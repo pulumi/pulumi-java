@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FirewallPolicyLogAnalyticsResourcesResponse {
     /**
-     * The default workspace Id for Firewall Policy Insights.
+     * @return The default workspace Id for Firewall Policy Insights.
      * 
      */
     private final @Nullable SubResourceResponse defaultWorkspaceId;
     /**
-     * List of workspaces for Firewall Policy Insights.
+     * @return List of workspaces for Firewall Policy Insights.
      * 
      */
     private final @Nullable List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces;
@@ -33,16 +33,16 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse {
     }
 
     /**
-     * The default workspace Id for Firewall Policy Insights.
+     * @return The default workspace Id for Firewall Policy Insights.
      * 
-    */
+     */
     public Optional<SubResourceResponse> defaultWorkspaceId() {
         return Optional.ofNullable(this.defaultWorkspaceId);
     }
     /**
-     * List of workspaces for Firewall Policy Insights.
+     * @return List of workspaces for Firewall Policy Insights.
      * 
-    */
+     */
     public List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces() {
         return this.workspaces == null ? List.of() : this.workspaces;
     }

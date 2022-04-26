@@ -26,6 +26,10 @@ public final class JwtClaimsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="audience")
     private @Nullable Output<String> audience;
 
+    /**
+     * @return Value for the &#34;aud&#34; claim.
+     * 
+     */
     public Optional<Output<String>> audience() {
         return Optional.ofNullable(this.audience);
     }
@@ -37,6 +41,10 @@ public final class JwtClaimsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="issuer")
     private @Nullable Output<String> issuer;
 
+    /**
+     * @return Value for the &#34;iss&#34; claim.
+     * 
+     */
     public Optional<Output<String>> issuer() {
         return Optional.ofNullable(this.issuer);
     }
@@ -48,6 +56,10 @@ public final class JwtClaimsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subject")
     private @Nullable Output<String> subject;
 
+    /**
+     * @return Value for the &#34;sub&#34; claim.
+     * 
+     */
     public Optional<Output<String>> subject() {
         return Optional.ofNullable(this.subject);
     }
@@ -78,29 +90,65 @@ public final class JwtClaimsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JwtClaimsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audience Value for the &#34;aud&#34; claim.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(@Nullable Output<String> audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param audience Value for the &#34;aud&#34; claim.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(String audience) {
             return audience(Output.of(audience));
         }
 
+        /**
+         * @param issuer Value for the &#34;iss&#34; claim.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(@Nullable Output<String> issuer) {
             $.issuer = issuer;
             return this;
         }
 
+        /**
+         * @param issuer Value for the &#34;iss&#34; claim.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(String issuer) {
             return issuer(Output.of(issuer));
         }
 
+        /**
+         * @param subject Value for the &#34;sub&#34; claim.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(@Nullable Output<String> subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param subject Value for the &#34;sub&#34; claim.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(String subject) {
             return subject(Output.of(subject));
         }

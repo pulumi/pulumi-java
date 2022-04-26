@@ -26,6 +26,10 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return Basic error code.
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -37,6 +41,10 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="extendedCode")
     private @Nullable String extendedCode;
 
+    /**
+     * @return Type of error.
+     * 
+     */
     public Optional<String> extendedCode() {
         return Optional.ofNullable(this.extendedCode);
     }
@@ -48,6 +56,10 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="innerErrors")
     private @Nullable List<ErrorEntityResponse> innerErrors;
 
+    /**
+     * @return Inner errors.
+     * 
+     */
     public Optional<List<ErrorEntityResponse>> innerErrors() {
         return Optional.ofNullable(this.innerErrors);
     }
@@ -59,6 +71,10 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return Any details of the error.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -70,6 +86,10 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="messageTemplate")
     private @Nullable String messageTemplate;
 
+    /**
+     * @return Message template.
+     * 
+     */
     public Optional<String> messageTemplate() {
         return Optional.ofNullable(this.messageTemplate);
     }
@@ -81,6 +101,10 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameters")
     private @Nullable List<String> parameters;
 
+    /**
+     * @return Parameters for the template.
+     * 
+     */
     public Optional<List<String>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -114,40 +138,88 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ErrorEntityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Basic error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param extendedCode Type of error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedCode(@Nullable String extendedCode) {
             $.extendedCode = extendedCode;
             return this;
         }
 
+        /**
+         * @param innerErrors Inner errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder innerErrors(@Nullable List<ErrorEntityResponse> innerErrors) {
             $.innerErrors = innerErrors;
             return this;
         }
 
+        /**
+         * @param innerErrors Inner errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder innerErrors(ErrorEntityResponse... innerErrors) {
             return innerErrors(List.of(innerErrors));
         }
 
+        /**
+         * @param message Any details of the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param messageTemplate Message template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageTemplate(@Nullable String messageTemplate) {
             $.messageTemplate = messageTemplate;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable List<String> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(String... parameters) {
             return parameters(List.of(parameters));
         }

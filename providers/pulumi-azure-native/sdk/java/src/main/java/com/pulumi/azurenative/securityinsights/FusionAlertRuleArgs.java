@@ -24,6 +24,10 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="alertRuleTemplateName", required=true)
     private Output<String> alertRuleTemplateName;
 
+    /**
+     * @return The Name of the alert rule template used to create this rule.
+     * 
+     */
     public Output<String> alertRuleTemplateName() {
         return this.alertRuleTemplateName;
     }
@@ -35,6 +39,10 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Determines whether this alert rule is enabled or disabled.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -47,6 +55,11 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return The kind of the alert rule
+     * Expected value is &#39;Fusion&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -58,6 +71,10 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +86,10 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ruleId")
     private @Nullable Output<String> ruleId;
 
+    /**
+     * @return Alert rule ID
+     * 
+     */
     public Optional<Output<String>> ruleId() {
         return Optional.ofNullable(this.ruleId);
     }
@@ -80,6 +101,10 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -113,56 +138,130 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
             $ = new FusionAlertRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertRuleTemplateName The Name of the alert rule template used to create this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertRuleTemplateName(Output<String> alertRuleTemplateName) {
             $.alertRuleTemplateName = alertRuleTemplateName;
             return this;
         }
 
+        /**
+         * @param alertRuleTemplateName The Name of the alert rule template used to create this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertRuleTemplateName(String alertRuleTemplateName) {
             return alertRuleTemplateName(Output.of(alertRuleTemplateName));
         }
 
+        /**
+         * @param enabled Determines whether this alert rule is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Determines whether this alert rule is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param kind The kind of the alert rule
+         * Expected value is &#39;Fusion&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the alert rule
+         * Expected value is &#39;Fusion&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleId Alert rule ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(@Nullable Output<String> ruleId) {
             $.ruleId = ruleId;
             return this;
         }
 
+        /**
+         * @param ruleId Alert rule ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(String ruleId) {
             return ruleId(Output.of(ruleId));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

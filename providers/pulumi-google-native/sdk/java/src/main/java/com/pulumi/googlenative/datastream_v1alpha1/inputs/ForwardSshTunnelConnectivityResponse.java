@@ -24,6 +24,10 @@ public final class ForwardSshTunnelConnectivityResponse extends com.pulumi.resou
     @Import(name="hostname", required=true)
     private String hostname;
 
+    /**
+     * @return Hostname for the SSH tunnel.
+     * 
+     */
     public String hostname() {
         return this.hostname;
     }
@@ -35,6 +39,10 @@ public final class ForwardSshTunnelConnectivityResponse extends com.pulumi.resou
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return Input only. SSH password.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -46,6 +54,10 @@ public final class ForwardSshTunnelConnectivityResponse extends com.pulumi.resou
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return Port for the SSH tunnel, default value is 22.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -57,6 +69,10 @@ public final class ForwardSshTunnelConnectivityResponse extends com.pulumi.resou
     @Import(name="privateKey", required=true)
     private String privateKey;
 
+    /**
+     * @return Input only. SSH private key.
+     * 
+     */
     public String privateKey() {
         return this.privateKey;
     }
@@ -68,6 +84,10 @@ public final class ForwardSshTunnelConnectivityResponse extends com.pulumi.resou
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return Username for the SSH tunnel.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -100,26 +120,56 @@ public final class ForwardSshTunnelConnectivityResponse extends com.pulumi.resou
             $ = new ForwardSshTunnelConnectivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostname Hostname for the SSH tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param password Input only. SSH password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param port Port for the SSH tunnel, default value is 22.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param privateKey Input only. SSH private key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(String privateKey) {
             $.privateKey = privateKey;
             return this;
         }
 
+        /**
+         * @param username Username for the SSH tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

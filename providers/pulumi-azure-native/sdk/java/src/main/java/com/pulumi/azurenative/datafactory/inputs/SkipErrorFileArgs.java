@@ -26,6 +26,10 @@ public final class SkipErrorFileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataInconsistency")
     private @Nullable Output<Object> dataInconsistency;
 
+    /**
+     * @return Skip if source/sink file changed by other concurrent write. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> dataInconsistency() {
         return Optional.ofNullable(this.dataInconsistency);
     }
@@ -37,6 +41,10 @@ public final class SkipErrorFileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileMissing")
     private @Nullable Output<Object> fileMissing;
 
+    /**
+     * @return Skip if file is deleted by other client during copy. Default is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> fileMissing() {
         return Optional.ofNullable(this.fileMissing);
     }
@@ -66,20 +74,44 @@ public final class SkipErrorFileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkipErrorFileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataInconsistency Skip if source/sink file changed by other concurrent write. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataInconsistency(@Nullable Output<Object> dataInconsistency) {
             $.dataInconsistency = dataInconsistency;
             return this;
         }
 
+        /**
+         * @param dataInconsistency Skip if source/sink file changed by other concurrent write. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataInconsistency(Object dataInconsistency) {
             return dataInconsistency(Output.of(dataInconsistency));
         }
 
+        /**
+         * @param fileMissing Skip if file is deleted by other client during copy. Default is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileMissing(@Nullable Output<Object> fileMissing) {
             $.fileMissing = fileMissing;
             return this;
         }
 
+        /**
+         * @param fileMissing Skip if file is deleted by other client during copy. Default is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileMissing(Object fileMissing) {
             return fileMissing(Output.of(fileMissing));
         }

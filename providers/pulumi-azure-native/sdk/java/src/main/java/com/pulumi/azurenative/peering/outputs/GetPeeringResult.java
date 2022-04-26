@@ -16,57 +16,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPeeringResult {
     /**
-     * The properties that define a direct peering.
+     * @return The properties that define a direct peering.
      * 
      */
     private final @Nullable PeeringPropertiesDirectResponse direct;
     /**
-     * The properties that define an exchange peering.
+     * @return The properties that define an exchange peering.
      * 
      */
     private final @Nullable PeeringPropertiesExchangeResponse exchange;
     /**
-     * The ID of the resource.
+     * @return The ID of the resource.
      * 
      */
     private final String id;
     /**
-     * The kind of the peering.
+     * @return The kind of the peering.
      * 
      */
     private final String kind;
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
      */
     private final String location;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * The location of the peering.
+     * @return The location of the peering.
      * 
      */
     private final @Nullable String peeringLocation;
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The SKU that defines the tier and kind of the peering.
+     * @return The SKU that defines the tier and kind of the peering.
      * 
      */
     private final PeeringSkuResponse sku;
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -98,79 +98,79 @@ public final class GetPeeringResult {
     }
 
     /**
-     * The properties that define a direct peering.
+     * @return The properties that define a direct peering.
      * 
-    */
+     */
     public Optional<PeeringPropertiesDirectResponse> direct() {
         return Optional.ofNullable(this.direct);
     }
     /**
-     * The properties that define an exchange peering.
+     * @return The properties that define an exchange peering.
      * 
-    */
+     */
     public Optional<PeeringPropertiesExchangeResponse> exchange() {
         return Optional.ofNullable(this.exchange);
     }
     /**
-     * The ID of the resource.
+     * @return The ID of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The kind of the peering.
+     * @return The kind of the peering.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The location of the peering.
+     * @return The location of the peering.
      * 
-    */
+     */
     public Optional<String> peeringLocation() {
         return Optional.ofNullable(this.peeringLocation);
     }
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The SKU that defines the tier and kind of the peering.
+     * @return The SKU that defines the tier and kind of the peering.
      * 
-    */
+     */
     public PeeringSkuResponse sku() {
         return this.sku;
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

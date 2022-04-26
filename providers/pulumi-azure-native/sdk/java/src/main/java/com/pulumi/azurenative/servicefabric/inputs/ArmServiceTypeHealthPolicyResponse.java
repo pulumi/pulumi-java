@@ -26,6 +26,10 @@ public final class ArmServiceTypeHealthPolicyResponse extends com.pulumi.resourc
     @Import(name="maxPercentUnhealthyPartitionsPerService")
     private @Nullable Integer maxPercentUnhealthyPartitionsPerService;
 
+    /**
+     * @return The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
+     * 
+     */
     public Optional<Integer> maxPercentUnhealthyPartitionsPerService() {
         return Optional.ofNullable(this.maxPercentUnhealthyPartitionsPerService);
     }
@@ -37,6 +41,10 @@ public final class ArmServiceTypeHealthPolicyResponse extends com.pulumi.resourc
     @Import(name="maxPercentUnhealthyReplicasPerPartition")
     private @Nullable Integer maxPercentUnhealthyReplicasPerPartition;
 
+    /**
+     * @return The maximum percentage of replicas per partition allowed to be unhealthy before your application is considered in error.
+     * 
+     */
     public Optional<Integer> maxPercentUnhealthyReplicasPerPartition() {
         return Optional.ofNullable(this.maxPercentUnhealthyReplicasPerPartition);
     }
@@ -48,6 +56,10 @@ public final class ArmServiceTypeHealthPolicyResponse extends com.pulumi.resourc
     @Import(name="maxPercentUnhealthyServices")
     private @Nullable Integer maxPercentUnhealthyServices;
 
+    /**
+     * @return The maximum percentage of services allowed to be unhealthy before your application is considered in error.
+     * 
+     */
     public Optional<Integer> maxPercentUnhealthyServices() {
         return Optional.ofNullable(this.maxPercentUnhealthyServices);
     }
@@ -78,16 +90,34 @@ public final class ArmServiceTypeHealthPolicyResponse extends com.pulumi.resourc
             $ = new ArmServiceTypeHealthPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxPercentUnhealthyPartitionsPerService The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentUnhealthyPartitionsPerService(@Nullable Integer maxPercentUnhealthyPartitionsPerService) {
             $.maxPercentUnhealthyPartitionsPerService = maxPercentUnhealthyPartitionsPerService;
             return this;
         }
 
+        /**
+         * @param maxPercentUnhealthyReplicasPerPartition The maximum percentage of replicas per partition allowed to be unhealthy before your application is considered in error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentUnhealthyReplicasPerPartition(@Nullable Integer maxPercentUnhealthyReplicasPerPartition) {
             $.maxPercentUnhealthyReplicasPerPartition = maxPercentUnhealthyReplicasPerPartition;
             return this;
         }
 
+        /**
+         * @param maxPercentUnhealthyServices The maximum percentage of services allowed to be unhealthy before your application is considered in error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
             $.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;

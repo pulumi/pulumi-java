@@ -24,6 +24,10 @@ public final class UsagePlanApiStageGetArgs extends com.pulumi.resources.Resourc
     @Import(name="apiId", required=true)
     private Output<String> apiId;
 
+    /**
+     * @return API Id of the associated API stage in a usage plan.
+     * 
+     */
     public Output<String> apiId() {
         return this.apiId;
     }
@@ -35,6 +39,10 @@ public final class UsagePlanApiStageGetArgs extends com.pulumi.resources.Resourc
     @Import(name="stage", required=true)
     private Output<String> stage;
 
+    /**
+     * @return API stage name of the associated API stage in a usage plan.
+     * 
+     */
     public Output<String> stage() {
         return this.stage;
     }
@@ -46,6 +54,10 @@ public final class UsagePlanApiStageGetArgs extends com.pulumi.resources.Resourc
     @Import(name="throttles")
     private @Nullable Output<List<UsagePlanApiStageThrottleGetArgs>> throttles;
 
+    /**
+     * @return The throttling limits of the usage plan.
+     * 
+     */
     public Optional<Output<List<UsagePlanApiStageThrottleGetArgs>>> throttles() {
         return Optional.ofNullable(this.throttles);
     }
@@ -76,33 +88,75 @@ public final class UsagePlanApiStageGetArgs extends com.pulumi.resources.Resourc
             $ = new UsagePlanApiStageGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId API Id of the associated API stage in a usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId API Id of the associated API stage in a usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param stage API stage name of the associated API stage in a usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(Output<String> stage) {
             $.stage = stage;
             return this;
         }
 
+        /**
+         * @param stage API stage name of the associated API stage in a usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(String stage) {
             return stage(Output.of(stage));
         }
 
+        /**
+         * @param throttles The throttling limits of the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttles(@Nullable Output<List<UsagePlanApiStageThrottleGetArgs>> throttles) {
             $.throttles = throttles;
             return this;
         }
 
+        /**
+         * @param throttles The throttling limits of the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttles(List<UsagePlanApiStageThrottleGetArgs> throttles) {
             return throttles(Output.of(throttles));
         }
 
+        /**
+         * @param throttles The throttling limits of the usage plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttles(UsagePlanApiStageThrottleGetArgs... throttles) {
             return throttles(List.of(throttles));
         }

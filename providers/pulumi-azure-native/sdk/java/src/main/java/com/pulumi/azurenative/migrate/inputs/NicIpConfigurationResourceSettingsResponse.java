@@ -31,6 +31,10 @@ public final class NicIpConfigurationResourceSettingsResponse extends com.pulumi
     @Import(name="loadBalancerBackendAddressPools")
     private @Nullable List<LoadBalancerBackendAddressPoolReferenceResponse> loadBalancerBackendAddressPools;
 
+    /**
+     * @return Gets or sets the references of the load balancer backend address pools.
+     * 
+     */
     public Optional<List<LoadBalancerBackendAddressPoolReferenceResponse>> loadBalancerBackendAddressPools() {
         return Optional.ofNullable(this.loadBalancerBackendAddressPools);
     }
@@ -42,6 +46,10 @@ public final class NicIpConfigurationResourceSettingsResponse extends com.pulumi
     @Import(name="loadBalancerNatRules")
     private @Nullable List<LoadBalancerNatRuleReferenceResponse> loadBalancerNatRules;
 
+    /**
+     * @return Gets or sets the references of the load balancer NAT rules.
+     * 
+     */
     public Optional<List<LoadBalancerNatRuleReferenceResponse>> loadBalancerNatRules() {
         return Optional.ofNullable(this.loadBalancerNatRules);
     }
@@ -53,6 +61,10 @@ public final class NicIpConfigurationResourceSettingsResponse extends com.pulumi
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets or sets the IP configuration name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -64,6 +76,10 @@ public final class NicIpConfigurationResourceSettingsResponse extends com.pulumi
     @Import(name="primary")
     private @Nullable Boolean primary;
 
+    /**
+     * @return Gets or sets a value indicating whether this IP configuration is the primary.
+     * 
+     */
     public Optional<Boolean> primary() {
         return Optional.ofNullable(this.primary);
     }
@@ -75,6 +91,10 @@ public final class NicIpConfigurationResourceSettingsResponse extends com.pulumi
     @Import(name="privateIpAddress")
     private @Nullable String privateIpAddress;
 
+    /**
+     * @return Gets or sets the private IP address of the network interface IP Configuration.
+     * 
+     */
     public Optional<String> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
@@ -86,6 +106,10 @@ public final class NicIpConfigurationResourceSettingsResponse extends com.pulumi
     @Import(name="privateIpAllocationMethod")
     private @Nullable String privateIpAllocationMethod;
 
+    /**
+     * @return Gets or sets the private IP address allocation method.
+     * 
+     */
     public Optional<String> privateIpAllocationMethod() {
         return Optional.ofNullable(this.privateIpAllocationMethod);
     }
@@ -97,6 +121,10 @@ public final class NicIpConfigurationResourceSettingsResponse extends com.pulumi
     @Import(name="publicIp")
     private @Nullable PublicIpReferenceResponse publicIp;
 
+    /**
+     * @return Defines reference to a public IP.
+     * 
+     */
     public Optional<PublicIpReferenceResponse> publicIp() {
         return Optional.ofNullable(this.publicIp);
     }
@@ -108,6 +136,10 @@ public final class NicIpConfigurationResourceSettingsResponse extends com.pulumi
     @Import(name="subnet")
     private @Nullable SubnetReferenceResponse subnet;
 
+    /**
+     * @return Defines reference to subnet.
+     * 
+     */
     public Optional<SubnetReferenceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -143,49 +175,109 @@ public final class NicIpConfigurationResourceSettingsResponse extends com.pulumi
             $ = new NicIpConfigurationResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loadBalancerBackendAddressPools Gets or sets the references of the load balancer backend address pools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerBackendAddressPools(@Nullable List<LoadBalancerBackendAddressPoolReferenceResponse> loadBalancerBackendAddressPools) {
             $.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
 
+        /**
+         * @param loadBalancerBackendAddressPools Gets or sets the references of the load balancer backend address pools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerBackendAddressPools(LoadBalancerBackendAddressPoolReferenceResponse... loadBalancerBackendAddressPools) {
             return loadBalancerBackendAddressPools(List.of(loadBalancerBackendAddressPools));
         }
 
+        /**
+         * @param loadBalancerNatRules Gets or sets the references of the load balancer NAT rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerNatRules(@Nullable List<LoadBalancerNatRuleReferenceResponse> loadBalancerNatRules) {
             $.loadBalancerNatRules = loadBalancerNatRules;
             return this;
         }
 
+        /**
+         * @param loadBalancerNatRules Gets or sets the references of the load balancer NAT rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerNatRules(LoadBalancerNatRuleReferenceResponse... loadBalancerNatRules) {
             return loadBalancerNatRules(List.of(loadBalancerNatRules));
         }
 
+        /**
+         * @param name Gets or sets the IP configuration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param primary Gets or sets a value indicating whether this IP configuration is the primary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primary(@Nullable Boolean primary) {
             $.primary = primary;
             return this;
         }
 
+        /**
+         * @param privateIpAddress Gets or sets the private IP address of the network interface IP Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param privateIpAllocationMethod Gets or sets the private IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
             $.privateIpAllocationMethod = privateIpAllocationMethod;
             return this;
         }
 
+        /**
+         * @param publicIp Defines reference to a public IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIp(@Nullable PublicIpReferenceResponse publicIp) {
             $.publicIp = publicIp;
             return this;
         }
 
+        /**
+         * @param subnet Defines reference to subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable SubnetReferenceResponse subnet) {
             $.subnet = subnet;
             return this;

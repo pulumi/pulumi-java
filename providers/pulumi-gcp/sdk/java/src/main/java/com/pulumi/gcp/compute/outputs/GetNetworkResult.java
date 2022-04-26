@@ -13,29 +13,29 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetNetworkResult {
     /**
-     * Description of this network.
+     * @return Description of this network.
      * 
      */
     private final String description;
     /**
-     * The IP address of the gateway.
+     * @return The IP address of the gateway.
      * 
      */
     private final String gatewayIpv4;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String name;
     private final @Nullable String project;
     /**
-     * The URI of the resource.
+     * @return The URI of the resource.
      * 
      */
     private final String selfLink;
     /**
-     * the list of subnetworks which belong to the network
+     * @return the list of subnetworks which belong to the network
      * 
      */
     private final List<String> subnetworksSelfLinks;
@@ -59,23 +59,23 @@ public final class GetNetworkResult {
     }
 
     /**
-     * Description of this network.
+     * @return Description of this network.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The IP address of the gateway.
+     * @return The IP address of the gateway.
      * 
-    */
+     */
     public String gatewayIpv4() {
         return this.gatewayIpv4;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -86,16 +86,16 @@ public final class GetNetworkResult {
         return Optional.ofNullable(this.project);
     }
     /**
-     * The URI of the resource.
+     * @return The URI of the resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * the list of subnetworks which belong to the network
+     * @return the list of subnetworks which belong to the network
      * 
-    */
+     */
     public List<String> subnetworksSelfLinks() {
         return this.subnetworksSelfLinks;
     }

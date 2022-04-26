@@ -26,6 +26,10 @@ public final class BucketServerSideEncryptionRule extends com.pulumi.resources.I
     @Import(name="bucketKeyEnabled")
     private @Nullable Boolean bucketKeyEnabled;
 
+    /**
+     * @return Specifies whether Amazon S3 should use an S3 Bucket Key with server-side encryption using KMS (SSE-KMS) for new objects in the bucket. Existing objects are not affected. Setting the BucketKeyEnabled element to true causes Amazon S3 to use an S3 Bucket Key. By default, S3 Bucket Key is not enabled.
+     * 
+     */
     public Optional<Boolean> bucketKeyEnabled() {
         return Optional.ofNullable(this.bucketKeyEnabled);
     }
@@ -62,6 +66,12 @@ public final class BucketServerSideEncryptionRule extends com.pulumi.resources.I
             $ = new BucketServerSideEncryptionRule(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketKeyEnabled Specifies whether Amazon S3 should use an S3 Bucket Key with server-side encryption using KMS (SSE-KMS) for new objects in the bucket. Existing objects are not affected. Setting the BucketKeyEnabled element to true causes Amazon S3 to use an S3 Bucket Key. By default, S3 Bucket Key is not enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
             $.bucketKeyEnabled = bucketKeyEnabled;
             return this;

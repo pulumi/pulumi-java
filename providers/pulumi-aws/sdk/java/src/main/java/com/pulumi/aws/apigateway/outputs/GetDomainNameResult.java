@@ -14,73 +14,73 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDomainNameResult {
     /**
-     * The ARN of the found custom domain name.
+     * @return The ARN of the found custom domain name.
      * 
      */
     private final String arn;
     /**
-     * The ARN for an AWS-managed certificate that is used by edge-optimized endpoint for this domain name.
+     * @return The ARN for an AWS-managed certificate that is used by edge-optimized endpoint for this domain name.
      * 
      */
     private final String certificateArn;
     /**
-     * The name of the certificate that is used by edge-optimized endpoint for this domain name.
+     * @return The name of the certificate that is used by edge-optimized endpoint for this domain name.
      * 
      */
     private final String certificateName;
     /**
-     * The upload date associated with the domain certificate.
+     * @return The upload date associated with the domain certificate.
      * 
      */
     private final String certificateUploadDate;
     /**
-     * The hostname created by Cloudfront to represent the distribution that implements this domain name mapping.
+     * @return The hostname created by Cloudfront to represent the distribution that implements this domain name mapping.
      * 
      */
     private final String cloudfrontDomainName;
     /**
-     * For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`) that can be used to create a Route53 alias record for the distribution.
+     * @return For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`) that can be used to create a Route53 alias record for the distribution.
      * 
      */
     private final String cloudfrontZoneId;
     private final String domainName;
     /**
-     * List of objects with the endpoint configuration of this domain name.
+     * @return List of objects with the endpoint configuration of this domain name.
      * 
      */
     private final List<GetDomainNameEndpointConfiguration> endpointConfigurations;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The ARN for an AWS-managed certificate that is used for validating the regional domain name.
+     * @return The ARN for an AWS-managed certificate that is used for validating the regional domain name.
      * 
      */
     private final String regionalCertificateArn;
     /**
-     * The user-friendly name of the certificate that is used by regional endpoint for this domain name.
+     * @return The user-friendly name of the certificate that is used by regional endpoint for this domain name.
      * 
      */
     private final String regionalCertificateName;
     /**
-     * The hostname for the custom domain&#39;s regional endpoint.
+     * @return The hostname for the custom domain&#39;s regional endpoint.
      * 
      */
     private final String regionalDomainName;
     /**
-     * The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
+     * @return The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
      * 
      */
     private final String regionalZoneId;
     /**
-     * The security policy for the domain name.
+     * @return The security policy for the domain name.
      * 
      */
     private final String securityPolicy;
     /**
-     * Key-value map of tags for the resource.
+     * @return Key-value map of tags for the resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
@@ -120,44 +120,44 @@ public final class GetDomainNameResult {
     }
 
     /**
-     * The ARN of the found custom domain name.
+     * @return The ARN of the found custom domain name.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The ARN for an AWS-managed certificate that is used by edge-optimized endpoint for this domain name.
+     * @return The ARN for an AWS-managed certificate that is used by edge-optimized endpoint for this domain name.
      * 
-    */
+     */
     public String certificateArn() {
         return this.certificateArn;
     }
     /**
-     * The name of the certificate that is used by edge-optimized endpoint for this domain name.
+     * @return The name of the certificate that is used by edge-optimized endpoint for this domain name.
      * 
-    */
+     */
     public String certificateName() {
         return this.certificateName;
     }
     /**
-     * The upload date associated with the domain certificate.
+     * @return The upload date associated with the domain certificate.
      * 
-    */
+     */
     public String certificateUploadDate() {
         return this.certificateUploadDate;
     }
     /**
-     * The hostname created by Cloudfront to represent the distribution that implements this domain name mapping.
+     * @return The hostname created by Cloudfront to represent the distribution that implements this domain name mapping.
      * 
-    */
+     */
     public String cloudfrontDomainName() {
         return this.cloudfrontDomainName;
     }
     /**
-     * For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`) that can be used to create a Route53 alias record for the distribution.
+     * @return For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`) that can be used to create a Route53 alias record for the distribution.
      * 
-    */
+     */
     public String cloudfrontZoneId() {
         return this.cloudfrontZoneId;
     }
@@ -165,58 +165,58 @@ public final class GetDomainNameResult {
         return this.domainName;
     }
     /**
-     * List of objects with the endpoint configuration of this domain name.
+     * @return List of objects with the endpoint configuration of this domain name.
      * 
-    */
+     */
     public List<GetDomainNameEndpointConfiguration> endpointConfigurations() {
         return this.endpointConfigurations;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The ARN for an AWS-managed certificate that is used for validating the regional domain name.
+     * @return The ARN for an AWS-managed certificate that is used for validating the regional domain name.
      * 
-    */
+     */
     public String regionalCertificateArn() {
         return this.regionalCertificateArn;
     }
     /**
-     * The user-friendly name of the certificate that is used by regional endpoint for this domain name.
+     * @return The user-friendly name of the certificate that is used by regional endpoint for this domain name.
      * 
-    */
+     */
     public String regionalCertificateName() {
         return this.regionalCertificateName;
     }
     /**
-     * The hostname for the custom domain&#39;s regional endpoint.
+     * @return The hostname for the custom domain&#39;s regional endpoint.
      * 
-    */
+     */
     public String regionalDomainName() {
         return this.regionalDomainName;
     }
     /**
-     * The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
+     * @return The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
      * 
-    */
+     */
     public String regionalZoneId() {
         return this.regionalZoneId;
     }
     /**
-     * The security policy for the domain name.
+     * @return The security policy for the domain name.
      * 
-    */
+     */
     public String securityPolicy() {
         return this.securityPolicy;
     }
     /**
-     * Key-value map of tags for the resource.
+     * @return Key-value map of tags for the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }

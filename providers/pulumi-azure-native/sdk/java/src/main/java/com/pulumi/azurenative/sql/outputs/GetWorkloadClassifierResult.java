@@ -12,47 +12,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWorkloadClassifierResult {
     /**
-     * The workload classifier context.
+     * @return The workload classifier context.
      * 
      */
     private final @Nullable String context;
     /**
-     * The workload classifier end time for classification.
+     * @return The workload classifier end time for classification.
      * 
      */
     private final @Nullable String endTime;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * The workload classifier importance.
+     * @return The workload classifier importance.
      * 
      */
     private final @Nullable String importance;
     /**
-     * The workload classifier label.
+     * @return The workload classifier label.
      * 
      */
     private final @Nullable String label;
     /**
-     * The workload classifier member name.
+     * @return The workload classifier member name.
      * 
      */
     private final String memberName;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The workload classifier start time for classification.
+     * @return The workload classifier start time for classification.
      * 
      */
     private final @Nullable String startTime;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -80,65 +80,65 @@ public final class GetWorkloadClassifierResult {
     }
 
     /**
-     * The workload classifier context.
+     * @return The workload classifier context.
      * 
-    */
+     */
     public Optional<String> context() {
         return Optional.ofNullable(this.context);
     }
     /**
-     * The workload classifier end time for classification.
+     * @return The workload classifier end time for classification.
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The workload classifier importance.
+     * @return The workload classifier importance.
      * 
-    */
+     */
     public Optional<String> importance() {
         return Optional.ofNullable(this.importance);
     }
     /**
-     * The workload classifier label.
+     * @return The workload classifier label.
      * 
-    */
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
-     * The workload classifier member name.
+     * @return The workload classifier member name.
      * 
-    */
+     */
     public String memberName() {
         return this.memberName;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The workload classifier start time for classification.
+     * @return The workload classifier start time for classification.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

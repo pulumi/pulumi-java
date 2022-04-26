@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class EcKeyTypeResponse {
     /**
-     * Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
+     * @return Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
      * 
      */
     private final String signatureAlgorithm;
@@ -21,9 +21,9 @@ public final class EcKeyTypeResponse {
     }
 
     /**
-     * Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
+     * @return Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
      * 
-    */
+     */
     public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }

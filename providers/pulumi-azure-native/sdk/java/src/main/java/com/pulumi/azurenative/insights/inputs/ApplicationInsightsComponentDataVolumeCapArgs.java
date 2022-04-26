@@ -28,6 +28,10 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends com.pul
     @Import(name="cap")
     private @Nullable Output<Double> cap;
 
+    /**
+     * @return Daily data volume cap in GB.
+     * 
+     */
     public Optional<Output<Double>> cap() {
         return Optional.ofNullable(this.cap);
     }
@@ -39,6 +43,10 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends com.pul
     @Import(name="stopSendNotificationWhenHitCap")
     private @Nullable Output<Boolean> stopSendNotificationWhenHitCap;
 
+    /**
+     * @return Do not send a notification email when the daily data volume cap is met.
+     * 
+     */
     public Optional<Output<Boolean>> stopSendNotificationWhenHitCap() {
         return Optional.ofNullable(this.stopSendNotificationWhenHitCap);
     }
@@ -50,6 +58,10 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends com.pul
     @Import(name="stopSendNotificationWhenHitThreshold")
     private @Nullable Output<Boolean> stopSendNotificationWhenHitThreshold;
 
+    /**
+     * @return Reserved, not used for now.
+     * 
+     */
     public Optional<Output<Boolean>> stopSendNotificationWhenHitThreshold() {
         return Optional.ofNullable(this.stopSendNotificationWhenHitThreshold);
     }
@@ -61,6 +73,10 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends com.pul
     @Import(name="warningThreshold")
     private @Nullable Output<Integer> warningThreshold;
 
+    /**
+     * @return Reserved, not used for now.
+     * 
+     */
     public Optional<Output<Integer>> warningThreshold() {
         return Optional.ofNullable(this.warningThreshold);
     }
@@ -92,38 +108,86 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends com.pul
             $ = new ApplicationInsightsComponentDataVolumeCapArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cap Daily data volume cap in GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cap(@Nullable Output<Double> cap) {
             $.cap = cap;
             return this;
         }
 
+        /**
+         * @param cap Daily data volume cap in GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cap(Double cap) {
             return cap(Output.of(cap));
         }
 
+        /**
+         * @param stopSendNotificationWhenHitCap Do not send a notification email when the daily data volume cap is met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stopSendNotificationWhenHitCap(@Nullable Output<Boolean> stopSendNotificationWhenHitCap) {
             $.stopSendNotificationWhenHitCap = stopSendNotificationWhenHitCap;
             return this;
         }
 
+        /**
+         * @param stopSendNotificationWhenHitCap Do not send a notification email when the daily data volume cap is met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stopSendNotificationWhenHitCap(Boolean stopSendNotificationWhenHitCap) {
             return stopSendNotificationWhenHitCap(Output.of(stopSendNotificationWhenHitCap));
         }
 
+        /**
+         * @param stopSendNotificationWhenHitThreshold Reserved, not used for now.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stopSendNotificationWhenHitThreshold(@Nullable Output<Boolean> stopSendNotificationWhenHitThreshold) {
             $.stopSendNotificationWhenHitThreshold = stopSendNotificationWhenHitThreshold;
             return this;
         }
 
+        /**
+         * @param stopSendNotificationWhenHitThreshold Reserved, not used for now.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stopSendNotificationWhenHitThreshold(Boolean stopSendNotificationWhenHitThreshold) {
             return stopSendNotificationWhenHitThreshold(Output.of(stopSendNotificationWhenHitThreshold));
         }
 
+        /**
+         * @param warningThreshold Reserved, not used for now.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warningThreshold(@Nullable Output<Integer> warningThreshold) {
             $.warningThreshold = warningThreshold;
             return this;
         }
 
+        /**
+         * @param warningThreshold Reserved, not used for now.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warningThreshold(Integer warningThreshold) {
             return warningThreshold(Output.of(warningThreshold));
         }

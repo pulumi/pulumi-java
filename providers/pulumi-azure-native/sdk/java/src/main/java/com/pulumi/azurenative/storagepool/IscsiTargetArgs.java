@@ -24,6 +24,10 @@ public final class IscsiTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskPoolName", required=true)
     private Output<String> diskPoolName;
 
+    /**
+     * @return The name of the Disk pool.
+     * 
+     */
     public Output<String> diskPoolName() {
         return this.diskPoolName;
     }
@@ -35,6 +39,10 @@ public final class IscsiTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iscsiTargetName")
     private @Nullable Output<String> iscsiTargetName;
 
+    /**
+     * @return The name of the iSCSI target.
+     * 
+     */
     public Optional<Output<String>> iscsiTargetName() {
         return Optional.ofNullable(this.iscsiTargetName);
     }
@@ -46,6 +54,10 @@ public final class IscsiTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class IscsiTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetIqn")
     private @Nullable Output<String> targetIqn;
 
+    /**
+     * @return iSCSI target IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:server&#34;.
+     * 
+     */
     public Optional<Output<String>> targetIqn() {
         return Optional.ofNullable(this.targetIqn);
     }
@@ -68,6 +84,10 @@ public final class IscsiTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tpgs", required=true)
     private Output<List<TargetPortalGroupCreateArgs>> tpgs;
 
+    /**
+     * @return List of iSCSI target portal groups. Can have 1 portal group at most.
+     * 
+     */
     public Output<List<TargetPortalGroupCreateArgs>> tpgs() {
         return this.tpgs;
     }
@@ -100,51 +120,117 @@ public final class IscsiTargetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IscsiTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskPoolName The name of the Disk pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskPoolName(Output<String> diskPoolName) {
             $.diskPoolName = diskPoolName;
             return this;
         }
 
+        /**
+         * @param diskPoolName The name of the Disk pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskPoolName(String diskPoolName) {
             return diskPoolName(Output.of(diskPoolName));
         }
 
+        /**
+         * @param iscsiTargetName The name of the iSCSI target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iscsiTargetName(@Nullable Output<String> iscsiTargetName) {
             $.iscsiTargetName = iscsiTargetName;
             return this;
         }
 
+        /**
+         * @param iscsiTargetName The name of the iSCSI target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iscsiTargetName(String iscsiTargetName) {
             return iscsiTargetName(Output.of(iscsiTargetName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param targetIqn iSCSI target IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:server&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetIqn(@Nullable Output<String> targetIqn) {
             $.targetIqn = targetIqn;
             return this;
         }
 
+        /**
+         * @param targetIqn iSCSI target IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:server&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetIqn(String targetIqn) {
             return targetIqn(Output.of(targetIqn));
         }
 
+        /**
+         * @param tpgs List of iSCSI target portal groups. Can have 1 portal group at most.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tpgs(Output<List<TargetPortalGroupCreateArgs>> tpgs) {
             $.tpgs = tpgs;
             return this;
         }
 
+        /**
+         * @param tpgs List of iSCSI target portal groups. Can have 1 portal group at most.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tpgs(List<TargetPortalGroupCreateArgs> tpgs) {
             return tpgs(Output.of(tpgs));
         }
 
+        /**
+         * @param tpgs List of iSCSI target portal groups. Can have 1 portal group at most.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tpgs(TargetPortalGroupCreateArgs... tpgs) {
             return tpgs(List.of(tpgs));
         }

@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class NodeGroupMaintenanceWindowResponse {
     /**
-     * [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
+     * @return [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
      * 
      */
     private final String duration;
     /**
-     * [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
+     * @return [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
      * 
      */
     private final DurationResponse maintenanceDuration;
     /**
-     * Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+     * @return Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
      * 
      */
     private final String startTime;
@@ -37,23 +37,23 @@ public final class NodeGroupMaintenanceWindowResponse {
     }
 
     /**
-     * [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
+     * @return [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
      * 
-    */
+     */
     public String duration() {
         return this.duration;
     }
     /**
-     * [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
+     * @return [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
      * 
-    */
+     */
     public DurationResponse maintenanceDuration() {
         return this.maintenanceDuration;
     }
     /**
-     * Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+     * @return Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

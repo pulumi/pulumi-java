@@ -33,6 +33,16 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
     @Import(name="basicSli")
     private @Nullable Output<SloBasicSliGetArgs> basicSli;
 
+    /**
+     * @return Basic Service-Level Indicator (SLI) on a well-known service type.
+     * Performance will be computed on the basis of pre-defined metrics.
+     * SLIs are used to measure and calculate the quality of the Service&#39;s
+     * performance with respect to a single aspect of service quality.
+     * Exactly one of the following must be set:
+     * `basic_sli`, `request_based_sli`, `windows_based_sli`
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SloBasicSliGetArgs>> basicSli() {
         return Optional.ofNullable(this.basicSli);
     }
@@ -46,6 +56,12 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
     @Import(name="calendarPeriod")
     private @Nullable Output<String> calendarPeriod;
 
+    /**
+     * @return A calendar period, semantically &#34;since the start of the current
+     * &lt;calendarPeriod&gt;&#34;.
+     * Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
+     * 
+     */
     public Optional<Output<String>> calendarPeriod() {
         return Optional.ofNullable(this.calendarPeriod);
     }
@@ -57,6 +73,10 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Name used for UI elements listing this SLO.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -69,6 +89,11 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
     @Import(name="goal")
     private @Nullable Output<Double> goal;
 
+    /**
+     * @return The fraction of service that must be good in order for this objective
+     * to be met. 0 &lt; goal &lt;= 0.999
+     * 
+     */
     public Optional<Output<Double>> goal() {
         return Optional.ofNullable(this.goal);
     }
@@ -81,6 +106,11 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The full resource name for this service. The syntax is:
+     * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -93,6 +123,11 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -111,6 +146,17 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestBasedSli")
     private @Nullable Output<SloRequestBasedSliGetArgs> requestBasedSli;
 
+    /**
+     * @return A request-based SLI defines a SLI for which atomic units of
+     * service are counted directly.
+     * A SLI describes a good service.
+     * It is used to measure and calculate the quality of the Service&#39;s
+     * performance with respect to a single aspect of service quality.
+     * Exactly one of the following must be set:
+     * `basic_sli`, `request_based_sli`, `windows_based_sli`
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SloRequestBasedSliGetArgs>> requestBasedSli() {
         return Optional.ofNullable(this.requestBasedSli);
     }
@@ -123,6 +169,11 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rollingPeriodDays")
     private @Nullable Output<Integer> rollingPeriodDays;
 
+    /**
+     * @return A rolling time period, semantically &#34;in the past X days&#34;.
+     * Must be between 1 to 30 days, inclusive.
+     * 
+     */
     public Optional<Output<Integer>> rollingPeriodDays() {
         return Optional.ofNullable(this.rollingPeriodDays);
     }
@@ -134,6 +185,10 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return ID of the service to which this SLO belongs.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -145,6 +200,10 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sloId")
     private @Nullable Output<String> sloId;
 
+    /**
+     * @return The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
+     * 
+     */
     public Optional<Output<String>> sloId() {
         return Optional.ofNullable(this.sloId);
     }
@@ -164,6 +223,18 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
     @Import(name="windowsBasedSli")
     private @Nullable Output<SloWindowsBasedSliGetArgs> windowsBasedSli;
 
+    /**
+     * @return A windows-based SLI defines the criteria for time windows.
+     * good_service is defined based off the count of these time windows
+     * for which the provided service was of good quality.
+     * A SLI describes a good service. It is used to measure and calculate
+     * the quality of the Service&#39;s performance with respect to a single
+     * aspect of service quality.
+     * Exactly one of the following must be set:
+     * `basic_sli`, `request_based_sli`, `windows_based_sli`
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SloWindowsBasedSliGetArgs>> windowsBasedSli() {
         return Optional.ofNullable(this.windowsBasedSli);
     }
@@ -202,101 +273,287 @@ public final class SloState extends com.pulumi.resources.ResourceArgs {
             $ = new SloState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basicSli Basic Service-Level Indicator (SLI) on a well-known service type.
+         * Performance will be computed on the basis of pre-defined metrics.
+         * SLIs are used to measure and calculate the quality of the Service&#39;s
+         * performance with respect to a single aspect of service quality.
+         * Exactly one of the following must be set:
+         * `basic_sli`, `request_based_sli`, `windows_based_sli`
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicSli(@Nullable Output<SloBasicSliGetArgs> basicSli) {
             $.basicSli = basicSli;
             return this;
         }
 
+        /**
+         * @param basicSli Basic Service-Level Indicator (SLI) on a well-known service type.
+         * Performance will be computed on the basis of pre-defined metrics.
+         * SLIs are used to measure and calculate the quality of the Service&#39;s
+         * performance with respect to a single aspect of service quality.
+         * Exactly one of the following must be set:
+         * `basic_sli`, `request_based_sli`, `windows_based_sli`
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicSli(SloBasicSliGetArgs basicSli) {
             return basicSli(Output.of(basicSli));
         }
 
+        /**
+         * @param calendarPeriod A calendar period, semantically &#34;since the start of the current
+         * &lt;calendarPeriod&gt;&#34;.
+         * Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder calendarPeriod(@Nullable Output<String> calendarPeriod) {
             $.calendarPeriod = calendarPeriod;
             return this;
         }
 
+        /**
+         * @param calendarPeriod A calendar period, semantically &#34;since the start of the current
+         * &lt;calendarPeriod&gt;&#34;.
+         * Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder calendarPeriod(String calendarPeriod) {
             return calendarPeriod(Output.of(calendarPeriod));
         }
 
+        /**
+         * @param displayName Name used for UI elements listing this SLO.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Name used for UI elements listing this SLO.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param goal The fraction of service that must be good in order for this objective
+         * to be met. 0 &lt; goal &lt;= 0.999
+         * 
+         * @return builder
+         * 
+         */
         public Builder goal(@Nullable Output<Double> goal) {
             $.goal = goal;
             return this;
         }
 
+        /**
+         * @param goal The fraction of service that must be good in order for this objective
+         * to be met. 0 &lt; goal &lt;= 0.999
+         * 
+         * @return builder
+         * 
+         */
         public Builder goal(Double goal) {
             return goal(Output.of(goal));
         }
 
+        /**
+         * @param name The full resource name for this service. The syntax is:
+         * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The full resource name for this service. The syntax is:
+         * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param requestBasedSli A request-based SLI defines a SLI for which atomic units of
+         * service are counted directly.
+         * A SLI describes a good service.
+         * It is used to measure and calculate the quality of the Service&#39;s
+         * performance with respect to a single aspect of service quality.
+         * Exactly one of the following must be set:
+         * `basic_sli`, `request_based_sli`, `windows_based_sli`
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBasedSli(@Nullable Output<SloRequestBasedSliGetArgs> requestBasedSli) {
             $.requestBasedSli = requestBasedSli;
             return this;
         }
 
+        /**
+         * @param requestBasedSli A request-based SLI defines a SLI for which atomic units of
+         * service are counted directly.
+         * A SLI describes a good service.
+         * It is used to measure and calculate the quality of the Service&#39;s
+         * performance with respect to a single aspect of service quality.
+         * Exactly one of the following must be set:
+         * `basic_sli`, `request_based_sli`, `windows_based_sli`
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBasedSli(SloRequestBasedSliGetArgs requestBasedSli) {
             return requestBasedSli(Output.of(requestBasedSli));
         }
 
+        /**
+         * @param rollingPeriodDays A rolling time period, semantically &#34;in the past X days&#34;.
+         * Must be between 1 to 30 days, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollingPeriodDays(@Nullable Output<Integer> rollingPeriodDays) {
             $.rollingPeriodDays = rollingPeriodDays;
             return this;
         }
 
+        /**
+         * @param rollingPeriodDays A rolling time period, semantically &#34;in the past X days&#34;.
+         * Must be between 1 to 30 days, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollingPeriodDays(Integer rollingPeriodDays) {
             return rollingPeriodDays(Output.of(rollingPeriodDays));
         }
 
+        /**
+         * @param service ID of the service to which this SLO belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service ID of the service to which this SLO belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param sloId The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sloId(@Nullable Output<String> sloId) {
             $.sloId = sloId;
             return this;
         }
 
+        /**
+         * @param sloId The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sloId(String sloId) {
             return sloId(Output.of(sloId));
         }
 
+        /**
+         * @param windowsBasedSli A windows-based SLI defines the criteria for time windows.
+         * good_service is defined based off the count of these time windows
+         * for which the provided service was of good quality.
+         * A SLI describes a good service. It is used to measure and calculate
+         * the quality of the Service&#39;s performance with respect to a single
+         * aspect of service quality.
+         * Exactly one of the following must be set:
+         * `basic_sli`, `request_based_sli`, `windows_based_sli`
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsBasedSli(@Nullable Output<SloWindowsBasedSliGetArgs> windowsBasedSli) {
             $.windowsBasedSli = windowsBasedSli;
             return this;
         }
 
+        /**
+         * @param windowsBasedSli A windows-based SLI defines the criteria for time windows.
+         * good_service is defined based off the count of these time windows
+         * for which the provided service was of good quality.
+         * A SLI describes a good service. It is used to measure and calculate
+         * the quality of the Service&#39;s performance with respect to a single
+         * aspect of service quality.
+         * Exactly one of the following must be set:
+         * `basic_sli`, `request_based_sli`, `windows_based_sli`
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsBasedSli(SloWindowsBasedSliGetArgs windowsBasedSli) {
             return windowsBasedSli(Output.of(windowsBasedSli));
         }

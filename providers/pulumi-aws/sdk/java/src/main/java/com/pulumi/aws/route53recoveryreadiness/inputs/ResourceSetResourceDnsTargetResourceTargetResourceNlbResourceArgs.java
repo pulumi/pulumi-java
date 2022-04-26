@@ -22,6 +22,10 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceNlbResource
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return NLB resource ARN.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -50,11 +54,23 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceNlbResource
             $ = new ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn NLB resource ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn NLB resource ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }

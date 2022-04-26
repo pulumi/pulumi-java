@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RetentionPolicyResponse {
     /**
-     * The number of days to retain an untagged manifest after which it gets purged.
+     * @return The number of days to retain an untagged manifest after which it gets purged.
      * 
      */
     private final @Nullable Integer days;
     /**
-     * The timestamp when the policy was last updated.
+     * @return The timestamp when the policy was last updated.
      * 
      */
     private final String lastUpdatedTime;
     /**
-     * The value that indicates whether the policy is enabled or not.
+     * @return The value that indicates whether the policy is enabled or not.
      * 
      */
     private final @Nullable String status;
@@ -39,23 +39,23 @@ public final class RetentionPolicyResponse {
     }
 
     /**
-     * The number of days to retain an untagged manifest after which it gets purged.
+     * @return The number of days to retain an untagged manifest after which it gets purged.
      * 
-    */
+     */
     public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
     /**
-     * The timestamp when the policy was last updated.
+     * @return The timestamp when the policy was last updated.
      * 
-    */
+     */
     public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
-     * The value that indicates whether the policy is enabled or not.
+     * @return The value that indicates whether the policy is enabled or not.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

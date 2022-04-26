@@ -26,6 +26,10 @@ public final class EventSourceMappingFilterArgs extends com.pulumi.resources.Res
     @Import(name="pattern")
     private @Nullable Output<String> pattern;
 
+    /**
+     * @return The filter pattern that defines which events should be passed for invocations.
+     * 
+     */
     public Optional<Output<String>> pattern() {
         return Optional.ofNullable(this.pattern);
     }
@@ -54,11 +58,23 @@ public final class EventSourceMappingFilterArgs extends com.pulumi.resources.Res
             $ = new EventSourceMappingFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pattern The filter pattern that defines which events should be passed for invocations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(@Nullable Output<String> pattern) {
             $.pattern = pattern;
             return this;
         }
 
+        /**
+         * @param pattern The filter pattern that defines which events should be passed for invocations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(String pattern) {
             return pattern(Output.of(pattern));
         }

@@ -27,6 +27,10 @@ public final class ModeValueInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="interfaceString")
     private @Nullable String interfaceString;
 
+    /**
+     * @return The interface string name for the nested parameter.
+     * 
+     */
     public Optional<String> interfaceString() {
         return Optional.ofNullable(this.interfaceString);
     }
@@ -38,6 +42,10 @@ public final class ModeValueInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="parameters")
     private @Nullable List<ModuleAssetParameterResponse> parameters;
 
+    /**
+     * @return The definition of the parameter.
+     * 
+     */
     public Optional<List<ModuleAssetParameterResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -67,16 +75,34 @@ public final class ModeValueInfoResponse extends com.pulumi.resources.InvokeArgs
             $ = new ModeValueInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interfaceString The interface string name for the nested parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaceString(@Nullable String interfaceString) {
             $.interfaceString = interfaceString;
             return this;
         }
 
+        /**
+         * @param parameters The definition of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable List<ModuleAssetParameterResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The definition of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ModuleAssetParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }

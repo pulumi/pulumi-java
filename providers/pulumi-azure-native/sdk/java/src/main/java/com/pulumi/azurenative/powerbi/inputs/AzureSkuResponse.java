@@ -19,6 +19,10 @@ public final class AzureSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return SKU name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class AzureSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tier", required=true)
     private String tier;
 
+    /**
+     * @return SKU tier
+     * 
+     */
     public String tier() {
         return this.tier;
     }
@@ -59,11 +67,23 @@ public final class AzureSkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AzureSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name SKU name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier SKU tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             $.tier = tier;
             return this;

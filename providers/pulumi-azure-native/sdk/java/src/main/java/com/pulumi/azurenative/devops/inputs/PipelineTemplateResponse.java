@@ -26,6 +26,10 @@ public final class PipelineTemplateResponse extends com.pulumi.resources.InvokeA
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Unique identifier of the pipeline template.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -37,6 +41,10 @@ public final class PipelineTemplateResponse extends com.pulumi.resources.InvokeA
     @Import(name="parameters")
     private @Nullable Map<String,String> parameters;
 
+    /**
+     * @return Dictionary of input parameters used in the pipeline template.
+     * 
+     */
     public Optional<Map<String,String>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -66,11 +74,23 @@ public final class PipelineTemplateResponse extends com.pulumi.resources.InvokeA
             $ = new PipelineTemplateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Unique identifier of the pipeline template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param parameters Dictionary of input parameters used in the pipeline template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,String> parameters) {
             $.parameters = parameters;
             return this;

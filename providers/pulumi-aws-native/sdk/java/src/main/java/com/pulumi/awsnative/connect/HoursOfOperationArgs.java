@@ -25,6 +25,10 @@ public final class HoursOfOperationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="config", required=true)
     private Output<List<HoursOfOperationConfigArgs>> config;
 
+    /**
+     * @return Configuration information for the hours of operation: day, start time, and end time.
+     * 
+     */
     public Output<List<HoursOfOperationConfigArgs>> config() {
         return this.config;
     }
@@ -36,6 +40,10 @@ public final class HoursOfOperationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the hours of operation.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class HoursOfOperationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="instanceArn", required=true)
     private Output<String> instanceArn;
 
+    /**
+     * @return The identifier of the Amazon Connect instance.
+     * 
+     */
     public Output<String> instanceArn() {
         return this.instanceArn;
     }
@@ -58,6 +70,10 @@ public final class HoursOfOperationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the hours of operation.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +85,10 @@ public final class HoursOfOperationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<List<HoursOfOperationTagArgs>> tags;
 
+    /**
+     * @return One or more tags.
+     * 
+     */
     public Optional<Output<List<HoursOfOperationTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -80,6 +100,10 @@ public final class HoursOfOperationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="timeZone", required=true)
     private Output<String> timeZone;
 
+    /**
+     * @return The time zone of the hours of operation.
+     * 
+     */
     public Output<String> timeZone() {
         return this.timeZone;
     }
@@ -113,64 +137,148 @@ public final class HoursOfOperationArgs extends com.pulumi.resources.ResourceArg
             $ = new HoursOfOperationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config Configuration information for the hours of operation: day, start time, and end time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(Output<List<HoursOfOperationConfigArgs>> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config Configuration information for the hours of operation: day, start time, and end time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(List<HoursOfOperationConfigArgs> config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param config Configuration information for the hours of operation: day, start time, and end time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(HoursOfOperationConfigArgs... config) {
             return config(List.of(config));
         }
 
+        /**
+         * @param description The description of the hours of operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the hours of operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param instanceArn The identifier of the Amazon Connect instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(Output<String> instanceArn) {
             $.instanceArn = instanceArn;
             return this;
         }
 
+        /**
+         * @param instanceArn The identifier of the Amazon Connect instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(String instanceArn) {
             return instanceArn(Output.of(instanceArn));
         }
 
+        /**
+         * @param name The name of the hours of operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the hours of operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags One or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<HoursOfOperationTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags One or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<HoursOfOperationTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags One or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(HoursOfOperationTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param timeZone The time zone of the hours of operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(Output<String> timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param timeZone The time zone of the hours of operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(String timeZone) {
             return timeZone(Output.of(timeZone));
         }

@@ -27,6 +27,10 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="availabilitySetName")
     private @Nullable Output<String> availabilitySetName;
 
+    /**
+     * @return The name of the availability set.
+     * 
+     */
     public Optional<Output<String>> availabilitySetName() {
         return Optional.ofNullable(this.availabilitySetName);
     }
@@ -38,6 +42,10 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -49,6 +57,10 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="platformFaultDomainCount")
     private @Nullable Output<Integer> platformFaultDomainCount;
 
+    /**
+     * @return Fault Domain count.
+     * 
+     */
     public Optional<Output<Integer>> platformFaultDomainCount() {
         return Optional.ofNullable(this.platformFaultDomainCount);
     }
@@ -60,6 +72,10 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="platformUpdateDomainCount")
     private @Nullable Output<Integer> platformUpdateDomainCount;
 
+    /**
+     * @return Update Domain count.
+     * 
+     */
     public Optional<Output<Integer>> platformUpdateDomainCount() {
         return Optional.ofNullable(this.platformUpdateDomainCount);
     }
@@ -71,6 +87,10 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="proximityPlacementGroup")
     private @Nullable Output<SubResourceArgs> proximityPlacementGroup;
 
+    /**
+     * @return Specifies information about the proximity placement group that the availability set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> proximityPlacementGroup() {
         return Optional.ofNullable(this.proximityPlacementGroup);
     }
@@ -82,6 +102,10 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -93,6 +117,10 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use &#39;Aligned&#39; for virtual machines with managed disks and &#39;Classic&#39; for virtual machines with unmanaged disks. Default value is &#39;Classic&#39;.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -104,6 +132,10 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -115,6 +147,10 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="virtualMachines")
     private @Nullable Output<List<SubResourceArgs>> virtualMachines;
 
+    /**
+     * @return A list of references to all virtual machines in the availability set.
+     * 
+     */
     public Optional<Output<List<SubResourceArgs>>> virtualMachines() {
         return Optional.ofNullable(this.virtualMachines);
     }
@@ -151,87 +187,201 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
             $ = new AvailabilitySetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilitySetName The name of the availability set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilitySetName(@Nullable Output<String> availabilitySetName) {
             $.availabilitySetName = availabilitySetName;
             return this;
         }
 
+        /**
+         * @param availabilitySetName The name of the availability set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilitySetName(String availabilitySetName) {
             return availabilitySetName(Output.of(availabilitySetName));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param platformFaultDomainCount Fault Domain count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformFaultDomainCount(@Nullable Output<Integer> platformFaultDomainCount) {
             $.platformFaultDomainCount = platformFaultDomainCount;
             return this;
         }
 
+        /**
+         * @param platformFaultDomainCount Fault Domain count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformFaultDomainCount(Integer platformFaultDomainCount) {
             return platformFaultDomainCount(Output.of(platformFaultDomainCount));
         }
 
+        /**
+         * @param platformUpdateDomainCount Update Domain count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformUpdateDomainCount(@Nullable Output<Integer> platformUpdateDomainCount) {
             $.platformUpdateDomainCount = platformUpdateDomainCount;
             return this;
         }
 
+        /**
+         * @param platformUpdateDomainCount Update Domain count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformUpdateDomainCount(Integer platformUpdateDomainCount) {
             return platformUpdateDomainCount(Output.of(platformUpdateDomainCount));
         }
 
+        /**
+         * @param proximityPlacementGroup Specifies information about the proximity placement group that the availability set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proximityPlacementGroup(@Nullable Output<SubResourceArgs> proximityPlacementGroup) {
             $.proximityPlacementGroup = proximityPlacementGroup;
             return this;
         }
 
+        /**
+         * @param proximityPlacementGroup Specifies information about the proximity placement group that the availability set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proximityPlacementGroup(SubResourceArgs proximityPlacementGroup) {
             return proximityPlacementGroup(Output.of(proximityPlacementGroup));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use &#39;Aligned&#39; for virtual machines with managed disks and &#39;Classic&#39; for virtual machines with unmanaged disks. Default value is &#39;Classic&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use &#39;Aligned&#39; for virtual machines with managed disks and &#39;Classic&#39; for virtual machines with unmanaged disks. Default value is &#39;Classic&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param virtualMachines A list of references to all virtual machines in the availability set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachines(@Nullable Output<List<SubResourceArgs>> virtualMachines) {
             $.virtualMachines = virtualMachines;
             return this;
         }
 
+        /**
+         * @param virtualMachines A list of references to all virtual machines in the availability set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachines(List<SubResourceArgs> virtualMachines) {
             return virtualMachines(Output.of(virtualMachines));
         }
 
+        /**
+         * @param virtualMachines A list of references to all virtual machines in the availability set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachines(SubResourceArgs... virtualMachines) {
             return virtualMachines(List.of(virtualMachines));
         }

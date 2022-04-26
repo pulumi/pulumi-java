@@ -27,6 +27,11 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends com.pulumi
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the Instance type.
+     * Expected value is &#39;AzureToAzure&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -38,6 +43,10 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends com.pulumi
     @Import(name="primaryFabricLocation")
     private @Nullable String primaryFabricLocation;
 
+    /**
+     * @return The primary fabric location.
+     * 
+     */
     public Optional<String> primaryFabricLocation() {
         return Optional.ofNullable(this.primaryFabricLocation);
     }
@@ -49,6 +58,10 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends com.pulumi
     @Import(name="recoveryFabricLocation")
     private @Nullable String recoveryFabricLocation;
 
+    /**
+     * @return The recovery fabric location.
+     * 
+     */
     public Optional<String> recoveryFabricLocation() {
         return Optional.ofNullable(this.recoveryFabricLocation);
     }
@@ -79,16 +92,35 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends com.pulumi
             $ = new AzureToAzureNetworkMappingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType Gets the Instance type.
+         * Expected value is &#39;AzureToAzure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param primaryFabricLocation The primary fabric location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryFabricLocation(@Nullable String primaryFabricLocation) {
             $.primaryFabricLocation = primaryFabricLocation;
             return this;
         }
 
+        /**
+         * @param recoveryFabricLocation The recovery fabric location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryFabricLocation(@Nullable String recoveryFabricLocation) {
             $.recoveryFabricLocation = recoveryFabricLocation;
             return this;

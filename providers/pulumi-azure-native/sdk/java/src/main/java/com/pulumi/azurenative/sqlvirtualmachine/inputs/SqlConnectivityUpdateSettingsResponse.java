@@ -26,6 +26,10 @@ public final class SqlConnectivityUpdateSettingsResponse extends com.pulumi.reso
     @Import(name="connectivityType")
     private @Nullable String connectivityType;
 
+    /**
+     * @return SQL Server connectivity option.
+     * 
+     */
     public Optional<String> connectivityType() {
         return Optional.ofNullable(this.connectivityType);
     }
@@ -37,6 +41,10 @@ public final class SqlConnectivityUpdateSettingsResponse extends com.pulumi.reso
     @Import(name="port")
     private @Nullable Integer port;
 
+    /**
+     * @return SQL Server port.
+     * 
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
@@ -66,11 +74,23 @@ public final class SqlConnectivityUpdateSettingsResponse extends com.pulumi.reso
             $ = new SqlConnectivityUpdateSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectivityType SQL Server connectivity option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectivityType(@Nullable String connectivityType) {
             $.connectivityType = connectivityType;
             return this;
         }
 
+        /**
+         * @param port SQL Server port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Integer port) {
             $.port = port;
             return this;

@@ -28,6 +28,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
     @Import(name="allMetrics", required=true)
     private List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics;
 
+    /**
+     * @return All recorded object metrics for this trial. This field is not currently populated.
+     * 
+     */
     public List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics() {
         return this.allMetrics;
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
     @Import(name="builtInAlgorithmOutput", required=true)
     private GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
 
+    /**
+     * @return Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.
+     * 
+     */
     public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput() {
         return this.builtInAlgorithmOutput;
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return End time for the trial.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
     @Import(name="finalMetric", required=true)
     private GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric;
 
+    /**
+     * @return The final objective metric seen for this trial.
+     * 
+     */
     public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric() {
         return this.finalMetric;
     }
@@ -72,6 +88,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
     @Import(name="hyperparameters", required=true)
     private Map<String,String> hyperparameters;
 
+    /**
+     * @return The hyperparameters given to this trial.
+     * 
+     */
     public Map<String,String> hyperparameters() {
         return this.hyperparameters;
     }
@@ -83,6 +103,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
     @Import(name="isTrialStoppedEarly", required=true)
     private Boolean isTrialStoppedEarly;
 
+    /**
+     * @return True if the trial is stopped early.
+     * 
+     */
     public Boolean isTrialStoppedEarly() {
         return this.isTrialStoppedEarly;
     }
@@ -94,6 +118,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Start time for the trial.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -105,6 +133,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The detailed state of the trial.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -116,6 +148,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
     @Import(name="trialId", required=true)
     private String trialId;
 
+    /**
+     * @return The trial id for these results.
+     * 
+     */
     public String trialId() {
         return this.trialId;
     }
@@ -127,6 +163,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
     @Import(name="webAccessUris", required=true)
     private Map<String,String> webAccessUris;
 
+    /**
+     * @return URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if this trial is part of a hyperparameter tuning job and the job&#39;s training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node&#39;s interactive shell.
+     * 
+     */
     public Map<String,String> webAccessUris() {
         return this.webAccessUris;
     }
@@ -164,55 +204,121 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends com.pul
             $ = new GoogleCloudMlV1__HyperparameterOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allMetrics All recorded object metrics for this trial. This field is not currently populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allMetrics(List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics) {
             $.allMetrics = allMetrics;
             return this;
         }
 
+        /**
+         * @param allMetrics All recorded object metrics for this trial. This field is not currently populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allMetrics(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse... allMetrics) {
             return allMetrics(List.of(allMetrics));
         }
 
+        /**
+         * @param builtInAlgorithmOutput Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builtInAlgorithmOutput(GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput) {
             $.builtInAlgorithmOutput = builtInAlgorithmOutput;
             return this;
         }
 
+        /**
+         * @param endTime End time for the trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param finalMetric The final objective metric seen for this trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalMetric(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric) {
             $.finalMetric = finalMetric;
             return this;
         }
 
+        /**
+         * @param hyperparameters The hyperparameters given to this trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hyperparameters(Map<String,String> hyperparameters) {
             $.hyperparameters = hyperparameters;
             return this;
         }
 
+        /**
+         * @param isTrialStoppedEarly True if the trial is stopped early.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isTrialStoppedEarly(Boolean isTrialStoppedEarly) {
             $.isTrialStoppedEarly = isTrialStoppedEarly;
             return this;
         }
 
+        /**
+         * @param startTime Start time for the trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param state The detailed state of the trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param trialId The trial id for these results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trialId(String trialId) {
             $.trialId = trialId;
             return this;
         }
 
+        /**
+         * @param webAccessUris URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if this trial is part of a hyperparameter tuning job and the job&#39;s training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node&#39;s interactive shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webAccessUris(Map<String,String> webAccessUris) {
             $.webAccessUris = webAccessUris;
             return this;

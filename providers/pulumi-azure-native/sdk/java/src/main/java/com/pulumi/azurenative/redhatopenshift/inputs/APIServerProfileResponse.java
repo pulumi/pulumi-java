@@ -25,6 +25,10 @@ public final class APIServerProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="ip")
     private @Nullable String ip;
 
+    /**
+     * @return The IP of the cluster API server (immutable).
+     * 
+     */
     public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
@@ -36,6 +40,10 @@ public final class APIServerProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="url")
     private @Nullable String url;
 
+    /**
+     * @return The URL to access the cluster API server (immutable).
+     * 
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -47,6 +55,10 @@ public final class APIServerProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="visibility")
     private @Nullable String visibility;
 
+    /**
+     * @return API server visibility (immutable).
+     * 
+     */
     public Optional<String> visibility() {
         return Optional.ofNullable(this.visibility);
     }
@@ -77,16 +89,34 @@ public final class APIServerProfileResponse extends com.pulumi.resources.InvokeA
             $ = new APIServerProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ip The IP of the cluster API server (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable String ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param url The URL to access the cluster API server (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable String url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param visibility API server visibility (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder visibility(@Nullable String visibility) {
             $.visibility = visibility;
             return this;

@@ -25,6 +25,10 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="containerName")
     private @Nullable String containerName;
 
+    /**
+     * @return Storage blob container name.
+     * 
+     */
     public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
@@ -36,6 +40,10 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="creatorId", required=true)
     private String creatorId;
 
+    /**
+     * @return Creator Id of the library/package.
+     * 
+     */
     public String creatorId() {
         return this.creatorId;
     }
@@ -47,6 +55,10 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the library.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return Storage blob path of library.
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -69,6 +85,10 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningStatus", required=true)
     private String provisioningStatus;
 
+    /**
+     * @return Provisioning status of the library/package.
+     * 
+     */
     public String provisioningStatus() {
         return this.provisioningStatus;
     }
@@ -80,6 +100,10 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of the library.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -91,6 +115,10 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uploadedTimestamp", required=true)
     private String uploadedTimestamp;
 
+    /**
+     * @return The last update time of the library.
+     * 
+     */
     public String uploadedTimestamp() {
         return this.uploadedTimestamp;
     }
@@ -125,36 +153,78 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LibraryInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerName Storage blob container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(@Nullable String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param creatorId Creator Id of the library/package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creatorId(String creatorId) {
             $.creatorId = creatorId;
             return this;
         }
 
+        /**
+         * @param name Name of the library.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param path Storage blob path of library.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param provisioningStatus Provisioning status of the library/package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningStatus(String provisioningStatus) {
             $.provisioningStatus = provisioningStatus;
             return this;
         }
 
+        /**
+         * @param type Type of the library.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param uploadedTimestamp The last update time of the library.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadedTimestamp(String uploadedTimestamp) {
             $.uploadedTimestamp = uploadedTimestamp;
             return this;

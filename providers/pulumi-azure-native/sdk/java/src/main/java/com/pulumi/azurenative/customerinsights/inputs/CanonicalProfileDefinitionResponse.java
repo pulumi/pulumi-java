@@ -27,6 +27,10 @@ public final class CanonicalProfileDefinitionResponse extends com.pulumi.resourc
     @Import(name="canonicalProfileId")
     private @Nullable Integer canonicalProfileId;
 
+    /**
+     * @return Canonical profile ID.
+     * 
+     */
     public Optional<Integer> canonicalProfileId() {
         return Optional.ofNullable(this.canonicalProfileId);
     }
@@ -38,6 +42,10 @@ public final class CanonicalProfileDefinitionResponse extends com.pulumi.resourc
     @Import(name="properties")
     private @Nullable List<CanonicalProfileDefinitionResponseProperties> properties;
 
+    /**
+     * @return Properties of the canonical profile.
+     * 
+     */
     public Optional<List<CanonicalProfileDefinitionResponseProperties>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -67,16 +75,34 @@ public final class CanonicalProfileDefinitionResponse extends com.pulumi.resourc
             $ = new CanonicalProfileDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canonicalProfileId Canonical profile ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalProfileId(@Nullable Integer canonicalProfileId) {
             $.canonicalProfileId = canonicalProfileId;
             return this;
         }
 
+        /**
+         * @param properties Properties of the canonical profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable List<CanonicalProfileDefinitionResponseProperties> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the canonical profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(CanonicalProfileDefinitionResponseProperties... properties) {
             return properties(List.of(properties));
         }

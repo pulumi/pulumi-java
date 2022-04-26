@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GenericContainerResponse {
     /**
-     * Type of backup management for the container.
+     * @return Type of backup management for the container.
      * 
      */
     private final @Nullable String backupManagementType;
     /**
-     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * @return Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
      * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
@@ -27,27 +27,27 @@ public final class GenericContainerResponse {
      */
     private final String containerType;
     /**
-     * Extended information (not returned in List container API calls)
+     * @return Extended information (not returned in List container API calls)
      * 
      */
     private final @Nullable GenericContainerExtendedInfoResponse extendedInformation;
     /**
-     * Name of the container&#39;s fabric
+     * @return Name of the container&#39;s fabric
      * 
      */
     private final @Nullable String fabricName;
     /**
-     * Friendly name of the container.
+     * @return Friendly name of the container.
      * 
      */
     private final @Nullable String friendlyName;
     /**
-     * Status of health of the container.
+     * @return Status of health of the container.
      * 
      */
     private final @Nullable String healthStatus;
     /**
-     * Status of registration of the container with the Recovery Services Vault.
+     * @return Status of registration of the container with the Recovery Services Vault.
      * 
      */
     private final @Nullable String registrationStatus;
@@ -71,55 +71,55 @@ public final class GenericContainerResponse {
     }
 
     /**
-     * Type of backup management for the container.
+     * @return Type of backup management for the container.
      * 
-    */
+     */
     public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
-     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * @return Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
      * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is &#39;GenericContainer&#39;.
      * 
-    */
+     */
     public String containerType() {
         return this.containerType;
     }
     /**
-     * Extended information (not returned in List container API calls)
+     * @return Extended information (not returned in List container API calls)
      * 
-    */
+     */
     public Optional<GenericContainerExtendedInfoResponse> extendedInformation() {
         return Optional.ofNullable(this.extendedInformation);
     }
     /**
-     * Name of the container&#39;s fabric
+     * @return Name of the container&#39;s fabric
      * 
-    */
+     */
     public Optional<String> fabricName() {
         return Optional.ofNullable(this.fabricName);
     }
     /**
-     * Friendly name of the container.
+     * @return Friendly name of the container.
      * 
-    */
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
-     * Status of health of the container.
+     * @return Status of health of the container.
      * 
-    */
+     */
     public Optional<String> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
-     * Status of registration of the container with the Recovery Services Vault.
+     * @return Status of registration of the container with the Recovery Services Vault.
      * 
-    */
+     */
     public Optional<String> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }

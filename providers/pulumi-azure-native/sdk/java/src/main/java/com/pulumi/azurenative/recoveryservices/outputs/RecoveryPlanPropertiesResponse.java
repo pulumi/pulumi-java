@@ -16,82 +16,82 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RecoveryPlanPropertiesResponse {
     /**
-     * The list of allowed operations.
+     * @return The list of allowed operations.
      * 
      */
     private final @Nullable List<String> allowedOperations;
     /**
-     * The current scenario details.
+     * @return The current scenario details.
      * 
      */
     private final @Nullable CurrentScenarioDetailsResponse currentScenario;
     /**
-     * The recovery plan status.
+     * @return The recovery plan status.
      * 
      */
     private final @Nullable String currentScenarioStatus;
     /**
-     * The recovery plan status description.
+     * @return The recovery plan status description.
      * 
      */
     private final @Nullable String currentScenarioStatusDescription;
     /**
-     * The failover deployment model.
+     * @return The failover deployment model.
      * 
      */
     private final @Nullable String failoverDeploymentModel;
     /**
-     * The friendly name.
+     * @return The friendly name.
      * 
      */
     private final @Nullable String friendlyName;
     /**
-     * The recovery plan groups.
+     * @return The recovery plan groups.
      * 
      */
     private final @Nullable List<RecoveryPlanGroupResponse> groups;
     /**
-     * The start time of the last planned failover.
+     * @return The start time of the last planned failover.
      * 
      */
     private final @Nullable String lastPlannedFailoverTime;
     /**
-     * The start time of the last test failover.
+     * @return The start time of the last test failover.
      * 
      */
     private final @Nullable String lastTestFailoverTime;
     /**
-     * The start time of the last unplanned failover.
+     * @return The start time of the last unplanned failover.
      * 
      */
     private final @Nullable String lastUnplannedFailoverTime;
     /**
-     * The primary fabric friendly name.
+     * @return The primary fabric friendly name.
      * 
      */
     private final @Nullable String primaryFabricFriendlyName;
     /**
-     * The primary fabric Id.
+     * @return The primary fabric Id.
      * 
      */
     private final @Nullable String primaryFabricId;
     /**
-     * The provider id and provider specific details.
+     * @return The provider id and provider specific details.
      * 
      */
     private final List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails;
     /**
-     * The recovery fabric friendly name.
+     * @return The recovery fabric friendly name.
      * 
      */
     private final @Nullable String recoveryFabricFriendlyName;
     /**
-     * The recovery fabric Id.
+     * @return The recovery fabric Id.
      * 
      */
     private final @Nullable String recoveryFabricId;
     /**
-     * The list of replication providers.
+     * @return The list of replication providers.
      * 
      */
     private final @Nullable List<String> replicationProviders;
@@ -133,114 +133,114 @@ public final class RecoveryPlanPropertiesResponse {
     }
 
     /**
-     * The list of allowed operations.
+     * @return The list of allowed operations.
      * 
-    */
+     */
     public List<String> allowedOperations() {
         return this.allowedOperations == null ? List.of() : this.allowedOperations;
     }
     /**
-     * The current scenario details.
+     * @return The current scenario details.
      * 
-    */
+     */
     public Optional<CurrentScenarioDetailsResponse> currentScenario() {
         return Optional.ofNullable(this.currentScenario);
     }
     /**
-     * The recovery plan status.
+     * @return The recovery plan status.
      * 
-    */
+     */
     public Optional<String> currentScenarioStatus() {
         return Optional.ofNullable(this.currentScenarioStatus);
     }
     /**
-     * The recovery plan status description.
+     * @return The recovery plan status description.
      * 
-    */
+     */
     public Optional<String> currentScenarioStatusDescription() {
         return Optional.ofNullable(this.currentScenarioStatusDescription);
     }
     /**
-     * The failover deployment model.
+     * @return The failover deployment model.
      * 
-    */
+     */
     public Optional<String> failoverDeploymentModel() {
         return Optional.ofNullable(this.failoverDeploymentModel);
     }
     /**
-     * The friendly name.
+     * @return The friendly name.
      * 
-    */
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
-     * The recovery plan groups.
+     * @return The recovery plan groups.
      * 
-    */
+     */
     public List<RecoveryPlanGroupResponse> groups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
-     * The start time of the last planned failover.
+     * @return The start time of the last planned failover.
      * 
-    */
+     */
     public Optional<String> lastPlannedFailoverTime() {
         return Optional.ofNullable(this.lastPlannedFailoverTime);
     }
     /**
-     * The start time of the last test failover.
+     * @return The start time of the last test failover.
      * 
-    */
+     */
     public Optional<String> lastTestFailoverTime() {
         return Optional.ofNullable(this.lastTestFailoverTime);
     }
     /**
-     * The start time of the last unplanned failover.
+     * @return The start time of the last unplanned failover.
      * 
-    */
+     */
     public Optional<String> lastUnplannedFailoverTime() {
         return Optional.ofNullable(this.lastUnplannedFailoverTime);
     }
     /**
-     * The primary fabric friendly name.
+     * @return The primary fabric friendly name.
      * 
-    */
+     */
     public Optional<String> primaryFabricFriendlyName() {
         return Optional.ofNullable(this.primaryFabricFriendlyName);
     }
     /**
-     * The primary fabric Id.
+     * @return The primary fabric Id.
      * 
-    */
+     */
     public Optional<String> primaryFabricId() {
         return Optional.ofNullable(this.primaryFabricId);
     }
     /**
-     * The provider id and provider specific details.
+     * @return The provider id and provider specific details.
      * 
-    */
+     */
     public List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails() {
         return this.providerSpecificDetails;
     }
     /**
-     * The recovery fabric friendly name.
+     * @return The recovery fabric friendly name.
      * 
-    */
+     */
     public Optional<String> recoveryFabricFriendlyName() {
         return Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
     /**
-     * The recovery fabric Id.
+     * @return The recovery fabric Id.
      * 
-    */
+     */
     public Optional<String> recoveryFabricId() {
         return Optional.ofNullable(this.recoveryFabricId);
     }
     /**
-     * The list of replication providers.
+     * @return The list of replication providers.
      * 
-    */
+     */
     public List<String> replicationProviders() {
         return this.replicationProviders == null ? List.of() : this.replicationProviders;
     }

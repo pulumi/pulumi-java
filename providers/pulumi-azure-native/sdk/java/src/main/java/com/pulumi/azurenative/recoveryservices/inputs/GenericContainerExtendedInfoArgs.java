@@ -28,6 +28,10 @@ public final class GenericContainerExtendedInfoArgs extends com.pulumi.resources
     @Import(name="containerIdentityInfo")
     private @Nullable Output<ContainerIdentityInfoArgs> containerIdentityInfo;
 
+    /**
+     * @return Container identity information
+     * 
+     */
     public Optional<Output<ContainerIdentityInfoArgs>> containerIdentityInfo() {
         return Optional.ofNullable(this.containerIdentityInfo);
     }
@@ -39,6 +43,10 @@ public final class GenericContainerExtendedInfoArgs extends com.pulumi.resources
     @Import(name="rawCertData")
     private @Nullable Output<String> rawCertData;
 
+    /**
+     * @return Public key of container cert
+     * 
+     */
     public Optional<Output<String>> rawCertData() {
         return Optional.ofNullable(this.rawCertData);
     }
@@ -50,6 +58,10 @@ public final class GenericContainerExtendedInfoArgs extends com.pulumi.resources
     @Import(name="serviceEndpoints")
     private @Nullable Output<Map<String,String>> serviceEndpoints;
 
+    /**
+     * @return Azure Backup Service Endpoints for the container
+     * 
+     */
     public Optional<Output<Map<String,String>>> serviceEndpoints() {
         return Optional.ofNullable(this.serviceEndpoints);
     }
@@ -80,29 +92,65 @@ public final class GenericContainerExtendedInfoArgs extends com.pulumi.resources
             $ = new GenericContainerExtendedInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerIdentityInfo Container identity information
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerIdentityInfo(@Nullable Output<ContainerIdentityInfoArgs> containerIdentityInfo) {
             $.containerIdentityInfo = containerIdentityInfo;
             return this;
         }
 
+        /**
+         * @param containerIdentityInfo Container identity information
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerIdentityInfo(ContainerIdentityInfoArgs containerIdentityInfo) {
             return containerIdentityInfo(Output.of(containerIdentityInfo));
         }
 
+        /**
+         * @param rawCertData Public key of container cert
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawCertData(@Nullable Output<String> rawCertData) {
             $.rawCertData = rawCertData;
             return this;
         }
 
+        /**
+         * @param rawCertData Public key of container cert
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawCertData(String rawCertData) {
             return rawCertData(Output.of(rawCertData));
         }
 
+        /**
+         * @param serviceEndpoints Azure Backup Service Endpoints for the container
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpoints(@Nullable Output<Map<String,String>> serviceEndpoints) {
             $.serviceEndpoints = serviceEndpoints;
             return this;
         }
 
+        /**
+         * @param serviceEndpoints Azure Backup Service Endpoints for the container
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpoints(Map<String,String> serviceEndpoints) {
             return serviceEndpoints(Output.of(serviceEndpoints));
         }

@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceSourceConfigurationCodeRepository {
     /**
-     * Configuration for building and running the service from a source code repository. See Code Configuration below for more details.
+     * @return Configuration for building and running the service from a source code repository. See Code Configuration below for more details.
      * 
      */
     private final @Nullable ServiceSourceConfigurationCodeRepositoryCodeConfiguration codeConfiguration;
     /**
-     * The location of the repository that contains the source code.
+     * @return The location of the repository that contains the source code.
      * 
      */
     private final String repositoryUrl;
     /**
-     * The version that should be used within the source code repository. See Source Code Version below for more details.
+     * @return The version that should be used within the source code repository. See Source Code Version below for more details.
      * 
      */
     private final ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion;
@@ -40,23 +40,23 @@ public final class ServiceSourceConfigurationCodeRepository {
     }
 
     /**
-     * Configuration for building and running the service from a source code repository. See Code Configuration below for more details.
+     * @return Configuration for building and running the service from a source code repository. See Code Configuration below for more details.
      * 
-    */
+     */
     public Optional<ServiceSourceConfigurationCodeRepositoryCodeConfiguration> codeConfiguration() {
         return Optional.ofNullable(this.codeConfiguration);
     }
     /**
-     * The location of the repository that contains the source code.
+     * @return The location of the repository that contains the source code.
      * 
-    */
+     */
     public String repositoryUrl() {
         return this.repositoryUrl;
     }
     /**
-     * The version that should be used within the source code repository. See Source Code Version below for more details.
+     * @return The version that should be used within the source code repository. See Source Code Version below for more details.
      * 
-    */
+     */
     public ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion() {
         return this.sourceCodeVersion;
     }

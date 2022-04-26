@@ -25,6 +25,10 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends com.pulumi.resour
     @Import(name="destIpRanges")
     private @Nullable Output<List<String>> destIpRanges;
 
+    /**
+     * @return CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
+     * 
+     */
     public Optional<Output<List<String>>> destIpRanges() {
         return Optional.ofNullable(this.destIpRanges);
     }
@@ -36,6 +40,10 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends com.pulumi.resour
     @Import(name="destPorts")
     private @Nullable Output<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> destPorts;
 
+    /**
+     * @return Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
+     * 
+     */
     public Optional<Output<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>>> destPorts() {
         return Optional.ofNullable(this.destPorts);
     }
@@ -47,6 +55,10 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends com.pulumi.resour
     @Import(name="layer4Configs")
     private @Nullable Output<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs;
 
+    /**
+     * @return Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
+     * 
+     */
     public Optional<Output<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>>> layer4Configs() {
         return Optional.ofNullable(this.layer4Configs);
     }
@@ -58,6 +70,10 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends com.pulumi.resour
     @Import(name="srcIpRanges")
     private @Nullable Output<List<String>> srcIpRanges;
 
+    /**
+     * @return CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
+     * 
+     */
     public Optional<Output<List<String>>> srcIpRanges() {
         return Optional.ofNullable(this.srcIpRanges);
     }
@@ -89,54 +105,126 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends com.pulumi.resour
             $ = new SecurityPolicyRuleMatcherConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destIpRanges CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destIpRanges(@Nullable Output<List<String>> destIpRanges) {
             $.destIpRanges = destIpRanges;
             return this;
         }
 
+        /**
+         * @param destIpRanges CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destIpRanges(List<String> destIpRanges) {
             return destIpRanges(Output.of(destIpRanges));
         }
 
+        /**
+         * @param destIpRanges CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destIpRanges(String... destIpRanges) {
             return destIpRanges(List.of(destIpRanges));
         }
 
+        /**
+         * @param destPorts Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destPorts(@Nullable Output<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> destPorts) {
             $.destPorts = destPorts;
             return this;
         }
 
+        /**
+         * @param destPorts Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destPorts(List<SecurityPolicyRuleMatcherConfigDestinationPortArgs> destPorts) {
             return destPorts(Output.of(destPorts));
         }
 
+        /**
+         * @param destPorts Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destPorts(SecurityPolicyRuleMatcherConfigDestinationPortArgs... destPorts) {
             return destPorts(List.of(destPorts));
         }
 
+        /**
+         * @param layer4Configs Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer4Configs(@Nullable Output<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs) {
             $.layer4Configs = layer4Configs;
             return this;
         }
 
+        /**
+         * @param layer4Configs Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer4Configs(List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs> layer4Configs) {
             return layer4Configs(Output.of(layer4Configs));
         }
 
+        /**
+         * @param layer4Configs Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer4Configs(SecurityPolicyRuleMatcherConfigLayer4ConfigArgs... layer4Configs) {
             return layer4Configs(List.of(layer4Configs));
         }
 
+        /**
+         * @param srcIpRanges CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(@Nullable Output<List<String>> srcIpRanges) {
             $.srcIpRanges = srcIpRanges;
             return this;
         }
 
+        /**
+         * @param srcIpRanges CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(List<String> srcIpRanges) {
             return srcIpRanges(Output.of(srcIpRanges));
         }
 
+        /**
+         * @param srcIpRanges CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
         }

@@ -25,6 +25,10 @@ public final class MetadataManagementActivityResponse extends com.pulumi.resourc
     @Import(name="metadataExports", required=true)
     private List<MetadataExportResponse> metadataExports;
 
+    /**
+     * @return The latest metadata exports of the metastore service.
+     * 
+     */
     public List<MetadataExportResponse> metadataExports() {
         return this.metadataExports;
     }
@@ -36,6 +40,10 @@ public final class MetadataManagementActivityResponse extends com.pulumi.resourc
     @Import(name="restores", required=true)
     private List<RestoreResponse> restores;
 
+    /**
+     * @return The latest restores of the metastore service.
+     * 
+     */
     public List<RestoreResponse> restores() {
         return this.restores;
     }
@@ -65,20 +73,44 @@ public final class MetadataManagementActivityResponse extends com.pulumi.resourc
             $ = new MetadataManagementActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadataExports The latest metadata exports of the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataExports(List<MetadataExportResponse> metadataExports) {
             $.metadataExports = metadataExports;
             return this;
         }
 
+        /**
+         * @param metadataExports The latest metadata exports of the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataExports(MetadataExportResponse... metadataExports) {
             return metadataExports(List.of(metadataExports));
         }
 
+        /**
+         * @param restores The latest restores of the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restores(List<RestoreResponse> restores) {
             $.restores = restores;
             return this;
         }
 
+        /**
+         * @param restores The latest restores of the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restores(RestoreResponse... restores) {
             return restores(List.of(restores));
         }

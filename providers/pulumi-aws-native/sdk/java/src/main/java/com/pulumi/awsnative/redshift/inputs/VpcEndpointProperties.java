@@ -27,6 +27,10 @@ public final class VpcEndpointProperties extends com.pulumi.resources.InvokeArgs
     @Import(name="networkInterfaces")
     private @Nullable List<EndpointAccessNetworkInterface> networkInterfaces;
 
+    /**
+     * @return One or more network interfaces of the endpoint. Also known as an interface endpoint.
+     * 
+     */
     public Optional<List<EndpointAccessNetworkInterface>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
@@ -38,6 +42,10 @@ public final class VpcEndpointProperties extends com.pulumi.resources.InvokeArgs
     @Import(name="vpcEndpointId")
     private @Nullable String vpcEndpointId;
 
+    /**
+     * @return The connection endpoint ID for connecting an Amazon Redshift cluster through the proxy.
+     * 
+     */
     public Optional<String> vpcEndpointId() {
         return Optional.ofNullable(this.vpcEndpointId);
     }
@@ -49,6 +57,10 @@ public final class VpcEndpointProperties extends com.pulumi.resources.InvokeArgs
     @Import(name="vpcId")
     private @Nullable String vpcId;
 
+    /**
+     * @return The VPC identifier that the endpoint is associated.
+     * 
+     */
     public Optional<String> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -79,20 +91,44 @@ public final class VpcEndpointProperties extends com.pulumi.resources.InvokeArgs
             $ = new VpcEndpointProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkInterfaces One or more network interfaces of the endpoint. Also known as an interface endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(@Nullable List<EndpointAccessNetworkInterface> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces One or more network interfaces of the endpoint. Also known as an interface endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(EndpointAccessNetworkInterface... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
+        /**
+         * @param vpcEndpointId The connection endpoint ID for connecting an Amazon Redshift cluster through the proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             $.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
+        /**
+         * @param vpcId The VPC identifier that the endpoint is associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable String vpcId) {
             $.vpcId = vpcId;
             return this;

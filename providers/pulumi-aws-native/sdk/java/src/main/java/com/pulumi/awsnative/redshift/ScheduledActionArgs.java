@@ -24,6 +24,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
+    /**
+     * @return If true, the schedule is enabled. If false, the scheduled action does not trigger.
+     * 
+     */
     public Optional<Output<Boolean>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -35,6 +39,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="endTime")
     private @Nullable Output<String> endTime;
 
+    /**
+     * @return The end time in UTC of the scheduled action. After this time, the scheduled action does not trigger.
+     * 
+     */
     public Optional<Output<String>> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -46,6 +54,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="iamRole")
     private @Nullable Output<String> iamRole;
 
+    /**
+     * @return The IAM role to assume to run the target action.
+     * 
+     */
     public Optional<Output<String>> iamRole() {
         return Optional.ofNullable(this.iamRole);
     }
@@ -57,6 +69,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="schedule")
     private @Nullable Output<String> schedule;
 
+    /**
+     * @return The schedule in `at( )` or `cron( )` format.
+     * 
+     */
     public Optional<Output<String>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -68,6 +84,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scheduledActionDescription")
     private @Nullable Output<String> scheduledActionDescription;
 
+    /**
+     * @return The description of the scheduled action.
+     * 
+     */
     public Optional<Output<String>> scheduledActionDescription() {
         return Optional.ofNullable(this.scheduledActionDescription);
     }
@@ -79,6 +99,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scheduledActionName")
     private @Nullable Output<String> scheduledActionName;
 
+    /**
+     * @return The name of the scheduled action. The name must be unique within an account.
+     * 
+     */
     public Optional<Output<String>> scheduledActionName() {
         return Optional.ofNullable(this.scheduledActionName);
     }
@@ -90,6 +114,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return The start time in UTC of the scheduled action. Before this time, the scheduled action does not trigger.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -101,6 +129,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="targetAction")
     private @Nullable Output<ScheduledActionTypeArgs> targetAction;
 
+    /**
+     * @return A JSON format string of the Amazon Redshift API operation with input parameters.
+     * 
+     */
     public Optional<Output<ScheduledActionTypeArgs>> targetAction() {
         return Optional.ofNullable(this.targetAction);
     }
@@ -136,74 +168,170 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
             $ = new ScheduledActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enable If true, the schedule is enabled. If false, the scheduled action does not trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable If true, the schedule is enabled. If false, the scheduled action does not trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param endTime The end time in UTC of the scheduled action. After this time, the scheduled action does not trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime The end time in UTC of the scheduled action. After this time, the scheduled action does not trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param iamRole The IAM role to assume to run the target action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRole(@Nullable Output<String> iamRole) {
             $.iamRole = iamRole;
             return this;
         }
 
+        /**
+         * @param iamRole The IAM role to assume to run the target action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRole(String iamRole) {
             return iamRole(Output.of(iamRole));
         }
 
+        /**
+         * @param schedule The schedule in `at( )` or `cron( )` format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule The schedule in `at( )` or `cron( )` format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param scheduledActionDescription The description of the scheduled action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledActionDescription(@Nullable Output<String> scheduledActionDescription) {
             $.scheduledActionDescription = scheduledActionDescription;
             return this;
         }
 
+        /**
+         * @param scheduledActionDescription The description of the scheduled action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledActionDescription(String scheduledActionDescription) {
             return scheduledActionDescription(Output.of(scheduledActionDescription));
         }
 
+        /**
+         * @param scheduledActionName The name of the scheduled action. The name must be unique within an account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledActionName(@Nullable Output<String> scheduledActionName) {
             $.scheduledActionName = scheduledActionName;
             return this;
         }
 
+        /**
+         * @param scheduledActionName The name of the scheduled action. The name must be unique within an account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledActionName(String scheduledActionName) {
             return scheduledActionName(Output.of(scheduledActionName));
         }
 
+        /**
+         * @param startTime The start time in UTC of the scheduled action. Before this time, the scheduled action does not trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The start time in UTC of the scheduled action. Before this time, the scheduled action does not trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param targetAction A JSON format string of the Amazon Redshift API operation with input parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAction(@Nullable Output<ScheduledActionTypeArgs> targetAction) {
             $.targetAction = targetAction;
             return this;
         }
 
+        /**
+         * @param targetAction A JSON format string of the Amazon Redshift API operation with input parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAction(ScheduledActionTypeArgs targetAction) {
             return targetAction(Output.of(targetAction));
         }

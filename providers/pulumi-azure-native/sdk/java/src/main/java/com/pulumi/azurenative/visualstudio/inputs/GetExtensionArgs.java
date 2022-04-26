@@ -19,6 +19,10 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountResourceName", required=true)
     private String accountResourceName;
 
+    /**
+     * @return The name of the Visual Studio Team Services account resource.
+     * 
+     */
     public String accountResourceName() {
         return this.accountResourceName;
     }
@@ -30,6 +34,10 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="extensionResourceName", required=true)
     private String extensionResourceName;
 
+    /**
+     * @return The name of the extension.
+     * 
+     */
     public String extensionResourceName() {
         return this.extensionResourceName;
     }
@@ -41,6 +49,10 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetExtensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountResourceName The name of the Visual Studio Team Services account resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountResourceName(String accountResourceName) {
             $.accountResourceName = accountResourceName;
             return this;
         }
 
+        /**
+         * @param extensionResourceName The name of the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionResourceName(String extensionResourceName) {
             $.extensionResourceName = extensionResourceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

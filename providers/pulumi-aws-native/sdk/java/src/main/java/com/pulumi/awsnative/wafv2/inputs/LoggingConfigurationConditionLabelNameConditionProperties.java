@@ -23,6 +23,10 @@ public final class LoggingConfigurationConditionLabelNameConditionProperties ext
     @Import(name="labelName", required=true)
     private String labelName;
 
+    /**
+     * @return The label name that a log record must contain in order to meet the condition. This must be a fully qualified label name. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label.
+     * 
+     */
     public String labelName() {
         return this.labelName;
     }
@@ -51,6 +55,12 @@ public final class LoggingConfigurationConditionLabelNameConditionProperties ext
             $ = new LoggingConfigurationConditionLabelNameConditionProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labelName The label name that a log record must contain in order to meet the condition. This must be a fully qualified label name. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelName(String labelName) {
             $.labelName = labelName;
             return this;

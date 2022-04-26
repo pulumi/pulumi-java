@@ -23,6 +23,10 @@ public final class StudioLifecycleConfigArgs extends com.pulumi.resources.Resour
     @Import(name="studioLifecycleConfigAppType", required=true)
     private Output<String> studioLifecycleConfigAppType;
 
+    /**
+     * @return The App type that the Lifecycle Configuration is attached to. Valid values are `JupyterServer` and `KernelGateway`.
+     * 
+     */
     public Output<String> studioLifecycleConfigAppType() {
         return this.studioLifecycleConfigAppType;
     }
@@ -34,6 +38,10 @@ public final class StudioLifecycleConfigArgs extends com.pulumi.resources.Resour
     @Import(name="studioLifecycleConfigContent", required=true)
     private Output<String> studioLifecycleConfigContent;
 
+    /**
+     * @return The content of your Studio Lifecycle Configuration script. This content must be base64 encoded.
+     * 
+     */
     public Output<String> studioLifecycleConfigContent() {
         return this.studioLifecycleConfigContent;
     }
@@ -45,6 +53,10 @@ public final class StudioLifecycleConfigArgs extends com.pulumi.resources.Resour
     @Import(name="studioLifecycleConfigName", required=true)
     private Output<String> studioLifecycleConfigName;
 
+    /**
+     * @return The name of the Studio Lifecycle Configuration to create.
+     * 
+     */
     public Output<String> studioLifecycleConfigName() {
         return this.studioLifecycleConfigName;
     }
@@ -56,6 +68,10 @@ public final class StudioLifecycleConfigArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -87,38 +103,86 @@ public final class StudioLifecycleConfigArgs extends com.pulumi.resources.Resour
             $ = new StudioLifecycleConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param studioLifecycleConfigAppType The App type that the Lifecycle Configuration is attached to. Valid values are `JupyterServer` and `KernelGateway`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioLifecycleConfigAppType(Output<String> studioLifecycleConfigAppType) {
             $.studioLifecycleConfigAppType = studioLifecycleConfigAppType;
             return this;
         }
 
+        /**
+         * @param studioLifecycleConfigAppType The App type that the Lifecycle Configuration is attached to. Valid values are `JupyterServer` and `KernelGateway`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioLifecycleConfigAppType(String studioLifecycleConfigAppType) {
             return studioLifecycleConfigAppType(Output.of(studioLifecycleConfigAppType));
         }
 
+        /**
+         * @param studioLifecycleConfigContent The content of your Studio Lifecycle Configuration script. This content must be base64 encoded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioLifecycleConfigContent(Output<String> studioLifecycleConfigContent) {
             $.studioLifecycleConfigContent = studioLifecycleConfigContent;
             return this;
         }
 
+        /**
+         * @param studioLifecycleConfigContent The content of your Studio Lifecycle Configuration script. This content must be base64 encoded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioLifecycleConfigContent(String studioLifecycleConfigContent) {
             return studioLifecycleConfigContent(Output.of(studioLifecycleConfigContent));
         }
 
+        /**
+         * @param studioLifecycleConfigName The name of the Studio Lifecycle Configuration to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioLifecycleConfigName(Output<String> studioLifecycleConfigName) {
             $.studioLifecycleConfigName = studioLifecycleConfigName;
             return this;
         }
 
+        /**
+         * @param studioLifecycleConfigName The name of the Studio Lifecycle Configuration to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioLifecycleConfigName(String studioLifecycleConfigName) {
             return studioLifecycleConfigName(Output.of(studioLifecycleConfigName));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

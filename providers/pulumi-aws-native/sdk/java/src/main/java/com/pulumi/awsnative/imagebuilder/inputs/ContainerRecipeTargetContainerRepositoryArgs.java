@@ -27,6 +27,10 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends com.pulu
     @Import(name="repositoryName")
     private @Nullable Output<String> repositoryName;
 
+    /**
+     * @return The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
+     * 
+     */
     public Optional<Output<String>> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
@@ -38,6 +42,10 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends com.pulu
     @Import(name="service")
     private @Nullable Output<ContainerRecipeTargetContainerRepositoryService> service;
 
+    /**
+     * @return Specifies the service in which this image was registered.
+     * 
+     */
     public Optional<Output<ContainerRecipeTargetContainerRepositoryService>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -67,20 +75,44 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends com.pulu
             $ = new ContainerRecipeTargetContainerRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param repositoryName The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
 
+        /**
+         * @param repositoryName The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(String repositoryName) {
             return repositoryName(Output.of(repositoryName));
         }
 
+        /**
+         * @param service Specifies the service in which this image was registered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<ContainerRecipeTargetContainerRepositoryService> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Specifies the service in which this image was registered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(ContainerRecipeTargetContainerRepositoryService service) {
             return service(Output.of(service));
         }

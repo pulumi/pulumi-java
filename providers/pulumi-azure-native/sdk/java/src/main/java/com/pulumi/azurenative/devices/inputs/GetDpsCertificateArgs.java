@@ -19,6 +19,10 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="certificateName", required=true)
     private String certificateName;
 
+    /**
+     * @return Name of the certificate to retrieve.
+     * 
+     */
     public String certificateName() {
         return this.certificateName;
     }
@@ -30,6 +34,10 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="provisioningServiceName", required=true)
     private String provisioningServiceName;
 
+    /**
+     * @return Name of the provisioning service the certificate is associated with.
+     * 
+     */
     public String provisioningServiceName() {
         return this.provisioningServiceName;
     }
@@ -41,6 +49,10 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Resource group identifier.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetDpsCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateName Name of the certificate to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(String certificateName) {
             $.certificateName = certificateName;
             return this;
         }
 
+        /**
+         * @param provisioningServiceName Name of the provisioning service the certificate is associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningServiceName(String provisioningServiceName) {
             $.provisioningServiceName = provisioningServiceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

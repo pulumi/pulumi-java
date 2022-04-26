@@ -19,6 +19,10 @@ public final class GetLabelArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return The label ARN.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetLabelArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLabelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The label ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

@@ -20,6 +20,10 @@ public final class RouteSpecHttpRouteMatchHeaderMatchRangeGetArgs extends com.pu
     @Import(name="end", required=true)
     private Output<Integer> end;
 
+    /**
+     * @return The end of the range.
+     * 
+     */
     public Output<Integer> end() {
         return this.end;
     }
@@ -31,6 +35,10 @@ public final class RouteSpecHttpRouteMatchHeaderMatchRangeGetArgs extends com.pu
     @Import(name="start", required=true)
     private Output<Integer> start;
 
+    /**
+     * @return The start of the range.
+     * 
+     */
     public Output<Integer> start() {
         return this.start;
     }
@@ -60,20 +68,44 @@ public final class RouteSpecHttpRouteMatchHeaderMatchRangeGetArgs extends com.pu
             $ = new RouteSpecHttpRouteMatchHeaderMatchRangeGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param end The end of the range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(Output<Integer> end) {
             $.end = end;
             return this;
         }
 
+        /**
+         * @param end The end of the range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(Integer end) {
             return end(Output.of(end));
         }
 
+        /**
+         * @param start The start of the range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(Output<Integer> start) {
             $.start = start;
             return this;
         }
 
+        /**
+         * @param start The start of the range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(Integer start) {
             return start(Output.of(start));
         }

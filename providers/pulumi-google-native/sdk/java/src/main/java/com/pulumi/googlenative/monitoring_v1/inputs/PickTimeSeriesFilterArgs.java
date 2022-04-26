@@ -28,6 +28,10 @@ public final class PickTimeSeriesFilterArgs extends com.pulumi.resources.Resourc
     @Import(name="direction")
     private @Nullable Output<PickTimeSeriesFilterDirection> direction;
 
+    /**
+     * @return How to use the ranking to select time series that pass through the filter.
+     * 
+     */
     public Optional<Output<PickTimeSeriesFilterDirection>> direction() {
         return Optional.ofNullable(this.direction);
     }
@@ -39,6 +43,10 @@ public final class PickTimeSeriesFilterArgs extends com.pulumi.resources.Resourc
     @Import(name="numTimeSeries")
     private @Nullable Output<Integer> numTimeSeries;
 
+    /**
+     * @return How many time series to allow to pass through the filter.
+     * 
+     */
     public Optional<Output<Integer>> numTimeSeries() {
         return Optional.ofNullable(this.numTimeSeries);
     }
@@ -50,6 +58,10 @@ public final class PickTimeSeriesFilterArgs extends com.pulumi.resources.Resourc
     @Import(name="rankingMethod")
     private @Nullable Output<PickTimeSeriesFilterRankingMethod> rankingMethod;
 
+    /**
+     * @return ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.
+     * 
+     */
     public Optional<Output<PickTimeSeriesFilterRankingMethod>> rankingMethod() {
         return Optional.ofNullable(this.rankingMethod);
     }
@@ -80,29 +92,65 @@ public final class PickTimeSeriesFilterArgs extends com.pulumi.resources.Resourc
             $ = new PickTimeSeriesFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param direction How to use the ranking to select time series that pass through the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(@Nullable Output<PickTimeSeriesFilterDirection> direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param direction How to use the ranking to select time series that pass through the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(PickTimeSeriesFilterDirection direction) {
             return direction(Output.of(direction));
         }
 
+        /**
+         * @param numTimeSeries How many time series to allow to pass through the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numTimeSeries(@Nullable Output<Integer> numTimeSeries) {
             $.numTimeSeries = numTimeSeries;
             return this;
         }
 
+        /**
+         * @param numTimeSeries How many time series to allow to pass through the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numTimeSeries(Integer numTimeSeries) {
             return numTimeSeries(Output.of(numTimeSeries));
         }
 
+        /**
+         * @param rankingMethod ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rankingMethod(@Nullable Output<PickTimeSeriesFilterRankingMethod> rankingMethod) {
             $.rankingMethod = rankingMethod;
             return this;
         }
 
+        /**
+         * @param rankingMethod ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rankingMethod(PickTimeSeriesFilterRankingMethod rankingMethod) {
             return rankingMethod(Output.of(rankingMethod));
         }

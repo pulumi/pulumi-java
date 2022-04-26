@@ -20,6 +20,10 @@ public final class GetTestablePermissionsPermission extends com.pulumi.resources
     @Import(name="apiDisabled", required=true)
     private Boolean apiDisabled;
 
+    /**
+     * @return Whether the corresponding API has been enabled for the resource.
+     * 
+     */
     public Boolean apiDisabled() {
         return this.apiDisabled;
     }
@@ -31,6 +35,10 @@ public final class GetTestablePermissionsPermission extends com.pulumi.resources
     @Import(name="customSupportLevel", required=true)
     private String customSupportLevel;
 
+    /**
+     * @return The level of support for custom roles. Can be one of `&#34;NOT_SUPPORTED&#34;`, `&#34;SUPPORTED&#34;`, `&#34;TESTING&#34;`. Default is `&#34;SUPPORTED&#34;`
+     * 
+     */
     public String customSupportLevel() {
         return this.customSupportLevel;
     }
@@ -42,6 +50,10 @@ public final class GetTestablePermissionsPermission extends com.pulumi.resources
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the permission.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -53,6 +65,10 @@ public final class GetTestablePermissionsPermission extends com.pulumi.resources
     @Import(name="stage", required=true)
     private String stage;
 
+    /**
+     * @return Release stage of the permission.
+     * 
+     */
     public String stage() {
         return this.stage;
     }
@@ -64,6 +80,10 @@ public final class GetTestablePermissionsPermission extends com.pulumi.resources
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Human readable title of the permission.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -96,26 +116,56 @@ public final class GetTestablePermissionsPermission extends com.pulumi.resources
             $ = new GetTestablePermissionsPermission(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiDisabled Whether the corresponding API has been enabled for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiDisabled(Boolean apiDisabled) {
             $.apiDisabled = apiDisabled;
             return this;
         }
 
+        /**
+         * @param customSupportLevel The level of support for custom roles. Can be one of `&#34;NOT_SUPPORTED&#34;`, `&#34;SUPPORTED&#34;`, `&#34;TESTING&#34;`. Default is `&#34;SUPPORTED&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder customSupportLevel(String customSupportLevel) {
             $.customSupportLevel = customSupportLevel;
             return this;
         }
 
+        /**
+         * @param name Name of the permission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param stage Release stage of the permission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(String stage) {
             $.stage = stage;
             return this;
         }
 
+        /**
+         * @param title Human readable title of the permission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

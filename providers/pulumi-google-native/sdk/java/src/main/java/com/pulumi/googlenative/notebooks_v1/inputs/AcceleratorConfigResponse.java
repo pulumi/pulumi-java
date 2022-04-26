@@ -23,6 +23,10 @@ public final class AcceleratorConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="coreCount", required=true)
     private String coreCount;
 
+    /**
+     * @return Count of cores of this accelerator.
+     * 
+     */
     public String coreCount() {
         return this.coreCount;
     }
@@ -34,6 +38,10 @@ public final class AcceleratorConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of this accelerator.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -63,11 +71,23 @@ public final class AcceleratorConfigResponse extends com.pulumi.resources.Invoke
             $ = new AcceleratorConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param coreCount Count of cores of this accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreCount(String coreCount) {
             $.coreCount = coreCount;
             return this;
         }
 
+        /**
+         * @param type Type of this accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

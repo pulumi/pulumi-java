@@ -27,6 +27,10 @@ public final class ScanConfigErrorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="code")
     private @Nullable Output<ScanConfigErrorCode> code;
 
+    /**
+     * @return Indicates the reason code for a configuration failure.
+     * 
+     */
     public Optional<Output<ScanConfigErrorCode>> code() {
         return Optional.ofNullable(this.code);
     }
@@ -38,6 +42,10 @@ public final class ScanConfigErrorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="fieldName")
     private @Nullable Output<String> fieldName;
 
+    /**
+     * @return Indicates the full name of the ScanConfig field that triggers this error, for example &#34;scan_config.max_qps&#34;. This field is provided for troubleshooting purposes only and its actual value can change in the future.
+     * 
+     */
     public Optional<Output<String>> fieldName() {
         return Optional.ofNullable(this.fieldName);
     }
@@ -67,20 +75,44 @@ public final class ScanConfigErrorArgs extends com.pulumi.resources.ResourceArgs
             $ = new ScanConfigErrorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Indicates the reason code for a configuration failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable Output<ScanConfigErrorCode> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code Indicates the reason code for a configuration failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(ScanConfigErrorCode code) {
             return code(Output.of(code));
         }
 
+        /**
+         * @param fieldName Indicates the full name of the ScanConfig field that triggers this error, for example &#34;scan_config.max_qps&#34;. This field is provided for troubleshooting purposes only and its actual value can change in the future.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldName(@Nullable Output<String> fieldName) {
             $.fieldName = fieldName;
             return this;
         }
 
+        /**
+         * @param fieldName Indicates the full name of the ScanConfig field that triggers this error, for example &#34;scan_config.max_qps&#34;. This field is provided for troubleshooting purposes only and its actual value can change in the future.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldName(String fieldName) {
             return fieldName(Output.of(fieldName));
         }

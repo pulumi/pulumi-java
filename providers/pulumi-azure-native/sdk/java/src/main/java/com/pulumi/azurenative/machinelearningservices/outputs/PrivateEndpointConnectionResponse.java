@@ -18,57 +18,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PrivateEndpointConnectionResponse {
     /**
-     * Specifies the resource ID.
+     * @return Specifies the resource ID.
      * 
      */
     private final String id;
     /**
-     * The identity of the resource.
+     * @return The identity of the resource.
      * 
      */
     private final @Nullable IdentityResponse identity;
     /**
-     * Specifies the location of the resource.
+     * @return Specifies the location of the resource.
      * 
      */
     private final @Nullable String location;
     /**
-     * Specifies the name of the resource.
+     * @return Specifies the name of the resource.
      * 
      */
     private final String name;
     /**
-     * The resource of private end point.
+     * @return The resource of private end point.
      * 
      */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
     /**
-     * A collection of information about the state of the connection between service consumer and provider.
+     * @return A collection of information about the state of the connection between service consumer and provider.
      * 
      */
     private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
     /**
-     * The provisioning state of the private endpoint connection resource.
+     * @return The provisioning state of the private endpoint connection resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The sku of the workspace.
+     * @return The sku of the workspace.
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * Read only system data
+     * @return Read only system data
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Contains resource tags defined as key/value pairs.
+     * @return Contains resource tags defined as key/value pairs.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Specifies the type of the resource.
+     * @return Specifies the type of the resource.
      * 
      */
     private final String type;
@@ -100,79 +100,79 @@ public final class PrivateEndpointConnectionResponse {
     }
 
     /**
-     * Specifies the resource ID.
+     * @return Specifies the resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the resource.
+     * @return The identity of the resource.
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Specifies the location of the resource.
+     * @return Specifies the location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Specifies the name of the resource.
+     * @return Specifies the name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource of private end point.
+     * @return The resource of private end point.
      * 
-    */
+     */
     public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * A collection of information about the state of the connection between service consumer and provider.
+     * @return A collection of information about the state of the connection between service consumer and provider.
      * 
-    */
+     */
     public PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
-     * The provisioning state of the private endpoint connection resource.
+     * @return The provisioning state of the private endpoint connection resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The sku of the workspace.
+     * @return The sku of the workspace.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Read only system data
+     * @return Read only system data
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Contains resource tags defined as key/value pairs.
+     * @return Contains resource tags defined as key/value pairs.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Specifies the type of the resource.
+     * @return Specifies the type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

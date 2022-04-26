@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PodDNSConfig {
     /**
-     * A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.
+     * @return A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.
      * 
      */
     private final @Nullable List<String> nameservers;
     /**
-     * A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.
+     * @return A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.
      * 
      */
     private final @Nullable List<PodDNSConfigOption> options;
     /**
-     * A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.
+     * @return A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.
      * 
      */
     private final @Nullable List<String> searches;
@@ -39,23 +39,23 @@ public final class PodDNSConfig {
     }
 
     /**
-     * A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.
+     * @return A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.
      * 
-    */
+     */
     public List<String> nameservers() {
         return this.nameservers == null ? List.of() : this.nameservers;
     }
     /**
-     * A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.
+     * @return A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.
      * 
-    */
+     */
     public List<PodDNSConfigOption> options() {
         return this.options == null ? List.of() : this.options;
     }
     /**
-     * A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.
+     * @return A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.
      * 
-    */
+     */
     public List<String> searches() {
         return this.searches == null ? List.of() : this.searches;
     }

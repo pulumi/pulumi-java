@@ -27,6 +27,10 @@ public final class DataSetGeoSpatialColumnGroup extends com.pulumi.resources.Inv
     @Import(name="columns", required=true)
     private List<String> columns;
 
+    /**
+     * @return &lt;p&gt;Columns in this hierarchy.&lt;/p&gt;
+     * 
+     */
     public List<String> columns() {
         return this.columns;
     }
@@ -45,6 +49,10 @@ public final class DataSetGeoSpatialColumnGroup extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return &lt;p&gt;A display name for the hierarchy.&lt;/p&gt;
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -75,11 +83,23 @@ public final class DataSetGeoSpatialColumnGroup extends com.pulumi.resources.Inv
             $ = new DataSetGeoSpatialColumnGroup(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns &lt;p&gt;Columns in this hierarchy.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(List<String> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns &lt;p&gt;Columns in this hierarchy.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(String... columns) {
             return columns(List.of(columns));
         }
@@ -89,6 +109,12 @@ public final class DataSetGeoSpatialColumnGroup extends com.pulumi.resources.Inv
             return this;
         }
 
+        /**
+         * @param name &lt;p&gt;A display name for the hierarchy.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

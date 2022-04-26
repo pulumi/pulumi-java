@@ -19,6 +19,10 @@ public final class EncryptionConfigurationResponse extends com.pulumi.resources.
     @Import(name="kmsKeyName", required=true)
     private String kmsKeyName;
 
+    /**
+     * @return [Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.
+     * 
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -47,6 +51,12 @@ public final class EncryptionConfigurationResponse extends com.pulumi.resources.
             $ = new EncryptionConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName [Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;

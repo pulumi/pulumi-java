@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetClusterResult {
     /**
-     * The list of cluster certificates.
+     * @return The list of cluster certificates.
      * * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
      * * `cluster_certificates.0.cluster_csr` - The certificate signing request (CSR). Available only in UNINITIALIZED state.
      * * `cluster_certificates.0.aws_hardware_certificate` - The HSM hardware certificate issued (signed) by AWS CloudHSM.
@@ -25,22 +25,22 @@ public final class GetClusterResult {
     private final String clusterId;
     private final String clusterState;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The ID of the security group associated with the CloudHSM cluster.
+     * @return The ID of the security group associated with the CloudHSM cluster.
      * 
      */
     private final String securityGroupId;
     /**
-     * The IDs of subnets in which cluster operates.
+     * @return The IDs of subnets in which cluster operates.
      * 
      */
     private final List<String> subnetIds;
     /**
-     * The id of the VPC that the CloudHSM cluster resides in.
+     * @return The id of the VPC that the CloudHSM cluster resides in.
      * 
      */
     private final String vpcId;
@@ -64,7 +64,7 @@ public final class GetClusterResult {
     }
 
     /**
-     * The list of cluster certificates.
+     * @return The list of cluster certificates.
      * * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
      * * `cluster_certificates.0.cluster_csr` - The certificate signing request (CSR). Available only in UNINITIALIZED state.
      * * `cluster_certificates.0.aws_hardware_certificate` - The HSM hardware certificate issued (signed) by AWS CloudHSM.
@@ -72,7 +72,7 @@ public final class GetClusterResult {
      * * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
      *   The number of available cluster certificates may vary depending on state of the cluster.
      * 
-    */
+     */
     public GetClusterClusterCertificates clusterCertificates() {
         return this.clusterCertificates;
     }
@@ -83,30 +83,30 @@ public final class GetClusterResult {
         return this.clusterState;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The ID of the security group associated with the CloudHSM cluster.
+     * @return The ID of the security group associated with the CloudHSM cluster.
      * 
-    */
+     */
     public String securityGroupId() {
         return this.securityGroupId;
     }
     /**
-     * The IDs of subnets in which cluster operates.
+     * @return The IDs of subnets in which cluster operates.
      * 
-    */
+     */
     public List<String> subnetIds() {
         return this.subnetIds;
     }
     /**
-     * The id of the VPC that the CloudHSM cluster resides in.
+     * @return The id of the VPC that the CloudHSM cluster resides in.
      * 
-    */
+     */
     public String vpcId() {
         return this.vpcId;
     }

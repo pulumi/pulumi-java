@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LoginRoutesResponse {
     /**
-     * The endpoint at which a logout request should be made.
+     * @return The endpoint at which a logout request should be made.
      * 
      */
     private final @Nullable String logoutEndpoint;
@@ -23,9 +23,9 @@ public final class LoginRoutesResponse {
     }
 
     /**
-     * The endpoint at which a logout request should be made.
+     * @return The endpoint at which a logout request should be made.
      * 
-    */
+     */
     public Optional<String> logoutEndpoint() {
         return Optional.ofNullable(this.logoutEndpoint);
     }

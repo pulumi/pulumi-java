@@ -19,6 +19,10 @@ public final class GetMemberInvitationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="graphArn", required=true)
     private String graphArn;
 
+    /**
+     * @return The ARN of the graph to which the member account will be invited
+     * 
+     */
     public String graphArn() {
         return this.graphArn;
     }
@@ -30,6 +34,10 @@ public final class GetMemberInvitationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="memberId", required=true)
     private String memberId;
 
+    /**
+     * @return The AWS account ID to be invited to join the graph as a member
+     * 
+     */
     public String memberId() {
         return this.memberId;
     }
@@ -59,11 +67,23 @@ public final class GetMemberInvitationArgs extends com.pulumi.resources.InvokeAr
             $ = new GetMemberInvitationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param graphArn The ARN of the graph to which the member account will be invited
+         * 
+         * @return builder
+         * 
+         */
         public Builder graphArn(String graphArn) {
             $.graphArn = graphArn;
             return this;
         }
 
+        /**
+         * @param memberId The AWS account ID to be invited to join the graph as a member
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberId(String memberId) {
             $.memberId = memberId;
             return this;

@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends com.pulumi.
     @Import(name="excludedFields", required=true)
     private List<GooglePrivacyDlpV2FieldIdResponse> excludedFields;
 
+    /**
+     * @return References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.
+     * 
+     */
     public List<GooglePrivacyDlpV2FieldIdResponse> excludedFields() {
         return this.excludedFields;
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends com.pulumi.
     @Import(name="identifyingFields", required=true)
     private List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
 
+    /**
+     * @return Table fields that may uniquely identify a row within the table. When `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here are available in the output table under `location.content_locations.record_location.record_key.id_values`. Nested fields such as `person.birthdate.year` are allowed.
+     * 
+     */
     public List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields() {
         return this.identifyingFields;
     }
@@ -49,6 +57,10 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends com.pulumi.
     @Import(name="includedFields", required=true)
     private List<GooglePrivacyDlpV2FieldIdResponse> includedFields;
 
+    /**
+     * @return Limit scanning only to these fields.
+     * 
+     */
     public List<GooglePrivacyDlpV2FieldIdResponse> includedFields() {
         return this.includedFields;
     }
@@ -60,6 +72,10 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends com.pulumi.
     @Import(name="rowsLimit", required=true)
     private String rowsLimit;
 
+    /**
+     * @return Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted. If not set, or if set to 0, all rows will be scanned. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
+     * 
+     */
     public String rowsLimit() {
         return this.rowsLimit;
     }
@@ -71,6 +87,10 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends com.pulumi.
     @Import(name="rowsLimitPercent", required=true)
     private Integer rowsLimitPercent;
 
+    /**
+     * @return Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
+     * 
+     */
     public Integer rowsLimitPercent() {
         return this.rowsLimitPercent;
     }
@@ -89,6 +109,10 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends com.pulumi.
     @Import(name="tableReference", required=true)
     private GooglePrivacyDlpV2BigQueryTableResponse tableReference;
 
+    /**
+     * @return Complete BigQuery table reference.
+     * 
+     */
     public GooglePrivacyDlpV2BigQueryTableResponse tableReference() {
         return this.tableReference;
     }
@@ -123,38 +147,86 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends com.pulumi.
             $ = new GooglePrivacyDlpV2BigQueryOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludedFields References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedFields(List<GooglePrivacyDlpV2FieldIdResponse> excludedFields) {
             $.excludedFields = excludedFields;
             return this;
         }
 
+        /**
+         * @param excludedFields References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedFields(GooglePrivacyDlpV2FieldIdResponse... excludedFields) {
             return excludedFields(List.of(excludedFields));
         }
 
+        /**
+         * @param identifyingFields Table fields that may uniquely identify a row within the table. When `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here are available in the output table under `location.content_locations.record_location.record_key.id_values`. Nested fields such as `person.birthdate.year` are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifyingFields(List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields) {
             $.identifyingFields = identifyingFields;
             return this;
         }
 
+        /**
+         * @param identifyingFields Table fields that may uniquely identify a row within the table. When `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here are available in the output table under `location.content_locations.record_location.record_key.id_values`. Nested fields such as `person.birthdate.year` are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifyingFields(GooglePrivacyDlpV2FieldIdResponse... identifyingFields) {
             return identifyingFields(List.of(identifyingFields));
         }
 
+        /**
+         * @param includedFields Limit scanning only to these fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedFields(List<GooglePrivacyDlpV2FieldIdResponse> includedFields) {
             $.includedFields = includedFields;
             return this;
         }
 
+        /**
+         * @param includedFields Limit scanning only to these fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedFields(GooglePrivacyDlpV2FieldIdResponse... includedFields) {
             return includedFields(List.of(includedFields));
         }
 
+        /**
+         * @param rowsLimit Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted. If not set, or if set to 0, all rows will be scanned. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowsLimit(String rowsLimit) {
             $.rowsLimit = rowsLimit;
             return this;
         }
 
+        /**
+         * @param rowsLimitPercent Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowsLimitPercent(Integer rowsLimitPercent) {
             $.rowsLimitPercent = rowsLimitPercent;
             return this;
@@ -165,6 +237,12 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends com.pulumi.
             return this;
         }
 
+        /**
+         * @param tableReference Complete BigQuery table reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableReference(GooglePrivacyDlpV2BigQueryTableResponse tableReference) {
             $.tableReference = tableReference;
             return this;

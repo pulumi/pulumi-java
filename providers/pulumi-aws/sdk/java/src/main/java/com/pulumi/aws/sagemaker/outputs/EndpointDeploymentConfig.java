@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EndpointDeploymentConfig {
     /**
-     * Automatic rollback configuration for handling endpoint deployment failures and recovery. See Auto Rollback Configuration.
+     * @return Automatic rollback configuration for handling endpoint deployment failures and recovery. See Auto Rollback Configuration.
      * 
      */
     private final @Nullable EndpointDeploymentConfigAutoRollbackConfiguration autoRollbackConfiguration;
     /**
-     * Update policy for a blue/green deployment. If this update policy is specified, SageMaker creates a new fleet during the deployment while maintaining the old fleet. See Blue Green Update Config.
+     * @return Update policy for a blue/green deployment. If this update policy is specified, SageMaker creates a new fleet during the deployment while maintaining the old fleet. See Blue Green Update Config.
      * 
      */
     private final EndpointDeploymentConfigBlueGreenUpdatePolicy blueGreenUpdatePolicy;
@@ -32,16 +32,16 @@ public final class EndpointDeploymentConfig {
     }
 
     /**
-     * Automatic rollback configuration for handling endpoint deployment failures and recovery. See Auto Rollback Configuration.
+     * @return Automatic rollback configuration for handling endpoint deployment failures and recovery. See Auto Rollback Configuration.
      * 
-    */
+     */
     public Optional<EndpointDeploymentConfigAutoRollbackConfiguration> autoRollbackConfiguration() {
         return Optional.ofNullable(this.autoRollbackConfiguration);
     }
     /**
-     * Update policy for a blue/green deployment. If this update policy is specified, SageMaker creates a new fleet during the deployment while maintaining the old fleet. See Blue Green Update Config.
+     * @return Update policy for a blue/green deployment. If this update policy is specified, SageMaker creates a new fleet during the deployment while maintaining the old fleet. See Blue Green Update Config.
      * 
-    */
+     */
     public EndpointDeploymentConfigBlueGreenUpdatePolicy blueGreenUpdatePolicy() {
         return this.blueGreenUpdatePolicy;
     }

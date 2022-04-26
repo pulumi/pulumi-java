@@ -30,6 +30,10 @@ public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.Reso
     @Import(name="extra")
     private @Nullable Output<Map<String,List<String>>> extra;
 
+    /**
+     * @return Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.
+     * 
+     */
     public Optional<Output<Map<String,List<String>>>> extra() {
         return Optional.ofNullable(this.extra);
     }
@@ -41,6 +45,10 @@ public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.Reso
     @Import(name="group")
     private @Nullable Output<List<String>> group;
 
+    /**
+     * @return Groups is the groups you&#39;re testing for.
+     * 
+     */
     public Optional<Output<List<String>>> group() {
         return Optional.ofNullable(this.group);
     }
@@ -52,6 +60,10 @@ public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.Reso
     @Import(name="nonResourceAttributes")
     private @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
 
+    /**
+     * @return NonResourceAttributes describes information for a non-resource access request
+     * 
+     */
     public Optional<Output<NonResourceAttributesArgs>> nonResourceAttributes() {
         return Optional.ofNullable(this.nonResourceAttributes);
     }
@@ -63,6 +75,10 @@ public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.Reso
     @Import(name="resourceAttributes")
     private @Nullable Output<ResourceAttributesArgs> resourceAttributes;
 
+    /**
+     * @return ResourceAuthorizationAttributes describes information for a resource access request
+     * 
+     */
     public Optional<Output<ResourceAttributesArgs>> resourceAttributes() {
         return Optional.ofNullable(this.resourceAttributes);
     }
@@ -74,6 +90,10 @@ public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.Reso
     @Import(name="uid")
     private @Nullable Output<String> uid;
 
+    /**
+     * @return UID information about the requesting user.
+     * 
+     */
     public Optional<Output<String>> uid() {
         return Optional.ofNullable(this.uid);
     }
@@ -85,6 +105,10 @@ public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.Reso
     @Import(name="user")
     private @Nullable Output<String> user;
 
+    /**
+     * @return User is the user you&#39;re testing for. If you specify &#34;User&#34; but not &#34;Group&#34;, then is it interpreted as &#34;What if User were not a member of any groups
+     * 
+     */
     public Optional<Output<String>> user() {
         return Optional.ofNullable(this.user);
     }
@@ -118,60 +142,138 @@ public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.Reso
             $ = new SubjectAccessReviewSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extra Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extra(@Nullable Output<Map<String,List<String>>> extra) {
             $.extra = extra;
             return this;
         }
 
+        /**
+         * @param extra Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extra(Map<String,List<String>> extra) {
             return extra(Output.of(extra));
         }
 
+        /**
+         * @param group Groups is the groups you&#39;re testing for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(@Nullable Output<List<String>> group) {
             $.group = group;
             return this;
         }
 
+        /**
+         * @param group Groups is the groups you&#39;re testing for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(List<String> group) {
             return group(Output.of(group));
         }
 
+        /**
+         * @param group Groups is the groups you&#39;re testing for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(String... group) {
             return group(List.of(group));
         }
 
+        /**
+         * @param nonResourceAttributes NonResourceAttributes describes information for a non-resource access request
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonResourceAttributes(@Nullable Output<NonResourceAttributesArgs> nonResourceAttributes) {
             $.nonResourceAttributes = nonResourceAttributes;
             return this;
         }
 
+        /**
+         * @param nonResourceAttributes NonResourceAttributes describes information for a non-resource access request
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonResourceAttributes(NonResourceAttributesArgs nonResourceAttributes) {
             return nonResourceAttributes(Output.of(nonResourceAttributes));
         }
 
+        /**
+         * @param resourceAttributes ResourceAuthorizationAttributes describes information for a resource access request
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAttributes(@Nullable Output<ResourceAttributesArgs> resourceAttributes) {
             $.resourceAttributes = resourceAttributes;
             return this;
         }
 
+        /**
+         * @param resourceAttributes ResourceAuthorizationAttributes describes information for a resource access request
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAttributes(ResourceAttributesArgs resourceAttributes) {
             return resourceAttributes(Output.of(resourceAttributes));
         }
 
+        /**
+         * @param uid UID information about the requesting user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(@Nullable Output<String> uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param uid UID information about the requesting user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             return uid(Output.of(uid));
         }
 
+        /**
+         * @param user User is the user you&#39;re testing for. If you specify &#34;User&#34; but not &#34;Group&#34;, then is it interpreted as &#34;What if User were not a member of any groups
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(@Nullable Output<String> user) {
             $.user = user;
             return this;
         }
 
+        /**
+         * @param user User is the user you&#39;re testing for. If you specify &#34;User&#34; but not &#34;Group&#34;, then is it interpreted as &#34;What if User were not a member of any groups
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(String user) {
             return user(Output.of(user));
         }

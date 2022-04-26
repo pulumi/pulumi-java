@@ -23,6 +23,11 @@ public final class PreventionJobTriggerTriggerGetArgs extends com.pulumi.resourc
     @Import(name="schedule")
     private @Nullable Output<PreventionJobTriggerTriggerScheduleGetArgs> schedule;
 
+    /**
+     * @return Schedule for triggered jobs
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionJobTriggerTriggerScheduleGetArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -51,11 +56,25 @@ public final class PreventionJobTriggerTriggerGetArgs extends com.pulumi.resourc
             $ = new PreventionJobTriggerTriggerGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param schedule Schedule for triggered jobs
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<PreventionJobTriggerTriggerScheduleGetArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Schedule for triggered jobs
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(PreventionJobTriggerTriggerScheduleGetArgs schedule) {
             return schedule(Output.of(schedule));
         }

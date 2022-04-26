@@ -23,6 +23,10 @@ public final class StageSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Dataflow service generated name for this source.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class StageSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="originalTransformOrCollection", required=true)
     private String originalTransformOrCollection;
 
+    /**
+     * @return User name for the original user transform or collection with which this source is most closely associated.
+     * 
+     */
     public String originalTransformOrCollection() {
         return this.originalTransformOrCollection;
     }
@@ -45,6 +53,10 @@ public final class StageSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sizeBytes", required=true)
     private String sizeBytes;
 
+    /**
+     * @return Size of the source, if measurable.
+     * 
+     */
     public String sizeBytes() {
         return this.sizeBytes;
     }
@@ -56,6 +68,10 @@ public final class StageSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return Human-readable name for this source; may be user or system generated.
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -87,21 +103,45 @@ public final class StageSourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new StageSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Dataflow service generated name for this source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param originalTransformOrCollection User name for the original user transform or collection with which this source is most closely associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalTransformOrCollection(String originalTransformOrCollection) {
             $.originalTransformOrCollection = originalTransformOrCollection;
             return this;
         }
 
+        /**
+         * @param sizeBytes Size of the source, if measurable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeBytes(String sizeBytes) {
             $.sizeBytes = sizeBytes;
             return this;
         }
 
+        /**
+         * @param userName Human-readable name for this source; may be user or system generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

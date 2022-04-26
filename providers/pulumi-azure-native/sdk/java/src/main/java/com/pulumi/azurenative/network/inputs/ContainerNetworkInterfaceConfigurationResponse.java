@@ -28,6 +28,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends com.pu
     @Import(name="containerNetworkInterfaces")
     private @Nullable List<SubResourceResponse> containerNetworkInterfaces;
 
+    /**
+     * @return A list of container network interfaces created from this container network interface configuration.
+     * 
+     */
     public Optional<List<SubResourceResponse>> containerNetworkInterfaces() {
         return Optional.ofNullable(this.containerNetworkInterfaces);
     }
@@ -39,6 +43,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends com.pu
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -50,6 +58,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends com.pu
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -61,6 +73,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends com.pu
     @Import(name="ipConfigurations")
     private @Nullable List<IPConfigurationProfileResponse> ipConfigurations;
 
+    /**
+     * @return A list of ip configurations of the container network interface configuration.
+     * 
+     */
     public Optional<List<IPConfigurationProfileResponse>> ipConfigurations() {
         return Optional.ofNullable(this.ipConfigurations);
     }
@@ -72,6 +88,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends com.pu
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,6 +103,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends com.pu
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the container network interface configuration resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -94,6 +118,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends com.pu
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Sub Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -128,44 +156,98 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends com.pu
             $ = new ContainerNetworkInterfaceConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerNetworkInterfaces A list of container network interfaces created from this container network interface configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerNetworkInterfaces(@Nullable List<SubResourceResponse> containerNetworkInterfaces) {
             $.containerNetworkInterfaces = containerNetworkInterfaces;
             return this;
         }
 
+        /**
+         * @param containerNetworkInterfaces A list of container network interfaces created from this container network interface configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerNetworkInterfaces(SubResourceResponse... containerNetworkInterfaces) {
             return containerNetworkInterfaces(List.of(containerNetworkInterfaces));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param ipConfigurations A list of ip configurations of the container network interface configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(@Nullable List<IPConfigurationProfileResponse> ipConfigurations) {
             $.ipConfigurations = ipConfigurations;
             return this;
         }
 
+        /**
+         * @param ipConfigurations A list of ip configurations of the container network interface configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(IPConfigurationProfileResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
 
+        /**
+         * @param name The name of the resource. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the container network interface configuration resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type Sub Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

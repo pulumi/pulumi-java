@@ -30,6 +30,10 @@ public final class TaggingCriteriaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="criteria")
     private @Nullable Output<List<ScheduleBasedBackupCriteriaArgs>> criteria;
 
+    /**
+     * @return Criteria which decides whether the tag can be applied to a triggered backup.
+     * 
+     */
     public Optional<Output<List<ScheduleBasedBackupCriteriaArgs>>> criteria() {
         return Optional.ofNullable(this.criteria);
     }
@@ -41,6 +45,10 @@ public final class TaggingCriteriaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="isDefault", required=true)
     private Output<Boolean> isDefault;
 
+    /**
+     * @return Specifies if tag is default.
+     * 
+     */
     public Output<Boolean> isDefault() {
         return this.isDefault;
     }
@@ -52,6 +60,10 @@ public final class TaggingCriteriaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tagInfo", required=true)
     private Output<RetentionTagArgs> tagInfo;
 
+    /**
+     * @return Retention tag information
+     * 
+     */
     public Output<RetentionTagArgs> tagInfo() {
         return this.tagInfo;
     }
@@ -63,6 +75,10 @@ public final class TaggingCriteriaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="taggingPriority", required=true)
     private Output<Double> taggingPriority;
 
+    /**
+     * @return Retention Tag priority.
+     * 
+     */
     public Output<Double> taggingPriority() {
         return this.taggingPriority;
     }
@@ -94,42 +110,96 @@ public final class TaggingCriteriaArgs extends com.pulumi.resources.ResourceArgs
             $ = new TaggingCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param criteria Criteria which decides whether the tag can be applied to a triggered backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(@Nullable Output<List<ScheduleBasedBackupCriteriaArgs>> criteria) {
             $.criteria = criteria;
             return this;
         }
 
+        /**
+         * @param criteria Criteria which decides whether the tag can be applied to a triggered backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(List<ScheduleBasedBackupCriteriaArgs> criteria) {
             return criteria(Output.of(criteria));
         }
 
+        /**
+         * @param criteria Criteria which decides whether the tag can be applied to a triggered backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(ScheduleBasedBackupCriteriaArgs... criteria) {
             return criteria(List.of(criteria));
         }
 
+        /**
+         * @param isDefault Specifies if tag is default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDefault(Output<Boolean> isDefault) {
             $.isDefault = isDefault;
             return this;
         }
 
+        /**
+         * @param isDefault Specifies if tag is default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDefault(Boolean isDefault) {
             return isDefault(Output.of(isDefault));
         }
 
+        /**
+         * @param tagInfo Retention tag information
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagInfo(Output<RetentionTagArgs> tagInfo) {
             $.tagInfo = tagInfo;
             return this;
         }
 
+        /**
+         * @param tagInfo Retention tag information
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagInfo(RetentionTagArgs tagInfo) {
             return tagInfo(Output.of(tagInfo));
         }
 
+        /**
+         * @param taggingPriority Retention Tag priority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taggingPriority(Output<Double> taggingPriority) {
             $.taggingPriority = taggingPriority;
             return this;
         }
 
+        /**
+         * @param taggingPriority Retention Tag priority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taggingPriority(Double taggingPriority) {
             return taggingPriority(Output.of(taggingPriority));
         }

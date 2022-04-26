@@ -20,6 +20,10 @@ public final class ResourceServerScopeArgs extends com.pulumi.resources.Resource
     @Import(name="scopeDescription", required=true)
     private Output<String> scopeDescription;
 
+    /**
+     * @return The scope description.
+     * 
+     */
     public Output<String> scopeDescription() {
         return this.scopeDescription;
     }
@@ -31,6 +35,10 @@ public final class ResourceServerScopeArgs extends com.pulumi.resources.Resource
     @Import(name="scopeName", required=true)
     private Output<String> scopeName;
 
+    /**
+     * @return The scope name.
+     * 
+     */
     public Output<String> scopeName() {
         return this.scopeName;
     }
@@ -60,20 +68,44 @@ public final class ResourceServerScopeArgs extends com.pulumi.resources.Resource
             $ = new ResourceServerScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scopeDescription The scope description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeDescription(Output<String> scopeDescription) {
             $.scopeDescription = scopeDescription;
             return this;
         }
 
+        /**
+         * @param scopeDescription The scope description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeDescription(String scopeDescription) {
             return scopeDescription(Output.of(scopeDescription));
         }
 
+        /**
+         * @param scopeName The scope name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeName(Output<String> scopeName) {
             $.scopeName = scopeName;
             return this;
         }
 
+        /**
+         * @param scopeName The scope name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeName(String scopeName) {
             return scopeName(Output.of(scopeName));
         }

@@ -34,6 +34,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
     @Import(name="appInsightsEnabled")
     private @Nullable Boolean appInsightsEnabled;
 
+    /**
+     * @return If true, enables Application Insights logging.
+     * 
+     */
     public Optional<Boolean> appInsightsEnabled() {
         return Optional.ofNullable(this.appInsightsEnabled);
     }
@@ -45,6 +49,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
     @Import(name="codeConfiguration")
     private @Nullable CodeConfigurationResponse codeConfiguration;
 
+    /**
+     * @return Code configuration for the endpoint deployment.
+     * 
+     */
     public Optional<CodeConfigurationResponse> codeConfiguration() {
         return Optional.ofNullable(this.codeConfiguration);
     }
@@ -56,6 +64,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the endpoint deployment.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -68,6 +80,11 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
     @Import(name="endpointComputeType", required=true)
     private String endpointComputeType;
 
+    /**
+     * @return Enum to determine endpoint compute type.
+     * Expected value is &#39;Managed&#39;.
+     * 
+     */
     public String endpointComputeType() {
         return this.endpointComputeType;
     }
@@ -79,6 +96,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
     @Import(name="environmentId")
     private @Nullable String environmentId;
 
+    /**
+     * @return ARM resource ID of the environment specification for the endpoint deployment.
+     * 
+     */
     public Optional<String> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
@@ -90,6 +111,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
     @Import(name="environmentVariables")
     private @Nullable Map<String,String> environmentVariables;
 
+    /**
+     * @return Environment variables configuration for the deployment.
+     * 
+     */
     public Optional<Map<String,String>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -101,6 +126,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
     @Import(name="instanceType")
     private @Nullable String instanceType;
 
+    /**
+     * @return Compute instance type.
+     * 
+     */
     public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -112,6 +141,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
     @Import(name="livenessProbe")
     private @Nullable ProbeSettingsResponse livenessProbe;
 
+    /**
+     * @return Deployment container liveness/readiness probe configuration.
+     * 
+     */
     public Optional<ProbeSettingsResponse> livenessProbe() {
         return Optional.ofNullable(this.livenessProbe);
     }
@@ -123,6 +156,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
     @Import(name="model")
     private @Nullable Object model;
 
+    /**
+     * @return Reference to the model asset for the endpoint deployment.
+     * 
+     */
     public Optional<Object> model() {
         return Optional.ofNullable(this.model);
     }
@@ -134,6 +171,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return Property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -145,6 +186,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state for the endpoint deployment.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -156,6 +201,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
     @Import(name="readinessProbe")
     private @Nullable ProbeSettingsResponse readinessProbe;
 
+    /**
+     * @return Deployment container liveness/readiness probe configuration.
+     * 
+     */
     public Optional<ProbeSettingsResponse> readinessProbe() {
         return Optional.ofNullable(this.readinessProbe);
     }
@@ -167,6 +216,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
     @Import(name="requestSettings")
     private @Nullable OnlineRequestSettingsResponse requestSettings;
 
+    /**
+     * @return Online deployment scoring requests configuration.
+     * 
+     */
     public Optional<OnlineRequestSettingsResponse> requestSettings() {
         return Optional.ofNullable(this.requestSettings);
     }
@@ -178,6 +231,10 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
     @Import(name="scaleSettings")
     private @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
 
+    /**
+     * @return Online deployment scaling configuration.
+     * 
+     */
     public Optional<Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse>> scaleSettings() {
         return Optional.ofNullable(this.scaleSettings);
     }
@@ -219,80 +276,177 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
             $ = new ManagedOnlineDeploymentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appInsightsEnabled If true, enables Application Insights logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
             $.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
 
+        /**
+         * @param codeConfiguration Code configuration for the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeConfiguration(@Nullable CodeConfigurationResponse codeConfiguration) {
             $.codeConfiguration = codeConfiguration;
             return this;
         }
 
+        /**
+         * @param description Description of the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param endpointComputeType Enum to determine endpoint compute type.
+         * Expected value is &#39;Managed&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointComputeType(String endpointComputeType) {
             $.endpointComputeType = endpointComputeType;
             return this;
         }
 
+        /**
+         * @param environmentId ARM resource ID of the environment specification for the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(@Nullable String environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
+        /**
+         * @param environmentVariables Environment variables configuration for the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param instanceType Compute instance type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param livenessProbe Deployment container liveness/readiness probe configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder livenessProbe(@Nullable ProbeSettingsResponse livenessProbe) {
             $.livenessProbe = livenessProbe;
             return this;
         }
 
+        /**
+         * @param model Reference to the model asset for the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(@Nullable Object model) {
             $.model = model;
             return this;
         }
 
+        /**
+         * @param properties Property dictionary. Properties can be added, but not removed or altered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state for the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param readinessProbe Deployment container liveness/readiness probe configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessProbe(@Nullable ProbeSettingsResponse readinessProbe) {
             $.readinessProbe = readinessProbe;
             return this;
         }
 
+        /**
+         * @param requestSettings Online deployment scoring requests configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestSettings(@Nullable OnlineRequestSettingsResponse requestSettings) {
             $.requestSettings = requestSettings;
             return this;
         }
 
+        /**
+         * @param scaleSettings Online deployment scaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleSettings(@Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
             $.scaleSettings = scaleSettings;
             return this;
         }
 
+        /**
+         * @param scaleSettings Online deployment scaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleSettings(AutoScaleSettingsResponse scaleSettings) {
             return scaleSettings(Either.ofLeft(scaleSettings));
         }
 
+        /**
+         * @param scaleSettings Online deployment scaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleSettings(ManualScaleSettingsResponse scaleSettings) {
             return scaleSettings(Either.ofRight(scaleSettings));
         }

@@ -23,6 +23,10 @@ public final class SuccessDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="otherNativeCrash", required=true)
     private Boolean otherNativeCrash;
 
+    /**
+     * @return If a native process other than the app crashed.
+     * 
+     */
     public Boolean otherNativeCrash() {
         return this.otherNativeCrash;
     }
@@ -51,6 +55,12 @@ public final class SuccessDetailResponse extends com.pulumi.resources.InvokeArgs
             $ = new SuccessDetailResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param otherNativeCrash If a native process other than the app crashed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder otherNativeCrash(Boolean otherNativeCrash) {
             $.otherNativeCrash = otherNativeCrash;
             return this;

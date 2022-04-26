@@ -25,6 +25,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="caMaterial")
     private @Nullable Output<String> caMaterial;
 
+    /**
+     * @return PEM-encoded content of Docker host CA certificate
+     * 
+     */
     public Optional<Output<String>> caMaterial() {
         return Optional.ofNullable(this.caMaterial);
     }
@@ -36,6 +40,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certMaterial")
     private @Nullable Output<String> certMaterial;
 
+    /**
+     * @return PEM-encoded content of Docker client certificate
+     * 
+     */
     public Optional<Output<String>> certMaterial() {
         return Optional.ofNullable(this.certMaterial);
     }
@@ -47,6 +55,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certPath")
     private @Nullable Output<String> certPath;
 
+    /**
+     * @return Path to directory with Docker TLS config
+     * 
+     */
     public Optional<Output<String>> certPath() {
         return Optional.ofNullable(this.certPath);
     }
@@ -58,6 +70,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return The Docker daemon address
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -69,6 +85,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyMaterial")
     private @Nullable Output<String> keyMaterial;
 
+    /**
+     * @return PEM-encoded content of Docker client private key
+     * 
+     */
     public Optional<Output<String>> keyMaterial() {
         return Optional.ofNullable(this.keyMaterial);
     }
@@ -109,47 +129,107 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caMaterial PEM-encoded content of Docker host CA certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder caMaterial(@Nullable Output<String> caMaterial) {
             $.caMaterial = caMaterial;
             return this;
         }
 
+        /**
+         * @param caMaterial PEM-encoded content of Docker host CA certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder caMaterial(String caMaterial) {
             return caMaterial(Output.of(caMaterial));
         }
 
+        /**
+         * @param certMaterial PEM-encoded content of Docker client certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder certMaterial(@Nullable Output<String> certMaterial) {
             $.certMaterial = certMaterial;
             return this;
         }
 
+        /**
+         * @param certMaterial PEM-encoded content of Docker client certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder certMaterial(String certMaterial) {
             return certMaterial(Output.of(certMaterial));
         }
 
+        /**
+         * @param certPath Path to directory with Docker TLS config
+         * 
+         * @return builder
+         * 
+         */
         public Builder certPath(@Nullable Output<String> certPath) {
             $.certPath = certPath;
             return this;
         }
 
+        /**
+         * @param certPath Path to directory with Docker TLS config
+         * 
+         * @return builder
+         * 
+         */
         public Builder certPath(String certPath) {
             return certPath(Output.of(certPath));
         }
 
+        /**
+         * @param host The Docker daemon address
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host The Docker daemon address
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param keyMaterial PEM-encoded content of Docker client private key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyMaterial(@Nullable Output<String> keyMaterial) {
             $.keyMaterial = keyMaterial;
             return this;
         }
 
+        /**
+         * @param keyMaterial PEM-encoded content of Docker client private key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyMaterial(String keyMaterial) {
             return keyMaterial(Output.of(keyMaterial));
         }

@@ -26,6 +26,10 @@ public final class DatasetCompressionArgs extends com.pulumi.resources.ResourceA
     @Import(name="level")
     private @Nullable Output<Object> level;
 
+    /**
+     * @return The dataset compression level. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> level() {
         return Optional.ofNullable(this.level);
     }
@@ -37,6 +41,10 @@ public final class DatasetCompressionArgs extends com.pulumi.resources.ResourceA
     @Import(name="type", required=true)
     private Output<Object> type;
 
+    /**
+     * @return Type of dataset compression. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> type() {
         return this.type;
     }
@@ -66,20 +74,44 @@ public final class DatasetCompressionArgs extends com.pulumi.resources.ResourceA
             $ = new DatasetCompressionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param level The dataset compression level. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable Output<Object> level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param level The dataset compression level. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(Object level) {
             return level(Output.of(level));
         }
 
+        /**
+         * @param type Type of dataset compression. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Object> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of dataset compression. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Object type) {
             return type(Output.of(type));
         }

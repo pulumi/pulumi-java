@@ -20,6 +20,10 @@ public final class GSuitePrincipalResponse extends com.pulumi.resources.InvokeAr
     @Import(name="gsuiteDomain", required=true)
     private Boolean gsuiteDomain;
 
+    /**
+     * @return This principal represents all users of the G Suite domain of the customer.
+     * 
+     */
     public Boolean gsuiteDomain() {
         return this.gsuiteDomain;
     }
@@ -31,6 +35,10 @@ public final class GSuitePrincipalResponse extends com.pulumi.resources.InvokeAr
     @Import(name="gsuiteGroupEmail", required=true)
     private String gsuiteGroupEmail;
 
+    /**
+     * @return This principal references a G Suite group account
+     * 
+     */
     public String gsuiteGroupEmail() {
         return this.gsuiteGroupEmail;
     }
@@ -42,6 +50,10 @@ public final class GSuitePrincipalResponse extends com.pulumi.resources.InvokeAr
     @Import(name="gsuiteUserEmail", required=true)
     private String gsuiteUserEmail;
 
+    /**
+     * @return This principal references a G Suite user account
+     * 
+     */
     public String gsuiteUserEmail() {
         return this.gsuiteUserEmail;
     }
@@ -72,16 +84,34 @@ public final class GSuitePrincipalResponse extends com.pulumi.resources.InvokeAr
             $ = new GSuitePrincipalResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gsuiteDomain This principal represents all users of the G Suite domain of the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gsuiteDomain(Boolean gsuiteDomain) {
             $.gsuiteDomain = gsuiteDomain;
             return this;
         }
 
+        /**
+         * @param gsuiteGroupEmail This principal references a G Suite group account
+         * 
+         * @return builder
+         * 
+         */
         public Builder gsuiteGroupEmail(String gsuiteGroupEmail) {
             $.gsuiteGroupEmail = gsuiteGroupEmail;
             return this;
         }
 
+        /**
+         * @param gsuiteUserEmail This principal references a G Suite user account
+         * 
+         * @return builder
+         * 
+         */
         public Builder gsuiteUserEmail(String gsuiteUserEmail) {
             $.gsuiteUserEmail = gsuiteUserEmail;
             return this;

@@ -24,6 +24,10 @@ public final class EdifactAgreementContentArgs extends com.pulumi.resources.Reso
     @Import(name="receiveAgreement", required=true)
     private Output<EdifactOneWayAgreementArgs> receiveAgreement;
 
+    /**
+     * @return The EDIFACT one-way receive agreement.
+     * 
+     */
     public Output<EdifactOneWayAgreementArgs> receiveAgreement() {
         return this.receiveAgreement;
     }
@@ -35,6 +39,10 @@ public final class EdifactAgreementContentArgs extends com.pulumi.resources.Reso
     @Import(name="sendAgreement", required=true)
     private Output<EdifactOneWayAgreementArgs> sendAgreement;
 
+    /**
+     * @return The EDIFACT one-way send agreement.
+     * 
+     */
     public Output<EdifactOneWayAgreementArgs> sendAgreement() {
         return this.sendAgreement;
     }
@@ -64,20 +72,44 @@ public final class EdifactAgreementContentArgs extends com.pulumi.resources.Reso
             $ = new EdifactAgreementContentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param receiveAgreement The EDIFACT one-way receive agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiveAgreement(Output<EdifactOneWayAgreementArgs> receiveAgreement) {
             $.receiveAgreement = receiveAgreement;
             return this;
         }
 
+        /**
+         * @param receiveAgreement The EDIFACT one-way receive agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiveAgreement(EdifactOneWayAgreementArgs receiveAgreement) {
             return receiveAgreement(Output.of(receiveAgreement));
         }
 
+        /**
+         * @param sendAgreement The EDIFACT one-way send agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendAgreement(Output<EdifactOneWayAgreementArgs> sendAgreement) {
             $.sendAgreement = sendAgreement;
             return this;
         }
 
+        /**
+         * @param sendAgreement The EDIFACT one-way send agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendAgreement(EdifactOneWayAgreementArgs sendAgreement) {
             return sendAgreement(Output.of(sendAgreement));
         }

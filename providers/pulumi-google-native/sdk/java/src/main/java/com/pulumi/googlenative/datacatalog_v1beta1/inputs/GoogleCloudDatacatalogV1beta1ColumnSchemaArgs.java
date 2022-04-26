@@ -27,6 +27,10 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends com.pul
     @Import(name="column", required=true)
     private Output<String> column;
 
+    /**
+     * @return Name of the column.
+     * 
+     */
     public Output<String> column() {
         return this.column;
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends com.pul
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. Description of the column. Default value is an empty string.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends com.pul
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
+    /**
+     * @return Optional. A column&#39;s mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
+     * 
+     */
     public Optional<Output<String>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -60,6 +72,10 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends com.pul
     @Import(name="subcolumns")
     private @Nullable Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> subcolumns;
 
+    /**
+     * @return Optional. Schema of sub-columns. A column can have zero or more sub-columns.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>>> subcolumns() {
         return Optional.ofNullable(this.subcolumns);
     }
@@ -71,6 +87,10 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends com.pul
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of the column.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -103,51 +123,117 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends com.pul
             $ = new GoogleCloudDatacatalogV1beta1ColumnSchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param column Name of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder column(Output<String> column) {
             $.column = column;
             return this;
         }
 
+        /**
+         * @param column Name of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder column(String column) {
             return column(Output.of(column));
         }
 
+        /**
+         * @param description Optional. Description of the column. Default value is an empty string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. Description of the column. Default value is an empty string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param mode Optional. A column&#39;s mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<String> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Optional. A column&#39;s mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param subcolumns Optional. Schema of sub-columns. A column can have zero or more sub-columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subcolumns(@Nullable Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> subcolumns) {
             $.subcolumns = subcolumns;
             return this;
         }
 
+        /**
+         * @param subcolumns Optional. Schema of sub-columns. A column can have zero or more sub-columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subcolumns(List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs> subcolumns) {
             return subcolumns(Output.of(subcolumns));
         }
 
+        /**
+         * @param subcolumns Optional. Schema of sub-columns. A column can have zero or more sub-columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subcolumns(GoogleCloudDatacatalogV1beta1ColumnSchemaArgs... subcolumns) {
             return subcolumns(List.of(subcolumns));
         }
 
+        /**
+         * @param type Type of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -20,6 +20,10 @@ public final class RouterNatRuleActionResponse extends com.pulumi.resources.Invo
     @Import(name="sourceNatActiveIps", required=true)
     private List<String> sourceNatActiveIps;
 
+    /**
+     * @return A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.
+     * 
+     */
     public List<String> sourceNatActiveIps() {
         return this.sourceNatActiveIps;
     }
@@ -31,6 +35,10 @@ public final class RouterNatRuleActionResponse extends com.pulumi.resources.Invo
     @Import(name="sourceNatActiveRanges", required=true)
     private List<String> sourceNatActiveRanges;
 
+    /**
+     * @return A list of URLs of the subnetworks used as source ranges for this NAT Rule. These subnetworks must have purpose set to PRIVATE_NAT. This field is used for private NAT.
+     * 
+     */
     public List<String> sourceNatActiveRanges() {
         return this.sourceNatActiveRanges;
     }
@@ -42,6 +50,10 @@ public final class RouterNatRuleActionResponse extends com.pulumi.resources.Invo
     @Import(name="sourceNatDrainIps", required=true)
     private List<String> sourceNatDrainIps;
 
+    /**
+     * @return A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.
+     * 
+     */
     public List<String> sourceNatDrainIps() {
         return this.sourceNatDrainIps;
     }
@@ -53,6 +65,10 @@ public final class RouterNatRuleActionResponse extends com.pulumi.resources.Invo
     @Import(name="sourceNatDrainRanges", required=true)
     private List<String> sourceNatDrainRanges;
 
+    /**
+     * @return A list of URLs of subnetworks representing source ranges to be drained. This is only supported on patch/update, and these subnetworks must have previously been used as active ranges in this NAT Rule. This field is used for private NAT.
+     * 
+     */
     public List<String> sourceNatDrainRanges() {
         return this.sourceNatDrainRanges;
     }
@@ -84,38 +100,86 @@ public final class RouterNatRuleActionResponse extends com.pulumi.resources.Invo
             $ = new RouterNatRuleActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceNatActiveIps A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNatActiveIps(List<String> sourceNatActiveIps) {
             $.sourceNatActiveIps = sourceNatActiveIps;
             return this;
         }
 
+        /**
+         * @param sourceNatActiveIps A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNatActiveIps(String... sourceNatActiveIps) {
             return sourceNatActiveIps(List.of(sourceNatActiveIps));
         }
 
+        /**
+         * @param sourceNatActiveRanges A list of URLs of the subnetworks used as source ranges for this NAT Rule. These subnetworks must have purpose set to PRIVATE_NAT. This field is used for private NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNatActiveRanges(List<String> sourceNatActiveRanges) {
             $.sourceNatActiveRanges = sourceNatActiveRanges;
             return this;
         }
 
+        /**
+         * @param sourceNatActiveRanges A list of URLs of the subnetworks used as source ranges for this NAT Rule. These subnetworks must have purpose set to PRIVATE_NAT. This field is used for private NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNatActiveRanges(String... sourceNatActiveRanges) {
             return sourceNatActiveRanges(List.of(sourceNatActiveRanges));
         }
 
+        /**
+         * @param sourceNatDrainIps A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNatDrainIps(List<String> sourceNatDrainIps) {
             $.sourceNatDrainIps = sourceNatDrainIps;
             return this;
         }
 
+        /**
+         * @param sourceNatDrainIps A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNatDrainIps(String... sourceNatDrainIps) {
             return sourceNatDrainIps(List.of(sourceNatDrainIps));
         }
 
+        /**
+         * @param sourceNatDrainRanges A list of URLs of subnetworks representing source ranges to be drained. This is only supported on patch/update, and these subnetworks must have previously been used as active ranges in this NAT Rule. This field is used for private NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNatDrainRanges(List<String> sourceNatDrainRanges) {
             $.sourceNatDrainRanges = sourceNatDrainRanges;
             return this;
         }
 
+        /**
+         * @param sourceNatDrainRanges A list of URLs of subnetworks representing source ranges to be drained. This is only supported on patch/update, and these subnetworks must have previously been used as active ranges in this NAT Rule. This field is used for private NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNatDrainRanges(String... sourceNatDrainRanges) {
             return sourceNatDrainRanges(List.of(sourceNatDrainRanges));
         }

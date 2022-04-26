@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudRunOpV2ContainerPortResponse {
     /**
-     * Port number the container listens on. This must be a valid TCP port number, 0 &lt; container_port &lt; 65536.
+     * @return Port number the container listens on. This must be a valid TCP port number, 0 &lt; container_port &lt; 65536.
      * 
      */
     private final Integer containerPort;
     /**
-     * If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
+     * @return If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
      * 
      */
     private final String name;
@@ -30,16 +30,16 @@ public final class GoogleCloudRunOpV2ContainerPortResponse {
     }
 
     /**
-     * Port number the container listens on. This must be a valid TCP port number, 0 &lt; container_port &lt; 65536.
+     * @return Port number the container listens on. This must be a valid TCP port number, 0 &lt; container_port &lt; 65536.
      * 
-    */
+     */
     public Integer containerPort() {
         return this.containerPort;
     }
     /**
-     * If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
+     * @return If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

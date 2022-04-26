@@ -26,6 +26,12 @@ public final class TriggerGithubGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the volume to mount.
+     * Volume names must be unique per build step and must be valid names for Docker volumes.
+     * Each named volume must be used by at least two build steps.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +44,11 @@ public final class TriggerGithubGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="owner")
     private @Nullable Output<String> owner;
 
+    /**
+     * @return Owner of the repository. For example: The owner for
+     * https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
+     * 
+     */
     public Optional<Output<String>> owner() {
         return Optional.ofNullable(this.owner);
     }
@@ -50,6 +61,11 @@ public final class TriggerGithubGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="pullRequest")
     private @Nullable Output<TriggerGithubPullRequestGetArgs> pullRequest;
 
+    /**
+     * @return filter to match changes in pull requests. Specify only one of `pull_request` or `push`.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<TriggerGithubPullRequestGetArgs>> pullRequest() {
         return Optional.ofNullable(this.pullRequest);
     }
@@ -62,6 +78,11 @@ public final class TriggerGithubGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="push")
     private @Nullable Output<TriggerGithubPushGetArgs> push;
 
+    /**
+     * @return filter to match changes in refs, like branches or tags. Specify only one of `pull_request` or `push`.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<TriggerGithubPushGetArgs>> push() {
         return Optional.ofNullable(this.push);
     }
@@ -93,38 +114,96 @@ public final class TriggerGithubGetArgs extends com.pulumi.resources.ResourceArg
             $ = new TriggerGithubGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the volume to mount.
+         * Volume names must be unique per build step and must be valid names for Docker volumes.
+         * Each named volume must be used by at least two build steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the volume to mount.
+         * Volume names must be unique per build step and must be valid names for Docker volumes.
+         * Each named volume must be used by at least two build steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param owner Owner of the repository. For example: The owner for
+         * https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(@Nullable Output<String> owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param owner Owner of the repository. For example: The owner for
+         * https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(String owner) {
             return owner(Output.of(owner));
         }
 
+        /**
+         * @param pullRequest filter to match changes in pull requests. Specify only one of `pull_request` or `push`.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullRequest(@Nullable Output<TriggerGithubPullRequestGetArgs> pullRequest) {
             $.pullRequest = pullRequest;
             return this;
         }
 
+        /**
+         * @param pullRequest filter to match changes in pull requests. Specify only one of `pull_request` or `push`.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullRequest(TriggerGithubPullRequestGetArgs pullRequest) {
             return pullRequest(Output.of(pullRequest));
         }
 
+        /**
+         * @param push filter to match changes in refs, like branches or tags. Specify only one of `pull_request` or `push`.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder push(@Nullable Output<TriggerGithubPushGetArgs> push) {
             $.push = push;
             return this;
         }
 
+        /**
+         * @param push filter to match changes in refs, like branches or tags. Specify only one of `pull_request` or `push`.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder push(TriggerGithubPushGetArgs push) {
             return push(Output.of(push));
         }

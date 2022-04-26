@@ -26,6 +26,11 @@ public final class LongTermSchedulePolicyArgs extends com.pulumi.resources.Resou
     @Import(name="schedulePolicyType", required=true)
     private Output<String> schedulePolicyType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;LongTermSchedulePolicy&#39;.
+     * 
+     */
     public Output<String> schedulePolicyType() {
         return this.schedulePolicyType;
     }
@@ -54,11 +59,25 @@ public final class LongTermSchedulePolicyArgs extends com.pulumi.resources.Resou
             $ = new LongTermSchedulePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param schedulePolicyType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;LongTermSchedulePolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicyType(Output<String> schedulePolicyType) {
             $.schedulePolicyType = schedulePolicyType;
             return this;
         }
 
+        /**
+         * @param schedulePolicyType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;LongTermSchedulePolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicyType(String schedulePolicyType) {
             return schedulePolicyType(Output.of(schedulePolicyType));
         }

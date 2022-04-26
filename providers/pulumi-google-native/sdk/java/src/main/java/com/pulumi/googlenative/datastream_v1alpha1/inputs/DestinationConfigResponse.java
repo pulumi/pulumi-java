@@ -24,6 +24,10 @@ public final class DestinationConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="destinationConnectionProfileName", required=true)
     private String destinationConnectionProfileName;
 
+    /**
+     * @return Destination connection profile identifier.
+     * 
+     */
     public String destinationConnectionProfileName() {
         return this.destinationConnectionProfileName;
     }
@@ -35,6 +39,10 @@ public final class DestinationConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="gcsDestinationConfig", required=true)
     private GcsDestinationConfigResponse gcsDestinationConfig;
 
+    /**
+     * @return GCS destination configuration.
+     * 
+     */
     public GcsDestinationConfigResponse gcsDestinationConfig() {
         return this.gcsDestinationConfig;
     }
@@ -64,11 +72,23 @@ public final class DestinationConfigResponse extends com.pulumi.resources.Invoke
             $ = new DestinationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationConnectionProfileName Destination connection profile identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationConnectionProfileName(String destinationConnectionProfileName) {
             $.destinationConnectionProfileName = destinationConnectionProfileName;
             return this;
         }
 
+        /**
+         * @param gcsDestinationConfig GCS destination configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsDestinationConfig(GcsDestinationConfigResponse gcsDestinationConfig) {
             $.gcsDestinationConfig = gcsDestinationConfig;
             return this;

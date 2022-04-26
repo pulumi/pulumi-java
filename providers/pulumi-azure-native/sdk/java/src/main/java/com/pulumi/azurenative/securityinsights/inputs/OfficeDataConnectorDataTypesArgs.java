@@ -28,6 +28,10 @@ public final class OfficeDataConnectorDataTypesArgs extends com.pulumi.resources
     @Import(name="exchange")
     private @Nullable Output<OfficeDataConnectorDataTypesExchangeArgs> exchange;
 
+    /**
+     * @return Exchange data type connection.
+     * 
+     */
     public Optional<Output<OfficeDataConnectorDataTypesExchangeArgs>> exchange() {
         return Optional.ofNullable(this.exchange);
     }
@@ -39,6 +43,10 @@ public final class OfficeDataConnectorDataTypesArgs extends com.pulumi.resources
     @Import(name="sharePoint")
     private @Nullable Output<OfficeDataConnectorDataTypesSharePointArgs> sharePoint;
 
+    /**
+     * @return SharePoint data type connection.
+     * 
+     */
     public Optional<Output<OfficeDataConnectorDataTypesSharePointArgs>> sharePoint() {
         return Optional.ofNullable(this.sharePoint);
     }
@@ -50,6 +58,10 @@ public final class OfficeDataConnectorDataTypesArgs extends com.pulumi.resources
     @Import(name="teams")
     private @Nullable Output<OfficeDataConnectorDataTypesTeamsArgs> teams;
 
+    /**
+     * @return Teams data type connection.
+     * 
+     */
     public Optional<Output<OfficeDataConnectorDataTypesTeamsArgs>> teams() {
         return Optional.ofNullable(this.teams);
     }
@@ -80,29 +92,65 @@ public final class OfficeDataConnectorDataTypesArgs extends com.pulumi.resources
             $ = new OfficeDataConnectorDataTypesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exchange Exchange data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exchange(@Nullable Output<OfficeDataConnectorDataTypesExchangeArgs> exchange) {
             $.exchange = exchange;
             return this;
         }
 
+        /**
+         * @param exchange Exchange data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exchange(OfficeDataConnectorDataTypesExchangeArgs exchange) {
             return exchange(Output.of(exchange));
         }
 
+        /**
+         * @param sharePoint SharePoint data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharePoint(@Nullable Output<OfficeDataConnectorDataTypesSharePointArgs> sharePoint) {
             $.sharePoint = sharePoint;
             return this;
         }
 
+        /**
+         * @param sharePoint SharePoint data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharePoint(OfficeDataConnectorDataTypesSharePointArgs sharePoint) {
             return sharePoint(Output.of(sharePoint));
         }
 
+        /**
+         * @param teams Teams data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder teams(@Nullable Output<OfficeDataConnectorDataTypesTeamsArgs> teams) {
             $.teams = teams;
             return this;
         }
 
+        /**
+         * @param teams Teams data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder teams(OfficeDataConnectorDataTypesTeamsArgs teams) {
             return teams(Output.of(teams));
         }

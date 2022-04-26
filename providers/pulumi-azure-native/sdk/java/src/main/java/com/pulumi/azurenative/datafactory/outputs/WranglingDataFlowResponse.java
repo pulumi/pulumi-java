@@ -16,37 +16,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WranglingDataFlowResponse {
     /**
-     * List of tags that can be used for describing the data flow.
+     * @return List of tags that can be used for describing the data flow.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * The description of the data flow.
+     * @return The description of the data flow.
      * 
      */
     private final @Nullable String description;
     /**
-     * Locale of the Power query mashup document.
+     * @return Locale of the Power query mashup document.
      * 
      */
     private final @Nullable String documentLocale;
     /**
-     * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+     * @return The folder that this data flow is in. If not specified, Data flow will appear at the root level.
      * 
      */
     private final @Nullable DataFlowResponseFolder folder;
     /**
-     * Power query mashup script.
+     * @return Power query mashup script.
      * 
      */
     private final @Nullable String script;
     /**
-     * List of sources in Power Query.
+     * @return List of sources in Power Query.
      * 
      */
     private final @Nullable List<PowerQuerySourceResponse> sources;
     /**
-     * Type of data flow.
+     * @return Type of data flow.
      * Expected value is &#39;WranglingDataFlow&#39;.
      * 
      */
@@ -71,52 +71,52 @@ public final class WranglingDataFlowResponse {
     }
 
     /**
-     * List of tags that can be used for describing the data flow.
+     * @return List of tags that can be used for describing the data flow.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The description of the data flow.
+     * @return The description of the data flow.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Locale of the Power query mashup document.
+     * @return Locale of the Power query mashup document.
      * 
-    */
+     */
     public Optional<String> documentLocale() {
         return Optional.ofNullable(this.documentLocale);
     }
     /**
-     * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+     * @return The folder that this data flow is in. If not specified, Data flow will appear at the root level.
      * 
-    */
+     */
     public Optional<DataFlowResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
-     * Power query mashup script.
+     * @return Power query mashup script.
      * 
-    */
+     */
     public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
     /**
-     * List of sources in Power Query.
+     * @return List of sources in Power Query.
      * 
-    */
+     */
     public List<PowerQuerySourceResponse> sources() {
         return this.sources == null ? List.of() : this.sources;
     }
     /**
-     * Type of data flow.
+     * @return Type of data flow.
      * Expected value is &#39;WranglingDataFlow&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -26,6 +26,10 @@ public final class AnalysisError extends com.pulumi.resources.InvokeArgs {
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return &lt;p&gt;The message associated with the analysis error.&lt;/p&gt;
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -62,6 +66,12 @@ public final class AnalysisError extends com.pulumi.resources.InvokeArgs {
             $ = new AnalysisError(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message &lt;p&gt;The message associated with the analysis error.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;

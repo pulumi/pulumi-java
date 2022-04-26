@@ -25,6 +25,10 @@ public final class DelayActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="duration", required=true)
     private Output<String> duration;
 
+    /**
+     * @return ISO8601 formatted string that represents a duration.
+     * 
+     */
     public Output<String> duration() {
         return this.duration;
     }
@@ -36,6 +40,10 @@ public final class DelayActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return String that represents a Capability URN.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -48,6 +56,11 @@ public final class DelayActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Enum that discriminates between action models.
+     * Expected value is &#39;delay&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -78,29 +91,67 @@ public final class DelayActionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DelayActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param duration ISO8601 formatted string that represents a duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(Output<String> duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param duration ISO8601 formatted string that represents a duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             return duration(Output.of(duration));
         }
 
+        /**
+         * @param name String that represents a Capability URN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name String that represents a Capability URN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type Enum that discriminates between action models.
+         * Expected value is &#39;delay&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Enum that discriminates between action models.
+         * Expected value is &#39;delay&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

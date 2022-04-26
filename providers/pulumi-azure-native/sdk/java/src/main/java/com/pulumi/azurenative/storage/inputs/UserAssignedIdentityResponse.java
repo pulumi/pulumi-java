@@ -23,6 +23,10 @@ public final class UserAssignedIdentityResponse extends com.pulumi.resources.Inv
     @Import(name="clientId", required=true)
     private String clientId;
 
+    /**
+     * @return The client ID of the identity.
+     * 
+     */
     public String clientId() {
         return this.clientId;
     }
@@ -34,6 +38,10 @@ public final class UserAssignedIdentityResponse extends com.pulumi.resources.Inv
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal ID of the identity.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -63,11 +71,23 @@ public final class UserAssignedIdentityResponse extends com.pulumi.resources.Inv
             $ = new UserAssignedIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The client ID of the identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param principalId The principal ID of the identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;

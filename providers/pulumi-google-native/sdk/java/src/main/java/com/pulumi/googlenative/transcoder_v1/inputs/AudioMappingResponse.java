@@ -25,6 +25,10 @@ public final class AudioMappingResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="atomKey", required=true)
     private String atomKey;
 
+    /**
+     * @return The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.
+     * 
+     */
     public String atomKey() {
         return this.atomKey;
     }
@@ -36,6 +40,10 @@ public final class AudioMappingResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="gainDb", required=true)
     private Double gainDb;
 
+    /**
+     * @return Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.
+     * 
+     */
     public Double gainDb() {
         return this.gainDb;
     }
@@ -47,6 +55,10 @@ public final class AudioMappingResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="inputChannel", required=true)
     private Integer inputChannel;
 
+    /**
+     * @return The zero-based index of the channel in the input audio stream.
+     * 
+     */
     public Integer inputChannel() {
         return this.inputChannel;
     }
@@ -58,6 +70,10 @@ public final class AudioMappingResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="inputKey", required=true)
     private String inputKey;
 
+    /**
+     * @return The `Input.key` that identifies the input file.
+     * 
+     */
     public String inputKey() {
         return this.inputKey;
     }
@@ -69,6 +85,10 @@ public final class AudioMappingResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="inputTrack", required=true)
     private Integer inputTrack;
 
+    /**
+     * @return The zero-based index of the track in the input file.
+     * 
+     */
     public Integer inputTrack() {
         return this.inputTrack;
     }
@@ -80,6 +100,10 @@ public final class AudioMappingResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="outputChannel", required=true)
     private Integer outputChannel;
 
+    /**
+     * @return The zero-based index of the channel in the output audio stream.
+     * 
+     */
     public Integer outputChannel() {
         return this.outputChannel;
     }
@@ -113,31 +137,67 @@ public final class AudioMappingResponse extends com.pulumi.resources.InvokeArgs 
             $ = new AudioMappingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param atomKey The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder atomKey(String atomKey) {
             $.atomKey = atomKey;
             return this;
         }
 
+        /**
+         * @param gainDb Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gainDb(Double gainDb) {
             $.gainDb = gainDb;
             return this;
         }
 
+        /**
+         * @param inputChannel The zero-based index of the channel in the input audio stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputChannel(Integer inputChannel) {
             $.inputChannel = inputChannel;
             return this;
         }
 
+        /**
+         * @param inputKey The `Input.key` that identifies the input file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputKey(String inputKey) {
             $.inputKey = inputKey;
             return this;
         }
 
+        /**
+         * @param inputTrack The zero-based index of the track in the input file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputTrack(Integer inputTrack) {
             $.inputTrack = inputTrack;
             return this;
         }
 
+        /**
+         * @param outputChannel The zero-based index of the channel in the output audio stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputChannel(Integer outputChannel) {
             $.outputChannel = outputChannel;
             return this;

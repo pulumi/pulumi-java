@@ -22,6 +22,10 @@ public final class RestApiPolicyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="policy")
     private @Nullable Output<String> policy;
 
+    /**
+     * @return JSON formatted policy document that controls access to the API Gateway.
+     * 
+     */
     public Optional<Output<String>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -33,6 +37,10 @@ public final class RestApiPolicyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="restApiId")
     private @Nullable Output<String> restApiId;
 
+    /**
+     * @return The ID of the REST API.
+     * 
+     */
     public Optional<Output<String>> restApiId() {
         return Optional.ofNullable(this.restApiId);
     }
@@ -62,20 +70,44 @@ public final class RestApiPolicyState extends com.pulumi.resources.ResourceArgs 
             $ = new RestApiPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policy JSON formatted policy document that controls access to the API Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<String> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy JSON formatted policy document that controls access to the API Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(String policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param restApiId The ID of the REST API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(@Nullable Output<String> restApiId) {
             $.restApiId = restApiId;
             return this;
         }
 
+        /**
+         * @param restApiId The ID of the REST API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             return restApiId(Output.of(restApiId));
         }

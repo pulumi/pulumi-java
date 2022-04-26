@@ -24,6 +24,11 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetA
     @Import(name="eventType", required=true)
     private Output<String> eventType;
 
+    /**
+     * @return The specific event to trigger this function.
+     * Valid values: `viewer-request` or `viewer-response`
+     * 
+     */
     public Output<String> eventType() {
         return this.eventType;
     }
@@ -35,6 +40,10 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetA
     @Import(name="includeBody")
     private @Nullable Output<Boolean> includeBody;
 
+    /**
+     * @return When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
+     * 
+     */
     public Optional<Output<Boolean>> includeBody() {
         return Optional.ofNullable(this.includeBody);
     }
@@ -46,6 +55,10 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetA
     @Import(name="lambdaArn", required=true)
     private Output<String> lambdaArn;
 
+    /**
+     * @return ARN of the Lambda function.
+     * 
+     */
     public Output<String> lambdaArn() {
         return this.lambdaArn;
     }
@@ -76,29 +89,67 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetA
             $ = new DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventType The specific event to trigger this function.
+         * Valid values: `viewer-request` or `viewer-response`
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(Output<String> eventType) {
             $.eventType = eventType;
             return this;
         }
 
+        /**
+         * @param eventType The specific event to trigger this function.
+         * Valid values: `viewer-request` or `viewer-response`
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(String eventType) {
             return eventType(Output.of(eventType));
         }
 
+        /**
+         * @param includeBody When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeBody(@Nullable Output<Boolean> includeBody) {
             $.includeBody = includeBody;
             return this;
         }
 
+        /**
+         * @param includeBody When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeBody(Boolean includeBody) {
             return includeBody(Output.of(includeBody));
         }
 
+        /**
+         * @param lambdaArn ARN of the Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaArn(Output<String> lambdaArn) {
             $.lambdaArn = lambdaArn;
             return this;
         }
 
+        /**
+         * @param lambdaArn ARN of the Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaArn(String lambdaArn) {
             return lambdaArn(Output.of(lambdaArn));
         }

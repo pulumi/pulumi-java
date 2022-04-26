@@ -23,6 +23,10 @@ public final class RelationshipNoteResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of relationship between the source and target SPDX elements
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -51,6 +55,12 @@ public final class RelationshipNoteResponse extends com.pulumi.resources.InvokeA
             $ = new RelationshipNoteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of relationship between the source and target SPDX elements
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

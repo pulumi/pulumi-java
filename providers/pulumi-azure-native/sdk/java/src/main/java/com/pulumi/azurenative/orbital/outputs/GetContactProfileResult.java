@@ -17,62 +17,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetContactProfileResult {
     /**
-     * Auto track configuration.
+     * @return Auto track configuration.
      * 
      */
     private final @Nullable String autoTrackingConfiguration;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * The URI of the Event Hub used for telemetry
+     * @return The URI of the Event Hub used for telemetry
      * 
      */
     private final @Nullable String eventHubUri;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Links of the Contact Profile
+     * @return Links of the Contact Profile
      * 
      */
     private final List<ContactProfileLinkResponse> links;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * Minimum viable elevation for the contact in decimal degrees.
+     * @return Minimum viable elevation for the contact in decimal degrees.
      * 
      */
     private final @Nullable Double minimumElevationDegrees;
     /**
-     * Minimum viable contact duration in ISO 8601 format.
+     * @return Minimum viable contact duration in ISO 8601 format.
      * 
      */
     private final @Nullable String minimumViableContactDuration;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -106,86 +106,86 @@ public final class GetContactProfileResult {
     }
 
     /**
-     * Auto track configuration.
+     * @return Auto track configuration.
      * 
-    */
+     */
     public Optional<String> autoTrackingConfiguration() {
         return Optional.ofNullable(this.autoTrackingConfiguration);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The URI of the Event Hub used for telemetry
+     * @return The URI of the Event Hub used for telemetry
      * 
-    */
+     */
     public Optional<String> eventHubUri() {
         return Optional.ofNullable(this.eventHubUri);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Links of the Contact Profile
+     * @return Links of the Contact Profile
      * 
-    */
+     */
     public List<ContactProfileLinkResponse> links() {
         return this.links;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Minimum viable elevation for the contact in decimal degrees.
+     * @return Minimum viable elevation for the contact in decimal degrees.
      * 
-    */
+     */
     public Optional<Double> minimumElevationDegrees() {
         return Optional.ofNullable(this.minimumElevationDegrees);
     }
     /**
-     * Minimum viable contact duration in ISO 8601 format.
+     * @return Minimum viable contact duration in ISO 8601 format.
      * 
-    */
+     */
     public Optional<String> minimumViableContactDuration() {
         return Optional.ofNullable(this.minimumViableContactDuration);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

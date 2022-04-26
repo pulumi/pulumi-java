@@ -26,6 +26,10 @@ public final class ApplicationLog extends com.pulumi.resources.InvokeArgs {
     @Import(name="encoding")
     private @Nullable ApplicationLogEncoding encoding;
 
+    /**
+     * @return The type of encoding of the logs to be monitored.
+     * 
+     */
     public Optional<ApplicationLogEncoding> encoding() {
         return Optional.ofNullable(this.encoding);
     }
@@ -37,6 +41,10 @@ public final class ApplicationLog extends com.pulumi.resources.InvokeArgs {
     @Import(name="logGroupName")
     private @Nullable String logGroupName;
 
+    /**
+     * @return The CloudWatch log group name to be associated to the monitored log.
+     * 
+     */
     public Optional<String> logGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
@@ -48,6 +56,10 @@ public final class ApplicationLog extends com.pulumi.resources.InvokeArgs {
     @Import(name="logPath")
     private @Nullable String logPath;
 
+    /**
+     * @return The path of the logs to be monitored.
+     * 
+     */
     public Optional<String> logPath() {
         return Optional.ofNullable(this.logPath);
     }
@@ -59,6 +71,10 @@ public final class ApplicationLog extends com.pulumi.resources.InvokeArgs {
     @Import(name="logType", required=true)
     private String logType;
 
+    /**
+     * @return The log type decides the log patterns against which Application Insights analyzes the log.
+     * 
+     */
     public String logType() {
         return this.logType;
     }
@@ -70,6 +86,10 @@ public final class ApplicationLog extends com.pulumi.resources.InvokeArgs {
     @Import(name="patternSet")
     private @Nullable String patternSet;
 
+    /**
+     * @return The name of the log pattern set.
+     * 
+     */
     public Optional<String> patternSet() {
         return Optional.ofNullable(this.patternSet);
     }
@@ -102,26 +122,56 @@ public final class ApplicationLog extends com.pulumi.resources.InvokeArgs {
             $ = new ApplicationLog(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encoding The type of encoding of the logs to be monitored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(@Nullable ApplicationLogEncoding encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param logGroupName The CloudWatch log group name to be associated to the monitored log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(@Nullable String logGroupName) {
             $.logGroupName = logGroupName;
             return this;
         }
 
+        /**
+         * @param logPath The path of the logs to be monitored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPath(@Nullable String logPath) {
             $.logPath = logPath;
             return this;
         }
 
+        /**
+         * @param logType The log type decides the log patterns against which Application Insights analyzes the log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logType(String logType) {
             $.logType = logType;
             return this;
         }
 
+        /**
+         * @param patternSet The name of the log pattern set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternSet(@Nullable String patternSet) {
             $.patternSet = patternSet;
             return this;

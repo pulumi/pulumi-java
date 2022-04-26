@@ -26,6 +26,10 @@ public final class AccountFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -37,6 +41,10 @@ public final class AccountFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filterName")
     private @Nullable Output<String> filterName;
 
+    /**
+     * @return The Account Filter name
+     * 
+     */
     public Optional<Output<String>> filterName() {
         return Optional.ofNullable(this.filterName);
     }
@@ -48,6 +56,10 @@ public final class AccountFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firstQuality")
     private @Nullable Output<FirstQualityArgs> firstQuality;
 
+    /**
+     * @return The first quality.
+     * 
+     */
     public Optional<Output<FirstQualityArgs>> firstQuality() {
         return Optional.ofNullable(this.firstQuality);
     }
@@ -59,6 +71,10 @@ public final class AccountFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="presentationTimeRange")
     private @Nullable Output<PresentationTimeRangeArgs> presentationTimeRange;
 
+    /**
+     * @return The presentation time range.
+     * 
+     */
     public Optional<Output<PresentationTimeRangeArgs>> presentationTimeRange() {
         return Optional.ofNullable(this.presentationTimeRange);
     }
@@ -70,6 +86,10 @@ public final class AccountFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -81,6 +101,10 @@ public final class AccountFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tracks")
     private @Nullable Output<List<FilterTrackSelectionArgs>> tracks;
 
+    /**
+     * @return The tracks selection conditions.
+     * 
+     */
     public Optional<Output<List<FilterTrackSelectionArgs>>> tracks() {
         return Optional.ofNullable(this.tracks);
     }
@@ -114,60 +138,138 @@ public final class AccountFilterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccountFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param filterName The Account Filter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterName(@Nullable Output<String> filterName) {
             $.filterName = filterName;
             return this;
         }
 
+        /**
+         * @param filterName The Account Filter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterName(String filterName) {
             return filterName(Output.of(filterName));
         }
 
+        /**
+         * @param firstQuality The first quality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstQuality(@Nullable Output<FirstQualityArgs> firstQuality) {
             $.firstQuality = firstQuality;
             return this;
         }
 
+        /**
+         * @param firstQuality The first quality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstQuality(FirstQualityArgs firstQuality) {
             return firstQuality(Output.of(firstQuality));
         }
 
+        /**
+         * @param presentationTimeRange The presentation time range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presentationTimeRange(@Nullable Output<PresentationTimeRangeArgs> presentationTimeRange) {
             $.presentationTimeRange = presentationTimeRange;
             return this;
         }
 
+        /**
+         * @param presentationTimeRange The presentation time range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presentationTimeRange(PresentationTimeRangeArgs presentationTimeRange) {
             return presentationTimeRange(Output.of(presentationTimeRange));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tracks The tracks selection conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracks(@Nullable Output<List<FilterTrackSelectionArgs>> tracks) {
             $.tracks = tracks;
             return this;
         }
 
+        /**
+         * @param tracks The tracks selection conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracks(List<FilterTrackSelectionArgs> tracks) {
             return tracks(Output.of(tracks));
         }
 
+        /**
+         * @param tracks The tracks selection conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracks(FilterTrackSelectionArgs... tracks) {
             return tracks(List.of(tracks));
         }

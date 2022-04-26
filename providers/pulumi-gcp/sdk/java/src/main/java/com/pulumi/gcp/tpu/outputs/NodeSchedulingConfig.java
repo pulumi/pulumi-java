@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class NodeSchedulingConfig {
     /**
-     * Defines whether the TPU instance is preemptible.
+     * @return Defines whether the TPU instance is preemptible.
      * 
      */
     private final Boolean preemptible;
@@ -21,9 +21,9 @@ public final class NodeSchedulingConfig {
     }
 
     /**
-     * Defines whether the TPU instance is preemptible.
+     * @return Defines whether the TPU instance is preemptible.
      * 
-    */
+     */
     public Boolean preemptible() {
         return this.preemptible;
     }

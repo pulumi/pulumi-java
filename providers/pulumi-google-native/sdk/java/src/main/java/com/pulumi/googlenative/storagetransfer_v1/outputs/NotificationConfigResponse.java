@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class NotificationConfigResponse {
     /**
-     * Event types for which a notification is desired. If empty, send notifications for all event types.
+     * @return Event types for which a notification is desired. If empty, send notifications for all event types.
      * 
      */
     private final List<String> eventTypes;
     /**
-     * The desired format of the notification message payloads.
+     * @return The desired format of the notification message payloads.
      * 
      */
     private final String payloadFormat;
     /**
-     * The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format results in an INVALID_ARGUMENT error.
+     * @return The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format results in an INVALID_ARGUMENT error.
      * 
      */
     private final String pubsubTopic;
@@ -37,23 +37,23 @@ public final class NotificationConfigResponse {
     }
 
     /**
-     * Event types for which a notification is desired. If empty, send notifications for all event types.
+     * @return Event types for which a notification is desired. If empty, send notifications for all event types.
      * 
-    */
+     */
     public List<String> eventTypes() {
         return this.eventTypes;
     }
     /**
-     * The desired format of the notification message payloads.
+     * @return The desired format of the notification message payloads.
      * 
-    */
+     */
     public String payloadFormat() {
         return this.payloadFormat;
     }
     /**
-     * The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format results in an INVALID_ARGUMENT error.
+     * @return The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format results in an INVALID_ARGUMENT error.
      * 
-    */
+     */
     public String pubsubTopic() {
         return this.pubsubTopic;
     }

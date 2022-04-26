@@ -27,6 +27,10 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="keySource")
     private @Nullable Output<KeySource> keySource;
 
+    /**
+     * @return Type of the key source.
+     * 
+     */
     public Optional<Output<KeySource>> keySource() {
         return Optional.ofNullable(this.keySource);
     }
@@ -38,6 +42,10 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="keyVaultProperties")
     private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
+    /**
+     * @return Additional details when using Microsoft.KeyVault
+     * 
+     */
     public Optional<Output<KeyVaultPropertiesArgs>> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -67,20 +75,44 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new EncryptionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keySource Type of the key source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(@Nullable Output<KeySource> keySource) {
             $.keySource = keySource;
             return this;
         }
 
+        /**
+         * @param keySource Type of the key source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(KeySource keySource) {
             return keySource(Output.of(keySource));
         }
 
+        /**
+         * @param keyVaultProperties Additional details when using Microsoft.KeyVault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties Additional details when using Microsoft.KeyVault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
             return keyVaultProperties(Output.of(keyVaultProperties));
         }

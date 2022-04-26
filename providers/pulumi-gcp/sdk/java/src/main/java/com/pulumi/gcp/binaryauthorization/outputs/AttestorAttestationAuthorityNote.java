@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AttestorAttestationAuthorityNote {
     /**
-     * - 
+     * @return -
      * This field will contain the service account email address that
      * this Attestor will use as the principal when querying Container
      * Analysis. Attestor administrators must grant this service account
@@ -28,7 +28,7 @@ public final class AttestorAttestationAuthorityNote {
      */
     private final @Nullable String delegationServiceAccountEmail;
     /**
-     * The resource name of a ATTESTATION_AUTHORITY Note, created by the
+     * @return The resource name of a ATTESTATION_AUTHORITY Note, created by the
      * user. If the Note is in a different project from the Attestor, it
      * should be specified in the format `projects/*{@literal /}notes/*` (or the legacy
      * `providers/*{@literal /}notes/*`). This field may not be updated.
@@ -39,7 +39,7 @@ public final class AttestorAttestationAuthorityNote {
      */
     private final String noteReference;
     /**
-     * Public keys that verify attestations signed by this attestor. This
+     * @return Public keys that verify attestations signed by this attestor. This
      * field may be updated.
      * If this field is non-empty, one of the specified public keys must
      * verify that an attestation was signed by this attestor for the
@@ -62,7 +62,7 @@ public final class AttestorAttestationAuthorityNote {
     }
 
     /**
-     * - 
+     * @return -
      * This field will contain the service account email address that
      * this Attestor will use as the principal when querying Container
      * Analysis. Attestor administrators must grant this service account
@@ -73,12 +73,12 @@ public final class AttestorAttestationAuthorityNote {
      * account email; future versions may use an email based on a
      * different naming pattern.
      * 
-    */
+     */
     public Optional<String> delegationServiceAccountEmail() {
         return Optional.ofNullable(this.delegationServiceAccountEmail);
     }
     /**
-     * The resource name of a ATTESTATION_AUTHORITY Note, created by the
+     * @return The resource name of a ATTESTATION_AUTHORITY Note, created by the
      * user. If the Note is in a different project from the Attestor, it
      * should be specified in the format `projects/*{@literal /}notes/*` (or the legacy
      * `providers/*{@literal /}notes/*`). This field may not be updated.
@@ -86,12 +86,12 @@ public final class AttestorAttestationAuthorityNote {
      * ATTESTATION_AUTHORITY Occurrence that names a container image
      * and that links to this Note.
      * 
-    */
+     */
     public String noteReference() {
         return this.noteReference;
     }
     /**
-     * Public keys that verify attestations signed by this attestor. This
+     * @return Public keys that verify attestations signed by this attestor. This
      * field may be updated.
      * If this field is non-empty, one of the specified public keys must
      * verify that an attestation was signed by this attestor for the
@@ -100,7 +100,7 @@ public final class AttestorAttestationAuthorityNote {
      * attestations exist.
      * Structure is documented below.
      * 
-    */
+     */
     public List<AttestorAttestationAuthorityNotePublicKey> publicKeys() {
         return this.publicKeys == null ? List.of() : this.publicKeys;
     }

@@ -23,6 +23,10 @@ public final class EventIntegrationAssociation extends com.pulumi.resources.Invo
     @Import(name="clientAssociationMetadata")
     private @Nullable List<EventIntegrationMetadata> clientAssociationMetadata;
 
+    /**
+     * @return The metadata associated with the client.
+     * 
+     */
     public Optional<List<EventIntegrationMetadata>> clientAssociationMetadata() {
         return Optional.ofNullable(this.clientAssociationMetadata);
     }
@@ -34,6 +38,10 @@ public final class EventIntegrationAssociation extends com.pulumi.resources.Invo
     @Import(name="clientId")
     private @Nullable String clientId;
 
+    /**
+     * @return The identifier for the client that is associated with the event integration.
+     * 
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -45,6 +53,10 @@ public final class EventIntegrationAssociation extends com.pulumi.resources.Invo
     @Import(name="eventBridgeRuleName")
     private @Nullable String eventBridgeRuleName;
 
+    /**
+     * @return The name of the Eventbridge rule.
+     * 
+     */
     public Optional<String> eventBridgeRuleName() {
         return Optional.ofNullable(this.eventBridgeRuleName);
     }
@@ -56,6 +68,10 @@ public final class EventIntegrationAssociation extends com.pulumi.resources.Invo
     @Import(name="eventIntegrationAssociationArn")
     private @Nullable String eventIntegrationAssociationArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the event integration association.
+     * 
+     */
     public Optional<String> eventIntegrationAssociationArn() {
         return Optional.ofNullable(this.eventIntegrationAssociationArn);
     }
@@ -67,6 +83,10 @@ public final class EventIntegrationAssociation extends com.pulumi.resources.Invo
     @Import(name="eventIntegrationAssociationId")
     private @Nullable String eventIntegrationAssociationId;
 
+    /**
+     * @return The identifier for the event integration association.
+     * 
+     */
     public Optional<String> eventIntegrationAssociationId() {
         return Optional.ofNullable(this.eventIntegrationAssociationId);
     }
@@ -99,30 +119,66 @@ public final class EventIntegrationAssociation extends com.pulumi.resources.Invo
             $ = new EventIntegrationAssociation(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientAssociationMetadata The metadata associated with the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAssociationMetadata(@Nullable List<EventIntegrationMetadata> clientAssociationMetadata) {
             $.clientAssociationMetadata = clientAssociationMetadata;
             return this;
         }
 
+        /**
+         * @param clientAssociationMetadata The metadata associated with the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAssociationMetadata(EventIntegrationMetadata... clientAssociationMetadata) {
             return clientAssociationMetadata(List.of(clientAssociationMetadata));
         }
 
+        /**
+         * @param clientId The identifier for the client that is associated with the event integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param eventBridgeRuleName The name of the Eventbridge rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventBridgeRuleName(@Nullable String eventBridgeRuleName) {
             $.eventBridgeRuleName = eventBridgeRuleName;
             return this;
         }
 
+        /**
+         * @param eventIntegrationAssociationArn The Amazon Resource Name (ARN) for the event integration association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventIntegrationAssociationArn(@Nullable String eventIntegrationAssociationArn) {
             $.eventIntegrationAssociationArn = eventIntegrationAssociationArn;
             return this;
         }
 
+        /**
+         * @param eventIntegrationAssociationId The identifier for the event integration association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventIntegrationAssociationId(@Nullable String eventIntegrationAssociationId) {
             $.eventIntegrationAssociationId = eventIntegrationAssociationId;
             return this;

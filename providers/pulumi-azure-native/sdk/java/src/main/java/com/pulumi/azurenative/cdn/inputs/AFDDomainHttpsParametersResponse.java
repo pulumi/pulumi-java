@@ -26,6 +26,10 @@ public final class AFDDomainHttpsParametersResponse extends com.pulumi.resources
     @Import(name="certificateType", required=true)
     private String certificateType;
 
+    /**
+     * @return Defines the source of the SSL certificate.
+     * 
+     */
     public String certificateType() {
         return this.certificateType;
     }
@@ -37,6 +41,10 @@ public final class AFDDomainHttpsParametersResponse extends com.pulumi.resources
     @Import(name="minimumTlsVersion")
     private @Nullable String minimumTlsVersion;
 
+    /**
+     * @return TLS protocol version that will be used for Https
+     * 
+     */
     public Optional<String> minimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
@@ -48,6 +56,10 @@ public final class AFDDomainHttpsParametersResponse extends com.pulumi.resources
     @Import(name="secret")
     private @Nullable ResourceReferenceResponse secret;
 
+    /**
+     * @return Resource reference to the secret. ie. subs/rg/profile/secret
+     * 
+     */
     public Optional<ResourceReferenceResponse> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -78,16 +90,34 @@ public final class AFDDomainHttpsParametersResponse extends com.pulumi.resources
             $ = new AFDDomainHttpsParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateType Defines the source of the SSL certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateType(String certificateType) {
             $.certificateType = certificateType;
             return this;
         }
 
+        /**
+         * @param minimumTlsVersion TLS protocol version that will be used for Https
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumTlsVersion(@Nullable String minimumTlsVersion) {
             $.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
 
+        /**
+         * @param secret Resource reference to the secret. ie. subs/rg/profile/secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable ResourceReferenceResponse secret) {
             $.secret = secret;
             return this;

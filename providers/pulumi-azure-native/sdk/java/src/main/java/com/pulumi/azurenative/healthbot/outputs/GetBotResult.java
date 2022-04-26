@@ -15,42 +15,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetBotResult {
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
      */
     private final String id;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The set of properties specific to Healthbot resource.
+     * @return The set of properties specific to Healthbot resource.
      * 
      */
     private final HealthBotPropertiesResponse properties;
     /**
-     * SKU of the HealthBot.
+     * @return SKU of the HealthBot.
      * 
      */
     private final SkuResponse sku;
     /**
-     * Metadata pertaining to creation and last modification of the resource
+     * @return Metadata pertaining to creation and last modification of the resource
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -76,58 +76,58 @@ public final class GetBotResult {
     }
 
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The set of properties specific to Healthbot resource.
+     * @return The set of properties specific to Healthbot resource.
      * 
-    */
+     */
     public HealthBotPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * SKU of the HealthBot.
+     * @return SKU of the HealthBot.
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource
+     * @return Metadata pertaining to creation and last modification of the resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

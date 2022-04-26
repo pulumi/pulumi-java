@@ -25,6 +25,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="associations")
     private @Nullable Output<List<FirewallPolicyAssociationArgs>> associations;
 
+    /**
+     * @return A list of associations that belong to this firewall policy.
+     * 
+     */
     public Optional<Output<List<FirewallPolicyAssociationArgs>>> associations() {
         return Optional.ofNullable(this.associations);
     }
@@ -36,6 +40,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -61,6 +69,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="rules")
     private @Nullable Output<List<FirewallPolicyRuleArgs>> rules;
 
+    /**
+     * @return A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match &#34;*&#34;). If no rules are provided when creating a firewall policy, a default rule with action &#34;allow&#34; will be added.
+     * 
+     */
     public Optional<Output<List<FirewallPolicyRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -72,6 +84,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="shortName")
     private @Nullable Output<String> shortName;
 
+    /**
+     * @return User-provided name of the Organization firewall plicy. The name should be unique in the organization in which the firewall policy is created. This name must be set on creation and cannot be changed. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> shortName() {
         return Optional.ofNullable(this.shortName);
     }
@@ -105,24 +121,54 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
             $ = new FirewallPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associations A list of associations that belong to this firewall policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associations(@Nullable Output<List<FirewallPolicyAssociationArgs>> associations) {
             $.associations = associations;
             return this;
         }
 
+        /**
+         * @param associations A list of associations that belong to this firewall policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associations(List<FirewallPolicyAssociationArgs> associations) {
             return associations(Output.of(associations));
         }
 
+        /**
+         * @param associations A list of associations that belong to this firewall policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associations(FirewallPolicyAssociationArgs... associations) {
             return associations(List.of(associations));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
@@ -145,24 +191,54 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param rules A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match &#34;*&#34;). If no rules are provided when creating a firewall policy, a default rule with action &#34;allow&#34; will be added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<FirewallPolicyRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match &#34;*&#34;). If no rules are provided when creating a firewall policy, a default rule with action &#34;allow&#34; will be added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<FirewallPolicyRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match &#34;*&#34;). If no rules are provided when creating a firewall policy, a default rule with action &#34;allow&#34; will be added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(FirewallPolicyRuleArgs... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param shortName User-provided name of the Organization firewall plicy. The name should be unique in the organization in which the firewall policy is created. This name must be set on creation and cannot be changed. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortName(@Nullable Output<String> shortName) {
             $.shortName = shortName;
             return this;
         }
 
+        /**
+         * @param shortName User-provided name of the Organization firewall plicy. The name should be unique in the organization in which the firewall policy is created. This name must be set on creation and cannot be changed. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortName(String shortName) {
             return shortName(Output.of(shortName));
         }

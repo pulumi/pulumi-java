@@ -16,47 +16,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AssignmentReportResponse {
     /**
-     * Configuration details of the guest configuration assignment.
+     * @return Configuration details of the guest configuration assignment.
      * 
      */
     private final @Nullable AssignmentInfoResponse assignment;
     /**
-     * A value indicating compliance status of the machine for the assigned guest configuration.
+     * @return A value indicating compliance status of the machine for the assigned guest configuration.
      * 
      */
     private final String complianceStatus;
     /**
-     * End date and time of the guest configuration assignment compliance status check.
+     * @return End date and time of the guest configuration assignment compliance status check.
      * 
      */
     private final String endTime;
     /**
-     * ARM resource id of the report for the guest configuration assignment.
+     * @return ARM resource id of the report for the guest configuration assignment.
      * 
      */
     private final String id;
     /**
-     * Type of report, Consistency or Initial
+     * @return Type of report, Consistency or Initial
      * 
      */
     private final String operationType;
     /**
-     * GUID that identifies the guest configuration assignment report under a subscription, resource group.
+     * @return GUID that identifies the guest configuration assignment report under a subscription, resource group.
      * 
      */
     private final String reportId;
     /**
-     * The list of resources for which guest configuration assignment compliance is checked.
+     * @return The list of resources for which guest configuration assignment compliance is checked.
      * 
      */
     private final @Nullable List<AssignmentReportResourceResponse> resources;
     /**
-     * Start date and time of the guest configuration assignment compliance status check.
+     * @return Start date and time of the guest configuration assignment compliance status check.
      * 
      */
     private final String startTime;
     /**
-     * Information about the VM.
+     * @return Information about the VM.
      * 
      */
     private final @Nullable VMInfoResponse vm;
@@ -84,65 +84,65 @@ public final class AssignmentReportResponse {
     }
 
     /**
-     * Configuration details of the guest configuration assignment.
+     * @return Configuration details of the guest configuration assignment.
      * 
-    */
+     */
     public Optional<AssignmentInfoResponse> assignment() {
         return Optional.ofNullable(this.assignment);
     }
     /**
-     * A value indicating compliance status of the machine for the assigned guest configuration.
+     * @return A value indicating compliance status of the machine for the assigned guest configuration.
      * 
-    */
+     */
     public String complianceStatus() {
         return this.complianceStatus;
     }
     /**
-     * End date and time of the guest configuration assignment compliance status check.
+     * @return End date and time of the guest configuration assignment compliance status check.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * ARM resource id of the report for the guest configuration assignment.
+     * @return ARM resource id of the report for the guest configuration assignment.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Type of report, Consistency or Initial
+     * @return Type of report, Consistency or Initial
      * 
-    */
+     */
     public String operationType() {
         return this.operationType;
     }
     /**
-     * GUID that identifies the guest configuration assignment report under a subscription, resource group.
+     * @return GUID that identifies the guest configuration assignment report under a subscription, resource group.
      * 
-    */
+     */
     public String reportId() {
         return this.reportId;
     }
     /**
-     * The list of resources for which guest configuration assignment compliance is checked.
+     * @return The list of resources for which guest configuration assignment compliance is checked.
      * 
-    */
+     */
     public List<AssignmentReportResourceResponse> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
     /**
-     * Start date and time of the guest configuration assignment compliance status check.
+     * @return Start date and time of the guest configuration assignment compliance status check.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Information about the VM.
+     * @return Information about the VM.
      * 
-    */
+     */
     public Optional<VMInfoResponse> vm() {
         return Optional.ofNullable(this.vm);
     }

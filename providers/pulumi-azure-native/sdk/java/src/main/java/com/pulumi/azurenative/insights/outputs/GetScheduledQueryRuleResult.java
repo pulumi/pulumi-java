@@ -19,92 +19,92 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetScheduledQueryRuleResult {
     /**
-     * Action needs to be taken on rule execution.
+     * @return Action needs to be taken on rule execution.
      * 
      */
     private final Either<AlertingActionResponse,LogToMetricActionResponse> action;
     /**
-     * The flag that indicates whether the alert should be automatically resolved or not. The default is false.
+     * @return The flag that indicates whether the alert should be automatically resolved or not. The default is false.
      * 
      */
     private final @Nullable Boolean autoMitigate;
     /**
-     * The api-version used when creating this alert rule
+     * @return The api-version used when creating this alert rule
      * 
      */
     private final String createdWithApiVersion;
     /**
-     * The description of the Log Search rule.
+     * @return The description of the Log Search rule.
      * 
      */
     private final @Nullable String description;
     /**
-     * The display name of the alert rule
+     * @return The display name of the alert rule
      * 
      */
     private final @Nullable String displayName;
     /**
-     * The flag which indicates whether the Log Search rule is enabled. Value should be true or false
+     * @return The flag which indicates whether the Log Search rule is enabled. Value should be true or false
      * 
      */
     private final @Nullable String enabled;
     /**
-     * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+     * @return The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
      * 
      */
     private final String etag;
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final String id;
     /**
-     * True if alert rule is legacy Log Analytic rule
+     * @return True if alert rule is legacy Log Analytic rule
      * 
      */
     private final Boolean isLegacyLogAnalyticsRule;
     /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
     private final String kind;
     /**
-     * Last time the rule was updated in IS08601 format.
+     * @return Last time the rule was updated in IS08601 format.
      * 
      */
     private final String lastUpdatedTime;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final String name;
     /**
-     * Provisioning state of the scheduled query rule
+     * @return Provisioning state of the scheduled query rule
      * 
      */
     private final String provisioningState;
     /**
-     * Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction
+     * @return Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction
      * 
      */
     private final @Nullable ScheduleResponse schedule;
     /**
-     * Data Source against which rule will Query Data
+     * @return Data Source against which rule will Query Data
      * 
      */
     private final SourceResponse source;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final String type;
@@ -150,128 +150,128 @@ public final class GetScheduledQueryRuleResult {
     }
 
     /**
-     * Action needs to be taken on rule execution.
+     * @return Action needs to be taken on rule execution.
      * 
-    */
+     */
     public Either<AlertingActionResponse,LogToMetricActionResponse> action() {
         return this.action;
     }
     /**
-     * The flag that indicates whether the alert should be automatically resolved or not. The default is false.
+     * @return The flag that indicates whether the alert should be automatically resolved or not. The default is false.
      * 
-    */
+     */
     public Optional<Boolean> autoMitigate() {
         return Optional.ofNullable(this.autoMitigate);
     }
     /**
-     * The api-version used when creating this alert rule
+     * @return The api-version used when creating this alert rule
      * 
-    */
+     */
     public String createdWithApiVersion() {
         return this.createdWithApiVersion;
     }
     /**
-     * The description of the Log Search rule.
+     * @return The description of the Log Search rule.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The display name of the alert rule
+     * @return The display name of the alert rule
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The flag which indicates whether the Log Search rule is enabled. Value should be true or false
+     * @return The flag which indicates whether the Log Search rule is enabled. Value should be true or false
      * 
-    */
+     */
     public Optional<String> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+     * @return The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * True if alert rule is legacy Log Analytic rule
+     * @return True if alert rule is legacy Log Analytic rule
      * 
-    */
+     */
     public Boolean isLegacyLogAnalyticsRule() {
         return this.isLegacyLogAnalyticsRule;
     }
     /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Last time the rule was updated in IS08601 format.
+     * @return Last time the rule was updated in IS08601 format.
      * 
-    */
+     */
     public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the scheduled query rule
+     * @return Provisioning state of the scheduled query rule
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction
+     * @return Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction
      * 
-    */
+     */
     public Optional<ScheduleResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
-     * Data Source against which rule will Query Data
+     * @return Data Source against which rule will Query Data
      * 
-    */
+     */
     public SourceResponse source() {
         return this.source;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

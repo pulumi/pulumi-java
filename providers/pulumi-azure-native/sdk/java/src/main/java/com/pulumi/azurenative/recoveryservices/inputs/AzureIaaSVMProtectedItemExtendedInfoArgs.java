@@ -28,6 +28,10 @@ public final class AzureIaaSVMProtectedItemExtendedInfoArgs extends com.pulumi.r
     @Import(name="oldestRecoveryPoint")
     private @Nullable Output<String> oldestRecoveryPoint;
 
+    /**
+     * @return The oldest backup copy available for this backup item.
+     * 
+     */
     public Optional<Output<String>> oldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
@@ -39,6 +43,10 @@ public final class AzureIaaSVMProtectedItemExtendedInfoArgs extends com.pulumi.r
     @Import(name="policyInconsistent")
     private @Nullable Output<Boolean> policyInconsistent;
 
+    /**
+     * @return Specifies if backup policy associated with the backup item is inconsistent.
+     * 
+     */
     public Optional<Output<Boolean>> policyInconsistent() {
         return Optional.ofNullable(this.policyInconsistent);
     }
@@ -50,6 +58,10 @@ public final class AzureIaaSVMProtectedItemExtendedInfoArgs extends com.pulumi.r
     @Import(name="recoveryPointCount")
     private @Nullable Output<Integer> recoveryPointCount;
 
+    /**
+     * @return Number of backup copies available for this backup item.
+     * 
+     */
     public Optional<Output<Integer>> recoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
@@ -80,29 +92,65 @@ public final class AzureIaaSVMProtectedItemExtendedInfoArgs extends com.pulumi.r
             $ = new AzureIaaSVMProtectedItemExtendedInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oldestRecoveryPoint The oldest backup copy available for this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldestRecoveryPoint(@Nullable Output<String> oldestRecoveryPoint) {
             $.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
+        /**
+         * @param oldestRecoveryPoint The oldest backup copy available for this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldestRecoveryPoint(String oldestRecoveryPoint) {
             return oldestRecoveryPoint(Output.of(oldestRecoveryPoint));
         }
 
+        /**
+         * @param policyInconsistent Specifies if backup policy associated with the backup item is inconsistent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyInconsistent(@Nullable Output<Boolean> policyInconsistent) {
             $.policyInconsistent = policyInconsistent;
             return this;
         }
 
+        /**
+         * @param policyInconsistent Specifies if backup policy associated with the backup item is inconsistent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyInconsistent(Boolean policyInconsistent) {
             return policyInconsistent(Output.of(policyInconsistent));
         }
 
+        /**
+         * @param recoveryPointCount Number of backup copies available for this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointCount(@Nullable Output<Integer> recoveryPointCount) {
             $.recoveryPointCount = recoveryPointCount;
             return this;
         }
 
+        /**
+         * @param recoveryPointCount Number of backup copies available for this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointCount(Integer recoveryPointCount) {
             return recoveryPointCount(Output.of(recoveryPointCount));
         }

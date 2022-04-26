@@ -27,6 +27,10 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
     @Import(name="globalValidation")
     private @Nullable Output<GlobalValidationArgs> globalValidation;
 
+    /**
+     * @return The configuration settings that determines the validation flow of users using App Service Authentication/Authorization.
+     * 
+     */
     public Optional<Output<GlobalValidationArgs>> globalValidation() {
         return Optional.ofNullable(this.globalValidation);
     }
@@ -38,6 +42,10 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
     @Import(name="httpSettings")
     private @Nullable Output<HttpSettingsArgs> httpSettings;
 
+    /**
+     * @return The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.
+     * 
+     */
     public Optional<Output<HttpSettingsArgs>> httpSettings() {
         return Optional.ofNullable(this.httpSettings);
     }
@@ -49,6 +57,10 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
     @Import(name="identityProviders")
     private @Nullable Output<IdentityProvidersArgs> identityProviders;
 
+    /**
+     * @return The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
+     * 
+     */
     public Optional<Output<IdentityProvidersArgs>> identityProviders() {
         return Optional.ofNullable(this.identityProviders);
     }
@@ -60,6 +72,10 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -71,6 +87,10 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
     @Import(name="login")
     private @Nullable Output<LoginArgs> login;
 
+    /**
+     * @return The configuration settings of the login flow of users using App Service Authentication/Authorization.
+     * 
+     */
     public Optional<Output<LoginArgs>> login() {
         return Optional.ofNullable(this.login);
     }
@@ -82,6 +102,10 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of web app.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -93,6 +117,10 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
     @Import(name="platform")
     private @Nullable Output<AuthPlatformArgs> platform;
 
+    /**
+     * @return The configuration settings of the platform of App Service Authentication/Authorization.
+     * 
+     */
     public Optional<Output<AuthPlatformArgs>> platform() {
         return Optional.ofNullable(this.platform);
     }
@@ -104,6 +132,10 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -115,6 +147,10 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
     @Import(name="slot", required=true)
     private Output<String> slot;
 
+    /**
+     * @return Name of web app slot. If not specified then will default to production slot.
+     * 
+     */
     public Output<String> slot() {
         return this.slot;
     }
@@ -151,83 +187,191 @@ public final class WebAppAuthSettingsV2SlotArgs extends com.pulumi.resources.Res
             $ = new WebAppAuthSettingsV2SlotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param globalValidation The configuration settings that determines the validation flow of users using App Service Authentication/Authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalValidation(@Nullable Output<GlobalValidationArgs> globalValidation) {
             $.globalValidation = globalValidation;
             return this;
         }
 
+        /**
+         * @param globalValidation The configuration settings that determines the validation flow of users using App Service Authentication/Authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalValidation(GlobalValidationArgs globalValidation) {
             return globalValidation(Output.of(globalValidation));
         }
 
+        /**
+         * @param httpSettings The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpSettings(@Nullable Output<HttpSettingsArgs> httpSettings) {
             $.httpSettings = httpSettings;
             return this;
         }
 
+        /**
+         * @param httpSettings The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpSettings(HttpSettingsArgs httpSettings) {
             return httpSettings(Output.of(httpSettings));
         }
 
+        /**
+         * @param identityProviders The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProviders(@Nullable Output<IdentityProvidersArgs> identityProviders) {
             $.identityProviders = identityProviders;
             return this;
         }
 
+        /**
+         * @param identityProviders The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProviders(IdentityProvidersArgs identityProviders) {
             return identityProviders(Output.of(identityProviders));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param login The configuration settings of the login flow of users using App Service Authentication/Authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(@Nullable Output<LoginArgs> login) {
             $.login = login;
             return this;
         }
 
+        /**
+         * @param login The configuration settings of the login flow of users using App Service Authentication/Authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(LoginArgs login) {
             return login(Output.of(login));
         }
 
+        /**
+         * @param name Name of web app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of web app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param platform The configuration settings of the platform of App Service Authentication/Authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(@Nullable Output<AuthPlatformArgs> platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param platform The configuration settings of the platform of App Service Authentication/Authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(AuthPlatformArgs platform) {
             return platform(Output.of(platform));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param slot Name of web app slot. If not specified then will default to production slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(Output<String> slot) {
             $.slot = slot;
             return this;
         }
 
+        /**
+         * @param slot Name of web app slot. If not specified then will default to production slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(String slot) {
             return slot(Output.of(slot));
         }

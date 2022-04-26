@@ -24,6 +24,10 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsGetArgs extends c
     @Import(name="onDemandSpecifications")
     private @Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>> onDemandSpecifications;
 
+    /**
+     * @return Configuration block for on demand instances launch specifications.
+     * 
+     */
     public Optional<Output<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>>> onDemandSpecifications() {
         return Optional.ofNullable(this.onDemandSpecifications);
     }
@@ -35,6 +39,10 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsGetArgs extends c
     @Import(name="spotSpecifications")
     private @Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> spotSpecifications;
 
+    /**
+     * @return Configuration block for spot instances launch specifications.
+     * 
+     */
     public Optional<Output<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>>> spotSpecifications() {
         return Optional.ofNullable(this.spotSpecifications);
     }
@@ -64,28 +72,64 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsGetArgs extends c
             $ = new ClusterCoreInstanceFleetLaunchSpecificationsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param onDemandSpecifications Configuration block for on demand instances launch specifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onDemandSpecifications(@Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>> onDemandSpecifications) {
             $.onDemandSpecifications = onDemandSpecifications;
             return this;
         }
 
+        /**
+         * @param onDemandSpecifications Configuration block for on demand instances launch specifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onDemandSpecifications(List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs> onDemandSpecifications) {
             return onDemandSpecifications(Output.of(onDemandSpecifications));
         }
 
+        /**
+         * @param onDemandSpecifications Configuration block for on demand instances launch specifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onDemandSpecifications(ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs... onDemandSpecifications) {
             return onDemandSpecifications(List.of(onDemandSpecifications));
         }
 
+        /**
+         * @param spotSpecifications Configuration block for spot instances launch specifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spotSpecifications(@Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> spotSpecifications) {
             $.spotSpecifications = spotSpecifications;
             return this;
         }
 
+        /**
+         * @param spotSpecifications Configuration block for spot instances launch specifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spotSpecifications(List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs> spotSpecifications) {
             return spotSpecifications(Output.of(spotSpecifications));
         }
 
+        /**
+         * @param spotSpecifications Configuration block for spot instances launch specifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spotSpecifications(ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs... spotSpecifications) {
             return spotSpecifications(List.of(spotSpecifications));
         }

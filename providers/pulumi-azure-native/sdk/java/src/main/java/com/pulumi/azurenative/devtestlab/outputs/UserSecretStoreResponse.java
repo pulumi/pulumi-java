@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UserSecretStoreResponse {
     /**
-     * The ID of the user&#39;s Key vault.
+     * @return The ID of the user&#39;s Key vault.
      * 
      */
     private final @Nullable String keyVaultId;
     /**
-     * The URI of the user&#39;s Key vault.
+     * @return The URI of the user&#39;s Key vault.
      * 
      */
     private final @Nullable String keyVaultUri;
@@ -31,16 +31,16 @@ public final class UserSecretStoreResponse {
     }
 
     /**
-     * The ID of the user&#39;s Key vault.
+     * @return The ID of the user&#39;s Key vault.
      * 
-    */
+     */
     public Optional<String> keyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
     /**
-     * The URI of the user&#39;s Key vault.
+     * @return The URI of the user&#39;s Key vault.
      * 
-    */
+     */
     public Optional<String> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }

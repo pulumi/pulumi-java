@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class LoggingConfigResponse {
     /**
-     * For transfers with a PosixFilesystem source, this option enables the Cloud Storage transfer logs for this transfer.
+     * @return For transfers with a PosixFilesystem source, this option enables the Cloud Storage transfer logs for this transfer.
      * 
      */
     private final Boolean enableOnpremGcsTransferLogs;
     /**
-     * States in which `log_actions` are logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+     * @return States in which `log_actions` are logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
      * 
      */
     private final List<String> logActionStates;
     /**
-     * Specifies the actions to be logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+     * @return Specifies the actions to be logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
      * 
      */
     private final List<String> logActions;
@@ -38,23 +38,23 @@ public final class LoggingConfigResponse {
     }
 
     /**
-     * For transfers with a PosixFilesystem source, this option enables the Cloud Storage transfer logs for this transfer.
+     * @return For transfers with a PosixFilesystem source, this option enables the Cloud Storage transfer logs for this transfer.
      * 
-    */
+     */
     public Boolean enableOnpremGcsTransferLogs() {
         return this.enableOnpremGcsTransferLogs;
     }
     /**
-     * States in which `log_actions` are logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+     * @return States in which `log_actions` are logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
      * 
-    */
+     */
     public List<String> logActionStates() {
         return this.logActionStates;
     }
     /**
-     * Specifies the actions to be logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+     * @return Specifies the actions to be logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
      * 
-    */
+     */
     public List<String> logActions() {
         return this.logActions;
     }

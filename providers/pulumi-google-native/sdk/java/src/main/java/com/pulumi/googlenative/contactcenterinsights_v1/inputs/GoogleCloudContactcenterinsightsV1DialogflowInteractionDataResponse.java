@@ -24,6 +24,10 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
     @Import(name="confidence", required=true)
     private Double confidence;
 
+    /**
+     * @return The confidence of the match ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+     * 
+     */
     public Double confidence() {
         return this.confidence;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
     @Import(name="dialogflowIntentId", required=true)
     private String dialogflowIntentId;
 
+    /**
+     * @return The Dialogflow intent resource path. Format: projects/{project}/agent/{agent}/intents/{intent}
+     * 
+     */
     public String dialogflowIntentId() {
         return this.dialogflowIntentId;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
             $ = new GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param confidence The confidence of the match ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidence(Double confidence) {
             $.confidence = confidence;
             return this;
         }
 
+        /**
+         * @param dialogflowIntentId The Dialogflow intent resource path. Format: projects/{project}/agent/{agent}/intents/{intent}
+         * 
+         * @return builder
+         * 
+         */
         public Builder dialogflowIntentId(String dialogflowIntentId) {
             $.dialogflowIntentId = dialogflowIntentId;
             return this;

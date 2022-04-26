@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BasicLoginInformationResponse {
     /**
-     * Login username.
+     * @return Login username.
      * 
      */
     private final @Nullable String username;
@@ -23,9 +23,9 @@ public final class BasicLoginInformationResponse {
     }
 
     /**
-     * Login username.
+     * @return Login username.
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

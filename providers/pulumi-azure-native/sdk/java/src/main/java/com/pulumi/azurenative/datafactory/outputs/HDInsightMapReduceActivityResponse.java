@@ -19,78 +19,78 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HDInsightMapReduceActivityResponse {
     /**
-     * User specified arguments to HDInsightActivity.
+     * @return User specified arguments to HDInsightActivity.
      * 
      */
     private final @Nullable List<Object> arguments;
     /**
-     * Class name. Type: string (or Expression with resultType string).
+     * @return Class name. Type: string (or Expression with resultType string).
      * 
      */
     private final Object className;
     /**
-     * Allows user to specify defines for the MapReduce job request.
+     * @return Allows user to specify defines for the MapReduce job request.
      * 
      */
     private final @Nullable Map<String,Object> defines;
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
-     * Activity description.
+     * @return Activity description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Debug info option.
+     * @return Debug info option.
      * 
      */
     private final @Nullable String getDebugInfo;
     /**
-     * Jar path. Type: string (or Expression with resultType string).
+     * @return Jar path. Type: string (or Expression with resultType string).
      * 
      */
     private final Object jarFilePath;
     /**
-     * Jar libs.
+     * @return Jar libs.
      * 
      */
     private final @Nullable List<Object> jarLibs;
     /**
-     * Jar linked service reference.
+     * @return Jar linked service reference.
      * 
      */
     private final @Nullable LinkedServiceReferenceResponse jarLinkedService;
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
      */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
     /**
-     * Activity name.
+     * @return Activity name.
      * 
      */
     private final String name;
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
      */
     private final @Nullable ActivityPolicyResponse policy;
     /**
-     * Storage linked service references.
+     * @return Storage linked service references.
      * 
      */
     private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;HDInsightMapReduce&#39;.
      * 
      */
     private final String type;
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
@@ -130,108 +130,108 @@ public final class HDInsightMapReduceActivityResponse {
     }
 
     /**
-     * User specified arguments to HDInsightActivity.
+     * @return User specified arguments to HDInsightActivity.
      * 
-    */
+     */
     public List<Object> arguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
     /**
-     * Class name. Type: string (or Expression with resultType string).
+     * @return Class name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object className() {
         return this.className;
     }
     /**
-     * Allows user to specify defines for the MapReduce job request.
+     * @return Allows user to specify defines for the MapReduce job request.
      * 
-    */
+     */
     public Map<String,Object> defines() {
         return this.defines == null ? Map.of() : this.defines;
     }
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Debug info option.
+     * @return Debug info option.
      * 
-    */
+     */
     public Optional<String> getDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
     /**
-     * Jar path. Type: string (or Expression with resultType string).
+     * @return Jar path. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object jarFilePath() {
         return this.jarFilePath;
     }
     /**
-     * Jar libs.
+     * @return Jar libs.
      * 
-    */
+     */
     public List<Object> jarLibs() {
         return this.jarLibs == null ? List.of() : this.jarLibs;
     }
     /**
-     * Jar linked service reference.
+     * @return Jar linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> jarLinkedService() {
         return Optional.ofNullable(this.jarLinkedService);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * Storage linked service references.
+     * @return Storage linked service references.
      * 
-    */
+     */
     public List<LinkedServiceReferenceResponse> storageLinkedServices() {
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;HDInsightMapReduce&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

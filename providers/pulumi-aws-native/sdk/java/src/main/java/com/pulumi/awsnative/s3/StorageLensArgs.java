@@ -31,6 +31,10 @@ public final class StorageLensArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<StorageLensTagArgs>> tags;
 
+    /**
+     * @return A set of tags (key-value pairs) for this Amazon S3 Storage Lens configuration.
+     * 
+     */
     public Optional<Output<List<StorageLensTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -69,15 +73,33 @@ public final class StorageLensArgs extends com.pulumi.resources.ResourceArgs {
             return storageLensConfiguration(Output.of(storageLensConfiguration));
         }
 
+        /**
+         * @param tags A set of tags (key-value pairs) for this Amazon S3 Storage Lens configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<StorageLensTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A set of tags (key-value pairs) for this Amazon S3 Storage Lens configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<StorageLensTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A set of tags (key-value pairs) for this Amazon S3 Storage Lens configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(StorageLensTagArgs... tags) {
             return tags(List.of(tags));
         }

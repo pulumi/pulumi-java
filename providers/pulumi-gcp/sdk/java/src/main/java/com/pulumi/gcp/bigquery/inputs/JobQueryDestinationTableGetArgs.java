@@ -22,6 +22,10 @@ public final class JobQueryDestinationTableGetArgs extends com.pulumi.resources.
     @Import(name="datasetId")
     private @Nullable Output<String> datasetId;
 
+    /**
+     * @return The ID of the dataset containing this model.
+     * 
+     */
     public Optional<Output<String>> datasetId() {
         return Optional.ofNullable(this.datasetId);
     }
@@ -33,6 +37,10 @@ public final class JobQueryDestinationTableGetArgs extends com.pulumi.resources.
     @Import(name="projectId")
     private @Nullable Output<String> projectId;
 
+    /**
+     * @return The ID of the project containing this model.
+     * 
+     */
     public Optional<Output<String>> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -45,6 +53,11 @@ public final class JobQueryDestinationTableGetArgs extends com.pulumi.resources.
     @Import(name="tableId", required=true)
     private Output<String> tableId;
 
+    /**
+     * @return The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
+     * or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
+     * 
+     */
     public Output<String> tableId() {
         return this.tableId;
     }
@@ -75,29 +88,67 @@ public final class JobQueryDestinationTableGetArgs extends com.pulumi.resources.
             $ = new JobQueryDestinationTableGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId The ID of the dataset containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(@Nullable Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param datasetId The ID of the dataset containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param projectId The ID of the project containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(@Nullable Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId The ID of the project containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }
 
+        /**
+         * @param tableId The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
+         * or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(Output<String> tableId) {
             $.tableId = tableId;
             return this;
         }
 
+        /**
+         * @param tableId The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
+         * or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(String tableId) {
             return tableId(Output.of(tableId));
         }

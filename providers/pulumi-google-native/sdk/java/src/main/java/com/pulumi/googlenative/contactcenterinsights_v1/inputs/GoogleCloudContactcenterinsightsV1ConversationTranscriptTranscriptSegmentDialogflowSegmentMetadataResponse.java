@@ -23,6 +23,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="smartReplyAllowlistCovered", required=true)
     private Boolean smartReplyAllowlistCovered;
 
+    /**
+     * @return Whether the transcript segment was covered under the configured smart reply allowlist in Agent Assist.
+     * 
+     */
     public Boolean smartReplyAllowlistCovered() {
         return this.smartReplyAllowlistCovered;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
             $ = new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param smartReplyAllowlistCovered Whether the transcript segment was covered under the configured smart reply allowlist in Agent Assist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smartReplyAllowlistCovered(Boolean smartReplyAllowlistCovered) {
             $.smartReplyAllowlistCovered = smartReplyAllowlistCovered;
             return this;

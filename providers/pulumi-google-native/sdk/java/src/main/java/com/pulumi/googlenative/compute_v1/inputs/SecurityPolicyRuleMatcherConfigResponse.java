@@ -20,6 +20,10 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends com.pulumi.re
     @Import(name="srcIpRanges", required=true)
     private List<String> srcIpRanges;
 
+    /**
+     * @return CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
+     * 
+     */
     public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }
@@ -48,11 +52,23 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends com.pulumi.re
             $ = new SecurityPolicyRuleMatcherConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param srcIpRanges CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(List<String> srcIpRanges) {
             $.srcIpRanges = srcIpRanges;
             return this;
         }
 
+        /**
+         * @param srcIpRanges CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
         }

@@ -34,6 +34,10 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hadoopJob", required=true)
     private HadoopJobResponse hadoopJob;
 
+    /**
+     * @return Optional. Job is a Hadoop job.
+     * 
+     */
     public HadoopJobResponse hadoopJob() {
         return this.hadoopJob;
     }
@@ -45,6 +49,10 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hiveJob", required=true)
     private HiveJobResponse hiveJob;
 
+    /**
+     * @return Optional. Job is a Hive job.
+     * 
+     */
     public HiveJobResponse hiveJob() {
         return this.hiveJob;
     }
@@ -56,6 +64,10 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Optional. The labels to associate with this job.Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given job.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -67,6 +79,10 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pigJob", required=true)
     private PigJobResponse pigJob;
 
+    /**
+     * @return Optional. Job is a Pig job.
+     * 
+     */
     public PigJobResponse pigJob() {
         return this.pigJob;
     }
@@ -78,6 +94,10 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="prerequisiteStepIds", required=true)
     private List<String> prerequisiteStepIds;
 
+    /**
+     * @return Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
+     * 
+     */
     public List<String> prerequisiteStepIds() {
         return this.prerequisiteStepIds;
     }
@@ -89,6 +109,10 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="prestoJob", required=true)
     private PrestoJobResponse prestoJob;
 
+    /**
+     * @return Optional. Job is a Presto job.
+     * 
+     */
     public PrestoJobResponse prestoJob() {
         return this.prestoJob;
     }
@@ -100,6 +124,10 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pysparkJob", required=true)
     private PySparkJobResponse pysparkJob;
 
+    /**
+     * @return Optional. Job is a PySpark job.
+     * 
+     */
     public PySparkJobResponse pysparkJob() {
         return this.pysparkJob;
     }
@@ -111,6 +139,10 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scheduling", required=true)
     private JobSchedulingResponse scheduling;
 
+    /**
+     * @return Optional. Job scheduling configuration.
+     * 
+     */
     public JobSchedulingResponse scheduling() {
         return this.scheduling;
     }
@@ -122,6 +154,10 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sparkJob", required=true)
     private SparkJobResponse sparkJob;
 
+    /**
+     * @return Optional. Job is a Spark job.
+     * 
+     */
     public SparkJobResponse sparkJob() {
         return this.sparkJob;
     }
@@ -133,6 +169,10 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sparkRJob", required=true)
     private SparkRJobResponse sparkRJob;
 
+    /**
+     * @return Optional. Job is a SparkR job.
+     * 
+     */
     public SparkRJobResponse sparkRJob() {
         return this.sparkRJob;
     }
@@ -144,6 +184,10 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sparkSqlJob", required=true)
     private SparkSqlJobResponse sparkSqlJob;
 
+    /**
+     * @return Optional. Job is a SparkSql job.
+     * 
+     */
     public SparkSqlJobResponse sparkSqlJob() {
         return this.sparkSqlJob;
     }
@@ -155,6 +199,10 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stepId", required=true)
     private String stepId;
 
+    /**
+     * @return The step id. The id must be unique among all jobs within the template.The step id is used as prefix for job id, as job goog-dataproc-workflow-step-id label, and in prerequisiteStepIds field from other steps.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
+     * 
+     */
     public String stepId() {
         return this.stepId;
     }
@@ -194,65 +242,143 @@ public final class OrderedJobResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OrderedJobResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hadoopJob Optional. Job is a Hadoop job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hadoopJob(HadoopJobResponse hadoopJob) {
             $.hadoopJob = hadoopJob;
             return this;
         }
 
+        /**
+         * @param hiveJob Optional. Job is a Hive job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hiveJob(HiveJobResponse hiveJob) {
             $.hiveJob = hiveJob;
             return this;
         }
 
+        /**
+         * @param labels Optional. The labels to associate with this job.Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param pigJob Optional. Job is a Pig job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pigJob(PigJobResponse pigJob) {
             $.pigJob = pigJob;
             return this;
         }
 
+        /**
+         * @param prerequisiteStepIds Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prerequisiteStepIds(List<String> prerequisiteStepIds) {
             $.prerequisiteStepIds = prerequisiteStepIds;
             return this;
         }
 
+        /**
+         * @param prerequisiteStepIds Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prerequisiteStepIds(String... prerequisiteStepIds) {
             return prerequisiteStepIds(List.of(prerequisiteStepIds));
         }
 
+        /**
+         * @param prestoJob Optional. Job is a Presto job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prestoJob(PrestoJobResponse prestoJob) {
             $.prestoJob = prestoJob;
             return this;
         }
 
+        /**
+         * @param pysparkJob Optional. Job is a PySpark job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pysparkJob(PySparkJobResponse pysparkJob) {
             $.pysparkJob = pysparkJob;
             return this;
         }
 
+        /**
+         * @param scheduling Optional. Job scheduling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(JobSchedulingResponse scheduling) {
             $.scheduling = scheduling;
             return this;
         }
 
+        /**
+         * @param sparkJob Optional. Job is a Spark job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkJob(SparkJobResponse sparkJob) {
             $.sparkJob = sparkJob;
             return this;
         }
 
+        /**
+         * @param sparkRJob Optional. Job is a SparkR job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkRJob(SparkRJobResponse sparkRJob) {
             $.sparkRJob = sparkRJob;
             return this;
         }
 
+        /**
+         * @param sparkSqlJob Optional. Job is a SparkSql job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkSqlJob(SparkSqlJobResponse sparkSqlJob) {
             $.sparkSqlJob = sparkSqlJob;
             return this;
         }
 
+        /**
+         * @param stepId The step id. The id must be unique among all jobs within the template.The step id is used as prefix for job id, as job goog-dataproc-workflow-step-id label, and in prerequisiteStepIds field from other steps.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepId(String stepId) {
             $.stepId = stepId;
             return this;

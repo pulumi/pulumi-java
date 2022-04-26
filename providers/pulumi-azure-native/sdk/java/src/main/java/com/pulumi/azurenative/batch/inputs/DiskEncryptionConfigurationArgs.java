@@ -27,6 +27,10 @@ public final class DiskEncryptionConfigurationArgs extends com.pulumi.resources.
     @Import(name="targets")
     private @Nullable Output<List<DiskEncryptionTarget>> targets;
 
+    /**
+     * @return On Linux pool, only &#34;TemporaryDisk&#34; is supported; on Windows pool, &#34;OsDisk&#34; and &#34;TemporaryDisk&#34; must be specified.
+     * 
+     */
     public Optional<Output<List<DiskEncryptionTarget>>> targets() {
         return Optional.ofNullable(this.targets);
     }
@@ -55,15 +59,33 @@ public final class DiskEncryptionConfigurationArgs extends com.pulumi.resources.
             $ = new DiskEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targets On Linux pool, only &#34;TemporaryDisk&#34; is supported; on Windows pool, &#34;OsDisk&#34; and &#34;TemporaryDisk&#34; must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(@Nullable Output<List<DiskEncryptionTarget>> targets) {
             $.targets = targets;
             return this;
         }
 
+        /**
+         * @param targets On Linux pool, only &#34;TemporaryDisk&#34; is supported; on Windows pool, &#34;OsDisk&#34; and &#34;TemporaryDisk&#34; must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(List<DiskEncryptionTarget> targets) {
             return targets(Output.of(targets));
         }
 
+        /**
+         * @param targets On Linux pool, only &#34;TemporaryDisk&#34; is supported; on Windows pool, &#34;OsDisk&#34; and &#34;TemporaryDisk&#34; must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(DiskEncryptionTarget... targets) {
             return targets(List.of(targets));
         }

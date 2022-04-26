@@ -26,6 +26,10 @@ public final class KeyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The identifier of the key vault key used to encrypt data.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class KeyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The version of the identity which will be used to access key vault.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -66,20 +74,44 @@ public final class KeyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KeyPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The identifier of the key vault key used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The identifier of the key vault key used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param version The version of the identity which will be used to access key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of the identity which will be used to access key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

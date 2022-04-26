@@ -23,6 +23,10 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRes
     @Import(name="headerName")
     private @Nullable Output<String> headerName;
 
+    /**
+     * @return The name of the header to add.
+     * 
+     */
     public Optional<Output<String>> headerName() {
         return Optional.ofNullable(this.headerName);
     }
@@ -34,6 +38,10 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRes
     @Import(name="headerValue")
     private @Nullable Output<String> headerValue;
 
+    /**
+     * @return The value of the header to add.
+     * 
+     */
     public Optional<Output<String>> headerValue() {
         return Optional.ofNullable(this.headerValue);
     }
@@ -46,6 +54,11 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRes
     @Import(name="replace")
     private @Nullable Output<Boolean> replace;
 
+    /**
+     * @return If false, headerValue is appended to any values that already exist for the header.
+     * If true, headerValue is set for the header, discarding any values that were set for that header.
+     * 
+     */
     public Optional<Output<Boolean>> replace() {
         return Optional.ofNullable(this.replace);
     }
@@ -76,29 +89,67 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRes
             $ = new URLMapDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerName The name of the header to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(@Nullable Output<String> headerName) {
             $.headerName = headerName;
             return this;
         }
 
+        /**
+         * @param headerName The name of the header to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             return headerName(Output.of(headerName));
         }
 
+        /**
+         * @param headerValue The value of the header to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerValue(@Nullable Output<String> headerValue) {
             $.headerValue = headerValue;
             return this;
         }
 
+        /**
+         * @param headerValue The value of the header to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerValue(String headerValue) {
             return headerValue(Output.of(headerValue));
         }
 
+        /**
+         * @param replace If false, headerValue is appended to any values that already exist for the header.
+         * If true, headerValue is set for the header, discarding any values that were set for that header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replace(@Nullable Output<Boolean> replace) {
             $.replace = replace;
             return this;
         }
 
+        /**
+         * @param replace If false, headerValue is appended to any values that already exist for the header.
+         * If true, headerValue is set for the header, discarding any values that were set for that header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replace(Boolean replace) {
             return replace(Output.of(replace));
         }

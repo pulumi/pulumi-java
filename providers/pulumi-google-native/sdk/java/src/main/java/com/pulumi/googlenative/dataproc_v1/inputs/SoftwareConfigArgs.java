@@ -29,6 +29,10 @@ public final class SoftwareConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="imageVersion")
     private @Nullable Output<String> imageVersion;
 
+    /**
+     * @return Optional. The version of software inside the cluster. It must be one of the supported Dataproc Versions (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as &#34;1.2&#34; (including a subminor version, such as &#34;1.2.29&#34;), or the &#34;preview&#34; version (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
+     * 
+     */
     public Optional<Output<String>> imageVersion() {
         return Optional.ofNullable(this.imageVersion);
     }
@@ -40,6 +44,10 @@ public final class SoftwareConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="optionalComponents")
     private @Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents;
 
+    /**
+     * @return Optional. The set of components to activate on the cluster.
+     * 
+     */
     public Optional<Output<List<SoftwareConfigOptionalComponentsItem>>> optionalComponents() {
         return Optional.ofNullable(this.optionalComponents);
     }
@@ -51,6 +59,10 @@ public final class SoftwareConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return Optional. The properties to set on daemon config files.Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. The following are supported prefixes and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig: pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster properties (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -81,33 +93,75 @@ public final class SoftwareConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SoftwareConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageVersion Optional. The version of software inside the cluster. It must be one of the supported Dataproc Versions (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as &#34;1.2&#34; (including a subminor version, such as &#34;1.2.29&#34;), or the &#34;preview&#34; version (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageVersion(@Nullable Output<String> imageVersion) {
             $.imageVersion = imageVersion;
             return this;
         }
 
+        /**
+         * @param imageVersion Optional. The version of software inside the cluster. It must be one of the supported Dataproc Versions (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as &#34;1.2&#34; (including a subminor version, such as &#34;1.2.29&#34;), or the &#34;preview&#34; version (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageVersion(String imageVersion) {
             return imageVersion(Output.of(imageVersion));
         }
 
+        /**
+         * @param optionalComponents Optional. The set of components to activate on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optionalComponents(@Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents) {
             $.optionalComponents = optionalComponents;
             return this;
         }
 
+        /**
+         * @param optionalComponents Optional. The set of components to activate on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optionalComponents(List<SoftwareConfigOptionalComponentsItem> optionalComponents) {
             return optionalComponents(Output.of(optionalComponents));
         }
 
+        /**
+         * @param optionalComponents Optional. The set of components to activate on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optionalComponents(SoftwareConfigOptionalComponentsItem... optionalComponents) {
             return optionalComponents(List.of(optionalComponents));
         }
 
+        /**
+         * @param properties Optional. The properties to set on daemon config files.Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. The following are supported prefixes and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig: pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster properties (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Optional. The properties to set on daemon config files.Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. The following are supported prefixes and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig: pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster properties (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }

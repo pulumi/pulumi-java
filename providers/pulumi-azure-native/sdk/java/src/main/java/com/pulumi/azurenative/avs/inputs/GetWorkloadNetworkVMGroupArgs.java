@@ -19,6 +19,10 @@ public final class GetWorkloadNetworkVMGroupArgs extends com.pulumi.resources.In
     @Import(name="privateCloudName", required=true)
     private String privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public String privateCloudName() {
         return this.privateCloudName;
     }
@@ -30,6 +34,10 @@ public final class GetWorkloadNetworkVMGroupArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetWorkloadNetworkVMGroupArgs extends com.pulumi.resources.In
     @Import(name="vmGroupId", required=true)
     private String vmGroupId;
 
+    /**
+     * @return NSX VM Group identifier. Generally the same as the VM Group&#39;s display name
+     * 
+     */
     public String vmGroupId() {
         return this.vmGroupId;
     }
@@ -71,16 +83,34 @@ public final class GetWorkloadNetworkVMGroupArgs extends com.pulumi.resources.In
             $ = new GetWorkloadNetworkVMGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vmGroupId NSX VM Group identifier. Generally the same as the VM Group&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmGroupId(String vmGroupId) {
             $.vmGroupId = vmGroupId;
             return this;

@@ -30,6 +30,10 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="backupManagementType")
     private @Nullable String backupManagementType;
 
+    /**
+     * @return Type of backup management for the container.
+     * 
+     */
     public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -41,6 +45,10 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="canReRegister")
     private @Nullable Boolean canReRegister;
 
+    /**
+     * @return Specifies whether the container is re-registrable.
+     * 
+     */
     public Optional<Boolean> canReRegister() {
         return Optional.ofNullable(this.canReRegister);
     }
@@ -52,6 +60,10 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="containerId")
     private @Nullable String containerId;
 
+    /**
+     * @return ID of container.
+     * 
+     */
     public Optional<String> containerId() {
         return Optional.ofNullable(this.containerId);
     }
@@ -67,6 +79,14 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="containerType", required=true)
     private String containerType;
 
+    /**
+     * @return Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+     * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+     * Backup is VMAppContainer
+     * Expected value is &#39;AzureBackupServerContainer&#39;.
+     * 
+     */
     public String containerType() {
         return this.containerType;
     }
@@ -78,6 +98,10 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="dpmAgentVersion")
     private @Nullable String dpmAgentVersion;
 
+    /**
+     * @return Backup engine Agent version
+     * 
+     */
     public Optional<String> dpmAgentVersion() {
         return Optional.ofNullable(this.dpmAgentVersion);
     }
@@ -89,6 +113,10 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="dpmServers")
     private @Nullable List<String> dpmServers;
 
+    /**
+     * @return List of BackupEngines protecting the container
+     * 
+     */
     public Optional<List<String>> dpmServers() {
         return Optional.ofNullable(this.dpmServers);
     }
@@ -100,6 +128,10 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="extendedInfo")
     private @Nullable DPMContainerExtendedInfoResponse extendedInfo;
 
+    /**
+     * @return Extended Info of the container.
+     * 
+     */
     public Optional<DPMContainerExtendedInfoResponse> extendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
@@ -111,6 +143,10 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return Friendly name of the container.
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -122,6 +158,10 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="healthStatus")
     private @Nullable String healthStatus;
 
+    /**
+     * @return Status of health of the container.
+     * 
+     */
     public Optional<String> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
@@ -133,6 +173,10 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="protectedItemCount")
     private @Nullable Double protectedItemCount;
 
+    /**
+     * @return Number of protected items in the BackupEngine
+     * 
+     */
     public Optional<Double> protectedItemCount() {
         return Optional.ofNullable(this.protectedItemCount);
     }
@@ -144,6 +188,10 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="protectionStatus")
     private @Nullable String protectionStatus;
 
+    /**
+     * @return Protection status of the container.
+     * 
+     */
     public Optional<String> protectionStatus() {
         return Optional.ofNullable(this.protectionStatus);
     }
@@ -155,6 +203,10 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="registrationStatus")
     private @Nullable String registrationStatus;
 
+    /**
+     * @return Status of registration of the container with the Recovery Services Vault.
+     * 
+     */
     public Optional<String> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
@@ -166,6 +218,10 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="upgradeAvailable")
     private @Nullable Boolean upgradeAvailable;
 
+    /**
+     * @return To check if upgrade available
+     * 
+     */
     public Optional<Boolean> upgradeAvailable() {
         return Optional.ofNullable(this.upgradeAvailable);
     }
@@ -206,70 +262,158 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
             $ = new AzureBackupServerContainerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(@Nullable String backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param canReRegister Specifies whether the container is re-registrable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canReRegister(@Nullable Boolean canReRegister) {
             $.canReRegister = canReRegister;
             return this;
         }
 
+        /**
+         * @param containerId ID of container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerId(@Nullable String containerId) {
             $.containerId = containerId;
             return this;
         }
 
+        /**
+         * @param containerType Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+         * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+         * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+         * Backup is VMAppContainer
+         * Expected value is &#39;AzureBackupServerContainer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(String containerType) {
             $.containerType = containerType;
             return this;
         }
 
+        /**
+         * @param dpmAgentVersion Backup engine Agent version
+         * 
+         * @return builder
+         * 
+         */
         public Builder dpmAgentVersion(@Nullable String dpmAgentVersion) {
             $.dpmAgentVersion = dpmAgentVersion;
             return this;
         }
 
+        /**
+         * @param dpmServers List of BackupEngines protecting the container
+         * 
+         * @return builder
+         * 
+         */
         public Builder dpmServers(@Nullable List<String> dpmServers) {
             $.dpmServers = dpmServers;
             return this;
         }
 
+        /**
+         * @param dpmServers List of BackupEngines protecting the container
+         * 
+         * @return builder
+         * 
+         */
         public Builder dpmServers(String... dpmServers) {
             return dpmServers(List.of(dpmServers));
         }
 
+        /**
+         * @param extendedInfo Extended Info of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedInfo(@Nullable DPMContainerExtendedInfoResponse extendedInfo) {
             $.extendedInfo = extendedInfo;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param healthStatus Status of health of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStatus(@Nullable String healthStatus) {
             $.healthStatus = healthStatus;
             return this;
         }
 
+        /**
+         * @param protectedItemCount Number of protected items in the BackupEngine
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemCount(@Nullable Double protectedItemCount) {
             $.protectedItemCount = protectedItemCount;
             return this;
         }
 
+        /**
+         * @param protectionStatus Protection status of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionStatus(@Nullable String protectionStatus) {
             $.protectionStatus = protectionStatus;
             return this;
         }
 
+        /**
+         * @param registrationStatus Status of registration of the container with the Recovery Services Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationStatus(@Nullable String registrationStatus) {
             $.registrationStatus = registrationStatus;
             return this;
         }
 
+        /**
+         * @param upgradeAvailable To check if upgrade available
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeAvailable(@Nullable Boolean upgradeAvailable) {
             $.upgradeAvailable = upgradeAvailable;
             return this;

@@ -12,22 +12,22 @@ import java.util.Objects;
 @CustomType
 public final class AzureIaaSVMHealthDetailsResponse {
     /**
-     * Health Code
+     * @return Health Code
      * 
      */
     private final Integer code;
     /**
-     * Health Message
+     * @return Health Message
      * 
      */
     private final String message;
     /**
-     * Health Recommended Actions
+     * @return Health Recommended Actions
      * 
      */
     private final List<String> recommendations;
     /**
-     * Health Title
+     * @return Health Title
      * 
      */
     private final String title;
@@ -45,30 +45,30 @@ public final class AzureIaaSVMHealthDetailsResponse {
     }
 
     /**
-     * Health Code
+     * @return Health Code
      * 
-    */
+     */
     public Integer code() {
         return this.code;
     }
     /**
-     * Health Message
+     * @return Health Message
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * Health Recommended Actions
+     * @return Health Recommended Actions
      * 
-    */
+     */
     public List<String> recommendations() {
         return this.recommendations;
     }
     /**
-     * Health Title
+     * @return Health Title
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

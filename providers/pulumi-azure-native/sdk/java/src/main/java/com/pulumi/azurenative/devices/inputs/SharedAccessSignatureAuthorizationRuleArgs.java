@@ -27,6 +27,10 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends com.pulumi
     @Import(name="keyName", required=true)
     private Output<String> keyName;
 
+    /**
+     * @return The name of the shared access policy.
+     * 
+     */
     public Output<String> keyName() {
         return this.keyName;
     }
@@ -38,6 +42,10 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends com.pulumi
     @Import(name="primaryKey")
     private @Nullable Output<String> primaryKey;
 
+    /**
+     * @return The primary key.
+     * 
+     */
     public Optional<Output<String>> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
@@ -49,6 +57,10 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends com.pulumi
     @Import(name="rights", required=true)
     private Output<AccessRights> rights;
 
+    /**
+     * @return The permissions assigned to the shared access policy.
+     * 
+     */
     public Output<AccessRights> rights() {
         return this.rights;
     }
@@ -60,6 +72,10 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends com.pulumi
     @Import(name="secondaryKey")
     private @Nullable Output<String> secondaryKey;
 
+    /**
+     * @return The secondary key.
+     * 
+     */
     public Optional<Output<String>> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
@@ -91,38 +107,86 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends com.pulumi
             $ = new SharedAccessSignatureAuthorizationRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The name of the shared access policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName The name of the shared access policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param primaryKey The primary key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(@Nullable Output<String> primaryKey) {
             $.primaryKey = primaryKey;
             return this;
         }
 
+        /**
+         * @param primaryKey The primary key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(String primaryKey) {
             return primaryKey(Output.of(primaryKey));
         }
 
+        /**
+         * @param rights The permissions assigned to the shared access policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(Output<AccessRights> rights) {
             $.rights = rights;
             return this;
         }
 
+        /**
+         * @param rights The permissions assigned to the shared access policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(AccessRights rights) {
             return rights(Output.of(rights));
         }
 
+        /**
+         * @param secondaryKey The secondary key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryKey(@Nullable Output<String> secondaryKey) {
             $.secondaryKey = secondaryKey;
             return this;
         }
 
+        /**
+         * @param secondaryKey The secondary key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryKey(String secondaryKey) {
             return secondaryKey(Output.of(secondaryKey));
         }

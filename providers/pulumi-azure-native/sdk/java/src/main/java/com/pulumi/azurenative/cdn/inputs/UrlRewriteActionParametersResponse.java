@@ -26,6 +26,10 @@ public final class UrlRewriteActionParametersResponse extends com.pulumi.resourc
     @Import(name="destination", required=true)
     private String destination;
 
+    /**
+     * @return Define the relative URL to which the above requests will be rewritten by.
+     * 
+     */
     public String destination() {
         return this.destination;
     }
@@ -44,6 +48,10 @@ public final class UrlRewriteActionParametersResponse extends com.pulumi.resourc
     @Import(name="preserveUnmatchedPath")
     private @Nullable Boolean preserveUnmatchedPath;
 
+    /**
+     * @return Whether to preserve unmatched path. Default value is true.
+     * 
+     */
     public Optional<Boolean> preserveUnmatchedPath() {
         return Optional.ofNullable(this.preserveUnmatchedPath);
     }
@@ -55,6 +63,10 @@ public final class UrlRewriteActionParametersResponse extends com.pulumi.resourc
     @Import(name="sourcePattern", required=true)
     private String sourcePattern;
 
+    /**
+     * @return define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
+     * 
+     */
     public String sourcePattern() {
         return this.sourcePattern;
     }
@@ -86,6 +98,12 @@ public final class UrlRewriteActionParametersResponse extends com.pulumi.resourc
             $ = new UrlRewriteActionParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Define the relative URL to which the above requests will be rewritten by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(String destination) {
             $.destination = destination;
             return this;
@@ -96,11 +114,23 @@ public final class UrlRewriteActionParametersResponse extends com.pulumi.resourc
             return this;
         }
 
+        /**
+         * @param preserveUnmatchedPath Whether to preserve unmatched path. Default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveUnmatchedPath(@Nullable Boolean preserveUnmatchedPath) {
             $.preserveUnmatchedPath = preserveUnmatchedPath;
             return this;
         }
 
+        /**
+         * @param sourcePattern define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePattern(String sourcePattern) {
             $.sourcePattern = sourcePattern;
             return this;

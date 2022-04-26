@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class ExecutionConfigResponse {
     /**
-     * Optional. The Cloud KMS key to use for encryption.
+     * @return Optional. The Cloud KMS key to use for encryption.
      * 
      */
     private final String kmsKey;
     /**
-     * Optional. Tags used for network traffic control.
+     * @return Optional. Tags used for network traffic control.
      * 
      */
     private final List<String> networkTags;
     /**
-     * Optional. Network URI to connect workload to.
+     * @return Optional. Network URI to connect workload to.
      * 
      */
     private final String networkUri;
     /**
-     * Optional. Service account that used to execute workload.
+     * @return Optional. Service account that used to execute workload.
      * 
      */
     private final String serviceAccount;
     /**
-     * Optional. Subnetwork URI to connect workload to.
+     * @return Optional. Subnetwork URI to connect workload to.
      * 
      */
     private final String subnetworkUri;
@@ -51,37 +51,37 @@ public final class ExecutionConfigResponse {
     }
 
     /**
-     * Optional. The Cloud KMS key to use for encryption.
+     * @return Optional. The Cloud KMS key to use for encryption.
      * 
-    */
+     */
     public String kmsKey() {
         return this.kmsKey;
     }
     /**
-     * Optional. Tags used for network traffic control.
+     * @return Optional. Tags used for network traffic control.
      * 
-    */
+     */
     public List<String> networkTags() {
         return this.networkTags;
     }
     /**
-     * Optional. Network URI to connect workload to.
+     * @return Optional. Network URI to connect workload to.
      * 
-    */
+     */
     public String networkUri() {
         return this.networkUri;
     }
     /**
-     * Optional. Service account that used to execute workload.
+     * @return Optional. Service account that used to execute workload.
      * 
-    */
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
-     * Optional. Subnetwork URI to connect workload to.
+     * @return Optional. Subnetwork URI to connect workload to.
      * 
-    */
+     */
     public String subnetworkUri() {
         return this.subnetworkUri;
     }

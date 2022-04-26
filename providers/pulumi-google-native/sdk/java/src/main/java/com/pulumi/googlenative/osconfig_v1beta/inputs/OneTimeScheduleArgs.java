@@ -24,6 +24,10 @@ public final class OneTimeScheduleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="executeTime", required=true)
     private Output<String> executeTime;
 
+    /**
+     * @return The desired patch job execution time.
+     * 
+     */
     public Output<String> executeTime() {
         return this.executeTime;
     }
@@ -52,11 +56,23 @@ public final class OneTimeScheduleArgs extends com.pulumi.resources.ResourceArgs
             $ = new OneTimeScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executeTime The desired patch job execution time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executeTime(Output<String> executeTime) {
             $.executeTime = executeTime;
             return this;
         }
 
+        /**
+         * @param executeTime The desired patch job execution time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executeTime(String executeTime) {
             return executeTime(Output.of(executeTime));
         }

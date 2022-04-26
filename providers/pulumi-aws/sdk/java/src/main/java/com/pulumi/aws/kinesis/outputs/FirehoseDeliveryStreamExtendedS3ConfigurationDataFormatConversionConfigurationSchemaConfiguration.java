@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration {
     /**
-     * The ID of the AWS Glue Data Catalog. If you don&#39;t supply this, the AWS account ID is used by default.
+     * @return The ID of the AWS Glue Data Catalog. If you don&#39;t supply this, the AWS account ID is used by default.
      * 
      */
     private final @Nullable String catalogId;
     /**
-     * Specifies the name of the AWS Glue database that contains the schema for the output data.
+     * @return Specifies the name of the AWS Glue database that contains the schema for the output data.
      * 
      */
     private final String databaseName;
     /**
-     * If you don&#39;t specify an AWS Region, the default is the current region.
+     * @return If you don&#39;t specify an AWS Region, the default is the current region.
      * 
      */
     private final @Nullable String region;
     /**
-     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren&#39;t allowed.
+     * @return The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren&#39;t allowed.
      * 
      */
     private final String roleArn;
     /**
-     * Specifies the AWS Glue table that contains the column information that constitutes your data schema.
+     * @return Specifies the AWS Glue table that contains the column information that constitutes your data schema.
      * 
      */
     private final String tableName;
     /**
-     * Specifies the table version for the output data schema. Defaults to `LATEST`.
+     * @return Specifies the table version for the output data schema. Defaults to `LATEST`.
      * 
      */
     private final @Nullable String versionId;
@@ -59,44 +59,44 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     }
 
     /**
-     * The ID of the AWS Glue Data Catalog. If you don&#39;t supply this, the AWS account ID is used by default.
+     * @return The ID of the AWS Glue Data Catalog. If you don&#39;t supply this, the AWS account ID is used by default.
      * 
-    */
+     */
     public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
     /**
-     * Specifies the name of the AWS Glue database that contains the schema for the output data.
+     * @return Specifies the name of the AWS Glue database that contains the schema for the output data.
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * If you don&#39;t specify an AWS Region, the default is the current region.
+     * @return If you don&#39;t specify an AWS Region, the default is the current region.
      * 
-    */
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
-     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren&#39;t allowed.
+     * @return The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren&#39;t allowed.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     * Specifies the AWS Glue table that contains the column information that constitutes your data schema.
+     * @return Specifies the AWS Glue table that contains the column information that constitutes your data schema.
      * 
-    */
+     */
     public String tableName() {
         return this.tableName;
     }
     /**
-     * Specifies the table version for the output data schema. Defaults to `LATEST`.
+     * @return Specifies the table version for the output data schema. Defaults to `LATEST`.
      * 
-    */
+     */
     public Optional<String> versionId() {
         return Optional.ofNullable(this.versionId);
     }

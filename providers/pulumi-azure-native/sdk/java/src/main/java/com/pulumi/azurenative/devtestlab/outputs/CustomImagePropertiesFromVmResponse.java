@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomImagePropertiesFromVmResponse {
     /**
-     * The Linux OS information of the VM.
+     * @return The Linux OS information of the VM.
      * 
      */
     private final @Nullable LinuxOsInfoResponse linuxOsInfo;
     /**
-     * The source vm identifier.
+     * @return The source vm identifier.
      * 
      */
     private final @Nullable String sourceVmId;
     /**
-     * The Windows OS information of the VM.
+     * @return The Windows OS information of the VM.
      * 
      */
     private final @Nullable WindowsOsInfoResponse windowsOsInfo;
@@ -40,23 +40,23 @@ public final class CustomImagePropertiesFromVmResponse {
     }
 
     /**
-     * The Linux OS information of the VM.
+     * @return The Linux OS information of the VM.
      * 
-    */
+     */
     public Optional<LinuxOsInfoResponse> linuxOsInfo() {
         return Optional.ofNullable(this.linuxOsInfo);
     }
     /**
-     * The source vm identifier.
+     * @return The source vm identifier.
      * 
-    */
+     */
     public Optional<String> sourceVmId() {
         return Optional.ofNullable(this.sourceVmId);
     }
     /**
-     * The Windows OS information of the VM.
+     * @return The Windows OS information of the VM.
      * 
-    */
+     */
     public Optional<WindowsOsInfoResponse> windowsOsInfo() {
         return Optional.ofNullable(this.windowsOsInfo);
     }

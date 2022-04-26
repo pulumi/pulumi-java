@@ -22,6 +22,10 @@ public final class UserPoolUICustomizationArgs extends com.pulumi.resources.Reso
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -33,6 +37,10 @@ public final class UserPoolUICustomizationArgs extends com.pulumi.resources.Reso
     @Import(name="css")
     private @Nullable Output<String> css;
 
+    /**
+     * @return The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
+     * 
+     */
     public Optional<Output<String>> css() {
         return Optional.ofNullable(this.css);
     }
@@ -44,6 +52,10 @@ public final class UserPoolUICustomizationArgs extends com.pulumi.resources.Reso
     @Import(name="imageFile")
     private @Nullable Output<String> imageFile;
 
+    /**
+     * @return The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
+     * 
+     */
     public Optional<Output<String>> imageFile() {
         return Optional.ofNullable(this.imageFile);
     }
@@ -55,6 +67,10 @@ public final class UserPoolUICustomizationArgs extends com.pulumi.resources.Reso
     @Import(name="userPoolId", required=true)
     private Output<String> userPoolId;
 
+    /**
+     * @return The user pool ID for the user pool.
+     * 
+     */
     public Output<String> userPoolId() {
         return this.userPoolId;
     }
@@ -86,38 +102,86 @@ public final class UserPoolUICustomizationArgs extends com.pulumi.resources.Reso
             $ = new UserPoolUICustomizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param css The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder css(@Nullable Output<String> css) {
             $.css = css;
             return this;
         }
 
+        /**
+         * @param css The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder css(String css) {
             return css(Output.of(css));
         }
 
+        /**
+         * @param imageFile The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageFile(@Nullable Output<String> imageFile) {
             $.imageFile = imageFile;
             return this;
         }
 
+        /**
+         * @param imageFile The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageFile(String imageFile) {
             return imageFile(Output.of(imageFile));
         }
 
+        /**
+         * @param userPoolId The user pool ID for the user pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPoolId(Output<String> userPoolId) {
             $.userPoolId = userPoolId;
             return this;
         }
 
+        /**
+         * @param userPoolId The user pool ID for the user pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPoolId(String userPoolId) {
             return userPoolId(Output.of(userPoolId));
         }

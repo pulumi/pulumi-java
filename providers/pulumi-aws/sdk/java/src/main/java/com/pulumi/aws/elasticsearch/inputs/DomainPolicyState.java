@@ -22,6 +22,10 @@ public final class DomainPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicies")
     private @Nullable Output<String> accessPolicies;
 
+    /**
+     * @return IAM policy document specifying the access policies for the domain
+     * 
+     */
     public Optional<Output<String>> accessPolicies() {
         return Optional.ofNullable(this.accessPolicies);
     }
@@ -33,6 +37,10 @@ public final class DomainPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return Name of the domain.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -62,20 +70,44 @@ public final class DomainPolicyState extends com.pulumi.resources.ResourceArgs {
             $ = new DomainPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPolicies IAM policy document specifying the access policies for the domain
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(@Nullable Output<String> accessPolicies) {
             $.accessPolicies = accessPolicies;
             return this;
         }
 
+        /**
+         * @param accessPolicies IAM policy document specifying the access policies for the domain
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(String accessPolicies) {
             return accessPolicies(Output.of(accessPolicies));
         }
 
+        /**
+         * @param domainName Name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName Name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }

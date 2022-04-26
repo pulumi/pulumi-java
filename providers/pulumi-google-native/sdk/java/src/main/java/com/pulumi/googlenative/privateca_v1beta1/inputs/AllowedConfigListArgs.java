@@ -21,6 +21,10 @@ public final class AllowedConfigListArgs extends com.pulumi.resources.ResourceAr
     @Import(name="allowedConfigValues", required=true)
     private Output<List<ReusableConfigWrapperArgs>> allowedConfigValues;
 
+    /**
+     * @return All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper. If a ReusableConfigWrapper has an empty field, any value will be allowed for that field.
+     * 
+     */
     public Output<List<ReusableConfigWrapperArgs>> allowedConfigValues() {
         return this.allowedConfigValues;
     }
@@ -49,15 +53,33 @@ public final class AllowedConfigListArgs extends com.pulumi.resources.ResourceAr
             $ = new AllowedConfigListArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedConfigValues All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper. If a ReusableConfigWrapper has an empty field, any value will be allowed for that field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedConfigValues(Output<List<ReusableConfigWrapperArgs>> allowedConfigValues) {
             $.allowedConfigValues = allowedConfigValues;
             return this;
         }
 
+        /**
+         * @param allowedConfigValues All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper. If a ReusableConfigWrapper has an empty field, any value will be allowed for that field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedConfigValues(List<ReusableConfigWrapperArgs> allowedConfigValues) {
             return allowedConfigValues(Output.of(allowedConfigValues));
         }
 
+        /**
+         * @param allowedConfigValues All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper. If a ReusableConfigWrapper has an empty field, any value will be allowed for that field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedConfigValues(ReusableConfigWrapperArgs... allowedConfigValues) {
             return allowedConfigValues(List.of(allowedConfigValues));
         }

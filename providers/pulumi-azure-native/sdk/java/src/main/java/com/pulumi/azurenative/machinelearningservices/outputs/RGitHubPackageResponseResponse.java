@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RGitHubPackageResponseResponse {
     /**
-     * Repository address in the format username/repo[/subdir][@ref|#pull].
+     * @return Repository address in the format username/repo[/subdir][@ref|#pull].
      * 
      */
     private final @Nullable String repository;
@@ -23,9 +23,9 @@ public final class RGitHubPackageResponseResponse {
     }
 
     /**
-     * Repository address in the format username/repo[/subdir][@ref|#pull].
+     * @return Repository address in the format username/repo[/subdir][@ref|#pull].
      * 
-    */
+     */
     public Optional<String> repository() {
         return Optional.ofNullable(this.repository);
     }

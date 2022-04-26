@@ -30,6 +30,10 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -41,6 +45,10 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +67,10 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userOwnedDrydockNote")
     private @Nullable Output<UserOwnedDrydockNoteArgs> userOwnedDrydockNote;
 
+    /**
+     * @return A Drydock ATTESTATION_AUTHORITY Note, created by the user.
+     * 
+     */
     public Optional<Output<UserOwnedDrydockNoteArgs>> userOwnedDrydockNote() {
         return Optional.ofNullable(this.userOwnedDrydockNote);
     }
@@ -100,20 +112,44 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
             return attestorId(Output.of(attestorId));
         }
 
+        /**
+         * @param description Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -127,11 +163,23 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param userOwnedDrydockNote A Drydock ATTESTATION_AUTHORITY Note, created by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userOwnedDrydockNote(@Nullable Output<UserOwnedDrydockNoteArgs> userOwnedDrydockNote) {
             $.userOwnedDrydockNote = userOwnedDrydockNote;
             return this;
         }
 
+        /**
+         * @param userOwnedDrydockNote A Drydock ATTESTATION_AUTHORITY Note, created by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userOwnedDrydockNote(UserOwnedDrydockNoteArgs userOwnedDrydockNote) {
             return userOwnedDrydockNote(Output.of(userOwnedDrydockNote));
         }

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterClusterNode {
     /**
-     * Whether the node is a leader node or a compute node
+     * @return Whether the node is a leader node or a compute node
      * 
      */
     private final @Nullable String nodeRole;
     /**
-     * The private IP address of a node within a cluster
+     * @return The private IP address of a node within a cluster
      * 
      */
     private final @Nullable String privateIpAddress;
     /**
-     * The public IP address of a node within a cluster
+     * @return The public IP address of a node within a cluster
      * 
      */
     private final @Nullable String publicIpAddress;
@@ -38,23 +38,23 @@ public final class ClusterClusterNode {
     }
 
     /**
-     * Whether the node is a leader node or a compute node
+     * @return Whether the node is a leader node or a compute node
      * 
-    */
+     */
     public Optional<String> nodeRole() {
         return Optional.ofNullable(this.nodeRole);
     }
     /**
-     * The private IP address of a node within a cluster
+     * @return The private IP address of a node within a cluster
      * 
-    */
+     */
     public Optional<String> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
-     * The public IP address of a node within a cluster
+     * @return The public IP address of a node within a cluster
      * 
-    */
+     */
     public Optional<String> publicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }

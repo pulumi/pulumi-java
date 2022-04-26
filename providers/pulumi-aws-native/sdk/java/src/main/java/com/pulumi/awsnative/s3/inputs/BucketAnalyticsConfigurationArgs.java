@@ -29,6 +29,10 @@ public final class BucketAnalyticsConfigurationArgs extends com.pulumi.resources
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The ID that identifies the analytics configuration.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -40,6 +44,10 @@ public final class BucketAnalyticsConfigurationArgs extends com.pulumi.resources
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return The prefix that an object must have to be included in the analytics results.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -85,20 +93,44 @@ public final class BucketAnalyticsConfigurationArgs extends com.pulumi.resources
             $ = new BucketAnalyticsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID that identifies the analytics configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The ID that identifies the analytics configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param prefix The prefix that an object must have to be included in the analytics results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix The prefix that an object must have to be included in the analytics results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }

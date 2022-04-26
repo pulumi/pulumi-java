@@ -29,6 +29,10 @@ public final class DnsKeySpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="algorithm")
     private @Nullable Output<DnsKeySpecAlgorithm> algorithm;
 
+    /**
+     * @return String mnemonic specifying the DNSSEC algorithm of this key.
+     * 
+     */
     public Optional<Output<DnsKeySpecAlgorithm>> algorithm() {
         return Optional.ofNullable(this.algorithm);
     }
@@ -40,6 +44,10 @@ public final class DnsKeySpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyLength")
     private @Nullable Output<Integer> keyLength;
 
+    /**
+     * @return Length of the keys in bits.
+     * 
+     */
     public Optional<Output<Integer>> keyLength() {
         return Optional.ofNullable(this.keyLength);
     }
@@ -51,6 +59,10 @@ public final class DnsKeySpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyType")
     private @Nullable Output<DnsKeySpecKeyType> keyType;
 
+    /**
+     * @return Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.
+     * 
+     */
     public Optional<Output<DnsKeySpecKeyType>> keyType() {
         return Optional.ofNullable(this.keyType);
     }
@@ -89,29 +101,65 @@ public final class DnsKeySpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DnsKeySpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm String mnemonic specifying the DNSSEC algorithm of this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(@Nullable Output<DnsKeySpecAlgorithm> algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param algorithm String mnemonic specifying the DNSSEC algorithm of this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(DnsKeySpecAlgorithm algorithm) {
             return algorithm(Output.of(algorithm));
         }
 
+        /**
+         * @param keyLength Length of the keys in bits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyLength(@Nullable Output<Integer> keyLength) {
             $.keyLength = keyLength;
             return this;
         }
 
+        /**
+         * @param keyLength Length of the keys in bits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyLength(Integer keyLength) {
             return keyLength(Output.of(keyLength));
         }
 
+        /**
+         * @param keyType Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(@Nullable Output<DnsKeySpecKeyType> keyType) {
             $.keyType = keyType;
             return this;
         }
 
+        /**
+         * @param keyType Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(DnsKeySpecKeyType keyType) {
             return keyType(Output.of(keyType));
         }

@@ -25,6 +25,10 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal ID of the workspace managed identity
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -36,6 +40,10 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The tenant ID of the workspace managed identity
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -47,6 +55,10 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of managed identity for the workspace
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -77,16 +89,34 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
             $ = new ManagedIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal ID of the workspace managed identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant ID of the workspace managed identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The type of managed identity for the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

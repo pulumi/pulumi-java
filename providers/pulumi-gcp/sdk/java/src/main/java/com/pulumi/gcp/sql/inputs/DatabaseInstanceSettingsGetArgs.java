@@ -33,6 +33,11 @@ public final class DatabaseInstanceSettingsGetArgs extends com.pulumi.resources.
     @Import(name="activationPolicy")
     private @Nullable Output<String> activationPolicy;
 
+    /**
+     * @return This specifies when the instance should be
+     * active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
+     * 
+     */
     public Optional<Output<String>> activationPolicy() {
         return Optional.ofNullable(this.activationPolicy);
     }
@@ -47,6 +52,13 @@ public final class DatabaseInstanceSettingsGetArgs extends com.pulumi.resources.
     @Import(name="availabilityType")
     private @Nullable Output<String> availabilityType;
 
+    /**
+     * @return The availability type of the Cloud SQL
+     * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For MySQL
+     * instances, ensure that `settings.backup_configuration.enabled` and
+     * `settings.backup_configuration.binary_log_enabled` are both set to `true`.
+     * 
+     */
     public Optional<Output<String>> availabilityType() {
         return Optional.ofNullable(this.availabilityType);
     }
@@ -65,6 +77,10 @@ public final class DatabaseInstanceSettingsGetArgs extends com.pulumi.resources.
     @Import(name="collation")
     private @Nullable Output<String> collation;
 
+    /**
+     * @return The name of server instance collation.
+     * 
+     */
     public Optional<Output<String>> collation() {
         return Optional.ofNullable(this.collation);
     }
@@ -83,6 +99,10 @@ public final class DatabaseInstanceSettingsGetArgs extends com.pulumi.resources.
     @Import(name="diskAutoresize")
     private @Nullable Output<Boolean> diskAutoresize;
 
+    /**
+     * @return Configuration to increase storage size automatically.  Note that future apply calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
+     * 
+     */
     public Optional<Output<Boolean>> diskAutoresize() {
         return Optional.ofNullable(this.diskAutoresize);
     }
@@ -101,6 +121,10 @@ public final class DatabaseInstanceSettingsGetArgs extends com.pulumi.resources.
     @Import(name="diskSize")
     private @Nullable Output<Integer> diskSize;
 
+    /**
+     * @return The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.
+     * 
+     */
     public Optional<Output<Integer>> diskSize() {
         return Optional.ofNullable(this.diskSize);
     }
@@ -112,6 +136,10 @@ public final class DatabaseInstanceSettingsGetArgs extends com.pulumi.resources.
     @Import(name="diskType")
     private @Nullable Output<String> diskType;
 
+    /**
+     * @return The type of data disk: PD_SSD or PD_HDD.
+     * 
+     */
     public Optional<Output<String>> diskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -151,6 +179,10 @@ public final class DatabaseInstanceSettingsGetArgs extends com.pulumi.resources.
     @Import(name="pricingPlan")
     private @Nullable Output<String> pricingPlan;
 
+    /**
+     * @return Pricing plan for this instance, can only be `PER_USE`.
+     * 
+     */
     public Optional<Output<String>> pricingPlan() {
         return Optional.ofNullable(this.pricingPlan);
     }
@@ -164,6 +196,12 @@ public final class DatabaseInstanceSettingsGetArgs extends com.pulumi.resources.
     @Import(name="tier", required=true)
     private Output<String> tier;
 
+    /**
+     * @return The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
+     * for more details and supported versions. Postgres supports only shared-core machine types,
+     * and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
+     * 
+     */
     public Output<String> tier() {
         return this.tier;
     }
@@ -175,6 +213,10 @@ public final class DatabaseInstanceSettingsGetArgs extends com.pulumi.resources.
     @Import(name="userLabels")
     private @Nullable Output<Map<String,String>> userLabels;
 
+    /**
+     * @return A set of key/value user label pairs to assign to the instance.
+     * 
+     */
     public Optional<Output<Map<String,String>>> userLabels() {
         return Optional.ofNullable(this.userLabels);
     }
@@ -226,20 +268,52 @@ public final class DatabaseInstanceSettingsGetArgs extends com.pulumi.resources.
             $ = new DatabaseInstanceSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activationPolicy This specifies when the instance should be
+         * active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activationPolicy(@Nullable Output<String> activationPolicy) {
             $.activationPolicy = activationPolicy;
             return this;
         }
 
+        /**
+         * @param activationPolicy This specifies when the instance should be
+         * active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activationPolicy(String activationPolicy) {
             return activationPolicy(Output.of(activationPolicy));
         }
 
+        /**
+         * @param availabilityType The availability type of the Cloud SQL
+         * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For MySQL
+         * instances, ensure that `settings.backup_configuration.enabled` and
+         * `settings.backup_configuration.binary_log_enabled` are both set to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityType(@Nullable Output<String> availabilityType) {
             $.availabilityType = availabilityType;
             return this;
         }
 
+        /**
+         * @param availabilityType The availability type of the Cloud SQL
+         * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For MySQL
+         * instances, ensure that `settings.backup_configuration.enabled` and
+         * `settings.backup_configuration.binary_log_enabled` are both set to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityType(String availabilityType) {
             return availabilityType(Output.of(availabilityType));
         }
@@ -253,11 +327,23 @@ public final class DatabaseInstanceSettingsGetArgs extends com.pulumi.resources.
             return backupConfiguration(Output.of(backupConfiguration));
         }
 
+        /**
+         * @param collation The name of server instance collation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collation(@Nullable Output<String> collation) {
             $.collation = collation;
             return this;
         }
 
+        /**
+         * @param collation The name of server instance collation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collation(String collation) {
             return collation(Output.of(collation));
         }
@@ -275,11 +361,23 @@ public final class DatabaseInstanceSettingsGetArgs extends com.pulumi.resources.
             return databaseFlags(List.of(databaseFlags));
         }
 
+        /**
+         * @param diskAutoresize Configuration to increase storage size automatically.  Note that future apply calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskAutoresize(@Nullable Output<Boolean> diskAutoresize) {
             $.diskAutoresize = diskAutoresize;
             return this;
         }
 
+        /**
+         * @param diskAutoresize Configuration to increase storage size automatically.  Note that future apply calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskAutoresize(Boolean diskAutoresize) {
             return diskAutoresize(Output.of(diskAutoresize));
         }
@@ -293,20 +391,44 @@ public final class DatabaseInstanceSettingsGetArgs extends com.pulumi.resources.
             return diskAutoresizeLimit(Output.of(diskAutoresizeLimit));
         }
 
+        /**
+         * @param diskSize The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSize(@Nullable Output<Integer> diskSize) {
             $.diskSize = diskSize;
             return this;
         }
 
+        /**
+         * @param diskSize The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSize(Integer diskSize) {
             return diskSize(Output.of(diskSize));
         }
 
+        /**
+         * @param diskType The type of data disk: PD_SSD or PD_HDD.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(@Nullable Output<String> diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param diskType The type of data disk: PD_SSD or PD_HDD.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             return diskType(Output.of(diskType));
         }
@@ -347,29 +469,69 @@ public final class DatabaseInstanceSettingsGetArgs extends com.pulumi.resources.
             return maintenanceWindow(Output.of(maintenanceWindow));
         }
 
+        /**
+         * @param pricingPlan Pricing plan for this instance, can only be `PER_USE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pricingPlan(@Nullable Output<String> pricingPlan) {
             $.pricingPlan = pricingPlan;
             return this;
         }
 
+        /**
+         * @param pricingPlan Pricing plan for this instance, can only be `PER_USE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pricingPlan(String pricingPlan) {
             return pricingPlan(Output.of(pricingPlan));
         }
 
+        /**
+         * @param tier The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
+         * for more details and supported versions. Postgres supports only shared-core machine types,
+         * and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Output<String> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
+         * for more details and supported versions. Postgres supports only shared-core machine types,
+         * and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param userLabels A set of key/value user label pairs to assign to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             $.userLabels = userLabels;
             return this;
         }
 
+        /**
+         * @param userLabels A set of key/value user label pairs to assign to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userLabels(Map<String,String> userLabels) {
             return userLabels(Output.of(userLabels));
         }

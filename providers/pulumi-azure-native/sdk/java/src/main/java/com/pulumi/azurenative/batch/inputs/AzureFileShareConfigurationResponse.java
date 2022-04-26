@@ -35,6 +35,10 @@ public final class AzureFileShareConfigurationResponse extends com.pulumi.resour
     @Import(name="azureFileUrl", required=true)
     private String azureFileUrl;
 
+    /**
+     * @return This is of the form &#39;https://{account}.file.core.windows.net/&#39;.
+     * 
+     */
     public String azureFileUrl() {
         return this.azureFileUrl;
     }
@@ -46,6 +50,10 @@ public final class AzureFileShareConfigurationResponse extends com.pulumi.resour
     @Import(name="mountOptions")
     private @Nullable String mountOptions;
 
+    /**
+     * @return These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+     * 
+     */
     public Optional<String> mountOptions() {
         return Optional.ofNullable(this.mountOptions);
     }
@@ -57,6 +65,10 @@ public final class AzureFileShareConfigurationResponse extends com.pulumi.resour
     @Import(name="relativeMountPath", required=true)
     private String relativeMountPath;
 
+    /**
+     * @return All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     * 
+     */
     public String relativeMountPath() {
         return this.relativeMountPath;
     }
@@ -99,16 +111,34 @@ public final class AzureFileShareConfigurationResponse extends com.pulumi.resour
             return this;
         }
 
+        /**
+         * @param azureFileUrl This is of the form &#39;https://{account}.file.core.windows.net/&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFileUrl(String azureFileUrl) {
             $.azureFileUrl = azureFileUrl;
             return this;
         }
 
+        /**
+         * @param mountOptions These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountOptions(@Nullable String mountOptions) {
             $.mountOptions = mountOptions;
             return this;
         }
 
+        /**
+         * @param relativeMountPath All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeMountPath(String relativeMountPath) {
             $.relativeMountPath = relativeMountPath;
             return this;

@@ -27,6 +27,10 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return Optional. The end time at which a recurring patch deployment schedule is no longer active.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -38,6 +42,10 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
     @Import(name="frequency", required=true)
     private String frequency;
 
+    /**
+     * @return The frequency unit of this recurring schedule.
+     * 
+     */
     public String frequency() {
         return this.frequency;
     }
@@ -49,6 +57,10 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
     @Import(name="lastExecuteTime", required=true)
     private String lastExecuteTime;
 
+    /**
+     * @return The time the last patch job ran successfully.
+     * 
+     */
     public String lastExecuteTime() {
         return this.lastExecuteTime;
     }
@@ -60,6 +72,10 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
     @Import(name="monthly", required=true)
     private MonthlyScheduleResponse monthly;
 
+    /**
+     * @return Schedule with monthly executions.
+     * 
+     */
     public MonthlyScheduleResponse monthly() {
         return this.monthly;
     }
@@ -71,6 +87,10 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
     @Import(name="nextExecuteTime", required=true)
     private String nextExecuteTime;
 
+    /**
+     * @return The time the next patch job is scheduled to run.
+     * 
+     */
     public String nextExecuteTime() {
         return this.nextExecuteTime;
     }
@@ -82,6 +102,10 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -93,6 +117,10 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
     @Import(name="timeOfDay", required=true)
     private TimeOfDayResponse timeOfDay;
 
+    /**
+     * @return Time of the day to run a recurring deployment.
+     * 
+     */
     public TimeOfDayResponse timeOfDay() {
         return this.timeOfDay;
     }
@@ -104,6 +132,10 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
     @Import(name="timeZone", required=true)
     private TimeZoneResponse timeZone;
 
+    /**
+     * @return Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.
+     * 
+     */
     public TimeZoneResponse timeZone() {
         return this.timeZone;
     }
@@ -115,6 +147,10 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
     @Import(name="weekly", required=true)
     private WeeklyScheduleResponse weekly;
 
+    /**
+     * @return Schedule with weekly executions.
+     * 
+     */
     public WeeklyScheduleResponse weekly() {
         return this.weekly;
     }
@@ -151,46 +187,100 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
             $ = new RecurringScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime Optional. The end time at which a recurring patch deployment schedule is no longer active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param frequency The frequency unit of this recurring schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(String frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param lastExecuteTime The time the last patch job ran successfully.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastExecuteTime(String lastExecuteTime) {
             $.lastExecuteTime = lastExecuteTime;
             return this;
         }
 
+        /**
+         * @param monthly Schedule with monthly executions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthly(MonthlyScheduleResponse monthly) {
             $.monthly = monthly;
             return this;
         }
 
+        /**
+         * @param nextExecuteTime The time the next patch job is scheduled to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextExecuteTime(String nextExecuteTime) {
             $.nextExecuteTime = nextExecuteTime;
             return this;
         }
 
+        /**
+         * @param startTime Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param timeOfDay Time of the day to run a recurring deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeOfDay(TimeOfDayResponse timeOfDay) {
             $.timeOfDay = timeOfDay;
             return this;
         }
 
+        /**
+         * @param timeZone Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(TimeZoneResponse timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param weekly Schedule with weekly executions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekly(WeeklyScheduleResponse weekly) {
             $.weekly = weekly;
             return this;

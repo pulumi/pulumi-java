@@ -28,6 +28,10 @@ public final class QuotaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="limits")
     private @Nullable Output<List<QuotaLimitArgs>> limits;
 
+    /**
+     * @return List of `QuotaLimit` definitions for the service.
+     * 
+     */
     public Optional<Output<List<QuotaLimitArgs>>> limits() {
         return Optional.ofNullable(this.limits);
     }
@@ -39,6 +43,10 @@ public final class QuotaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricRules")
     private @Nullable Output<List<MetricRuleArgs>> metricRules;
 
+    /**
+     * @return List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
+     * 
+     */
     public Optional<Output<List<MetricRuleArgs>>> metricRules() {
         return Optional.ofNullable(this.metricRules);
     }
@@ -68,28 +76,64 @@ public final class QuotaArgs extends com.pulumi.resources.ResourceArgs {
             $ = new QuotaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param limits List of `QuotaLimit` definitions for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(@Nullable Output<List<QuotaLimitArgs>> limits) {
             $.limits = limits;
             return this;
         }
 
+        /**
+         * @param limits List of `QuotaLimit` definitions for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(List<QuotaLimitArgs> limits) {
             return limits(Output.of(limits));
         }
 
+        /**
+         * @param limits List of `QuotaLimit` definitions for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(QuotaLimitArgs... limits) {
             return limits(List.of(limits));
         }
 
+        /**
+         * @param metricRules List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricRules(@Nullable Output<List<MetricRuleArgs>> metricRules) {
             $.metricRules = metricRules;
             return this;
         }
 
+        /**
+         * @param metricRules List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricRules(List<MetricRuleArgs> metricRules) {
             return metricRules(Output.of(metricRules));
         }
 
+        /**
+         * @param metricRules List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricRules(MetricRuleArgs... metricRules) {
             return metricRules(List.of(metricRules));
         }

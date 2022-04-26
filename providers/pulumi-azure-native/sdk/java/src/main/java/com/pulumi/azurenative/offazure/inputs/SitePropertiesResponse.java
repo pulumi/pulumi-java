@@ -27,6 +27,10 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="agentDetails")
     private @Nullable SiteAgentPropertiesResponse agentDetails;
 
+    /**
+     * @return On-premises agent details.
+     * 
+     */
     public Optional<SiteAgentPropertiesResponse> agentDetails() {
         return Optional.ofNullable(this.agentDetails);
     }
@@ -38,6 +42,10 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="applianceName")
     private @Nullable String applianceName;
 
+    /**
+     * @return Appliance Name.
+     * 
+     */
     public Optional<String> applianceName() {
         return Optional.ofNullable(this.applianceName);
     }
@@ -49,6 +57,10 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="discoverySolutionId")
     private @Nullable String discoverySolutionId;
 
+    /**
+     * @return ARM ID of migration hub solution for SDS.
+     * 
+     */
     public Optional<String> discoverySolutionId() {
         return Optional.ofNullable(this.discoverySolutionId);
     }
@@ -60,6 +72,10 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="serviceEndpoint", required=true)
     private String serviceEndpoint;
 
+    /**
+     * @return Service endpoint.
+     * 
+     */
     public String serviceEndpoint() {
         return this.serviceEndpoint;
     }
@@ -71,6 +87,10 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="servicePrincipalIdentityDetails")
     private @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails;
 
+    /**
+     * @return Service principal identity details used by agent for communication to the service.
+     * 
+     */
     public Optional<SiteSpnPropertiesResponse> servicePrincipalIdentityDetails() {
         return Optional.ofNullable(this.servicePrincipalIdentityDetails);
     }
@@ -103,26 +123,56 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
             $ = new SitePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentDetails On-premises agent details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentDetails(@Nullable SiteAgentPropertiesResponse agentDetails) {
             $.agentDetails = agentDetails;
             return this;
         }
 
+        /**
+         * @param applianceName Appliance Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applianceName(@Nullable String applianceName) {
             $.applianceName = applianceName;
             return this;
         }
 
+        /**
+         * @param discoverySolutionId ARM ID of migration hub solution for SDS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoverySolutionId(@Nullable String discoverySolutionId) {
             $.discoverySolutionId = discoverySolutionId;
             return this;
         }
 
+        /**
+         * @param serviceEndpoint Service endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpoint(String serviceEndpoint) {
             $.serviceEndpoint = serviceEndpoint;
             return this;
         }
 
+        /**
+         * @param servicePrincipalIdentityDetails Service principal identity details used by agent for communication to the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalIdentityDetails(@Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails) {
             $.servicePrincipalIdentityDetails = servicePrincipalIdentityDetails;
             return this;

@@ -27,6 +27,10 @@ public final class ScorecardResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="gaugeView", required=true)
     private GaugeViewResponse gaugeView;
 
+    /**
+     * @return Will cause the scorecard to show a gauge chart.
+     * 
+     */
     public GaugeViewResponse gaugeView() {
         return this.gaugeView;
     }
@@ -38,6 +42,10 @@ public final class ScorecardResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sparkChartView", required=true)
     private SparkChartViewResponse sparkChartView;
 
+    /**
+     * @return Will cause the scorecard to show a spark chart.
+     * 
+     */
     public SparkChartViewResponse sparkChartView() {
         return this.sparkChartView;
     }
@@ -49,6 +57,10 @@ public final class ScorecardResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="thresholds", required=true)
     private List<ThresholdResponse> thresholds;
 
+    /**
+     * @return The thresholds used to determine the state of the scorecard given the time series&#39; current value. For an actual value x, the scorecard is in a danger state if x is less than or equal to a danger threshold that triggers below, or greater than or equal to a danger threshold that triggers above. Similarly, if x is above/below a warning threshold that triggers above/below, then the scorecard is in a warning state - unless x also puts it in a danger state. (Danger trumps warning.)As an example, consider a scorecard with the following four thresholds: { value: 90, category: &#39;DANGER&#39;, trigger: &#39;ABOVE&#39;, }, { value: 70, category: &#39;WARNING&#39;, trigger: &#39;ABOVE&#39;, }, { value: 10, category: &#39;DANGER&#39;, trigger: &#39;BELOW&#39;, }, { value: 20, category: &#39;WARNING&#39;, trigger: &#39;BELOW&#39;, }Then: values less than or equal to 10 would put the scorecard in a DANGER state, values greater than 10 but less than or equal to 20 a WARNING state, values strictly between 20 and 70 an OK state, values greater than or equal to 70 but less than 90 a WARNING state, and values greater than or equal to 90 a DANGER state.
+     * 
+     */
     public List<ThresholdResponse> thresholds() {
         return this.thresholds;
     }
@@ -60,6 +72,10 @@ public final class ScorecardResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timeSeriesQuery", required=true)
     private TimeSeriesQueryResponse timeSeriesQuery;
 
+    /**
+     * @return Fields for querying time series data from the Stackdriver metrics API.
+     * 
+     */
     public TimeSeriesQueryResponse timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
@@ -91,25 +107,55 @@ public final class ScorecardResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ScorecardResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gaugeView Will cause the scorecard to show a gauge chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gaugeView(GaugeViewResponse gaugeView) {
             $.gaugeView = gaugeView;
             return this;
         }
 
+        /**
+         * @param sparkChartView Will cause the scorecard to show a spark chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkChartView(SparkChartViewResponse sparkChartView) {
             $.sparkChartView = sparkChartView;
             return this;
         }
 
+        /**
+         * @param thresholds The thresholds used to determine the state of the scorecard given the time series&#39; current value. For an actual value x, the scorecard is in a danger state if x is less than or equal to a danger threshold that triggers below, or greater than or equal to a danger threshold that triggers above. Similarly, if x is above/below a warning threshold that triggers above/below, then the scorecard is in a warning state - unless x also puts it in a danger state. (Danger trumps warning.)As an example, consider a scorecard with the following four thresholds: { value: 90, category: &#39;DANGER&#39;, trigger: &#39;ABOVE&#39;, }, { value: 70, category: &#39;WARNING&#39;, trigger: &#39;ABOVE&#39;, }, { value: 10, category: &#39;DANGER&#39;, trigger: &#39;BELOW&#39;, }, { value: 20, category: &#39;WARNING&#39;, trigger: &#39;BELOW&#39;, }Then: values less than or equal to 10 would put the scorecard in a DANGER state, values greater than 10 but less than or equal to 20 a WARNING state, values strictly between 20 and 70 an OK state, values greater than or equal to 70 but less than 90 a WARNING state, and values greater than or equal to 90 a DANGER state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholds(List<ThresholdResponse> thresholds) {
             $.thresholds = thresholds;
             return this;
         }
 
+        /**
+         * @param thresholds The thresholds used to determine the state of the scorecard given the time series&#39; current value. For an actual value x, the scorecard is in a danger state if x is less than or equal to a danger threshold that triggers below, or greater than or equal to a danger threshold that triggers above. Similarly, if x is above/below a warning threshold that triggers above/below, then the scorecard is in a warning state - unless x also puts it in a danger state. (Danger trumps warning.)As an example, consider a scorecard with the following four thresholds: { value: 90, category: &#39;DANGER&#39;, trigger: &#39;ABOVE&#39;, }, { value: 70, category: &#39;WARNING&#39;, trigger: &#39;ABOVE&#39;, }, { value: 10, category: &#39;DANGER&#39;, trigger: &#39;BELOW&#39;, }, { value: 20, category: &#39;WARNING&#39;, trigger: &#39;BELOW&#39;, }Then: values less than or equal to 10 would put the scorecard in a DANGER state, values greater than 10 but less than or equal to 20 a WARNING state, values strictly between 20 and 70 an OK state, values greater than or equal to 70 but less than 90 a WARNING state, and values greater than or equal to 90 a DANGER state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholds(ThresholdResponse... thresholds) {
             return thresholds(List.of(thresholds));
         }
 
+        /**
+         * @param timeSeriesQuery Fields for querying time series data from the Stackdriver metrics API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
             $.timeSeriesQuery = timeSeriesQuery;
             return this;

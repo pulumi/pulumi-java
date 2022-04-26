@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PublicIpReferenceResponse {
     /**
-     * Gets the ARM resource ID of the tracked resource being referenced.
+     * @return Gets the ARM resource ID of the tracked resource being referenced.
      * 
      */
     private final String sourceArmResourceId;
@@ -21,9 +21,9 @@ public final class PublicIpReferenceResponse {
     }
 
     /**
-     * Gets the ARM resource ID of the tracked resource being referenced.
+     * @return Gets the ARM resource ID of the tracked resource being referenced.
      * 
-    */
+     */
     public String sourceArmResourceId() {
         return this.sourceArmResourceId;
     }

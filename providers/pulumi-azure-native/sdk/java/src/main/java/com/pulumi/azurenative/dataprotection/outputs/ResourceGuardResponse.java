@@ -13,27 +13,27 @@ import java.util.Objects;
 @CustomType
 public final class ResourceGuardResponse {
     /**
-     * This flag indicates whether auto approval is allowed or not.
+     * @return This flag indicates whether auto approval is allowed or not.
      * 
      */
     private final Boolean allowAutoApprovals;
     /**
-     * Description about the pre-req steps to perform all the critical operations.
+     * @return Description about the pre-req steps to perform all the critical operations.
      * 
      */
     private final String description;
     /**
-     * Provisioning state of the BackupVault resource
+     * @return Provisioning state of the BackupVault resource
      * 
      */
     private final String provisioningState;
     /**
-     * {readonly} List of operation details those are protected by the ResourceGuard resource
+     * @return {readonly} List of operation details those are protected by the ResourceGuard resource
      * 
      */
     private final List<ResourceGuardOperationResponse> resourceGuardOperations;
     /**
-     * List of critical operations which are not protected by this resourceGuard
+     * @return List of critical operations which are not protected by this resourceGuard
      * 
      */
     private final List<String> vaultCriticalOperationExclusionList;
@@ -53,37 +53,37 @@ public final class ResourceGuardResponse {
     }
 
     /**
-     * This flag indicates whether auto approval is allowed or not.
+     * @return This flag indicates whether auto approval is allowed or not.
      * 
-    */
+     */
     public Boolean allowAutoApprovals() {
         return this.allowAutoApprovals;
     }
     /**
-     * Description about the pre-req steps to perform all the critical operations.
+     * @return Description about the pre-req steps to perform all the critical operations.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Provisioning state of the BackupVault resource
+     * @return Provisioning state of the BackupVault resource
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * {readonly} List of operation details those are protected by the ResourceGuard resource
+     * @return {readonly} List of operation details those are protected by the ResourceGuard resource
      * 
-    */
+     */
     public List<ResourceGuardOperationResponse> resourceGuardOperations() {
         return this.resourceGuardOperations;
     }
     /**
-     * List of critical operations which are not protected by this resourceGuard
+     * @return List of critical operations which are not protected by this resourceGuard
      * 
-    */
+     */
     public List<String> vaultCriticalOperationExclusionList() {
         return this.vaultCriticalOperationExclusionList;
     }

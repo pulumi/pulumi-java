@@ -20,33 +20,33 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobInputClipResponse {
     /**
-     * Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
+     * @return Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
      * 
      */
     private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end;
     /**
-     * List of files. Required for JobInputHttp. Maximum of 4000 characters each.
+     * @return List of files. Required for JobInputHttp. Maximum of 4000 characters each.
      * 
      */
     private final @Nullable List<String> files;
     /**
-     * Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
+     * @return Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
      * 
      */
     private final @Nullable List<Object> inputDefinitions;
     /**
-     * A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label &#39;xyz&#39; and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label &#39;xyz&#39;.
+     * @return A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label &#39;xyz&#39; and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label &#39;xyz&#39;.
      * 
      */
     private final @Nullable String label;
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.JobInputClip&#39;.
      * 
      */
     private final String odataType;
     /**
-     * Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
+     * @return Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
      * 
      */
     private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start;
@@ -68,45 +68,45 @@ public final class JobInputClipResponse {
     }
 
     /**
-     * Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
+     * @return Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
      * 
-    */
+     */
     public Optional<Either<AbsoluteClipTimeResponse,UtcClipTimeResponse>> end() {
         return Optional.ofNullable(this.end);
     }
     /**
-     * List of files. Required for JobInputHttp. Maximum of 4000 characters each.
+     * @return List of files. Required for JobInputHttp. Maximum of 4000 characters each.
      * 
-    */
+     */
     public List<String> files() {
         return this.files == null ? List.of() : this.files;
     }
     /**
-     * Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
+     * @return Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
      * 
-    */
+     */
     public List<Object> inputDefinitions() {
         return this.inputDefinitions == null ? List.of() : this.inputDefinitions;
     }
     /**
-     * A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label &#39;xyz&#39; and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label &#39;xyz&#39;.
+     * @return A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label &#39;xyz&#39; and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label &#39;xyz&#39;.
      * 
-    */
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.JobInputClip&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
+     * @return Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
      * 
-    */
+     */
     public Optional<Either<AbsoluteClipTimeResponse,UtcClipTimeResponse>> start() {
         return Optional.ofNullable(this.start);
     }

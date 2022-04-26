@@ -19,6 +19,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="routeName", required=true)
     private String routeName;
 
+    /**
+     * @return The name of the route.
+     * 
+     */
     public String routeName() {
         return this.routeName;
     }
@@ -41,6 +49,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="routeTableName", required=true)
     private String routeTableName;
 
+    /**
+     * @return The name of the route table.
+     * 
+     */
     public String routeTableName() {
         return this.routeTableName;
     }
@@ -71,16 +83,34 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param routeName The name of the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeName(String routeName) {
             $.routeName = routeName;
             return this;
         }
 
+        /**
+         * @param routeTableName The name of the route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableName(String routeTableName) {
             $.routeTableName = routeTableName;
             return this;

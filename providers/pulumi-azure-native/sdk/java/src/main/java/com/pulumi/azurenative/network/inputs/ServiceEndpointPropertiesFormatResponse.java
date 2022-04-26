@@ -26,6 +26,10 @@ public final class ServiceEndpointPropertiesFormatResponse extends com.pulumi.re
     @Import(name="locations")
     private @Nullable List<String> locations;
 
+    /**
+     * @return A list of locations.
+     * 
+     */
     public Optional<List<String>> locations() {
         return Optional.ofNullable(this.locations);
     }
@@ -37,6 +41,10 @@ public final class ServiceEndpointPropertiesFormatResponse extends com.pulumi.re
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the service endpoint resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -48,6 +56,10 @@ public final class ServiceEndpointPropertiesFormatResponse extends com.pulumi.re
     @Import(name="service")
     private @Nullable String service;
 
+    /**
+     * @return The type of the endpoint service.
+     * 
+     */
     public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
@@ -78,20 +90,44 @@ public final class ServiceEndpointPropertiesFormatResponse extends com.pulumi.re
             $ = new ServiceEndpointPropertiesFormatResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param locations A list of locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(@Nullable List<String> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations A list of locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param provisioningState The provisioning state of the service endpoint resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param service The type of the endpoint service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable String service) {
             $.service = service;
             return this;

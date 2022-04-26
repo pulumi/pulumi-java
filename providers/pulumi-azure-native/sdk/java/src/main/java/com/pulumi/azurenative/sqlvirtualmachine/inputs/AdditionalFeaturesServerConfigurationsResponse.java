@@ -25,6 +25,10 @@ public final class AdditionalFeaturesServerConfigurationsResponse extends com.pu
     @Import(name="isRServicesEnabled")
     private @Nullable Boolean isRServicesEnabled;
 
+    /**
+     * @return Enable or disable R services (SQL 2016 onwards).
+     * 
+     */
     public Optional<Boolean> isRServicesEnabled() {
         return Optional.ofNullable(this.isRServicesEnabled);
     }
@@ -53,6 +57,12 @@ public final class AdditionalFeaturesServerConfigurationsResponse extends com.pu
             $ = new AdditionalFeaturesServerConfigurationsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isRServicesEnabled Enable or disable R services (SQL 2016 onwards).
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRServicesEnabled(@Nullable Boolean isRServicesEnabled) {
             $.isRServicesEnabled = isRServicesEnabled;
             return this;

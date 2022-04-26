@@ -23,6 +23,10 @@ public final class PolicyAssignmentPropertiesResponse extends com.pulumi.resourc
     @Import(name="policy")
     private @Nullable PolicyAssignmentPropertiesResponsePolicy policy;
 
+    /**
+     * @return Details of the policy
+     * 
+     */
     public Optional<PolicyAssignmentPropertiesResponsePolicy> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -34,6 +38,10 @@ public final class PolicyAssignmentPropertiesResponse extends com.pulumi.resourc
     @Import(name="roleDefinition")
     private @Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition;
 
+    /**
+     * @return Details of role definition
+     * 
+     */
     public Optional<PolicyAssignmentPropertiesResponseRoleDefinition> roleDefinition() {
         return Optional.ofNullable(this.roleDefinition);
     }
@@ -45,6 +53,10 @@ public final class PolicyAssignmentPropertiesResponse extends com.pulumi.resourc
     @Import(name="scope")
     private @Nullable PolicyAssignmentPropertiesResponseScope scope;
 
+    /**
+     * @return Details of the resource scope
+     * 
+     */
     public Optional<PolicyAssignmentPropertiesResponseScope> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -75,16 +87,34 @@ public final class PolicyAssignmentPropertiesResponse extends com.pulumi.resourc
             $ = new PolicyAssignmentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policy Details of the policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable PolicyAssignmentPropertiesResponsePolicy policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param roleDefinition Details of role definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinition(@Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition) {
             $.roleDefinition = roleDefinition;
             return this;
         }
 
+        /**
+         * @param scope Details of the resource scope
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable PolicyAssignmentPropertiesResponseScope scope) {
             $.scope = scope;
             return this;

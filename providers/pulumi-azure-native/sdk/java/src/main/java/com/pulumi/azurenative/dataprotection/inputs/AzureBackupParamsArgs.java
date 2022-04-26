@@ -25,6 +25,10 @@ public final class AzureBackupParamsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="backupType", required=true)
     private Output<String> backupType;
 
+    /**
+     * @return BackupType ; Full/Incremental etc
+     * 
+     */
     public Output<String> backupType() {
         return this.backupType;
     }
@@ -37,6 +41,11 @@ public final class AzureBackupParamsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="objectType", required=true)
     private Output<String> objectType;
 
+    /**
+     * @return Type of the specific object - used for deserializing
+     * Expected value is &#39;AzureBackupParams&#39;.
+     * 
+     */
     public Output<String> objectType() {
         return this.objectType;
     }
@@ -66,20 +75,46 @@ public final class AzureBackupParamsArgs extends com.pulumi.resources.ResourceAr
             $ = new AzureBackupParamsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupType BackupType ; Full/Incremental etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupType(Output<String> backupType) {
             $.backupType = backupType;
             return this;
         }
 
+        /**
+         * @param backupType BackupType ; Full/Incremental etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupType(String backupType) {
             return backupType(Output.of(backupType));
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;AzureBackupParams&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(Output<String> objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;AzureBackupParams&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             return objectType(Output.of(objectType));
         }

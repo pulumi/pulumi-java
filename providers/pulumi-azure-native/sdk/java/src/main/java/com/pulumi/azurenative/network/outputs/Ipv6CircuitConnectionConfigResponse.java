@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Ipv6CircuitConnectionConfigResponse {
     /**
-     * /125 IP address space to carve out customer addresses for global reach.
+     * @return /125 IP address space to carve out customer addresses for global reach.
      * 
      */
     private final @Nullable String addressPrefix;
     /**
-     * Express Route Circuit connection state.
+     * @return Express Route Circuit connection state.
      * 
      */
     private final String circuitConnectionStatus;
@@ -31,16 +31,16 @@ public final class Ipv6CircuitConnectionConfigResponse {
     }
 
     /**
-     * /125 IP address space to carve out customer addresses for global reach.
+     * @return /125 IP address space to carve out customer addresses for global reach.
      * 
-    */
+     */
     public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
-     * Express Route Circuit connection state.
+     * @return Express Route Circuit connection state.
      * 
-    */
+     */
     public String circuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }

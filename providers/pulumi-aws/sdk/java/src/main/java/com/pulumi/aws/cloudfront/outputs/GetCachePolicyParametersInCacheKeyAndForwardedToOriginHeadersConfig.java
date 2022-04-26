@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig {
     /**
-     * Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
+     * @return Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
      * 
      */
     private final String headerBehavior;
     /**
-     * Object that contains a list of header names. See Items for more information.
+     * @return Object that contains a list of header names. See Items for more information.
      * 
      */
     private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers;
@@ -31,16 +31,16 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
     }
 
     /**
-     * Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
+     * @return Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
      * 
-    */
+     */
     public String headerBehavior() {
         return this.headerBehavior;
     }
     /**
-     * Object that contains a list of header names. See Items for more information.
+     * @return Object that contains a list of header names. See Items for more information.
      * 
-    */
+     */
     public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers() {
         return this.headers;
     }

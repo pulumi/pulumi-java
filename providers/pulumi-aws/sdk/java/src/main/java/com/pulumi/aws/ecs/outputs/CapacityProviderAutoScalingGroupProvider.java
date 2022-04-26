@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CapacityProviderAutoScalingGroupProvider {
     /**
-     * - ARN of the associated auto scaling group.
+     * @return - ARN of the associated auto scaling group.
      * 
      */
     private final String autoScalingGroupArn;
     /**
-     * - Configuration block defining the parameters of the auto scaling. Detailed below.
+     * @return - Configuration block defining the parameters of the auto scaling. Detailed below.
      * 
      */
     private final @Nullable CapacityProviderAutoScalingGroupProviderManagedScaling managedScaling;
     /**
-     * - Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are `ENABLED` and `DISABLED`.
+     * @return - Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are `ENABLED` and `DISABLED`.
      * 
      */
     private final @Nullable String managedTerminationProtection;
@@ -39,23 +39,23 @@ public final class CapacityProviderAutoScalingGroupProvider {
     }
 
     /**
-     * - ARN of the associated auto scaling group.
+     * @return - ARN of the associated auto scaling group.
      * 
-    */
+     */
     public String autoScalingGroupArn() {
         return this.autoScalingGroupArn;
     }
     /**
-     * - Configuration block defining the parameters of the auto scaling. Detailed below.
+     * @return - Configuration block defining the parameters of the auto scaling. Detailed below.
      * 
-    */
+     */
     public Optional<CapacityProviderAutoScalingGroupProviderManagedScaling> managedScaling() {
         return Optional.ofNullable(this.managedScaling);
     }
     /**
-     * - Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are `ENABLED` and `DISABLED`.
+     * @return - Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are `ENABLED` and `DISABLED`.
      * 
-    */
+     */
     public Optional<String> managedTerminationProtection() {
         return Optional.ofNullable(this.managedTerminationProtection);
     }

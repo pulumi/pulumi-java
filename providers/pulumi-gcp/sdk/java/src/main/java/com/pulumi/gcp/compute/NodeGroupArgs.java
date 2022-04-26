@@ -27,6 +27,12 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingPolicy")
     private @Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
 
+    /**
+     * @return If you use sole-tenant nodes for your workloads, you can use the node
+     * group autoscaler to automatically manage the sizes of your node groups.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<NodeGroupAutoscalingPolicyArgs>> autoscalingPolicy() {
         return Optional.ofNullable(this.autoscalingPolicy);
     }
@@ -38,6 +44,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional textual description of the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +59,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="initialSize")
     private @Nullable Output<Integer> initialSize;
 
+    /**
+     * @return The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
+     * 
+     */
     public Optional<Output<Integer>> initialSize() {
         return Optional.ofNullable(this.initialSize);
     }
@@ -60,6 +74,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maintenancePolicy")
     private @Nullable Output<String> maintenancePolicy;
 
+    /**
+     * @return Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT.
+     * 
+     */
     public Optional<Output<String>> maintenancePolicy() {
         return Optional.ofNullable(this.maintenancePolicy);
     }
@@ -72,6 +90,11 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceWindow")
     private @Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
 
+    /**
+     * @return contains properties for the timeframe of maintenance
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<NodeGroupMaintenanceWindowArgs>> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
@@ -83,6 +106,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -94,6 +121,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeTemplate", required=true)
     private Output<String> nodeTemplate;
 
+    /**
+     * @return The URL of the node template to which this node group belongs.
+     * 
+     */
     public Output<String> nodeTemplate() {
         return this.nodeTemplate;
     }
@@ -106,6 +137,11 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -117,6 +153,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="size")
     private @Nullable Output<Integer> size;
 
+    /**
+     * @return The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
+     * 
+     */
     public Optional<Output<Integer>> size() {
         return Optional.ofNullable(this.size);
     }
@@ -128,6 +168,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return Zone where this node group is located
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -165,92 +209,220 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NodeGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscalingPolicy If you use sole-tenant nodes for your workloads, you can use the node
+         * group autoscaler to automatically manage the sizes of your node groups.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingPolicy(@Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy) {
             $.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
 
+        /**
+         * @param autoscalingPolicy If you use sole-tenant nodes for your workloads, you can use the node
+         * group autoscaler to automatically manage the sizes of your node groups.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingPolicy(NodeGroupAutoscalingPolicyArgs autoscalingPolicy) {
             return autoscalingPolicy(Output.of(autoscalingPolicy));
         }
 
+        /**
+         * @param description An optional textual description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional textual description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param initialSize The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialSize(@Nullable Output<Integer> initialSize) {
             $.initialSize = initialSize;
             return this;
         }
 
+        /**
+         * @param initialSize The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialSize(Integer initialSize) {
             return initialSize(Output.of(initialSize));
         }
 
+        /**
+         * @param maintenancePolicy Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenancePolicy(@Nullable Output<String> maintenancePolicy) {
             $.maintenancePolicy = maintenancePolicy;
             return this;
         }
 
+        /**
+         * @param maintenancePolicy Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenancePolicy(String maintenancePolicy) {
             return maintenancePolicy(Output.of(maintenancePolicy));
         }
 
+        /**
+         * @param maintenanceWindow contains properties for the timeframe of maintenance
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(@Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow) {
             $.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
+        /**
+         * @param maintenanceWindow contains properties for the timeframe of maintenance
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(NodeGroupMaintenanceWindowArgs maintenanceWindow) {
             return maintenanceWindow(Output.of(maintenanceWindow));
         }
 
+        /**
+         * @param name Name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nodeTemplate The URL of the node template to which this node group belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeTemplate(Output<String> nodeTemplate) {
             $.nodeTemplate = nodeTemplate;
             return this;
         }
 
+        /**
+         * @param nodeTemplate The URL of the node template to which this node group belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeTemplate(String nodeTemplate) {
             return nodeTemplate(Output.of(nodeTemplate));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param size The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Output<Integer> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(Integer size) {
             return size(Output.of(size));
         }
 
+        /**
+         * @param zone Zone where this node group is located
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone Zone where this node group is located
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

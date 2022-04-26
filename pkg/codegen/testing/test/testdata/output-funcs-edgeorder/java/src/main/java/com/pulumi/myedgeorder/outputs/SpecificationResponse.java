@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class SpecificationResponse {
     /**
-     * Name of the specification
+     * @return Name of the specification
      * 
      */
     private final String name;
     /**
-     * Value of the specification
+     * @return Value of the specification
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class SpecificationResponse {
     }
 
     /**
-     * Name of the specification
+     * @return Name of the specification
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Value of the specification
+     * @return Value of the specification
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

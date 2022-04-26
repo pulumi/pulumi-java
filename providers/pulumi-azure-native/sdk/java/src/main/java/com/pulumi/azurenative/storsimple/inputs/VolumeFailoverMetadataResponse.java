@@ -26,6 +26,10 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
     @Import(name="backupCreatedDate")
     private @Nullable String backupCreatedDate;
 
+    /**
+     * @return The date at which the snapshot was taken.
+     * 
+     */
     public Optional<String> backupCreatedDate() {
         return Optional.ofNullable(this.backupCreatedDate);
     }
@@ -37,6 +41,10 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
     @Import(name="backupElementId")
     private @Nullable String backupElementId;
 
+    /**
+     * @return The path ID of the backup-element for this volume, inside the backup set.
+     * 
+     */
     public Optional<String> backupElementId() {
         return Optional.ofNullable(this.backupElementId);
     }
@@ -48,6 +56,10 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
     @Import(name="backupId")
     private @Nullable String backupId;
 
+    /**
+     * @return The path ID of the backup set.
+     * 
+     */
     public Optional<String> backupId() {
         return Optional.ofNullable(this.backupId);
     }
@@ -59,6 +71,10 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
     @Import(name="backupPolicyId")
     private @Nullable String backupPolicyId;
 
+    /**
+     * @return The path ID of the backup policy using which the snapshot was taken.
+     * 
+     */
     public Optional<String> backupPolicyId() {
         return Optional.ofNullable(this.backupPolicyId);
     }
@@ -70,6 +86,10 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
     @Import(name="sizeInBytes")
     private @Nullable Double sizeInBytes;
 
+    /**
+     * @return The size of the volume in bytes at the time the snapshot was taken.
+     * 
+     */
     public Optional<Double> sizeInBytes() {
         return Optional.ofNullable(this.sizeInBytes);
     }
@@ -81,6 +101,10 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
     @Import(name="volumeId")
     private @Nullable String volumeId;
 
+    /**
+     * @return The path ID of the volume.
+     * 
+     */
     public Optional<String> volumeId() {
         return Optional.ofNullable(this.volumeId);
     }
@@ -92,6 +116,10 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
     @Import(name="volumeType")
     private @Nullable String volumeType;
 
+    /**
+     * @return The type of the volume.
+     * 
+     */
     public Optional<String> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }
@@ -126,36 +154,78 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
             $ = new VolumeFailoverMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupCreatedDate The date at which the snapshot was taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupCreatedDate(@Nullable String backupCreatedDate) {
             $.backupCreatedDate = backupCreatedDate;
             return this;
         }
 
+        /**
+         * @param backupElementId The path ID of the backup-element for this volume, inside the backup set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupElementId(@Nullable String backupElementId) {
             $.backupElementId = backupElementId;
             return this;
         }
 
+        /**
+         * @param backupId The path ID of the backup set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupId(@Nullable String backupId) {
             $.backupId = backupId;
             return this;
         }
 
+        /**
+         * @param backupPolicyId The path ID of the backup policy using which the snapshot was taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicyId(@Nullable String backupPolicyId) {
             $.backupPolicyId = backupPolicyId;
             return this;
         }
 
+        /**
+         * @param sizeInBytes The size of the volume in bytes at the time the snapshot was taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeInBytes(@Nullable Double sizeInBytes) {
             $.sizeInBytes = sizeInBytes;
             return this;
         }
 
+        /**
+         * @param volumeId The path ID of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeId(@Nullable String volumeId) {
             $.volumeId = volumeId;
             return this;
         }
 
+        /**
+         * @param volumeType The type of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(@Nullable String volumeType) {
             $.volumeType = volumeType;
             return this;

@@ -29,6 +29,10 @@ public final class StorageSettingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="datastoreType")
     private @Nullable Output<Either<String,StorageSettingStoreTypes>> datastoreType;
 
+    /**
+     * @return Gets or sets the type of the datastore.
+     * 
+     */
     public Optional<Output<Either<String,StorageSettingStoreTypes>>> datastoreType() {
         return Optional.ofNullable(this.datastoreType);
     }
@@ -40,6 +44,10 @@ public final class StorageSettingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type")
     private @Nullable Output<Either<String,StorageSettingTypes>> type;
 
+    /**
+     * @return Gets or sets the type.
+     * 
+     */
     public Optional<Output<Either<String,StorageSettingTypes>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -69,36 +77,84 @@ public final class StorageSettingArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datastoreType Gets or sets the type of the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreType(@Nullable Output<Either<String,StorageSettingStoreTypes>> datastoreType) {
             $.datastoreType = datastoreType;
             return this;
         }
 
+        /**
+         * @param datastoreType Gets or sets the type of the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreType(Either<String,StorageSettingStoreTypes> datastoreType) {
             return datastoreType(Output.of(datastoreType));
         }
 
+        /**
+         * @param datastoreType Gets or sets the type of the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreType(String datastoreType) {
             return datastoreType(Either.ofLeft(datastoreType));
         }
 
+        /**
+         * @param datastoreType Gets or sets the type of the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreType(StorageSettingStoreTypes datastoreType) {
             return datastoreType(Either.ofRight(datastoreType));
         }
 
+        /**
+         * @param type Gets or sets the type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,StorageSettingTypes>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,StorageSettingTypes> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Gets or sets the type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Gets or sets the type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(StorageSettingTypes type) {
             return type(Either.ofRight(type));
         }

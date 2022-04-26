@@ -23,6 +23,10 @@ public final class UserGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the user group.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class UserGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the user group.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -45,6 +53,10 @@ public final class UserGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="precedence")
     private @Nullable Output<Integer> precedence;
 
+    /**
+     * @return The precedence of the user group.
+     * 
+     */
     public Optional<Output<Integer>> precedence() {
         return Optional.ofNullable(this.precedence);
     }
@@ -56,6 +68,10 @@ public final class UserGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
     private @Nullable Output<String> roleArn;
 
+    /**
+     * @return The ARN of the IAM role to be associated with the user group.
+     * 
+     */
     public Optional<Output<String>> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -67,6 +83,10 @@ public final class UserGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userPoolId")
     private @Nullable Output<String> userPoolId;
 
+    /**
+     * @return The user pool ID.
+     * 
+     */
     public Optional<Output<String>> userPoolId() {
         return Optional.ofNullable(this.userPoolId);
     }
@@ -99,47 +119,107 @@ public final class UserGroupState extends com.pulumi.resources.ResourceArgs {
             $ = new UserGroupState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param precedence The precedence of the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder precedence(@Nullable Output<Integer> precedence) {
             $.precedence = precedence;
             return this;
         }
 
+        /**
+         * @param precedence The precedence of the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder precedence(Integer precedence) {
             return precedence(Output.of(precedence));
         }
 
+        /**
+         * @param roleArn The ARN of the IAM role to be associated with the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(@Nullable Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of the IAM role to be associated with the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param userPoolId The user pool ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPoolId(@Nullable Output<String> userPoolId) {
             $.userPoolId = userPoolId;
             return this;
         }
 
+        /**
+         * @param userPoolId The user pool ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPoolId(String userPoolId) {
             return userPoolId(Output.of(userPoolId));
         }

@@ -30,6 +30,10 @@ public final class SoftwareRecipeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="artifacts")
     private @Nullable Output<List<SoftwareRecipeArtifactArgs>> artifacts;
 
+    /**
+     * @return Resources available to be used in the steps in the recipe.
+     * 
+     */
     public Optional<Output<List<SoftwareRecipeArtifactArgs>>> artifacts() {
         return Optional.ofNullable(this.artifacts);
     }
@@ -41,6 +45,10 @@ public final class SoftwareRecipeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="desiredState")
     private @Nullable Output<SoftwareRecipeDesiredState> desiredState;
 
+    /**
+     * @return Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won&#39;t be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.
+     * 
+     */
     public Optional<Output<SoftwareRecipeDesiredState>> desiredState() {
         return Optional.ofNullable(this.desiredState);
     }
@@ -52,6 +60,10 @@ public final class SoftwareRecipeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="installSteps")
     private @Nullable Output<List<SoftwareRecipeStepArgs>> installSteps;
 
+    /**
+     * @return Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation. Any steps taken (including partially completed steps) are not rolled back.
+     * 
+     */
     public Optional<Output<List<SoftwareRecipeStepArgs>>> installSteps() {
         return Optional.ofNullable(this.installSteps);
     }
@@ -63,6 +75,10 @@ public final class SoftwareRecipeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Unique identifier for the recipe. Only one recipe with a given name is installed on an instance. Names are also used to identify resources which helps to determine whether guest policies have conflicts. This means that requests to create multiple recipes with the same name and version are rejected since they could potentially have conflicting assignments.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -74,6 +90,10 @@ public final class SoftwareRecipeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="updateSteps")
     private @Nullable Output<List<SoftwareRecipeStepArgs>> updateSteps;
 
+    /**
+     * @return Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe. Any steps taken (including partially completed steps) are not rolled back.
+     * 
+     */
     public Optional<Output<List<SoftwareRecipeStepArgs>>> updateSteps() {
         return Optional.ofNullable(this.updateSteps);
     }
@@ -85,6 +105,10 @@ public final class SoftwareRecipeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -118,68 +142,158 @@ public final class SoftwareRecipeArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SoftwareRecipeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifacts Resources available to be used in the steps in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(@Nullable Output<List<SoftwareRecipeArtifactArgs>> artifacts) {
             $.artifacts = artifacts;
             return this;
         }
 
+        /**
+         * @param artifacts Resources available to be used in the steps in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(List<SoftwareRecipeArtifactArgs> artifacts) {
             return artifacts(Output.of(artifacts));
         }
 
+        /**
+         * @param artifacts Resources available to be used in the steps in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(SoftwareRecipeArtifactArgs... artifacts) {
             return artifacts(List.of(artifacts));
         }
 
+        /**
+         * @param desiredState Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won&#39;t be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredState(@Nullable Output<SoftwareRecipeDesiredState> desiredState) {
             $.desiredState = desiredState;
             return this;
         }
 
+        /**
+         * @param desiredState Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won&#39;t be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredState(SoftwareRecipeDesiredState desiredState) {
             return desiredState(Output.of(desiredState));
         }
 
+        /**
+         * @param installSteps Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation. Any steps taken (including partially completed steps) are not rolled back.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installSteps(@Nullable Output<List<SoftwareRecipeStepArgs>> installSteps) {
             $.installSteps = installSteps;
             return this;
         }
 
+        /**
+         * @param installSteps Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation. Any steps taken (including partially completed steps) are not rolled back.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installSteps(List<SoftwareRecipeStepArgs> installSteps) {
             return installSteps(Output.of(installSteps));
         }
 
+        /**
+         * @param installSteps Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation. Any steps taken (including partially completed steps) are not rolled back.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installSteps(SoftwareRecipeStepArgs... installSteps) {
             return installSteps(List.of(installSteps));
         }
 
+        /**
+         * @param name Unique identifier for the recipe. Only one recipe with a given name is installed on an instance. Names are also used to identify resources which helps to determine whether guest policies have conflicts. This means that requests to create multiple recipes with the same name and version are rejected since they could potentially have conflicting assignments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique identifier for the recipe. Only one recipe with a given name is installed on an instance. Names are also used to identify resources which helps to determine whether guest policies have conflicts. This means that requests to create multiple recipes with the same name and version are rejected since they could potentially have conflicting assignments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param updateSteps Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe. Any steps taken (including partially completed steps) are not rolled back.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateSteps(@Nullable Output<List<SoftwareRecipeStepArgs>> updateSteps) {
             $.updateSteps = updateSteps;
             return this;
         }
 
+        /**
+         * @param updateSteps Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe. Any steps taken (including partially completed steps) are not rolled back.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateSteps(List<SoftwareRecipeStepArgs> updateSteps) {
             return updateSteps(Output.of(updateSteps));
         }
 
+        /**
+         * @param updateSteps Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe. Any steps taken (including partially completed steps) are not rolled back.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateSteps(SoftwareRecipeStepArgs... updateSteps) {
             return updateSteps(List.of(updateSteps));
         }
 
+        /**
+         * @param version The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

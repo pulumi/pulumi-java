@@ -25,6 +25,10 @@ public final class ConnStringInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="connectionString")
     private @Nullable String connectionString;
 
+    /**
+     * @return Connection string value.
+     * 
+     */
     public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -36,6 +40,10 @@ public final class ConnStringInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of connection string.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class ConnStringInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of database.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -77,16 +89,34 @@ public final class ConnStringInfoResponse extends com.pulumi.resources.InvokeArg
             $ = new ConnStringInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionString Connection string value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable String connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param name Name of connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Type of database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

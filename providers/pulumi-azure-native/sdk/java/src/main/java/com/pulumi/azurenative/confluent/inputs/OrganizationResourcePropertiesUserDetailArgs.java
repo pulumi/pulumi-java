@@ -26,6 +26,10 @@ public final class OrganizationResourcePropertiesUserDetailArgs extends com.pulu
     @Import(name="emailAddress")
     private @Nullable Output<String> emailAddress;
 
+    /**
+     * @return Email address
+     * 
+     */
     public Optional<Output<String>> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
@@ -37,6 +41,10 @@ public final class OrganizationResourcePropertiesUserDetailArgs extends com.pulu
     @Import(name="firstName")
     private @Nullable Output<String> firstName;
 
+    /**
+     * @return First name
+     * 
+     */
     public Optional<Output<String>> firstName() {
         return Optional.ofNullable(this.firstName);
     }
@@ -48,6 +56,10 @@ public final class OrganizationResourcePropertiesUserDetailArgs extends com.pulu
     @Import(name="lastName")
     private @Nullable Output<String> lastName;
 
+    /**
+     * @return Last name
+     * 
+     */
     public Optional<Output<String>> lastName() {
         return Optional.ofNullable(this.lastName);
     }
@@ -78,29 +90,65 @@ public final class OrganizationResourcePropertiesUserDetailArgs extends com.pulu
             $ = new OrganizationResourcePropertiesUserDetailArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailAddress Email address
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(@Nullable Output<String> emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param emailAddress Email address
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(String emailAddress) {
             return emailAddress(Output.of(emailAddress));
         }
 
+        /**
+         * @param firstName First name
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstName(@Nullable Output<String> firstName) {
             $.firstName = firstName;
             return this;
         }
 
+        /**
+         * @param firstName First name
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstName(String firstName) {
             return firstName(Output.of(firstName));
         }
 
+        /**
+         * @param lastName Last name
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastName(@Nullable Output<String> lastName) {
             $.lastName = lastName;
             return this;
         }
 
+        /**
+         * @param lastName Last name
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastName(String lastName) {
             return lastName(Output.of(lastName));
         }

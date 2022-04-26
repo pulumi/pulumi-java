@@ -23,6 +23,10 @@ public final class CloudTieringDatePolicyStatusResponse extends com.pulumi.resou
     @Import(name="lastUpdatedTimestamp", required=true)
     private String lastUpdatedTimestamp;
 
+    /**
+     * @return Last updated timestamp
+     * 
+     */
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
@@ -34,6 +38,10 @@ public final class CloudTieringDatePolicyStatusResponse extends com.pulumi.resou
     @Import(name="tieredFilesMostRecentAccessTimestamp", required=true)
     private String tieredFilesMostRecentAccessTimestamp;
 
+    /**
+     * @return Most recent access time of tiered files
+     * 
+     */
     public String tieredFilesMostRecentAccessTimestamp() {
         return this.tieredFilesMostRecentAccessTimestamp;
     }
@@ -63,11 +71,23 @@ public final class CloudTieringDatePolicyStatusResponse extends com.pulumi.resou
             $ = new CloudTieringDatePolicyStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastUpdatedTimestamp Last updated timestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;
         }
 
+        /**
+         * @param tieredFilesMostRecentAccessTimestamp Most recent access time of tiered files
+         * 
+         * @return builder
+         * 
+         */
         public Builder tieredFilesMostRecentAccessTimestamp(String tieredFilesMostRecentAccessTimestamp) {
             $.tieredFilesMostRecentAccessTimestamp = tieredFilesMostRecentAccessTimestamp;
             return this;

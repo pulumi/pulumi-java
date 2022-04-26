@@ -21,6 +21,10 @@ public final class GetPrivateLinkServiceArgs extends com.pulumi.resources.Invoke
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetPrivateLinkServiceArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetPrivateLinkServiceArgs extends com.pulumi.resources.Invoke
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the private link service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -73,16 +85,34 @@ public final class GetPrivateLinkServiceArgs extends com.pulumi.resources.Invoke
             $ = new GetPrivateLinkServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the private link service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

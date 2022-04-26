@@ -23,6 +23,10 @@ public final class TableTtlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributeName", required=true)
     private Output<String> attributeName;
 
+    /**
+     * @return The name of the table attribute to store the TTL timestamp in.
+     * 
+     */
     public Output<String> attributeName() {
         return this.attributeName;
     }
@@ -34,6 +38,10 @@ public final class TableTtlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Indicates whether ttl is enabled (true) or disabled (false).
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -63,20 +71,44 @@ public final class TableTtlArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TableTtlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributeName The name of the table attribute to store the TTL timestamp in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributeName(Output<String> attributeName) {
             $.attributeName = attributeName;
             return this;
         }
 
+        /**
+         * @param attributeName The name of the table attribute to store the TTL timestamp in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributeName(String attributeName) {
             return attributeName(Output.of(attributeName));
         }
 
+        /**
+         * @param enabled Indicates whether ttl is enabled (true) or disabled (false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Indicates whether ttl is enabled (true) or disabled (false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

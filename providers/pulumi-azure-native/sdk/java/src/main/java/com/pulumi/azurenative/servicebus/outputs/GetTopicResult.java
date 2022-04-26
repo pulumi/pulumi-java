@@ -16,97 +16,97 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetTopicResult {
     /**
-     * Last time the message was sent, or a request was received, for this topic.
+     * @return Last time the message was sent, or a request was received, for this topic.
      * 
      */
     private final String accessedAt;
     /**
-     * ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
+     * @return ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
      * 
      */
     private final @Nullable String autoDeleteOnIdle;
     /**
-     * Message count details
+     * @return Message count details
      * 
      */
     private final MessageCountDetailsResponse countDetails;
     /**
-     * Exact time the message was created.
+     * @return Exact time the message was created.
      * 
      */
     private final String createdAt;
     /**
-     * ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+     * @return ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
      */
     private final @Nullable String defaultMessageTimeToLive;
     /**
-     * ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+     * @return ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
      */
     private final @Nullable String duplicateDetectionHistoryTimeWindow;
     /**
-     * Value that indicates whether server-side batched operations are enabled.
+     * @return Value that indicates whether server-side batched operations are enabled.
      * 
      */
     private final @Nullable Boolean enableBatchedOperations;
     /**
-     * Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
+     * @return Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
      * 
      */
     private final @Nullable Boolean enableExpress;
     /**
-     * Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
+     * @return Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
      * 
      */
     private final @Nullable Boolean enablePartitioning;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
+     * @return Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
      * 
      */
     private final @Nullable Integer maxSizeInMegabytes;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * Value indicating if this topic requires duplicate detection.
+     * @return Value indicating if this topic requires duplicate detection.
      * 
      */
     private final @Nullable Boolean requiresDuplicateDetection;
     /**
-     * Size of the topic, in bytes.
+     * @return Size of the topic, in bytes.
      * 
      */
     private final Double sizeInBytes;
     /**
-     * Enumerates the possible values for the status of a messaging entity.
+     * @return Enumerates the possible values for the status of a messaging entity.
      * 
      */
     private final @Nullable String status;
     /**
-     * Number of subscriptions.
+     * @return Number of subscriptions.
      * 
      */
     private final Integer subscriptionCount;
     /**
-     * Value that indicates whether the topic supports ordering.
+     * @return Value that indicates whether the topic supports ordering.
      * 
      */
     private final @Nullable Boolean supportOrdering;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
     /**
-     * The exact time the message was updated.
+     * @return The exact time the message was updated.
      * 
      */
     private final String updatedAt;
@@ -154,135 +154,135 @@ public final class GetTopicResult {
     }
 
     /**
-     * Last time the message was sent, or a request was received, for this topic.
+     * @return Last time the message was sent, or a request was received, for this topic.
      * 
-    */
+     */
     public String accessedAt() {
         return this.accessedAt;
     }
     /**
-     * ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
+     * @return ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
      * 
-    */
+     */
     public Optional<String> autoDeleteOnIdle() {
         return Optional.ofNullable(this.autoDeleteOnIdle);
     }
     /**
-     * Message count details
+     * @return Message count details
      * 
-    */
+     */
     public MessageCountDetailsResponse countDetails() {
         return this.countDetails;
     }
     /**
-     * Exact time the message was created.
+     * @return Exact time the message was created.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+     * @return ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
-    */
+     */
     public Optional<String> defaultMessageTimeToLive() {
         return Optional.ofNullable(this.defaultMessageTimeToLive);
     }
     /**
-     * ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+     * @return ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
-    */
+     */
     public Optional<String> duplicateDetectionHistoryTimeWindow() {
         return Optional.ofNullable(this.duplicateDetectionHistoryTimeWindow);
     }
     /**
-     * Value that indicates whether server-side batched operations are enabled.
+     * @return Value that indicates whether server-side batched operations are enabled.
      * 
-    */
+     */
     public Optional<Boolean> enableBatchedOperations() {
         return Optional.ofNullable(this.enableBatchedOperations);
     }
     /**
-     * Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
+     * @return Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
      * 
-    */
+     */
     public Optional<Boolean> enableExpress() {
         return Optional.ofNullable(this.enableExpress);
     }
     /**
-     * Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
+     * @return Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
      * 
-    */
+     */
     public Optional<Boolean> enablePartitioning() {
         return Optional.ofNullable(this.enablePartitioning);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
+     * @return Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
      * 
-    */
+     */
     public Optional<Integer> maxSizeInMegabytes() {
         return Optional.ofNullable(this.maxSizeInMegabytes);
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Value indicating if this topic requires duplicate detection.
+     * @return Value indicating if this topic requires duplicate detection.
      * 
-    */
+     */
     public Optional<Boolean> requiresDuplicateDetection() {
         return Optional.ofNullable(this.requiresDuplicateDetection);
     }
     /**
-     * Size of the topic, in bytes.
+     * @return Size of the topic, in bytes.
      * 
-    */
+     */
     public Double sizeInBytes() {
         return this.sizeInBytes;
     }
     /**
-     * Enumerates the possible values for the status of a messaging entity.
+     * @return Enumerates the possible values for the status of a messaging entity.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Number of subscriptions.
+     * @return Number of subscriptions.
      * 
-    */
+     */
     public Integer subscriptionCount() {
         return this.subscriptionCount;
     }
     /**
-     * Value that indicates whether the topic supports ordering.
+     * @return Value that indicates whether the topic supports ordering.
      * 
-    */
+     */
     public Optional<Boolean> supportOrdering() {
         return Optional.ofNullable(this.supportOrdering);
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The exact time the message was updated.
+     * @return The exact time the message was updated.
      * 
-    */
+     */
     public String updatedAt() {
         return this.updatedAt;
     }

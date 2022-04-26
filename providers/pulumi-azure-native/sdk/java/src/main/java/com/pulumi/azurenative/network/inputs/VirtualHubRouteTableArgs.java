@@ -27,6 +27,10 @@ public final class VirtualHubRouteTableArgs extends com.pulumi.resources.Resourc
     @Import(name="routes")
     private @Nullable Output<List<VirtualHubRouteArgs>> routes;
 
+    /**
+     * @return List of all routes.
+     * 
+     */
     public Optional<Output<List<VirtualHubRouteArgs>>> routes() {
         return Optional.ofNullable(this.routes);
     }
@@ -55,15 +59,33 @@ public final class VirtualHubRouteTableArgs extends com.pulumi.resources.Resourc
             $ = new VirtualHubRouteTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param routes List of all routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(@Nullable Output<List<VirtualHubRouteArgs>> routes) {
             $.routes = routes;
             return this;
         }
 
+        /**
+         * @param routes List of all routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(List<VirtualHubRouteArgs> routes) {
             return routes(Output.of(routes));
         }
 
+        /**
+         * @param routes List of all routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(VirtualHubRouteArgs... routes) {
             return routes(List.of(routes));
         }

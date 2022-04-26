@@ -29,6 +29,10 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="inline")
     private @Nullable List<String> inline;
 
+    /**
+     * @return Array of PowerShell commands to execute
+     * 
+     */
     public Optional<List<String>> inline() {
         return Optional.ofNullable(this.inline);
     }
@@ -40,6 +44,10 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Friendly Name to provide context on what this customization step does
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -51,6 +59,10 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="runAsSystem")
     private @Nullable Boolean runAsSystem;
 
+    /**
+     * @return If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.
+     * 
+     */
     public Optional<Boolean> runAsSystem() {
         return Optional.ofNullable(this.runAsSystem);
     }
@@ -62,6 +74,10 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="runElevated")
     private @Nullable Boolean runElevated;
 
+    /**
+     * @return If specified, the PowerShell script will be run with elevated privileges
+     * 
+     */
     public Optional<Boolean> runElevated() {
         return Optional.ofNullable(this.runElevated);
     }
@@ -73,6 +89,10 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="scriptUri")
     private @Nullable String scriptUri;
 
+    /**
+     * @return URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
+     * 
+     */
     public Optional<String> scriptUri() {
         return Optional.ofNullable(this.scriptUri);
     }
@@ -84,6 +104,10 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="sha256Checksum")
     private @Nullable String sha256Checksum;
 
+    /**
+     * @return SHA256 checksum of the power shell script provided in the scriptUri field above
+     * 
+     */
     public Optional<String> sha256Checksum() {
         return Optional.ofNullable(this.sha256Checksum);
     }
@@ -96,6 +120,11 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;PowerShell&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -107,6 +136,10 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="validExitCodes")
     private @Nullable List<Integer> validExitCodes;
 
+    /**
+     * @return Valid exit codes for the PowerShell script. [Default: 0]
+     * 
+     */
     public Optional<List<Integer>> validExitCodes() {
         return Optional.ofNullable(this.validExitCodes);
     }
@@ -142,50 +175,111 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
             $ = new ImageTemplatePowerShellCustomizerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inline Array of PowerShell commands to execute
+         * 
+         * @return builder
+         * 
+         */
         public Builder inline(@Nullable List<String> inline) {
             $.inline = inline;
             return this;
         }
 
+        /**
+         * @param inline Array of PowerShell commands to execute
+         * 
+         * @return builder
+         * 
+         */
         public Builder inline(String... inline) {
             return inline(List.of(inline));
         }
 
+        /**
+         * @param name Friendly Name to provide context on what this customization step does
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param runAsSystem If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsSystem(@Nullable Boolean runAsSystem) {
             $.runAsSystem = runAsSystem;
             return this;
         }
 
+        /**
+         * @param runElevated If specified, the PowerShell script will be run with elevated privileges
+         * 
+         * @return builder
+         * 
+         */
         public Builder runElevated(@Nullable Boolean runElevated) {
             $.runElevated = runElevated;
             return this;
         }
 
+        /**
+         * @param scriptUri URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptUri(@Nullable String scriptUri) {
             $.scriptUri = scriptUri;
             return this;
         }
 
+        /**
+         * @param sha256Checksum SHA256 checksum of the power shell script provided in the scriptUri field above
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha256Checksum(@Nullable String sha256Checksum) {
             $.sha256Checksum = sha256Checksum;
             return this;
         }
 
+        /**
+         * @param type The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+         * Expected value is &#39;PowerShell&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param validExitCodes Valid exit codes for the PowerShell script. [Default: 0]
+         * 
+         * @return builder
+         * 
+         */
         public Builder validExitCodes(@Nullable List<Integer> validExitCodes) {
             $.validExitCodes = validExitCodes;
             return this;
         }
 
+        /**
+         * @param validExitCodes Valid exit codes for the PowerShell script. [Default: 0]
+         * 
+         * @return builder
+         * 
+         */
         public Builder validExitCodes(Integer... validExitCodes) {
             return validExitCodes(List.of(validExitCodes));
         }

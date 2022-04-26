@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class Gen2StorageConfigurationOutputResponse {
     /**
-     * The name of the storage account that will hold the environment&#39;s Gen2 data.
+     * @return The name of the storage account that will hold the environment&#39;s Gen2 data.
      * 
      */
     private final String accountName;
@@ -21,9 +21,9 @@ public final class Gen2StorageConfigurationOutputResponse {
     }
 
     /**
-     * The name of the storage account that will hold the environment&#39;s Gen2 data.
+     * @return The name of the storage account that will hold the environment&#39;s Gen2 data.
      * 
-    */
+     */
     public String accountName() {
         return this.accountName;
     }

@@ -17,72 +17,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FlowLogResponse {
     /**
-     * Flag to enable/disable flow logging.
+     * @return Flag to enable/disable flow logging.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Parameters that define the configuration of traffic analytics.
+     * @return Parameters that define the configuration of traffic analytics.
      * 
      */
     private final @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration;
     /**
-     * Parameters that define the flow log format.
+     * @return Parameters that define the flow log format.
      * 
      */
     private final @Nullable FlowLogFormatParametersResponse format;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The provisioning state of the flow log.
+     * @return The provisioning state of the flow log.
      * 
      */
     private final String provisioningState;
     /**
-     * Parameters that define the retention policy for flow log.
+     * @return Parameters that define the retention policy for flow log.
      * 
      */
     private final @Nullable RetentionPolicyParametersResponse retentionPolicy;
     /**
-     * ID of the storage account which is used to store the flow log.
+     * @return ID of the storage account which is used to store the flow log.
      * 
      */
     private final String storageId;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Guid of network security group to which flow log will be applied.
+     * @return Guid of network security group to which flow log will be applied.
      * 
      */
     private final String targetResourceGuid;
     /**
-     * ID of network security group to which flow log will be applied.
+     * @return ID of network security group to which flow log will be applied.
      * 
      */
     private final String targetResourceId;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -120,100 +120,100 @@ public final class FlowLogResponse {
     }
 
     /**
-     * Flag to enable/disable flow logging.
+     * @return Flag to enable/disable flow logging.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Parameters that define the configuration of traffic analytics.
+     * @return Parameters that define the configuration of traffic analytics.
      * 
-    */
+     */
     public Optional<TrafficAnalyticsPropertiesResponse> flowAnalyticsConfiguration() {
         return Optional.ofNullable(this.flowAnalyticsConfiguration);
     }
     /**
-     * Parameters that define the flow log format.
+     * @return Parameters that define the flow log format.
      * 
-    */
+     */
     public Optional<FlowLogFormatParametersResponse> format() {
         return Optional.ofNullable(this.format);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the flow log.
+     * @return The provisioning state of the flow log.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Parameters that define the retention policy for flow log.
+     * @return Parameters that define the retention policy for flow log.
      * 
-    */
+     */
     public Optional<RetentionPolicyParametersResponse> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
-     * ID of the storage account which is used to store the flow log.
+     * @return ID of the storage account which is used to store the flow log.
      * 
-    */
+     */
     public String storageId() {
         return this.storageId;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Guid of network security group to which flow log will be applied.
+     * @return Guid of network security group to which flow log will be applied.
      * 
-    */
+     */
     public String targetResourceGuid() {
         return this.targetResourceGuid;
     }
     /**
-     * ID of network security group to which flow log will be applied.
+     * @return ID of network security group to which flow log will be applied.
      * 
-    */
+     */
     public String targetResourceId() {
         return this.targetResourceId;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

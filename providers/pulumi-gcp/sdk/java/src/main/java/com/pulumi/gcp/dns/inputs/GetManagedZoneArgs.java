@@ -21,6 +21,10 @@ public final class GetManagedZoneArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return A unique name for the resource.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -32,6 +36,10 @@ public final class GetManagedZoneArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The ID of the project for the Google Cloud DNS zone.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -61,11 +69,23 @@ public final class GetManagedZoneArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetManagedZoneArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A unique name for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param project The ID of the project for the Google Cloud DNS zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;

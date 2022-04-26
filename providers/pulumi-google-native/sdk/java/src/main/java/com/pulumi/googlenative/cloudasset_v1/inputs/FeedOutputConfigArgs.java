@@ -26,6 +26,10 @@ public final class FeedOutputConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="pubsubDestination")
     private @Nullable Output<PubsubDestinationArgs> pubsubDestination;
 
+    /**
+     * @return Destination on Pub/Sub.
+     * 
+     */
     public Optional<Output<PubsubDestinationArgs>> pubsubDestination() {
         return Optional.ofNullable(this.pubsubDestination);
     }
@@ -54,11 +58,23 @@ public final class FeedOutputConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new FeedOutputConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsubDestination Destination on Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubDestination(@Nullable Output<PubsubDestinationArgs> pubsubDestination) {
             $.pubsubDestination = pubsubDestination;
             return this;
         }
 
+        /**
+         * @param pubsubDestination Destination on Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubDestination(PubsubDestinationArgs pubsubDestination) {
             return pubsubDestination(Output.of(pubsubDestination));
         }

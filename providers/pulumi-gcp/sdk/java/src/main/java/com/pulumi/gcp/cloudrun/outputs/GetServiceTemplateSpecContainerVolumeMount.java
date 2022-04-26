@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class GetServiceTemplateSpecContainerVolumeMount {
     private final String mountPath;
     /**
-     * The name of the Cloud Run Service.
+     * @return The name of the Cloud Run Service.
      * 
      */
     private final String name;
@@ -28,9 +28,9 @@ public final class GetServiceTemplateSpecContainerVolumeMount {
         return this.mountPath;
     }
     /**
-     * The name of the Cloud Run Service.
+     * @return The name of the Cloud Run Service.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

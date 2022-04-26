@@ -43,6 +43,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="inputParallelism")
     private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs> inputParallelism;
 
+    /**
+     * @return Describes the number of in-application streams to create.
+     * 
+     */
     public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs>> inputParallelism() {
         return Optional.ofNullable(this.inputParallelism);
     }
@@ -55,6 +59,11 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="inputProcessingConfiguration")
     private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationGetArgs> inputProcessingConfiguration;
 
+    /**
+     * @return The input processing configuration for the input.
+     * An input processor transforms records as they are received from the stream, before the application&#39;s SQL code executes.
+     * 
+     */
     public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationGetArgs>> inputProcessingConfiguration() {
         return Optional.ofNullable(this.inputProcessingConfiguration);
     }
@@ -66,6 +75,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="inputSchema", required=true)
     private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaGetArgs> inputSchema;
 
+    /**
+     * @return Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.
+     * 
+     */
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaGetArgs> inputSchema() {
         return this.inputSchema;
     }
@@ -77,6 +90,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="inputStartingPositionConfigurations")
     private @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs>> inputStartingPositionConfigurations;
 
+    /**
+     * @return The point at which the application starts processing records from the streaming source.
+     * 
+     */
     public Optional<Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs>>> inputStartingPositionConfigurations() {
         return Optional.ofNullable(this.inputStartingPositionConfigurations);
     }
@@ -88,6 +105,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="kinesisFirehoseInput")
     private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputGetArgs> kinesisFirehoseInput;
 
+    /**
+     * @return If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream&#39;s ARN.
+     * 
+     */
     public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputGetArgs>> kinesisFirehoseInput() {
         return Optional.ofNullable(this.kinesisFirehoseInput);
     }
@@ -99,6 +120,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="kinesisStreamsInput")
     private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputGetArgs> kinesisStreamsInput;
 
+    /**
+     * @return If the streaming source is a Kinesis data stream, identifies the stream&#39;s Amazon Resource Name (ARN).
+     * 
+     */
     public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputGetArgs>> kinesisStreamsInput() {
         return Optional.ofNullable(this.kinesisStreamsInput);
     }
@@ -110,6 +135,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="namePrefix", required=true)
     private Output<String> namePrefix;
 
+    /**
+     * @return The name prefix to use when creating an in-application stream.
+     * 
+     */
     public Output<String> namePrefix() {
         return this.namePrefix;
     }
@@ -168,69 +197,161 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             return inputId(Output.of(inputId));
         }
 
+        /**
+         * @param inputParallelism Describes the number of in-application streams to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputParallelism(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs> inputParallelism) {
             $.inputParallelism = inputParallelism;
             return this;
         }
 
+        /**
+         * @param inputParallelism Describes the number of in-application streams to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputParallelism(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs inputParallelism) {
             return inputParallelism(Output.of(inputParallelism));
         }
 
+        /**
+         * @param inputProcessingConfiguration The input processing configuration for the input.
+         * An input processor transforms records as they are received from the stream, before the application&#39;s SQL code executes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputProcessingConfiguration(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationGetArgs> inputProcessingConfiguration) {
             $.inputProcessingConfiguration = inputProcessingConfiguration;
             return this;
         }
 
+        /**
+         * @param inputProcessingConfiguration The input processing configuration for the input.
+         * An input processor transforms records as they are received from the stream, before the application&#39;s SQL code executes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputProcessingConfiguration(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationGetArgs inputProcessingConfiguration) {
             return inputProcessingConfiguration(Output.of(inputProcessingConfiguration));
         }
 
+        /**
+         * @param inputSchema Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchema(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaGetArgs> inputSchema) {
             $.inputSchema = inputSchema;
             return this;
         }
 
+        /**
+         * @param inputSchema Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaGetArgs inputSchema) {
             return inputSchema(Output.of(inputSchema));
         }
 
+        /**
+         * @param inputStartingPositionConfigurations The point at which the application starts processing records from the streaming source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputStartingPositionConfigurations(@Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs>> inputStartingPositionConfigurations) {
             $.inputStartingPositionConfigurations = inputStartingPositionConfigurations;
             return this;
         }
 
+        /**
+         * @param inputStartingPositionConfigurations The point at which the application starts processing records from the streaming source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputStartingPositionConfigurations(List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs> inputStartingPositionConfigurations) {
             return inputStartingPositionConfigurations(Output.of(inputStartingPositionConfigurations));
         }
 
+        /**
+         * @param inputStartingPositionConfigurations The point at which the application starts processing records from the streaming source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputStartingPositionConfigurations(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs... inputStartingPositionConfigurations) {
             return inputStartingPositionConfigurations(List.of(inputStartingPositionConfigurations));
         }
 
+        /**
+         * @param kinesisFirehoseInput If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream&#39;s ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisFirehoseInput(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputGetArgs> kinesisFirehoseInput) {
             $.kinesisFirehoseInput = kinesisFirehoseInput;
             return this;
         }
 
+        /**
+         * @param kinesisFirehoseInput If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream&#39;s ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisFirehoseInput(ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputGetArgs kinesisFirehoseInput) {
             return kinesisFirehoseInput(Output.of(kinesisFirehoseInput));
         }
 
+        /**
+         * @param kinesisStreamsInput If the streaming source is a Kinesis data stream, identifies the stream&#39;s Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisStreamsInput(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputGetArgs> kinesisStreamsInput) {
             $.kinesisStreamsInput = kinesisStreamsInput;
             return this;
         }
 
+        /**
+         * @param kinesisStreamsInput If the streaming source is a Kinesis data stream, identifies the stream&#39;s Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisStreamsInput(ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputGetArgs kinesisStreamsInput) {
             return kinesisStreamsInput(Output.of(kinesisStreamsInput));
         }
 
+        /**
+         * @param namePrefix The name prefix to use when creating an in-application stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix The name prefix to use when creating an in-application stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }

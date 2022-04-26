@@ -28,6 +28,10 @@ public final class CertificateExtensionConstraintsArgs extends com.pulumi.resour
     @Import(name="additionalExtensions")
     private @Nullable Output<List<ObjectIdArgs>> additionalExtensions;
 
+    /**
+     * @return Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
+     * 
+     */
     public Optional<Output<List<ObjectIdArgs>>> additionalExtensions() {
         return Optional.ofNullable(this.additionalExtensions);
     }
@@ -39,6 +43,10 @@ public final class CertificateExtensionConstraintsArgs extends com.pulumi.resour
     @Import(name="knownExtensions")
     private @Nullable Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions;
 
+    /**
+     * @return Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
+     * 
+     */
     public Optional<Output<List<CertificateExtensionConstraintsKnownExtensionsItem>>> knownExtensions() {
         return Optional.ofNullable(this.knownExtensions);
     }
@@ -68,28 +76,64 @@ public final class CertificateExtensionConstraintsArgs extends com.pulumi.resour
             $ = new CertificateExtensionConstraintsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalExtensions Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(@Nullable Output<List<ObjectIdArgs>> additionalExtensions) {
             $.additionalExtensions = additionalExtensions;
             return this;
         }
 
+        /**
+         * @param additionalExtensions Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(List<ObjectIdArgs> additionalExtensions) {
             return additionalExtensions(Output.of(additionalExtensions));
         }
 
+        /**
+         * @param additionalExtensions Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(ObjectIdArgs... additionalExtensions) {
             return additionalExtensions(List.of(additionalExtensions));
         }
 
+        /**
+         * @param knownExtensions Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder knownExtensions(@Nullable Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions) {
             $.knownExtensions = knownExtensions;
             return this;
         }
 
+        /**
+         * @param knownExtensions Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder knownExtensions(List<CertificateExtensionConstraintsKnownExtensionsItem> knownExtensions) {
             return knownExtensions(Output.of(knownExtensions));
         }
 
+        /**
+         * @param knownExtensions Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder knownExtensions(CertificateExtensionConstraintsKnownExtensionsItem... knownExtensions) {
             return knownExtensions(List.of(knownExtensions));
         }

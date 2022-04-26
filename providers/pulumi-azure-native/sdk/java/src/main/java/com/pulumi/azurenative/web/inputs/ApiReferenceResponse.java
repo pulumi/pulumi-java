@@ -22,6 +22,10 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="brandColor")
     private @Nullable String brandColor;
 
+    /**
+     * @return Brand color
+     * 
+     */
     public Optional<String> brandColor() {
         return Optional.ofNullable(this.brandColor);
     }
@@ -33,6 +37,10 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The custom API description
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -44,6 +52,10 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The display name
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -55,6 +67,10 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="iconUri")
     private @Nullable String iconUri;
 
+    /**
+     * @return The icon URI
+     * 
+     */
     public Optional<String> iconUri() {
         return Optional.ofNullable(this.iconUri);
     }
@@ -66,6 +82,10 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource reference id
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -77,6 +97,10 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the API
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -88,6 +112,10 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="swagger")
     private @Nullable Object swagger;
 
+    /**
+     * @return The JSON representation of the swagger
+     * 
+     */
     public Optional<Object> swagger() {
         return Optional.ofNullable(this.swagger);
     }
@@ -99,6 +127,10 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Resource reference type
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -134,41 +166,89 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ApiReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param brandColor Brand color
+         * 
+         * @return builder
+         * 
+         */
         public Builder brandColor(@Nullable String brandColor) {
             $.brandColor = brandColor;
             return this;
         }
 
+        /**
+         * @param description The custom API description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName The display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param iconUri The icon URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder iconUri(@Nullable String iconUri) {
             $.iconUri = iconUri;
             return this;
         }
 
+        /**
+         * @param id Resource reference id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the API
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param swagger The JSON representation of the swagger
+         * 
+         * @return builder
+         * 
+         */
         public Builder swagger(@Nullable Object swagger) {
             $.swagger = swagger;
             return this;
         }
 
+        /**
+         * @param type Resource reference type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

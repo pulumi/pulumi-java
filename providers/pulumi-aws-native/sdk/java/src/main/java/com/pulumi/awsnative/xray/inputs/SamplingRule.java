@@ -24,6 +24,10 @@ public final class SamplingRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="attributes")
     private @Nullable Object attributes;
 
+    /**
+     * @return Matches attributes derived from the request.
+     * 
+     */
     public Optional<Object> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -35,6 +39,10 @@ public final class SamplingRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="fixedRate")
     private @Nullable Double fixedRate;
 
+    /**
+     * @return The percentage of matching requests to instrument, after the reservoir is exhausted.
+     * 
+     */
     public Optional<Double> fixedRate() {
         return Optional.ofNullable(this.fixedRate);
     }
@@ -46,6 +54,10 @@ public final class SamplingRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="hTTPMethod")
     private @Nullable String hTTPMethod;
 
+    /**
+     * @return Matches the HTTP method from a request URL.
+     * 
+     */
     public Optional<String> hTTPMethod() {
         return Optional.ofNullable(this.hTTPMethod);
     }
@@ -57,6 +69,10 @@ public final class SamplingRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="host")
     private @Nullable String host;
 
+    /**
+     * @return Matches the hostname from a request URL.
+     * 
+     */
     public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
@@ -68,6 +84,10 @@ public final class SamplingRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="priority")
     private @Nullable Integer priority;
 
+    /**
+     * @return The priority of the sampling rule.
+     * 
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -79,6 +99,10 @@ public final class SamplingRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="reservoirSize")
     private @Nullable Integer reservoirSize;
 
+    /**
+     * @return A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
+     * 
+     */
     public Optional<Integer> reservoirSize() {
         return Optional.ofNullable(this.reservoirSize);
     }
@@ -90,6 +114,10 @@ public final class SamplingRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceARN")
     private @Nullable String resourceARN;
 
+    /**
+     * @return Matches the ARN of the AWS resource on which the service runs.
+     * 
+     */
     public Optional<String> resourceARN() {
         return Optional.ofNullable(this.resourceARN);
     }
@@ -115,6 +143,10 @@ public final class SamplingRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName")
     private @Nullable String serviceName;
 
+    /**
+     * @return Matches the name that the service uses to identify itself in segments.
+     * 
+     */
     public Optional<String> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -126,6 +158,10 @@ public final class SamplingRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceType")
     private @Nullable String serviceType;
 
+    /**
+     * @return Matches the origin that the service uses to identify its type in segments.
+     * 
+     */
     public Optional<String> serviceType() {
         return Optional.ofNullable(this.serviceType);
     }
@@ -137,6 +173,10 @@ public final class SamplingRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="uRLPath")
     private @Nullable String uRLPath;
 
+    /**
+     * @return Matches the path from a request URL.
+     * 
+     */
     public Optional<String> uRLPath() {
         return Optional.ofNullable(this.uRLPath);
     }
@@ -148,6 +188,10 @@ public final class SamplingRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="version")
     private @Nullable Integer version;
 
+    /**
+     * @return The version of the sampling rule format (1)
+     * 
+     */
     public Optional<Integer> version() {
         return Optional.ofNullable(this.version);
     }
@@ -188,36 +232,78 @@ public final class SamplingRule extends com.pulumi.resources.InvokeArgs {
             $ = new SamplingRule(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes Matches attributes derived from the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Object attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param fixedRate The percentage of matching requests to instrument, after the reservoir is exhausted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedRate(@Nullable Double fixedRate) {
             $.fixedRate = fixedRate;
             return this;
         }
 
+        /**
+         * @param hTTPMethod Matches the HTTP method from a request URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hTTPMethod(@Nullable String hTTPMethod) {
             $.hTTPMethod = hTTPMethod;
             return this;
         }
 
+        /**
+         * @param host Matches the hostname from a request URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param priority The priority of the sampling rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param reservoirSize A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservoirSize(@Nullable Integer reservoirSize) {
             $.reservoirSize = reservoirSize;
             return this;
         }
 
+        /**
+         * @param resourceARN Matches the ARN of the AWS resource on which the service runs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceARN(@Nullable String resourceARN) {
             $.resourceARN = resourceARN;
             return this;
@@ -233,21 +319,45 @@ public final class SamplingRule extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param serviceName Matches the name that the service uses to identify itself in segments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable String serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceType Matches the origin that the service uses to identify its type in segments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceType(@Nullable String serviceType) {
             $.serviceType = serviceType;
             return this;
         }
 
+        /**
+         * @param uRLPath Matches the path from a request URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uRLPath(@Nullable String uRLPath) {
             $.uRLPath = uRLPath;
             return this;
         }
 
+        /**
+         * @param version The version of the sampling rule format (1)
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Integer version) {
             $.version = version;
             return this;

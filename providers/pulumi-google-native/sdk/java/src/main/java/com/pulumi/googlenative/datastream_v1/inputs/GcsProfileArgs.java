@@ -26,6 +26,10 @@ public final class GcsProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return The Cloud Storage bucket name.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -37,6 +41,10 @@ public final class GcsProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootPath")
     private @Nullable Output<String> rootPath;
 
+    /**
+     * @return The root path inside the Cloud Storage bucket.
+     * 
+     */
     public Optional<Output<String>> rootPath() {
         return Optional.ofNullable(this.rootPath);
     }
@@ -66,20 +74,44 @@ public final class GcsProfileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GcsProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The Cloud Storage bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The Cloud Storage bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param rootPath The root path inside the Cloud Storage bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootPath(@Nullable Output<String> rootPath) {
             $.rootPath = rootPath;
             return this;
         }
 
+        /**
+         * @param rootPath The root path inside the Cloud Storage bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootPath(String rootPath) {
             return rootPath(Output.of(rootPath));
         }

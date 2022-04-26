@@ -26,6 +26,10 @@ public final class LicenseResourceCommitmentArgs extends com.pulumi.resources.Re
     @Import(name="amount")
     private @Nullable Output<String> amount;
 
+    /**
+     * @return The number of licenses purchased.
+     * 
+     */
     public Optional<Output<String>> amount() {
         return Optional.ofNullable(this.amount);
     }
@@ -37,6 +41,10 @@ public final class LicenseResourceCommitmentArgs extends com.pulumi.resources.Re
     @Import(name="coresPerLicense")
     private @Nullable Output<String> coresPerLicense;
 
+    /**
+     * @return Specifies the core range of the instance for which this license applies.
+     * 
+     */
     public Optional<Output<String>> coresPerLicense() {
         return Optional.ofNullable(this.coresPerLicense);
     }
@@ -48,6 +56,10 @@ public final class LicenseResourceCommitmentArgs extends com.pulumi.resources.Re
     @Import(name="license")
     private @Nullable Output<String> license;
 
+    /**
+     * @return Any applicable license URI.
+     * 
+     */
     public Optional<Output<String>> license() {
         return Optional.ofNullable(this.license);
     }
@@ -78,29 +90,65 @@ public final class LicenseResourceCommitmentArgs extends com.pulumi.resources.Re
             $ = new LicenseResourceCommitmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amount The number of licenses purchased.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(@Nullable Output<String> amount) {
             $.amount = amount;
             return this;
         }
 
+        /**
+         * @param amount The number of licenses purchased.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(String amount) {
             return amount(Output.of(amount));
         }
 
+        /**
+         * @param coresPerLicense Specifies the core range of the instance for which this license applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coresPerLicense(@Nullable Output<String> coresPerLicense) {
             $.coresPerLicense = coresPerLicense;
             return this;
         }
 
+        /**
+         * @param coresPerLicense Specifies the core range of the instance for which this license applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coresPerLicense(String coresPerLicense) {
             return coresPerLicense(Output.of(coresPerLicense));
         }
 
+        /**
+         * @param license Any applicable license URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder license(@Nullable Output<String> license) {
             $.license = license;
             return this;
         }
 
+        /**
+         * @param license Any applicable license URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder license(String license) {
             return license(Output.of(license));
         }

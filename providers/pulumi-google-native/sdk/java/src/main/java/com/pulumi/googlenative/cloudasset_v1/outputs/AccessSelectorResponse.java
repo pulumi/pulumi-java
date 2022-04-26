@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class AccessSelectorResponse {
     /**
-     * Optional. The permissions to appear in result.
+     * @return Optional. The permissions to appear in result.
      * 
      */
     private final List<String> permissions;
     /**
-     * Optional. The roles to appear in result.
+     * @return Optional. The roles to appear in result.
      * 
      */
     private final List<String> roles;
@@ -30,16 +30,16 @@ public final class AccessSelectorResponse {
     }
 
     /**
-     * Optional. The permissions to appear in result.
+     * @return Optional. The permissions to appear in result.
      * 
-    */
+     */
     public List<String> permissions() {
         return this.permissions;
     }
     /**
-     * Optional. The roles to appear in result.
+     * @return Optional. The roles to appear in result.
      * 
-    */
+     */
     public List<String> roles() {
         return this.roles;
     }

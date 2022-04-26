@@ -30,6 +30,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keySource")
     private @Nullable Output<Either<String,KeySource>> keySource;
 
+    /**
+     * @return Enumerates the possible value of keySource for Encryption
+     * 
+     */
     public Optional<Output<Either<String,KeySource>>> keySource() {
         return Optional.ofNullable(this.keySource);
     }
@@ -41,6 +45,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultProperties")
     private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
+    /**
+     * @return Properties of KeyVault
+     * 
+     */
     public Optional<Output<KeyVaultPropertiesArgs>> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -70,28 +78,64 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keySource Enumerates the possible value of keySource for Encryption
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(@Nullable Output<Either<String,KeySource>> keySource) {
             $.keySource = keySource;
             return this;
         }
 
+        /**
+         * @param keySource Enumerates the possible value of keySource for Encryption
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(Either<String,KeySource> keySource) {
             return keySource(Output.of(keySource));
         }
 
+        /**
+         * @param keySource Enumerates the possible value of keySource for Encryption
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(String keySource) {
             return keySource(Either.ofLeft(keySource));
         }
 
+        /**
+         * @param keySource Enumerates the possible value of keySource for Encryption
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(KeySource keySource) {
             return keySource(Either.ofRight(keySource));
         }
 
+        /**
+         * @param keyVaultProperties Properties of KeyVault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties Properties of KeyVault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
             return keyVaultProperties(Output.of(keyVaultProperties));
         }

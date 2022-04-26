@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class StorageAccountCredentialsResponse {
     /**
-     * The primary key of the storage account.
+     * @return The primary key of the storage account.
      * 
      */
     private final String primaryKey;
     /**
-     * The ARM resource ID of the storage account.
+     * @return The ARM resource ID of the storage account.
      * 
      */
     private final String resourceId;
     /**
-     * The secondary key of the storage account.
+     * @return The secondary key of the storage account.
      * 
      */
     private final String secondaryKey;
@@ -36,23 +36,23 @@ public final class StorageAccountCredentialsResponse {
     }
 
     /**
-     * The primary key of the storage account.
+     * @return The primary key of the storage account.
      * 
-    */
+     */
     public String primaryKey() {
         return this.primaryKey;
     }
     /**
-     * The ARM resource ID of the storage account.
+     * @return The ARM resource ID of the storage account.
      * 
-    */
+     */
     public String resourceId() {
         return this.resourceId;
     }
     /**
-     * The secondary key of the storage account.
+     * @return The secondary key of the storage account.
      * 
-    */
+     */
     public String secondaryKey() {
         return this.secondaryKey;
     }

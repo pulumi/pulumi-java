@@ -27,6 +27,10 @@ public final class DscConfigurationParameterResponse extends com.pulumi.resource
     @Import(name="defaultValue")
     private @Nullable String defaultValue;
 
+    /**
+     * @return Gets or sets the default value of parameter.
+     * 
+     */
     public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -38,6 +42,10 @@ public final class DscConfigurationParameterResponse extends com.pulumi.resource
     @Import(name="isMandatory")
     private @Nullable Boolean isMandatory;
 
+    /**
+     * @return Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
+     * 
+     */
     public Optional<Boolean> isMandatory() {
         return Optional.ofNullable(this.isMandatory);
     }
@@ -49,6 +57,10 @@ public final class DscConfigurationParameterResponse extends com.pulumi.resource
     @Import(name="position")
     private @Nullable Integer position;
 
+    /**
+     * @return Get or sets the position of the parameter.
+     * 
+     */
     public Optional<Integer> position() {
         return Optional.ofNullable(this.position);
     }
@@ -60,6 +72,10 @@ public final class DscConfigurationParameterResponse extends com.pulumi.resource
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Gets or sets the type of the parameter.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -91,21 +107,45 @@ public final class DscConfigurationParameterResponse extends com.pulumi.resource
             $ = new DscConfigurationParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValue Gets or sets the default value of parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable String defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param isMandatory Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isMandatory(@Nullable Boolean isMandatory) {
             $.isMandatory = isMandatory;
             return this;
         }
 
+        /**
+         * @param position Get or sets the position of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder position(@Nullable Integer position) {
             $.position = position;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

@@ -23,6 +23,10 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyName")
     private @Nullable Output<String> keyName;
 
+    /**
+     * @return The name for the key pair.
+     * 
+     */
     public Optional<Output<String>> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -34,6 +38,10 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyNamePrefix")
     private @Nullable Output<String> keyNamePrefix;
 
+    /**
+     * @return Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
+     * 
+     */
     public Optional<Output<String>> keyNamePrefix() {
         return Optional.ofNullable(this.keyNamePrefix);
     }
@@ -45,6 +53,10 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKey", required=true)
     private Output<String> publicKey;
 
+    /**
+     * @return The public key material.
+     * 
+     */
     public Output<String> publicKey() {
         return this.publicKey;
     }
@@ -56,6 +68,10 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -87,38 +103,86 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KeyPairArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The name for the key pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName The name for the key pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param keyNamePrefix Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyNamePrefix(@Nullable Output<String> keyNamePrefix) {
             $.keyNamePrefix = keyNamePrefix;
             return this;
         }
 
+        /**
+         * @param keyNamePrefix Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyNamePrefix(String keyNamePrefix) {
             return keyNamePrefix(Output.of(keyNamePrefix));
         }
 
+        /**
+         * @param publicKey The public key material.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(Output<String> publicKey) {
             $.publicKey = publicKey;
             return this;
         }
 
+        /**
+         * @param publicKey The public key material.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(String publicKey) {
             return publicKey(Output.of(publicKey));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

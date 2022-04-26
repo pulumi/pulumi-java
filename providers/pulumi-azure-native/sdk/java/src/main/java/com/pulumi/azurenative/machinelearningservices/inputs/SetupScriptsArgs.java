@@ -26,6 +26,10 @@ public final class SetupScriptsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scripts")
     private @Nullable Output<ScriptsToExecuteArgs> scripts;
 
+    /**
+     * @return Customized setup scripts
+     * 
+     */
     public Optional<Output<ScriptsToExecuteArgs>> scripts() {
         return Optional.ofNullable(this.scripts);
     }
@@ -54,11 +58,23 @@ public final class SetupScriptsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SetupScriptsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scripts Customized setup scripts
+         * 
+         * @return builder
+         * 
+         */
         public Builder scripts(@Nullable Output<ScriptsToExecuteArgs> scripts) {
             $.scripts = scripts;
             return this;
         }
 
+        /**
+         * @param scripts Customized setup scripts
+         * 
+         * @return builder
+         * 
+         */
         public Builder scripts(ScriptsToExecuteArgs scripts) {
             return scripts(Output.of(scripts));
         }

@@ -13,38 +13,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAwsCloudTrailDataConnectorResult {
     /**
-     * The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
+     * @return The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
      * 
      */
     private final @Nullable String awsRoleArn;
     /**
-     * The available data types for the connector.
+     * @return The available data types for the connector.
      * 
      */
     private final @Nullable AwsCloudTrailDataConnectorDataTypesResponse dataTypes;
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
      */
     private final @Nullable String etag;
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final String id;
     /**
-     * The kind of the data connector
+     * @return The kind of the data connector
      * Expected value is &#39;AmazonWebServicesCloudTrail&#39;.
      * 
      */
     private final String kind;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final String name;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final String type;
@@ -68,52 +68,52 @@ public final class GetAwsCloudTrailDataConnectorResult {
     }
 
     /**
-     * The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
+     * @return The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
      * 
-    */
+     */
     public Optional<String> awsRoleArn() {
         return Optional.ofNullable(this.awsRoleArn);
     }
     /**
-     * The available data types for the connector.
+     * @return The available data types for the connector.
      * 
-    */
+     */
     public Optional<AwsCloudTrailDataConnectorDataTypesResponse> dataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The kind of the data connector
+     * @return The kind of the data connector
      * Expected value is &#39;AmazonWebServicesCloudTrail&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

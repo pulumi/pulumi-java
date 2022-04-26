@@ -24,6 +24,10 @@ public final class OrganizationConformancePackArgs extends com.pulumi.resources.
     @Import(name="conformancePackInputParameters")
     private @Nullable Output<List<OrganizationConformancePackConformancePackInputParameterArgs>> conformancePackInputParameters;
 
+    /**
+     * @return A list of ConformancePackInputParameter objects.
+     * 
+     */
     public Optional<Output<List<OrganizationConformancePackConformancePackInputParameterArgs>>> conformancePackInputParameters() {
         return Optional.ofNullable(this.conformancePackInputParameters);
     }
@@ -35,6 +39,10 @@ public final class OrganizationConformancePackArgs extends com.pulumi.resources.
     @Import(name="deliveryS3Bucket")
     private @Nullable Output<String> deliveryS3Bucket;
 
+    /**
+     * @return AWS Config stores intermediate files while processing conformance pack template.
+     * 
+     */
     public Optional<Output<String>> deliveryS3Bucket() {
         return Optional.ofNullable(this.deliveryS3Bucket);
     }
@@ -46,6 +54,10 @@ public final class OrganizationConformancePackArgs extends com.pulumi.resources.
     @Import(name="deliveryS3KeyPrefix")
     private @Nullable Output<String> deliveryS3KeyPrefix;
 
+    /**
+     * @return The prefix for the delivery S3 bucket.
+     * 
+     */
     public Optional<Output<String>> deliveryS3KeyPrefix() {
         return Optional.ofNullable(this.deliveryS3KeyPrefix);
     }
@@ -57,6 +69,10 @@ public final class OrganizationConformancePackArgs extends com.pulumi.resources.
     @Import(name="excludedAccounts")
     private @Nullable Output<List<String>> excludedAccounts;
 
+    /**
+     * @return A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+     * 
+     */
     public Optional<Output<List<String>>> excludedAccounts() {
         return Optional.ofNullable(this.excludedAccounts);
     }
@@ -68,6 +84,10 @@ public final class OrganizationConformancePackArgs extends com.pulumi.resources.
     @Import(name="organizationConformancePackName")
     private @Nullable Output<String> organizationConformancePackName;
 
+    /**
+     * @return The name of the organization conformance pack.
+     * 
+     */
     public Optional<Output<String>> organizationConformancePackName() {
         return Optional.ofNullable(this.organizationConformancePackName);
     }
@@ -79,6 +99,10 @@ public final class OrganizationConformancePackArgs extends com.pulumi.resources.
     @Import(name="templateBody")
     private @Nullable Output<String> templateBody;
 
+    /**
+     * @return A string containing full conformance pack template body.
+     * 
+     */
     public Optional<Output<String>> templateBody() {
         return Optional.ofNullable(this.templateBody);
     }
@@ -90,6 +114,10 @@ public final class OrganizationConformancePackArgs extends com.pulumi.resources.
     @Import(name="templateS3Uri")
     private @Nullable Output<String> templateS3Uri;
 
+    /**
+     * @return Location of file containing the template body.
+     * 
+     */
     public Optional<Output<String>> templateS3Uri() {
         return Optional.ofNullable(this.templateS3Uri);
     }
@@ -124,73 +152,169 @@ public final class OrganizationConformancePackArgs extends com.pulumi.resources.
             $ = new OrganizationConformancePackArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conformancePackInputParameters A list of ConformancePackInputParameter objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conformancePackInputParameters(@Nullable Output<List<OrganizationConformancePackConformancePackInputParameterArgs>> conformancePackInputParameters) {
             $.conformancePackInputParameters = conformancePackInputParameters;
             return this;
         }
 
+        /**
+         * @param conformancePackInputParameters A list of ConformancePackInputParameter objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conformancePackInputParameters(List<OrganizationConformancePackConformancePackInputParameterArgs> conformancePackInputParameters) {
             return conformancePackInputParameters(Output.of(conformancePackInputParameters));
         }
 
+        /**
+         * @param conformancePackInputParameters A list of ConformancePackInputParameter objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conformancePackInputParameters(OrganizationConformancePackConformancePackInputParameterArgs... conformancePackInputParameters) {
             return conformancePackInputParameters(List.of(conformancePackInputParameters));
         }
 
+        /**
+         * @param deliveryS3Bucket AWS Config stores intermediate files while processing conformance pack template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryS3Bucket(@Nullable Output<String> deliveryS3Bucket) {
             $.deliveryS3Bucket = deliveryS3Bucket;
             return this;
         }
 
+        /**
+         * @param deliveryS3Bucket AWS Config stores intermediate files while processing conformance pack template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryS3Bucket(String deliveryS3Bucket) {
             return deliveryS3Bucket(Output.of(deliveryS3Bucket));
         }
 
+        /**
+         * @param deliveryS3KeyPrefix The prefix for the delivery S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryS3KeyPrefix(@Nullable Output<String> deliveryS3KeyPrefix) {
             $.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
             return this;
         }
 
+        /**
+         * @param deliveryS3KeyPrefix The prefix for the delivery S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryS3KeyPrefix(String deliveryS3KeyPrefix) {
             return deliveryS3KeyPrefix(Output.of(deliveryS3KeyPrefix));
         }
 
+        /**
+         * @param excludedAccounts A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedAccounts(@Nullable Output<List<String>> excludedAccounts) {
             $.excludedAccounts = excludedAccounts;
             return this;
         }
 
+        /**
+         * @param excludedAccounts A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedAccounts(List<String> excludedAccounts) {
             return excludedAccounts(Output.of(excludedAccounts));
         }
 
+        /**
+         * @param excludedAccounts A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedAccounts(String... excludedAccounts) {
             return excludedAccounts(List.of(excludedAccounts));
         }
 
+        /**
+         * @param organizationConformancePackName The name of the organization conformance pack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationConformancePackName(@Nullable Output<String> organizationConformancePackName) {
             $.organizationConformancePackName = organizationConformancePackName;
             return this;
         }
 
+        /**
+         * @param organizationConformancePackName The name of the organization conformance pack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationConformancePackName(String organizationConformancePackName) {
             return organizationConformancePackName(Output.of(organizationConformancePackName));
         }
 
+        /**
+         * @param templateBody A string containing full conformance pack template body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateBody(@Nullable Output<String> templateBody) {
             $.templateBody = templateBody;
             return this;
         }
 
+        /**
+         * @param templateBody A string containing full conformance pack template body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateBody(String templateBody) {
             return templateBody(Output.of(templateBody));
         }
 
+        /**
+         * @param templateS3Uri Location of file containing the template body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateS3Uri(@Nullable Output<String> templateS3Uri) {
             $.templateS3Uri = templateS3Uri;
             return this;
         }
 
+        /**
+         * @param templateS3Uri Location of file containing the template body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateS3Uri(String templateS3Uri) {
             return templateS3Uri(Output.of(templateS3Uri));
         }

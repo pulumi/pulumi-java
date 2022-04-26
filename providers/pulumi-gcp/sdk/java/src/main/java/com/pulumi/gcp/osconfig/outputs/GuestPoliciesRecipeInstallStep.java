@@ -18,43 +18,43 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GuestPoliciesRecipeInstallStep {
     /**
-     * Extracts an archive into the specified directory.
+     * @return Extracts an archive into the specified directory.
      * Structure is documented below.
      * 
      */
     private final @Nullable GuestPoliciesRecipeInstallStepArchiveExtraction archiveExtraction;
     /**
-     * Installs a deb file via dpkg.
+     * @return Installs a deb file via dpkg.
      * Structure is documented below.
      * 
      */
     private final @Nullable GuestPoliciesRecipeInstallStepDpkgInstallation dpkgInstallation;
     /**
-     * Copies a file onto the instance.
+     * @return Copies a file onto the instance.
      * Structure is documented below.
      * 
      */
     private final @Nullable GuestPoliciesRecipeInstallStepFileCopy fileCopy;
     /**
-     * Executes an artifact or local file.
+     * @return Executes an artifact or local file.
      * Structure is documented below.
      * 
      */
     private final @Nullable GuestPoliciesRecipeInstallStepFileExec fileExec;
     /**
-     * Installs an MSI file.
+     * @return Installs an MSI file.
      * Structure is documented below.
      * 
      */
     private final @Nullable GuestPoliciesRecipeInstallStepMsiInstallation msiInstallation;
     /**
-     * Installs an rpm file via the rpm utility.
+     * @return Installs an rpm file via the rpm utility.
      * Structure is documented below.
      * 
      */
     private final @Nullable GuestPoliciesRecipeInstallStepRpmInstallation rpmInstallation;
     /**
-     * Runs commands in a shell.
+     * @return Runs commands in a shell.
      * Structure is documented below.
      * 
      */
@@ -79,58 +79,58 @@ public final class GuestPoliciesRecipeInstallStep {
     }
 
     /**
-     * Extracts an archive into the specified directory.
+     * @return Extracts an archive into the specified directory.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<GuestPoliciesRecipeInstallStepArchiveExtraction> archiveExtraction() {
         return Optional.ofNullable(this.archiveExtraction);
     }
     /**
-     * Installs a deb file via dpkg.
+     * @return Installs a deb file via dpkg.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<GuestPoliciesRecipeInstallStepDpkgInstallation> dpkgInstallation() {
         return Optional.ofNullable(this.dpkgInstallation);
     }
     /**
-     * Copies a file onto the instance.
+     * @return Copies a file onto the instance.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<GuestPoliciesRecipeInstallStepFileCopy> fileCopy() {
         return Optional.ofNullable(this.fileCopy);
     }
     /**
-     * Executes an artifact or local file.
+     * @return Executes an artifact or local file.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<GuestPoliciesRecipeInstallStepFileExec> fileExec() {
         return Optional.ofNullable(this.fileExec);
     }
     /**
-     * Installs an MSI file.
+     * @return Installs an MSI file.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<GuestPoliciesRecipeInstallStepMsiInstallation> msiInstallation() {
         return Optional.ofNullable(this.msiInstallation);
     }
     /**
-     * Installs an rpm file via the rpm utility.
+     * @return Installs an rpm file via the rpm utility.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<GuestPoliciesRecipeInstallStepRpmInstallation> rpmInstallation() {
         return Optional.ofNullable(this.rpmInstallation);
     }
     /**
-     * Runs commands in a shell.
+     * @return Runs commands in a shell.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<GuestPoliciesRecipeInstallStepScriptRun> scriptRun() {
         return Optional.ofNullable(this.scriptRun);
     }

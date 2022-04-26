@@ -19,6 +19,10 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the Data Lake Store account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="firewallRuleName", required=true)
     private String firewallRuleName;
 
+    /**
+     * @return The name of the firewall rule to retrieve.
+     * 
+     */
     public String firewallRuleName() {
         return this.firewallRuleName;
     }
@@ -41,6 +49,10 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the Azure resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param firewallRuleName The name of the firewall rule to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRuleName(String firewallRuleName) {
             $.firewallRuleName = firewallRuleName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

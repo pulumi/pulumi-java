@@ -20,6 +20,10 @@ public final class DicomStoreStreamConfigBigqueryDestinationArgs extends com.pul
     @Import(name="tableUri", required=true)
     private Output<String> tableUri;
 
+    /**
+     * @return a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
+     * 
+     */
     public Output<String> tableUri() {
         return this.tableUri;
     }
@@ -48,11 +52,23 @@ public final class DicomStoreStreamConfigBigqueryDestinationArgs extends com.pul
             $ = new DicomStoreStreamConfigBigqueryDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tableUri a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableUri(Output<String> tableUri) {
             $.tableUri = tableUri;
             return this;
         }
 
+        /**
+         * @param tableUri a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableUri(String tableUri) {
             return tableUri(Output.of(tableUri));
         }

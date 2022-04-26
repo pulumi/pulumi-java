@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScaleSettingsResponse {
     /**
-     * Max number of nodes to use
+     * @return Max number of nodes to use
      * 
      */
     private final Integer maxNodeCount;
     /**
-     * Min number of nodes to use
+     * @return Min number of nodes to use
      * 
      */
     private final @Nullable Integer minNodeCount;
     /**
-     * Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
+     * @return Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
      * 
      */
     private final @Nullable String nodeIdleTimeBeforeScaleDown;
@@ -39,23 +39,23 @@ public final class ScaleSettingsResponse {
     }
 
     /**
-     * Max number of nodes to use
+     * @return Max number of nodes to use
      * 
-    */
+     */
     public Integer maxNodeCount() {
         return this.maxNodeCount;
     }
     /**
-     * Min number of nodes to use
+     * @return Min number of nodes to use
      * 
-    */
+     */
     public Optional<Integer> minNodeCount() {
         return Optional.ofNullable(this.minNodeCount);
     }
     /**
-     * Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
+     * @return Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
      * 
-    */
+     */
     public Optional<String> nodeIdleTimeBeforeScaleDown() {
         return Optional.ofNullable(this.nodeIdleTimeBeforeScaleDown);
     }

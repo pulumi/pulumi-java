@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class StageDetailsResponse {
     /**
-     * Display name of the resource stage.
+     * @return Display name of the resource stage.
      * 
      */
     private final String displayName;
     /**
-     * Stage name
+     * @return Stage name
      * 
      */
     private final String stageName;
     /**
-     * Stage status.
+     * @return Stage status.
      * 
      */
     private final String stageStatus;
     /**
-     * Stage start time
+     * @return Stage start time
      * 
      */
     private final String startTime;
@@ -43,30 +43,30 @@ public final class StageDetailsResponse {
     }
 
     /**
-     * Display name of the resource stage.
+     * @return Display name of the resource stage.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Stage name
+     * @return Stage name
      * 
-    */
+     */
     public String stageName() {
         return this.stageName;
     }
     /**
-     * Stage status.
+     * @return Stage status.
      * 
-    */
+     */
     public String stageStatus() {
         return this.stageStatus;
     }
     /**
-     * Stage start time
+     * @return Stage start time
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

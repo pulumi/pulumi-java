@@ -20,6 +20,10 @@ public final class DeploymentTargetConfigArgs extends com.pulumi.resources.Resou
     @Import(name="content", required=true)
     private Output<String> content;
 
+    /**
+     * @return The full contents of the template that you want to import.
+     * 
+     */
     public Output<String> content() {
         return this.content;
     }
@@ -48,11 +52,23 @@ public final class DeploymentTargetConfigArgs extends com.pulumi.resources.Resou
             $ = new DeploymentTargetConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The full contents of the template that you want to import.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The full contents of the template that you want to import.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }

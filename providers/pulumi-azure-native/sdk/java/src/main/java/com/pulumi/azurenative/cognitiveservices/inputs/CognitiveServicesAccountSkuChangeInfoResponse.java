@@ -24,6 +24,10 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends com.pul
     @Import(name="countOfDowngrades", required=true)
     private Double countOfDowngrades;
 
+    /**
+     * @return Gets the count of downgrades.
+     * 
+     */
     public Double countOfDowngrades() {
         return this.countOfDowngrades;
     }
@@ -35,6 +39,10 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends com.pul
     @Import(name="countOfUpgradesAfterDowngrades", required=true)
     private Double countOfUpgradesAfterDowngrades;
 
+    /**
+     * @return Gets the count of upgrades after downgrades.
+     * 
+     */
     public Double countOfUpgradesAfterDowngrades() {
         return this.countOfUpgradesAfterDowngrades;
     }
@@ -46,6 +54,10 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends com.pul
     @Import(name="lastChangeDate", required=true)
     private String lastChangeDate;
 
+    /**
+     * @return Gets the last change date.
+     * 
+     */
     public String lastChangeDate() {
         return this.lastChangeDate;
     }
@@ -76,16 +88,34 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends com.pul
             $ = new CognitiveServicesAccountSkuChangeInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param countOfDowngrades Gets the count of downgrades.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countOfDowngrades(Double countOfDowngrades) {
             $.countOfDowngrades = countOfDowngrades;
             return this;
         }
 
+        /**
+         * @param countOfUpgradesAfterDowngrades Gets the count of upgrades after downgrades.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countOfUpgradesAfterDowngrades(Double countOfUpgradesAfterDowngrades) {
             $.countOfUpgradesAfterDowngrades = countOfUpgradesAfterDowngrades;
             return this;
         }
 
+        /**
+         * @param lastChangeDate Gets the last change date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastChangeDate(String lastChangeDate) {
             $.lastChangeDate = lastChangeDate;
             return this;

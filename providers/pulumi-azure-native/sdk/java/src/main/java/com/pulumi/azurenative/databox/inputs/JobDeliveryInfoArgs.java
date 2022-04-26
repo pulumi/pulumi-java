@@ -26,6 +26,10 @@ public final class JobDeliveryInfoArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scheduledDateTime")
     private @Nullable Output<String> scheduledDateTime;
 
+    /**
+     * @return Scheduled date time.
+     * 
+     */
     public Optional<Output<String>> scheduledDateTime() {
         return Optional.ofNullable(this.scheduledDateTime);
     }
@@ -54,11 +58,23 @@ public final class JobDeliveryInfoArgs extends com.pulumi.resources.ResourceArgs
             $ = new JobDeliveryInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scheduledDateTime Scheduled date time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledDateTime(@Nullable Output<String> scheduledDateTime) {
             $.scheduledDateTime = scheduledDateTime;
             return this;
         }
 
+        /**
+         * @param scheduledDateTime Scheduled date time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledDateTime(String scheduledDateTime) {
             return scheduledDateTime(Output.of(scheduledDateTime));
         }

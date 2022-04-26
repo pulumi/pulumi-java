@@ -27,6 +27,10 @@ public final class PeripheralsConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="metastoreService")
     private @Nullable Output<String> metastoreService;
 
+    /**
+     * @return Optional. Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[region]/services/[service_id]
+     * 
+     */
     public Optional<Output<String>> metastoreService() {
         return Optional.ofNullable(this.metastoreService);
     }
@@ -38,6 +42,10 @@ public final class PeripheralsConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sparkHistoryServerConfig")
     private @Nullable Output<SparkHistoryServerConfigArgs> sparkHistoryServerConfig;
 
+    /**
+     * @return Optional. The Spark History Server configuration for the workload.
+     * 
+     */
     public Optional<Output<SparkHistoryServerConfigArgs>> sparkHistoryServerConfig() {
         return Optional.ofNullable(this.sparkHistoryServerConfig);
     }
@@ -67,20 +75,44 @@ public final class PeripheralsConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new PeripheralsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metastoreService Optional. Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[region]/services/[service_id]
+         * 
+         * @return builder
+         * 
+         */
         public Builder metastoreService(@Nullable Output<String> metastoreService) {
             $.metastoreService = metastoreService;
             return this;
         }
 
+        /**
+         * @param metastoreService Optional. Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[region]/services/[service_id]
+         * 
+         * @return builder
+         * 
+         */
         public Builder metastoreService(String metastoreService) {
             return metastoreService(Output.of(metastoreService));
         }
 
+        /**
+         * @param sparkHistoryServerConfig Optional. The Spark History Server configuration for the workload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkHistoryServerConfig(@Nullable Output<SparkHistoryServerConfigArgs> sparkHistoryServerConfig) {
             $.sparkHistoryServerConfig = sparkHistoryServerConfig;
             return this;
         }
 
+        /**
+         * @param sparkHistoryServerConfig Optional. The Spark History Server configuration for the workload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkHistoryServerConfig(SparkHistoryServerConfigArgs sparkHistoryServerConfig) {
             return sparkHistoryServerConfig(Output.of(sparkHistoryServerConfig));
         }

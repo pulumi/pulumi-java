@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExternalSubnetResponse {
     /**
-     * Gets or sets the identifier.
+     * @return Gets or sets the identifier.
      * 
      */
     private final @Nullable String id;
     /**
-     * Gets or sets the name.
+     * @return Gets or sets the name.
      * 
      */
     private final @Nullable String name;
@@ -31,16 +31,16 @@ public final class ExternalSubnetResponse {
     }
 
     /**
-     * Gets or sets the identifier.
+     * @return Gets or sets the identifier.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Gets or sets the name.
+     * @return Gets or sets the name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

@@ -22,6 +22,10 @@ public final class LaunchMetricDefinitionObjectArgs extends com.pulumi.resources
     @Import(name="entityIdKey", required=true)
     private Output<String> entityIdKey;
 
+    /**
+     * @return The JSON path to reference the entity id in the event.
+     * 
+     */
     public Output<String> entityIdKey() {
         return this.entityIdKey;
     }
@@ -33,6 +37,10 @@ public final class LaunchMetricDefinitionObjectArgs extends com.pulumi.resources
     @Import(name="eventPattern", required=true)
     private Output<String> eventPattern;
 
+    /**
+     * @return Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn&#39;t.
+     * 
+     */
     public Output<String> eventPattern() {
         return this.eventPattern;
     }
@@ -58,6 +66,10 @@ public final class LaunchMetricDefinitionObjectArgs extends com.pulumi.resources
     @Import(name="valueKey", required=true)
     private Output<String> valueKey;
 
+    /**
+     * @return The JSON path to reference the numerical metric value in the event.
+     * 
+     */
     public Output<String> valueKey() {
         return this.valueKey;
     }
@@ -90,20 +102,44 @@ public final class LaunchMetricDefinitionObjectArgs extends com.pulumi.resources
             $ = new LaunchMetricDefinitionObjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param entityIdKey The JSON path to reference the entity id in the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityIdKey(Output<String> entityIdKey) {
             $.entityIdKey = entityIdKey;
             return this;
         }
 
+        /**
+         * @param entityIdKey The JSON path to reference the entity id in the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityIdKey(String entityIdKey) {
             return entityIdKey(Output.of(entityIdKey));
         }
 
+        /**
+         * @param eventPattern Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn&#39;t.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventPattern(Output<String> eventPattern) {
             $.eventPattern = eventPattern;
             return this;
         }
 
+        /**
+         * @param eventPattern Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn&#39;t.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventPattern(String eventPattern) {
             return eventPattern(Output.of(eventPattern));
         }
@@ -126,11 +162,23 @@ public final class LaunchMetricDefinitionObjectArgs extends com.pulumi.resources
             return unitLabel(Output.of(unitLabel));
         }
 
+        /**
+         * @param valueKey The JSON path to reference the numerical metric value in the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueKey(Output<String> valueKey) {
             $.valueKey = valueKey;
             return this;
         }
 
+        /**
+         * @param valueKey The JSON path to reference the numerical metric value in the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueKey(String valueKey) {
             return valueKey(Output.of(valueKey));
         }

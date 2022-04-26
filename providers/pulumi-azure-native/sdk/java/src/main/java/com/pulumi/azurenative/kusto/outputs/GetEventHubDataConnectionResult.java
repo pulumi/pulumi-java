@@ -13,73 +13,73 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEventHubDataConnectionResult {
     /**
-     * The event hub messages compression type
+     * @return The event hub messages compression type
      * 
      */
     private final @Nullable String compression;
     /**
-     * The event hub consumer group.
+     * @return The event hub consumer group.
      * 
      */
     private final String consumerGroup;
     /**
-     * The data format of the message. Optionally the data format can be added to each message.
+     * @return The data format of the message. Optionally the data format can be added to each message.
      * 
      */
     private final @Nullable String dataFormat;
     /**
-     * The resource ID of the event hub to be used to create a data connection.
+     * @return The resource ID of the event hub to be used to create a data connection.
      * 
      */
     private final String eventHubResourceId;
     /**
-     * System properties of the event hub
+     * @return System properties of the event hub
      * 
      */
     private final @Nullable List<String> eventSystemProperties;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Kind of the endpoint for the data connection
+     * @return Kind of the endpoint for the data connection
      * Expected value is &#39;EventHub&#39;.
      * 
      */
     private final String kind;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
+     * @return The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
      * 
      */
     private final @Nullable String managedIdentityResourceId;
     /**
-     * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
+     * @return The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
      * 
      */
     private final @Nullable String mappingRuleName;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The provisioned state of the resource.
+     * @return The provisioned state of the resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The table where the data should be ingested. Optionally the table information can be added to each message.
+     * @return The table where the data should be ingested. Optionally the table information can be added to each message.
      * 
      */
     private final @Nullable String tableName;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -117,101 +117,101 @@ public final class GetEventHubDataConnectionResult {
     }
 
     /**
-     * The event hub messages compression type
+     * @return The event hub messages compression type
      * 
-    */
+     */
     public Optional<String> compression() {
         return Optional.ofNullable(this.compression);
     }
     /**
-     * The event hub consumer group.
+     * @return The event hub consumer group.
      * 
-    */
+     */
     public String consumerGroup() {
         return this.consumerGroup;
     }
     /**
-     * The data format of the message. Optionally the data format can be added to each message.
+     * @return The data format of the message. Optionally the data format can be added to each message.
      * 
-    */
+     */
     public Optional<String> dataFormat() {
         return Optional.ofNullable(this.dataFormat);
     }
     /**
-     * The resource ID of the event hub to be used to create a data connection.
+     * @return The resource ID of the event hub to be used to create a data connection.
      * 
-    */
+     */
     public String eventHubResourceId() {
         return this.eventHubResourceId;
     }
     /**
-     * System properties of the event hub
+     * @return System properties of the event hub
      * 
-    */
+     */
     public List<String> eventSystemProperties() {
         return this.eventSystemProperties == null ? List.of() : this.eventSystemProperties;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of the endpoint for the data connection
+     * @return Kind of the endpoint for the data connection
      * Expected value is &#39;EventHub&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
+     * @return The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
      * 
-    */
+     */
     public Optional<String> managedIdentityResourceId() {
         return Optional.ofNullable(this.managedIdentityResourceId);
     }
     /**
-     * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
+     * @return The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
      * 
-    */
+     */
     public Optional<String> mappingRuleName() {
         return Optional.ofNullable(this.mappingRuleName);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioned state of the resource.
+     * @return The provisioned state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The table where the data should be ingested. Optionally the table information can be added to each message.
+     * @return The table where the data should be ingested. Optionally the table information can be added to each message.
      * 
-    */
+     */
     public Optional<String> tableName() {
         return Optional.ofNullable(this.tableName);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

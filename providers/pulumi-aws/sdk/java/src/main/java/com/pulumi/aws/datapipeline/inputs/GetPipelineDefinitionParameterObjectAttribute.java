@@ -19,6 +19,10 @@ public final class GetPipelineDefinitionParameterObjectAttribute extends com.pul
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return Field identifier.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -30,6 +34,10 @@ public final class GetPipelineDefinitionParameterObjectAttribute extends com.pul
     @Import(name="stringValue", required=true)
     private String stringValue;
 
+    /**
+     * @return Field value, expressed as a String.
+     * 
+     */
     public String stringValue() {
         return this.stringValue;
     }
@@ -59,11 +67,23 @@ public final class GetPipelineDefinitionParameterObjectAttribute extends com.pul
             $ = new GetPipelineDefinitionParameterObjectAttribute(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Field identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param stringValue Field value, expressed as a String.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(String stringValue) {
             $.stringValue = stringValue;
             return this;

@@ -26,6 +26,11 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
     @Import(name="connectionPreference", required=true)
     private Output<String> connectionPreference;
 
+    /**
+     * @return The connection preference to use for this service attachment. Valid
+     * values include &#34;ACCEPT_AUTOMATIC&#34;, &#34;ACCEPT_MANUAL&#34;.
+     * 
+     */
     public Output<String> connectionPreference() {
         return this.connectionPreference;
     }
@@ -39,6 +44,12 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
     @Import(name="consumerAcceptLists")
     private @Nullable Output<List<ServiceAttachmentConsumerAcceptListArgs>> consumerAcceptLists;
 
+    /**
+     * @return An array of projects that are allowed to connect to this service
+     * attachment.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<ServiceAttachmentConsumerAcceptListArgs>>> consumerAcceptLists() {
         return Optional.ofNullable(this.consumerAcceptLists);
     }
@@ -51,6 +62,11 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
     @Import(name="consumerRejectLists")
     private @Nullable Output<List<String>> consumerRejectLists;
 
+    /**
+     * @return An array of projects that are not allowed to connect to this service
+     * attachment.
+     * 
+     */
     public Optional<Output<List<String>>> consumerRejectLists() {
         return Optional.ofNullable(this.consumerRejectLists);
     }
@@ -62,6 +78,10 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -75,6 +95,12 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
     @Import(name="enableProxyProtocol", required=true)
     private Output<Boolean> enableProxyProtocol;
 
+    /**
+     * @return If true, enable the proxy protocol which is for supplying client TCP/IP
+     * address data in TCP connections that traverse proxies on their way to
+     * destination servers.
+     * 
+     */
     public Output<Boolean> enableProxyProtocol() {
         return this.enableProxyProtocol;
     }
@@ -91,6 +117,15 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. The name must be 1-63 characters long, and
+     * comply with RFC1035. Specifically, the name must be 1-63 characters
+     * long and match the regular expression `a-z?`
+     * which means the first character must be a lowercase letter, and all
+     * following characters must be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -102,6 +137,10 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
     @Import(name="natSubnets", required=true)
     private Output<List<String>> natSubnets;
 
+    /**
+     * @return An array of subnets that is provided for NAT in this service attachment.
+     * 
+     */
     public Output<List<String>> natSubnets() {
         return this.natSubnets;
     }
@@ -114,6 +153,11 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -125,6 +169,10 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return URL of the region where the resource resides.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -137,6 +185,11 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
     @Import(name="targetService", required=true)
     private Output<String> targetService;
 
+    /**
+     * @return The URL of a forwarding rule that represents the service identified by
+     * this service attachment.
+     * 
+     */
     public Output<String> targetService() {
         return this.targetService;
     }
@@ -174,104 +227,271 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
             $ = new ServiceAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionPreference The connection preference to use for this service attachment. Valid
+         * values include &#34;ACCEPT_AUTOMATIC&#34;, &#34;ACCEPT_MANUAL&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionPreference(Output<String> connectionPreference) {
             $.connectionPreference = connectionPreference;
             return this;
         }
 
+        /**
+         * @param connectionPreference The connection preference to use for this service attachment. Valid
+         * values include &#34;ACCEPT_AUTOMATIC&#34;, &#34;ACCEPT_MANUAL&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionPreference(String connectionPreference) {
             return connectionPreference(Output.of(connectionPreference));
         }
 
+        /**
+         * @param consumerAcceptLists An array of projects that are allowed to connect to this service
+         * attachment.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerAcceptLists(@Nullable Output<List<ServiceAttachmentConsumerAcceptListArgs>> consumerAcceptLists) {
             $.consumerAcceptLists = consumerAcceptLists;
             return this;
         }
 
+        /**
+         * @param consumerAcceptLists An array of projects that are allowed to connect to this service
+         * attachment.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerAcceptLists(List<ServiceAttachmentConsumerAcceptListArgs> consumerAcceptLists) {
             return consumerAcceptLists(Output.of(consumerAcceptLists));
         }
 
+        /**
+         * @param consumerAcceptLists An array of projects that are allowed to connect to this service
+         * attachment.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerAcceptLists(ServiceAttachmentConsumerAcceptListArgs... consumerAcceptLists) {
             return consumerAcceptLists(List.of(consumerAcceptLists));
         }
 
+        /**
+         * @param consumerRejectLists An array of projects that are not allowed to connect to this service
+         * attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerRejectLists(@Nullable Output<List<String>> consumerRejectLists) {
             $.consumerRejectLists = consumerRejectLists;
             return this;
         }
 
+        /**
+         * @param consumerRejectLists An array of projects that are not allowed to connect to this service
+         * attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerRejectLists(List<String> consumerRejectLists) {
             return consumerRejectLists(Output.of(consumerRejectLists));
         }
 
+        /**
+         * @param consumerRejectLists An array of projects that are not allowed to connect to this service
+         * attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerRejectLists(String... consumerRejectLists) {
             return consumerRejectLists(List.of(consumerRejectLists));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enableProxyProtocol If true, enable the proxy protocol which is for supplying client TCP/IP
+         * address data in TCP connections that traverse proxies on their way to
+         * destination servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableProxyProtocol(Output<Boolean> enableProxyProtocol) {
             $.enableProxyProtocol = enableProxyProtocol;
             return this;
         }
 
+        /**
+         * @param enableProxyProtocol If true, enable the proxy protocol which is for supplying client TCP/IP
+         * address data in TCP connections that traverse proxies on their way to
+         * destination servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
             return enableProxyProtocol(Output.of(enableProxyProtocol));
         }
 
+        /**
+         * @param name Name of the resource. The name must be 1-63 characters long, and
+         * comply with RFC1035. Specifically, the name must be 1-63 characters
+         * long and match the regular expression `a-z?`
+         * which means the first character must be a lowercase letter, and all
+         * following characters must be a dash, lowercase letter, or digit,
+         * except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. The name must be 1-63 characters long, and
+         * comply with RFC1035. Specifically, the name must be 1-63 characters
+         * long and match the regular expression `a-z?`
+         * which means the first character must be a lowercase letter, and all
+         * following characters must be a dash, lowercase letter, or digit,
+         * except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param natSubnets An array of subnets that is provided for NAT in this service attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natSubnets(Output<List<String>> natSubnets) {
             $.natSubnets = natSubnets;
             return this;
         }
 
+        /**
+         * @param natSubnets An array of subnets that is provided for NAT in this service attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natSubnets(List<String> natSubnets) {
             return natSubnets(Output.of(natSubnets));
         }
 
+        /**
+         * @param natSubnets An array of subnets that is provided for NAT in this service attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natSubnets(String... natSubnets) {
             return natSubnets(List.of(natSubnets));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region URL of the region where the resource resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region URL of the region where the resource resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param targetService The URL of a forwarding rule that represents the service identified by
+         * this service attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetService(Output<String> targetService) {
             $.targetService = targetService;
             return this;
         }
 
+        /**
+         * @param targetService The URL of a forwarding rule that represents the service identified by
+         * this service attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetService(String targetService) {
             return targetService(Output.of(targetService));
         }

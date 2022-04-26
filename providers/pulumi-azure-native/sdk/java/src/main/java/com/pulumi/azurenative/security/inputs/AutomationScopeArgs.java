@@ -26,6 +26,10 @@ public final class AutomationScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The resources scope description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class AutomationScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scopePath")
     private @Nullable Output<String> scopePath;
 
+    /**
+     * @return The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).
+     * 
+     */
     public Optional<Output<String>> scopePath() {
         return Optional.ofNullable(this.scopePath);
     }
@@ -66,20 +74,44 @@ public final class AutomationScopeArgs extends com.pulumi.resources.ResourceArgs
             $ = new AutomationScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The resources scope description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The resources scope description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param scopePath The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopePath(@Nullable Output<String> scopePath) {
             $.scopePath = scopePath;
             return this;
         }
 
+        /**
+         * @param scopePath The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopePath(String scopePath) {
             return scopePath(Output.of(scopePath));
         }

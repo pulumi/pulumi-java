@@ -23,6 +23,10 @@ public final class DetectorModelTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return Key of the Tag.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -34,6 +38,10 @@ public final class DetectorModelTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Value of the Tag.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class DetectorModelTag extends com.pulumi.resources.InvokeArgs {
             $ = new DetectorModelTag(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Key of the Tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value Value of the Tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

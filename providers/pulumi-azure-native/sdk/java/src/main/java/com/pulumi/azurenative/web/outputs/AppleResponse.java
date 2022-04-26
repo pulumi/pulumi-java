@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AppleResponse {
     /**
-     * &lt;code&gt;false&lt;/code&gt; if the Apple provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * @return &lt;code&gt;false&lt;/code&gt; if the Apple provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * The configuration settings of the login flow.
+     * @return The configuration settings of the login flow.
      * 
      */
     private final @Nullable LoginScopesResponse login;
     /**
-     * The configuration settings of the Apple registration.
+     * @return The configuration settings of the Apple registration.
      * 
      */
     private final @Nullable AppleRegistrationResponse registration;
@@ -40,23 +40,23 @@ public final class AppleResponse {
     }
 
     /**
-     * &lt;code&gt;false&lt;/code&gt; if the Apple provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * @return &lt;code&gt;false&lt;/code&gt; if the Apple provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The configuration settings of the login flow.
+     * @return The configuration settings of the login flow.
      * 
-    */
+     */
     public Optional<LoginScopesResponse> login() {
         return Optional.ofNullable(this.login);
     }
     /**
-     * The configuration settings of the Apple registration.
+     * @return The configuration settings of the Apple registration.
      * 
-    */
+     */
     public Optional<AppleRegistrationResponse> registration() {
         return Optional.ofNullable(this.registration);
     }

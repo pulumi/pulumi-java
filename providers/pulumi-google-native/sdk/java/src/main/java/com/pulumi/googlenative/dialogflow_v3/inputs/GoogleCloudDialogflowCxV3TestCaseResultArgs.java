@@ -29,6 +29,10 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends com.pulum
     @Import(name="conversationTurns")
     private @Nullable Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> conversationTurns;
 
+    /**
+     * @return The conversation turns uttered during the test case replay in chronological order.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>>> conversationTurns() {
         return Optional.ofNullable(this.conversationTurns);
     }
@@ -40,6 +44,10 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends com.pulum
     @Import(name="environment")
     private @Nullable Output<String> environment;
 
+    /**
+     * @return Environment where the test was run. If not set, it indicates the draft environment.
+     * 
+     */
     public Optional<Output<String>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -51,6 +59,10 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends com.pulum
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -62,6 +74,10 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends com.pulum
     @Import(name="testResult")
     private @Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultTestResult> testResult;
 
+    /**
+     * @return Whether the test case passed in the agent environment.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3TestCaseResultTestResult>> testResult() {
         return Optional.ofNullable(this.testResult);
     }
@@ -73,6 +89,10 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends com.pulum
     @Import(name="testTime")
     private @Nullable Output<String> testTime;
 
+    /**
+     * @return The time that the test was run.
+     * 
+     */
     public Optional<Output<String>> testTime() {
         return Optional.ofNullable(this.testTime);
     }
@@ -105,51 +125,117 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends com.pulum
             $ = new GoogleCloudDialogflowCxV3TestCaseResultArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conversationTurns The conversation turns uttered during the test case replay in chronological order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversationTurns(@Nullable Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> conversationTurns) {
             $.conversationTurns = conversationTurns;
             return this;
         }
 
+        /**
+         * @param conversationTurns The conversation turns uttered during the test case replay in chronological order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversationTurns(List<GoogleCloudDialogflowCxV3ConversationTurnArgs> conversationTurns) {
             return conversationTurns(Output.of(conversationTurns));
         }
 
+        /**
+         * @param conversationTurns The conversation turns uttered during the test case replay in chronological order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversationTurns(GoogleCloudDialogflowCxV3ConversationTurnArgs... conversationTurns) {
             return conversationTurns(List.of(conversationTurns));
         }
 
+        /**
+         * @param environment Environment where the test was run. If not set, it indicates the draft environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<String> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment Environment where the test was run. If not set, it indicates the draft environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(String environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param name The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param testResult Whether the test case passed in the agent environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testResult(@Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultTestResult> testResult) {
             $.testResult = testResult;
             return this;
         }
 
+        /**
+         * @param testResult Whether the test case passed in the agent environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testResult(GoogleCloudDialogflowCxV3TestCaseResultTestResult testResult) {
             return testResult(Output.of(testResult));
         }
 
+        /**
+         * @param testTime The time that the test was run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTime(@Nullable Output<String> testTime) {
             $.testTime = testTime;
             return this;
         }
 
+        /**
+         * @param testTime The time that the test was run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTime(String testTime) {
             return testTime(Output.of(testTime));
         }

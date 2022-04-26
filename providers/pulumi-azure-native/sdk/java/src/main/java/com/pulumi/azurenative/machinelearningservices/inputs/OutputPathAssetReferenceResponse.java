@@ -26,6 +26,10 @@ public final class OutputPathAssetReferenceResponse extends com.pulumi.resources
     @Import(name="jobId")
     private @Nullable String jobId;
 
+    /**
+     * @return ARM resource ID of the job.
+     * 
+     */
     public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
     }
@@ -37,6 +41,10 @@ public final class OutputPathAssetReferenceResponse extends com.pulumi.resources
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return The path of the file/directory in the job output.
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -49,6 +57,11 @@ public final class OutputPathAssetReferenceResponse extends com.pulumi.resources
     @Import(name="referenceType", required=true)
     private String referenceType;
 
+    /**
+     * @return Enum to determine which reference method to use for an asset.
+     * Expected value is &#39;OutputPath&#39;.
+     * 
+     */
     public String referenceType() {
         return this.referenceType;
     }
@@ -79,16 +92,35 @@ public final class OutputPathAssetReferenceResponse extends com.pulumi.resources
             $ = new OutputPathAssetReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobId ARM resource ID of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(@Nullable String jobId) {
             $.jobId = jobId;
             return this;
         }
 
+        /**
+         * @param path The path of the file/directory in the job output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param referenceType Enum to determine which reference method to use for an asset.
+         * Expected value is &#39;OutputPath&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceType(String referenceType) {
             $.referenceType = referenceType;
             return this;

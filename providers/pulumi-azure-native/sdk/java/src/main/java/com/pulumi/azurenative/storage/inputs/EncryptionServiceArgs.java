@@ -29,6 +29,10 @@ public final class EncryptionServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return A boolean indicating whether or not the service encrypts the data as it is stored.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -40,6 +44,10 @@ public final class EncryptionServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="keyType")
     private @Nullable Output<Either<String,KeyType>> keyType;
 
+    /**
+     * @return Encryption key type to be used for the encryption service. &#39;Account&#39; key type implies that an account-scoped encryption key will be used. &#39;Service&#39; key type implies that a default service key is used.
+     * 
+     */
     public Optional<Output<Either<String,KeyType>>> keyType() {
         return Optional.ofNullable(this.keyType);
     }
@@ -69,28 +77,64 @@ public final class EncryptionServiceArgs extends com.pulumi.resources.ResourceAr
             $ = new EncryptionServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled A boolean indicating whether or not the service encrypts the data as it is stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled A boolean indicating whether or not the service encrypts the data as it is stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param keyType Encryption key type to be used for the encryption service. &#39;Account&#39; key type implies that an account-scoped encryption key will be used. &#39;Service&#39; key type implies that a default service key is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(@Nullable Output<Either<String,KeyType>> keyType) {
             $.keyType = keyType;
             return this;
         }
 
+        /**
+         * @param keyType Encryption key type to be used for the encryption service. &#39;Account&#39; key type implies that an account-scoped encryption key will be used. &#39;Service&#39; key type implies that a default service key is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(Either<String,KeyType> keyType) {
             return keyType(Output.of(keyType));
         }
 
+        /**
+         * @param keyType Encryption key type to be used for the encryption service. &#39;Account&#39; key type implies that an account-scoped encryption key will be used. &#39;Service&#39; key type implies that a default service key is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(String keyType) {
             return keyType(Either.ofLeft(keyType));
         }
 
+        /**
+         * @param keyType Encryption key type to be used for the encryption service. &#39;Account&#39; key type implies that an account-scoped encryption key will be used. &#39;Service&#39; key type implies that a default service key is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(KeyType keyType) {
             return keyType(Either.ofRight(keyType));
         }

@@ -35,6 +35,10 @@ public final class StackSetStackInstances extends com.pulumi.resources.InvokeArg
     @Import(name="parameterOverrides")
     private @Nullable List<StackSetParameter> parameterOverrides;
 
+    /**
+     * @return A list of stack set parameters whose values you want to override in the selected stack instances.
+     * 
+     */
     public Optional<List<StackSetParameter>> parameterOverrides() {
         return Optional.ofNullable(this.parameterOverrides);
     }
@@ -46,6 +50,10 @@ public final class StackSetStackInstances extends com.pulumi.resources.InvokeArg
     @Import(name="regions", required=true)
     private List<String> regions;
 
+    /**
+     * @return The names of one or more Regions where you want to create stack instances using the specified AWS account(s).
+     * 
+     */
     public List<String> regions() {
         return this.regions;
     }
@@ -81,20 +89,44 @@ public final class StackSetStackInstances extends com.pulumi.resources.InvokeArg
             return this;
         }
 
+        /**
+         * @param parameterOverrides A list of stack set parameters whose values you want to override in the selected stack instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterOverrides(@Nullable List<StackSetParameter> parameterOverrides) {
             $.parameterOverrides = parameterOverrides;
             return this;
         }
 
+        /**
+         * @param parameterOverrides A list of stack set parameters whose values you want to override in the selected stack instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterOverrides(StackSetParameter... parameterOverrides) {
             return parameterOverrides(List.of(parameterOverrides));
         }
 
+        /**
+         * @param regions The names of one or more Regions where you want to create stack instances using the specified AWS account(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(List<String> regions) {
             $.regions = regions;
             return this;
         }
 
+        /**
+         * @param regions The names of one or more Regions where you want to create stack instances using the specified AWS account(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }

@@ -34,6 +34,18 @@ public final class ServicePerimetersServicePerimeterSpecArgs extends com.pulumi.
     @Import(name="accessLevels")
     private @Nullable Output<List<String>> accessLevels;
 
+    /**
+     * @return A list of AccessLevel resource names that allow resources within
+     * the ServicePerimeter to be accessed from the internet.
+     * AccessLevels listed must be in the same policy as this
+     * ServicePerimeter. Referencing a nonexistent AccessLevel is a
+     * syntax error. If no AccessLevel names are listed, resources within
+     * the perimeter can only be accessed via GCP calls with request
+     * origins within the perimeter. For Service Perimeter Bridge, must
+     * be empty.
+     * Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+     * 
+     */
     public Optional<Output<List<String>>> accessLevels() {
         return Optional.ofNullable(this.accessLevels);
     }
@@ -49,6 +61,14 @@ public final class ServicePerimetersServicePerimeterSpecArgs extends com.pulumi.
     @Import(name="egressPolicies")
     private @Nullable Output<List<ServicePerimetersServicePerimeterSpecEgressPolicyArgs>> egressPolicies;
 
+    /**
+     * @return List of EgressPolicies to apply to the perimeter. A perimeter may
+     * have multiple EgressPolicies, each of which is evaluated separately.
+     * Access is granted if any EgressPolicy grants it. Must be empty for
+     * a perimeter bridge.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<ServicePerimetersServicePerimeterSpecEgressPolicyArgs>>> egressPolicies() {
         return Optional.ofNullable(this.egressPolicies);
     }
@@ -64,6 +84,14 @@ public final class ServicePerimetersServicePerimeterSpecArgs extends com.pulumi.
     @Import(name="ingressPolicies")
     private @Nullable Output<List<ServicePerimetersServicePerimeterSpecIngressPolicyArgs>> ingressPolicies;
 
+    /**
+     * @return List of `IngressPolicies` to apply to the perimeter. A perimeter may
+     * have multiple `IngressPolicies`, each of which is evaluated
+     * separately. Access is granted if any `Ingress Policy` grants it.
+     * Must be empty for a perimeter bridge.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<ServicePerimetersServicePerimeterSpecIngressPolicyArgs>>> ingressPolicies() {
         return Optional.ofNullable(this.ingressPolicies);
     }
@@ -79,6 +107,14 @@ public final class ServicePerimetersServicePerimeterSpecArgs extends com.pulumi.
     @Import(name="resources")
     private @Nullable Output<List<String>> resources;
 
+    /**
+     * @return A list of resources, currently only projects in the form
+     * `projects/&lt;projectnumber&gt;`, that match this to stanza. A request matches
+     * if it contains a resource in this list. If * is specified for resources,
+     * then this `EgressTo` rule will authorize access to all resources outside
+     * the perimeter.
+     * 
+     */
     public Optional<Output<List<String>>> resources() {
         return Optional.ofNullable(this.resources);
     }
@@ -94,6 +130,14 @@ public final class ServicePerimetersServicePerimeterSpecArgs extends com.pulumi.
     @Import(name="restrictedServices")
     private @Nullable Output<List<String>> restrictedServices;
 
+    /**
+     * @return GCP services that are subject to the Service Perimeter
+     * restrictions. Must contain a list of services. For example, if
+     * `storage.googleapis.com` is specified, access to the storage
+     * buckets inside the perimeter must meet the perimeter&#39;s access
+     * restrictions.
+     * 
+     */
     public Optional<Output<List<String>>> restrictedServices() {
         return Optional.ofNullable(this.restrictedServices);
     }
@@ -107,6 +151,12 @@ public final class ServicePerimetersServicePerimeterSpecArgs extends com.pulumi.
     @Import(name="vpcAccessibleServices")
     private @Nullable Output<ServicePerimetersServicePerimeterSpecVpcAccessibleServicesArgs> vpcAccessibleServices;
 
+    /**
+     * @return Specifies how APIs are allowed to communicate within the Service
+     * Perimeter.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ServicePerimetersServicePerimeterSpecVpcAccessibleServicesArgs>> vpcAccessibleServices() {
         return Optional.ofNullable(this.vpcAccessibleServices);
     }
@@ -140,76 +190,254 @@ public final class ServicePerimetersServicePerimeterSpecArgs extends com.pulumi.
             $ = new ServicePerimetersServicePerimeterSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessLevels A list of AccessLevel resource names that allow resources within
+         * the ServicePerimeter to be accessed from the internet.
+         * AccessLevels listed must be in the same policy as this
+         * ServicePerimeter. Referencing a nonexistent AccessLevel is a
+         * syntax error. If no AccessLevel names are listed, resources within
+         * the perimeter can only be accessed via GCP calls with request
+         * origins within the perimeter. For Service Perimeter Bridge, must
+         * be empty.
+         * Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLevels(@Nullable Output<List<String>> accessLevels) {
             $.accessLevels = accessLevels;
             return this;
         }
 
+        /**
+         * @param accessLevels A list of AccessLevel resource names that allow resources within
+         * the ServicePerimeter to be accessed from the internet.
+         * AccessLevels listed must be in the same policy as this
+         * ServicePerimeter. Referencing a nonexistent AccessLevel is a
+         * syntax error. If no AccessLevel names are listed, resources within
+         * the perimeter can only be accessed via GCP calls with request
+         * origins within the perimeter. For Service Perimeter Bridge, must
+         * be empty.
+         * Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLevels(List<String> accessLevels) {
             return accessLevels(Output.of(accessLevels));
         }
 
+        /**
+         * @param accessLevels A list of AccessLevel resource names that allow resources within
+         * the ServicePerimeter to be accessed from the internet.
+         * AccessLevels listed must be in the same policy as this
+         * ServicePerimeter. Referencing a nonexistent AccessLevel is a
+         * syntax error. If no AccessLevel names are listed, resources within
+         * the perimeter can only be accessed via GCP calls with request
+         * origins within the perimeter. For Service Perimeter Bridge, must
+         * be empty.
+         * Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLevels(String... accessLevels) {
             return accessLevels(List.of(accessLevels));
         }
 
+        /**
+         * @param egressPolicies List of EgressPolicies to apply to the perimeter. A perimeter may
+         * have multiple EgressPolicies, each of which is evaluated separately.
+         * Access is granted if any EgressPolicy grants it. Must be empty for
+         * a perimeter bridge.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressPolicies(@Nullable Output<List<ServicePerimetersServicePerimeterSpecEgressPolicyArgs>> egressPolicies) {
             $.egressPolicies = egressPolicies;
             return this;
         }
 
+        /**
+         * @param egressPolicies List of EgressPolicies to apply to the perimeter. A perimeter may
+         * have multiple EgressPolicies, each of which is evaluated separately.
+         * Access is granted if any EgressPolicy grants it. Must be empty for
+         * a perimeter bridge.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressPolicies(List<ServicePerimetersServicePerimeterSpecEgressPolicyArgs> egressPolicies) {
             return egressPolicies(Output.of(egressPolicies));
         }
 
+        /**
+         * @param egressPolicies List of EgressPolicies to apply to the perimeter. A perimeter may
+         * have multiple EgressPolicies, each of which is evaluated separately.
+         * Access is granted if any EgressPolicy grants it. Must be empty for
+         * a perimeter bridge.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressPolicies(ServicePerimetersServicePerimeterSpecEgressPolicyArgs... egressPolicies) {
             return egressPolicies(List.of(egressPolicies));
         }
 
+        /**
+         * @param ingressPolicies List of `IngressPolicies` to apply to the perimeter. A perimeter may
+         * have multiple `IngressPolicies`, each of which is evaluated
+         * separately. Access is granted if any `Ingress Policy` grants it.
+         * Must be empty for a perimeter bridge.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressPolicies(@Nullable Output<List<ServicePerimetersServicePerimeterSpecIngressPolicyArgs>> ingressPolicies) {
             $.ingressPolicies = ingressPolicies;
             return this;
         }
 
+        /**
+         * @param ingressPolicies List of `IngressPolicies` to apply to the perimeter. A perimeter may
+         * have multiple `IngressPolicies`, each of which is evaluated
+         * separately. Access is granted if any `Ingress Policy` grants it.
+         * Must be empty for a perimeter bridge.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressPolicies(List<ServicePerimetersServicePerimeterSpecIngressPolicyArgs> ingressPolicies) {
             return ingressPolicies(Output.of(ingressPolicies));
         }
 
+        /**
+         * @param ingressPolicies List of `IngressPolicies` to apply to the perimeter. A perimeter may
+         * have multiple `IngressPolicies`, each of which is evaluated
+         * separately. Access is granted if any `Ingress Policy` grants it.
+         * Must be empty for a perimeter bridge.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressPolicies(ServicePerimetersServicePerimeterSpecIngressPolicyArgs... ingressPolicies) {
             return ingressPolicies(List.of(ingressPolicies));
         }
 
+        /**
+         * @param resources A list of resources, currently only projects in the form
+         * `projects/&lt;projectnumber&gt;`, that match this to stanza. A request matches
+         * if it contains a resource in this list. If * is specified for resources,
+         * then this `EgressTo` rule will authorize access to all resources outside
+         * the perimeter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(@Nullable Output<List<String>> resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param resources A list of resources, currently only projects in the form
+         * `projects/&lt;projectnumber&gt;`, that match this to stanza. A request matches
+         * if it contains a resource in this list. If * is specified for resources,
+         * then this `EgressTo` rule will authorize access to all resources outside
+         * the perimeter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(List<String> resources) {
             return resources(Output.of(resources));
         }
 
+        /**
+         * @param resources A list of resources, currently only projects in the form
+         * `projects/&lt;projectnumber&gt;`, that match this to stanza. A request matches
+         * if it contains a resource in this list. If * is specified for resources,
+         * then this `EgressTo` rule will authorize access to all resources outside
+         * the perimeter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(String... resources) {
             return resources(List.of(resources));
         }
 
+        /**
+         * @param restrictedServices GCP services that are subject to the Service Perimeter
+         * restrictions. Must contain a list of services. For example, if
+         * `storage.googleapis.com` is specified, access to the storage
+         * buckets inside the perimeter must meet the perimeter&#39;s access
+         * restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictedServices(@Nullable Output<List<String>> restrictedServices) {
             $.restrictedServices = restrictedServices;
             return this;
         }
 
+        /**
+         * @param restrictedServices GCP services that are subject to the Service Perimeter
+         * restrictions. Must contain a list of services. For example, if
+         * `storage.googleapis.com` is specified, access to the storage
+         * buckets inside the perimeter must meet the perimeter&#39;s access
+         * restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictedServices(List<String> restrictedServices) {
             return restrictedServices(Output.of(restrictedServices));
         }
 
+        /**
+         * @param restrictedServices GCP services that are subject to the Service Perimeter
+         * restrictions. Must contain a list of services. For example, if
+         * `storage.googleapis.com` is specified, access to the storage
+         * buckets inside the perimeter must meet the perimeter&#39;s access
+         * restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictedServices(String... restrictedServices) {
             return restrictedServices(List.of(restrictedServices));
         }
 
+        /**
+         * @param vpcAccessibleServices Specifies how APIs are allowed to communicate within the Service
+         * Perimeter.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcAccessibleServices(@Nullable Output<ServicePerimetersServicePerimeterSpecVpcAccessibleServicesArgs> vpcAccessibleServices) {
             $.vpcAccessibleServices = vpcAccessibleServices;
             return this;
         }
 
+        /**
+         * @param vpcAccessibleServices Specifies how APIs are allowed to communicate within the Service
+         * Perimeter.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcAccessibleServices(ServicePerimetersServicePerimeterSpecVpcAccessibleServicesArgs vpcAccessibleServices) {
             return vpcAccessibleServices(Output.of(vpcAccessibleServices));
         }

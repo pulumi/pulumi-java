@@ -26,6 +26,10 @@ public final class OperationErrorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="code")
     private @Nullable Output<String> code;
 
+    /**
+     * @return Identifies the specific error that occurred.
+     * 
+     */
     public Optional<Output<String>> code() {
         return Optional.ofNullable(this.code);
     }
@@ -37,6 +41,10 @@ public final class OperationErrorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return This is always `sql#operationError`.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -48,6 +56,10 @@ public final class OperationErrorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return Additional information about the error encountered.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -78,29 +90,65 @@ public final class OperationErrorArgs extends com.pulumi.resources.ResourceArgs 
             $ = new OperationErrorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Identifies the specific error that occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable Output<String> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code Identifies the specific error that occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             return code(Output.of(code));
         }
 
+        /**
+         * @param kind This is always `sql#operationError`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#operationError`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param message Additional information about the error encountered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message Additional information about the error encountered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }

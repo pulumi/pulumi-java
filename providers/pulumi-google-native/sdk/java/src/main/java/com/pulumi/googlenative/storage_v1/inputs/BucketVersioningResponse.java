@@ -23,6 +23,10 @@ public final class BucketVersioningResponse extends com.pulumi.resources.InvokeA
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return While set to true, versioning is fully enabled for this bucket.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class BucketVersioningResponse extends com.pulumi.resources.InvokeA
             $ = new BucketVersioningResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled While set to true, versioning is fully enabled for this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

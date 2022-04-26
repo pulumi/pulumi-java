@@ -16,42 +16,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BucketReplicationConfigurationRule {
     /**
-     * Whether delete markers are replicated. The only valid value is `Enabled`. To disable, omit this argument. This argument is only valid with V2 replication configurations (i.e., when `filter` is used).
+     * @return Whether delete markers are replicated. The only valid value is `Enabled`. To disable, omit this argument. This argument is only valid with V2 replication configurations (i.e., when `filter` is used).
      * 
      */
     private final @Nullable String deleteMarkerReplicationStatus;
     /**
-     * Specifies the destination for the rule (documented below).
+     * @return Specifies the destination for the rule (documented below).
      * 
      */
     private final BucketReplicationConfigurationRuleDestination destination;
     /**
-     * Filter that identifies subset of objects to which the replication rule applies (documented below).
+     * @return Filter that identifies subset of objects to which the replication rule applies (documented below).
      * 
      */
     private final @Nullable BucketReplicationConfigurationRuleFilter filter;
     /**
-     * Unique identifier for the rule. Must be less than or equal to 255 characters in length.
+     * @return Unique identifier for the rule. Must be less than or equal to 255 characters in length.
      * 
      */
     private final @Nullable String id;
     /**
-     * Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
+     * @return Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
      * 
      */
     private final @Nullable String prefix;
     /**
-     * The priority associated with the rule. Priority should only be set if `filter` is configured. If not provided, defaults to `0`. Priority must be unique between multiple rules.
+     * @return The priority associated with the rule. Priority should only be set if `filter` is configured. If not provided, defaults to `0`. Priority must be unique between multiple rules.
      * 
      */
     private final @Nullable Integer priority;
     /**
-     * Specifies special object selection criteria (documented below).
+     * @return Specifies special object selection criteria (documented below).
      * 
      */
     private final @Nullable BucketReplicationConfigurationRuleSourceSelectionCriteria sourceSelectionCriteria;
     /**
-     * The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if status is not Enabled.
+     * @return The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if status is not Enabled.
      * 
      */
     private final String status;
@@ -77,58 +77,58 @@ public final class BucketReplicationConfigurationRule {
     }
 
     /**
-     * Whether delete markers are replicated. The only valid value is `Enabled`. To disable, omit this argument. This argument is only valid with V2 replication configurations (i.e., when `filter` is used).
+     * @return Whether delete markers are replicated. The only valid value is `Enabled`. To disable, omit this argument. This argument is only valid with V2 replication configurations (i.e., when `filter` is used).
      * 
-    */
+     */
     public Optional<String> deleteMarkerReplicationStatus() {
         return Optional.ofNullable(this.deleteMarkerReplicationStatus);
     }
     /**
-     * Specifies the destination for the rule (documented below).
+     * @return Specifies the destination for the rule (documented below).
      * 
-    */
+     */
     public BucketReplicationConfigurationRuleDestination destination() {
         return this.destination;
     }
     /**
-     * Filter that identifies subset of objects to which the replication rule applies (documented below).
+     * @return Filter that identifies subset of objects to which the replication rule applies (documented below).
      * 
-    */
+     */
     public Optional<BucketReplicationConfigurationRuleFilter> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * Unique identifier for the rule. Must be less than or equal to 255 characters in length.
+     * @return Unique identifier for the rule. Must be less than or equal to 255 characters in length.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
+     * @return Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
-     * The priority associated with the rule. Priority should only be set if `filter` is configured. If not provided, defaults to `0`. Priority must be unique between multiple rules.
+     * @return The priority associated with the rule. Priority should only be set if `filter` is configured. If not provided, defaults to `0`. Priority must be unique between multiple rules.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * Specifies special object selection criteria (documented below).
+     * @return Specifies special object selection criteria (documented below).
      * 
-    */
+     */
     public Optional<BucketReplicationConfigurationRuleSourceSelectionCriteria> sourceSelectionCriteria() {
         return Optional.ofNullable(this.sourceSelectionCriteria);
     }
     /**
-     * The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if status is not Enabled.
+     * @return The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if status is not Enabled.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

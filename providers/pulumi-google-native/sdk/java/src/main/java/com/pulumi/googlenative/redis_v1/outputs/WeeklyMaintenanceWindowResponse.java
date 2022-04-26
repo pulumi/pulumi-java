@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class WeeklyMaintenanceWindowResponse {
     /**
-     * The day of week that maintenance updates occur.
+     * @return The day of week that maintenance updates occur.
      * 
      */
     private final String day;
     /**
-     * Duration of the maintenance window. The current window is fixed at 1 hour.
+     * @return Duration of the maintenance window. The current window is fixed at 1 hour.
      * 
      */
     private final String duration;
     /**
-     * Start time of the window in UTC time.
+     * @return Start time of the window in UTC time.
      * 
      */
     private final TimeOfDayResponse startTime;
@@ -37,23 +37,23 @@ public final class WeeklyMaintenanceWindowResponse {
     }
 
     /**
-     * The day of week that maintenance updates occur.
+     * @return The day of week that maintenance updates occur.
      * 
-    */
+     */
     public String day() {
         return this.day;
     }
     /**
-     * Duration of the maintenance window. The current window is fixed at 1 hour.
+     * @return Duration of the maintenance window. The current window is fixed at 1 hour.
      * 
-    */
+     */
     public String duration() {
         return this.duration;
     }
     /**
-     * Start time of the window in UTC time.
+     * @return Start time of the window in UTC time.
      * 
-    */
+     */
     public TimeOfDayResponse startTime() {
         return this.startTime;
     }

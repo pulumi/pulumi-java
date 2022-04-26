@@ -24,6 +24,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
     private @Nullable Output<Map<String,String>> annotations;
 
+    /**
+     * @return User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+     * 
+     */
     public Optional<Output<Map<String,String>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -35,6 +39,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -53,6 +61,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privatePoolV1Config")
     private @Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config;
 
+    /**
+     * @return Legacy Private Pool configuration.
+     * 
+     */
     public Optional<Output<PrivatePoolV1ConfigArgs>> privatePoolV1Config() {
         return Optional.ofNullable(this.privatePoolV1Config);
     }
@@ -108,20 +120,44 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkerPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Map<String,String> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param displayName A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -135,11 +171,23 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param privatePoolV1Config Legacy Private Pool configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privatePoolV1Config(@Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config) {
             $.privatePoolV1Config = privatePoolV1Config;
             return this;
         }
 
+        /**
+         * @param privatePoolV1Config Legacy Private Pool configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privatePoolV1Config(PrivatePoolV1ConfigArgs privatePoolV1Config) {
             return privatePoolV1Config(Output.of(privatePoolV1Config));
         }

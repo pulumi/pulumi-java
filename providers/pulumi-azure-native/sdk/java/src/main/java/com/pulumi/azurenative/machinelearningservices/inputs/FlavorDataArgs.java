@@ -23,6 +23,10 @@ public final class FlavorDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="data")
     private @Nullable Output<Map<String,String>> data;
 
+    /**
+     * @return Model flavor-specific data.
+     * 
+     */
     public Optional<Output<Map<String,String>>> data() {
         return Optional.ofNullable(this.data);
     }
@@ -51,11 +55,23 @@ public final class FlavorDataArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FlavorDataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param data Model flavor-specific data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(@Nullable Output<Map<String,String>> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data Model flavor-specific data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(Map<String,String> data) {
             return data(Output.of(data));
         }

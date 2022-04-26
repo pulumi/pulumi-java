@@ -22,6 +22,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="identityClientId")
     private @Nullable Output<String> identityClientId;
 
+    /**
+     * @return For future use - The client id of the identity which will be used to access key vault.
+     * 
+     */
     public Optional<Output<String>> identityClientId() {
         return Optional.ofNullable(this.identityClientId);
     }
@@ -33,6 +37,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyIdentifier", required=true)
     private Output<String> keyIdentifier;
 
+    /**
+     * @return Key vault uri to access the encryption key.
+     * 
+     */
     public Output<String> keyIdentifier() {
         return this.keyIdentifier;
     }
@@ -44,6 +52,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyVaultArmId", required=true)
     private Output<String> keyVaultArmId;
 
+    /**
+     * @return The ArmId of the keyVault where the customer owned encryption key is present.
+     * 
+     */
     public Output<String> keyVaultArmId() {
         return this.keyVaultArmId;
     }
@@ -74,29 +86,65 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new KeyVaultPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityClientId For future use - The client id of the identity which will be used to access key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityClientId(@Nullable Output<String> identityClientId) {
             $.identityClientId = identityClientId;
             return this;
         }
 
+        /**
+         * @param identityClientId For future use - The client id of the identity which will be used to access key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityClientId(String identityClientId) {
             return identityClientId(Output.of(identityClientId));
         }
 
+        /**
+         * @param keyIdentifier Key vault uri to access the encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyIdentifier(Output<String> keyIdentifier) {
             $.keyIdentifier = keyIdentifier;
             return this;
         }
 
+        /**
+         * @param keyIdentifier Key vault uri to access the encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyIdentifier(String keyIdentifier) {
             return keyIdentifier(Output.of(keyIdentifier));
         }
 
+        /**
+         * @param keyVaultArmId The ArmId of the keyVault where the customer owned encryption key is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultArmId(Output<String> keyVaultArmId) {
             $.keyVaultArmId = keyVaultArmId;
             return this;
         }
 
+        /**
+         * @param keyVaultArmId The ArmId of the keyVault where the customer owned encryption key is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultArmId(String keyVaultArmId) {
             return keyVaultArmId(Output.of(keyVaultArmId));
         }

@@ -21,6 +21,10 @@ public final class CloudServiceConfigurationResponse extends com.pulumi.resource
     @Import(name="osFamily", required=true)
     private String osFamily;
 
+    /**
+     * @return Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. 6 - OS Family 6, equivalent to Windows Server 2019. For more information, see Azure Guest OS Releases (https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases).
+     * 
+     */
     public String osFamily() {
         return this.osFamily;
     }
@@ -32,6 +36,10 @@ public final class CloudServiceConfigurationResponse extends com.pulumi.resource
     @Import(name="osVersion")
     private @Nullable String osVersion;
 
+    /**
+     * @return The default value is * which specifies the latest operating system version for the specified OS family.
+     * 
+     */
     public Optional<String> osVersion() {
         return Optional.ofNullable(this.osVersion);
     }
@@ -61,11 +69,23 @@ public final class CloudServiceConfigurationResponse extends com.pulumi.resource
             $ = new CloudServiceConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param osFamily Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. 6 - OS Family 6, equivalent to Windows Server 2019. For more information, see Azure Guest OS Releases (https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases).
+         * 
+         * @return builder
+         * 
+         */
         public Builder osFamily(String osFamily) {
             $.osFamily = osFamily;
             return this;
         }
 
+        /**
+         * @param osVersion The default value is * which specifies the latest operating system version for the specified OS family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osVersion(@Nullable String osVersion) {
             $.osVersion = osVersion;
             return this;

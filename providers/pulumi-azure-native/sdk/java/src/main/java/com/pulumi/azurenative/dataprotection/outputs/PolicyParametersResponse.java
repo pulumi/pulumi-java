@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PolicyParametersResponse {
     /**
-     * Gets or sets the DataStore Parameters
+     * @return Gets or sets the DataStore Parameters
      * 
      */
     private final @Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList;
@@ -23,9 +23,9 @@ public final class PolicyParametersResponse {
     }
 
     /**
-     * Gets or sets the DataStore Parameters
+     * @return Gets or sets the DataStore Parameters
      * 
-    */
+     */
     public List<AzureOperationalStoreParametersResponse> dataStoreParametersList() {
         return this.dataStoreParametersList == null ? List.of() : this.dataStoreParametersList;
     }

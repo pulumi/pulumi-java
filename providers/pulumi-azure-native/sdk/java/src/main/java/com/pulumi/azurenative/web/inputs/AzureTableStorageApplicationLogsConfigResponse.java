@@ -25,6 +25,10 @@ public final class AzureTableStorageApplicationLogsConfigResponse extends com.pu
     @Import(name="level")
     private @Nullable String level;
 
+    /**
+     * @return Log level.
+     * 
+     */
     public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
@@ -36,6 +40,10 @@ public final class AzureTableStorageApplicationLogsConfigResponse extends com.pu
     @Import(name="sasUrl", required=true)
     private String sasUrl;
 
+    /**
+     * @return SAS URL to an Azure table with add/query/delete permissions.
+     * 
+     */
     public String sasUrl() {
         return this.sasUrl;
     }
@@ -65,11 +73,23 @@ public final class AzureTableStorageApplicationLogsConfigResponse extends com.pu
             $ = new AzureTableStorageApplicationLogsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param level Log level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable String level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param sasUrl SAS URL to an Azure table with add/query/delete permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUrl(String sasUrl) {
             $.sasUrl = sasUrl;
             return this;

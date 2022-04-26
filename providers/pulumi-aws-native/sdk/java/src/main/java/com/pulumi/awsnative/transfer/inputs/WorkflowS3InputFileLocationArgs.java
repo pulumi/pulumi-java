@@ -26,6 +26,10 @@ public final class WorkflowS3InputFileLocationArgs extends com.pulumi.resources.
     @Import(name="bucket")
     private @Nullable Output<String> bucket;
 
+    /**
+     * @return Specifies the S3 bucket that contains the file being copied.
+     * 
+     */
     public Optional<Output<String>> bucket() {
         return Optional.ofNullable(this.bucket);
     }
@@ -37,6 +41,10 @@ public final class WorkflowS3InputFileLocationArgs extends com.pulumi.resources.
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return The name assigned to the file when it was created in S3. You use the object key to retrieve the object.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -66,20 +74,44 @@ public final class WorkflowS3InputFileLocationArgs extends com.pulumi.resources.
             $ = new WorkflowS3InputFileLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Specifies the S3 bucket that contains the file being copied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(@Nullable Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket Specifies the S3 bucket that contains the file being copied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param key The name assigned to the file when it was created in S3. You use the object key to retrieve the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The name assigned to the file when it was created in S3. You use the object key to retrieve the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }

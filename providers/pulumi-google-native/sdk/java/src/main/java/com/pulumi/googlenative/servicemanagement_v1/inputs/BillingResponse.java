@@ -24,6 +24,10 @@ public final class BillingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="consumerDestinations", required=true)
     private List<BillingDestinationResponse> consumerDestinations;
 
+    /**
+     * @return Billing configurations for sending metrics to the consumer project. There can be multiple consumer destinations per service, each one must have a different monitored resource type. A metric can be used in at most one consumer destination.
+     * 
+     */
     public List<BillingDestinationResponse> consumerDestinations() {
         return this.consumerDestinations;
     }
@@ -52,11 +56,23 @@ public final class BillingResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BillingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumerDestinations Billing configurations for sending metrics to the consumer project. There can be multiple consumer destinations per service, each one must have a different monitored resource type. A metric can be used in at most one consumer destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerDestinations(List<BillingDestinationResponse> consumerDestinations) {
             $.consumerDestinations = consumerDestinations;
             return this;
         }
 
+        /**
+         * @param consumerDestinations Billing configurations for sending metrics to the consumer project. There can be multiple consumer destinations per service, each one must have a different monitored resource type. A metric can be used in at most one consumer destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerDestinations(BillingDestinationResponse... consumerDestinations) {
             return consumerDestinations(List.of(consumerDestinations));
         }

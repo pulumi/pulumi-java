@@ -14,57 +14,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEnvironmentResult {
     /**
-     * The display name of the Azure Resource Manager template that produced the environment.
+     * @return The display name of the Azure Resource Manager template that produced the environment.
      * 
      */
     private final @Nullable String armTemplateDisplayName;
     /**
-     * The creator of the environment.
+     * @return The creator of the environment.
      * 
      */
     private final String createdByUser;
     /**
-     * The deployment properties of the environment.
+     * @return The deployment properties of the environment.
      * 
      */
     private final @Nullable EnvironmentDeploymentPropertiesResponse deploymentProperties;
     /**
-     * The identifier of the resource.
+     * @return The identifier of the resource.
      * 
      */
     private final String id;
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * The provisioning status of the resource.
+     * @return The provisioning status of the resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The identifier of the resource group containing the environment&#39;s resources.
+     * @return The identifier of the resource group containing the environment&#39;s resources.
      * 
      */
     private final String resourceGroupId;
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
     /**
-     * The unique immutable identifier of a resource (Guid).
+     * @return The unique immutable identifier of a resource (Guid).
      * 
      */
     private final String uniqueIdentifier;
@@ -96,79 +96,79 @@ public final class GetEnvironmentResult {
     }
 
     /**
-     * The display name of the Azure Resource Manager template that produced the environment.
+     * @return The display name of the Azure Resource Manager template that produced the environment.
      * 
-    */
+     */
     public Optional<String> armTemplateDisplayName() {
         return Optional.ofNullable(this.armTemplateDisplayName);
     }
     /**
-     * The creator of the environment.
+     * @return The creator of the environment.
      * 
-    */
+     */
     public String createdByUser() {
         return this.createdByUser;
     }
     /**
-     * The deployment properties of the environment.
+     * @return The deployment properties of the environment.
      * 
-    */
+     */
     public Optional<EnvironmentDeploymentPropertiesResponse> deploymentProperties() {
         return Optional.ofNullable(this.deploymentProperties);
     }
     /**
-     * The identifier of the resource.
+     * @return The identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning status of the resource.
+     * @return The provisioning status of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The identifier of the resource group containing the environment&#39;s resources.
+     * @return The identifier of the resource group containing the environment&#39;s resources.
      * 
-    */
+     */
     public String resourceGroupId() {
         return this.resourceGroupId;
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The unique immutable identifier of a resource (Guid).
+     * @return The unique immutable identifier of a resource (Guid).
      * 
-    */
+     */
     public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }

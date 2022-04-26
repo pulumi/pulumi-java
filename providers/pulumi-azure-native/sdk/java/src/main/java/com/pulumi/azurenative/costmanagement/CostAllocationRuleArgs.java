@@ -23,6 +23,10 @@ public final class CostAllocationRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="billingAccountId", required=true)
     private Output<String> billingAccountId;
 
+    /**
+     * @return BillingAccount ID
+     * 
+     */
     public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
@@ -34,6 +38,10 @@ public final class CostAllocationRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="properties")
     private @Nullable Output<CostAllocationRulePropertiesArgs> properties;
 
+    /**
+     * @return Cost allocation rule properties
+     * 
+     */
     public Optional<Output<CostAllocationRulePropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -45,6 +53,10 @@ public final class CostAllocationRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="ruleName")
     private @Nullable Output<String> ruleName;
 
+    /**
+     * @return Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than &#39;_&#39; and &#39;-&#39;. The max length is 260 characters.
+     * 
+     */
     public Optional<Output<String>> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
@@ -75,29 +87,65 @@ public final class CostAllocationRuleArgs extends com.pulumi.resources.ResourceA
             $ = new CostAllocationRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingAccountId BillingAccount ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountId(Output<String> billingAccountId) {
             $.billingAccountId = billingAccountId;
             return this;
         }
 
+        /**
+         * @param billingAccountId BillingAccount ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountId(String billingAccountId) {
             return billingAccountId(Output.of(billingAccountId));
         }
 
+        /**
+         * @param properties Cost allocation rule properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<CostAllocationRulePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Cost allocation rule properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(CostAllocationRulePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param ruleName Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than &#39;_&#39; and &#39;-&#39;. The max length is 260 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(@Nullable Output<String> ruleName) {
             $.ruleName = ruleName;
             return this;
         }
 
+        /**
+         * @param ruleName Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than &#39;_&#39; and &#39;-&#39;. The max length is 260 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             return ruleName(Output.of(ruleName));
         }

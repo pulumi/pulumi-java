@@ -35,6 +35,12 @@ public final class GetInstanceTemplateNetworkInterfaceIpv6AccessConfig extends c
     @Import(name="networkTier", required=true)
     private String networkTier;
 
+    /**
+     * @return The [networking tier][network-tier] used for configuring
+     * this instance template. This field can take the following values: PREMIUM or
+     * STANDARD. If this field is not specified, it is assumed to be PREMIUM.
+     * 
+     */
     public String networkTier() {
         return this.networkTier;
     }
@@ -83,6 +89,14 @@ public final class GetInstanceTemplateNetworkInterfaceIpv6AccessConfig extends c
             return this;
         }
 
+        /**
+         * @param networkTier The [networking tier][network-tier] used for configuring
+         * this instance template. This field can take the following values: PREMIUM or
+         * STANDARD. If this field is not specified, it is assumed to be PREMIUM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTier(String networkTier) {
             $.networkTier = networkTier;
             return this;

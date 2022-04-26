@@ -26,6 +26,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="arcSettingName", required=true)
     private Output<String> arcSettingName;
 
+    /**
+     * @return The name of the proxy resource holding details of HCI ArcSetting information.
+     * 
+     */
     public Output<String> arcSettingName() {
         return this.arcSettingName;
     }
@@ -37,6 +41,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoUpgradeMinorVersion")
     private @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
+    /**
+     * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * 
+     */
     public Optional<Output<Boolean>> autoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
@@ -48,6 +56,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return The name of the cluster.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -59,6 +71,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
     private @Nullable Output<String> createdAt;
 
+    /**
+     * @return The timestamp of resource creation (UTC).
+     * 
+     */
     public Optional<Output<String>> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -70,6 +86,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
     private @Nullable Output<String> createdBy;
 
+    /**
+     * @return The identity that created the resource.
+     * 
+     */
     public Optional<Output<String>> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
@@ -81,6 +101,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdByType")
     private @Nullable Output<Either<String,CreatedByType>> createdByType;
 
+    /**
+     * @return The type of identity that created the resource.
+     * 
+     */
     public Optional<Output<Either<String,CreatedByType>>> createdByType() {
         return Optional.ofNullable(this.createdByType);
     }
@@ -92,6 +116,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extensionName")
     private @Nullable Output<String> extensionName;
 
+    /**
+     * @return The name of the machine extension.
+     * 
+     */
     public Optional<Output<String>> extensionName() {
         return Optional.ofNullable(this.extensionName);
     }
@@ -103,6 +131,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceUpdateTag")
     private @Nullable Output<String> forceUpdateTag;
 
+    /**
+     * @return How the extension handler should be forced to update even if the extension configuration has not changed.
+     * 
+     */
     public Optional<Output<String>> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
@@ -114,6 +146,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedAt")
     private @Nullable Output<String> lastModifiedAt;
 
+    /**
+     * @return The timestamp of resource last modification (UTC)
+     * 
+     */
     public Optional<Output<String>> lastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
@@ -125,6 +161,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedBy")
     private @Nullable Output<String> lastModifiedBy;
 
+    /**
+     * @return The identity that last modified the resource.
+     * 
+     */
     public Optional<Output<String>> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
@@ -136,6 +176,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedByType")
     private @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
+    /**
+     * @return The type of identity that last modified the resource.
+     * 
+     */
     public Optional<Output<Either<String,CreatedByType>>> lastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
@@ -147,6 +191,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protectedSettings")
     private @Nullable Output<Object> protectedSettings;
 
+    /**
+     * @return Protected settings (may contain secrets).
+     * 
+     */
     public Optional<Output<Object>> protectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
@@ -158,6 +206,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publisher")
     private @Nullable Output<String> publisher;
 
+    /**
+     * @return The name of the extension handler publisher.
+     * 
+     */
     public Optional<Output<String>> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -169,6 +221,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -180,6 +236,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="settings")
     private @Nullable Output<Object> settings;
 
+    /**
+     * @return Json formatted public settings for the extension.
+     * 
+     */
     public Optional<Output<Object>> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -191,6 +251,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -202,6 +266,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="typeHandlerVersion")
     private @Nullable Output<String> typeHandlerVersion;
 
+    /**
+     * @return Specifies the version of the script handler.
+     * 
+     */
     public Optional<Output<String>> typeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }
@@ -246,171 +314,399 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ExtensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arcSettingName The name of the proxy resource holding details of HCI ArcSetting information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arcSettingName(Output<String> arcSettingName) {
             $.arcSettingName = arcSettingName;
             return this;
         }
 
+        /**
+         * @param arcSettingName The name of the proxy resource holding details of HCI ArcSetting information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arcSettingName(String arcSettingName) {
             return arcSettingName(Output.of(arcSettingName));
         }
 
+        /**
+         * @param autoUpgradeMinorVersion Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgradeMinorVersion(@Nullable Output<Boolean> autoUpgradeMinorVersion) {
             $.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
+        /**
+         * @param autoUpgradeMinorVersion Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgradeMinorVersion(Boolean autoUpgradeMinorVersion) {
             return autoUpgradeMinorVersion(Output.of(autoUpgradeMinorVersion));
         }
 
+        /**
+         * @param clusterName The name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param createdAt The timestamp of resource creation (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(@Nullable Output<String> createdAt) {
             $.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * @param createdAt The timestamp of resource creation (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(String createdAt) {
             return createdAt(Output.of(createdAt));
         }
 
+        /**
+         * @param createdBy The identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(@Nullable Output<String> createdBy) {
             $.createdBy = createdBy;
             return this;
         }
 
+        /**
+         * @param createdBy The identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(String createdBy) {
             return createdBy(Output.of(createdBy));
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
             $.createdByType = createdByType;
             return this;
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(Either<String,CreatedByType> createdByType) {
             return createdByType(Output.of(createdByType));
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(String createdByType) {
             return createdByType(Either.ofLeft(createdByType));
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(CreatedByType createdByType) {
             return createdByType(Either.ofRight(createdByType));
         }
 
+        /**
+         * @param extensionName The name of the machine extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionName(@Nullable Output<String> extensionName) {
             $.extensionName = extensionName;
             return this;
         }
 
+        /**
+         * @param extensionName The name of the machine extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionName(String extensionName) {
             return extensionName(Output.of(extensionName));
         }
 
+        /**
+         * @param forceUpdateTag How the extension handler should be forced to update even if the extension configuration has not changed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             $.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
+        /**
+         * @param forceUpdateTag How the extension handler should be forced to update even if the extension configuration has not changed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdateTag(String forceUpdateTag) {
             return forceUpdateTag(Output.of(forceUpdateTag));
         }
 
+        /**
+         * @param lastModifiedAt The timestamp of resource last modification (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             $.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
+        /**
+         * @param lastModifiedAt The timestamp of resource last modification (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedAt(String lastModifiedAt) {
             return lastModifiedAt(Output.of(lastModifiedAt));
         }
 
+        /**
+         * @param lastModifiedBy The identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
             $.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
+        /**
+         * @param lastModifiedBy The identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedBy(String lastModifiedBy) {
             return lastModifiedBy(Output.of(lastModifiedBy));
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
             $.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(Either<String,CreatedByType> lastModifiedByType) {
             return lastModifiedByType(Output.of(lastModifiedByType));
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(String lastModifiedByType) {
             return lastModifiedByType(Either.ofLeft(lastModifiedByType));
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(CreatedByType lastModifiedByType) {
             return lastModifiedByType(Either.ofRight(lastModifiedByType));
         }
 
+        /**
+         * @param protectedSettings Protected settings (may contain secrets).
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
             $.protectedSettings = protectedSettings;
             return this;
         }
 
+        /**
+         * @param protectedSettings Protected settings (may contain secrets).
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedSettings(Object protectedSettings) {
             return protectedSettings(Output.of(protectedSettings));
         }
 
+        /**
+         * @param publisher The name of the extension handler publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable Output<String> publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param publisher The name of the extension handler publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             return publisher(Output.of(publisher));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param settings Json formatted public settings for the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable Output<Object> settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param settings Json formatted public settings for the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(Object settings) {
             return settings(Output.of(settings));
         }
 
+        /**
+         * @param type Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param typeHandlerVersion Specifies the version of the script handler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
             $.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
 
+        /**
+         * @param typeHandlerVersion Specifies the version of the script handler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeHandlerVersion(String typeHandlerVersion) {
             return typeHandlerVersion(Output.of(typeHandlerVersion));
         }

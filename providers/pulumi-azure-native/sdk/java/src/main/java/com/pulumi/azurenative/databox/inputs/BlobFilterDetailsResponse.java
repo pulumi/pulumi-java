@@ -26,6 +26,10 @@ public final class BlobFilterDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="blobPathList")
     private @Nullable List<String> blobPathList;
 
+    /**
+     * @return List of full path of the blobs to be transferred.
+     * 
+     */
     public Optional<List<String>> blobPathList() {
         return Optional.ofNullable(this.blobPathList);
     }
@@ -37,6 +41,10 @@ public final class BlobFilterDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="blobPrefixList")
     private @Nullable List<String> blobPrefixList;
 
+    /**
+     * @return Prefix list of the Azure blobs to be transferred.
+     * 
+     */
     public Optional<List<String>> blobPrefixList() {
         return Optional.ofNullable(this.blobPrefixList);
     }
@@ -48,6 +56,10 @@ public final class BlobFilterDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="containerList")
     private @Nullable List<String> containerList;
 
+    /**
+     * @return List of blob containers to be transferred.
+     * 
+     */
     public Optional<List<String>> containerList() {
         return Optional.ofNullable(this.containerList);
     }
@@ -78,29 +90,65 @@ public final class BlobFilterDetailsResponse extends com.pulumi.resources.Invoke
             $ = new BlobFilterDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobPathList List of full path of the blobs to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPathList(@Nullable List<String> blobPathList) {
             $.blobPathList = blobPathList;
             return this;
         }
 
+        /**
+         * @param blobPathList List of full path of the blobs to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPathList(String... blobPathList) {
             return blobPathList(List.of(blobPathList));
         }
 
+        /**
+         * @param blobPrefixList Prefix list of the Azure blobs to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPrefixList(@Nullable List<String> blobPrefixList) {
             $.blobPrefixList = blobPrefixList;
             return this;
         }
 
+        /**
+         * @param blobPrefixList Prefix list of the Azure blobs to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPrefixList(String... blobPrefixList) {
             return blobPrefixList(List.of(blobPrefixList));
         }
 
+        /**
+         * @param containerList List of blob containers to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerList(@Nullable List<String> containerList) {
             $.containerList = containerList;
             return this;
         }
 
+        /**
+         * @param containerList List of blob containers to be transferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerList(String... containerList) {
             return containerList(List.of(containerList));
         }

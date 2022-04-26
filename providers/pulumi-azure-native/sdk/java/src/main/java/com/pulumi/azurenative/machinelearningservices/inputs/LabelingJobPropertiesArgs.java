@@ -32,6 +32,10 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="datasetConfiguration", required=true)
     private Output<LabelingDatasetConfigurationArgs> datasetConfiguration;
 
+    /**
+     * @return Dataset configuration for the job.
+     * 
+     */
     public Output<LabelingDatasetConfigurationArgs> datasetConfiguration() {
         return this.datasetConfiguration;
     }
@@ -43,6 +47,10 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="jobInstructions", required=true)
     private Output<LabelingJobInstructionsArgs> jobInstructions;
 
+    /**
+     * @return Instructions for the job.
+     * 
+     */
     public Output<LabelingJobInstructionsArgs> jobInstructions() {
         return this.jobInstructions;
     }
@@ -54,6 +62,10 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="labelCategories", required=true)
     private Output<Map<String,LabelCategoryArgs>> labelCategories;
 
+    /**
+     * @return Label categories of the job.
+     * 
+     */
     public Output<Map<String,LabelCategoryArgs>> labelCategories() {
         return this.labelCategories;
     }
@@ -65,6 +77,10 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="labelingJobMediaProperties", required=true)
     private Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties;
 
+    /**
+     * @return Media specific properties in a labeling job.
+     * 
+     */
     public Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties() {
         return this.labelingJobMediaProperties;
     }
@@ -76,6 +92,10 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="mlAssistConfiguration")
     private @Nullable Output<MLAssistConfigurationArgs> mlAssistConfiguration;
 
+    /**
+     * @return Machine learning assisted configuration for the job.
+     * 
+     */
     public Optional<Output<MLAssistConfigurationArgs>> mlAssistConfiguration() {
         return Optional.ofNullable(this.mlAssistConfiguration);
     }
@@ -87,6 +107,10 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return The job property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -98,6 +122,10 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The job tag dictionary. Tags can be added, removed, and updated.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -132,65 +160,149 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
             $ = new LabelingJobPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetConfiguration Dataset configuration for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetConfiguration(Output<LabelingDatasetConfigurationArgs> datasetConfiguration) {
             $.datasetConfiguration = datasetConfiguration;
             return this;
         }
 
+        /**
+         * @param datasetConfiguration Dataset configuration for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetConfiguration(LabelingDatasetConfigurationArgs datasetConfiguration) {
             return datasetConfiguration(Output.of(datasetConfiguration));
         }
 
+        /**
+         * @param jobInstructions Instructions for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobInstructions(Output<LabelingJobInstructionsArgs> jobInstructions) {
             $.jobInstructions = jobInstructions;
             return this;
         }
 
+        /**
+         * @param jobInstructions Instructions for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobInstructions(LabelingJobInstructionsArgs jobInstructions) {
             return jobInstructions(Output.of(jobInstructions));
         }
 
+        /**
+         * @param labelCategories Label categories of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelCategories(Output<Map<String,LabelCategoryArgs>> labelCategories) {
             $.labelCategories = labelCategories;
             return this;
         }
 
+        /**
+         * @param labelCategories Label categories of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelCategories(Map<String,LabelCategoryArgs> labelCategories) {
             return labelCategories(Output.of(labelCategories));
         }
 
+        /**
+         * @param labelingJobMediaProperties Media specific properties in a labeling job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelingJobMediaProperties(Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties) {
             $.labelingJobMediaProperties = labelingJobMediaProperties;
             return this;
         }
 
+        /**
+         * @param labelingJobMediaProperties Media specific properties in a labeling job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelingJobMediaProperties(LabelingJobImagePropertiesArgs labelingJobMediaProperties) {
             return labelingJobMediaProperties(Output.of(labelingJobMediaProperties));
         }
 
+        /**
+         * @param mlAssistConfiguration Machine learning assisted configuration for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mlAssistConfiguration(@Nullable Output<MLAssistConfigurationArgs> mlAssistConfiguration) {
             $.mlAssistConfiguration = mlAssistConfiguration;
             return this;
         }
 
+        /**
+         * @param mlAssistConfiguration Machine learning assisted configuration for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mlAssistConfiguration(MLAssistConfigurationArgs mlAssistConfiguration) {
             return mlAssistConfiguration(Output.of(mlAssistConfiguration));
         }
 
+        /**
+         * @param properties The job property dictionary. Properties can be added, but not removed or altered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The job property dictionary. Properties can be added, but not removed or altered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param tags The job tag dictionary. Tags can be added, removed, and updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The job tag dictionary. Tags can be added, removed, and updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

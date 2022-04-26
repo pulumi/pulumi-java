@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetIPAMAllocationResult {
     /**
-     * Id of the allocation.
+     * @return Id of the allocation.
      * 
      */
     private final @Nullable String ipamPoolAllocationId;
@@ -23,9 +23,9 @@ public final class GetIPAMAllocationResult {
     }
 
     /**
-     * Id of the allocation.
+     * @return Id of the allocation.
      * 
-    */
+     */
     public Optional<String> ipamPoolAllocationId() {
         return Optional.ofNullable(this.ipamPoolAllocationId);
     }

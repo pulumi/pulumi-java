@@ -19,6 +19,10 @@ public final class GetEventSubscriptionArgs extends com.pulumi.resources.InvokeA
     @Import(name="subscriptionName", required=true)
     private String subscriptionName;
 
+    /**
+     * @return The name of the Amazon Redshift event notification subscription
+     * 
+     */
     public String subscriptionName() {
         return this.subscriptionName;
     }
@@ -47,6 +51,12 @@ public final class GetEventSubscriptionArgs extends com.pulumi.resources.InvokeA
             $ = new GetEventSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subscriptionName The name of the Amazon Redshift event notification subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionName(String subscriptionName) {
             $.subscriptionName = subscriptionName;
             return this;

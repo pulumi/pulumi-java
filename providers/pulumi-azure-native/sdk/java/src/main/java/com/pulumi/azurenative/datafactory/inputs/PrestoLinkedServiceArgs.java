@@ -36,6 +36,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="allowHostNameCNMismatch")
     private @Nullable Output<Object> allowHostNameCNMismatch;
 
+    /**
+     * @return Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
+     * 
+     */
     public Optional<Output<Object>> allowHostNameCNMismatch() {
         return Optional.ofNullable(this.allowHostNameCNMismatch);
     }
@@ -47,6 +51,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="allowSelfSignedServerCert")
     private @Nullable Output<Object> allowSelfSignedServerCert;
 
+    /**
+     * @return Specifies whether to allow self-signed certificates from the server. The default value is false.
+     * 
+     */
     public Optional<Output<Object>> allowSelfSignedServerCert() {
         return Optional.ofNullable(this.allowSelfSignedServerCert);
     }
@@ -58,6 +66,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -69,6 +81,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="authenticationType", required=true)
     private Output<Either<String,PrestoAuthenticationType>> authenticationType;
 
+    /**
+     * @return The authentication mechanism used to connect to the Presto server.
+     * 
+     */
     public Output<Either<String,PrestoAuthenticationType>> authenticationType() {
         return this.authenticationType;
     }
@@ -80,6 +96,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="catalog", required=true)
     private Output<Object> catalog;
 
+    /**
+     * @return The catalog context for all request against the server.
+     * 
+     */
     public Output<Object> catalog() {
         return this.catalog;
     }
@@ -91,6 +111,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -102,6 +126,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -113,6 +141,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="enableSsl")
     private @Nullable Output<Object> enableSsl;
 
+    /**
+     * @return Specifies whether the connections to the server are encrypted using SSL. The default value is false.
+     * 
+     */
     public Optional<Output<Object>> enableSsl() {
         return Optional.ofNullable(this.enableSsl);
     }
@@ -124,6 +156,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="encryptedCredential")
     private @Nullable Output<Object> encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -135,6 +171,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="host", required=true)
     private Output<Object> host;
 
+    /**
+     * @return The IP address or host name of the Presto server. (i.e. 192.168.222.160)
+     * 
+     */
     public Output<Object> host() {
         return this.host;
     }
@@ -146,6 +186,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -157,6 +201,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="password")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
+    /**
+     * @return The password corresponding to the user name.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -168,6 +216,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="port")
     private @Nullable Output<Object> port;
 
+    /**
+     * @return The TCP port that the Presto server uses to listen for client connections. The default value is 8080.
+     * 
+     */
     public Optional<Output<Object>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -179,6 +231,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="serverVersion", required=true)
     private Output<Object> serverVersion;
 
+    /**
+     * @return The version of the Presto server. (i.e. 0.148-t)
+     * 
+     */
     public Output<Object> serverVersion() {
         return this.serverVersion;
     }
@@ -190,6 +246,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="timeZoneID")
     private @Nullable Output<Object> timeZoneID;
 
+    /**
+     * @return The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone.
+     * 
+     */
     public Optional<Output<Object>> timeZoneID() {
         return Optional.ofNullable(this.timeZoneID);
     }
@@ -201,6 +261,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="trustedCertPath")
     private @Nullable Output<Object> trustedCertPath;
 
+    /**
+     * @return The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+     * 
+     */
     public Optional<Output<Object>> trustedCertPath() {
         return Optional.ofNullable(this.trustedCertPath);
     }
@@ -213,6 +277,11 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;Presto&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -224,6 +293,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="useSystemTrustStore")
     private @Nullable Output<Object> useSystemTrustStore;
 
+    /**
+     * @return Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+     * 
+     */
     public Optional<Output<Object>> useSystemTrustStore() {
         return Optional.ofNullable(this.useSystemTrustStore);
     }
@@ -235,6 +308,10 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="username")
     private @Nullable Output<Object> username;
 
+    /**
+     * @return The user name used to connect to the Presto server.
+     * 
+     */
     public Optional<Output<Object>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -281,193 +358,453 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
             $ = new PrestoLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowHostNameCNMismatch Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowHostNameCNMismatch(@Nullable Output<Object> allowHostNameCNMismatch) {
             $.allowHostNameCNMismatch = allowHostNameCNMismatch;
             return this;
         }
 
+        /**
+         * @param allowHostNameCNMismatch Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowHostNameCNMismatch(Object allowHostNameCNMismatch) {
             return allowHostNameCNMismatch(Output.of(allowHostNameCNMismatch));
         }
 
+        /**
+         * @param allowSelfSignedServerCert Specifies whether to allow self-signed certificates from the server. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSelfSignedServerCert(@Nullable Output<Object> allowSelfSignedServerCert) {
             $.allowSelfSignedServerCert = allowSelfSignedServerCert;
             return this;
         }
 
+        /**
+         * @param allowSelfSignedServerCert Specifies whether to allow self-signed certificates from the server. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSelfSignedServerCert(Object allowSelfSignedServerCert) {
             return allowSelfSignedServerCert(Output.of(allowSelfSignedServerCert));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param authenticationType The authentication mechanism used to connect to the Presto server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Output<Either<String,PrestoAuthenticationType>> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType The authentication mechanism used to connect to the Presto server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Either<String,PrestoAuthenticationType> authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param authenticationType The authentication mechanism used to connect to the Presto server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Either.ofLeft(authenticationType));
         }
 
+        /**
+         * @param authenticationType The authentication mechanism used to connect to the Presto server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(PrestoAuthenticationType authenticationType) {
             return authenticationType(Either.ofRight(authenticationType));
         }
 
+        /**
+         * @param catalog The catalog context for all request against the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalog(Output<Object> catalog) {
             $.catalog = catalog;
             return this;
         }
 
+        /**
+         * @param catalog The catalog context for all request against the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalog(Object catalog) {
             return catalog(Output.of(catalog));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enableSsl Specifies whether the connections to the server are encrypted using SSL. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSsl(@Nullable Output<Object> enableSsl) {
             $.enableSsl = enableSsl;
             return this;
         }
 
+        /**
+         * @param enableSsl Specifies whether the connections to the server are encrypted using SSL. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSsl(Object enableSsl) {
             return enableSsl(Output.of(enableSsl));
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(Object encryptedCredential) {
             return encryptedCredential(Output.of(encryptedCredential));
         }
 
+        /**
+         * @param host The IP address or host name of the Presto server. (i.e. 192.168.222.160)
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(Output<Object> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host The IP address or host name of the Presto server. (i.e. 192.168.222.160)
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(Object host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param password The password corresponding to the user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password corresponding to the user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param password The password corresponding to the user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceArgs password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password The password corresponding to the user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringArgs password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param port The TCP port that the Presto server uses to listen for client connections. The default value is 8080.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Object> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The TCP port that the Presto server uses to listen for client connections. The default value is 8080.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Object port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param serverVersion The version of the Presto server. (i.e. 0.148-t)
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverVersion(Output<Object> serverVersion) {
             $.serverVersion = serverVersion;
             return this;
         }
 
+        /**
+         * @param serverVersion The version of the Presto server. (i.e. 0.148-t)
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverVersion(Object serverVersion) {
             return serverVersion(Output.of(serverVersion));
         }
 
+        /**
+         * @param timeZoneID The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZoneID(@Nullable Output<Object> timeZoneID) {
             $.timeZoneID = timeZoneID;
             return this;
         }
 
+        /**
+         * @param timeZoneID The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZoneID(Object timeZoneID) {
             return timeZoneID(Output.of(timeZoneID));
         }
 
+        /**
+         * @param trustedCertPath The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedCertPath(@Nullable Output<Object> trustedCertPath) {
             $.trustedCertPath = trustedCertPath;
             return this;
         }
 
+        /**
+         * @param trustedCertPath The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedCertPath(Object trustedCertPath) {
             return trustedCertPath(Output.of(trustedCertPath));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;Presto&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;Presto&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param useSystemTrustStore Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useSystemTrustStore(@Nullable Output<Object> useSystemTrustStore) {
             $.useSystemTrustStore = useSystemTrustStore;
             return this;
         }
 
+        /**
+         * @param useSystemTrustStore Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useSystemTrustStore(Object useSystemTrustStore) {
             return useSystemTrustStore(Output.of(useSystemTrustStore));
         }
 
+        /**
+         * @param username The user name used to connect to the Presto server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<Object> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The user name used to connect to the Presto server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Object username) {
             return username(Output.of(username));
         }

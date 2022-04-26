@@ -32,6 +32,10 @@ public final class SignalRNetworkACLsArgs extends com.pulumi.resources.ResourceA
     @Import(name="defaultAction")
     private @Nullable Output<Either<String,ACLAction>> defaultAction;
 
+    /**
+     * @return Default action when no other rule matches
+     * 
+     */
     public Optional<Output<Either<String,ACLAction>>> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
@@ -43,6 +47,10 @@ public final class SignalRNetworkACLsArgs extends com.pulumi.resources.ResourceA
     @Import(name="privateEndpoints")
     private @Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints;
 
+    /**
+     * @return ACLs for requests from private endpoints
+     * 
+     */
     public Optional<Output<List<PrivateEndpointACLArgs>>> privateEndpoints() {
         return Optional.ofNullable(this.privateEndpoints);
     }
@@ -54,6 +62,10 @@ public final class SignalRNetworkACLsArgs extends com.pulumi.resources.ResourceA
     @Import(name="publicNetwork")
     private @Nullable Output<NetworkACLArgs> publicNetwork;
 
+    /**
+     * @return ACL for requests from public network
+     * 
+     */
     public Optional<Output<NetworkACLArgs>> publicNetwork() {
         return Optional.ofNullable(this.publicNetwork);
     }
@@ -84,41 +96,95 @@ public final class SignalRNetworkACLsArgs extends com.pulumi.resources.ResourceA
             $ = new SignalRNetworkACLsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultAction Default action when no other rule matches
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(@Nullable Output<Either<String,ACLAction>> defaultAction) {
             $.defaultAction = defaultAction;
             return this;
         }
 
+        /**
+         * @param defaultAction Default action when no other rule matches
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(Either<String,ACLAction> defaultAction) {
             return defaultAction(Output.of(defaultAction));
         }
 
+        /**
+         * @param defaultAction Default action when no other rule matches
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(String defaultAction) {
             return defaultAction(Either.ofLeft(defaultAction));
         }
 
+        /**
+         * @param defaultAction Default action when no other rule matches
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(ACLAction defaultAction) {
             return defaultAction(Either.ofRight(defaultAction));
         }
 
+        /**
+         * @param privateEndpoints ACLs for requests from private endpoints
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoints(@Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints) {
             $.privateEndpoints = privateEndpoints;
             return this;
         }
 
+        /**
+         * @param privateEndpoints ACLs for requests from private endpoints
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoints(List<PrivateEndpointACLArgs> privateEndpoints) {
             return privateEndpoints(Output.of(privateEndpoints));
         }
 
+        /**
+         * @param privateEndpoints ACLs for requests from private endpoints
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoints(PrivateEndpointACLArgs... privateEndpoints) {
             return privateEndpoints(List.of(privateEndpoints));
         }
 
+        /**
+         * @param publicNetwork ACL for requests from public network
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetwork(@Nullable Output<NetworkACLArgs> publicNetwork) {
             $.publicNetwork = publicNetwork;
             return this;
         }
 
+        /**
+         * @param publicNetwork ACL for requests from public network
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetwork(NetworkACLArgs publicNetwork) {
             return publicNetwork(Output.of(publicNetwork));
         }

@@ -23,6 +23,10 @@ public final class ScalingPlanApplicationSourceTagFilterGetArgs extends com.pulu
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return The tag key.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -34,6 +38,10 @@ public final class ScalingPlanApplicationSourceTagFilterGetArgs extends com.pulu
     @Import(name="values")
     private @Nullable Output<List<String>> values;
 
+    /**
+     * @return The tag values.
+     * 
+     */
     public Optional<Output<List<String>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -63,24 +71,54 @@ public final class ScalingPlanApplicationSourceTagFilterGetArgs extends com.pulu
             $ = new ScalingPlanApplicationSourceTagFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The tag key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The tag key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param values The tag values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The tag values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values The tag values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

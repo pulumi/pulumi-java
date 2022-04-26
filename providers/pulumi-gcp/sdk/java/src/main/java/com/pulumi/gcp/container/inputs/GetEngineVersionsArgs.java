@@ -24,6 +24,13 @@ public final class GetEngineVersionsArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return The location (region or zone) to list versions for.
+     * Must exactly match the location the cluster will be deployed in, or listed
+     * versions may not be available. If `location`, `region`, and `zone` are not
+     * specified, the provider-level zone must be set and is used instead.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -36,6 +43,11 @@ public final class GetEngineVersionsArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return ID of the project to list available cluster versions for. Should match the project the cluster will be deployed to.
+     * Defaults to the project that the provider is authenticated with.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -52,6 +64,15 @@ public final class GetEngineVersionsArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="versionPrefix")
     private @Nullable String versionPrefix;
 
+    /**
+     * @return If provided, the provider will only return versions
+     * that match the string prefix. For example, `1.11.` will match all `1.11` series
+     * releases. Since this is just a string match, it&#39;s recommended that you append a
+     * `.` after minor versions to ensure that prefixes such as `1.1` don&#39;t match
+     * versions like `1.12.5-gke.10` accidentally. See [the docs on versioning schema](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#versioning_scheme)
+     * for full details on how version strings are formatted.
+     * 
+     */
     public Optional<String> versionPrefix() {
         return Optional.ofNullable(this.versionPrefix);
     }
@@ -82,16 +103,43 @@ public final class GetEngineVersionsArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetEngineVersionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The location (region or zone) to list versions for.
+         * Must exactly match the location the cluster will be deployed in, or listed
+         * versions may not be available. If `location`, `region`, and `zone` are not
+         * specified, the provider-level zone must be set and is used instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param project ID of the project to list available cluster versions for. Should match the project the cluster will be deployed to.
+         * Defaults to the project that the provider is authenticated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param versionPrefix If provided, the provider will only return versions
+         * that match the string prefix. For example, `1.11.` will match all `1.11` series
+         * releases. Since this is just a string match, it&#39;s recommended that you append a
+         * `.` after minor versions to ensure that prefixes such as `1.1` don&#39;t match
+         * versions like `1.12.5-gke.10` accidentally. See [the docs on versioning schema](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#versioning_scheme)
+         * for full details on how version strings are formatted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionPrefix(@Nullable String versionPrefix) {
             $.versionPrefix = versionPrefix;
             return this;

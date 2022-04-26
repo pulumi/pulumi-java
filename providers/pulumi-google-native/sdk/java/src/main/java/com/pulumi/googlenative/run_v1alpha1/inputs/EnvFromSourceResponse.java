@@ -25,6 +25,10 @@ public final class EnvFromSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="configMapRef", required=true)
     private ConfigMapEnvSourceResponse configMapRef;
 
+    /**
+     * @return (Optional) The ConfigMap to select from
+     * 
+     */
     public ConfigMapEnvSourceResponse configMapRef() {
         return this.configMapRef;
     }
@@ -36,6 +40,10 @@ public final class EnvFromSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="prefix", required=true)
     private String prefix;
 
+    /**
+     * @return (Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
+     * 
+     */
     public String prefix() {
         return this.prefix;
     }
@@ -47,6 +55,10 @@ public final class EnvFromSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="secretRef", required=true)
     private SecretEnvSourceResponse secretRef;
 
+    /**
+     * @return (Optional) The Secret to select from
+     * 
+     */
     public SecretEnvSourceResponse secretRef() {
         return this.secretRef;
     }
@@ -77,16 +89,34 @@ public final class EnvFromSourceResponse extends com.pulumi.resources.InvokeArgs
             $ = new EnvFromSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configMapRef (Optional) The ConfigMap to select from
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMapRef(ConfigMapEnvSourceResponse configMapRef) {
             $.configMapRef = configMapRef;
             return this;
         }
 
+        /**
+         * @param prefix (Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param secretRef (Optional) The Secret to select from
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(SecretEnvSourceResponse secretRef) {
             $.secretRef = secretRef;
             return this;

@@ -27,6 +27,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allUpdatesRule")
     private @Nullable Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule;
 
+    /**
+     * @return Optional. Rules to apply to notifications sent based on budget spend and thresholds.
+     * 
+     */
     public Optional<Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs>> allUpdatesRule() {
         return Optional.ofNullable(this.allUpdatesRule);
     }
@@ -38,6 +42,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="amount", required=true)
     private Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount;
 
+    /**
+     * @return Budgeted amount.
+     * 
+     */
     public Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount() {
         return this.amount;
     }
@@ -56,6 +64,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="budgetFilter")
     private @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter;
 
+    /**
+     * @return Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget&#39;s time period, as well as other filters.
+     * 
+     */
     public Optional<Output<GoogleCloudBillingBudgetsV1beta1FilterArgs>> budgetFilter() {
         return Optional.ofNullable(this.budgetFilter);
     }
@@ -67,6 +79,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return User data for display name in UI. Validation: &lt;= 60 chars.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -78,6 +94,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag will cause an update to overwrite other changes.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -89,6 +109,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="thresholdRules")
     private @Nullable Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules;
 
+    /**
+     * @return Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications. Required if using email notifications.
+     * 
+     */
     public Optional<Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>>> thresholdRules() {
         return Optional.ofNullable(this.thresholdRules);
     }
@@ -123,20 +147,44 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BudgetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allUpdatesRule Optional. Rules to apply to notifications sent based on budget spend and thresholds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allUpdatesRule(@Nullable Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule) {
             $.allUpdatesRule = allUpdatesRule;
             return this;
         }
 
+        /**
+         * @param allUpdatesRule Optional. Rules to apply to notifications sent based on budget spend and thresholds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allUpdatesRule(GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs allUpdatesRule) {
             return allUpdatesRule(Output.of(allUpdatesRule));
         }
 
+        /**
+         * @param amount Budgeted amount.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount) {
             $.amount = amount;
             return this;
         }
 
+        /**
+         * @param amount Budgeted amount.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs amount) {
             return amount(Output.of(amount));
         }
@@ -150,42 +198,96 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
             return billingAccountId(Output.of(billingAccountId));
         }
 
+        /**
+         * @param budgetFilter Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget&#39;s time period, as well as other filters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder budgetFilter(@Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter) {
             $.budgetFilter = budgetFilter;
             return this;
         }
 
+        /**
+         * @param budgetFilter Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget&#39;s time period, as well as other filters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder budgetFilter(GoogleCloudBillingBudgetsV1beta1FilterArgs budgetFilter) {
             return budgetFilter(Output.of(budgetFilter));
         }
 
+        /**
+         * @param displayName User data for display name in UI. Validation: &lt;= 60 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User data for display name in UI. Validation: &lt;= 60 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param etag Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag will cause an update to overwrite other changes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag will cause an update to overwrite other changes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param thresholdRules Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications. Required if using email notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdRules(@Nullable Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules) {
             $.thresholdRules = thresholdRules;
             return this;
         }
 
+        /**
+         * @param thresholdRules Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications. Required if using email notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdRules(List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs> thresholdRules) {
             return thresholdRules(Output.of(thresholdRules));
         }
 
+        /**
+         * @param thresholdRules Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications. Required if using email notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdRules(GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs... thresholdRules) {
             return thresholdRules(List.of(thresholdRules));
         }

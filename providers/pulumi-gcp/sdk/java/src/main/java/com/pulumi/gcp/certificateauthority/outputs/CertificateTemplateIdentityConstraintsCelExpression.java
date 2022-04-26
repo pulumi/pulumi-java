@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateTemplateIdentityConstraintsCelExpression {
     /**
-     * Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+     * @return Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
      * 
      */
     private final @Nullable String description;
     /**
-     * Textual representation of an expression in Common Expression Language syntax.
+     * @return Textual representation of an expression in Common Expression Language syntax.
      * 
      */
     private final @Nullable String expression;
     /**
-     * Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+     * @return Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
      * 
      */
     private final @Nullable String location;
     /**
-     * Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
+     * @return Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
      * 
      */
     private final @Nullable String title;
@@ -45,30 +45,30 @@ public final class CertificateTemplateIdentityConstraintsCelExpression {
     }
 
     /**
-     * Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+     * @return Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Textual representation of an expression in Common Expression Language syntax.
+     * @return Textual representation of an expression in Common Expression Language syntax.
      * 
-    */
+     */
     public Optional<String> expression() {
         return Optional.ofNullable(this.expression);
     }
     /**
-     * Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+     * @return Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
+     * @return Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }

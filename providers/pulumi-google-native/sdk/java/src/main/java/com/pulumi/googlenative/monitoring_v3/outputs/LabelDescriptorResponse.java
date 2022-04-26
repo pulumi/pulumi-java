@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class LabelDescriptorResponse {
     /**
-     * A human-readable description for the label.
+     * @return A human-readable description for the label.
      * 
      */
     private final String description;
     /**
-     * The key for this label. The key must meet the following criteria: Does not exceed 100 characters. Matches the following regular expression: [a-zA-Z][a-zA-Z0-9_]* The first character must be an upper- or lower-case letter. The remaining characters must be letters, digits, or underscores.
+     * @return The key for this label. The key must meet the following criteria: Does not exceed 100 characters. Matches the following regular expression: [a-zA-Z][a-zA-Z0-9_]* The first character must be an upper- or lower-case letter. The remaining characters must be letters, digits, or underscores.
      * 
      */
     private final String key;
     /**
-     * The type of data that can be assigned to the label.
+     * @return The type of data that can be assigned to the label.
      * 
      */
     private final String valueType;
@@ -36,23 +36,23 @@ public final class LabelDescriptorResponse {
     }
 
     /**
-     * A human-readable description for the label.
+     * @return A human-readable description for the label.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The key for this label. The key must meet the following criteria: Does not exceed 100 characters. Matches the following regular expression: [a-zA-Z][a-zA-Z0-9_]* The first character must be an upper- or lower-case letter. The remaining characters must be letters, digits, or underscores.
+     * @return The key for this label. The key must meet the following criteria: Does not exceed 100 characters. Matches the following regular expression: [a-zA-Z][a-zA-Z0-9_]* The first character must be an upper- or lower-case letter. The remaining characters must be letters, digits, or underscores.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The type of data that can be assigned to the label.
+     * @return The type of data that can be assigned to the label.
      * 
-    */
+     */
     public String valueType() {
         return this.valueType;
     }

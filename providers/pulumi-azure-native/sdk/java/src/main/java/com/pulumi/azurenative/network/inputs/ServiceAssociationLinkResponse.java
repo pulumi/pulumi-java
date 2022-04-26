@@ -27,6 +27,10 @@ public final class ServiceAssociationLinkResponse extends com.pulumi.resources.I
     @Import(name="allowDelete")
     private @Nullable Boolean allowDelete;
 
+    /**
+     * @return If true, the resource can be deleted.
+     * 
+     */
     public Optional<Boolean> allowDelete() {
         return Optional.ofNullable(this.allowDelete);
     }
@@ -38,6 +42,10 @@ public final class ServiceAssociationLinkResponse extends com.pulumi.resources.I
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -49,6 +57,10 @@ public final class ServiceAssociationLinkResponse extends com.pulumi.resources.I
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -60,6 +72,10 @@ public final class ServiceAssociationLinkResponse extends com.pulumi.resources.I
     @Import(name="link")
     private @Nullable String link;
 
+    /**
+     * @return Link to the external resource.
+     * 
+     */
     public Optional<String> link() {
         return Optional.ofNullable(this.link);
     }
@@ -71,6 +87,10 @@ public final class ServiceAssociationLinkResponse extends com.pulumi.resources.I
     @Import(name="linkedResourceType")
     private @Nullable String linkedResourceType;
 
+    /**
+     * @return Resource type of the linked resource.
+     * 
+     */
     public Optional<String> linkedResourceType() {
         return Optional.ofNullable(this.linkedResourceType);
     }
@@ -82,6 +102,10 @@ public final class ServiceAssociationLinkResponse extends com.pulumi.resources.I
     @Import(name="locations")
     private @Nullable List<String> locations;
 
+    /**
+     * @return A list of locations.
+     * 
+     */
     public Optional<List<String>> locations() {
         return Optional.ofNullable(this.locations);
     }
@@ -93,6 +117,10 @@ public final class ServiceAssociationLinkResponse extends com.pulumi.resources.I
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -104,6 +132,10 @@ public final class ServiceAssociationLinkResponse extends com.pulumi.resources.I
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the service association link resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -115,6 +147,10 @@ public final class ServiceAssociationLinkResponse extends com.pulumi.resources.I
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -151,50 +187,110 @@ public final class ServiceAssociationLinkResponse extends com.pulumi.resources.I
             $ = new ServiceAssociationLinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowDelete If true, the resource can be deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowDelete(@Nullable Boolean allowDelete) {
             $.allowDelete = allowDelete;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param link Link to the external resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder link(@Nullable String link) {
             $.link = link;
             return this;
         }
 
+        /**
+         * @param linkedResourceType Resource type of the linked resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedResourceType(@Nullable String linkedResourceType) {
             $.linkedResourceType = linkedResourceType;
             return this;
         }
 
+        /**
+         * @param locations A list of locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(@Nullable List<String> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations A list of locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param name Name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the service association link resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

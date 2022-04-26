@@ -35,6 +35,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aadAuthEnabled")
     private @Nullable Output<Boolean> aadAuthEnabled;
 
+    /**
+     * @return Whether or not AAD authentication is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> aadAuthEnabled() {
         return Optional.ofNullable(this.aadAuthEnabled);
     }
@@ -46,6 +50,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appInsightsEnabled")
     private @Nullable Output<Boolean> appInsightsEnabled;
 
+    /**
+     * @return Whether or not Application Insights is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> appInsightsEnabled() {
         return Optional.ofNullable(this.appInsightsEnabled);
     }
@@ -57,6 +65,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authEnabled")
     private @Nullable Output<Boolean> authEnabled;
 
+    /**
+     * @return Whether or not authentication is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> authEnabled() {
         return Optional.ofNullable(this.authEnabled);
     }
@@ -68,6 +80,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoScaler")
     private @Nullable Output<AKSServiceCreateRequestAutoScalerArgs> autoScaler;
 
+    /**
+     * @return The auto scaler properties.
+     * 
+     */
     public Optional<Output<AKSServiceCreateRequestAutoScalerArgs>> autoScaler() {
         return Optional.ofNullable(this.autoScaler);
     }
@@ -79,6 +95,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computeName")
     private @Nullable Output<String> computeName;
 
+    /**
+     * @return The name of the compute resource.
+     * 
+     */
     public Optional<Output<String>> computeName() {
         return Optional.ofNullable(this.computeName);
     }
@@ -91,6 +111,11 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computeType", required=true)
     private Output<String> computeType;
 
+    /**
+     * @return The compute environment type for the service.
+     * Expected value is &#39;AKS&#39;.
+     * 
+     */
     public Output<String> computeType() {
         return this.computeType;
     }
@@ -102,6 +127,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerResourceRequirements")
     private @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements;
 
+    /**
+     * @return The container resource requirements.
+     * 
+     */
     public Optional<Output<ContainerResourceRequirementsArgs>> containerResourceRequirements() {
         return Optional.ofNullable(this.containerResourceRequirements);
     }
@@ -113,6 +142,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataCollection")
     private @Nullable Output<AKSServiceCreateRequestDataCollectionArgs> dataCollection;
 
+    /**
+     * @return Details of the data collection options specified.
+     * 
+     */
     public Optional<Output<AKSServiceCreateRequestDataCollectionArgs>> dataCollection() {
         return Optional.ofNullable(this.dataCollection);
     }
@@ -124,6 +157,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the service.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -135,6 +172,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentImageRequest")
     private @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
+    /**
+     * @return The Environment, models and assets needed for inferencing.
+     * 
+     */
     public Optional<Output<CreateServiceRequestEnvironmentImageRequestArgs>> environmentImageRequest() {
         return Optional.ofNullable(this.environmentImageRequest);
     }
@@ -146,6 +187,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isDefault")
     private @Nullable Output<Boolean> isDefault;
 
+    /**
+     * @return Is this the default variant.
+     * 
+     */
     public Optional<Output<Boolean>> isDefault() {
         return Optional.ofNullable(this.isDefault);
     }
@@ -157,6 +202,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keys")
     private @Nullable Output<CreateServiceRequestKeysArgs> keys;
 
+    /**
+     * @return The authentication keys.
+     * 
+     */
     public Optional<Output<CreateServiceRequestKeysArgs>> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -168,6 +217,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kvTags")
     private @Nullable Output<Map<String,String>> kvTags;
 
+    /**
+     * @return The service tag dictionary. Tags are mutable.
+     * 
+     */
     public Optional<Output<Map<String,String>>> kvTags() {
         return Optional.ofNullable(this.kvTags);
     }
@@ -179,6 +232,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="livenessProbeRequirements")
     private @Nullable Output<AKSServiceCreateRequestLivenessProbeRequirementsArgs> livenessProbeRequirements;
 
+    /**
+     * @return The liveness probe requirements.
+     * 
+     */
     public Optional<Output<AKSServiceCreateRequestLivenessProbeRequirementsArgs>> livenessProbeRequirements() {
         return Optional.ofNullable(this.livenessProbeRequirements);
     }
@@ -190,6 +247,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The name of the Azure location/region.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -201,6 +262,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentRequestsPerContainer")
     private @Nullable Output<Integer> maxConcurrentRequestsPerContainer;
 
+    /**
+     * @return The maximum number of concurrent requests per container.
+     * 
+     */
     public Optional<Output<Integer>> maxConcurrentRequestsPerContainer() {
         return Optional.ofNullable(this.maxConcurrentRequestsPerContainer);
     }
@@ -212,6 +277,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxQueueWaitMs")
     private @Nullable Output<Integer> maxQueueWaitMs;
 
+    /**
+     * @return Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
+     * 
+     */
     public Optional<Output<Integer>> maxQueueWaitMs() {
         return Optional.ofNullable(this.maxQueueWaitMs);
     }
@@ -223,6 +292,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
     private @Nullable Output<String> namespace;
 
+    /**
+     * @return Kubernetes namespace for the service.
+     * 
+     */
     public Optional<Output<String>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -234,6 +307,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="numReplicas")
     private @Nullable Output<Integer> numReplicas;
 
+    /**
+     * @return The number of replicas on the cluster.
+     * 
+     */
     public Optional<Output<Integer>> numReplicas() {
         return Optional.ofNullable(this.numReplicas);
     }
@@ -245,6 +322,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return The service properties dictionary. Properties are immutable.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -256,6 +337,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group in which workspace is located.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -267,6 +352,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scoringTimeoutMs")
     private @Nullable Output<Integer> scoringTimeoutMs;
 
+    /**
+     * @return The scoring timeout in milliseconds.
+     * 
+     */
     public Optional<Output<Integer>> scoringTimeoutMs() {
         return Optional.ofNullable(this.scoringTimeoutMs);
     }
@@ -278,6 +367,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return Name of the Azure Machine Learning service.
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -289,6 +382,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trafficPercentile")
     private @Nullable Output<Double> trafficPercentile;
 
+    /**
+     * @return The amount of traffic variant receives.
+     * 
+     */
     public Optional<Output<Double>> trafficPercentile() {
         return Optional.ofNullable(this.trafficPercentile);
     }
@@ -300,6 +397,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<Either<String,VariantType>> type;
 
+    /**
+     * @return The type of the variant.
+     * 
+     */
     public Optional<Output<Either<String,VariantType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -311,6 +412,10 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -364,244 +469,570 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AKSServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadAuthEnabled Whether or not AAD authentication is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadAuthEnabled(@Nullable Output<Boolean> aadAuthEnabled) {
             $.aadAuthEnabled = aadAuthEnabled;
             return this;
         }
 
+        /**
+         * @param aadAuthEnabled Whether or not AAD authentication is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadAuthEnabled(Boolean aadAuthEnabled) {
             return aadAuthEnabled(Output.of(aadAuthEnabled));
         }
 
+        /**
+         * @param appInsightsEnabled Whether or not Application Insights is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appInsightsEnabled(@Nullable Output<Boolean> appInsightsEnabled) {
             $.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
 
+        /**
+         * @param appInsightsEnabled Whether or not Application Insights is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appInsightsEnabled(Boolean appInsightsEnabled) {
             return appInsightsEnabled(Output.of(appInsightsEnabled));
         }
 
+        /**
+         * @param authEnabled Whether or not authentication is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authEnabled(@Nullable Output<Boolean> authEnabled) {
             $.authEnabled = authEnabled;
             return this;
         }
 
+        /**
+         * @param authEnabled Whether or not authentication is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authEnabled(Boolean authEnabled) {
             return authEnabled(Output.of(authEnabled));
         }
 
+        /**
+         * @param autoScaler The auto scaler properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScaler(@Nullable Output<AKSServiceCreateRequestAutoScalerArgs> autoScaler) {
             $.autoScaler = autoScaler;
             return this;
         }
 
+        /**
+         * @param autoScaler The auto scaler properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScaler(AKSServiceCreateRequestAutoScalerArgs autoScaler) {
             return autoScaler(Output.of(autoScaler));
         }
 
+        /**
+         * @param computeName The name of the compute resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeName(@Nullable Output<String> computeName) {
             $.computeName = computeName;
             return this;
         }
 
+        /**
+         * @param computeName The name of the compute resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeName(String computeName) {
             return computeName(Output.of(computeName));
         }
 
+        /**
+         * @param computeType The compute environment type for the service.
+         * Expected value is &#39;AKS&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(Output<String> computeType) {
             $.computeType = computeType;
             return this;
         }
 
+        /**
+         * @param computeType The compute environment type for the service.
+         * Expected value is &#39;AKS&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(String computeType) {
             return computeType(Output.of(computeType));
         }
 
+        /**
+         * @param containerResourceRequirements The container resource requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerResourceRequirements(@Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements) {
             $.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
 
+        /**
+         * @param containerResourceRequirements The container resource requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerResourceRequirements(ContainerResourceRequirementsArgs containerResourceRequirements) {
             return containerResourceRequirements(Output.of(containerResourceRequirements));
         }
 
+        /**
+         * @param dataCollection Details of the data collection options specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCollection(@Nullable Output<AKSServiceCreateRequestDataCollectionArgs> dataCollection) {
             $.dataCollection = dataCollection;
             return this;
         }
 
+        /**
+         * @param dataCollection Details of the data collection options specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCollection(AKSServiceCreateRequestDataCollectionArgs dataCollection) {
             return dataCollection(Output.of(dataCollection));
         }
 
+        /**
+         * @param description The description of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param environmentImageRequest The Environment, models and assets needed for inferencing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentImageRequest(@Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
             $.environmentImageRequest = environmentImageRequest;
             return this;
         }
 
+        /**
+         * @param environmentImageRequest The Environment, models and assets needed for inferencing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentImageRequest(CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
             return environmentImageRequest(Output.of(environmentImageRequest));
         }
 
+        /**
+         * @param isDefault Is this the default variant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDefault(@Nullable Output<Boolean> isDefault) {
             $.isDefault = isDefault;
             return this;
         }
 
+        /**
+         * @param isDefault Is this the default variant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDefault(Boolean isDefault) {
             return isDefault(Output.of(isDefault));
         }
 
+        /**
+         * @param keys The authentication keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable Output<CreateServiceRequestKeysArgs> keys) {
             $.keys = keys;
             return this;
         }
 
+        /**
+         * @param keys The authentication keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(CreateServiceRequestKeysArgs keys) {
             return keys(Output.of(keys));
         }
 
+        /**
+         * @param kvTags The service tag dictionary. Tags are mutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kvTags(@Nullable Output<Map<String,String>> kvTags) {
             $.kvTags = kvTags;
             return this;
         }
 
+        /**
+         * @param kvTags The service tag dictionary. Tags are mutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kvTags(Map<String,String> kvTags) {
             return kvTags(Output.of(kvTags));
         }
 
+        /**
+         * @param livenessProbeRequirements The liveness probe requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder livenessProbeRequirements(@Nullable Output<AKSServiceCreateRequestLivenessProbeRequirementsArgs> livenessProbeRequirements) {
             $.livenessProbeRequirements = livenessProbeRequirements;
             return this;
         }
 
+        /**
+         * @param livenessProbeRequirements The liveness probe requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder livenessProbeRequirements(AKSServiceCreateRequestLivenessProbeRequirementsArgs livenessProbeRequirements) {
             return livenessProbeRequirements(Output.of(livenessProbeRequirements));
         }
 
+        /**
+         * @param location The name of the Azure location/region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The name of the Azure location/region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param maxConcurrentRequestsPerContainer The maximum number of concurrent requests per container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentRequestsPerContainer(@Nullable Output<Integer> maxConcurrentRequestsPerContainer) {
             $.maxConcurrentRequestsPerContainer = maxConcurrentRequestsPerContainer;
             return this;
         }
 
+        /**
+         * @param maxConcurrentRequestsPerContainer The maximum number of concurrent requests per container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentRequestsPerContainer(Integer maxConcurrentRequestsPerContainer) {
             return maxConcurrentRequestsPerContainer(Output.of(maxConcurrentRequestsPerContainer));
         }
 
+        /**
+         * @param maxQueueWaitMs Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxQueueWaitMs(@Nullable Output<Integer> maxQueueWaitMs) {
             $.maxQueueWaitMs = maxQueueWaitMs;
             return this;
         }
 
+        /**
+         * @param maxQueueWaitMs Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxQueueWaitMs(Integer maxQueueWaitMs) {
             return maxQueueWaitMs(Output.of(maxQueueWaitMs));
         }
 
+        /**
+         * @param namespace Kubernetes namespace for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Kubernetes namespace for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }
 
+        /**
+         * @param numReplicas The number of replicas on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numReplicas(@Nullable Output<Integer> numReplicas) {
             $.numReplicas = numReplicas;
             return this;
         }
 
+        /**
+         * @param numReplicas The number of replicas on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numReplicas(Integer numReplicas) {
             return numReplicas(Output.of(numReplicas));
         }
 
+        /**
+         * @param properties The service properties dictionary. Properties are immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The service properties dictionary. Properties are immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scoringTimeoutMs The scoring timeout in milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringTimeoutMs(@Nullable Output<Integer> scoringTimeoutMs) {
             $.scoringTimeoutMs = scoringTimeoutMs;
             return this;
         }
 
+        /**
+         * @param scoringTimeoutMs The scoring timeout in milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringTimeoutMs(Integer scoringTimeoutMs) {
             return scoringTimeoutMs(Output.of(scoringTimeoutMs));
         }
 
+        /**
+         * @param serviceName Name of the Azure Machine Learning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName Name of the Azure Machine Learning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param trafficPercentile The amount of traffic variant receives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficPercentile(@Nullable Output<Double> trafficPercentile) {
             $.trafficPercentile = trafficPercentile;
             return this;
         }
 
+        /**
+         * @param trafficPercentile The amount of traffic variant receives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficPercentile(Double trafficPercentile) {
             return trafficPercentile(Output.of(trafficPercentile));
         }
 
+        /**
+         * @param type The type of the variant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,VariantType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the variant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,VariantType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of the variant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of the variant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(VariantType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

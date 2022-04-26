@@ -23,6 +23,10 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="secretVersion", required=true)
     private String secretVersion;
 
+    /**
+     * @return The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
+     * 
+     */
     public String secretVersion() {
         return this.secretVersion;
     }
@@ -51,6 +55,12 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SecretResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secretVersion The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(String secretVersion) {
             $.secretVersion = secretVersion;
             return this;

@@ -26,6 +26,10 @@ public final class UpstreamAuthSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="managedIdentity")
     private @Nullable ManagedIdentitySettingsResponse managedIdentity;
 
+    /**
+     * @return Managed identity settings for upstream.
+     * 
+     */
     public Optional<ManagedIdentitySettingsResponse> managedIdentity() {
         return Optional.ofNullable(this.managedIdentity);
     }
@@ -37,6 +41,10 @@ public final class UpstreamAuthSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Upstream auth type enum.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -66,11 +74,23 @@ public final class UpstreamAuthSettingsResponse extends com.pulumi.resources.Inv
             $ = new UpstreamAuthSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managedIdentity Managed identity settings for upstream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedIdentity(@Nullable ManagedIdentitySettingsResponse managedIdentity) {
             $.managedIdentity = managedIdentity;
             return this;
         }
 
+        /**
+         * @param type Upstream auth type enum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

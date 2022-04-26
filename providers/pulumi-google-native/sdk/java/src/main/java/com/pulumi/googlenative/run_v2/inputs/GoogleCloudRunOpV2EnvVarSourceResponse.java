@@ -23,6 +23,10 @@ public final class GoogleCloudRunOpV2EnvVarSourceResponse extends com.pulumi.res
     @Import(name="secretKeyRef", required=true)
     private GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef;
 
+    /**
+     * @return Selects a secret and a specific version from Cloud Secret Manager.
+     * 
+     */
     public GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef() {
         return this.secretKeyRef;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudRunOpV2EnvVarSourceResponse extends com.pulumi.res
             $ = new GoogleCloudRunOpV2EnvVarSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secretKeyRef Selects a secret and a specific version from Cloud Secret Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKeyRef(GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef) {
             $.secretKeyRef = secretKeyRef;
             return this;

@@ -26,6 +26,10 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="keyVaultProperties")
     private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
+    /**
+     * @return Key vault properties.
+     * 
+     */
     public Optional<Output<KeyVaultPropertiesArgs>> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -54,11 +58,23 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new EncryptionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultProperties Key vault properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties Key vault properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
             return keyVaultProperties(Output.of(keyVaultProperties));
         }

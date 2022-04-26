@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecretReference {
     /**
-     * Name is unique within a namespace to reference a secret resource.
+     * @return Name is unique within a namespace to reference a secret resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * Namespace defines the space within which the secret name must be unique.
+     * @return Namespace defines the space within which the secret name must be unique.
      * 
      */
     private final @Nullable String namespace;
@@ -31,16 +31,16 @@ public final class SecretReference {
     }
 
     /**
-     * Name is unique within a namespace to reference a secret resource.
+     * @return Name is unique within a namespace to reference a secret resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Namespace defines the space within which the secret name must be unique.
+     * @return Namespace defines the space within which the secret name must be unique.
      * 
-    */
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }

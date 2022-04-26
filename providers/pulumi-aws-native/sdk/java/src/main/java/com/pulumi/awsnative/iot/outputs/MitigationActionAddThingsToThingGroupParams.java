@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MitigationActionAddThingsToThingGroupParams {
     /**
-     * Specifies if this mitigation action can move the things that triggered the mitigation action out of one or more dynamic thing groups.
+     * @return Specifies if this mitigation action can move the things that triggered the mitigation action out of one or more dynamic thing groups.
      * 
      */
     private final @Nullable Boolean overrideDynamicGroups;
     /**
-     * The list of groups to which you want to add the things that triggered the mitigation action.
+     * @return The list of groups to which you want to add the things that triggered the mitigation action.
      * 
      */
     private final List<String> thingGroupNames;
@@ -33,16 +33,16 @@ public final class MitigationActionAddThingsToThingGroupParams {
     }
 
     /**
-     * Specifies if this mitigation action can move the things that triggered the mitigation action out of one or more dynamic thing groups.
+     * @return Specifies if this mitigation action can move the things that triggered the mitigation action out of one or more dynamic thing groups.
      * 
-    */
+     */
     public Optional<Boolean> overrideDynamicGroups() {
         return Optional.ofNullable(this.overrideDynamicGroups);
     }
     /**
-     * The list of groups to which you want to add the things that triggered the mitigation action.
+     * @return The list of groups to which you want to add the things that triggered the mitigation action.
      * 
-    */
+     */
     public List<String> thingGroupNames() {
         return this.thingGroupNames;
     }

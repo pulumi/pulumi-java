@@ -27,6 +27,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storageaccounts")
     private @Nullable Output<List<StorageAccountArgs>> storageaccounts;
 
+    /**
+     * @return The list of storage accounts in the cluster.
+     * 
+     */
     public Optional<Output<List<StorageAccountArgs>>> storageaccounts() {
         return Optional.ofNullable(this.storageaccounts);
     }
@@ -55,15 +59,33 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param storageaccounts The list of storage accounts in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageaccounts(@Nullable Output<List<StorageAccountArgs>> storageaccounts) {
             $.storageaccounts = storageaccounts;
             return this;
         }
 
+        /**
+         * @param storageaccounts The list of storage accounts in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageaccounts(List<StorageAccountArgs> storageaccounts) {
             return storageaccounts(Output.of(storageaccounts));
         }
 
+        /**
+         * @param storageaccounts The list of storage accounts in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageaccounts(StorageAccountArgs... storageaccounts) {
             return storageaccounts(List.of(storageaccounts));
         }

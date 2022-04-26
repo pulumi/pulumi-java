@@ -23,6 +23,10 @@ public final class LocalObjectReferenceResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return (Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -51,6 +55,12 @@ public final class LocalObjectReferenceResponse extends com.pulumi.resources.Inv
             $ = new LocalObjectReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name (Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

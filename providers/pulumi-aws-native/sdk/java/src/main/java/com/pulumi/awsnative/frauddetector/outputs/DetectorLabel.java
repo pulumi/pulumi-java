@@ -16,24 +16,24 @@ import javax.annotation.Nullable;
 public final class DetectorLabel {
     private final @Nullable String arn;
     /**
-     * The time when the label was created.
+     * @return The time when the label was created.
      * 
      */
     private final @Nullable String createdTime;
     /**
-     * The description.
+     * @return The description.
      * 
      */
     private final @Nullable String description;
     private final @Nullable Boolean inline;
     /**
-     * The time when the label was last updated.
+     * @return The time when the label was last updated.
      * 
      */
     private final @Nullable String lastUpdatedTime;
     private final @Nullable String name;
     /**
-     * Tags associated with this label.
+     * @return Tags associated with this label.
      * 
      */
     private final @Nullable List<DetectorTag> tags;
@@ -60,16 +60,16 @@ public final class DetectorLabel {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The time when the label was created.
+     * @return The time when the label was created.
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * The description.
+     * @return The description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -77,9 +77,9 @@ public final class DetectorLabel {
         return Optional.ofNullable(this.inline);
     }
     /**
-     * The time when the label was last updated.
+     * @return The time when the label was last updated.
      * 
-    */
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -87,9 +87,9 @@ public final class DetectorLabel {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Tags associated with this label.
+     * @return Tags associated with this label.
      * 
-    */
+     */
     public List<DetectorTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

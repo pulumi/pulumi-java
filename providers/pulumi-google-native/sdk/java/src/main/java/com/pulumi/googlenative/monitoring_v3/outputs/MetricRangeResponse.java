@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class MetricRangeResponse {
     /**
-     * Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
+     * @return Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
      * 
      */
     private final GoogleMonitoringV3RangeResponse range;
     /**
-     * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.
+     * @return A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.
      * 
      */
     private final String timeSeries;
@@ -30,16 +30,16 @@ public final class MetricRangeResponse {
     }
 
     /**
-     * Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
+     * @return Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
      * 
-    */
+     */
     public GoogleMonitoringV3RangeResponse range() {
         return this.range;
     }
     /**
-     * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.
+     * @return A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.
      * 
-    */
+     */
     public String timeSeries() {
         return this.timeSeries;
     }

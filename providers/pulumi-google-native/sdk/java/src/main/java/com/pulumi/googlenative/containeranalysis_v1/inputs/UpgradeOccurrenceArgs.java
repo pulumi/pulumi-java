@@ -29,6 +29,10 @@ public final class UpgradeOccurrenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="distribution")
     private @Nullable Output<UpgradeDistributionArgs> distribution;
 
+    /**
+     * @return Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
+     * 
+     */
     public Optional<Output<UpgradeDistributionArgs>> distribution() {
         return Optional.ofNullable(this.distribution);
     }
@@ -40,6 +44,10 @@ public final class UpgradeOccurrenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="package")
     private @Nullable Output<String> package_;
 
+    /**
+     * @return Required for non-Windows OS. The package this Upgrade is for.
+     * 
+     */
     public Optional<Output<String>> package_() {
         return Optional.ofNullable(this.package_);
     }
@@ -51,6 +59,10 @@ public final class UpgradeOccurrenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="parsedVersion")
     private @Nullable Output<VersionArgs> parsedVersion;
 
+    /**
+     * @return Required for non-Windows OS. The version of the package in a machine + human readable form.
+     * 
+     */
     public Optional<Output<VersionArgs>> parsedVersion() {
         return Optional.ofNullable(this.parsedVersion);
     }
@@ -62,6 +74,10 @@ public final class UpgradeOccurrenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="windowsUpdate")
     private @Nullable Output<WindowsUpdateArgs> windowsUpdate;
 
+    /**
+     * @return Required for Windows OS. Represents the metadata about the Windows update.
+     * 
+     */
     public Optional<Output<WindowsUpdateArgs>> windowsUpdate() {
         return Optional.ofNullable(this.windowsUpdate);
     }
@@ -93,38 +109,86 @@ public final class UpgradeOccurrenceArgs extends com.pulumi.resources.ResourceAr
             $ = new UpgradeOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distribution Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribution(@Nullable Output<UpgradeDistributionArgs> distribution) {
             $.distribution = distribution;
             return this;
         }
 
+        /**
+         * @param distribution Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribution(UpgradeDistributionArgs distribution) {
             return distribution(Output.of(distribution));
         }
 
+        /**
+         * @param package_ Required for non-Windows OS. The package this Upgrade is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder package_(@Nullable Output<String> package_) {
             $.package_ = package_;
             return this;
         }
 
+        /**
+         * @param package_ Required for non-Windows OS. The package this Upgrade is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder package_(String package_) {
             return package_(Output.of(package_));
         }
 
+        /**
+         * @param parsedVersion Required for non-Windows OS. The version of the package in a machine + human readable form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parsedVersion(@Nullable Output<VersionArgs> parsedVersion) {
             $.parsedVersion = parsedVersion;
             return this;
         }
 
+        /**
+         * @param parsedVersion Required for non-Windows OS. The version of the package in a machine + human readable form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parsedVersion(VersionArgs parsedVersion) {
             return parsedVersion(Output.of(parsedVersion));
         }
 
+        /**
+         * @param windowsUpdate Required for Windows OS. Represents the metadata about the Windows update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsUpdate(@Nullable Output<WindowsUpdateArgs> windowsUpdate) {
             $.windowsUpdate = windowsUpdate;
             return this;
         }
 
+        /**
+         * @param windowsUpdate Required for Windows OS. Represents the metadata about the Windows update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsUpdate(WindowsUpdateArgs windowsUpdate) {
             return windowsUpdate(Output.of(windowsUpdate));
         }

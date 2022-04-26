@@ -22,6 +22,10 @@ public final class GetResourceTagsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return The ID of the resource with the tags to list. See details below.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -33,6 +37,10 @@ public final class GetResourceTagsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Map of key=value pairs for each tag set on the resource.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -62,11 +70,23 @@ public final class GetResourceTagsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetResourceTagsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId The ID of the resource with the tags to list. See details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param tags Map of key=value pairs for each tag set on the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

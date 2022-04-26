@@ -26,6 +26,10 @@ public final class WorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
     private @Nullable Output<String> diskSizeGb;
 
+    /**
+     * @return Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size.
+     * 
+     */
     public Optional<Output<String>> diskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
@@ -37,6 +41,10 @@ public final class WorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="machineType")
     private @Nullable Output<String> machineType;
 
+    /**
+     * @return Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool.
+     * 
+     */
     public Optional<Output<String>> machineType() {
         return Optional.ofNullable(this.machineType);
     }
@@ -66,20 +74,44 @@ public final class WorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkerConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSizeGb Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param diskSizeGb Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(String diskSizeGb) {
             return diskSizeGb(Output.of(diskSizeGb));
         }
 
+        /**
+         * @param machineType Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(@Nullable Output<String> machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param machineType Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             return machineType(Output.of(machineType));
         }

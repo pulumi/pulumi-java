@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GetLocationsResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The code for the locations.
+     * @return The code for the locations.
      * 
      */
     private final List<String> locationCodes;
@@ -30,16 +30,16 @@ public final class GetLocationsResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The code for the locations.
+     * @return The code for the locations.
      * 
-    */
+     */
     public List<String> locationCodes() {
         return this.locationCodes;
     }

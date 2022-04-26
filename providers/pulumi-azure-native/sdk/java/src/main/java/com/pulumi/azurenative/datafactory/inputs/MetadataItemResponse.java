@@ -25,6 +25,10 @@ public final class MetadataItemResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name")
     private @Nullable Object name;
 
+    /**
+     * @return Metadata item key name. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class MetadataItemResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="value")
     private @Nullable Object value;
 
+    /**
+     * @return Metadata item value. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }
@@ -65,11 +73,23 @@ public final class MetadataItemResponse extends com.pulumi.resources.InvokeArgs 
             $ = new MetadataItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Metadata item key name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Object name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value Metadata item value. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Object value) {
             $.value = value;
             return this;

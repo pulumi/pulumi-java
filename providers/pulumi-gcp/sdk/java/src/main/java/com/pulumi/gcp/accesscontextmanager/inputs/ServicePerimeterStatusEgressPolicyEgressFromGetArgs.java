@@ -25,6 +25,12 @@ public final class ServicePerimeterStatusEgressPolicyEgressFromGetArgs extends c
     @Import(name="identities")
     private @Nullable Output<List<String>> identities;
 
+    /**
+     * @return A list of identities that are allowed access through this `EgressPolicy`.
+     * Should be in the format of email address. The email address should
+     * represent individual user or service account only.
+     * 
+     */
     public Optional<Output<List<String>>> identities() {
         return Optional.ofNullable(this.identities);
     }
@@ -39,6 +45,13 @@ public final class ServicePerimeterStatusEgressPolicyEgressFromGetArgs extends c
     @Import(name="identityType")
     private @Nullable Output<String> identityType;
 
+    /**
+     * @return Specifies the type of identities that are allowed access to outside the
+     * perimeter. If left unspecified, then members of `identities` field will
+     * be allowed access.
+     * Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+     * 
+     */
     public Optional<Output<String>> identityType() {
         return Optional.ofNullable(this.identityType);
     }
@@ -68,24 +81,66 @@ public final class ServicePerimeterStatusEgressPolicyEgressFromGetArgs extends c
             $ = new ServicePerimeterStatusEgressPolicyEgressFromGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identities A list of identities that are allowed access through this `EgressPolicy`.
+         * Should be in the format of email address. The email address should
+         * represent individual user or service account only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identities(@Nullable Output<List<String>> identities) {
             $.identities = identities;
             return this;
         }
 
+        /**
+         * @param identities A list of identities that are allowed access through this `EgressPolicy`.
+         * Should be in the format of email address. The email address should
+         * represent individual user or service account only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identities(List<String> identities) {
             return identities(Output.of(identities));
         }
 
+        /**
+         * @param identities A list of identities that are allowed access through this `EgressPolicy`.
+         * Should be in the format of email address. The email address should
+         * represent individual user or service account only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identities(String... identities) {
             return identities(List.of(identities));
         }
 
+        /**
+         * @param identityType Specifies the type of identities that are allowed access to outside the
+         * perimeter. If left unspecified, then members of `identities` field will
+         * be allowed access.
+         * Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(@Nullable Output<String> identityType) {
             $.identityType = identityType;
             return this;
         }
 
+        /**
+         * @param identityType Specifies the type of identities that are allowed access to outside the
+         * perimeter. If left unspecified, then members of `identities` field will
+         * be allowed access.
+         * Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(String identityType) {
             return identityType(Output.of(identityType));
         }

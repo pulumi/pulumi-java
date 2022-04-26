@@ -22,6 +22,10 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends com.pulu
     @Import(name="remediationName", required=true)
     private String remediationName;
 
+    /**
+     * @return The name of the remediation.
+     * 
+     */
     public String remediationName() {
         return this.remediationName;
     }
@@ -33,6 +37,10 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends com.pulu
     @Import(name="top")
     private @Nullable Integer top;
 
+    /**
+     * @return Maximum number of records to return.
+     * 
+     */
     public Optional<Integer> top() {
         return Optional.ofNullable(this.top);
     }
@@ -62,11 +70,23 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends com.pulu
             $ = new ListRemediationDeploymentsAtSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param remediationName The name of the remediation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediationName(String remediationName) {
             $.remediationName = remediationName;
             return this;
         }
 
+        /**
+         * @param top Maximum number of records to return.
+         * 
+         * @return builder
+         * 
+         */
         public Builder top(@Nullable Integer top) {
             $.top = top;
             return this;

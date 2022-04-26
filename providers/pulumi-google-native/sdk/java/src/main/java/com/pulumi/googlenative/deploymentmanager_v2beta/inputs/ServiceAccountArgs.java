@@ -26,6 +26,10 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="email")
     private @Nullable Output<String> email;
 
+    /**
+     * @return The IAM service account email address like test@myproject.iam.gserviceaccount.com
+     * 
+     */
     public Optional<Output<String>> email() {
         return Optional.ofNullable(this.email);
     }
@@ -54,11 +58,23 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ServiceAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email The IAM service account email address like test@myproject.iam.gserviceaccount.com
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email The IAM service account email address like test@myproject.iam.gserviceaccount.com
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }

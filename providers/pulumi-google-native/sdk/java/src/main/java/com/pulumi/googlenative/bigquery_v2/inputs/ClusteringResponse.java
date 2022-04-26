@@ -20,6 +20,10 @@ public final class ClusteringResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fields", required=true)
     private List<String> fields;
 
+    /**
+     * @return [Repeated] One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type fields are supported. When you cluster a table using multiple columns, the order of columns you specify is important. The order of the specified columns determines the sort order of the data.
+     * 
+     */
     public List<String> fields() {
         return this.fields;
     }
@@ -48,11 +52,23 @@ public final class ClusteringResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ClusteringResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fields [Repeated] One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type fields are supported. When you cluster a table using multiple columns, the order of columns you specify is important. The order of the specified columns determines the sort order of the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(List<String> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields [Repeated] One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type fields are supported. When you cluster a table using multiple columns, the order of columns you specify is important. The order of the specified columns determines the sort order of the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(String... fields) {
             return fields(List.of(fields));
         }

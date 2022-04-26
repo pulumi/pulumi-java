@@ -34,6 +34,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="basePolicy")
     private @Nullable Output<SubResourceArgs> basePolicy;
 
+    /**
+     * @return The parent firewall policy from which rules are inherited.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> basePolicy() {
         return Optional.ofNullable(this.basePolicy);
     }
@@ -45,6 +49,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dnsSettings")
     private @Nullable Output<DnsSettingsArgs> dnsSettings;
 
+    /**
+     * @return DNS Proxy Settings definition.
+     * 
+     */
     public Optional<Output<DnsSettingsArgs>> dnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
@@ -56,6 +64,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="firewallPolicyName")
     private @Nullable Output<String> firewallPolicyName;
 
+    /**
+     * @return The name of the Firewall Policy.
+     * 
+     */
     public Optional<Output<String>> firewallPolicyName() {
         return Optional.ofNullable(this.firewallPolicyName);
     }
@@ -67,6 +79,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -78,6 +94,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="identity")
     private @Nullable Output<ManagedServiceIdentityArgs> identity;
 
+    /**
+     * @return The identity of the firewall policy.
+     * 
+     */
     public Optional<Output<ManagedServiceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -89,6 +109,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="insights")
     private @Nullable Output<FirewallPolicyInsightsArgs> insights;
 
+    /**
+     * @return Insights on Firewall Policy.
+     * 
+     */
     public Optional<Output<FirewallPolicyInsightsArgs>> insights() {
         return Optional.ofNullable(this.insights);
     }
@@ -100,6 +124,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="intrusionDetection")
     private @Nullable Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection;
 
+    /**
+     * @return The configuration for Intrusion detection.
+     * 
+     */
     public Optional<Output<FirewallPolicyIntrusionDetectionArgs>> intrusionDetection() {
         return Optional.ofNullable(this.intrusionDetection);
     }
@@ -111,6 +139,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -122,6 +154,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -133,6 +169,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sku")
     private @Nullable Output<FirewallPolicySkuArgs> sku;
 
+    /**
+     * @return The Firewall Policy SKU.
+     * 
+     */
     public Optional<Output<FirewallPolicySkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -144,6 +184,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="snat")
     private @Nullable Output<FirewallPolicySNATArgs> snat;
 
+    /**
+     * @return The private IP addresses/IP ranges to which traffic will not be SNAT.
+     * 
+     */
     public Optional<Output<FirewallPolicySNATArgs>> snat() {
         return Optional.ofNullable(this.snat);
     }
@@ -155,6 +199,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -166,6 +214,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="threatIntelMode")
     private @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
 
+    /**
+     * @return The operation mode for Threat Intelligence.
+     * 
+     */
     public Optional<Output<Either<String,AzureFirewallThreatIntelMode>>> threatIntelMode() {
         return Optional.ofNullable(this.threatIntelMode);
     }
@@ -177,6 +229,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="threatIntelWhitelist")
     private @Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist;
 
+    /**
+     * @return ThreatIntel Whitelist for Firewall Policy.
+     * 
+     */
     public Optional<Output<FirewallPolicyThreatIntelWhitelistArgs>> threatIntelWhitelist() {
         return Optional.ofNullable(this.threatIntelWhitelist);
     }
@@ -188,6 +244,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="transportSecurity")
     private @Nullable Output<FirewallPolicyTransportSecurityArgs> transportSecurity;
 
+    /**
+     * @return TLS Configuration definition.
+     * 
+     */
     public Optional<Output<FirewallPolicyTransportSecurityArgs>> transportSecurity() {
         return Optional.ofNullable(this.transportSecurity);
     }
@@ -230,145 +290,337 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
             $ = new FirewallPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basePolicy The parent firewall policy from which rules are inherited.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basePolicy(@Nullable Output<SubResourceArgs> basePolicy) {
             $.basePolicy = basePolicy;
             return this;
         }
 
+        /**
+         * @param basePolicy The parent firewall policy from which rules are inherited.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basePolicy(SubResourceArgs basePolicy) {
             return basePolicy(Output.of(basePolicy));
         }
 
+        /**
+         * @param dnsSettings DNS Proxy Settings definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSettings(@Nullable Output<DnsSettingsArgs> dnsSettings) {
             $.dnsSettings = dnsSettings;
             return this;
         }
 
+        /**
+         * @param dnsSettings DNS Proxy Settings definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSettings(DnsSettingsArgs dnsSettings) {
             return dnsSettings(Output.of(dnsSettings));
         }
 
+        /**
+         * @param firewallPolicyName The name of the Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallPolicyName(@Nullable Output<String> firewallPolicyName) {
             $.firewallPolicyName = firewallPolicyName;
             return this;
         }
 
+        /**
+         * @param firewallPolicyName The name of the Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallPolicyName(String firewallPolicyName) {
             return firewallPolicyName(Output.of(firewallPolicyName));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param identity The identity of the firewall policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the firewall policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedServiceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param insights Insights on Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insights(@Nullable Output<FirewallPolicyInsightsArgs> insights) {
             $.insights = insights;
             return this;
         }
 
+        /**
+         * @param insights Insights on Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insights(FirewallPolicyInsightsArgs insights) {
             return insights(Output.of(insights));
         }
 
+        /**
+         * @param intrusionDetection The configuration for Intrusion detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intrusionDetection(@Nullable Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection) {
             $.intrusionDetection = intrusionDetection;
             return this;
         }
 
+        /**
+         * @param intrusionDetection The configuration for Intrusion detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intrusionDetection(FirewallPolicyIntrusionDetectionArgs intrusionDetection) {
             return intrusionDetection(Output.of(intrusionDetection));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The Firewall Policy SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<FirewallPolicySkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The Firewall Policy SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(FirewallPolicySkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param snat The private IP addresses/IP ranges to which traffic will not be SNAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snat(@Nullable Output<FirewallPolicySNATArgs> snat) {
             $.snat = snat;
             return this;
         }
 
+        /**
+         * @param snat The private IP addresses/IP ranges to which traffic will not be SNAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snat(FirewallPolicySNATArgs snat) {
             return snat(Output.of(snat));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param threatIntelMode The operation mode for Threat Intelligence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelMode(@Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode) {
             $.threatIntelMode = threatIntelMode;
             return this;
         }
 
+        /**
+         * @param threatIntelMode The operation mode for Threat Intelligence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelMode(Either<String,AzureFirewallThreatIntelMode> threatIntelMode) {
             return threatIntelMode(Output.of(threatIntelMode));
         }
 
+        /**
+         * @param threatIntelMode The operation mode for Threat Intelligence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelMode(String threatIntelMode) {
             return threatIntelMode(Either.ofLeft(threatIntelMode));
         }
 
+        /**
+         * @param threatIntelMode The operation mode for Threat Intelligence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelMode(AzureFirewallThreatIntelMode threatIntelMode) {
             return threatIntelMode(Either.ofRight(threatIntelMode));
         }
 
+        /**
+         * @param threatIntelWhitelist ThreatIntel Whitelist for Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelWhitelist(@Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist) {
             $.threatIntelWhitelist = threatIntelWhitelist;
             return this;
         }
 
+        /**
+         * @param threatIntelWhitelist ThreatIntel Whitelist for Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelWhitelist(FirewallPolicyThreatIntelWhitelistArgs threatIntelWhitelist) {
             return threatIntelWhitelist(Output.of(threatIntelWhitelist));
         }
 
+        /**
+         * @param transportSecurity TLS Configuration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportSecurity(@Nullable Output<FirewallPolicyTransportSecurityArgs> transportSecurity) {
             $.transportSecurity = transportSecurity;
             return this;
         }
 
+        /**
+         * @param transportSecurity TLS Configuration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportSecurity(FirewallPolicyTransportSecurityArgs transportSecurity) {
             return transportSecurity(Output.of(transportSecurity));
         }

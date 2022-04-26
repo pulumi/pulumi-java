@@ -26,6 +26,10 @@ public final class CloudServiceVaultCertificateArgs extends com.pulumi.resources
     @Import(name="certificateUrl")
     private @Nullable Output<String> certificateUrl;
 
+    /**
+     * @return This is the URL of a certificate that has been uploaded to Key Vault as a secret.
+     * 
+     */
     public Optional<Output<String>> certificateUrl() {
         return Optional.ofNullable(this.certificateUrl);
     }
@@ -54,11 +58,23 @@ public final class CloudServiceVaultCertificateArgs extends com.pulumi.resources
             $ = new CloudServiceVaultCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateUrl This is the URL of a certificate that has been uploaded to Key Vault as a secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateUrl(@Nullable Output<String> certificateUrl) {
             $.certificateUrl = certificateUrl;
             return this;
         }
 
+        /**
+         * @param certificateUrl This is the URL of a certificate that has been uploaded to Key Vault as a secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateUrl(String certificateUrl) {
             return certificateUrl(Output.of(certificateUrl));
         }

@@ -23,6 +23,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return Name of VPC network connected with service producers using VPC peering.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -43,6 +47,12 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservedPeeringRanges")
     private @Nullable Output<List<String>> reservedPeeringRanges;
 
+    /**
+     * @return Named IP address range(s) of PEERING type reserved for
+     * this service provider. Note that invoking this method with a different range when connection
+     * is already established will not reallocate already provisioned service producer subnetworks.
+     * 
+     */
     public Optional<Output<List<String>>> reservedPeeringRanges() {
         return Optional.ofNullable(this.reservedPeeringRanges);
     }
@@ -56,6 +66,12 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return Provider peering service that is managing peering connectivity for a
+     * service provider organization. For Google services that support this functionality it is
+     * &#39;servicenetworking.googleapis.com&#39;.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -87,11 +103,23 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
             $ = new ConnectionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param network Name of VPC network connected with service producers using VPC peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network Name of VPC network connected with service producers using VPC peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
@@ -105,24 +133,64 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
             return peering(Output.of(peering));
         }
 
+        /**
+         * @param reservedPeeringRanges Named IP address range(s) of PEERING type reserved for
+         * this service provider. Note that invoking this method with a different range when connection
+         * is already established will not reallocate already provisioned service producer subnetworks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservedPeeringRanges(@Nullable Output<List<String>> reservedPeeringRanges) {
             $.reservedPeeringRanges = reservedPeeringRanges;
             return this;
         }
 
+        /**
+         * @param reservedPeeringRanges Named IP address range(s) of PEERING type reserved for
+         * this service provider. Note that invoking this method with a different range when connection
+         * is already established will not reallocate already provisioned service producer subnetworks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservedPeeringRanges(List<String> reservedPeeringRanges) {
             return reservedPeeringRanges(Output.of(reservedPeeringRanges));
         }
 
+        /**
+         * @param reservedPeeringRanges Named IP address range(s) of PEERING type reserved for
+         * this service provider. Note that invoking this method with a different range when connection
+         * is already established will not reallocate already provisioned service producer subnetworks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservedPeeringRanges(String... reservedPeeringRanges) {
             return reservedPeeringRanges(List.of(reservedPeeringRanges));
         }
 
+        /**
+         * @param service Provider peering service that is managing peering connectivity for a
+         * service provider organization. For Google services that support this functionality it is
+         * &#39;servicenetworking.googleapis.com&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Provider peering service that is managing peering connectivity for a
+         * service provider organization. For Google services that support this functionality it is
+         * &#39;servicenetworking.googleapis.com&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

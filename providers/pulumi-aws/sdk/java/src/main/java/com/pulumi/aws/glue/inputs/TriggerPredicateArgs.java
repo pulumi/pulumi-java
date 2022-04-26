@@ -24,6 +24,10 @@ public final class TriggerPredicateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="conditions", required=true)
     private Output<List<TriggerPredicateConditionArgs>> conditions;
 
+    /**
+     * @return A list of the conditions that determine when the trigger will fire. See Conditions.
+     * 
+     */
     public Output<List<TriggerPredicateConditionArgs>> conditions() {
         return this.conditions;
     }
@@ -35,6 +39,10 @@ public final class TriggerPredicateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="logical")
     private @Nullable Output<String> logical;
 
+    /**
+     * @return How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or `ANY`.
+     * 
+     */
     public Optional<Output<String>> logical() {
         return Optional.ofNullable(this.logical);
     }
@@ -64,24 +72,54 @@ public final class TriggerPredicateArgs extends com.pulumi.resources.ResourceArg
             $ = new TriggerPredicateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions A list of the conditions that determine when the trigger will fire. See Conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(Output<List<TriggerPredicateConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions A list of the conditions that determine when the trigger will fire. See Conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<TriggerPredicateConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions A list of the conditions that determine when the trigger will fire. See Conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(TriggerPredicateConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param logical How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or `ANY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logical(@Nullable Output<String> logical) {
             $.logical = logical;
             return this;
         }
 
+        /**
+         * @param logical How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or `ANY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logical(String logical) {
             return logical(Output.of(logical));
         }

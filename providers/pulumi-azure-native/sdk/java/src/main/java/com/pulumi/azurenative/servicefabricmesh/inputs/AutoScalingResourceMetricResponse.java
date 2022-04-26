@@ -25,6 +25,11 @@ public final class AutoScalingResourceMetricResponse extends com.pulumi.resource
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Enumerates the metrics that are used for triggering auto scaling.
+     * Expected value is &#39;Resource&#39;.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -36,6 +41,10 @@ public final class AutoScalingResourceMetricResponse extends com.pulumi.resource
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the resource.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -65,11 +74,24 @@ public final class AutoScalingResourceMetricResponse extends com.pulumi.resource
             $ = new AutoScalingResourceMetricResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind Enumerates the metrics that are used for triggering auto scaling.
+         * Expected value is &#39;Resource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

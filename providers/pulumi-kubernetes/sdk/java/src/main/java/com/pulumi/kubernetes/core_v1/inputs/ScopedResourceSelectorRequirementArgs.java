@@ -33,6 +33,16 @@ public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.reso
     @Import(name="operator", required=true)
     private Output<String> operator;
 
+    /**
+     * @return Represents a scope&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.
+     * 
+     * Possible enum values:
+     *  - `&#34;DoesNotExist&#34;`
+     *  - `&#34;Exists&#34;`
+     *  - `&#34;In&#34;`
+     *  - `&#34;NotIn&#34;`
+     * 
+     */
     public Output<String> operator() {
         return this.operator;
     }
@@ -52,6 +62,18 @@ public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.reso
     @Import(name="scopeName", required=true)
     private Output<String> scopeName;
 
+    /**
+     * @return The name of the scope that the selector applies to.
+     * 
+     * Possible enum values:
+     *  - `&#34;BestEffort&#34;` Match all pod objects that have best effort quality of service
+     *  - `&#34;CrossNamespacePodAffinity&#34;` Match all pod objects that have cross-namespace pod (anti)affinity mentioned. This is a beta feature enabled by the PodAffinityNamespaceSelector feature flag.
+     *  - `&#34;NotBestEffort&#34;` Match all pod objects that do not have best effort quality of service
+     *  - `&#34;NotTerminating&#34;` Match all pod objects where spec.activeDeadlineSeconds is nil
+     *  - `&#34;PriorityClass&#34;` Match all pod objects that have priority class mentioned
+     *  - `&#34;Terminating&#34;` Match all pod objects where spec.activeDeadlineSeconds &gt;=0
+     * 
+     */
     public Output<String> scopeName() {
         return this.scopeName;
     }
@@ -63,6 +85,10 @@ public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.reso
     @Import(name="values")
     private @Nullable Output<List<String>> values;
 
+    /**
+     * @return An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
+     * 
+     */
     public Optional<Output<List<String>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -93,33 +119,103 @@ public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.reso
             $ = new ScopedResourceSelectorRequirementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operator Represents a scope&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.
+         * 
+         * Possible enum values:
+         *  - `&#34;DoesNotExist&#34;`
+         *  - `&#34;Exists&#34;`
+         *  - `&#34;In&#34;`
+         *  - `&#34;NotIn&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<String> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator Represents a scope&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.
+         * 
+         * Possible enum values:
+         *  - `&#34;DoesNotExist&#34;`
+         *  - `&#34;Exists&#34;`
+         *  - `&#34;In&#34;`
+         *  - `&#34;NotIn&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param scopeName The name of the scope that the selector applies to.
+         * 
+         * Possible enum values:
+         *  - `&#34;BestEffort&#34;` Match all pod objects that have best effort quality of service
+         *  - `&#34;CrossNamespacePodAffinity&#34;` Match all pod objects that have cross-namespace pod (anti)affinity mentioned. This is a beta feature enabled by the PodAffinityNamespaceSelector feature flag.
+         *  - `&#34;NotBestEffort&#34;` Match all pod objects that do not have best effort quality of service
+         *  - `&#34;NotTerminating&#34;` Match all pod objects where spec.activeDeadlineSeconds is nil
+         *  - `&#34;PriorityClass&#34;` Match all pod objects that have priority class mentioned
+         *  - `&#34;Terminating&#34;` Match all pod objects where spec.activeDeadlineSeconds &gt;=0
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeName(Output<String> scopeName) {
             $.scopeName = scopeName;
             return this;
         }
 
+        /**
+         * @param scopeName The name of the scope that the selector applies to.
+         * 
+         * Possible enum values:
+         *  - `&#34;BestEffort&#34;` Match all pod objects that have best effort quality of service
+         *  - `&#34;CrossNamespacePodAffinity&#34;` Match all pod objects that have cross-namespace pod (anti)affinity mentioned. This is a beta feature enabled by the PodAffinityNamespaceSelector feature flag.
+         *  - `&#34;NotBestEffort&#34;` Match all pod objects that do not have best effort quality of service
+         *  - `&#34;NotTerminating&#34;` Match all pod objects where spec.activeDeadlineSeconds is nil
+         *  - `&#34;PriorityClass&#34;` Match all pod objects that have priority class mentioned
+         *  - `&#34;Terminating&#34;` Match all pod objects where spec.activeDeadlineSeconds &gt;=0
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeName(String scopeName) {
             return scopeName(Output.of(scopeName));
         }
 
+        /**
+         * @param values An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

@@ -49,6 +49,10 @@ public final class DetectorModelState extends com.pulumi.resources.InvokeArgs {
     @Import(name="stateName", required=true)
     private String stateName;
 
+    /**
+     * @return The name of the state.
+     * 
+     */
     public String stateName() {
         return this.stateName;
     }
@@ -95,6 +99,12 @@ public final class DetectorModelState extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param stateName The name of the state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateName(String stateName) {
             $.stateName = stateName;
             return this;

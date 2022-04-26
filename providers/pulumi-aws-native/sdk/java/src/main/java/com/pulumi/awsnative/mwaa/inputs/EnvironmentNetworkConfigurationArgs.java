@@ -27,6 +27,10 @@ public final class EnvironmentNetworkConfigurationArgs extends com.pulumi.resour
     @Import(name="securityGroupIds")
     private @Nullable Output<List<String>> securityGroupIds;
 
+    /**
+     * @return A list of security groups to use for the environment.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroupIds() {
         return Optional.ofNullable(this.securityGroupIds);
     }
@@ -38,6 +42,10 @@ public final class EnvironmentNetworkConfigurationArgs extends com.pulumi.resour
     @Import(name="subnetIds")
     private @Nullable Output<List<String>> subnetIds;
 
+    /**
+     * @return A list of subnets to use for the environment. These must be private subnets, in the same VPC, in two different availability zones.
+     * 
+     */
     public Optional<Output<List<String>>> subnetIds() {
         return Optional.ofNullable(this.subnetIds);
     }
@@ -67,28 +75,64 @@ public final class EnvironmentNetworkConfigurationArgs extends com.pulumi.resour
             $ = new EnvironmentNetworkConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityGroupIds A list of security groups to use for the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds A list of security groups to use for the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             return securityGroupIds(Output.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupIds A list of security groups to use for the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param subnetIds A list of subnets to use for the environment. These must be private subnets, in the same VPC, in two different availability zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds A list of subnets to use for the environment. These must be private subnets, in the same VPC, in two different availability zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds A list of subnets to use for the environment. These must be private subnets, in the same VPC, in two different availability zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }

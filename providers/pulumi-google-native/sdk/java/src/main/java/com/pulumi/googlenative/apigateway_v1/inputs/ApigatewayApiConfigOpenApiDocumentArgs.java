@@ -26,6 +26,10 @@ public final class ApigatewayApiConfigOpenApiDocumentArgs extends com.pulumi.res
     @Import(name="document")
     private @Nullable Output<ApigatewayApiConfigFileArgs> document;
 
+    /**
+     * @return The OpenAPI Specification document file.
+     * 
+     */
     public Optional<Output<ApigatewayApiConfigFileArgs>> document() {
         return Optional.ofNullable(this.document);
     }
@@ -54,11 +58,23 @@ public final class ApigatewayApiConfigOpenApiDocumentArgs extends com.pulumi.res
             $ = new ApigatewayApiConfigOpenApiDocumentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param document The OpenAPI Specification document file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder document(@Nullable Output<ApigatewayApiConfigFileArgs> document) {
             $.document = document;
             return this;
         }
 
+        /**
+         * @param document The OpenAPI Specification document file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder document(ApigatewayApiConfigFileArgs document) {
             return document(Output.of(document));
         }

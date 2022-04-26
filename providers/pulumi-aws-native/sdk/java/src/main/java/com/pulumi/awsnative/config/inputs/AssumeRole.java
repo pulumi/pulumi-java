@@ -28,6 +28,10 @@ public final class AssumeRole extends com.pulumi.resources.InvokeArgs {
     @Import(name="durationSeconds")
     private @Nullable Integer durationSeconds;
 
+    /**
+     * @return Number of seconds to restrict the assume role session duration.
+     * 
+     */
     public Optional<Integer> durationSeconds() {
         return Optional.ofNullable(this.durationSeconds);
     }
@@ -39,6 +43,10 @@ public final class AssumeRole extends com.pulumi.resources.InvokeArgs {
     @Import(name="externalId")
     private @Nullable String externalId;
 
+    /**
+     * @return External identifier to use when assuming the role.
+     * 
+     */
     public Optional<String> externalId() {
         return Optional.ofNullable(this.externalId);
     }
@@ -50,6 +58,10 @@ public final class AssumeRole extends com.pulumi.resources.InvokeArgs {
     @Import(name="policy")
     private @Nullable String policy;
 
+    /**
+     * @return IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
+     * 
+     */
     public Optional<String> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -61,6 +73,10 @@ public final class AssumeRole extends com.pulumi.resources.InvokeArgs {
     @Import(name="policyArns")
     private @Nullable List<String> policyArns;
 
+    /**
+     * @return Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
+     * 
+     */
     public Optional<List<String>> policyArns() {
         return Optional.ofNullable(this.policyArns);
     }
@@ -72,6 +88,10 @@ public final class AssumeRole extends com.pulumi.resources.InvokeArgs {
     @Import(name="roleArn")
     private @Nullable String roleArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the IAM Role to assume.
+     * 
+     */
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -83,6 +103,10 @@ public final class AssumeRole extends com.pulumi.resources.InvokeArgs {
     @Import(name="sessionName")
     private @Nullable String sessionName;
 
+    /**
+     * @return Session name to use when assuming the role.
+     * 
+     */
     public Optional<String> sessionName() {
         return Optional.ofNullable(this.sessionName);
     }
@@ -94,6 +118,10 @@ public final class AssumeRole extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Map of assume role session tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -105,6 +133,10 @@ public final class AssumeRole extends com.pulumi.resources.InvokeArgs {
     @Import(name="transitiveTagKeys")
     private @Nullable List<String> transitiveTagKeys;
 
+    /**
+     * @return A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
+     * 
+     */
     public Optional<List<String>> transitiveTagKeys() {
         return Optional.ofNullable(this.transitiveTagKeys);
     }
@@ -140,50 +172,110 @@ public final class AssumeRole extends com.pulumi.resources.InvokeArgs {
             $ = new AssumeRole(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param durationSeconds Number of seconds to restrict the assume role session duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
             $.durationSeconds = durationSeconds;
             return this;
         }
 
+        /**
+         * @param externalId External identifier to use when assuming the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(@Nullable String externalId) {
             $.externalId = externalId;
             return this;
         }
 
+        /**
+         * @param policy IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable String policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policyArns Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyArns(@Nullable List<String> policyArns) {
             $.policyArns = policyArns;
             return this;
         }
 
+        /**
+         * @param policyArns Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyArns(String... policyArns) {
             return policyArns(List.of(policyArns));
         }
 
+        /**
+         * @param roleArn Amazon Resource Name (ARN) of the IAM Role to assume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(@Nullable String roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param sessionName Session name to use when assuming the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionName(@Nullable String sessionName) {
             $.sessionName = sessionName;
             return this;
         }
 
+        /**
+         * @param tags Map of assume role session tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param transitiveTagKeys A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitiveTagKeys(@Nullable List<String> transitiveTagKeys) {
             $.transitiveTagKeys = transitiveTagKeys;
             return this;
         }
 
+        /**
+         * @param transitiveTagKeys A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitiveTagKeys(String... transitiveTagKeys) {
             return transitiveTagKeys(List.of(transitiveTagKeys));
         }

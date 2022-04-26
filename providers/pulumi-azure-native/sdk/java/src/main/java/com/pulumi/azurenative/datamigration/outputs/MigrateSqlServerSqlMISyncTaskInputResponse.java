@@ -18,32 +18,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MigrateSqlServerSqlMISyncTaskInputResponse {
     /**
-     * Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+     * @return Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
      * 
      */
     private final AzureActiveDirectoryAppResponse azureApp;
     /**
-     * Backup file share information for all selected databases.
+     * @return Backup file share information for all selected databases.
      * 
      */
     private final @Nullable FileShareResponse backupFileShare;
     /**
-     * Databases to migrate
+     * @return Databases to migrate
      * 
      */
     private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
     /**
-     * Connection information for source SQL Server
+     * @return Connection information for source SQL Server
      * 
      */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
     /**
-     * Fully qualified resourceId of storage
+     * @return Fully qualified resourceId of storage
      * 
      */
     private final String storageResourceId;
     /**
-     * Connection information for Azure SQL Database Managed Instance
+     * @return Connection information for Azure SQL Database Managed Instance
      * 
      */
     private final MiSqlConnectionInfoResponse targetConnectionInfo;
@@ -65,44 +65,44 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse {
     }
 
     /**
-     * Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+     * @return Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
      * 
-    */
+     */
     public AzureActiveDirectoryAppResponse azureApp() {
         return this.azureApp;
     }
     /**
-     * Backup file share information for all selected databases.
+     * @return Backup file share information for all selected databases.
      * 
-    */
+     */
     public Optional<FileShareResponse> backupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
     /**
-     * Databases to migrate
+     * @return Databases to migrate
      * 
-    */
+     */
     public List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
     /**
-     * Connection information for source SQL Server
+     * @return Connection information for source SQL Server
      * 
-    */
+     */
     public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
-     * Fully qualified resourceId of storage
+     * @return Fully qualified resourceId of storage
      * 
-    */
+     */
     public String storageResourceId() {
         return this.storageResourceId;
     }
     /**
-     * Connection information for Azure SQL Database Managed Instance
+     * @return Connection information for Azure SQL Database Managed Instance
      * 
-    */
+     */
     public MiSqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }

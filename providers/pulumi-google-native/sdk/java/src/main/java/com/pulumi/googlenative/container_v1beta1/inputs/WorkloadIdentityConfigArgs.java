@@ -26,6 +26,10 @@ public final class WorkloadIdentityConfigArgs extends com.pulumi.resources.Resou
     @Import(name="identityNamespace")
     private @Nullable Output<String> identityNamespace;
 
+    /**
+     * @return IAM Identity Namespace to attach all Kubernetes Service Accounts to.
+     * 
+     */
     public Optional<Output<String>> identityNamespace() {
         return Optional.ofNullable(this.identityNamespace);
     }
@@ -37,6 +41,10 @@ public final class WorkloadIdentityConfigArgs extends com.pulumi.resources.Resou
     @Import(name="identityProvider")
     private @Nullable Output<String> identityProvider;
 
+    /**
+     * @return identity provider is the third party identity provider.
+     * 
+     */
     public Optional<Output<String>> identityProvider() {
         return Optional.ofNullable(this.identityProvider);
     }
@@ -48,6 +56,10 @@ public final class WorkloadIdentityConfigArgs extends com.pulumi.resources.Resou
     @Import(name="workloadPool")
     private @Nullable Output<String> workloadPool;
 
+    /**
+     * @return The workload pool to attach all Kubernetes service accounts to.
+     * 
+     */
     public Optional<Output<String>> workloadPool() {
         return Optional.ofNullable(this.workloadPool);
     }
@@ -78,29 +90,65 @@ public final class WorkloadIdentityConfigArgs extends com.pulumi.resources.Resou
             $ = new WorkloadIdentityConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityNamespace IAM Identity Namespace to attach all Kubernetes Service Accounts to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityNamespace(@Nullable Output<String> identityNamespace) {
             $.identityNamespace = identityNamespace;
             return this;
         }
 
+        /**
+         * @param identityNamespace IAM Identity Namespace to attach all Kubernetes Service Accounts to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityNamespace(String identityNamespace) {
             return identityNamespace(Output.of(identityNamespace));
         }
 
+        /**
+         * @param identityProvider identity provider is the third party identity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProvider(@Nullable Output<String> identityProvider) {
             $.identityProvider = identityProvider;
             return this;
         }
 
+        /**
+         * @param identityProvider identity provider is the third party identity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProvider(String identityProvider) {
             return identityProvider(Output.of(identityProvider));
         }
 
+        /**
+         * @param workloadPool The workload pool to attach all Kubernetes service accounts to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadPool(@Nullable Output<String> workloadPool) {
             $.workloadPool = workloadPool;
             return this;
         }
 
+        /**
+         * @param workloadPool The workload pool to attach all Kubernetes service accounts to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadPool(String workloadPool) {
             return workloadPool(Output.of(workloadPool));
         }

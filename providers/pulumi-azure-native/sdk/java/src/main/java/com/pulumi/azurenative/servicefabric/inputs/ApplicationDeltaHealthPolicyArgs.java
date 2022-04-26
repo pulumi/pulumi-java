@@ -28,6 +28,10 @@ public final class ApplicationDeltaHealthPolicyArgs extends com.pulumi.resources
     @Import(name="defaultServiceTypeDeltaHealthPolicy")
     private @Nullable Output<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy;
 
+    /**
+     * @return The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.
+     * 
+     */
     public Optional<Output<ServiceTypeDeltaHealthPolicyArgs>> defaultServiceTypeDeltaHealthPolicy() {
         return Optional.ofNullable(this.defaultServiceTypeDeltaHealthPolicy);
     }
@@ -39,6 +43,10 @@ public final class ApplicationDeltaHealthPolicyArgs extends com.pulumi.resources
     @Import(name="serviceTypeDeltaHealthPolicies")
     private @Nullable Output<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies;
 
+    /**
+     * @return The map with service type delta health policy per service type name. The map is empty by default.
+     * 
+     */
     public Optional<Output<Map<String,ServiceTypeDeltaHealthPolicyArgs>>> serviceTypeDeltaHealthPolicies() {
         return Optional.ofNullable(this.serviceTypeDeltaHealthPolicies);
     }
@@ -68,20 +76,44 @@ public final class ApplicationDeltaHealthPolicyArgs extends com.pulumi.resources
             $ = new ApplicationDeltaHealthPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultServiceTypeDeltaHealthPolicy The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultServiceTypeDeltaHealthPolicy(@Nullable Output<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy) {
             $.defaultServiceTypeDeltaHealthPolicy = defaultServiceTypeDeltaHealthPolicy;
             return this;
         }
 
+        /**
+         * @param defaultServiceTypeDeltaHealthPolicy The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultServiceTypeDeltaHealthPolicy(ServiceTypeDeltaHealthPolicyArgs defaultServiceTypeDeltaHealthPolicy) {
             return defaultServiceTypeDeltaHealthPolicy(Output.of(defaultServiceTypeDeltaHealthPolicy));
         }
 
+        /**
+         * @param serviceTypeDeltaHealthPolicies The map with service type delta health policy per service type name. The map is empty by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTypeDeltaHealthPolicies(@Nullable Output<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies) {
             $.serviceTypeDeltaHealthPolicies = serviceTypeDeltaHealthPolicies;
             return this;
         }
 
+        /**
+         * @param serviceTypeDeltaHealthPolicies The map with service type delta health policy per service type name. The map is empty by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTypeDeltaHealthPolicies(Map<String,ServiceTypeDeltaHealthPolicyArgs> serviceTypeDeltaHealthPolicies) {
             return serviceTypeDeltaHealthPolicies(Output.of(serviceTypeDeltaHealthPolicies));
         }

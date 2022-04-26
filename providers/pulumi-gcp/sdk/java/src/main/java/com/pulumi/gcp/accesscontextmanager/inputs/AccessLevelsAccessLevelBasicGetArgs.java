@@ -30,6 +30,16 @@ public final class AccessLevelsAccessLevelBasicGetArgs extends com.pulumi.resour
     @Import(name="combiningFunction")
     private @Nullable Output<String> combiningFunction;
 
+    /**
+     * @return How the conditions list should be combined to determine if a request
+     * is granted this AccessLevel. If AND is used, each Condition in
+     * conditions must be satisfied for the AccessLevel to be applied. If
+     * OR is used, at least one Condition in conditions must be satisfied
+     * for the AccessLevel to be applied.
+     * Default value is `AND`.
+     * Possible values are `AND` and `OR`.
+     * 
+     */
     public Optional<Output<String>> combiningFunction() {
         return Optional.ofNullable(this.combiningFunction);
     }
@@ -42,6 +52,11 @@ public final class AccessLevelsAccessLevelBasicGetArgs extends com.pulumi.resour
     @Import(name="conditions", required=true)
     private Output<List<AccessLevelsAccessLevelBasicConditionGetArgs>> conditions;
 
+    /**
+     * @return A set of requirements for the AccessLevel to be granted.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<AccessLevelsAccessLevelBasicConditionGetArgs>> conditions() {
         return this.conditions;
     }
@@ -71,24 +86,69 @@ public final class AccessLevelsAccessLevelBasicGetArgs extends com.pulumi.resour
             $ = new AccessLevelsAccessLevelBasicGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param combiningFunction How the conditions list should be combined to determine if a request
+         * is granted this AccessLevel. If AND is used, each Condition in
+         * conditions must be satisfied for the AccessLevel to be applied. If
+         * OR is used, at least one Condition in conditions must be satisfied
+         * for the AccessLevel to be applied.
+         * Default value is `AND`.
+         * Possible values are `AND` and `OR`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder combiningFunction(@Nullable Output<String> combiningFunction) {
             $.combiningFunction = combiningFunction;
             return this;
         }
 
+        /**
+         * @param combiningFunction How the conditions list should be combined to determine if a request
+         * is granted this AccessLevel. If AND is used, each Condition in
+         * conditions must be satisfied for the AccessLevel to be applied. If
+         * OR is used, at least one Condition in conditions must be satisfied
+         * for the AccessLevel to be applied.
+         * Default value is `AND`.
+         * Possible values are `AND` and `OR`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder combiningFunction(String combiningFunction) {
             return combiningFunction(Output.of(combiningFunction));
         }
 
+        /**
+         * @param conditions A set of requirements for the AccessLevel to be granted.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(Output<List<AccessLevelsAccessLevelBasicConditionGetArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions A set of requirements for the AccessLevel to be granted.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<AccessLevelsAccessLevelBasicConditionGetArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions A set of requirements for the AccessLevel to be granted.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(AccessLevelsAccessLevelBasicConditionGetArgs... conditions) {
             return conditions(List.of(conditions));
         }

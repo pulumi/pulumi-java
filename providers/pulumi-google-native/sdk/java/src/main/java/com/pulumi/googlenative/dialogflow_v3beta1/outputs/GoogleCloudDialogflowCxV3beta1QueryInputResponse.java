@@ -15,32 +15,32 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse {
     /**
-     * The natural language speech audio to be processed.
+     * @return The natural language speech audio to be processed.
      * 
      */
     private final GoogleCloudDialogflowCxV3beta1AudioInputResponse audio;
     /**
-     * The DTMF event to be handled.
+     * @return The DTMF event to be handled.
      * 
      */
     private final GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf;
     /**
-     * The event to be triggered.
+     * @return The event to be triggered.
      * 
      */
     private final GoogleCloudDialogflowCxV3beta1EventInputResponse event;
     /**
-     * The intent to be triggered.
+     * @return The intent to be triggered.
      * 
      */
     private final GoogleCloudDialogflowCxV3beta1IntentInputResponse intent;
     /**
-     * The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
+     * @return The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
      * 
      */
     private final String languageCode;
     /**
-     * The natural language text to be processed.
+     * @return The natural language text to be processed.
      * 
      */
     private final GoogleCloudDialogflowCxV3beta1TextInputResponse text;
@@ -62,44 +62,44 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse {
     }
 
     /**
-     * The natural language speech audio to be processed.
+     * @return The natural language speech audio to be processed.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3beta1AudioInputResponse audio() {
         return this.audio;
     }
     /**
-     * The DTMF event to be handled.
+     * @return The DTMF event to be handled.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf() {
         return this.dtmf;
     }
     /**
-     * The event to be triggered.
+     * @return The event to be triggered.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3beta1EventInputResponse event() {
         return this.event;
     }
     /**
-     * The intent to be triggered.
+     * @return The intent to be triggered.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3beta1IntentInputResponse intent() {
         return this.intent;
     }
     /**
-     * The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
+     * @return The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
      * 
-    */
+     */
     public String languageCode() {
         return this.languageCode;
     }
     /**
-     * The natural language text to be processed.
+     * @return The natural language text to be processed.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3beta1TextInputResponse text() {
         return this.text;
     }

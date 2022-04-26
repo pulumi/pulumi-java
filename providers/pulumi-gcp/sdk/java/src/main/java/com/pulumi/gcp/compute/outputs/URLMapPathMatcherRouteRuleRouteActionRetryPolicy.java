@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class URLMapPathMatcherRouteRuleRouteActionRetryPolicy {
     /**
-     * Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.
+     * @return Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.
      * 
      */
     private final Integer numRetries;
     /**
-     * Specifies a non-zero timeout per retry attempt.
+     * @return Specifies a non-zero timeout per retry attempt.
      * If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
      * will use the largest timeout among all backend services associated with the route.
      * Structure is documented below.
@@ -28,7 +28,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionRetryPolicy {
      */
     private final @Nullable URLMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout perTryTimeout;
     /**
-     * Specfies one or more conditions when this retry rule applies. Valid values are:
+     * @return Specfies one or more conditions when this retry rule applies. Valid values are:
      * * 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
      *   or if the backend service does not respond at all, example: disconnects, reset, read timeout,
      * * connection failure, and refused streams.
@@ -58,24 +58,24 @@ public final class URLMapPathMatcherRouteRuleRouteActionRetryPolicy {
     }
 
     /**
-     * Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.
+     * @return Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.
      * 
-    */
+     */
     public Integer numRetries() {
         return this.numRetries;
     }
     /**
-     * Specifies a non-zero timeout per retry attempt.
+     * @return Specifies a non-zero timeout per retry attempt.
      * If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
      * will use the largest timeout among all backend services associated with the route.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<URLMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout> perTryTimeout() {
         return Optional.ofNullable(this.perTryTimeout);
     }
     /**
-     * Specfies one or more conditions when this retry rule applies. Valid values are:
+     * @return Specfies one or more conditions when this retry rule applies. Valid values are:
      * * 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
      *   or if the backend service does not respond at all, example: disconnects, reset, read timeout,
      * * connection failure, and refused streams.
@@ -91,7 +91,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionRetryPolicy {
      * * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
      * * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
      * 
-    */
+     */
     public List<String> retryConditions() {
         return this.retryConditions == null ? List.of() : this.retryConditions;
     }

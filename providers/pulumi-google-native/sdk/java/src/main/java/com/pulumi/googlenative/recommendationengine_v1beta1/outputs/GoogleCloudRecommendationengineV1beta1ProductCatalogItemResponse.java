@@ -15,42 +15,42 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse {
     /**
-     * Optional. The available quantity of the item.
+     * @return Optional. The available quantity of the item.
      * 
      */
     private final String availableQuantity;
     /**
-     * Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..
+     * @return Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..
      * 
      */
     private final String canonicalProductUri;
     /**
-     * Optional. A map to pass the costs associated with the product. For example: {&#34;manufacturing&#34;: 45.5} The profit of selling this item is computed like so: * If &#39;exactPrice&#39; is provided, profit = displayPrice - sum(costs) * If &#39;priceRange&#39; is provided, profit = minPrice - sum(costs)
+     * @return Optional. A map to pass the costs associated with the product. For example: {&#34;manufacturing&#34;: 45.5} The profit of selling this item is computed like so: * If &#39;exactPrice&#39; is provided, profit = displayPrice - sum(costs) * If &#39;priceRange&#39; is provided, profit = minPrice - sum(costs)
      * 
      */
     private final Map<String,String> costs;
     /**
-     * Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.
+     * @return Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.
      * 
      */
     private final String currencyCode;
     /**
-     * Optional. The exact product price.
+     * @return Optional. The exact product price.
      * 
      */
     private final GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice;
     /**
-     * Optional. Product images for the catalog item.
+     * @return Optional. Product images for the catalog item.
      * 
      */
     private final List<GoogleCloudRecommendationengineV1beta1ImageResponse> images;
     /**
-     * Optional. The product price range.
+     * @return Optional. The product price range.
      * 
      */
     private final GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange;
     /**
-     * Optional. Online stock state of the catalog item. Default is `IN_STOCK`.
+     * @return Optional. Online stock state of the catalog item. Default is `IN_STOCK`.
      * 
      */
     private final String stockState;
@@ -76,58 +76,58 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     }
 
     /**
-     * Optional. The available quantity of the item.
+     * @return Optional. The available quantity of the item.
      * 
-    */
+     */
     public String availableQuantity() {
         return this.availableQuantity;
     }
     /**
-     * Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..
+     * @return Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..
      * 
-    */
+     */
     public String canonicalProductUri() {
         return this.canonicalProductUri;
     }
     /**
-     * Optional. A map to pass the costs associated with the product. For example: {&#34;manufacturing&#34;: 45.5} The profit of selling this item is computed like so: * If &#39;exactPrice&#39; is provided, profit = displayPrice - sum(costs) * If &#39;priceRange&#39; is provided, profit = minPrice - sum(costs)
+     * @return Optional. A map to pass the costs associated with the product. For example: {&#34;manufacturing&#34;: 45.5} The profit of selling this item is computed like so: * If &#39;exactPrice&#39; is provided, profit = displayPrice - sum(costs) * If &#39;priceRange&#39; is provided, profit = minPrice - sum(costs)
      * 
-    */
+     */
     public Map<String,String> costs() {
         return this.costs;
     }
     /**
-     * Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.
+     * @return Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.
      * 
-    */
+     */
     public String currencyCode() {
         return this.currencyCode;
     }
     /**
-     * Optional. The exact product price.
+     * @return Optional. The exact product price.
      * 
-    */
+     */
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice() {
         return this.exactPrice;
     }
     /**
-     * Optional. Product images for the catalog item.
+     * @return Optional. Product images for the catalog item.
      * 
-    */
+     */
     public List<GoogleCloudRecommendationengineV1beta1ImageResponse> images() {
         return this.images;
     }
     /**
-     * Optional. The product price range.
+     * @return Optional. The product price range.
      * 
-    */
+     */
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange() {
         return this.priceRange;
     }
     /**
-     * Optional. Online stock state of the catalog item. Default is `IN_STOCK`.
+     * @return Optional. Online stock state of the catalog item. Default is `IN_STOCK`.
      * 
-    */
+     */
     public String stockState() {
         return this.stockState;
     }

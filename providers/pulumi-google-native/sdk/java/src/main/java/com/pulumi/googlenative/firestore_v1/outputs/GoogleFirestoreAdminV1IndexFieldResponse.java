@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleFirestoreAdminV1IndexFieldResponse {
     /**
-     * Indicates that this field supports operations on `array_value`s.
+     * @return Indicates that this field supports operations on `array_value`s.
      * 
      */
     private final String arrayConfig;
     /**
-     * Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
+     * @return Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
      * 
      */
     private final String fieldPath;
     /**
-     * Indicates that this field supports ordering by the specified order or comparing using =, !=, &lt;, &lt;=, &gt;, &gt;=.
+     * @return Indicates that this field supports ordering by the specified order or comparing using =, !=, &lt;, &lt;=, &gt;, &gt;=.
      * 
      */
     private final String order;
@@ -36,23 +36,23 @@ public final class GoogleFirestoreAdminV1IndexFieldResponse {
     }
 
     /**
-     * Indicates that this field supports operations on `array_value`s.
+     * @return Indicates that this field supports operations on `array_value`s.
      * 
-    */
+     */
     public String arrayConfig() {
         return this.arrayConfig;
     }
     /**
-     * Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
+     * @return Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
      * 
-    */
+     */
     public String fieldPath() {
         return this.fieldPath;
     }
     /**
-     * Indicates that this field supports ordering by the specified order or comparing using =, !=, &lt;, &lt;=, &gt;, &gt;=.
+     * @return Indicates that this field supports ordering by the specified order or comparing using =, !=, &lt;, &lt;=, &gt;, &gt;=.
      * 
-    */
+     */
     public String order() {
         return this.order;
     }

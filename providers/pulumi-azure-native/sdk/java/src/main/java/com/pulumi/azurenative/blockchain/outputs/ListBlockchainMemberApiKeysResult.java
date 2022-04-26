@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListBlockchainMemberApiKeysResult {
     /**
-     * Gets or sets the collection of API key.
+     * @return Gets or sets the collection of API key.
      * 
      */
     private final @Nullable List<ApiKeyResponse> keys;
@@ -23,9 +23,9 @@ public final class ListBlockchainMemberApiKeysResult {
     }
 
     /**
-     * Gets or sets the collection of API key.
+     * @return Gets or sets the collection of API key.
      * 
-    */
+     */
     public List<ApiKeyResponse> keys() {
         return this.keys == null ? List.of() : this.keys;
     }

@@ -21,6 +21,10 @@ public final class VirtualClusterContainerProviderArgs extends com.pulumi.resour
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The ID of the container cluster
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -39,6 +43,10 @@ public final class VirtualClusterContainerProviderArgs extends com.pulumi.resour
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of the container provider
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -69,11 +77,23 @@ public final class VirtualClusterContainerProviderArgs extends com.pulumi.resour
             $ = new VirtualClusterContainerProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the container cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The ID of the container cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
@@ -87,11 +107,23 @@ public final class VirtualClusterContainerProviderArgs extends com.pulumi.resour
             return info(Output.of(info));
         }
 
+        /**
+         * @param type The type of the container provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the container provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ResourceIdResponse {
     /**
-     * The ID of the resource
+     * @return The ID of the resource
      * 
      */
     private final String id;
@@ -21,9 +21,9 @@ public final class ResourceIdResponse {
     }
 
     /**
-     * The ID of the resource
+     * @return The ID of the resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

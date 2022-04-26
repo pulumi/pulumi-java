@@ -28,6 +28,10 @@ public final class FlowAccessControlConfigurationPolicyArgs extends com.pulumi.r
     @Import(name="allowedCallerIpAddresses")
     private @Nullable Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses;
 
+    /**
+     * @return The allowed caller IP address ranges.
+     * 
+     */
     public Optional<Output<List<IpAddressRangeArgs>>> allowedCallerIpAddresses() {
         return Optional.ofNullable(this.allowedCallerIpAddresses);
     }
@@ -39,6 +43,10 @@ public final class FlowAccessControlConfigurationPolicyArgs extends com.pulumi.r
     @Import(name="openAuthenticationPolicies")
     private @Nullable Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies;
 
+    /**
+     * @return The authentication policies for workflow.
+     * 
+     */
     public Optional<Output<OpenAuthenticationAccessPoliciesArgs>> openAuthenticationPolicies() {
         return Optional.ofNullable(this.openAuthenticationPolicies);
     }
@@ -68,24 +76,54 @@ public final class FlowAccessControlConfigurationPolicyArgs extends com.pulumi.r
             $ = new FlowAccessControlConfigurationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedCallerIpAddresses The allowed caller IP address ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCallerIpAddresses(@Nullable Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses) {
             $.allowedCallerIpAddresses = allowedCallerIpAddresses;
             return this;
         }
 
+        /**
+         * @param allowedCallerIpAddresses The allowed caller IP address ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCallerIpAddresses(List<IpAddressRangeArgs> allowedCallerIpAddresses) {
             return allowedCallerIpAddresses(Output.of(allowedCallerIpAddresses));
         }
 
+        /**
+         * @param allowedCallerIpAddresses The allowed caller IP address ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCallerIpAddresses(IpAddressRangeArgs... allowedCallerIpAddresses) {
             return allowedCallerIpAddresses(List.of(allowedCallerIpAddresses));
         }
 
+        /**
+         * @param openAuthenticationPolicies The authentication policies for workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openAuthenticationPolicies(@Nullable Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies) {
             $.openAuthenticationPolicies = openAuthenticationPolicies;
             return this;
         }
 
+        /**
+         * @param openAuthenticationPolicies The authentication policies for workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openAuthenticationPolicies(OpenAuthenticationAccessPoliciesArgs openAuthenticationPolicies) {
             return openAuthenticationPolicies(Output.of(openAuthenticationPolicies));
         }

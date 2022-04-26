@@ -25,6 +25,11 @@ public final class ServiceTemplateSpecContainerEnvFromGetArgs extends com.pulumi
     @Import(name="configMapRef")
     private @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs> configMapRef;
 
+    /**
+     * @return The ConfigMap to select from.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs>> configMapRef() {
         return Optional.ofNullable(this.configMapRef);
     }
@@ -36,6 +41,10 @@ public final class ServiceTemplateSpecContainerEnvFromGetArgs extends com.pulumi
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return An optional identifier to prepend to each key in the ConfigMap.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -48,6 +57,11 @@ public final class ServiceTemplateSpecContainerEnvFromGetArgs extends com.pulumi
     @Import(name="secretRef")
     private @Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefGetArgs> secretRef;
 
+    /**
+     * @return The Secret to select from.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ServiceTemplateSpecContainerEnvFromSecretRefGetArgs>> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
@@ -78,29 +92,69 @@ public final class ServiceTemplateSpecContainerEnvFromGetArgs extends com.pulumi
             $ = new ServiceTemplateSpecContainerEnvFromGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configMapRef The ConfigMap to select from.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMapRef(@Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs> configMapRef) {
             $.configMapRef = configMapRef;
             return this;
         }
 
+        /**
+         * @param configMapRef The ConfigMap to select from.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMapRef(ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs configMapRef) {
             return configMapRef(Output.of(configMapRef));
         }
 
+        /**
+         * @param prefix An optional identifier to prepend to each key in the ConfigMap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix An optional identifier to prepend to each key in the ConfigMap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
+        /**
+         * @param secretRef The Secret to select from.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(@Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefGetArgs> secretRef) {
             $.secretRef = secretRef;
             return this;
         }
 
+        /**
+         * @param secretRef The Secret to select from.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(ServiceTemplateSpecContainerEnvFromSecretRefGetArgs secretRef) {
             return secretRef(Output.of(secretRef));
         }

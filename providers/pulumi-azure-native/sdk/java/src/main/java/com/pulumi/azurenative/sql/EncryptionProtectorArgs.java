@@ -25,6 +25,10 @@ public final class EncryptionProtectorArgs extends com.pulumi.resources.Resource
     @Import(name="autoRotationEnabled")
     private @Nullable Output<Boolean> autoRotationEnabled;
 
+    /**
+     * @return Key auto rotation opt-in flag. Either true or false.
+     * 
+     */
     public Optional<Output<Boolean>> autoRotationEnabled() {
         return Optional.ofNullable(this.autoRotationEnabled);
     }
@@ -36,6 +40,10 @@ public final class EncryptionProtectorArgs extends com.pulumi.resources.Resource
     @Import(name="encryptionProtectorName")
     private @Nullable Output<String> encryptionProtectorName;
 
+    /**
+     * @return The name of the encryption protector to be updated.
+     * 
+     */
     public Optional<Output<String>> encryptionProtectorName() {
         return Optional.ofNullable(this.encryptionProtectorName);
     }
@@ -47,6 +55,10 @@ public final class EncryptionProtectorArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -58,6 +70,10 @@ public final class EncryptionProtectorArgs extends com.pulumi.resources.Resource
     @Import(name="serverKeyName")
     private @Nullable Output<String> serverKeyName;
 
+    /**
+     * @return The name of the server key.
+     * 
+     */
     public Optional<Output<String>> serverKeyName() {
         return Optional.ofNullable(this.serverKeyName);
     }
@@ -69,6 +85,10 @@ public final class EncryptionProtectorArgs extends com.pulumi.resources.Resource
     @Import(name="serverKeyType", required=true)
     private Output<Either<String,ServerKeyType>> serverKeyType;
 
+    /**
+     * @return The encryption protector type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
+     * 
+     */
     public Output<Either<String,ServerKeyType>> serverKeyType() {
         return this.serverKeyType;
     }
@@ -80,6 +100,10 @@ public final class EncryptionProtectorArgs extends com.pulumi.resources.Resource
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -113,64 +137,148 @@ public final class EncryptionProtectorArgs extends com.pulumi.resources.Resource
             $ = new EncryptionProtectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoRotationEnabled Key auto rotation opt-in flag. Either true or false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRotationEnabled(@Nullable Output<Boolean> autoRotationEnabled) {
             $.autoRotationEnabled = autoRotationEnabled;
             return this;
         }
 
+        /**
+         * @param autoRotationEnabled Key auto rotation opt-in flag. Either true or false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRotationEnabled(Boolean autoRotationEnabled) {
             return autoRotationEnabled(Output.of(autoRotationEnabled));
         }
 
+        /**
+         * @param encryptionProtectorName The name of the encryption protector to be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionProtectorName(@Nullable Output<String> encryptionProtectorName) {
             $.encryptionProtectorName = encryptionProtectorName;
             return this;
         }
 
+        /**
+         * @param encryptionProtectorName The name of the encryption protector to be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionProtectorName(String encryptionProtectorName) {
             return encryptionProtectorName(Output.of(encryptionProtectorName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverKeyName The name of the server key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverKeyName(@Nullable Output<String> serverKeyName) {
             $.serverKeyName = serverKeyName;
             return this;
         }
 
+        /**
+         * @param serverKeyName The name of the server key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverKeyName(String serverKeyName) {
             return serverKeyName(Output.of(serverKeyName));
         }
 
+        /**
+         * @param serverKeyType The encryption protector type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverKeyType(Output<Either<String,ServerKeyType>> serverKeyType) {
             $.serverKeyType = serverKeyType;
             return this;
         }
 
+        /**
+         * @param serverKeyType The encryption protector type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverKeyType(Either<String,ServerKeyType> serverKeyType) {
             return serverKeyType(Output.of(serverKeyType));
         }
 
+        /**
+         * @param serverKeyType The encryption protector type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverKeyType(String serverKeyType) {
             return serverKeyType(Either.ofLeft(serverKeyType));
         }
 
+        /**
+         * @param serverKeyType The encryption protector type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverKeyType(ServerKeyType serverKeyType) {
             return serverKeyType(Either.ofRight(serverKeyType));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }

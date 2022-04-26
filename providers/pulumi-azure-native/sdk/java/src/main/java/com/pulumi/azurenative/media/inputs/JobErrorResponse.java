@@ -25,6 +25,10 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="category", required=true)
     private String category;
 
+    /**
+     * @return Helps with categorization of errors.
+     * 
+     */
     public String category() {
         return this.category;
     }
@@ -36,6 +40,10 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return Error code describing the error.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -47,6 +55,10 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="details", required=true)
     private List<JobErrorDetailResponse> details;
 
+    /**
+     * @return An array of details about specific errors that led to this reported error.
+     * 
+     */
     public List<JobErrorDetailResponse> details() {
         return this.details;
     }
@@ -58,6 +70,10 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return A human-readable language-dependent representation of the error.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -69,6 +85,10 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="retry", required=true)
     private String retry;
 
+    /**
+     * @return Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.
+     * 
+     */
     public String retry() {
         return this.retry;
     }
@@ -101,30 +121,66 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JobErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category Helps with categorization of errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param code Error code describing the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param details An array of details about specific errors that led to this reported error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(List<JobErrorDetailResponse> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details An array of details about specific errors that led to this reported error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(JobErrorDetailResponse... details) {
             return details(List.of(details));
         }
 
+        /**
+         * @param message A human-readable language-dependent representation of the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param retry Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retry(String retry) {
             $.retry = retry;
             return this;

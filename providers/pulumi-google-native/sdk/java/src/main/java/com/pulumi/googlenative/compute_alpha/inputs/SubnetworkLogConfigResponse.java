@@ -26,6 +26,10 @@ public final class SubnetworkLogConfigResponse extends com.pulumi.resources.Invo
     @Import(name="aggregationInterval", required=true)
     private String aggregationInterval;
 
+    /**
+     * @return Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection.
+     * 
+     */
     public String aggregationInterval() {
         return this.aggregationInterval;
     }
@@ -37,6 +41,10 @@ public final class SubnetworkLogConfigResponse extends com.pulumi.resources.Invo
     @Import(name="enable", required=true)
     private Boolean enable;
 
+    /**
+     * @return Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled.
+     * 
+     */
     public Boolean enable() {
         return this.enable;
     }
@@ -48,6 +56,10 @@ public final class SubnetworkLogConfigResponse extends com.pulumi.resources.Invo
     @Import(name="filterExpr", required=true)
     private String filterExpr;
 
+    /**
+     * @return Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to define which VPC flow logs should be logged.
+     * 
+     */
     public String filterExpr() {
         return this.filterExpr;
     }
@@ -59,6 +71,10 @@ public final class SubnetworkLogConfigResponse extends com.pulumi.resources.Invo
     @Import(name="flowSampling", required=true)
     private Double flowSampling;
 
+    /**
+     * @return Can only be specified if VPC flow logging for this subnetwork is enabled. The value of the field must be in [0, 1]. Set the sampling rate of VPC flow logs within the subnetwork where 1.0 means all collected logs are reported and 0.0 means no logs are reported. Default is 0.5 unless otherwise specified by the org policy, which means half of all collected logs are reported.
+     * 
+     */
     public Double flowSampling() {
         return this.flowSampling;
     }
@@ -70,6 +86,10 @@ public final class SubnetworkLogConfigResponse extends com.pulumi.resources.Invo
     @Import(name="metadata", required=true)
     private String metadata;
 
+    /**
+     * @return Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all, none or a subset of metadata fields should be added to the reported VPC flow logs. Default is EXCLUDE_ALL_METADATA.
+     * 
+     */
     public String metadata() {
         return this.metadata;
     }
@@ -81,6 +101,10 @@ public final class SubnetworkLogConfigResponse extends com.pulumi.resources.Invo
     @Import(name="metadataFields", required=true)
     private List<String> metadataFields;
 
+    /**
+     * @return Can only be specified if VPC flow logs for this subnetwork is enabled and &#34;metadata&#34; was set to CUSTOM_METADATA.
+     * 
+     */
     public List<String> metadataFields() {
         return this.metadataFields;
     }
@@ -114,36 +138,78 @@ public final class SubnetworkLogConfigResponse extends com.pulumi.resources.Invo
             $ = new SubnetworkLogConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregationInterval Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregationInterval(String aggregationInterval) {
             $.aggregationInterval = aggregationInterval;
             return this;
         }
 
+        /**
+         * @param enable Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param filterExpr Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to define which VPC flow logs should be logged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterExpr(String filterExpr) {
             $.filterExpr = filterExpr;
             return this;
         }
 
+        /**
+         * @param flowSampling Can only be specified if VPC flow logging for this subnetwork is enabled. The value of the field must be in [0, 1]. Set the sampling rate of VPC flow logs within the subnetwork where 1.0 means all collected logs are reported and 0.0 means no logs are reported. Default is 0.5 unless otherwise specified by the org policy, which means half of all collected logs are reported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowSampling(Double flowSampling) {
             $.flowSampling = flowSampling;
             return this;
         }
 
+        /**
+         * @param metadata Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all, none or a subset of metadata fields should be added to the reported VPC flow logs. Default is EXCLUDE_ALL_METADATA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(String metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadataFields Can only be specified if VPC flow logs for this subnetwork is enabled and &#34;metadata&#34; was set to CUSTOM_METADATA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataFields(List<String> metadataFields) {
             $.metadataFields = metadataFields;
             return this;
         }
 
+        /**
+         * @param metadataFields Can only be specified if VPC flow logs for this subnetwork is enabled and &#34;metadata&#34; was set to CUSTOM_METADATA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataFields(String... metadataFields) {
             return metadataFields(List.of(metadataFields));
         }

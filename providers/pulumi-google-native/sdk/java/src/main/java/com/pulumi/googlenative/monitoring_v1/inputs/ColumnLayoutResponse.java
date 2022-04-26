@@ -24,6 +24,10 @@ public final class ColumnLayoutResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="columns", required=true)
     private List<ColumnResponse> columns;
 
+    /**
+     * @return The columns of content to display.
+     * 
+     */
     public List<ColumnResponse> columns() {
         return this.columns;
     }
@@ -52,11 +56,23 @@ public final class ColumnLayoutResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ColumnLayoutResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns The columns of content to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(List<ColumnResponse> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns The columns of content to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(ColumnResponse... columns) {
             return columns(List.of(columns));
         }

@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class ApprovalResultResponse {
     /**
-     * The time when the approval decision was made.
+     * @return The time when the approval decision was made.
      * 
      */
     private final String approvalTime;
     /**
-     * Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.
+     * @return Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.
      * 
      */
     private final String approverAccount;
     /**
-     * Optional. An optional comment for this manual approval result.
+     * @return Optional. An optional comment for this manual approval result.
      * 
      */
     private final String comment;
     /**
-     * The decision of this manual approval.
+     * @return The decision of this manual approval.
      * 
      */
     private final String decision;
     /**
-     * Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.
+     * @return Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.
      * 
      */
     private final String url;
@@ -50,37 +50,37 @@ public final class ApprovalResultResponse {
     }
 
     /**
-     * The time when the approval decision was made.
+     * @return The time when the approval decision was made.
      * 
-    */
+     */
     public String approvalTime() {
         return this.approvalTime;
     }
     /**
-     * Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.
+     * @return Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.
      * 
-    */
+     */
     public String approverAccount() {
         return this.approverAccount;
     }
     /**
-     * Optional. An optional comment for this manual approval result.
+     * @return Optional. An optional comment for this manual approval result.
      * 
-    */
+     */
     public String comment() {
         return this.comment;
     }
     /**
-     * The decision of this manual approval.
+     * @return The decision of this manual approval.
      * 
-    */
+     */
     public String decision() {
         return this.decision;
     }
     /**
-     * Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.
+     * @return Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

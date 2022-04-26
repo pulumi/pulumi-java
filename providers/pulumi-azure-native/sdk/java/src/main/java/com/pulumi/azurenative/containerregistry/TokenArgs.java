@@ -25,6 +25,10 @@ public final class TokenArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
     private @Nullable Output<TokenCredentialsPropertiesArgs> credentials;
 
+    /**
+     * @return The credentials that can be used for authenticating the token.
+     * 
+     */
     public Optional<Output<TokenCredentialsPropertiesArgs>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -36,6 +40,10 @@ public final class TokenArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
     private Output<String> registryName;
 
+    /**
+     * @return The name of the container registry.
+     * 
+     */
     public Output<String> registryName() {
         return this.registryName;
     }
@@ -47,6 +55,10 @@ public final class TokenArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -58,6 +70,10 @@ public final class TokenArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scopeMapId")
     private @Nullable Output<String> scopeMapId;
 
+    /**
+     * @return The resource ID of the scope map to which the token will be associated with.
+     * 
+     */
     public Optional<Output<String>> scopeMapId() {
         return Optional.ofNullable(this.scopeMapId);
     }
@@ -69,6 +85,10 @@ public final class TokenArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<Either<String,TokenStatus>> status;
 
+    /**
+     * @return The status of the token example enabled or disabled.
+     * 
+     */
     public Optional<Output<Either<String,TokenStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -80,6 +100,10 @@ public final class TokenArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tokenName")
     private @Nullable Output<String> tokenName;
 
+    /**
+     * @return The name of the token.
+     * 
+     */
     public Optional<Output<String>> tokenName() {
         return Optional.ofNullable(this.tokenName);
     }
@@ -113,64 +137,148 @@ public final class TokenArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TokenArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credentials The credentials that can be used for authenticating the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<TokenCredentialsPropertiesArgs> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials The credentials that can be used for authenticating the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(TokenCredentialsPropertiesArgs credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(Output<String> registryName) {
             $.registryName = registryName;
             return this;
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(String registryName) {
             return registryName(Output.of(registryName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scopeMapId The resource ID of the scope map to which the token will be associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeMapId(@Nullable Output<String> scopeMapId) {
             $.scopeMapId = scopeMapId;
             return this;
         }
 
+        /**
+         * @param scopeMapId The resource ID of the scope map to which the token will be associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeMapId(String scopeMapId) {
             return scopeMapId(Output.of(scopeMapId));
         }
 
+        /**
+         * @param status The status of the token example enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,TokenStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the token example enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,TokenStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The status of the token example enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The status of the token example enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(TokenStatus status) {
             return status(Either.ofRight(status));
         }
 
+        /**
+         * @param tokenName The name of the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenName(@Nullable Output<String> tokenName) {
             $.tokenName = tokenName;
             return this;
         }
 
+        /**
+         * @param tokenName The name of the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenName(String tokenName) {
             return tokenName(Output.of(tokenName));
         }

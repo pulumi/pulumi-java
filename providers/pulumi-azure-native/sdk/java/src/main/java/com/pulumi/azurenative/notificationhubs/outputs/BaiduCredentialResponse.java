@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BaiduCredentialResponse {
     /**
-     * Baidu Api Key.
+     * @return Baidu Api Key.
      * 
      */
     private final @Nullable String baiduApiKey;
     /**
-     * Baidu Endpoint.
+     * @return Baidu Endpoint.
      * 
      */
     private final @Nullable String baiduEndPoint;
     /**
-     * Baidu Secret Key
+     * @return Baidu Secret Key
      * 
      */
     private final @Nullable String baiduSecretKey;
@@ -38,23 +38,23 @@ public final class BaiduCredentialResponse {
     }
 
     /**
-     * Baidu Api Key.
+     * @return Baidu Api Key.
      * 
-    */
+     */
     public Optional<String> baiduApiKey() {
         return Optional.ofNullable(this.baiduApiKey);
     }
     /**
-     * Baidu Endpoint.
+     * @return Baidu Endpoint.
      * 
-    */
+     */
     public Optional<String> baiduEndPoint() {
         return Optional.ofNullable(this.baiduEndPoint);
     }
     /**
-     * Baidu Secret Key
+     * @return Baidu Secret Key
      * 
-    */
+     */
     public Optional<String> baiduSecretKey() {
         return Optional.ofNullable(this.baiduSecretKey);
     }

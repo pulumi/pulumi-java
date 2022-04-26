@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class DescriptionResponse {
     /**
-     * Attributes for the product system.
+     * @return Attributes for the product system.
      * 
      */
     private final List<String> attributes;
     /**
-     * Type of description.
+     * @return Type of description.
      * 
      */
     private final String descriptionType;
     /**
-     * Keywords for the product system.
+     * @return Keywords for the product system.
      * 
      */
     private final List<String> keywords;
     /**
-     * Links for the product system.
+     * @return Links for the product system.
      * 
      */
     private final List<LinkResponse> links;
     /**
-     * Long description of the product system.
+     * @return Long description of the product system.
      * 
      */
     private final String longDescription;
     /**
-     * Short description of the product system.
+     * @return Short description of the product system.
      * 
      */
     private final String shortDescription;
@@ -59,44 +59,44 @@ public final class DescriptionResponse {
     }
 
     /**
-     * Attributes for the product system.
+     * @return Attributes for the product system.
      * 
-    */
+     */
     public List<String> attributes() {
         return this.attributes;
     }
     /**
-     * Type of description.
+     * @return Type of description.
      * 
-    */
+     */
     public String descriptionType() {
         return this.descriptionType;
     }
     /**
-     * Keywords for the product system.
+     * @return Keywords for the product system.
      * 
-    */
+     */
     public List<String> keywords() {
         return this.keywords;
     }
     /**
-     * Links for the product system.
+     * @return Links for the product system.
      * 
-    */
+     */
     public List<LinkResponse> links() {
         return this.links;
     }
     /**
-     * Long description of the product system.
+     * @return Long description of the product system.
      * 
-    */
+     */
     public String longDescription() {
         return this.longDescription;
     }
     /**
-     * Short description of the product system.
+     * @return Short description of the product system.
      * 
-    */
+     */
     public String shortDescription() {
         return this.shortDescription;
     }

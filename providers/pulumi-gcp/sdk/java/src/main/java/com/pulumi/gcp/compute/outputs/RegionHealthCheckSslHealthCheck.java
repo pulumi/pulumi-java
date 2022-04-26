@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionHealthCheckSslHealthCheck {
     /**
-     * The port number for the health check request.
+     * @return The port number for the health check request.
      * Must be specified if portName and portSpecification are not set
      * or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
      * 
      */
     private final @Nullable Integer port;
     /**
-     * Port name as defined in InstanceGroup#NamedPort#name. If both port and
+     * @return Port name as defined in InstanceGroup#NamedPort#name. If both port and
      * port_name are defined, port takes precedence.
      * 
      */
     private final @Nullable String portName;
     /**
-     * Specifies how port is selected for health checking, can be one of the
+     * @return Specifies how port is selected for health checking, can be one of the
      * following values:
      * * `USE_FIXED_PORT`: The port number in `port` is used for health checking.
      * * `USE_NAMED_PORT`: The `portName` is used for health checking.
@@ -41,7 +41,7 @@ public final class RegionHealthCheckSslHealthCheck {
      */
     private final @Nullable String portSpecification;
     /**
-     * Specifies the type of proxy header to append before sending data to the
+     * @return Specifies the type of proxy header to append before sending data to the
      * backend.
      * Default value is `NONE`.
      * Possible values are `NONE` and `PROXY_V1`.
@@ -49,7 +49,7 @@ public final class RegionHealthCheckSslHealthCheck {
      */
     private final @Nullable String proxyHeader;
     /**
-     * The application data to send once the SSL connection has been
+     * @return The application data to send once the SSL connection has been
      * established (default value is empty). If both request and response are
      * empty, the connection establishment alone will indicate health. The request
      * data can only be ASCII.
@@ -57,7 +57,7 @@ public final class RegionHealthCheckSslHealthCheck {
      */
     private final @Nullable String request;
     /**
-     * The bytes to match against the beginning of the response data. If left empty
+     * @return The bytes to match against the beginning of the response data. If left empty
      * (the default value), any response will indicate health. The response data
      * can only be ASCII.
      * 
@@ -81,24 +81,24 @@ public final class RegionHealthCheckSslHealthCheck {
     }
 
     /**
-     * The port number for the health check request.
+     * @return The port number for the health check request.
      * Must be specified if portName and portSpecification are not set
      * or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * Port name as defined in InstanceGroup#NamedPort#name. If both port and
+     * @return Port name as defined in InstanceGroup#NamedPort#name. If both port and
      * port_name are defined, port takes precedence.
      * 
-    */
+     */
     public Optional<String> portName() {
         return Optional.ofNullable(this.portName);
     }
     /**
-     * Specifies how port is selected for health checking, can be one of the
+     * @return Specifies how port is selected for health checking, can be one of the
      * following values:
      * * `USE_FIXED_PORT`: The port number in `port` is used for health checking.
      * * `USE_NAMED_PORT`: The `portName` is used for health checking.
@@ -110,36 +110,36 @@ public final class RegionHealthCheckSslHealthCheck {
      *   `portName` fields.
      *   Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
      * 
-    */
+     */
     public Optional<String> portSpecification() {
         return Optional.ofNullable(this.portSpecification);
     }
     /**
-     * Specifies the type of proxy header to append before sending data to the
+     * @return Specifies the type of proxy header to append before sending data to the
      * backend.
      * Default value is `NONE`.
      * Possible values are `NONE` and `PROXY_V1`.
      * 
-    */
+     */
     public Optional<String> proxyHeader() {
         return Optional.ofNullable(this.proxyHeader);
     }
     /**
-     * The application data to send once the SSL connection has been
+     * @return The application data to send once the SSL connection has been
      * established (default value is empty). If both request and response are
      * empty, the connection establishment alone will indicate health. The request
      * data can only be ASCII.
      * 
-    */
+     */
     public Optional<String> request() {
         return Optional.ofNullable(this.request);
     }
     /**
-     * The bytes to match against the beginning of the response data. If left empty
+     * @return The bytes to match against the beginning of the response data. If left empty
      * (the default value), any response will indicate health. The response data
      * can only be ASCII.
      * 
-    */
+     */
     public Optional<String> response() {
         return Optional.ofNullable(this.response);
     }

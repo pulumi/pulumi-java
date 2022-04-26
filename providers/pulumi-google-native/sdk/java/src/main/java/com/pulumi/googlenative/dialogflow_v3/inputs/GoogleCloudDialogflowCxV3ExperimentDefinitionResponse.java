@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionResponse extends
     @Import(name="condition", required=true)
     private String condition;
 
+    /**
+     * @return The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. &#34;query_input.language_code=en&#34; See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+     * 
+     */
     public String condition() {
         return this.condition;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionResponse extends
     @Import(name="versionVariants", required=true)
     private GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants;
 
+    /**
+     * @return The flow versions as the variants of this experiment.
+     * 
+     */
     public GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants() {
         return this.versionVariants;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionResponse extends
             $ = new GoogleCloudDialogflowCxV3ExperimentDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. &#34;query_input.language_code=en&#34; See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(String condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param versionVariants The flow versions as the variants of this experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionVariants(GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants) {
             $.versionVariants = versionVariants;
             return this;

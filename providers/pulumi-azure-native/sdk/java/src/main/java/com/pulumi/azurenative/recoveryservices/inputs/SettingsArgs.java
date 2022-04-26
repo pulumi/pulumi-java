@@ -28,6 +28,11 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isCompression")
     private @Nullable Output<Boolean> isCompression;
 
+    /**
+     * @return Workload compression flag. This has been added so that &#39;isSqlCompression&#39;
+     * will be deprecated once clients upgrade to consider this flag.
+     * 
+     */
     public Optional<Output<Boolean>> isCompression() {
         return Optional.ofNullable(this.isCompression);
     }
@@ -39,6 +44,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="issqlcompression")
     private @Nullable Output<Boolean> issqlcompression;
 
+    /**
+     * @return SQL compression flag
+     * 
+     */
     public Optional<Output<Boolean>> issqlcompression() {
         return Optional.ofNullable(this.issqlcompression);
     }
@@ -50,6 +59,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
     private @Nullable Output<String> timeZone;
 
+    /**
+     * @return TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+     * 
+     */
     public Optional<Output<String>> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -80,29 +93,67 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isCompression Workload compression flag. This has been added so that &#39;isSqlCompression&#39;
+         * will be deprecated once clients upgrade to consider this flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCompression(@Nullable Output<Boolean> isCompression) {
             $.isCompression = isCompression;
             return this;
         }
 
+        /**
+         * @param isCompression Workload compression flag. This has been added so that &#39;isSqlCompression&#39;
+         * will be deprecated once clients upgrade to consider this flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCompression(Boolean isCompression) {
             return isCompression(Output.of(isCompression));
         }
 
+        /**
+         * @param issqlcompression SQL compression flag
+         * 
+         * @return builder
+         * 
+         */
         public Builder issqlcompression(@Nullable Output<Boolean> issqlcompression) {
             $.issqlcompression = issqlcompression;
             return this;
         }
 
+        /**
+         * @param issqlcompression SQL compression flag
+         * 
+         * @return builder
+         * 
+         */
         public Builder issqlcompression(Boolean issqlcompression) {
             return issqlcompression(Output.of(issqlcompression));
         }
 
+        /**
+         * @param timeZone TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable Output<String> timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param timeZone TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(String timeZone) {
             return timeZone(Output.of(timeZone));
         }

@@ -26,6 +26,10 @@ public final class BotGrammarSlotTypeSourceArgs extends com.pulumi.resources.Res
     @Import(name="kmsKeyArn")
     private @Nullable Output<String> kmsKeyArn;
 
+    /**
+     * @return The Amazon KMS key required to decrypt the contents of the grammar, if any.
+     * 
+     */
     public Optional<Output<String>> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
@@ -37,6 +41,10 @@ public final class BotGrammarSlotTypeSourceArgs extends com.pulumi.resources.Res
     @Import(name="s3BucketName", required=true)
     private Output<String> s3BucketName;
 
+    /**
+     * @return The name of the S3 bucket that contains the grammar source.
+     * 
+     */
     public Output<String> s3BucketName() {
         return this.s3BucketName;
     }
@@ -48,6 +56,10 @@ public final class BotGrammarSlotTypeSourceArgs extends com.pulumi.resources.Res
     @Import(name="s3ObjectKey", required=true)
     private Output<String> s3ObjectKey;
 
+    /**
+     * @return The path to the grammar in the S3 bucket.
+     * 
+     */
     public Output<String> s3ObjectKey() {
         return this.s3ObjectKey;
     }
@@ -78,29 +90,65 @@ public final class BotGrammarSlotTypeSourceArgs extends com.pulumi.resources.Res
             $ = new BotGrammarSlotTypeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyArn The Amazon KMS key required to decrypt the contents of the grammar, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             $.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
+        /**
+         * @param kmsKeyArn The Amazon KMS key required to decrypt the contents of the grammar, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(String kmsKeyArn) {
             return kmsKeyArn(Output.of(kmsKeyArn));
         }
 
+        /**
+         * @param s3BucketName The name of the S3 bucket that contains the grammar source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3BucketName(Output<String> s3BucketName) {
             $.s3BucketName = s3BucketName;
             return this;
         }
 
+        /**
+         * @param s3BucketName The name of the S3 bucket that contains the grammar source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3BucketName(String s3BucketName) {
             return s3BucketName(Output.of(s3BucketName));
         }
 
+        /**
+         * @param s3ObjectKey The path to the grammar in the S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3ObjectKey(Output<String> s3ObjectKey) {
             $.s3ObjectKey = s3ObjectKey;
             return this;
         }
 
+        /**
+         * @param s3ObjectKey The path to the grammar in the S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3ObjectKey(String s3ObjectKey) {
             return s3ObjectKey(Output.of(s3ObjectKey));
         }

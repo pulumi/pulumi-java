@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 public final class ServiceCodeRepository {
     private final @Nullable ServiceCodeConfiguration codeConfiguration;
     /**
-     * Repository Url
+     * @return Repository Url
      * 
      */
     private final String repositoryUrl;
@@ -35,9 +35,9 @@ public final class ServiceCodeRepository {
         return Optional.ofNullable(this.codeConfiguration);
     }
     /**
-     * Repository Url
+     * @return Repository Url
      * 
-    */
+     */
     public String repositoryUrl() {
         return this.repositoryUrl;
     }

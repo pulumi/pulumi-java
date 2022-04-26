@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LiveEventInputTrackSelectionResponse {
     /**
-     * Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
+     * @return Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
      * 
      */
     private final @Nullable String operation;
     /**
-     * Property name to select. This property is reserved for future use, any value set on this property will be ignored.
+     * @return Property name to select. This property is reserved for future use, any value set on this property will be ignored.
      * 
      */
     private final @Nullable String property;
     /**
-     * Property value to select. This property is reserved for future use, any value set on this property will be ignored.
+     * @return Property value to select. This property is reserved for future use, any value set on this property will be ignored.
      * 
      */
     private final @Nullable String value;
@@ -38,23 +38,23 @@ public final class LiveEventInputTrackSelectionResponse {
     }
 
     /**
-     * Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
+     * @return Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
      * 
-    */
+     */
     public Optional<String> operation() {
         return Optional.ofNullable(this.operation);
     }
     /**
-     * Property name to select. This property is reserved for future use, any value set on this property will be ignored.
+     * @return Property name to select. This property is reserved for future use, any value set on this property will be ignored.
      * 
-    */
+     */
     public Optional<String> property() {
         return Optional.ofNullable(this.property);
     }
     /**
-     * Property value to select. This property is reserved for future use, any value set on this property will be ignored.
+     * @return Property value to select. This property is reserved for future use, any value set on this property will be ignored.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

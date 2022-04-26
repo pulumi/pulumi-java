@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DeploymentModelResponse {
     /**
-     * Deployment model format.
+     * @return Deployment model format.
      * 
      */
     private final @Nullable String format;
     /**
-     * Deployment model name.
+     * @return Deployment model name.
      * 
      */
     private final @Nullable String name;
     /**
-     * Deployment model version.
+     * @return Deployment model version.
      * 
      */
     private final @Nullable String version;
@@ -38,23 +38,23 @@ public final class DeploymentModelResponse {
     }
 
     /**
-     * Deployment model format.
+     * @return Deployment model format.
      * 
-    */
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
     /**
-     * Deployment model name.
+     * @return Deployment model name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Deployment model version.
+     * @return Deployment model version.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

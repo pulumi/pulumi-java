@@ -21,6 +21,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return The path for the route.
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -32,6 +36,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return The port for the route.
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -61,20 +69,44 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path The path for the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path for the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param port The port for the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port for the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

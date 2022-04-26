@@ -25,6 +25,10 @@ public final class FrameworkControlArgs extends com.pulumi.resources.ResourceArg
     @Import(name="controlInputParameters")
     private @Nullable Output<List<FrameworkControlInputParameterArgs>> controlInputParameters;
 
+    /**
+     * @return A list of ParameterName and ParameterValue pairs.
+     * 
+     */
     public Optional<Output<List<FrameworkControlInputParameterArgs>>> controlInputParameters() {
         return Optional.ofNullable(this.controlInputParameters);
     }
@@ -36,6 +40,10 @@ public final class FrameworkControlArgs extends com.pulumi.resources.ResourceArg
     @Import(name="controlName", required=true)
     private Output<String> controlName;
 
+    /**
+     * @return The name of a control. This name is between 1 and 256 characters.
+     * 
+     */
     public Output<String> controlName() {
         return this.controlName;
     }
@@ -47,6 +55,10 @@ public final class FrameworkControlArgs extends com.pulumi.resources.ResourceArg
     @Import(name="controlScope")
     private @Nullable Output<FrameworkControlControlScopePropertiesArgs> controlScope;
 
+    /**
+     * @return The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
+     * 
+     */
     public Optional<Output<FrameworkControlControlScopePropertiesArgs>> controlScope() {
         return Optional.ofNullable(this.controlScope);
     }
@@ -77,33 +89,75 @@ public final class FrameworkControlArgs extends com.pulumi.resources.ResourceArg
             $ = new FrameworkControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param controlInputParameters A list of ParameterName and ParameterValue pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlInputParameters(@Nullable Output<List<FrameworkControlInputParameterArgs>> controlInputParameters) {
             $.controlInputParameters = controlInputParameters;
             return this;
         }
 
+        /**
+         * @param controlInputParameters A list of ParameterName and ParameterValue pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlInputParameters(List<FrameworkControlInputParameterArgs> controlInputParameters) {
             return controlInputParameters(Output.of(controlInputParameters));
         }
 
+        /**
+         * @param controlInputParameters A list of ParameterName and ParameterValue pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlInputParameters(FrameworkControlInputParameterArgs... controlInputParameters) {
             return controlInputParameters(List.of(controlInputParameters));
         }
 
+        /**
+         * @param controlName The name of a control. This name is between 1 and 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlName(Output<String> controlName) {
             $.controlName = controlName;
             return this;
         }
 
+        /**
+         * @param controlName The name of a control. This name is between 1 and 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlName(String controlName) {
             return controlName(Output.of(controlName));
         }
 
+        /**
+         * @param controlScope The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlScope(@Nullable Output<FrameworkControlControlScopePropertiesArgs> controlScope) {
             $.controlScope = controlScope;
             return this;
         }
 
+        /**
+         * @param controlScope The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlScope(FrameworkControlControlScopePropertiesArgs controlScope) {
             return controlScope(Output.of(controlScope));
         }

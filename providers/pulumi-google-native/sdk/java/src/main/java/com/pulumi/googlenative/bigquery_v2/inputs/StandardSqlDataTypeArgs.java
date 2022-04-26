@@ -27,6 +27,10 @@ public final class StandardSqlDataTypeArgs extends com.pulumi.resources.Resource
     @Import(name="arrayElementType")
     private @Nullable Output<StandardSqlDataTypeArgs> arrayElementType;
 
+    /**
+     * @return The type of the array&#39;s elements, if type_kind = &#34;ARRAY&#34;.
+     * 
+     */
     public Optional<Output<StandardSqlDataTypeArgs>> arrayElementType() {
         return Optional.ofNullable(this.arrayElementType);
     }
@@ -38,6 +42,10 @@ public final class StandardSqlDataTypeArgs extends com.pulumi.resources.Resource
     @Import(name="structType")
     private @Nullable Output<StandardSqlStructTypeArgs> structType;
 
+    /**
+     * @return The fields of this struct, in order, if type_kind = &#34;STRUCT&#34;.
+     * 
+     */
     public Optional<Output<StandardSqlStructTypeArgs>> structType() {
         return Optional.ofNullable(this.structType);
     }
@@ -49,6 +57,10 @@ public final class StandardSqlDataTypeArgs extends com.pulumi.resources.Resource
     @Import(name="typeKind", required=true)
     private Output<StandardSqlDataTypeTypeKind> typeKind;
 
+    /**
+     * @return The top level type of this field. Can be any standard SQL data type (e.g., &#34;INT64&#34;, &#34;DATE&#34;, &#34;ARRAY&#34;).
+     * 
+     */
     public Output<StandardSqlDataTypeTypeKind> typeKind() {
         return this.typeKind;
     }
@@ -79,29 +91,65 @@ public final class StandardSqlDataTypeArgs extends com.pulumi.resources.Resource
             $ = new StandardSqlDataTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arrayElementType The type of the array&#39;s elements, if type_kind = &#34;ARRAY&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayElementType(@Nullable Output<StandardSqlDataTypeArgs> arrayElementType) {
             $.arrayElementType = arrayElementType;
             return this;
         }
 
+        /**
+         * @param arrayElementType The type of the array&#39;s elements, if type_kind = &#34;ARRAY&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayElementType(StandardSqlDataTypeArgs arrayElementType) {
             return arrayElementType(Output.of(arrayElementType));
         }
 
+        /**
+         * @param structType The fields of this struct, in order, if type_kind = &#34;STRUCT&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structType(@Nullable Output<StandardSqlStructTypeArgs> structType) {
             $.structType = structType;
             return this;
         }
 
+        /**
+         * @param structType The fields of this struct, in order, if type_kind = &#34;STRUCT&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structType(StandardSqlStructTypeArgs structType) {
             return structType(Output.of(structType));
         }
 
+        /**
+         * @param typeKind The top level type of this field. Can be any standard SQL data type (e.g., &#34;INT64&#34;, &#34;DATE&#34;, &#34;ARRAY&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeKind(Output<StandardSqlDataTypeTypeKind> typeKind) {
             $.typeKind = typeKind;
             return this;
         }
 
+        /**
+         * @param typeKind The top level type of this field. Can be any standard SQL data type (e.g., &#34;INT64&#34;, &#34;DATE&#34;, &#34;ARRAY&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeKind(StandardSqlDataTypeTypeKind typeKind) {
             return typeKind(Output.of(typeKind));
         }

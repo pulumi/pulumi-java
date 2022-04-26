@@ -27,6 +27,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="clientOperationId", required=true)
     private String clientOperationId;
 
+    /**
+     * @return The value of `requestId` if you provided it in the request. Not present otherwise.
+     * 
+     */
     public String clientOperationId() {
         return this.clientOperationId;
     }
@@ -38,6 +42,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return A textual description of the operation, which is set when the operation is created.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -49,6 +57,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return The time that this operation was completed. This value is in RFC3339 text format.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -60,6 +72,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="error", required=true)
     private OperationErrorResponse error;
 
+    /**
+     * @return If errors are generated during processing of the operation, this field will be populated.
+     * 
+     */
     public OperationErrorResponse error() {
         return this.error;
     }
@@ -71,6 +87,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="httpErrorMessage", required=true)
     private String httpErrorMessage;
 
+    /**
+     * @return If the operation fails, this field contains the HTTP error message that was returned, such as `NOT FOUND`.
+     * 
+     */
     public String httpErrorMessage() {
         return this.httpErrorMessage;
     }
@@ -82,6 +102,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="httpErrorStatusCode", required=true)
     private Integer httpErrorStatusCode;
 
+    /**
+     * @return If the operation fails, this field contains the HTTP error status code that was returned. For example, a `404` means the resource was not found.
+     * 
+     */
     public Integer httpErrorStatusCode() {
         return this.httpErrorStatusCode;
     }
@@ -93,6 +117,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="insertTime", required=true)
     private String insertTime;
 
+    /**
+     * @return The time that this operation was requested. This value is in RFC3339 text format.
+     * 
+     */
     public String insertTime() {
         return this.insertTime;
     }
@@ -104,6 +132,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Type of the resource. Always `compute#operation` for Operation resources.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -115,6 +147,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the operation.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -126,6 +162,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="operationGroupId", required=true)
     private String operationGroupId;
 
+    /**
+     * @return An ID that represents a group of operations, such as when a group of operations results from a `bulkInsert` API request.
+     * 
+     */
     public String operationGroupId() {
         return this.operationGroupId;
     }
@@ -137,6 +177,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="operationType", required=true)
     private String operationType;
 
+    /**
+     * @return The type of operation, such as `insert`, `update`, or `delete`, and so on.
+     * 
+     */
     public String operationType() {
         return this.operationType;
     }
@@ -148,6 +192,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="progress", required=true)
     private Integer progress;
 
+    /**
+     * @return An optional progress indicator that ranges from 0 to 100. There is no requirement that this be linear or support any granularity of operations. This should not be used to guess when the operation will be complete. This number should monotonically increase as the operation progresses.
+     * 
+     */
     public Integer progress() {
         return this.progress;
     }
@@ -159,6 +207,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return The URL of the region where the operation resides. Only applicable when performing regional operations.
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -170,6 +222,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="selfLink", required=true)
     private String selfLink;
 
+    /**
+     * @return Server-defined URL for the resource.
+     * 
+     */
     public String selfLink() {
         return this.selfLink;
     }
@@ -181,6 +237,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The time that this operation was started by the server. This value is in RFC3339 text format.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -192,6 +252,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -203,6 +267,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="statusMessage", required=true)
     private String statusMessage;
 
+    /**
+     * @return An optional textual description of the current status of the operation.
+     * 
+     */
     public String statusMessage() {
         return this.statusMessage;
     }
@@ -214,6 +282,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetId", required=true)
     private String targetId;
 
+    /**
+     * @return The unique target ID, which identifies a specific incarnation of the target resource.
+     * 
+     */
     public String targetId() {
         return this.targetId;
     }
@@ -225,6 +297,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetLink", required=true)
     private String targetLink;
 
+    /**
+     * @return The URL of the resource that the operation modifies. For operations related to creating a snapshot, this points to the persistent disk that the snapshot was created from.
+     * 
+     */
     public String targetLink() {
         return this.targetLink;
     }
@@ -236,6 +312,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="user", required=true)
     private String user;
 
+    /**
+     * @return User who requested the operation, for example: `user@example.com`.
+     * 
+     */
     public String user() {
         return this.user;
     }
@@ -247,6 +327,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="warnings", required=true)
     private List<OperationWarningsItemResponse> warnings;
 
+    /**
+     * @return If warning messages are generated during processing of the operation, this field will be populated.
+     * 
+     */
     public List<OperationWarningsItemResponse> warnings() {
         return this.warnings;
     }
@@ -258,6 +342,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="zone", required=true)
     private String zone;
 
+    /**
+     * @return The URL of the zone where the operation resides. Only applicable when performing per-zone operations.
+     * 
+     */
     public String zone() {
         return this.zone;
     }
@@ -307,115 +395,253 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OperationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientOperationId The value of `requestId` if you provided it in the request. Not present otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientOperationId(String clientOperationId) {
             $.clientOperationId = clientOperationId;
             return this;
         }
 
+        /**
+         * @param description A textual description of the operation, which is set when the operation is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param endTime The time that this operation was completed. This value is in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param error If errors are generated during processing of the operation, this field will be populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(OperationErrorResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param httpErrorMessage If the operation fails, this field contains the HTTP error message that was returned, such as `NOT FOUND`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpErrorMessage(String httpErrorMessage) {
             $.httpErrorMessage = httpErrorMessage;
             return this;
         }
 
+        /**
+         * @param httpErrorStatusCode If the operation fails, this field contains the HTTP error status code that was returned. For example, a `404` means the resource was not found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpErrorStatusCode(Integer httpErrorStatusCode) {
             $.httpErrorStatusCode = httpErrorStatusCode;
             return this;
         }
 
+        /**
+         * @param insertTime The time that this operation was requested. This value is in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertTime(String insertTime) {
             $.insertTime = insertTime;
             return this;
         }
 
+        /**
+         * @param kind Type of the resource. Always `compute#operation` for Operation resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Name of the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param operationGroupId An ID that represents a group of operations, such as when a group of operations results from a `bulkInsert` API request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationGroupId(String operationGroupId) {
             $.operationGroupId = operationGroupId;
             return this;
         }
 
+        /**
+         * @param operationType The type of operation, such as `insert`, `update`, or `delete`, and so on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationType(String operationType) {
             $.operationType = operationType;
             return this;
         }
 
+        /**
+         * @param progress An optional progress indicator that ranges from 0 to 100. There is no requirement that this be linear or support any granularity of operations. This should not be used to guess when the operation will be complete. This number should monotonically increase as the operation progresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progress(Integer progress) {
             $.progress = progress;
             return this;
         }
 
+        /**
+         * @param region The URL of the region where the operation resides. Only applicable when performing regional operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param selfLink Server-defined URL for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param startTime The time that this operation was started by the server. This value is in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param status The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param statusMessage An optional textual description of the current status of the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusMessage(String statusMessage) {
             $.statusMessage = statusMessage;
             return this;
         }
 
+        /**
+         * @param targetId The unique target ID, which identifies a specific incarnation of the target resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(String targetId) {
             $.targetId = targetId;
             return this;
         }
 
+        /**
+         * @param targetLink The URL of the resource that the operation modifies. For operations related to creating a snapshot, this points to the persistent disk that the snapshot was created from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetLink(String targetLink) {
             $.targetLink = targetLink;
             return this;
         }
 
+        /**
+         * @param user User who requested the operation, for example: `user@example.com`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(String user) {
             $.user = user;
             return this;
         }
 
+        /**
+         * @param warnings If warning messages are generated during processing of the operation, this field will be populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warnings(List<OperationWarningsItemResponse> warnings) {
             $.warnings = warnings;
             return this;
         }
 
+        /**
+         * @param warnings If warning messages are generated during processing of the operation, this field will be populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warnings(OperationWarningsItemResponse... warnings) {
             return warnings(List.of(warnings));
         }
 
+        /**
+         * @param zone The URL of the zone where the operation resides. Only applicable when performing per-zone operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             $.zone = zone;
             return this;

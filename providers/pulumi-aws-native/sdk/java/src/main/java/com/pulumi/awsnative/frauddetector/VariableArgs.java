@@ -27,6 +27,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSource", required=true)
     private Output<VariableDataSource> dataSource;
 
+    /**
+     * @return The source of the data.
+     * 
+     */
     public Output<VariableDataSource> dataSource() {
         return this.dataSource;
     }
@@ -38,6 +42,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataType", required=true)
     private Output<VariableDataType> dataType;
 
+    /**
+     * @return The data type.
+     * 
+     */
     public Output<VariableDataType> dataType() {
         return this.dataType;
     }
@@ -49,6 +57,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultValue", required=true)
     private Output<String> defaultValue;
 
+    /**
+     * @return The default value for the variable when no value is received.
+     * 
+     */
     public Output<String> defaultValue() {
         return this.defaultValue;
     }
@@ -60,6 +72,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -71,6 +87,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the variable.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -82,6 +102,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<VariableTagArgs>> tags;
 
+    /**
+     * @return Tags associated with this variable.
+     * 
+     */
     public Optional<Output<List<VariableTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -93,6 +117,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="variableType")
     private @Nullable Output<VariableType> variableType;
 
+    /**
+     * @return The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
+     * 
+     */
     public Optional<Output<VariableType>> variableType() {
         return Optional.ofNullable(this.variableType);
     }
@@ -127,69 +155,159 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VariableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSource The source of the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(Output<VariableDataSource> dataSource) {
             $.dataSource = dataSource;
             return this;
         }
 
+        /**
+         * @param dataSource The source of the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(VariableDataSource dataSource) {
             return dataSource(Output.of(dataSource));
         }
 
+        /**
+         * @param dataType The data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(Output<VariableDataType> dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param dataType The data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(VariableDataType dataType) {
             return dataType(Output.of(dataType));
         }
 
+        /**
+         * @param defaultValue The default value for the variable when no value is received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(Output<String> defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param defaultValue The default value for the variable when no value is received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(String defaultValue) {
             return defaultValue(Output.of(defaultValue));
         }
 
+        /**
+         * @param description The description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Tags associated with this variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<VariableTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags associated with this variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<VariableTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags associated with this variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(VariableTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param variableType The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableType(@Nullable Output<VariableType> variableType) {
             $.variableType = variableType;
             return this;
         }
 
+        /**
+         * @param variableType The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableType(VariableType variableType) {
             return variableType(Output.of(variableType));
         }

@@ -28,6 +28,15 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingPolicy")
     private @Nullable Output<AutoscalerAutoscalingPolicyGetArgs> autoscalingPolicy;
 
+    /**
+     * @return The configuration parameters for the autoscaling algorithm. You can
+     * define one or more of the policies for an autoscaler: cpuUtilization,
+     * customMetricUtilizations, and loadBalancingUtilization.
+     * If none of these are specified, the default will be to autoscale based
+     * on cpuUtilization to 0.6 or 60%.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AutoscalerAutoscalingPolicyGetArgs>> autoscalingPolicy() {
         return Optional.ofNullable(this.autoscalingPolicy);
     }
@@ -39,6 +48,10 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
     private @Nullable Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> creationTimestamp() {
         return Optional.ofNullable(this.creationTimestamp);
     }
@@ -50,6 +63,10 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -61,6 +78,10 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The identifier for this object. Format specified above.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -73,6 +94,11 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -84,6 +110,10 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -97,6 +127,12 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="target")
     private @Nullable Output<String> target;
 
+    /**
+     * @return Fraction of backend capacity utilization (set in HTTP(s) load
+     * balancing configuration) that autoscaler should maintain. Must
+     * be a positive float value. If not defined, the default is 0.8.
+     * 
+     */
     public Optional<Output<String>> target() {
         return Optional.ofNullable(this.target);
     }
@@ -108,6 +144,10 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return URL of the zone where the instance group resides.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -143,74 +183,186 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
             $ = new AutoscalerState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscalingPolicy The configuration parameters for the autoscaling algorithm. You can
+         * define one or more of the policies for an autoscaler: cpuUtilization,
+         * customMetricUtilizations, and loadBalancingUtilization.
+         * If none of these are specified, the default will be to autoscale based
+         * on cpuUtilization to 0.6 or 60%.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingPolicy(@Nullable Output<AutoscalerAutoscalingPolicyGetArgs> autoscalingPolicy) {
             $.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
 
+        /**
+         * @param autoscalingPolicy The configuration parameters for the autoscaling algorithm. You can
+         * define one or more of the policies for an autoscaler: cpuUtilization,
+         * customMetricUtilizations, and loadBalancingUtilization.
+         * If none of these are specified, the default will be to autoscale based
+         * on cpuUtilization to 0.6 or 60%.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingPolicy(AutoscalerAutoscalingPolicyGetArgs autoscalingPolicy) {
             return autoscalingPolicy(Output.of(autoscalingPolicy));
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             $.creationTimestamp = creationTimestamp;
             return this;
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(String creationTimestamp) {
             return creationTimestamp(Output.of(creationTimestamp));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The identifier for this object. Format specified above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The identifier for this object. Format specified above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param target Fraction of backend capacity utilization (set in HTTP(s) load
+         * balancing configuration) that autoscaler should maintain. Must
+         * be a positive float value. If not defined, the default is 0.8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target Fraction of backend capacity utilization (set in HTTP(s) load
+         * balancing configuration) that autoscaler should maintain. Must
+         * be a positive float value. If not defined, the default is 0.8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }
 
+        /**
+         * @param zone URL of the zone where the instance group resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone URL of the zone where the instance group resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

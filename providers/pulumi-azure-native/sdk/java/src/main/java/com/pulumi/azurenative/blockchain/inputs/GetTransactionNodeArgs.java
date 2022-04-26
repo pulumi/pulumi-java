@@ -19,6 +19,10 @@ public final class GetTransactionNodeArgs extends com.pulumi.resources.InvokeArg
     @Import(name="blockchainMemberName", required=true)
     private String blockchainMemberName;
 
+    /**
+     * @return Blockchain member name.
+     * 
+     */
     public String blockchainMemberName() {
         return this.blockchainMemberName;
     }
@@ -30,6 +34,10 @@ public final class GetTransactionNodeArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetTransactionNodeArgs extends com.pulumi.resources.InvokeArg
     @Import(name="transactionNodeName", required=true)
     private String transactionNodeName;
 
+    /**
+     * @return Transaction node name.
+     * 
+     */
     public String transactionNodeName() {
         return this.transactionNodeName;
     }
@@ -71,16 +83,34 @@ public final class GetTransactionNodeArgs extends com.pulumi.resources.InvokeArg
             $ = new GetTransactionNodeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blockchainMemberName Blockchain member name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockchainMemberName(String blockchainMemberName) {
             $.blockchainMemberName = blockchainMemberName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param transactionNodeName Transaction node name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionNodeName(String transactionNodeName) {
             $.transactionNodeName = transactionNodeName;
             return this;

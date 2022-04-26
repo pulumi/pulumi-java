@@ -25,6 +25,10 @@ public final class TransitGatewayMulticastDomainArgs extends com.pulumi.resource
     @Import(name="options")
     private @Nullable Output<OptionsPropertiesArgs> options;
 
+    /**
+     * @return The options for the transit gateway multicast domain.
+     * 
+     */
     public Optional<Output<OptionsPropertiesArgs>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -36,6 +40,10 @@ public final class TransitGatewayMulticastDomainArgs extends com.pulumi.resource
     @Import(name="tags")
     private @Nullable Output<List<TransitGatewayMulticastDomainTagArgs>> tags;
 
+    /**
+     * @return The tags for the transit gateway multicast domain.
+     * 
+     */
     public Optional<Output<List<TransitGatewayMulticastDomainTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -47,6 +55,10 @@ public final class TransitGatewayMulticastDomainArgs extends com.pulumi.resource
     @Import(name="transitGatewayId", required=true)
     private Output<String> transitGatewayId;
 
+    /**
+     * @return The ID of the transit gateway.
+     * 
+     */
     public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
@@ -77,33 +89,75 @@ public final class TransitGatewayMulticastDomainArgs extends com.pulumi.resource
             $ = new TransitGatewayMulticastDomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param options The options for the transit gateway multicast domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<OptionsPropertiesArgs> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options The options for the transit gateway multicast domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionsPropertiesArgs options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param tags The tags for the transit gateway multicast domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<TransitGatewayMulticastDomainTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags for the transit gateway multicast domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<TransitGatewayMulticastDomainTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags for the transit gateway multicast domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(TransitGatewayMulticastDomainTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param transitGatewayId The ID of the transit gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayId(Output<String> transitGatewayId) {
             $.transitGatewayId = transitGatewayId;
             return this;
         }
 
+        /**
+         * @param transitGatewayId The ID of the transit gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayId(String transitGatewayId) {
             return transitGatewayId(Output.of(transitGatewayId));
         }

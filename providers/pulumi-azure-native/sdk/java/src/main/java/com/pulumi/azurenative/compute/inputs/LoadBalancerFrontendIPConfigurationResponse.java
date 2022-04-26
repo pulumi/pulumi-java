@@ -20,6 +20,10 @@ public final class LoadBalancerFrontendIPConfigurationResponse extends com.pulum
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -31,6 +35,10 @@ public final class LoadBalancerFrontendIPConfigurationResponse extends com.pulum
     @Import(name="properties", required=true)
     private LoadBalancerFrontendIPConfigurationPropertiesResponse properties;
 
+    /**
+     * @return Properties of load balancer frontend ip configuration.
+     * 
+     */
     public LoadBalancerFrontendIPConfigurationPropertiesResponse properties() {
         return this.properties;
     }
@@ -60,11 +68,23 @@ public final class LoadBalancerFrontendIPConfigurationResponse extends com.pulum
             $ = new LoadBalancerFrontendIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param properties Properties of load balancer frontend ip configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(LoadBalancerFrontendIPConfigurationPropertiesResponse properties) {
             $.properties = properties;
             return this;

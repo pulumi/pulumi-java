@@ -27,6 +27,10 @@ public final class DataFactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computeLocation")
     private @Nullable Output<String> computeLocation;
 
+    /**
+     * @return Location for the underlying compute
+     * 
+     */
     public Optional<Output<String>> computeLocation() {
         return Optional.ofNullable(this.computeLocation);
     }
@@ -39,6 +43,11 @@ public final class DataFactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computeType", required=true)
     private Output<String> computeType;
 
+    /**
+     * @return The type of compute
+     * Expected value is &#39;DataFactory&#39;.
+     * 
+     */
     public Output<String> computeType() {
         return this.computeType;
     }
@@ -50,6 +59,10 @@ public final class DataFactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the Machine Learning compute.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -61,6 +74,10 @@ public final class DataFactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return ARM resource id of the underlying compute
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -92,38 +109,88 @@ public final class DataFactoryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataFactoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeLocation Location for the underlying compute
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeLocation(@Nullable Output<String> computeLocation) {
             $.computeLocation = computeLocation;
             return this;
         }
 
+        /**
+         * @param computeLocation Location for the underlying compute
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeLocation(String computeLocation) {
             return computeLocation(Output.of(computeLocation));
         }
 
+        /**
+         * @param computeType The type of compute
+         * Expected value is &#39;DataFactory&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(Output<String> computeType) {
             $.computeType = computeType;
             return this;
         }
 
+        /**
+         * @param computeType The type of compute
+         * Expected value is &#39;DataFactory&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(String computeType) {
             return computeType(Output.of(computeType));
         }
 
+        /**
+         * @param description The description of the Machine Learning compute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the Machine Learning compute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param resourceId ARM resource id of the underlying compute
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId ARM resource id of the underlying compute
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

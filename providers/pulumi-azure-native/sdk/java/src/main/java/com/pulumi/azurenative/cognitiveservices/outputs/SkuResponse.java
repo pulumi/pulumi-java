@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class SkuResponse {
     /**
-     * Gets or sets the sku name. Required for account creation, optional for update.
+     * @return Gets or sets the sku name. Required for account creation, optional for update.
      * 
      */
     private final String name;
     /**
-     * Gets the sku tier. This is based on the SKU name.
+     * @return Gets the sku tier. This is based on the SKU name.
      * 
      */
     private final String tier;
@@ -29,16 +29,16 @@ public final class SkuResponse {
     }
 
     /**
-     * Gets or sets the sku name. Required for account creation, optional for update.
+     * @return Gets or sets the sku name. Required for account creation, optional for update.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets the sku tier. This is based on the SKU name.
+     * @return Gets the sku tier. This is based on the SKU name.
      * 
-    */
+     */
     public String tier() {
         return this.tier;
     }

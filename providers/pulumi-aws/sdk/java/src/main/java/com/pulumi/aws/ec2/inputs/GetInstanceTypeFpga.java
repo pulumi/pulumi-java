@@ -34,6 +34,10 @@ public final class GetInstanceTypeFpga extends com.pulumi.resources.InvokeArgs {
     @Import(name="memorySize", required=true)
     private Integer memorySize;
 
+    /**
+     * @return Size of the instance memory, in MiB.
+     * 
+     */
     public Integer memorySize() {
         return this.memorySize;
     }
@@ -82,6 +86,12 @@ public final class GetInstanceTypeFpga extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param memorySize Size of the instance memory, in MiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memorySize(Integer memorySize) {
             $.memorySize = memorySize;
             return this;

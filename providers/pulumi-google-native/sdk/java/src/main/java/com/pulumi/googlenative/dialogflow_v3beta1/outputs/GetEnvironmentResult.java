@@ -13,32 +13,32 @@ import java.util.Objects;
 @CustomType
 public final class GetEnvironmentResult {
     /**
-     * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * @return The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
     private final String description;
     /**
-     * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
+     * @return The human-readable name of the environment (unique in an agent). Limit of 64 characters.
      * 
      */
     private final String displayName;
     /**
-     * The name of the environment. Format: `projects//locations//agents//environments/`.
+     * @return The name of the environment. Format: `projects//locations//agents//environments/`.
      * 
      */
     private final String name;
     /**
-     * The test cases config for continuous tests of this environment.
+     * @return The test cases config for continuous tests of this environment.
      * 
      */
     private final GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse testCasesConfig;
     /**
-     * Update time of this environment.
+     * @return Update time of this environment.
      * 
      */
     private final String updateTime;
     /**
-     * A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
+     * @return A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
      * 
      */
     private final List<GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse> versionConfigs;
@@ -60,44 +60,44 @@ public final class GetEnvironmentResult {
     }
 
     /**
-     * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * @return The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
+     * @return The human-readable name of the environment (unique in an agent). Limit of 64 characters.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The name of the environment. Format: `projects//locations//agents//environments/`.
+     * @return The name of the environment. Format: `projects//locations//agents//environments/`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The test cases config for continuous tests of this environment.
+     * @return The test cases config for continuous tests of this environment.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse testCasesConfig() {
         return this.testCasesConfig;
     }
     /**
-     * Update time of this environment.
+     * @return Update time of this environment.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
+     * @return A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse> versionConfigs() {
         return this.versionConfigs;
     }

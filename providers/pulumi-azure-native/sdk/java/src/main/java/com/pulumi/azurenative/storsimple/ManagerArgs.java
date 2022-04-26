@@ -25,6 +25,10 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cisIntrinsicSettings")
     private @Nullable Output<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings;
 
+    /**
+     * @return Represents the type of StorSimple Manager.
+     * 
+     */
     public Optional<Output<ManagerIntrinsicSettingsArgs>> cisIntrinsicSettings() {
         return Optional.ofNullable(this.cisIntrinsicSettings);
     }
@@ -36,6 +40,10 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -47,6 +55,10 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managerName")
     private @Nullable Output<String> managerName;
 
+    /**
+     * @return The manager name
+     * 
+     */
     public Optional<Output<String>> managerName() {
         return Optional.ofNullable(this.managerName);
     }
@@ -58,6 +70,10 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
     private @Nullable Output<String> provisioningState;
 
+    /**
+     * @return Specifies the state of the resource as it is getting provisioned. Value of &#34;Succeeded&#34; means the Manager was successfully created.
+     * 
+     */
     public Optional<Output<String>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -69,6 +85,10 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -80,6 +100,10 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<ManagerSkuArgs> sku;
 
+    /**
+     * @return Specifies the Sku.
+     * 
+     */
     public Optional<Output<ManagerSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -91,6 +115,10 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags attached to the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,65 +153,149 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ManagerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cisIntrinsicSettings Represents the type of StorSimple Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cisIntrinsicSettings(@Nullable Output<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings) {
             $.cisIntrinsicSettings = cisIntrinsicSettings;
             return this;
         }
 
+        /**
+         * @param cisIntrinsicSettings Represents the type of StorSimple Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cisIntrinsicSettings(ManagerIntrinsicSettingsArgs cisIntrinsicSettings) {
             return cisIntrinsicSettings(Output.of(cisIntrinsicSettings));
         }
 
+        /**
+         * @param location The geo location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(@Nullable Output<String> managerName) {
             $.managerName = managerName;
             return this;
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(String managerName) {
             return managerName(Output.of(managerName));
         }
 
+        /**
+         * @param provisioningState Specifies the state of the resource as it is getting provisioned. Value of &#34;Succeeded&#34; means the Manager was successfully created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState Specifies the state of the resource as it is getting provisioned. Value of &#34;Succeeded&#34; means the Manager was successfully created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku Specifies the Sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<ManagerSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Specifies the Sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(ManagerSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags The tags attached to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags attached to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -25,6 +25,10 @@ public final class ManagedRuleOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="ruleId", required=true)
     private String ruleId;
 
+    /**
+     * @return Identifier for the managed rule.
+     * 
+     */
     public String ruleId() {
         return this.ruleId;
     }
@@ -36,6 +40,10 @@ public final class ManagedRuleOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return The state of the managed rule. Defaults to Disabled if not specified.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -65,11 +73,23 @@ public final class ManagedRuleOverrideResponse extends com.pulumi.resources.Invo
             $ = new ManagedRuleOverrideResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ruleId Identifier for the managed rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(String ruleId) {
             $.ruleId = ruleId;
             return this;
         }
 
+        /**
+         * @param state The state of the managed rule. Defaults to Disabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

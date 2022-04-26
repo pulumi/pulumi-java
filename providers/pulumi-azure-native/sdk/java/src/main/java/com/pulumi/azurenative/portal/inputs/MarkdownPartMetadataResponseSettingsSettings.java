@@ -26,6 +26,10 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends com.pulu
     @Import(name="content")
     private @Nullable String content;
 
+    /**
+     * @return The content of the markdown part.
+     * 
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
@@ -37,6 +41,10 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends com.pulu
     @Import(name="markdownSource")
     private @Nullable Integer markdownSource;
 
+    /**
+     * @return The source of the content of the markdown part.
+     * 
+     */
     public Optional<Integer> markdownSource() {
         return Optional.ofNullable(this.markdownSource);
     }
@@ -48,6 +56,10 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends com.pulu
     @Import(name="markdownUri")
     private @Nullable String markdownUri;
 
+    /**
+     * @return The uri of markdown content.
+     * 
+     */
     public Optional<String> markdownUri() {
         return Optional.ofNullable(this.markdownUri);
     }
@@ -59,6 +71,10 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends com.pulu
     @Import(name="subtitle")
     private @Nullable String subtitle;
 
+    /**
+     * @return The subtitle of the markdown part.
+     * 
+     */
     public Optional<String> subtitle() {
         return Optional.ofNullable(this.subtitle);
     }
@@ -70,6 +86,10 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends com.pulu
     @Import(name="title")
     private @Nullable String title;
 
+    /**
+     * @return The title of the markdown part.
+     * 
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
@@ -102,26 +122,56 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends com.pulu
             $ = new MarkdownPartMetadataResponseSettingsSettings(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The content of the markdown part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param markdownSource The source of the content of the markdown part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder markdownSource(@Nullable Integer markdownSource) {
             $.markdownSource = markdownSource;
             return this;
         }
 
+        /**
+         * @param markdownUri The uri of markdown content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder markdownUri(@Nullable String markdownUri) {
             $.markdownUri = markdownUri;
             return this;
         }
 
+        /**
+         * @param subtitle The subtitle of the markdown part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subtitle(@Nullable String subtitle) {
             $.subtitle = subtitle;
             return this;
         }
 
+        /**
+         * @param title The title of the markdown part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable String title) {
             $.title = title;
             return this;

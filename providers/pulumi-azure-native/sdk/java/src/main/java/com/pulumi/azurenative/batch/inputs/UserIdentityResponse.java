@@ -26,6 +26,10 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="autoUser")
     private @Nullable AutoUserSpecificationResponse autoUser;
 
+    /**
+     * @return The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+     * 
+     */
     public Optional<AutoUserSpecificationResponse> autoUser() {
         return Optional.ofNullable(this.autoUser);
     }
@@ -37,6 +41,10 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="userName")
     private @Nullable String userName;
 
+    /**
+     * @return The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+     * 
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -66,11 +74,23 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
             $ = new UserIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoUser The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUser(@Nullable AutoUserSpecificationResponse autoUser) {
             $.autoUser = autoUser;
             return this;
         }
 
+        /**
+         * @param userName The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable String userName) {
             $.userName = userName;
             return this;

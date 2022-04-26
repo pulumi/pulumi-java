@@ -23,6 +23,10 @@ public final class AcceleratorAttributesGetArgs extends com.pulumi.resources.Res
     @Import(name="flowLogsEnabled")
     private @Nullable Output<Boolean> flowLogsEnabled;
 
+    /**
+     * @return Indicates whether flow logs are enabled. Defaults to `false`. Valid values: `true`, `false`.
+     * 
+     */
     public Optional<Output<Boolean>> flowLogsEnabled() {
         return Optional.ofNullable(this.flowLogsEnabled);
     }
@@ -34,6 +38,10 @@ public final class AcceleratorAttributesGetArgs extends com.pulumi.resources.Res
     @Import(name="flowLogsS3Bucket")
     private @Nullable Output<String> flowLogsS3Bucket;
 
+    /**
+     * @return The name of the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
+     * 
+     */
     public Optional<Output<String>> flowLogsS3Bucket() {
         return Optional.ofNullable(this.flowLogsS3Bucket);
     }
@@ -45,6 +53,10 @@ public final class AcceleratorAttributesGetArgs extends com.pulumi.resources.Res
     @Import(name="flowLogsS3Prefix")
     private @Nullable Output<String> flowLogsS3Prefix;
 
+    /**
+     * @return The prefix for the location in the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
+     * 
+     */
     public Optional<Output<String>> flowLogsS3Prefix() {
         return Optional.ofNullable(this.flowLogsS3Prefix);
     }
@@ -75,29 +87,65 @@ public final class AcceleratorAttributesGetArgs extends com.pulumi.resources.Res
             $ = new AcceleratorAttributesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param flowLogsEnabled Indicates whether flow logs are enabled. Defaults to `false`. Valid values: `true`, `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowLogsEnabled(@Nullable Output<Boolean> flowLogsEnabled) {
             $.flowLogsEnabled = flowLogsEnabled;
             return this;
         }
 
+        /**
+         * @param flowLogsEnabled Indicates whether flow logs are enabled. Defaults to `false`. Valid values: `true`, `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowLogsEnabled(Boolean flowLogsEnabled) {
             return flowLogsEnabled(Output.of(flowLogsEnabled));
         }
 
+        /**
+         * @param flowLogsS3Bucket The name of the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowLogsS3Bucket(@Nullable Output<String> flowLogsS3Bucket) {
             $.flowLogsS3Bucket = flowLogsS3Bucket;
             return this;
         }
 
+        /**
+         * @param flowLogsS3Bucket The name of the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowLogsS3Bucket(String flowLogsS3Bucket) {
             return flowLogsS3Bucket(Output.of(flowLogsS3Bucket));
         }
 
+        /**
+         * @param flowLogsS3Prefix The prefix for the location in the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowLogsS3Prefix(@Nullable Output<String> flowLogsS3Prefix) {
             $.flowLogsS3Prefix = flowLogsS3Prefix;
             return this;
         }
 
+        /**
+         * @param flowLogsS3Prefix The prefix for the location in the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowLogsS3Prefix(String flowLogsS3Prefix) {
             return flowLogsS3Prefix(Output.of(flowLogsS3Prefix));
         }

@@ -27,6 +27,10 @@ public final class BatchReleaseCriteriaArgs extends com.pulumi.resources.Resourc
     @Import(name="batchSize")
     private @Nullable Output<Integer> batchSize;
 
+    /**
+     * @return The batch size in bytes.
+     * 
+     */
     public Optional<Output<Integer>> batchSize() {
         return Optional.ofNullable(this.batchSize);
     }
@@ -38,6 +42,10 @@ public final class BatchReleaseCriteriaArgs extends com.pulumi.resources.Resourc
     @Import(name="messageCount")
     private @Nullable Output<Integer> messageCount;
 
+    /**
+     * @return The message count.
+     * 
+     */
     public Optional<Output<Integer>> messageCount() {
         return Optional.ofNullable(this.messageCount);
     }
@@ -49,6 +57,10 @@ public final class BatchReleaseCriteriaArgs extends com.pulumi.resources.Resourc
     @Import(name="recurrence")
     private @Nullable Output<WorkflowTriggerRecurrenceArgs> recurrence;
 
+    /**
+     * @return The recurrence.
+     * 
+     */
     public Optional<Output<WorkflowTriggerRecurrenceArgs>> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }
@@ -79,29 +91,65 @@ public final class BatchReleaseCriteriaArgs extends com.pulumi.resources.Resourc
             $ = new BatchReleaseCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param batchSize The batch size in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchSize(@Nullable Output<Integer> batchSize) {
             $.batchSize = batchSize;
             return this;
         }
 
+        /**
+         * @param batchSize The batch size in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchSize(Integer batchSize) {
             return batchSize(Output.of(batchSize));
         }
 
+        /**
+         * @param messageCount The message count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageCount(@Nullable Output<Integer> messageCount) {
             $.messageCount = messageCount;
             return this;
         }
 
+        /**
+         * @param messageCount The message count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageCount(Integer messageCount) {
             return messageCount(Output.of(messageCount));
         }
 
+        /**
+         * @param recurrence The recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(@Nullable Output<WorkflowTriggerRecurrenceArgs> recurrence) {
             $.recurrence = recurrence;
             return this;
         }
 
+        /**
+         * @param recurrence The recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(WorkflowTriggerRecurrenceArgs recurrence) {
             return recurrence(Output.of(recurrence));
         }

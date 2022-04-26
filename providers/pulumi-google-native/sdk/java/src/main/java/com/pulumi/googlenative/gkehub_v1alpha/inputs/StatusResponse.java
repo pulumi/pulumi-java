@@ -23,6 +23,10 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return Code specifies AppDevExperienceFeature&#39;s subcomponent ready state.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -34,6 +38,10 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Description is populated if Code is Failed, explaining why it has failed.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -63,11 +71,23 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
             $ = new StatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Code specifies AppDevExperienceFeature&#39;s subcomponent ready state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param description Description is populated if Code is Failed, explaining why it has failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;

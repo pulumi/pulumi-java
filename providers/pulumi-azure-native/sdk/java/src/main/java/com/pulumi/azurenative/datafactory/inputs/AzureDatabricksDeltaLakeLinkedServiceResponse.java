@@ -35,6 +35,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
     @Import(name="accessToken")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
 
+    /**
+     * @return Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
@@ -46,6 +50,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -57,6 +65,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
     @Import(name="clusterId")
     private @Nullable Object clusterId;
 
+    /**
+     * @return The id of an existing interactive cluster that will be used for all runs of this job. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
@@ -68,6 +80,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -79,6 +95,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
     @Import(name="credential")
     private @Nullable CredentialReferenceResponse credential;
 
+    /**
+     * @return The credential reference containing authentication information.
+     * 
+     */
     public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
@@ -90,6 +110,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -101,6 +125,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
     @Import(name="domain", required=true)
     private Object domain;
 
+    /**
+     * @return &lt;REGION&gt;.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object domain() {
         return this.domain;
     }
@@ -112,6 +140,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -123,6 +155,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -135,6 +171,11 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;AzureDatabricksDeltaLake&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -146,6 +187,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
     @Import(name="workspaceResourceId")
     private @Nullable Object workspaceResourceId;
 
+    /**
+     * @return Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
@@ -184,68 +229,153 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
             $ = new AzureDatabricksDeltaLakeLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessToken Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken) {
             $.accessToken = accessToken;
             return this;
         }
 
+        /**
+         * @param accessToken Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(AzureKeyVaultSecretReferenceResponse accessToken) {
             return accessToken(Either.ofLeft(accessToken));
         }
 
+        /**
+         * @param accessToken Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(SecureStringResponse accessToken) {
             return accessToken(Either.ofRight(accessToken));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param clusterId The id of an existing interactive cluster that will be used for all runs of this job. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(@Nullable Object clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param domain &lt;REGION&gt;.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(Object domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AzureDatabricksDeltaLake&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param workspaceResourceId Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceResourceId(@Nullable Object workspaceResourceId) {
             $.workspaceResourceId = workspaceResourceId;
             return this;

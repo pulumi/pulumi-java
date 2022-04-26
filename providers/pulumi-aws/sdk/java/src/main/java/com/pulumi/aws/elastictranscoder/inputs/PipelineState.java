@@ -28,6 +28,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the Elastictranscoder pipeline.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -39,6 +43,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="awsKmsKeyArn")
     private @Nullable Output<String> awsKmsKeyArn;
 
+    /**
+     * @return The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
+     * 
+     */
     public Optional<Output<String>> awsKmsKeyArn() {
         return Optional.ofNullable(this.awsKmsKeyArn);
     }
@@ -50,6 +58,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentConfig")
     private @Nullable Output<PipelineContentConfigGetArgs> contentConfig;
 
+    /**
+     * @return The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
+     * 
+     */
     public Optional<Output<PipelineContentConfigGetArgs>> contentConfig() {
         return Optional.ofNullable(this.contentConfig);
     }
@@ -61,6 +73,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentConfigPermissions")
     private @Nullable Output<List<PipelineContentConfigPermissionGetArgs>> contentConfigPermissions;
 
+    /**
+     * @return The permissions for the `content_config` object. (documented below)
+     * 
+     */
     public Optional<Output<List<PipelineContentConfigPermissionGetArgs>>> contentConfigPermissions() {
         return Optional.ofNullable(this.contentConfigPermissions);
     }
@@ -72,6 +88,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputBucket")
     private @Nullable Output<String> inputBucket;
 
+    /**
+     * @return The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
+     * 
+     */
     public Optional<Output<String>> inputBucket() {
         return Optional.ofNullable(this.inputBucket);
     }
@@ -83,6 +103,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the pipeline. Maximum 40 characters
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -94,6 +118,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="notifications")
     private @Nullable Output<PipelineNotificationsGetArgs> notifications;
 
+    /**
+     * @return The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
+     * 
+     */
     public Optional<Output<PipelineNotificationsGetArgs>> notifications() {
         return Optional.ofNullable(this.notifications);
     }
@@ -105,6 +133,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputBucket")
     private @Nullable Output<String> outputBucket;
 
+    /**
+     * @return The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
+     * 
+     */
     public Optional<Output<String>> outputBucket() {
         return Optional.ofNullable(this.outputBucket);
     }
@@ -116,6 +148,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -127,6 +163,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="thumbnailConfig")
     private @Nullable Output<PipelineThumbnailConfigGetArgs> thumbnailConfig;
 
+    /**
+     * @return The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
+     * 
+     */
     public Optional<Output<PipelineThumbnailConfigGetArgs>> thumbnailConfig() {
         return Optional.ofNullable(this.thumbnailConfig);
     }
@@ -138,6 +178,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="thumbnailConfigPermissions")
     private @Nullable Output<List<PipelineThumbnailConfigPermissionGetArgs>> thumbnailConfigPermissions;
 
+    /**
+     * @return The permissions for the `thumbnail_config` object. (documented below)
+     * 
+     */
     public Optional<Output<List<PipelineThumbnailConfigPermissionGetArgs>>> thumbnailConfigPermissions() {
         return Optional.ofNullable(this.thumbnailConfigPermissions);
     }
@@ -176,109 +220,253 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
             $ = new PipelineState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the Elastictranscoder pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the Elastictranscoder pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param awsKmsKeyArn The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsKmsKeyArn(@Nullable Output<String> awsKmsKeyArn) {
             $.awsKmsKeyArn = awsKmsKeyArn;
             return this;
         }
 
+        /**
+         * @param awsKmsKeyArn The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsKmsKeyArn(String awsKmsKeyArn) {
             return awsKmsKeyArn(Output.of(awsKmsKeyArn));
         }
 
+        /**
+         * @param contentConfig The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentConfig(@Nullable Output<PipelineContentConfigGetArgs> contentConfig) {
             $.contentConfig = contentConfig;
             return this;
         }
 
+        /**
+         * @param contentConfig The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentConfig(PipelineContentConfigGetArgs contentConfig) {
             return contentConfig(Output.of(contentConfig));
         }
 
+        /**
+         * @param contentConfigPermissions The permissions for the `content_config` object. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentConfigPermissions(@Nullable Output<List<PipelineContentConfigPermissionGetArgs>> contentConfigPermissions) {
             $.contentConfigPermissions = contentConfigPermissions;
             return this;
         }
 
+        /**
+         * @param contentConfigPermissions The permissions for the `content_config` object. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentConfigPermissions(List<PipelineContentConfigPermissionGetArgs> contentConfigPermissions) {
             return contentConfigPermissions(Output.of(contentConfigPermissions));
         }
 
+        /**
+         * @param contentConfigPermissions The permissions for the `content_config` object. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentConfigPermissions(PipelineContentConfigPermissionGetArgs... contentConfigPermissions) {
             return contentConfigPermissions(List.of(contentConfigPermissions));
         }
 
+        /**
+         * @param inputBucket The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputBucket(@Nullable Output<String> inputBucket) {
             $.inputBucket = inputBucket;
             return this;
         }
 
+        /**
+         * @param inputBucket The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputBucket(String inputBucket) {
             return inputBucket(Output.of(inputBucket));
         }
 
+        /**
+         * @param name The name of the pipeline. Maximum 40 characters
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the pipeline. Maximum 40 characters
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param notifications The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(@Nullable Output<PipelineNotificationsGetArgs> notifications) {
             $.notifications = notifications;
             return this;
         }
 
+        /**
+         * @param notifications The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(PipelineNotificationsGetArgs notifications) {
             return notifications(Output.of(notifications));
         }
 
+        /**
+         * @param outputBucket The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputBucket(@Nullable Output<String> outputBucket) {
             $.outputBucket = outputBucket;
             return this;
         }
 
+        /**
+         * @param outputBucket The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputBucket(String outputBucket) {
             return outputBucket(Output.of(outputBucket));
         }
 
+        /**
+         * @param role The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param thumbnailConfig The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbnailConfig(@Nullable Output<PipelineThumbnailConfigGetArgs> thumbnailConfig) {
             $.thumbnailConfig = thumbnailConfig;
             return this;
         }
 
+        /**
+         * @param thumbnailConfig The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbnailConfig(PipelineThumbnailConfigGetArgs thumbnailConfig) {
             return thumbnailConfig(Output.of(thumbnailConfig));
         }
 
+        /**
+         * @param thumbnailConfigPermissions The permissions for the `thumbnail_config` object. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbnailConfigPermissions(@Nullable Output<List<PipelineThumbnailConfigPermissionGetArgs>> thumbnailConfigPermissions) {
             $.thumbnailConfigPermissions = thumbnailConfigPermissions;
             return this;
         }
 
+        /**
+         * @param thumbnailConfigPermissions The permissions for the `thumbnail_config` object. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbnailConfigPermissions(List<PipelineThumbnailConfigPermissionGetArgs> thumbnailConfigPermissions) {
             return thumbnailConfigPermissions(Output.of(thumbnailConfigPermissions));
         }
 
+        /**
+         * @param thumbnailConfigPermissions The permissions for the `thumbnail_config` object. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbnailConfigPermissions(PipelineThumbnailConfigPermissionGetArgs... thumbnailConfigPermissions) {
             return thumbnailConfigPermissions(List.of(thumbnailConfigPermissions));
         }

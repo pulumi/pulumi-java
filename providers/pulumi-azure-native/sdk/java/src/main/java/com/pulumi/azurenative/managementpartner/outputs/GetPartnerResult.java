@@ -13,57 +13,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPartnerResult {
     /**
-     * This is the DateTime when the partner was created.
+     * @return This is the DateTime when the partner was created.
      * 
      */
     private final @Nullable String createdTime;
     /**
-     * Type of the partner
+     * @return Type of the partner
      * 
      */
     private final @Nullable Integer etag;
     /**
-     * Identifier of the partner
+     * @return Identifier of the partner
      * 
      */
     private final String id;
     /**
-     * Name of the partner
+     * @return Name of the partner
      * 
      */
     private final String name;
     /**
-     * This is the object id.
+     * @return This is the object id.
      * 
      */
     private final @Nullable String objectId;
     /**
-     * This is the partner id
+     * @return This is the partner id
      * 
      */
     private final @Nullable String partnerId;
     /**
-     * This is the partner name
+     * @return This is the partner name
      * 
      */
     private final @Nullable String partnerName;
     /**
-     * This is the tenant id.
+     * @return This is the tenant id.
      * 
      */
     private final @Nullable String tenantId;
     /**
-     * Type of resource. &#34;Microsoft.ManagementPartner/partners&#34;
+     * @return Type of resource. &#34;Microsoft.ManagementPartner/partners&#34;
      * 
      */
     private final String type;
     /**
-     * This is the DateTime when the partner was updated.
+     * @return This is the DateTime when the partner was updated.
      * 
      */
     private final @Nullable String updatedTime;
     /**
-     * This is the version.
+     * @return This is the version.
      * 
      */
     private final @Nullable Integer version;
@@ -95,79 +95,79 @@ public final class GetPartnerResult {
     }
 
     /**
-     * This is the DateTime when the partner was created.
+     * @return This is the DateTime when the partner was created.
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * Type of the partner
+     * @return Type of the partner
      * 
-    */
+     */
     public Optional<Integer> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Identifier of the partner
+     * @return Identifier of the partner
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the partner
+     * @return Name of the partner
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * This is the object id.
+     * @return This is the object id.
      * 
-    */
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
-     * This is the partner id
+     * @return This is the partner id
      * 
-    */
+     */
     public Optional<String> partnerId() {
         return Optional.ofNullable(this.partnerId);
     }
     /**
-     * This is the partner name
+     * @return This is the partner name
      * 
-    */
+     */
     public Optional<String> partnerName() {
         return Optional.ofNullable(this.partnerName);
     }
     /**
-     * This is the tenant id.
+     * @return This is the tenant id.
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
-     * Type of resource. &#34;Microsoft.ManagementPartner/partners&#34;
+     * @return Type of resource. &#34;Microsoft.ManagementPartner/partners&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * This is the DateTime when the partner was updated.
+     * @return This is the DateTime when the partner was updated.
      * 
-    */
+     */
     public Optional<String> updatedTime() {
         return Optional.ofNullable(this.updatedTime);
     }
     /**
-     * This is the version.
+     * @return This is the version.
      * 
-    */
+     */
     public Optional<Integer> version() {
         return Optional.ofNullable(this.version);
     }

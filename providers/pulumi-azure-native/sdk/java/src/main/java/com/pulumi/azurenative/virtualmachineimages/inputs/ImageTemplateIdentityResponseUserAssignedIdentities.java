@@ -19,6 +19,10 @@ public final class ImageTemplateIdentityResponseUserAssignedIdentities extends c
     @Import(name="clientId", required=true)
     private String clientId;
 
+    /**
+     * @return The client id of user assigned identity.
+     * 
+     */
     public String clientId() {
         return this.clientId;
     }
@@ -30,6 +34,10 @@ public final class ImageTemplateIdentityResponseUserAssignedIdentities extends c
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal id of user assigned identity.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -59,11 +67,23 @@ public final class ImageTemplateIdentityResponseUserAssignedIdentities extends c
             $ = new ImageTemplateIdentityResponseUserAssignedIdentities(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The client id of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param principalId The principal id of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;

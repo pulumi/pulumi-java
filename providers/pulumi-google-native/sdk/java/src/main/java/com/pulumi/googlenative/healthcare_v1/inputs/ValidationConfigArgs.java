@@ -28,6 +28,10 @@ public final class ValidationConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="disableFhirpathValidation")
     private @Nullable Output<Boolean> disableFhirpathValidation;
 
+    /**
+     * @return Whether to disable FHIRPath validation for incoming resources. Set this to true to disable checking incoming resources for conformance against FHIRPath requirement defined in the FHIR specification. This property only affects resource types that do not have profiles configured for them, any rules in enabled implementation guides will still be enforced.
+     * 
+     */
     public Optional<Output<Boolean>> disableFhirpathValidation() {
         return Optional.ofNullable(this.disableFhirpathValidation);
     }
@@ -39,6 +43,10 @@ public final class ValidationConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="disableProfileValidation")
     private @Nullable Output<Boolean> disableProfileValidation;
 
+    /**
+     * @return Whether to disable profile validation for this FHIR store. Set this to true to disable checking incoming resources for conformance against structure definitions in this FHIR store.
+     * 
+     */
     public Optional<Output<Boolean>> disableProfileValidation() {
         return Optional.ofNullable(this.disableProfileValidation);
     }
@@ -50,6 +58,10 @@ public final class ValidationConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="disableReferenceTypeValidation")
     private @Nullable Output<Boolean> disableReferenceTypeValidation;
 
+    /**
+     * @return Whether to disable reference type validation for incoming resources. Set this to true to disable checking incoming resources for conformance against reference type requirement defined in the FHIR specification. This property only affects resource types that do not have profiles configured for them, any rules in enabled implementation guides will still be enforced.
+     * 
+     */
     public Optional<Output<Boolean>> disableReferenceTypeValidation() {
         return Optional.ofNullable(this.disableReferenceTypeValidation);
     }
@@ -61,6 +73,10 @@ public final class ValidationConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="disableRequiredFieldValidation")
     private @Nullable Output<Boolean> disableRequiredFieldValidation;
 
+    /**
+     * @return Whether to disable required fields validation for incoming resources. Set this to true to disable checking incoming resources for conformance against required fields requirement defined in the FHIR specification. This property only affects resource types that do not have profiles configured for them, any rules in enabled implementation guides will still be enforced.
+     * 
+     */
     public Optional<Output<Boolean>> disableRequiredFieldValidation() {
         return Optional.ofNullable(this.disableRequiredFieldValidation);
     }
@@ -72,6 +88,10 @@ public final class ValidationConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enabledImplementationGuides")
     private @Nullable Output<List<String>> enabledImplementationGuides;
 
+    /**
+     * @return A list of implementation guide URLs in this FHIR store that are used to configure the profiles to use for validation. For example, to use the US Core profiles for validation, set `enabled_implementation_guides` to `[&#34;http://hl7.org/fhir/us/core/ImplementationGuide/ig&#34;]`. If `enabled_implementation_guides` is empty or omitted, then incoming resources are only required to conform to the base FHIR profiles. Otherwise, a resource must conform to at least one profile listed in the `global` property of one of the enabled ImplementationGuides. The Cloud Healthcare API does not currently enforce all of the rules in a StructureDefinition. The following rules are supported: - min/max - minValue/maxValue - maxLength - type - fixed[x] - pattern[x] on simple types - slicing, when using &#34;value&#34; as the discriminator type When a URL cannot be resolved (for example, in a type assertion), the server does not return an error.
+     * 
+     */
     public Optional<Output<List<String>>> enabledImplementationGuides() {
         return Optional.ofNullable(this.enabledImplementationGuides);
     }
@@ -104,51 +124,117 @@ public final class ValidationConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new ValidationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableFhirpathValidation Whether to disable FHIRPath validation for incoming resources. Set this to true to disable checking incoming resources for conformance against FHIRPath requirement defined in the FHIR specification. This property only affects resource types that do not have profiles configured for them, any rules in enabled implementation guides will still be enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableFhirpathValidation(@Nullable Output<Boolean> disableFhirpathValidation) {
             $.disableFhirpathValidation = disableFhirpathValidation;
             return this;
         }
 
+        /**
+         * @param disableFhirpathValidation Whether to disable FHIRPath validation for incoming resources. Set this to true to disable checking incoming resources for conformance against FHIRPath requirement defined in the FHIR specification. This property only affects resource types that do not have profiles configured for them, any rules in enabled implementation guides will still be enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableFhirpathValidation(Boolean disableFhirpathValidation) {
             return disableFhirpathValidation(Output.of(disableFhirpathValidation));
         }
 
+        /**
+         * @param disableProfileValidation Whether to disable profile validation for this FHIR store. Set this to true to disable checking incoming resources for conformance against structure definitions in this FHIR store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableProfileValidation(@Nullable Output<Boolean> disableProfileValidation) {
             $.disableProfileValidation = disableProfileValidation;
             return this;
         }
 
+        /**
+         * @param disableProfileValidation Whether to disable profile validation for this FHIR store. Set this to true to disable checking incoming resources for conformance against structure definitions in this FHIR store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableProfileValidation(Boolean disableProfileValidation) {
             return disableProfileValidation(Output.of(disableProfileValidation));
         }
 
+        /**
+         * @param disableReferenceTypeValidation Whether to disable reference type validation for incoming resources. Set this to true to disable checking incoming resources for conformance against reference type requirement defined in the FHIR specification. This property only affects resource types that do not have profiles configured for them, any rules in enabled implementation guides will still be enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableReferenceTypeValidation(@Nullable Output<Boolean> disableReferenceTypeValidation) {
             $.disableReferenceTypeValidation = disableReferenceTypeValidation;
             return this;
         }
 
+        /**
+         * @param disableReferenceTypeValidation Whether to disable reference type validation for incoming resources. Set this to true to disable checking incoming resources for conformance against reference type requirement defined in the FHIR specification. This property only affects resource types that do not have profiles configured for them, any rules in enabled implementation guides will still be enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableReferenceTypeValidation(Boolean disableReferenceTypeValidation) {
             return disableReferenceTypeValidation(Output.of(disableReferenceTypeValidation));
         }
 
+        /**
+         * @param disableRequiredFieldValidation Whether to disable required fields validation for incoming resources. Set this to true to disable checking incoming resources for conformance against required fields requirement defined in the FHIR specification. This property only affects resource types that do not have profiles configured for them, any rules in enabled implementation guides will still be enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableRequiredFieldValidation(@Nullable Output<Boolean> disableRequiredFieldValidation) {
             $.disableRequiredFieldValidation = disableRequiredFieldValidation;
             return this;
         }
 
+        /**
+         * @param disableRequiredFieldValidation Whether to disable required fields validation for incoming resources. Set this to true to disable checking incoming resources for conformance against required fields requirement defined in the FHIR specification. This property only affects resource types that do not have profiles configured for them, any rules in enabled implementation guides will still be enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableRequiredFieldValidation(Boolean disableRequiredFieldValidation) {
             return disableRequiredFieldValidation(Output.of(disableRequiredFieldValidation));
         }
 
+        /**
+         * @param enabledImplementationGuides A list of implementation guide URLs in this FHIR store that are used to configure the profiles to use for validation. For example, to use the US Core profiles for validation, set `enabled_implementation_guides` to `[&#34;http://hl7.org/fhir/us/core/ImplementationGuide/ig&#34;]`. If `enabled_implementation_guides` is empty or omitted, then incoming resources are only required to conform to the base FHIR profiles. Otherwise, a resource must conform to at least one profile listed in the `global` property of one of the enabled ImplementationGuides. The Cloud Healthcare API does not currently enforce all of the rules in a StructureDefinition. The following rules are supported: - min/max - minValue/maxValue - maxLength - type - fixed[x] - pattern[x] on simple types - slicing, when using &#34;value&#34; as the discriminator type When a URL cannot be resolved (for example, in a type assertion), the server does not return an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledImplementationGuides(@Nullable Output<List<String>> enabledImplementationGuides) {
             $.enabledImplementationGuides = enabledImplementationGuides;
             return this;
         }
 
+        /**
+         * @param enabledImplementationGuides A list of implementation guide URLs in this FHIR store that are used to configure the profiles to use for validation. For example, to use the US Core profiles for validation, set `enabled_implementation_guides` to `[&#34;http://hl7.org/fhir/us/core/ImplementationGuide/ig&#34;]`. If `enabled_implementation_guides` is empty or omitted, then incoming resources are only required to conform to the base FHIR profiles. Otherwise, a resource must conform to at least one profile listed in the `global` property of one of the enabled ImplementationGuides. The Cloud Healthcare API does not currently enforce all of the rules in a StructureDefinition. The following rules are supported: - min/max - minValue/maxValue - maxLength - type - fixed[x] - pattern[x] on simple types - slicing, when using &#34;value&#34; as the discriminator type When a URL cannot be resolved (for example, in a type assertion), the server does not return an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledImplementationGuides(List<String> enabledImplementationGuides) {
             return enabledImplementationGuides(Output.of(enabledImplementationGuides));
         }
 
+        /**
+         * @param enabledImplementationGuides A list of implementation guide URLs in this FHIR store that are used to configure the profiles to use for validation. For example, to use the US Core profiles for validation, set `enabled_implementation_guides` to `[&#34;http://hl7.org/fhir/us/core/ImplementationGuide/ig&#34;]`. If `enabled_implementation_guides` is empty or omitted, then incoming resources are only required to conform to the base FHIR profiles. Otherwise, a resource must conform to at least one profile listed in the `global` property of one of the enabled ImplementationGuides. The Cloud Healthcare API does not currently enforce all of the rules in a StructureDefinition. The following rules are supported: - min/max - minValue/maxValue - maxLength - type - fixed[x] - pattern[x] on simple types - slicing, when using &#34;value&#34; as the discriminator type When a URL cannot be resolved (for example, in a type assertion), the server does not return an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledImplementationGuides(String... enabledImplementationGuides) {
             return enabledImplementationGuides(List.of(enabledImplementationGuides));
         }

@@ -26,6 +26,10 @@ public final class WorkspaceEncryptionParameterArgs extends com.pulumi.resources
     @Import(name="value")
     private @Nullable Output<EncryptionArgs> value;
 
+    /**
+     * @return The value which should be used for this field.
+     * 
+     */
     public Optional<Output<EncryptionArgs>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -54,11 +58,23 @@ public final class WorkspaceEncryptionParameterArgs extends com.pulumi.resources
             $ = new WorkspaceEncryptionParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The value which should be used for this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<EncryptionArgs> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value which should be used for this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(EncryptionArgs value) {
             return value(Output.of(value));
         }

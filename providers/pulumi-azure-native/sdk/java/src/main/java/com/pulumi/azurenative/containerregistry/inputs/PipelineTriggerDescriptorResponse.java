@@ -21,6 +21,10 @@ public final class PipelineTriggerDescriptorResponse extends com.pulumi.resource
     @Import(name="sourceTrigger")
     private @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger;
 
+    /**
+     * @return The source trigger that caused the pipeline run.
+     * 
+     */
     public Optional<PipelineSourceTriggerDescriptorResponse> sourceTrigger() {
         return Optional.ofNullable(this.sourceTrigger);
     }
@@ -49,6 +53,12 @@ public final class PipelineTriggerDescriptorResponse extends com.pulumi.resource
             $ = new PipelineTriggerDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceTrigger The source trigger that caused the pipeline run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTrigger(@Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger) {
             $.sourceTrigger = sourceTrigger;
             return this;

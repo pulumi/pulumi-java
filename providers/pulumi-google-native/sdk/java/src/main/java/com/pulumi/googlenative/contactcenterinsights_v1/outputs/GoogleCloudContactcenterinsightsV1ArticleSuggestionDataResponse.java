@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse {
     /**
-     * The system&#39;s confidence score that this article is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+     * @return The system&#39;s confidence score that this article is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
      */
     private final Double confidenceScore;
     /**
-     * Map that contains metadata about the Article Suggestion and the document that it originates from.
+     * @return Map that contains metadata about the Article Suggestion and the document that it originates from.
      * 
      */
     private final Map<String,String> metadata;
     /**
-     * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
+     * @return Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
      * 
      */
     private final String queryRecord;
     /**
-     * The knowledge document that this answer was extracted from. Format: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}
+     * @return The knowledge document that this answer was extracted from. Format: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}
      * 
      */
     private final String source;
     /**
-     * Article title.
+     * @return Article title.
      * 
      */
     private final String title;
     /**
-     * Article URI.
+     * @return Article URI.
      * 
      */
     private final String uri;
@@ -59,44 +59,44 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
     }
 
     /**
-     * The system&#39;s confidence score that this article is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+     * @return The system&#39;s confidence score that this article is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
-    */
+     */
     public Double confidenceScore() {
         return this.confidenceScore;
     }
     /**
-     * Map that contains metadata about the Article Suggestion and the document that it originates from.
+     * @return Map that contains metadata about the Article Suggestion and the document that it originates from.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
-     * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
+     * @return Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
      * 
-    */
+     */
     public String queryRecord() {
         return this.queryRecord;
     }
     /**
-     * The knowledge document that this answer was extracted from. Format: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}
+     * @return The knowledge document that this answer was extracted from. Format: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}
      * 
-    */
+     */
     public String source() {
         return this.source;
     }
     /**
-     * Article title.
+     * @return Article title.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }
     /**
-     * Article URI.
+     * @return Article URI.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

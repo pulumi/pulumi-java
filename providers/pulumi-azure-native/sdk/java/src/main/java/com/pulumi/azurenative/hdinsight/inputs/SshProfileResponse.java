@@ -26,6 +26,10 @@ public final class SshProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="publicKeys")
     private @Nullable List<SshPublicKeyResponse> publicKeys;
 
+    /**
+     * @return The list of SSH public keys.
+     * 
+     */
     public Optional<List<SshPublicKeyResponse>> publicKeys() {
         return Optional.ofNullable(this.publicKeys);
     }
@@ -54,11 +58,23 @@ public final class SshProfileResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SshProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicKeys The list of SSH public keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(@Nullable List<SshPublicKeyResponse> publicKeys) {
             $.publicKeys = publicKeys;
             return this;
         }
 
+        /**
+         * @param publicKeys The list of SSH public keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(SshPublicKeyResponse... publicKeys) {
             return publicKeys(List.of(publicKeys));
         }

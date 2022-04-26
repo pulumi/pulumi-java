@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StackSetAutoDeployment {
     /**
-     * Whether or not auto-deployment is enabled.
+     * @return Whether or not auto-deployment is enabled.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * Whether or not to retain stacks when the account is removed.
+     * @return Whether or not to retain stacks when the account is removed.
      * 
      */
     private final @Nullable Boolean retainStacksOnAccountRemoval;
@@ -31,16 +31,16 @@ public final class StackSetAutoDeployment {
     }
 
     /**
-     * Whether or not auto-deployment is enabled.
+     * @return Whether or not auto-deployment is enabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Whether or not to retain stacks when the account is removed.
+     * @return Whether or not to retain stacks when the account is removed.
      * 
-    */
+     */
     public Optional<Boolean> retainStacksOnAccountRemoval() {
         return Optional.ofNullable(this.retainStacksOnAccountRemoval);
     }

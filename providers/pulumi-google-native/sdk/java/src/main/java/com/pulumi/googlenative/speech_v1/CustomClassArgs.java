@@ -24,6 +24,10 @@ public final class CustomClassArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customClassId", required=true)
     private Output<String> customClassId;
 
+    /**
+     * @return The ID to use for the custom class, which will become the final component of the custom class&#39; resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+     * 
+     */
     public Output<String> customClassId() {
         return this.customClassId;
     }
@@ -35,6 +39,10 @@ public final class CustomClassArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="items")
     private @Nullable Output<List<ClassItemArgs>> items;
 
+    /**
+     * @return A collection of class items.
+     * 
+     */
     public Optional<Output<List<ClassItemArgs>>> items() {
         return Optional.ofNullable(this.items);
     }
@@ -53,6 +61,10 @@ public final class CustomClassArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the custom class.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -92,24 +104,54 @@ public final class CustomClassArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CustomClassArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customClassId The ID to use for the custom class, which will become the final component of the custom class&#39; resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customClassId(Output<String> customClassId) {
             $.customClassId = customClassId;
             return this;
         }
 
+        /**
+         * @param customClassId The ID to use for the custom class, which will become the final component of the custom class&#39; resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customClassId(String customClassId) {
             return customClassId(Output.of(customClassId));
         }
 
+        /**
+         * @param items A collection of class items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(@Nullable Output<List<ClassItemArgs>> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items A collection of class items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<ClassItemArgs> items) {
             return items(Output.of(items));
         }
 
+        /**
+         * @param items A collection of class items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(ClassItemArgs... items) {
             return items(List.of(items));
         }
@@ -123,11 +165,23 @@ public final class CustomClassArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the custom class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the custom class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

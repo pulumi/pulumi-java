@@ -26,6 +26,10 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="documentationRootUrl", required=true)
     private String documentationRootUrl;
 
+    /**
+     * @return The URL to the root of documentation.
+     * 
+     */
     public String documentationRootUrl() {
         return this.documentationRootUrl;
     }
@@ -37,6 +41,10 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="overview", required=true)
     private String overview;
 
+    /**
+     * @return Declares a single overview page. For example: documentation: summary: ... overview: (== include overview.md ==) This is a shortcut for the following declaration (using pages style): documentation: summary: ... pages: - name: Overview content: (== include overview.md ==) Note: you cannot specify both `overview` field and `pages` field.
+     * 
+     */
     public String overview() {
         return this.overview;
     }
@@ -48,6 +56,10 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="pages", required=true)
     private List<PageResponse> pages;
 
+    /**
+     * @return The top level pages for the documentation set.
+     * 
+     */
     public List<PageResponse> pages() {
         return this.pages;
     }
@@ -59,6 +71,10 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="rules", required=true)
     private List<DocumentationRuleResponse> rules;
 
+    /**
+     * @return A list of documentation rules that apply to individual API elements. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * 
+     */
     public List<DocumentationRuleResponse> rules() {
         return this.rules;
     }
@@ -70,6 +86,10 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="serviceRootUrl", required=true)
     private String serviceRootUrl;
 
+    /**
+     * @return Specifies the service root url if the default one (the service name from the yaml file) is not suitable. This can be seen in any fully specified service urls as well as sections that show a base that other urls are relative to.
+     * 
+     */
     public String serviceRootUrl() {
         return this.serviceRootUrl;
     }
@@ -81,6 +101,10 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="summary", required=true)
     private String summary;
 
+    /**
+     * @return A short description of what the service does. The summary must be plain text. It becomes the overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to the standard field `description`.
+     * 
+     */
     public String summary() {
         return this.summary;
     }
@@ -114,39 +138,87 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
             $ = new DocumentationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param documentationRootUrl The URL to the root of documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentationRootUrl(String documentationRootUrl) {
             $.documentationRootUrl = documentationRootUrl;
             return this;
         }
 
+        /**
+         * @param overview Declares a single overview page. For example: documentation: summary: ... overview: (== include overview.md ==) This is a shortcut for the following declaration (using pages style): documentation: summary: ... pages: - name: Overview content: (== include overview.md ==) Note: you cannot specify both `overview` field and `pages` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overview(String overview) {
             $.overview = overview;
             return this;
         }
 
+        /**
+         * @param pages The top level pages for the documentation set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pages(List<PageResponse> pages) {
             $.pages = pages;
             return this;
         }
 
+        /**
+         * @param pages The top level pages for the documentation set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pages(PageResponse... pages) {
             return pages(List.of(pages));
         }
 
+        /**
+         * @param rules A list of documentation rules that apply to individual API elements. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<DocumentationRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of documentation rules that apply to individual API elements. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(DocumentationRuleResponse... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param serviceRootUrl Specifies the service root url if the default one (the service name from the yaml file) is not suitable. This can be seen in any fully specified service urls as well as sections that show a base that other urls are relative to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRootUrl(String serviceRootUrl) {
             $.serviceRootUrl = serviceRootUrl;
             return this;
         }
 
+        /**
+         * @param summary A short description of what the service does. The summary must be plain text. It becomes the overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to the standard field `description`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder summary(String summary) {
             $.summary = summary;
             return this;

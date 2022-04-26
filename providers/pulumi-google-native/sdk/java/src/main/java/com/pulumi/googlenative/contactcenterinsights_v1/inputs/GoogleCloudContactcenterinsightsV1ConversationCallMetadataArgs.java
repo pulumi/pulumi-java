@@ -26,6 +26,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
     @Import(name="agentChannel")
     private @Nullable Output<Integer> agentChannel;
 
+    /**
+     * @return The audio channel that contains the agent.
+     * 
+     */
     public Optional<Output<Integer>> agentChannel() {
         return Optional.ofNullable(this.agentChannel);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
     @Import(name="customerChannel")
     private @Nullable Output<Integer> customerChannel;
 
+    /**
+     * @return The audio channel that contains the customer.
+     * 
+     */
     public Optional<Output<Integer>> customerChannel() {
         return Optional.ofNullable(this.customerChannel);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
             $ = new GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentChannel The audio channel that contains the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentChannel(@Nullable Output<Integer> agentChannel) {
             $.agentChannel = agentChannel;
             return this;
         }
 
+        /**
+         * @param agentChannel The audio channel that contains the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentChannel(Integer agentChannel) {
             return agentChannel(Output.of(agentChannel));
         }
 
+        /**
+         * @param customerChannel The audio channel that contains the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerChannel(@Nullable Output<Integer> customerChannel) {
             $.customerChannel = customerChannel;
             return this;
         }
 
+        /**
+         * @param customerChannel The audio channel that contains the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerChannel(Integer customerChannel) {
             return customerChannel(Output.of(customerChannel));
         }

@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureFirewallNatRuleResponse {
     /**
-     * Description of the rule.
+     * @return Description of the rule.
      * 
      */
     private final @Nullable String description;
     /**
-     * List of destination IP addresses for this rule. Supports IP ranges, prefixes, and service tags.
+     * @return List of destination IP addresses for this rule. Supports IP ranges, prefixes, and service tags.
      * 
      */
     private final @Nullable List<String> destinationAddresses;
     /**
-     * List of destination ports.
+     * @return List of destination ports.
      * 
      */
     private final @Nullable List<String> destinationPorts;
     /**
-     * Name of the NAT rule.
+     * @return Name of the NAT rule.
      * 
      */
     private final @Nullable String name;
     /**
-     * Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule.
+     * @return Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule.
      * 
      */
     private final @Nullable List<String> protocols;
     /**
-     * List of source IP addresses for this rule.
+     * @return List of source IP addresses for this rule.
      * 
      */
     private final @Nullable List<String> sourceAddresses;
     /**
-     * List of source IpGroups for this rule.
+     * @return List of source IpGroups for this rule.
      * 
      */
     private final @Nullable List<String> sourceIpGroups;
     /**
-     * The translated address for this NAT rule.
+     * @return The translated address for this NAT rule.
      * 
      */
     private final @Nullable String translatedAddress;
     /**
-     * The translated FQDN for this NAT rule.
+     * @return The translated FQDN for this NAT rule.
      * 
      */
     private final @Nullable String translatedFqdn;
     /**
-     * The translated port for this NAT rule.
+     * @return The translated port for this NAT rule.
      * 
      */
     private final @Nullable String translatedPort;
@@ -88,72 +88,72 @@ public final class AzureFirewallNatRuleResponse {
     }
 
     /**
-     * Description of the rule.
+     * @return Description of the rule.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * List of destination IP addresses for this rule. Supports IP ranges, prefixes, and service tags.
+     * @return List of destination IP addresses for this rule. Supports IP ranges, prefixes, and service tags.
      * 
-    */
+     */
     public List<String> destinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
-     * List of destination ports.
+     * @return List of destination ports.
      * 
-    */
+     */
     public List<String> destinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
     /**
-     * Name of the NAT rule.
+     * @return Name of the NAT rule.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule.
+     * @return Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule.
      * 
-    */
+     */
     public List<String> protocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
     /**
-     * List of source IP addresses for this rule.
+     * @return List of source IP addresses for this rule.
      * 
-    */
+     */
     public List<String> sourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
-     * List of source IpGroups for this rule.
+     * @return List of source IpGroups for this rule.
      * 
-    */
+     */
     public List<String> sourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
     /**
-     * The translated address for this NAT rule.
+     * @return The translated address for this NAT rule.
      * 
-    */
+     */
     public Optional<String> translatedAddress() {
         return Optional.ofNullable(this.translatedAddress);
     }
     /**
-     * The translated FQDN for this NAT rule.
+     * @return The translated FQDN for this NAT rule.
      * 
-    */
+     */
     public Optional<String> translatedFqdn() {
         return Optional.ofNullable(this.translatedFqdn);
     }
     /**
-     * The translated port for this NAT rule.
+     * @return The translated port for this NAT rule.
      * 
-    */
+     */
     public Optional<String> translatedPort() {
         return Optional.ofNullable(this.translatedPort);
     }

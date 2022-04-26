@@ -30,6 +30,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureFile")
     private @Nullable Output<AzureFileVolumeArgs> azureFile;
 
+    /**
+     * @return The Azure File volume.
+     * 
+     */
     public Optional<Output<AzureFileVolumeArgs>> azureFile() {
         return Optional.ofNullable(this.azureFile);
     }
@@ -41,6 +45,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="emptyDir")
     private @Nullable Output<Object> emptyDir;
 
+    /**
+     * @return The empty directory volume.
+     * 
+     */
     public Optional<Output<Object>> emptyDir() {
         return Optional.ofNullable(this.emptyDir);
     }
@@ -52,6 +60,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gitRepo")
     private @Nullable Output<GitRepoVolumeArgs> gitRepo;
 
+    /**
+     * @return The git repo volume.
+     * 
+     */
     public Optional<Output<GitRepoVolumeArgs>> gitRepo() {
         return Optional.ofNullable(this.gitRepo);
     }
@@ -63,6 +75,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the volume.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -74,6 +90,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secret")
     private @Nullable Output<Map<String,String>> secret;
 
+    /**
+     * @return The secret volume.
+     * 
+     */
     public Optional<Output<Map<String,String>>> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -106,47 +126,107 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VolumeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureFile The Azure File volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFile(@Nullable Output<AzureFileVolumeArgs> azureFile) {
             $.azureFile = azureFile;
             return this;
         }
 
+        /**
+         * @param azureFile The Azure File volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFile(AzureFileVolumeArgs azureFile) {
             return azureFile(Output.of(azureFile));
         }
 
+        /**
+         * @param emptyDir The empty directory volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emptyDir(@Nullable Output<Object> emptyDir) {
             $.emptyDir = emptyDir;
             return this;
         }
 
+        /**
+         * @param emptyDir The empty directory volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emptyDir(Object emptyDir) {
             return emptyDir(Output.of(emptyDir));
         }
 
+        /**
+         * @param gitRepo The git repo volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitRepo(@Nullable Output<GitRepoVolumeArgs> gitRepo) {
             $.gitRepo = gitRepo;
             return this;
         }
 
+        /**
+         * @param gitRepo The git repo volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitRepo(GitRepoVolumeArgs gitRepo) {
             return gitRepo(Output.of(gitRepo));
         }
 
+        /**
+         * @param name The name of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param secret The secret volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable Output<Map<String,String>> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret The secret volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(Map<String,String> secret) {
             return secret(Output.of(secret));
         }

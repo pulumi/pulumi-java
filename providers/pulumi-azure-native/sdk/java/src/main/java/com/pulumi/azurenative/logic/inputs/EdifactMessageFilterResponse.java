@@ -23,6 +23,10 @@ public final class EdifactMessageFilterResponse extends com.pulumi.resources.Inv
     @Import(name="messageFilterType", required=true)
     private String messageFilterType;
 
+    /**
+     * @return The message filter type.
+     * 
+     */
     public String messageFilterType() {
         return this.messageFilterType;
     }
@@ -51,6 +55,12 @@ public final class EdifactMessageFilterResponse extends com.pulumi.resources.Inv
             $ = new EdifactMessageFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messageFilterType The message filter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilterType(String messageFilterType) {
             $.messageFilterType = messageFilterType;
             return this;

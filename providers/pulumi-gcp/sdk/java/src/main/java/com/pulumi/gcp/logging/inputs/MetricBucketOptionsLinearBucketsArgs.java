@@ -23,6 +23,10 @@ public final class MetricBucketOptionsLinearBucketsArgs extends com.pulumi.resou
     @Import(name="numFiniteBuckets")
     private @Nullable Output<Integer> numFiniteBuckets;
 
+    /**
+     * @return Must be greater than 0.
+     * 
+     */
     public Optional<Output<Integer>> numFiniteBuckets() {
         return Optional.ofNullable(this.numFiniteBuckets);
     }
@@ -34,6 +38,10 @@ public final class MetricBucketOptionsLinearBucketsArgs extends com.pulumi.resou
     @Import(name="offset")
     private @Nullable Output<Double> offset;
 
+    /**
+     * @return Lower bound of the first bucket.
+     * 
+     */
     public Optional<Output<Double>> offset() {
         return Optional.ofNullable(this.offset);
     }
@@ -45,6 +53,10 @@ public final class MetricBucketOptionsLinearBucketsArgs extends com.pulumi.resou
     @Import(name="width")
     private @Nullable Output<Double> width;
 
+    /**
+     * @return Must be greater than 0.
+     * 
+     */
     public Optional<Output<Double>> width() {
         return Optional.ofNullable(this.width);
     }
@@ -75,29 +87,65 @@ public final class MetricBucketOptionsLinearBucketsArgs extends com.pulumi.resou
             $ = new MetricBucketOptionsLinearBucketsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param numFiniteBuckets Must be greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numFiniteBuckets(@Nullable Output<Integer> numFiniteBuckets) {
             $.numFiniteBuckets = numFiniteBuckets;
             return this;
         }
 
+        /**
+         * @param numFiniteBuckets Must be greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numFiniteBuckets(Integer numFiniteBuckets) {
             return numFiniteBuckets(Output.of(numFiniteBuckets));
         }
 
+        /**
+         * @param offset Lower bound of the first bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offset(@Nullable Output<Double> offset) {
             $.offset = offset;
             return this;
         }
 
+        /**
+         * @param offset Lower bound of the first bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offset(Double offset) {
             return offset(Output.of(offset));
         }
 
+        /**
+         * @param width Must be greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(@Nullable Output<Double> width) {
             $.width = width;
             return this;
         }
 
+        /**
+         * @param width Must be greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(Double width) {
             return width(Output.of(width));
         }

@@ -23,6 +23,10 @@ public final class ReservationSpecificReservationGetArgs extends com.pulumi.reso
     @Import(name="count", required=true)
     private Output<Integer> count;
 
+    /**
+     * @return The number of resources that are allocated.
+     * 
+     */
     public Output<Integer> count() {
         return this.count;
     }
@@ -35,6 +39,11 @@ public final class ReservationSpecificReservationGetArgs extends com.pulumi.reso
     @Import(name="inUseCount")
     private @Nullable Output<Integer> inUseCount;
 
+    /**
+     * @return -
+     * How many instances are in use.
+     * 
+     */
     public Optional<Output<Integer>> inUseCount() {
         return Optional.ofNullable(this.inUseCount);
     }
@@ -47,6 +56,11 @@ public final class ReservationSpecificReservationGetArgs extends com.pulumi.reso
     @Import(name="instanceProperties", required=true)
     private Output<ReservationSpecificReservationInstancePropertiesGetArgs> instanceProperties;
 
+    /**
+     * @return The instance properties for the reservation.
+     * Structure is documented below.
+     * 
+     */
     public Output<ReservationSpecificReservationInstancePropertiesGetArgs> instanceProperties() {
         return this.instanceProperties;
     }
@@ -77,29 +91,69 @@ public final class ReservationSpecificReservationGetArgs extends com.pulumi.reso
             $ = new ReservationSpecificReservationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count The number of resources that are allocated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count The number of resources that are allocated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param inUseCount -
+         * How many instances are in use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inUseCount(@Nullable Output<Integer> inUseCount) {
             $.inUseCount = inUseCount;
             return this;
         }
 
+        /**
+         * @param inUseCount -
+         * How many instances are in use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inUseCount(Integer inUseCount) {
             return inUseCount(Output.of(inUseCount));
         }
 
+        /**
+         * @param instanceProperties The instance properties for the reservation.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceProperties(Output<ReservationSpecificReservationInstancePropertiesGetArgs> instanceProperties) {
             $.instanceProperties = instanceProperties;
             return this;
         }
 
+        /**
+         * @param instanceProperties The instance properties for the reservation.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceProperties(ReservationSpecificReservationInstancePropertiesGetArgs instanceProperties) {
             return instanceProperties(Output.of(instanceProperties));
         }

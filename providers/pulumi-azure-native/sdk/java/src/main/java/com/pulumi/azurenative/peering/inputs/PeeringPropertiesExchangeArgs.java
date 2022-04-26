@@ -28,6 +28,10 @@ public final class PeeringPropertiesExchangeArgs extends com.pulumi.resources.Re
     @Import(name="connections")
     private @Nullable Output<List<ExchangeConnectionArgs>> connections;
 
+    /**
+     * @return The set of connections that constitute an exchange peering.
+     * 
+     */
     public Optional<Output<List<ExchangeConnectionArgs>>> connections() {
         return Optional.ofNullable(this.connections);
     }
@@ -39,6 +43,10 @@ public final class PeeringPropertiesExchangeArgs extends com.pulumi.resources.Re
     @Import(name="peerAsn")
     private @Nullable Output<SubResourceArgs> peerAsn;
 
+    /**
+     * @return The reference of the peer ASN.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> peerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
@@ -68,24 +76,54 @@ public final class PeeringPropertiesExchangeArgs extends com.pulumi.resources.Re
             $ = new PeeringPropertiesExchangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connections The set of connections that constitute an exchange peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(@Nullable Output<List<ExchangeConnectionArgs>> connections) {
             $.connections = connections;
             return this;
         }
 
+        /**
+         * @param connections The set of connections that constitute an exchange peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(List<ExchangeConnectionArgs> connections) {
             return connections(Output.of(connections));
         }
 
+        /**
+         * @param connections The set of connections that constitute an exchange peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(ExchangeConnectionArgs... connections) {
             return connections(List.of(connections));
         }
 
+        /**
+         * @param peerAsn The reference of the peer ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsn(@Nullable Output<SubResourceArgs> peerAsn) {
             $.peerAsn = peerAsn;
             return this;
         }
 
+        /**
+         * @param peerAsn The reference of the peer ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsn(SubResourceArgs peerAsn) {
             return peerAsn(Output.of(peerAsn));
         }

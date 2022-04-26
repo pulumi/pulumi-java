@@ -20,6 +20,10 @@ public final class SnapshotDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="baseTableReference", required=true)
     private TableReferenceResponse baseTableReference;
 
+    /**
+     * @return [Required] Reference describing the ID of the table that was snapshot.
+     * 
+     */
     public TableReferenceResponse baseTableReference() {
         return this.baseTableReference;
     }
@@ -31,6 +35,10 @@ public final class SnapshotDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="snapshotTime", required=true)
     private String snapshotTime;
 
+    /**
+     * @return [Required] The time at which the base table was snapshot. This value is reported in the JSON response using RFC3339 format.
+     * 
+     */
     public String snapshotTime() {
         return this.snapshotTime;
     }
@@ -60,11 +68,23 @@ public final class SnapshotDefinitionResponse extends com.pulumi.resources.Invok
             $ = new SnapshotDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseTableReference [Required] Reference describing the ID of the table that was snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseTableReference(TableReferenceResponse baseTableReference) {
             $.baseTableReference = baseTableReference;
             return this;
         }
 
+        /**
+         * @param snapshotTime [Required] The time at which the base table was snapshot. This value is reported in the JSON response using RFC3339 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotTime(String snapshotTime) {
             $.snapshotTime = snapshotTime;
             return this;

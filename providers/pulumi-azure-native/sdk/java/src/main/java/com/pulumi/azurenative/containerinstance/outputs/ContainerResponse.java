@@ -19,52 +19,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerResponse {
     /**
-     * The commands to execute within the container instance in exec form.
+     * @return The commands to execute within the container instance in exec form.
      * 
      */
     private final @Nullable List<String> command;
     /**
-     * The environment variables to set in the container instance.
+     * @return The environment variables to set in the container instance.
      * 
      */
     private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
     /**
-     * The name of the image used to create the container instance.
+     * @return The name of the image used to create the container instance.
      * 
      */
     private final String image;
     /**
-     * The instance view of the container instance. Only valid in response.
+     * @return The instance view of the container instance. Only valid in response.
      * 
      */
     private final ContainerPropertiesResponseInstanceView instanceView;
     /**
-     * The liveness probe.
+     * @return The liveness probe.
      * 
      */
     private final @Nullable ContainerProbeResponse livenessProbe;
     /**
-     * The user-provided name of the container instance.
+     * @return The user-provided name of the container instance.
      * 
      */
     private final String name;
     /**
-     * The exposed ports on the container instance.
+     * @return The exposed ports on the container instance.
      * 
      */
     private final @Nullable List<ContainerPortResponse> ports;
     /**
-     * The readiness probe.
+     * @return The readiness probe.
      * 
      */
     private final @Nullable ContainerProbeResponse readinessProbe;
     /**
-     * The resource requirements of the container instance.
+     * @return The resource requirements of the container instance.
      * 
      */
     private final ResourceRequirementsResponse resources;
     /**
-     * The volume mounts available to the container instance.
+     * @return The volume mounts available to the container instance.
      * 
      */
     private final @Nullable List<VolumeMountResponse> volumeMounts;
@@ -94,72 +94,72 @@ public final class ContainerResponse {
     }
 
     /**
-     * The commands to execute within the container instance in exec form.
+     * @return The commands to execute within the container instance in exec form.
      * 
-    */
+     */
     public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
     /**
-     * The environment variables to set in the container instance.
+     * @return The environment variables to set in the container instance.
      * 
-    */
+     */
     public List<EnvironmentVariableResponse> environmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
     /**
-     * The name of the image used to create the container instance.
+     * @return The name of the image used to create the container instance.
      * 
-    */
+     */
     public String image() {
         return this.image;
     }
     /**
-     * The instance view of the container instance. Only valid in response.
+     * @return The instance view of the container instance. Only valid in response.
      * 
-    */
+     */
     public ContainerPropertiesResponseInstanceView instanceView() {
         return this.instanceView;
     }
     /**
-     * The liveness probe.
+     * @return The liveness probe.
      * 
-    */
+     */
     public Optional<ContainerProbeResponse> livenessProbe() {
         return Optional.ofNullable(this.livenessProbe);
     }
     /**
-     * The user-provided name of the container instance.
+     * @return The user-provided name of the container instance.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The exposed ports on the container instance.
+     * @return The exposed ports on the container instance.
      * 
-    */
+     */
     public List<ContainerPortResponse> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
     /**
-     * The readiness probe.
+     * @return The readiness probe.
      * 
-    */
+     */
     public Optional<ContainerProbeResponse> readinessProbe() {
         return Optional.ofNullable(this.readinessProbe);
     }
     /**
-     * The resource requirements of the container instance.
+     * @return The resource requirements of the container instance.
      * 
-    */
+     */
     public ResourceRequirementsResponse resources() {
         return this.resources;
     }
     /**
-     * The volume mounts available to the container instance.
+     * @return The volume mounts available to the container instance.
      * 
-    */
+     */
     public List<VolumeMountResponse> volumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
     }

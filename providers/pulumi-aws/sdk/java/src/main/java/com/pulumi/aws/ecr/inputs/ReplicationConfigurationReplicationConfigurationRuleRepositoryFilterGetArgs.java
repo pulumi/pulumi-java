@@ -20,6 +20,10 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
     @Import(name="filter", required=true)
     private Output<String> filter;
 
+    /**
+     * @return The repository filter details.
+     * 
+     */
     public Output<String> filter() {
         return this.filter;
     }
@@ -31,6 +35,10 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
     @Import(name="filterType", required=true)
     private Output<String> filterType;
 
+    /**
+     * @return The repository filter type. The only supported value is `PREFIX_MATCH`, which is a repository name prefix specified with the filter parameter.
+     * 
+     */
     public Output<String> filterType() {
         return this.filterType;
     }
@@ -60,20 +68,44 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
             $ = new ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filter The repository filter details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(Output<String> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter The repository filter details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param filterType The repository filter type. The only supported value is `PREFIX_MATCH`, which is a repository name prefix specified with the filter parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterType(Output<String> filterType) {
             $.filterType = filterType;
             return this;
         }
 
+        /**
+         * @param filterType The repository filter type. The only supported value is `PREFIX_MATCH`, which is a repository name prefix specified with the filter parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterType(String filterType) {
             return filterType(Output.of(filterType));
         }

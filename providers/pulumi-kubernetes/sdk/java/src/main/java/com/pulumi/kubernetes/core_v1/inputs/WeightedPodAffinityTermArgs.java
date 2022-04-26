@@ -25,6 +25,10 @@ public final class WeightedPodAffinityTermArgs extends com.pulumi.resources.Reso
     @Import(name="podAffinityTerm", required=true)
     private Output<PodAffinityTermArgs> podAffinityTerm;
 
+    /**
+     * @return Required. A pod affinity term, associated with the corresponding weight.
+     * 
+     */
     public Output<PodAffinityTermArgs> podAffinityTerm() {
         return this.podAffinityTerm;
     }
@@ -36,6 +40,10 @@ public final class WeightedPodAffinityTermArgs extends com.pulumi.resources.Reso
     @Import(name="weight", required=true)
     private Output<Integer> weight;
 
+    /**
+     * @return weight associated with matching the corresponding podAffinityTerm, in the range 1-100.
+     * 
+     */
     public Output<Integer> weight() {
         return this.weight;
     }
@@ -65,20 +73,44 @@ public final class WeightedPodAffinityTermArgs extends com.pulumi.resources.Reso
             $ = new WeightedPodAffinityTermArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param podAffinityTerm Required. A pod affinity term, associated with the corresponding weight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podAffinityTerm(Output<PodAffinityTermArgs> podAffinityTerm) {
             $.podAffinityTerm = podAffinityTerm;
             return this;
         }
 
+        /**
+         * @param podAffinityTerm Required. A pod affinity term, associated with the corresponding weight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podAffinityTerm(PodAffinityTermArgs podAffinityTerm) {
             return podAffinityTerm(Output.of(podAffinityTerm));
         }
 
+        /**
+         * @param weight weight associated with matching the corresponding podAffinityTerm, in the range 1-100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Output<Integer> weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param weight weight associated with matching the corresponding podAffinityTerm, in the range 1-100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Integer weight) {
             return weight(Output.of(weight));
         }

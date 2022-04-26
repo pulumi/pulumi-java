@@ -22,6 +22,10 @@ public final class TagBindingState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The generated id for the TagBinding. This is a string of the form: &#39;tagBindings/{full-resource-name}/{tag-value-name}&#39;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -33,6 +37,10 @@ public final class TagBindingState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -44,6 +52,10 @@ public final class TagBindingState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagValue")
     private @Nullable Output<String> tagValue;
 
+    /**
+     * @return The TagValue of the TagBinding. Must be of the form tagValues/456.
+     * 
+     */
     public Optional<Output<String>> tagValue() {
         return Optional.ofNullable(this.tagValue);
     }
@@ -74,29 +86,65 @@ public final class TagBindingState extends com.pulumi.resources.ResourceArgs {
             $ = new TagBindingState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The generated id for the TagBinding. This is a string of the form: &#39;tagBindings/{full-resource-name}/{tag-value-name}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The generated id for the TagBinding. This is a string of the form: &#39;tagBindings/{full-resource-name}/{tag-value-name}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parent The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param tagValue The TagValue of the TagBinding. Must be of the form tagValues/456.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagValue(@Nullable Output<String> tagValue) {
             $.tagValue = tagValue;
             return this;
         }
 
+        /**
+         * @param tagValue The TagValue of the TagBinding. Must be of the form tagValues/456.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagValue(String tagValue) {
             return tagValue(Output.of(tagValue));
         }

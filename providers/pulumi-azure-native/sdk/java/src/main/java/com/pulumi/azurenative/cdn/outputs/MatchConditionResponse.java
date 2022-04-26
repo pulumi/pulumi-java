@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MatchConditionResponse {
     /**
-     * List of possible match values.
+     * @return List of possible match values.
      * 
      */
     private final List<String> matchValue;
     /**
-     * Match variable to compare against.
+     * @return Match variable to compare against.
      * 
      */
     private final String matchVariable;
     /**
-     * Describes if the result of this condition should be negated.
+     * @return Describes if the result of this condition should be negated.
      * 
      */
     private final @Nullable Boolean negateCondition;
     /**
-     * Describes operator to be matched
+     * @return Describes operator to be matched
      * 
      */
     private final String operator;
     /**
-     * Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
+     * @return Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
      * 
      */
     private final @Nullable String selector;
     /**
-     * List of transforms.
+     * @return List of transforms.
      * 
      */
     private final @Nullable List<String> transforms;
@@ -61,44 +61,44 @@ public final class MatchConditionResponse {
     }
 
     /**
-     * List of possible match values.
+     * @return List of possible match values.
      * 
-    */
+     */
     public List<String> matchValue() {
         return this.matchValue;
     }
     /**
-     * Match variable to compare against.
+     * @return Match variable to compare against.
      * 
-    */
+     */
     public String matchVariable() {
         return this.matchVariable;
     }
     /**
-     * Describes if the result of this condition should be negated.
+     * @return Describes if the result of this condition should be negated.
      * 
-    */
+     */
     public Optional<Boolean> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
     /**
-     * Describes operator to be matched
+     * @return Describes operator to be matched
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
+     * @return Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
      * 
-    */
+     */
     public Optional<String> selector() {
         return Optional.ofNullable(this.selector);
     }
     /**
-     * List of transforms.
+     * @return List of transforms.
      * 
-    */
+     */
     public List<String> transforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }

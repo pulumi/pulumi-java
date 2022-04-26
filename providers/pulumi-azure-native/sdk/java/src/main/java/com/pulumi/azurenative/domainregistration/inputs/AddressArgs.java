@@ -26,6 +26,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="address1", required=true)
     private Output<String> address1;
 
+    /**
+     * @return First line of an Address.
+     * 
+     */
     public Output<String> address1() {
         return this.address1;
     }
@@ -37,6 +41,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="address2")
     private @Nullable Output<String> address2;
 
+    /**
+     * @return The second line of the Address. Optional.
+     * 
+     */
     public Optional<Output<String>> address2() {
         return Optional.ofNullable(this.address2);
     }
@@ -48,6 +56,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="city", required=true)
     private Output<String> city;
 
+    /**
+     * @return The city for the address.
+     * 
+     */
     public Output<String> city() {
         return this.city;
     }
@@ -59,6 +71,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="country", required=true)
     private Output<String> country;
 
+    /**
+     * @return The country for the address.
+     * 
+     */
     public Output<String> country() {
         return this.country;
     }
@@ -70,6 +86,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="postalCode", required=true)
     private Output<String> postalCode;
 
+    /**
+     * @return The postal code for the address.
+     * 
+     */
     public Output<String> postalCode() {
         return this.postalCode;
     }
@@ -81,6 +101,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state", required=true)
     private Output<String> state;
 
+    /**
+     * @return The state or province for the address.
+     * 
+     */
     public Output<String> state() {
         return this.state;
     }
@@ -114,56 +138,128 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AddressArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address1 First line of an Address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address1(Output<String> address1) {
             $.address1 = address1;
             return this;
         }
 
+        /**
+         * @param address1 First line of an Address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address1(String address1) {
             return address1(Output.of(address1));
         }
 
+        /**
+         * @param address2 The second line of the Address. Optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address2(@Nullable Output<String> address2) {
             $.address2 = address2;
             return this;
         }
 
+        /**
+         * @param address2 The second line of the Address. Optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address2(String address2) {
             return address2(Output.of(address2));
         }
 
+        /**
+         * @param city The city for the address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder city(Output<String> city) {
             $.city = city;
             return this;
         }
 
+        /**
+         * @param city The city for the address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder city(String city) {
             return city(Output.of(city));
         }
 
+        /**
+         * @param country The country for the address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder country(Output<String> country) {
             $.country = country;
             return this;
         }
 
+        /**
+         * @param country The country for the address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder country(String country) {
             return country(Output.of(country));
         }
 
+        /**
+         * @param postalCode The postal code for the address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalCode(Output<String> postalCode) {
             $.postalCode = postalCode;
             return this;
         }
 
+        /**
+         * @param postalCode The postal code for the address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalCode(String postalCode) {
             return postalCode(Output.of(postalCode));
         }
 
+        /**
+         * @param state The state or province for the address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state or province for the address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }

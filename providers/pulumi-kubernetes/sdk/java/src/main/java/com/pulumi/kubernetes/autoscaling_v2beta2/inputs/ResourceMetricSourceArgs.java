@@ -25,6 +25,10 @@ public final class ResourceMetricSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return name is the name of the resource in question.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -36,6 +40,10 @@ public final class ResourceMetricSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="target", required=true)
     private Output<MetricTargetArgs> target;
 
+    /**
+     * @return target specifies the target value for the given metric
+     * 
+     */
     public Output<MetricTargetArgs> target() {
         return this.target;
     }
@@ -65,20 +73,44 @@ public final class ResourceMetricSourceArgs extends com.pulumi.resources.Resourc
             $ = new ResourceMetricSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name name is the name of the resource in question.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name name is the name of the resource in question.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param target target specifies the target value for the given metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Output<MetricTargetArgs> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target target specifies the target value for the given metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(MetricTargetArgs target) {
             return target(Output.of(target));
         }

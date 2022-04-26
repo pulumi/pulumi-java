@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TableEncryptionConfiguration {
     /**
-     * The self link or full name of a key which should be used to
+     * @return The self link or full name of a key which should be used to
      * encrypt this table.  Note that the default bigquery service account will need to have
      * encrypt/decrypt permissions on this key - you may want to see the
      * `gcp.bigquery.getDefaultServiceAccount` datasource and the
@@ -21,7 +21,7 @@ public final class TableEncryptionConfiguration {
      */
     private final String kmsKeyName;
     /**
-     * The self link or full name of the kms key version used to encrypt this table.
+     * @return The self link or full name of the kms key version used to encrypt this table.
      * 
      */
     private final @Nullable String kmsKeyVersion;
@@ -35,20 +35,20 @@ public final class TableEncryptionConfiguration {
     }
 
     /**
-     * The self link or full name of a key which should be used to
+     * @return The self link or full name of a key which should be used to
      * encrypt this table.  Note that the default bigquery service account will need to have
      * encrypt/decrypt permissions on this key - you may want to see the
      * `gcp.bigquery.getDefaultServiceAccount` datasource and the
      * `gcp.kms.CryptoKeyIAMBinding` resource.
      * 
-    */
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
-     * The self link or full name of the kms key version used to encrypt this table.
+     * @return The self link or full name of the kms key version used to encrypt this table.
      * 
-    */
+     */
     public Optional<String> kmsKeyVersion() {
         return Optional.ofNullable(this.kmsKeyVersion);
     }

@@ -28,6 +28,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alpha")
     private @Nullable Output<Double> alpha;
 
+    /**
+     * @return Target image opacity. Valid values are from `1.0` (solid, default) to `0.0` (transparent), exclusive. Set this to a value greater than `0.0`.
+     * 
+     */
     public Optional<Output<Double>> alpha() {
         return Optional.ofNullable(this.alpha);
     }
@@ -39,6 +43,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resolution")
     private @Nullable Output<NormalizedCoordinateArgs> resolution;
 
+    /**
+     * @return Normalized image resolution, based on output video resolution. Valid values: `0.0`–`1.0`. To respect the original image aspect ratio, set either `x` or `y` to `0.0`. To use the original image resolution, set both `x` and `y` to `0.0`.
+     * 
+     */
     public Optional<Output<NormalizedCoordinateArgs>> resolution() {
         return Optional.ofNullable(this.resolution);
     }
@@ -50,6 +58,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -80,29 +92,65 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alpha Target image opacity. Valid values are from `1.0` (solid, default) to `0.0` (transparent), exclusive. Set this to a value greater than `0.0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alpha(@Nullable Output<Double> alpha) {
             $.alpha = alpha;
             return this;
         }
 
+        /**
+         * @param alpha Target image opacity. Valid values are from `1.0` (solid, default) to `0.0` (transparent), exclusive. Set this to a value greater than `0.0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alpha(Double alpha) {
             return alpha(Output.of(alpha));
         }
 
+        /**
+         * @param resolution Normalized image resolution, based on output video resolution. Valid values: `0.0`–`1.0`. To respect the original image aspect ratio, set either `x` or `y` to `0.0`. To use the original image resolution, set both `x` and `y` to `0.0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolution(@Nullable Output<NormalizedCoordinateArgs> resolution) {
             $.resolution = resolution;
             return this;
         }
 
+        /**
+         * @param resolution Normalized image resolution, based on output video resolution. Valid values: `0.0`–`1.0`. To respect the original image aspect ratio, set either `x` or `y` to `0.0`. To use the original image resolution, set both `x` and `y` to `0.0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolution(NormalizedCoordinateArgs resolution) {
             return resolution(Output.of(resolution));
         }
 
+        /**
+         * @param uri URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

@@ -46,6 +46,10 @@ public final class DBProxyTargetGroupArgs extends com.pulumi.resources.ResourceA
     @Import(name="dBProxyName", required=true)
     private Output<String> dBProxyName;
 
+    /**
+     * @return The identifier for the proxy.
+     * 
+     */
     public Output<String> dBProxyName() {
         return this.dBProxyName;
     }
@@ -57,6 +61,10 @@ public final class DBProxyTargetGroupArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetGroupName", required=true)
     private Output<DBProxyTargetGroupTargetGroupName> targetGroupName;
 
+    /**
+     * @return The identifier for the DBProxyTargetGroup
+     * 
+     */
     public Output<DBProxyTargetGroupTargetGroupName> targetGroupName() {
         return this.targetGroupName;
     }
@@ -124,20 +132,44 @@ public final class DBProxyTargetGroupArgs extends com.pulumi.resources.ResourceA
             return dBInstanceIdentifiers(List.of(dBInstanceIdentifiers));
         }
 
+        /**
+         * @param dBProxyName The identifier for the proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dBProxyName(Output<String> dBProxyName) {
             $.dBProxyName = dBProxyName;
             return this;
         }
 
+        /**
+         * @param dBProxyName The identifier for the proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dBProxyName(String dBProxyName) {
             return dBProxyName(Output.of(dBProxyName));
         }
 
+        /**
+         * @param targetGroupName The identifier for the DBProxyTargetGroup
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroupName(Output<DBProxyTargetGroupTargetGroupName> targetGroupName) {
             $.targetGroupName = targetGroupName;
             return this;
         }
 
+        /**
+         * @param targetGroupName The identifier for the DBProxyTargetGroup
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroupName(DBProxyTargetGroupTargetGroupName targetGroupName) {
             return targetGroupName(Output.of(targetGroupName));
         }

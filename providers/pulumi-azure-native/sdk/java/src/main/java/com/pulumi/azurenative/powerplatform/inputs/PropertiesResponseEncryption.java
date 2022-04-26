@@ -26,6 +26,10 @@ public final class PropertiesResponseEncryption extends com.pulumi.resources.Inv
     @Import(name="keyVault")
     private @Nullable KeyVaultPropertiesResponse keyVault;
 
+    /**
+     * @return Key vault properties.
+     * 
+     */
     public Optional<KeyVaultPropertiesResponse> keyVault() {
         return Optional.ofNullable(this.keyVault);
     }
@@ -37,6 +41,10 @@ public final class PropertiesResponseEncryption extends com.pulumi.resources.Inv
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return The state of onboarding, which only appears in the response.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -66,11 +74,23 @@ public final class PropertiesResponseEncryption extends com.pulumi.resources.Inv
             $ = new PropertiesResponseEncryption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVault Key vault properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(@Nullable KeyVaultPropertiesResponse keyVault) {
             $.keyVault = keyVault;
             return this;
         }
 
+        /**
+         * @param state The state of onboarding, which only appears in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

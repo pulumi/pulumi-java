@@ -19,6 +19,10 @@ public final class GetCodeSigningConfigPolicy extends com.pulumi.resources.Invok
     @Import(name="untrustedArtifactOnDeployment", required=true)
     private String untrustedArtifactOnDeployment;
 
+    /**
+     * @return Code signing configuration policy for deployment validation failure.
+     * 
+     */
     public String untrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
     }
@@ -47,6 +51,12 @@ public final class GetCodeSigningConfigPolicy extends com.pulumi.resources.Invok
             $ = new GetCodeSigningConfigPolicy(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param untrustedArtifactOnDeployment Code signing configuration policy for deployment validation failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder untrustedArtifactOnDeployment(String untrustedArtifactOnDeployment) {
             $.untrustedArtifactOnDeployment = untrustedArtifactOnDeployment;
             return this;

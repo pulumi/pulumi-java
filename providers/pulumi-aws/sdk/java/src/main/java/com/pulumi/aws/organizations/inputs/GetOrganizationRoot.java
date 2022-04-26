@@ -21,6 +21,10 @@ public final class GetOrganizationRoot extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return ARN of the root
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -32,6 +36,10 @@ public final class GetOrganizationRoot extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Identifier of the root
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -43,6 +51,10 @@ public final class GetOrganizationRoot extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the policy type
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -54,6 +66,10 @@ public final class GetOrganizationRoot extends com.pulumi.resources.InvokeArgs {
     @Import(name="policyTypes", required=true)
     private List<GetOrganizationRootPolicyType> policyTypes;
 
+    /**
+     * @return List of policy types enabled for this root. All elements have these attributes:
+     * 
+     */
     public List<GetOrganizationRootPolicyType> policyTypes() {
         return this.policyTypes;
     }
@@ -85,26 +101,56 @@ public final class GetOrganizationRoot extends com.pulumi.resources.InvokeArgs {
             $ = new GetOrganizationRoot(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn ARN of the root
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param id Identifier of the root
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the policy type
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param policyTypes List of policy types enabled for this root. All elements have these attributes:
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyTypes(List<GetOrganizationRootPolicyType> policyTypes) {
             $.policyTypes = policyTypes;
             return this;
         }
 
+        /**
+         * @param policyTypes List of policy types enabled for this root. All elements have these attributes:
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyTypes(GetOrganizationRootPolicyType... policyTypes) {
             return policyTypes(List.of(policyTypes));
         }

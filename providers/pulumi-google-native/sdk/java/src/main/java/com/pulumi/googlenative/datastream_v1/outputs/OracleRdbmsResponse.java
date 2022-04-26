@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class OracleRdbmsResponse {
     /**
-     * Oracle schemas/databases in the database server.
+     * @return Oracle schemas/databases in the database server.
      * 
      */
     private final List<OracleSchemaResponse> oracleSchemas;
@@ -22,9 +22,9 @@ public final class OracleRdbmsResponse {
     }
 
     /**
-     * Oracle schemas/databases in the database server.
+     * @return Oracle schemas/databases in the database server.
      * 
-    */
+     */
     public List<OracleSchemaResponse> oracleSchemas() {
         return this.oracleSchemas;
     }

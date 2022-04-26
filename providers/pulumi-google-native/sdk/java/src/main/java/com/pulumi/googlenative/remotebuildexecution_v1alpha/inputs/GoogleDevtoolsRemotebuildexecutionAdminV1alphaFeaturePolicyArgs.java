@@ -27,6 +27,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
     @Import(name="containerImageSources")
     private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> containerImageSources;
 
+    /**
+     * @return Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ &#34;gcr.io/project-foo&#34;, &#34;gcr.io/project-bar/repo-baz&#34;, ] } will allow any repositories under &#34;gcr.io/project-foo&#34; plus the repository &#34;gcr.io/project-bar/repo-baz&#34;. Default (UNSPECIFIED) is equivalent to any source is allowed.
+     * 
+     */
     public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs>> containerImageSources() {
         return Optional.ofNullable(this.containerImageSources);
     }
@@ -38,6 +42,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
     @Import(name="dockerAddCapabilities")
     private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerAddCapabilities;
 
+    /**
+     * @return Whether dockerAddCapabilities can be used or what capabilities are allowed.
+     * 
+     */
     public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs>> dockerAddCapabilities() {
         return Optional.ofNullable(this.dockerAddCapabilities);
     }
@@ -49,6 +57,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
     @Import(name="dockerChrootPath")
     private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerChrootPath;
 
+    /**
+     * @return Whether dockerChrootPath can be used.
+     * 
+     */
     public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs>> dockerChrootPath() {
         return Optional.ofNullable(this.dockerChrootPath);
     }
@@ -60,6 +72,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
     @Import(name="dockerNetwork")
     private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerNetwork;
 
+    /**
+     * @return Whether dockerNetwork can be used or what network modes are allowed. E.g. one may allow `off` value only via `allowed_values`.
+     * 
+     */
     public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs>> dockerNetwork() {
         return Optional.ofNullable(this.dockerNetwork);
     }
@@ -71,6 +87,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
     @Import(name="dockerPrivileged")
     private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerPrivileged;
 
+    /**
+     * @return Whether dockerPrivileged can be used.
+     * 
+     */
     public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs>> dockerPrivileged() {
         return Optional.ofNullable(this.dockerPrivileged);
     }
@@ -82,6 +102,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
     @Import(name="dockerRunAsRoot")
     private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerRunAsRoot;
 
+    /**
+     * @return Whether dockerRunAsRoot can be used.
+     * 
+     */
     public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs>> dockerRunAsRoot() {
         return Optional.ofNullable(this.dockerRunAsRoot);
     }
@@ -93,6 +117,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
     @Import(name="dockerRuntime")
     private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerRuntime;
 
+    /**
+     * @return Whether dockerRuntime is allowed to be set or what runtimes are allowed. Note linux_isolation takes precedence, and if set, docker_runtime values may be rejected if they are incompatible with the selected isolation.
+     * 
+     */
     public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs>> dockerRuntime() {
         return Optional.ofNullable(this.dockerRuntime);
     }
@@ -104,6 +132,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
     @Import(name="dockerSiblingContainers")
     private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerSiblingContainers;
 
+    /**
+     * @return Whether dockerSiblingContainers can be used.
+     * 
+     */
     public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs>> dockerSiblingContainers() {
         return Optional.ofNullable(this.dockerSiblingContainers);
     }
@@ -115,6 +147,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
     @Import(name="linuxIsolation")
     private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolation> linuxIsolation;
 
+    /**
+     * @return linux_isolation allows overriding the docker runtime used for containers started on Linux.
+     * 
+     */
     public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolation>> linuxIsolation() {
         return Optional.ofNullable(this.linuxIsolation);
     }
@@ -151,83 +187,191 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
             $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerImageSources Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ &#34;gcr.io/project-foo&#34;, &#34;gcr.io/project-bar/repo-baz&#34;, ] } will allow any repositories under &#34;gcr.io/project-foo&#34; plus the repository &#34;gcr.io/project-bar/repo-baz&#34;. Default (UNSPECIFIED) is equivalent to any source is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImageSources(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> containerImageSources) {
             $.containerImageSources = containerImageSources;
             return this;
         }
 
+        /**
+         * @param containerImageSources Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ &#34;gcr.io/project-foo&#34;, &#34;gcr.io/project-bar/repo-baz&#34;, ] } will allow any repositories under &#34;gcr.io/project-foo&#34; plus the repository &#34;gcr.io/project-bar/repo-baz&#34;. Default (UNSPECIFIED) is equivalent to any source is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImageSources(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs containerImageSources) {
             return containerImageSources(Output.of(containerImageSources));
         }
 
+        /**
+         * @param dockerAddCapabilities Whether dockerAddCapabilities can be used or what capabilities are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerAddCapabilities(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerAddCapabilities) {
             $.dockerAddCapabilities = dockerAddCapabilities;
             return this;
         }
 
+        /**
+         * @param dockerAddCapabilities Whether dockerAddCapabilities can be used or what capabilities are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerAddCapabilities(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs dockerAddCapabilities) {
             return dockerAddCapabilities(Output.of(dockerAddCapabilities));
         }
 
+        /**
+         * @param dockerChrootPath Whether dockerChrootPath can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerChrootPath(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerChrootPath) {
             $.dockerChrootPath = dockerChrootPath;
             return this;
         }
 
+        /**
+         * @param dockerChrootPath Whether dockerChrootPath can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerChrootPath(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs dockerChrootPath) {
             return dockerChrootPath(Output.of(dockerChrootPath));
         }
 
+        /**
+         * @param dockerNetwork Whether dockerNetwork can be used or what network modes are allowed. E.g. one may allow `off` value only via `allowed_values`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerNetwork(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerNetwork) {
             $.dockerNetwork = dockerNetwork;
             return this;
         }
 
+        /**
+         * @param dockerNetwork Whether dockerNetwork can be used or what network modes are allowed. E.g. one may allow `off` value only via `allowed_values`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerNetwork(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs dockerNetwork) {
             return dockerNetwork(Output.of(dockerNetwork));
         }
 
+        /**
+         * @param dockerPrivileged Whether dockerPrivileged can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerPrivileged(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerPrivileged) {
             $.dockerPrivileged = dockerPrivileged;
             return this;
         }
 
+        /**
+         * @param dockerPrivileged Whether dockerPrivileged can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerPrivileged(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs dockerPrivileged) {
             return dockerPrivileged(Output.of(dockerPrivileged));
         }
 
+        /**
+         * @param dockerRunAsRoot Whether dockerRunAsRoot can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerRunAsRoot(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerRunAsRoot) {
             $.dockerRunAsRoot = dockerRunAsRoot;
             return this;
         }
 
+        /**
+         * @param dockerRunAsRoot Whether dockerRunAsRoot can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerRunAsRoot(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs dockerRunAsRoot) {
             return dockerRunAsRoot(Output.of(dockerRunAsRoot));
         }
 
+        /**
+         * @param dockerRuntime Whether dockerRuntime is allowed to be set or what runtimes are allowed. Note linux_isolation takes precedence, and if set, docker_runtime values may be rejected if they are incompatible with the selected isolation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerRuntime(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerRuntime) {
             $.dockerRuntime = dockerRuntime;
             return this;
         }
 
+        /**
+         * @param dockerRuntime Whether dockerRuntime is allowed to be set or what runtimes are allowed. Note linux_isolation takes precedence, and if set, docker_runtime values may be rejected if they are incompatible with the selected isolation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerRuntime(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs dockerRuntime) {
             return dockerRuntime(Output.of(dockerRuntime));
         }
 
+        /**
+         * @param dockerSiblingContainers Whether dockerSiblingContainers can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerSiblingContainers(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerSiblingContainers) {
             $.dockerSiblingContainers = dockerSiblingContainers;
             return this;
         }
 
+        /**
+         * @param dockerSiblingContainers Whether dockerSiblingContainers can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerSiblingContainers(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs dockerSiblingContainers) {
             return dockerSiblingContainers(Output.of(dockerSiblingContainers));
         }
 
+        /**
+         * @param linuxIsolation linux_isolation allows overriding the docker runtime used for containers started on Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxIsolation(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolation> linuxIsolation) {
             $.linuxIsolation = linuxIsolation;
             return this;
         }
 
+        /**
+         * @param linuxIsolation linux_isolation allows overriding the docker runtime used for containers started on Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxIsolation(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolation linuxIsolation) {
             return linuxIsolation(Output.of(linuxIsolation));
         }

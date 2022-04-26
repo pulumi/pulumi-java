@@ -37,6 +37,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the trigger.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -48,6 +52,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
     @Import(name="delay")
     private @Nullable Output<Object> delay;
 
+    /**
+     * @return Specifies how long the trigger waits past due time before triggering new run. It doesn&#39;t alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Output<Object>> delay() {
         return Optional.ofNullable(this.delay);
     }
@@ -59,6 +67,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
     @Import(name="dependsOn")
     private @Nullable Output<List<Object>> dependsOn;
 
+    /**
+     * @return Triggers that this trigger depends on. Only tumbling window triggers are supported.
+     * 
+     */
     public Optional<Output<List<Object>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -70,6 +82,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Trigger description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -81,6 +97,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
     @Import(name="endTime")
     private @Nullable Output<String> endTime;
 
+    /**
+     * @return The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
+     * 
+     */
     public Optional<Output<String>> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -92,6 +112,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
     @Import(name="frequency", required=true)
     private Output<Either<String,TumblingWindowFrequency>> frequency;
 
+    /**
+     * @return The frequency of the time windows.
+     * 
+     */
     public Output<Either<String,TumblingWindowFrequency>> frequency() {
         return this.frequency;
     }
@@ -103,6 +127,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
     @Import(name="interval", required=true)
     private Output<Integer> interval;
 
+    /**
+     * @return The interval of the time windows. The minimum interval allowed is 15 Minutes.
+     * 
+     */
     public Output<Integer> interval() {
         return this.interval;
     }
@@ -114,6 +142,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
     @Import(name="maxConcurrency", required=true)
     private Output<Integer> maxConcurrency;
 
+    /**
+     * @return The max number of parallel time windows (ready for execution) for which a new run is triggered.
+     * 
+     */
     public Output<Integer> maxConcurrency() {
         return this.maxConcurrency;
     }
@@ -125,6 +157,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
     @Import(name="pipeline", required=true)
     private Output<TriggerPipelineReferenceArgs> pipeline;
 
+    /**
+     * @return Pipeline for which runs are created when an event is fired for trigger window that is ready.
+     * 
+     */
     public Output<TriggerPipelineReferenceArgs> pipeline() {
         return this.pipeline;
     }
@@ -136,6 +172,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
     @Import(name="retryPolicy")
     private @Nullable Output<RetryPolicyArgs> retryPolicy;
 
+    /**
+     * @return Retry policy that will be applied for failed pipeline runs.
+     * 
+     */
     public Optional<Output<RetryPolicyArgs>> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
@@ -147,6 +187,10 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
     @Import(name="startTime", required=true)
     private Output<String> startTime;
 
+    /**
+     * @return The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
+     * 
+     */
     public Output<String> startTime() {
         return this.startTime;
     }
@@ -159,6 +203,11 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Trigger type.
+     * Expected value is &#39;TumblingWindowTrigger&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -198,126 +247,296 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
             $ = new TumblingWindowTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param delay Specifies how long the trigger waits past due time before triggering new run. It doesn&#39;t alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder delay(@Nullable Output<Object> delay) {
             $.delay = delay;
             return this;
         }
 
+        /**
+         * @param delay Specifies how long the trigger waits past due time before triggering new run. It doesn&#39;t alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder delay(Object delay) {
             return delay(Output.of(delay));
         }
 
+        /**
+         * @param dependsOn Triggers that this trigger depends on. Only tumbling window triggers are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<Object>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Triggers that this trigger depends on. Only tumbling window triggers are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<Object> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Triggers that this trigger depends on. Only tumbling window triggers are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(Object... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param endTime The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param frequency The frequency of the time windows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(Output<Either<String,TumblingWindowFrequency>> frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param frequency The frequency of the time windows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(Either<String,TumblingWindowFrequency> frequency) {
             return frequency(Output.of(frequency));
         }
 
+        /**
+         * @param frequency The frequency of the time windows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(String frequency) {
             return frequency(Either.ofLeft(frequency));
         }
 
+        /**
+         * @param frequency The frequency of the time windows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(TumblingWindowFrequency frequency) {
             return frequency(Either.ofRight(frequency));
         }
 
+        /**
+         * @param interval The interval of the time windows. The minimum interval allowed is 15 Minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Output<Integer> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval The interval of the time windows. The minimum interval allowed is 15 Minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Integer interval) {
             return interval(Output.of(interval));
         }
 
+        /**
+         * @param maxConcurrency The max number of parallel time windows (ready for execution) for which a new run is triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrency(Output<Integer> maxConcurrency) {
             $.maxConcurrency = maxConcurrency;
             return this;
         }
 
+        /**
+         * @param maxConcurrency The max number of parallel time windows (ready for execution) for which a new run is triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrency(Integer maxConcurrency) {
             return maxConcurrency(Output.of(maxConcurrency));
         }
 
+        /**
+         * @param pipeline Pipeline for which runs are created when an event is fired for trigger window that is ready.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipeline(Output<TriggerPipelineReferenceArgs> pipeline) {
             $.pipeline = pipeline;
             return this;
         }
 
+        /**
+         * @param pipeline Pipeline for which runs are created when an event is fired for trigger window that is ready.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipeline(TriggerPipelineReferenceArgs pipeline) {
             return pipeline(Output.of(pipeline));
         }
 
+        /**
+         * @param retryPolicy Retry policy that will be applied for failed pipeline runs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
             $.retryPolicy = retryPolicy;
             return this;
         }
 
+        /**
+         * @param retryPolicy Retry policy that will be applied for failed pipeline runs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(RetryPolicyArgs retryPolicy) {
             return retryPolicy(Output.of(retryPolicy));
         }
 
+        /**
+         * @param startTime The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;TumblingWindowTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;TumblingWindowTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -19,42 +19,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLinkerResult {
     /**
-     * The authentication type.
+     * @return The authentication type.
      * 
      */
     private final @Nullable Object authInfo;
     /**
-     * The application client type
+     * @return The application client type
      * 
      */
     private final @Nullable String clientType;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
      */
     private final String provisioningState;
     /**
-     * The system data.
+     * @return The system data.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The resource Id of target service.
+     * @return The resource Id of target service.
      * 
      */
     private final @Nullable String targetId;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -80,58 +80,58 @@ public final class GetLinkerResult {
     }
 
     /**
-     * The authentication type.
+     * @return The authentication type.
      * 
-    */
+     */
     public Optional<Object> authInfo() {
         return Optional.ofNullable(this.authInfo);
     }
     /**
-     * The application client type
+     * @return The application client type
      * 
-    */
+     */
     public Optional<String> clientType() {
         return Optional.ofNullable(this.clientType);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The system data.
+     * @return The system data.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The resource Id of target service.
+     * @return The resource Id of target service.
      * 
-    */
+     */
     public Optional<String> targetId() {
         return Optional.ofNullable(this.targetId);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

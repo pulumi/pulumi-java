@@ -24,6 +24,10 @@ public final class MoveResourceErrorBodyResponse extends com.pulumi.resources.In
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -35,6 +39,10 @@ public final class MoveResourceErrorBodyResponse extends com.pulumi.resources.In
     @Import(name="details", required=true)
     private List<MoveResourceErrorBodyResponse> details;
 
+    /**
+     * @return A list of additional details about the error.
+     * 
+     */
     public List<MoveResourceErrorBodyResponse> details() {
         return this.details;
     }
@@ -46,6 +54,10 @@ public final class MoveResourceErrorBodyResponse extends com.pulumi.resources.In
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return A message describing the error, intended to be suitable for display in a user interface.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -57,6 +69,10 @@ public final class MoveResourceErrorBodyResponse extends com.pulumi.resources.In
     @Import(name="target", required=true)
     private String target;
 
+    /**
+     * @return The target of the particular error. For example, the name of the property in error.
+     * 
+     */
     public String target() {
         return this.target;
     }
@@ -88,25 +104,55 @@ public final class MoveResourceErrorBodyResponse extends com.pulumi.resources.In
             $ = new MoveResourceErrorBodyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param details A list of additional details about the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(List<MoveResourceErrorBodyResponse> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details A list of additional details about the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(MoveResourceErrorBodyResponse... details) {
             return details(List.of(details));
         }
 
+        /**
+         * @param message A message describing the error, intended to be suitable for display in a user interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param target The target of the particular error. For example, the name of the property in error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             $.target = target;
             return this;

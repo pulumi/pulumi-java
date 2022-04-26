@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UefiSettingsResponse {
     /**
-     * Specifies whether secure boot should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
+     * @return Specifies whether secure boot should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
      * 
      */
     private final @Nullable Boolean secureBootEnabled;
     /**
-     * Specifies whether vTPM should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
+     * @return Specifies whether vTPM should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
      * 
      */
     private final @Nullable Boolean vTpmEnabled;
@@ -31,16 +31,16 @@ public final class UefiSettingsResponse {
     }
 
     /**
-     * Specifies whether secure boot should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
+     * @return Specifies whether secure boot should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
      * 
-    */
+     */
     public Optional<Boolean> secureBootEnabled() {
         return Optional.ofNullable(this.secureBootEnabled);
     }
     /**
-     * Specifies whether vTPM should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
+     * @return Specifies whether vTPM should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
      * 
-    */
+     */
     public Optional<Boolean> vTpmEnabled() {
         return Optional.ofNullable(this.vTpmEnabled);
     }

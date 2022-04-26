@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LaunchTemplateTagSpecification {
     /**
-     * The type of resource to tag.
+     * @return The type of resource to tag.
      * 
      */
     private final @Nullable String resourceType;
     /**
-     * A map of tags to assign to the resource.
+     * @return A map of tags to assign to the resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
@@ -32,16 +32,16 @@ public final class LaunchTemplateTagSpecification {
     }
 
     /**
-     * The type of resource to tag.
+     * @return The type of resource to tag.
      * 
-    */
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
-     * A map of tags to assign to the resource.
+     * @return A map of tags to assign to the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }

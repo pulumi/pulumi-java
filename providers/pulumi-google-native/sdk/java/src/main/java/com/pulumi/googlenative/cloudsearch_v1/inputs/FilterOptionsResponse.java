@@ -24,6 +24,10 @@ public final class FilterOptionsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="filter", required=true)
     private FilterResponse filter;
 
+    /**
+     * @return Generic filter to restrict the search, such as `lang:en`, `site:xyz`.
+     * 
+     */
     public FilterResponse filter() {
         return this.filter;
     }
@@ -35,6 +39,10 @@ public final class FilterOptionsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return If object_type is set, only objects of that type are returned. This should correspond to the name of the object that was registered within the definition of schema. The maximum length is 256 characters.
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -64,11 +72,23 @@ public final class FilterOptionsResponse extends com.pulumi.resources.InvokeArgs
             $ = new FilterOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filter Generic filter to restrict the search, such as `lang:en`, `site:xyz`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(FilterResponse filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param objectType If object_type is set, only objects of that type are returned. This should correspond to the name of the object that was registered within the definition of schema. The maximum length is 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;

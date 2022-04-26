@@ -28,6 +28,10 @@ public final class MetadataSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kind", required=true)
     private Output<Either<String,SourceKind>> kind;
 
+    /**
+     * @return Source type of the content
+     * 
+     */
     public Output<Either<String,SourceKind>> kind() {
         return this.kind;
     }
@@ -39,6 +43,10 @@ public final class MetadataSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the content source.  The repo name, solution name, LA workspace name etc.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +58,10 @@ public final class MetadataSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sourceId")
     private @Nullable Output<String> sourceId;
 
+    /**
+     * @return ID of the content source.  The solution ID, workspace ID, etc
+     * 
+     */
     public Optional<Output<String>> sourceId() {
         return Optional.ofNullable(this.sourceId);
     }
@@ -80,37 +92,85 @@ public final class MetadataSourceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MetadataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind Source type of the content
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,SourceKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Source type of the content
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,SourceKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind Source type of the content
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind Source type of the content
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(SourceKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param name Name of the content source.  The repo name, solution name, LA workspace name etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the content source.  The repo name, solution name, LA workspace name etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param sourceId ID of the content source.  The solution ID, workspace ID, etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceId(@Nullable Output<String> sourceId) {
             $.sourceId = sourceId;
             return this;
         }
 
+        /**
+         * @param sourceId ID of the content source.  The solution ID, workspace ID, etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceId(String sourceId) {
             return sourceId(Output.of(sourceId));
         }

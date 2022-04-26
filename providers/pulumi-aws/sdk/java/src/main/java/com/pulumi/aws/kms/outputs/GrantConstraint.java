@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GrantConstraint {
     /**
-     * A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with `encryption_context_subset`.
+     * @return A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with `encryption_context_subset`.
      * 
      */
     private final @Nullable Map<String,String> encryptionContextEquals;
     /**
-     * A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with `encryption_context_equals`.
+     * @return A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with `encryption_context_equals`.
      * 
      */
     private final @Nullable Map<String,String> encryptionContextSubset;
@@ -31,16 +31,16 @@ public final class GrantConstraint {
     }
 
     /**
-     * A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with `encryption_context_subset`.
+     * @return A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with `encryption_context_subset`.
      * 
-    */
+     */
     public Map<String,String> encryptionContextEquals() {
         return this.encryptionContextEquals == null ? Map.of() : this.encryptionContextEquals;
     }
     /**
-     * A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with `encryption_context_equals`.
+     * @return A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with `encryption_context_equals`.
      * 
-    */
+     */
     public Map<String,String> encryptionContextSubset() {
         return this.encryptionContextSubset == null ? Map.of() : this.encryptionContextSubset;
     }

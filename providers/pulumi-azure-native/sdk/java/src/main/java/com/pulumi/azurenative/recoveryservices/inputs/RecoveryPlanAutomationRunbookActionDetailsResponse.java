@@ -26,6 +26,10 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends co
     @Import(name="fabricLocation", required=true)
     private String fabricLocation;
 
+    /**
+     * @return The fabric location.
+     * 
+     */
     public String fabricLocation() {
         return this.fabricLocation;
     }
@@ -38,6 +42,11 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends co
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+     * Expected value is &#39;AutomationRunbookActionDetails&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -49,6 +58,10 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends co
     @Import(name="runbookId")
     private @Nullable String runbookId;
 
+    /**
+     * @return The runbook ARM Id.
+     * 
+     */
     public Optional<String> runbookId() {
         return Optional.ofNullable(this.runbookId);
     }
@@ -60,6 +73,10 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends co
     @Import(name="timeout")
     private @Nullable String timeout;
 
+    /**
+     * @return The runbook timeout.
+     * 
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -91,21 +108,46 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends co
             $ = new RecoveryPlanAutomationRunbookActionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fabricLocation The fabric location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricLocation(String fabricLocation) {
             $.fabricLocation = fabricLocation;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+         * Expected value is &#39;AutomationRunbookActionDetails&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param runbookId The runbook ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runbookId(@Nullable String runbookId) {
             $.runbookId = runbookId;
             return this;
         }
 
+        /**
+         * @param timeout The runbook timeout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable String timeout) {
             $.timeout = timeout;
             return this;

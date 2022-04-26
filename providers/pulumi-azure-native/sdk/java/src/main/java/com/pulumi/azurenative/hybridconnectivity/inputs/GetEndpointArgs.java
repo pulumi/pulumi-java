@@ -19,6 +19,10 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointName", required=true)
     private String endpointName;
 
+    /**
+     * @return The endpoint name.
+     * 
+     */
     public String endpointName() {
         return this.endpointName;
     }
@@ -30,6 +34,10 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceUri", required=true)
     private String resourceUri;
 
+    /**
+     * @return The fully qualified Azure Resource manager identifier of the resource to be connected.
+     * 
+     */
     public String resourceUri() {
         return this.resourceUri;
     }
@@ -59,11 +67,23 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointName The endpoint name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param resourceUri The fully qualified Azure Resource manager identifier of the resource to be connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             $.resourceUri = resourceUri;
             return this;

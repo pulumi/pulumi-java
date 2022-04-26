@@ -19,6 +19,10 @@ public final class GetVirtualMachineTemplateArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetVirtualMachineTemplateArgs extends com.pulumi.resources.In
     @Import(name="virtualMachineTemplateName", required=true)
     private String virtualMachineTemplateName;
 
+    /**
+     * @return Name of the virtual machine template resource.
+     * 
+     */
     public String virtualMachineTemplateName() {
         return this.virtualMachineTemplateName;
     }
@@ -59,11 +67,23 @@ public final class GetVirtualMachineTemplateArgs extends com.pulumi.resources.In
             $ = new GetVirtualMachineTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualMachineTemplateName Name of the virtual machine template resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineTemplateName(String virtualMachineTemplateName) {
             $.virtualMachineTemplateName = virtualMachineTemplateName;
             return this;

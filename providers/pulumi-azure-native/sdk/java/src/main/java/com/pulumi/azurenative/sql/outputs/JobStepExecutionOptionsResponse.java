@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobStepExecutionOptionsResponse {
     /**
-     * Initial delay between retries for job step execution.
+     * @return Initial delay between retries for job step execution.
      * 
      */
     private final @Nullable Integer initialRetryIntervalSeconds;
     /**
-     * The maximum amount of time to wait between retries for job step execution.
+     * @return The maximum amount of time to wait between retries for job step execution.
      * 
      */
     private final @Nullable Integer maximumRetryIntervalSeconds;
     /**
-     * Maximum number of times the job step will be reattempted if the first attempt fails.
+     * @return Maximum number of times the job step will be reattempted if the first attempt fails.
      * 
      */
     private final @Nullable Integer retryAttempts;
     /**
-     * The backoff multiplier for the time between retries.
+     * @return The backoff multiplier for the time between retries.
      * 
      */
     private final @Nullable Double retryIntervalBackoffMultiplier;
     /**
-     * Execution timeout for the job step.
+     * @return Execution timeout for the job step.
      * 
      */
     private final @Nullable Integer timeoutSeconds;
@@ -53,37 +53,37 @@ public final class JobStepExecutionOptionsResponse {
     }
 
     /**
-     * Initial delay between retries for job step execution.
+     * @return Initial delay between retries for job step execution.
      * 
-    */
+     */
     public Optional<Integer> initialRetryIntervalSeconds() {
         return Optional.ofNullable(this.initialRetryIntervalSeconds);
     }
     /**
-     * The maximum amount of time to wait between retries for job step execution.
+     * @return The maximum amount of time to wait between retries for job step execution.
      * 
-    */
+     */
     public Optional<Integer> maximumRetryIntervalSeconds() {
         return Optional.ofNullable(this.maximumRetryIntervalSeconds);
     }
     /**
-     * Maximum number of times the job step will be reattempted if the first attempt fails.
+     * @return Maximum number of times the job step will be reattempted if the first attempt fails.
      * 
-    */
+     */
     public Optional<Integer> retryAttempts() {
         return Optional.ofNullable(this.retryAttempts);
     }
     /**
-     * The backoff multiplier for the time between retries.
+     * @return The backoff multiplier for the time between retries.
      * 
-    */
+     */
     public Optional<Double> retryIntervalBackoffMultiplier() {
         return Optional.ofNullable(this.retryIntervalBackoffMultiplier);
     }
     /**
-     * Execution timeout for the job step.
+     * @return Execution timeout for the job step.
      * 
-    */
+     */
     public Optional<Integer> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }

@@ -21,6 +21,10 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="galleryName", required=true)
     private String galleryName;
 
+    /**
+     * @return The name of the Shared Image Gallery.
+     * 
+     */
     public String galleryName() {
         return this.galleryName;
     }
@@ -32,6 +36,10 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="select")
     private @Nullable String select;
 
+    /**
+     * @return The select expression to apply on the operation.
+     * 
+     */
     public Optional<String> select() {
         return Optional.ofNullable(this.select);
     }
@@ -73,16 +85,34 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetGalleryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param galleryName The name of the Shared Image Gallery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryName(String galleryName) {
             $.galleryName = galleryName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param select The select expression to apply on the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder select(@Nullable String select) {
             $.select = select;
             return this;

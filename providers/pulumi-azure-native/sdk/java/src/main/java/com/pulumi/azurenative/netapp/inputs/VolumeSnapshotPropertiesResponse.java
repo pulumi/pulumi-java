@@ -25,6 +25,10 @@ public final class VolumeSnapshotPropertiesResponse extends com.pulumi.resources
     @Import(name="snapshotPolicyId")
     private @Nullable String snapshotPolicyId;
 
+    /**
+     * @return Snapshot Policy ResourceId
+     * 
+     */
     public Optional<String> snapshotPolicyId() {
         return Optional.ofNullable(this.snapshotPolicyId);
     }
@@ -53,6 +57,12 @@ public final class VolumeSnapshotPropertiesResponse extends com.pulumi.resources
             $ = new VolumeSnapshotPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param snapshotPolicyId Snapshot Policy ResourceId
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotPolicyId(@Nullable String snapshotPolicyId) {
             $.snapshotPolicyId = snapshotPolicyId;
             return this;

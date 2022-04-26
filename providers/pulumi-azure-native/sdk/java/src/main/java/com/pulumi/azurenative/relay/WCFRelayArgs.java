@@ -24,6 +24,10 @@ public final class WCFRelayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The namespace name
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -35,6 +39,10 @@ public final class WCFRelayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relayName")
     private @Nullable Output<String> relayName;
 
+    /**
+     * @return The relay name.
+     * 
+     */
     public Optional<Output<String>> relayName() {
         return Optional.ofNullable(this.relayName);
     }
@@ -46,6 +54,10 @@ public final class WCFRelayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relayType")
     private @Nullable Output<Relaytype> relayType;
 
+    /**
+     * @return WCF relay type.
+     * 
+     */
     public Optional<Output<Relaytype>> relayType() {
         return Optional.ofNullable(this.relayType);
     }
@@ -57,6 +69,10 @@ public final class WCFRelayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requiresClientAuthorization")
     private @Nullable Output<Boolean> requiresClientAuthorization;
 
+    /**
+     * @return Returns true if client authorization is needed for this relay; otherwise, false.
+     * 
+     */
     public Optional<Output<Boolean>> requiresClientAuthorization() {
         return Optional.ofNullable(this.requiresClientAuthorization);
     }
@@ -68,6 +84,10 @@ public final class WCFRelayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requiresTransportSecurity")
     private @Nullable Output<Boolean> requiresTransportSecurity;
 
+    /**
+     * @return Returns true if transport security is needed for this relay; otherwise, false.
+     * 
+     */
     public Optional<Output<Boolean>> requiresTransportSecurity() {
         return Optional.ofNullable(this.requiresTransportSecurity);
     }
@@ -79,6 +99,10 @@ public final class WCFRelayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -90,6 +114,10 @@ public final class WCFRelayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userMetadata")
     private @Nullable Output<String> userMetadata;
 
+    /**
+     * @return The usermetadata is a placeholder to store user-defined string data for the WCF Relay endpoint. For example, it can be used to store descriptive data, such as list of teams and their contact information. Also, user-defined configuration settings can be stored.
+     * 
+     */
     public Optional<Output<String>> userMetadata() {
         return Optional.ofNullable(this.userMetadata);
     }
@@ -124,65 +152,149 @@ public final class WCFRelayArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WCFRelayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param relayName The relay name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relayName(@Nullable Output<String> relayName) {
             $.relayName = relayName;
             return this;
         }
 
+        /**
+         * @param relayName The relay name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relayName(String relayName) {
             return relayName(Output.of(relayName));
         }
 
+        /**
+         * @param relayType WCF relay type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relayType(@Nullable Output<Relaytype> relayType) {
             $.relayType = relayType;
             return this;
         }
 
+        /**
+         * @param relayType WCF relay type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relayType(Relaytype relayType) {
             return relayType(Output.of(relayType));
         }
 
+        /**
+         * @param requiresClientAuthorization Returns true if client authorization is needed for this relay; otherwise, false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresClientAuthorization(@Nullable Output<Boolean> requiresClientAuthorization) {
             $.requiresClientAuthorization = requiresClientAuthorization;
             return this;
         }
 
+        /**
+         * @param requiresClientAuthorization Returns true if client authorization is needed for this relay; otherwise, false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresClientAuthorization(Boolean requiresClientAuthorization) {
             return requiresClientAuthorization(Output.of(requiresClientAuthorization));
         }
 
+        /**
+         * @param requiresTransportSecurity Returns true if transport security is needed for this relay; otherwise, false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresTransportSecurity(@Nullable Output<Boolean> requiresTransportSecurity) {
             $.requiresTransportSecurity = requiresTransportSecurity;
             return this;
         }
 
+        /**
+         * @param requiresTransportSecurity Returns true if transport security is needed for this relay; otherwise, false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresTransportSecurity(Boolean requiresTransportSecurity) {
             return requiresTransportSecurity(Output.of(requiresTransportSecurity));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param userMetadata The usermetadata is a placeholder to store user-defined string data for the WCF Relay endpoint. For example, it can be used to store descriptive data, such as list of teams and their contact information. Also, user-defined configuration settings can be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userMetadata(@Nullable Output<String> userMetadata) {
             $.userMetadata = userMetadata;
             return this;
         }
 
+        /**
+         * @param userMetadata The usermetadata is a placeholder to store user-defined string data for the WCF Relay endpoint. For example, it can be used to store descriptive data, such as list of teams and their contact information. Also, user-defined configuration settings can be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userMetadata(String userMetadata) {
             return userMetadata(Output.of(userMetadata));
         }

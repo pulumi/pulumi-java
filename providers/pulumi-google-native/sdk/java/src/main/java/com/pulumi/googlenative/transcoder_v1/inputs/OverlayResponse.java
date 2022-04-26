@@ -25,6 +25,10 @@ public final class OverlayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="animations", required=true)
     private List<AnimationResponse> animations;
 
+    /**
+     * @return List of Animations. The list should be chronological, without any time overlap.
+     * 
+     */
     public List<AnimationResponse> animations() {
         return this.animations;
     }
@@ -36,6 +40,10 @@ public final class OverlayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="image", required=true)
     private ImageResponse image;
 
+    /**
+     * @return Image overlay.
+     * 
+     */
     public ImageResponse image() {
         return this.image;
     }
@@ -65,15 +73,33 @@ public final class OverlayResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OverlayResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param animations List of Animations. The list should be chronological, without any time overlap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder animations(List<AnimationResponse> animations) {
             $.animations = animations;
             return this;
         }
 
+        /**
+         * @param animations List of Animations. The list should be chronological, without any time overlap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder animations(AnimationResponse... animations) {
             return animations(List.of(animations));
         }
 
+        /**
+         * @param image Image overlay.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(ImageResponse image) {
             $.image = image;
             return this;

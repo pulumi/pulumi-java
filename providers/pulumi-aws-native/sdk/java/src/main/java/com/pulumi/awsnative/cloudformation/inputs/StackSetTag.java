@@ -23,6 +23,10 @@ public final class StackSetTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return A string used to identify this tag. You can specify a maximum of 127 characters for a tag key.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -34,6 +38,10 @@ public final class StackSetTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return A string containing the value for this tag. You can specify a maximum of 256 characters for a tag value.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class StackSetTag extends com.pulumi.resources.InvokeArgs {
             $ = new StackSetTag(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key A string used to identify this tag. You can specify a maximum of 127 characters for a tag key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value A string containing the value for this tag. You can specify a maximum of 256 characters for a tag value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

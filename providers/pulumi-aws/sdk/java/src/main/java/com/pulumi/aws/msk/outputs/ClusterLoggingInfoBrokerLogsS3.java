@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterLoggingInfoBrokerLogsS3 {
     /**
-     * Name of the S3 bucket to deliver logs to.
+     * @return Name of the S3 bucket to deliver logs to.
      * 
      */
     private final @Nullable String bucket;
     /**
-     * Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
+     * @return Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
      * 
      */
     private final Boolean enabled;
     /**
-     * Prefix to append to the folder name.
+     * @return Prefix to append to the folder name.
      * 
      */
     private final @Nullable String prefix;
@@ -39,23 +39,23 @@ public final class ClusterLoggingInfoBrokerLogsS3 {
     }
 
     /**
-     * Name of the S3 bucket to deliver logs to.
+     * @return Name of the S3 bucket to deliver logs to.
      * 
-    */
+     */
     public Optional<String> bucket() {
         return Optional.ofNullable(this.bucket);
     }
     /**
-     * Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
+     * @return Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * Prefix to append to the folder name.
+     * @return Prefix to append to the folder name.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }

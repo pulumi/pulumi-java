@@ -11,47 +11,47 @@ import java.util.Objects;
 @CustomType
 public final class InMageRcmProtectedDiskDetailsResponse {
     /**
-     * The disk capacity in bytes.
+     * @return The disk capacity in bytes.
      * 
      */
     private final Double capacityInBytes;
     /**
-     * The disk encryption set ARM Id.
+     * @return The disk encryption set ARM Id.
      * 
      */
     private final String diskEncryptionSetId;
     /**
-     * The disk Id.
+     * @return The disk Id.
      * 
      */
     private final String diskId;
     /**
-     * The disk name.
+     * @return The disk name.
      * 
      */
     private final String diskName;
     /**
-     * The disk type.
+     * @return The disk type.
      * 
      */
     private final String diskType;
     /**
-     * A value indicating whether the disk is the OS disk.
+     * @return A value indicating whether the disk is the OS disk.
      * 
      */
     private final String isOSDisk;
     /**
-     * The log storage account ARM Id.
+     * @return The log storage account ARM Id.
      * 
      */
     private final String logStorageAccountId;
     /**
-     * The ARM Id of the seed managed disk.
+     * @return The ARM Id of the seed managed disk.
      * 
      */
     private final String seedManagedDiskId;
     /**
-     * The ARM Id of the target managed disk.
+     * @return The ARM Id of the target managed disk.
      * 
      */
     private final String targetManagedDiskId;
@@ -79,65 +79,65 @@ public final class InMageRcmProtectedDiskDetailsResponse {
     }
 
     /**
-     * The disk capacity in bytes.
+     * @return The disk capacity in bytes.
      * 
-    */
+     */
     public Double capacityInBytes() {
         return this.capacityInBytes;
     }
     /**
-     * The disk encryption set ARM Id.
+     * @return The disk encryption set ARM Id.
      * 
-    */
+     */
     public String diskEncryptionSetId() {
         return this.diskEncryptionSetId;
     }
     /**
-     * The disk Id.
+     * @return The disk Id.
      * 
-    */
+     */
     public String diskId() {
         return this.diskId;
     }
     /**
-     * The disk name.
+     * @return The disk name.
      * 
-    */
+     */
     public String diskName() {
         return this.diskName;
     }
     /**
-     * The disk type.
+     * @return The disk type.
      * 
-    */
+     */
     public String diskType() {
         return this.diskType;
     }
     /**
-     * A value indicating whether the disk is the OS disk.
+     * @return A value indicating whether the disk is the OS disk.
      * 
-    */
+     */
     public String isOSDisk() {
         return this.isOSDisk;
     }
     /**
-     * The log storage account ARM Id.
+     * @return The log storage account ARM Id.
      * 
-    */
+     */
     public String logStorageAccountId() {
         return this.logStorageAccountId;
     }
     /**
-     * The ARM Id of the seed managed disk.
+     * @return The ARM Id of the seed managed disk.
      * 
-    */
+     */
     public String seedManagedDiskId() {
         return this.seedManagedDiskId;
     }
     /**
-     * The ARM Id of the target managed disk.
+     * @return The ARM Id of the target managed disk.
      * 
-    */
+     */
     public String targetManagedDiskId() {
         return this.targetManagedDiskId;
     }

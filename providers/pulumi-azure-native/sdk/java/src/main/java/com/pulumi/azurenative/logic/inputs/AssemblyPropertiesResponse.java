@@ -27,6 +27,10 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="assemblyCulture")
     private @Nullable String assemblyCulture;
 
+    /**
+     * @return The assembly culture.
+     * 
+     */
     public Optional<String> assemblyCulture() {
         return Optional.ofNullable(this.assemblyCulture);
     }
@@ -38,6 +42,10 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="assemblyName", required=true)
     private String assemblyName;
 
+    /**
+     * @return The assembly name.
+     * 
+     */
     public String assemblyName() {
         return this.assemblyName;
     }
@@ -49,6 +57,10 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="assemblyPublicKeyToken")
     private @Nullable String assemblyPublicKeyToken;
 
+    /**
+     * @return The assembly public key token.
+     * 
+     */
     public Optional<String> assemblyPublicKeyToken() {
         return Optional.ofNullable(this.assemblyPublicKeyToken);
     }
@@ -60,6 +72,10 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="assemblyVersion")
     private @Nullable String assemblyVersion;
 
+    /**
+     * @return The assembly version.
+     * 
+     */
     public Optional<String> assemblyVersion() {
         return Optional.ofNullable(this.assemblyVersion);
     }
@@ -71,6 +87,10 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="changedTime")
     private @Nullable String changedTime;
 
+    /**
+     * @return The artifact changed time.
+     * 
+     */
     public Optional<String> changedTime() {
         return Optional.ofNullable(this.changedTime);
     }
@@ -89,6 +109,10 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="contentLink")
     private @Nullable ContentLinkResponse contentLink;
 
+    /**
+     * @return The content link.
+     * 
+     */
     public Optional<ContentLinkResponse> contentLink() {
         return Optional.ofNullable(this.contentLink);
     }
@@ -100,6 +124,10 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="contentType")
     private @Nullable String contentType;
 
+    /**
+     * @return The content type.
+     * 
+     */
     public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -111,6 +139,10 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="createdTime")
     private @Nullable String createdTime;
 
+    /**
+     * @return The artifact creation time.
+     * 
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -155,26 +187,56 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
             $ = new AssemblyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assemblyCulture The assembly culture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assemblyCulture(@Nullable String assemblyCulture) {
             $.assemblyCulture = assemblyCulture;
             return this;
         }
 
+        /**
+         * @param assemblyName The assembly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assemblyName(String assemblyName) {
             $.assemblyName = assemblyName;
             return this;
         }
 
+        /**
+         * @param assemblyPublicKeyToken The assembly public key token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assemblyPublicKeyToken(@Nullable String assemblyPublicKeyToken) {
             $.assemblyPublicKeyToken = assemblyPublicKeyToken;
             return this;
         }
 
+        /**
+         * @param assemblyVersion The assembly version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assemblyVersion(@Nullable String assemblyVersion) {
             $.assemblyVersion = assemblyVersion;
             return this;
         }
 
+        /**
+         * @param changedTime The artifact changed time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder changedTime(@Nullable String changedTime) {
             $.changedTime = changedTime;
             return this;
@@ -185,16 +247,34 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
             return this;
         }
 
+        /**
+         * @param contentLink The content link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentLink(@Nullable ContentLinkResponse contentLink) {
             $.contentLink = contentLink;
             return this;
         }
 
+        /**
+         * @param contentType The content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable String contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param createdTime The artifact creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable String createdTime) {
             $.createdTime = createdTime;
             return this;

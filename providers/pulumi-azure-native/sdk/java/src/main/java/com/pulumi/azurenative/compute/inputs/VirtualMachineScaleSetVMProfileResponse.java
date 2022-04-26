@@ -33,6 +33,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
     @Import(name="billingProfile")
     private @Nullable BillingProfileResponse billingProfile;
 
+    /**
+     * @return Specifies the billing related details of a Azure Spot VMSS. &lt;br&gt;&lt;br&gt;Minimum api-version: 2019-03-01.
+     * 
+     */
     public Optional<BillingProfileResponse> billingProfile() {
         return Optional.ofNullable(this.billingProfile);
     }
@@ -44,6 +48,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
     @Import(name="diagnosticsProfile")
     private @Nullable DiagnosticsProfileResponse diagnosticsProfile;
 
+    /**
+     * @return Specifies the boot diagnostic settings state. &lt;br&gt;&lt;br&gt;Minimum api-version: 2015-06-15.
+     * 
+     */
     public Optional<DiagnosticsProfileResponse> diagnosticsProfile() {
         return Optional.ofNullable(this.diagnosticsProfile);
     }
@@ -55,6 +63,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
     @Import(name="evictionPolicy")
     private @Nullable String evictionPolicy;
 
+    /**
+     * @return Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. &lt;br&gt;&lt;br&gt;For Azure Spot virtual machines, both &#39;Deallocate&#39; and &#39;Delete&#39; are supported and the minimum api-version is 2019-03-01. &lt;br&gt;&lt;br&gt;For Azure Spot scale sets, both &#39;Deallocate&#39; and &#39;Delete&#39; are supported and the minimum api-version is 2017-10-30-preview.
+     * 
+     */
     public Optional<String> evictionPolicy() {
         return Optional.ofNullable(this.evictionPolicy);
     }
@@ -66,6 +78,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
     @Import(name="extensionProfile")
     private @Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile;
 
+    /**
+     * @return Specifies a collection of settings for extensions installed on virtual machines in the scale set.
+     * 
+     */
     public Optional<VirtualMachineScaleSetExtensionProfileResponse> extensionProfile() {
         return Optional.ofNullable(this.extensionProfile);
     }
@@ -77,6 +93,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
     @Import(name="licenseType")
     private @Nullable String licenseType;
 
+    /**
+     * @return Specifies that the image or disk that is being used was licensed on-premises. &lt;br&gt;&lt;br&gt; Possible values for Windows Server operating system are: &lt;br&gt;&lt;br&gt; Windows_Client &lt;br&gt;&lt;br&gt; Windows_Server &lt;br&gt;&lt;br&gt; Possible values for Linux Server operating system are: &lt;br&gt;&lt;br&gt; RHEL_BYOS (for RHEL) &lt;br&gt;&lt;br&gt; SLES_BYOS (for SUSE) &lt;br&gt;&lt;br&gt; For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) &lt;br&gt;&lt;br&gt; [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
+     * 
+     */
     public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
@@ -88,6 +108,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
     @Import(name="networkProfile")
     private @Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile;
 
+    /**
+     * @return Specifies properties of the network interfaces of the virtual machines in the scale set.
+     * 
+     */
     public Optional<VirtualMachineScaleSetNetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
@@ -99,6 +123,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
     @Import(name="osProfile")
     private @Nullable VirtualMachineScaleSetOSProfileResponse osProfile;
 
+    /**
+     * @return Specifies the operating system settings for the virtual machines in the scale set.
+     * 
+     */
     public Optional<VirtualMachineScaleSetOSProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
@@ -110,6 +138,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
     @Import(name="priority")
     private @Nullable String priority;
 
+    /**
+     * @return Specifies the priority for the virtual machines in the scale set. &lt;br&gt;&lt;br&gt;Minimum api-version: 2017-10-30-preview
+     * 
+     */
     public Optional<String> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -121,6 +153,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
     @Import(name="scheduledEventsProfile")
     private @Nullable ScheduledEventsProfileResponse scheduledEventsProfile;
 
+    /**
+     * @return Specifies Scheduled Event related configurations.
+     * 
+     */
     public Optional<ScheduledEventsProfileResponse> scheduledEventsProfile() {
         return Optional.ofNullable(this.scheduledEventsProfile);
     }
@@ -132,6 +168,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
     @Import(name="securityProfile")
     private @Nullable SecurityProfileResponse securityProfile;
 
+    /**
+     * @return Specifies the Security related profile settings for the virtual machines in the scale set.
+     * 
+     */
     public Optional<SecurityProfileResponse> securityProfile() {
         return Optional.ofNullable(this.securityProfile);
     }
@@ -143,6 +183,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
     @Import(name="storageProfile")
     private @Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile;
 
+    /**
+     * @return Specifies the storage settings for the virtual machine disks.
+     * 
+     */
     public Optional<VirtualMachineScaleSetStorageProfileResponse> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
@@ -154,6 +198,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
     @Import(name="userData")
     private @Nullable String userData;
 
+    /**
+     * @return UserData for the virtual machines in the scale set, which must be base-64 encoded. Customer should not pass any secrets in here. &lt;br&gt;&lt;br&gt;Minimum api-version: 2021-03-01
+     * 
+     */
     public Optional<String> userData() {
         return Optional.ofNullable(this.userData);
     }
@@ -193,61 +241,133 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
             $ = new VirtualMachineScaleSetVMProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingProfile Specifies the billing related details of a Azure Spot VMSS. &lt;br&gt;&lt;br&gt;Minimum api-version: 2019-03-01.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingProfile(@Nullable BillingProfileResponse billingProfile) {
             $.billingProfile = billingProfile;
             return this;
         }
 
+        /**
+         * @param diagnosticsProfile Specifies the boot diagnostic settings state. &lt;br&gt;&lt;br&gt;Minimum api-version: 2015-06-15.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnosticsProfile(@Nullable DiagnosticsProfileResponse diagnosticsProfile) {
             $.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
 
+        /**
+         * @param evictionPolicy Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. &lt;br&gt;&lt;br&gt;For Azure Spot virtual machines, both &#39;Deallocate&#39; and &#39;Delete&#39; are supported and the minimum api-version is 2019-03-01. &lt;br&gt;&lt;br&gt;For Azure Spot scale sets, both &#39;Deallocate&#39; and &#39;Delete&#39; are supported and the minimum api-version is 2017-10-30-preview.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evictionPolicy(@Nullable String evictionPolicy) {
             $.evictionPolicy = evictionPolicy;
             return this;
         }
 
+        /**
+         * @param extensionProfile Specifies a collection of settings for extensions installed on virtual machines in the scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionProfile(@Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile) {
             $.extensionProfile = extensionProfile;
             return this;
         }
 
+        /**
+         * @param licenseType Specifies that the image or disk that is being used was licensed on-premises. &lt;br&gt;&lt;br&gt; Possible values for Windows Server operating system are: &lt;br&gt;&lt;br&gt; Windows_Client &lt;br&gt;&lt;br&gt; Windows_Server &lt;br&gt;&lt;br&gt; Possible values for Linux Server operating system are: &lt;br&gt;&lt;br&gt; RHEL_BYOS (for RHEL) &lt;br&gt;&lt;br&gt; SLES_BYOS (for SUSE) &lt;br&gt;&lt;br&gt; For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) &lt;br&gt;&lt;br&gt; [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(@Nullable String licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param networkProfile Specifies properties of the network interfaces of the virtual machines in the scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(@Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile) {
             $.networkProfile = networkProfile;
             return this;
         }
 
+        /**
+         * @param osProfile Specifies the operating system settings for the virtual machines in the scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osProfile(@Nullable VirtualMachineScaleSetOSProfileResponse osProfile) {
             $.osProfile = osProfile;
             return this;
         }
 
+        /**
+         * @param priority Specifies the priority for the virtual machines in the scale set. &lt;br&gt;&lt;br&gt;Minimum api-version: 2017-10-30-preview
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable String priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param scheduledEventsProfile Specifies Scheduled Event related configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledEventsProfile(@Nullable ScheduledEventsProfileResponse scheduledEventsProfile) {
             $.scheduledEventsProfile = scheduledEventsProfile;
             return this;
         }
 
+        /**
+         * @param securityProfile Specifies the Security related profile settings for the virtual machines in the scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityProfile(@Nullable SecurityProfileResponse securityProfile) {
             $.securityProfile = securityProfile;
             return this;
         }
 
+        /**
+         * @param storageProfile Specifies the storage settings for the virtual machine disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageProfile(@Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile) {
             $.storageProfile = storageProfile;
             return this;
         }
 
+        /**
+         * @param userData UserData for the virtual machines in the scale set, which must be base-64 encoded. Customer should not pass any secrets in here. &lt;br&gt;&lt;br&gt;Minimum api-version: 2021-03-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder userData(@Nullable String userData) {
             $.userData = userData;
             return this;

@@ -26,6 +26,10 @@ public final class FlowAccessControlConfigurationArgs extends com.pulumi.resourc
     @Import(name="actions")
     private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> actions;
 
+    /**
+     * @return The access control configuration for workflow actions.
+     * 
+     */
     public Optional<Output<FlowAccessControlConfigurationPolicyArgs>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -37,6 +41,10 @@ public final class FlowAccessControlConfigurationArgs extends com.pulumi.resourc
     @Import(name="contents")
     private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> contents;
 
+    /**
+     * @return The access control configuration for accessing workflow run contents.
+     * 
+     */
     public Optional<Output<FlowAccessControlConfigurationPolicyArgs>> contents() {
         return Optional.ofNullable(this.contents);
     }
@@ -48,6 +56,10 @@ public final class FlowAccessControlConfigurationArgs extends com.pulumi.resourc
     @Import(name="triggers")
     private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> triggers;
 
+    /**
+     * @return The access control configuration for invoking workflow triggers.
+     * 
+     */
     public Optional<Output<FlowAccessControlConfigurationPolicyArgs>> triggers() {
         return Optional.ofNullable(this.triggers);
     }
@@ -59,6 +71,10 @@ public final class FlowAccessControlConfigurationArgs extends com.pulumi.resourc
     @Import(name="workflowManagement")
     private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement;
 
+    /**
+     * @return The access control configuration for workflow management.
+     * 
+     */
     public Optional<Output<FlowAccessControlConfigurationPolicyArgs>> workflowManagement() {
         return Optional.ofNullable(this.workflowManagement);
     }
@@ -90,38 +106,86 @@ public final class FlowAccessControlConfigurationArgs extends com.pulumi.resourc
             $ = new FlowAccessControlConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions The access control configuration for workflow actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable Output<FlowAccessControlConfigurationPolicyArgs> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions The access control configuration for workflow actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(FlowAccessControlConfigurationPolicyArgs actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param contents The access control configuration for accessing workflow run contents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contents(@Nullable Output<FlowAccessControlConfigurationPolicyArgs> contents) {
             $.contents = contents;
             return this;
         }
 
+        /**
+         * @param contents The access control configuration for accessing workflow run contents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contents(FlowAccessControlConfigurationPolicyArgs contents) {
             return contents(Output.of(contents));
         }
 
+        /**
+         * @param triggers The access control configuration for invoking workflow triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggers(@Nullable Output<FlowAccessControlConfigurationPolicyArgs> triggers) {
             $.triggers = triggers;
             return this;
         }
 
+        /**
+         * @param triggers The access control configuration for invoking workflow triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggers(FlowAccessControlConfigurationPolicyArgs triggers) {
             return triggers(Output.of(triggers));
         }
 
+        /**
+         * @param workflowManagement The access control configuration for workflow management.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowManagement(@Nullable Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement) {
             $.workflowManagement = workflowManagement;
             return this;
         }
 
+        /**
+         * @param workflowManagement The access control configuration for workflow management.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowManagement(FlowAccessControlConfigurationPolicyArgs workflowManagement) {
             return workflowManagement(Output.of(workflowManagement));
         }

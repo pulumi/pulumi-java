@@ -24,6 +24,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alertManagerDefinition")
     private @Nullable Output<String> alertManagerDefinition;
 
+    /**
+     * @return The AMP Workspace alert manager definition data
+     * 
+     */
     public Optional<Output<String>> alertManagerDefinition() {
         return Optional.ofNullable(this.alertManagerDefinition);
     }
@@ -35,6 +39,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alias")
     private @Nullable Output<String> alias;
 
+    /**
+     * @return AMP Workspace alias.
+     * 
+     */
     public Optional<Output<String>> alias() {
         return Optional.ofNullable(this.alias);
     }
@@ -46,6 +54,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<WorkspaceTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<WorkspaceTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -76,33 +88,75 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertManagerDefinition The AMP Workspace alert manager definition data
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertManagerDefinition(@Nullable Output<String> alertManagerDefinition) {
             $.alertManagerDefinition = alertManagerDefinition;
             return this;
         }
 
+        /**
+         * @param alertManagerDefinition The AMP Workspace alert manager definition data
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertManagerDefinition(String alertManagerDefinition) {
             return alertManagerDefinition(Output.of(alertManagerDefinition));
         }
 
+        /**
+         * @param alias AMP Workspace alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(@Nullable Output<String> alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param alias AMP Workspace alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             return alias(Output.of(alias));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<WorkspaceTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<WorkspaceTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(WorkspaceTagArgs... tags) {
             return tags(List.of(tags));
         }

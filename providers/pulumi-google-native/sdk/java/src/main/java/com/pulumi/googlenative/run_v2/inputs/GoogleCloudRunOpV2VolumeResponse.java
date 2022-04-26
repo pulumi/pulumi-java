@@ -25,6 +25,10 @@ public final class GoogleCloudRunOpV2VolumeResponse extends com.pulumi.resources
     @Import(name="cloudSqlInstance", required=true)
     private GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance;
 
+    /**
+     * @return For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run.
+     * 
+     */
     public GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance() {
         return this.cloudSqlInstance;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudRunOpV2VolumeResponse extends com.pulumi.resources
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Volume&#39;s name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudRunOpV2VolumeResponse extends com.pulumi.resources
     @Import(name="secret", required=true)
     private GoogleCloudRunOpV2SecretVolumeSourceResponse secret;
 
+    /**
+     * @return Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+     * 
+     */
     public GoogleCloudRunOpV2SecretVolumeSourceResponse secret() {
         return this.secret;
     }
@@ -77,16 +89,34 @@ public final class GoogleCloudRunOpV2VolumeResponse extends com.pulumi.resources
             $ = new GoogleCloudRunOpV2VolumeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudSqlInstance For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSqlInstance(GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance) {
             $.cloudSqlInstance = cloudSqlInstance;
             return this;
         }
 
+        /**
+         * @param name Volume&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param secret Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(GoogleCloudRunOpV2SecretVolumeSourceResponse secret) {
             $.secret = secret;
             return this;

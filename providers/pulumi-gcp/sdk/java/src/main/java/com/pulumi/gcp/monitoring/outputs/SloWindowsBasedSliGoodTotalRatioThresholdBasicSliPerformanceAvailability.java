@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability {
     /**
-     * Whether an availability SLI is enabled or not. Must be set to ` true. Defaults to  `true`.
+     * @return Whether an availability SLI is enabled or not. Must be set to ` true. Defaults to  `true`.
      * 
      */
     private final @Nullable Boolean enabled;
@@ -23,9 +23,9 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
     }
 
     /**
-     * Whether an availability SLI is enabled or not. Must be set to ` true. Defaults to  `true`.
+     * @return Whether an availability SLI is enabled or not. Must be set to ` true. Defaults to  `true`.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }

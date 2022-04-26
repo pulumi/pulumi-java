@@ -21,6 +21,10 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
     @Import(name="headerBehavior", required=true)
     private String headerBehavior;
 
+    /**
+     * @return Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
+     * 
+     */
     public String headerBehavior() {
         return this.headerBehavior;
     }
@@ -32,6 +36,10 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
     @Import(name="headers", required=true)
     private List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers;
 
+    /**
+     * @return Object that contains a list of header names. See Items for more information.
+     * 
+     */
     public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers() {
         return this.headers;
     }
@@ -61,16 +69,34 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
             $ = new GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerBehavior Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerBehavior(String headerBehavior) {
             $.headerBehavior = headerBehavior;
             return this;
         }
 
+        /**
+         * @param headers Object that contains a list of header names. See Items for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers Object that contains a list of header names. See Items for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader... headers) {
             return headers(List.of(headers));
         }

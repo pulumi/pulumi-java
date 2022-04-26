@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ApigatewayBackendConfigResponse {
     /**
-     * Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend). This may either be the Service Account&#39;s email (i.e. &#34;{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com&#34;) or its full resource name (i.e. &#34;projects/{PROJECT}/accounts/{UNIQUE_ID}&#34;). This is most often used when the backend is a GCP resource such as a Cloud Run Service or an IAP-secured service. Note that this token is always sent as an authorization header bearer token. The audience of the OIDC token is configured in the associated Service Config in the BackendRule option (https://github.com/googleapis/googleapis/blob/master/google/api/backend.proto#L125).
+     * @return Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend). This may either be the Service Account&#39;s email (i.e. &#34;{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com&#34;) or its full resource name (i.e. &#34;projects/{PROJECT}/accounts/{UNIQUE_ID}&#34;). This is most often used when the backend is a GCP resource such as a Cloud Run Service or an IAP-secured service. Note that this token is always sent as an authorization header bearer token. The audience of the OIDC token is configured in the associated Service Config in the BackendRule option (https://github.com/googleapis/googleapis/blob/master/google/api/backend.proto#L125).
      * 
      */
     private final String googleServiceAccount;
@@ -21,9 +21,9 @@ public final class ApigatewayBackendConfigResponse {
     }
 
     /**
-     * Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend). This may either be the Service Account&#39;s email (i.e. &#34;{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com&#34;) or its full resource name (i.e. &#34;projects/{PROJECT}/accounts/{UNIQUE_ID}&#34;). This is most often used when the backend is a GCP resource such as a Cloud Run Service or an IAP-secured service. Note that this token is always sent as an authorization header bearer token. The audience of the OIDC token is configured in the associated Service Config in the BackendRule option (https://github.com/googleapis/googleapis/blob/master/google/api/backend.proto#L125).
+     * @return Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend). This may either be the Service Account&#39;s email (i.e. &#34;{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com&#34;) or its full resource name (i.e. &#34;projects/{PROJECT}/accounts/{UNIQUE_ID}&#34;). This is most often used when the backend is a GCP resource such as a Cloud Run Service or an IAP-secured service. Note that this token is always sent as an authorization header bearer token. The audience of the OIDC token is configured in the associated Service Config in the BackendRule option (https://github.com/googleapis/googleapis/blob/master/google/api/backend.proto#L125).
      * 
-    */
+     */
     public String googleServiceAccount() {
         return this.googleServiceAccount;
     }

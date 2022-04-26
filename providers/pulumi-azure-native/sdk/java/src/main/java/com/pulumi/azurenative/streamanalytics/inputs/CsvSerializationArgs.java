@@ -29,6 +29,10 @@ public final class CsvSerializationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="encoding")
     private @Nullable Output<Either<String,Encoding>> encoding;
 
+    /**
+     * @return Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<Either<String,Encoding>>> encoding() {
         return Optional.ofNullable(this.encoding);
     }
@@ -40,6 +44,10 @@ public final class CsvSerializationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="fieldDelimiter")
     private @Nullable Output<String> fieldDelimiter;
 
+    /**
+     * @return Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> fieldDelimiter() {
         return Optional.ofNullable(this.fieldDelimiter);
     }
@@ -52,6 +60,11 @@ public final class CsvSerializationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
+     * Expected value is &#39;Csv&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -82,37 +95,87 @@ public final class CsvSerializationArgs extends com.pulumi.resources.ResourceArg
             $ = new CsvSerializationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encoding Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(@Nullable Output<Either<String,Encoding>> encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param encoding Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(Either<String,Encoding> encoding) {
             return encoding(Output.of(encoding));
         }
 
+        /**
+         * @param encoding Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(String encoding) {
             return encoding(Either.ofLeft(encoding));
         }
 
+        /**
+         * @param encoding Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(Encoding encoding) {
             return encoding(Either.ofRight(encoding));
         }
 
+        /**
+         * @param fieldDelimiter Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
             $.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
+        /**
+         * @param fieldDelimiter Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldDelimiter(String fieldDelimiter) {
             return fieldDelimiter(Output.of(fieldDelimiter));
         }
 
+        /**
+         * @param type Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Csv&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Csv&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -22,6 +22,10 @@ public final class VmUptimeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="daysPerMonth")
     private @Nullable Output<Double> daysPerMonth;
 
+    /**
+     * @return Number of days in a month for VM uptime.
+     * 
+     */
     public Optional<Output<Double>> daysPerMonth() {
         return Optional.ofNullable(this.daysPerMonth);
     }
@@ -33,6 +37,10 @@ public final class VmUptimeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hoursPerDay")
     private @Nullable Output<Double> hoursPerDay;
 
+    /**
+     * @return Number of hours per day for VM uptime.
+     * 
+     */
     public Optional<Output<Double>> hoursPerDay() {
         return Optional.ofNullable(this.hoursPerDay);
     }
@@ -62,20 +70,44 @@ public final class VmUptimeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VmUptimeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysPerMonth Number of days in a month for VM uptime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysPerMonth(@Nullable Output<Double> daysPerMonth) {
             $.daysPerMonth = daysPerMonth;
             return this;
         }
 
+        /**
+         * @param daysPerMonth Number of days in a month for VM uptime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysPerMonth(Double daysPerMonth) {
             return daysPerMonth(Output.of(daysPerMonth));
         }
 
+        /**
+         * @param hoursPerDay Number of hours per day for VM uptime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hoursPerDay(@Nullable Output<Double> hoursPerDay) {
             $.hoursPerDay = hoursPerDay;
             return this;
         }
 
+        /**
+         * @param hoursPerDay Number of hours per day for VM uptime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hoursPerDay(Double hoursPerDay) {
             return hoursPerDay(Output.of(hoursPerDay));
         }

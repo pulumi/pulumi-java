@@ -29,6 +29,12 @@ public final class ServiceTypeDeltaHealthPolicyArgs extends com.pulumi.resources
     @Import(name="maxPercentDeltaUnhealthyServices")
     private @Nullable Output<Integer> maxPercentDeltaUnhealthyServices;
 
+    /**
+     * @return The maximum allowed percentage of services health degradation allowed during cluster upgrades.
+     * The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
+     * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+     * 
+     */
     public Optional<Output<Integer>> maxPercentDeltaUnhealthyServices() {
         return Optional.ofNullable(this.maxPercentDeltaUnhealthyServices);
     }
@@ -57,11 +63,27 @@ public final class ServiceTypeDeltaHealthPolicyArgs extends com.pulumi.resources
             $ = new ServiceTypeDeltaHealthPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxPercentDeltaUnhealthyServices The maximum allowed percentage of services health degradation allowed during cluster upgrades.
+         * The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
+         * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentDeltaUnhealthyServices(@Nullable Output<Integer> maxPercentDeltaUnhealthyServices) {
             $.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices;
             return this;
         }
 
+        /**
+         * @param maxPercentDeltaUnhealthyServices The maximum allowed percentage of services health degradation allowed during cluster upgrades.
+         * The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
+         * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentDeltaUnhealthyServices(Integer maxPercentDeltaUnhealthyServices) {
             return maxPercentDeltaUnhealthyServices(Output.of(maxPercentDeltaUnhealthyServices));
         }

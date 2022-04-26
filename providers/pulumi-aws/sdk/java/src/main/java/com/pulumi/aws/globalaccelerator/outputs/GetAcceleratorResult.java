@@ -20,7 +20,7 @@ public final class GetAcceleratorResult {
     private final Boolean enabled;
     private final String hostedZoneId;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -69,9 +69,9 @@ public final class GetAcceleratorResult {
         return this.hostedZoneId;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

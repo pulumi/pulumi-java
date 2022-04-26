@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class TestCaseReferenceResponse {
     /**
-     * The name of the class.
+     * @return The name of the class.
      * 
      */
     private final String className;
     /**
-     * The name of the test case. Required.
+     * @return The name of the test case. Required.
      * 
      */
     private final String name;
     /**
-     * The name of the test suite to which this test case belongs.
+     * @return The name of the test suite to which this test case belongs.
      * 
      */
     private final String testSuiteName;
@@ -36,23 +36,23 @@ public final class TestCaseReferenceResponse {
     }
 
     /**
-     * The name of the class.
+     * @return The name of the class.
      * 
-    */
+     */
     public String className() {
         return this.className;
     }
     /**
-     * The name of the test case. Required.
+     * @return The name of the test case. Required.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The name of the test suite to which this test case belongs.
+     * @return The name of the test suite to which this test case belongs.
      * 
-    */
+     */
     public String testSuiteName() {
         return this.testSuiteName;
     }

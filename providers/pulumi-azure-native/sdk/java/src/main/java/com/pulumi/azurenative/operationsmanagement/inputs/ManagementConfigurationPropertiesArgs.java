@@ -29,6 +29,10 @@ public final class ManagementConfigurationPropertiesArgs extends com.pulumi.reso
     @Import(name="applicationId")
     private @Nullable Output<String> applicationId;
 
+    /**
+     * @return The applicationId of the appliance for this Management.
+     * 
+     */
     public Optional<Output<String>> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -40,6 +44,10 @@ public final class ManagementConfigurationPropertiesArgs extends com.pulumi.reso
     @Import(name="parameters", required=true)
     private Output<List<ArmTemplateParameterArgs>> parameters;
 
+    /**
+     * @return Parameters to run the ARM template
+     * 
+     */
     public Output<List<ArmTemplateParameterArgs>> parameters() {
         return this.parameters;
     }
@@ -51,6 +59,10 @@ public final class ManagementConfigurationPropertiesArgs extends com.pulumi.reso
     @Import(name="parentResourceType", required=true)
     private Output<String> parentResourceType;
 
+    /**
+     * @return The type of the parent resource.
+     * 
+     */
     public Output<String> parentResourceType() {
         return this.parentResourceType;
     }
@@ -62,6 +74,10 @@ public final class ManagementConfigurationPropertiesArgs extends com.pulumi.reso
     @Import(name="template", required=true)
     private Output<Object> template;
 
+    /**
+     * @return The Json object containing the ARM template to deploy
+     * 
+     */
     public Output<Object> template() {
         return this.template;
     }
@@ -93,42 +109,96 @@ public final class ManagementConfigurationPropertiesArgs extends com.pulumi.reso
             $ = new ManagementConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The applicationId of the appliance for this Management.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId The applicationId of the appliance for this Management.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }
 
+        /**
+         * @param parameters Parameters to run the ARM template
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Output<List<ArmTemplateParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters to run the ARM template
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<ArmTemplateParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters Parameters to run the ARM template
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ArmTemplateParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param parentResourceType The type of the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourceType(Output<String> parentResourceType) {
             $.parentResourceType = parentResourceType;
             return this;
         }
 
+        /**
+         * @param parentResourceType The type of the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourceType(String parentResourceType) {
             return parentResourceType(Output.of(parentResourceType));
         }
 
+        /**
+         * @param template The Json object containing the ARM template to deploy
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(Output<Object> template) {
             $.template = template;
             return this;
         }
 
+        /**
+         * @param template The Json object containing the ARM template to deploy
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(Object template) {
             return template(Output.of(template));
         }

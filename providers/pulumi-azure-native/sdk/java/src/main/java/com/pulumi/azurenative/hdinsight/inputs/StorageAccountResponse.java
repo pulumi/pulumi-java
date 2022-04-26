@@ -26,6 +26,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="container")
     private @Nullable String container;
 
+    /**
+     * @return The container in the storage account, only to be specified for WASB storage accounts.
+     * 
+     */
     public Optional<String> container() {
         return Optional.ofNullable(this.container);
     }
@@ -37,6 +41,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="fileSystem")
     private @Nullable String fileSystem;
 
+    /**
+     * @return The filesystem, only to be specified for Azure Data Lake Storage Gen 2.
+     * 
+     */
     public Optional<String> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
@@ -48,6 +56,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="fileshare")
     private @Nullable String fileshare;
 
+    /**
+     * @return The file share name.
+     * 
+     */
     public Optional<String> fileshare() {
         return Optional.ofNullable(this.fileshare);
     }
@@ -59,6 +71,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="isDefault")
     private @Nullable Boolean isDefault;
 
+    /**
+     * @return Whether or not the storage account is the default storage account.
+     * 
+     */
     public Optional<Boolean> isDefault() {
         return Optional.ofNullable(this.isDefault);
     }
@@ -70,6 +86,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="key")
     private @Nullable String key;
 
+    /**
+     * @return The storage account access key.
+     * 
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
@@ -81,6 +101,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="msiResourceId")
     private @Nullable String msiResourceId;
 
+    /**
+     * @return The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.
+     * 
+     */
     public Optional<String> msiResourceId() {
         return Optional.ofNullable(this.msiResourceId);
     }
@@ -92,6 +116,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the storage account.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -103,6 +131,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -114,6 +146,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="saskey")
     private @Nullable String saskey;
 
+    /**
+     * @return The shared access signature key.
+     * 
+     */
     public Optional<String> saskey() {
         return Optional.ofNullable(this.saskey);
     }
@@ -150,46 +186,100 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
             $ = new StorageAccountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param container The container in the storage account, only to be specified for WASB storage accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(@Nullable String container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param fileSystem The filesystem, only to be specified for Azure Data Lake Storage Gen 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(@Nullable String fileSystem) {
             $.fileSystem = fileSystem;
             return this;
         }
 
+        /**
+         * @param fileshare The file share name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileshare(@Nullable String fileshare) {
             $.fileshare = fileshare;
             return this;
         }
 
+        /**
+         * @param isDefault Whether or not the storage account is the default storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDefault(@Nullable Boolean isDefault) {
             $.isDefault = isDefault;
             return this;
         }
 
+        /**
+         * @param key The storage account access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param msiResourceId The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msiResourceId(@Nullable String msiResourceId) {
             $.msiResourceId = msiResourceId;
             return this;
         }
 
+        /**
+         * @param name The name of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceId The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param saskey The shared access signature key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saskey(@Nullable String saskey) {
             $.saskey = saskey;
             return this;

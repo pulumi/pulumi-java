@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ShieldedInstanceIntegrityPolicyResponse {
     /**
-     * Updates the integrity policy baseline using the measurements from the VM instance&#39;s most recent boot.
+     * @return Updates the integrity policy baseline using the measurements from the VM instance&#39;s most recent boot.
      * 
      */
     private final Boolean updateAutoLearnPolicy;
@@ -21,9 +21,9 @@ public final class ShieldedInstanceIntegrityPolicyResponse {
     }
 
     /**
-     * Updates the integrity policy baseline using the measurements from the VM instance&#39;s most recent boot.
+     * @return Updates the integrity policy baseline using the measurements from the VM instance&#39;s most recent boot.
      * 
-    */
+     */
     public Boolean updateAutoLearnPolicy() {
         return this.updateAutoLearnPolicy;
     }

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SoftwareUpdateConfigurationTasksResponse {
     /**
-     * Post task properties.
+     * @return Post task properties.
      * 
      */
     private final @Nullable TaskPropertiesResponse postTask;
     /**
-     * Pre task properties.
+     * @return Pre task properties.
      * 
      */
     private final @Nullable TaskPropertiesResponse preTask;
@@ -31,16 +31,16 @@ public final class SoftwareUpdateConfigurationTasksResponse {
     }
 
     /**
-     * Post task properties.
+     * @return Post task properties.
      * 
-    */
+     */
     public Optional<TaskPropertiesResponse> postTask() {
         return Optional.ofNullable(this.postTask);
     }
     /**
-     * Pre task properties.
+     * @return Pre task properties.
      * 
-    */
+     */
     public Optional<TaskPropertiesResponse> preTask() {
         return Optional.ofNullable(this.preTask);
     }

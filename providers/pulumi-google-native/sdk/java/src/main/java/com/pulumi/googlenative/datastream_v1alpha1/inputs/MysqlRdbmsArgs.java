@@ -27,6 +27,10 @@ public final class MysqlRdbmsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mysqlDatabases")
     private @Nullable Output<List<MysqlDatabaseArgs>> mysqlDatabases;
 
+    /**
+     * @return Mysql databases on the server
+     * 
+     */
     public Optional<Output<List<MysqlDatabaseArgs>>> mysqlDatabases() {
         return Optional.ofNullable(this.mysqlDatabases);
     }
@@ -55,15 +59,33 @@ public final class MysqlRdbmsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MysqlRdbmsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mysqlDatabases Mysql databases on the server
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlDatabases(@Nullable Output<List<MysqlDatabaseArgs>> mysqlDatabases) {
             $.mysqlDatabases = mysqlDatabases;
             return this;
         }
 
+        /**
+         * @param mysqlDatabases Mysql databases on the server
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlDatabases(List<MysqlDatabaseArgs> mysqlDatabases) {
             return mysqlDatabases(Output.of(mysqlDatabases));
         }
 
+        /**
+         * @param mysqlDatabases Mysql databases on the server
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlDatabases(MysqlDatabaseArgs... mysqlDatabases) {
             return mysqlDatabases(List.of(mysqlDatabases));
         }

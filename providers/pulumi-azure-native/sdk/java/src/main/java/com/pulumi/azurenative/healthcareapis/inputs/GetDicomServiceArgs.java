@@ -19,6 +19,10 @@ public final class GetDicomServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dicomServiceName", required=true)
     private String dicomServiceName;
 
+    /**
+     * @return The name of DICOM Service resource.
+     * 
+     */
     public String dicomServiceName() {
         return this.dicomServiceName;
     }
@@ -30,6 +34,10 @@ public final class GetDicomServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the service instance.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetDicomServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of workspace resource.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -71,16 +83,34 @@ public final class GetDicomServiceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDicomServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dicomServiceName The name of DICOM Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dicomServiceName(String dicomServiceName) {
             $.dicomServiceName = dicomServiceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of workspace resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

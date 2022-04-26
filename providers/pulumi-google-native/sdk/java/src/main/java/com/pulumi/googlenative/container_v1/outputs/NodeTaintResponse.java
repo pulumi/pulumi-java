@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class NodeTaintResponse {
     /**
-     * Effect for taint.
+     * @return Effect for taint.
      * 
      */
     private final String effect;
     /**
-     * Key for taint.
+     * @return Key for taint.
      * 
      */
     private final String key;
     /**
-     * Value for taint.
+     * @return Value for taint.
      * 
      */
     private final String value;
@@ -36,23 +36,23 @@ public final class NodeTaintResponse {
     }
 
     /**
-     * Effect for taint.
+     * @return Effect for taint.
      * 
-    */
+     */
     public String effect() {
         return this.effect;
     }
     /**
-     * Key for taint.
+     * @return Key for taint.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Value for taint.
+     * @return Value for taint.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

@@ -17,72 +17,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetGatewayResult {
     /**
-     * User readable description of the gateway.
+     * @return User readable description of the gateway.
      * 
      */
     private final @Nullable String description;
     /**
-     * Network that the Application is using.
+     * @return Network that the Application is using.
      * 
      */
     private final NetworkRefResponse destinationNetwork;
     /**
-     * Configuration for http connectivity for this gateway.
+     * @return Configuration for http connectivity for this gateway.
      * 
      */
     private final @Nullable List<HttpConfigResponse> http;
     /**
-     * Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * IP address of the gateway. This is populated in the response and is ignored for incoming requests.
+     * @return IP address of the gateway. This is populated in the response and is ignored for incoming requests.
      * 
      */
     private final String ipAddress;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * State of the resource.
+     * @return State of the resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Network the gateway should listen on for requests.
+     * @return Network the gateway should listen on for requests.
      * 
      */
     private final NetworkRefResponse sourceNetwork;
     /**
-     * Status of the resource.
+     * @return Status of the resource.
      * 
      */
     private final String status;
     /**
-     * Gives additional information about the current status of the gateway.
+     * @return Gives additional information about the current status of the gateway.
      * 
      */
     private final String statusDetails;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Configuration for tcp connectivity for this gateway.
+     * @return Configuration for tcp connectivity for this gateway.
      * 
      */
     private final @Nullable List<TcpConfigResponse> tcp;
     /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
     private final String type;
@@ -120,100 +120,100 @@ public final class GetGatewayResult {
     }
 
     /**
-     * User readable description of the gateway.
+     * @return User readable description of the gateway.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Network that the Application is using.
+     * @return Network that the Application is using.
      * 
-    */
+     */
     public NetworkRefResponse destinationNetwork() {
         return this.destinationNetwork;
     }
     /**
-     * Configuration for http connectivity for this gateway.
+     * @return Configuration for http connectivity for this gateway.
      * 
-    */
+     */
     public List<HttpConfigResponse> http() {
         return this.http == null ? List.of() : this.http;
     }
     /**
-     * Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * IP address of the gateway. This is populated in the response and is ignored for incoming requests.
+     * @return IP address of the gateway. This is populated in the response and is ignored for incoming requests.
      * 
-    */
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * State of the resource.
+     * @return State of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Network the gateway should listen on for requests.
+     * @return Network the gateway should listen on for requests.
      * 
-    */
+     */
     public NetworkRefResponse sourceNetwork() {
         return this.sourceNetwork;
     }
     /**
-     * Status of the resource.
+     * @return Status of the resource.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Gives additional information about the current status of the gateway.
+     * @return Gives additional information about the current status of the gateway.
      * 
-    */
+     */
     public String statusDetails() {
         return this.statusDetails;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Configuration for tcp connectivity for this gateway.
+     * @return Configuration for tcp connectivity for this gateway.
      * 
-    */
+     */
     public List<TcpConfigResponse> tcp() {
         return this.tcp == null ? List.of() : this.tcp;
     }
     /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

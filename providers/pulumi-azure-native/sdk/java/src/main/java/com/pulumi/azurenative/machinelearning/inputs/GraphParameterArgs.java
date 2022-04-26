@@ -30,6 +30,10 @@ public final class GraphParameterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of this graph parameter.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -41,6 +45,10 @@ public final class GraphParameterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="links", required=true)
     private Output<List<GraphParameterLinkArgs>> links;
 
+    /**
+     * @return Association links for this parameter to nodes in the graph.
+     * 
+     */
     public Output<List<GraphParameterLinkArgs>> links() {
         return this.links;
     }
@@ -52,6 +60,10 @@ public final class GraphParameterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
     private Output<Either<String,ParameterType>> type;
 
+    /**
+     * @return Graph parameter&#39;s type.
+     * 
+     */
     public Output<Either<String,ParameterType>> type() {
         return this.type;
     }
@@ -82,41 +94,95 @@ public final class GraphParameterArgs extends com.pulumi.resources.ResourceArgs 
             $ = new GraphParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of this graph parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of this graph parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param links Association links for this parameter to nodes in the graph.
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(Output<List<GraphParameterLinkArgs>> links) {
             $.links = links;
             return this;
         }
 
+        /**
+         * @param links Association links for this parameter to nodes in the graph.
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(List<GraphParameterLinkArgs> links) {
             return links(Output.of(links));
         }
 
+        /**
+         * @param links Association links for this parameter to nodes in the graph.
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(GraphParameterLinkArgs... links) {
             return links(List.of(links));
         }
 
+        /**
+         * @param type Graph parameter&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,ParameterType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Graph parameter&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ParameterType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Graph parameter&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Graph parameter&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ParameterType type) {
             return type(Either.ofRight(type));
         }

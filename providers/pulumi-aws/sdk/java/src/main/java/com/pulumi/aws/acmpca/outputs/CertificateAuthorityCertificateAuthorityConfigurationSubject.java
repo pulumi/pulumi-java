@@ -12,67 +12,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateAuthorityCertificateAuthorityConfigurationSubject {
     /**
-     * Fully qualified domain name (FQDN) associated with the certificate subject. Must be less than or equal to 64 characters in length.
+     * @return Fully qualified domain name (FQDN) associated with the certificate subject. Must be less than or equal to 64 characters in length.
      * 
      */
     private final @Nullable String commonName;
     /**
-     * Two digit code that specifies the country in which the certificate subject located. Must be less than or equal to 2 characters in length.
+     * @return Two digit code that specifies the country in which the certificate subject located. Must be less than or equal to 2 characters in length.
      * 
      */
     private final @Nullable String country;
     /**
-     * Disambiguating information for the certificate subject. Must be less than or equal to 64 characters in length.
+     * @return Disambiguating information for the certificate subject. Must be less than or equal to 64 characters in length.
      * 
      */
     private final @Nullable String distinguishedNameQualifier;
     /**
-     * Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third. Must be less than or equal to 3 characters in length.
+     * @return Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third. Must be less than or equal to 3 characters in length.
      * 
      */
     private final @Nullable String generationQualifier;
     /**
-     * First name. Must be less than or equal to 16 characters in length.
+     * @return First name. Must be less than or equal to 16 characters in length.
      * 
      */
     private final @Nullable String givenName;
     /**
-     * Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`. Must be less than or equal to 5 characters in length.
+     * @return Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`. Must be less than or equal to 5 characters in length.
      * 
      */
     private final @Nullable String initials;
     /**
-     * The locality (such as a city or town) in which the certificate subject is located. Must be less than or equal to 128 characters in length.
+     * @return The locality (such as a city or town) in which the certificate subject is located. Must be less than or equal to 128 characters in length.
      * 
      */
     private final @Nullable String locality;
     /**
-     * Legal name of the organization with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
+     * @return Legal name of the organization with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
      * 
      */
     private final @Nullable String organization;
     /**
-     * A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
+     * @return A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
      * 
      */
     private final @Nullable String organizationalUnit;
     /**
-     * Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza. Must be less than or equal to 128 characters in length.
+     * @return Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza. Must be less than or equal to 128 characters in length.
      * 
      */
     private final @Nullable String pseudonym;
     /**
-     * State in which the subject of the certificate is located. Must be less than or equal to 128 characters in length.
+     * @return State in which the subject of the certificate is located. Must be less than or equal to 128 characters in length.
      * 
      */
     private final @Nullable String state;
     /**
-     * Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first. Must be less than or equal to 40 characters in length.
+     * @return Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first. Must be less than or equal to 40 characters in length.
      * 
      */
     private final @Nullable String surname;
     /**
-     * A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject. Must be less than or equal to 64 characters in length.
+     * @return A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject. Must be less than or equal to 64 characters in length.
      * 
      */
     private final @Nullable String title;
@@ -108,93 +108,93 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubject 
     }
 
     /**
-     * Fully qualified domain name (FQDN) associated with the certificate subject. Must be less than or equal to 64 characters in length.
+     * @return Fully qualified domain name (FQDN) associated with the certificate subject. Must be less than or equal to 64 characters in length.
      * 
-    */
+     */
     public Optional<String> commonName() {
         return Optional.ofNullable(this.commonName);
     }
     /**
-     * Two digit code that specifies the country in which the certificate subject located. Must be less than or equal to 2 characters in length.
+     * @return Two digit code that specifies the country in which the certificate subject located. Must be less than or equal to 2 characters in length.
      * 
-    */
+     */
     public Optional<String> country() {
         return Optional.ofNullable(this.country);
     }
     /**
-     * Disambiguating information for the certificate subject. Must be less than or equal to 64 characters in length.
+     * @return Disambiguating information for the certificate subject. Must be less than or equal to 64 characters in length.
      * 
-    */
+     */
     public Optional<String> distinguishedNameQualifier() {
         return Optional.ofNullable(this.distinguishedNameQualifier);
     }
     /**
-     * Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third. Must be less than or equal to 3 characters in length.
+     * @return Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third. Must be less than or equal to 3 characters in length.
      * 
-    */
+     */
     public Optional<String> generationQualifier() {
         return Optional.ofNullable(this.generationQualifier);
     }
     /**
-     * First name. Must be less than or equal to 16 characters in length.
+     * @return First name. Must be less than or equal to 16 characters in length.
      * 
-    */
+     */
     public Optional<String> givenName() {
         return Optional.ofNullable(this.givenName);
     }
     /**
-     * Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`. Must be less than or equal to 5 characters in length.
+     * @return Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`. Must be less than or equal to 5 characters in length.
      * 
-    */
+     */
     public Optional<String> initials() {
         return Optional.ofNullable(this.initials);
     }
     /**
-     * The locality (such as a city or town) in which the certificate subject is located. Must be less than or equal to 128 characters in length.
+     * @return The locality (such as a city or town) in which the certificate subject is located. Must be less than or equal to 128 characters in length.
      * 
-    */
+     */
     public Optional<String> locality() {
         return Optional.ofNullable(this.locality);
     }
     /**
-     * Legal name of the organization with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
+     * @return Legal name of the organization with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
      * 
-    */
+     */
     public Optional<String> organization() {
         return Optional.ofNullable(this.organization);
     }
     /**
-     * A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
+     * @return A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
      * 
-    */
+     */
     public Optional<String> organizationalUnit() {
         return Optional.ofNullable(this.organizationalUnit);
     }
     /**
-     * Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza. Must be less than or equal to 128 characters in length.
+     * @return Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza. Must be less than or equal to 128 characters in length.
      * 
-    */
+     */
     public Optional<String> pseudonym() {
         return Optional.ofNullable(this.pseudonym);
     }
     /**
-     * State in which the subject of the certificate is located. Must be less than or equal to 128 characters in length.
+     * @return State in which the subject of the certificate is located. Must be less than or equal to 128 characters in length.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first. Must be less than or equal to 40 characters in length.
+     * @return Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first. Must be less than or equal to 40 characters in length.
      * 
-    */
+     */
     public Optional<String> surname() {
         return Optional.ofNullable(this.surname);
     }
     /**
-     * A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject. Must be less than or equal to 64 characters in length.
+     * @return A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject. Must be less than or equal to 64 characters in length.
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }

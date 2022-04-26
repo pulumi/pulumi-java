@@ -23,6 +23,10 @@ public final class AppEngineHttpTargetResponse extends com.pulumi.resources.Invo
     @Import(name="appEngineRoutingOverride", required=true)
     private AppEngineRoutingResponse appEngineRoutingOverride;
 
+    /**
+     * @return Overrides for the task-level app_engine_routing. If set, `app_engine_routing_override` is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.
+     * 
+     */
     public AppEngineRoutingResponse appEngineRoutingOverride() {
         return this.appEngineRoutingOverride;
     }
@@ -51,6 +55,12 @@ public final class AppEngineHttpTargetResponse extends com.pulumi.resources.Invo
             $ = new AppEngineHttpTargetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appEngineRoutingOverride Overrides for the task-level app_engine_routing. If set, `app_engine_routing_override` is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appEngineRoutingOverride(AppEngineRoutingResponse appEngineRoutingOverride) {
             $.appEngineRoutingOverride = appEngineRoutingOverride;
             return this;

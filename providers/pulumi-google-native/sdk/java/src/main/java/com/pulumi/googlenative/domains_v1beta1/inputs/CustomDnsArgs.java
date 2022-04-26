@@ -28,6 +28,10 @@ public final class CustomDnsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dsRecords")
     private @Nullable Output<List<DsRecordArgs>> dsRecords;
 
+    /**
+     * @return The list of DS records for this domain, which are used to enable DNSSEC. The domain&#39;s DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
+     * 
+     */
     public Optional<Output<List<DsRecordArgs>>> dsRecords() {
         return Optional.ofNullable(this.dsRecords);
     }
@@ -39,6 +43,10 @@ public final class CustomDnsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nameServers", required=true)
     private Output<List<String>> nameServers;
 
+    /**
+     * @return A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.
+     * 
+     */
     public Output<List<String>> nameServers() {
         return this.nameServers;
     }
@@ -68,28 +76,64 @@ public final class CustomDnsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CustomDnsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dsRecords The list of DS records for this domain, which are used to enable DNSSEC. The domain&#39;s DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dsRecords(@Nullable Output<List<DsRecordArgs>> dsRecords) {
             $.dsRecords = dsRecords;
             return this;
         }
 
+        /**
+         * @param dsRecords The list of DS records for this domain, which are used to enable DNSSEC. The domain&#39;s DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dsRecords(List<DsRecordArgs> dsRecords) {
             return dsRecords(Output.of(dsRecords));
         }
 
+        /**
+         * @param dsRecords The list of DS records for this domain, which are used to enable DNSSEC. The domain&#39;s DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dsRecords(DsRecordArgs... dsRecords) {
             return dsRecords(List.of(dsRecords));
         }
 
+        /**
+         * @param nameServers A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameServers(Output<List<String>> nameServers) {
             $.nameServers = nameServers;
             return this;
         }
 
+        /**
+         * @param nameServers A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameServers(List<String> nameServers) {
             return nameServers(Output.of(nameServers));
         }
 
+        /**
+         * @param nameServers A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameServers(String... nameServers) {
             return nameServers(List.of(nameServers));
         }

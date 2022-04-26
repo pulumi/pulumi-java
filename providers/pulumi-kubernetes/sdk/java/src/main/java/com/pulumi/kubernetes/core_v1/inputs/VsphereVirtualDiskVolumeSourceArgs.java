@@ -26,6 +26,10 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
+    /**
+     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * 
+     */
     public Optional<Output<String>> fsType() {
         return Optional.ofNullable(this.fsType);
     }
@@ -37,6 +41,10 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
     @Import(name="storagePolicyID")
     private @Nullable Output<String> storagePolicyID;
 
+    /**
+     * @return Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
+     * 
+     */
     public Optional<Output<String>> storagePolicyID() {
         return Optional.ofNullable(this.storagePolicyID);
     }
@@ -48,6 +56,10 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
     @Import(name="storagePolicyName")
     private @Nullable Output<String> storagePolicyName;
 
+    /**
+     * @return Storage Policy Based Management (SPBM) profile name.
+     * 
+     */
     public Optional<Output<String>> storagePolicyName() {
         return Optional.ofNullable(this.storagePolicyName);
     }
@@ -59,6 +71,10 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
     @Import(name="volumePath", required=true)
     private Output<String> volumePath;
 
+    /**
+     * @return Path that identifies vSphere volume vmdk
+     * 
+     */
     public Output<String> volumePath() {
         return this.volumePath;
     }
@@ -90,38 +106,86 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
             $ = new VsphereVirtualDiskVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(@Nullable Output<String> fsType) {
             $.fsType = fsType;
             return this;
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(String fsType) {
             return fsType(Output.of(fsType));
         }
 
+        /**
+         * @param storagePolicyID Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storagePolicyID(@Nullable Output<String> storagePolicyID) {
             $.storagePolicyID = storagePolicyID;
             return this;
         }
 
+        /**
+         * @param storagePolicyID Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storagePolicyID(String storagePolicyID) {
             return storagePolicyID(Output.of(storagePolicyID));
         }
 
+        /**
+         * @param storagePolicyName Storage Policy Based Management (SPBM) profile name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storagePolicyName(@Nullable Output<String> storagePolicyName) {
             $.storagePolicyName = storagePolicyName;
             return this;
         }
 
+        /**
+         * @param storagePolicyName Storage Policy Based Management (SPBM) profile name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storagePolicyName(String storagePolicyName) {
             return storagePolicyName(Output.of(storagePolicyName));
         }
 
+        /**
+         * @param volumePath Path that identifies vSphere volume vmdk
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumePath(Output<String> volumePath) {
             $.volumePath = volumePath;
             return this;
         }
 
+        /**
+         * @param volumePath Path that identifies vSphere volume vmdk
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumePath(String volumePath) {
             return volumePath(Output.of(volumePath));
         }

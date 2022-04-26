@@ -24,6 +24,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentName")
     private @Nullable Output<String> environmentName;
 
+    /**
+     * @return The name of the environment.
+     * 
+     */
     public Optional<Output<String>> environmentName() {
         return Optional.ofNullable(this.environmentName);
     }
@@ -35,6 +39,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentSettingName", required=true)
     private Output<String> environmentSettingName;
 
+    /**
+     * @return The name of the environment Setting.
+     * 
+     */
     public Output<String> environmentSettingName() {
         return this.environmentSettingName;
     }
@@ -46,6 +54,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labAccountName", required=true)
     private Output<String> labAccountName;
 
+    /**
+     * @return The name of the lab Account.
+     * 
+     */
     public Output<String> labAccountName() {
         return this.labAccountName;
     }
@@ -57,6 +69,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
     private Output<String> labName;
 
+    /**
+     * @return The name of the lab.
+     * 
+     */
     public Output<String> labName() {
         return this.labName;
     }
@@ -68,6 +84,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -79,6 +99,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
     private @Nullable Output<String> provisioningState;
 
+    /**
+     * @return The provisioning status of the resource.
+     * 
+     */
     public Optional<Output<String>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -90,6 +114,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -101,6 +129,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceSets")
     private @Nullable Output<ResourceSetArgs> resourceSets;
 
+    /**
+     * @return The set of a VM and the setting id it was created for
+     * 
+     */
     public Optional<Output<ResourceSetArgs>> resourceSets() {
         return Optional.ofNullable(this.resourceSets);
     }
@@ -112,6 +144,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -123,6 +159,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uniqueIdentifier")
     private @Nullable Output<String> uniqueIdentifier;
 
+    /**
+     * @return The unique immutable identifier of a resource (Guid).
+     * 
+     */
     public Optional<Output<String>> uniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);
     }
@@ -160,92 +200,212 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environmentName The name of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(@Nullable Output<String> environmentName) {
             $.environmentName = environmentName;
             return this;
         }
 
+        /**
+         * @param environmentName The name of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(String environmentName) {
             return environmentName(Output.of(environmentName));
         }
 
+        /**
+         * @param environmentSettingName The name of the environment Setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentSettingName(Output<String> environmentSettingName) {
             $.environmentSettingName = environmentSettingName;
             return this;
         }
 
+        /**
+         * @param environmentSettingName The name of the environment Setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentSettingName(String environmentSettingName) {
             return environmentSettingName(Output.of(environmentSettingName));
         }
 
+        /**
+         * @param labAccountName The name of the lab Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labAccountName(Output<String> labAccountName) {
             $.labAccountName = labAccountName;
             return this;
         }
 
+        /**
+         * @param labAccountName The name of the lab Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labAccountName(String labAccountName) {
             return labAccountName(Output.of(labAccountName));
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(Output<String> labName) {
             $.labName = labName;
             return this;
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(String labName) {
             return labName(Output.of(labName));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param provisioningState The provisioning status of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning status of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceSets The set of a VM and the setting id it was created for
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSets(@Nullable Output<ResourceSetArgs> resourceSets) {
             $.resourceSets = resourceSets;
             return this;
         }
 
+        /**
+         * @param resourceSets The set of a VM and the setting id it was created for
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSets(ResourceSetArgs resourceSets) {
             return resourceSets(Output.of(resourceSets));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param uniqueIdentifier The unique immutable identifier of a resource (Guid).
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueIdentifier(@Nullable Output<String> uniqueIdentifier) {
             $.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
 
+        /**
+         * @param uniqueIdentifier The unique immutable identifier of a resource (Guid).
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueIdentifier(String uniqueIdentifier) {
             return uniqueIdentifier(Output.of(uniqueIdentifier));
         }

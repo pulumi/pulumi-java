@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class AnalyticsApplicationInputsKinesisStream {
     /**
-     * The ARN of the Kinesis Stream.
+     * @return The ARN of the Kinesis Stream.
      * 
      */
     private final String resourceArn;
     /**
-     * The ARN of the IAM Role used to access the stream.
+     * @return The ARN of the IAM Role used to access the stream.
      * 
      */
     private final String roleArn;
@@ -29,16 +29,16 @@ public final class AnalyticsApplicationInputsKinesisStream {
     }
 
     /**
-     * The ARN of the Kinesis Stream.
+     * @return The ARN of the Kinesis Stream.
      * 
-    */
+     */
     public String resourceArn() {
         return this.resourceArn;
     }
     /**
-     * The ARN of the IAM Role used to access the stream.
+     * @return The ARN of the IAM Role used to access the stream.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }

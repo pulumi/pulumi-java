@@ -19,6 +19,10 @@ public final class GetMongoDBResourceMongoUserDefinitionArgs extends com.pulumi.
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetMongoDBResourceMongoUserDefinitionArgs extends com.pulumi.
     @Import(name="mongoUserDefinitionId", required=true)
     private String mongoUserDefinitionId;
 
+    /**
+     * @return The ID for the User Definition {dbName.userName}.
+     * 
+     */
     public String mongoUserDefinitionId() {
         return this.mongoUserDefinitionId;
     }
@@ -41,6 +49,10 @@ public final class GetMongoDBResourceMongoUserDefinitionArgs extends com.pulumi.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetMongoDBResourceMongoUserDefinitionArgs extends com.pulumi.
             $ = new GetMongoDBResourceMongoUserDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param mongoUserDefinitionId The ID for the User Definition {dbName.userName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mongoUserDefinitionId(String mongoUserDefinitionId) {
             $.mongoUserDefinitionId = mongoUserDefinitionId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

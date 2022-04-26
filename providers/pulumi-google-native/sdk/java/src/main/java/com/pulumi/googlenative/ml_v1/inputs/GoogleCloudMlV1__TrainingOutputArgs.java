@@ -31,6 +31,10 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends com.pulumi.resour
     @Import(name="builtInAlgorithmOutput")
     private @Nullable Output<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput;
 
+    /**
+     * @return Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs>> builtInAlgorithmOutput() {
         return Optional.ofNullable(this.builtInAlgorithmOutput);
     }
@@ -42,6 +46,10 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends com.pulumi.resour
     @Import(name="completedTrialCount")
     private @Nullable Output<String> completedTrialCount;
 
+    /**
+     * @return The number of hyperparameter tuning trials that completed successfully. Only set for hyperparameter tuning jobs.
+     * 
+     */
     public Optional<Output<String>> completedTrialCount() {
         return Optional.ofNullable(this.completedTrialCount);
     }
@@ -53,6 +61,10 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends com.pulumi.resour
     @Import(name="consumedMLUnits")
     private @Nullable Output<Double> consumedMLUnits;
 
+    /**
+     * @return The amount of ML units consumed by the job.
+     * 
+     */
     public Optional<Output<Double>> consumedMLUnits() {
         return Optional.ofNullable(this.consumedMLUnits);
     }
@@ -64,6 +76,10 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends com.pulumi.resour
     @Import(name="hyperparameterMetricTag")
     private @Nullable Output<String> hyperparameterMetricTag;
 
+    /**
+     * @return The TensorFlow summary tag name used for optimizing hyperparameter tuning trials. See [`HyperparameterSpec.hyperparameterMetricTag`](#HyperparameterSpec.FIELDS.hyperparameter_metric_tag) for more information. Only set for hyperparameter tuning jobs.
+     * 
+     */
     public Optional<Output<String>> hyperparameterMetricTag() {
         return Optional.ofNullable(this.hyperparameterMetricTag);
     }
@@ -75,6 +91,10 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends com.pulumi.resour
     @Import(name="isBuiltInAlgorithmJob")
     private @Nullable Output<Boolean> isBuiltInAlgorithmJob;
 
+    /**
+     * @return Whether this job is a built-in Algorithm job.
+     * 
+     */
     public Optional<Output<Boolean>> isBuiltInAlgorithmJob() {
         return Optional.ofNullable(this.isBuiltInAlgorithmJob);
     }
@@ -86,6 +106,10 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends com.pulumi.resour
     @Import(name="isHyperparameterTuningJob")
     private @Nullable Output<Boolean> isHyperparameterTuningJob;
 
+    /**
+     * @return Whether this job is a hyperparameter tuning job.
+     * 
+     */
     public Optional<Output<Boolean>> isHyperparameterTuningJob() {
         return Optional.ofNullable(this.isHyperparameterTuningJob);
     }
@@ -97,6 +121,10 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends com.pulumi.resour
     @Import(name="trials")
     private @Nullable Output<List<GoogleCloudMlV1__HyperparameterOutputArgs>> trials;
 
+    /**
+     * @return Results for individual Hyperparameter trials. Only set for hyperparameter tuning jobs.
+     * 
+     */
     public Optional<Output<List<GoogleCloudMlV1__HyperparameterOutputArgs>>> trials() {
         return Optional.ofNullable(this.trials);
     }
@@ -131,69 +159,159 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends com.pulumi.resour
             $ = new GoogleCloudMlV1__TrainingOutputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param builtInAlgorithmOutput Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builtInAlgorithmOutput(@Nullable Output<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput) {
             $.builtInAlgorithmOutput = builtInAlgorithmOutput;
             return this;
         }
 
+        /**
+         * @param builtInAlgorithmOutput Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builtInAlgorithmOutput(GoogleCloudMlV1__BuiltInAlgorithmOutputArgs builtInAlgorithmOutput) {
             return builtInAlgorithmOutput(Output.of(builtInAlgorithmOutput));
         }
 
+        /**
+         * @param completedTrialCount The number of hyperparameter tuning trials that completed successfully. Only set for hyperparameter tuning jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completedTrialCount(@Nullable Output<String> completedTrialCount) {
             $.completedTrialCount = completedTrialCount;
             return this;
         }
 
+        /**
+         * @param completedTrialCount The number of hyperparameter tuning trials that completed successfully. Only set for hyperparameter tuning jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completedTrialCount(String completedTrialCount) {
             return completedTrialCount(Output.of(completedTrialCount));
         }
 
+        /**
+         * @param consumedMLUnits The amount of ML units consumed by the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumedMLUnits(@Nullable Output<Double> consumedMLUnits) {
             $.consumedMLUnits = consumedMLUnits;
             return this;
         }
 
+        /**
+         * @param consumedMLUnits The amount of ML units consumed by the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumedMLUnits(Double consumedMLUnits) {
             return consumedMLUnits(Output.of(consumedMLUnits));
         }
 
+        /**
+         * @param hyperparameterMetricTag The TensorFlow summary tag name used for optimizing hyperparameter tuning trials. See [`HyperparameterSpec.hyperparameterMetricTag`](#HyperparameterSpec.FIELDS.hyperparameter_metric_tag) for more information. Only set for hyperparameter tuning jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hyperparameterMetricTag(@Nullable Output<String> hyperparameterMetricTag) {
             $.hyperparameterMetricTag = hyperparameterMetricTag;
             return this;
         }
 
+        /**
+         * @param hyperparameterMetricTag The TensorFlow summary tag name used for optimizing hyperparameter tuning trials. See [`HyperparameterSpec.hyperparameterMetricTag`](#HyperparameterSpec.FIELDS.hyperparameter_metric_tag) for more information. Only set for hyperparameter tuning jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hyperparameterMetricTag(String hyperparameterMetricTag) {
             return hyperparameterMetricTag(Output.of(hyperparameterMetricTag));
         }
 
+        /**
+         * @param isBuiltInAlgorithmJob Whether this job is a built-in Algorithm job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isBuiltInAlgorithmJob(@Nullable Output<Boolean> isBuiltInAlgorithmJob) {
             $.isBuiltInAlgorithmJob = isBuiltInAlgorithmJob;
             return this;
         }
 
+        /**
+         * @param isBuiltInAlgorithmJob Whether this job is a built-in Algorithm job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isBuiltInAlgorithmJob(Boolean isBuiltInAlgorithmJob) {
             return isBuiltInAlgorithmJob(Output.of(isBuiltInAlgorithmJob));
         }
 
+        /**
+         * @param isHyperparameterTuningJob Whether this job is a hyperparameter tuning job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isHyperparameterTuningJob(@Nullable Output<Boolean> isHyperparameterTuningJob) {
             $.isHyperparameterTuningJob = isHyperparameterTuningJob;
             return this;
         }
 
+        /**
+         * @param isHyperparameterTuningJob Whether this job is a hyperparameter tuning job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isHyperparameterTuningJob(Boolean isHyperparameterTuningJob) {
             return isHyperparameterTuningJob(Output.of(isHyperparameterTuningJob));
         }
 
+        /**
+         * @param trials Results for individual Hyperparameter trials. Only set for hyperparameter tuning jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trials(@Nullable Output<List<GoogleCloudMlV1__HyperparameterOutputArgs>> trials) {
             $.trials = trials;
             return this;
         }
 
+        /**
+         * @param trials Results for individual Hyperparameter trials. Only set for hyperparameter tuning jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trials(List<GoogleCloudMlV1__HyperparameterOutputArgs> trials) {
             return trials(Output.of(trials));
         }
 
+        /**
+         * @param trials Results for individual Hyperparameter trials. Only set for hyperparameter tuning jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trials(GoogleCloudMlV1__HyperparameterOutputArgs... trials) {
             return trials(List.of(trials));
         }

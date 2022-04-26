@@ -27,6 +27,10 @@ public final class DnsSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enableProxy")
     private @Nullable Boolean enableProxy;
 
+    /**
+     * @return Enable DNS Proxy on Firewalls attached to the Firewall Policy.
+     * 
+     */
     public Optional<Boolean> enableProxy() {
         return Optional.ofNullable(this.enableProxy);
     }
@@ -38,6 +42,10 @@ public final class DnsSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="requireProxyForNetworkRules")
     private @Nullable Boolean requireProxyForNetworkRules;
 
+    /**
+     * @return FQDNs in Network Rules are supported when set to true.
+     * 
+     */
     public Optional<Boolean> requireProxyForNetworkRules() {
         return Optional.ofNullable(this.requireProxyForNetworkRules);
     }
@@ -49,6 +57,10 @@ public final class DnsSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="servers")
     private @Nullable List<String> servers;
 
+    /**
+     * @return List of Custom DNS Servers.
+     * 
+     */
     public Optional<List<String>> servers() {
         return Optional.ofNullable(this.servers);
     }
@@ -79,21 +91,45 @@ public final class DnsSettingsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DnsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableProxy Enable DNS Proxy on Firewalls attached to the Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableProxy(@Nullable Boolean enableProxy) {
             $.enableProxy = enableProxy;
             return this;
         }
 
+        /**
+         * @param requireProxyForNetworkRules FQDNs in Network Rules are supported when set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireProxyForNetworkRules(@Nullable Boolean requireProxyForNetworkRules) {
             $.requireProxyForNetworkRules = requireProxyForNetworkRules;
             return this;
         }
 
+        /**
+         * @param servers List of Custom DNS Servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servers(@Nullable List<String> servers) {
             $.servers = servers;
             return this;
         }
 
+        /**
+         * @param servers List of Custom DNS Servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servers(String... servers) {
             return servers(List.of(servers));
         }

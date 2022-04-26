@@ -28,6 +28,10 @@ public final class DiscoveredArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="analysisStatus")
     private @Nullable Output<DiscoveredAnalysisStatus> analysisStatus;
 
+    /**
+     * @return The status of discovery for the resource.
+     * 
+     */
     public Optional<Output<DiscoveredAnalysisStatus>> analysisStatus() {
         return Optional.ofNullable(this.analysisStatus);
     }
@@ -39,6 +43,10 @@ public final class DiscoveredArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="analysisStatusError")
     private @Nullable Output<StatusArgs> analysisStatusError;
 
+    /**
+     * @return When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
+     * 
+     */
     public Optional<Output<StatusArgs>> analysisStatusError() {
         return Optional.ofNullable(this.analysisStatusError);
     }
@@ -50,6 +58,10 @@ public final class DiscoveredArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="continuousAnalysis")
     private @Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis;
 
+    /**
+     * @return Whether the resource is continuously analyzed.
+     * 
+     */
     public Optional<Output<DiscoveredContinuousAnalysis>> continuousAnalysis() {
         return Optional.ofNullable(this.continuousAnalysis);
     }
@@ -80,29 +92,65 @@ public final class DiscoveredArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DiscoveredArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analysisStatus The status of discovery for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisStatus(@Nullable Output<DiscoveredAnalysisStatus> analysisStatus) {
             $.analysisStatus = analysisStatus;
             return this;
         }
 
+        /**
+         * @param analysisStatus The status of discovery for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisStatus(DiscoveredAnalysisStatus analysisStatus) {
             return analysisStatus(Output.of(analysisStatus));
         }
 
+        /**
+         * @param analysisStatusError When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisStatusError(@Nullable Output<StatusArgs> analysisStatusError) {
             $.analysisStatusError = analysisStatusError;
             return this;
         }
 
+        /**
+         * @param analysisStatusError When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisStatusError(StatusArgs analysisStatusError) {
             return analysisStatusError(Output.of(analysisStatusError));
         }
 
+        /**
+         * @param continuousAnalysis Whether the resource is continuously analyzed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder continuousAnalysis(@Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis) {
             $.continuousAnalysis = continuousAnalysis;
             return this;
         }
 
+        /**
+         * @param continuousAnalysis Whether the resource is continuously analyzed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder continuousAnalysis(DiscoveredContinuousAnalysis continuousAnalysis) {
             return continuousAnalysis(Output.of(continuousAnalysis));
         }

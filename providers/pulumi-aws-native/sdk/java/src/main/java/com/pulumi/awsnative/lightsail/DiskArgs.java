@@ -26,6 +26,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addOns")
     private @Nullable Output<List<DiskAddOnArgs>> addOns;
 
+    /**
+     * @return An array of objects representing the add-ons to enable for the new instance.
+     * 
+     */
     public Optional<Output<List<DiskAddOnArgs>>> addOns() {
         return Optional.ofNullable(this.addOns);
     }
@@ -37,6 +41,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
     private @Nullable Output<String> availabilityZone;
 
+    /**
+     * @return The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
+     * 
+     */
     public Optional<Output<String>> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -48,6 +56,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskName")
     private @Nullable Output<String> diskName;
 
+    /**
+     * @return The names to use for your new Lightsail disk.
+     * 
+     */
     public Optional<Output<String>> diskName() {
         return Optional.ofNullable(this.diskName);
     }
@@ -59,6 +71,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sizeInGb", required=true)
     private Output<Integer> sizeInGb;
 
+    /**
+     * @return Size of the Lightsail disk
+     * 
+     */
     public Output<Integer> sizeInGb() {
         return this.sizeInGb;
     }
@@ -70,6 +86,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DiskTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<DiskTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -102,55 +122,127 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addOns An array of objects representing the add-ons to enable for the new instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addOns(@Nullable Output<List<DiskAddOnArgs>> addOns) {
             $.addOns = addOns;
             return this;
         }
 
+        /**
+         * @param addOns An array of objects representing the add-ons to enable for the new instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addOns(List<DiskAddOnArgs> addOns) {
             return addOns(Output.of(addOns));
         }
 
+        /**
+         * @param addOns An array of objects representing the add-ons to enable for the new instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addOns(DiskAddOnArgs... addOns) {
             return addOns(List.of(addOns));
         }
 
+        /**
+         * @param availabilityZone The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param availabilityZone The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(String availabilityZone) {
             return availabilityZone(Output.of(availabilityZone));
         }
 
+        /**
+         * @param diskName The names to use for your new Lightsail disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(@Nullable Output<String> diskName) {
             $.diskName = diskName;
             return this;
         }
 
+        /**
+         * @param diskName The names to use for your new Lightsail disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(String diskName) {
             return diskName(Output.of(diskName));
         }
 
+        /**
+         * @param sizeInGb Size of the Lightsail disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeInGb(Output<Integer> sizeInGb) {
             $.sizeInGb = sizeInGb;
             return this;
         }
 
+        /**
+         * @param sizeInGb Size of the Lightsail disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeInGb(Integer sizeInGb) {
             return sizeInGb(Output.of(sizeInGb));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DiskTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DiskTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DiskTagArgs... tags) {
             return tags(List.of(tags));
         }

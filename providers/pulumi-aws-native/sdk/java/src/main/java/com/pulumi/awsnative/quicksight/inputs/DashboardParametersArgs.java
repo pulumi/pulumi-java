@@ -30,6 +30,10 @@ public final class DashboardParametersArgs extends com.pulumi.resources.Resource
     @Import(name="dateTimeParameters")
     private @Nullable Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters;
 
+    /**
+     * @return &lt;p&gt;Date-time parameters.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<DashboardDateTimeParameterArgs>>> dateTimeParameters() {
         return Optional.ofNullable(this.dateTimeParameters);
     }
@@ -41,6 +45,10 @@ public final class DashboardParametersArgs extends com.pulumi.resources.Resource
     @Import(name="decimalParameters")
     private @Nullable Output<List<DashboardDecimalParameterArgs>> decimalParameters;
 
+    /**
+     * @return &lt;p&gt;Decimal parameters.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<DashboardDecimalParameterArgs>>> decimalParameters() {
         return Optional.ofNullable(this.decimalParameters);
     }
@@ -52,6 +60,10 @@ public final class DashboardParametersArgs extends com.pulumi.resources.Resource
     @Import(name="integerParameters")
     private @Nullable Output<List<DashboardIntegerParameterArgs>> integerParameters;
 
+    /**
+     * @return &lt;p&gt;Integer parameters.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<DashboardIntegerParameterArgs>>> integerParameters() {
         return Optional.ofNullable(this.integerParameters);
     }
@@ -63,6 +75,10 @@ public final class DashboardParametersArgs extends com.pulumi.resources.Resource
     @Import(name="stringParameters")
     private @Nullable Output<List<DashboardStringParameterArgs>> stringParameters;
 
+    /**
+     * @return &lt;p&gt;String parameters.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<DashboardStringParameterArgs>>> stringParameters() {
         return Optional.ofNullable(this.stringParameters);
     }
@@ -94,54 +110,126 @@ public final class DashboardParametersArgs extends com.pulumi.resources.Resource
             $ = new DashboardParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dateTimeParameters &lt;p&gt;Date-time parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateTimeParameters(@Nullable Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters) {
             $.dateTimeParameters = dateTimeParameters;
             return this;
         }
 
+        /**
+         * @param dateTimeParameters &lt;p&gt;Date-time parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateTimeParameters(List<DashboardDateTimeParameterArgs> dateTimeParameters) {
             return dateTimeParameters(Output.of(dateTimeParameters));
         }
 
+        /**
+         * @param dateTimeParameters &lt;p&gt;Date-time parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateTimeParameters(DashboardDateTimeParameterArgs... dateTimeParameters) {
             return dateTimeParameters(List.of(dateTimeParameters));
         }
 
+        /**
+         * @param decimalParameters &lt;p&gt;Decimal parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder decimalParameters(@Nullable Output<List<DashboardDecimalParameterArgs>> decimalParameters) {
             $.decimalParameters = decimalParameters;
             return this;
         }
 
+        /**
+         * @param decimalParameters &lt;p&gt;Decimal parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder decimalParameters(List<DashboardDecimalParameterArgs> decimalParameters) {
             return decimalParameters(Output.of(decimalParameters));
         }
 
+        /**
+         * @param decimalParameters &lt;p&gt;Decimal parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder decimalParameters(DashboardDecimalParameterArgs... decimalParameters) {
             return decimalParameters(List.of(decimalParameters));
         }
 
+        /**
+         * @param integerParameters &lt;p&gt;Integer parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder integerParameters(@Nullable Output<List<DashboardIntegerParameterArgs>> integerParameters) {
             $.integerParameters = integerParameters;
             return this;
         }
 
+        /**
+         * @param integerParameters &lt;p&gt;Integer parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder integerParameters(List<DashboardIntegerParameterArgs> integerParameters) {
             return integerParameters(Output.of(integerParameters));
         }
 
+        /**
+         * @param integerParameters &lt;p&gt;Integer parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder integerParameters(DashboardIntegerParameterArgs... integerParameters) {
             return integerParameters(List.of(integerParameters));
         }
 
+        /**
+         * @param stringParameters &lt;p&gt;String parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringParameters(@Nullable Output<List<DashboardStringParameterArgs>> stringParameters) {
             $.stringParameters = stringParameters;
             return this;
         }
 
+        /**
+         * @param stringParameters &lt;p&gt;String parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringParameters(List<DashboardStringParameterArgs> stringParameters) {
             return stringParameters(Output.of(stringParameters));
         }
 
+        /**
+         * @param stringParameters &lt;p&gt;String parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringParameters(DashboardStringParameterArgs... stringParameters) {
             return stringParameters(List.of(stringParameters));
         }

@@ -22,6 +22,10 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessId")
     private @Nullable Output<String> accessId;
 
+    /**
+     * @return The access ID of the HMAC Key.
+     * 
+     */
     public Optional<Output<String>> accessId() {
         return Optional.ofNullable(this.accessId);
     }
@@ -34,6 +38,11 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -45,6 +54,10 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="secret")
     private @Nullable Output<String> secret;
 
+    /**
+     * @return HMAC secret key material.
+     * 
+     */
     public Optional<Output<String>> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -56,6 +69,10 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountEmail")
     private @Nullable Output<String> serviceAccountEmail;
 
+    /**
+     * @return The email address of the key&#39;s associated service account.
+     * 
+     */
     public Optional<Output<String>> serviceAccountEmail() {
         return Optional.ofNullable(this.serviceAccountEmail);
     }
@@ -69,6 +86,12 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return The state of the key. Can be set to one of ACTIVE, INACTIVE.
+     * Default value is `ACTIVE`.
+     * Possible values are `ACTIVE` and `INACTIVE`.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -80,6 +103,10 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeCreated")
     private @Nullable Output<String> timeCreated;
 
+    /**
+     * @return &#39;The creation time of the HMAC key in RFC 3339 format. &#39;
+     * 
+     */
     public Optional<Output<String>> timeCreated() {
         return Optional.ofNullable(this.timeCreated);
     }
@@ -91,6 +118,10 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="updated")
     private @Nullable Output<String> updated;
 
+    /**
+     * @return &#39;The last modification time of the HMAC key metadata in RFC 3339 format.&#39;
+     * 
+     */
     public Optional<Output<String>> updated() {
         return Optional.ofNullable(this.updated);
     }
@@ -125,65 +156,155 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
             $ = new HmacKeyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessId The access ID of the HMAC Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessId(@Nullable Output<String> accessId) {
             $.accessId = accessId;
             return this;
         }
 
+        /**
+         * @param accessId The access ID of the HMAC Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessId(String accessId) {
             return accessId(Output.of(accessId));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param secret HMAC secret key material.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret HMAC secret key material.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }
 
+        /**
+         * @param serviceAccountEmail The email address of the key&#39;s associated service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
+        /**
+         * @param serviceAccountEmail The email address of the key&#39;s associated service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             return serviceAccountEmail(Output.of(serviceAccountEmail));
         }
 
+        /**
+         * @param state The state of the key. Can be set to one of ACTIVE, INACTIVE.
+         * Default value is `ACTIVE`.
+         * Possible values are `ACTIVE` and `INACTIVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of the key. Can be set to one of ACTIVE, INACTIVE.
+         * Default value is `ACTIVE`.
+         * Possible values are `ACTIVE` and `INACTIVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param timeCreated &#39;The creation time of the HMAC key in RFC 3339 format. &#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeCreated(@Nullable Output<String> timeCreated) {
             $.timeCreated = timeCreated;
             return this;
         }
 
+        /**
+         * @param timeCreated &#39;The creation time of the HMAC key in RFC 3339 format. &#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeCreated(String timeCreated) {
             return timeCreated(Output.of(timeCreated));
         }
 
+        /**
+         * @param updated &#39;The last modification time of the HMAC key metadata in RFC 3339 format.&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder updated(@Nullable Output<String> updated) {
             $.updated = updated;
             return this;
         }
 
+        /**
+         * @param updated &#39;The last modification time of the HMAC key metadata in RFC 3339 format.&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder updated(String updated) {
             return updated(Output.of(updated));
         }

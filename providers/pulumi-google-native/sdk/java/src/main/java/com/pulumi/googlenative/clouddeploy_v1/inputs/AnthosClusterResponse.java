@@ -23,6 +23,10 @@ public final class AnthosClusterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="membership", required=true)
     private String membership;
 
+    /**
+     * @return Membership of the GKE Hub registered cluster that the Skaffold configuration should be applied to. Format is `projects/{project}/locations/{location}/memberships/{membership_name}`.
+     * 
+     */
     public String membership() {
         return this.membership;
     }
@@ -51,6 +55,12 @@ public final class AnthosClusterResponse extends com.pulumi.resources.InvokeArgs
             $ = new AnthosClusterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param membership Membership of the GKE Hub registered cluster that the Skaffold configuration should be applied to. Format is `projects/{project}/locations/{location}/memberships/{membership_name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membership(String membership) {
             $.membership = membership;
             return this;

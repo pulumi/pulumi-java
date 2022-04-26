@@ -18,107 +18,107 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VpnSiteLinkConnectionResponse {
     /**
-     * Expected bandwidth in MBPS.
+     * @return Expected bandwidth in MBPS.
      * 
      */
     private final @Nullable Integer connectionBandwidth;
     /**
-     * The connection status.
+     * @return The connection status.
      * 
      */
     private final String connectionStatus;
     /**
-     * Egress bytes transferred.
+     * @return Egress bytes transferred.
      * 
      */
     private final Double egressBytesTransferred;
     /**
-     * List of egress NatRules.
+     * @return List of egress NatRules.
      * 
      */
     private final @Nullable List<SubResourceResponse> egressNatRules;
     /**
-     * EnableBgp flag.
+     * @return EnableBgp flag.
      * 
      */
     private final @Nullable Boolean enableBgp;
     /**
-     * EnableBgp flag.
+     * @return EnableBgp flag.
      * 
      */
     private final @Nullable Boolean enableRateLimiting;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Ingress bytes transferred.
+     * @return Ingress bytes transferred.
      * 
      */
     private final Double ingressBytesTransferred;
     /**
-     * List of ingress NatRules.
+     * @return List of ingress NatRules.
      * 
      */
     private final @Nullable List<SubResourceResponse> ingressNatRules;
     /**
-     * The IPSec Policies to be considered by this connection.
+     * @return The IPSec Policies to be considered by this connection.
      * 
      */
     private final @Nullable List<IpsecPolicyResponse> ipsecPolicies;
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * The provisioning state of the VPN site link connection resource.
+     * @return The provisioning state of the VPN site link connection resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Routing weight for vpn connection.
+     * @return Routing weight for vpn connection.
      * 
      */
     private final @Nullable Integer routingWeight;
     /**
-     * SharedKey for the vpn connection.
+     * @return SharedKey for the vpn connection.
      * 
      */
     private final @Nullable String sharedKey;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * Use local azure ip to initiate connection.
+     * @return Use local azure ip to initiate connection.
      * 
      */
     private final @Nullable Boolean useLocalAzureIpAddress;
     /**
-     * Enable policy-based traffic selectors.
+     * @return Enable policy-based traffic selectors.
      * 
      */
     private final @Nullable Boolean usePolicyBasedTrafficSelectors;
     /**
-     * Connection protocol used for this connection.
+     * @return Connection protocol used for this connection.
      * 
      */
     private final @Nullable String vpnConnectionProtocolType;
     /**
-     * Vpn link connection mode.
+     * @return Vpn link connection mode.
      * 
      */
     private final @Nullable String vpnLinkConnectionMode;
     /**
-     * Id of the connected vpn site link.
+     * @return Id of the connected vpn site link.
      * 
      */
     private final @Nullable SubResourceResponse vpnSiteLink;
@@ -170,149 +170,149 @@ public final class VpnSiteLinkConnectionResponse {
     }
 
     /**
-     * Expected bandwidth in MBPS.
+     * @return Expected bandwidth in MBPS.
      * 
-    */
+     */
     public Optional<Integer> connectionBandwidth() {
         return Optional.ofNullable(this.connectionBandwidth);
     }
     /**
-     * The connection status.
+     * @return The connection status.
      * 
-    */
+     */
     public String connectionStatus() {
         return this.connectionStatus;
     }
     /**
-     * Egress bytes transferred.
+     * @return Egress bytes transferred.
      * 
-    */
+     */
     public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
     }
     /**
-     * List of egress NatRules.
+     * @return List of egress NatRules.
      * 
-    */
+     */
     public List<SubResourceResponse> egressNatRules() {
         return this.egressNatRules == null ? List.of() : this.egressNatRules;
     }
     /**
-     * EnableBgp flag.
+     * @return EnableBgp flag.
      * 
-    */
+     */
     public Optional<Boolean> enableBgp() {
         return Optional.ofNullable(this.enableBgp);
     }
     /**
-     * EnableBgp flag.
+     * @return EnableBgp flag.
      * 
-    */
+     */
     public Optional<Boolean> enableRateLimiting() {
         return Optional.ofNullable(this.enableRateLimiting);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Ingress bytes transferred.
+     * @return Ingress bytes transferred.
      * 
-    */
+     */
     public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
     /**
-     * List of ingress NatRules.
+     * @return List of ingress NatRules.
      * 
-    */
+     */
     public List<SubResourceResponse> ingressNatRules() {
         return this.ingressNatRules == null ? List.of() : this.ingressNatRules;
     }
     /**
-     * The IPSec Policies to be considered by this connection.
+     * @return The IPSec Policies to be considered by this connection.
      * 
-    */
+     */
     public List<IpsecPolicyResponse> ipsecPolicies() {
         return this.ipsecPolicies == null ? List.of() : this.ipsecPolicies;
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the VPN site link connection resource.
+     * @return The provisioning state of the VPN site link connection resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Routing weight for vpn connection.
+     * @return Routing weight for vpn connection.
      * 
-    */
+     */
     public Optional<Integer> routingWeight() {
         return Optional.ofNullable(this.routingWeight);
     }
     /**
-     * SharedKey for the vpn connection.
+     * @return SharedKey for the vpn connection.
      * 
-    */
+     */
     public Optional<String> sharedKey() {
         return Optional.ofNullable(this.sharedKey);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Use local azure ip to initiate connection.
+     * @return Use local azure ip to initiate connection.
      * 
-    */
+     */
     public Optional<Boolean> useLocalAzureIpAddress() {
         return Optional.ofNullable(this.useLocalAzureIpAddress);
     }
     /**
-     * Enable policy-based traffic selectors.
+     * @return Enable policy-based traffic selectors.
      * 
-    */
+     */
     public Optional<Boolean> usePolicyBasedTrafficSelectors() {
         return Optional.ofNullable(this.usePolicyBasedTrafficSelectors);
     }
     /**
-     * Connection protocol used for this connection.
+     * @return Connection protocol used for this connection.
      * 
-    */
+     */
     public Optional<String> vpnConnectionProtocolType() {
         return Optional.ofNullable(this.vpnConnectionProtocolType);
     }
     /**
-     * Vpn link connection mode.
+     * @return Vpn link connection mode.
      * 
-    */
+     */
     public Optional<String> vpnLinkConnectionMode() {
         return Optional.ofNullable(this.vpnLinkConnectionMode);
     }
     /**
-     * Id of the connected vpn site link.
+     * @return Id of the connected vpn site link.
      * 
-    */
+     */
     public Optional<SubResourceResponse> vpnSiteLink() {
         return Optional.ofNullable(this.vpnSiteLink);
     }

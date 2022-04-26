@@ -21,34 +21,34 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureIaaSVMProtectionPolicyResponse {
     /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is &#39;AzureIaasVM&#39;.
      * 
      */
     private final String backupManagementType;
     private final @Nullable InstantRPAdditionalDetailsResponse instantRPDetails;
     /**
-     * Instant RP retention policy range in days
+     * @return Instant RP retention policy range in days
      * 
      */
     private final @Nullable Integer instantRpRetentionRangeInDays;
     /**
-     * Number of items associated with this policy.
+     * @return Number of items associated with this policy.
      * 
      */
     private final @Nullable Integer protectedItemsCount;
     /**
-     * Retention policy with the details on backup copy retention ranges.
+     * @return Retention policy with the details on backup copy retention ranges.
      * 
      */
     private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
     /**
-     * Backup schedule specified as part of backup policy.
+     * @return Backup schedule specified as part of backup policy.
      * 
      */
     private final @Nullable Object schedulePolicy;
     /**
-     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+     * @return TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
      */
     private final @Nullable String timeZone;
@@ -72,10 +72,10 @@ public final class AzureIaaSVMProtectionPolicyResponse {
     }
 
     /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is &#39;AzureIaasVM&#39;.
      * 
-    */
+     */
     public String backupManagementType() {
         return this.backupManagementType;
     }
@@ -83,37 +83,37 @@ public final class AzureIaaSVMProtectionPolicyResponse {
         return Optional.ofNullable(this.instantRPDetails);
     }
     /**
-     * Instant RP retention policy range in days
+     * @return Instant RP retention policy range in days
      * 
-    */
+     */
     public Optional<Integer> instantRpRetentionRangeInDays() {
         return Optional.ofNullable(this.instantRpRetentionRangeInDays);
     }
     /**
-     * Number of items associated with this policy.
+     * @return Number of items associated with this policy.
      * 
-    */
+     */
     public Optional<Integer> protectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
     /**
-     * Retention policy with the details on backup copy retention ranges.
+     * @return Retention policy with the details on backup copy retention ranges.
      * 
-    */
+     */
     public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
-     * Backup schedule specified as part of backup policy.
+     * @return Backup schedule specified as part of backup policy.
      * 
-    */
+     */
     public Optional<Object> schedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
     /**
-     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+     * @return TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
-    */
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }

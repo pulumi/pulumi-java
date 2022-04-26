@@ -29,6 +29,10 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends com.pulumi
     @Import(name="licenses", required=true)
     private Output<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses;
 
+    /**
+     * @return The PlayReady licenses.
+     * 
+     */
     public Output<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses() {
         return this.licenses;
     }
@@ -41,6 +45,11 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends com.pulumi
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -52,6 +61,10 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends com.pulumi
     @Import(name="responseCustomData")
     private @Nullable Output<String> responseCustomData;
 
+    /**
+     * @return The custom response data.
+     * 
+     */
     public Optional<Output<String>> responseCustomData() {
         return Optional.ofNullable(this.responseCustomData);
     }
@@ -82,33 +95,77 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends com.pulumi
             $ = new ContentKeyPolicyPlayReadyConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param licenses The PlayReady licenses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenses(Output<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses) {
             $.licenses = licenses;
             return this;
         }
 
+        /**
+         * @param licenses The PlayReady licenses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenses(List<ContentKeyPolicyPlayReadyLicenseArgs> licenses) {
             return licenses(Output.of(licenses));
         }
 
+        /**
+         * @param licenses The PlayReady licenses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenses(ContentKeyPolicyPlayReadyLicenseArgs... licenses) {
             return licenses(List.of(licenses));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param responseCustomData The custom response data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseCustomData(@Nullable Output<String> responseCustomData) {
             $.responseCustomData = responseCustomData;
             return this;
         }
 
+        /**
+         * @param responseCustomData The custom response data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseCustomData(String responseCustomData) {
             return responseCustomData(Output.of(responseCustomData));
         }

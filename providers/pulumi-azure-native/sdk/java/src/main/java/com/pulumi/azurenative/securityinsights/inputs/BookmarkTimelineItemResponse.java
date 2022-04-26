@@ -28,6 +28,10 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="azureResourceId", required=true)
     private String azureResourceId;
 
+    /**
+     * @return The bookmark azure resource id.
+     * 
+     */
     public String azureResourceId() {
         return this.azureResourceId;
     }
@@ -39,6 +43,10 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="createdBy")
     private @Nullable UserInfoResponse createdBy;
 
+    /**
+     * @return Describes a user that created the bookmark
+     * 
+     */
     public Optional<UserInfoResponse> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
@@ -50,6 +58,10 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The bookmark display name.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -61,6 +73,10 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="endTimeUtc")
     private @Nullable String endTimeUtc;
 
+    /**
+     * @return The bookmark end time.
+     * 
+     */
     public Optional<String> endTimeUtc() {
         return Optional.ofNullable(this.endTimeUtc);
     }
@@ -72,6 +88,10 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="eventTime")
     private @Nullable String eventTime;
 
+    /**
+     * @return The bookmark event time.
+     * 
+     */
     public Optional<String> eventTime() {
         return Optional.ofNullable(this.eventTime);
     }
@@ -84,6 +104,11 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return The entity query kind
+     * Expected value is &#39;Bookmark&#39;.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -95,6 +120,10 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="labels")
     private @Nullable List<String> labels;
 
+    /**
+     * @return List of labels relevant to this bookmark
+     * 
+     */
     public Optional<List<String>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -106,6 +135,10 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="notes")
     private @Nullable String notes;
 
+    /**
+     * @return The notes of the bookmark
+     * 
+     */
     public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
     }
@@ -117,6 +150,10 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="startTimeUtc")
     private @Nullable String startTimeUtc;
 
+    /**
+     * @return The bookmark start time.
+     * 
+     */
     public Optional<String> startTimeUtc() {
         return Optional.ofNullable(this.startTimeUtc);
     }
@@ -153,50 +190,111 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
             $ = new BookmarkTimelineItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureResourceId The bookmark azure resource id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureResourceId(String azureResourceId) {
             $.azureResourceId = azureResourceId;
             return this;
         }
 
+        /**
+         * @param createdBy Describes a user that created the bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(@Nullable UserInfoResponse createdBy) {
             $.createdBy = createdBy;
             return this;
         }
 
+        /**
+         * @param displayName The bookmark display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param endTimeUtc The bookmark end time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimeUtc(@Nullable String endTimeUtc) {
             $.endTimeUtc = endTimeUtc;
             return this;
         }
 
+        /**
+         * @param eventTime The bookmark event time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTime(@Nullable String eventTime) {
             $.eventTime = eventTime;
             return this;
         }
 
+        /**
+         * @param kind The entity query kind
+         * Expected value is &#39;Bookmark&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param labels List of labels relevant to this bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable List<String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels List of labels relevant to this bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(String... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param notes The notes of the bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(@Nullable String notes) {
             $.notes = notes;
             return this;
         }
 
+        /**
+         * @param startTimeUtc The bookmark start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeUtc(@Nullable String startTimeUtc) {
             $.startTimeUtc = startTimeUtc;
             return this;

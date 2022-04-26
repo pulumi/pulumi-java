@@ -27,6 +27,10 @@ public final class CaaRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="flags")
     private @Nullable Output<Integer> flags;
 
+    /**
+     * @return The flags for this CAA record as an integer between 0 and 255.
+     * 
+     */
     public Optional<Output<Integer>> flags() {
         return Optional.ofNullable(this.flags);
     }
@@ -38,6 +42,10 @@ public final class CaaRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tag")
     private @Nullable Output<String> tag;
 
+    /**
+     * @return The tag for this CAA record.
+     * 
+     */
     public Optional<Output<String>> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -49,6 +57,10 @@ public final class CaaRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The value for this CAA record.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -79,29 +91,65 @@ public final class CaaRecordArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CaaRecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param flags The flags for this CAA record as an integer between 0 and 255.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flags(@Nullable Output<Integer> flags) {
             $.flags = flags;
             return this;
         }
 
+        /**
+         * @param flags The flags for this CAA record as an integer between 0 and 255.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flags(Integer flags) {
             return flags(Output.of(flags));
         }
 
+        /**
+         * @param tag The tag for this CAA record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable Output<String> tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param tag The tag for this CAA record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             return tag(Output.of(tag));
         }
 
+        /**
+         * @param value The value for this CAA record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value for this CAA record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

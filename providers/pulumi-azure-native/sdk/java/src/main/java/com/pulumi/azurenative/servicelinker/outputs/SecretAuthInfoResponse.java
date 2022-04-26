@@ -12,18 +12,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecretAuthInfoResponse {
     /**
-     * The authentication type.
+     * @return The authentication type.
      * Expected value is &#39;secret&#39;.
      * 
      */
     private final String authType;
     /**
-     * Username or account name for secret auth.
+     * @return Username or account name for secret auth.
      * 
      */
     private final @Nullable String name;
     /**
-     * Password or account key for secret auth.
+     * @return Password or account key for secret auth.
      * 
      */
     private final @Nullable String secret;
@@ -39,24 +39,24 @@ public final class SecretAuthInfoResponse {
     }
 
     /**
-     * The authentication type.
+     * @return The authentication type.
      * Expected value is &#39;secret&#39;.
      * 
-    */
+     */
     public String authType() {
         return this.authType;
     }
     /**
-     * Username or account name for secret auth.
+     * @return Username or account name for secret auth.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Password or account key for secret auth.
+     * @return Password or account key for secret auth.
      * 
-    */
+     */
     public Optional<String> secret() {
         return Optional.ofNullable(this.secret);
     }

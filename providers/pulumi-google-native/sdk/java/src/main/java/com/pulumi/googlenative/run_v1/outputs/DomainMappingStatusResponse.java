@@ -14,27 +14,27 @@ import java.util.Objects;
 @CustomType
 public final class DomainMappingStatusResponse {
     /**
-     * Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
+     * @return Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
      * 
      */
     private final List<GoogleCloudRunV1ConditionResponse> conditions;
     /**
-     * The name of the route that the mapping currently points to.
+     * @return The name of the route that the mapping currently points to.
      * 
      */
     private final String mappedRouteName;
     /**
-     * ObservedGeneration is the &#39;Generation&#39; of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition&#39;s status is True or False.
+     * @return ObservedGeneration is the &#39;Generation&#39; of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition&#39;s status is True or False.
      * 
      */
     private final Integer observedGeneration;
     /**
-     * The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
+     * @return The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
      * 
      */
     private final List<ResourceRecordResponse> resourceRecords;
     /**
-     * Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
+     * @return Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
      * 
      */
     private final String url;
@@ -54,37 +54,37 @@ public final class DomainMappingStatusResponse {
     }
 
     /**
-     * Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
+     * @return Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
      * 
-    */
+     */
     public List<GoogleCloudRunV1ConditionResponse> conditions() {
         return this.conditions;
     }
     /**
-     * The name of the route that the mapping currently points to.
+     * @return The name of the route that the mapping currently points to.
      * 
-    */
+     */
     public String mappedRouteName() {
         return this.mappedRouteName;
     }
     /**
-     * ObservedGeneration is the &#39;Generation&#39; of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition&#39;s status is True or False.
+     * @return ObservedGeneration is the &#39;Generation&#39; of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition&#39;s status is True or False.
      * 
-    */
+     */
     public Integer observedGeneration() {
         return this.observedGeneration;
     }
     /**
-     * The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
+     * @return The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
      * 
-    */
+     */
     public List<ResourceRecordResponse> resourceRecords() {
         return this.resourceRecords;
     }
     /**
-     * Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
+     * @return Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

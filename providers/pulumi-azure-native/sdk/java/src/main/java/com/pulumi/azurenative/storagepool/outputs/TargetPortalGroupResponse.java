@@ -15,32 +15,32 @@ import java.util.Objects;
 @CustomType
 public final class TargetPortalGroupResponse {
     /**
-     * Access Control List (ACL) for an iSCSI target portal group.
+     * @return Access Control List (ACL) for an iSCSI target portal group.
      * 
      */
     private final List<AclResponse> acls;
     /**
-     * Attributes of an iSCSI target portal group.
+     * @return Attributes of an iSCSI target portal group.
      * 
      */
     private final AttributesResponse attributes;
     /**
-     * List of private IPv4 addresses to connect to the iSCSI target.
+     * @return List of private IPv4 addresses to connect to the iSCSI target.
      * 
      */
     private final List<String> endpoints;
     /**
-     * List of LUNs to be exposed through iSCSI target portal group.
+     * @return List of LUNs to be exposed through iSCSI target portal group.
      * 
      */
     private final List<IscsiLunResponse> luns;
     /**
-     * The port used by iSCSI target portal group.
+     * @return The port used by iSCSI target portal group.
      * 
      */
     private final Integer port;
     /**
-     * The tag associated with the iSCSI target portal group.
+     * @return The tag associated with the iSCSI target portal group.
      * 
      */
     private final Integer tag;
@@ -62,44 +62,44 @@ public final class TargetPortalGroupResponse {
     }
 
     /**
-     * Access Control List (ACL) for an iSCSI target portal group.
+     * @return Access Control List (ACL) for an iSCSI target portal group.
      * 
-    */
+     */
     public List<AclResponse> acls() {
         return this.acls;
     }
     /**
-     * Attributes of an iSCSI target portal group.
+     * @return Attributes of an iSCSI target portal group.
      * 
-    */
+     */
     public AttributesResponse attributes() {
         return this.attributes;
     }
     /**
-     * List of private IPv4 addresses to connect to the iSCSI target.
+     * @return List of private IPv4 addresses to connect to the iSCSI target.
      * 
-    */
+     */
     public List<String> endpoints() {
         return this.endpoints;
     }
     /**
-     * List of LUNs to be exposed through iSCSI target portal group.
+     * @return List of LUNs to be exposed through iSCSI target portal group.
      * 
-    */
+     */
     public List<IscsiLunResponse> luns() {
         return this.luns;
     }
     /**
-     * The port used by iSCSI target portal group.
+     * @return The port used by iSCSI target portal group.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * The tag associated with the iSCSI target portal group.
+     * @return The tag associated with the iSCSI target portal group.
      * 
-    */
+     */
     public Integer tag() {
         return this.tag;
     }

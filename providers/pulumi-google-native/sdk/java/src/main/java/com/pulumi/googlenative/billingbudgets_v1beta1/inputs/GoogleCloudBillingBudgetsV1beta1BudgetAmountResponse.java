@@ -24,6 +24,10 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse extends 
     @Import(name="lastPeriodAmount", required=true)
     private GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse lastPeriodAmount;
 
+    /**
+     * @return Use the last period&#39;s actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget&#39;s time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
+     * 
+     */
     public GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse lastPeriodAmount() {
         return this.lastPeriodAmount;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse extends 
     @Import(name="specifiedAmount", required=true)
     private GoogleTypeMoneyResponse specifiedAmount;
 
+    /**
+     * @return A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.
+     * 
+     */
     public GoogleTypeMoneyResponse specifiedAmount() {
         return this.specifiedAmount;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse extends 
             $ = new GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastPeriodAmount Use the last period&#39;s actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget&#39;s time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastPeriodAmount(GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse lastPeriodAmount) {
             $.lastPeriodAmount = lastPeriodAmount;
             return this;
         }
 
+        /**
+         * @param specifiedAmount A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specifiedAmount(GoogleTypeMoneyResponse specifiedAmount) {
             $.specifiedAmount = specifiedAmount;
             return this;

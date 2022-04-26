@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class GetNotificationConfigResult {
     /**
-     * The description of the notification config (max of 1024 characters).
+     * @return The description of the notification config (max of 1024 characters).
      * 
      */
     private final String description;
     /**
-     * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/notificationConfigs/notify_public_bucket&#34;.
+     * @return The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/notificationConfigs/notify_public_bucket&#34;.
      * 
      */
     private final String name;
     /**
-     * The Pub/Sub topic to send notifications to. Its format is &#34;projects/[project_id]/topics/[topic]&#34;.
+     * @return The Pub/Sub topic to send notifications to. Its format is &#34;projects/[project_id]/topics/[topic]&#34;.
      * 
      */
     private final String pubsubTopic;
     /**
-     * The service account that needs &#34;pubsub.topics.publish&#34; permission to publish to the Pub/Sub topic.
+     * @return The service account that needs &#34;pubsub.topics.publish&#34; permission to publish to the Pub/Sub topic.
      * 
      */
     private final String serviceAccount;
     /**
-     * The config for triggering streaming-based notifications.
+     * @return The config for triggering streaming-based notifications.
      * 
      */
     private final StreamingConfigResponse streamingConfig;
@@ -51,37 +51,37 @@ public final class GetNotificationConfigResult {
     }
 
     /**
-     * The description of the notification config (max of 1024 characters).
+     * @return The description of the notification config (max of 1024 characters).
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/notificationConfigs/notify_public_bucket&#34;.
+     * @return The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/notificationConfigs/notify_public_bucket&#34;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Pub/Sub topic to send notifications to. Its format is &#34;projects/[project_id]/topics/[topic]&#34;.
+     * @return The Pub/Sub topic to send notifications to. Its format is &#34;projects/[project_id]/topics/[topic]&#34;.
      * 
-    */
+     */
     public String pubsubTopic() {
         return this.pubsubTopic;
     }
     /**
-     * The service account that needs &#34;pubsub.topics.publish&#34; permission to publish to the Pub/Sub topic.
+     * @return The service account that needs &#34;pubsub.topics.publish&#34; permission to publish to the Pub/Sub topic.
      * 
-    */
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
-     * The config for triggering streaming-based notifications.
+     * @return The config for triggering streaming-based notifications.
      * 
-    */
+     */
     public StreamingConfigResponse streamingConfig() {
         return this.streamingConfig;
     }

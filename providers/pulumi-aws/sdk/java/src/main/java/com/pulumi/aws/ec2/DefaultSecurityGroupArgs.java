@@ -27,6 +27,10 @@ public final class DefaultSecurityGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="egress")
     private @Nullable Output<List<DefaultSecurityGroupEgressArgs>> egress;
 
+    /**
+     * @return Configuration block. Detailed below.
+     * 
+     */
     public Optional<Output<List<DefaultSecurityGroupEgressArgs>>> egress() {
         return Optional.ofNullable(this.egress);
     }
@@ -38,6 +42,10 @@ public final class DefaultSecurityGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="ingress")
     private @Nullable Output<List<DefaultSecurityGroupIngressArgs>> ingress;
 
+    /**
+     * @return Configuration block. Detailed below.
+     * 
+     */
     public Optional<Output<List<DefaultSecurityGroupIngressArgs>>> ingress() {
         return Optional.ofNullable(this.ingress);
     }
@@ -56,6 +64,10 @@ public final class DefaultSecurityGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -67,6 +79,10 @@ public final class DefaultSecurityGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
+    /**
+     * @return VPC ID. **Note that changing the `vpc_id` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state.
+     * 
+     */
     public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -99,28 +115,64 @@ public final class DefaultSecurityGroupArgs extends com.pulumi.resources.Resourc
             $ = new DefaultSecurityGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param egress Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egress(@Nullable Output<List<DefaultSecurityGroupEgressArgs>> egress) {
             $.egress = egress;
             return this;
         }
 
+        /**
+         * @param egress Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egress(List<DefaultSecurityGroupEgressArgs> egress) {
             return egress(Output.of(egress));
         }
 
+        /**
+         * @param egress Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egress(DefaultSecurityGroupEgressArgs... egress) {
             return egress(List.of(egress));
         }
 
+        /**
+         * @param ingress Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(@Nullable Output<List<DefaultSecurityGroupIngressArgs>> ingress) {
             $.ingress = ingress;
             return this;
         }
 
+        /**
+         * @param ingress Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(List<DefaultSecurityGroupIngressArgs> ingress) {
             return ingress(Output.of(ingress));
         }
 
+        /**
+         * @param ingress Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(DefaultSecurityGroupIngressArgs... ingress) {
             return ingress(List.of(ingress));
         }
@@ -134,20 +186,44 @@ public final class DefaultSecurityGroupArgs extends com.pulumi.resources.Resourc
             return revokeRulesOnDelete(Output.of(revokeRulesOnDelete));
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vpcId VPC ID. **Note that changing the `vpc_id` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId VPC ID. **Note that changing the `vpc_id` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

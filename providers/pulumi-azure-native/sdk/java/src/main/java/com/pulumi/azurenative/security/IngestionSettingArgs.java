@@ -22,6 +22,10 @@ public final class IngestionSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ingestionSettingName")
     private @Nullable Output<String> ingestionSettingName;
 
+    /**
+     * @return Name of the ingestion setting
+     * 
+     */
     public Optional<Output<String>> ingestionSettingName() {
         return Optional.ofNullable(this.ingestionSettingName);
     }
@@ -50,11 +54,23 @@ public final class IngestionSettingArgs extends com.pulumi.resources.ResourceArg
             $ = new IngestionSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ingestionSettingName Name of the ingestion setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestionSettingName(@Nullable Output<String> ingestionSettingName) {
             $.ingestionSettingName = ingestionSettingName;
             return this;
         }
 
+        /**
+         * @param ingestionSettingName Name of the ingestion setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestionSettingName(String ingestionSettingName) {
             return ingestionSettingName(Output.of(ingestionSettingName));
         }

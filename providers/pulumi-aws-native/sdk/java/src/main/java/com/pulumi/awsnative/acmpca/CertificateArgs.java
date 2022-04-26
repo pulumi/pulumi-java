@@ -24,6 +24,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiPassthrough")
     private @Nullable Output<CertificateApiPassthroughArgs> apiPassthrough;
 
+    /**
+     * @return These are fields to be overridden in a certificate at the time of issuance. These requires an API_Passthrough template be used or they will be ignored.
+     * 
+     */
     public Optional<Output<CertificateApiPassthroughArgs>> apiPassthrough() {
         return Optional.ofNullable(this.apiPassthrough);
     }
@@ -35,6 +39,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateAuthorityArn", required=true)
     private Output<String> certificateAuthorityArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the private CA to issue the certificate.
+     * 
+     */
     public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
@@ -46,6 +54,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateSigningRequest", required=true)
     private Output<String> certificateSigningRequest;
 
+    /**
+     * @return The certificate signing request (CSR) for the Certificate.
+     * 
+     */
     public Output<String> certificateSigningRequest() {
         return this.certificateSigningRequest;
     }
@@ -57,6 +69,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="signingAlgorithm", required=true)
     private Output<String> signingAlgorithm;
 
+    /**
+     * @return The name of the algorithm that will be used to sign the Certificate.
+     * 
+     */
     public Output<String> signingAlgorithm() {
         return this.signingAlgorithm;
     }
@@ -68,6 +84,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateArn")
     private @Nullable Output<String> templateArn;
 
+    /**
+     * @return Specifies a custom configuration template to use when issuing a certificate. If this parameter is not provided, ACM Private CA defaults to the EndEntityCertificate/V1 template.
+     * 
+     */
     public Optional<Output<String>> templateArn() {
         return Optional.ofNullable(this.templateArn);
     }
@@ -79,6 +99,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="validity", required=true)
     private Output<CertificateValidityArgs> validity;
 
+    /**
+     * @return The time before which the Certificate will be valid.
+     * 
+     */
     public Output<CertificateValidityArgs> validity() {
         return this.validity;
     }
@@ -90,6 +114,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="validityNotBefore")
     private @Nullable Output<CertificateValidityArgs> validityNotBefore;
 
+    /**
+     * @return The time after which the Certificate will be valid.
+     * 
+     */
     public Optional<Output<CertificateValidityArgs>> validityNotBefore() {
         return Optional.ofNullable(this.validityNotBefore);
     }
@@ -124,65 +152,149 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiPassthrough These are fields to be overridden in a certificate at the time of issuance. These requires an API_Passthrough template be used or they will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiPassthrough(@Nullable Output<CertificateApiPassthroughArgs> apiPassthrough) {
             $.apiPassthrough = apiPassthrough;
             return this;
         }
 
+        /**
+         * @param apiPassthrough These are fields to be overridden in a certificate at the time of issuance. These requires an API_Passthrough template be used or they will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiPassthrough(CertificateApiPassthroughArgs apiPassthrough) {
             return apiPassthrough(Output.of(apiPassthrough));
         }
 
+        /**
+         * @param certificateAuthorityArn The Amazon Resource Name (ARN) for the private CA to issue the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArn(Output<String> certificateAuthorityArn) {
             $.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
 
+        /**
+         * @param certificateAuthorityArn The Amazon Resource Name (ARN) for the private CA to issue the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             return certificateAuthorityArn(Output.of(certificateAuthorityArn));
         }
 
+        /**
+         * @param certificateSigningRequest The certificate signing request (CSR) for the Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSigningRequest(Output<String> certificateSigningRequest) {
             $.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
 
+        /**
+         * @param certificateSigningRequest The certificate signing request (CSR) for the Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSigningRequest(String certificateSigningRequest) {
             return certificateSigningRequest(Output.of(certificateSigningRequest));
         }
 
+        /**
+         * @param signingAlgorithm The name of the algorithm that will be used to sign the Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingAlgorithm(Output<String> signingAlgorithm) {
             $.signingAlgorithm = signingAlgorithm;
             return this;
         }
 
+        /**
+         * @param signingAlgorithm The name of the algorithm that will be used to sign the Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingAlgorithm(String signingAlgorithm) {
             return signingAlgorithm(Output.of(signingAlgorithm));
         }
 
+        /**
+         * @param templateArn Specifies a custom configuration template to use when issuing a certificate. If this parameter is not provided, ACM Private CA defaults to the EndEntityCertificate/V1 template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateArn(@Nullable Output<String> templateArn) {
             $.templateArn = templateArn;
             return this;
         }
 
+        /**
+         * @param templateArn Specifies a custom configuration template to use when issuing a certificate. If this parameter is not provided, ACM Private CA defaults to the EndEntityCertificate/V1 template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateArn(String templateArn) {
             return templateArn(Output.of(templateArn));
         }
 
+        /**
+         * @param validity The time before which the Certificate will be valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validity(Output<CertificateValidityArgs> validity) {
             $.validity = validity;
             return this;
         }
 
+        /**
+         * @param validity The time before which the Certificate will be valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validity(CertificateValidityArgs validity) {
             return validity(Output.of(validity));
         }
 
+        /**
+         * @param validityNotBefore The time after which the Certificate will be valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validityNotBefore(@Nullable Output<CertificateValidityArgs> validityNotBefore) {
             $.validityNotBefore = validityNotBefore;
             return this;
         }
 
+        /**
+         * @param validityNotBefore The time after which the Certificate will be valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validityNotBefore(CertificateValidityArgs validityNotBefore) {
             return validityNotBefore(Output.of(validityNotBefore));
         }

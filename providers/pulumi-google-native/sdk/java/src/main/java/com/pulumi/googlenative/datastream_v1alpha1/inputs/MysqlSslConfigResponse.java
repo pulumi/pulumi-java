@@ -24,6 +24,10 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="caCertificate", required=true)
     private String caCertificate;
 
+    /**
+     * @return Input only. PEM-encoded certificate of the CA that signed the source database server&#39;s certificate.
+     * 
+     */
     public String caCertificate() {
         return this.caCertificate;
     }
@@ -35,6 +39,10 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="caCertificateSet", required=true)
     private Boolean caCertificateSet;
 
+    /**
+     * @return Indicates whether the ca_certificate field is set.
+     * 
+     */
     public Boolean caCertificateSet() {
         return this.caCertificateSet;
     }
@@ -46,6 +54,10 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="clientCertificate", required=true)
     private String clientCertificate;
 
+    /**
+     * @return Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the &#39;client_key&#39; and the &#39;ca_certificate&#39; fields are mandatory.
+     * 
+     */
     public String clientCertificate() {
         return this.clientCertificate;
     }
@@ -57,6 +69,10 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="clientCertificateSet", required=true)
     private Boolean clientCertificateSet;
 
+    /**
+     * @return Indicates whether the client_certificate field is set.
+     * 
+     */
     public Boolean clientCertificateSet() {
         return this.clientCertificateSet;
     }
@@ -68,6 +84,10 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="clientKey", required=true)
     private String clientKey;
 
+    /**
+     * @return Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the &#39;client_certificate&#39; and the &#39;ca_certificate&#39; fields are mandatory.
+     * 
+     */
     public String clientKey() {
         return this.clientKey;
     }
@@ -79,6 +99,10 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="clientKeySet", required=true)
     private Boolean clientKeySet;
 
+    /**
+     * @return Indicates whether the client_key field is set.
+     * 
+     */
     public Boolean clientKeySet() {
         return this.clientKeySet;
     }
@@ -112,31 +136,67 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
             $ = new MysqlSslConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caCertificate Input only. PEM-encoded certificate of the CA that signed the source database server&#39;s certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificate(String caCertificate) {
             $.caCertificate = caCertificate;
             return this;
         }
 
+        /**
+         * @param caCertificateSet Indicates whether the ca_certificate field is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificateSet(Boolean caCertificateSet) {
             $.caCertificateSet = caCertificateSet;
             return this;
         }
 
+        /**
+         * @param clientCertificate Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the &#39;client_key&#39; and the &#39;ca_certificate&#39; fields are mandatory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificate(String clientCertificate) {
             $.clientCertificate = clientCertificate;
             return this;
         }
 
+        /**
+         * @param clientCertificateSet Indicates whether the client_certificate field is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificateSet(Boolean clientCertificateSet) {
             $.clientCertificateSet = clientCertificateSet;
             return this;
         }
 
+        /**
+         * @param clientKey Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the &#39;client_certificate&#39; and the &#39;ca_certificate&#39; fields are mandatory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKey(String clientKey) {
             $.clientKey = clientKey;
             return this;
         }
 
+        /**
+         * @param clientKeySet Indicates whether the client_key field is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKeySet(Boolean clientKeySet) {
             $.clientKeySet = clientKeySet;
             return this;

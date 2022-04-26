@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension {
     /**
-     * The name of the dimension.
+     * @return The name of the dimension.
      * 
      */
     private final String name;
     /**
-     * The value of the dimension.
+     * @return The value of the dimension.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     }
 
     /**
-     * The name of the dimension.
+     * @return The name of the dimension.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The value of the dimension.
+     * @return The value of the dimension.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

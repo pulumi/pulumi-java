@@ -28,6 +28,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="androidSettings")
     private @Nullable Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings;
 
+    /**
+     * @return Settings for keys that can be used by Android apps.
+     * 
+     */
     public Optional<Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs>> androidSettings() {
         return Optional.ofNullable(this.androidSettings);
     }
@@ -39,6 +43,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return The timestamp corresponding to the creation of this Key.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -50,6 +58,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Human-readable display name of this key. Modifiable by user.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -61,6 +73,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iosSettings")
     private @Nullable Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings;
 
+    /**
+     * @return Settings for keys that can be used by iOS apps.
+     * 
+     */
     public Optional<Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs>> iosSettings() {
         return Optional.ofNullable(this.iosSettings);
     }
@@ -72,6 +88,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return See Creating and managing labels.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -83,6 +103,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name for the Key in the format &#34;projects/{project}/keys/{key}&#34;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -101,6 +125,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="testingOptions")
     private @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions;
 
+    /**
+     * @return Options for user acceptance testing.
+     * 
+     */
     public Optional<Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs>> testingOptions() {
         return Optional.ofNullable(this.testingOptions);
     }
@@ -112,6 +140,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="wafSettings")
     private @Nullable Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings;
 
+    /**
+     * @return Settings for WAF
+     * 
+     */
     public Optional<Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs>> wafSettings() {
         return Optional.ofNullable(this.wafSettings);
     }
@@ -123,6 +155,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="webSettings")
     private @Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings;
 
+    /**
+     * @return Settings for keys that can be used by websites.
+     * 
+     */
     public Optional<Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs>> webSettings() {
         return Optional.ofNullable(this.webSettings);
     }
@@ -160,56 +196,128 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidSettings Settings for keys that can be used by Android apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidSettings(@Nullable Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings) {
             $.androidSettings = androidSettings;
             return this;
         }
 
+        /**
+         * @param androidSettings Settings for keys that can be used by Android apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidSettings(GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs androidSettings) {
             return androidSettings(Output.of(androidSettings));
         }
 
+        /**
+         * @param createTime The timestamp corresponding to the creation of this Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime The timestamp corresponding to the creation of this Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param displayName Human-readable display name of this key. Modifiable by user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Human-readable display name of this key. Modifiable by user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param iosSettings Settings for keys that can be used by iOS apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosSettings(@Nullable Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings) {
             $.iosSettings = iosSettings;
             return this;
         }
 
+        /**
+         * @param iosSettings Settings for keys that can be used by iOS apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosSettings(GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs iosSettings) {
             return iosSettings(Output.of(iosSettings));
         }
 
+        /**
+         * @param labels See Creating and managing labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels See Creating and managing labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name The resource name for the Key in the format &#34;projects/{project}/keys/{key}&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name for the Key in the format &#34;projects/{project}/keys/{key}&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -223,29 +331,65 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param testingOptions Options for user acceptance testing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testingOptions(@Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions) {
             $.testingOptions = testingOptions;
             return this;
         }
 
+        /**
+         * @param testingOptions Options for user acceptance testing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testingOptions(GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs testingOptions) {
             return testingOptions(Output.of(testingOptions));
         }
 
+        /**
+         * @param wafSettings Settings for WAF
+         * 
+         * @return builder
+         * 
+         */
         public Builder wafSettings(@Nullable Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings) {
             $.wafSettings = wafSettings;
             return this;
         }
 
+        /**
+         * @param wafSettings Settings for WAF
+         * 
+         * @return builder
+         * 
+         */
         public Builder wafSettings(GoogleCloudRecaptchaenterpriseV1WafSettingsArgs wafSettings) {
             return wafSettings(Output.of(wafSettings));
         }
 
+        /**
+         * @param webSettings Settings for keys that can be used by websites.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webSettings(@Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings) {
             $.webSettings = webSettings;
             return this;
         }
 
+        /**
+         * @param webSettings Settings for keys that can be used by websites.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webSettings(GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs webSettings) {
             return webSettings(Output.of(webSettings));
         }

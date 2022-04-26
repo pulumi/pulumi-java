@@ -25,6 +25,10 @@ public final class KeyPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The identifier of the key vault key used to encrypt data.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class KeyPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return The version of the identity which will be used to access key vault.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -65,11 +73,23 @@ public final class KeyPropertiesResponse extends com.pulumi.resources.InvokeArgs
             $ = new KeyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The identifier of the key vault key used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version The version of the identity which will be used to access key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

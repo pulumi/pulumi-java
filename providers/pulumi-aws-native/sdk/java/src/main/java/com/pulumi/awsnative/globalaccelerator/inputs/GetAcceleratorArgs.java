@@ -19,6 +19,10 @@ public final class GetAcceleratorArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="acceleratorArn", required=true)
     private String acceleratorArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the accelerator.
+     * 
+     */
     public String acceleratorArn() {
         return this.acceleratorArn;
     }
@@ -47,6 +51,12 @@ public final class GetAcceleratorArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAcceleratorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorArn The Amazon Resource Name (ARN) of the accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorArn(String acceleratorArn) {
             $.acceleratorArn = acceleratorArn;
             return this;

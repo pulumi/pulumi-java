@@ -23,6 +23,10 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentArgs extend
     @Import(name="metricIntervalLowerBound")
     private @Nullable Output<String> metricIntervalLowerBound;
 
+    /**
+     * @return The lower bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as negative infinity.
+     * 
+     */
     public Optional<Output<String>> metricIntervalLowerBound() {
         return Optional.ofNullable(this.metricIntervalLowerBound);
     }
@@ -34,6 +38,10 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentArgs extend
     @Import(name="metricIntervalUpperBound")
     private @Nullable Output<String> metricIntervalUpperBound;
 
+    /**
+     * @return The upper bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as infinity. The upper bound must be greater than the lower bound.
+     * 
+     */
     public Optional<Output<String>> metricIntervalUpperBound() {
         return Optional.ofNullable(this.metricIntervalUpperBound);
     }
@@ -45,6 +53,10 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentArgs extend
     @Import(name="scalingAdjustment", required=true)
     private Output<Integer> scalingAdjustment;
 
+    /**
+     * @return The number of members by which to scale, when the adjustment bounds are breached. A positive value scales up. A negative value scales down.
+     * 
+     */
     public Output<Integer> scalingAdjustment() {
         return this.scalingAdjustment;
     }
@@ -75,29 +87,65 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentArgs extend
             $ = new PolicyStepScalingPolicyConfigurationStepAdjustmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metricIntervalLowerBound The lower bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as negative infinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricIntervalLowerBound(@Nullable Output<String> metricIntervalLowerBound) {
             $.metricIntervalLowerBound = metricIntervalLowerBound;
             return this;
         }
 
+        /**
+         * @param metricIntervalLowerBound The lower bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as negative infinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricIntervalLowerBound(String metricIntervalLowerBound) {
             return metricIntervalLowerBound(Output.of(metricIntervalLowerBound));
         }
 
+        /**
+         * @param metricIntervalUpperBound The upper bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as infinity. The upper bound must be greater than the lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricIntervalUpperBound(@Nullable Output<String> metricIntervalUpperBound) {
             $.metricIntervalUpperBound = metricIntervalUpperBound;
             return this;
         }
 
+        /**
+         * @param metricIntervalUpperBound The upper bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as infinity. The upper bound must be greater than the lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricIntervalUpperBound(String metricIntervalUpperBound) {
             return metricIntervalUpperBound(Output.of(metricIntervalUpperBound));
         }
 
+        /**
+         * @param scalingAdjustment The number of members by which to scale, when the adjustment bounds are breached. A positive value scales up. A negative value scales down.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingAdjustment(Output<Integer> scalingAdjustment) {
             $.scalingAdjustment = scalingAdjustment;
             return this;
         }
 
+        /**
+         * @param scalingAdjustment The number of members by which to scale, when the adjustment bounds are breached. A positive value scales up. A negative value scales down.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingAdjustment(Integer scalingAdjustment) {
             return scalingAdjustment(Output.of(scalingAdjustment));
         }

@@ -26,6 +26,10 @@ public final class ExtensionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the extension.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class ExtensionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="properties")
     private @Nullable CloudServiceExtensionPropertiesResponse properties;
 
+    /**
+     * @return Extension Properties.
+     * 
+     */
     public Optional<CloudServiceExtensionPropertiesResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -66,11 +74,23 @@ public final class ExtensionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ExtensionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param properties Extension Properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable CloudServiceExtensionPropertiesResponse properties) {
             $.properties = properties;
             return this;

@@ -23,6 +23,11 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs extends
     @Import(name="cidrBlock", required=true)
     private Output<String> cidrBlock;
 
+    /**
+     * @return External network that can access Kubernetes master through HTTPS.
+     * Must be specified in CIDR notation.
+     * 
+     */
     public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
@@ -34,6 +39,10 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs extends
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Field for users to identify CIDR blocks.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -63,20 +72,46 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs extends
             $ = new ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrBlock External network that can access Kubernetes master through HTTPS.
+         * Must be specified in CIDR notation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(Output<String> cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;
         }
 
+        /**
+         * @param cidrBlock External network that can access Kubernetes master through HTTPS.
+         * Must be specified in CIDR notation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(String cidrBlock) {
             return cidrBlock(Output.of(cidrBlock));
         }
 
+        /**
+         * @param displayName Field for users to identify CIDR blocks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Field for users to identify CIDR blocks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }

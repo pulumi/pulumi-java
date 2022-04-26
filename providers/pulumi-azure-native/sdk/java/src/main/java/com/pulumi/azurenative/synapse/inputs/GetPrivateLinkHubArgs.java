@@ -19,6 +19,10 @@ public final class GetPrivateLinkHubArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="privateLinkHubName", required=true)
     private String privateLinkHubName;
 
+    /**
+     * @return Name of the privateLinkHub
+     * 
+     */
     public String privateLinkHubName() {
         return this.privateLinkHubName;
     }
@@ -30,6 +34,10 @@ public final class GetPrivateLinkHubArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetPrivateLinkHubArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetPrivateLinkHubArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateLinkHubName Name of the privateLinkHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkHubName(String privateLinkHubName) {
             $.privateLinkHubName = privateLinkHubName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetAmiResult {
     /**
-     * The kernel associated with the image, if any. Only applicable
+     * @return The kernel associated with the image, if any. Only applicable
      * for machine images.
      * 
      */
@@ -22,10 +22,10 @@ public final class GetAmiResult {
     }
 
     /**
-     * The kernel associated with the image, if any. Only applicable
+     * @return The kernel associated with the image, if any. Only applicable
      * for machine images.
      * 
-    */
+     */
     public String kernelId() {
         return this.kernelId;
     }

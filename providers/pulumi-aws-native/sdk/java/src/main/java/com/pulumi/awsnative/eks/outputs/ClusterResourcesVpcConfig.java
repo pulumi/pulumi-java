@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterResourcesVpcConfig {
     /**
-     * Set this value to true to enable private access for your cluster&#39;s Kubernetes API server endpoint. If you enable private access, Kubernetes API requests from within your cluster&#39;s VPC use the private VPC endpoint. The default value for this parameter is false, which disables private access for your Kubernetes API server. If you disable private access and you have nodes or AWS Fargate pods in the cluster, then ensure that publicAccessCidrs includes the necessary CIDR blocks for communication with the nodes or Fargate pods.
+     * @return Set this value to true to enable private access for your cluster&#39;s Kubernetes API server endpoint. If you enable private access, Kubernetes API requests from within your cluster&#39;s VPC use the private VPC endpoint. The default value for this parameter is false, which disables private access for your Kubernetes API server. If you disable private access and you have nodes or AWS Fargate pods in the cluster, then ensure that publicAccessCidrs includes the necessary CIDR blocks for communication with the nodes or Fargate pods.
      * 
      */
     private final @Nullable Boolean endpointPrivateAccess;
     /**
-     * Set this value to false to disable public access to your cluster&#39;s Kubernetes API server endpoint. If you disable public access, your cluster&#39;s Kubernetes API server can only receive requests from within the cluster VPC. The default value for this parameter is true, which enables public access for your Kubernetes API server.
+     * @return Set this value to false to disable public access to your cluster&#39;s Kubernetes API server endpoint. If you disable public access, your cluster&#39;s Kubernetes API server can only receive requests from within the cluster VPC. The default value for this parameter is true, which enables public access for your Kubernetes API server.
      * 
      */
     private final @Nullable Boolean endpointPublicAccess;
     /**
-     * The CIDR blocks that are allowed access to your cluster&#39;s public Kubernetes API server endpoint. Communication to the endpoint from addresses outside of the CIDR blocks that you specify is denied. The default value is 0.0.0.0/0. If you&#39;ve disabled private endpoint access and you have nodes or AWS Fargate pods in the cluster, then ensure that you specify the necessary CIDR blocks.
+     * @return The CIDR blocks that are allowed access to your cluster&#39;s public Kubernetes API server endpoint. Communication to the endpoint from addresses outside of the CIDR blocks that you specify is denied. The default value is 0.0.0.0/0. If you&#39;ve disabled private endpoint access and you have nodes or AWS Fargate pods in the cluster, then ensure that you specify the necessary CIDR blocks.
      * 
      */
     private final @Nullable List<String> publicAccessCidrs;
     /**
-     * Specify one or more security groups for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane. If you don&#39;t specify a security group, the default security group for your VPC is used.
+     * @return Specify one or more security groups for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane. If you don&#39;t specify a security group, the default security group for your VPC is used.
      * 
      */
     private final @Nullable List<String> securityGroupIds;
     /**
-     * Specify subnets for your Amazon EKS nodes. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your nodes and the Kubernetes control plane.
+     * @return Specify subnets for your Amazon EKS nodes. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your nodes and the Kubernetes control plane.
      * 
      */
     private final List<String> subnetIds;
@@ -54,37 +54,37 @@ public final class ClusterResourcesVpcConfig {
     }
 
     /**
-     * Set this value to true to enable private access for your cluster&#39;s Kubernetes API server endpoint. If you enable private access, Kubernetes API requests from within your cluster&#39;s VPC use the private VPC endpoint. The default value for this parameter is false, which disables private access for your Kubernetes API server. If you disable private access and you have nodes or AWS Fargate pods in the cluster, then ensure that publicAccessCidrs includes the necessary CIDR blocks for communication with the nodes or Fargate pods.
+     * @return Set this value to true to enable private access for your cluster&#39;s Kubernetes API server endpoint. If you enable private access, Kubernetes API requests from within your cluster&#39;s VPC use the private VPC endpoint. The default value for this parameter is false, which disables private access for your Kubernetes API server. If you disable private access and you have nodes or AWS Fargate pods in the cluster, then ensure that publicAccessCidrs includes the necessary CIDR blocks for communication with the nodes or Fargate pods.
      * 
-    */
+     */
     public Optional<Boolean> endpointPrivateAccess() {
         return Optional.ofNullable(this.endpointPrivateAccess);
     }
     /**
-     * Set this value to false to disable public access to your cluster&#39;s Kubernetes API server endpoint. If you disable public access, your cluster&#39;s Kubernetes API server can only receive requests from within the cluster VPC. The default value for this parameter is true, which enables public access for your Kubernetes API server.
+     * @return Set this value to false to disable public access to your cluster&#39;s Kubernetes API server endpoint. If you disable public access, your cluster&#39;s Kubernetes API server can only receive requests from within the cluster VPC. The default value for this parameter is true, which enables public access for your Kubernetes API server.
      * 
-    */
+     */
     public Optional<Boolean> endpointPublicAccess() {
         return Optional.ofNullable(this.endpointPublicAccess);
     }
     /**
-     * The CIDR blocks that are allowed access to your cluster&#39;s public Kubernetes API server endpoint. Communication to the endpoint from addresses outside of the CIDR blocks that you specify is denied. The default value is 0.0.0.0/0. If you&#39;ve disabled private endpoint access and you have nodes or AWS Fargate pods in the cluster, then ensure that you specify the necessary CIDR blocks.
+     * @return The CIDR blocks that are allowed access to your cluster&#39;s public Kubernetes API server endpoint. Communication to the endpoint from addresses outside of the CIDR blocks that you specify is denied. The default value is 0.0.0.0/0. If you&#39;ve disabled private endpoint access and you have nodes or AWS Fargate pods in the cluster, then ensure that you specify the necessary CIDR blocks.
      * 
-    */
+     */
     public List<String> publicAccessCidrs() {
         return this.publicAccessCidrs == null ? List.of() : this.publicAccessCidrs;
     }
     /**
-     * Specify one or more security groups for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane. If you don&#39;t specify a security group, the default security group for your VPC is used.
+     * @return Specify one or more security groups for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane. If you don&#39;t specify a security group, the default security group for your VPC is used.
      * 
-    */
+     */
     public List<String> securityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
-     * Specify subnets for your Amazon EKS nodes. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your nodes and the Kubernetes control plane.
+     * @return Specify subnets for your Amazon EKS nodes. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your nodes and the Kubernetes control plane.
      * 
-    */
+     */
     public List<String> subnetIds() {
         return this.subnetIds;
     }

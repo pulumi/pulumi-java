@@ -13,47 +13,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSignalRSharedPrivateLinkResourceResult {
     /**
-     * The group id from the provider of resource the shared private link resource is for
+     * @return The group id from the provider of resource the shared private link resource is for
      * 
      */
     private final String groupId;
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
      */
     private final String id;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * The resource id of the resource the shared private link resource is for
+     * @return The resource id of the resource the shared private link resource is for
      * 
      */
     private final String privateLinkResourceId;
     /**
-     * Provisioning state of the shared private link resource
+     * @return Provisioning state of the shared private link resource
      * 
      */
     private final String provisioningState;
     /**
-     * The request message for requesting approval of the shared private link resource
+     * @return The request message for requesting approval of the shared private link resource
      * 
      */
     private final @Nullable String requestMessage;
     /**
-     * Status of the shared private link resource
+     * @return Status of the shared private link resource
      * 
      */
     private final String status;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
+     * @return The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     private final String type;
@@ -81,65 +81,65 @@ public final class GetSignalRSharedPrivateLinkResourceResult {
     }
 
     /**
-     * The group id from the provider of resource the shared private link resource is for
+     * @return The group id from the provider of resource the shared private link resource is for
      * 
-    */
+     */
     public String groupId() {
         return this.groupId;
     }
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource id of the resource the shared private link resource is for
+     * @return The resource id of the resource the shared private link resource is for
      * 
-    */
+     */
     public String privateLinkResourceId() {
         return this.privateLinkResourceId;
     }
     /**
-     * Provisioning state of the shared private link resource
+     * @return Provisioning state of the shared private link resource
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The request message for requesting approval of the shared private link resource
+     * @return The request message for requesting approval of the shared private link resource
      * 
-    */
+     */
     public Optional<String> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
     /**
-     * Status of the shared private link resource
+     * @return Status of the shared private link resource
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
+     * @return The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

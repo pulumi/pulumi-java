@@ -26,6 +26,10 @@ public final class LabelingDatasetConfigurationResponse extends com.pulumi.resou
     @Import(name="assetName", required=true)
     private String assetName;
 
+    /**
+     * @return Name of the data asset to perform labeling.
+     * 
+     */
     public String assetName() {
         return this.assetName;
     }
@@ -37,6 +41,10 @@ public final class LabelingDatasetConfigurationResponse extends com.pulumi.resou
     @Import(name="datasetVersion", required=true)
     private String datasetVersion;
 
+    /**
+     * @return AML dataset version.
+     * 
+     */
     public String datasetVersion() {
         return this.datasetVersion;
     }
@@ -48,6 +56,10 @@ public final class LabelingDatasetConfigurationResponse extends com.pulumi.resou
     @Import(name="enableIncrementalDatasetRefresh")
     private @Nullable Boolean enableIncrementalDatasetRefresh;
 
+    /**
+     * @return Indicates whether to enable incremental dataset refresh.
+     * 
+     */
     public Optional<Boolean> enableIncrementalDatasetRefresh() {
         return Optional.ofNullable(this.enableIncrementalDatasetRefresh);
     }
@@ -78,16 +90,34 @@ public final class LabelingDatasetConfigurationResponse extends com.pulumi.resou
             $ = new LabelingDatasetConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetName Name of the data asset to perform labeling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(String assetName) {
             $.assetName = assetName;
             return this;
         }
 
+        /**
+         * @param datasetVersion AML dataset version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetVersion(String datasetVersion) {
             $.datasetVersion = datasetVersion;
             return this;
         }
 
+        /**
+         * @param enableIncrementalDatasetRefresh Indicates whether to enable incremental dataset refresh.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIncrementalDatasetRefresh(@Nullable Boolean enableIncrementalDatasetRefresh) {
             $.enableIncrementalDatasetRefresh = enableIncrementalDatasetRefresh;
             return this;

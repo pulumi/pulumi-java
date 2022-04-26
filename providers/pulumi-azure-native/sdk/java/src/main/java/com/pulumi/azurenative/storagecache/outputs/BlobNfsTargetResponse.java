@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BlobNfsTargetResponse {
     /**
-     * Resource ID of the storage container.
+     * @return Resource ID of the storage container.
      * 
      */
     private final @Nullable String target;
     /**
-     * Identifies the StorageCache usage model to be used for this storage target.
+     * @return Identifies the StorageCache usage model to be used for this storage target.
      * 
      */
     private final @Nullable String usageModel;
@@ -31,16 +31,16 @@ public final class BlobNfsTargetResponse {
     }
 
     /**
-     * Resource ID of the storage container.
+     * @return Resource ID of the storage container.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
     /**
-     * Identifies the StorageCache usage model to be used for this storage target.
+     * @return Identifies the StorageCache usage model to be used for this storage target.
      * 
-    */
+     */
     public Optional<String> usageModel() {
         return Optional.ofNullable(this.usageModel);
     }

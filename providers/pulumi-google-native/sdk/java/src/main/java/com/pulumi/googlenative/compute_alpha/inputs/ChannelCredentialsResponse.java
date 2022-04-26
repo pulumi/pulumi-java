@@ -24,6 +24,10 @@ public final class ChannelCredentialsResponse extends com.pulumi.resources.Invok
     @Import(name="certificates", required=true)
     private TlsCertificatePathsResponse certificates;
 
+    /**
+     * @return The call credentials to access the SDS server.
+     * 
+     */
     public TlsCertificatePathsResponse certificates() {
         return this.certificates;
     }
@@ -35,6 +39,10 @@ public final class ChannelCredentialsResponse extends com.pulumi.resources.Invok
     @Import(name="channelCredentialType", required=true)
     private String channelCredentialType;
 
+    /**
+     * @return The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.
+     * 
+     */
     public String channelCredentialType() {
         return this.channelCredentialType;
     }
@@ -64,11 +72,23 @@ public final class ChannelCredentialsResponse extends com.pulumi.resources.Invok
             $ = new ChannelCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificates The call credentials to access the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(TlsCertificatePathsResponse certificates) {
             $.certificates = certificates;
             return this;
         }
 
+        /**
+         * @param channelCredentialType The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelCredentialType(String channelCredentialType) {
             $.channelCredentialType = channelCredentialType;
             return this;

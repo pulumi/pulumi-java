@@ -26,6 +26,10 @@ public final class DaprMetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Metadata property name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class DaprMetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretRef")
     private @Nullable Output<String> secretRef;
 
+    /**
+     * @return Name of the Container App secret from which to pull the metadata property value.
+     * 
+     */
     public Optional<Output<String>> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
@@ -48,6 +56,10 @@ public final class DaprMetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Metadata property value.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -78,29 +90,65 @@ public final class DaprMetadataArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DaprMetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Metadata property name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Metadata property name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param secretRef Name of the Container App secret from which to pull the metadata property value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(@Nullable Output<String> secretRef) {
             $.secretRef = secretRef;
             return this;
         }
 
+        /**
+         * @param secretRef Name of the Container App secret from which to pull the metadata property value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(String secretRef) {
             return secretRef(Output.of(secretRef));
         }
 
+        /**
+         * @param value Metadata property value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Metadata property value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

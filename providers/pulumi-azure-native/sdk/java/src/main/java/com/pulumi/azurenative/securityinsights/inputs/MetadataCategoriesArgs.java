@@ -27,6 +27,10 @@ public final class MetadataCategoriesArgs extends com.pulumi.resources.ResourceA
     @Import(name="domains")
     private @Nullable Output<List<String>> domains;
 
+    /**
+     * @return domain for the solution content item
+     * 
+     */
     public Optional<Output<List<String>>> domains() {
         return Optional.ofNullable(this.domains);
     }
@@ -38,6 +42,10 @@ public final class MetadataCategoriesArgs extends com.pulumi.resources.ResourceA
     @Import(name="verticals")
     private @Nullable Output<List<String>> verticals;
 
+    /**
+     * @return Industry verticals for the solution content item
+     * 
+     */
     public Optional<Output<List<String>>> verticals() {
         return Optional.ofNullable(this.verticals);
     }
@@ -67,28 +75,64 @@ public final class MetadataCategoriesArgs extends com.pulumi.resources.ResourceA
             $ = new MetadataCategoriesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domains domain for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder domains(@Nullable Output<List<String>> domains) {
             $.domains = domains;
             return this;
         }
 
+        /**
+         * @param domains domain for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder domains(List<String> domains) {
             return domains(Output.of(domains));
         }
 
+        /**
+         * @param domains domain for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder domains(String... domains) {
             return domains(List.of(domains));
         }
 
+        /**
+         * @param verticals Industry verticals for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder verticals(@Nullable Output<List<String>> verticals) {
             $.verticals = verticals;
             return this;
         }
 
+        /**
+         * @param verticals Industry verticals for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder verticals(List<String> verticals) {
             return verticals(Output.of(verticals));
         }
 
+        /**
+         * @param verticals Industry verticals for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder verticals(String... verticals) {
             return verticals(List.of(verticals));
         }

@@ -27,6 +27,10 @@ public final class ActivityPolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="retry")
     private @Nullable Object retry;
 
+    /**
+     * @return Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Object> retry() {
         return Optional.ofNullable(this.retry);
     }
@@ -38,6 +42,10 @@ public final class ActivityPolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="retryIntervalInSeconds")
     private @Nullable Integer retryIntervalInSeconds;
 
+    /**
+     * @return Interval between each retry attempt (in seconds). The default is 30 sec.
+     * 
+     */
     public Optional<Integer> retryIntervalInSeconds() {
         return Optional.ofNullable(this.retryIntervalInSeconds);
     }
@@ -49,6 +57,10 @@ public final class ActivityPolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="secureInput")
     private @Nullable Boolean secureInput;
 
+    /**
+     * @return When set to true, Input from activity is considered as secure and will not be logged to monitoring.
+     * 
+     */
     public Optional<Boolean> secureInput() {
         return Optional.ofNullable(this.secureInput);
     }
@@ -60,6 +72,10 @@ public final class ActivityPolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="secureOutput")
     private @Nullable Boolean secureOutput;
 
+    /**
+     * @return When set to true, Output from activity is considered as secure and will not be logged to monitoring.
+     * 
+     */
     public Optional<Boolean> secureOutput() {
         return Optional.ofNullable(this.secureOutput);
     }
@@ -71,6 +87,10 @@ public final class ActivityPolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="timeout")
     private @Nullable Object timeout;
 
+    /**
+     * @return Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -103,26 +123,56 @@ public final class ActivityPolicyResponse extends com.pulumi.resources.InvokeArg
             $ = new ActivityPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retry Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retry(@Nullable Object retry) {
             $.retry = retry;
             return this;
         }
 
+        /**
+         * @param retryIntervalInSeconds Interval between each retry attempt (in seconds). The default is 30 sec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryIntervalInSeconds(@Nullable Integer retryIntervalInSeconds) {
             $.retryIntervalInSeconds = retryIntervalInSeconds;
             return this;
         }
 
+        /**
+         * @param secureInput When set to true, Input from activity is considered as secure and will not be logged to monitoring.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secureInput(@Nullable Boolean secureInput) {
             $.secureInput = secureInput;
             return this;
         }
 
+        /**
+         * @param secureOutput When set to true, Output from activity is considered as secure and will not be logged to monitoring.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secureOutput(@Nullable Boolean secureOutput) {
             $.secureOutput = secureOutput;
             return this;
         }
 
+        /**
+         * @param timeout Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Object timeout) {
             $.timeout = timeout;
             return this;

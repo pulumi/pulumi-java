@@ -22,6 +22,10 @@ public final class DeviceGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceGroupName")
     private @Nullable Output<String> deviceGroupName;
 
+    /**
+     * @return Device group name
+     * 
+     */
     public Optional<Output<String>> deviceGroupName() {
         return Optional.ofNullable(this.deviceGroupName);
     }
@@ -33,6 +37,10 @@ public final class DeviceGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iotDefenderLocation", required=true)
     private Output<String> iotDefenderLocation;
 
+    /**
+     * @return Defender for IoT location
+     * 
+     */
     public Output<String> iotDefenderLocation() {
         return this.iotDefenderLocation;
     }
@@ -62,20 +70,44 @@ public final class DeviceGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeviceGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceGroupName Device group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceGroupName(@Nullable Output<String> deviceGroupName) {
             $.deviceGroupName = deviceGroupName;
             return this;
         }
 
+        /**
+         * @param deviceGroupName Device group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceGroupName(String deviceGroupName) {
             return deviceGroupName(Output.of(deviceGroupName));
         }
 
+        /**
+         * @param iotDefenderLocation Defender for IoT location
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotDefenderLocation(Output<String> iotDefenderLocation) {
             $.iotDefenderLocation = iotDefenderLocation;
             return this;
         }
 
+        /**
+         * @param iotDefenderLocation Defender for IoT location
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotDefenderLocation(String iotDefenderLocation) {
             return iotDefenderLocation(Output.of(iotDefenderLocation));
         }

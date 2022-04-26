@@ -34,6 +34,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
     private @Nullable Output<String> accountName;
 
+    /**
+     * @return The name of the Data Lake Store account.
+     * 
+     */
     public Optional<Output<String>> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -45,6 +49,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultGroup")
     private @Nullable Output<String> defaultGroup;
 
+    /**
+     * @return The default owner group for all new folders and files created in the Data Lake Store account.
+     * 
+     */
     public Optional<Output<String>> defaultGroup() {
         return Optional.ofNullable(this.defaultGroup);
     }
@@ -56,6 +64,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
     private @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
+    /**
+     * @return The Key Vault encryption configuration.
+     * 
+     */
     public Optional<Output<EncryptionConfigArgs>> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
@@ -67,6 +79,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionState")
     private @Nullable Output<EncryptionState> encryptionState;
 
+    /**
+     * @return The current state of encryption for this Data Lake Store account.
+     * 
+     */
     public Optional<Output<EncryptionState>> encryptionState() {
         return Optional.ofNullable(this.encryptionState);
     }
@@ -78,6 +94,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallAllowAzureIps")
     private @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps;
 
+    /**
+     * @return The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
+     * 
+     */
     public Optional<Output<FirewallAllowAzureIpsState>> firewallAllowAzureIps() {
         return Optional.ofNullable(this.firewallAllowAzureIps);
     }
@@ -89,6 +109,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallRules")
     private @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
 
+    /**
+     * @return The list of firewall rules associated with this Data Lake Store account.
+     * 
+     */
     public Optional<Output<List<CreateFirewallRuleWithAccountParametersArgs>>> firewallRules() {
         return Optional.ofNullable(this.firewallRules);
     }
@@ -100,6 +124,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallState")
     private @Nullable Output<FirewallState> firewallState;
 
+    /**
+     * @return The current state of the IP address firewall for this Data Lake Store account.
+     * 
+     */
     public Optional<Output<FirewallState>> firewallState() {
         return Optional.ofNullable(this.firewallState);
     }
@@ -111,6 +139,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<EncryptionIdentityArgs> identity;
 
+    /**
+     * @return The Key Vault encryption identity, if any.
+     * 
+     */
     public Optional<Output<EncryptionIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -122,6 +154,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -133,6 +169,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="newTier")
     private @Nullable Output<TierType> newTier;
 
+    /**
+     * @return The commitment tier to use for next month.
+     * 
+     */
     public Optional<Output<TierType>> newTier() {
         return Optional.ofNullable(this.newTier);
     }
@@ -144,6 +184,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the Azure resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -155,6 +199,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -166,6 +214,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trustedIdProviderState")
     private @Nullable Output<TrustedIdProviderState> trustedIdProviderState;
 
+    /**
+     * @return The current state of the trusted identity provider feature for this Data Lake Store account.
+     * 
+     */
     public Optional<Output<TrustedIdProviderState>> trustedIdProviderState() {
         return Optional.ofNullable(this.trustedIdProviderState);
     }
@@ -177,6 +229,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trustedIdProviders")
     private @Nullable Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders;
 
+    /**
+     * @return The list of trusted identity providers associated with this Data Lake Store account.
+     * 
+     */
     public Optional<Output<List<CreateTrustedIdProviderWithAccountParametersArgs>>> trustedIdProviders() {
         return Optional.ofNullable(this.trustedIdProviders);
     }
@@ -188,6 +244,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualNetworkRules")
     private @Nullable Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules;
 
+    /**
+     * @return The list of virtual network rules associated with this Data Lake Store account.
+     * 
+     */
     public Optional<Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>>> virtualNetworkRules() {
         return Optional.ofNullable(this.virtualNetworkRules);
     }
@@ -230,149 +290,347 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param defaultGroup The default owner group for all new folders and files created in the Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultGroup(@Nullable Output<String> defaultGroup) {
             $.defaultGroup = defaultGroup;
             return this;
         }
 
+        /**
+         * @param defaultGroup The default owner group for all new folders and files created in the Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultGroup(String defaultGroup) {
             return defaultGroup(Output.of(defaultGroup));
         }
 
+        /**
+         * @param encryptionConfig The Key Vault encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
             $.encryptionConfig = encryptionConfig;
             return this;
         }
 
+        /**
+         * @param encryptionConfig The Key Vault encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(EncryptionConfigArgs encryptionConfig) {
             return encryptionConfig(Output.of(encryptionConfig));
         }
 
+        /**
+         * @param encryptionState The current state of encryption for this Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionState(@Nullable Output<EncryptionState> encryptionState) {
             $.encryptionState = encryptionState;
             return this;
         }
 
+        /**
+         * @param encryptionState The current state of encryption for this Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionState(EncryptionState encryptionState) {
             return encryptionState(Output.of(encryptionState));
         }
 
+        /**
+         * @param firewallAllowAzureIps The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallAllowAzureIps(@Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps) {
             $.firewallAllowAzureIps = firewallAllowAzureIps;
             return this;
         }
 
+        /**
+         * @param firewallAllowAzureIps The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallAllowAzureIps(FirewallAllowAzureIpsState firewallAllowAzureIps) {
             return firewallAllowAzureIps(Output.of(firewallAllowAzureIps));
         }
 
+        /**
+         * @param firewallRules The list of firewall rules associated with this Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(@Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules) {
             $.firewallRules = firewallRules;
             return this;
         }
 
+        /**
+         * @param firewallRules The list of firewall rules associated with this Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(List<CreateFirewallRuleWithAccountParametersArgs> firewallRules) {
             return firewallRules(Output.of(firewallRules));
         }
 
+        /**
+         * @param firewallRules The list of firewall rules associated with this Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(CreateFirewallRuleWithAccountParametersArgs... firewallRules) {
             return firewallRules(List.of(firewallRules));
         }
 
+        /**
+         * @param firewallState The current state of the IP address firewall for this Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallState(@Nullable Output<FirewallState> firewallState) {
             $.firewallState = firewallState;
             return this;
         }
 
+        /**
+         * @param firewallState The current state of the IP address firewall for this Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallState(FirewallState firewallState) {
             return firewallState(Output.of(firewallState));
         }
 
+        /**
+         * @param identity The Key Vault encryption identity, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<EncryptionIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The Key Vault encryption identity, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(EncryptionIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param newTier The commitment tier to use for next month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newTier(@Nullable Output<TierType> newTier) {
             $.newTier = newTier;
             return this;
         }
 
+        /**
+         * @param newTier The commitment tier to use for next month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newTier(TierType newTier) {
             return newTier(Output.of(newTier));
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param trustedIdProviderState The current state of the trusted identity provider feature for this Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedIdProviderState(@Nullable Output<TrustedIdProviderState> trustedIdProviderState) {
             $.trustedIdProviderState = trustedIdProviderState;
             return this;
         }
 
+        /**
+         * @param trustedIdProviderState The current state of the trusted identity provider feature for this Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedIdProviderState(TrustedIdProviderState trustedIdProviderState) {
             return trustedIdProviderState(Output.of(trustedIdProviderState));
         }
 
+        /**
+         * @param trustedIdProviders The list of trusted identity providers associated with this Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedIdProviders(@Nullable Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders) {
             $.trustedIdProviders = trustedIdProviders;
             return this;
         }
 
+        /**
+         * @param trustedIdProviders The list of trusted identity providers associated with this Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedIdProviders(List<CreateTrustedIdProviderWithAccountParametersArgs> trustedIdProviders) {
             return trustedIdProviders(Output.of(trustedIdProviders));
         }
 
+        /**
+         * @param trustedIdProviders The list of trusted identity providers associated with this Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedIdProviders(CreateTrustedIdProviderWithAccountParametersArgs... trustedIdProviders) {
             return trustedIdProviders(List.of(trustedIdProviders));
         }
 
+        /**
+         * @param virtualNetworkRules The list of virtual network rules associated with this Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRules(@Nullable Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules) {
             $.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
+        /**
+         * @param virtualNetworkRules The list of virtual network rules associated with this Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRules(List<CreateVirtualNetworkRuleWithAccountParametersArgs> virtualNetworkRules) {
             return virtualNetworkRules(Output.of(virtualNetworkRules));
         }
 
+        /**
+         * @param virtualNetworkRules The list of virtual network rules associated with this Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRules(CreateVirtualNetworkRuleWithAccountParametersArgs... virtualNetworkRules) {
             return virtualNetworkRules(List.of(virtualNetworkRules));
         }

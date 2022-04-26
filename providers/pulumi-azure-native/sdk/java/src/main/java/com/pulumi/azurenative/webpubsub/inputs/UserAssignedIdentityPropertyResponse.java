@@ -23,6 +23,10 @@ public final class UserAssignedIdentityPropertyResponse extends com.pulumi.resou
     @Import(name="clientId", required=true)
     private String clientId;
 
+    /**
+     * @return Get the client id for the user assigned identity
+     * 
+     */
     public String clientId() {
         return this.clientId;
     }
@@ -34,6 +38,10 @@ public final class UserAssignedIdentityPropertyResponse extends com.pulumi.resou
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return Get the principal id for the user assigned identity
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -63,11 +71,23 @@ public final class UserAssignedIdentityPropertyResponse extends com.pulumi.resou
             $ = new UserAssignedIdentityPropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId Get the client id for the user assigned identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param principalId Get the principal id for the user assigned identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;

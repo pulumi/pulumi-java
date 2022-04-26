@@ -24,6 +24,10 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="amazonSideAsn")
     private @Nullable String amazonSideAsn;
 
+    /**
+     * @return The Autonomous System Number (ASN) for the Amazon side of the specific VPN Gateway to retrieve.
+     * 
+     */
     public Optional<String> amazonSideAsn() {
         return Optional.ofNullable(this.amazonSideAsn);
     }
@@ -35,6 +39,10 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="attachedVpcId")
     private @Nullable String attachedVpcId;
 
+    /**
+     * @return The ID of a VPC attached to the specific VPN Gateway to retrieve.
+     * 
+     */
     public Optional<String> attachedVpcId() {
         return Optional.ofNullable(this.attachedVpcId);
     }
@@ -46,6 +54,10 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZone")
     private @Nullable String availabilityZone;
 
+    /**
+     * @return The Availability Zone of the specific VPN Gateway to retrieve.
+     * 
+     */
     public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -57,6 +69,10 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
     private @Nullable List<GetVpnGatewayFilter> filters;
 
+    /**
+     * @return Custom filter block as described below.
+     * 
+     */
     public Optional<List<GetVpnGatewayFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -68,6 +84,10 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The ID of the specific VPN Gateway to retrieve.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -79,6 +99,10 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return The state of the specific VPN Gateway to retrieve.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -91,6 +115,11 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags, each pair of which must exactly match
+     * a pair on the desired VPN Gateway.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,40 +154,89 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVpnGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amazonSideAsn The Autonomous System Number (ASN) for the Amazon side of the specific VPN Gateway to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amazonSideAsn(@Nullable String amazonSideAsn) {
             $.amazonSideAsn = amazonSideAsn;
             return this;
         }
 
+        /**
+         * @param attachedVpcId The ID of a VPC attached to the specific VPN Gateway to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedVpcId(@Nullable String attachedVpcId) {
             $.attachedVpcId = attachedVpcId;
             return this;
         }
 
+        /**
+         * @param availabilityZone The Availability Zone of the specific VPN Gateway to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(@Nullable String availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetVpnGatewayFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetVpnGatewayFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param id The ID of the specific VPN Gateway to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param state The state of the specific VPN Gateway to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param tags A map of tags, each pair of which must exactly match
+         * a pair on the desired VPN Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

@@ -24,6 +24,10 @@ public final class BucketLifecycleRuleExpirationGetArgs extends com.pulumi.resou
     @Import(name="date")
     private @Nullable Output<String> date;
 
+    /**
+     * @return Specifies the date after which you want the corresponding action to take effect.
+     * 
+     */
     public Optional<Output<String>> date() {
         return Optional.ofNullable(this.date);
     }
@@ -35,6 +39,10 @@ public final class BucketLifecycleRuleExpirationGetArgs extends com.pulumi.resou
     @Import(name="days")
     private @Nullable Output<Integer> days;
 
+    /**
+     * @return Specifies the number of days after object creation when the specific rule action takes effect.
+     * 
+     */
     public Optional<Output<Integer>> days() {
         return Optional.ofNullable(this.days);
     }
@@ -46,6 +54,10 @@ public final class BucketLifecycleRuleExpirationGetArgs extends com.pulumi.resou
     @Import(name="expiredObjectDeleteMarker")
     private @Nullable Output<Boolean> expiredObjectDeleteMarker;
 
+    /**
+     * @return On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
+     * 
+     */
     public Optional<Output<Boolean>> expiredObjectDeleteMarker() {
         return Optional.ofNullable(this.expiredObjectDeleteMarker);
     }
@@ -76,29 +88,65 @@ public final class BucketLifecycleRuleExpirationGetArgs extends com.pulumi.resou
             $ = new BucketLifecycleRuleExpirationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param date Specifies the date after which you want the corresponding action to take effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder date(@Nullable Output<String> date) {
             $.date = date;
             return this;
         }
 
+        /**
+         * @param date Specifies the date after which you want the corresponding action to take effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder date(String date) {
             return date(Output.of(date));
         }
 
+        /**
+         * @param days Specifies the number of days after object creation when the specific rule action takes effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(@Nullable Output<Integer> days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param days Specifies the number of days after object creation when the specific rule action takes effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(Integer days) {
             return days(Output.of(days));
         }
 
+        /**
+         * @param expiredObjectDeleteMarker On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiredObjectDeleteMarker(@Nullable Output<Boolean> expiredObjectDeleteMarker) {
             $.expiredObjectDeleteMarker = expiredObjectDeleteMarker;
             return this;
         }
 
+        /**
+         * @param expiredObjectDeleteMarker On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiredObjectDeleteMarker(Boolean expiredObjectDeleteMarker) {
             return expiredObjectDeleteMarker(Output.of(expiredObjectDeleteMarker));
         }

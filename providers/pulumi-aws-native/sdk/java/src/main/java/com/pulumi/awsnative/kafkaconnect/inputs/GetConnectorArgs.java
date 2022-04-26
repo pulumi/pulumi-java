@@ -19,6 +19,10 @@ public final class GetConnectorArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="connectorArn", required=true)
     private String connectorArn;
 
+    /**
+     * @return Amazon Resource Name for the created Connector.
+     * 
+     */
     public String connectorArn() {
         return this.connectorArn;
     }
@@ -47,6 +51,12 @@ public final class GetConnectorArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectorArn Amazon Resource Name for the created Connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorArn(String connectorArn) {
             $.connectorArn = connectorArn;
             return this;

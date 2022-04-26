@@ -31,6 +31,10 @@ public final class ScheduleTriggerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the trigger.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -42,6 +46,10 @@ public final class ScheduleTriggerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Trigger description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -53,6 +61,10 @@ public final class ScheduleTriggerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="pipelines")
     private @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
+    /**
+     * @return Pipelines that need to be started.
+     * 
+     */
     public Optional<Output<List<TriggerPipelineReferenceArgs>>> pipelines() {
         return Optional.ofNullable(this.pipelines);
     }
@@ -64,6 +76,10 @@ public final class ScheduleTriggerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="recurrence", required=true)
     private Output<ScheduleTriggerRecurrenceArgs> recurrence;
 
+    /**
+     * @return Recurrence schedule configuration.
+     * 
+     */
     public Output<ScheduleTriggerRecurrenceArgs> recurrence() {
         return this.recurrence;
     }
@@ -76,6 +92,11 @@ public final class ScheduleTriggerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Trigger type.
+     * Expected value is &#39;ScheduleTrigger&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -108,55 +129,129 @@ public final class ScheduleTriggerArgs extends com.pulumi.resources.ResourceArgs
             $ = new ScheduleTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param pipelines Pipelines that need to be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
             $.pipelines = pipelines;
             return this;
         }
 
+        /**
+         * @param pipelines Pipelines that need to be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelines(List<TriggerPipelineReferenceArgs> pipelines) {
             return pipelines(Output.of(pipelines));
         }
 
+        /**
+         * @param pipelines Pipelines that need to be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelines(TriggerPipelineReferenceArgs... pipelines) {
             return pipelines(List.of(pipelines));
         }
 
+        /**
+         * @param recurrence Recurrence schedule configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(Output<ScheduleTriggerRecurrenceArgs> recurrence) {
             $.recurrence = recurrence;
             return this;
         }
 
+        /**
+         * @param recurrence Recurrence schedule configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(ScheduleTriggerRecurrenceArgs recurrence) {
             return recurrence(Output.of(recurrence));
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;ScheduleTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;ScheduleTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

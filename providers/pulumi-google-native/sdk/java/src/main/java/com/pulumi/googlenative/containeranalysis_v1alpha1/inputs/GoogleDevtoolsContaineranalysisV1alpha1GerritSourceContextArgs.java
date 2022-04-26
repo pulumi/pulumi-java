@@ -27,6 +27,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
     @Import(name="aliasContext")
     private @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext;
 
+    /**
+     * @return An alias, which may be a branch or tag.
+     * 
+     */
     public Optional<Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs>> aliasContext() {
         return Optional.ofNullable(this.aliasContext);
     }
@@ -38,6 +42,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
     @Import(name="gerritProject")
     private @Nullable Output<String> gerritProject;
 
+    /**
+     * @return The full project name within the host. Projects may be nested, so &#34;project/subproject&#34; is a valid project name. The &#34;repo name&#34; is the hostURI/project.
+     * 
+     */
     public Optional<Output<String>> gerritProject() {
         return Optional.ofNullable(this.gerritProject);
     }
@@ -49,6 +57,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
     @Import(name="hostUri")
     private @Nullable Output<String> hostUri;
 
+    /**
+     * @return The URI of a running Gerrit instance.
+     * 
+     */
     public Optional<Output<String>> hostUri() {
         return Optional.ofNullable(this.hostUri);
     }
@@ -60,6 +72,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
     @Import(name="revisionId")
     private @Nullable Output<String> revisionId;
 
+    /**
+     * @return A revision (commit) ID.
+     * 
+     */
     public Optional<Output<String>> revisionId() {
         return Optional.ofNullable(this.revisionId);
     }
@@ -91,38 +107,86 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
             $ = new GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aliasContext An alias, which may be a branch or tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasContext(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext) {
             $.aliasContext = aliasContext;
             return this;
         }
 
+        /**
+         * @param aliasContext An alias, which may be a branch or tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasContext(GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs aliasContext) {
             return aliasContext(Output.of(aliasContext));
         }
 
+        /**
+         * @param gerritProject The full project name within the host. Projects may be nested, so &#34;project/subproject&#34; is a valid project name. The &#34;repo name&#34; is the hostURI/project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gerritProject(@Nullable Output<String> gerritProject) {
             $.gerritProject = gerritProject;
             return this;
         }
 
+        /**
+         * @param gerritProject The full project name within the host. Projects may be nested, so &#34;project/subproject&#34; is a valid project name. The &#34;repo name&#34; is the hostURI/project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gerritProject(String gerritProject) {
             return gerritProject(Output.of(gerritProject));
         }
 
+        /**
+         * @param hostUri The URI of a running Gerrit instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostUri(@Nullable Output<String> hostUri) {
             $.hostUri = hostUri;
             return this;
         }
 
+        /**
+         * @param hostUri The URI of a running Gerrit instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostUri(String hostUri) {
             return hostUri(Output.of(hostUri));
         }
 
+        /**
+         * @param revisionId A revision (commit) ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionId(@Nullable Output<String> revisionId) {
             $.revisionId = revisionId;
             return this;
         }
 
+        /**
+         * @param revisionId A revision (commit) ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionId(String revisionId) {
             return revisionId(Output.of(revisionId));
         }

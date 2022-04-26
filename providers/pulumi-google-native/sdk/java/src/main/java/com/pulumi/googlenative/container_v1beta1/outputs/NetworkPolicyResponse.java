@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class NetworkPolicyResponse {
     /**
-     * Whether network policy is enabled on the cluster.
+     * @return Whether network policy is enabled on the cluster.
      * 
      */
     private final Boolean enabled;
     /**
-     * The selected network policy provider.
+     * @return The selected network policy provider.
      * 
      */
     private final String provider;
@@ -30,16 +30,16 @@ public final class NetworkPolicyResponse {
     }
 
     /**
-     * Whether network policy is enabled on the cluster.
+     * @return Whether network policy is enabled on the cluster.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The selected network policy provider.
+     * @return The selected network policy provider.
      * 
-    */
+     */
     public String provider() {
         return this.provider;
     }

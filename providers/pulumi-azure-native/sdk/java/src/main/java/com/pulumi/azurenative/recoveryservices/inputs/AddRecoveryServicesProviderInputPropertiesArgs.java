@@ -27,6 +27,10 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends com.pu
     @Import(name="authenticationIdentityInput", required=true)
     private Output<IdentityProviderInputArgs> authenticationIdentityInput;
 
+    /**
+     * @return The identity provider input for DRA authentication.
+     * 
+     */
     public Output<IdentityProviderInputArgs> authenticationIdentityInput() {
         return this.authenticationIdentityInput;
     }
@@ -38,6 +42,10 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends com.pu
     @Import(name="dataPlaneAuthenticationIdentityInput")
     private @Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput;
 
+    /**
+     * @return The identity provider input for data plane authentication.
+     * 
+     */
     public Optional<Output<IdentityProviderInputArgs>> dataPlaneAuthenticationIdentityInput() {
         return Optional.ofNullable(this.dataPlaneAuthenticationIdentityInput);
     }
@@ -49,6 +57,10 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends com.pu
     @Import(name="machineId")
     private @Nullable Output<String> machineId;
 
+    /**
+     * @return The Id of the machine where the provider is getting added.
+     * 
+     */
     public Optional<Output<String>> machineId() {
         return Optional.ofNullable(this.machineId);
     }
@@ -60,6 +72,10 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends com.pu
     @Import(name="machineName", required=true)
     private Output<String> machineName;
 
+    /**
+     * @return The name of the machine where the provider is getting added.
+     * 
+     */
     public Output<String> machineName() {
         return this.machineName;
     }
@@ -71,6 +87,10 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends com.pu
     @Import(name="resourceAccessIdentityInput", required=true)
     private Output<IdentityProviderInputArgs> resourceAccessIdentityInput;
 
+    /**
+     * @return The identity provider input for resource access.
+     * 
+     */
     public Output<IdentityProviderInputArgs> resourceAccessIdentityInput() {
         return this.resourceAccessIdentityInput;
     }
@@ -103,47 +123,107 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends com.pu
             $ = new AddRecoveryServicesProviderInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationIdentityInput The identity provider input for DRA authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationIdentityInput(Output<IdentityProviderInputArgs> authenticationIdentityInput) {
             $.authenticationIdentityInput = authenticationIdentityInput;
             return this;
         }
 
+        /**
+         * @param authenticationIdentityInput The identity provider input for DRA authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationIdentityInput(IdentityProviderInputArgs authenticationIdentityInput) {
             return authenticationIdentityInput(Output.of(authenticationIdentityInput));
         }
 
+        /**
+         * @param dataPlaneAuthenticationIdentityInput The identity provider input for data plane authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPlaneAuthenticationIdentityInput(@Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput) {
             $.dataPlaneAuthenticationIdentityInput = dataPlaneAuthenticationIdentityInput;
             return this;
         }
 
+        /**
+         * @param dataPlaneAuthenticationIdentityInput The identity provider input for data plane authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPlaneAuthenticationIdentityInput(IdentityProviderInputArgs dataPlaneAuthenticationIdentityInput) {
             return dataPlaneAuthenticationIdentityInput(Output.of(dataPlaneAuthenticationIdentityInput));
         }
 
+        /**
+         * @param machineId The Id of the machine where the provider is getting added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineId(@Nullable Output<String> machineId) {
             $.machineId = machineId;
             return this;
         }
 
+        /**
+         * @param machineId The Id of the machine where the provider is getting added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineId(String machineId) {
             return machineId(Output.of(machineId));
         }
 
+        /**
+         * @param machineName The name of the machine where the provider is getting added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineName(Output<String> machineName) {
             $.machineName = machineName;
             return this;
         }
 
+        /**
+         * @param machineName The name of the machine where the provider is getting added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineName(String machineName) {
             return machineName(Output.of(machineName));
         }
 
+        /**
+         * @param resourceAccessIdentityInput The identity provider input for resource access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAccessIdentityInput(Output<IdentityProviderInputArgs> resourceAccessIdentityInput) {
             $.resourceAccessIdentityInput = resourceAccessIdentityInput;
             return this;
         }
 
+        /**
+         * @param resourceAccessIdentityInput The identity provider input for resource access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAccessIdentityInput(IdentityProviderInputArgs resourceAccessIdentityInput) {
             return resourceAccessIdentityInput(Output.of(resourceAccessIdentityInput));
         }

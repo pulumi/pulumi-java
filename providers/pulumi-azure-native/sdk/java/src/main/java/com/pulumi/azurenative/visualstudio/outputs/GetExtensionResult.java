@@ -14,37 +14,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetExtensionResult {
     /**
-     * Unique identifier of the resource.
+     * @return Unique identifier of the resource.
      * 
      */
     private final String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The extension plan that was purchased.
+     * @return The extension plan that was purchased.
      * 
      */
     private final @Nullable ExtensionResourcePlanResponse plan;
     /**
-     * Resource properties.
+     * @return Resource properties.
      * 
      */
     private final Map<String,String> properties;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -68,51 +68,51 @@ public final class GetExtensionResult {
     }
 
     /**
-     * Unique identifier of the resource.
+     * @return Unique identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The extension plan that was purchased.
+     * @return The extension plan that was purchased.
      * 
-    */
+     */
     public Optional<ExtensionResourcePlanResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
-     * Resource properties.
+     * @return Resource properties.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

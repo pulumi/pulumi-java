@@ -20,6 +20,10 @@ public final class EventDestinationCloudwatchDestinationArgs extends com.pulumi.
     @Import(name="defaultValue", required=true)
     private Output<String> defaultValue;
 
+    /**
+     * @return The default value for the event
+     * 
+     */
     public Output<String> defaultValue() {
         return this.defaultValue;
     }
@@ -31,6 +35,10 @@ public final class EventDestinationCloudwatchDestinationArgs extends com.pulumi.
     @Import(name="dimensionName", required=true)
     private Output<String> dimensionName;
 
+    /**
+     * @return The name for the dimension
+     * 
+     */
     public Output<String> dimensionName() {
         return this.dimensionName;
     }
@@ -42,6 +50,10 @@ public final class EventDestinationCloudwatchDestinationArgs extends com.pulumi.
     @Import(name="valueSource", required=true)
     private Output<String> valueSource;
 
+    /**
+     * @return The source for the value. May be any of `&#34;messageTag&#34;`, `&#34;emailHeader&#34;` or `&#34;linkTag&#34;`.
+     * 
+     */
     public Output<String> valueSource() {
         return this.valueSource;
     }
@@ -72,29 +84,65 @@ public final class EventDestinationCloudwatchDestinationArgs extends com.pulumi.
             $ = new EventDestinationCloudwatchDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValue The default value for the event
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(Output<String> defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param defaultValue The default value for the event
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(String defaultValue) {
             return defaultValue(Output.of(defaultValue));
         }
 
+        /**
+         * @param dimensionName The name for the dimension
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionName(Output<String> dimensionName) {
             $.dimensionName = dimensionName;
             return this;
         }
 
+        /**
+         * @param dimensionName The name for the dimension
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionName(String dimensionName) {
             return dimensionName(Output.of(dimensionName));
         }
 
+        /**
+         * @param valueSource The source for the value. May be any of `&#34;messageTag&#34;`, `&#34;emailHeader&#34;` or `&#34;linkTag&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueSource(Output<String> valueSource) {
             $.valueSource = valueSource;
             return this;
         }
 
+        /**
+         * @param valueSource The source for the value. May be any of `&#34;messageTag&#34;`, `&#34;emailHeader&#34;` or `&#34;linkTag&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueSource(String valueSource) {
             return valueSource(Output.of(valueSource));
         }

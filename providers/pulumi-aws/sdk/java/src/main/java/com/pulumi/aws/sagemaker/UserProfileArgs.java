@@ -24,6 +24,10 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainId", required=true)
     private Output<String> domainId;
 
+    /**
+     * @return The ID of the associated Domain.
+     * 
+     */
     public Output<String> domainId() {
         return this.domainId;
     }
@@ -35,6 +39,10 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="singleSignOnUserIdentifier")
     private @Nullable Output<String> singleSignOnUserIdentifier;
 
+    /**
+     * @return A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain&#39;s AuthMode is SSO, this field is required. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
+     * 
+     */
     public Optional<Output<String>> singleSignOnUserIdentifier() {
         return Optional.ofNullable(this.singleSignOnUserIdentifier);
     }
@@ -46,6 +54,10 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="singleSignOnUserValue")
     private @Nullable Output<String> singleSignOnUserValue;
 
+    /**
+     * @return The username of the associated AWS Single Sign-On User for this User Profile. If the Domain&#39;s AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
+     * 
+     */
     public Optional<Output<String>> singleSignOnUserValue() {
         return Optional.ofNullable(this.singleSignOnUserValue);
     }
@@ -57,6 +69,10 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -68,6 +84,10 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userProfileName", required=true)
     private Output<String> userProfileName;
 
+    /**
+     * @return The name for the User Profile.
+     * 
+     */
     public Output<String> userProfileName() {
         return this.userProfileName;
     }
@@ -79,6 +99,10 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userSettings")
     private @Nullable Output<UserProfileUserSettingsArgs> userSettings;
 
+    /**
+     * @return The user settings. See User Settings below.
+     * 
+     */
     public Optional<Output<UserProfileUserSettingsArgs>> userSettings() {
         return Optional.ofNullable(this.userSettings);
     }
@@ -112,56 +136,128 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UserProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainId The ID of the associated Domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainId(Output<String> domainId) {
             $.domainId = domainId;
             return this;
         }
 
+        /**
+         * @param domainId The ID of the associated Domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainId(String domainId) {
             return domainId(Output.of(domainId));
         }
 
+        /**
+         * @param singleSignOnUserIdentifier A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain&#39;s AuthMode is SSO, this field is required. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleSignOnUserIdentifier(@Nullable Output<String> singleSignOnUserIdentifier) {
             $.singleSignOnUserIdentifier = singleSignOnUserIdentifier;
             return this;
         }
 
+        /**
+         * @param singleSignOnUserIdentifier A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain&#39;s AuthMode is SSO, this field is required. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleSignOnUserIdentifier(String singleSignOnUserIdentifier) {
             return singleSignOnUserIdentifier(Output.of(singleSignOnUserIdentifier));
         }
 
+        /**
+         * @param singleSignOnUserValue The username of the associated AWS Single Sign-On User for this User Profile. If the Domain&#39;s AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleSignOnUserValue(@Nullable Output<String> singleSignOnUserValue) {
             $.singleSignOnUserValue = singleSignOnUserValue;
             return this;
         }
 
+        /**
+         * @param singleSignOnUserValue The username of the associated AWS Single Sign-On User for this User Profile. If the Domain&#39;s AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleSignOnUserValue(String singleSignOnUserValue) {
             return singleSignOnUserValue(Output.of(singleSignOnUserValue));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param userProfileName The name for the User Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProfileName(Output<String> userProfileName) {
             $.userProfileName = userProfileName;
             return this;
         }
 
+        /**
+         * @param userProfileName The name for the User Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProfileName(String userProfileName) {
             return userProfileName(Output.of(userProfileName));
         }
 
+        /**
+         * @param userSettings The user settings. See User Settings below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userSettings(@Nullable Output<UserProfileUserSettingsArgs> userSettings) {
             $.userSettings = userSettings;
             return this;
         }
 
+        /**
+         * @param userSettings The user settings. See User Settings below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userSettings(UserProfileUserSettingsArgs userSettings) {
             return userSettings(Output.of(userSettings));
         }

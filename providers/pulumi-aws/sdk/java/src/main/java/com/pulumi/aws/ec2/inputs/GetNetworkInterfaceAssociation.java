@@ -19,6 +19,10 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
     @Import(name="allocationId", required=true)
     private String allocationId;
 
+    /**
+     * @return The allocation ID.
+     * 
+     */
     public String allocationId() {
         return this.allocationId;
     }
@@ -30,6 +34,10 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
     @Import(name="associationId", required=true)
     private String associationId;
 
+    /**
+     * @return The association ID.
+     * 
+     */
     public String associationId() {
         return this.associationId;
     }
@@ -41,6 +49,10 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
     @Import(name="carrierIp", required=true)
     private String carrierIp;
 
+    /**
+     * @return The carrier IP address associated with the network interface. This attribute is only set when the network interface is in a subnet which is associated with a Wavelength Zone.
+     * 
+     */
     public String carrierIp() {
         return this.carrierIp;
     }
@@ -52,6 +64,10 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
     @Import(name="customerOwnedIp", required=true)
     private String customerOwnedIp;
 
+    /**
+     * @return The customer-owned IP address.
+     * 
+     */
     public String customerOwnedIp() {
         return this.customerOwnedIp;
     }
@@ -63,6 +79,10 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
     @Import(name="ipOwnerId", required=true)
     private String ipOwnerId;
 
+    /**
+     * @return The ID of the Elastic IP address owner.
+     * 
+     */
     public String ipOwnerId() {
         return this.ipOwnerId;
     }
@@ -74,6 +94,10 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
     @Import(name="publicDnsName", required=true)
     private String publicDnsName;
 
+    /**
+     * @return The public DNS name.
+     * 
+     */
     public String publicDnsName() {
         return this.publicDnsName;
     }
@@ -85,6 +109,10 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
     @Import(name="publicIp", required=true)
     private String publicIp;
 
+    /**
+     * @return The address of the Elastic IP address bound to the network interface.
+     * 
+     */
     public String publicIp() {
         return this.publicIp;
     }
@@ -119,36 +147,78 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
             $ = new GetNetworkInterfaceAssociation(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocationId The allocation ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationId(String allocationId) {
             $.allocationId = allocationId;
             return this;
         }
 
+        /**
+         * @param associationId The association ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationId(String associationId) {
             $.associationId = associationId;
             return this;
         }
 
+        /**
+         * @param carrierIp The carrier IP address associated with the network interface. This attribute is only set when the network interface is in a subnet which is associated with a Wavelength Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder carrierIp(String carrierIp) {
             $.carrierIp = carrierIp;
             return this;
         }
 
+        /**
+         * @param customerOwnedIp The customer-owned IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerOwnedIp(String customerOwnedIp) {
             $.customerOwnedIp = customerOwnedIp;
             return this;
         }
 
+        /**
+         * @param ipOwnerId The ID of the Elastic IP address owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipOwnerId(String ipOwnerId) {
             $.ipOwnerId = ipOwnerId;
             return this;
         }
 
+        /**
+         * @param publicDnsName The public DNS name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicDnsName(String publicDnsName) {
             $.publicDnsName = publicDnsName;
             return this;
         }
 
+        /**
+         * @param publicIp The address of the Elastic IP address bound to the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIp(String publicIp) {
             $.publicIp = publicIp;
             return this;

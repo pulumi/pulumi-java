@@ -26,6 +26,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="podCidr")
     private @Nullable Output<String> podCidr;
 
+    /**
+     * @return The CIDR used for OpenShift/Kubernetes Pods (immutable).
+     * 
+     */
     public Optional<Output<String>> podCidr() {
         return Optional.ofNullable(this.podCidr);
     }
@@ -37,6 +41,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="serviceCidr")
     private @Nullable Output<String> serviceCidr;
 
+    /**
+     * @return The CIDR used for OpenShift/Kubernetes Services (immutable).
+     * 
+     */
     public Optional<Output<String>> serviceCidr() {
         return Optional.ofNullable(this.serviceCidr);
     }
@@ -66,20 +74,44 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new NetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param podCidr The CIDR used for OpenShift/Kubernetes Pods (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder podCidr(@Nullable Output<String> podCidr) {
             $.podCidr = podCidr;
             return this;
         }
 
+        /**
+         * @param podCidr The CIDR used for OpenShift/Kubernetes Pods (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder podCidr(String podCidr) {
             return podCidr(Output.of(podCidr));
         }
 
+        /**
+         * @param serviceCidr The CIDR used for OpenShift/Kubernetes Services (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCidr(@Nullable Output<String> serviceCidr) {
             $.serviceCidr = serviceCidr;
             return this;
         }
 
+        /**
+         * @param serviceCidr The CIDR used for OpenShift/Kubernetes Services (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCidr(String serviceCidr) {
             return serviceCidr(Output.of(serviceCidr));
         }

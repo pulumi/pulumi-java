@@ -26,6 +26,10 @@ public final class AutoHealActionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="actionType")
     private @Nullable String actionType;
 
+    /**
+     * @return Predefined action to be taken.
+     * 
+     */
     public Optional<String> actionType() {
         return Optional.ofNullable(this.actionType);
     }
@@ -37,6 +41,10 @@ public final class AutoHealActionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="customAction")
     private @Nullable AutoHealCustomActionResponse customAction;
 
+    /**
+     * @return Custom action to be taken.
+     * 
+     */
     public Optional<AutoHealCustomActionResponse> customAction() {
         return Optional.ofNullable(this.customAction);
     }
@@ -49,6 +57,11 @@ public final class AutoHealActionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="minProcessExecutionTime")
     private @Nullable String minProcessExecutionTime;
 
+    /**
+     * @return Minimum time the process must execute
+     * before taking the action
+     * 
+     */
     public Optional<String> minProcessExecutionTime() {
         return Optional.ofNullable(this.minProcessExecutionTime);
     }
@@ -79,16 +92,35 @@ public final class AutoHealActionsResponse extends com.pulumi.resources.InvokeAr
             $ = new AutoHealActionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionType Predefined action to be taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(@Nullable String actionType) {
             $.actionType = actionType;
             return this;
         }
 
+        /**
+         * @param customAction Custom action to be taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customAction(@Nullable AutoHealCustomActionResponse customAction) {
             $.customAction = customAction;
             return this;
         }
 
+        /**
+         * @param minProcessExecutionTime Minimum time the process must execute
+         * before taking the action
+         * 
+         * @return builder
+         * 
+         */
         public Builder minProcessExecutionTime(@Nullable String minProcessExecutionTime) {
             $.minProcessExecutionTime = minProcessExecutionTime;
             return this;

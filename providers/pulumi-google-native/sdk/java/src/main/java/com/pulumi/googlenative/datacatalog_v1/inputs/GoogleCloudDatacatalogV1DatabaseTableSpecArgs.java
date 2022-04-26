@@ -26,6 +26,10 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends com.pul
     @Import(name="type")
     private @Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type;
 
+    /**
+     * @return Type of this table.
+     * 
+     */
     public Optional<Output<GoogleCloudDatacatalogV1DatabaseTableSpecType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends com.pul
             $ = new GoogleCloudDatacatalogV1DatabaseTableSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Type of this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(GoogleCloudDatacatalogV1DatabaseTableSpecType type) {
             return type(Output.of(type));
         }

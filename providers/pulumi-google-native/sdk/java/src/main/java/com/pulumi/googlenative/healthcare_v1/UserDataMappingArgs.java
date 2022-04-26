@@ -31,6 +31,10 @@ public final class UserDataMappingArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dataId", required=true)
     private Output<String> dataId;
 
+    /**
+     * @return A unique identifier for the mapped resource.
+     * 
+     */
     public Output<String> dataId() {
         return this.dataId;
     }
@@ -56,6 +60,10 @@ public final class UserDataMappingArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_id}`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -74,6 +82,10 @@ public final class UserDataMappingArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceAttributes")
     private @Nullable Output<List<AttributeArgs>> resourceAttributes;
 
+    /**
+     * @return Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field &#34;values&#34; in each Attribute.
+     * 
+     */
     public Optional<Output<List<AttributeArgs>>> resourceAttributes() {
         return Optional.ofNullable(this.resourceAttributes);
     }
@@ -85,6 +97,10 @@ public final class UserDataMappingArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="userId", required=true)
     private Output<String> userId;
 
+    /**
+     * @return User&#39;s UUID provided by the client.
+     * 
+     */
     public Output<String> userId() {
         return this.userId;
     }
@@ -129,11 +145,23 @@ public final class UserDataMappingArgs extends com.pulumi.resources.ResourceArgs
             return consentStoreId(Output.of(consentStoreId));
         }
 
+        /**
+         * @param dataId A unique identifier for the mapped resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataId(Output<String> dataId) {
             $.dataId = dataId;
             return this;
         }
 
+        /**
+         * @param dataId A unique identifier for the mapped resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataId(String dataId) {
             return dataId(Output.of(dataId));
         }
@@ -156,11 +184,23 @@ public final class UserDataMappingArgs extends com.pulumi.resources.ResourceArgs
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -174,24 +214,54 @@ public final class UserDataMappingArgs extends com.pulumi.resources.ResourceArgs
             return project(Output.of(project));
         }
 
+        /**
+         * @param resourceAttributes Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field &#34;values&#34; in each Attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAttributes(@Nullable Output<List<AttributeArgs>> resourceAttributes) {
             $.resourceAttributes = resourceAttributes;
             return this;
         }
 
+        /**
+         * @param resourceAttributes Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field &#34;values&#34; in each Attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAttributes(List<AttributeArgs> resourceAttributes) {
             return resourceAttributes(Output.of(resourceAttributes));
         }
 
+        /**
+         * @param resourceAttributes Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field &#34;values&#34; in each Attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAttributes(AttributeArgs... resourceAttributes) {
             return resourceAttributes(List.of(resourceAttributes));
         }
 
+        /**
+         * @param userId User&#39;s UUID provided by the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(Output<String> userId) {
             $.userId = userId;
             return this;
         }
 
+        /**
+         * @param userId User&#39;s UUID provided by the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             return userId(Output.of(userId));
         }

@@ -27,6 +27,10 @@ public final class InputMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fieldName")
     private @Nullable Output<String> fieldName;
 
+    /**
+     * @return The name of the field that is going to be injected.
+     * 
+     */
     public Optional<Output<String>> fieldName() {
         return Optional.ofNullable(this.fieldName);
     }
@@ -38,6 +42,10 @@ public final class InputMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<InputMappingLocation> location;
 
+    /**
+     * @return The location where this mapping applies.
+     * 
+     */
     public Optional<Output<InputMappingLocation>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -49,6 +57,10 @@ public final class InputMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="methodMatch")
     private @Nullable Output<String> methodMatch;
 
+    /**
+     * @return Regex to evaluate on method to decide if input applies.
+     * 
+     */
     public Optional<Output<String>> methodMatch() {
         return Optional.ofNullable(this.methodMatch);
     }
@@ -60,6 +72,10 @@ public final class InputMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return A jsonPath expression to select an element.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -91,38 +107,86 @@ public final class InputMappingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InputMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fieldName The name of the field that is going to be injected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldName(@Nullable Output<String> fieldName) {
             $.fieldName = fieldName;
             return this;
         }
 
+        /**
+         * @param fieldName The name of the field that is going to be injected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldName(String fieldName) {
             return fieldName(Output.of(fieldName));
         }
 
+        /**
+         * @param location The location where this mapping applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<InputMappingLocation> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location where this mapping applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(InputMappingLocation location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param methodMatch Regex to evaluate on method to decide if input applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodMatch(@Nullable Output<String> methodMatch) {
             $.methodMatch = methodMatch;
             return this;
         }
 
+        /**
+         * @param methodMatch Regex to evaluate on method to decide if input applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodMatch(String methodMatch) {
             return methodMatch(Output.of(methodMatch));
         }
 
+        /**
+         * @param value A jsonPath expression to select an element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value A jsonPath expression to select an element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

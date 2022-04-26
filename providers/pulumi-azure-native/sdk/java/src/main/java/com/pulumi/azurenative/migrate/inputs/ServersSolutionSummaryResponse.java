@@ -27,6 +27,10 @@ public final class ServersSolutionSummaryResponse extends com.pulumi.resources.I
     @Import(name="assessedCount")
     private @Nullable Integer assessedCount;
 
+    /**
+     * @return Gets or sets the count of servers assessed.
+     * 
+     */
     public Optional<Integer> assessedCount() {
         return Optional.ofNullable(this.assessedCount);
     }
@@ -38,6 +42,10 @@ public final class ServersSolutionSummaryResponse extends com.pulumi.resources.I
     @Import(name="discoveredCount")
     private @Nullable Integer discoveredCount;
 
+    /**
+     * @return Gets or sets the count of servers discovered.
+     * 
+     */
     public Optional<Integer> discoveredCount() {
         return Optional.ofNullable(this.discoveredCount);
     }
@@ -50,6 +58,11 @@ public final class ServersSolutionSummaryResponse extends com.pulumi.resources.I
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the Instance type.
+     * Expected value is &#39;Servers&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -61,6 +74,10 @@ public final class ServersSolutionSummaryResponse extends com.pulumi.resources.I
     @Import(name="migratedCount")
     private @Nullable Integer migratedCount;
 
+    /**
+     * @return Gets or sets the count of servers migrated.
+     * 
+     */
     public Optional<Integer> migratedCount() {
         return Optional.ofNullable(this.migratedCount);
     }
@@ -72,6 +89,10 @@ public final class ServersSolutionSummaryResponse extends com.pulumi.resources.I
     @Import(name="replicatingCount")
     private @Nullable Integer replicatingCount;
 
+    /**
+     * @return Gets or sets the count of servers being replicated.
+     * 
+     */
     public Optional<Integer> replicatingCount() {
         return Optional.ofNullable(this.replicatingCount);
     }
@@ -83,6 +104,10 @@ public final class ServersSolutionSummaryResponse extends com.pulumi.resources.I
     @Import(name="testMigratedCount")
     private @Nullable Integer testMigratedCount;
 
+    /**
+     * @return Gets or sets the count of servers test migrated.
+     * 
+     */
     public Optional<Integer> testMigratedCount() {
         return Optional.ofNullable(this.testMigratedCount);
     }
@@ -116,31 +141,68 @@ public final class ServersSolutionSummaryResponse extends com.pulumi.resources.I
             $ = new ServersSolutionSummaryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assessedCount Gets or sets the count of servers assessed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessedCount(@Nullable Integer assessedCount) {
             $.assessedCount = assessedCount;
             return this;
         }
 
+        /**
+         * @param discoveredCount Gets or sets the count of servers discovered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoveredCount(@Nullable Integer discoveredCount) {
             $.discoveredCount = discoveredCount;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the Instance type.
+         * Expected value is &#39;Servers&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param migratedCount Gets or sets the count of servers migrated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migratedCount(@Nullable Integer migratedCount) {
             $.migratedCount = migratedCount;
             return this;
         }
 
+        /**
+         * @param replicatingCount Gets or sets the count of servers being replicated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicatingCount(@Nullable Integer replicatingCount) {
             $.replicatingCount = replicatingCount;
             return this;
         }
 
+        /**
+         * @param testMigratedCount Gets or sets the count of servers test migrated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testMigratedCount(@Nullable Integer testMigratedCount) {
             $.testMigratedCount = testMigratedCount;
             return this;

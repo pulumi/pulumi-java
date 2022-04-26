@@ -24,6 +24,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleArgs extends
     @Import(name="exclusionRule")
     private @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> exclusionRule;
 
+    /**
+     * @return The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs>> exclusionRule() {
         return Optional.ofNullable(this.exclusionRule);
     }
@@ -36,6 +41,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleArgs extends
     @Import(name="hotwordRule")
     private @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> hotwordRule;
 
+    /**
+     * @return Hotword-based detection rule.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs>> hotwordRule() {
         return Optional.ofNullable(this.hotwordRule);
     }
@@ -65,20 +75,48 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleArgs extends
             $ = new PreventionInspectTemplateInspectConfigRuleSetRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exclusionRule The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusionRule(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> exclusionRule) {
             $.exclusionRule = exclusionRule;
             return this;
         }
 
+        /**
+         * @param exclusionRule The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusionRule(PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs exclusionRule) {
             return exclusionRule(Output.of(exclusionRule));
         }
 
+        /**
+         * @param hotwordRule Hotword-based detection rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hotwordRule(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> hotwordRule) {
             $.hotwordRule = hotwordRule;
             return this;
         }
 
+        /**
+         * @param hotwordRule Hotword-based detection rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hotwordRule(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs hotwordRule) {
             return hotwordRule(Output.of(hotwordRule));
         }

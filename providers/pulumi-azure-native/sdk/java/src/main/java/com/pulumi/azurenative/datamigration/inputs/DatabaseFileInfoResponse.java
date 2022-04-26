@@ -26,6 +26,10 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="databaseName")
     private @Nullable String databaseName;
 
+    /**
+     * @return Name of the database
+     * 
+     */
     public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -37,6 +41,10 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="fileType")
     private @Nullable String fileType;
 
+    /**
+     * @return Database file type
+     * 
+     */
     public Optional<String> fileType() {
         return Optional.ofNullable(this.fileType);
     }
@@ -48,6 +56,10 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Unique identifier for database file
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -59,6 +71,10 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="logicalName")
     private @Nullable String logicalName;
 
+    /**
+     * @return Logical name of the file
+     * 
+     */
     public Optional<String> logicalName() {
         return Optional.ofNullable(this.logicalName);
     }
@@ -70,6 +86,10 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="physicalFullName")
     private @Nullable String physicalFullName;
 
+    /**
+     * @return Operating-system full path of the file
+     * 
+     */
     public Optional<String> physicalFullName() {
         return Optional.ofNullable(this.physicalFullName);
     }
@@ -81,6 +101,10 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="restoreFullName")
     private @Nullable String restoreFullName;
 
+    /**
+     * @return Suggested full path of the file for restoring
+     * 
+     */
     public Optional<String> restoreFullName() {
         return Optional.ofNullable(this.restoreFullName);
     }
@@ -92,6 +116,10 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="sizeMB")
     private @Nullable Double sizeMB;
 
+    /**
+     * @return Size of the file in megabytes
+     * 
+     */
     public Optional<Double> sizeMB() {
         return Optional.ofNullable(this.sizeMB);
     }
@@ -126,36 +154,78 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
             $ = new DatabaseFileInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param fileType Database file type
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileType(@Nullable String fileType) {
             $.fileType = fileType;
             return this;
         }
 
+        /**
+         * @param id Unique identifier for database file
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param logicalName Logical name of the file
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalName(@Nullable String logicalName) {
             $.logicalName = logicalName;
             return this;
         }
 
+        /**
+         * @param physicalFullName Operating-system full path of the file
+         * 
+         * @return builder
+         * 
+         */
         public Builder physicalFullName(@Nullable String physicalFullName) {
             $.physicalFullName = physicalFullName;
             return this;
         }
 
+        /**
+         * @param restoreFullName Suggested full path of the file for restoring
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreFullName(@Nullable String restoreFullName) {
             $.restoreFullName = restoreFullName;
             return this;
         }
 
+        /**
+         * @param sizeMB Size of the file in megabytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeMB(@Nullable Double sizeMB) {
             $.sizeMB = sizeMB;
             return this;

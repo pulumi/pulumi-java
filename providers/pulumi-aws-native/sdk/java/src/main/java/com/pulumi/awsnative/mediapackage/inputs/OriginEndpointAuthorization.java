@@ -23,6 +23,10 @@ public final class OriginEndpointAuthorization extends com.pulumi.resources.Invo
     @Import(name="cdnIdentifierSecret", required=true)
     private String cdnIdentifierSecret;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the secret in Secrets Manager that your Content Distribution Network (CDN) uses for authorization to access your endpoint.
+     * 
+     */
     public String cdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
     }
@@ -34,6 +38,10 @@ public final class OriginEndpointAuthorization extends com.pulumi.resources.Invo
     @Import(name="secretsRoleArn", required=true)
     private String secretsRoleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
+     * 
+     */
     public String secretsRoleArn() {
         return this.secretsRoleArn;
     }
@@ -63,11 +71,23 @@ public final class OriginEndpointAuthorization extends com.pulumi.resources.Invo
             $ = new OriginEndpointAuthorization(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cdnIdentifierSecret The Amazon Resource Name (ARN) for the secret in Secrets Manager that your Content Distribution Network (CDN) uses for authorization to access your endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdnIdentifierSecret(String cdnIdentifierSecret) {
             $.cdnIdentifierSecret = cdnIdentifierSecret;
             return this;
         }
 
+        /**
+         * @param secretsRoleArn The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretsRoleArn(String secretsRoleArn) {
             $.secretsRoleArn = secretsRoleArn;
             return this;

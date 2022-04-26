@@ -26,6 +26,12 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ignoreIdleSlots")
     private @Nullable Output<Boolean> ignoreIdleSlots;
 
+    /**
+     * @return If false, any query using this reservation will use idle slots from other reservations within
+     * the same admin project. If true, a query using this reservation will execute with the slot
+     * capacity specified above at most.
+     * 
+     */
     public Optional<Output<Boolean>> ignoreIdleSlots() {
         return Optional.ofNullable(this.ignoreIdleSlots);
     }
@@ -38,6 +44,11 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geographic location where the transfer config should reside.
+     * Examples: US, EU, asia-northeast1. The default value is US.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -49,6 +60,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the reservation. This field must only contain alphanumeric characters or dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +76,11 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -73,6 +93,11 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="slotCapacity")
     private @Nullable Output<Integer> slotCapacity;
 
+    /**
+     * @return Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+     * unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+     * 
+     */
     public Optional<Output<Integer>> slotCapacity() {
         return Optional.ofNullable(this.slotCapacity);
     }
@@ -105,47 +130,117 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
             $ = new ReservationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreIdleSlots If false, any query using this reservation will use idle slots from other reservations within
+         * the same admin project. If true, a query using this reservation will execute with the slot
+         * capacity specified above at most.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreIdleSlots(@Nullable Output<Boolean> ignoreIdleSlots) {
             $.ignoreIdleSlots = ignoreIdleSlots;
             return this;
         }
 
+        /**
+         * @param ignoreIdleSlots If false, any query using this reservation will use idle slots from other reservations within
+         * the same admin project. If true, a query using this reservation will execute with the slot
+         * capacity specified above at most.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreIdleSlots(Boolean ignoreIdleSlots) {
             return ignoreIdleSlots(Output.of(ignoreIdleSlots));
         }
 
+        /**
+         * @param location The geographic location where the transfer config should reside.
+         * Examples: US, EU, asia-northeast1. The default value is US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geographic location where the transfer config should reside.
+         * Examples: US, EU, asia-northeast1. The default value is US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the reservation. This field must only contain alphanumeric characters or dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the reservation. This field must only contain alphanumeric characters or dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param slotCapacity Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+         * unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slotCapacity(@Nullable Output<Integer> slotCapacity) {
             $.slotCapacity = slotCapacity;
             return this;
         }
 
+        /**
+         * @param slotCapacity Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+         * unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slotCapacity(Integer slotCapacity) {
             return slotCapacity(Output.of(slotCapacity));
         }

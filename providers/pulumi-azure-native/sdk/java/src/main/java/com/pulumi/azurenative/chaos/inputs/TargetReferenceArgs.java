@@ -25,6 +25,10 @@ public final class TargetReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return String of the resource ID of a Target resource.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -36,6 +40,10 @@ public final class TargetReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
     private Output<TargetReferenceType> type;
 
+    /**
+     * @return Enum of the Target reference type.
+     * 
+     */
     public Output<TargetReferenceType> type() {
         return this.type;
     }
@@ -65,20 +73,44 @@ public final class TargetReferenceArgs extends com.pulumi.resources.ResourceArgs
             $ = new TargetReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id String of the resource ID of a Target resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id String of the resource ID of a Target resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param type Enum of the Target reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<TargetReferenceType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Enum of the Target reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(TargetReferenceType type) {
             return type(Output.of(type));
         }

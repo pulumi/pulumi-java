@@ -29,6 +29,10 @@ public final class PasswordValidationPolicyArgs extends com.pulumi.resources.Res
     @Import(name="complexity")
     private @Nullable Output<PasswordValidationPolicyComplexity> complexity;
 
+    /**
+     * @return The complexity of the password.
+     * 
+     */
     public Optional<Output<PasswordValidationPolicyComplexity>> complexity() {
         return Optional.ofNullable(this.complexity);
     }
@@ -40,6 +44,10 @@ public final class PasswordValidationPolicyArgs extends com.pulumi.resources.Res
     @Import(name="disallowUsernameSubstring")
     private @Nullable Output<Boolean> disallowUsernameSubstring;
 
+    /**
+     * @return Disallow username as a part of the password.
+     * 
+     */
     public Optional<Output<Boolean>> disallowUsernameSubstring() {
         return Optional.ofNullable(this.disallowUsernameSubstring);
     }
@@ -51,6 +59,10 @@ public final class PasswordValidationPolicyArgs extends com.pulumi.resources.Res
     @Import(name="minLength")
     private @Nullable Output<Integer> minLength;
 
+    /**
+     * @return Minimum number of characters allowed.
+     * 
+     */
     public Optional<Output<Integer>> minLength() {
         return Optional.ofNullable(this.minLength);
     }
@@ -62,6 +74,10 @@ public final class PasswordValidationPolicyArgs extends com.pulumi.resources.Res
     @Import(name="passwordChangeInterval")
     private @Nullable Output<String> passwordChangeInterval;
 
+    /**
+     * @return Minimum interval after which the password can be changed. This flag is only supported for PostgresSQL.
+     * 
+     */
     public Optional<Output<String>> passwordChangeInterval() {
         return Optional.ofNullable(this.passwordChangeInterval);
     }
@@ -73,6 +89,10 @@ public final class PasswordValidationPolicyArgs extends com.pulumi.resources.Res
     @Import(name="reuseInterval")
     private @Nullable Output<Integer> reuseInterval;
 
+    /**
+     * @return Number of previous passwords that cannot be reused.
+     * 
+     */
     public Optional<Output<Integer>> reuseInterval() {
         return Optional.ofNullable(this.reuseInterval);
     }
@@ -105,47 +125,107 @@ public final class PasswordValidationPolicyArgs extends com.pulumi.resources.Res
             $ = new PasswordValidationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param complexity The complexity of the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complexity(@Nullable Output<PasswordValidationPolicyComplexity> complexity) {
             $.complexity = complexity;
             return this;
         }
 
+        /**
+         * @param complexity The complexity of the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complexity(PasswordValidationPolicyComplexity complexity) {
             return complexity(Output.of(complexity));
         }
 
+        /**
+         * @param disallowUsernameSubstring Disallow username as a part of the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disallowUsernameSubstring(@Nullable Output<Boolean> disallowUsernameSubstring) {
             $.disallowUsernameSubstring = disallowUsernameSubstring;
             return this;
         }
 
+        /**
+         * @param disallowUsernameSubstring Disallow username as a part of the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disallowUsernameSubstring(Boolean disallowUsernameSubstring) {
             return disallowUsernameSubstring(Output.of(disallowUsernameSubstring));
         }
 
+        /**
+         * @param minLength Minimum number of characters allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minLength(@Nullable Output<Integer> minLength) {
             $.minLength = minLength;
             return this;
         }
 
+        /**
+         * @param minLength Minimum number of characters allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minLength(Integer minLength) {
             return minLength(Output.of(minLength));
         }
 
+        /**
+         * @param passwordChangeInterval Minimum interval after which the password can be changed. This flag is only supported for PostgresSQL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwordChangeInterval(@Nullable Output<String> passwordChangeInterval) {
             $.passwordChangeInterval = passwordChangeInterval;
             return this;
         }
 
+        /**
+         * @param passwordChangeInterval Minimum interval after which the password can be changed. This flag is only supported for PostgresSQL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwordChangeInterval(String passwordChangeInterval) {
             return passwordChangeInterval(Output.of(passwordChangeInterval));
         }
 
+        /**
+         * @param reuseInterval Number of previous passwords that cannot be reused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reuseInterval(@Nullable Output<Integer> reuseInterval) {
             $.reuseInterval = reuseInterval;
             return this;
         }
 
+        /**
+         * @param reuseInterval Number of previous passwords that cannot be reused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reuseInterval(Integer reuseInterval) {
             return reuseInterval(Output.of(reuseInterval));
         }

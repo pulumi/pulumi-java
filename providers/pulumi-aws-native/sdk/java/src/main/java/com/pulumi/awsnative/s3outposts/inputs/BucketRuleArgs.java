@@ -30,6 +30,10 @@ public final class BucketRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="abortIncompleteMultipartUpload")
     private @Nullable Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
 
+    /**
+     * @return Specifies a lifecycle rule that stops incomplete multipart uploads to an Amazon S3Outposts bucket.
+     * 
+     */
     public Optional<Output<BucketAbortIncompleteMultipartUploadArgs>> abortIncompleteMultipartUpload() {
         return Optional.ofNullable(this.abortIncompleteMultipartUpload);
     }
@@ -41,6 +45,10 @@ public final class BucketRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expirationDate")
     private @Nullable Output<String> expirationDate;
 
+    /**
+     * @return Indicates when objects are deleted from Amazon S3Outposts. The date value must be in ISO 8601 format. The time is always midnight UTC.
+     * 
+     */
     public Optional<Output<String>> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
@@ -52,6 +60,10 @@ public final class BucketRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expirationInDays")
     private @Nullable Output<Integer> expirationInDays;
 
+    /**
+     * @return Indicates the number of days after creation when objects are deleted from Amazon S3Outposts.
+     * 
+     */
     public Optional<Output<Integer>> expirationInDays() {
         return Optional.ofNullable(this.expirationInDays);
     }
@@ -63,6 +75,10 @@ public final class BucketRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter")
     private @Nullable Output<BucketRuleFilterPropertiesArgs> filter;
 
+    /**
+     * @return The container for the filter of the lifecycle rule.
+     * 
+     */
     public Optional<Output<BucketRuleFilterPropertiesArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -74,6 +90,10 @@ public final class BucketRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Unique identifier for the lifecycle rule. The value can&#39;t be longer than 255 characters.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -114,47 +134,107 @@ public final class BucketRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BucketRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param abortIncompleteMultipartUpload Specifies a lifecycle rule that stops incomplete multipart uploads to an Amazon S3Outposts bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abortIncompleteMultipartUpload(@Nullable Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload) {
             $.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
 
+        /**
+         * @param abortIncompleteMultipartUpload Specifies a lifecycle rule that stops incomplete multipart uploads to an Amazon S3Outposts bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abortIncompleteMultipartUpload(BucketAbortIncompleteMultipartUploadArgs abortIncompleteMultipartUpload) {
             return abortIncompleteMultipartUpload(Output.of(abortIncompleteMultipartUpload));
         }
 
+        /**
+         * @param expirationDate Indicates when objects are deleted from Amazon S3Outposts. The date value must be in ISO 8601 format. The time is always midnight UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
             $.expirationDate = expirationDate;
             return this;
         }
 
+        /**
+         * @param expirationDate Indicates when objects are deleted from Amazon S3Outposts. The date value must be in ISO 8601 format. The time is always midnight UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(String expirationDate) {
             return expirationDate(Output.of(expirationDate));
         }
 
+        /**
+         * @param expirationInDays Indicates the number of days after creation when objects are deleted from Amazon S3Outposts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationInDays(@Nullable Output<Integer> expirationInDays) {
             $.expirationInDays = expirationInDays;
             return this;
         }
 
+        /**
+         * @param expirationInDays Indicates the number of days after creation when objects are deleted from Amazon S3Outposts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationInDays(Integer expirationInDays) {
             return expirationInDays(Output.of(expirationInDays));
         }
 
+        /**
+         * @param filter The container for the filter of the lifecycle rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<BucketRuleFilterPropertiesArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter The container for the filter of the lifecycle rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(BucketRuleFilterPropertiesArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param id Unique identifier for the lifecycle rule. The value can&#39;t be longer than 255 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Unique identifier for the lifecycle rule. The value can&#39;t be longer than 255 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

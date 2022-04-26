@@ -21,6 +21,10 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceArn", required=true)
     private String instanceArn;
 
+    /**
+     * @return The sso instance that the permission set is owned.
+     * 
+     */
     public String instanceArn() {
         return this.instanceArn;
     }
@@ -32,6 +36,10 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="permissionSetArn", required=true)
     private String permissionSetArn;
 
+    /**
+     * @return The permission set that the assignemt will be assigned
+     * 
+     */
     public String permissionSetArn() {
         return this.permissionSetArn;
     }
@@ -43,6 +51,10 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The assignee&#39;s identifier, user id/group id
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -54,6 +66,10 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="principalType", required=true)
     private AssignmentPrincipalType principalType;
 
+    /**
+     * @return The assignee&#39;s type, user/group
+     * 
+     */
     public AssignmentPrincipalType principalType() {
         return this.principalType;
     }
@@ -65,6 +81,10 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetId", required=true)
     private String targetId;
 
+    /**
+     * @return The account id to be provisioned.
+     * 
+     */
     public String targetId() {
         return this.targetId;
     }
@@ -76,6 +96,10 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetType", required=true)
     private AssignmentTargetType targetType;
 
+    /**
+     * @return The type of resource to be provsioned to, only aws account now
+     * 
+     */
     public AssignmentTargetType targetType() {
         return this.targetType;
     }
@@ -109,31 +133,67 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceArn The sso instance that the permission set is owned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(String instanceArn) {
             $.instanceArn = instanceArn;
             return this;
         }
 
+        /**
+         * @param permissionSetArn The permission set that the assignemt will be assigned
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionSetArn(String permissionSetArn) {
             $.permissionSetArn = permissionSetArn;
             return this;
         }
 
+        /**
+         * @param principalId The assignee&#39;s identifier, user id/group id
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalType The assignee&#39;s type, user/group
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(AssignmentPrincipalType principalType) {
             $.principalType = principalType;
             return this;
         }
 
+        /**
+         * @param targetId The account id to be provisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(String targetId) {
             $.targetId = targetId;
             return this;
         }
 
+        /**
+         * @param targetType The type of resource to be provsioned to, only aws account now
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(AssignmentTargetType targetType) {
             $.targetType = targetType;
             return this;

@@ -26,6 +26,10 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="clientId")
     private @Nullable String clientId;
 
+    /**
+     * @return Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
+     * 
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -38,6 +42,11 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="identityType", required=true)
     private String identityType;
 
+    /**
+     * @return Enum to determine identity framework.
+     * Expected value is &#39;Managed&#39;.
+     * 
+     */
     public String identityType() {
         return this.identityType;
     }
@@ -49,6 +58,10 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="objectId")
     private @Nullable String objectId;
 
+    /**
+     * @return Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
+     * 
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -60,6 +73,10 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -91,21 +108,46 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
             $ = new ManagedIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param identityType Enum to determine identity framework.
+         * Expected value is &#39;Managed&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(String identityType) {
             $.identityType = identityType;
             return this;
         }
 
+        /**
+         * @param objectId Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param resourceId Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;

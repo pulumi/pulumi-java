@@ -28,6 +28,10 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessDirection")
     private @Nullable Output<String> accessDirection;
 
+    /**
+     * @return Access Direction for Protocol of the Instance(inbound/outbound).
+     * 
+     */
     public Optional<Output<String>> accessDirection() {
         return Optional.ofNullable(this.accessDirection);
     }
@@ -39,6 +43,10 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessFrom")
     private @Nullable Output<String> accessFrom;
 
+    /**
+     * @return Access From Protocol of the Instance.
+     * 
+     */
     public Optional<Output<String>> accessFrom() {
         return Optional.ofNullable(this.accessFrom);
     }
@@ -50,6 +58,10 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessType")
     private @Nullable Output<String> accessType;
 
+    /**
+     * @return Access Type Protocol of the Instance.
+     * 
+     */
     public Optional<Output<String>> accessType() {
         return Optional.ofNullable(this.accessType);
     }
@@ -75,6 +87,10 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="commonName")
     private @Nullable Output<String> commonName;
 
+    /**
+     * @return CommonName for Protocol of the Instance.
+     * 
+     */
     public Optional<Output<String>> commonName() {
         return Optional.ofNullable(this.commonName);
     }
@@ -86,6 +102,10 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fromPort")
     private @Nullable Output<Integer> fromPort;
 
+    /**
+     * @return From Port of the Instance.
+     * 
+     */
     public Optional<Output<Integer>> fromPort() {
         return Optional.ofNullable(this.fromPort);
     }
@@ -104,6 +124,10 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
+    /**
+     * @return Port Protocol of the Instance.
+     * 
+     */
     public Optional<Output<String>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -115,6 +139,10 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="toPort")
     private @Nullable Output<Integer> toPort;
 
+    /**
+     * @return To Port of the Instance.
+     * 
+     */
     public Optional<Output<Integer>> toPort() {
         return Optional.ofNullable(this.toPort);
     }
@@ -152,29 +180,65 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstancePortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessDirection Access Direction for Protocol of the Instance(inbound/outbound).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessDirection(@Nullable Output<String> accessDirection) {
             $.accessDirection = accessDirection;
             return this;
         }
 
+        /**
+         * @param accessDirection Access Direction for Protocol of the Instance(inbound/outbound).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessDirection(String accessDirection) {
             return accessDirection(Output.of(accessDirection));
         }
 
+        /**
+         * @param accessFrom Access From Protocol of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessFrom(@Nullable Output<String> accessFrom) {
             $.accessFrom = accessFrom;
             return this;
         }
 
+        /**
+         * @param accessFrom Access From Protocol of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessFrom(String accessFrom) {
             return accessFrom(Output.of(accessFrom));
         }
 
+        /**
+         * @param accessType Access Type Protocol of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(@Nullable Output<String> accessType) {
             $.accessType = accessType;
             return this;
         }
 
+        /**
+         * @param accessType Access Type Protocol of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(String accessType) {
             return accessType(Output.of(accessType));
         }
@@ -205,20 +269,44 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
             return cidrs(List.of(cidrs));
         }
 
+        /**
+         * @param commonName CommonName for Protocol of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonName(@Nullable Output<String> commonName) {
             $.commonName = commonName;
             return this;
         }
 
+        /**
+         * @param commonName CommonName for Protocol of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonName(String commonName) {
             return commonName(Output.of(commonName));
         }
 
+        /**
+         * @param fromPort From Port of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromPort(@Nullable Output<Integer> fromPort) {
             $.fromPort = fromPort;
             return this;
         }
 
+        /**
+         * @param fromPort From Port of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromPort(Integer fromPort) {
             return fromPort(Output.of(fromPort));
         }
@@ -236,20 +324,44 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
             return ipv6Cidrs(List.of(ipv6Cidrs));
         }
 
+        /**
+         * @param protocol Port Protocol of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Port Protocol of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param toPort To Port of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toPort(@Nullable Output<Integer> toPort) {
             $.toPort = toPort;
             return this;
         }
 
+        /**
+         * @param toPort To Port of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toPort(Integer toPort) {
             return toPort(Output.of(toPort));
         }

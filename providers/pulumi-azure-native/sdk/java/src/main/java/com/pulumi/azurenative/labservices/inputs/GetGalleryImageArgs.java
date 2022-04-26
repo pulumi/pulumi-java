@@ -21,6 +21,10 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Specify the $expand query. Example: &#39;properties($select=author)&#39;
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="galleryImageName", required=true)
     private String galleryImageName;
 
+    /**
+     * @return The name of the gallery Image.
+     * 
+     */
     public String galleryImageName() {
         return this.galleryImageName;
     }
@@ -43,6 +51,10 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="labAccountName", required=true)
     private String labAccountName;
 
+    /**
+     * @return The name of the lab Account.
+     * 
+     */
     public String labAccountName() {
         return this.labAccountName;
     }
@@ -54,6 +66,10 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -85,21 +101,45 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetGalleryImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Specify the $expand query. Example: &#39;properties($select=author)&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param galleryImageName The name of the gallery Image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryImageName(String galleryImageName) {
             $.galleryImageName = galleryImageName;
             return this;
         }
 
+        /**
+         * @param labAccountName The name of the lab Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labAccountName(String labAccountName) {
             $.labAccountName = labAccountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

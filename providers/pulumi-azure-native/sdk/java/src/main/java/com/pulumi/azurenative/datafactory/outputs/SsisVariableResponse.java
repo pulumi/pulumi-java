@@ -14,37 +14,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SsisVariableResponse {
     /**
-     * Variable type.
+     * @return Variable type.
      * 
      */
     private final @Nullable String dataType;
     /**
-     * Variable description.
+     * @return Variable description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Variable id.
+     * @return Variable id.
      * 
      */
     private final @Nullable Double id;
     /**
-     * Variable name.
+     * @return Variable name.
      * 
      */
     private final @Nullable String name;
     /**
-     * Whether variable is sensitive.
+     * @return Whether variable is sensitive.
      * 
      */
     private final @Nullable Boolean sensitive;
     /**
-     * Variable sensitive value.
+     * @return Variable sensitive value.
      * 
      */
     private final @Nullable String sensitiveValue;
     /**
-     * Variable value.
+     * @return Variable value.
      * 
      */
     private final @Nullable String value;
@@ -68,51 +68,51 @@ public final class SsisVariableResponse {
     }
 
     /**
-     * Variable type.
+     * @return Variable type.
      * 
-    */
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
-     * Variable description.
+     * @return Variable description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Variable id.
+     * @return Variable id.
      * 
-    */
+     */
     public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Variable name.
+     * @return Variable name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Whether variable is sensitive.
+     * @return Whether variable is sensitive.
      * 
-    */
+     */
     public Optional<Boolean> sensitive() {
         return Optional.ofNullable(this.sensitive);
     }
     /**
-     * Variable sensitive value.
+     * @return Variable sensitive value.
      * 
-    */
+     */
     public Optional<String> sensitiveValue() {
         return Optional.ofNullable(this.sensitiveValue);
     }
     /**
-     * Variable value.
+     * @return Variable value.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

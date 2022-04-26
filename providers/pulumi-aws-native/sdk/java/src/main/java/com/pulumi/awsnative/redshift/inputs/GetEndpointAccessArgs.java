@@ -19,6 +19,10 @@ public final class GetEndpointAccessArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="endpointName", required=true)
     private String endpointName;
 
+    /**
+     * @return The name of the endpoint.
+     * 
+     */
     public String endpointName() {
         return this.endpointName;
     }
@@ -47,6 +51,12 @@ public final class GetEndpointAccessArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetEndpointAccessArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointName The name of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             $.endpointName = endpointName;
             return this;

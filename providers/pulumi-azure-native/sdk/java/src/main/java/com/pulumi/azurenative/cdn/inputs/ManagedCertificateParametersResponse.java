@@ -25,6 +25,11 @@ public final class ManagedCertificateParametersResponse extends com.pulumi.resou
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the Secret to create.
+     * Expected value is &#39;ManagedCertificate&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -53,6 +58,13 @@ public final class ManagedCertificateParametersResponse extends com.pulumi.resou
             $ = new ManagedCertificateParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of the Secret to create.
+         * Expected value is &#39;ManagedCertificate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

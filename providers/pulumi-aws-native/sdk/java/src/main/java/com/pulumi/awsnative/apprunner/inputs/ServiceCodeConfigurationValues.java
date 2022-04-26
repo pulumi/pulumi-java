@@ -28,6 +28,10 @@ public final class ServiceCodeConfigurationValues extends com.pulumi.resources.I
     @Import(name="buildCommand")
     private @Nullable String buildCommand;
 
+    /**
+     * @return Build Command
+     * 
+     */
     public Optional<String> buildCommand() {
         return Optional.ofNullable(this.buildCommand);
     }
@@ -39,6 +43,10 @@ public final class ServiceCodeConfigurationValues extends com.pulumi.resources.I
     @Import(name="port")
     private @Nullable String port;
 
+    /**
+     * @return Port
+     * 
+     */
     public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
@@ -50,6 +58,10 @@ public final class ServiceCodeConfigurationValues extends com.pulumi.resources.I
     @Import(name="runtime", required=true)
     private ServiceCodeConfigurationValuesRuntime runtime;
 
+    /**
+     * @return Runtime
+     * 
+     */
     public ServiceCodeConfigurationValuesRuntime runtime() {
         return this.runtime;
     }
@@ -68,6 +80,10 @@ public final class ServiceCodeConfigurationValues extends com.pulumi.resources.I
     @Import(name="startCommand")
     private @Nullable String startCommand;
 
+    /**
+     * @return Start Command
+     * 
+     */
     public Optional<String> startCommand() {
         return Optional.ofNullable(this.startCommand);
     }
@@ -100,16 +116,34 @@ public final class ServiceCodeConfigurationValues extends com.pulumi.resources.I
             $ = new ServiceCodeConfigurationValues(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buildCommand Build Command
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildCommand(@Nullable String buildCommand) {
             $.buildCommand = buildCommand;
             return this;
         }
 
+        /**
+         * @param port Port
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable String port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param runtime Runtime
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtime(ServiceCodeConfigurationValuesRuntime runtime) {
             $.runtime = runtime;
             return this;
@@ -124,6 +158,12 @@ public final class ServiceCodeConfigurationValues extends com.pulumi.resources.I
             return runtimeEnvironmentVariables(List.of(runtimeEnvironmentVariables));
         }
 
+        /**
+         * @param startCommand Start Command
+         * 
+         * @return builder
+         * 
+         */
         public Builder startCommand(@Nullable String startCommand) {
             $.startCommand = startCommand;
             return this;

@@ -28,6 +28,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addressMailing")
     private @Nullable Output<AddressArgs> addressMailing;
 
+    /**
+     * @return Mailing address.
+     * 
+     */
     public Optional<Output<AddressArgs>> addressMailing() {
         return Optional.ofNullable(this.addressMailing);
     }
@@ -39,6 +43,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
     private Output<String> email;
 
+    /**
+     * @return Email address.
+     * 
+     */
     public Output<String> email() {
         return this.email;
     }
@@ -50,6 +58,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fax")
     private @Nullable Output<String> fax;
 
+    /**
+     * @return Fax number.
+     * 
+     */
     public Optional<Output<String>> fax() {
         return Optional.ofNullable(this.fax);
     }
@@ -61,6 +73,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobTitle")
     private @Nullable Output<String> jobTitle;
 
+    /**
+     * @return Job title.
+     * 
+     */
     public Optional<Output<String>> jobTitle() {
         return Optional.ofNullable(this.jobTitle);
     }
@@ -72,6 +88,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nameFirst", required=true)
     private Output<String> nameFirst;
 
+    /**
+     * @return First name.
+     * 
+     */
     public Output<String> nameFirst() {
         return this.nameFirst;
     }
@@ -83,6 +103,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nameLast", required=true)
     private Output<String> nameLast;
 
+    /**
+     * @return Last name.
+     * 
+     */
     public Output<String> nameLast() {
         return this.nameLast;
     }
@@ -94,6 +118,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nameMiddle")
     private @Nullable Output<String> nameMiddle;
 
+    /**
+     * @return Middle name.
+     * 
+     */
     public Optional<Output<String>> nameMiddle() {
         return Optional.ofNullable(this.nameMiddle);
     }
@@ -105,6 +133,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="organization")
     private @Nullable Output<String> organization;
 
+    /**
+     * @return Organization contact belongs to.
+     * 
+     */
     public Optional<Output<String>> organization() {
         return Optional.ofNullable(this.organization);
     }
@@ -116,6 +148,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phone", required=true)
     private Output<String> phone;
 
+    /**
+     * @return Phone number.
+     * 
+     */
     public Output<String> phone() {
         return this.phone;
     }
@@ -152,83 +188,191 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressMailing Mailing address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressMailing(@Nullable Output<AddressArgs> addressMailing) {
             $.addressMailing = addressMailing;
             return this;
         }
 
+        /**
+         * @param addressMailing Mailing address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressMailing(AddressArgs addressMailing) {
             return addressMailing(Output.of(addressMailing));
         }
 
+        /**
+         * @param email Email address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email Email address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param fax Fax number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fax(@Nullable Output<String> fax) {
             $.fax = fax;
             return this;
         }
 
+        /**
+         * @param fax Fax number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fax(String fax) {
             return fax(Output.of(fax));
         }
 
+        /**
+         * @param jobTitle Job title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobTitle(@Nullable Output<String> jobTitle) {
             $.jobTitle = jobTitle;
             return this;
         }
 
+        /**
+         * @param jobTitle Job title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobTitle(String jobTitle) {
             return jobTitle(Output.of(jobTitle));
         }
 
+        /**
+         * @param nameFirst First name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameFirst(Output<String> nameFirst) {
             $.nameFirst = nameFirst;
             return this;
         }
 
+        /**
+         * @param nameFirst First name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameFirst(String nameFirst) {
             return nameFirst(Output.of(nameFirst));
         }
 
+        /**
+         * @param nameLast Last name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameLast(Output<String> nameLast) {
             $.nameLast = nameLast;
             return this;
         }
 
+        /**
+         * @param nameLast Last name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameLast(String nameLast) {
             return nameLast(Output.of(nameLast));
         }
 
+        /**
+         * @param nameMiddle Middle name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameMiddle(@Nullable Output<String> nameMiddle) {
             $.nameMiddle = nameMiddle;
             return this;
         }
 
+        /**
+         * @param nameMiddle Middle name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameMiddle(String nameMiddle) {
             return nameMiddle(Output.of(nameMiddle));
         }
 
+        /**
+         * @param organization Organization contact belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organization(@Nullable Output<String> organization) {
             $.organization = organization;
             return this;
         }
 
+        /**
+         * @param organization Organization contact belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organization(String organization) {
             return organization(Output.of(organization));
         }
 
+        /**
+         * @param phone Phone number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(Output<String> phone) {
             $.phone = phone;
             return this;
         }
 
+        /**
+         * @param phone Phone number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(String phone) {
             return phone(Output.of(phone));
         }

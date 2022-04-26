@@ -24,6 +24,10 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the DataSync Location.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ec2Config")
     private @Nullable Output<EfsLocationEc2ConfigGetArgs> ec2Config;
 
+    /**
+     * @return Configuration block containing EC2 configurations for connecting to the EFS File System.
+     * 
+     */
     public Optional<Output<EfsLocationEc2ConfigGetArgs>> ec2Config() {
         return Optional.ofNullable(this.ec2Config);
     }
@@ -46,6 +54,10 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="efsFileSystemArn")
     private @Nullable Output<String> efsFileSystemArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of EFS File System.
+     * 
+     */
     public Optional<Output<String>> efsFileSystemArn() {
         return Optional.ofNullable(this.efsFileSystemArn);
     }
@@ -57,6 +69,10 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory")
     private @Nullable Output<String> subdirectory;
 
+    /**
+     * @return Subdirectory to perform actions as source or destination. Default `/`.
+     * 
+     */
     public Optional<Output<String>> subdirectory() {
         return Optional.ofNullable(this.subdirectory);
     }
@@ -68,6 +84,10 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -79,6 +99,10 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -120,56 +144,128 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
             $ = new EfsLocationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the DataSync Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the DataSync Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param ec2Config Configuration block containing EC2 configurations for connecting to the EFS File System.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2Config(@Nullable Output<EfsLocationEc2ConfigGetArgs> ec2Config) {
             $.ec2Config = ec2Config;
             return this;
         }
 
+        /**
+         * @param ec2Config Configuration block containing EC2 configurations for connecting to the EFS File System.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2Config(EfsLocationEc2ConfigGetArgs ec2Config) {
             return ec2Config(Output.of(ec2Config));
         }
 
+        /**
+         * @param efsFileSystemArn Amazon Resource Name (ARN) of EFS File System.
+         * 
+         * @return builder
+         * 
+         */
         public Builder efsFileSystemArn(@Nullable Output<String> efsFileSystemArn) {
             $.efsFileSystemArn = efsFileSystemArn;
             return this;
         }
 
+        /**
+         * @param efsFileSystemArn Amazon Resource Name (ARN) of EFS File System.
+         * 
+         * @return builder
+         * 
+         */
         public Builder efsFileSystemArn(String efsFileSystemArn) {
             return efsFileSystemArn(Output.of(efsFileSystemArn));
         }
 
+        /**
+         * @param subdirectory Subdirectory to perform actions as source or destination. Default `/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             $.subdirectory = subdirectory;
             return this;
         }
 
+        /**
+         * @param subdirectory Subdirectory to perform actions as source or destination. Default `/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(String subdirectory) {
             return subdirectory(Output.of(subdirectory));
         }
 
+        /**
+         * @param tags Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

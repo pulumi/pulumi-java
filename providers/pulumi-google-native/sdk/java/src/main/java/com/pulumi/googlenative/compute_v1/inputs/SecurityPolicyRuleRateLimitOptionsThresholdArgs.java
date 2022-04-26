@@ -22,6 +22,10 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends com.p
     @Import(name="count")
     private @Nullable Output<Integer> count;
 
+    /**
+     * @return Number of HTTP(S) requests for calculating the threshold.
+     * 
+     */
     public Optional<Output<Integer>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -33,6 +37,10 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends com.p
     @Import(name="intervalSec")
     private @Nullable Output<Integer> intervalSec;
 
+    /**
+     * @return Interval over which the threshold is computed.
+     * 
+     */
     public Optional<Output<Integer>> intervalSec() {
         return Optional.ofNullable(this.intervalSec);
     }
@@ -62,20 +70,44 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends com.p
             $ = new SecurityPolicyRuleRateLimitOptionsThresholdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Number of HTTP(S) requests for calculating the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Number of HTTP(S) requests for calculating the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param intervalSec Interval over which the threshold is computed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalSec(@Nullable Output<Integer> intervalSec) {
             $.intervalSec = intervalSec;
             return this;
         }
 
+        /**
+         * @param intervalSec Interval over which the threshold is computed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalSec(Integer intervalSec) {
             return intervalSec(Output.of(intervalSec));
         }

@@ -24,6 +24,10 @@ public final class ManagedZoneCloudLoggingConfigResponse extends com.pulumi.reso
     @Import(name="enableLogging", required=true)
     private Boolean enableLogging;
 
+    /**
+     * @return If set, enable query logging for this ManagedZone. False by default, making logging opt-in.
+     * 
+     */
     public Boolean enableLogging() {
         return this.enableLogging;
     }
@@ -60,6 +64,12 @@ public final class ManagedZoneCloudLoggingConfigResponse extends com.pulumi.reso
             $ = new ManagedZoneCloudLoggingConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableLogging If set, enable query logging for this ManagedZone. False by default, making logging opt-in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableLogging(Boolean enableLogging) {
             $.enableLogging = enableLogging;
             return this;

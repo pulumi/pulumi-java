@@ -23,6 +23,10 @@ public final class EdgeClusterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceLink", required=true)
     private String resourceLink;
 
+    /**
+     * @return Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
+     * 
+     */
     public String resourceLink() {
         return this.resourceLink;
     }
@@ -51,6 +55,12 @@ public final class EdgeClusterResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EdgeClusterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceLink Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLink(String resourceLink) {
             $.resourceLink = resourceLink;
             return this;

@@ -23,6 +23,10 @@ public final class DataSourceHttpConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="authorizationConfig")
     private @Nullable Output<DataSourceHttpConfigAuthorizationConfigArgs> authorizationConfig;
 
+    /**
+     * @return The authorization configuration in case the HTTP endpoint requires authorization. See Authorization Config.
+     * 
+     */
     public Optional<Output<DataSourceHttpConfigAuthorizationConfigArgs>> authorizationConfig() {
         return Optional.ofNullable(this.authorizationConfig);
     }
@@ -34,6 +38,10 @@ public final class DataSourceHttpConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="endpoint", required=true)
     private Output<String> endpoint;
 
+    /**
+     * @return HTTP URL.
+     * 
+     */
     public Output<String> endpoint() {
         return this.endpoint;
     }
@@ -63,20 +71,44 @@ public final class DataSourceHttpConfigArgs extends com.pulumi.resources.Resourc
             $ = new DataSourceHttpConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationConfig The authorization configuration in case the HTTP endpoint requires authorization. See Authorization Config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationConfig(@Nullable Output<DataSourceHttpConfigAuthorizationConfigArgs> authorizationConfig) {
             $.authorizationConfig = authorizationConfig;
             return this;
         }
 
+        /**
+         * @param authorizationConfig The authorization configuration in case the HTTP endpoint requires authorization. See Authorization Config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationConfig(DataSourceHttpConfigAuthorizationConfigArgs authorizationConfig) {
             return authorizationConfig(Output.of(authorizationConfig));
         }
 
+        /**
+         * @param endpoint HTTP URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(Output<String> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint HTTP URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             return endpoint(Output.of(endpoint));
         }

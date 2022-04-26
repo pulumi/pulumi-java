@@ -19,6 +19,10 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigContentTypeOptio
     @Import(name="override", required=true)
     private Boolean override;
 
+    /**
+     * @return A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
+     * 
+     */
     public Boolean override() {
         return this.override;
     }
@@ -47,6 +51,12 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigContentTypeOptio
             $ = new GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param override A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder override(Boolean override) {
             $.override = override;
             return this;

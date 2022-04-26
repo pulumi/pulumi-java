@@ -22,6 +22,10 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="auditLogConfigs", required=true)
     private Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
+    /**
+     * @return The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
+     * 
+     */
     public Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs() {
         return this.auditLogConfigs;
     }
@@ -33,6 +37,10 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="orgId", required=true)
     private Output<String> orgId;
 
+    /**
+     * @return The numeric ID of the organization in which you want to manage the audit logging config.
+     * 
+     */
     public Output<String> orgId() {
         return this.orgId;
     }
@@ -44,6 +52,10 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="service", required=true)
     private Output<String> service;
 
+    /**
+     * @return Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_organization\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
+     * 
+     */
     public Output<String> service() {
         return this.service;
     }
@@ -74,33 +86,75 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new IamAuditConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auditLogConfigs The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogConfigs(Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs) {
             $.auditLogConfigs = auditLogConfigs;
             return this;
         }
 
+        /**
+         * @param auditLogConfigs The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogConfigs(List<IamAuditConfigAuditLogConfigArgs> auditLogConfigs) {
             return auditLogConfigs(Output.of(auditLogConfigs));
         }
 
+        /**
+         * @param auditLogConfigs The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogConfigs(IamAuditConfigAuditLogConfigArgs... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
 
+        /**
+         * @param orgId The numeric ID of the organization in which you want to manage the audit logging config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(Output<String> orgId) {
             $.orgId = orgId;
             return this;
         }
 
+        /**
+         * @param orgId The numeric ID of the organization in which you want to manage the audit logging config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(String orgId) {
             return orgId(Output.of(orgId));
         }
 
+        /**
+         * @param service Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_organization\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_organization\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

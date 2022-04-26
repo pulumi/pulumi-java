@@ -20,6 +20,10 @@ public final class DataSourceParametersAmazonElasticsearchGetArgs extends com.pu
     @Import(name="domain", required=true)
     private Output<String> domain;
 
+    /**
+     * @return The OpenSearch domain.
+     * 
+     */
     public Output<String> domain() {
         return this.domain;
     }
@@ -48,11 +52,23 @@ public final class DataSourceParametersAmazonElasticsearchGetArgs extends com.pu
             $ = new DataSourceParametersAmazonElasticsearchGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain The OpenSearch domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain The OpenSearch domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }

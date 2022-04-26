@@ -23,6 +23,10 @@ public final class ApplicationApplicationConfigurationVpcConfigurationGetArgs ex
     @Import(name="securityGroupIds", required=true)
     private Output<List<String>> securityGroupIds;
 
+    /**
+     * @return The Security Group IDs used by the VPC configuration.
+     * 
+     */
     public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
@@ -34,6 +38,10 @@ public final class ApplicationApplicationConfigurationVpcConfigurationGetArgs ex
     @Import(name="subnetIds", required=true)
     private Output<List<String>> subnetIds;
 
+    /**
+     * @return The Subnet IDs used by the VPC configuration.
+     * 
+     */
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
@@ -79,28 +87,64 @@ public final class ApplicationApplicationConfigurationVpcConfigurationGetArgs ex
             $ = new ApplicationApplicationConfigurationVpcConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityGroupIds The Security Group IDs used by the VPC configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds The Security Group IDs used by the VPC configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             return securityGroupIds(Output.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupIds The Security Group IDs used by the VPC configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param subnetIds The Subnet IDs used by the VPC configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds The Subnet IDs used by the VPC configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds The Subnet IDs used by the VPC configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }

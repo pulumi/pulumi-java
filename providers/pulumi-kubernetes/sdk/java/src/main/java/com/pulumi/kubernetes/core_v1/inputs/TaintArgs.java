@@ -31,6 +31,15 @@ public final class TaintArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="effect", required=true)
     private Output<String> effect;
 
+    /**
+     * @return Required. The effect of the taint on pods that do not tolerate the taint. Valid effects are NoSchedule, PreferNoSchedule and NoExecute.
+     * 
+     * Possible enum values:
+     *  - `&#34;NoExecute&#34;` Evict any already-running pods that do not tolerate the taint. Currently enforced by NodeController.
+     *  - `&#34;NoSchedule&#34;` Do not allow new pods to schedule onto the node unless they tolerate the taint, but allow all pods submitted to Kubelet without going through the scheduler to start, and allow all already-running pods to continue running. Enforced by the scheduler.
+     *  - `&#34;PreferNoSchedule&#34;` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
+     * 
+     */
     public Output<String> effect() {
         return this.effect;
     }
@@ -42,6 +51,10 @@ public final class TaintArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return Required. The taint key to be applied to a node.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -53,6 +66,10 @@ public final class TaintArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeAdded")
     private @Nullable Output<String> timeAdded;
 
+    /**
+     * @return TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints.
+     * 
+     */
     public Optional<Output<String>> timeAdded() {
         return Optional.ofNullable(this.timeAdded);
     }
@@ -64,6 +81,10 @@ public final class TaintArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The taint value corresponding to the taint key.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -95,38 +116,96 @@ public final class TaintArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TaintArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param effect Required. The effect of the taint on pods that do not tolerate the taint. Valid effects are NoSchedule, PreferNoSchedule and NoExecute.
+         * 
+         * Possible enum values:
+         *  - `&#34;NoExecute&#34;` Evict any already-running pods that do not tolerate the taint. Currently enforced by NodeController.
+         *  - `&#34;NoSchedule&#34;` Do not allow new pods to schedule onto the node unless they tolerate the taint, but allow all pods submitted to Kubelet without going through the scheduler to start, and allow all already-running pods to continue running. Enforced by the scheduler.
+         *  - `&#34;PreferNoSchedule&#34;` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder effect(Output<String> effect) {
             $.effect = effect;
             return this;
         }
 
+        /**
+         * @param effect Required. The effect of the taint on pods that do not tolerate the taint. Valid effects are NoSchedule, PreferNoSchedule and NoExecute.
+         * 
+         * Possible enum values:
+         *  - `&#34;NoExecute&#34;` Evict any already-running pods that do not tolerate the taint. Currently enforced by NodeController.
+         *  - `&#34;NoSchedule&#34;` Do not allow new pods to schedule onto the node unless they tolerate the taint, but allow all pods submitted to Kubelet without going through the scheduler to start, and allow all already-running pods to continue running. Enforced by the scheduler.
+         *  - `&#34;PreferNoSchedule&#34;` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder effect(String effect) {
             return effect(Output.of(effect));
         }
 
+        /**
+         * @param key Required. The taint key to be applied to a node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Required. The taint key to be applied to a node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param timeAdded TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAdded(@Nullable Output<String> timeAdded) {
             $.timeAdded = timeAdded;
             return this;
         }
 
+        /**
+         * @param timeAdded TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAdded(String timeAdded) {
             return timeAdded(Output.of(timeAdded));
         }
 
+        /**
+         * @param value The taint value corresponding to the taint key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The taint value corresponding to the taint key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

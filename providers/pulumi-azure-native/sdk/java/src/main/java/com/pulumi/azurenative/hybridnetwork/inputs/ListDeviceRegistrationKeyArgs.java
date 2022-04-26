@@ -19,6 +19,10 @@ public final class ListDeviceRegistrationKeyArgs extends com.pulumi.resources.In
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The name of the device resource.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -30,6 +34,10 @@ public final class ListDeviceRegistrationKeyArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class ListDeviceRegistrationKeyArgs extends com.pulumi.resources.In
             $ = new ListDeviceRegistrationKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The name of the device resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

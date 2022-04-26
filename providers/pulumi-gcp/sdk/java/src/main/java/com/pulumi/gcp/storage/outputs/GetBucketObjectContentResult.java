@@ -18,7 +18,7 @@ public final class GetBucketObjectContentResult {
     private final String bucket;
     private final String cacheControl;
     /**
-     * (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
+     * @return (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
      * 
      */
     private final @Nullable String content;
@@ -31,7 +31,7 @@ public final class GetBucketObjectContentResult {
     private final String detectMd5hash;
     private final Boolean eventBasedHold;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -101,9 +101,9 @@ public final class GetBucketObjectContentResult {
         return this.cacheControl;
     }
     /**
-     * (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
+     * @return (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
      * 
-    */
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
@@ -132,9 +132,9 @@ public final class GetBucketObjectContentResult {
         return this.eventBasedHold;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

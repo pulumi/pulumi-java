@@ -19,6 +19,10 @@ public final class GetLinkerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkerName", required=true)
     private String linkerName;
 
+    /**
+     * @return The name Linker resource.
+     * 
+     */
     public String linkerName() {
         return this.linkerName;
     }
@@ -30,6 +34,10 @@ public final class GetLinkerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceUri", required=true)
     private String resourceUri;
 
+    /**
+     * @return The fully qualified Azure Resource manager identifier of the resource to be connected.
+     * 
+     */
     public String resourceUri() {
         return this.resourceUri;
     }
@@ -59,11 +67,23 @@ public final class GetLinkerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLinkerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkerName The name Linker resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkerName(String linkerName) {
             $.linkerName = linkerName;
             return this;
         }
 
+        /**
+         * @param resourceUri The fully qualified Azure Resource manager identifier of the resource to be connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             $.resourceUri = resourceUri;
             return this;

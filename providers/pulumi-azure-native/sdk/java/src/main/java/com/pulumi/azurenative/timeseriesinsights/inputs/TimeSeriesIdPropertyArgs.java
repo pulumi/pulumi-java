@@ -28,6 +28,10 @@ public final class TimeSeriesIdPropertyArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the property.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -39,6 +43,10 @@ public final class TimeSeriesIdPropertyArgs extends com.pulumi.resources.Resourc
     @Import(name="type")
     private @Nullable Output<Either<String,PropertyType>> type;
 
+    /**
+     * @return The type of the property.
+     * 
+     */
     public Optional<Output<Either<String,PropertyType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -68,28 +76,64 @@ public final class TimeSeriesIdPropertyArgs extends com.pulumi.resources.Resourc
             $ = new TimeSeriesIdPropertyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type The type of the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,PropertyType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,PropertyType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(PropertyType type) {
             return type(Either.ofRight(type));
         }

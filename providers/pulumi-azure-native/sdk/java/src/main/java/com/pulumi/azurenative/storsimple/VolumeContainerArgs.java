@@ -25,6 +25,10 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="bandWidthRateInMbps")
     private @Nullable Output<Integer> bandWidthRateInMbps;
 
+    /**
+     * @return The bandwidth-rate set on the volume container.
+     * 
+     */
     public Optional<Output<Integer>> bandWidthRateInMbps() {
         return Optional.ofNullable(this.bandWidthRateInMbps);
     }
@@ -36,6 +40,10 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="bandwidthSettingId")
     private @Nullable Output<String> bandwidthSettingId;
 
+    /**
+     * @return The ID of the bandwidth setting associated with the volume container.
+     * 
+     */
     public Optional<Output<String>> bandwidthSettingId() {
         return Optional.ofNullable(this.bandwidthSettingId);
     }
@@ -47,6 +55,10 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -58,6 +70,10 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="encryptionKey")
     private @Nullable Output<AsymmetricEncryptedSecretArgs> encryptionKey;
 
+    /**
+     * @return The key used to encrypt data in the volume container. It is required when property &#39;EncryptionStatus&#39; is &#34;Enabled&#34;.
+     * 
+     */
     public Optional<Output<AsymmetricEncryptedSecretArgs>> encryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
@@ -69,6 +85,10 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kind")
     private @Nullable Output<Kind> kind;
 
+    /**
+     * @return The Kind of the object. Currently only Series8000 is supported
+     * 
+     */
     public Optional<Output<Kind>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -80,6 +100,10 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="managerName", required=true)
     private Output<String> managerName;
 
+    /**
+     * @return The manager name
+     * 
+     */
     public Output<String> managerName() {
         return this.managerName;
     }
@@ -91,6 +115,10 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -102,6 +130,10 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="storageAccountCredentialId", required=true)
     private Output<String> storageAccountCredentialId;
 
+    /**
+     * @return The path ID of storage account associated with the volume container.
+     * 
+     */
     public Output<String> storageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
@@ -113,6 +145,10 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="volumeContainerName")
     private @Nullable Output<String> volumeContainerName;
 
+    /**
+     * @return The name of the volume container.
+     * 
+     */
     public Optional<Output<String>> volumeContainerName() {
         return Optional.ofNullable(this.volumeContainerName);
     }
@@ -149,83 +185,191 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
             $ = new VolumeContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bandWidthRateInMbps The bandwidth-rate set on the volume container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandWidthRateInMbps(@Nullable Output<Integer> bandWidthRateInMbps) {
             $.bandWidthRateInMbps = bandWidthRateInMbps;
             return this;
         }
 
+        /**
+         * @param bandWidthRateInMbps The bandwidth-rate set on the volume container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandWidthRateInMbps(Integer bandWidthRateInMbps) {
             return bandWidthRateInMbps(Output.of(bandWidthRateInMbps));
         }
 
+        /**
+         * @param bandwidthSettingId The ID of the bandwidth setting associated with the volume container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthSettingId(@Nullable Output<String> bandwidthSettingId) {
             $.bandwidthSettingId = bandwidthSettingId;
             return this;
         }
 
+        /**
+         * @param bandwidthSettingId The ID of the bandwidth setting associated with the volume container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthSettingId(String bandwidthSettingId) {
             return bandwidthSettingId(Output.of(bandwidthSettingId));
         }
 
+        /**
+         * @param deviceName The device name
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param encryptionKey The key used to encrypt data in the volume container. It is required when property &#39;EncryptionStatus&#39; is &#34;Enabled&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKey(@Nullable Output<AsymmetricEncryptedSecretArgs> encryptionKey) {
             $.encryptionKey = encryptionKey;
             return this;
         }
 
+        /**
+         * @param encryptionKey The key used to encrypt data in the volume container. It is required when property &#39;EncryptionStatus&#39; is &#34;Enabled&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKey(AsymmetricEncryptedSecretArgs encryptionKey) {
             return encryptionKey(Output.of(encryptionKey));
         }
 
+        /**
+         * @param kind The Kind of the object. Currently only Series8000 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Kind> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The Kind of the object. Currently only Series8000 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Kind kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(Output<String> managerName) {
             $.managerName = managerName;
             return this;
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(String managerName) {
             return managerName(Output.of(managerName));
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param storageAccountCredentialId The path ID of storage account associated with the volume container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountCredentialId(Output<String> storageAccountCredentialId) {
             $.storageAccountCredentialId = storageAccountCredentialId;
             return this;
         }
 
+        /**
+         * @param storageAccountCredentialId The path ID of storage account associated with the volume container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountCredentialId(String storageAccountCredentialId) {
             return storageAccountCredentialId(Output.of(storageAccountCredentialId));
         }
 
+        /**
+         * @param volumeContainerName The name of the volume container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeContainerName(@Nullable Output<String> volumeContainerName) {
             $.volumeContainerName = volumeContainerName;
             return this;
         }
 
+        /**
+         * @param volumeContainerName The name of the volume container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeContainerName(String volumeContainerName) {
             return volumeContainerName(Output.of(volumeContainerName));
         }

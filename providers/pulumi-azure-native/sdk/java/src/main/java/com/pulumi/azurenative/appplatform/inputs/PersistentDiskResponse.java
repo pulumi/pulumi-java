@@ -26,6 +26,10 @@ public final class PersistentDiskResponse extends com.pulumi.resources.InvokeArg
     @Import(name="mountPath")
     private @Nullable String mountPath;
 
+    /**
+     * @return Mount path of the persistent disk
+     * 
+     */
     public Optional<String> mountPath() {
         return Optional.ofNullable(this.mountPath);
     }
@@ -37,6 +41,10 @@ public final class PersistentDiskResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sizeInGB")
     private @Nullable Integer sizeInGB;
 
+    /**
+     * @return Size of the persistent disk in GB
+     * 
+     */
     public Optional<Integer> sizeInGB() {
         return Optional.ofNullable(this.sizeInGB);
     }
@@ -48,6 +56,10 @@ public final class PersistentDiskResponse extends com.pulumi.resources.InvokeArg
     @Import(name="usedInGB", required=true)
     private Integer usedInGB;
 
+    /**
+     * @return Size of the used persistent disk in GB
+     * 
+     */
     public Integer usedInGB() {
         return this.usedInGB;
     }
@@ -78,16 +90,34 @@ public final class PersistentDiskResponse extends com.pulumi.resources.InvokeArg
             $ = new PersistentDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mountPath Mount path of the persistent disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(@Nullable String mountPath) {
             $.mountPath = mountPath;
             return this;
         }
 
+        /**
+         * @param sizeInGB Size of the persistent disk in GB
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeInGB(@Nullable Integer sizeInGB) {
             $.sizeInGB = sizeInGB;
             return this;
         }
 
+        /**
+         * @param usedInGB Size of the used persistent disk in GB
+         * 
+         * @return builder
+         * 
+         */
         public Builder usedInGB(Integer usedInGB) {
             $.usedInGB = usedInGB;
             return this;

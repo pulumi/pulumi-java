@@ -24,6 +24,10 @@ public final class BasicScalingResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="idleTimeout", required=true)
     private String idleTimeout;
 
+    /**
+     * @return Duration of time after the last request that an instance must wait before the instance is shut down.
+     * 
+     */
     public String idleTimeout() {
         return this.idleTimeout;
     }
@@ -35,6 +39,10 @@ public final class BasicScalingResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="maxInstances", required=true)
     private Integer maxInstances;
 
+    /**
+     * @return Maximum number of instances to create for this version.
+     * 
+     */
     public Integer maxInstances() {
         return this.maxInstances;
     }
@@ -64,11 +72,23 @@ public final class BasicScalingResponse extends com.pulumi.resources.InvokeArgs 
             $ = new BasicScalingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param idleTimeout Duration of time after the last request that an instance must wait before the instance is shut down.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeout(String idleTimeout) {
             $.idleTimeout = idleTimeout;
             return this;
         }
 
+        /**
+         * @param maxInstances Maximum number of instances to create for this version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(Integer maxInstances) {
             $.maxInstances = maxInstances;
             return this;

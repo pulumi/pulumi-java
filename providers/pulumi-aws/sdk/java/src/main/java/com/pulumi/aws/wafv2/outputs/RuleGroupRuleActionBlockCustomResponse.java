@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RuleGroupRuleActionBlockCustomResponse {
     /**
-     * References the response body that you want AWS WAF to return to the web request client. This must reference a `key` defined in a `custom_response_body` block of this resource.
+     * @return References the response body that you want AWS WAF to return to the web request client. This must reference a `key` defined in a `custom_response_body` block of this resource.
      * 
      */
     private final @Nullable String customResponseBodyKey;
     /**
-     * The HTTP status code to return to the client.
+     * @return The HTTP status code to return to the client.
      * 
      */
     private final Integer responseCode;
     /**
-     * The `response_header` blocks used to define the HTTP response headers added to the response. See Custom HTTP Header below for details.
+     * @return The `response_header` blocks used to define the HTTP response headers added to the response. See Custom HTTP Header below for details.
      * 
      */
     private final @Nullable List<RuleGroupRuleActionBlockCustomResponseResponseHeader> responseHeaders;
@@ -41,23 +41,23 @@ public final class RuleGroupRuleActionBlockCustomResponse {
     }
 
     /**
-     * References the response body that you want AWS WAF to return to the web request client. This must reference a `key` defined in a `custom_response_body` block of this resource.
+     * @return References the response body that you want AWS WAF to return to the web request client. This must reference a `key` defined in a `custom_response_body` block of this resource.
      * 
-    */
+     */
     public Optional<String> customResponseBodyKey() {
         return Optional.ofNullable(this.customResponseBodyKey);
     }
     /**
-     * The HTTP status code to return to the client.
+     * @return The HTTP status code to return to the client.
      * 
-    */
+     */
     public Integer responseCode() {
         return this.responseCode;
     }
     /**
-     * The `response_header` blocks used to define the HTTP response headers added to the response. See Custom HTTP Header below for details.
+     * @return The `response_header` blocks used to define the HTTP response headers added to the response. See Custom HTTP Header below for details.
      * 
-    */
+     */
     public List<RuleGroupRuleActionBlockCustomResponseResponseHeader> responseHeaders() {
         return this.responseHeaders == null ? List.of() : this.responseHeaders;
     }

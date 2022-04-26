@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse {
     /**
-     * The job config for the risk job.
+     * @return The job config for the risk job.
      * 
      */
     private final GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig;
@@ -21,9 +21,9 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse {
     }
 
     /**
-     * The job config for the risk job.
+     * @return The job config for the risk job.
      * 
-    */
+     */
     public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig() {
         return this.jobConfig;
     }

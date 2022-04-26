@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TriggerBuildArtifacts {
     /**
-     * A list of images to be pushed upon the successful completion of all build steps.
+     * @return A list of images to be pushed upon the successful completion of all build steps.
      * The images will be pushed using the builder service account&#39;s credentials.
      * The digests of the pushed images will be stored in the Build resource&#39;s results field.
      * If any of the images fail to be pushed, the build is marked FAILURE.
@@ -22,7 +22,7 @@ public final class TriggerBuildArtifacts {
      */
     private final @Nullable List<String> images;
     /**
-     * A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
+     * @return A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
      * Files in the workspace matching specified paths globs will be uploaded to the
      * Cloud Storage location using the builder service account&#39;s credentials.
      * The location and generation of the uploaded objects will be stored in the Build resource&#39;s results field.
@@ -41,24 +41,24 @@ public final class TriggerBuildArtifacts {
     }
 
     /**
-     * A list of images to be pushed upon the successful completion of all build steps.
+     * @return A list of images to be pushed upon the successful completion of all build steps.
      * The images will be pushed using the builder service account&#39;s credentials.
      * The digests of the pushed images will be stored in the Build resource&#39;s results field.
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * 
-    */
+     */
     public List<String> images() {
         return this.images == null ? List.of() : this.images;
     }
     /**
-     * A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
+     * @return A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
      * Files in the workspace matching specified paths globs will be uploaded to the
      * Cloud Storage location using the builder service account&#39;s credentials.
      * The location and generation of the uploaded objects will be stored in the Build resource&#39;s results field.
      * If any objects fail to be pushed, the build is marked FAILURE.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<TriggerBuildArtifactsObjects> objects() {
         return Optional.ofNullable(this.objects);
     }

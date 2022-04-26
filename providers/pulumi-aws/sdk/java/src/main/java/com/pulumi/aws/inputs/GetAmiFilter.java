@@ -20,6 +20,10 @@ public final class GetAmiFilter extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the AMI that was provided during image creation.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -56,6 +60,12 @@ public final class GetAmiFilter extends com.pulumi.resources.InvokeArgs {
             $ = new GetAmiFilter(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the AMI that was provided during image creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

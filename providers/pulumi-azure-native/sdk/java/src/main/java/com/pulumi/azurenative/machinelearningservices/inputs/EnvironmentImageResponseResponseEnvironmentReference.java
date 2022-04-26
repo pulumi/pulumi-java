@@ -25,6 +25,10 @@ public final class EnvironmentImageResponseResponseEnvironmentReference extends 
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the environment.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class EnvironmentImageResponseResponseEnvironmentReference extends 
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return Version of the environment.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -65,11 +73,23 @@ public final class EnvironmentImageResponseResponseEnvironmentReference extends 
             $ = new EnvironmentImageResponseResponseEnvironmentReference(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version Version of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

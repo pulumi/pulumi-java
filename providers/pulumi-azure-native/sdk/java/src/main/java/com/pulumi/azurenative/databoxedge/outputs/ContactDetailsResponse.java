@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class ContactDetailsResponse {
     /**
-     * The name of the company.
+     * @return The name of the company.
      * 
      */
     private final String companyName;
     /**
-     * The contact person name.
+     * @return The contact person name.
      * 
      */
     private final String contactPerson;
     /**
-     * The email list.
+     * @return The email list.
      * 
      */
     private final List<String> emailList;
     /**
-     * The phone number.
+     * @return The phone number.
      * 
      */
     private final String phone;
@@ -44,30 +44,30 @@ public final class ContactDetailsResponse {
     }
 
     /**
-     * The name of the company.
+     * @return The name of the company.
      * 
-    */
+     */
     public String companyName() {
         return this.companyName;
     }
     /**
-     * The contact person name.
+     * @return The contact person name.
      * 
-    */
+     */
     public String contactPerson() {
         return this.contactPerson;
     }
     /**
-     * The email list.
+     * @return The email list.
      * 
-    */
+     */
     public List<String> emailList() {
         return this.emailList;
     }
     /**
-     * The phone number.
+     * @return The phone number.
      * 
-    */
+     */
     public String phone() {
         return this.phone;
     }

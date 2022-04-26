@@ -21,6 +21,10 @@ public final class GetLoadBalancerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetLoadBalancerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="loadBalancerName", required=true)
     private String loadBalancerName;
 
+    /**
+     * @return The name of the load balancer.
+     * 
+     */
     public String loadBalancerName() {
         return this.loadBalancerName;
     }
@@ -43,6 +51,10 @@ public final class GetLoadBalancerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetLoadBalancerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLoadBalancerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param loadBalancerName The name of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerName(String loadBalancerName) {
             $.loadBalancerName = loadBalancerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

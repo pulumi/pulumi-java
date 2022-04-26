@@ -23,6 +23,10 @@ public final class DateAfterCreationResponse extends com.pulumi.resources.Invoke
     @Import(name="daysAfterCreationGreaterThan", required=true)
     private Double daysAfterCreationGreaterThan;
 
+    /**
+     * @return Value indicating the age in days after creation
+     * 
+     */
     public Double daysAfterCreationGreaterThan() {
         return this.daysAfterCreationGreaterThan;
     }
@@ -51,6 +55,12 @@ public final class DateAfterCreationResponse extends com.pulumi.resources.Invoke
             $ = new DateAfterCreationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysAfterCreationGreaterThan Value indicating the age in days after creation
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysAfterCreationGreaterThan(Double daysAfterCreationGreaterThan) {
             $.daysAfterCreationGreaterThan = daysAfterCreationGreaterThan;
             return this;

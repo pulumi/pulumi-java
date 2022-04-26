@@ -23,6 +23,10 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustGetArgs extends c
     @Import(name="file")
     private @Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs> file;
 
+    /**
+     * @return The TLS validation context trust for a local file certificate.
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs>> file() {
         return Optional.ofNullable(this.file);
     }
@@ -34,6 +38,10 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustGetArgs extends c
     @Import(name="sds")
     private @Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs> sds;
 
+    /**
+     * @return The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs>> sds() {
         return Optional.ofNullable(this.sds);
     }
@@ -63,20 +71,44 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustGetArgs extends c
             $ = new VirtualGatewaySpecListenerTlsValidationTrustGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param file The TLS validation context trust for a local file certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(@Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs> file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param file The TLS validation context trust for a local file certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs file) {
             return file(Output.of(file));
         }
 
+        /**
+         * @param sds The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sds(@Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs> sds) {
             $.sds = sds;
             return this;
         }
 
+        /**
+         * @param sds The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sds(VirtualGatewaySpecListenerTlsValidationTrustSdsGetArgs sds) {
             return sds(Output.of(sds));
         }

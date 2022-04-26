@@ -27,6 +27,10 @@ public final class SourceCostAllocationResourceArgs extends com.pulumi.resources
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class SourceCostAllocationResourceArgs extends com.pulumi.resources
     @Import(name="resourceType", required=true)
     private Output<Either<String,CostAllocationResourceType>> resourceType;
 
+    /**
+     * @return Type of resources contained in this cost allocation rule
+     * 
+     */
     public Output<Either<String,CostAllocationResourceType>> resourceType() {
         return this.resourceType;
     }
@@ -49,6 +57,10 @@ public final class SourceCostAllocationResourceArgs extends com.pulumi.resources
     @Import(name="values", required=true)
     private Output<List<String>> values;
 
+    /**
+     * @return Source Resources for cost allocation. This list cannot contain more than 25 values.
+     * 
+     */
     public Output<List<String>> values() {
         return this.values;
     }
@@ -79,41 +91,95 @@ public final class SourceCostAllocationResourceArgs extends com.pulumi.resources
             $ = new SourceCostAllocationResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceType Type of resources contained in this cost allocation rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<Either<String,CostAllocationResourceType>> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType Type of resources contained in this cost allocation rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Either<String,CostAllocationResourceType> resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param resourceType Type of resources contained in this cost allocation rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Either.ofLeft(resourceType));
         }
 
+        /**
+         * @param resourceType Type of resources contained in this cost allocation rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(CostAllocationResourceType resourceType) {
             return resourceType(Either.ofRight(resourceType));
         }
 
+        /**
+         * @param values Source Resources for cost allocation. This list cannot contain more than 25 values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Source Resources for cost allocation. This list cannot contain more than 25 values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values Source Resources for cost allocation. This list cannot contain more than 25 values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

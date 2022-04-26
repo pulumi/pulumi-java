@@ -24,6 +24,10 @@ public final class ServerEndpointRecallErrorResponse extends com.pulumi.resource
     @Import(name="count", required=true)
     private Double count;
 
+    /**
+     * @return Count of occurences of the error
+     * 
+     */
     public Double count() {
         return this.count;
     }
@@ -35,6 +39,10 @@ public final class ServerEndpointRecallErrorResponse extends com.pulumi.resource
     @Import(name="errorCode", required=true)
     private Integer errorCode;
 
+    /**
+     * @return Error code (HResult)
+     * 
+     */
     public Integer errorCode() {
         return this.errorCode;
     }
@@ -64,11 +72,23 @@ public final class ServerEndpointRecallErrorResponse extends com.pulumi.resource
             $ = new ServerEndpointRecallErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Count of occurences of the error
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Double count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param errorCode Error code (HResult)
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(Integer errorCode) {
             $.errorCode = errorCode;
             return this;

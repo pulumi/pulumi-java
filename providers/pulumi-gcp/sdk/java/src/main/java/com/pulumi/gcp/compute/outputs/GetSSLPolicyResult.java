@@ -14,46 +14,46 @@ import javax.annotation.Nullable;
 public final class GetSSLPolicyResult {
     private final String creationTimestamp;
     /**
-     * If the `profile` is `CUSTOM`, these are the custom encryption
+     * @return If the `profile` is `CUSTOM`, these are the custom encryption
      * ciphers supported by the profile. If the `profile` is *not* `CUSTOM`, this
      * attribute will be empty.
      * 
      */
     private final List<String> customFeatures;
     /**
-     * Description of this SSL Policy.
+     * @return Description of this SSL Policy.
      * 
      */
     private final String description;
     /**
-     * The set of enabled encryption ciphers as a result of the policy config
+     * @return The set of enabled encryption ciphers as a result of the policy config
      * 
      */
     private final List<String> enabledFeatures;
     /**
-     * Fingerprint of this resource.
+     * @return Fingerprint of this resource.
      * 
      */
     private final String fingerprint;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The minimum supported TLS version of this policy.
+     * @return The minimum supported TLS version of this policy.
      * 
      */
     private final String minTlsVersion;
     private final String name;
     /**
-     * The Google-curated or custom profile used by this policy.
+     * @return The Google-curated or custom profile used by this policy.
      * 
      */
     private final String profile;
     private final @Nullable String project;
     /**
-     * The URI of the created resource.
+     * @return The URI of the created resource.
      * 
      */
     private final String selfLink;
@@ -88,46 +88,46 @@ public final class GetSSLPolicyResult {
         return this.creationTimestamp;
     }
     /**
-     * If the `profile` is `CUSTOM`, these are the custom encryption
+     * @return If the `profile` is `CUSTOM`, these are the custom encryption
      * ciphers supported by the profile. If the `profile` is *not* `CUSTOM`, this
      * attribute will be empty.
      * 
-    */
+     */
     public List<String> customFeatures() {
         return this.customFeatures;
     }
     /**
-     * Description of this SSL Policy.
+     * @return Description of this SSL Policy.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The set of enabled encryption ciphers as a result of the policy config
+     * @return The set of enabled encryption ciphers as a result of the policy config
      * 
-    */
+     */
     public List<String> enabledFeatures() {
         return this.enabledFeatures;
     }
     /**
-     * Fingerprint of this resource.
+     * @return Fingerprint of this resource.
      * 
-    */
+     */
     public String fingerprint() {
         return this.fingerprint;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The minimum supported TLS version of this policy.
+     * @return The minimum supported TLS version of this policy.
      * 
-    */
+     */
     public String minTlsVersion() {
         return this.minTlsVersion;
     }
@@ -135,9 +135,9 @@ public final class GetSSLPolicyResult {
         return this.name;
     }
     /**
-     * The Google-curated or custom profile used by this policy.
+     * @return The Google-curated or custom profile used by this policy.
      * 
-    */
+     */
     public String profile() {
         return this.profile;
     }
@@ -145,9 +145,9 @@ public final class GetSSLPolicyResult {
         return Optional.ofNullable(this.project);
     }
     /**
-     * The URI of the created resource.
+     * @return The URI of the created resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }

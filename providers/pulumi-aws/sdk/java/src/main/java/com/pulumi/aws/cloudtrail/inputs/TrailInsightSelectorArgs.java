@@ -20,6 +20,10 @@ public final class TrailInsightSelectorArgs extends com.pulumi.resources.Resourc
     @Import(name="insightType", required=true)
     private Output<String> insightType;
 
+    /**
+     * @return Type of insights to log on a trail. The valid value is `ApiCallRateInsight`.
+     * 
+     */
     public Output<String> insightType() {
         return this.insightType;
     }
@@ -48,11 +52,23 @@ public final class TrailInsightSelectorArgs extends com.pulumi.resources.Resourc
             $ = new TrailInsightSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param insightType Type of insights to log on a trail. The valid value is `ApiCallRateInsight`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insightType(Output<String> insightType) {
             $.insightType = insightType;
             return this;
         }
 
+        /**
+         * @param insightType Type of insights to log on a trail. The valid value is `ApiCallRateInsight`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insightType(String insightType) {
             return insightType(Output.of(insightType));
         }

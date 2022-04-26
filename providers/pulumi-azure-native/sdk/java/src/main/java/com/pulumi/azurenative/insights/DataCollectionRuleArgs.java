@@ -29,6 +29,10 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataCollectionRuleName")
     private @Nullable Output<String> dataCollectionRuleName;
 
+    /**
+     * @return The name of the data collection rule. The name is case insensitive.
+     * 
+     */
     public Optional<Output<String>> dataCollectionRuleName() {
         return Optional.ofNullable(this.dataCollectionRuleName);
     }
@@ -40,6 +44,10 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataFlows")
     private @Nullable Output<List<DataFlowArgs>> dataFlows;
 
+    /**
+     * @return The specification of data flows.
+     * 
+     */
     public Optional<Output<List<DataFlowArgs>>> dataFlows() {
         return Optional.ofNullable(this.dataFlows);
     }
@@ -52,6 +60,11 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataSources")
     private @Nullable Output<DataCollectionRuleDataSourcesArgs> dataSources;
 
+    /**
+     * @return The specification of data sources.
+     * This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
+     * 
+     */
     public Optional<Output<DataCollectionRuleDataSourcesArgs>> dataSources() {
         return Optional.ofNullable(this.dataSources);
     }
@@ -63,6 +76,10 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the data collection rule.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -74,6 +91,10 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="destinations")
     private @Nullable Output<DataCollectionRuleDestinationsArgs> destinations;
 
+    /**
+     * @return The specification of destinations.
+     * 
+     */
     public Optional<Output<DataCollectionRuleDestinationsArgs>> destinations() {
         return Optional.ofNullable(this.destinations);
     }
@@ -85,6 +106,10 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="kind")
     private @Nullable Output<Either<String,KnownDataCollectionRuleResourceKind>> kind;
 
+    /**
+     * @return The kind of the resource.
+     * 
+     */
     public Optional<Output<Either<String,KnownDataCollectionRuleResourceKind>>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -96,6 +121,10 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -107,6 +136,10 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -118,6 +151,10 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -154,95 +191,223 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
             $ = new DataCollectionRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataCollectionRuleName The name of the data collection rule. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCollectionRuleName(@Nullable Output<String> dataCollectionRuleName) {
             $.dataCollectionRuleName = dataCollectionRuleName;
             return this;
         }
 
+        /**
+         * @param dataCollectionRuleName The name of the data collection rule. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCollectionRuleName(String dataCollectionRuleName) {
             return dataCollectionRuleName(Output.of(dataCollectionRuleName));
         }
 
+        /**
+         * @param dataFlows The specification of data flows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFlows(@Nullable Output<List<DataFlowArgs>> dataFlows) {
             $.dataFlows = dataFlows;
             return this;
         }
 
+        /**
+         * @param dataFlows The specification of data flows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFlows(List<DataFlowArgs> dataFlows) {
             return dataFlows(Output.of(dataFlows));
         }
 
+        /**
+         * @param dataFlows The specification of data flows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFlows(DataFlowArgs... dataFlows) {
             return dataFlows(List.of(dataFlows));
         }
 
+        /**
+         * @param dataSources The specification of data sources.
+         * This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSources(@Nullable Output<DataCollectionRuleDataSourcesArgs> dataSources) {
             $.dataSources = dataSources;
             return this;
         }
 
+        /**
+         * @param dataSources The specification of data sources.
+         * This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSources(DataCollectionRuleDataSourcesArgs dataSources) {
             return dataSources(Output.of(dataSources));
         }
 
+        /**
+         * @param description Description of the data collection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the data collection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param destinations The specification of destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(@Nullable Output<DataCollectionRuleDestinationsArgs> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations The specification of destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(DataCollectionRuleDestinationsArgs destinations) {
             return destinations(Output.of(destinations));
         }
 
+        /**
+         * @param kind The kind of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Either<String,KnownDataCollectionRuleResourceKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,KnownDataCollectionRuleResourceKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind The kind of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind The kind of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(KnownDataCollectionRuleResourceKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param location The geo-location where the resource lives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

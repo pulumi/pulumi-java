@@ -26,6 +26,10 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
     private @Nullable Output<String> accountId;
 
+    /**
+     * @return The ID of the target account for budget. Will use current user&#39;s account_id by default if omitted.
+     * 
+     */
     public Optional<Output<String>> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -37,6 +41,10 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the budget.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -48,6 +56,10 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="budgetType")
     private @Nullable Output<String> budgetType;
 
+    /**
+     * @return Whether this budget tracks monetary cost or usage.
+     * 
+     */
     public Optional<Output<String>> budgetType() {
         return Optional.ofNullable(this.budgetType);
     }
@@ -59,6 +71,10 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="costFilters")
     private @Nullable Output<Map<String,String>> costFilters;
 
+    /**
+     * @return Map of CostFilters key/value pairs to apply to the budget.
+     * 
+     */
     public Optional<Output<Map<String,String>>> costFilters() {
         return Optional.ofNullable(this.costFilters);
     }
@@ -70,6 +86,10 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="costTypes")
     private @Nullable Output<BudgetCostTypesGetArgs> costTypes;
 
+    /**
+     * @return Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.
+     * 
+     */
     public Optional<Output<BudgetCostTypesGetArgs>> costTypes() {
         return Optional.ofNullable(this.costTypes);
     }
@@ -81,6 +101,10 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="limitAmount")
     private @Nullable Output<String> limitAmount;
 
+    /**
+     * @return The amount of cost or usage being measured for a budget.
+     * 
+     */
     public Optional<Output<String>> limitAmount() {
         return Optional.ofNullable(this.limitAmount);
     }
@@ -92,6 +116,10 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="limitUnit")
     private @Nullable Output<String> limitUnit;
 
+    /**
+     * @return The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
+     * 
+     */
     public Optional<Output<String>> limitUnit() {
         return Optional.ofNullable(this.limitUnit);
     }
@@ -103,6 +131,10 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of a budget. Unique within accounts.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -114,6 +146,10 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
     private @Nullable Output<String> namePrefix;
 
+    /**
+     * @return The prefix of the name of a budget. Unique within accounts.
+     * 
+     */
     public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -125,6 +161,10 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="notifications")
     private @Nullable Output<List<BudgetNotificationGetArgs>> notifications;
 
+    /**
+     * @return Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
+     * 
+     */
     public Optional<Output<List<BudgetNotificationGetArgs>>> notifications() {
         return Optional.ofNullable(this.notifications);
     }
@@ -136,6 +176,10 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="timePeriodEnd")
     private @Nullable Output<String> timePeriodEnd;
 
+    /**
+     * @return The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
+     * 
+     */
     public Optional<Output<String>> timePeriodEnd() {
         return Optional.ofNullable(this.timePeriodEnd);
     }
@@ -147,6 +191,10 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="timePeriodStart")
     private @Nullable Output<String> timePeriodStart;
 
+    /**
+     * @return The start of the time period covered by the budget. If you don&#39;t specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
+     * 
+     */
     public Optional<Output<String>> timePeriodStart() {
         return Optional.ofNullable(this.timePeriodStart);
     }
@@ -158,6 +206,10 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeUnit")
     private @Nullable Output<String> timeUnit;
 
+    /**
+     * @return The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
+     * 
+     */
     public Optional<Output<String>> timeUnit() {
         return Optional.ofNullable(this.timeUnit);
     }
@@ -198,123 +250,285 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
             $ = new BudgetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The ID of the target account for budget. Will use current user&#39;s account_id by default if omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(@Nullable Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId The ID of the target account for budget. Will use current user&#39;s account_id by default if omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param arn The ARN of the budget.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the budget.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param budgetType Whether this budget tracks monetary cost or usage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder budgetType(@Nullable Output<String> budgetType) {
             $.budgetType = budgetType;
             return this;
         }
 
+        /**
+         * @param budgetType Whether this budget tracks monetary cost or usage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder budgetType(String budgetType) {
             return budgetType(Output.of(budgetType));
         }
 
+        /**
+         * @param costFilters Map of CostFilters key/value pairs to apply to the budget.
+         * 
+         * @return builder
+         * 
+         */
         public Builder costFilters(@Nullable Output<Map<String,String>> costFilters) {
             $.costFilters = costFilters;
             return this;
         }
 
+        /**
+         * @param costFilters Map of CostFilters key/value pairs to apply to the budget.
+         * 
+         * @return builder
+         * 
+         */
         public Builder costFilters(Map<String,String> costFilters) {
             return costFilters(Output.of(costFilters));
         }
 
+        /**
+         * @param costTypes Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder costTypes(@Nullable Output<BudgetCostTypesGetArgs> costTypes) {
             $.costTypes = costTypes;
             return this;
         }
 
+        /**
+         * @param costTypes Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder costTypes(BudgetCostTypesGetArgs costTypes) {
             return costTypes(Output.of(costTypes));
         }
 
+        /**
+         * @param limitAmount The amount of cost or usage being measured for a budget.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limitAmount(@Nullable Output<String> limitAmount) {
             $.limitAmount = limitAmount;
             return this;
         }
 
+        /**
+         * @param limitAmount The amount of cost or usage being measured for a budget.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limitAmount(String limitAmount) {
             return limitAmount(Output.of(limitAmount));
         }
 
+        /**
+         * @param limitUnit The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limitUnit(@Nullable Output<String> limitUnit) {
             $.limitUnit = limitUnit;
             return this;
         }
 
+        /**
+         * @param limitUnit The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limitUnit(String limitUnit) {
             return limitUnit(Output.of(limitUnit));
         }
 
+        /**
+         * @param name The name of a budget. Unique within accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of a budget. Unique within accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namePrefix The prefix of the name of a budget. Unique within accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix The prefix of the name of a budget. Unique within accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param notifications Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(@Nullable Output<List<BudgetNotificationGetArgs>> notifications) {
             $.notifications = notifications;
             return this;
         }
 
+        /**
+         * @param notifications Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(List<BudgetNotificationGetArgs> notifications) {
             return notifications(Output.of(notifications));
         }
 
+        /**
+         * @param notifications Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(BudgetNotificationGetArgs... notifications) {
             return notifications(List.of(notifications));
         }
 
+        /**
+         * @param timePeriodEnd The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePeriodEnd(@Nullable Output<String> timePeriodEnd) {
             $.timePeriodEnd = timePeriodEnd;
             return this;
         }
 
+        /**
+         * @param timePeriodEnd The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePeriodEnd(String timePeriodEnd) {
             return timePeriodEnd(Output.of(timePeriodEnd));
         }
 
+        /**
+         * @param timePeriodStart The start of the time period covered by the budget. If you don&#39;t specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePeriodStart(@Nullable Output<String> timePeriodStart) {
             $.timePeriodStart = timePeriodStart;
             return this;
         }
 
+        /**
+         * @param timePeriodStart The start of the time period covered by the budget. If you don&#39;t specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePeriodStart(String timePeriodStart) {
             return timePeriodStart(Output.of(timePeriodStart));
         }
 
+        /**
+         * @param timeUnit The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeUnit(@Nullable Output<String> timeUnit) {
             $.timeUnit = timeUnit;
             return this;
         }
 
+        /**
+         * @param timeUnit The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeUnit(String timeUnit) {
             return timeUnit(Output.of(timeUnit));
         }

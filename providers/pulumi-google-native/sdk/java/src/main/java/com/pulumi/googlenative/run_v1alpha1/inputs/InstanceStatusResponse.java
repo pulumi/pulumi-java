@@ -25,6 +25,10 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="completionTime", required=true)
     private String completionTime;
 
+    /**
+     * @return Optional. Represents time when the instance was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+     * 
+     */
     public String completionTime() {
         return this.completionTime;
     }
@@ -36,6 +40,10 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="failed", required=true)
     private Integer failed;
 
+    /**
+     * @return Optional. The number of times this instance exited with code &gt; 0; +optional
+     * 
+     */
     public Integer failed() {
         return this.failed;
     }
@@ -47,6 +55,10 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="index", required=true)
     private Integer index;
 
+    /**
+     * @return Index of the instance, unique per Job, and beginning at 0.
+     * 
+     */
     public Integer index() {
         return this.index;
     }
@@ -58,6 +70,10 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="lastAttemptResult", required=true)
     private InstanceAttemptResultResponse lastAttemptResult;
 
+    /**
+     * @return Optional. Result of the last attempt of this instance. +optional
+     * 
+     */
     public InstanceAttemptResultResponse lastAttemptResult() {
         return this.lastAttemptResult;
     }
@@ -69,6 +85,10 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="lastExitCode", required=true)
     private Integer lastExitCode;
 
+    /**
+     * @return Optional. Last exit code seen for this instance. +optional
+     * 
+     */
     public Integer lastExitCode() {
         return this.lastExitCode;
     }
@@ -80,6 +100,10 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="restarted", required=true)
     private Integer restarted;
 
+    /**
+     * @return Optional. The number of times this instance was restarted. Instances are restarted according the restartPolicy configured in the Job template. +optional
+     * 
+     */
     public Integer restarted() {
         return this.restarted;
     }
@@ -91,6 +115,10 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Optional. Represents time when the instance was created by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -102,6 +130,10 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="succeeded", required=true)
     private Integer succeeded;
 
+    /**
+     * @return Optional. The number of times this instance exited with code == 0. +optional
+     * 
+     */
     public Integer succeeded() {
         return this.succeeded;
     }
@@ -137,41 +169,89 @@ public final class InstanceStatusResponse extends com.pulumi.resources.InvokeArg
             $ = new InstanceStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param completionTime Optional. Represents time when the instance was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder completionTime(String completionTime) {
             $.completionTime = completionTime;
             return this;
         }
 
+        /**
+         * @param failed Optional. The number of times this instance exited with code &gt; 0; +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder failed(Integer failed) {
             $.failed = failed;
             return this;
         }
 
+        /**
+         * @param index Index of the instance, unique per Job, and beginning at 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder index(Integer index) {
             $.index = index;
             return this;
         }
 
+        /**
+         * @param lastAttemptResult Optional. Result of the last attempt of this instance. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAttemptResult(InstanceAttemptResultResponse lastAttemptResult) {
             $.lastAttemptResult = lastAttemptResult;
             return this;
         }
 
+        /**
+         * @param lastExitCode Optional. Last exit code seen for this instance. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastExitCode(Integer lastExitCode) {
             $.lastExitCode = lastExitCode;
             return this;
         }
 
+        /**
+         * @param restarted Optional. The number of times this instance was restarted. Instances are restarted according the restartPolicy configured in the Job template. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder restarted(Integer restarted) {
             $.restarted = restarted;
             return this;
         }
 
+        /**
+         * @param startTime Optional. Represents time when the instance was created by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param succeeded Optional. The number of times this instance exited with code == 0. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder succeeded(Integer succeeded) {
             $.succeeded = succeeded;
             return this;

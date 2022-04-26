@@ -25,6 +25,10 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
     private @Nullable Output<AcceleratorAttributesArgs> attributes;
 
+    /**
+     * @return The attributes of the accelerator. Fields documented below.
+     * 
+     */
     public Optional<Output<AcceleratorAttributesArgs>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -36,6 +40,10 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -47,6 +55,10 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddressType")
     private @Nullable Output<String> ipAddressType;
 
+    /**
+     * @return The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
+     * 
+     */
     public Optional<Output<String>> ipAddressType() {
         return Optional.ofNullable(this.ipAddressType);
     }
@@ -58,6 +70,10 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the accelerator.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +85,10 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,47 +121,107 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AcceleratorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes The attributes of the accelerator. Fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Output<AcceleratorAttributesArgs> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes The attributes of the accelerator. Fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(AcceleratorAttributesArgs attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param enabled Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param ipAddressType The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressType(@Nullable Output<String> ipAddressType) {
             $.ipAddressType = ipAddressType;
             return this;
         }
 
+        /**
+         * @param ipAddressType The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressType(String ipAddressType) {
             return ipAddressType(Output.of(ipAddressType));
         }
 
+        /**
+         * @param name The name of the accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -19,6 +19,10 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
     @Import(name="carrierGatewayId", required=true)
     private String carrierGatewayId;
 
+    /**
+     * @return ID of the Carrier Gateway.
+     * 
+     */
     public String carrierGatewayId() {
         return this.carrierGatewayId;
     }
@@ -30,6 +34,10 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
     @Import(name="cidrBlock", required=true)
     private String cidrBlock;
 
+    /**
+     * @return CIDR block of the route.
+     * 
+     */
     public String cidrBlock() {
         return this.cidrBlock;
     }
@@ -41,6 +49,10 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
     @Import(name="destinationPrefixListId", required=true)
     private String destinationPrefixListId;
 
+    /**
+     * @return The ID of a managed prefix list destination of the route.
+     * 
+     */
     public String destinationPrefixListId() {
         return this.destinationPrefixListId;
     }
@@ -52,6 +64,10 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
     @Import(name="egressOnlyGatewayId", required=true)
     private String egressOnlyGatewayId;
 
+    /**
+     * @return ID of the Egress Only Internet Gateway.
+     * 
+     */
     public String egressOnlyGatewayId() {
         return this.egressOnlyGatewayId;
     }
@@ -63,6 +79,10 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
     @Import(name="gatewayId", required=true)
     private String gatewayId;
 
+    /**
+     * @return ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+     * 
+     */
     public String gatewayId() {
         return this.gatewayId;
     }
@@ -74,6 +94,10 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceId", required=true)
     private String instanceId;
 
+    /**
+     * @return EC2 instance ID.
+     * 
+     */
     public String instanceId() {
         return this.instanceId;
     }
@@ -85,6 +109,10 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipv6CidrBlock", required=true)
     private String ipv6CidrBlock;
 
+    /**
+     * @return IPv6 CIDR block of the route.
+     * 
+     */
     public String ipv6CidrBlock() {
         return this.ipv6CidrBlock;
     }
@@ -96,6 +124,10 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
     @Import(name="localGatewayId", required=true)
     private String localGatewayId;
 
+    /**
+     * @return Local Gateway ID.
+     * 
+     */
     public String localGatewayId() {
         return this.localGatewayId;
     }
@@ -107,6 +139,10 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
     @Import(name="natGatewayId", required=true)
     private String natGatewayId;
 
+    /**
+     * @return NAT Gateway ID.
+     * 
+     */
     public String natGatewayId() {
         return this.natGatewayId;
     }
@@ -118,6 +154,10 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
     @Import(name="networkInterfaceId", required=true)
     private String networkInterfaceId;
 
+    /**
+     * @return ID of the elastic network interface (eni) to use.
+     * 
+     */
     public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
@@ -129,6 +169,10 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
     @Import(name="transitGatewayId", required=true)
     private String transitGatewayId;
 
+    /**
+     * @return EC2 Transit Gateway ID.
+     * 
+     */
     public String transitGatewayId() {
         return this.transitGatewayId;
     }
@@ -140,6 +184,10 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpcEndpointId", required=true)
     private String vpcEndpointId;
 
+    /**
+     * @return VPC Endpoint ID.
+     * 
+     */
     public String vpcEndpointId() {
         return this.vpcEndpointId;
     }
@@ -151,6 +199,10 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpcPeeringConnectionId", required=true)
     private String vpcPeeringConnectionId;
 
+    /**
+     * @return VPC Peering ID.
+     * 
+     */
     public String vpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId;
     }
@@ -191,66 +243,144 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
             $ = new GetRouteTableRoute(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param carrierGatewayId ID of the Carrier Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder carrierGatewayId(String carrierGatewayId) {
             $.carrierGatewayId = carrierGatewayId;
             return this;
         }
 
+        /**
+         * @param cidrBlock CIDR block of the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(String cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;
         }
 
+        /**
+         * @param destinationPrefixListId The ID of a managed prefix list destination of the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPrefixListId(String destinationPrefixListId) {
             $.destinationPrefixListId = destinationPrefixListId;
             return this;
         }
 
+        /**
+         * @param egressOnlyGatewayId ID of the Egress Only Internet Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressOnlyGatewayId(String egressOnlyGatewayId) {
             $.egressOnlyGatewayId = egressOnlyGatewayId;
             return this;
         }
 
+        /**
+         * @param gatewayId ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(String gatewayId) {
             $.gatewayId = gatewayId;
             return this;
         }
 
+        /**
+         * @param instanceId EC2 instance ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param ipv6CidrBlock IPv6 CIDR block of the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             $.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
+        /**
+         * @param localGatewayId Local Gateway ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayId(String localGatewayId) {
             $.localGatewayId = localGatewayId;
             return this;
         }
 
+        /**
+         * @param natGatewayId NAT Gateway ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natGatewayId(String natGatewayId) {
             $.natGatewayId = natGatewayId;
             return this;
         }
 
+        /**
+         * @param networkInterfaceId ID of the elastic network interface (eni) to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(String networkInterfaceId) {
             $.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
+        /**
+         * @param transitGatewayId EC2 Transit Gateway ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayId(String transitGatewayId) {
             $.transitGatewayId = transitGatewayId;
             return this;
         }
 
+        /**
+         * @param vpcEndpointId VPC Endpoint ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcEndpointId(String vpcEndpointId) {
             $.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
+        /**
+         * @param vpcPeeringConnectionId VPC Peering ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcPeeringConnectionId(String vpcPeeringConnectionId) {
             $.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;

@@ -20,6 +20,10 @@ public final class GetListenerDefaultActionForwardTargetGroup extends com.pulumi
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -56,6 +60,12 @@ public final class GetListenerDefaultActionForwardTargetGroup extends com.pulumi
             $ = new GetListenerDefaultActionForwardTargetGroup(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

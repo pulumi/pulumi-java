@@ -29,6 +29,10 @@ public final class DataBoxDiskJobSecretsResponse extends com.pulumi.resources.In
     @Import(name="dcAccessSecurityCode", required=true)
     private DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
+    /**
+     * @return Dc Access Security Code for Customer Managed Shipping
+     * 
+     */
     public DcAccessSecurityCodeResponse dcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
@@ -40,6 +44,10 @@ public final class DataBoxDiskJobSecretsResponse extends com.pulumi.resources.In
     @Import(name="diskSecrets", required=true)
     private List<DiskSecretResponse> diskSecrets;
 
+    /**
+     * @return Contains the list of secrets object for that device.
+     * 
+     */
     public List<DiskSecretResponse> diskSecrets() {
         return this.diskSecrets;
     }
@@ -51,6 +59,10 @@ public final class DataBoxDiskJobSecretsResponse extends com.pulumi.resources.In
     @Import(name="error", required=true)
     private CloudErrorResponse error;
 
+    /**
+     * @return Error while fetching the secrets.
+     * 
+     */
     public CloudErrorResponse error() {
         return this.error;
     }
@@ -62,6 +74,10 @@ public final class DataBoxDiskJobSecretsResponse extends com.pulumi.resources.In
     @Import(name="isPasskeyUserDefined", required=true)
     private Boolean isPasskeyUserDefined;
 
+    /**
+     * @return Whether passkey was provided by user.
+     * 
+     */
     public Boolean isPasskeyUserDefined() {
         return this.isPasskeyUserDefined;
     }
@@ -74,6 +90,11 @@ public final class DataBoxDiskJobSecretsResponse extends com.pulumi.resources.In
     @Import(name="jobSecretsType", required=true)
     private String jobSecretsType;
 
+    /**
+     * @return Used to indicate what type of job secrets object.
+     * Expected value is &#39;DataBoxDisk&#39;.
+     * 
+     */
     public String jobSecretsType() {
         return this.jobSecretsType;
     }
@@ -85,6 +106,10 @@ public final class DataBoxDiskJobSecretsResponse extends com.pulumi.resources.In
     @Import(name="passKey", required=true)
     private String passKey;
 
+    /**
+     * @return PassKey for the disk Job.
+     * 
+     */
     public String passKey() {
         return this.passKey;
     }
@@ -118,35 +143,78 @@ public final class DataBoxDiskJobSecretsResponse extends com.pulumi.resources.In
             $ = new DataBoxDiskJobSecretsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dcAccessSecurityCode Dc Access Security Code for Customer Managed Shipping
+         * 
+         * @return builder
+         * 
+         */
         public Builder dcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
             $.dcAccessSecurityCode = dcAccessSecurityCode;
             return this;
         }
 
+        /**
+         * @param diskSecrets Contains the list of secrets object for that device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSecrets(List<DiskSecretResponse> diskSecrets) {
             $.diskSecrets = diskSecrets;
             return this;
         }
 
+        /**
+         * @param diskSecrets Contains the list of secrets object for that device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSecrets(DiskSecretResponse... diskSecrets) {
             return diskSecrets(List.of(diskSecrets));
         }
 
+        /**
+         * @param error Error while fetching the secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(CloudErrorResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param isPasskeyUserDefined Whether passkey was provided by user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPasskeyUserDefined(Boolean isPasskeyUserDefined) {
             $.isPasskeyUserDefined = isPasskeyUserDefined;
             return this;
         }
 
+        /**
+         * @param jobSecretsType Used to indicate what type of job secrets object.
+         * Expected value is &#39;DataBoxDisk&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobSecretsType(String jobSecretsType) {
             $.jobSecretsType = jobSecretsType;
             return this;
         }
 
+        /**
+         * @param passKey PassKey for the disk Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passKey(String passKey) {
             $.passKey = passKey;
             return this;

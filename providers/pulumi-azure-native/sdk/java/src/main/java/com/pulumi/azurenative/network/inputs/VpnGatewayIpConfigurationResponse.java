@@ -25,6 +25,10 @@ public final class VpnGatewayIpConfigurationResponse extends com.pulumi.resource
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The identifier of the IP configuration for a VPN Gateway.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class VpnGatewayIpConfigurationResponse extends com.pulumi.resource
     @Import(name="privateIpAddress")
     private @Nullable String privateIpAddress;
 
+    /**
+     * @return The private IP address of this IP configuration.
+     * 
+     */
     public Optional<String> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
@@ -47,6 +55,10 @@ public final class VpnGatewayIpConfigurationResponse extends com.pulumi.resource
     @Import(name="publicIpAddress")
     private @Nullable String publicIpAddress;
 
+    /**
+     * @return The public IP address of this IP configuration.
+     * 
+     */
     public Optional<String> publicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }
@@ -77,16 +89,34 @@ public final class VpnGatewayIpConfigurationResponse extends com.pulumi.resource
             $ = new VpnGatewayIpConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The identifier of the IP configuration for a VPN Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param privateIpAddress The private IP address of this IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param publicIpAddress The public IP address of this IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
             $.publicIpAddress = publicIpAddress;
             return this;

@@ -26,6 +26,10 @@ public final class MonitoringScheduleS3Output extends com.pulumi.resources.Invok
     @Import(name="localPath", required=true)
     private String localPath;
 
+    /**
+     * @return The local path to the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job. LocalPath is an absolute path for the output data.
+     * 
+     */
     public String localPath() {
         return this.localPath;
     }
@@ -37,6 +41,10 @@ public final class MonitoringScheduleS3Output extends com.pulumi.resources.Invok
     @Import(name="s3UploadMode")
     private @Nullable MonitoringScheduleS3OutputS3UploadMode s3UploadMode;
 
+    /**
+     * @return Whether to upload the results of the monitoring job continuously or after the job completes.
+     * 
+     */
     public Optional<MonitoringScheduleS3OutputS3UploadMode> s3UploadMode() {
         return Optional.ofNullable(this.s3UploadMode);
     }
@@ -48,6 +56,10 @@ public final class MonitoringScheduleS3Output extends com.pulumi.resources.Invok
     @Import(name="s3Uri", required=true)
     private String s3Uri;
 
+    /**
+     * @return A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
+     * 
+     */
     public String s3Uri() {
         return this.s3Uri;
     }
@@ -78,16 +90,34 @@ public final class MonitoringScheduleS3Output extends com.pulumi.resources.Invok
             $ = new MonitoringScheduleS3Output(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param localPath The local path to the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job. LocalPath is an absolute path for the output data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localPath(String localPath) {
             $.localPath = localPath;
             return this;
         }
 
+        /**
+         * @param s3UploadMode Whether to upload the results of the monitoring job continuously or after the job completes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3UploadMode(@Nullable MonitoringScheduleS3OutputS3UploadMode s3UploadMode) {
             $.s3UploadMode = s3UploadMode;
             return this;
         }
 
+        /**
+         * @param s3Uri A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Uri(String s3Uri) {
             $.s3Uri = s3Uri;
             return this;

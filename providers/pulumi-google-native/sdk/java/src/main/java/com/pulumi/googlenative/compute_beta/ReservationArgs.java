@@ -25,6 +25,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +69,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareSettings")
     private @Nullable Output<ShareSettingsArgs> shareSettings;
 
+    /**
+     * @return Share-settings for shared-reservation
+     * 
+     */
     public Optional<Output<ShareSettingsArgs>> shareSettings() {
         return Optional.ofNullable(this.shareSettings);
     }
@@ -72,6 +84,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="specificReservation")
     private @Nullable Output<AllocationSpecificSKUReservationArgs> specificReservation;
 
+    /**
+     * @return Reservation for instances with specific machine shapes.
+     * 
+     */
     public Optional<Output<AllocationSpecificSKUReservationArgs>> specificReservation() {
         return Optional.ofNullable(this.specificReservation);
     }
@@ -83,6 +99,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="specificReservationRequired")
     private @Nullable Output<Boolean> specificReservationRequired;
 
+    /**
+     * @return Indicates whether the reservation can be consumed by VMs with affinity for &#34;any&#34; reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
+     * 
+     */
     public Optional<Output<Boolean>> specificReservationRequired() {
         return Optional.ofNullable(this.specificReservationRequired);
     }
@@ -94,6 +114,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -129,20 +153,44 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReservationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -165,38 +213,86 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param shareSettings Share-settings for shared-reservation
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSettings(@Nullable Output<ShareSettingsArgs> shareSettings) {
             $.shareSettings = shareSettings;
             return this;
         }
 
+        /**
+         * @param shareSettings Share-settings for shared-reservation
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSettings(ShareSettingsArgs shareSettings) {
             return shareSettings(Output.of(shareSettings));
         }
 
+        /**
+         * @param specificReservation Reservation for instances with specific machine shapes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specificReservation(@Nullable Output<AllocationSpecificSKUReservationArgs> specificReservation) {
             $.specificReservation = specificReservation;
             return this;
         }
 
+        /**
+         * @param specificReservation Reservation for instances with specific machine shapes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specificReservation(AllocationSpecificSKUReservationArgs specificReservation) {
             return specificReservation(Output.of(specificReservation));
         }
 
+        /**
+         * @param specificReservationRequired Indicates whether the reservation can be consumed by VMs with affinity for &#34;any&#34; reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specificReservationRequired(@Nullable Output<Boolean> specificReservationRequired) {
             $.specificReservationRequired = specificReservationRequired;
             return this;
         }
 
+        /**
+         * @param specificReservationRequired Indicates whether the reservation can be consumed by VMs with affinity for &#34;any&#34; reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specificReservationRequired(Boolean specificReservationRequired) {
             return specificReservationRequired(Output.of(specificReservationRequired));
         }
 
+        /**
+         * @param zone Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

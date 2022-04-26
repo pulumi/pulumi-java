@@ -13,37 +13,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCertificateResult {
     /**
-     * Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * @return Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
     private final String expirationDate;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * KeyVault location details of the certificate.
+     * @return KeyVault location details of the certificate.
      * 
      */
     private final @Nullable KeyVaultContractPropertiesResponse keyVault;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Subject attribute of the certificate.
+     * @return Subject attribute of the certificate.
      * 
      */
     private final String subject;
     /**
-     * Thumbprint of the certificate.
+     * @return Thumbprint of the certificate.
      * 
      */
     private final String thumbprint;
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
      */
     private final String type;
@@ -67,51 +67,51 @@ public final class GetCertificateResult {
     }
 
     /**
-     * Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * @return Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
-    */
+     */
     public String expirationDate() {
         return this.expirationDate;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * KeyVault location details of the certificate.
+     * @return KeyVault location details of the certificate.
      * 
-    */
+     */
     public Optional<KeyVaultContractPropertiesResponse> keyVault() {
         return Optional.ofNullable(this.keyVault);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Subject attribute of the certificate.
+     * @return Subject attribute of the certificate.
      * 
-    */
+     */
     public String subject() {
         return this.subject;
     }
     /**
-     * Thumbprint of the certificate.
+     * @return Thumbprint of the certificate.
      * 
-    */
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -26,6 +26,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the bypass traffic rule.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
     @Import(name="destinationAddresses")
     private @Nullable List<String> destinationAddresses;
 
+    /**
+     * @return List of destination IP addresses or ranges for this rule.
+     * 
+     */
     public Optional<List<String>> destinationAddresses() {
         return Optional.ofNullable(this.destinationAddresses);
     }
@@ -48,6 +56,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
     @Import(name="destinationIpGroups")
     private @Nullable List<String> destinationIpGroups;
 
+    /**
+     * @return List of destination IpGroups for this rule.
+     * 
+     */
     public Optional<List<String>> destinationIpGroups() {
         return Optional.ofNullable(this.destinationIpGroups);
     }
@@ -59,6 +71,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
     @Import(name="destinationPorts")
     private @Nullable List<String> destinationPorts;
 
+    /**
+     * @return List of destination ports or ranges.
+     * 
+     */
     public Optional<List<String>> destinationPorts() {
         return Optional.ofNullable(this.destinationPorts);
     }
@@ -70,6 +86,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the bypass traffic rule.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -81,6 +101,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
     @Import(name="protocol")
     private @Nullable String protocol;
 
+    /**
+     * @return The rule bypass protocol.
+     * 
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -92,6 +116,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
     @Import(name="sourceAddresses")
     private @Nullable List<String> sourceAddresses;
 
+    /**
+     * @return List of source IP addresses or ranges for this rule.
+     * 
+     */
     public Optional<List<String>> sourceAddresses() {
         return Optional.ofNullable(this.sourceAddresses);
     }
@@ -103,6 +131,10 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
     @Import(name="sourceIpGroups")
     private @Nullable List<String> sourceIpGroups;
 
+    /**
+     * @return List of source IpGroups for this rule.
+     * 
+     */
     public Optional<List<String>> sourceIpGroups() {
         return Optional.ofNullable(this.sourceIpGroups);
     }
@@ -138,62 +170,140 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
             $ = new FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the bypass traffic rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param destinationAddresses List of destination IP addresses or ranges for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             $.destinationAddresses = destinationAddresses;
             return this;
         }
 
+        /**
+         * @param destinationAddresses List of destination IP addresses or ranges for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddresses(String... destinationAddresses) {
             return destinationAddresses(List.of(destinationAddresses));
         }
 
+        /**
+         * @param destinationIpGroups List of destination IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationIpGroups(@Nullable List<String> destinationIpGroups) {
             $.destinationIpGroups = destinationIpGroups;
             return this;
         }
 
+        /**
+         * @param destinationIpGroups List of destination IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationIpGroups(String... destinationIpGroups) {
             return destinationIpGroups(List.of(destinationIpGroups));
         }
 
+        /**
+         * @param destinationPorts List of destination ports or ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             $.destinationPorts = destinationPorts;
             return this;
         }
 
+        /**
+         * @param destinationPorts List of destination ports or ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPorts(String... destinationPorts) {
             return destinationPorts(List.of(destinationPorts));
         }
 
+        /**
+         * @param name Name of the bypass traffic rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param protocol The rule bypass protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param sourceAddresses List of source IP addresses or ranges for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             $.sourceAddresses = sourceAddresses;
             return this;
         }
 
+        /**
+         * @param sourceAddresses List of source IP addresses or ranges for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAddresses(String... sourceAddresses) {
             return sourceAddresses(List.of(sourceAddresses));
         }
 
+        /**
+         * @param sourceIpGroups List of source IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             $.sourceIpGroups = sourceIpGroups;
             return this;
         }
 
+        /**
+         * @param sourceIpGroups List of source IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpGroups(String... sourceIpGroups) {
             return sourceIpGroups(List.of(sourceIpGroups));
         }

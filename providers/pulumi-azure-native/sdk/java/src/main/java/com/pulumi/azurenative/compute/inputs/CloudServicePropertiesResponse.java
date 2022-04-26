@@ -31,6 +31,11 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
     @Import(name="allowModelOverride")
     private @Nullable Boolean allowModelOverride;
 
+    /**
+     * @return (Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
+     * The default value is `false`.
+     * 
+     */
     public Optional<Boolean> allowModelOverride() {
         return Optional.ofNullable(this.allowModelOverride);
     }
@@ -42,6 +47,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
     @Import(name="configuration")
     private @Nullable String configuration;
 
+    /**
+     * @return Specifies the XML service configuration (.cscfg) for the cloud service.
+     * 
+     */
     public Optional<String> configuration() {
         return Optional.ofNullable(this.configuration);
     }
@@ -54,6 +63,11 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
     @Import(name="configurationUrl")
     private @Nullable String configurationUrl;
 
+    /**
+     * @return Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
+     * This is a write-only property and is not returned in GET calls.
+     * 
+     */
     public Optional<String> configurationUrl() {
         return Optional.ofNullable(this.configurationUrl);
     }
@@ -65,6 +79,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
     @Import(name="extensionProfile")
     private @Nullable CloudServiceExtensionProfileResponse extensionProfile;
 
+    /**
+     * @return Describes a cloud service extension profile.
+     * 
+     */
     public Optional<CloudServiceExtensionProfileResponse> extensionProfile() {
         return Optional.ofNullable(this.extensionProfile);
     }
@@ -76,6 +94,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
     @Import(name="networkProfile")
     private @Nullable CloudServiceNetworkProfileResponse networkProfile;
 
+    /**
+     * @return Network Profile for the cloud service.
+     * 
+     */
     public Optional<CloudServiceNetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
@@ -87,6 +109,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
     @Import(name="osProfile")
     private @Nullable CloudServiceOsProfileResponse osProfile;
 
+    /**
+     * @return Describes the OS profile for the cloud service.
+     * 
+     */
     public Optional<CloudServiceOsProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
@@ -99,6 +125,11 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
     @Import(name="packageUrl")
     private @Nullable String packageUrl;
 
+    /**
+     * @return Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
+     * This is a write-only property and is not returned in GET calls.
+     * 
+     */
     public Optional<String> packageUrl() {
         return Optional.ofNullable(this.packageUrl);
     }
@@ -110,6 +141,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state, which only appears in the response.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -121,6 +156,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
     @Import(name="roleProfile")
     private @Nullable CloudServiceRoleProfileResponse roleProfile;
 
+    /**
+     * @return Describes the role profile for the cloud service.
+     * 
+     */
     public Optional<CloudServiceRoleProfileResponse> roleProfile() {
         return Optional.ofNullable(this.roleProfile);
     }
@@ -133,6 +172,11 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
     @Import(name="startCloudService")
     private @Nullable Boolean startCloudService;
 
+    /**
+     * @return (Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
+     * If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.
+     * 
+     */
     public Optional<Boolean> startCloudService() {
         return Optional.ofNullable(this.startCloudService);
     }
@@ -144,6 +188,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
     @Import(name="uniqueId", required=true)
     private String uniqueId;
 
+    /**
+     * @return The unique identifier for the cloud service.
+     * 
+     */
     public String uniqueId() {
         return this.uniqueId;
     }
@@ -157,6 +205,12 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
     @Import(name="upgradeMode")
     private @Nullable String upgradeMode;
 
+    /**
+     * @return Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
+     * Possible Values are &lt;br /&gt;&lt;br /&gt;**Auto**&lt;br /&gt;&lt;br /&gt;**Manual** &lt;br /&gt;&lt;br /&gt;**Simultaneous**&lt;br /&gt;&lt;br /&gt;
+     * If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.
+     * 
+     */
     public Optional<String> upgradeMode() {
         return Optional.ofNullable(this.upgradeMode);
     }
@@ -196,61 +250,139 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
             $ = new CloudServicePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowModelOverride (Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
+         * The default value is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowModelOverride(@Nullable Boolean allowModelOverride) {
             $.allowModelOverride = allowModelOverride;
             return this;
         }
 
+        /**
+         * @param configuration Specifies the XML service configuration (.cscfg) for the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(@Nullable String configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param configurationUrl Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
+         * This is a write-only property and is not returned in GET calls.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationUrl(@Nullable String configurationUrl) {
             $.configurationUrl = configurationUrl;
             return this;
         }
 
+        /**
+         * @param extensionProfile Describes a cloud service extension profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionProfile(@Nullable CloudServiceExtensionProfileResponse extensionProfile) {
             $.extensionProfile = extensionProfile;
             return this;
         }
 
+        /**
+         * @param networkProfile Network Profile for the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(@Nullable CloudServiceNetworkProfileResponse networkProfile) {
             $.networkProfile = networkProfile;
             return this;
         }
 
+        /**
+         * @param osProfile Describes the OS profile for the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osProfile(@Nullable CloudServiceOsProfileResponse osProfile) {
             $.osProfile = osProfile;
             return this;
         }
 
+        /**
+         * @param packageUrl Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
+         * This is a write-only property and is not returned in GET calls.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageUrl(@Nullable String packageUrl) {
             $.packageUrl = packageUrl;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state, which only appears in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param roleProfile Describes the role profile for the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleProfile(@Nullable CloudServiceRoleProfileResponse roleProfile) {
             $.roleProfile = roleProfile;
             return this;
         }
 
+        /**
+         * @param startCloudService (Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
+         * If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startCloudService(@Nullable Boolean startCloudService) {
             $.startCloudService = startCloudService;
             return this;
         }
 
+        /**
+         * @param uniqueId The unique identifier for the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueId(String uniqueId) {
             $.uniqueId = uniqueId;
             return this;
         }
 
+        /**
+         * @param upgradeMode Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
+         * Possible Values are &lt;br /&gt;&lt;br /&gt;**Auto**&lt;br /&gt;&lt;br /&gt;**Manual** &lt;br /&gt;&lt;br /&gt;**Simultaneous**&lt;br /&gt;&lt;br /&gt;
+         * If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeMode(@Nullable String upgradeMode) {
             $.upgradeMode = upgradeMode;
             return this;

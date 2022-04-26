@@ -27,6 +27,10 @@ public final class StatefulPolicyPreservedStateArgs extends com.pulumi.resources
     @Import(name="disks")
     private @Nullable Output<Map<String,String>> disks;
 
+    /**
+     * @return Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
+     * 
+     */
     public Optional<Output<Map<String,String>>> disks() {
         return Optional.ofNullable(this.disks);
     }
@@ -38,6 +42,10 @@ public final class StatefulPolicyPreservedStateArgs extends com.pulumi.resources
     @Import(name="externalIPs")
     private @Nullable Output<Map<String,String>> externalIPs;
 
+    /**
+     * @return External network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
+     * 
+     */
     public Optional<Output<Map<String,String>>> externalIPs() {
         return Optional.ofNullable(this.externalIPs);
     }
@@ -49,6 +57,10 @@ public final class StatefulPolicyPreservedStateArgs extends com.pulumi.resources
     @Import(name="internalIPs")
     private @Nullable Output<Map<String,String>> internalIPs;
 
+    /**
+     * @return Internal network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
+     * 
+     */
     public Optional<Output<Map<String,String>>> internalIPs() {
         return Optional.ofNullable(this.internalIPs);
     }
@@ -79,29 +91,65 @@ public final class StatefulPolicyPreservedStateArgs extends com.pulumi.resources
             $ = new StatefulPolicyPreservedStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disks Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(@Nullable Output<Map<String,String>> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(Map<String,String> disks) {
             return disks(Output.of(disks));
         }
 
+        /**
+         * @param externalIPs External network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIPs(@Nullable Output<Map<String,String>> externalIPs) {
             $.externalIPs = externalIPs;
             return this;
         }
 
+        /**
+         * @param externalIPs External network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIPs(Map<String,String> externalIPs) {
             return externalIPs(Output.of(externalIPs));
         }
 
+        /**
+         * @param internalIPs Internal network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIPs(@Nullable Output<Map<String,String>> internalIPs) {
             $.internalIPs = internalIPs;
             return this;
         }
 
+        /**
+         * @param internalIPs Internal network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIPs(Map<String,String> internalIPs) {
             return internalIPs(Output.of(internalIPs));
         }

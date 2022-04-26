@@ -23,6 +23,10 @@ public final class InstanceTemplateSpecResponse extends com.pulumi.resources.Inv
     @Import(name="spec", required=true)
     private InstanceSpecResponse spec;
 
+    /**
+     * @return Optional. Specification of the desired behavior of the instance. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status +optional
+     * 
+     */
     public InstanceSpecResponse spec() {
         return this.spec;
     }
@@ -51,6 +55,12 @@ public final class InstanceTemplateSpecResponse extends com.pulumi.resources.Inv
             $ = new InstanceTemplateSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param spec Optional. Specification of the desired behavior of the instance. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(InstanceSpecResponse spec) {
             $.spec = spec;
             return this;

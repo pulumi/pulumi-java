@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse {
     /**
-     * The maximal number of workers. Must be equal to or greater than min_size.
+     * @return The maximal number of workers. Must be equal to or greater than min_size.
      * 
      */
     private final String maxSize;
     /**
-     * The minimal number of workers. Must be greater than 0.
+     * @return The minimal number of workers. Must be greater than 0.
      * 
      */
     private final String minSize;
@@ -29,16 +29,16 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
     }
 
     /**
-     * The maximal number of workers. Must be equal to or greater than min_size.
+     * @return The maximal number of workers. Must be equal to or greater than min_size.
      * 
-    */
+     */
     public String maxSize() {
         return this.maxSize;
     }
     /**
-     * The minimal number of workers. Must be greater than 0.
+     * @return The minimal number of workers. Must be greater than 0.
      * 
-    */
+     */
     public String minSize() {
         return this.minSize;
     }

@@ -27,6 +27,10 @@ public final class TriggerConditionResponse extends com.pulumi.resources.InvokeA
     @Import(name="metricTrigger")
     private @Nullable LogMetricTriggerResponse metricTrigger;
 
+    /**
+     * @return Trigger condition for metric query rule
+     * 
+     */
     public Optional<LogMetricTriggerResponse> metricTrigger() {
         return Optional.ofNullable(this.metricTrigger);
     }
@@ -38,6 +42,10 @@ public final class TriggerConditionResponse extends com.pulumi.resources.InvokeA
     @Import(name="threshold", required=true)
     private Double threshold;
 
+    /**
+     * @return Result or count threshold based on which rule should be triggered.
+     * 
+     */
     public Double threshold() {
         return this.threshold;
     }
@@ -49,6 +57,10 @@ public final class TriggerConditionResponse extends com.pulumi.resources.InvokeA
     @Import(name="thresholdOperator", required=true)
     private String thresholdOperator;
 
+    /**
+     * @return Evaluation operation for rule - &#39;GreaterThan&#39; or &#39;LessThan.
+     * 
+     */
     public String thresholdOperator() {
         return this.thresholdOperator;
     }
@@ -79,16 +91,34 @@ public final class TriggerConditionResponse extends com.pulumi.resources.InvokeA
             $ = new TriggerConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metricTrigger Trigger condition for metric query rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricTrigger(@Nullable LogMetricTriggerResponse metricTrigger) {
             $.metricTrigger = metricTrigger;
             return this;
         }
 
+        /**
+         * @param threshold Result or count threshold based on which rule should be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Double threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param thresholdOperator Evaluation operation for rule - &#39;GreaterThan&#39; or &#39;LessThan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdOperator(String thresholdOperator) {
             $.thresholdOperator = thresholdOperator;
             return this;

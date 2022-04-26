@@ -27,6 +27,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the DAX cluster
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -39,6 +43,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZones")
     private @Nullable Output<List<String>> availabilityZones;
 
+    /**
+     * @return List of Availability Zones in which the
+     * nodes will be created
+     * 
+     */
     public Optional<Output<List<String>>> availabilityZones() {
         return Optional.ofNullable(this.availabilityZones);
     }
@@ -50,6 +59,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterAddress")
     private @Nullable Output<String> clusterAddress;
 
+    /**
+     * @return The DNS name of the DAX cluster without the port appended
+     * 
+     */
     public Optional<Output<String>> clusterAddress() {
         return Optional.ofNullable(this.clusterAddress);
     }
@@ -63,6 +76,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterEndpointEncryptionType")
     private @Nullable Output<String> clusterEndpointEncryptionType;
 
+    /**
+     * @return The type of encryption the
+     * cluster&#39;s endpoint should support. Valid values are: `NONE` and `TLS`.
+     * Default value is `NONE`.
+     * 
+     */
     public Optional<Output<String>> clusterEndpointEncryptionType() {
         return Optional.ofNullable(this.clusterEndpointEncryptionType);
     }
@@ -75,6 +94,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
     private @Nullable Output<String> clusterName;
 
+    /**
+     * @return Group identifier. DAX converts this name to
+     * lowercase
+     * 
+     */
     public Optional<Output<String>> clusterName() {
         return Optional.ofNullable(this.clusterName);
     }
@@ -87,6 +111,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="configurationEndpoint")
     private @Nullable Output<String> configurationEndpoint;
 
+    /**
+     * @return The configuration endpoint for this DAX cluster,
+     * consisting of a DNS name and a port number
+     * 
+     */
     public Optional<Output<String>> configurationEndpoint() {
         return Optional.ofNullable(this.configurationEndpoint);
     }
@@ -98,6 +127,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description for the cluster
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -111,6 +144,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamRoleArn")
     private @Nullable Output<String> iamRoleArn;
 
+    /**
+     * @return A valid Amazon Resource Name (ARN) that identifies
+     * an IAM role. At runtime, DAX will assume this role and use the role&#39;s
+     * permissions to access DynamoDB on your behalf
+     * 
+     */
     public Optional<Output<String>> iamRoleArn() {
         return Optional.ofNullable(this.iamRoleArn);
     }
@@ -125,6 +164,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceWindow")
     private @Nullable Output<String> maintenanceWindow;
 
+    /**
+     * @return Specifies the weekly time range for when
+     * maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
+     * (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
+     * `sun:05:00-sun:09:00`
+     * 
+     */
     public Optional<Output<String>> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
@@ -137,6 +183,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeType")
     private @Nullable Output<String> nodeType;
 
+    /**
+     * @return The compute and memory capacity of the nodes. See
+     * [Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
+     * 
+     */
     public Optional<Output<String>> nodeType() {
         return Optional.ofNullable(this.nodeType);
     }
@@ -150,6 +201,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodes")
     private @Nullable Output<List<ClusterNodeGetArgs>> nodes;
 
+    /**
+     * @return List of node objects including `id`, `address`, `port` and
+     * `availability_zone`. Referenceable e.g., as
+     * `${aws_dax_cluster.test.nodes.0.address}`
+     * 
+     */
     public Optional<Output<List<ClusterNodeGetArgs>>> nodes() {
         return Optional.ofNullable(this.nodes);
     }
@@ -163,6 +220,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationTopicArn")
     private @Nullable Output<String> notificationTopicArn;
 
+    /**
+     * @return An Amazon Resource Name (ARN) of an
+     * SNS topic to send DAX notifications to. Example:
+     * `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
+     * 
+     */
     public Optional<Output<String>> notificationTopicArn() {
         return Optional.ofNullable(this.notificationTopicArn);
     }
@@ -175,6 +238,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameterGroupName")
     private @Nullable Output<String> parameterGroupName;
 
+    /**
+     * @return Name of the parameter group to associate
+     * with this DAX cluster
+     * 
+     */
     public Optional<Output<String>> parameterGroupName() {
         return Optional.ofNullable(this.parameterGroupName);
     }
@@ -186,6 +254,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The port used by the configuration endpoint
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -199,6 +271,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicationFactor")
     private @Nullable Output<Integer> replicationFactor;
 
+    /**
+     * @return The number of nodes in the DAX cluster. A
+     * replication factor of 1 will create a single-node cluster, without any read
+     * replicas
+     * 
+     */
     public Optional<Output<Integer>> replicationFactor() {
         return Optional.ofNullable(this.replicationFactor);
     }
@@ -211,6 +289,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupIds")
     private @Nullable Output<List<String>> securityGroupIds;
 
+    /**
+     * @return One or more VPC security groups associated
+     * with the cluster
+     * 
+     */
     public Optional<Output<List<String>>> securityGroupIds() {
         return Optional.ofNullable(this.securityGroupIds);
     }
@@ -222,6 +305,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverSideEncryption")
     private @Nullable Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption;
 
+    /**
+     * @return Encrypt at rest options
+     * 
+     */
     public Optional<Output<ClusterServerSideEncryptionGetArgs>> serverSideEncryption() {
         return Optional.ofNullable(this.serverSideEncryption);
     }
@@ -234,6 +321,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetGroupName")
     private @Nullable Output<String> subnetGroupName;
 
+    /**
+     * @return Name of the subnet group to be used for the
+     * cluster
+     * 
+     */
     public Optional<Output<String>> subnetGroupName() {
         return Optional.ofNullable(this.subnetGroupName);
     }
@@ -245,6 +337,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -256,6 +352,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -303,194 +403,496 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the DAX cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the DAX cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param availabilityZones List of Availability Zones in which the
+         * nodes will be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             $.availabilityZones = availabilityZones;
             return this;
         }
 
+        /**
+         * @param availabilityZones List of Availability Zones in which the
+         * nodes will be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(List<String> availabilityZones) {
             return availabilityZones(Output.of(availabilityZones));
         }
 
+        /**
+         * @param availabilityZones List of Availability Zones in which the
+         * nodes will be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
 
+        /**
+         * @param clusterAddress The DNS name of the DAX cluster without the port appended
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterAddress(@Nullable Output<String> clusterAddress) {
             $.clusterAddress = clusterAddress;
             return this;
         }
 
+        /**
+         * @param clusterAddress The DNS name of the DAX cluster without the port appended
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterAddress(String clusterAddress) {
             return clusterAddress(Output.of(clusterAddress));
         }
 
+        /**
+         * @param clusterEndpointEncryptionType The type of encryption the
+         * cluster&#39;s endpoint should support. Valid values are: `NONE` and `TLS`.
+         * Default value is `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterEndpointEncryptionType(@Nullable Output<String> clusterEndpointEncryptionType) {
             $.clusterEndpointEncryptionType = clusterEndpointEncryptionType;
             return this;
         }
 
+        /**
+         * @param clusterEndpointEncryptionType The type of encryption the
+         * cluster&#39;s endpoint should support. Valid values are: `NONE` and `TLS`.
+         * Default value is `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterEndpointEncryptionType(String clusterEndpointEncryptionType) {
             return clusterEndpointEncryptionType(Output.of(clusterEndpointEncryptionType));
         }
 
+        /**
+         * @param clusterName Group identifier. DAX converts this name to
+         * lowercase
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(@Nullable Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName Group identifier. DAX converts this name to
+         * lowercase
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param configurationEndpoint The configuration endpoint for this DAX cluster,
+         * consisting of a DNS name and a port number
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationEndpoint(@Nullable Output<String> configurationEndpoint) {
             $.configurationEndpoint = configurationEndpoint;
             return this;
         }
 
+        /**
+         * @param configurationEndpoint The configuration endpoint for this DAX cluster,
+         * consisting of a DNS name and a port number
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationEndpoint(String configurationEndpoint) {
             return configurationEndpoint(Output.of(configurationEndpoint));
         }
 
+        /**
+         * @param description Description for the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description for the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param iamRoleArn A valid Amazon Resource Name (ARN) that identifies
+         * an IAM role. At runtime, DAX will assume this role and use the role&#39;s
+         * permissions to access DynamoDB on your behalf
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
             $.iamRoleArn = iamRoleArn;
             return this;
         }
 
+        /**
+         * @param iamRoleArn A valid Amazon Resource Name (ARN) that identifies
+         * an IAM role. At runtime, DAX will assume this role and use the role&#39;s
+         * permissions to access DynamoDB on your behalf
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoleArn(String iamRoleArn) {
             return iamRoleArn(Output.of(iamRoleArn));
         }
 
+        /**
+         * @param maintenanceWindow Specifies the weekly time range for when
+         * maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
+         * (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
+         * `sun:05:00-sun:09:00`
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
             $.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
+        /**
+         * @param maintenanceWindow Specifies the weekly time range for when
+         * maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
+         * (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
+         * `sun:05:00-sun:09:00`
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(String maintenanceWindow) {
             return maintenanceWindow(Output.of(maintenanceWindow));
         }
 
+        /**
+         * @param nodeType The compute and memory capacity of the nodes. See
+         * [Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeType(@Nullable Output<String> nodeType) {
             $.nodeType = nodeType;
             return this;
         }
 
+        /**
+         * @param nodeType The compute and memory capacity of the nodes. See
+         * [Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeType(String nodeType) {
             return nodeType(Output.of(nodeType));
         }
 
+        /**
+         * @param nodes List of node objects including `id`, `address`, `port` and
+         * `availability_zone`. Referenceable e.g., as
+         * `${aws_dax_cluster.test.nodes.0.address}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(@Nullable Output<List<ClusterNodeGetArgs>> nodes) {
             $.nodes = nodes;
             return this;
         }
 
+        /**
+         * @param nodes List of node objects including `id`, `address`, `port` and
+         * `availability_zone`. Referenceable e.g., as
+         * `${aws_dax_cluster.test.nodes.0.address}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(List<ClusterNodeGetArgs> nodes) {
             return nodes(Output.of(nodes));
         }
 
+        /**
+         * @param nodes List of node objects including `id`, `address`, `port` and
+         * `availability_zone`. Referenceable e.g., as
+         * `${aws_dax_cluster.test.nodes.0.address}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(ClusterNodeGetArgs... nodes) {
             return nodes(List.of(nodes));
         }
 
+        /**
+         * @param notificationTopicArn An Amazon Resource Name (ARN) of an
+         * SNS topic to send DAX notifications to. Example:
+         * `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationTopicArn(@Nullable Output<String> notificationTopicArn) {
             $.notificationTopicArn = notificationTopicArn;
             return this;
         }
 
+        /**
+         * @param notificationTopicArn An Amazon Resource Name (ARN) of an
+         * SNS topic to send DAX notifications to. Example:
+         * `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationTopicArn(String notificationTopicArn) {
             return notificationTopicArn(Output.of(notificationTopicArn));
         }
 
+        /**
+         * @param parameterGroupName Name of the parameter group to associate
+         * with this DAX cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
             $.parameterGroupName = parameterGroupName;
             return this;
         }
 
+        /**
+         * @param parameterGroupName Name of the parameter group to associate
+         * with this DAX cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterGroupName(String parameterGroupName) {
             return parameterGroupName(Output.of(parameterGroupName));
         }
 
+        /**
+         * @param port The port used by the configuration endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port used by the configuration endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param replicationFactor The number of nodes in the DAX cluster. A
+         * replication factor of 1 will create a single-node cluster, without any read
+         * replicas
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationFactor(@Nullable Output<Integer> replicationFactor) {
             $.replicationFactor = replicationFactor;
             return this;
         }
 
+        /**
+         * @param replicationFactor The number of nodes in the DAX cluster. A
+         * replication factor of 1 will create a single-node cluster, without any read
+         * replicas
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationFactor(Integer replicationFactor) {
             return replicationFactor(Output.of(replicationFactor));
         }
 
+        /**
+         * @param securityGroupIds One or more VPC security groups associated
+         * with the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds One or more VPC security groups associated
+         * with the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             return securityGroupIds(Output.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupIds One or more VPC security groups associated
+         * with the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param serverSideEncryption Encrypt at rest options
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverSideEncryption(@Nullable Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption) {
             $.serverSideEncryption = serverSideEncryption;
             return this;
         }
 
+        /**
+         * @param serverSideEncryption Encrypt at rest options
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverSideEncryption(ClusterServerSideEncryptionGetArgs serverSideEncryption) {
             return serverSideEncryption(Output.of(serverSideEncryption));
         }
 
+        /**
+         * @param subnetGroupName Name of the subnet group to be used for the
+         * cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
             $.subnetGroupName = subnetGroupName;
             return this;
         }
 
+        /**
+         * @param subnetGroupName Name of the subnet group to be used for the
+         * cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetGroupName(String subnetGroupName) {
             return subnetGroupName(Output.of(subnetGroupName));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

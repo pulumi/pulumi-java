@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class AndroidAppInfoResponse {
     /**
-     * The name of the app. Optional
+     * @return The name of the app. Optional
      * 
      */
     private final String name;
     /**
-     * The package name of the app. Required.
+     * @return The package name of the app. Required.
      * 
      */
     private final String packageName;
     /**
-     * The internal version code of the app. Optional.
+     * @return The internal version code of the app. Optional.
      * 
      */
     private final String versionCode;
     /**
-     * The version name of the app. Optional.
+     * @return The version name of the app. Optional.
      * 
      */
     private final String versionName;
@@ -43,30 +43,30 @@ public final class AndroidAppInfoResponse {
     }
 
     /**
-     * The name of the app. Optional
+     * @return The name of the app. Optional
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The package name of the app. Required.
+     * @return The package name of the app. Required.
      * 
-    */
+     */
     public String packageName() {
         return this.packageName;
     }
     /**
-     * The internal version code of the app. Optional.
+     * @return The internal version code of the app. Optional.
      * 
-    */
+     */
     public String versionCode() {
         return this.versionCode;
     }
     /**
-     * The version name of the app. Optional.
+     * @return The version name of the app. Optional.
      * 
-    */
+     */
     public String versionName() {
         return this.versionName;
     }

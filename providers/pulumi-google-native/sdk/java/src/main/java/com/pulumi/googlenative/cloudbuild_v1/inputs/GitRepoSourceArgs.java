@@ -27,6 +27,10 @@ public final class GitRepoSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ref")
     private @Nullable Output<String> ref;
 
+    /**
+     * @return The branch or tag to use. Must start with &#34;refs/&#34; (required).
+     * 
+     */
     public Optional<Output<String>> ref() {
         return Optional.ofNullable(this.ref);
     }
@@ -38,6 +42,10 @@ public final class GitRepoSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repoType")
     private @Nullable Output<GitRepoSourceRepoType> repoType;
 
+    /**
+     * @return See RepoType below.
+     * 
+     */
     public Optional<Output<GitRepoSourceRepoType>> repoType() {
         return Optional.ofNullable(this.repoType);
     }
@@ -49,6 +57,10 @@ public final class GitRepoSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return The URI of the repo (required).
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -79,29 +91,65 @@ public final class GitRepoSourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GitRepoSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ref The branch or tag to use. Must start with &#34;refs/&#34; (required).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ref(@Nullable Output<String> ref) {
             $.ref = ref;
             return this;
         }
 
+        /**
+         * @param ref The branch or tag to use. Must start with &#34;refs/&#34; (required).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ref(String ref) {
             return ref(Output.of(ref));
         }
 
+        /**
+         * @param repoType See RepoType below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoType(@Nullable Output<GitRepoSourceRepoType> repoType) {
             $.repoType = repoType;
             return this;
         }
 
+        /**
+         * @param repoType See RepoType below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoType(GitRepoSourceRepoType repoType) {
             return repoType(Output.of(repoType));
         }
 
+        /**
+         * @param uri The URI of the repo (required).
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The URI of the repo (required).
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

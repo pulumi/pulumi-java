@@ -28,6 +28,10 @@ public final class FirewallPolicyFilterRuleActionArgs extends com.pulumi.resourc
     @Import(name="type")
     private @Nullable Output<Either<String,FirewallPolicyFilterRuleActionType>> type;
 
+    /**
+     * @return The type of action.
+     * 
+     */
     public Optional<Output<Either<String,FirewallPolicyFilterRuleActionType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -56,19 +60,43 @@ public final class FirewallPolicyFilterRuleActionArgs extends com.pulumi.resourc
             $ = new FirewallPolicyFilterRuleActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,FirewallPolicyFilterRuleActionType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,FirewallPolicyFilterRuleActionType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(FirewallPolicyFilterRuleActionType type) {
             return type(Either.ofRight(type));
         }

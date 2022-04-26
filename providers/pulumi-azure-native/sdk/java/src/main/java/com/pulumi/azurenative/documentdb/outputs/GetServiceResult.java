@@ -13,22 +13,22 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceResult {
     /**
-     * The unique resource identifier of the database account.
+     * @return The unique resource identifier of the database account.
      * 
      */
     private final String id;
     /**
-     * The name of the database account.
+     * @return The name of the database account.
      * 
      */
     private final String name;
     /**
-     * Services response resource.
+     * @return Services response resource.
      * 
      */
     private final Either<DataTransferServiceResourcePropertiesResponse,SqlDedicatedGatewayServiceResourcePropertiesResponse> properties;
     /**
-     * The type of Azure resource.
+     * @return The type of Azure resource.
      * 
      */
     private final String type;
@@ -46,30 +46,30 @@ public final class GetServiceResult {
     }
 
     /**
-     * The unique resource identifier of the database account.
+     * @return The unique resource identifier of the database account.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the database account.
+     * @return The name of the database account.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Services response resource.
+     * @return Services response resource.
      * 
-    */
+     */
     public Either<DataTransferServiceResourcePropertiesResponse,SqlDedicatedGatewayServiceResourcePropertiesResponse> properties() {
         return this.properties;
     }
     /**
-     * The type of Azure resource.
+     * @return The type of Azure resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

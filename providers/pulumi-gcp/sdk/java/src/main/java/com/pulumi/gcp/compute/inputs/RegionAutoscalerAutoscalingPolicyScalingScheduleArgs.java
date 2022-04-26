@@ -24,6 +24,10 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleArgs extends 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleArgs extends 
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
+    /**
+     * @return A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
+     * 
+     */
     public Optional<Output<Boolean>> disabled() {
         return Optional.ofNullable(this.disabled);
     }
@@ -46,6 +54,10 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleArgs extends 
     @Import(name="durationSec", required=true)
     private Output<Integer> durationSec;
 
+    /**
+     * @return The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
+     * 
+     */
     public Output<Integer> durationSec() {
         return this.durationSec;
     }
@@ -57,6 +69,10 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleArgs extends 
     @Import(name="minRequiredReplicas", required=true)
     private Output<Integer> minRequiredReplicas;
 
+    /**
+     * @return Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
+     * 
+     */
     public Output<Integer> minRequiredReplicas() {
         return this.minRequiredReplicas;
     }
@@ -68,6 +84,10 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleArgs extends 
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The identifier for this object. Format specified above.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -79,6 +99,10 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleArgs extends 
     @Import(name="schedule", required=true)
     private Output<String> schedule;
 
+    /**
+     * @return The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
+     * 
+     */
     public Output<String> schedule() {
         return this.schedule;
     }
@@ -90,6 +114,10 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleArgs extends 
     @Import(name="timeZone")
     private @Nullable Output<String> timeZone;
 
+    /**
+     * @return The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+     * 
+     */
     public Optional<Output<String>> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -124,65 +152,149 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleArgs extends 
             $ = new RegionAutoscalerAutoscalingPolicyScalingScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param disabled A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }
 
+        /**
+         * @param durationSec The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationSec(Output<Integer> durationSec) {
             $.durationSec = durationSec;
             return this;
         }
 
+        /**
+         * @param durationSec The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationSec(Integer durationSec) {
             return durationSec(Output.of(durationSec));
         }
 
+        /**
+         * @param minRequiredReplicas Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minRequiredReplicas(Output<Integer> minRequiredReplicas) {
             $.minRequiredReplicas = minRequiredReplicas;
             return this;
         }
 
+        /**
+         * @param minRequiredReplicas Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minRequiredReplicas(Integer minRequiredReplicas) {
             return minRequiredReplicas(Output.of(minRequiredReplicas));
         }
 
+        /**
+         * @param name The identifier for this object. Format specified above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The identifier for this object. Format specified above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param schedule The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param timeZone The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable Output<String> timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param timeZone The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(String timeZone) {
             return timeZone(Output.of(timeZone));
         }

@@ -25,6 +25,10 @@ public final class EncryptionPreferencesResponse extends com.pulumi.resources.In
     @Import(name="doubleEncryptionStatus")
     private @Nullable String doubleEncryptionStatus;
 
+    /**
+     * @return Double encryption status as entered by the customer. It is compulsory to give this parameter if the &#39;Deny&#39; or &#39;Disabled&#39; policy is configured.
+     * 
+     */
     public Optional<String> doubleEncryptionStatus() {
         return Optional.ofNullable(this.doubleEncryptionStatus);
     }
@@ -53,6 +57,12 @@ public final class EncryptionPreferencesResponse extends com.pulumi.resources.In
             $ = new EncryptionPreferencesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param doubleEncryptionStatus Double encryption status as entered by the customer. It is compulsory to give this parameter if the &#39;Deny&#39; or &#39;Disabled&#39; policy is configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleEncryptionStatus(@Nullable String doubleEncryptionStatus) {
             $.doubleEncryptionStatus = doubleEncryptionStatus;
             return this;

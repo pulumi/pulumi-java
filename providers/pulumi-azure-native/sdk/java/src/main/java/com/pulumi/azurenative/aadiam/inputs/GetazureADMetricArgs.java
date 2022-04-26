@@ -19,6 +19,10 @@ public final class GetazureADMetricArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="azureADMetricsName", required=true)
     private String azureADMetricsName;
 
+    /**
+     * @return Name of the azureADMetrics instance.
+     * 
+     */
     public String azureADMetricsName() {
         return this.azureADMetricsName;
     }
@@ -30,6 +34,10 @@ public final class GetazureADMetricArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of an Azure resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetazureADMetricArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetazureADMetricArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureADMetricsName Name of the azureADMetrics instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureADMetricsName(String azureADMetricsName) {
             $.azureADMetricsName = azureADMetricsName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

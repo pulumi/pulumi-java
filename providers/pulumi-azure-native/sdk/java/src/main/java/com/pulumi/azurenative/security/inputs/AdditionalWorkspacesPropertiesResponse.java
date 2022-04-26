@@ -27,6 +27,10 @@ public final class AdditionalWorkspacesPropertiesResponse extends com.pulumi.res
     @Import(name="dataTypes")
     private @Nullable List<String> dataTypes;
 
+    /**
+     * @return List of data types sent to workspace
+     * 
+     */
     public Optional<List<String>> dataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
@@ -38,6 +42,10 @@ public final class AdditionalWorkspacesPropertiesResponse extends com.pulumi.res
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Workspace type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -49,6 +57,10 @@ public final class AdditionalWorkspacesPropertiesResponse extends com.pulumi.res
     @Import(name="workspace")
     private @Nullable String workspace;
 
+    /**
+     * @return Workspace resource id
+     * 
+     */
     public Optional<String> workspace() {
         return Optional.ofNullable(this.workspace);
     }
@@ -79,20 +91,44 @@ public final class AdditionalWorkspacesPropertiesResponse extends com.pulumi.res
             $ = new AdditionalWorkspacesPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataTypes List of data types sent to workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypes(@Nullable List<String> dataTypes) {
             $.dataTypes = dataTypes;
             return this;
         }
 
+        /**
+         * @param dataTypes List of data types sent to workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypes(String... dataTypes) {
             return dataTypes(List.of(dataTypes));
         }
 
+        /**
+         * @param type Workspace type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param workspace Workspace resource id
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspace(@Nullable String workspace) {
             $.workspace = workspace;
             return this;

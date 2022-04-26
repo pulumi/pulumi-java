@@ -23,6 +23,10 @@ public final class ErrorDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return Error code.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -34,6 +38,10 @@ public final class ErrorDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Error message indicating why the operation failed.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -63,11 +71,23 @@ public final class ErrorDetailsResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ErrorDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param message Error message indicating why the operation failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;

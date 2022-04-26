@@ -27,6 +27,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="disks")
     private @Nullable List<VirtualDiskResponse> disks;
 
+    /**
+     * @return Gets or sets the list of virtual disks associated with the virtual machine.
+     * 
+     */
     public Optional<List<VirtualDiskResponse>> disks() {
         return Optional.ofNullable(this.disks);
     }
@@ -38,6 +42,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="scsiControllers", required=true)
     private List<VirtualSCSIControllerResponse> scsiControllers;
 
+    /**
+     * @return Gets or sets the list of virtual SCSI controllers associated with the virtual machine.
+     * 
+     */
     public List<VirtualSCSIControllerResponse> scsiControllers() {
         return this.scsiControllers;
     }
@@ -67,20 +75,44 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new StorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disks Gets or sets the list of virtual disks associated with the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(@Nullable List<VirtualDiskResponse> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks Gets or sets the list of virtual disks associated with the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(VirtualDiskResponse... disks) {
             return disks(List.of(disks));
         }
 
+        /**
+         * @param scsiControllers Gets or sets the list of virtual SCSI controllers associated with the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scsiControllers(List<VirtualSCSIControllerResponse> scsiControllers) {
             $.scsiControllers = scsiControllers;
             return this;
         }
 
+        /**
+         * @param scsiControllers Gets or sets the list of virtual SCSI controllers associated with the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scsiControllers(VirtualSCSIControllerResponse... scsiControllers) {
             return scsiControllers(List.of(scsiControllers));
         }

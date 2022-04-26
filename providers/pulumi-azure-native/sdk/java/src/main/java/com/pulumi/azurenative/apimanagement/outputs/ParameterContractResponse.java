@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ParameterContractResponse {
     /**
-     * Default parameter value.
+     * @return Default parameter value.
      * 
      */
     private final @Nullable String defaultValue;
     /**
-     * Parameter description.
+     * @return Parameter description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Parameter name.
+     * @return Parameter name.
      * 
      */
     private final String name;
     /**
-     * Specifies whether parameter is required or not.
+     * @return Specifies whether parameter is required or not.
      * 
      */
     private final @Nullable Boolean required;
     /**
-     * Parameter type.
+     * @return Parameter type.
      * 
      */
     private final String type;
     /**
-     * Parameter values.
+     * @return Parameter values.
      * 
      */
     private final @Nullable List<String> values;
@@ -61,44 +61,44 @@ public final class ParameterContractResponse {
     }
 
     /**
-     * Default parameter value.
+     * @return Default parameter value.
      * 
-    */
+     */
     public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
-     * Parameter description.
+     * @return Parameter description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Parameter name.
+     * @return Parameter name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies whether parameter is required or not.
+     * @return Specifies whether parameter is required or not.
      * 
-    */
+     */
     public Optional<Boolean> required() {
         return Optional.ofNullable(this.required);
     }
     /**
-     * Parameter type.
+     * @return Parameter type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Parameter values.
+     * @return Parameter values.
      * 
-    */
+     */
     public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }

@@ -26,6 +26,10 @@ public final class X509CertificateNameArgs extends com.pulumi.resources.Resource
     @Import(name="issuerCertificateThumbprint")
     private @Nullable Output<String> issuerCertificateThumbprint;
 
+    /**
+     * @return Thumbprint for the Issuer of the Certificate.
+     * 
+     */
     public Optional<Output<String>> issuerCertificateThumbprint() {
         return Optional.ofNullable(this.issuerCertificateThumbprint);
     }
@@ -37,6 +41,10 @@ public final class X509CertificateNameArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Common Name of the Certificate.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,20 +74,44 @@ public final class X509CertificateNameArgs extends com.pulumi.resources.Resource
             $ = new X509CertificateNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param issuerCertificateThumbprint Thumbprint for the Issuer of the Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuerCertificateThumbprint(@Nullable Output<String> issuerCertificateThumbprint) {
             $.issuerCertificateThumbprint = issuerCertificateThumbprint;
             return this;
         }
 
+        /**
+         * @param issuerCertificateThumbprint Thumbprint for the Issuer of the Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuerCertificateThumbprint(String issuerCertificateThumbprint) {
             return issuerCertificateThumbprint(Output.of(issuerCertificateThumbprint));
         }
 
+        /**
+         * @param name Common Name of the Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Common Name of the Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

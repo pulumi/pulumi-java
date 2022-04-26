@@ -26,6 +26,10 @@ public final class SourceScoringConfigArgs extends com.pulumi.resources.Resource
     @Import(name="sourceImportance")
     private @Nullable Output<SourceScoringConfigSourceImportance> sourceImportance;
 
+    /**
+     * @return Importance of the source.
+     * 
+     */
     public Optional<Output<SourceScoringConfigSourceImportance>> sourceImportance() {
         return Optional.ofNullable(this.sourceImportance);
     }
@@ -54,11 +58,23 @@ public final class SourceScoringConfigArgs extends com.pulumi.resources.Resource
             $ = new SourceScoringConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceImportance Importance of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImportance(@Nullable Output<SourceScoringConfigSourceImportance> sourceImportance) {
             $.sourceImportance = sourceImportance;
             return this;
         }
 
+        /**
+         * @param sourceImportance Importance of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImportance(SourceScoringConfigSourceImportance sourceImportance) {
             return sourceImportance(Output.of(sourceImportance));
         }

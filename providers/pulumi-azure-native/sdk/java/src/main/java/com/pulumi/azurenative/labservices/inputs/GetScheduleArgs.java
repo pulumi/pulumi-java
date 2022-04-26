@@ -19,6 +19,10 @@ public final class GetScheduleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="labName", required=true)
     private String labName;
 
+    /**
+     * @return The name of the lab that uniquely identifies it within containing lab account. Used in resource URIs.
+     * 
+     */
     public String labName() {
         return this.labName;
     }
@@ -30,6 +34,10 @@ public final class GetScheduleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetScheduleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="scheduleName", required=true)
     private String scheduleName;
 
+    /**
+     * @return The name of the schedule that uniquely identifies it within containing lab. Used in resource URIs.
+     * 
+     */
     public String scheduleName() {
         return this.scheduleName;
     }
@@ -71,16 +83,34 @@ public final class GetScheduleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labName The name of the lab that uniquely identifies it within containing lab account. Used in resource URIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(String labName) {
             $.labName = labName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param scheduleName The name of the schedule that uniquely identifies it within containing lab. Used in resource URIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleName(String scheduleName) {
             $.scheduleName = scheduleName;
             return this;

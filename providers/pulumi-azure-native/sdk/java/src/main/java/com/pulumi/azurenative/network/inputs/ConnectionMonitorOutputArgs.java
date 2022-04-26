@@ -29,6 +29,10 @@ public final class ConnectionMonitorOutputArgs extends com.pulumi.resources.Reso
     @Import(name="type")
     private @Nullable Output<Either<String,OutputType>> type;
 
+    /**
+     * @return Connection monitor output destination type. Currently, only &#34;Workspace&#34; is supported.
+     * 
+     */
     public Optional<Output<Either<String,OutputType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -40,6 +44,10 @@ public final class ConnectionMonitorOutputArgs extends com.pulumi.resources.Reso
     @Import(name="workspaceSettings")
     private @Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings;
 
+    /**
+     * @return Describes the settings for producing output into a log analytics workspace.
+     * 
+     */
     public Optional<Output<ConnectionMonitorWorkspaceSettingsArgs>> workspaceSettings() {
         return Optional.ofNullable(this.workspaceSettings);
     }
@@ -69,28 +77,64 @@ public final class ConnectionMonitorOutputArgs extends com.pulumi.resources.Reso
             $ = new ConnectionMonitorOutputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Connection monitor output destination type. Currently, only &#34;Workspace&#34; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,OutputType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Connection monitor output destination type. Currently, only &#34;Workspace&#34; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,OutputType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Connection monitor output destination type. Currently, only &#34;Workspace&#34; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Connection monitor output destination type. Currently, only &#34;Workspace&#34; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(OutputType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param workspaceSettings Describes the settings for producing output into a log analytics workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceSettings(@Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings) {
             $.workspaceSettings = workspaceSettings;
             return this;
         }
 
+        /**
+         * @param workspaceSettings Describes the settings for producing output into a log analytics workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceSettings(ConnectionMonitorWorkspaceSettingsArgs workspaceSettings) {
             return workspaceSettings(Output.of(workspaceSettings));
         }

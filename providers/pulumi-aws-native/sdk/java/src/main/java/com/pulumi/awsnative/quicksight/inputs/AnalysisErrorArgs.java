@@ -27,6 +27,10 @@ public final class AnalysisErrorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return &lt;p&gt;The message associated with the analysis error.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -63,11 +67,23 @@ public final class AnalysisErrorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AnalysisErrorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message &lt;p&gt;The message associated with the analysis error.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message &lt;p&gt;The message associated with the analysis error.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }

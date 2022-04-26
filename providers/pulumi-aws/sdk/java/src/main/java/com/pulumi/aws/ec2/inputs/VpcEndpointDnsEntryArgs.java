@@ -22,6 +22,10 @@ public final class VpcEndpointDnsEntryArgs extends com.pulumi.resources.Resource
     @Import(name="dnsName")
     private @Nullable Output<String> dnsName;
 
+    /**
+     * @return The DNS name.
+     * 
+     */
     public Optional<Output<String>> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
@@ -33,6 +37,10 @@ public final class VpcEndpointDnsEntryArgs extends com.pulumi.resources.Resource
     @Import(name="hostedZoneId")
     private @Nullable Output<String> hostedZoneId;
 
+    /**
+     * @return The ID of the private hosted zone.
+     * 
+     */
     public Optional<Output<String>> hostedZoneId() {
         return Optional.ofNullable(this.hostedZoneId);
     }
@@ -62,20 +70,44 @@ public final class VpcEndpointDnsEntryArgs extends com.pulumi.resources.Resource
             $ = new VpcEndpointDnsEntryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsName The DNS name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(@Nullable Output<String> dnsName) {
             $.dnsName = dnsName;
             return this;
         }
 
+        /**
+         * @param dnsName The DNS name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(String dnsName) {
             return dnsName(Output.of(dnsName));
         }
 
+        /**
+         * @param hostedZoneId The ID of the private hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             $.hostedZoneId = hostedZoneId;
             return this;
         }
 
+        /**
+         * @param hostedZoneId The ID of the private hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneId(String hostedZoneId) {
             return hostedZoneId(Output.of(hostedZoneId));
         }

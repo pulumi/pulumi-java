@@ -23,6 +23,10 @@ public final class ServerInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serverId", required=true)
     private String serverId;
 
+    /**
+     * @return Server Id.
+     * 
+     */
     public String serverId() {
         return this.serverId;
     }
@@ -51,6 +55,12 @@ public final class ServerInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ServerInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serverId Server Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverId(String serverId) {
             $.serverId = serverId;
             return this;

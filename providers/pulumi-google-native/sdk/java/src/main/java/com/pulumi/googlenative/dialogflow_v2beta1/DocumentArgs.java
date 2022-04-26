@@ -26,6 +26,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ knowledge types. Note: This field is in the process of being deprecated, please use raw_content instead.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -37,6 +41,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentUri")
     private @Nullable Output<String> contentUri;
 
+    /**
+     * @return The URI where the file content is located. For documents stored in Google Cloud Storage, these URIs must have the form `gs:///`. NOTE: External URLs must correspond to public webpages, i.e., they must be indexed by Google Search. In particular, URLs for showing documents in Google Cloud Storage (i.e. the URL in your browser) are not supported. Instead use the `gs://` format URI described above.
+     * 
+     */
     public Optional<Output<String>> contentUri() {
         return Optional.ofNullable(this.contentUri);
     }
@@ -48,6 +56,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The display name of the document. The name must be 1024 bytes or less; otherwise, the creation request fails.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -59,6 +71,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableAutoReload")
     private @Nullable Output<Boolean> enableAutoReload;
 
+    /**
+     * @return Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don&#39;t try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
+     * 
+     */
     public Optional<Output<Boolean>> enableAutoReload() {
         return Optional.ofNullable(this.enableAutoReload);
     }
@@ -84,6 +100,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="knowledgeTypes", required=true)
     private Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes;
 
+    /**
+     * @return The knowledge type of document content.
+     * 
+     */
     public Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes() {
         return this.knowledgeTypes;
     }
@@ -102,6 +122,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return Optional. Metadata for the document. The metadata supports arbitrary key-value pairs. Suggested use cases include storing a document&#39;s title, an external URL distinct from the document&#39;s content_uri, etc. The max size of a `key` or a `value` of the metadata is 1024 bytes.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -113,6 +137,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mimeType", required=true)
     private Output<String> mimeType;
 
+    /**
+     * @return The MIME type of this document.
+     * 
+     */
     public Output<String> mimeType() {
         return this.mimeType;
     }
@@ -124,6 +152,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Optional. The document resource name. The name must be empty when creating a document. Format: `projects//locations//knowledgeBases//documents/`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -142,6 +174,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rawContent")
     private @Nullable Output<String> rawContent;
 
+    /**
+     * @return The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ knowledge types.
+     * 
+     */
     public Optional<Output<String>> rawContent() {
         return Optional.ofNullable(this.rawContent);
     }
@@ -182,38 +218,86 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DocumentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ knowledge types. Note: This field is in the process of being deprecated, please use raw_content instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ knowledge types. Note: This field is in the process of being deprecated, please use raw_content instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param contentUri The URI where the file content is located. For documents stored in Google Cloud Storage, these URIs must have the form `gs:///`. NOTE: External URLs must correspond to public webpages, i.e., they must be indexed by Google Search. In particular, URLs for showing documents in Google Cloud Storage (i.e. the URL in your browser) are not supported. Instead use the `gs://` format URI described above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentUri(@Nullable Output<String> contentUri) {
             $.contentUri = contentUri;
             return this;
         }
 
+        /**
+         * @param contentUri The URI where the file content is located. For documents stored in Google Cloud Storage, these URIs must have the form `gs:///`. NOTE: External URLs must correspond to public webpages, i.e., they must be indexed by Google Search. In particular, URLs for showing documents in Google Cloud Storage (i.e. the URL in your browser) are not supported. Instead use the `gs://` format URI described above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentUri(String contentUri) {
             return contentUri(Output.of(contentUri));
         }
 
+        /**
+         * @param displayName The display name of the document. The name must be 1024 bytes or less; otherwise, the creation request fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the document. The name must be 1024 bytes or less; otherwise, the creation request fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param enableAutoReload Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don&#39;t try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutoReload(@Nullable Output<Boolean> enableAutoReload) {
             $.enableAutoReload = enableAutoReload;
             return this;
         }
 
+        /**
+         * @param enableAutoReload Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don&#39;t try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutoReload(Boolean enableAutoReload) {
             return enableAutoReload(Output.of(enableAutoReload));
         }
@@ -236,15 +320,33 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
             return knowledgeBaseId(Output.of(knowledgeBaseId));
         }
 
+        /**
+         * @param knowledgeTypes The knowledge type of document content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder knowledgeTypes(Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes) {
             $.knowledgeTypes = knowledgeTypes;
             return this;
         }
 
+        /**
+         * @param knowledgeTypes The knowledge type of document content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder knowledgeTypes(List<DocumentKnowledgeTypesItem> knowledgeTypes) {
             return knowledgeTypes(Output.of(knowledgeTypes));
         }
 
+        /**
+         * @param knowledgeTypes The knowledge type of document content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder knowledgeTypes(DocumentKnowledgeTypesItem... knowledgeTypes) {
             return knowledgeTypes(List.of(knowledgeTypes));
         }
@@ -258,29 +360,65 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param metadata Optional. Metadata for the document. The metadata supports arbitrary key-value pairs. Suggested use cases include storing a document&#39;s title, an external URL distinct from the document&#39;s content_uri, etc. The max size of a `key` or a `value` of the metadata is 1024 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Optional. Metadata for the document. The metadata supports arbitrary key-value pairs. Suggested use cases include storing a document&#39;s title, an external URL distinct from the document&#39;s content_uri, etc. The max size of a `key` or a `value` of the metadata is 1024 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param mimeType The MIME type of this document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mimeType(Output<String> mimeType) {
             $.mimeType = mimeType;
             return this;
         }
 
+        /**
+         * @param mimeType The MIME type of this document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mimeType(String mimeType) {
             return mimeType(Output.of(mimeType));
         }
 
+        /**
+         * @param name Optional. The document resource name. The name must be empty when creating a document. Format: `projects//locations//knowledgeBases//documents/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Optional. The document resource name. The name must be empty when creating a document. Format: `projects//locations//knowledgeBases//documents/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -294,11 +432,23 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param rawContent The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ knowledge types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawContent(@Nullable Output<String> rawContent) {
             $.rawContent = rawContent;
             return this;
         }
 
+        /**
+         * @param rawContent The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ knowledge types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawContent(String rawContent) {
             return rawContent(Output.of(rawContent));
         }

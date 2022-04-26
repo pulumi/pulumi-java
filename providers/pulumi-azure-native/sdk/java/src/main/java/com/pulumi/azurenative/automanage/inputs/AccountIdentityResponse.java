@@ -25,6 +25,10 @@ public final class AccountIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal id of Automanage account identity.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -36,6 +40,10 @@ public final class AccountIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The tenant id associated with the Automanage account.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -47,6 +55,10 @@ public final class AccountIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of identity used for the Automanage account. Currently, the only supported type is &#39;SystemAssigned&#39;, which implicitly creates an identity.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -77,16 +89,34 @@ public final class AccountIdentityResponse extends com.pulumi.resources.InvokeAr
             $ = new AccountIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal id of Automanage account identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant id associated with the Automanage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The type of identity used for the Automanage account. Currently, the only supported type is &#39;SystemAssigned&#39;, which implicitly creates an identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

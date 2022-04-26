@@ -25,6 +25,10 @@ public final class FunctionDeadLetterConfig extends com.pulumi.resources.InvokeA
     @Import(name="targetArn")
     private @Nullable String targetArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
+     * 
+     */
     public Optional<String> targetArn() {
         return Optional.ofNullable(this.targetArn);
     }
@@ -53,6 +57,12 @@ public final class FunctionDeadLetterConfig extends com.pulumi.resources.InvokeA
             $ = new FunctionDeadLetterConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetArn The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetArn(@Nullable String targetArn) {
             $.targetArn = targetArn;
             return this;

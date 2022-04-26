@@ -27,6 +27,10 @@ public final class StagingSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enableCompression")
     private @Nullable Output<Object> enableCompression;
 
+    /**
+     * @return Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> enableCompression() {
         return Optional.ofNullable(this.enableCompression);
     }
@@ -38,6 +42,10 @@ public final class StagingSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="linkedServiceName", required=true)
     private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
+    /**
+     * @return Staging linked service reference.
+     * 
+     */
     public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -49,6 +57,10 @@ public final class StagingSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="path")
     private @Nullable Output<Object> path;
 
+    /**
+     * @return The path to storage for storing the interim data. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -79,29 +91,65 @@ public final class StagingSettingsArgs extends com.pulumi.resources.ResourceArgs
             $ = new StagingSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableCompression Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCompression(@Nullable Output<Object> enableCompression) {
             $.enableCompression = enableCompression;
             return this;
         }
 
+        /**
+         * @param enableCompression Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCompression(Object enableCompression) {
             return enableCompression(Output.of(enableCompression));
         }
 
+        /**
+         * @param linkedServiceName Staging linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Staging linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param path The path to storage for storing the interim data. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<Object> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path to storage for storing the interim data. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Object path) {
             return path(Output.of(path));
         }

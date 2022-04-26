@@ -25,6 +25,10 @@ public final class SasAuthenticationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sasUri", required=true)
     private Output<String> sasUri;
 
+    /**
+     * @return The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
+     * 
+     */
     public Output<String> sasUri() {
         return this.sasUri;
     }
@@ -37,6 +41,11 @@ public final class SasAuthenticationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The authentication type
+     * Expected value is &#39;Sas&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -66,20 +75,46 @@ public final class SasAuthenticationArgs extends com.pulumi.resources.ResourceAr
             $ = new SasAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sasUri The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUri(Output<String> sasUri) {
             $.sasUri = sasUri;
             return this;
         }
 
+        /**
+         * @param sasUri The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUri(String sasUri) {
             return sasUri(Output.of(sasUri));
         }
 
+        /**
+         * @param type The authentication type
+         * Expected value is &#39;Sas&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The authentication type
+         * Expected value is &#39;Sas&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -23,6 +23,10 @@ public final class ComplianceVersionResponse extends com.pulumi.resources.Invoke
     @Import(name="cpeUri", required=true)
     private String cpeUri;
 
+    /**
+     * @return The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
+     * 
+     */
     public String cpeUri() {
         return this.cpeUri;
     }
@@ -34,6 +38,10 @@ public final class ComplianceVersionResponse extends com.pulumi.resources.Invoke
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The version of the benchmark. This is set to the version of the OS-specific CIS document the benchmark is defined in.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -63,11 +71,23 @@ public final class ComplianceVersionResponse extends com.pulumi.resources.Invoke
             $ = new ComplianceVersionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpeUri The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpeUri(String cpeUri) {
             $.cpeUri = cpeUri;
             return this;
         }
 
+        /**
+         * @param version The version of the benchmark. This is set to the version of the OS-specific CIS document the benchmark is defined in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

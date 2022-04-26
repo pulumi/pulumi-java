@@ -30,6 +30,10 @@ public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.
     @Import(name="chapAuthDiscovery")
     private @Nullable Output<Boolean> chapAuthDiscovery;
 
+    /**
+     * @return whether support iSCSI Discovery CHAP authentication
+     * 
+     */
     public Optional<Output<Boolean>> chapAuthDiscovery() {
         return Optional.ofNullable(this.chapAuthDiscovery);
     }
@@ -41,6 +45,10 @@ public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.
     @Import(name="chapAuthSession")
     private @Nullable Output<Boolean> chapAuthSession;
 
+    /**
+     * @return whether support iSCSI Session CHAP authentication
+     * 
+     */
     public Optional<Output<Boolean>> chapAuthSession() {
         return Optional.ofNullable(this.chapAuthSession);
     }
@@ -52,6 +60,10 @@ public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
+    /**
+     * @return Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
+     * 
+     */
     public Optional<Output<String>> fsType() {
         return Optional.ofNullable(this.fsType);
     }
@@ -63,6 +75,10 @@ public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.
     @Import(name="initiatorName")
     private @Nullable Output<String> initiatorName;
 
+    /**
+     * @return Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface &lt;target portal&gt;:&lt;volume name&gt; will be created for the connection.
+     * 
+     */
     public Optional<Output<String>> initiatorName() {
         return Optional.ofNullable(this.initiatorName);
     }
@@ -74,6 +90,10 @@ public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.
     @Import(name="iqn", required=true)
     private Output<String> iqn;
 
+    /**
+     * @return Target iSCSI Qualified Name.
+     * 
+     */
     public Output<String> iqn() {
         return this.iqn;
     }
@@ -85,6 +105,10 @@ public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.
     @Import(name="iscsiInterface")
     private @Nullable Output<String> iscsiInterface;
 
+    /**
+     * @return iSCSI Interface Name that uses an iSCSI transport. Defaults to &#39;default&#39; (tcp).
+     * 
+     */
     public Optional<Output<String>> iscsiInterface() {
         return Optional.ofNullable(this.iscsiInterface);
     }
@@ -96,6 +120,10 @@ public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.
     @Import(name="lun", required=true)
     private Output<Integer> lun;
 
+    /**
+     * @return iSCSI Target Lun number.
+     * 
+     */
     public Output<Integer> lun() {
         return this.lun;
     }
@@ -107,6 +135,10 @@ public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.
     @Import(name="portals")
     private @Nullable Output<List<String>> portals;
 
+    /**
+     * @return iSCSI Target Portal List. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+     * 
+     */
     public Optional<Output<List<String>>> portals() {
         return Optional.ofNullable(this.portals);
     }
@@ -118,6 +150,10 @@ public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -129,6 +165,10 @@ public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.
     @Import(name="secretRef")
     private @Nullable Output<SecretReferenceArgs> secretRef;
 
+    /**
+     * @return CHAP Secret for iSCSI target and initiator authentication
+     * 
+     */
     public Optional<Output<SecretReferenceArgs>> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
@@ -140,6 +180,10 @@ public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.
     @Import(name="targetPortal", required=true)
     private Output<String> targetPortal;
 
+    /**
+     * @return iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+     * 
+     */
     public Output<String> targetPortal() {
         return this.targetPortal;
     }
@@ -178,105 +222,243 @@ public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.
             $ = new ISCSIPersistentVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param chapAuthDiscovery whether support iSCSI Discovery CHAP authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder chapAuthDiscovery(@Nullable Output<Boolean> chapAuthDiscovery) {
             $.chapAuthDiscovery = chapAuthDiscovery;
             return this;
         }
 
+        /**
+         * @param chapAuthDiscovery whether support iSCSI Discovery CHAP authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder chapAuthDiscovery(Boolean chapAuthDiscovery) {
             return chapAuthDiscovery(Output.of(chapAuthDiscovery));
         }
 
+        /**
+         * @param chapAuthSession whether support iSCSI Session CHAP authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder chapAuthSession(@Nullable Output<Boolean> chapAuthSession) {
             $.chapAuthSession = chapAuthSession;
             return this;
         }
 
+        /**
+         * @param chapAuthSession whether support iSCSI Session CHAP authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder chapAuthSession(Boolean chapAuthSession) {
             return chapAuthSession(Output.of(chapAuthSession));
         }
 
+        /**
+         * @param fsType Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(@Nullable Output<String> fsType) {
             $.fsType = fsType;
             return this;
         }
 
+        /**
+         * @param fsType Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(String fsType) {
             return fsType(Output.of(fsType));
         }
 
+        /**
+         * @param initiatorName Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface &lt;target portal&gt;:&lt;volume name&gt; will be created for the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initiatorName(@Nullable Output<String> initiatorName) {
             $.initiatorName = initiatorName;
             return this;
         }
 
+        /**
+         * @param initiatorName Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface &lt;target portal&gt;:&lt;volume name&gt; will be created for the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initiatorName(String initiatorName) {
             return initiatorName(Output.of(initiatorName));
         }
 
+        /**
+         * @param iqn Target iSCSI Qualified Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iqn(Output<String> iqn) {
             $.iqn = iqn;
             return this;
         }
 
+        /**
+         * @param iqn Target iSCSI Qualified Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iqn(String iqn) {
             return iqn(Output.of(iqn));
         }
 
+        /**
+         * @param iscsiInterface iSCSI Interface Name that uses an iSCSI transport. Defaults to &#39;default&#39; (tcp).
+         * 
+         * @return builder
+         * 
+         */
         public Builder iscsiInterface(@Nullable Output<String> iscsiInterface) {
             $.iscsiInterface = iscsiInterface;
             return this;
         }
 
+        /**
+         * @param iscsiInterface iSCSI Interface Name that uses an iSCSI transport. Defaults to &#39;default&#39; (tcp).
+         * 
+         * @return builder
+         * 
+         */
         public Builder iscsiInterface(String iscsiInterface) {
             return iscsiInterface(Output.of(iscsiInterface));
         }
 
+        /**
+         * @param lun iSCSI Target Lun number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(Output<Integer> lun) {
             $.lun = lun;
             return this;
         }
 
+        /**
+         * @param lun iSCSI Target Lun number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(Integer lun) {
             return lun(Output.of(lun));
         }
 
+        /**
+         * @param portals iSCSI Target Portal List. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+         * 
+         * @return builder
+         * 
+         */
         public Builder portals(@Nullable Output<List<String>> portals) {
             $.portals = portals;
             return this;
         }
 
+        /**
+         * @param portals iSCSI Target Portal List. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+         * 
+         * @return builder
+         * 
+         */
         public Builder portals(List<String> portals) {
             return portals(Output.of(portals));
         }
 
+        /**
+         * @param portals iSCSI Target Portal List. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+         * 
+         * @return builder
+         * 
+         */
         public Builder portals(String... portals) {
             return portals(List.of(portals));
         }
 
+        /**
+         * @param readOnly ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }
 
+        /**
+         * @param secretRef CHAP Secret for iSCSI target and initiator authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(@Nullable Output<SecretReferenceArgs> secretRef) {
             $.secretRef = secretRef;
             return this;
         }
 
+        /**
+         * @param secretRef CHAP Secret for iSCSI target and initiator authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(SecretReferenceArgs secretRef) {
             return secretRef(Output.of(secretRef));
         }
 
+        /**
+         * @param targetPortal iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPortal(Output<String> targetPortal) {
             $.targetPortal = targetPortal;
             return this;
         }
 
+        /**
+         * @param targetPortal iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPortal(String targetPortal) {
             return targetPortal(Output.of(targetPortal));
         }

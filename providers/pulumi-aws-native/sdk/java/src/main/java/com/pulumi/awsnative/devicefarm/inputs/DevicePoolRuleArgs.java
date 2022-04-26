@@ -28,6 +28,10 @@ public final class DevicePoolRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="attribute")
     private @Nullable Output<DevicePoolRuleAttribute> attribute;
 
+    /**
+     * @return The rule&#39;s stringified attribute.
+     * 
+     */
     public Optional<Output<DevicePoolRuleAttribute>> attribute() {
         return Optional.ofNullable(this.attribute);
     }
@@ -39,6 +43,10 @@ public final class DevicePoolRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="operator")
     private @Nullable Output<DevicePoolRuleOperator> operator;
 
+    /**
+     * @return Specifies how Device Farm compares the rule&#39;s attribute to the value.
+     * 
+     */
     public Optional<Output<DevicePoolRuleOperator>> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -50,6 +58,10 @@ public final class DevicePoolRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The rule&#39;s value.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -80,29 +92,65 @@ public final class DevicePoolRuleArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DevicePoolRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attribute The rule&#39;s stringified attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribute(@Nullable Output<DevicePoolRuleAttribute> attribute) {
             $.attribute = attribute;
             return this;
         }
 
+        /**
+         * @param attribute The rule&#39;s stringified attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribute(DevicePoolRuleAttribute attribute) {
             return attribute(Output.of(attribute));
         }
 
+        /**
+         * @param operator Specifies how Device Farm compares the rule&#39;s attribute to the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable Output<DevicePoolRuleOperator> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator Specifies how Device Farm compares the rule&#39;s attribute to the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(DevicePoolRuleOperator operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param value The rule&#39;s value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The rule&#39;s value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

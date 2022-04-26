@@ -26,6 +26,10 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type")
     private @Nullable Output<PlacementPolicyType> type;
 
+    /**
+     * @return The type of placement.
+     * 
+     */
     public Optional<Output<PlacementPolicyType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -54,11 +58,23 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
             $ = new PlacementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of placement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<PlacementPolicyType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of placement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(PlacementPolicyType type) {
             return type(Output.of(type));
         }

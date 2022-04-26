@@ -26,6 +26,10 @@ public final class VirtualSCSIControllerResponse extends com.pulumi.resources.In
     @Import(name="busNumber")
     private @Nullable Integer busNumber;
 
+    /**
+     * @return Gets or sets the bus number of the controller.
+     * 
+     */
     public Optional<Integer> busNumber() {
         return Optional.ofNullable(this.busNumber);
     }
@@ -37,6 +41,10 @@ public final class VirtualSCSIControllerResponse extends com.pulumi.resources.In
     @Import(name="controllerKey")
     private @Nullable Integer controllerKey;
 
+    /**
+     * @return Gets or sets the key of the controller.
+     * 
+     */
     public Optional<Integer> controllerKey() {
         return Optional.ofNullable(this.controllerKey);
     }
@@ -48,6 +56,10 @@ public final class VirtualSCSIControllerResponse extends com.pulumi.resources.In
     @Import(name="scsiCtlrUnitNumber")
     private @Nullable Integer scsiCtlrUnitNumber;
 
+    /**
+     * @return Gets or sets the SCSI controller unit number.
+     * 
+     */
     public Optional<Integer> scsiCtlrUnitNumber() {
         return Optional.ofNullable(this.scsiCtlrUnitNumber);
     }
@@ -59,6 +71,10 @@ public final class VirtualSCSIControllerResponse extends com.pulumi.resources.In
     @Import(name="sharing")
     private @Nullable String sharing;
 
+    /**
+     * @return Gets or sets the sharing mode.
+     * 
+     */
     public Optional<String> sharing() {
         return Optional.ofNullable(this.sharing);
     }
@@ -70,6 +86,10 @@ public final class VirtualSCSIControllerResponse extends com.pulumi.resources.In
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Gets or sets the controller type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -102,26 +122,56 @@ public final class VirtualSCSIControllerResponse extends com.pulumi.resources.In
             $ = new VirtualSCSIControllerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param busNumber Gets or sets the bus number of the controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder busNumber(@Nullable Integer busNumber) {
             $.busNumber = busNumber;
             return this;
         }
 
+        /**
+         * @param controllerKey Gets or sets the key of the controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controllerKey(@Nullable Integer controllerKey) {
             $.controllerKey = controllerKey;
             return this;
         }
 
+        /**
+         * @param scsiCtlrUnitNumber Gets or sets the SCSI controller unit number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scsiCtlrUnitNumber(@Nullable Integer scsiCtlrUnitNumber) {
             $.scsiCtlrUnitNumber = scsiCtlrUnitNumber;
             return this;
         }
 
+        /**
+         * @param sharing Gets or sets the sharing mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharing(@Nullable String sharing) {
             $.sharing = sharing;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the controller type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

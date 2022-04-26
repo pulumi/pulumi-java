@@ -29,6 +29,10 @@ public final class UserPropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="preferredLocation", required=true)
     private Output<String> preferredLocation;
 
+    /**
+     * @return The preferred location of the cloud shell.
+     * 
+     */
     public Output<String> preferredLocation() {
         return this.preferredLocation;
     }
@@ -40,6 +44,10 @@ public final class UserPropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="preferredOsType", required=true)
     private Output<Either<String,OsType>> preferredOsType;
 
+    /**
+     * @return The operating system type of the cloud shell. Deprecated, use preferredShellType.
+     * 
+     */
     public Output<Either<String,OsType>> preferredOsType() {
         return this.preferredOsType;
     }
@@ -51,6 +59,10 @@ public final class UserPropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="preferredShellType", required=true)
     private Output<Either<String,ShellType>> preferredShellType;
 
+    /**
+     * @return The shell type of the cloud shell.
+     * 
+     */
     public Output<Either<String,ShellType>> preferredShellType() {
         return this.preferredShellType;
     }
@@ -62,6 +74,10 @@ public final class UserPropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storageProfile", required=true)
     private Output<StorageProfileArgs> storageProfile;
 
+    /**
+     * @return The storage profile of the user settings.
+     * 
+     */
     public Output<StorageProfileArgs> storageProfile() {
         return this.storageProfile;
     }
@@ -73,6 +89,10 @@ public final class UserPropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="terminalSettings", required=true)
     private Output<TerminalSettingsArgs> terminalSettings;
 
+    /**
+     * @return Settings for terminal appearance.
+     * 
+     */
     public Output<TerminalSettingsArgs> terminalSettings() {
         return this.terminalSettings;
     }
@@ -105,63 +125,147 @@ public final class UserPropertiesArgs extends com.pulumi.resources.ResourceArgs 
             $ = new UserPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param preferredLocation The preferred location of the cloud shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredLocation(Output<String> preferredLocation) {
             $.preferredLocation = preferredLocation;
             return this;
         }
 
+        /**
+         * @param preferredLocation The preferred location of the cloud shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredLocation(String preferredLocation) {
             return preferredLocation(Output.of(preferredLocation));
         }
 
+        /**
+         * @param preferredOsType The operating system type of the cloud shell. Deprecated, use preferredShellType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredOsType(Output<Either<String,OsType>> preferredOsType) {
             $.preferredOsType = preferredOsType;
             return this;
         }
 
+        /**
+         * @param preferredOsType The operating system type of the cloud shell. Deprecated, use preferredShellType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredOsType(Either<String,OsType> preferredOsType) {
             return preferredOsType(Output.of(preferredOsType));
         }
 
+        /**
+         * @param preferredOsType The operating system type of the cloud shell. Deprecated, use preferredShellType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredOsType(String preferredOsType) {
             return preferredOsType(Either.ofLeft(preferredOsType));
         }
 
+        /**
+         * @param preferredOsType The operating system type of the cloud shell. Deprecated, use preferredShellType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredOsType(OsType preferredOsType) {
             return preferredOsType(Either.ofRight(preferredOsType));
         }
 
+        /**
+         * @param preferredShellType The shell type of the cloud shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredShellType(Output<Either<String,ShellType>> preferredShellType) {
             $.preferredShellType = preferredShellType;
             return this;
         }
 
+        /**
+         * @param preferredShellType The shell type of the cloud shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredShellType(Either<String,ShellType> preferredShellType) {
             return preferredShellType(Output.of(preferredShellType));
         }
 
+        /**
+         * @param preferredShellType The shell type of the cloud shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredShellType(String preferredShellType) {
             return preferredShellType(Either.ofLeft(preferredShellType));
         }
 
+        /**
+         * @param preferredShellType The shell type of the cloud shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredShellType(ShellType preferredShellType) {
             return preferredShellType(Either.ofRight(preferredShellType));
         }
 
+        /**
+         * @param storageProfile The storage profile of the user settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageProfile(Output<StorageProfileArgs> storageProfile) {
             $.storageProfile = storageProfile;
             return this;
         }
 
+        /**
+         * @param storageProfile The storage profile of the user settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageProfile(StorageProfileArgs storageProfile) {
             return storageProfile(Output.of(storageProfile));
         }
 
+        /**
+         * @param terminalSettings Settings for terminal appearance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminalSettings(Output<TerminalSettingsArgs> terminalSettings) {
             $.terminalSettings = terminalSettings;
             return this;
         }
 
+        /**
+         * @param terminalSettings Settings for terminal appearance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminalSettings(TerminalSettingsArgs terminalSettings) {
             return terminalSettings(Output.of(terminalSettings));
         }

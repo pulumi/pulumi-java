@@ -23,122 +23,122 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NetworkInterfaceResponse {
     /**
-     * The DNS settings in network interface.
+     * @return The DNS settings in network interface.
      * 
      */
     private final @Nullable NetworkInterfaceDnsSettingsResponse dnsSettings;
     /**
-     * A reference to the dscp configuration to which the network interface is linked.
+     * @return A reference to the dscp configuration to which the network interface is linked.
      * 
      */
     private final SubResourceResponse dscpConfiguration;
     /**
-     * If the network interface is accelerated networking enabled.
+     * @return If the network interface is accelerated networking enabled.
      * 
      */
     private final @Nullable Boolean enableAcceleratedNetworking;
     /**
-     * Indicates whether IP forwarding is enabled on this network interface.
+     * @return Indicates whether IP forwarding is enabled on this network interface.
      * 
      */
     private final @Nullable Boolean enableIPForwarding;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * The extended location of the network interface.
+     * @return The extended location of the network interface.
      * 
      */
     private final @Nullable ExtendedLocationResponse extendedLocation;
     /**
-     * A list of references to linked BareMetal resources.
+     * @return A list of references to linked BareMetal resources.
      * 
      */
     private final List<String> hostedWorkloads;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * A list of IPConfigurations of the network interface.
+     * @return A list of IPConfigurations of the network interface.
      * 
      */
     private final @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * The MAC address of the network interface.
+     * @return The MAC address of the network interface.
      * 
      */
     private final String macAddress;
     /**
-     * Migration phase of Network Interface resource.
+     * @return Migration phase of Network Interface resource.
      * 
      */
     private final @Nullable String migrationPhase;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The reference to the NetworkSecurityGroup resource.
+     * @return The reference to the NetworkSecurityGroup resource.
      * 
      */
     private final @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
     /**
-     * Type of Network Interface resource.
+     * @return Type of Network Interface resource.
      * 
      */
     private final @Nullable String nicType;
     /**
-     * Whether this is a primary network interface on a virtual machine.
+     * @return Whether this is a primary network interface on a virtual machine.
      * 
      */
     private final Boolean primary;
     /**
-     * A reference to the private endpoint to which the network interface is linked.
+     * @return A reference to the private endpoint to which the network interface is linked.
      * 
      */
     private final PrivateEndpointResponse privateEndpoint;
     /**
-     * Privatelinkservice of the network interface resource.
+     * @return Privatelinkservice of the network interface resource.
      * 
      */
     private final @Nullable PrivateLinkServiceResponse privateLinkService;
     /**
-     * The provisioning state of the network interface resource.
+     * @return The provisioning state of the network interface resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The resource GUID property of the network interface resource.
+     * @return The resource GUID property of the network interface resource.
      * 
      */
     private final String resourceGuid;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * A list of TapConfigurations of the network interface.
+     * @return A list of TapConfigurations of the network interface.
      * 
      */
     private final List<NetworkInterfaceTapConfigurationResponse> tapConfigurations;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * The reference to a virtual machine.
+     * @return The reference to a virtual machine.
      * 
      */
     private final SubResourceResponse virtualMachine;
@@ -196,170 +196,170 @@ public final class NetworkInterfaceResponse {
     }
 
     /**
-     * The DNS settings in network interface.
+     * @return The DNS settings in network interface.
      * 
-    */
+     */
     public Optional<NetworkInterfaceDnsSettingsResponse> dnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
     /**
-     * A reference to the dscp configuration to which the network interface is linked.
+     * @return A reference to the dscp configuration to which the network interface is linked.
      * 
-    */
+     */
     public SubResourceResponse dscpConfiguration() {
         return this.dscpConfiguration;
     }
     /**
-     * If the network interface is accelerated networking enabled.
+     * @return If the network interface is accelerated networking enabled.
      * 
-    */
+     */
     public Optional<Boolean> enableAcceleratedNetworking() {
         return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
     /**
-     * Indicates whether IP forwarding is enabled on this network interface.
+     * @return Indicates whether IP forwarding is enabled on this network interface.
      * 
-    */
+     */
     public Optional<Boolean> enableIPForwarding() {
         return Optional.ofNullable(this.enableIPForwarding);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The extended location of the network interface.
+     * @return The extended location of the network interface.
      * 
-    */
+     */
     public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
-     * A list of references to linked BareMetal resources.
+     * @return A list of references to linked BareMetal resources.
      * 
-    */
+     */
     public List<String> hostedWorkloads() {
         return this.hostedWorkloads;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * A list of IPConfigurations of the network interface.
+     * @return A list of IPConfigurations of the network interface.
      * 
-    */
+     */
     public List<NetworkInterfaceIPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The MAC address of the network interface.
+     * @return The MAC address of the network interface.
      * 
-    */
+     */
     public String macAddress() {
         return this.macAddress;
     }
     /**
-     * Migration phase of Network Interface resource.
+     * @return Migration phase of Network Interface resource.
      * 
-    */
+     */
     public Optional<String> migrationPhase() {
         return Optional.ofNullable(this.migrationPhase);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The reference to the NetworkSecurityGroup resource.
+     * @return The reference to the NetworkSecurityGroup resource.
      * 
-    */
+     */
     public Optional<NetworkSecurityGroupResponse> networkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);
     }
     /**
-     * Type of Network Interface resource.
+     * @return Type of Network Interface resource.
      * 
-    */
+     */
     public Optional<String> nicType() {
         return Optional.ofNullable(this.nicType);
     }
     /**
-     * Whether this is a primary network interface on a virtual machine.
+     * @return Whether this is a primary network interface on a virtual machine.
      * 
-    */
+     */
     public Boolean primary() {
         return this.primary;
     }
     /**
-     * A reference to the private endpoint to which the network interface is linked.
+     * @return A reference to the private endpoint to which the network interface is linked.
      * 
-    */
+     */
     public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
-     * Privatelinkservice of the network interface resource.
+     * @return Privatelinkservice of the network interface resource.
      * 
-    */
+     */
     public Optional<PrivateLinkServiceResponse> privateLinkService() {
         return Optional.ofNullable(this.privateLinkService);
     }
     /**
-     * The provisioning state of the network interface resource.
+     * @return The provisioning state of the network interface resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource GUID property of the network interface resource.
+     * @return The resource GUID property of the network interface resource.
      * 
-    */
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * A list of TapConfigurations of the network interface.
+     * @return A list of TapConfigurations of the network interface.
      * 
-    */
+     */
     public List<NetworkInterfaceTapConfigurationResponse> tapConfigurations() {
         return this.tapConfigurations;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The reference to a virtual machine.
+     * @return The reference to a virtual machine.
      * 
-    */
+     */
     public SubResourceResponse virtualMachine() {
         return this.virtualMachine;
     }

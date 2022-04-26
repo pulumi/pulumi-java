@@ -19,6 +19,10 @@ public final class GetManagementConfigurationArgs extends com.pulumi.resources.I
     @Import(name="managementConfigurationName", required=true)
     private String managementConfigurationName;
 
+    /**
+     * @return User Management Configuration Name.
+     * 
+     */
     public String managementConfigurationName() {
         return this.managementConfigurationName;
     }
@@ -30,6 +34,10 @@ public final class GetManagementConfigurationArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group to get. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetManagementConfigurationArgs extends com.pulumi.resources.I
             $ = new GetManagementConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managementConfigurationName User Management Configuration Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementConfigurationName(String managementConfigurationName) {
             $.managementConfigurationName = managementConfigurationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to get. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

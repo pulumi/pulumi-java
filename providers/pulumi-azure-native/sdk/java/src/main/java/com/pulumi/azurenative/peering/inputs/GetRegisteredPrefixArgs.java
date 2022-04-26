@@ -19,6 +19,10 @@ public final class GetRegisteredPrefixArgs extends com.pulumi.resources.InvokeAr
     @Import(name="peeringName", required=true)
     private String peeringName;
 
+    /**
+     * @return The name of the peering.
+     * 
+     */
     public String peeringName() {
         return this.peeringName;
     }
@@ -30,6 +34,10 @@ public final class GetRegisteredPrefixArgs extends com.pulumi.resources.InvokeAr
     @Import(name="registeredPrefixName", required=true)
     private String registeredPrefixName;
 
+    /**
+     * @return The name of the registered prefix.
+     * 
+     */
     public String registeredPrefixName() {
         return this.registeredPrefixName;
     }
@@ -41,6 +49,10 @@ public final class GetRegisteredPrefixArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetRegisteredPrefixArgs extends com.pulumi.resources.InvokeAr
             $ = new GetRegisteredPrefixArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param peeringName The name of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringName(String peeringName) {
             $.peeringName = peeringName;
             return this;
         }
 
+        /**
+         * @param registeredPrefixName The name of the registered prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registeredPrefixName(String registeredPrefixName) {
             $.registeredPrefixName = registeredPrefixName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

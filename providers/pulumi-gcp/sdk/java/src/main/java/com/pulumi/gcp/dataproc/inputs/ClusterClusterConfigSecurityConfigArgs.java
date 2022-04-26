@@ -20,6 +20,10 @@ public final class ClusterClusterConfigSecurityConfigArgs extends com.pulumi.res
     @Import(name="kerberosConfig", required=true)
     private Output<ClusterClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig;
 
+    /**
+     * @return Kerberos Configuration
+     * 
+     */
     public Output<ClusterClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig() {
         return this.kerberosConfig;
     }
@@ -48,11 +52,23 @@ public final class ClusterClusterConfigSecurityConfigArgs extends com.pulumi.res
             $ = new ClusterClusterConfigSecurityConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kerberosConfig Kerberos Configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosConfig(Output<ClusterClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig) {
             $.kerberosConfig = kerberosConfig;
             return this;
         }
 
+        /**
+         * @param kerberosConfig Kerberos Configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosConfig(ClusterClusterConfigSecurityConfigKerberosConfigArgs kerberosConfig) {
             return kerberosConfig(Output.of(kerberosConfig));
         }

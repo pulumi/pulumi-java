@@ -21,6 +21,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="emailAddress")
     private @Nullable String emailAddress;
 
+    /**
+     * @return Email of the user used by Logz for contacting them if needed
+     * 
+     */
     public Optional<String> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
@@ -32,6 +36,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="firstName")
     private @Nullable String firstName;
 
+    /**
+     * @return First Name of the user
+     * 
+     */
     public Optional<String> firstName() {
         return Optional.ofNullable(this.firstName);
     }
@@ -43,6 +51,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastName")
     private @Nullable String lastName;
 
+    /**
+     * @return Last Name of the user
+     * 
+     */
     public Optional<String> lastName() {
         return Optional.ofNullable(this.lastName);
     }
@@ -54,6 +66,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="phoneNumber")
     private @Nullable String phoneNumber;
 
+    /**
+     * @return Phone number of the user used by Logz for contacting them if needed
+     * 
+     */
     public Optional<String> phoneNumber() {
         return Optional.ofNullable(this.phoneNumber);
     }
@@ -85,21 +101,45 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new UserInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailAddress Email of the user used by Logz for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(@Nullable String emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param firstName First Name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstName(@Nullable String firstName) {
             $.firstName = firstName;
             return this;
         }
 
+        /**
+         * @param lastName Last Name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastName(@Nullable String lastName) {
             $.lastName = lastName;
             return this;
         }
 
+        /**
+         * @param phoneNumber Phone number of the user used by Logz for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(@Nullable String phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;

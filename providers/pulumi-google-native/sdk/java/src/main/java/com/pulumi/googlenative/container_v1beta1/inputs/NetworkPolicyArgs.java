@@ -27,6 +27,10 @@ public final class NetworkPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether network policy is enabled on the cluster.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class NetworkPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provider")
     private @Nullable Output<NetworkPolicyProvider> provider;
 
+    /**
+     * @return The selected network policy provider.
+     * 
+     */
     public Optional<Output<NetworkPolicyProvider>> provider() {
         return Optional.ofNullable(this.provider);
     }
@@ -67,20 +75,44 @@ public final class NetworkPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NetworkPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether network policy is enabled on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether network policy is enabled on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param provider The selected network policy provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(@Nullable Output<NetworkPolicyProvider> provider) {
             $.provider = provider;
             return this;
         }
 
+        /**
+         * @param provider The selected network policy provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(NetworkPolicyProvider provider) {
             return provider(Output.of(provider));
         }

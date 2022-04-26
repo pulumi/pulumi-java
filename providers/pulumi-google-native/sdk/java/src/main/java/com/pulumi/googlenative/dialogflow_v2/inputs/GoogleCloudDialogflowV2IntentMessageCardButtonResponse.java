@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonResponse extend
     @Import(name="postback", required=true)
     private String postback;
 
+    /**
+     * @return Optional. The text to send back to the Dialogflow API or a URI to open.
+     * 
+     */
     public String postback() {
         return this.postback;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonResponse extend
     @Import(name="text", required=true)
     private String text;
 
+    /**
+     * @return Optional. The text to show on the button.
+     * 
+     */
     public String text() {
         return this.text;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonResponse extend
             $ = new GoogleCloudDialogflowV2IntentMessageCardButtonResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param postback Optional. The text to send back to the Dialogflow API or a URI to open.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postback(String postback) {
             $.postback = postback;
             return this;
         }
 
+        /**
+         * @param text Optional. The text to show on the button.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             $.text = text;
             return this;

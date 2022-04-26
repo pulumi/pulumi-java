@@ -11,42 +11,42 @@ import java.util.Objects;
 @CustomType
 public final class GetCapacityCommitmentResult {
     /**
-     * The end of the current commitment period. It is applicable only for ACTIVE capacity commitments.
+     * @return The end of the current commitment period. It is applicable only for ACTIVE capacity commitments.
      * 
      */
     private final String commitmentEndTime;
     /**
-     * The start of the current commitment period. It is applicable only for ACTIVE capacity commitments.
+     * @return The start of the current commitment period. It is applicable only for ACTIVE capacity commitments.
      * 
      */
     private final String commitmentStartTime;
     /**
-     * For FAILED commitment plan, provides the reason of failure.
+     * @return For FAILED commitment plan, provides the reason of failure.
      * 
      */
     private final StatusResponse failureStatus;
     /**
-     * The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123`
+     * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123`
      * 
      */
     private final String name;
     /**
-     * Capacity commitment commitment plan.
+     * @return Capacity commitment commitment plan.
      * 
      */
     private final String plan;
     /**
-     * The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.
+     * @return The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.
      * 
      */
     private final String renewalPlan;
     /**
-     * Number of slots in this commitment.
+     * @return Number of slots in this commitment.
      * 
      */
     private final String slotCount;
     /**
-     * State of the commitment.
+     * @return State of the commitment.
      * 
      */
     private final String state;
@@ -72,58 +72,58 @@ public final class GetCapacityCommitmentResult {
     }
 
     /**
-     * The end of the current commitment period. It is applicable only for ACTIVE capacity commitments.
+     * @return The end of the current commitment period. It is applicable only for ACTIVE capacity commitments.
      * 
-    */
+     */
     public String commitmentEndTime() {
         return this.commitmentEndTime;
     }
     /**
-     * The start of the current commitment period. It is applicable only for ACTIVE capacity commitments.
+     * @return The start of the current commitment period. It is applicable only for ACTIVE capacity commitments.
      * 
-    */
+     */
     public String commitmentStartTime() {
         return this.commitmentStartTime;
     }
     /**
-     * For FAILED commitment plan, provides the reason of failure.
+     * @return For FAILED commitment plan, provides the reason of failure.
      * 
-    */
+     */
     public StatusResponse failureStatus() {
         return this.failureStatus;
     }
     /**
-     * The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123`
+     * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Capacity commitment commitment plan.
+     * @return Capacity commitment commitment plan.
      * 
-    */
+     */
     public String plan() {
         return this.plan;
     }
     /**
-     * The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.
+     * @return The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.
      * 
-    */
+     */
     public String renewalPlan() {
         return this.renewalPlan;
     }
     /**
-     * Number of slots in this commitment.
+     * @return Number of slots in this commitment.
      * 
-    */
+     */
     public String slotCount() {
         return this.slotCount;
     }
     /**
-     * State of the commitment.
+     * @return State of the commitment.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

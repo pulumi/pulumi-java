@@ -23,6 +23,10 @@ public final class SecretReplicationGetArgs extends com.pulumi.resources.Resourc
     @Import(name="automatic")
     private @Nullable Output<Boolean> automatic;
 
+    /**
+     * @return The Secret will automatically be replicated without any restrictions.
+     * 
+     */
     public Optional<Output<Boolean>> automatic() {
         return Optional.ofNullable(this.automatic);
     }
@@ -35,6 +39,11 @@ public final class SecretReplicationGetArgs extends com.pulumi.resources.Resourc
     @Import(name="userManaged")
     private @Nullable Output<SecretReplicationUserManagedGetArgs> userManaged;
 
+    /**
+     * @return The Secret will automatically be replicated without any restrictions.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SecretReplicationUserManagedGetArgs>> userManaged() {
         return Optional.ofNullable(this.userManaged);
     }
@@ -64,20 +73,46 @@ public final class SecretReplicationGetArgs extends com.pulumi.resources.Resourc
             $ = new SecretReplicationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automatic The Secret will automatically be replicated without any restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatic(@Nullable Output<Boolean> automatic) {
             $.automatic = automatic;
             return this;
         }
 
+        /**
+         * @param automatic The Secret will automatically be replicated without any restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatic(Boolean automatic) {
             return automatic(Output.of(automatic));
         }
 
+        /**
+         * @param userManaged The Secret will automatically be replicated without any restrictions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userManaged(@Nullable Output<SecretReplicationUserManagedGetArgs> userManaged) {
             $.userManaged = userManaged;
             return this;
         }
 
+        /**
+         * @param userManaged The Secret will automatically be replicated without any restrictions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userManaged(SecretReplicationUserManagedGetArgs userManaged) {
             return userManaged(Output.of(userManaged));
         }

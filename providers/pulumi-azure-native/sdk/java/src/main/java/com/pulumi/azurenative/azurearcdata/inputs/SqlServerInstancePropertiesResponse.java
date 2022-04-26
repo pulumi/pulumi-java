@@ -25,6 +25,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
     @Import(name="collation")
     private @Nullable String collation;
 
+    /**
+     * @return SQL Server collation.
+     * 
+     */
     public Optional<String> collation() {
         return Optional.ofNullable(this.collation);
     }
@@ -36,6 +40,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
     @Import(name="containerResourceId", required=true)
     private String containerResourceId;
 
+    /**
+     * @return ARM Resource id of the container resource (Azure Arc for Servers).
+     * 
+     */
     public String containerResourceId() {
         return this.containerResourceId;
     }
@@ -47,6 +55,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The time when the resource was created.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -58,6 +70,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
     @Import(name="currentVersion")
     private @Nullable String currentVersion;
 
+    /**
+     * @return SQL Server current version.
+     * 
+     */
     public Optional<String> currentVersion() {
         return Optional.ofNullable(this.currentVersion);
     }
@@ -69,6 +85,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
     @Import(name="edition")
     private @Nullable String edition;
 
+    /**
+     * @return SQL Server edition.
+     * 
+     */
     public Optional<String> edition() {
         return Optional.ofNullable(this.edition);
     }
@@ -80,6 +100,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
     @Import(name="instanceName")
     private @Nullable String instanceName;
 
+    /**
+     * @return SQL Server instance name.
+     * 
+     */
     public Optional<String> instanceName() {
         return Optional.ofNullable(this.instanceName);
     }
@@ -91,6 +115,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
     @Import(name="licenseType")
     private @Nullable String licenseType;
 
+    /**
+     * @return SQL Server license type.
+     * 
+     */
     public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
@@ -102,6 +130,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
     @Import(name="patchLevel")
     private @Nullable String patchLevel;
 
+    /**
+     * @return SQL Server update level.
+     * 
+     */
     public Optional<String> patchLevel() {
         return Optional.ofNullable(this.patchLevel);
     }
@@ -113,6 +145,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
     @Import(name="productId")
     private @Nullable String productId;
 
+    /**
+     * @return SQL Server product ID.
+     * 
+     */
     public Optional<String> productId() {
         return Optional.ofNullable(this.productId);
     }
@@ -131,6 +167,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The cloud connectivity status.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -142,6 +182,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
     @Import(name="tcpDynamicPorts")
     private @Nullable String tcpDynamicPorts;
 
+    /**
+     * @return Dynamic TCP ports used by SQL Server.
+     * 
+     */
     public Optional<String> tcpDynamicPorts() {
         return Optional.ofNullable(this.tcpDynamicPorts);
     }
@@ -153,6 +197,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
     @Import(name="tcpStaticPorts")
     private @Nullable String tcpStaticPorts;
 
+    /**
+     * @return Static TCP ports used by SQL Server.
+     * 
+     */
     public Optional<String> tcpStaticPorts() {
         return Optional.ofNullable(this.tcpStaticPorts);
     }
@@ -164,6 +212,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
     @Import(name="vCore")
     private @Nullable String vCore;
 
+    /**
+     * @return The number of logical processors used by the SQL Server instance.
+     * 
+     */
     public Optional<String> vCore() {
         return Optional.ofNullable(this.vCore);
     }
@@ -175,6 +227,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return SQL Server version.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -217,46 +273,100 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
             $ = new SqlServerInstancePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param collation SQL Server collation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collation(@Nullable String collation) {
             $.collation = collation;
             return this;
         }
 
+        /**
+         * @param containerResourceId ARM Resource id of the container resource (Azure Arc for Servers).
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerResourceId(String containerResourceId) {
             $.containerResourceId = containerResourceId;
             return this;
         }
 
+        /**
+         * @param createTime The time when the resource was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param currentVersion SQL Server current version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentVersion(@Nullable String currentVersion) {
             $.currentVersion = currentVersion;
             return this;
         }
 
+        /**
+         * @param edition SQL Server edition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edition(@Nullable String edition) {
             $.edition = edition;
             return this;
         }
 
+        /**
+         * @param instanceName SQL Server instance name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(@Nullable String instanceName) {
             $.instanceName = instanceName;
             return this;
         }
 
+        /**
+         * @param licenseType SQL Server license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(@Nullable String licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param patchLevel SQL Server update level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchLevel(@Nullable String patchLevel) {
             $.patchLevel = patchLevel;
             return this;
         }
 
+        /**
+         * @param productId SQL Server product ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(@Nullable String productId) {
             $.productId = productId;
             return this;
@@ -267,26 +377,56 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
             return this;
         }
 
+        /**
+         * @param status The cloud connectivity status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param tcpDynamicPorts Dynamic TCP ports used by SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpDynamicPorts(@Nullable String tcpDynamicPorts) {
             $.tcpDynamicPorts = tcpDynamicPorts;
             return this;
         }
 
+        /**
+         * @param tcpStaticPorts Static TCP ports used by SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpStaticPorts(@Nullable String tcpStaticPorts) {
             $.tcpStaticPorts = tcpStaticPorts;
             return this;
         }
 
+        /**
+         * @param vCore The number of logical processors used by the SQL Server instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vCore(@Nullable String vCore) {
             $.vCore = vCore;
             return this;
         }
 
+        /**
+         * @param version SQL Server version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

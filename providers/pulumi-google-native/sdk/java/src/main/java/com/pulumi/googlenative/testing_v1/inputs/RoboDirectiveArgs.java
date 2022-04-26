@@ -27,6 +27,10 @@ public final class RoboDirectiveArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actionType", required=true)
     private Output<RoboDirectiveActionType> actionType;
 
+    /**
+     * @return The type of action that Robo should perform on the specified element.
+     * 
+     */
     public Output<RoboDirectiveActionType> actionType() {
         return this.actionType;
     }
@@ -38,6 +42,10 @@ public final class RoboDirectiveArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputText")
     private @Nullable Output<String> inputText;
 
+    /**
+     * @return The text that Robo is directed to set. If left empty, the directive will be treated as a CLICK on the element matching the resource_name.
+     * 
+     */
     public Optional<Output<String>> inputText() {
         return Optional.ofNullable(this.inputText);
     }
@@ -49,6 +57,10 @@ public final class RoboDirectiveArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the &#34;foo&#34; part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -79,29 +91,65 @@ public final class RoboDirectiveArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RoboDirectiveArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionType The type of action that Robo should perform on the specified element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(Output<RoboDirectiveActionType> actionType) {
             $.actionType = actionType;
             return this;
         }
 
+        /**
+         * @param actionType The type of action that Robo should perform on the specified element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(RoboDirectiveActionType actionType) {
             return actionType(Output.of(actionType));
         }
 
+        /**
+         * @param inputText The text that Robo is directed to set. If left empty, the directive will be treated as a CLICK on the element matching the resource_name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputText(@Nullable Output<String> inputText) {
             $.inputText = inputText;
             return this;
         }
 
+        /**
+         * @param inputText The text that Robo is directed to set. If left empty, the directive will be treated as a CLICK on the element matching the resource_name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputText(String inputText) {
             return inputText(Output.of(inputText));
         }
 
+        /**
+         * @param resourceName The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the &#34;foo&#34; part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the &#34;foo&#34; part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }

@@ -14,19 +14,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureBlobStorageHttpLogsConfigResponse {
     /**
-     * True if configuration is enabled, false if it is disabled and null if configuration is not set.
+     * @return True if configuration is enabled, false if it is disabled and null if configuration is not set.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * Retention in days.
+     * @return Retention in days.
      * Remove blobs older than X days.
      * 0 or lower means no retention.
      * 
      */
     private final @Nullable Integer retentionInDays;
     /**
-     * SAS url to a azure blob container with read/write/list/delete permissions.
+     * @return SAS url to a azure blob container with read/write/list/delete permissions.
      * 
      */
     private final @Nullable String sasUrl;
@@ -42,25 +42,25 @@ public final class AzureBlobStorageHttpLogsConfigResponse {
     }
 
     /**
-     * True if configuration is enabled, false if it is disabled and null if configuration is not set.
+     * @return True if configuration is enabled, false if it is disabled and null if configuration is not set.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Retention in days.
+     * @return Retention in days.
      * Remove blobs older than X days.
      * 0 or lower means no retention.
      * 
-    */
+     */
     public Optional<Integer> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
     /**
-     * SAS url to a azure blob container with read/write/list/delete permissions.
+     * @return SAS url to a azure blob container with read/write/list/delete permissions.
      * 
-    */
+     */
     public Optional<String> sasUrl() {
         return Optional.ofNullable(this.sasUrl);
     }

@@ -22,6 +22,10 @@ public final class LiteTopicReservationConfigArgs extends com.pulumi.resources.R
     @Import(name="throughputReservation")
     private @Nullable Output<String> throughputReservation;
 
+    /**
+     * @return The Reservation to use for this topic&#39;s throughput capacity.
+     * 
+     */
     public Optional<Output<String>> throughputReservation() {
         return Optional.ofNullable(this.throughputReservation);
     }
@@ -50,11 +54,23 @@ public final class LiteTopicReservationConfigArgs extends com.pulumi.resources.R
             $ = new LiteTopicReservationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param throughputReservation The Reservation to use for this topic&#39;s throughput capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughputReservation(@Nullable Output<String> throughputReservation) {
             $.throughputReservation = throughputReservation;
             return this;
         }
 
+        /**
+         * @param throughputReservation The Reservation to use for this topic&#39;s throughput capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughputReservation(String throughputReservation) {
             return throughputReservation(Output.of(throughputReservation));
         }

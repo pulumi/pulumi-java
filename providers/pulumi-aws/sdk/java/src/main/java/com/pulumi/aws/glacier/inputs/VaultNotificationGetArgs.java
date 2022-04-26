@@ -21,6 +21,10 @@ public final class VaultNotificationGetArgs extends com.pulumi.resources.Resourc
     @Import(name="events", required=true)
     private Output<List<String>> events;
 
+    /**
+     * @return You can configure a vault to publish a notification for `ArchiveRetrievalCompleted` and `InventoryRetrievalCompleted` events.
+     * 
+     */
     public Output<List<String>> events() {
         return this.events;
     }
@@ -32,6 +36,10 @@ public final class VaultNotificationGetArgs extends com.pulumi.resources.Resourc
     @Import(name="snsTopic", required=true)
     private Output<String> snsTopic;
 
+    /**
+     * @return The SNS Topic ARN.
+     * 
+     */
     public Output<String> snsTopic() {
         return this.snsTopic;
     }
@@ -61,24 +69,54 @@ public final class VaultNotificationGetArgs extends com.pulumi.resources.Resourc
             $ = new VaultNotificationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param events You can configure a vault to publish a notification for `ArchiveRetrievalCompleted` and `InventoryRetrievalCompleted` events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(Output<List<String>> events) {
             $.events = events;
             return this;
         }
 
+        /**
+         * @param events You can configure a vault to publish a notification for `ArchiveRetrievalCompleted` and `InventoryRetrievalCompleted` events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(List<String> events) {
             return events(Output.of(events));
         }
 
+        /**
+         * @param events You can configure a vault to publish a notification for `ArchiveRetrievalCompleted` and `InventoryRetrievalCompleted` events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(String... events) {
             return events(List.of(events));
         }
 
+        /**
+         * @param snsTopic The SNS Topic ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snsTopic(Output<String> snsTopic) {
             $.snsTopic = snsTopic;
             return this;
         }
 
+        /**
+         * @param snsTopic The SNS Topic ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snsTopic(String snsTopic) {
             return snsTopic(Output.of(snsTopic));
         }

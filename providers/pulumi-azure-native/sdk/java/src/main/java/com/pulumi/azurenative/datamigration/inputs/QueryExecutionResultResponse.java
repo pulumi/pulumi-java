@@ -25,6 +25,10 @@ public final class QueryExecutionResultResponse extends com.pulumi.resources.Inv
     @Import(name="queryText", required=true)
     private String queryText;
 
+    /**
+     * @return Query text retrieved from the source server
+     * 
+     */
     public String queryText() {
         return this.queryText;
     }
@@ -36,6 +40,10 @@ public final class QueryExecutionResultResponse extends com.pulumi.resources.Inv
     @Import(name="sourceResult", required=true)
     private ExecutionStatisticsResponse sourceResult;
 
+    /**
+     * @return Query analysis result from the source
+     * 
+     */
     public ExecutionStatisticsResponse sourceResult() {
         return this.sourceResult;
     }
@@ -47,6 +55,10 @@ public final class QueryExecutionResultResponse extends com.pulumi.resources.Inv
     @Import(name="statementsInBatch", required=true)
     private Double statementsInBatch;
 
+    /**
+     * @return Total no. of statements in the batch
+     * 
+     */
     public Double statementsInBatch() {
         return this.statementsInBatch;
     }
@@ -58,6 +70,10 @@ public final class QueryExecutionResultResponse extends com.pulumi.resources.Inv
     @Import(name="targetResult", required=true)
     private ExecutionStatisticsResponse targetResult;
 
+    /**
+     * @return Query analysis result from the target
+     * 
+     */
     public ExecutionStatisticsResponse targetResult() {
         return this.targetResult;
     }
@@ -89,21 +105,45 @@ public final class QueryExecutionResultResponse extends com.pulumi.resources.Inv
             $ = new QueryExecutionResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queryText Query text retrieved from the source server
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryText(String queryText) {
             $.queryText = queryText;
             return this;
         }
 
+        /**
+         * @param sourceResult Query analysis result from the source
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResult(ExecutionStatisticsResponse sourceResult) {
             $.sourceResult = sourceResult;
             return this;
         }
 
+        /**
+         * @param statementsInBatch Total no. of statements in the batch
+         * 
+         * @return builder
+         * 
+         */
         public Builder statementsInBatch(Double statementsInBatch) {
             $.statementsInBatch = statementsInBatch;
             return this;
         }
 
+        /**
+         * @param targetResult Query analysis result from the target
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResult(ExecutionStatisticsResponse targetResult) {
             $.targetResult = targetResult;
             return this;

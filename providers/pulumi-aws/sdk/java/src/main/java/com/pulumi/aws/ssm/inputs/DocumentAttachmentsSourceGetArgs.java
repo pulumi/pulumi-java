@@ -23,6 +23,10 @@ public final class DocumentAttachmentsSourceGetArgs extends com.pulumi.resources
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return The key describing the location of an attachment to a document. Valid key types include: `SourceUrl` and `S3FileUrl`
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -34,6 +38,10 @@ public final class DocumentAttachmentsSourceGetArgs extends com.pulumi.resources
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the document attachment file
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -45,6 +53,10 @@ public final class DocumentAttachmentsSourceGetArgs extends com.pulumi.resources
     @Import(name="values", required=true)
     private Output<List<String>> values;
 
+    /**
+     * @return The value describing the location of an attachment to a document
+     * 
+     */
     public Output<List<String>> values() {
         return this.values;
     }
@@ -75,33 +87,75 @@ public final class DocumentAttachmentsSourceGetArgs extends com.pulumi.resources
             $ = new DocumentAttachmentsSourceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key describing the location of an attachment to a document. Valid key types include: `SourceUrl` and `S3FileUrl`
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The key describing the location of an attachment to a document. Valid key types include: `SourceUrl` and `S3FileUrl`
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param name The name of the document attachment file
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the document attachment file
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param values The value describing the location of an attachment to a document
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The value describing the location of an attachment to a document
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values The value describing the location of an attachment to a document
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

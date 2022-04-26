@@ -24,6 +24,10 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends com.pulum
     @Import(name="endIpAddress", required=true)
     private Output<String> endIpAddress;
 
+    /**
+     * @return The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+     * 
+     */
     public Output<String> endIpAddress() {
         return this.endIpAddress;
     }
@@ -35,6 +39,10 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends com.pulum
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The unique name of the firewall rule to create.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -46,6 +54,10 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends com.pulum
     @Import(name="startIpAddress", required=true)
     private Output<String> startIpAddress;
 
+    /**
+     * @return The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+     * 
+     */
     public Output<String> startIpAddress() {
         return this.startIpAddress;
     }
@@ -76,29 +88,65 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends com.pulum
             $ = new CreateFirewallRuleWithAccountParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endIpAddress The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endIpAddress(Output<String> endIpAddress) {
             $.endIpAddress = endIpAddress;
             return this;
         }
 
+        /**
+         * @param endIpAddress The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endIpAddress(String endIpAddress) {
             return endIpAddress(Output.of(endIpAddress));
         }
 
+        /**
+         * @param name The unique name of the firewall rule to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique name of the firewall rule to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param startIpAddress The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startIpAddress(Output<String> startIpAddress) {
             $.startIpAddress = startIpAddress;
             return this;
         }
 
+        /**
+         * @param startIpAddress The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startIpAddress(String startIpAddress) {
             return startIpAddress(Output.of(startIpAddress));
         }

@@ -29,6 +29,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
     @Import(name="metrics")
     private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> metrics;
 
+    /**
+     * @return The metrics and corresponding confidence intervals in the inference result.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>>> metrics() {
         return Optional.ofNullable(this.metrics);
     }
@@ -40,6 +44,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
     @Import(name="sessionCount")
     private @Nullable Output<Integer> sessionCount;
 
+    /**
+     * @return Number of sessions that were allocated to this version.
+     * 
+     */
     public Optional<Output<Integer>> sessionCount() {
         return Optional.ofNullable(this.sessionCount);
     }
@@ -51,6 +59,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -81,33 +93,75 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
             $ = new GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metrics The metrics and corresponding confidence intervals in the inference result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics The metrics and corresponding confidence intervals in the inference result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs> metrics) {
             return metrics(Output.of(metrics));
         }
 
+        /**
+         * @param metrics The metrics and corresponding confidence intervals in the inference result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs... metrics) {
             return metrics(List.of(metrics));
         }
 
+        /**
+         * @param sessionCount Number of sessions that were allocated to this version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionCount(@Nullable Output<Integer> sessionCount) {
             $.sessionCount = sessionCount;
             return this;
         }
 
+        /**
+         * @param sessionCount Number of sessions that were allocated to this version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionCount(Integer sessionCount) {
             return sessionCount(Output.of(sessionCount));
         }
 
+        /**
+         * @param version The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

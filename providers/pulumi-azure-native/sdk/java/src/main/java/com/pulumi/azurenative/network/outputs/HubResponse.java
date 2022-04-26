@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HubResponse {
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final @Nullable String resourceId;
     /**
-     * Resource Type.
+     * @return Resource Type.
      * 
      */
     private final @Nullable String resourceType;
@@ -31,16 +31,16 @@ public final class HubResponse {
     }
 
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
-     * Resource Type.
+     * @return Resource Type.
      * 
-    */
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }

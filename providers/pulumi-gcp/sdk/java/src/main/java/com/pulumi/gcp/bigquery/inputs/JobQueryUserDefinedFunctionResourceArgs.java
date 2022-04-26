@@ -23,6 +23,11 @@ public final class JobQueryUserDefinedFunctionResourceArgs extends com.pulumi.re
     @Import(name="inlineCode")
     private @Nullable Output<String> inlineCode;
 
+    /**
+     * @return An inline resource that contains code for a user-defined function (UDF).
+     * Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
+     * 
+     */
     public Optional<Output<String>> inlineCode() {
         return Optional.ofNullable(this.inlineCode);
     }
@@ -34,6 +39,10 @@ public final class JobQueryUserDefinedFunctionResourceArgs extends com.pulumi.re
     @Import(name="resourceUri")
     private @Nullable Output<String> resourceUri;
 
+    /**
+     * @return A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
+     * 
+     */
     public Optional<Output<String>> resourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }
@@ -63,20 +72,46 @@ public final class JobQueryUserDefinedFunctionResourceArgs extends com.pulumi.re
             $ = new JobQueryUserDefinedFunctionResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inlineCode An inline resource that contains code for a user-defined function (UDF).
+         * Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inlineCode(@Nullable Output<String> inlineCode) {
             $.inlineCode = inlineCode;
             return this;
         }
 
+        /**
+         * @param inlineCode An inline resource that contains code for a user-defined function (UDF).
+         * Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inlineCode(String inlineCode) {
             return inlineCode(Output.of(inlineCode));
         }
 
+        /**
+         * @param resourceUri A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
             $.resourceUri = resourceUri;
             return this;
         }
 
+        /**
+         * @param resourceUri A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             return resourceUri(Output.of(resourceUri));
         }

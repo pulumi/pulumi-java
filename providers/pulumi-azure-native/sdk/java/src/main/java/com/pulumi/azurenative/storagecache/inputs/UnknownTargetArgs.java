@@ -27,6 +27,10 @@ public final class UnknownTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
     private @Nullable Output<Map<String,String>> attributes;
 
+    /**
+     * @return Dictionary of string-&gt;string pairs containing information about the Storage Target.
+     * 
+     */
     public Optional<Output<Map<String,String>>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -55,11 +59,23 @@ public final class UnknownTargetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UnknownTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes Dictionary of string-&gt;string pairs containing information about the Storage Target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes Dictionary of string-&gt;string pairs containing information about the Storage Target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(Map<String,String> attributes) {
             return attributes(Output.of(attributes));
         }

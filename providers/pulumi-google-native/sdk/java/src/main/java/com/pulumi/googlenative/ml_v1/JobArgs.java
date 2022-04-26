@@ -27,6 +27,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -38,6 +42,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobId", required=true)
     private Output<String> jobId;
 
+    /**
+     * @return The user-specified id of the job.
+     * 
+     */
     public Output<String> jobId() {
         return this.jobId;
     }
@@ -49,6 +57,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -60,6 +72,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="predictionInput")
     private @Nullable Output<GoogleCloudMlV1__PredictionInputArgs> predictionInput;
 
+    /**
+     * @return Input parameters to create a prediction job.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1__PredictionInputArgs>> predictionInput() {
         return Optional.ofNullable(this.predictionInput);
     }
@@ -71,6 +87,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="predictionOutput")
     private @Nullable Output<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput;
 
+    /**
+     * @return The current prediction job result.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1__PredictionOutputArgs>> predictionOutput() {
         return Optional.ofNullable(this.predictionOutput);
     }
@@ -89,6 +109,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trainingInput")
     private @Nullable Output<GoogleCloudMlV1__TrainingInputArgs> trainingInput;
 
+    /**
+     * @return Input parameters to create a training job.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1__TrainingInputArgs>> trainingInput() {
         return Optional.ofNullable(this.trainingInput);
     }
@@ -100,6 +124,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trainingOutput")
     private @Nullable Output<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput;
 
+    /**
+     * @return The current training job result.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1__TrainingOutputArgs>> trainingOutput() {
         return Optional.ofNullable(this.trainingOutput);
     }
@@ -135,47 +163,107 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param jobId The user-specified id of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(Output<String> jobId) {
             $.jobId = jobId;
             return this;
         }
 
+        /**
+         * @param jobId The user-specified id of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(String jobId) {
             return jobId(Output.of(jobId));
         }
 
+        /**
+         * @param labels Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param predictionInput Input parameters to create a prediction job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictionInput(@Nullable Output<GoogleCloudMlV1__PredictionInputArgs> predictionInput) {
             $.predictionInput = predictionInput;
             return this;
         }
 
+        /**
+         * @param predictionInput Input parameters to create a prediction job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictionInput(GoogleCloudMlV1__PredictionInputArgs predictionInput) {
             return predictionInput(Output.of(predictionInput));
         }
 
+        /**
+         * @param predictionOutput The current prediction job result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictionOutput(@Nullable Output<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput) {
             $.predictionOutput = predictionOutput;
             return this;
         }
 
+        /**
+         * @param predictionOutput The current prediction job result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictionOutput(GoogleCloudMlV1__PredictionOutputArgs predictionOutput) {
             return predictionOutput(Output.of(predictionOutput));
         }
@@ -189,20 +277,44 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param trainingInput Input parameters to create a training job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingInput(@Nullable Output<GoogleCloudMlV1__TrainingInputArgs> trainingInput) {
             $.trainingInput = trainingInput;
             return this;
         }
 
+        /**
+         * @param trainingInput Input parameters to create a training job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingInput(GoogleCloudMlV1__TrainingInputArgs trainingInput) {
             return trainingInput(Output.of(trainingInput));
         }
 
+        /**
+         * @param trainingOutput The current training job result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingOutput(@Nullable Output<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput) {
             $.trainingOutput = trainingOutput;
             return this;
         }
 
+        /**
+         * @param trainingOutput The current training job result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingOutput(GoogleCloudMlV1__TrainingOutputArgs trainingOutput) {
             return trainingOutput(Output.of(trainingOutput));
         }

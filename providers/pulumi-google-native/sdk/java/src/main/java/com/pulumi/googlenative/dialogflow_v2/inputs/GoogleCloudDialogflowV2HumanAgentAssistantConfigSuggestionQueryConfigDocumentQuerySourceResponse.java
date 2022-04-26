@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     @Import(name="documents", required=true)
     private List<String> documents;
 
+    /**
+     * @return Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, at most 5 documents are supported.
+     * 
+     */
     public List<String> documents() {
         return this.documents;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
             $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param documents Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, at most 5 documents are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documents(List<String> documents) {
             $.documents = documents;
             return this;
         }
 
+        /**
+         * @param documents Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, at most 5 documents are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documents(String... documents) {
             return documents(List.of(documents));
         }

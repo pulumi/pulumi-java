@@ -30,6 +30,10 @@ public final class DynamicMetricCriteriaResponse extends com.pulumi.resources.In
     @Import(name="alertSensitivity", required=true)
     private String alertSensitivity;
 
+    /**
+     * @return The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
+     * 
+     */
     public String alertSensitivity() {
         return this.alertSensitivity;
     }
@@ -42,6 +46,11 @@ public final class DynamicMetricCriteriaResponse extends com.pulumi.resources.In
     @Import(name="criterionType", required=true)
     private String criterionType;
 
+    /**
+     * @return Specifies the type of threshold criteria
+     * Expected value is &#39;DynamicThresholdCriterion&#39;.
+     * 
+     */
     public String criterionType() {
         return this.criterionType;
     }
@@ -53,6 +62,10 @@ public final class DynamicMetricCriteriaResponse extends com.pulumi.resources.In
     @Import(name="dimensions")
     private @Nullable List<MetricDimensionResponse> dimensions;
 
+    /**
+     * @return List of dimension conditions.
+     * 
+     */
     public Optional<List<MetricDimensionResponse>> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
@@ -64,6 +77,10 @@ public final class DynamicMetricCriteriaResponse extends com.pulumi.resources.In
     @Import(name="failingPeriods", required=true)
     private DynamicThresholdFailingPeriodsResponse failingPeriods;
 
+    /**
+     * @return The minimum number of violations required within the selected lookback time window required to raise an alert.
+     * 
+     */
     public DynamicThresholdFailingPeriodsResponse failingPeriods() {
         return this.failingPeriods;
     }
@@ -75,6 +92,10 @@ public final class DynamicMetricCriteriaResponse extends com.pulumi.resources.In
     @Import(name="ignoreDataBefore")
     private @Nullable String ignoreDataBefore;
 
+    /**
+     * @return Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
+     * 
+     */
     public Optional<String> ignoreDataBefore() {
         return Optional.ofNullable(this.ignoreDataBefore);
     }
@@ -86,6 +107,10 @@ public final class DynamicMetricCriteriaResponse extends com.pulumi.resources.In
     @Import(name="metricName", required=true)
     private String metricName;
 
+    /**
+     * @return Name of the metric.
+     * 
+     */
     public String metricName() {
         return this.metricName;
     }
@@ -97,6 +122,10 @@ public final class DynamicMetricCriteriaResponse extends com.pulumi.resources.In
     @Import(name="metricNamespace")
     private @Nullable String metricNamespace;
 
+    /**
+     * @return Namespace of the metric.
+     * 
+     */
     public Optional<String> metricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
@@ -108,6 +137,10 @@ public final class DynamicMetricCriteriaResponse extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the criteria.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -119,6 +152,10 @@ public final class DynamicMetricCriteriaResponse extends com.pulumi.resources.In
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return The operator used to compare the metric value against the threshold.
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -130,6 +167,10 @@ public final class DynamicMetricCriteriaResponse extends com.pulumi.resources.In
     @Import(name="skipMetricValidation")
     private @Nullable Boolean skipMetricValidation;
 
+    /**
+     * @return Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
+     * 
+     */
     public Optional<Boolean> skipMetricValidation() {
         return Optional.ofNullable(this.skipMetricValidation);
     }
@@ -141,6 +182,10 @@ public final class DynamicMetricCriteriaResponse extends com.pulumi.resources.In
     @Import(name="timeAggregation", required=true)
     private String timeAggregation;
 
+    /**
+     * @return the criteria time aggregation types.
+     * 
+     */
     public String timeAggregation() {
         return this.timeAggregation;
     }
@@ -179,60 +224,133 @@ public final class DynamicMetricCriteriaResponse extends com.pulumi.resources.In
             $ = new DynamicMetricCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertSensitivity The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertSensitivity(String alertSensitivity) {
             $.alertSensitivity = alertSensitivity;
             return this;
         }
 
+        /**
+         * @param criterionType Specifies the type of threshold criteria
+         * Expected value is &#39;DynamicThresholdCriterion&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criterionType(String criterionType) {
             $.criterionType = criterionType;
             return this;
         }
 
+        /**
+         * @param dimensions List of dimension conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(@Nullable List<MetricDimensionResponse> dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param dimensions List of dimension conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(MetricDimensionResponse... dimensions) {
             return dimensions(List.of(dimensions));
         }
 
+        /**
+         * @param failingPeriods The minimum number of violations required within the selected lookback time window required to raise an alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failingPeriods(DynamicThresholdFailingPeriodsResponse failingPeriods) {
             $.failingPeriods = failingPeriods;
             return this;
         }
 
+        /**
+         * @param ignoreDataBefore Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreDataBefore(@Nullable String ignoreDataBefore) {
             $.ignoreDataBefore = ignoreDataBefore;
             return this;
         }
 
+        /**
+         * @param metricName Name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param metricNamespace Namespace of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricNamespace(@Nullable String metricNamespace) {
             $.metricNamespace = metricNamespace;
             return this;
         }
 
+        /**
+         * @param name Name of the criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param operator The operator used to compare the metric value against the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param skipMetricValidation Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipMetricValidation(@Nullable Boolean skipMetricValidation) {
             $.skipMetricValidation = skipMetricValidation;
             return this;
         }
 
+        /**
+         * @param timeAggregation the criteria time aggregation types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAggregation(String timeAggregation) {
             $.timeAggregation = timeAggregation;
             return this;

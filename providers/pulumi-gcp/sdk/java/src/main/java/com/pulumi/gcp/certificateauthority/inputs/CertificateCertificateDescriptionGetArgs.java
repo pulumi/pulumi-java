@@ -65,6 +65,11 @@ public final class CertificateCertificateDescriptionGetArgs extends com.pulumi.r
     @Import(name="publicKeys")
     private @Nullable Output<List<CertificateCertificateDescriptionPublicKeyGetArgs>> publicKeys;
 
+    /**
+     * @return A PublicKey describes a public key.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<CertificateCertificateDescriptionPublicKeyGetArgs>>> publicKeys() {
         return Optional.ofNullable(this.publicKeys);
     }
@@ -179,15 +184,36 @@ public final class CertificateCertificateDescriptionGetArgs extends com.pulumi.r
             return crlDistributionPoints(List.of(crlDistributionPoints));
         }
 
+        /**
+         * @param publicKeys A PublicKey describes a public key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(@Nullable Output<List<CertificateCertificateDescriptionPublicKeyGetArgs>> publicKeys) {
             $.publicKeys = publicKeys;
             return this;
         }
 
+        /**
+         * @param publicKeys A PublicKey describes a public key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(List<CertificateCertificateDescriptionPublicKeyGetArgs> publicKeys) {
             return publicKeys(Output.of(publicKeys));
         }
 
+        /**
+         * @param publicKeys A PublicKey describes a public key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(CertificateCertificateDescriptionPublicKeyGetArgs... publicKeys) {
             return publicKeys(List.of(publicKeys));
         }

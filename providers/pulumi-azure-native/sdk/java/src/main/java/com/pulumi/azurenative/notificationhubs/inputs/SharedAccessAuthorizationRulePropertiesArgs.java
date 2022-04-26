@@ -27,6 +27,10 @@ public final class SharedAccessAuthorizationRulePropertiesArgs extends com.pulum
     @Import(name="rights")
     private @Nullable Output<List<AccessRights>> rights;
 
+    /**
+     * @return The rights associated with the rule.
+     * 
+     */
     public Optional<Output<List<AccessRights>>> rights() {
         return Optional.ofNullable(this.rights);
     }
@@ -55,15 +59,33 @@ public final class SharedAccessAuthorizationRulePropertiesArgs extends com.pulum
             $ = new SharedAccessAuthorizationRulePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rights The rights associated with the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(@Nullable Output<List<AccessRights>> rights) {
             $.rights = rights;
             return this;
         }
 
+        /**
+         * @param rights The rights associated with the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(List<AccessRights> rights) {
             return rights(Output.of(rights));
         }
 
+        /**
+         * @param rights The rights associated with the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(AccessRights... rights) {
             return rights(List.of(rights));
         }

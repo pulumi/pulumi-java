@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RepositoryResponse {
     /**
-     * Branch name of repository.
+     * @return Branch name of repository.
      * 
      */
     private final @Nullable String branch;
     /**
-     * Url to access repository action logs.
+     * @return Url to access repository action logs.
      * 
      */
     private final @Nullable String deploymentLogsUrl;
     /**
-     * Display url of repository.
+     * @return Display url of repository.
      * 
      */
     private final @Nullable String displayUrl;
     /**
-     * Dictionary of source control content type and path mapping.
+     * @return Dictionary of source control content type and path mapping.
      * 
      */
     private final @Nullable List<ContentPathMapResponse> pathMapping;
     /**
-     * Url of repository.
+     * @return Url of repository.
      * 
      */
     private final @Nullable String url;
@@ -54,37 +54,37 @@ public final class RepositoryResponse {
     }
 
     /**
-     * Branch name of repository.
+     * @return Branch name of repository.
      * 
-    */
+     */
     public Optional<String> branch() {
         return Optional.ofNullable(this.branch);
     }
     /**
-     * Url to access repository action logs.
+     * @return Url to access repository action logs.
      * 
-    */
+     */
     public Optional<String> deploymentLogsUrl() {
         return Optional.ofNullable(this.deploymentLogsUrl);
     }
     /**
-     * Display url of repository.
+     * @return Display url of repository.
      * 
-    */
+     */
     public Optional<String> displayUrl() {
         return Optional.ofNullable(this.displayUrl);
     }
     /**
-     * Dictionary of source control content type and path mapping.
+     * @return Dictionary of source control content type and path mapping.
      * 
-    */
+     */
     public List<ContentPathMapResponse> pathMapping() {
         return this.pathMapping == null ? List.of() : this.pathMapping;
     }
     /**
-     * Url of repository.
+     * @return Url of repository.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }

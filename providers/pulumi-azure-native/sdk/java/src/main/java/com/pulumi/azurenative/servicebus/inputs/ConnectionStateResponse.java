@@ -25,6 +25,10 @@ public final class ConnectionStateResponse extends com.pulumi.resources.InvokeAr
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the connection state.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class ConnectionStateResponse extends com.pulumi.resources.InvokeAr
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Status of the connection.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -65,11 +73,23 @@ public final class ConnectionStateResponse extends com.pulumi.resources.InvokeAr
             $ = new ConnectionStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the connection state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param status Status of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

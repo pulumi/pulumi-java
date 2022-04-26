@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse 
     @Import(name="cases", required=true)
     private List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse> cases;
 
+    /**
+     * @return A list of cascading if-else conditions.
+     * 
+     */
     public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse> cases() {
         return this.cases;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse 
             $ = new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cases A list of cascading if-else conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cases(List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse> cases) {
             $.cases = cases;
             return this;
         }
 
+        /**
+         * @param cases A list of cascading if-else conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cases(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse... cases) {
             return cases(List.of(cases));
         }

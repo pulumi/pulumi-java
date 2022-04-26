@@ -11,13 +11,13 @@ import java.util.Objects;
 @CustomType
 public final class DeliveryRuleUrlFileNameConditionResponse {
     /**
-     * The name of the condition for the delivery rule.
+     * @return The name of the condition for the delivery rule.
      * Expected value is &#39;UrlFileName&#39;.
      * 
      */
     private final String name;
     /**
-     * Defines the parameters for the condition.
+     * @return Defines the parameters for the condition.
      * 
      */
     private final UrlFileNameMatchConditionParametersResponse parameters;
@@ -31,17 +31,17 @@ public final class DeliveryRuleUrlFileNameConditionResponse {
     }
 
     /**
-     * The name of the condition for the delivery rule.
+     * @return The name of the condition for the delivery rule.
      * Expected value is &#39;UrlFileName&#39;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Defines the parameters for the condition.
+     * @return Defines the parameters for the condition.
      * 
-    */
+     */
     public UrlFileNameMatchConditionParametersResponse parameters() {
         return this.parameters;
     }

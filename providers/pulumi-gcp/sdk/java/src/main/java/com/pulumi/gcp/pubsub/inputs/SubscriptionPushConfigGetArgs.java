@@ -41,6 +41,27 @@ public final class SubscriptionPushConfigGetArgs extends com.pulumi.resources.Re
     @Import(name="attributes")
     private @Nullable Output<Map<String,String>> attributes;
 
+    /**
+     * @return Endpoint configuration attributes.
+     * Every endpoint has a set of API supported attributes that can
+     * be used to control different aspects of the message delivery.
+     * The currently supported attribute is x-goog-version, which you
+     * can use to change the format of the pushed message. This
+     * attribute indicates the version of the data expected by
+     * the endpoint. This controls the shape of the pushed message
+     * (i.e., its fields and metadata). The endpoint version is
+     * based on the version of the Pub/Sub API.
+     * If not present during the subscriptions.create call,
+     * it will default to the version of the API used to make
+     * such call. If not present during a subscriptions.modifyPushConfig
+     * call, its value will not be changed. subscriptions.get
+     * calls will always return a valid version, even if the
+     * subscription was created without this attribute.
+     * The possible values for this attribute are:
+     * - v1beta1: uses the push format defined in the v1beta1 Pub/Sub API.
+     * - v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
+     * 
+     */
     public Optional<Output<Map<String,String>>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -54,6 +75,12 @@ public final class SubscriptionPushConfigGetArgs extends com.pulumi.resources.Re
     @Import(name="oidcToken")
     private @Nullable Output<SubscriptionPushConfigOidcTokenGetArgs> oidcToken;
 
+    /**
+     * @return If specified, Pub/Sub will generate and attach an OIDC JWT token as
+     * an Authorization header in the HTTP request for every pushed message.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SubscriptionPushConfigOidcTokenGetArgs>> oidcToken() {
         return Optional.ofNullable(this.oidcToken);
     }
@@ -67,6 +94,12 @@ public final class SubscriptionPushConfigGetArgs extends com.pulumi.resources.Re
     @Import(name="pushEndpoint", required=true)
     private Output<String> pushEndpoint;
 
+    /**
+     * @return A URL locating the endpoint to which messages should be pushed.
+     * For example, a Webhook endpoint might use
+     * &#34;https://example.com/push&#34;.
+     * 
+     */
     public Output<String> pushEndpoint() {
         return this.pushEndpoint;
     }
@@ -97,29 +130,107 @@ public final class SubscriptionPushConfigGetArgs extends com.pulumi.resources.Re
             $ = new SubscriptionPushConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes Endpoint configuration attributes.
+         * Every endpoint has a set of API supported attributes that can
+         * be used to control different aspects of the message delivery.
+         * The currently supported attribute is x-goog-version, which you
+         * can use to change the format of the pushed message. This
+         * attribute indicates the version of the data expected by
+         * the endpoint. This controls the shape of the pushed message
+         * (i.e., its fields and metadata). The endpoint version is
+         * based on the version of the Pub/Sub API.
+         * If not present during the subscriptions.create call,
+         * it will default to the version of the API used to make
+         * such call. If not present during a subscriptions.modifyPushConfig
+         * call, its value will not be changed. subscriptions.get
+         * calls will always return a valid version, even if the
+         * subscription was created without this attribute.
+         * The possible values for this attribute are:
+         * - v1beta1: uses the push format defined in the v1beta1 Pub/Sub API.
+         * - v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes Endpoint configuration attributes.
+         * Every endpoint has a set of API supported attributes that can
+         * be used to control different aspects of the message delivery.
+         * The currently supported attribute is x-goog-version, which you
+         * can use to change the format of the pushed message. This
+         * attribute indicates the version of the data expected by
+         * the endpoint. This controls the shape of the pushed message
+         * (i.e., its fields and metadata). The endpoint version is
+         * based on the version of the Pub/Sub API.
+         * If not present during the subscriptions.create call,
+         * it will default to the version of the API used to make
+         * such call. If not present during a subscriptions.modifyPushConfig
+         * call, its value will not be changed. subscriptions.get
+         * calls will always return a valid version, even if the
+         * subscription was created without this attribute.
+         * The possible values for this attribute are:
+         * - v1beta1: uses the push format defined in the v1beta1 Pub/Sub API.
+         * - v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(Map<String,String> attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param oidcToken If specified, Pub/Sub will generate and attach an OIDC JWT token as
+         * an Authorization header in the HTTP request for every pushed message.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcToken(@Nullable Output<SubscriptionPushConfigOidcTokenGetArgs> oidcToken) {
             $.oidcToken = oidcToken;
             return this;
         }
 
+        /**
+         * @param oidcToken If specified, Pub/Sub will generate and attach an OIDC JWT token as
+         * an Authorization header in the HTTP request for every pushed message.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcToken(SubscriptionPushConfigOidcTokenGetArgs oidcToken) {
             return oidcToken(Output.of(oidcToken));
         }
 
+        /**
+         * @param pushEndpoint A URL locating the endpoint to which messages should be pushed.
+         * For example, a Webhook endpoint might use
+         * &#34;https://example.com/push&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushEndpoint(Output<String> pushEndpoint) {
             $.pushEndpoint = pushEndpoint;
             return this;
         }
 
+        /**
+         * @param pushEndpoint A URL locating the endpoint to which messages should be pushed.
+         * For example, a Webhook endpoint might use
+         * &#34;https://example.com/push&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushEndpoint(String pushEndpoint) {
             return pushEndpoint(Output.of(pushEndpoint));
         }

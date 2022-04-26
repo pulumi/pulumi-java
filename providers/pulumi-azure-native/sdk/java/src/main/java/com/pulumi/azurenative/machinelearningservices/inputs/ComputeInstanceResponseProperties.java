@@ -36,6 +36,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
     @Import(name="applicationSharingPolicy")
     private @Nullable String applicationSharingPolicy;
 
+    /**
+     * @return Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
+     * 
+     */
     public Optional<String> applicationSharingPolicy() {
         return Optional.ofNullable(this.applicationSharingPolicy);
     }
@@ -47,6 +51,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
     @Import(name="applications", required=true)
     private List<ComputeInstanceApplicationResponse> applications;
 
+    /**
+     * @return Describes available applications and their endpoints on this ComputeInstance.
+     * 
+     */
     public List<ComputeInstanceApplicationResponse> applications() {
         return this.applications;
     }
@@ -58,6 +66,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
     @Import(name="computeInstanceAuthorizationType")
     private @Nullable String computeInstanceAuthorizationType;
 
+    /**
+     * @return The Compute Instance Authorization type. Available values are personal (default).
+     * 
+     */
     public Optional<String> computeInstanceAuthorizationType() {
         return Optional.ofNullable(this.computeInstanceAuthorizationType);
     }
@@ -69,6 +81,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
     @Import(name="connectivityEndpoints", required=true)
     private ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints;
 
+    /**
+     * @return Describes all connectivity endpoints available for this ComputeInstance.
+     * 
+     */
     public ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints() {
         return this.connectivityEndpoints;
     }
@@ -80,6 +96,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
     @Import(name="createdBy", required=true)
     private ComputeInstanceCreatedByResponse createdBy;
 
+    /**
+     * @return Describes information on user who created this ComputeInstance.
+     * 
+     */
     public ComputeInstanceCreatedByResponse createdBy() {
         return this.createdBy;
     }
@@ -91,6 +111,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
     @Import(name="errors", required=true)
     private List<MachineLearningServiceErrorResponse> errors;
 
+    /**
+     * @return Collection of errors encountered on this ComputeInstance.
+     * 
+     */
     public List<MachineLearningServiceErrorResponse> errors() {
         return this.errors;
     }
@@ -102,6 +126,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
     @Import(name="lastOperation", required=true)
     private ComputeInstanceLastOperationResponse lastOperation;
 
+    /**
+     * @return The last operation on ComputeInstance.
+     * 
+     */
     public ComputeInstanceLastOperationResponse lastOperation() {
         return this.lastOperation;
     }
@@ -113,6 +141,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
     @Import(name="personalComputeInstanceSettings")
     private @Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings;
 
+    /**
+     * @return Settings for a personal compute instance.
+     * 
+     */
     public Optional<PersonalComputeInstanceSettingsResponse> personalComputeInstanceSettings() {
         return Optional.ofNullable(this.personalComputeInstanceSettings);
     }
@@ -124,6 +156,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
     @Import(name="setupScripts")
     private @Nullable SetupScriptsResponse setupScripts;
 
+    /**
+     * @return Details of customized scripts to execute for setting up the cluster.
+     * 
+     */
     public Optional<SetupScriptsResponse> setupScripts() {
         return Optional.ofNullable(this.setupScripts);
     }
@@ -135,6 +171,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
     @Import(name="sshSettings")
     private @Nullable ComputeInstanceSshSettingsResponse sshSettings;
 
+    /**
+     * @return Specifies policy and settings for SSH access.
+     * 
+     */
     public Optional<ComputeInstanceSshSettingsResponse> sshSettings() {
         return Optional.ofNullable(this.sshSettings);
     }
@@ -146,6 +186,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The current state of this ComputeInstance.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -157,6 +201,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
     @Import(name="subnet")
     private @Nullable ResourceIdResponse subnet;
 
+    /**
+     * @return Virtual network subnet resource ID the compute nodes belong to.
+     * 
+     */
     public Optional<ResourceIdResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -168,6 +216,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
     @Import(name="vmSize")
     private @Nullable String vmSize;
 
+    /**
+     * @return Virtual Machine Size
+     * 
+     */
     public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -208,74 +260,164 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
             $ = new ComputeInstanceResponseProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationSharingPolicy Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationSharingPolicy(@Nullable String applicationSharingPolicy) {
             $.applicationSharingPolicy = applicationSharingPolicy;
             return this;
         }
 
+        /**
+         * @param applications Describes available applications and their endpoints on this ComputeInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applications(List<ComputeInstanceApplicationResponse> applications) {
             $.applications = applications;
             return this;
         }
 
+        /**
+         * @param applications Describes available applications and their endpoints on this ComputeInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applications(ComputeInstanceApplicationResponse... applications) {
             return applications(List.of(applications));
         }
 
+        /**
+         * @param computeInstanceAuthorizationType The Compute Instance Authorization type. Available values are personal (default).
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeInstanceAuthorizationType(@Nullable String computeInstanceAuthorizationType) {
             $.computeInstanceAuthorizationType = computeInstanceAuthorizationType;
             return this;
         }
 
+        /**
+         * @param connectivityEndpoints Describes all connectivity endpoints available for this ComputeInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectivityEndpoints(ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints) {
             $.connectivityEndpoints = connectivityEndpoints;
             return this;
         }
 
+        /**
+         * @param createdBy Describes information on user who created this ComputeInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(ComputeInstanceCreatedByResponse createdBy) {
             $.createdBy = createdBy;
             return this;
         }
 
+        /**
+         * @param errors Collection of errors encountered on this ComputeInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(List<MachineLearningServiceErrorResponse> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors Collection of errors encountered on this ComputeInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(MachineLearningServiceErrorResponse... errors) {
             return errors(List.of(errors));
         }
 
+        /**
+         * @param lastOperation The last operation on ComputeInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastOperation(ComputeInstanceLastOperationResponse lastOperation) {
             $.lastOperation = lastOperation;
             return this;
         }
 
+        /**
+         * @param personalComputeInstanceSettings Settings for a personal compute instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder personalComputeInstanceSettings(@Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings) {
             $.personalComputeInstanceSettings = personalComputeInstanceSettings;
             return this;
         }
 
+        /**
+         * @param setupScripts Details of customized scripts to execute for setting up the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setupScripts(@Nullable SetupScriptsResponse setupScripts) {
             $.setupScripts = setupScripts;
             return this;
         }
 
+        /**
+         * @param sshSettings Specifies policy and settings for SSH access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshSettings(@Nullable ComputeInstanceSshSettingsResponse sshSettings) {
             $.sshSettings = sshSettings;
             return this;
         }
 
+        /**
+         * @param state The current state of this ComputeInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param subnet Virtual network subnet resource ID the compute nodes belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable ResourceIdResponse subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param vmSize Virtual Machine Size
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(@Nullable String vmSize) {
             $.vmSize = vmSize;
             return this;

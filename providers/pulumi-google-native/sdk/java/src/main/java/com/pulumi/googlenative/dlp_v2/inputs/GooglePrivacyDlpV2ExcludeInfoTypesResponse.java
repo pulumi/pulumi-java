@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesResponse extends com.pulumi
     @Import(name="infoTypes", required=true)
     private List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
+    /**
+     * @return InfoType list in ExclusionRule rule drops a finding when it overlaps or contained within with a finding of an infoType from this list. For example, for `InspectionRuleSet.info_types` containing &#34;PHONE_NUMBER&#34;`and`exclusion_rule`containing`exclude_info_types.info_types` with &#34;EMAIL_ADDRESS&#34; the phone number findings are dropped if they overlap with EMAIL_ADDRESS finding. That leads to &#34;555-222-2222@example.org&#34; to generate only a single finding, namely email address.
+     * 
+     */
     public List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes() {
         return this.infoTypes;
     }
@@ -52,11 +56,23 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesResponse extends com.pulumi
             $ = new GooglePrivacyDlpV2ExcludeInfoTypesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param infoTypes InfoType list in ExclusionRule rule drops a finding when it overlaps or contained within with a finding of an infoType from this list. For example, for `InspectionRuleSet.info_types` containing &#34;PHONE_NUMBER&#34;`and`exclusion_rule`containing`exclude_info_types.info_types` with &#34;EMAIL_ADDRESS&#34; the phone number findings are dropped if they overlap with EMAIL_ADDRESS finding. That leads to &#34;555-222-2222@example.org&#34; to generate only a single finding, namely email address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
             $.infoTypes = infoTypes;
             return this;
         }
 
+        /**
+         * @param infoTypes InfoType list in ExclusionRule rule drops a finding when it overlaps or contained within with a finding of an infoType from this list. For example, for `InspectionRuleSet.info_types` containing &#34;PHONE_NUMBER&#34;`and`exclusion_rule`containing`exclude_info_types.info_types` with &#34;EMAIL_ADDRESS&#34; the phone number findings are dropped if they overlap with EMAIL_ADDRESS finding. That leads to &#34;555-222-2222@example.org&#34; to generate only a single finding, namely email address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(GooglePrivacyDlpV2InfoTypeResponse... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }

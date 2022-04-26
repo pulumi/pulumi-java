@@ -229,6 +229,10 @@ public final class RecipeParameters extends com.pulumi.resources.InvokeArgs {
     @Import(name="input")
     private @Nullable RecipeParametersInputProperties input;
 
+    /**
+     * @return Input
+     * 
+     */
     public Optional<RecipeParametersInputProperties> input() {
         return Optional.ofNullable(this.input);
     }
@@ -999,6 +1003,12 @@ public final class RecipeParameters extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param input Input
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(@Nullable RecipeParametersInputProperties input) {
             $.input = input;
             return this;

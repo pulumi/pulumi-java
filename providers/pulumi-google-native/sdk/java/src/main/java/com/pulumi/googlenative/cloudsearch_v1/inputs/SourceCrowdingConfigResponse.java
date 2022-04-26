@@ -23,6 +23,10 @@ public final class SourceCrowdingConfigResponse extends com.pulumi.resources.Inv
     @Import(name="numResults", required=true)
     private Integer numResults;
 
+    /**
+     * @return Maximum number of results allowed from a datasource in a result page as long as results from other sources are not exhausted. Value specified must not be negative. A default value is used if this value is equal to 0. To disable crowding, set the value greater than 100.
+     * 
+     */
     public Integer numResults() {
         return this.numResults;
     }
@@ -34,6 +38,10 @@ public final class SourceCrowdingConfigResponse extends com.pulumi.resources.Inv
     @Import(name="numSuggestions", required=true)
     private Integer numSuggestions;
 
+    /**
+     * @return Maximum number of suggestions allowed from a source. No limits will be set on results if this value is less than or equal to 0.
+     * 
+     */
     public Integer numSuggestions() {
         return this.numSuggestions;
     }
@@ -63,11 +71,23 @@ public final class SourceCrowdingConfigResponse extends com.pulumi.resources.Inv
             $ = new SourceCrowdingConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param numResults Maximum number of results allowed from a datasource in a result page as long as results from other sources are not exhausted. Value specified must not be negative. A default value is used if this value is equal to 0. To disable crowding, set the value greater than 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numResults(Integer numResults) {
             $.numResults = numResults;
             return this;
         }
 
+        /**
+         * @param numSuggestions Maximum number of suggestions allowed from a source. No limits will be set on results if this value is less than or equal to 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numSuggestions(Integer numSuggestions) {
             $.numSuggestions = numSuggestions;
             return this;

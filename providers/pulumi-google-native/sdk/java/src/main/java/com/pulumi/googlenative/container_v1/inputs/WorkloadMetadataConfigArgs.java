@@ -26,6 +26,10 @@ public final class WorkloadMetadataConfigArgs extends com.pulumi.resources.Resou
     @Import(name="mode")
     private @Nullable Output<WorkloadMetadataConfigMode> mode;
 
+    /**
+     * @return Mode is the configuration for how to expose metadata to workloads running on the node pool.
+     * 
+     */
     public Optional<Output<WorkloadMetadataConfigMode>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -54,11 +58,23 @@ public final class WorkloadMetadataConfigArgs extends com.pulumi.resources.Resou
             $ = new WorkloadMetadataConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode Mode is the configuration for how to expose metadata to workloads running on the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<WorkloadMetadataConfigMode> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Mode is the configuration for how to expose metadata to workloads running on the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(WorkloadMetadataConfigMode mode) {
             return mode(Output.of(mode));
         }

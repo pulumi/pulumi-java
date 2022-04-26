@@ -20,6 +20,10 @@ public final class PacketMirroringFilterResponse extends com.pulumi.resources.In
     @Import(name="cidrRanges", required=true)
     private List<String> cidrRanges;
 
+    /**
+     * @return IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
+     * 
+     */
     public List<String> cidrRanges() {
         return this.cidrRanges;
     }
@@ -31,6 +35,10 @@ public final class PacketMirroringFilterResponse extends com.pulumi.resources.In
     @Import(name="direction", required=true)
     private String direction;
 
+    /**
+     * @return Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.
+     * 
+     */
     public String direction() {
         return this.direction;
     }
@@ -42,6 +50,10 @@ public final class PacketMirroringFilterResponse extends com.pulumi.resources.In
     @Import(name="ipProtocols", required=true)
     private List<String> ipProtocols;
 
+    /**
+     * @return Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
+     * 
+     */
     public List<String> ipProtocols() {
         return this.ipProtocols;
     }
@@ -72,25 +84,55 @@ public final class PacketMirroringFilterResponse extends com.pulumi.resources.In
             $ = new PacketMirroringFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrRanges IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrRanges(List<String> cidrRanges) {
             $.cidrRanges = cidrRanges;
             return this;
         }
 
+        /**
+         * @param cidrRanges IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrRanges(String... cidrRanges) {
             return cidrRanges(List.of(cidrRanges));
         }
 
+        /**
+         * @param direction Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param ipProtocols Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipProtocols(List<String> ipProtocols) {
             $.ipProtocols = ipProtocols;
             return this;
         }
 
+        /**
+         * @param ipProtocols Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipProtocols(String... ipProtocols) {
             return ipProtocols(List.of(ipProtocols));
         }

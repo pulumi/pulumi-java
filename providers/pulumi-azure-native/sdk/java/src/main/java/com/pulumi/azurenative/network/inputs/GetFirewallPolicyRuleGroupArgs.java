@@ -19,6 +19,10 @@ public final class GetFirewallPolicyRuleGroupArgs extends com.pulumi.resources.I
     @Import(name="firewallPolicyName", required=true)
     private String firewallPolicyName;
 
+    /**
+     * @return The name of the Firewall Policy.
+     * 
+     */
     public String firewallPolicyName() {
         return this.firewallPolicyName;
     }
@@ -30,6 +34,10 @@ public final class GetFirewallPolicyRuleGroupArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetFirewallPolicyRuleGroupArgs extends com.pulumi.resources.I
     @Import(name="ruleGroupName", required=true)
     private String ruleGroupName;
 
+    /**
+     * @return The name of the FirewallPolicyRuleGroup.
+     * 
+     */
     public String ruleGroupName() {
         return this.ruleGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetFirewallPolicyRuleGroupArgs extends com.pulumi.resources.I
             $ = new GetFirewallPolicyRuleGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param firewallPolicyName The name of the Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallPolicyName(String firewallPolicyName) {
             $.firewallPolicyName = firewallPolicyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param ruleGroupName The name of the FirewallPolicyRuleGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupName(String ruleGroupName) {
             $.ruleGroupName = ruleGroupName;
             return this;

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApiResourceBackendServiceResponse {
     /**
-     * The service URL
+     * @return The service URL
      * 
      */
     private final @Nullable String serviceUrl;
@@ -23,9 +23,9 @@ public final class ApiResourceBackendServiceResponse {
     }
 
     /**
-     * The service URL
+     * @return The service URL
      * 
-    */
+     */
     public Optional<String> serviceUrl() {
         return Optional.ofNullable(this.serviceUrl);
     }

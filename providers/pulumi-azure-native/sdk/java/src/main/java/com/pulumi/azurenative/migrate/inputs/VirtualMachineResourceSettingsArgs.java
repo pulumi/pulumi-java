@@ -30,6 +30,11 @@ public final class VirtualMachineResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -41,6 +46,10 @@ public final class VirtualMachineResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="targetAvailabilitySetId")
     private @Nullable Output<String> targetAvailabilitySetId;
 
+    /**
+     * @return Gets or sets the target availability set id for virtual machines not in an availability set at source.
+     * 
+     */
     public Optional<Output<String>> targetAvailabilitySetId() {
         return Optional.ofNullable(this.targetAvailabilitySetId);
     }
@@ -52,6 +61,10 @@ public final class VirtualMachineResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="targetAvailabilityZone")
     private @Nullable Output<Either<String,TargetAvailabilityZone>> targetAvailabilityZone;
 
+    /**
+     * @return Gets or sets the target availability zone.
+     * 
+     */
     public Optional<Output<Either<String,TargetAvailabilityZone>>> targetAvailabilityZone() {
         return Optional.ofNullable(this.targetAvailabilityZone);
     }
@@ -63,6 +76,10 @@ public final class VirtualMachineResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="targetResourceName", required=true)
     private Output<String> targetResourceName;
 
+    /**
+     * @return Gets or sets the target Resource name.
+     * 
+     */
     public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
@@ -74,6 +91,10 @@ public final class VirtualMachineResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="targetVmSize")
     private @Nullable Output<String> targetVmSize;
 
+    /**
+     * @return Gets or sets the target virtual machine size.
+     * 
+     */
     public Optional<Output<String>> targetVmSize() {
         return Optional.ofNullable(this.targetVmSize);
     }
@@ -106,55 +127,129 @@ public final class VirtualMachineResourceSettingsArgs extends com.pulumi.resourc
             $ = new VirtualMachineResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param targetAvailabilitySetId Gets or sets the target availability set id for virtual machines not in an availability set at source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilitySetId(@Nullable Output<String> targetAvailabilitySetId) {
             $.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
+        /**
+         * @param targetAvailabilitySetId Gets or sets the target availability set id for virtual machines not in an availability set at source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilitySetId(String targetAvailabilitySetId) {
             return targetAvailabilitySetId(Output.of(targetAvailabilitySetId));
         }
 
+        /**
+         * @param targetAvailabilityZone Gets or sets the target availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilityZone(@Nullable Output<Either<String,TargetAvailabilityZone>> targetAvailabilityZone) {
             $.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
+        /**
+         * @param targetAvailabilityZone Gets or sets the target availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilityZone(Either<String,TargetAvailabilityZone> targetAvailabilityZone) {
             return targetAvailabilityZone(Output.of(targetAvailabilityZone));
         }
 
+        /**
+         * @param targetAvailabilityZone Gets or sets the target availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilityZone(String targetAvailabilityZone) {
             return targetAvailabilityZone(Either.ofLeft(targetAvailabilityZone));
         }
 
+        /**
+         * @param targetAvailabilityZone Gets or sets the target availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilityZone(TargetAvailabilityZone targetAvailabilityZone) {
             return targetAvailabilityZone(Either.ofRight(targetAvailabilityZone));
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(Output<String> targetResourceName) {
             $.targetResourceName = targetResourceName;
             return this;
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(String targetResourceName) {
             return targetResourceName(Output.of(targetResourceName));
         }
 
+        /**
+         * @param targetVmSize Gets or sets the target virtual machine size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVmSize(@Nullable Output<String> targetVmSize) {
             $.targetVmSize = targetVmSize;
             return this;
         }
 
+        /**
+         * @param targetVmSize Gets or sets the target virtual machine size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVmSize(String targetVmSize) {
             return targetVmSize(Output.of(targetVmSize));
         }

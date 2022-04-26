@@ -28,6 +28,10 @@ public final class JobStepExecutionOptionsArgs extends com.pulumi.resources.Reso
     @Import(name="initialRetryIntervalSeconds")
     private @Nullable Output<Integer> initialRetryIntervalSeconds;
 
+    /**
+     * @return Initial delay between retries for job step execution.
+     * 
+     */
     public Optional<Output<Integer>> initialRetryIntervalSeconds() {
         return Optional.ofNullable(this.initialRetryIntervalSeconds);
     }
@@ -39,6 +43,10 @@ public final class JobStepExecutionOptionsArgs extends com.pulumi.resources.Reso
     @Import(name="maximumRetryIntervalSeconds")
     private @Nullable Output<Integer> maximumRetryIntervalSeconds;
 
+    /**
+     * @return The maximum amount of time to wait between retries for job step execution.
+     * 
+     */
     public Optional<Output<Integer>> maximumRetryIntervalSeconds() {
         return Optional.ofNullable(this.maximumRetryIntervalSeconds);
     }
@@ -50,6 +58,10 @@ public final class JobStepExecutionOptionsArgs extends com.pulumi.resources.Reso
     @Import(name="retryAttempts")
     private @Nullable Output<Integer> retryAttempts;
 
+    /**
+     * @return Maximum number of times the job step will be reattempted if the first attempt fails.
+     * 
+     */
     public Optional<Output<Integer>> retryAttempts() {
         return Optional.ofNullable(this.retryAttempts);
     }
@@ -61,6 +73,10 @@ public final class JobStepExecutionOptionsArgs extends com.pulumi.resources.Reso
     @Import(name="retryIntervalBackoffMultiplier")
     private @Nullable Output<Double> retryIntervalBackoffMultiplier;
 
+    /**
+     * @return The backoff multiplier for the time between retries.
+     * 
+     */
     public Optional<Output<Double>> retryIntervalBackoffMultiplier() {
         return Optional.ofNullable(this.retryIntervalBackoffMultiplier);
     }
@@ -72,6 +88,10 @@ public final class JobStepExecutionOptionsArgs extends com.pulumi.resources.Reso
     @Import(name="timeoutSeconds")
     private @Nullable Output<Integer> timeoutSeconds;
 
+    /**
+     * @return Execution timeout for the job step.
+     * 
+     */
     public Optional<Output<Integer>> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
@@ -104,47 +124,107 @@ public final class JobStepExecutionOptionsArgs extends com.pulumi.resources.Reso
             $ = new JobStepExecutionOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param initialRetryIntervalSeconds Initial delay between retries for job step execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialRetryIntervalSeconds(@Nullable Output<Integer> initialRetryIntervalSeconds) {
             $.initialRetryIntervalSeconds = initialRetryIntervalSeconds;
             return this;
         }
 
+        /**
+         * @param initialRetryIntervalSeconds Initial delay between retries for job step execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialRetryIntervalSeconds(Integer initialRetryIntervalSeconds) {
             return initialRetryIntervalSeconds(Output.of(initialRetryIntervalSeconds));
         }
 
+        /**
+         * @param maximumRetryIntervalSeconds The maximum amount of time to wait between retries for job step execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumRetryIntervalSeconds(@Nullable Output<Integer> maximumRetryIntervalSeconds) {
             $.maximumRetryIntervalSeconds = maximumRetryIntervalSeconds;
             return this;
         }
 
+        /**
+         * @param maximumRetryIntervalSeconds The maximum amount of time to wait between retries for job step execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumRetryIntervalSeconds(Integer maximumRetryIntervalSeconds) {
             return maximumRetryIntervalSeconds(Output.of(maximumRetryIntervalSeconds));
         }
 
+        /**
+         * @param retryAttempts Maximum number of times the job step will be reattempted if the first attempt fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryAttempts(@Nullable Output<Integer> retryAttempts) {
             $.retryAttempts = retryAttempts;
             return this;
         }
 
+        /**
+         * @param retryAttempts Maximum number of times the job step will be reattempted if the first attempt fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryAttempts(Integer retryAttempts) {
             return retryAttempts(Output.of(retryAttempts));
         }
 
+        /**
+         * @param retryIntervalBackoffMultiplier The backoff multiplier for the time between retries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryIntervalBackoffMultiplier(@Nullable Output<Double> retryIntervalBackoffMultiplier) {
             $.retryIntervalBackoffMultiplier = retryIntervalBackoffMultiplier;
             return this;
         }
 
+        /**
+         * @param retryIntervalBackoffMultiplier The backoff multiplier for the time between retries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryIntervalBackoffMultiplier(Double retryIntervalBackoffMultiplier) {
             return retryIntervalBackoffMultiplier(Output.of(retryIntervalBackoffMultiplier));
         }
 
+        /**
+         * @param timeoutSeconds Execution timeout for the job step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             $.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
+        /**
+         * @param timeoutSeconds Execution timeout for the job step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             return timeoutSeconds(Output.of(timeoutSeconds));
         }

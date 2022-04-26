@@ -19,6 +19,10 @@ public final class GetConnectionMonitorArgs extends com.pulumi.resources.InvokeA
     @Import(name="connectionMonitorName", required=true)
     private String connectionMonitorName;
 
+    /**
+     * @return The name of the connection monitor.
+     * 
+     */
     public String connectionMonitorName() {
         return this.connectionMonitorName;
     }
@@ -30,6 +34,10 @@ public final class GetConnectionMonitorArgs extends com.pulumi.resources.InvokeA
     @Import(name="networkWatcherName", required=true)
     private String networkWatcherName;
 
+    /**
+     * @return The name of the Network Watcher resource.
+     * 
+     */
     public String networkWatcherName() {
         return this.networkWatcherName;
     }
@@ -41,6 +49,10 @@ public final class GetConnectionMonitorArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group containing Network Watcher.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetConnectionMonitorArgs extends com.pulumi.resources.InvokeA
             $ = new GetConnectionMonitorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionMonitorName The name of the connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionMonitorName(String connectionMonitorName) {
             $.connectionMonitorName = connectionMonitorName;
             return this;
         }
 
+        /**
+         * @param networkWatcherName The name of the Network Watcher resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkWatcherName(String networkWatcherName) {
             $.networkWatcherName = networkWatcherName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing Network Watcher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

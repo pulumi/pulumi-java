@@ -23,6 +23,10 @@ public final class ColorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="brightness", required=true)
     private Double brightness;
 
+    /**
+     * @return Control brightness of the video. Enter a value between -1 and 1, where -1 is minimum brightness and 1 is maximum brightness. 0 is no change. The default is 0.
+     * 
+     */
     public Double brightness() {
         return this.brightness;
     }
@@ -34,6 +38,10 @@ public final class ColorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="contrast", required=true)
     private Double contrast;
 
+    /**
+     * @return Control black and white contrast of the video. Enter a value between -1 and 1, where -1 is minimum contrast and 1 is maximum contrast. 0 is no change. The default is 0.
+     * 
+     */
     public Double contrast() {
         return this.contrast;
     }
@@ -45,6 +53,10 @@ public final class ColorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="saturation", required=true)
     private Double saturation;
 
+    /**
+     * @return Control color saturation of the video. Enter a value between -1 and 1, where -1 is fully desaturated and 1 is maximum saturation. 0 is no change. The default is 0.
+     * 
+     */
     public Double saturation() {
         return this.saturation;
     }
@@ -75,16 +87,34 @@ public final class ColorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ColorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param brightness Control brightness of the video. Enter a value between -1 and 1, where -1 is minimum brightness and 1 is maximum brightness. 0 is no change. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder brightness(Double brightness) {
             $.brightness = brightness;
             return this;
         }
 
+        /**
+         * @param contrast Control black and white contrast of the video. Enter a value between -1 and 1, where -1 is minimum contrast and 1 is maximum contrast. 0 is no change. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contrast(Double contrast) {
             $.contrast = contrast;
             return this;
         }
 
+        /**
+         * @param saturation Control color saturation of the video. Enter a value between -1 and 1, where -1 is fully desaturated and 1 is maximum saturation. 0 is no change. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saturation(Double saturation) {
             $.saturation = saturation;
             return this;

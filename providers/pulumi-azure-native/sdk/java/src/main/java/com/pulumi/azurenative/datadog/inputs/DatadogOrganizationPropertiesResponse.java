@@ -23,6 +23,10 @@ public final class DatadogOrganizationPropertiesResponse extends com.pulumi.reso
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Id of the Datadog organization.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -34,6 +38,10 @@ public final class DatadogOrganizationPropertiesResponse extends com.pulumi.reso
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the Datadog organization.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class DatadogOrganizationPropertiesResponse extends com.pulumi.reso
             $ = new DatadogOrganizationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Id of the Datadog organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the Datadog organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

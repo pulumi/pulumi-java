@@ -24,6 +24,10 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends com.pulu
     @Import(name="column", required=true)
     private String column;
 
+    /**
+     * @return Name of the column. Must be a UTF-8 string without dots (.). The maximum size is 64 bytes.
+     * 
+     */
     public String column() {
         return this.column;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends com.pulu
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Optional. Description of the column. Default value is an empty string. The description must be a UTF-8 string with the maximum size of 2000 bytes.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends com.pulu
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return Optional. A column&#39;s mode indicates whether values in this column are required, nullable, or repeated. Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported. Default mode is `NULLABLE`.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -57,6 +69,10 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends com.pulu
     @Import(name="subcolumns", required=true)
     private List<GoogleCloudDatacatalogV1ColumnSchemaResponse> subcolumns;
 
+    /**
+     * @return Optional. Schema of sub-columns. A column can have zero or more sub-columns.
+     * 
+     */
     public List<GoogleCloudDatacatalogV1ColumnSchemaResponse> subcolumns() {
         return this.subcolumns;
     }
@@ -68,6 +84,10 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends com.pulu
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the column. Must be a UTF-8 string with the maximum size of 128 bytes.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -100,30 +120,66 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends com.pulu
             $ = new GoogleCloudDatacatalogV1ColumnSchemaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param column Name of the column. Must be a UTF-8 string without dots (.). The maximum size is 64 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder column(String column) {
             $.column = column;
             return this;
         }
 
+        /**
+         * @param description Optional. Description of the column. Default value is an empty string. The description must be a UTF-8 string with the maximum size of 2000 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param mode Optional. A column&#39;s mode indicates whether values in this column are required, nullable, or repeated. Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported. Default mode is `NULLABLE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param subcolumns Optional. Schema of sub-columns. A column can have zero or more sub-columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subcolumns(List<GoogleCloudDatacatalogV1ColumnSchemaResponse> subcolumns) {
             $.subcolumns = subcolumns;
             return this;
         }
 
+        /**
+         * @param subcolumns Optional. Schema of sub-columns. A column can have zero or more sub-columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subcolumns(GoogleCloudDatacatalogV1ColumnSchemaResponse... subcolumns) {
             return subcolumns(List.of(subcolumns));
         }
 
+        /**
+         * @param type Type of the column. Must be a UTF-8 string with the maximum size of 128 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

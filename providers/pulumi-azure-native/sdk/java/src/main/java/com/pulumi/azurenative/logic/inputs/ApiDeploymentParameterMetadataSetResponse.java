@@ -25,6 +25,10 @@ public final class ApiDeploymentParameterMetadataSetResponse extends com.pulumi.
     @Import(name="packageContentLink")
     private @Nullable ApiDeploymentParameterMetadataResponse packageContentLink;
 
+    /**
+     * @return The package content link parameter.
+     * 
+     */
     public Optional<ApiDeploymentParameterMetadataResponse> packageContentLink() {
         return Optional.ofNullable(this.packageContentLink);
     }
@@ -36,6 +40,10 @@ public final class ApiDeploymentParameterMetadataSetResponse extends com.pulumi.
     @Import(name="redisCacheConnectionString")
     private @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString;
 
+    /**
+     * @return The package content link parameter.
+     * 
+     */
     public Optional<ApiDeploymentParameterMetadataResponse> redisCacheConnectionString() {
         return Optional.ofNullable(this.redisCacheConnectionString);
     }
@@ -65,11 +73,23 @@ public final class ApiDeploymentParameterMetadataSetResponse extends com.pulumi.
             $ = new ApiDeploymentParameterMetadataSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param packageContentLink The package content link parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageContentLink(@Nullable ApiDeploymentParameterMetadataResponse packageContentLink) {
             $.packageContentLink = packageContentLink;
             return this;
         }
 
+        /**
+         * @param redisCacheConnectionString The package content link parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redisCacheConnectionString(@Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString) {
             $.redisCacheConnectionString = redisCacheConnectionString;
             return this;

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FunctionEnvironment {
     /**
-     * Environment variable key-value pairs.
+     * @return Environment variable key-value pairs.
      * 
      */
     private final @Nullable Object variables;
@@ -23,9 +23,9 @@ public final class FunctionEnvironment {
     }
 
     /**
-     * Environment variable key-value pairs.
+     * @return Environment variable key-value pairs.
      * 
-    */
+     */
     public Optional<Object> variables() {
         return Optional.ofNullable(this.variables);
     }

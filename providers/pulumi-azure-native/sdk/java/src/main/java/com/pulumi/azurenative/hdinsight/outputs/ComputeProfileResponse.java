@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ComputeProfileResponse {
     /**
-     * The list of roles in the cluster.
+     * @return The list of roles in the cluster.
      * 
      */
     private final @Nullable List<RoleResponse> roles;
@@ -23,9 +23,9 @@ public final class ComputeProfileResponse {
     }
 
     /**
-     * The list of roles in the cluster.
+     * @return The list of roles in the cluster.
      * 
-    */
+     */
     public List<RoleResponse> roles() {
         return this.roles == null ? List.of() : this.roles;
     }

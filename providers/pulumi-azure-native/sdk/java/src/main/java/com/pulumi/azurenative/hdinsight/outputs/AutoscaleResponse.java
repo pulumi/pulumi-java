@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AutoscaleResponse {
     /**
-     * Parameters for load-based autoscale
+     * @return Parameters for load-based autoscale
      * 
      */
     private final @Nullable AutoscaleCapacityResponse capacity;
     /**
-     * Parameters for schedule-based autoscale
+     * @return Parameters for schedule-based autoscale
      * 
      */
     private final @Nullable AutoscaleRecurrenceResponse recurrence;
@@ -32,16 +32,16 @@ public final class AutoscaleResponse {
     }
 
     /**
-     * Parameters for load-based autoscale
+     * @return Parameters for load-based autoscale
      * 
-    */
+     */
     public Optional<AutoscaleCapacityResponse> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * Parameters for schedule-based autoscale
+     * @return Parameters for schedule-based autoscale
      * 
-    */
+     */
     public Optional<AutoscaleRecurrenceResponse> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }

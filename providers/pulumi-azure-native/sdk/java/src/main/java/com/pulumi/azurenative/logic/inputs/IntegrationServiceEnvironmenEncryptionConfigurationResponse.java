@@ -25,6 +25,10 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse e
     @Import(name="encryptionKeyReference")
     private @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference;
 
+    /**
+     * @return The encryption key reference.
+     * 
+     */
     public Optional<IntegrationServiceEnvironmenEncryptionKeyReferenceResponse> encryptionKeyReference() {
         return Optional.ofNullable(this.encryptionKeyReference);
     }
@@ -53,6 +57,12 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse e
             $ = new IntegrationServiceEnvironmenEncryptionConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionKeyReference The encryption key reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKeyReference(@Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference) {
             $.encryptionKeyReference = encryptionKeyReference;
             return this;

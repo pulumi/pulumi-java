@@ -17,37 +17,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MongoDBCollectionGetPropertiesResponseResource {
     /**
-     * Analytical TTL.
+     * @return Analytical TTL.
      * 
      */
     private final @Nullable Integer analyticalStorageTtl;
     /**
-     * A system generated property representing the resource etag required for optimistic concurrency control.
+     * @return A system generated property representing the resource etag required for optimistic concurrency control.
      * 
      */
     private final String etag;
     /**
-     * Name of the Cosmos DB MongoDB collection
+     * @return Name of the Cosmos DB MongoDB collection
      * 
      */
     private final String id;
     /**
-     * List of index keys
+     * @return List of index keys
      * 
      */
     private final @Nullable List<MongoIndexResponse> indexes;
     /**
-     * A system generated property. A unique identifier.
+     * @return A system generated property. A unique identifier.
      * 
      */
     private final String rid;
     /**
-     * A key-value pair of shard keys to be applied for the request.
+     * @return A key-value pair of shard keys to be applied for the request.
      * 
      */
     private final @Nullable Map<String,String> shardKey;
     /**
-     * A system generated property that denotes the last updated timestamp of the resource.
+     * @return A system generated property that denotes the last updated timestamp of the resource.
      * 
      */
     private final Double ts;
@@ -71,51 +71,51 @@ public final class MongoDBCollectionGetPropertiesResponseResource {
     }
 
     /**
-     * Analytical TTL.
+     * @return Analytical TTL.
      * 
-    */
+     */
     public Optional<Integer> analyticalStorageTtl() {
         return Optional.ofNullable(this.analyticalStorageTtl);
     }
     /**
-     * A system generated property representing the resource etag required for optimistic concurrency control.
+     * @return A system generated property representing the resource etag required for optimistic concurrency control.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Name of the Cosmos DB MongoDB collection
+     * @return Name of the Cosmos DB MongoDB collection
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * List of index keys
+     * @return List of index keys
      * 
-    */
+     */
     public List<MongoIndexResponse> indexes() {
         return this.indexes == null ? List.of() : this.indexes;
     }
     /**
-     * A system generated property. A unique identifier.
+     * @return A system generated property. A unique identifier.
      * 
-    */
+     */
     public String rid() {
         return this.rid;
     }
     /**
-     * A key-value pair of shard keys to be applied for the request.
+     * @return A key-value pair of shard keys to be applied for the request.
      * 
-    */
+     */
     public Map<String,String> shardKey() {
         return this.shardKey == null ? Map.of() : this.shardKey;
     }
     /**
-     * A system generated property that denotes the last updated timestamp of the resource.
+     * @return A system generated property that denotes the last updated timestamp of the resource.
      * 
-    */
+     */
     public Double ts() {
         return this.ts;
     }

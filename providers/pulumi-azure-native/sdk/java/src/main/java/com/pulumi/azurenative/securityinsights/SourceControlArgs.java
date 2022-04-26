@@ -28,6 +28,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentTypes", required=true)
     private Output<List<Either<String,ContentType>>> contentTypes;
 
+    /**
+     * @return Array of source control content types.
+     * 
+     */
     public Output<List<Either<String,ContentType>>> contentTypes() {
         return this.contentTypes;
     }
@@ -39,6 +43,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
     private @Nullable Output<String> createdAt;
 
+    /**
+     * @return The timestamp of resource creation (UTC).
+     * 
+     */
     public Optional<Output<String>> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -50,6 +58,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
     private @Nullable Output<String> createdBy;
 
+    /**
+     * @return The identity that created the resource.
+     * 
+     */
     public Optional<Output<String>> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
@@ -61,6 +73,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdByType")
     private @Nullable Output<Either<String,CreatedByType>> createdByType;
 
+    /**
+     * @return The type of identity that created the resource.
+     * 
+     */
     public Optional<Output<Either<String,CreatedByType>>> createdByType() {
         return Optional.ofNullable(this.createdByType);
     }
@@ -72,6 +88,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the source control
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -83,6 +103,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The display name of the source control
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -94,6 +118,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The id (a Guid) of the source control
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -105,6 +133,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedAt")
     private @Nullable Output<String> lastModifiedAt;
 
+    /**
+     * @return The timestamp of resource last modification (UTC)
+     * 
+     */
     public Optional<Output<String>> lastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
@@ -116,6 +148,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedBy")
     private @Nullable Output<String> lastModifiedBy;
 
+    /**
+     * @return The identity that last modified the resource.
+     * 
+     */
     public Optional<Output<String>> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
@@ -127,6 +163,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedByType")
     private @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
+    /**
+     * @return The type of identity that last modified the resource.
+     * 
+     */
     public Optional<Output<Either<String,CreatedByType>>> lastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
@@ -138,6 +178,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
     private Output<String> operationalInsightsResourceProvider;
 
+    /**
+     * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
@@ -149,6 +193,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repoType", required=true)
     private Output<Either<String,RepoType>> repoType;
 
+    /**
+     * @return The repository type of the source control
+     * 
+     */
     public Output<Either<String,RepoType>> repoType() {
         return this.repoType;
     }
@@ -160,6 +208,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repository", required=true)
     private Output<RepositoryArgs> repository;
 
+    /**
+     * @return Repository metadata.
+     * 
+     */
     public Output<RepositoryArgs> repository() {
         return this.repository;
     }
@@ -171,6 +223,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -182,6 +238,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceControlId")
     private @Nullable Output<String> sourceControlId;
 
+    /**
+     * @return Source control Id
+     * 
+     */
     public Optional<Output<String>> sourceControlId() {
         return Optional.ofNullable(this.sourceControlId);
     }
@@ -193,6 +253,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -236,174 +300,408 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SourceControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentTypes Array of source control content types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentTypes(Output<List<Either<String,ContentType>>> contentTypes) {
             $.contentTypes = contentTypes;
             return this;
         }
 
+        /**
+         * @param contentTypes Array of source control content types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentTypes(List<Either<String,ContentType>> contentTypes) {
             return contentTypes(Output.of(contentTypes));
         }
 
+        /**
+         * @param contentTypes Array of source control content types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentTypes(Either<String,ContentType>... contentTypes) {
             return contentTypes(List.of(contentTypes));
         }
 
+        /**
+         * @param createdAt The timestamp of resource creation (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(@Nullable Output<String> createdAt) {
             $.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * @param createdAt The timestamp of resource creation (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(String createdAt) {
             return createdAt(Output.of(createdAt));
         }
 
+        /**
+         * @param createdBy The identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(@Nullable Output<String> createdBy) {
             $.createdBy = createdBy;
             return this;
         }
 
+        /**
+         * @param createdBy The identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(String createdBy) {
             return createdBy(Output.of(createdBy));
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
             $.createdByType = createdByType;
             return this;
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(Either<String,CreatedByType> createdByType) {
             return createdByType(Output.of(createdByType));
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(String createdByType) {
             return createdByType(Either.ofLeft(createdByType));
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(CreatedByType createdByType) {
             return createdByType(Either.ofRight(createdByType));
         }
 
+        /**
+         * @param description A description of the source control
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the source control
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The display name of the source control
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the source control
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param id The id (a Guid) of the source control
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The id (a Guid) of the source control
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param lastModifiedAt The timestamp of resource last modification (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             $.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
+        /**
+         * @param lastModifiedAt The timestamp of resource last modification (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedAt(String lastModifiedAt) {
             return lastModifiedAt(Output.of(lastModifiedAt));
         }
 
+        /**
+         * @param lastModifiedBy The identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
             $.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
+        /**
+         * @param lastModifiedBy The identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedBy(String lastModifiedBy) {
             return lastModifiedBy(Output.of(lastModifiedBy));
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
             $.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(Either<String,CreatedByType> lastModifiedByType) {
             return lastModifiedByType(Output.of(lastModifiedByType));
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(String lastModifiedByType) {
             return lastModifiedByType(Either.ofLeft(lastModifiedByType));
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(CreatedByType lastModifiedByType) {
             return lastModifiedByType(Either.ofRight(lastModifiedByType));
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
 
+        /**
+         * @param repoType The repository type of the source control
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoType(Output<Either<String,RepoType>> repoType) {
             $.repoType = repoType;
             return this;
         }
 
+        /**
+         * @param repoType The repository type of the source control
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoType(Either<String,RepoType> repoType) {
             return repoType(Output.of(repoType));
         }
 
+        /**
+         * @param repoType The repository type of the source control
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoType(String repoType) {
             return repoType(Either.ofLeft(repoType));
         }
 
+        /**
+         * @param repoType The repository type of the source control
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoType(RepoType repoType) {
             return repoType(Either.ofRight(repoType));
         }
 
+        /**
+         * @param repository Repository metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(Output<RepositoryArgs> repository) {
             $.repository = repository;
             return this;
         }
 
+        /**
+         * @param repository Repository metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(RepositoryArgs repository) {
             return repository(Output.of(repository));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sourceControlId Source control Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceControlId(@Nullable Output<String> sourceControlId) {
             $.sourceControlId = sourceControlId;
             return this;
         }
 
+        /**
+         * @param sourceControlId Source control Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceControlId(String sourceControlId) {
             return sourceControlId(Output.of(sourceControlId));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

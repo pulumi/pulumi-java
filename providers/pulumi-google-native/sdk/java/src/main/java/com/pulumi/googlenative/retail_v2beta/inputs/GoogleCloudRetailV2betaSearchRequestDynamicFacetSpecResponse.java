@@ -23,6 +23,10 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse 
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it&#39;s unset.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse 
             $ = new GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it&#39;s unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;

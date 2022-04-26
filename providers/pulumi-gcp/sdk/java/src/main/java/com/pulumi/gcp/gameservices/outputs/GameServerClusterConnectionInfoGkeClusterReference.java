@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GameServerClusterConnectionInfoGkeClusterReference {
     /**
-     * The full or partial name of a GKE cluster, using one of the following
+     * @return The full or partial name of a GKE cluster, using one of the following
      * forms:
      * * `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
      * * `locations/{location}/clusters/{cluster_id}`
@@ -28,7 +28,7 @@ public final class GameServerClusterConnectionInfoGkeClusterReference {
     }
 
     /**
-     * The full or partial name of a GKE cluster, using one of the following
+     * @return The full or partial name of a GKE cluster, using one of the following
      * forms:
      * * `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
      * * `locations/{location}/clusters/{cluster_id}`
@@ -37,7 +37,7 @@ public final class GameServerClusterConnectionInfoGkeClusterReference {
      *   GameServerCluster resource are used to generate the full name of the
      *   GKE cluster.
      * 
-    */
+     */
     public String cluster() {
         return this.cluster;
     }

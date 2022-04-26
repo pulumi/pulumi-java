@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SearchResultsResponse {
     /**
-     * Search results table&#39;s Description.
+     * @return Search results table&#39;s Description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The timestamp to end the search by (UTC)
+     * @return The timestamp to end the search by (UTC)
      * 
      */
     private final @Nullable String endSearchTime;
     /**
-     * Limit the search job to return up to specified number of rows.
+     * @return Limit the search job to return up to specified number of rows.
      * 
      */
     private final @Nullable Integer limit;
     /**
-     * Search job query.
+     * @return Search job query.
      * 
      */
     private final @Nullable String query;
     /**
-     * The table to search data from.
+     * @return The table to search data from.
      * 
      */
     private final String sourceTable;
     /**
-     * The timestamp to start the search from (UTC)
+     * @return The timestamp to start the search from (UTC)
      * 
      */
     private final @Nullable String startSearchTime;
@@ -60,44 +60,44 @@ public final class SearchResultsResponse {
     }
 
     /**
-     * Search results table&#39;s Description.
+     * @return Search results table&#39;s Description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The timestamp to end the search by (UTC)
+     * @return The timestamp to end the search by (UTC)
      * 
-    */
+     */
     public Optional<String> endSearchTime() {
         return Optional.ofNullable(this.endSearchTime);
     }
     /**
-     * Limit the search job to return up to specified number of rows.
+     * @return Limit the search job to return up to specified number of rows.
      * 
-    */
+     */
     public Optional<Integer> limit() {
         return Optional.ofNullable(this.limit);
     }
     /**
-     * Search job query.
+     * @return Search job query.
      * 
-    */
+     */
     public Optional<String> query() {
         return Optional.ofNullable(this.query);
     }
     /**
-     * The table to search data from.
+     * @return The table to search data from.
      * 
-    */
+     */
     public String sourceTable() {
         return this.sourceTable;
     }
     /**
-     * The timestamp to start the search from (UTC)
+     * @return The timestamp to start the search from (UTC)
      * 
-    */
+     */
     public Optional<String> startSearchTime() {
         return Optional.ofNullable(this.startSearchTime);
     }

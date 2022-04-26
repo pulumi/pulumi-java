@@ -24,6 +24,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkInterfaces")
     private @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
+    /**
+     * @return Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
+     * 
+     */
     public Optional<Output<List<NetworkInterfaceArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
@@ -35,6 +39,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="subnet")
     private @Nullable Output<ApiEntityReferenceArgs> subnet;
 
+    /**
+     * @return Specifies the identifier of the subnet.
+     * 
+     */
     public Optional<Output<ApiEntityReferenceArgs>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -64,24 +72,54 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new NetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkInterfaces Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(List<NetworkInterfaceArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
+        /**
+         * @param networkInterfaces Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
+        /**
+         * @param subnet Specifies the identifier of the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<ApiEntityReferenceArgs> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet Specifies the identifier of the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(ApiEntityReferenceArgs subnet) {
             return subnet(Output.of(subnet));
         }

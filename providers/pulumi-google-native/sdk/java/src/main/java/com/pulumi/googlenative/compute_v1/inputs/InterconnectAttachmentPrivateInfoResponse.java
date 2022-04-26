@@ -23,6 +23,10 @@ public final class InterconnectAttachmentPrivateInfoResponse extends com.pulumi.
     @Import(name="tag8021q", required=true)
     private Integer tag8021q;
 
+    /**
+     * @return 802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.
+     * 
+     */
     public Integer tag8021q() {
         return this.tag8021q;
     }
@@ -51,6 +55,12 @@ public final class InterconnectAttachmentPrivateInfoResponse extends com.pulumi.
             $ = new InterconnectAttachmentPrivateInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tag8021q 802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag8021q(Integer tag8021q) {
             $.tag8021q = tag8021q;
             return this;

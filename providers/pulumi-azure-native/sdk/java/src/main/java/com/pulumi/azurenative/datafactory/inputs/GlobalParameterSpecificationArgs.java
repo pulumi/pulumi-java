@@ -27,6 +27,10 @@ public final class GlobalParameterSpecificationArgs extends com.pulumi.resources
     @Import(name="type", required=true)
     private Output<Either<String,GlobalParameterType>> type;
 
+    /**
+     * @return Global Parameter type.
+     * 
+     */
     public Output<Either<String,GlobalParameterType>> type() {
         return this.type;
     }
@@ -38,6 +42,10 @@ public final class GlobalParameterSpecificationArgs extends com.pulumi.resources
     @Import(name="value", required=true)
     private Output<Object> value;
 
+    /**
+     * @return Value of parameter.
+     * 
+     */
     public Output<Object> value() {
         return this.value;
     }
@@ -67,28 +75,64 @@ public final class GlobalParameterSpecificationArgs extends com.pulumi.resources
             $ = new GlobalParameterSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Global Parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,GlobalParameterType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Global Parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,GlobalParameterType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Global Parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Global Parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(GlobalParameterType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param value Value of parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<Object> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value of parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Object value) {
             return value(Output.of(value));
         }

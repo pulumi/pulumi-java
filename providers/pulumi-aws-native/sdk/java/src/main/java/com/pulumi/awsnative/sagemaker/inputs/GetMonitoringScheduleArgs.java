@@ -19,6 +19,10 @@ public final class GetMonitoringScheduleArgs extends com.pulumi.resources.Invoke
     @Import(name="monitoringScheduleArn", required=true)
     private String monitoringScheduleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the monitoring schedule.
+     * 
+     */
     public String monitoringScheduleArn() {
         return this.monitoringScheduleArn;
     }
@@ -47,6 +51,12 @@ public final class GetMonitoringScheduleArgs extends com.pulumi.resources.Invoke
             $ = new GetMonitoringScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param monitoringScheduleArn The Amazon Resource Name (ARN) of the monitoring schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringScheduleArn(String monitoringScheduleArn) {
             $.monitoringScheduleArn = monitoringScheduleArn;
             return this;

@@ -19,6 +19,10 @@ public final class GetSqlServerRegistrationArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetSqlServerRegistrationArgs extends com.pulumi.resources.Inv
     @Import(name="sqlServerRegistrationName", required=true)
     private String sqlServerRegistrationName;
 
+    /**
+     * @return Name of the SQL Server registration.
+     * 
+     */
     public String sqlServerRegistrationName() {
         return this.sqlServerRegistrationName;
     }
@@ -59,11 +67,23 @@ public final class GetSqlServerRegistrationArgs extends com.pulumi.resources.Inv
             $ = new GetSqlServerRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param sqlServerRegistrationName Name of the SQL Server registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerRegistrationName(String sqlServerRegistrationName) {
             $.sqlServerRegistrationName = sqlServerRegistrationName;
             return this;

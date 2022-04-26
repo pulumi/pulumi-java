@@ -28,6 +28,10 @@ public final class ManagementPolicyFilterArgs extends com.pulumi.resources.Resou
     @Import(name="blobIndexMatch")
     private @Nullable Output<List<TagFilterArgs>> blobIndexMatch;
 
+    /**
+     * @return An array of blob index tag based filters, there can be at most 10 tag filters
+     * 
+     */
     public Optional<Output<List<TagFilterArgs>>> blobIndexMatch() {
         return Optional.ofNullable(this.blobIndexMatch);
     }
@@ -39,6 +43,10 @@ public final class ManagementPolicyFilterArgs extends com.pulumi.resources.Resou
     @Import(name="blobTypes", required=true)
     private Output<List<String>> blobTypes;
 
+    /**
+     * @return An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
+     * 
+     */
     public Output<List<String>> blobTypes() {
         return this.blobTypes;
     }
@@ -50,6 +58,10 @@ public final class ManagementPolicyFilterArgs extends com.pulumi.resources.Resou
     @Import(name="prefixMatch")
     private @Nullable Output<List<String>> prefixMatch;
 
+    /**
+     * @return An array of strings for prefixes to be match.
+     * 
+     */
     public Optional<Output<List<String>>> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
@@ -80,41 +92,95 @@ public final class ManagementPolicyFilterArgs extends com.pulumi.resources.Resou
             $ = new ManagementPolicyFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobIndexMatch An array of blob index tag based filters, there can be at most 10 tag filters
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobIndexMatch(@Nullable Output<List<TagFilterArgs>> blobIndexMatch) {
             $.blobIndexMatch = blobIndexMatch;
             return this;
         }
 
+        /**
+         * @param blobIndexMatch An array of blob index tag based filters, there can be at most 10 tag filters
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobIndexMatch(List<TagFilterArgs> blobIndexMatch) {
             return blobIndexMatch(Output.of(blobIndexMatch));
         }
 
+        /**
+         * @param blobIndexMatch An array of blob index tag based filters, there can be at most 10 tag filters
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobIndexMatch(TagFilterArgs... blobIndexMatch) {
             return blobIndexMatch(List.of(blobIndexMatch));
         }
 
+        /**
+         * @param blobTypes An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobTypes(Output<List<String>> blobTypes) {
             $.blobTypes = blobTypes;
             return this;
         }
 
+        /**
+         * @param blobTypes An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobTypes(List<String> blobTypes) {
             return blobTypes(Output.of(blobTypes));
         }
 
+        /**
+         * @param blobTypes An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobTypes(String... blobTypes) {
             return blobTypes(List.of(blobTypes));
         }
 
+        /**
+         * @param prefixMatch An array of strings for prefixes to be match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(@Nullable Output<List<String>> prefixMatch) {
             $.prefixMatch = prefixMatch;
             return this;
         }
 
+        /**
+         * @param prefixMatch An array of strings for prefixes to be match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(List<String> prefixMatch) {
             return prefixMatch(Output.of(prefixMatch));
         }
 
+        /**
+         * @param prefixMatch An array of strings for prefixes to be match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(String... prefixMatch) {
             return prefixMatch(List.of(prefixMatch));
         }

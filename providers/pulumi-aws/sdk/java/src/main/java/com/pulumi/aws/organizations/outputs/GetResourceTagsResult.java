@@ -11,13 +11,13 @@ import java.util.Objects;
 @CustomType
 public final class GetResourceTagsResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String resourceId;
     /**
-     * Map of key=value pairs for each tag set on the resource.
+     * @return Map of key=value pairs for each tag set on the resource.
      * 
      */
     private final Map<String,String> tags;
@@ -33,9 +33,9 @@ public final class GetResourceTagsResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -43,9 +43,9 @@ public final class GetResourceTagsResult {
         return this.resourceId;
     }
     /**
-     * Map of key=value pairs for each tag set on the resource.
+     * @return Map of key=value pairs for each tag set on the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

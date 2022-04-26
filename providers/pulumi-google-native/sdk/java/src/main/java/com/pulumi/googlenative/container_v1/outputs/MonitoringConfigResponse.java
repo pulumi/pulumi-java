@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class MonitoringConfigResponse {
     /**
-     * Monitoring components configuration
+     * @return Monitoring components configuration
      * 
      */
     private final MonitoringComponentConfigResponse componentConfig;
@@ -21,9 +21,9 @@ public final class MonitoringConfigResponse {
     }
 
     /**
-     * Monitoring components configuration
+     * @return Monitoring components configuration
      * 
-    */
+     */
     public MonitoringComponentConfigResponse componentConfig() {
         return this.componentConfig;
     }

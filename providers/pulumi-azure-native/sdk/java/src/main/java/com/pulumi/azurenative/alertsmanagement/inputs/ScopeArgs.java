@@ -29,6 +29,10 @@ public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scopeType")
     private @Nullable Output<Either<String,ScopeType>> scopeType;
 
+    /**
+     * @return type of target scope
+     * 
+     */
     public Optional<Output<Either<String,ScopeType>>> scopeType() {
         return Optional.ofNullable(this.scopeType);
     }
@@ -40,6 +44,10 @@ public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="values")
     private @Nullable Output<List<String>> values;
 
+    /**
+     * @return list of ARM IDs of the given scope type which will be the target of the given action rule.
+     * 
+     */
     public Optional<Output<List<String>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -69,32 +77,74 @@ public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scopeType type of target scope
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeType(@Nullable Output<Either<String,ScopeType>> scopeType) {
             $.scopeType = scopeType;
             return this;
         }
 
+        /**
+         * @param scopeType type of target scope
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeType(Either<String,ScopeType> scopeType) {
             return scopeType(Output.of(scopeType));
         }
 
+        /**
+         * @param scopeType type of target scope
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeType(String scopeType) {
             return scopeType(Either.ofLeft(scopeType));
         }
 
+        /**
+         * @param scopeType type of target scope
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeType(ScopeType scopeType) {
             return scopeType(Either.ofRight(scopeType));
         }
 
+        /**
+         * @param values list of ARM IDs of the given scope type which will be the target of the given action rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values list of ARM IDs of the given scope type which will be the target of the given action rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values list of ARM IDs of the given scope type which will be the target of the given action rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

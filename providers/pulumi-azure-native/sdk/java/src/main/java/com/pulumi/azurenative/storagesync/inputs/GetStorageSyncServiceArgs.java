@@ -19,6 +19,10 @@ public final class GetStorageSyncServiceArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetStorageSyncServiceArgs extends com.pulumi.resources.Invoke
     @Import(name="storageSyncServiceName", required=true)
     private String storageSyncServiceName;
 
+    /**
+     * @return Name of Storage Sync Service resource.
+     * 
+     */
     public String storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
@@ -59,11 +67,23 @@ public final class GetStorageSyncServiceArgs extends com.pulumi.resources.Invoke
             $ = new GetStorageSyncServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param storageSyncServiceName Name of Storage Sync Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSyncServiceName(String storageSyncServiceName) {
             $.storageSyncServiceName = storageSyncServiceName;
             return this;

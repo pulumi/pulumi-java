@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class LiteSubscriptionDeliveryConfig {
     /**
-     * When this subscription should send messages to subscribers relative to messages persistence in storage.
+     * @return When this subscription should send messages to subscribers relative to messages persistence in storage.
      * Possible values are `DELIVER_IMMEDIATELY`, `DELIVER_AFTER_STORED`, and `DELIVERY_REQUIREMENT_UNSPECIFIED`.
      * 
      */
@@ -22,10 +22,10 @@ public final class LiteSubscriptionDeliveryConfig {
     }
 
     /**
-     * When this subscription should send messages to subscribers relative to messages persistence in storage.
+     * @return When this subscription should send messages to subscribers relative to messages persistence in storage.
      * Possible values are `DELIVER_IMMEDIATELY`, `DELIVER_AFTER_STORED`, and `DELIVERY_REQUIREMENT_UNSPECIFIED`.
      * 
-    */
+     */
     public String deliveryRequirement() {
         return this.deliveryRequirement;
     }

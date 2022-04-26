@@ -26,6 +26,10 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesArgs exten
     @Import(name="functionAlias")
     private @Nullable Output<String> functionAlias;
 
+    /**
+     * @return A function alias, used when the type of the item is Function
+     * 
+     */
     public Optional<Output<String>> functionAlias() {
         return Optional.ofNullable(this.functionAlias);
     }
@@ -54,11 +58,23 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesArgs exten
             $ = new ApplicationInsightsComponentAnalyticsItemPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functionAlias A function alias, used when the type of the item is Function
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAlias(@Nullable Output<String> functionAlias) {
             $.functionAlias = functionAlias;
             return this;
         }
 
+        /**
+         * @param functionAlias A function alias, used when the type of the item is Function
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAlias(String functionAlias) {
             return functionAlias(Output.of(functionAlias));
         }

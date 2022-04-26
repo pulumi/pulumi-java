@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DatasetParameter {
     /**
-     * Add the value of this parameter as a column in a dataset.
+     * @return Add the value of this parameter as a column in a dataset.
      * 
      */
     private final @Nullable Boolean createColumn;
@@ -24,7 +24,7 @@ public final class DatasetParameter {
     private final @Nullable DatasetFilterExpression filter;
     private final String name;
     /**
-     * Parameter type
+     * @return Parameter type
      * 
      */
     private final DatasetParameterType type;
@@ -44,9 +44,9 @@ public final class DatasetParameter {
     }
 
     /**
-     * Add the value of this parameter as a column in a dataset.
+     * @return Add the value of this parameter as a column in a dataset.
      * 
-    */
+     */
     public Optional<Boolean> createColumn() {
         return Optional.ofNullable(this.createColumn);
     }
@@ -60,9 +60,9 @@ public final class DatasetParameter {
         return this.name;
     }
     /**
-     * Parameter type
+     * @return Parameter type
      * 
-    */
+     */
     public DatasetParameterType type() {
         return this.type;
     }

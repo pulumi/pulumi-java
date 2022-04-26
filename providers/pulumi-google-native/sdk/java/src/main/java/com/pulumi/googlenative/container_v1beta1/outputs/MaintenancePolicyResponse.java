@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class MaintenancePolicyResponse {
     /**
-     * A hash identifying the version of this policy, so that updates to fields of the policy won&#39;t accidentally undo intermediate changes (and so that users of the API unaware of some fields won&#39;t accidentally remove other fields). Make a `get()` request to the cluster to get the current resource version and include it with requests to set the policy.
+     * @return A hash identifying the version of this policy, so that updates to fields of the policy won&#39;t accidentally undo intermediate changes (and so that users of the API unaware of some fields won&#39;t accidentally remove other fields). Make a `get()` request to the cluster to get the current resource version and include it with requests to set the policy.
      * 
      */
     private final String resourceVersion;
     /**
-     * Specifies the maintenance window in which maintenance may be performed.
+     * @return Specifies the maintenance window in which maintenance may be performed.
      * 
      */
     private final MaintenanceWindowResponse window;
@@ -30,16 +30,16 @@ public final class MaintenancePolicyResponse {
     }
 
     /**
-     * A hash identifying the version of this policy, so that updates to fields of the policy won&#39;t accidentally undo intermediate changes (and so that users of the API unaware of some fields won&#39;t accidentally remove other fields). Make a `get()` request to the cluster to get the current resource version and include it with requests to set the policy.
+     * @return A hash identifying the version of this policy, so that updates to fields of the policy won&#39;t accidentally undo intermediate changes (and so that users of the API unaware of some fields won&#39;t accidentally remove other fields). Make a `get()` request to the cluster to get the current resource version and include it with requests to set the policy.
      * 
-    */
+     */
     public String resourceVersion() {
         return this.resourceVersion;
     }
     /**
-     * Specifies the maintenance window in which maintenance may be performed.
+     * @return Specifies the maintenance window in which maintenance may be performed.
      * 
-    */
+     */
     public MaintenanceWindowResponse window() {
         return this.window;
     }

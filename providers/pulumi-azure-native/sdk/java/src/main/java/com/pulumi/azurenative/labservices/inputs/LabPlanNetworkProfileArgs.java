@@ -26,6 +26,10 @@ public final class LabPlanNetworkProfileArgs extends com.pulumi.resources.Resour
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
+    /**
+     * @return The external subnet resource id
+     * 
+     */
     public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -54,11 +58,23 @@ public final class LabPlanNetworkProfileArgs extends com.pulumi.resources.Resour
             $ = new LabPlanNetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subnetId The external subnet resource id
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The external subnet resource id
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }

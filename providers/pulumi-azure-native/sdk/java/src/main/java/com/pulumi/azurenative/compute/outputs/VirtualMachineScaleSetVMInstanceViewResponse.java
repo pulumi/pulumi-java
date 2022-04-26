@@ -21,62 +21,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualMachineScaleSetVMInstanceViewResponse {
     /**
-     * Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
+     * @return Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
      * 
      */
     private final String assignedHost;
     /**
-     * Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. &lt;br&gt;&lt;br&gt; You can easily view the output of your console log. &lt;br&gt;&lt;br&gt; Azure also enables you to see a screenshot of the VM from the hypervisor.
+     * @return Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. &lt;br&gt;&lt;br&gt; You can easily view the output of your console log. &lt;br&gt;&lt;br&gt; Azure also enables you to see a screenshot of the VM from the hypervisor.
      * 
      */
     private final @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics;
     /**
-     * The disks information.
+     * @return The disks information.
      * 
      */
     private final @Nullable List<DiskInstanceViewResponse> disks;
     /**
-     * The extensions information.
+     * @return The extensions information.
      * 
      */
     private final @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions;
     /**
-     * The Maintenance Operation status on the virtual machine.
+     * @return The Maintenance Operation status on the virtual machine.
      * 
      */
     private final @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus;
     /**
-     * The placement group in which the VM is running. If the VM is deallocated it will not have a placementGroupId.
+     * @return The placement group in which the VM is running. If the VM is deallocated it will not have a placementGroupId.
      * 
      */
     private final @Nullable String placementGroupId;
     /**
-     * The Fault Domain count.
+     * @return The Fault Domain count.
      * 
      */
     private final @Nullable Integer platformFaultDomain;
     /**
-     * The Update Domain count.
+     * @return The Update Domain count.
      * 
      */
     private final @Nullable Integer platformUpdateDomain;
     /**
-     * The Remote desktop certificate thumbprint.
+     * @return The Remote desktop certificate thumbprint.
      * 
      */
     private final @Nullable String rdpThumbPrint;
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
      */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
     /**
-     * The VM Agent running on the virtual machine.
+     * @return The VM Agent running on the virtual machine.
      * 
      */
     private final @Nullable VirtualMachineAgentInstanceViewResponse vmAgent;
     /**
-     * The health status for the VM.
+     * @return The health status for the VM.
      * 
      */
     private final VirtualMachineHealthStatusResponse vmHealth;
@@ -110,86 +110,86 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse {
     }
 
     /**
-     * Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
+     * @return Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
      * 
-    */
+     */
     public String assignedHost() {
         return this.assignedHost;
     }
     /**
-     * Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. &lt;br&gt;&lt;br&gt; You can easily view the output of your console log. &lt;br&gt;&lt;br&gt; Azure also enables you to see a screenshot of the VM from the hypervisor.
+     * @return Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. &lt;br&gt;&lt;br&gt; You can easily view the output of your console log. &lt;br&gt;&lt;br&gt; Azure also enables you to see a screenshot of the VM from the hypervisor.
      * 
-    */
+     */
     public Optional<BootDiagnosticsInstanceViewResponse> bootDiagnostics() {
         return Optional.ofNullable(this.bootDiagnostics);
     }
     /**
-     * The disks information.
+     * @return The disks information.
      * 
-    */
+     */
     public List<DiskInstanceViewResponse> disks() {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
-     * The extensions information.
+     * @return The extensions information.
      * 
-    */
+     */
     public List<VirtualMachineExtensionInstanceViewResponse> extensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
     /**
-     * The Maintenance Operation status on the virtual machine.
+     * @return The Maintenance Operation status on the virtual machine.
      * 
-    */
+     */
     public Optional<MaintenanceRedeployStatusResponse> maintenanceRedeployStatus() {
         return Optional.ofNullable(this.maintenanceRedeployStatus);
     }
     /**
-     * The placement group in which the VM is running. If the VM is deallocated it will not have a placementGroupId.
+     * @return The placement group in which the VM is running. If the VM is deallocated it will not have a placementGroupId.
      * 
-    */
+     */
     public Optional<String> placementGroupId() {
         return Optional.ofNullable(this.placementGroupId);
     }
     /**
-     * The Fault Domain count.
+     * @return The Fault Domain count.
      * 
-    */
+     */
     public Optional<Integer> platformFaultDomain() {
         return Optional.ofNullable(this.platformFaultDomain);
     }
     /**
-     * The Update Domain count.
+     * @return The Update Domain count.
      * 
-    */
+     */
     public Optional<Integer> platformUpdateDomain() {
         return Optional.ofNullable(this.platformUpdateDomain);
     }
     /**
-     * The Remote desktop certificate thumbprint.
+     * @return The Remote desktop certificate thumbprint.
      * 
-    */
+     */
     public Optional<String> rdpThumbPrint() {
         return Optional.ofNullable(this.rdpThumbPrint);
     }
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
-    */
+     */
     public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
-     * The VM Agent running on the virtual machine.
+     * @return The VM Agent running on the virtual machine.
      * 
-    */
+     */
     public Optional<VirtualMachineAgentInstanceViewResponse> vmAgent() {
         return Optional.ofNullable(this.vmAgent);
     }
     /**
-     * The health status for the VM.
+     * @return The health status for the VM.
      * 
-    */
+     */
     public VirtualMachineHealthStatusResponse vmHealth() {
         return this.vmHealth;
     }

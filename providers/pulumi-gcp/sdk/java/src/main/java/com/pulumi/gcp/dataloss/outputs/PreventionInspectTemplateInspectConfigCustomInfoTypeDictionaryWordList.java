@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList {
     /**
-     * Words or phrases defining the dictionary. The dictionary must contain at least one
+     * @return Words or phrases defining the dictionary. The dictionary must contain at least one
      * phrase and every phrase must contain at least 2 characters that are letters or digits.
      * 
      */
@@ -23,10 +23,10 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
     }
 
     /**
-     * Words or phrases defining the dictionary. The dictionary must contain at least one
+     * @return Words or phrases defining the dictionary. The dictionary must contain at least one
      * phrase and every phrase must contain at least 2 characters that are letters or digits.
      * 
-    */
+     */
     public List<String> words() {
         return this.words;
     }

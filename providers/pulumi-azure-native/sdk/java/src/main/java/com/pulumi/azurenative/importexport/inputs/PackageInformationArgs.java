@@ -25,6 +25,10 @@ public final class PackageInformationArgs extends com.pulumi.resources.ResourceA
     @Import(name="carrierName", required=true)
     private Output<String> carrierName;
 
+    /**
+     * @return The name of the carrier that is used to ship the import or export drives.
+     * 
+     */
     public Output<String> carrierName() {
         return this.carrierName;
     }
@@ -36,6 +40,10 @@ public final class PackageInformationArgs extends com.pulumi.resources.ResourceA
     @Import(name="driveCount", required=true)
     private Output<Double> driveCount;
 
+    /**
+     * @return The number of drives included in the package.
+     * 
+     */
     public Output<Double> driveCount() {
         return this.driveCount;
     }
@@ -47,6 +55,10 @@ public final class PackageInformationArgs extends com.pulumi.resources.ResourceA
     @Import(name="shipDate", required=true)
     private Output<String> shipDate;
 
+    /**
+     * @return The date when the package is shipped.
+     * 
+     */
     public Output<String> shipDate() {
         return this.shipDate;
     }
@@ -58,6 +70,10 @@ public final class PackageInformationArgs extends com.pulumi.resources.ResourceA
     @Import(name="trackingNumber", required=true)
     private Output<String> trackingNumber;
 
+    /**
+     * @return The tracking number of the package.
+     * 
+     */
     public Output<String> trackingNumber() {
         return this.trackingNumber;
     }
@@ -89,38 +105,86 @@ public final class PackageInformationArgs extends com.pulumi.resources.ResourceA
             $ = new PackageInformationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param carrierName The name of the carrier that is used to ship the import or export drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder carrierName(Output<String> carrierName) {
             $.carrierName = carrierName;
             return this;
         }
 
+        /**
+         * @param carrierName The name of the carrier that is used to ship the import or export drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder carrierName(String carrierName) {
             return carrierName(Output.of(carrierName));
         }
 
+        /**
+         * @param driveCount The number of drives included in the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driveCount(Output<Double> driveCount) {
             $.driveCount = driveCount;
             return this;
         }
 
+        /**
+         * @param driveCount The number of drives included in the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driveCount(Double driveCount) {
             return driveCount(Output.of(driveCount));
         }
 
+        /**
+         * @param shipDate The date when the package is shipped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shipDate(Output<String> shipDate) {
             $.shipDate = shipDate;
             return this;
         }
 
+        /**
+         * @param shipDate The date when the package is shipped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shipDate(String shipDate) {
             return shipDate(Output.of(shipDate));
         }
 
+        /**
+         * @param trackingNumber The tracking number of the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingNumber(Output<String> trackingNumber) {
             $.trackingNumber = trackingNumber;
             return this;
         }
 
+        /**
+         * @param trackingNumber The tracking number of the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingNumber(String trackingNumber) {
             return trackingNumber(Output.of(trackingNumber));
         }

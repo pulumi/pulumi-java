@@ -19,6 +19,10 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
     @Import(name="fhirDestinationName", required=true)
     private String fhirDestinationName;
 
+    /**
+     * @return The name of IoT Connector FHIR destination resource.
+     * 
+     */
     public String fhirDestinationName() {
         return this.fhirDestinationName;
     }
@@ -30,6 +34,10 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
     @Import(name="iotConnectorName", required=true)
     private String iotConnectorName;
 
+    /**
+     * @return The name of IoT Connector resource.
+     * 
+     */
     public String iotConnectorName() {
         return this.iotConnectorName;
     }
@@ -41,6 +49,10 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the service instance.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of workspace resource.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -83,21 +99,45 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
             $ = new GetIotConnectorFhirDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fhirDestinationName The name of IoT Connector FHIR destination resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fhirDestinationName(String fhirDestinationName) {
             $.fhirDestinationName = fhirDestinationName;
             return this;
         }
 
+        /**
+         * @param iotConnectorName The name of IoT Connector resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotConnectorName(String iotConnectorName) {
             $.iotConnectorName = iotConnectorName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of workspace resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

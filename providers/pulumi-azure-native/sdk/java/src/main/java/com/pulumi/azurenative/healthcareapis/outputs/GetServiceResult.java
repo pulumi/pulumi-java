@@ -16,52 +16,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetServiceResult {
     /**
-     * An etag associated with the resource, used for optimistic concurrency when editing it.
+     * @return An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
      */
     private final @Nullable String etag;
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
      */
     private final String id;
     /**
-     * Setting indicating whether the service has a managed identity associated with it.
+     * @return Setting indicating whether the service has a managed identity associated with it.
      * 
      */
     private final @Nullable ServicesResourceResponseIdentity identity;
     /**
-     * The kind of the service.
+     * @return The kind of the service.
      * 
      */
     private final String kind;
     /**
-     * The resource location.
+     * @return The resource location.
      * 
      */
     private final String location;
     /**
-     * The resource name.
+     * @return The resource name.
      * 
      */
     private final String name;
     /**
-     * The common properties of a service.
+     * @return The common properties of a service.
      * 
      */
     private final ServicesPropertiesResponse properties;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final String type;
@@ -91,72 +91,72 @@ public final class GetServiceResult {
     }
 
     /**
-     * An etag associated with the resource, used for optimistic concurrency when editing it.
+     * @return An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Setting indicating whether the service has a managed identity associated with it.
+     * @return Setting indicating whether the service has a managed identity associated with it.
      * 
-    */
+     */
     public Optional<ServicesResourceResponseIdentity> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The kind of the service.
+     * @return The kind of the service.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The common properties of a service.
+     * @return The common properties of a service.
      * 
-    */
+     */
     public ServicesPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

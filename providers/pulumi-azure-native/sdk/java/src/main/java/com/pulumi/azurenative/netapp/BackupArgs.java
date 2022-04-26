@@ -22,6 +22,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the NetApp account
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -33,6 +37,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backupName")
     private @Nullable Output<String> backupName;
 
+    /**
+     * @return The name of the backup
+     * 
+     */
     public Optional<Output<String>> backupName() {
         return Optional.ofNullable(this.backupName);
     }
@@ -44,6 +52,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return Label for backup
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -55,6 +67,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -66,6 +82,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="poolName", required=true)
     private Output<String> poolName;
 
+    /**
+     * @return The name of the capacity pool
+     * 
+     */
     public Output<String> poolName() {
         return this.poolName;
     }
@@ -77,6 +97,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -88,6 +112,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumeName", required=true)
     private Output<String> volumeName;
 
+    /**
+     * @return The name of the volume
+     * 
+     */
     public Output<String> volumeName() {
         return this.volumeName;
     }
@@ -122,65 +150,149 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BackupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the NetApp account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the NetApp account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param backupName The name of the backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupName(@Nullable Output<String> backupName) {
             $.backupName = backupName;
             return this;
         }
 
+        /**
+         * @param backupName The name of the backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupName(String backupName) {
             return backupName(Output.of(backupName));
         }
 
+        /**
+         * @param label Label for backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label Label for backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param poolName The name of the capacity pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolName(Output<String> poolName) {
             $.poolName = poolName;
             return this;
         }
 
+        /**
+         * @param poolName The name of the capacity pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolName(String poolName) {
             return poolName(Output.of(poolName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param volumeName The name of the volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeName(Output<String> volumeName) {
             $.volumeName = volumeName;
             return this;
         }
 
+        /**
+         * @param volumeName The name of the volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeName(String volumeName) {
             return volumeName(Output.of(volumeName));
         }

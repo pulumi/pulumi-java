@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetManagementAssociationResult {
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
+     * @return Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
      * 
      */
     private final ManagementAssociationPropertiesResponse properties;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -53,37 +53,37 @@ public final class GetManagementAssociationResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
+     * @return Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
      * 
-    */
+     */
     public ManagementAssociationPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

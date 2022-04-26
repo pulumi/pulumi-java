@@ -23,6 +23,10 @@ public final class NotificationHubAuthorizationRuleArgs extends com.pulumi.resou
     @Import(name="authorizationRuleName")
     private @Nullable Output<String> authorizationRuleName;
 
+    /**
+     * @return Authorization Rule Name.
+     * 
+     */
     public Optional<Output<String>> authorizationRuleName() {
         return Optional.ofNullable(this.authorizationRuleName);
     }
@@ -34,6 +38,10 @@ public final class NotificationHubAuthorizationRuleArgs extends com.pulumi.resou
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The namespace name.
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -45,6 +53,10 @@ public final class NotificationHubAuthorizationRuleArgs extends com.pulumi.resou
     @Import(name="notificationHubName", required=true)
     private Output<String> notificationHubName;
 
+    /**
+     * @return The notification hub name.
+     * 
+     */
     public Output<String> notificationHubName() {
         return this.notificationHubName;
     }
@@ -56,6 +68,10 @@ public final class NotificationHubAuthorizationRuleArgs extends com.pulumi.resou
     @Import(name="properties", required=true)
     private Output<SharedAccessAuthorizationRulePropertiesArgs> properties;
 
+    /**
+     * @return Properties of the Namespace AuthorizationRules.
+     * 
+     */
     public Output<SharedAccessAuthorizationRulePropertiesArgs> properties() {
         return this.properties;
     }
@@ -67,6 +83,10 @@ public final class NotificationHubAuthorizationRuleArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -99,47 +119,107 @@ public final class NotificationHubAuthorizationRuleArgs extends com.pulumi.resou
             $ = new NotificationHubAuthorizationRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationRuleName Authorization Rule Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationRuleName(@Nullable Output<String> authorizationRuleName) {
             $.authorizationRuleName = authorizationRuleName;
             return this;
         }
 
+        /**
+         * @param authorizationRuleName Authorization Rule Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationRuleName(String authorizationRuleName) {
             return authorizationRuleName(Output.of(authorizationRuleName));
         }
 
+        /**
+         * @param namespaceName The namespace name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The namespace name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param notificationHubName The notification hub name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationHubName(Output<String> notificationHubName) {
             $.notificationHubName = notificationHubName;
             return this;
         }
 
+        /**
+         * @param notificationHubName The notification hub name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationHubName(String notificationHubName) {
             return notificationHubName(Output.of(notificationHubName));
         }
 
+        /**
+         * @param properties Properties of the Namespace AuthorizationRules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<SharedAccessAuthorizationRulePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the Namespace AuthorizationRules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(SharedAccessAuthorizationRulePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

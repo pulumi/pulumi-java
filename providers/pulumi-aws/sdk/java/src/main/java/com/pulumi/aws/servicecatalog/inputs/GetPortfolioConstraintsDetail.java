@@ -19,6 +19,10 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
     @Import(name="constraintId", required=true)
     private String constraintId;
 
+    /**
+     * @return Identifier of the constraint.
+     * 
+     */
     public String constraintId() {
         return this.constraintId;
     }
@@ -30,6 +34,10 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Description of the constraint.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -48,6 +56,10 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
     @Import(name="portfolioId", required=true)
     private String portfolioId;
 
+    /**
+     * @return Portfolio identifier.
+     * 
+     */
     public String portfolioId() {
         return this.portfolioId;
     }
@@ -59,6 +71,10 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
     @Import(name="productId", required=true)
     private String productId;
 
+    /**
+     * @return Product identifier.
+     * 
+     */
     public String productId() {
         return this.productId;
     }
@@ -70,6 +86,10 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `STACKSET`, and `TEMPLATE`.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -103,11 +123,23 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
             $ = new GetPortfolioConstraintsDetail(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param constraintId Identifier of the constraint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder constraintId(String constraintId) {
             $.constraintId = constraintId;
             return this;
         }
 
+        /**
+         * @param description Description of the constraint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
@@ -118,16 +150,34 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
             return this;
         }
 
+        /**
+         * @param portfolioId Portfolio identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portfolioId(String portfolioId) {
             $.portfolioId = portfolioId;
             return this;
         }
 
+        /**
+         * @param productId Product identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(String productId) {
             $.productId = productId;
             return this;
         }
 
+        /**
+         * @param type Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `STACKSET`, and `TEMPLATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

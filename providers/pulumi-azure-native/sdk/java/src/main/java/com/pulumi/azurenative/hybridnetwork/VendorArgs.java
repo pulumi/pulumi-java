@@ -22,6 +22,10 @@ public final class VendorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vendorName")
     private @Nullable Output<String> vendorName;
 
+    /**
+     * @return The name of the vendor.
+     * 
+     */
     public Optional<Output<String>> vendorName() {
         return Optional.ofNullable(this.vendorName);
     }
@@ -50,11 +54,23 @@ public final class VendorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VendorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vendorName The name of the vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendorName(@Nullable Output<String> vendorName) {
             $.vendorName = vendorName;
             return this;
         }
 
+        /**
+         * @param vendorName The name of the vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendorName(String vendorName) {
             return vendorName(Output.of(vendorName));
         }

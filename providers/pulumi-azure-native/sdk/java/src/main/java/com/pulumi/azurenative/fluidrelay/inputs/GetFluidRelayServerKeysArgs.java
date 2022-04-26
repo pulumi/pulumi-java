@@ -19,6 +19,10 @@ public final class GetFluidRelayServerKeysArgs extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetFluidRelayServerKeysArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroup", required=true)
     private String resourceGroup;
 
+    /**
+     * @return The resource group containing the resource.
+     * 
+     */
     public String resourceGroup() {
         return this.resourceGroup;
     }
@@ -59,11 +67,23 @@ public final class GetFluidRelayServerKeysArgs extends com.pulumi.resources.Invo
             $ = new GetFluidRelayServerKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroup The resource group containing the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;

@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class ResourcePolicyInstanceSchedulePolicyResponse {
     /**
-     * The expiration time of the schedule. The timestamp is an RFC3339 string.
+     * @return The expiration time of the schedule. The timestamp is an RFC3339 string.
      * 
      */
     private final String expirationTime;
     /**
-     * The start time of the schedule. The timestamp is an RFC3339 string.
+     * @return The start time of the schedule. The timestamp is an RFC3339 string.
      * 
      */
     private final String startTime;
     /**
-     * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+     * @return Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
      * 
      */
     private final String timeZone;
     /**
-     * Specifies the schedule for starting instances.
+     * @return Specifies the schedule for starting instances.
      * 
      */
     private final ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule;
     /**
-     * Specifies the schedule for stopping instances.
+     * @return Specifies the schedule for stopping instances.
      * 
      */
     private final ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule;
@@ -51,37 +51,37 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse {
     }
 
     /**
-     * The expiration time of the schedule. The timestamp is an RFC3339 string.
+     * @return The expiration time of the schedule. The timestamp is an RFC3339 string.
      * 
-    */
+     */
     public String expirationTime() {
         return this.expirationTime;
     }
     /**
-     * The start time of the schedule. The timestamp is an RFC3339 string.
+     * @return The start time of the schedule. The timestamp is an RFC3339 string.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+     * @return Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
      * 
-    */
+     */
     public String timeZone() {
         return this.timeZone;
     }
     /**
-     * Specifies the schedule for starting instances.
+     * @return Specifies the schedule for starting instances.
      * 
-    */
+     */
     public ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule() {
         return this.vmStartSchedule;
     }
     /**
-     * Specifies the schedule for stopping instances.
+     * @return Specifies the schedule for stopping instances.
      * 
-    */
+     */
     public ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule() {
         return this.vmStopSchedule;
     }

@@ -14,22 +14,22 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudApigeeV1OperationConfigResponse {
     /**
-     * Name of the API proxy or remote service with which the resources, methods, and quota are associated.
+     * @return Name of the API proxy or remote service with which the resources, methods, and quota are associated.
      * 
      */
     private final String apiSource;
     /**
-     * Custom attributes associated with the operation.
+     * @return Custom attributes associated with the operation.
      * 
      */
     private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
     /**
-     * List of resource/method pairs for the API proxy or remote service to which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.
+     * @return List of resource/method pairs for the API proxy or remote service to which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.
      * 
      */
     private final List<GoogleCloudApigeeV1OperationResponse> operations;
     /**
-     * Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
+     * @return Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
      * 
      */
     private final GoogleCloudApigeeV1QuotaResponse quota;
@@ -47,30 +47,30 @@ public final class GoogleCloudApigeeV1OperationConfigResponse {
     }
 
     /**
-     * Name of the API proxy or remote service with which the resources, methods, and quota are associated.
+     * @return Name of the API proxy or remote service with which the resources, methods, and quota are associated.
      * 
-    */
+     */
     public String apiSource() {
         return this.apiSource;
     }
     /**
-     * Custom attributes associated with the operation.
+     * @return Custom attributes associated with the operation.
      * 
-    */
+     */
     public List<GoogleCloudApigeeV1AttributeResponse> attributes() {
         return this.attributes;
     }
     /**
-     * List of resource/method pairs for the API proxy or remote service to which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.
+     * @return List of resource/method pairs for the API proxy or remote service to which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.
      * 
-    */
+     */
     public List<GoogleCloudApigeeV1OperationResponse> operations() {
         return this.operations;
     }
     /**
-     * Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
+     * @return Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
      * 
-    */
+     */
     public GoogleCloudApigeeV1QuotaResponse quota() {
         return this.quota;
     }

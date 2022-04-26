@@ -16,77 +16,77 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationGatewayHttpListenerResponse {
     /**
-     * Custom error configurations of the HTTP listener.
+     * @return Custom error configurations of the HTTP listener.
      * 
      */
     private final @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Reference to the FirewallPolicy resource.
+     * @return Reference to the FirewallPolicy resource.
      * 
      */
     private final @Nullable SubResourceResponse firewallPolicy;
     /**
-     * Frontend IP configuration resource of an application gateway.
+     * @return Frontend IP configuration resource of an application gateway.
      * 
      */
     private final @Nullable SubResourceResponse frontendIPConfiguration;
     /**
-     * Frontend port resource of an application gateway.
+     * @return Frontend port resource of an application gateway.
      * 
      */
     private final @Nullable SubResourceResponse frontendPort;
     /**
-     * Host name of HTTP listener.
+     * @return Host name of HTTP listener.
      * 
      */
     private final @Nullable String hostName;
     /**
-     * List of Host names for HTTP Listener that allows special wildcard characters as well.
+     * @return List of Host names for HTTP Listener that allows special wildcard characters as well.
      * 
      */
     private final @Nullable List<String> hostNames;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Name of the HTTP listener that is unique within an Application Gateway.
+     * @return Name of the HTTP listener that is unique within an Application Gateway.
      * 
      */
     private final @Nullable String name;
     /**
-     * Protocol of the HTTP listener.
+     * @return Protocol of the HTTP listener.
      * 
      */
     private final @Nullable String protocol;
     /**
-     * The provisioning state of the HTTP listener resource.
+     * @return The provisioning state of the HTTP listener resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Applicable only if protocol is https. Enables SNI for multi-hosting.
+     * @return Applicable only if protocol is https. Enables SNI for multi-hosting.
      * 
      */
     private final @Nullable Boolean requireServerNameIndication;
     /**
-     * SSL certificate resource of an application gateway.
+     * @return SSL certificate resource of an application gateway.
      * 
      */
     private final @Nullable SubResourceResponse sslCertificate;
     /**
-     * SSL profile resource of the application gateway.
+     * @return SSL profile resource of the application gateway.
      * 
      */
     private final @Nullable SubResourceResponse sslProfile;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -126,107 +126,107 @@ public final class ApplicationGatewayHttpListenerResponse {
     }
 
     /**
-     * Custom error configurations of the HTTP listener.
+     * @return Custom error configurations of the HTTP listener.
      * 
-    */
+     */
     public List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations() {
         return this.customErrorConfigurations == null ? List.of() : this.customErrorConfigurations;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Reference to the FirewallPolicy resource.
+     * @return Reference to the FirewallPolicy resource.
      * 
-    */
+     */
     public Optional<SubResourceResponse> firewallPolicy() {
         return Optional.ofNullable(this.firewallPolicy);
     }
     /**
-     * Frontend IP configuration resource of an application gateway.
+     * @return Frontend IP configuration resource of an application gateway.
      * 
-    */
+     */
     public Optional<SubResourceResponse> frontendIPConfiguration() {
         return Optional.ofNullable(this.frontendIPConfiguration);
     }
     /**
-     * Frontend port resource of an application gateway.
+     * @return Frontend port resource of an application gateway.
      * 
-    */
+     */
     public Optional<SubResourceResponse> frontendPort() {
         return Optional.ofNullable(this.frontendPort);
     }
     /**
-     * Host name of HTTP listener.
+     * @return Host name of HTTP listener.
      * 
-    */
+     */
     public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
-     * List of Host names for HTTP Listener that allows special wildcard characters as well.
+     * @return List of Host names for HTTP Listener that allows special wildcard characters as well.
      * 
-    */
+     */
     public List<String> hostNames() {
         return this.hostNames == null ? List.of() : this.hostNames;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Name of the HTTP listener that is unique within an Application Gateway.
+     * @return Name of the HTTP listener that is unique within an Application Gateway.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Protocol of the HTTP listener.
+     * @return Protocol of the HTTP listener.
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * The provisioning state of the HTTP listener resource.
+     * @return The provisioning state of the HTTP listener resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Applicable only if protocol is https. Enables SNI for multi-hosting.
+     * @return Applicable only if protocol is https. Enables SNI for multi-hosting.
      * 
-    */
+     */
     public Optional<Boolean> requireServerNameIndication() {
         return Optional.ofNullable(this.requireServerNameIndication);
     }
     /**
-     * SSL certificate resource of an application gateway.
+     * @return SSL certificate resource of an application gateway.
      * 
-    */
+     */
     public Optional<SubResourceResponse> sslCertificate() {
         return Optional.ofNullable(this.sslCertificate);
     }
     /**
-     * SSL profile resource of the application gateway.
+     * @return SSL profile resource of the application gateway.
      * 
-    */
+     */
     public Optional<SubResourceResponse> sslProfile() {
         return Optional.ofNullable(this.sslProfile);
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

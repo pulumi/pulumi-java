@@ -32,6 +32,10 @@ public final class ConnectionMonitorHttpConfigurationArgs extends com.pulumi.res
     @Import(name="method")
     private @Nullable Output<Either<String,HTTPConfigurationMethod>> method;
 
+    /**
+     * @return The HTTP method to use.
+     * 
+     */
     public Optional<Output<Either<String,HTTPConfigurationMethod>>> method() {
         return Optional.ofNullable(this.method);
     }
@@ -43,6 +47,10 @@ public final class ConnectionMonitorHttpConfigurationArgs extends com.pulumi.res
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The path component of the URI. For instance, &#34;/dir1/dir2&#34;.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -54,6 +62,10 @@ public final class ConnectionMonitorHttpConfigurationArgs extends com.pulumi.res
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The port to connect to.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -65,6 +77,10 @@ public final class ConnectionMonitorHttpConfigurationArgs extends com.pulumi.res
     @Import(name="preferHTTPS")
     private @Nullable Output<Boolean> preferHTTPS;
 
+    /**
+     * @return Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.
+     * 
+     */
     public Optional<Output<Boolean>> preferHTTPS() {
         return Optional.ofNullable(this.preferHTTPS);
     }
@@ -76,6 +92,10 @@ public final class ConnectionMonitorHttpConfigurationArgs extends com.pulumi.res
     @Import(name="requestHeaders")
     private @Nullable Output<List<HTTPHeaderArgs>> requestHeaders;
 
+    /**
+     * @return The HTTP headers to transmit with the request.
+     * 
+     */
     public Optional<Output<List<HTTPHeaderArgs>>> requestHeaders() {
         return Optional.ofNullable(this.requestHeaders);
     }
@@ -87,6 +107,10 @@ public final class ConnectionMonitorHttpConfigurationArgs extends com.pulumi.res
     @Import(name="validStatusCodeRanges")
     private @Nullable Output<List<String>> validStatusCodeRanges;
 
+    /**
+     * @return HTTP status codes to consider successful. For instance, &#34;2xx,301-304,418&#34;.
+     * 
+     */
     public Optional<Output<List<String>>> validStatusCodeRanges() {
         return Optional.ofNullable(this.validStatusCodeRanges);
     }
@@ -120,72 +144,168 @@ public final class ConnectionMonitorHttpConfigurationArgs extends com.pulumi.res
             $ = new ConnectionMonitorHttpConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param method The HTTP method to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable Output<Either<String,HTTPConfigurationMethod>> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method The HTTP method to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(Either<String,HTTPConfigurationMethod> method) {
             return method(Output.of(method));
         }
 
+        /**
+         * @param method The HTTP method to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(String method) {
             return method(Either.ofLeft(method));
         }
 
+        /**
+         * @param method The HTTP method to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(HTTPConfigurationMethod method) {
             return method(Either.ofRight(method));
         }
 
+        /**
+         * @param path The path component of the URI. For instance, &#34;/dir1/dir2&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path component of the URI. For instance, &#34;/dir1/dir2&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param port The port to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param preferHTTPS Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferHTTPS(@Nullable Output<Boolean> preferHTTPS) {
             $.preferHTTPS = preferHTTPS;
             return this;
         }
 
+        /**
+         * @param preferHTTPS Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferHTTPS(Boolean preferHTTPS) {
             return preferHTTPS(Output.of(preferHTTPS));
         }
 
+        /**
+         * @param requestHeaders The HTTP headers to transmit with the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaders(@Nullable Output<List<HTTPHeaderArgs>> requestHeaders) {
             $.requestHeaders = requestHeaders;
             return this;
         }
 
+        /**
+         * @param requestHeaders The HTTP headers to transmit with the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaders(List<HTTPHeaderArgs> requestHeaders) {
             return requestHeaders(Output.of(requestHeaders));
         }
 
+        /**
+         * @param requestHeaders The HTTP headers to transmit with the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaders(HTTPHeaderArgs... requestHeaders) {
             return requestHeaders(List.of(requestHeaders));
         }
 
+        /**
+         * @param validStatusCodeRanges HTTP status codes to consider successful. For instance, &#34;2xx,301-304,418&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validStatusCodeRanges(@Nullable Output<List<String>> validStatusCodeRanges) {
             $.validStatusCodeRanges = validStatusCodeRanges;
             return this;
         }
 
+        /**
+         * @param validStatusCodeRanges HTTP status codes to consider successful. For instance, &#34;2xx,301-304,418&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validStatusCodeRanges(List<String> validStatusCodeRanges) {
             return validStatusCodeRanges(Output.of(validStatusCodeRanges));
         }
 
+        /**
+         * @param validStatusCodeRanges HTTP status codes to consider successful. For instance, &#34;2xx,301-304,418&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validStatusCodeRanges(String... validStatusCodeRanges) {
             return validStatusCodeRanges(List.of(validStatusCodeRanges));
         }

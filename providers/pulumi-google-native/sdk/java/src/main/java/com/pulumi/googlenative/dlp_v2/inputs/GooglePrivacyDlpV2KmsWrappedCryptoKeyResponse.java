@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse extends com.pul
     @Import(name="cryptoKeyName", required=true)
     private String cryptoKeyName;
 
+    /**
+     * @return The resource name of the KMS CryptoKey to use for unwrapping.
+     * 
+     */
     public String cryptoKeyName() {
         return this.cryptoKeyName;
     }
@@ -34,6 +38,10 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse extends com.pul
     @Import(name="wrappedKey", required=true)
     private String wrappedKey;
 
+    /**
+     * @return The wrapped data crypto key.
+     * 
+     */
     public String wrappedKey() {
         return this.wrappedKey;
     }
@@ -63,11 +71,23 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse extends com.pul
             $ = new GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cryptoKeyName The resource name of the KMS CryptoKey to use for unwrapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKeyName(String cryptoKeyName) {
             $.cryptoKeyName = cryptoKeyName;
             return this;
         }
 
+        /**
+         * @param wrappedKey The wrapped data crypto key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wrappedKey(String wrappedKey) {
             $.wrappedKey = wrappedKey;
             return this;

@@ -27,6 +27,10 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends com.pulumi.reso
     @Import(name="autoscaleEnabled")
     private @Nullable Output<Boolean> autoscaleEnabled;
 
+    /**
+     * @return Option to enable/disable auto scaling.
+     * 
+     */
     public Optional<Output<Boolean>> autoscaleEnabled() {
         return Optional.ofNullable(this.autoscaleEnabled);
     }
@@ -38,6 +42,10 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends com.pulumi.reso
     @Import(name="maxReplicas")
     private @Nullable Output<Integer> maxReplicas;
 
+    /**
+     * @return The maximum number of replicas in the cluster.
+     * 
+     */
     public Optional<Output<Integer>> maxReplicas() {
         return Optional.ofNullable(this.maxReplicas);
     }
@@ -49,6 +57,10 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends com.pulumi.reso
     @Import(name="minReplicas")
     private @Nullable Output<Integer> minReplicas;
 
+    /**
+     * @return The minimum number of replicas to scale down to.
+     * 
+     */
     public Optional<Output<Integer>> minReplicas() {
         return Optional.ofNullable(this.minReplicas);
     }
@@ -60,6 +72,10 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends com.pulumi.reso
     @Import(name="refreshPeriodInSeconds")
     private @Nullable Output<Integer> refreshPeriodInSeconds;
 
+    /**
+     * @return The amount of seconds to wait between auto scale updates.
+     * 
+     */
     public Optional<Output<Integer>> refreshPeriodInSeconds() {
         return Optional.ofNullable(this.refreshPeriodInSeconds);
     }
@@ -71,6 +87,10 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends com.pulumi.reso
     @Import(name="targetUtilization")
     private @Nullable Output<Integer> targetUtilization;
 
+    /**
+     * @return The target utilization percentage to use for determining whether to scale the cluster.
+     * 
+     */
     public Optional<Output<Integer>> targetUtilization() {
         return Optional.ofNullable(this.targetUtilization);
     }
@@ -103,47 +123,107 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends com.pulumi.reso
             $ = new AKSServiceCreateRequestAutoScalerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscaleEnabled Option to enable/disable auto scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaleEnabled(@Nullable Output<Boolean> autoscaleEnabled) {
             $.autoscaleEnabled = autoscaleEnabled;
             return this;
         }
 
+        /**
+         * @param autoscaleEnabled Option to enable/disable auto scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaleEnabled(Boolean autoscaleEnabled) {
             return autoscaleEnabled(Output.of(autoscaleEnabled));
         }
 
+        /**
+         * @param maxReplicas The maximum number of replicas in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxReplicas(@Nullable Output<Integer> maxReplicas) {
             $.maxReplicas = maxReplicas;
             return this;
         }
 
+        /**
+         * @param maxReplicas The maximum number of replicas in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxReplicas(Integer maxReplicas) {
             return maxReplicas(Output.of(maxReplicas));
         }
 
+        /**
+         * @param minReplicas The minimum number of replicas to scale down to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
             $.minReplicas = minReplicas;
             return this;
         }
 
+        /**
+         * @param minReplicas The minimum number of replicas to scale down to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReplicas(Integer minReplicas) {
             return minReplicas(Output.of(minReplicas));
         }
 
+        /**
+         * @param refreshPeriodInSeconds The amount of seconds to wait between auto scale updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshPeriodInSeconds(@Nullable Output<Integer> refreshPeriodInSeconds) {
             $.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
 
+        /**
+         * @param refreshPeriodInSeconds The amount of seconds to wait between auto scale updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshPeriodInSeconds(Integer refreshPeriodInSeconds) {
             return refreshPeriodInSeconds(Output.of(refreshPeriodInSeconds));
         }
 
+        /**
+         * @param targetUtilization The target utilization percentage to use for determining whether to scale the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUtilization(@Nullable Output<Integer> targetUtilization) {
             $.targetUtilization = targetUtilization;
             return this;
         }
 
+        /**
+         * @param targetUtilization The target utilization percentage to use for determining whether to scale the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUtilization(Integer targetUtilization) {
             return targetUtilization(Output.of(targetUtilization));
         }

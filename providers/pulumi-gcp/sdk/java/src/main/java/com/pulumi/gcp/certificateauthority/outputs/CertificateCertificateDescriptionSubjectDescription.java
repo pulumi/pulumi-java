@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 public final class CertificateCertificateDescriptionSubjectDescription {
     private final @Nullable String hexSerialNumber;
     /**
-     * The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+     * @return The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
      * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
      * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
@@ -25,13 +25,13 @@ public final class CertificateCertificateDescriptionSubjectDescription {
     private final @Nullable String notAfterTime;
     private final @Nullable String notBeforeTime;
     /**
-     * The subject alternative name fields.
+     * @return The subject alternative name fields.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> subjectAltNames;
     /**
-     * Contains distinguished name fields such as the location and organization.
+     * @return Contains distinguished name fields such as the location and organization.
      * Structure is documented below.
      * 
      */
@@ -57,11 +57,11 @@ public final class CertificateCertificateDescriptionSubjectDescription {
         return Optional.ofNullable(this.hexSerialNumber);
     }
     /**
-     * The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+     * @return The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
      * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
      * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
-    */
+     */
     public Optional<String> lifetime() {
         return Optional.ofNullable(this.lifetime);
     }
@@ -72,18 +72,18 @@ public final class CertificateCertificateDescriptionSubjectDescription {
         return Optional.ofNullable(this.notBeforeTime);
     }
     /**
-     * The subject alternative name fields.
+     * @return The subject alternative name fields.
      * Structure is documented below.
      * 
-    */
+     */
     public List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> subjectAltNames() {
         return this.subjectAltNames == null ? List.of() : this.subjectAltNames;
     }
     /**
-     * Contains distinguished name fields such as the location and organization.
+     * @return Contains distinguished name fields such as the location and organization.
      * Structure is documented below.
      * 
-    */
+     */
     public List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects() {
         return this.subjects == null ? List.of() : this.subjects;
     }

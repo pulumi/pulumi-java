@@ -27,6 +27,10 @@ public final class WorkspaceFeaturesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clusterResourceId")
     private @Nullable Output<String> clusterResourceId;
 
+    /**
+     * @return Dedicated LA cluster resourceId that is linked to the workspaces.
+     * 
+     */
     public Optional<Output<String>> clusterResourceId() {
         return Optional.ofNullable(this.clusterResourceId);
     }
@@ -38,6 +42,10 @@ public final class WorkspaceFeaturesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="disableLocalAuth")
     private @Nullable Output<Boolean> disableLocalAuth;
 
+    /**
+     * @return Disable Non-AAD based Auth.
+     * 
+     */
     public Optional<Output<Boolean>> disableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
@@ -49,6 +57,10 @@ public final class WorkspaceFeaturesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="enableDataExport")
     private @Nullable Output<Boolean> enableDataExport;
 
+    /**
+     * @return Flag that indicate if data should be exported.
+     * 
+     */
     public Optional<Output<Boolean>> enableDataExport() {
         return Optional.ofNullable(this.enableDataExport);
     }
@@ -60,6 +72,10 @@ public final class WorkspaceFeaturesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="enableLogAccessUsingOnlyResourcePermissions")
     private @Nullable Output<Boolean> enableLogAccessUsingOnlyResourcePermissions;
 
+    /**
+     * @return Flag that indicate which permission to use - resource or workspace or both.
+     * 
+     */
     public Optional<Output<Boolean>> enableLogAccessUsingOnlyResourcePermissions() {
         return Optional.ofNullable(this.enableLogAccessUsingOnlyResourcePermissions);
     }
@@ -71,6 +87,10 @@ public final class WorkspaceFeaturesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="immediatePurgeDataOn30Days")
     private @Nullable Output<Boolean> immediatePurgeDataOn30Days;
 
+    /**
+     * @return Flag that describes if we want to remove the data after 30 days.
+     * 
+     */
     public Optional<Output<Boolean>> immediatePurgeDataOn30Days() {
         return Optional.ofNullable(this.immediatePurgeDataOn30Days);
     }
@@ -103,47 +123,107 @@ public final class WorkspaceFeaturesArgs extends com.pulumi.resources.ResourceAr
             $ = new WorkspaceFeaturesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterResourceId Dedicated LA cluster resourceId that is linked to the workspaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterResourceId(@Nullable Output<String> clusterResourceId) {
             $.clusterResourceId = clusterResourceId;
             return this;
         }
 
+        /**
+         * @param clusterResourceId Dedicated LA cluster resourceId that is linked to the workspaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterResourceId(String clusterResourceId) {
             return clusterResourceId(Output.of(clusterResourceId));
         }
 
+        /**
+         * @param disableLocalAuth Disable Non-AAD based Auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableLocalAuth(@Nullable Output<Boolean> disableLocalAuth) {
             $.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
+        /**
+         * @param disableLocalAuth Disable Non-AAD based Auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableLocalAuth(Boolean disableLocalAuth) {
             return disableLocalAuth(Output.of(disableLocalAuth));
         }
 
+        /**
+         * @param enableDataExport Flag that indicate if data should be exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDataExport(@Nullable Output<Boolean> enableDataExport) {
             $.enableDataExport = enableDataExport;
             return this;
         }
 
+        /**
+         * @param enableDataExport Flag that indicate if data should be exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDataExport(Boolean enableDataExport) {
             return enableDataExport(Output.of(enableDataExport));
         }
 
+        /**
+         * @param enableLogAccessUsingOnlyResourcePermissions Flag that indicate which permission to use - resource or workspace or both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableLogAccessUsingOnlyResourcePermissions(@Nullable Output<Boolean> enableLogAccessUsingOnlyResourcePermissions) {
             $.enableLogAccessUsingOnlyResourcePermissions = enableLogAccessUsingOnlyResourcePermissions;
             return this;
         }
 
+        /**
+         * @param enableLogAccessUsingOnlyResourcePermissions Flag that indicate which permission to use - resource or workspace or both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableLogAccessUsingOnlyResourcePermissions(Boolean enableLogAccessUsingOnlyResourcePermissions) {
             return enableLogAccessUsingOnlyResourcePermissions(Output.of(enableLogAccessUsingOnlyResourcePermissions));
         }
 
+        /**
+         * @param immediatePurgeDataOn30Days Flag that describes if we want to remove the data after 30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder immediatePurgeDataOn30Days(@Nullable Output<Boolean> immediatePurgeDataOn30Days) {
             $.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;
         }
 
+        /**
+         * @param immediatePurgeDataOn30Days Flag that describes if we want to remove the data after 30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder immediatePurgeDataOn30Days(Boolean immediatePurgeDataOn30Days) {
             return immediatePurgeDataOn30Days(Output.of(immediatePurgeDataOn30Days));
         }

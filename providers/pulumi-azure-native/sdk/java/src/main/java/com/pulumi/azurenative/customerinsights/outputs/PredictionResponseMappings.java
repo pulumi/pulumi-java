@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class PredictionResponseMappings {
     /**
-     * The grade of the link mapping.
+     * @return The grade of the link mapping.
      * 
      */
     private final String grade;
     /**
-     * The reason of the link mapping.
+     * @return The reason of the link mapping.
      * 
      */
     private final String reason;
     /**
-     * The score of the link mapping.
+     * @return The score of the link mapping.
      * 
      */
     private final String score;
@@ -36,23 +36,23 @@ public final class PredictionResponseMappings {
     }
 
     /**
-     * The grade of the link mapping.
+     * @return The grade of the link mapping.
      * 
-    */
+     */
     public String grade() {
         return this.grade;
     }
     /**
-     * The reason of the link mapping.
+     * @return The reason of the link mapping.
      * 
-    */
+     */
     public String reason() {
         return this.reason;
     }
     /**
-     * The score of the link mapping.
+     * @return The score of the link mapping.
      * 
-    */
+     */
     public String score() {
         return this.score;
     }

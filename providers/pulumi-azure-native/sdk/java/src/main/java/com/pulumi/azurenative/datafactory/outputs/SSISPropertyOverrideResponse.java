@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SSISPropertyOverrideResponse {
     /**
-     * Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
+     * @return Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
      * 
      */
     private final @Nullable Boolean isSensitive;
     /**
-     * SSIS package property override value. Type: string (or Expression with resultType string).
+     * @return SSIS package property override value. Type: string (or Expression with resultType string).
      * 
      */
     private final Object value;
@@ -32,16 +32,16 @@ public final class SSISPropertyOverrideResponse {
     }
 
     /**
-     * Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
+     * @return Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
      * 
-    */
+     */
     public Optional<Boolean> isSensitive() {
         return Optional.ofNullable(this.isSensitive);
     }
     /**
-     * SSIS package property override value. Type: string (or Expression with resultType string).
+     * @return SSIS package property override value. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object value() {
         return this.value;
     }

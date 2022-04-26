@@ -19,7 +19,7 @@ public final class GetRouterResult {
     private final String description;
     private final Boolean encryptedInterconnectRouter;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -66,9 +66,9 @@ public final class GetRouterResult {
         return this.encryptedInterconnectRouter;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

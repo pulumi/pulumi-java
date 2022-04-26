@@ -25,6 +25,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="configName")
     private @Nullable Output<String> configName;
 
+    /**
+     * @return The name of the maintenance configuration.
+     * 
+     */
     public Optional<Output<String>> configName() {
         return Optional.ofNullable(this.configName);
     }
@@ -36,6 +40,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="notAllowedTime")
     private @Nullable Output<List<TimeSpanArgs>> notAllowedTime;
 
+    /**
+     * @return Time slots on which upgrade is not allowed.
+     * 
+     */
     public Optional<Output<List<TimeSpanArgs>>> notAllowedTime() {
         return Optional.ofNullable(this.notAllowedTime);
     }
@@ -47,6 +55,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -58,6 +70,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the managed cluster resource.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -69,6 +85,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="timeInWeek")
     private @Nullable Output<List<TimeInWeekArgs>> timeInWeek;
 
+    /**
+     * @return Weekday time slots allowed to upgrade.
+     * 
+     */
     public Optional<Output<List<TimeInWeekArgs>>> timeInWeek() {
         return Optional.ofNullable(this.timeInWeek);
     }
@@ -101,55 +121,127 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
             $ = new MaintenanceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configName The name of the maintenance configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configName(@Nullable Output<String> configName) {
             $.configName = configName;
             return this;
         }
 
+        /**
+         * @param configName The name of the maintenance configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configName(String configName) {
             return configName(Output.of(configName));
         }
 
+        /**
+         * @param notAllowedTime Time slots on which upgrade is not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notAllowedTime(@Nullable Output<List<TimeSpanArgs>> notAllowedTime) {
             $.notAllowedTime = notAllowedTime;
             return this;
         }
 
+        /**
+         * @param notAllowedTime Time slots on which upgrade is not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notAllowedTime(List<TimeSpanArgs> notAllowedTime) {
             return notAllowedTime(Output.of(notAllowedTime));
         }
 
+        /**
+         * @param notAllowedTime Time slots on which upgrade is not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notAllowedTime(TimeSpanArgs... notAllowedTime) {
             return notAllowedTime(List.of(notAllowedTime));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the managed cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the managed cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param timeInWeek Weekday time slots allowed to upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInWeek(@Nullable Output<List<TimeInWeekArgs>> timeInWeek) {
             $.timeInWeek = timeInWeek;
             return this;
         }
 
+        /**
+         * @param timeInWeek Weekday time slots allowed to upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInWeek(List<TimeInWeekArgs> timeInWeek) {
             return timeInWeek(Output.of(timeInWeek));
         }
 
+        /**
+         * @param timeInWeek Weekday time slots allowed to upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInWeek(TimeInWeekArgs... timeInWeek) {
             return timeInWeek(List.of(timeInWeek));
         }

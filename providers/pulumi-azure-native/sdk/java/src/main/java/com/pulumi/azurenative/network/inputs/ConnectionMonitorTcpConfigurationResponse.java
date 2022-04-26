@@ -27,6 +27,10 @@ public final class ConnectionMonitorTcpConfigurationResponse extends com.pulumi.
     @Import(name="destinationPortBehavior")
     private @Nullable String destinationPortBehavior;
 
+    /**
+     * @return Destination port behavior.
+     * 
+     */
     public Optional<String> destinationPortBehavior() {
         return Optional.ofNullable(this.destinationPortBehavior);
     }
@@ -38,6 +42,10 @@ public final class ConnectionMonitorTcpConfigurationResponse extends com.pulumi.
     @Import(name="disableTraceRoute")
     private @Nullable Boolean disableTraceRoute;
 
+    /**
+     * @return Value indicating whether path evaluation with trace route should be disabled.
+     * 
+     */
     public Optional<Boolean> disableTraceRoute() {
         return Optional.ofNullable(this.disableTraceRoute);
     }
@@ -49,6 +57,10 @@ public final class ConnectionMonitorTcpConfigurationResponse extends com.pulumi.
     @Import(name="port")
     private @Nullable Integer port;
 
+    /**
+     * @return The port to connect to.
+     * 
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
@@ -79,16 +91,34 @@ public final class ConnectionMonitorTcpConfigurationResponse extends com.pulumi.
             $ = new ConnectionMonitorTcpConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationPortBehavior Destination port behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortBehavior(@Nullable String destinationPortBehavior) {
             $.destinationPortBehavior = destinationPortBehavior;
             return this;
         }
 
+        /**
+         * @param disableTraceRoute Value indicating whether path evaluation with trace route should be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
             $.disableTraceRoute = disableTraceRoute;
             return this;
         }
 
+        /**
+         * @param port The port to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Integer port) {
             $.port = port;
             return this;

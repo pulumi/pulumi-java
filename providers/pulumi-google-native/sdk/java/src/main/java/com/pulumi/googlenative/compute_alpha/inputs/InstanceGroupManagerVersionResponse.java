@@ -20,6 +20,10 @@ public final class InstanceGroupManagerVersionResponse extends com.pulumi.resour
     @Import(name="instanceTemplate", required=true)
     private String instanceTemplate;
 
+    /**
+     * @return The URL of the instance template that is specified for this managed instance group. The group uses this template to create new instances in the managed instance group until the `targetSize` for this version is reached. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group&#39;s updatePolicy.type to PROACTIVE; in those cases, existing instances are updated until the `targetSize` for this version is reached.
+     * 
+     */
     public String instanceTemplate() {
         return this.instanceTemplate;
     }
@@ -31,6 +35,10 @@ public final class InstanceGroupManagerVersionResponse extends com.pulumi.resour
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the version. Unique among all versions in the scope of this managed instance group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -42,6 +50,10 @@ public final class InstanceGroupManagerVersionResponse extends com.pulumi.resour
     @Import(name="targetSize", required=true)
     private FixedOrPercentResponse targetSize;
 
+    /**
+     * @return Specifies the intended number of instances to be created from the instanceTemplate. The final number of instances created from the template will be equal to: - If expressed as a fixed number, the minimum of either targetSize.fixed or instanceGroupManager.targetSize is used. - if expressed as a percent, the targetSize would be (targetSize.percent/100 * InstanceGroupManager.targetSize) If there is a remainder, the number is rounded. If unset, this version will update any remaining instances not updated by another version. Read Starting a canary update for more information.
+     * 
+     */
     public FixedOrPercentResponse targetSize() {
         return this.targetSize;
     }
@@ -72,16 +84,34 @@ public final class InstanceGroupManagerVersionResponse extends com.pulumi.resour
             $ = new InstanceGroupManagerVersionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceTemplate The URL of the instance template that is specified for this managed instance group. The group uses this template to create new instances in the managed instance group until the `targetSize` for this version is reached. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group&#39;s updatePolicy.type to PROACTIVE; in those cases, existing instances are updated until the `targetSize` for this version is reached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTemplate(String instanceTemplate) {
             $.instanceTemplate = instanceTemplate;
             return this;
         }
 
+        /**
+         * @param name Name of the version. Unique among all versions in the scope of this managed instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param targetSize Specifies the intended number of instances to be created from the instanceTemplate. The final number of instances created from the template will be equal to: - If expressed as a fixed number, the minimum of either targetSize.fixed or instanceGroupManager.targetSize is used. - if expressed as a percent, the targetSize would be (targetSize.percent/100 * InstanceGroupManager.targetSize) If there is a remainder, the number is rounded. If unset, this version will update any remaining instances not updated by another version. Read Starting a canary update for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSize(FixedOrPercentResponse targetSize) {
             $.targetSize = targetSize;
             return this;

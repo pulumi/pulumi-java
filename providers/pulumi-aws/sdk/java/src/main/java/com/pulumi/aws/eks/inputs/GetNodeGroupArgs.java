@@ -22,6 +22,10 @@ public final class GetNodeGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return The name of the cluster.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -33,6 +37,10 @@ public final class GetNodeGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="nodeGroupName", required=true)
     private String nodeGroupName;
 
+    /**
+     * @return The name of the node group.
+     * 
+     */
     public String nodeGroupName() {
         return this.nodeGroupName;
     }
@@ -44,6 +52,10 @@ public final class GetNodeGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Key-value map of resource tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -74,16 +86,34 @@ public final class GetNodeGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetNodeGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param nodeGroupName The name of the node group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeGroupName(String nodeGroupName) {
             $.nodeGroupName = nodeGroupName;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

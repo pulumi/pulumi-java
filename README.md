@@ -21,23 +21,46 @@ introduced in places where `pulumi/pulumi` currently build-depends on
 `pulumi/java`, for example:
 
 - `pkg/cmd/pulumi/import.go`: import command support needs
-  jvm.GenerateProgram; instead figure out dynamic loading of program
+  java.GenerateProgram; instead figure out dynamic loading of program
   generators
 
-- `pkg/cmd/pulumi/new.go`: new command needs jvm.Build to support
+- `pkg/cmd/pulumi/new.go`: new command needs java.Build to support
   dispatching the right build commands for a java project; instead
   figure out dynamic dispatch of builders per language
 
-## Install local depedencies
+## Install local dependencies
 
+### Using privately released dependencies
+
+You will need:
+- a GitHub username
+- access grant to read `pulumi/pulumi-java` repository
+- a [Personal Access Token](https://github.com/settings/tokens) with `repo` scope
+
+Set `GITHUB_TOKEN` environment variables to your GitHub Personal Access Token, e.g.:
 ```shell
-$ make install_sdk #installs com.pulumi:pulumi to local maven repository
+export GITHUB_TOKEN=<my github personal access token>
+```
 
+Install the `java` language plugin:
+```shell
+pulumi plugin install language java
+```
+
+To access pre-release GitHub Packages see: [doc/packages.md]
+
+### Building dependencies locally
+```shell
+make submodule_update # downloads pulumi/pulumi for protobuf definitions
+make install_sdk # installs com.pulumi:pulumi into ~/.m2 maven repo
+make providers_all # installs all com.pulumi:pulumi-* providers into ~/.m2 maven repo
+make bin/pulumi-language-java # builds bin/pulumi-language-java language host
+export PATH="${PATH}:${PWD}/bin" # add bin/pulumi-language-java to PATH
 ```
 
 ## Adding Examples
 
-- Copy `tests/examples/random` to `tests/examples/your-example`.
+- Copy `tests/examples/eks-minimal` to `tests/examples/your-example`.
 - Update `rootProject.name` in `settings.gradle`.
 - Update `name` in `Pulumi.yaml`.
 - Update `mainClass` in `app/build.gradle`.

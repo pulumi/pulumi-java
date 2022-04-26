@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse extend
     @Import(name="jobConfig", required=true)
     private GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig;
 
+    /**
+     * @return The job config for the risk job.
+     * 
+     */
     public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig() {
         return this.jobConfig;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse extend
             $ = new GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobConfig The job config for the risk job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobConfig(GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig) {
             $.jobConfig = jobConfig;
             return this;

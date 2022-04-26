@@ -13,47 +13,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SharedAccessAuthorizationRulePropertiesResponse {
     /**
-     * A string that describes the claim type
+     * @return A string that describes the claim type
      * 
      */
     private final String claimType;
     /**
-     * A string that describes the claim value
+     * @return A string that describes the claim value
      * 
      */
     private final String claimValue;
     /**
-     * The created time for this rule
+     * @return The created time for this rule
      * 
      */
     private final String createdTime;
     /**
-     * A string that describes the authorization rule.
+     * @return A string that describes the authorization rule.
      * 
      */
     private final String keyName;
     /**
-     * The last modified time for this rule
+     * @return The last modified time for this rule
      * 
      */
     private final String modifiedTime;
     /**
-     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
      */
     private final String primaryKey;
     /**
-     * The revision number for the rule
+     * @return The revision number for the rule
      * 
      */
     private final Integer revision;
     /**
-     * The rights associated with the rule.
+     * @return The rights associated with the rule.
      * 
      */
     private final @Nullable List<String> rights;
     /**
-     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
      */
     private final String secondaryKey;
@@ -81,65 +81,65 @@ public final class SharedAccessAuthorizationRulePropertiesResponse {
     }
 
     /**
-     * A string that describes the claim type
+     * @return A string that describes the claim type
      * 
-    */
+     */
     public String claimType() {
         return this.claimType;
     }
     /**
-     * A string that describes the claim value
+     * @return A string that describes the claim value
      * 
-    */
+     */
     public String claimValue() {
         return this.claimValue;
     }
     /**
-     * The created time for this rule
+     * @return The created time for this rule
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * A string that describes the authorization rule.
+     * @return A string that describes the authorization rule.
      * 
-    */
+     */
     public String keyName() {
         return this.keyName;
     }
     /**
-     * The last modified time for this rule
+     * @return The last modified time for this rule
      * 
-    */
+     */
     public String modifiedTime() {
         return this.modifiedTime;
     }
     /**
-     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
-    */
+     */
     public String primaryKey() {
         return this.primaryKey;
     }
     /**
-     * The revision number for the rule
+     * @return The revision number for the rule
      * 
-    */
+     */
     public Integer revision() {
         return this.revision;
     }
     /**
-     * The rights associated with the rule.
+     * @return The rights associated with the rule.
      * 
-    */
+     */
     public List<String> rights() {
         return this.rights == null ? List.of() : this.rights;
     }
     /**
-     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
-    */
+     */
     public String secondaryKey() {
         return this.secondaryKey;
     }

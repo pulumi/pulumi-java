@@ -24,6 +24,10 @@ public final class SentimentAnalysisSettingsPropertiesArgs extends com.pulumi.re
     @Import(name="detectSentiment", required=true)
     private Output<Boolean> detectSentiment;
 
+    /**
+     * @return Enable to call Amazon Comprehend for Sentiment natively within Lex
+     * 
+     */
     public Output<Boolean> detectSentiment() {
         return this.detectSentiment;
     }
@@ -52,11 +56,23 @@ public final class SentimentAnalysisSettingsPropertiesArgs extends com.pulumi.re
             $ = new SentimentAnalysisSettingsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param detectSentiment Enable to call Amazon Comprehend for Sentiment natively within Lex
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectSentiment(Output<Boolean> detectSentiment) {
             $.detectSentiment = detectSentiment;
             return this;
         }
 
+        /**
+         * @param detectSentiment Enable to call Amazon Comprehend for Sentiment natively within Lex
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectSentiment(Boolean detectSentiment) {
             return detectSentiment(Output.of(detectSentiment));
         }

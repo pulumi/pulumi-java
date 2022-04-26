@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class JwtLocationResponse {
     /**
-     * Specifies HTTP header name to extract JWT token.
+     * @return Specifies HTTP header name to extract JWT token.
      * 
      */
     private final String header;
     /**
-     * Specifies URL query parameter name to extract JWT token.
+     * @return Specifies URL query parameter name to extract JWT token.
      * 
      */
     private final String query;
     /**
-     * The value prefix. The value format is &#34;value_prefix{token}&#34; Only applies to &#34;in&#34; header type. Must be empty for &#34;in&#34; query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for &#34;Authorization: Bearer {JWT}&#34;, value_prefix=&#34;Bearer &#34; with a space at the end.
+     * @return The value prefix. The value format is &#34;value_prefix{token}&#34; Only applies to &#34;in&#34; header type. Must be empty for &#34;in&#34; query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for &#34;Authorization: Bearer {JWT}&#34;, value_prefix=&#34;Bearer &#34; with a space at the end.
      * 
      */
     private final String valuePrefix;
@@ -36,23 +36,23 @@ public final class JwtLocationResponse {
     }
 
     /**
-     * Specifies HTTP header name to extract JWT token.
+     * @return Specifies HTTP header name to extract JWT token.
      * 
-    */
+     */
     public String header() {
         return this.header;
     }
     /**
-     * Specifies URL query parameter name to extract JWT token.
+     * @return Specifies URL query parameter name to extract JWT token.
      * 
-    */
+     */
     public String query() {
         return this.query;
     }
     /**
-     * The value prefix. The value format is &#34;value_prefix{token}&#34; Only applies to &#34;in&#34; header type. Must be empty for &#34;in&#34; query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for &#34;Authorization: Bearer {JWT}&#34;, value_prefix=&#34;Bearer &#34; with a space at the end.
+     * @return The value prefix. The value format is &#34;value_prefix{token}&#34; Only applies to &#34;in&#34; header type. Must be empty for &#34;in&#34; query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for &#34;Authorization: Bearer {JWT}&#34;, value_prefix=&#34;Bearer &#34; with a space at the end.
      * 
-    */
+     */
     public String valuePrefix() {
         return this.valuePrefix;
     }

@@ -25,6 +25,10 @@ public final class FileShareConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="capacityGb", required=true)
     private String capacityGb;
 
+    /**
+     * @return File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
+     * 
+     */
     public String capacityGb() {
         return this.capacityGb;
     }
@@ -36,6 +40,10 @@ public final class FileShareConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the file share (must be 16 characters or less).
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class FileShareConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="nfsExportOptions", required=true)
     private List<NfsExportOptionsResponse> nfsExportOptions;
 
+    /**
+     * @return Nfs Export Options. There is a limit of 10 export options per file share.
+     * 
+     */
     public List<NfsExportOptionsResponse> nfsExportOptions() {
         return this.nfsExportOptions;
     }
@@ -58,6 +70,10 @@ public final class FileShareConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sourceBackup", required=true)
     private String sourceBackup;
 
+    /**
+     * @return The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`, that this file share has been restored from.
+     * 
+     */
     public String sourceBackup() {
         return this.sourceBackup;
     }
@@ -89,25 +105,55 @@ public final class FileShareConfigResponse extends com.pulumi.resources.InvokeAr
             $ = new FileShareConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityGb File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityGb(String capacityGb) {
             $.capacityGb = capacityGb;
             return this;
         }
 
+        /**
+         * @param name The name of the file share (must be 16 characters or less).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param nfsExportOptions Nfs Export Options. There is a limit of 10 export options per file share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsExportOptions(List<NfsExportOptionsResponse> nfsExportOptions) {
             $.nfsExportOptions = nfsExportOptions;
             return this;
         }
 
+        /**
+         * @param nfsExportOptions Nfs Export Options. There is a limit of 10 export options per file share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsExportOptions(NfsExportOptionsResponse... nfsExportOptions) {
             return nfsExportOptions(List.of(nfsExportOptions));
         }
 
+        /**
+         * @param sourceBackup The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`, that this file share has been restored from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceBackup(String sourceBackup) {
             $.sourceBackup = sourceBackup;
             return this;

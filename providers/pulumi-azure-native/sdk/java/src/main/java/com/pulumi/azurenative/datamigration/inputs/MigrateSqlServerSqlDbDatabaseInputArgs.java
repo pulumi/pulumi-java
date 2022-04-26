@@ -28,6 +28,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends com.pulumi.res
     @Import(name="makeSourceDbReadOnly")
     private @Nullable Output<Boolean> makeSourceDbReadOnly;
 
+    /**
+     * @return Whether to set database read only before migration
+     * 
+     */
     public Optional<Output<Boolean>> makeSourceDbReadOnly() {
         return Optional.ofNullable(this.makeSourceDbReadOnly);
     }
@@ -39,6 +43,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends com.pulumi.res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the database
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +58,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends com.pulumi.res
     @Import(name="tableMap")
     private @Nullable Output<Map<String,String>> tableMap;
 
+    /**
+     * @return Mapping of source to target tables
+     * 
+     */
     public Optional<Output<Map<String,String>>> tableMap() {
         return Optional.ofNullable(this.tableMap);
     }
@@ -61,6 +73,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends com.pulumi.res
     @Import(name="targetDatabaseName")
     private @Nullable Output<String> targetDatabaseName;
 
+    /**
+     * @return Name of target database. Note: Target database will be truncated before starting migration.
+     * 
+     */
     public Optional<Output<String>> targetDatabaseName() {
         return Optional.ofNullable(this.targetDatabaseName);
     }
@@ -92,38 +108,86 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends com.pulumi.res
             $ = new MigrateSqlServerSqlDbDatabaseInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param makeSourceDbReadOnly Whether to set database read only before migration
+         * 
+         * @return builder
+         * 
+         */
         public Builder makeSourceDbReadOnly(@Nullable Output<Boolean> makeSourceDbReadOnly) {
             $.makeSourceDbReadOnly = makeSourceDbReadOnly;
             return this;
         }
 
+        /**
+         * @param makeSourceDbReadOnly Whether to set database read only before migration
+         * 
+         * @return builder
+         * 
+         */
         public Builder makeSourceDbReadOnly(Boolean makeSourceDbReadOnly) {
             return makeSourceDbReadOnly(Output.of(makeSourceDbReadOnly));
         }
 
+        /**
+         * @param name Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tableMap Mapping of source to target tables
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableMap(@Nullable Output<Map<String,String>> tableMap) {
             $.tableMap = tableMap;
             return this;
         }
 
+        /**
+         * @param tableMap Mapping of source to target tables
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableMap(Map<String,String> tableMap) {
             return tableMap(Output.of(tableMap));
         }
 
+        /**
+         * @param targetDatabaseName Name of target database. Note: Target database will be truncated before starting migration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDatabaseName(@Nullable Output<String> targetDatabaseName) {
             $.targetDatabaseName = targetDatabaseName;
             return this;
         }
 
+        /**
+         * @param targetDatabaseName Name of target database. Note: Target database will be truncated before starting migration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDatabaseName(String targetDatabaseName) {
             return targetDatabaseName(Output.of(targetDatabaseName));
         }

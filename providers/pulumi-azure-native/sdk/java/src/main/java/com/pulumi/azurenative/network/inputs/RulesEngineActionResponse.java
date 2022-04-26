@@ -29,6 +29,10 @@ public final class RulesEngineActionResponse extends com.pulumi.resources.Invoke
     @Import(name="requestHeaderActions")
     private @Nullable List<HeaderActionResponse> requestHeaderActions;
 
+    /**
+     * @return A list of header actions to apply from the request from AFD to the origin.
+     * 
+     */
     public Optional<List<HeaderActionResponse>> requestHeaderActions() {
         return Optional.ofNullable(this.requestHeaderActions);
     }
@@ -40,6 +44,10 @@ public final class RulesEngineActionResponse extends com.pulumi.resources.Invoke
     @Import(name="responseHeaderActions")
     private @Nullable List<HeaderActionResponse> responseHeaderActions;
 
+    /**
+     * @return A list of header actions to apply from the response from AFD to the client.
+     * 
+     */
     public Optional<List<HeaderActionResponse>> responseHeaderActions() {
         return Optional.ofNullable(this.responseHeaderActions);
     }
@@ -51,6 +59,10 @@ public final class RulesEngineActionResponse extends com.pulumi.resources.Invoke
     @Import(name="routeConfigurationOverride")
     private @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride;
 
+    /**
+     * @return Override the route configuration.
+     * 
+     */
     public Optional<Either<ForwardingConfigurationResponse,RedirectConfigurationResponse>> routeConfigurationOverride() {
         return Optional.ofNullable(this.routeConfigurationOverride);
     }
@@ -81,33 +93,75 @@ public final class RulesEngineActionResponse extends com.pulumi.resources.Invoke
             $ = new RulesEngineActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param requestHeaderActions A list of header actions to apply from the request from AFD to the origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaderActions(@Nullable List<HeaderActionResponse> requestHeaderActions) {
             $.requestHeaderActions = requestHeaderActions;
             return this;
         }
 
+        /**
+         * @param requestHeaderActions A list of header actions to apply from the request from AFD to the origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaderActions(HeaderActionResponse... requestHeaderActions) {
             return requestHeaderActions(List.of(requestHeaderActions));
         }
 
+        /**
+         * @param responseHeaderActions A list of header actions to apply from the response from AFD to the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaderActions(@Nullable List<HeaderActionResponse> responseHeaderActions) {
             $.responseHeaderActions = responseHeaderActions;
             return this;
         }
 
+        /**
+         * @param responseHeaderActions A list of header actions to apply from the response from AFD to the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaderActions(HeaderActionResponse... responseHeaderActions) {
             return responseHeaderActions(List.of(responseHeaderActions));
         }
 
+        /**
+         * @param routeConfigurationOverride Override the route configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeConfigurationOverride(@Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride) {
             $.routeConfigurationOverride = routeConfigurationOverride;
             return this;
         }
 
+        /**
+         * @param routeConfigurationOverride Override the route configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeConfigurationOverride(ForwardingConfigurationResponse routeConfigurationOverride) {
             return routeConfigurationOverride(Either.ofLeft(routeConfigurationOverride));
         }
 
+        /**
+         * @param routeConfigurationOverride Override the route configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeConfigurationOverride(RedirectConfigurationResponse routeConfigurationOverride) {
             return routeConfigurationOverride(Either.ofRight(routeConfigurationOverride));
         }

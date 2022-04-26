@@ -19,6 +19,10 @@ public final class GetSubnetGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnetGroupName", required=true)
     private String subnetGroupName;
 
+    /**
+     * @return The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
+     * 
+     */
     public String subnetGroupName() {
         return this.subnetGroupName;
     }
@@ -47,6 +51,12 @@ public final class GetSubnetGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSubnetGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subnetGroupName The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetGroupName(String subnetGroupName) {
             $.subnetGroupName = subnetGroupName;
             return this;

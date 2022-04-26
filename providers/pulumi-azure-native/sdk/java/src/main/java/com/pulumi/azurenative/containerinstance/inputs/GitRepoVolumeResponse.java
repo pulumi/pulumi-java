@@ -25,6 +25,10 @@ public final class GitRepoVolumeResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="directory")
     private @Nullable String directory;
 
+    /**
+     * @return Target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+     * 
+     */
     public Optional<String> directory() {
         return Optional.ofNullable(this.directory);
     }
@@ -36,6 +40,10 @@ public final class GitRepoVolumeResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="repository", required=true)
     private String repository;
 
+    /**
+     * @return Repository URL
+     * 
+     */
     public String repository() {
         return this.repository;
     }
@@ -47,6 +55,10 @@ public final class GitRepoVolumeResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="revision")
     private @Nullable String revision;
 
+    /**
+     * @return Commit hash for the specified revision.
+     * 
+     */
     public Optional<String> revision() {
         return Optional.ofNullable(this.revision);
     }
@@ -77,16 +89,34 @@ public final class GitRepoVolumeResponse extends com.pulumi.resources.InvokeArgs
             $ = new GitRepoVolumeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param directory Target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directory(@Nullable String directory) {
             $.directory = directory;
             return this;
         }
 
+        /**
+         * @param repository Repository URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(String repository) {
             $.repository = repository;
             return this;
         }
 
+        /**
+         * @param revision Commit hash for the specified revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(@Nullable String revision) {
             $.revision = revision;
             return this;

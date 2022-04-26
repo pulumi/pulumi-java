@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class BoundingPolyResponse {
     /**
-     * The bounding polygon normalized vertices.
+     * @return The bounding polygon normalized vertices.
      * 
      */
     private final List<NormalizedVertexResponse> normalizedVertices;
     /**
-     * The bounding polygon vertices.
+     * @return The bounding polygon vertices.
      * 
      */
     private final List<VertexResponse> vertices;
@@ -31,16 +31,16 @@ public final class BoundingPolyResponse {
     }
 
     /**
-     * The bounding polygon normalized vertices.
+     * @return The bounding polygon normalized vertices.
      * 
-    */
+     */
     public List<NormalizedVertexResponse> normalizedVertices() {
         return this.normalizedVertices;
     }
     /**
-     * The bounding polygon vertices.
+     * @return The bounding polygon vertices.
      * 
-    */
+     */
     public List<VertexResponse> vertices() {
         return this.vertices;
     }

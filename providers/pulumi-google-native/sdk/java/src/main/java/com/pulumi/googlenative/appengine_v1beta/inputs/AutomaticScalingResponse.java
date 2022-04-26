@@ -31,6 +31,10 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
     @Import(name="coolDownPeriod", required=true)
     private String coolDownPeriod;
 
+    /**
+     * @return The time period that the Autoscaler (https://cloud.google.com/compute/docs/autoscaler/) should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. Only applicable in the App Engine flexible environment.
+     * 
+     */
     public String coolDownPeriod() {
         return this.coolDownPeriod;
     }
@@ -42,6 +46,10 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
     @Import(name="cpuUtilization", required=true)
     private CpuUtilizationResponse cpuUtilization;
 
+    /**
+     * @return Target scaling by CPU usage.
+     * 
+     */
     public CpuUtilizationResponse cpuUtilization() {
         return this.cpuUtilization;
     }
@@ -53,6 +61,10 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
     @Import(name="customMetrics", required=true)
     private List<CustomMetricResponse> customMetrics;
 
+    /**
+     * @return Target scaling by user-provided metrics. Only applicable in the App Engine flexible environment.
+     * 
+     */
     public List<CustomMetricResponse> customMetrics() {
         return this.customMetrics;
     }
@@ -64,6 +76,10 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
     @Import(name="diskUtilization", required=true)
     private DiskUtilizationResponse diskUtilization;
 
+    /**
+     * @return Target scaling by disk usage.
+     * 
+     */
     public DiskUtilizationResponse diskUtilization() {
         return this.diskUtilization;
     }
@@ -75,6 +91,10 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
     @Import(name="maxConcurrentRequests", required=true)
     private Integer maxConcurrentRequests;
 
+    /**
+     * @return Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.Defaults to a runtime-specific value.
+     * 
+     */
     public Integer maxConcurrentRequests() {
         return this.maxConcurrentRequests;
     }
@@ -86,6 +106,10 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
     @Import(name="maxIdleInstances", required=true)
     private Integer maxIdleInstances;
 
+    /**
+     * @return Maximum number of idle instances that should be maintained for this version.
+     * 
+     */
     public Integer maxIdleInstances() {
         return this.maxIdleInstances;
     }
@@ -97,6 +121,10 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
     @Import(name="maxPendingLatency", required=true)
     private String maxPendingLatency;
 
+    /**
+     * @return Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+     * 
+     */
     public String maxPendingLatency() {
         return this.maxPendingLatency;
     }
@@ -108,6 +136,10 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
     @Import(name="maxTotalInstances", required=true)
     private Integer maxTotalInstances;
 
+    /**
+     * @return Maximum number of instances that should be started to handle requests for this version.
+     * 
+     */
     public Integer maxTotalInstances() {
         return this.maxTotalInstances;
     }
@@ -119,6 +151,10 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
     @Import(name="minIdleInstances", required=true)
     private Integer minIdleInstances;
 
+    /**
+     * @return Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+     * 
+     */
     public Integer minIdleInstances() {
         return this.minIdleInstances;
     }
@@ -130,6 +166,10 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
     @Import(name="minPendingLatency", required=true)
     private String minPendingLatency;
 
+    /**
+     * @return Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+     * 
+     */
     public String minPendingLatency() {
         return this.minPendingLatency;
     }
@@ -141,6 +181,10 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
     @Import(name="minTotalInstances", required=true)
     private Integer minTotalInstances;
 
+    /**
+     * @return Minimum number of running instances that should be maintained for this version.
+     * 
+     */
     public Integer minTotalInstances() {
         return this.minTotalInstances;
     }
@@ -152,6 +196,10 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
     @Import(name="networkUtilization", required=true)
     private NetworkUtilizationResponse networkUtilization;
 
+    /**
+     * @return Target scaling by network usage.
+     * 
+     */
     public NetworkUtilizationResponse networkUtilization() {
         return this.networkUtilization;
     }
@@ -163,6 +211,10 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
     @Import(name="requestUtilization", required=true)
     private RequestUtilizationResponse requestUtilization;
 
+    /**
+     * @return Target scaling by request utilization.
+     * 
+     */
     public RequestUtilizationResponse requestUtilization() {
         return this.requestUtilization;
     }
@@ -174,6 +226,10 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
     @Import(name="standardSchedulerSettings", required=true)
     private StandardSchedulerSettingsResponse standardSchedulerSettings;
 
+    /**
+     * @return Scheduler settings for standard environment.
+     * 
+     */
     public StandardSchedulerSettingsResponse standardSchedulerSettings() {
         return this.standardSchedulerSettings;
     }
@@ -215,75 +271,165 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
             $ = new AutomaticScalingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param coolDownPeriod The time period that the Autoscaler (https://cloud.google.com/compute/docs/autoscaler/) should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. Only applicable in the App Engine flexible environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coolDownPeriod(String coolDownPeriod) {
             $.coolDownPeriod = coolDownPeriod;
             return this;
         }
 
+        /**
+         * @param cpuUtilization Target scaling by CPU usage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuUtilization(CpuUtilizationResponse cpuUtilization) {
             $.cpuUtilization = cpuUtilization;
             return this;
         }
 
+        /**
+         * @param customMetrics Target scaling by user-provided metrics. Only applicable in the App Engine flexible environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customMetrics(List<CustomMetricResponse> customMetrics) {
             $.customMetrics = customMetrics;
             return this;
         }
 
+        /**
+         * @param customMetrics Target scaling by user-provided metrics. Only applicable in the App Engine flexible environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customMetrics(CustomMetricResponse... customMetrics) {
             return customMetrics(List.of(customMetrics));
         }
 
+        /**
+         * @param diskUtilization Target scaling by disk usage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskUtilization(DiskUtilizationResponse diskUtilization) {
             $.diskUtilization = diskUtilization;
             return this;
         }
 
+        /**
+         * @param maxConcurrentRequests Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.Defaults to a runtime-specific value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentRequests(Integer maxConcurrentRequests) {
             $.maxConcurrentRequests = maxConcurrentRequests;
             return this;
         }
 
+        /**
+         * @param maxIdleInstances Maximum number of idle instances that should be maintained for this version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxIdleInstances(Integer maxIdleInstances) {
             $.maxIdleInstances = maxIdleInstances;
             return this;
         }
 
+        /**
+         * @param maxPendingLatency Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPendingLatency(String maxPendingLatency) {
             $.maxPendingLatency = maxPendingLatency;
             return this;
         }
 
+        /**
+         * @param maxTotalInstances Maximum number of instances that should be started to handle requests for this version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxTotalInstances(Integer maxTotalInstances) {
             $.maxTotalInstances = maxTotalInstances;
             return this;
         }
 
+        /**
+         * @param minIdleInstances Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minIdleInstances(Integer minIdleInstances) {
             $.minIdleInstances = minIdleInstances;
             return this;
         }
 
+        /**
+         * @param minPendingLatency Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minPendingLatency(String minPendingLatency) {
             $.minPendingLatency = minPendingLatency;
             return this;
         }
 
+        /**
+         * @param minTotalInstances Minimum number of running instances that should be maintained for this version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minTotalInstances(Integer minTotalInstances) {
             $.minTotalInstances = minTotalInstances;
             return this;
         }
 
+        /**
+         * @param networkUtilization Target scaling by network usage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUtilization(NetworkUtilizationResponse networkUtilization) {
             $.networkUtilization = networkUtilization;
             return this;
         }
 
+        /**
+         * @param requestUtilization Target scaling by request utilization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestUtilization(RequestUtilizationResponse requestUtilization) {
             $.requestUtilization = requestUtilization;
             return this;
         }
 
+        /**
+         * @param standardSchedulerSettings Scheduler settings for standard environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder standardSchedulerSettings(StandardSchedulerSettingsResponse standardSchedulerSettings) {
             $.standardSchedulerSettings = standardSchedulerSettings;
             return this;

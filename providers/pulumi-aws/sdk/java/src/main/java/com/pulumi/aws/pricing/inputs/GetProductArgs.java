@@ -21,6 +21,10 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters", required=true)
     private List<GetProductFilter> filters;
 
+    /**
+     * @return A list of filters. Passed directly to the API (see GetProducts API reference). These filters must describe a single product, this resource will fail if more than one product is returned by the API.
+     * 
+     */
     public List<GetProductFilter> filters() {
         return this.filters;
     }
@@ -32,6 +36,10 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceCode", required=true)
     private String serviceCode;
 
+    /**
+     * @return The code of the service. Available service codes can be fetched using the DescribeServices pricing API call.
+     * 
+     */
     public String serviceCode() {
         return this.serviceCode;
     }
@@ -61,15 +69,33 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetProductArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters A list of filters. Passed directly to the API (see GetProducts API reference). These filters must describe a single product, this resource will fail if more than one product is returned by the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(List<GetProductFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters A list of filters. Passed directly to the API (see GetProducts API reference). These filters must describe a single product, this resource will fail if more than one product is returned by the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetProductFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param serviceCode The code of the service. Available service codes can be fetched using the DescribeServices pricing API call.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCode(String serviceCode) {
             $.serviceCode = serviceCode;
             return this;

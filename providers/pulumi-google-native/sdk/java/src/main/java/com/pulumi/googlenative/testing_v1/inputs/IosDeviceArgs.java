@@ -24,6 +24,10 @@ public final class IosDeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iosModelId", required=true)
     private Output<String> iosModelId;
 
+    /**
+     * @return The id of the iOS device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public Output<String> iosModelId() {
         return this.iosModelId;
     }
@@ -35,6 +39,10 @@ public final class IosDeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iosVersionId", required=true)
     private Output<String> iosVersionId;
 
+    /**
+     * @return The id of the iOS major software version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public Output<String> iosVersionId() {
         return this.iosVersionId;
     }
@@ -46,6 +54,10 @@ public final class IosDeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locale", required=true)
     private Output<String> locale;
 
+    /**
+     * @return The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public Output<String> locale() {
         return this.locale;
     }
@@ -57,6 +69,10 @@ public final class IosDeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="orientation", required=true)
     private Output<String> orientation;
 
+    /**
+     * @return How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public Output<String> orientation() {
         return this.orientation;
     }
@@ -88,38 +104,86 @@ public final class IosDeviceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IosDeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iosModelId The id of the iOS device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosModelId(Output<String> iosModelId) {
             $.iosModelId = iosModelId;
             return this;
         }
 
+        /**
+         * @param iosModelId The id of the iOS device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosModelId(String iosModelId) {
             return iosModelId(Output.of(iosModelId));
         }
 
+        /**
+         * @param iosVersionId The id of the iOS major software version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosVersionId(Output<String> iosVersionId) {
             $.iosVersionId = iosVersionId;
             return this;
         }
 
+        /**
+         * @param iosVersionId The id of the iOS major software version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosVersionId(String iosVersionId) {
             return iosVersionId(Output.of(iosVersionId));
         }
 
+        /**
+         * @param locale The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locale(Output<String> locale) {
             $.locale = locale;
             return this;
         }
 
+        /**
+         * @param locale The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locale(String locale) {
             return locale(Output.of(locale));
         }
 
+        /**
+         * @param orientation How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orientation(Output<String> orientation) {
             $.orientation = orientation;
             return this;
         }
 
+        /**
+         * @param orientation How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orientation(String orientation) {
             return orientation(Output.of(orientation));
         }

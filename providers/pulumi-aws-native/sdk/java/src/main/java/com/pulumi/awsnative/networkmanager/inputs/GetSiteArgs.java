@@ -19,6 +19,10 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="globalNetworkId", required=true)
     private String globalNetworkId;
 
+    /**
+     * @return The ID of the global network.
+     * 
+     */
     public String globalNetworkId() {
         return this.globalNetworkId;
     }
@@ -30,6 +34,10 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="siteId", required=true)
     private String siteId;
 
+    /**
+     * @return The ID of the site.
+     * 
+     */
     public String siteId() {
         return this.siteId;
     }
@@ -59,11 +67,23 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNetworkId(String globalNetworkId) {
             $.globalNetworkId = globalNetworkId;
             return this;
         }
 
+        /**
+         * @param siteId The ID of the site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteId(String siteId) {
             $.siteId = siteId;
             return this;

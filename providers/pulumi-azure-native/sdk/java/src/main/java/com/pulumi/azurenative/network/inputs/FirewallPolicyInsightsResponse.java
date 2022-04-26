@@ -27,6 +27,10 @@ public final class FirewallPolicyInsightsResponse extends com.pulumi.resources.I
     @Import(name="isEnabled")
     private @Nullable Boolean isEnabled;
 
+    /**
+     * @return A flag to indicate if the insights are enabled on the policy.
+     * 
+     */
     public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
@@ -38,6 +42,10 @@ public final class FirewallPolicyInsightsResponse extends com.pulumi.resources.I
     @Import(name="logAnalyticsResources")
     private @Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources;
 
+    /**
+     * @return Workspaces needed to configure the Firewall Policy Insights.
+     * 
+     */
     public Optional<FirewallPolicyLogAnalyticsResourcesResponse> logAnalyticsResources() {
         return Optional.ofNullable(this.logAnalyticsResources);
     }
@@ -49,6 +57,10 @@ public final class FirewallPolicyInsightsResponse extends com.pulumi.resources.I
     @Import(name="retentionDays")
     private @Nullable Integer retentionDays;
 
+    /**
+     * @return Number of days the insights should be enabled on the policy.
+     * 
+     */
     public Optional<Integer> retentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
@@ -79,16 +91,34 @@ public final class FirewallPolicyInsightsResponse extends com.pulumi.resources.I
             $ = new FirewallPolicyInsightsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isEnabled A flag to indicate if the insights are enabled on the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param logAnalyticsResources Workspaces needed to configure the Firewall Policy Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalyticsResources(@Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources) {
             $.logAnalyticsResources = logAnalyticsResources;
             return this;
         }
 
+        /**
+         * @param retentionDays Number of days the insights should be enabled on the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDays(@Nullable Integer retentionDays) {
             $.retentionDays = retentionDays;
             return this;

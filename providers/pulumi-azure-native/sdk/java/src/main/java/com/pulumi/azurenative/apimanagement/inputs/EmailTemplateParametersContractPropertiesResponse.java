@@ -25,6 +25,10 @@ public final class EmailTemplateParametersContractPropertiesResponse extends com
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Template parameter description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class EmailTemplateParametersContractPropertiesResponse extends com
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Template parameter name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class EmailTemplateParametersContractPropertiesResponse extends com
     @Import(name="title")
     private @Nullable String title;
 
+    /**
+     * @return Template parameter title.
+     * 
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
@@ -77,16 +89,34 @@ public final class EmailTemplateParametersContractPropertiesResponse extends com
             $ = new EmailTemplateParametersContractPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Template parameter description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param name Template parameter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param title Template parameter title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable String title) {
             $.title = title;
             return this;

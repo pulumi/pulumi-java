@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PostgresInstancePropertiesResponse {
     /**
-     * The instance admin
+     * @return The instance admin
      * 
      */
     private final @Nullable String admin;
     /**
-     * Username and password for basic authentication.
+     * @return Username and password for basic authentication.
      * 
      */
     private final @Nullable BasicLoginInformationResponse basicLoginInformation;
     /**
-     * The data controller id
+     * @return The data controller id
      * 
      */
     private final @Nullable String dataControllerId;
     /**
-     * The raw kubernetes information
+     * @return The raw kubernetes information
      * 
      */
     private final @Nullable Object k8sRaw;
     /**
-     * Last uploaded date from Kubernetes cluster. Defaults to current date time
+     * @return Last uploaded date from Kubernetes cluster. Defaults to current date time
      * 
      */
     private final @Nullable String lastUploadedDate;
@@ -57,37 +57,37 @@ public final class PostgresInstancePropertiesResponse {
     }
 
     /**
-     * The instance admin
+     * @return The instance admin
      * 
-    */
+     */
     public Optional<String> admin() {
         return Optional.ofNullable(this.admin);
     }
     /**
-     * Username and password for basic authentication.
+     * @return Username and password for basic authentication.
      * 
-    */
+     */
     public Optional<BasicLoginInformationResponse> basicLoginInformation() {
         return Optional.ofNullable(this.basicLoginInformation);
     }
     /**
-     * The data controller id
+     * @return The data controller id
      * 
-    */
+     */
     public Optional<String> dataControllerId() {
         return Optional.ofNullable(this.dataControllerId);
     }
     /**
-     * The raw kubernetes information
+     * @return The raw kubernetes information
      * 
-    */
+     */
     public Optional<Object> k8sRaw() {
         return Optional.ofNullable(this.k8sRaw);
     }
     /**
-     * Last uploaded date from Kubernetes cluster. Defaults to current date time
+     * @return Last uploaded date from Kubernetes cluster. Defaults to current date time
      * 
-    */
+     */
     public Optional<String> lastUploadedDate() {
         return Optional.ofNullable(this.lastUploadedDate);
     }

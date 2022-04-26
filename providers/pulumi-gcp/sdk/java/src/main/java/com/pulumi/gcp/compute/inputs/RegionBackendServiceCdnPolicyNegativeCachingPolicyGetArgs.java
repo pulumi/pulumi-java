@@ -23,6 +23,11 @@ public final class RegionBackendServiceCdnPolicyNegativeCachingPolicyGetArgs ext
     @Import(name="code")
     private @Nullable Output<Integer> code;
 
+    /**
+     * @return The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
+     * can be specified as values, and you cannot specify a status code more than once.
+     * 
+     */
     public Optional<Output<Integer>> code() {
         return Optional.ofNullable(this.code);
     }
@@ -35,6 +40,11 @@ public final class RegionBackendServiceCdnPolicyNegativeCachingPolicyGetArgs ext
     @Import(name="ttl")
     private @Nullable Output<Integer> ttl;
 
+    /**
+     * @return The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+     * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+     * 
+     */
     public Optional<Output<Integer>> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -64,20 +74,48 @@ public final class RegionBackendServiceCdnPolicyNegativeCachingPolicyGetArgs ext
             $ = new RegionBackendServiceCdnPolicyNegativeCachingPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
+         * can be specified as values, and you cannot specify a status code more than once.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable Output<Integer> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
+         * can be specified as values, and you cannot specify a status code more than once.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(Integer code) {
             return code(Output.of(code));
         }
 
+        /**
+         * @param ttl The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+         * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Output<Integer> ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param ttl The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+         * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(Integer ttl) {
             return ttl(Output.of(ttl));
         }

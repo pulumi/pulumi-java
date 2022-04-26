@@ -26,6 +26,10 @@ public final class LanguageExtensionsListResponse extends com.pulumi.resources.I
     @Import(name="value")
     private @Nullable List<LanguageExtensionResponse> value;
 
+    /**
+     * @return The list of language extensions.
+     * 
+     */
     public Optional<List<LanguageExtensionResponse>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -54,11 +58,23 @@ public final class LanguageExtensionsListResponse extends com.pulumi.resources.I
             $ = new LanguageExtensionsListResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The list of language extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable List<LanguageExtensionResponse> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The list of language extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(LanguageExtensionResponse... value) {
             return value(List.of(value));
         }

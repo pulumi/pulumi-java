@@ -27,6 +27,10 @@ public final class SourceProvenanceResponse extends com.pulumi.resources.InvokeA
     @Import(name="fileHashes", required=true)
     private Map<String,String> fileHashes;
 
+    /**
+     * @return Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. Note that `FileHashes` will only be populated if `BuildOptions` has requested a `SourceProvenanceHash`. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (`.tar.gz`), the `FileHash` will be for the single path to that file.
+     * 
+     */
     public Map<String,String> fileHashes() {
         return this.fileHashes;
     }
@@ -38,6 +42,10 @@ public final class SourceProvenanceResponse extends com.pulumi.resources.InvokeA
     @Import(name="resolvedRepoSource", required=true)
     private RepoSourceResponse resolvedRepoSource;
 
+    /**
+     * @return A copy of the build&#39;s `source.repo_source`, if exists, with any revisions resolved.
+     * 
+     */
     public RepoSourceResponse resolvedRepoSource() {
         return this.resolvedRepoSource;
     }
@@ -49,6 +57,10 @@ public final class SourceProvenanceResponse extends com.pulumi.resources.InvokeA
     @Import(name="resolvedStorageSource", required=true)
     private StorageSourceResponse resolvedStorageSource;
 
+    /**
+     * @return A copy of the build&#39;s `source.storage_source`, if exists, with any generations resolved.
+     * 
+     */
     public StorageSourceResponse resolvedStorageSource() {
         return this.resolvedStorageSource;
     }
@@ -60,6 +72,10 @@ public final class SourceProvenanceResponse extends com.pulumi.resources.InvokeA
     @Import(name="resolvedStorageSourceManifest", required=true)
     private StorageSourceManifestResponse resolvedStorageSourceManifest;
 
+    /**
+     * @return A copy of the build&#39;s `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.
+     * 
+     */
     public StorageSourceManifestResponse resolvedStorageSourceManifest() {
         return this.resolvedStorageSourceManifest;
     }
@@ -91,21 +107,45 @@ public final class SourceProvenanceResponse extends com.pulumi.resources.InvokeA
             $ = new SourceProvenanceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileHashes Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. Note that `FileHashes` will only be populated if `BuildOptions` has requested a `SourceProvenanceHash`. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (`.tar.gz`), the `FileHash` will be for the single path to that file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileHashes(Map<String,String> fileHashes) {
             $.fileHashes = fileHashes;
             return this;
         }
 
+        /**
+         * @param resolvedRepoSource A copy of the build&#39;s `source.repo_source`, if exists, with any revisions resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolvedRepoSource(RepoSourceResponse resolvedRepoSource) {
             $.resolvedRepoSource = resolvedRepoSource;
             return this;
         }
 
+        /**
+         * @param resolvedStorageSource A copy of the build&#39;s `source.storage_source`, if exists, with any generations resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolvedStorageSource(StorageSourceResponse resolvedStorageSource) {
             $.resolvedStorageSource = resolvedStorageSource;
             return this;
         }
 
+        /**
+         * @param resolvedStorageSourceManifest A copy of the build&#39;s `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolvedStorageSourceManifest(StorageSourceManifestResponse resolvedStorageSourceManifest) {
             $.resolvedStorageSourceManifest = resolvedStorageSourceManifest;
             return this;

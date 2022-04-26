@@ -26,6 +26,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
     private Output<String> apiId;
 
+    /**
+     * @return API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+     * 
+     */
     public Output<String> apiId() {
         return this.apiId;
     }
@@ -37,6 +41,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the operation. May include HTML formatting tags.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Operation Name.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -59,6 +71,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="method", required=true)
     private Output<String> method;
 
+    /**
+     * @return A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
+     * 
+     */
     public Output<String> method() {
         return this.method;
     }
@@ -70,6 +86,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operationId")
     private @Nullable Output<String> operationId;
 
+    /**
+     * @return Operation identifier within an API. Must be unique in the current API Management service instance.
+     * 
+     */
     public Optional<Output<String>> operationId() {
         return Optional.ofNullable(this.operationId);
     }
@@ -81,6 +101,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policies")
     private @Nullable Output<String> policies;
 
+    /**
+     * @return Operation Policies
+     * 
+     */
     public Optional<Output<String>> policies() {
         return Optional.ofNullable(this.policies);
     }
@@ -92,6 +116,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="request")
     private @Nullable Output<RequestContractArgs> request;
 
+    /**
+     * @return An entity containing request details.
+     * 
+     */
     public Optional<Output<RequestContractArgs>> request() {
         return Optional.ofNullable(this.request);
     }
@@ -103,6 +131,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -114,6 +146,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="responses")
     private @Nullable Output<List<ResponseContractArgs>> responses;
 
+    /**
+     * @return Array of Operation responses.
+     * 
+     */
     public Optional<Output<List<ResponseContractArgs>>> responses() {
         return Optional.ofNullable(this.responses);
     }
@@ -125,6 +161,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -136,6 +176,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateParameters")
     private @Nullable Output<List<ParameterContractArgs>> templateParameters;
 
+    /**
+     * @return Collection of URL template parameters.
+     * 
+     */
     public Optional<Output<List<ParameterContractArgs>>> templateParameters() {
         return Optional.ofNullable(this.templateParameters);
     }
@@ -147,6 +191,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="urlTemplate", required=true)
     private Output<String> urlTemplate;
 
+    /**
+     * @return Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
+     * 
+     */
     public Output<String> urlTemplate() {
         return this.urlTemplate;
     }
@@ -186,118 +234,274 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApiOperationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param description Description of the operation. May include HTML formatting tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the operation. May include HTML formatting tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Operation Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Operation Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param method A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(Output<String> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(String method) {
             return method(Output.of(method));
         }
 
+        /**
+         * @param operationId Operation identifier within an API. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationId(@Nullable Output<String> operationId) {
             $.operationId = operationId;
             return this;
         }
 
+        /**
+         * @param operationId Operation identifier within an API. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationId(String operationId) {
             return operationId(Output.of(operationId));
         }
 
+        /**
+         * @param policies Operation Policies
+         * 
+         * @return builder
+         * 
+         */
         public Builder policies(@Nullable Output<String> policies) {
             $.policies = policies;
             return this;
         }
 
+        /**
+         * @param policies Operation Policies
+         * 
+         * @return builder
+         * 
+         */
         public Builder policies(String policies) {
             return policies(Output.of(policies));
         }
 
+        /**
+         * @param request An entity containing request details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(@Nullable Output<RequestContractArgs> request) {
             $.request = request;
             return this;
         }
 
+        /**
+         * @param request An entity containing request details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(RequestContractArgs request) {
             return request(Output.of(request));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param responses Array of Operation responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responses(@Nullable Output<List<ResponseContractArgs>> responses) {
             $.responses = responses;
             return this;
         }
 
+        /**
+         * @param responses Array of Operation responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responses(List<ResponseContractArgs> responses) {
             return responses(Output.of(responses));
         }
 
+        /**
+         * @param responses Array of Operation responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responses(ResponseContractArgs... responses) {
             return responses(List.of(responses));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param templateParameters Collection of URL template parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateParameters(@Nullable Output<List<ParameterContractArgs>> templateParameters) {
             $.templateParameters = templateParameters;
             return this;
         }
 
+        /**
+         * @param templateParameters Collection of URL template parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateParameters(List<ParameterContractArgs> templateParameters) {
             return templateParameters(Output.of(templateParameters));
         }
 
+        /**
+         * @param templateParameters Collection of URL template parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateParameters(ParameterContractArgs... templateParameters) {
             return templateParameters(List.of(templateParameters));
         }
 
+        /**
+         * @param urlTemplate Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlTemplate(Output<String> urlTemplate) {
             $.urlTemplate = urlTemplate;
             return this;
         }
 
+        /**
+         * @param urlTemplate Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlTemplate(String urlTemplate) {
             return urlTemplate(Output.of(urlTemplate));
         }

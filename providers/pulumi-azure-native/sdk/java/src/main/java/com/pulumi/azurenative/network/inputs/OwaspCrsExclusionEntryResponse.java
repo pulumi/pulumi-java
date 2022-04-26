@@ -23,6 +23,10 @@ public final class OwaspCrsExclusionEntryResponse extends com.pulumi.resources.I
     @Import(name="matchVariable", required=true)
     private String matchVariable;
 
+    /**
+     * @return The variable to be excluded.
+     * 
+     */
     public String matchVariable() {
         return this.matchVariable;
     }
@@ -34,6 +38,10 @@ public final class OwaspCrsExclusionEntryResponse extends com.pulumi.resources.I
     @Import(name="selector", required=true)
     private String selector;
 
+    /**
+     * @return When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
+     * 
+     */
     public String selector() {
         return this.selector;
     }
@@ -45,6 +53,10 @@ public final class OwaspCrsExclusionEntryResponse extends com.pulumi.resources.I
     @Import(name="selectorMatchOperator", required=true)
     private String selectorMatchOperator;
 
+    /**
+     * @return When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
+     * 
+     */
     public String selectorMatchOperator() {
         return this.selectorMatchOperator;
     }
@@ -75,16 +87,34 @@ public final class OwaspCrsExclusionEntryResponse extends com.pulumi.resources.I
             $ = new OwaspCrsExclusionEntryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchVariable The variable to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariable(String matchVariable) {
             $.matchVariable = matchVariable;
             return this;
         }
 
+        /**
+         * @param selector When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selectorMatchOperator When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectorMatchOperator(String selectorMatchOperator) {
             $.selectorMatchOperator = selectorMatchOperator;
             return this;

@@ -21,6 +21,10 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementGetArgs
     @Import(name="statements", required=true)
     private Output<List<RuleGroupRuleStatementOrStatementStatementAndStatementStatementGetArgs>> statements;
 
+    /**
+     * @return The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+     * 
+     */
     public Output<List<RuleGroupRuleStatementOrStatementStatementAndStatementStatementGetArgs>> statements() {
         return this.statements;
     }
@@ -49,15 +53,33 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementGetArgs
             $ = new RuleGroupRuleStatementOrStatementStatementAndStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(Output<List<RuleGroupRuleStatementOrStatementStatementAndStatementStatementGetArgs>> statements) {
             $.statements = statements;
             return this;
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(List<RuleGroupRuleStatementOrStatementStatementAndStatementStatementGetArgs> statements) {
             return statements(Output.of(statements));
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(RuleGroupRuleStatementOrStatementStatementAndStatementStatementGetArgs... statements) {
             return statements(List.of(statements));
         }

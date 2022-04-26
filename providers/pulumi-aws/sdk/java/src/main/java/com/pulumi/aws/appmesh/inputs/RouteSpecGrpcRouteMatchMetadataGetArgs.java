@@ -24,6 +24,10 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends com.pulumi.res
     @Import(name="invert")
     private @Nullable Output<Boolean> invert;
 
+    /**
+     * @return If `true`, the match is on the opposite of the `match` criteria. Default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> invert() {
         return Optional.ofNullable(this.invert);
     }
@@ -35,6 +39,10 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends com.pulumi.res
     @Import(name="match")
     private @Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match;
 
+    /**
+     * @return The data to match from the request.
+     * 
+     */
     public Optional<Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs>> match() {
         return Optional.ofNullable(this.match);
     }
@@ -46,6 +54,10 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends com.pulumi.res
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the route. Must be between 1 and 50 characters in length.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -76,29 +88,65 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends com.pulumi.res
             $ = new RouteSpecGrpcRouteMatchMetadataGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param invert If `true`, the match is on the opposite of the `match` criteria. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invert(@Nullable Output<Boolean> invert) {
             $.invert = invert;
             return this;
         }
 
+        /**
+         * @param invert If `true`, the match is on the opposite of the `match` criteria. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invert(Boolean invert) {
             return invert(Output.of(invert));
         }
 
+        /**
+         * @param match The data to match from the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(@Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param match The data to match from the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(RouteSpecGrpcRouteMatchMetadataMatchGetArgs match) {
             return match(Output.of(match));
         }
 
+        /**
+         * @param name The name of the route. Must be between 1 and 50 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the route. Must be between 1 and 50 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

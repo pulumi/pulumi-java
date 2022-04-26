@@ -16,62 +16,62 @@ import java.util.Objects;
 @CustomType
 public final class GetRouterResult {
     /**
-     * BGP information specific to this router.
+     * @return BGP information specific to this router.
      * 
      */
     private final RouterBgpResponse bgp;
     /**
-     * BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.
+     * @return BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.
      * 
      */
     private final List<RouterBgpPeerResponse> bgpPeers;
     /**
-     * Creation timestamp in RFC3339 text format.
+     * @return Creation timestamp in RFC3339 text format.
      * 
      */
     private final String creationTimestamp;
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
     private final String description;
     /**
-     * Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments). Not currently available publicly.
+     * @return Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments). Not currently available publicly.
      * 
      */
     private final Boolean encryptedInterconnectRouter;
     /**
-     * Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
+     * @return Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
      * 
      */
     private final List<RouterInterfaceResponse> interfaces;
     /**
-     * Type of resource. Always compute#router for routers.
+     * @return Type of resource. Always compute#router for routers.
      * 
      */
     private final String kind;
     /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
     private final String name;
     /**
-     * A list of NAT services created in this router.
+     * @return A list of NAT services created in this router.
      * 
      */
     private final List<RouterNatResponse> nats;
     /**
-     * URI of the network to which this router belongs.
+     * @return URI of the network to which this router belongs.
      * 
      */
     private final String network;
     /**
-     * URI of the region where the router resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
+     * @return URI of the region where the router resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
     private final String region;
     /**
-     * Server-defined URL for the resource.
+     * @return Server-defined URL for the resource.
      * 
      */
     private final String selfLink;
@@ -105,86 +105,86 @@ public final class GetRouterResult {
     }
 
     /**
-     * BGP information specific to this router.
+     * @return BGP information specific to this router.
      * 
-    */
+     */
     public RouterBgpResponse bgp() {
         return this.bgp;
     }
     /**
-     * BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.
+     * @return BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.
      * 
-    */
+     */
     public List<RouterBgpPeerResponse> bgpPeers() {
         return this.bgpPeers;
     }
     /**
-     * Creation timestamp in RFC3339 text format.
+     * @return Creation timestamp in RFC3339 text format.
      * 
-    */
+     */
     public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments). Not currently available publicly.
+     * @return Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments). Not currently available publicly.
      * 
-    */
+     */
     public Boolean encryptedInterconnectRouter() {
         return this.encryptedInterconnectRouter;
     }
     /**
-     * Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
+     * @return Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
      * 
-    */
+     */
     public List<RouterInterfaceResponse> interfaces() {
         return this.interfaces;
     }
     /**
-     * Type of resource. Always compute#router for routers.
+     * @return Type of resource. Always compute#router for routers.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A list of NAT services created in this router.
+     * @return A list of NAT services created in this router.
      * 
-    */
+     */
     public List<RouterNatResponse> nats() {
         return this.nats;
     }
     /**
-     * URI of the network to which this router belongs.
+     * @return URI of the network to which this router belongs.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
     /**
-     * URI of the region where the router resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
+     * @return URI of the region where the router resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * Server-defined URL for the resource.
+     * @return Server-defined URL for the resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }

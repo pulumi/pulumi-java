@@ -15,18 +15,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VMExtensionResponse {
     /**
-     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
     private final @Nullable Boolean autoUpgradeMinorVersion;
     private final String name;
     /**
-     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+     * @return The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
      */
     private final @Nullable Object protectedSettings;
     /**
-     * Collection of extension names after which this extension needs to be provisioned.
+     * @return Collection of extension names after which this extension needs to be provisioned.
      * 
      */
     private final @Nullable List<String> provisionAfterExtensions;
@@ -56,9 +56,9 @@ public final class VMExtensionResponse {
     }
 
     /**
-     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
-    */
+     */
     public Optional<Boolean> autoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
@@ -66,16 +66,16 @@ public final class VMExtensionResponse {
         return this.name;
     }
     /**
-     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+     * @return The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
-    */
+     */
     public Optional<Object> protectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
     /**
-     * Collection of extension names after which this extension needs to be provisioned.
+     * @return Collection of extension names after which this extension needs to be provisioned.
      * 
-    */
+     */
     public List<String> provisionAfterExtensions() {
         return this.provisionAfterExtensions == null ? List.of() : this.provisionAfterExtensions;
     }

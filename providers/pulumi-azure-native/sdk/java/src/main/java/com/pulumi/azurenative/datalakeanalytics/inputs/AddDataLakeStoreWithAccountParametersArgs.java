@@ -26,6 +26,10 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends com.pulumi.
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The unique name of the Data Lake Store account to add.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends com.pulumi.
     @Import(name="suffix")
     private @Nullable Output<String> suffix;
 
+    /**
+     * @return The optional suffix for the Data Lake Store account.
+     * 
+     */
     public Optional<Output<String>> suffix() {
         return Optional.ofNullable(this.suffix);
     }
@@ -66,20 +74,44 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends com.pulumi.
             $ = new AddDataLakeStoreWithAccountParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The unique name of the Data Lake Store account to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique name of the Data Lake Store account to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param suffix The optional suffix for the Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suffix(@Nullable Output<String> suffix) {
             $.suffix = suffix;
             return this;
         }
 
+        /**
+         * @param suffix The optional suffix for the Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suffix(String suffix) {
             return suffix(Output.of(suffix));
         }

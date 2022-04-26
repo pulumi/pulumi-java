@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GraphResourceGetPropertiesResponseResource {
     /**
-     * Name of the Cosmos DB Graph
+     * @return Name of the Cosmos DB Graph
      * 
      */
     private final String id;
@@ -21,9 +21,9 @@ public final class GraphResourceGetPropertiesResponseResource {
     }
 
     /**
-     * Name of the Cosmos DB Graph
+     * @return Name of the Cosmos DB Graph
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

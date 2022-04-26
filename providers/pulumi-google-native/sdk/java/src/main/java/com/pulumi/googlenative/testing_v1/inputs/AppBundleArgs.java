@@ -26,6 +26,10 @@ public final class AppBundleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bundleLocation")
     private @Nullable Output<FileReferenceArgs> bundleLocation;
 
+    /**
+     * @return .aab file representing the app bundle under test.
+     * 
+     */
     public Optional<Output<FileReferenceArgs>> bundleLocation() {
         return Optional.ofNullable(this.bundleLocation);
     }
@@ -54,11 +58,23 @@ public final class AppBundleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AppBundleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bundleLocation .aab file representing the app bundle under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleLocation(@Nullable Output<FileReferenceArgs> bundleLocation) {
             $.bundleLocation = bundleLocation;
             return this;
         }
 
+        /**
+         * @param bundleLocation .aab file representing the app bundle under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleLocation(FileReferenceArgs bundleLocation) {
             return bundleLocation(Output.of(bundleLocation));
         }

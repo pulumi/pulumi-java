@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable {
     /**
-     * The dataset ID of the table.
+     * @return The dataset ID of the table.
      * 
      */
     private final String datasetId;
     /**
-     * The Google Cloud Platform project ID of the project containing the table.
+     * @return The Google Cloud Platform project ID of the project containing the table.
      * 
      */
     private final String projectId;
     /**
-     * The name of the table.
+     * @return The name of the table.
      * 
      */
     private final String tableId;
@@ -36,23 +36,23 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
     }
 
     /**
-     * The dataset ID of the table.
+     * @return The dataset ID of the table.
      * 
-    */
+     */
     public String datasetId() {
         return this.datasetId;
     }
     /**
-     * The Google Cloud Platform project ID of the project containing the table.
+     * @return The Google Cloud Platform project ID of the project containing the table.
      * 
-    */
+     */
     public String projectId() {
         return this.projectId;
     }
     /**
-     * The name of the table.
+     * @return The name of the table.
      * 
-    */
+     */
     public String tableId() {
         return this.tableId;
     }

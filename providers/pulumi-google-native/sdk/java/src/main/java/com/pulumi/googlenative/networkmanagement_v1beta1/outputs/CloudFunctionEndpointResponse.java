@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class CloudFunctionEndpointResponse {
     /**
-     * A [Cloud function](https://cloud.google.com/functions) name.
+     * @return A [Cloud function](https://cloud.google.com/functions) name.
      * 
      */
     private final String uri;
@@ -21,9 +21,9 @@ public final class CloudFunctionEndpointResponse {
     }
 
     /**
-     * A [Cloud function](https://cloud.google.com/functions) name.
+     * @return A [Cloud function](https://cloud.google.com/functions) name.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

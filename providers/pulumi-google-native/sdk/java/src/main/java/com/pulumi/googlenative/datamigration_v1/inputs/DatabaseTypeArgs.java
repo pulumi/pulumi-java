@@ -27,6 +27,10 @@ public final class DatabaseTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engine")
     private @Nullable Output<DatabaseTypeEngine> engine;
 
+    /**
+     * @return The database engine.
+     * 
+     */
     public Optional<Output<DatabaseTypeEngine>> engine() {
         return Optional.ofNullable(this.engine);
     }
@@ -38,6 +42,10 @@ public final class DatabaseTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provider")
     private @Nullable Output<DatabaseTypeProvider> provider;
 
+    /**
+     * @return The database provider.
+     * 
+     */
     public Optional<Output<DatabaseTypeProvider>> provider() {
         return Optional.ofNullable(this.provider);
     }
@@ -67,20 +75,44 @@ public final class DatabaseTypeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatabaseTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param engine The database engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(@Nullable Output<DatabaseTypeEngine> engine) {
             $.engine = engine;
             return this;
         }
 
+        /**
+         * @param engine The database engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(DatabaseTypeEngine engine) {
             return engine(Output.of(engine));
         }
 
+        /**
+         * @param provider The database provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(@Nullable Output<DatabaseTypeProvider> provider) {
             $.provider = provider;
             return this;
         }
 
+        /**
+         * @param provider The database provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(DatabaseTypeProvider provider) {
             return provider(Output.of(provider));
         }

@@ -25,6 +25,12 @@ public final class PatchDeploymentRecurringScheduleMonthlyGetArgs extends com.pu
     @Import(name="monthDay")
     private @Nullable Output<Integer> monthDay;
 
+    /**
+     * @return One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
+     * Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34;
+     * will not run in February, April, June, etc.
+     * 
+     */
     public Optional<Output<Integer>> monthDay() {
         return Optional.ofNullable(this.monthDay);
     }
@@ -37,6 +43,11 @@ public final class PatchDeploymentRecurringScheduleMonthlyGetArgs extends com.pu
     @Import(name="weekDayOfMonth")
     private @Nullable Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs> weekDayOfMonth;
 
+    /**
+     * @return Week day in a month.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs>> weekDayOfMonth() {
         return Optional.ofNullable(this.weekDayOfMonth);
     }
@@ -66,20 +77,50 @@ public final class PatchDeploymentRecurringScheduleMonthlyGetArgs extends com.pu
             $ = new PatchDeploymentRecurringScheduleMonthlyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param monthDay One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
+         * Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34;
+         * will not run in February, April, June, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthDay(@Nullable Output<Integer> monthDay) {
             $.monthDay = monthDay;
             return this;
         }
 
+        /**
+         * @param monthDay One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
+         * Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34;
+         * will not run in February, April, June, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthDay(Integer monthDay) {
             return monthDay(Output.of(monthDay));
         }
 
+        /**
+         * @param weekDayOfMonth Week day in a month.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDayOfMonth(@Nullable Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs> weekDayOfMonth) {
             $.weekDayOfMonth = weekDayOfMonth;
             return this;
         }
 
+        /**
+         * @param weekDayOfMonth Week day in a month.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDayOfMonth(PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs weekDayOfMonth) {
             return weekDayOfMonth(Output.of(weekDayOfMonth));
         }

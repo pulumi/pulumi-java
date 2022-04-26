@@ -23,6 +23,10 @@ public final class VirtualApplianceSiteArgs extends com.pulumi.resources.Resourc
     @Import(name="addressPrefix")
     private @Nullable Output<String> addressPrefix;
 
+    /**
+     * @return Address Prefix.
+     * 
+     */
     public Optional<Output<String>> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
@@ -34,6 +38,10 @@ public final class VirtualApplianceSiteArgs extends com.pulumi.resources.Resourc
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -45,6 +53,10 @@ public final class VirtualApplianceSiteArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the virtual appliance site.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,6 +68,10 @@ public final class VirtualApplianceSiteArgs extends com.pulumi.resources.Resourc
     @Import(name="networkVirtualApplianceName", required=true)
     private Output<String> networkVirtualApplianceName;
 
+    /**
+     * @return The name of the Network Virtual Appliance.
+     * 
+     */
     public Output<String> networkVirtualApplianceName() {
         return this.networkVirtualApplianceName;
     }
@@ -67,6 +83,10 @@ public final class VirtualApplianceSiteArgs extends com.pulumi.resources.Resourc
     @Import(name="o365Policy")
     private @Nullable Output<Office365PolicyPropertiesArgs> o365Policy;
 
+    /**
+     * @return Office 365 Policy.
+     * 
+     */
     public Optional<Output<Office365PolicyPropertiesArgs>> o365Policy() {
         return Optional.ofNullable(this.o365Policy);
     }
@@ -78,6 +98,10 @@ public final class VirtualApplianceSiteArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -89,6 +113,10 @@ public final class VirtualApplianceSiteArgs extends com.pulumi.resources.Resourc
     @Import(name="siteName")
     private @Nullable Output<String> siteName;
 
+    /**
+     * @return The name of the site.
+     * 
+     */
     public Optional<Output<String>> siteName() {
         return Optional.ofNullable(this.siteName);
     }
@@ -123,65 +151,149 @@ public final class VirtualApplianceSiteArgs extends com.pulumi.resources.Resourc
             $ = new VirtualApplianceSiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressPrefix Address Prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
             $.addressPrefix = addressPrefix;
             return this;
         }
 
+        /**
+         * @param addressPrefix Address Prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefix(String addressPrefix) {
             return addressPrefix(Output.of(addressPrefix));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name of the virtual appliance site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the virtual appliance site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkVirtualApplianceName The name of the Network Virtual Appliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkVirtualApplianceName(Output<String> networkVirtualApplianceName) {
             $.networkVirtualApplianceName = networkVirtualApplianceName;
             return this;
         }
 
+        /**
+         * @param networkVirtualApplianceName The name of the Network Virtual Appliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkVirtualApplianceName(String networkVirtualApplianceName) {
             return networkVirtualApplianceName(Output.of(networkVirtualApplianceName));
         }
 
+        /**
+         * @param o365Policy Office 365 Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder o365Policy(@Nullable Output<Office365PolicyPropertiesArgs> o365Policy) {
             $.o365Policy = o365Policy;
             return this;
         }
 
+        /**
+         * @param o365Policy Office 365 Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder o365Policy(Office365PolicyPropertiesArgs o365Policy) {
             return o365Policy(Output.of(o365Policy));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param siteName The name of the site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(@Nullable Output<String> siteName) {
             $.siteName = siteName;
             return this;
         }
 
+        /**
+         * @param siteName The name of the site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(String siteName) {
             return siteName(Output.of(siteName));
         }

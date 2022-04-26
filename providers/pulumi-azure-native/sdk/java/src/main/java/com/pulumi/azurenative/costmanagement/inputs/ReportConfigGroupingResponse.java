@@ -23,6 +23,10 @@ public final class ReportConfigGroupingResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the column to group. This version supports subscription lowest possible grain.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class ReportConfigGroupingResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Has type of the column to group.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -63,11 +71,23 @@ public final class ReportConfigGroupingResponse extends com.pulumi.resources.Inv
             $ = new ReportConfigGroupingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the column to group. This version supports subscription lowest possible grain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Has type of the column to group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

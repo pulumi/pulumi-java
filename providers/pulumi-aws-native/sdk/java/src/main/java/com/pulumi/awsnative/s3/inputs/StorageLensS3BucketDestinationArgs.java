@@ -29,6 +29,10 @@ public final class StorageLensS3BucketDestinationArgs extends com.pulumi.resourc
     @Import(name="accountId", required=true)
     private Output<String> accountId;
 
+    /**
+     * @return The AWS account ID that owns the destination S3 bucket.
+     * 
+     */
     public Output<String> accountId() {
         return this.accountId;
     }
@@ -40,6 +44,10 @@ public final class StorageLensS3BucketDestinationArgs extends com.pulumi.resourc
     @Import(name="arn", required=true)
     private Output<String> arn;
 
+    /**
+     * @return The ARN of the bucket to which Amazon S3 Storage Lens exports will be placed.
+     * 
+     */
     public Output<String> arn() {
         return this.arn;
     }
@@ -58,6 +66,10 @@ public final class StorageLensS3BucketDestinationArgs extends com.pulumi.resourc
     @Import(name="format", required=true)
     private Output<StorageLensS3BucketDestinationFormat> format;
 
+    /**
+     * @return Specifies the file format to use when exporting Amazon S3 Storage Lens metrics export.
+     * 
+     */
     public Output<StorageLensS3BucketDestinationFormat> format() {
         return this.format;
     }
@@ -69,6 +81,10 @@ public final class StorageLensS3BucketDestinationArgs extends com.pulumi.resourc
     @Import(name="outputSchemaVersion", required=true)
     private Output<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion;
 
+    /**
+     * @return The version of the output schema to use when exporting Amazon S3 Storage Lens metrics.
+     * 
+     */
     public Output<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion() {
         return this.outputSchemaVersion;
     }
@@ -80,6 +96,10 @@ public final class StorageLensS3BucketDestinationArgs extends com.pulumi.resourc
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return The prefix to use for Amazon S3 Storage Lens export.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -113,20 +133,44 @@ public final class StorageLensS3BucketDestinationArgs extends com.pulumi.resourc
             $ = new StorageLensS3BucketDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The AWS account ID that owns the destination S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId The AWS account ID that owns the destination S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param arn The ARN of the bucket to which Amazon S3 Storage Lens exports will be placed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the bucket to which Amazon S3 Storage Lens exports will be placed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
@@ -140,29 +184,65 @@ public final class StorageLensS3BucketDestinationArgs extends com.pulumi.resourc
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param format Specifies the file format to use when exporting Amazon S3 Storage Lens metrics export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(Output<StorageLensS3BucketDestinationFormat> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format Specifies the file format to use when exporting Amazon S3 Storage Lens metrics export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(StorageLensS3BucketDestinationFormat format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param outputSchemaVersion The version of the output schema to use when exporting Amazon S3 Storage Lens metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputSchemaVersion(Output<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion) {
             $.outputSchemaVersion = outputSchemaVersion;
             return this;
         }
 
+        /**
+         * @param outputSchemaVersion The version of the output schema to use when exporting Amazon S3 Storage Lens metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputSchemaVersion(StorageLensS3BucketDestinationOutputSchemaVersion outputSchemaVersion) {
             return outputSchemaVersion(Output.of(outputSchemaVersion));
         }
 
+        /**
+         * @param prefix The prefix to use for Amazon S3 Storage Lens export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix The prefix to use for Amazon S3 Storage Lens export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }

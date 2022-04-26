@@ -21,6 +21,10 @@ public final class LoggingConfigurationLoggingConfigurationArgs extends com.pulu
     @Import(name="logDestinationConfigs", required=true)
     private Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs;
 
+    /**
+     * @return Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for `FLOW` logs and one for `ALERT` logs.
+     * 
+     */
     public Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs() {
         return this.logDestinationConfigs;
     }
@@ -49,15 +53,33 @@ public final class LoggingConfigurationLoggingConfigurationArgs extends com.pulu
             $ = new LoggingConfigurationLoggingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logDestinationConfigs Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for `FLOW` logs and one for `ALERT` logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logDestinationConfigs(Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs) {
             $.logDestinationConfigs = logDestinationConfigs;
             return this;
         }
 
+        /**
+         * @param logDestinationConfigs Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for `FLOW` logs and one for `ALERT` logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logDestinationConfigs(List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs> logDestinationConfigs) {
             return logDestinationConfigs(Output.of(logDestinationConfigs));
         }
 
+        /**
+         * @param logDestinationConfigs Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for `FLOW` logs and one for `ALERT` logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logDestinationConfigs(LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs... logDestinationConfigs) {
             return logDestinationConfigs(List.of(logDestinationConfigs));
         }

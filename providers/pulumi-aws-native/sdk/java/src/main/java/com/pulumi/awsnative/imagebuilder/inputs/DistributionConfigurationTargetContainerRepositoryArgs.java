@@ -27,6 +27,10 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
     @Import(name="repositoryName")
     private @Nullable Output<String> repositoryName;
 
+    /**
+     * @return The repository name of target container repository.
+     * 
+     */
     public Optional<Output<String>> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
@@ -38,6 +42,10 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
     @Import(name="service")
     private @Nullable Output<DistributionConfigurationTargetContainerRepositoryService> service;
 
+    /**
+     * @return The service of target container repository.
+     * 
+     */
     public Optional<Output<DistributionConfigurationTargetContainerRepositoryService>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -67,20 +75,44 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
             $ = new DistributionConfigurationTargetContainerRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param repositoryName The repository name of target container repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
 
+        /**
+         * @param repositoryName The repository name of target container repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(String repositoryName) {
             return repositoryName(Output.of(repositoryName));
         }
 
+        /**
+         * @param service The service of target container repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<DistributionConfigurationTargetContainerRepositoryService> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The service of target container repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(DistributionConfigurationTargetContainerRepositoryService service) {
             return service(Output.of(service));
         }

@@ -25,6 +25,10 @@ public final class PlatformPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="architecture")
     private @Nullable String architecture;
 
+    /**
+     * @return The OS architecture.
+     * 
+     */
     public Optional<String> architecture() {
         return Optional.ofNullable(this.architecture);
     }
@@ -36,6 +40,10 @@ public final class PlatformPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="os", required=true)
     private String os;
 
+    /**
+     * @return The operating system type required for the run.
+     * 
+     */
     public String os() {
         return this.os;
     }
@@ -47,6 +55,10 @@ public final class PlatformPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="variant")
     private @Nullable String variant;
 
+    /**
+     * @return Variant of the CPU.
+     * 
+     */
     public Optional<String> variant() {
         return Optional.ofNullable(this.variant);
     }
@@ -77,16 +89,34 @@ public final class PlatformPropertiesResponse extends com.pulumi.resources.Invok
             $ = new PlatformPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param architecture The OS architecture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(@Nullable String architecture) {
             $.architecture = architecture;
             return this;
         }
 
+        /**
+         * @param os The operating system type required for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder os(String os) {
             $.os = os;
             return this;
         }
 
+        /**
+         * @param variant Variant of the CPU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variant(@Nullable String variant) {
             $.variant = variant;
             return this;

@@ -27,6 +27,10 @@ public final class TaskPropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="parameters")
     private @Nullable Output<Map<String,String>> parameters;
 
+    /**
+     * @return Gets or sets the parameters of the task.
+     * 
+     */
     public Optional<Output<Map<String,String>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -38,6 +42,10 @@ public final class TaskPropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="source")
     private @Nullable Output<String> source;
 
+    /**
+     * @return Gets or sets the name of the runbook.
+     * 
+     */
     public Optional<Output<String>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -67,20 +75,44 @@ public final class TaskPropertiesArgs extends com.pulumi.resources.ResourceArgs 
             $ = new TaskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameters Gets or sets the parameters of the task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Gets or sets the parameters of the task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,String> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param source Gets or sets the name of the runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Gets or sets the name of the runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }

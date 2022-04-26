@@ -25,6 +25,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
     private @Nullable Output<String> applicationId;
 
+    /**
+     * @return The AppConfig application ID. Must be between 4 and 7 characters in length.
+     * 
+     */
     public Optional<Output<String>> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -36,6 +40,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the AppConfig Environment.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -47,6 +55,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the environment. Can be at most 1024 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -58,6 +70,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentId")
     private @Nullable Output<String> environmentId;
 
+    /**
+     * @return The AppConfig environment ID.
+     * 
+     */
     public Optional<Output<String>> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
@@ -69,6 +85,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitors")
     private @Nullable Output<List<EnvironmentMonitorGetArgs>> monitors;
 
+    /**
+     * @return Set of Amazon CloudWatch alarms to monitor during the deployment process. Maximum of 5. See Monitor below for more details.
+     * 
+     */
     public Optional<Output<List<EnvironmentMonitorGetArgs>>> monitors() {
         return Optional.ofNullable(this.monitors);
     }
@@ -80,6 +100,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for the environment. Must be between 1 and 64 characters in length.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -98,6 +122,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -109,6 +137,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -145,60 +177,138 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
             $ = new EnvironmentState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The AppConfig application ID. Must be between 4 and 7 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId The AppConfig application ID. Must be between 4 and 7 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the AppConfig Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the AppConfig Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param description The description of the environment. Can be at most 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the environment. Can be at most 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param environmentId The AppConfig environment ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(@Nullable Output<String> environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
+        /**
+         * @param environmentId The AppConfig environment ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(String environmentId) {
             return environmentId(Output.of(environmentId));
         }
 
+        /**
+         * @param monitors Set of Amazon CloudWatch alarms to monitor during the deployment process. Maximum of 5. See Monitor below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitors(@Nullable Output<List<EnvironmentMonitorGetArgs>> monitors) {
             $.monitors = monitors;
             return this;
         }
 
+        /**
+         * @param monitors Set of Amazon CloudWatch alarms to monitor during the deployment process. Maximum of 5. See Monitor below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitors(List<EnvironmentMonitorGetArgs> monitors) {
             return monitors(Output.of(monitors));
         }
 
+        /**
+         * @param monitors Set of Amazon CloudWatch alarms to monitor during the deployment process. Maximum of 5. See Monitor below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitors(EnvironmentMonitorGetArgs... monitors) {
             return monitors(List.of(monitors));
         }
 
+        /**
+         * @param name The name for the environment. Must be between 1 and 64 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for the environment. Must be between 1 and 64 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -212,20 +322,44 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
             return state(Output.of(state));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

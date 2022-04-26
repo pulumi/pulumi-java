@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OrganizationConfigurationDatasources {
     /**
-     * Configuration for the builds to store logs to S3.
+     * @return Configuration for the builds to store logs to S3.
      * 
      */
     private final @Nullable OrganizationConfigurationDatasourcesS3Logs s3Logs;
@@ -23,9 +23,9 @@ public final class OrganizationConfigurationDatasources {
     }
 
     /**
-     * Configuration for the builds to store logs to S3.
+     * @return Configuration for the builds to store logs to S3.
      * 
-    */
+     */
     public Optional<OrganizationConfigurationDatasourcesS3Logs> s3Logs() {
         return Optional.ofNullable(this.s3Logs);
     }

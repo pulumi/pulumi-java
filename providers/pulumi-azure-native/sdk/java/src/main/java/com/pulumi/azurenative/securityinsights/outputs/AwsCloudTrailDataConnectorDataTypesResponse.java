@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AwsCloudTrailDataConnectorDataTypesResponse {
     /**
-     * Logs data type.
+     * @return Logs data type.
      * 
      */
     private final @Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs;
@@ -23,9 +23,9 @@ public final class AwsCloudTrailDataConnectorDataTypesResponse {
     }
 
     /**
-     * Logs data type.
+     * @return Logs data type.
      * 
-    */
+     */
     public Optional<AwsCloudTrailDataConnectorDataTypesResponseLogs> logs() {
         return Optional.ofNullable(this.logs);
     }

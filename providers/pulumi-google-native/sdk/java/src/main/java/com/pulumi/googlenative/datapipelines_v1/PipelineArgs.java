@@ -27,6 +27,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The display name of the pipeline. It can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), and underscores (_).
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -45,6 +49,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The pipeline name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical ID for the pipeline&#39;s location. The list of available locations can be obtained by calling `google.cloud.location.Locations.ListLocations`. Note that the Data Pipelines service is not available in all regions. It depends on Cloud Scheduler, an App Engine application, so it&#39;s only available in [App Engine regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of the pipeline. Must be unique for the selected project and location.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,6 +64,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineSources")
     private @Nullable Output<Map<String,String>> pipelineSources;
 
+    /**
+     * @return Immutable. The sources of the pipeline (for example, Dataplex). The keys and values are set by the corresponding sources during pipeline creation.
+     * 
+     */
     public Optional<Output<Map<String,String>>> pipelineSources() {
         return Optional.ofNullable(this.pipelineSources);
     }
@@ -74,6 +86,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheduleInfo")
     private @Nullable Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo;
 
+    /**
+     * @return Internal scheduling information for a pipeline. If this information is provided, periodic jobs will be created per the schedule. If not, users are responsible for creating jobs externally.
+     * 
+     */
     public Optional<Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs>> scheduleInfo() {
         return Optional.ofNullable(this.scheduleInfo);
     }
@@ -85,6 +101,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedulerServiceAccountEmail")
     private @Nullable Output<String> schedulerServiceAccountEmail;
 
+    /**
+     * @return Optional. A service account email to be used with the Cloud Scheduler job. If not specified, the default compute engine service account will be used.
+     * 
+     */
     public Optional<Output<String>> schedulerServiceAccountEmail() {
         return Optional.ofNullable(this.schedulerServiceAccountEmail);
     }
@@ -96,6 +116,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state", required=true)
     private Output<PipelineState> state;
 
+    /**
+     * @return The state of the pipeline. When the pipeline is created, the state is set to &#39;PIPELINE_STATE_ACTIVE&#39; by default. State changes can be requested by setting the state to stopping, paused, or resuming. State cannot be changed through UpdatePipeline requests.
+     * 
+     */
     public Output<PipelineState> state() {
         return this.state;
     }
@@ -107,6 +131,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<PipelineType> type;
 
+    /**
+     * @return The type of the pipeline. This field affects the scheduling of the pipeline and the type of metrics to show for the pipeline.
+     * 
+     */
     public Output<PipelineType> type() {
         return this.type;
     }
@@ -118,6 +146,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workload")
     private @Nullable Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload;
 
+    /**
+     * @return Workload information for creating new jobs.
+     * 
+     */
     public Optional<Output<GoogleCloudDatapipelinesV1WorkloadArgs>> workload() {
         return Optional.ofNullable(this.workload);
     }
@@ -155,11 +187,23 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PipelineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name of the pipeline. It can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), and underscores (_).
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the pipeline. It can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), and underscores (_).
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -173,20 +217,44 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The pipeline name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical ID for the pipeline&#39;s location. The list of available locations can be obtained by calling `google.cloud.location.Locations.ListLocations`. Note that the Data Pipelines service is not available in all regions. It depends on Cloud Scheduler, an App Engine application, so it&#39;s only available in [App Engine regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of the pipeline. Must be unique for the selected project and location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The pipeline name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical ID for the pipeline&#39;s location. The list of available locations can be obtained by calling `google.cloud.location.Locations.ListLocations`. Note that the Data Pipelines service is not available in all regions. It depends on Cloud Scheduler, an App Engine application, so it&#39;s only available in [App Engine regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of the pipeline. Must be unique for the selected project and location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param pipelineSources Immutable. The sources of the pipeline (for example, Dataplex). The keys and values are set by the corresponding sources during pipeline creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineSources(@Nullable Output<Map<String,String>> pipelineSources) {
             $.pipelineSources = pipelineSources;
             return this;
         }
 
+        /**
+         * @param pipelineSources Immutable. The sources of the pipeline (for example, Dataplex). The keys and values are set by the corresponding sources during pipeline creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineSources(Map<String,String> pipelineSources) {
             return pipelineSources(Output.of(pipelineSources));
         }
@@ -200,47 +268,107 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param scheduleInfo Internal scheduling information for a pipeline. If this information is provided, periodic jobs will be created per the schedule. If not, users are responsible for creating jobs externally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleInfo(@Nullable Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo) {
             $.scheduleInfo = scheduleInfo;
             return this;
         }
 
+        /**
+         * @param scheduleInfo Internal scheduling information for a pipeline. If this information is provided, periodic jobs will be created per the schedule. If not, users are responsible for creating jobs externally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleInfo(GoogleCloudDatapipelinesV1ScheduleSpecArgs scheduleInfo) {
             return scheduleInfo(Output.of(scheduleInfo));
         }
 
+        /**
+         * @param schedulerServiceAccountEmail Optional. A service account email to be used with the Cloud Scheduler job. If not specified, the default compute engine service account will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulerServiceAccountEmail(@Nullable Output<String> schedulerServiceAccountEmail) {
             $.schedulerServiceAccountEmail = schedulerServiceAccountEmail;
             return this;
         }
 
+        /**
+         * @param schedulerServiceAccountEmail Optional. A service account email to be used with the Cloud Scheduler job. If not specified, the default compute engine service account will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulerServiceAccountEmail(String schedulerServiceAccountEmail) {
             return schedulerServiceAccountEmail(Output.of(schedulerServiceAccountEmail));
         }
 
+        /**
+         * @param state The state of the pipeline. When the pipeline is created, the state is set to &#39;PIPELINE_STATE_ACTIVE&#39; by default. State changes can be requested by setting the state to stopping, paused, or resuming. State cannot be changed through UpdatePipeline requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Output<PipelineState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of the pipeline. When the pipeline is created, the state is set to &#39;PIPELINE_STATE_ACTIVE&#39; by default. State changes can be requested by setting the state to stopping, paused, or resuming. State cannot be changed through UpdatePipeline requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(PipelineState state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param type The type of the pipeline. This field affects the scheduling of the pipeline and the type of metrics to show for the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<PipelineType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the pipeline. This field affects the scheduling of the pipeline and the type of metrics to show for the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(PipelineType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param workload Workload information for creating new jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workload(@Nullable Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload) {
             $.workload = workload;
             return this;
         }
 
+        /**
+         * @param workload Workload information for creating new jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workload(GoogleCloudDatapipelinesV1WorkloadArgs workload) {
             return workload(Output.of(workload));
         }

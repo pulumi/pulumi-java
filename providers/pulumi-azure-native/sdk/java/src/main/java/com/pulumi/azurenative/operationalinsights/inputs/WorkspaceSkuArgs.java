@@ -29,6 +29,10 @@ public final class WorkspaceSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacityReservationLevel")
     private @Nullable Output<Integer> capacityReservationLevel;
 
+    /**
+     * @return The capacity reservation level for this workspace, when CapacityReservation sku is selected.
+     * 
+     */
     public Optional<Output<Integer>> capacityReservationLevel() {
         return Optional.ofNullable(this.capacityReservationLevel);
     }
@@ -40,6 +44,10 @@ public final class WorkspaceSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<Either<String,WorkspaceSkuNameEnum>> name;
 
+    /**
+     * @return The name of the SKU.
+     * 
+     */
     public Output<Either<String,WorkspaceSkuNameEnum>> name() {
         return this.name;
     }
@@ -69,28 +77,64 @@ public final class WorkspaceSkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkspaceSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityReservationLevel The capacity reservation level for this workspace, when CapacityReservation sku is selected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationLevel(@Nullable Output<Integer> capacityReservationLevel) {
             $.capacityReservationLevel = capacityReservationLevel;
             return this;
         }
 
+        /**
+         * @param capacityReservationLevel The capacity reservation level for this workspace, when CapacityReservation sku is selected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationLevel(Integer capacityReservationLevel) {
             return capacityReservationLevel(Output.of(capacityReservationLevel));
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,WorkspaceSkuNameEnum>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,WorkspaceSkuNameEnum> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(WorkspaceSkuNameEnum name) {
             return name(Either.ofRight(name));
         }

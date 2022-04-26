@@ -26,6 +26,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayCapabilitySummaries")
     private @Nullable Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries;
 
+    /**
+     * @return A list of gateway capability summaries that each contain a namespace and status.
+     * 
+     */
     public Optional<Output<List<GatewayCapabilitySummaryArgs>>> gatewayCapabilitySummaries() {
         return Optional.ofNullable(this.gatewayCapabilitySummaries);
     }
@@ -37,6 +41,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayName")
     private @Nullable Output<String> gatewayName;
 
+    /**
+     * @return A unique, friendly name for the gateway.
+     * 
+     */
     public Optional<Output<String>> gatewayName() {
         return Optional.ofNullable(this.gatewayName);
     }
@@ -48,6 +56,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayPlatform", required=true)
     private Output<GatewayPlatformArgs> gatewayPlatform;
 
+    /**
+     * @return The gateway&#39;s platform. You can only specify one platform in a gateway.
+     * 
+     */
     public Output<GatewayPlatformArgs> gatewayPlatform() {
         return this.gatewayPlatform;
     }
@@ -59,6 +71,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<GatewayTagArgs>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the gateway.
+     * 
+     */
     public Optional<Output<List<GatewayTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -90,46 +106,106 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayCapabilitySummaries A list of gateway capability summaries that each contain a namespace and status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayCapabilitySummaries(@Nullable Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries) {
             $.gatewayCapabilitySummaries = gatewayCapabilitySummaries;
             return this;
         }
 
+        /**
+         * @param gatewayCapabilitySummaries A list of gateway capability summaries that each contain a namespace and status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayCapabilitySummaries(List<GatewayCapabilitySummaryArgs> gatewayCapabilitySummaries) {
             return gatewayCapabilitySummaries(Output.of(gatewayCapabilitySummaries));
         }
 
+        /**
+         * @param gatewayCapabilitySummaries A list of gateway capability summaries that each contain a namespace and status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayCapabilitySummaries(GatewayCapabilitySummaryArgs... gatewayCapabilitySummaries) {
             return gatewayCapabilitySummaries(List.of(gatewayCapabilitySummaries));
         }
 
+        /**
+         * @param gatewayName A unique, friendly name for the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(@Nullable Output<String> gatewayName) {
             $.gatewayName = gatewayName;
             return this;
         }
 
+        /**
+         * @param gatewayName A unique, friendly name for the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(String gatewayName) {
             return gatewayName(Output.of(gatewayName));
         }
 
+        /**
+         * @param gatewayPlatform The gateway&#39;s platform. You can only specify one platform in a gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayPlatform(Output<GatewayPlatformArgs> gatewayPlatform) {
             $.gatewayPlatform = gatewayPlatform;
             return this;
         }
 
+        /**
+         * @param gatewayPlatform The gateway&#39;s platform. You can only specify one platform in a gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayPlatform(GatewayPlatformArgs gatewayPlatform) {
             return gatewayPlatform(Output.of(gatewayPlatform));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<GatewayTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<GatewayTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(GatewayTagArgs... tags) {
             return tags(List.of(tags));
         }

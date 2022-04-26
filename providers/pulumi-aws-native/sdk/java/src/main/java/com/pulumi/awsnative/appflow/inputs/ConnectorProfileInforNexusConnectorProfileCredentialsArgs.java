@@ -20,6 +20,10 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     @Import(name="accessKeyId", required=true)
     private Output<String> accessKeyId;
 
+    /**
+     * @return The Access Key portion of the credentials.
+     * 
+     */
     public Output<String> accessKeyId() {
         return this.accessKeyId;
     }
@@ -31,6 +35,10 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     @Import(name="datakey", required=true)
     private Output<String> datakey;
 
+    /**
+     * @return The encryption keys used to encrypt data.
+     * 
+     */
     public Output<String> datakey() {
         return this.datakey;
     }
@@ -42,6 +50,10 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     @Import(name="secretAccessKey", required=true)
     private Output<String> secretAccessKey;
 
+    /**
+     * @return The secret key used to sign requests.
+     * 
+     */
     public Output<String> secretAccessKey() {
         return this.secretAccessKey;
     }
@@ -53,6 +65,10 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     @Import(name="userId", required=true)
     private Output<String> userId;
 
+    /**
+     * @return The identiﬁer for the user.
+     * 
+     */
     public Output<String> userId() {
         return this.userId;
     }
@@ -84,38 +100,86 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
             $ = new ConnectorProfileInforNexusConnectorProfileCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKeyId The Access Key portion of the credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKeyId(Output<String> accessKeyId) {
             $.accessKeyId = accessKeyId;
             return this;
         }
 
+        /**
+         * @param accessKeyId The Access Key portion of the credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKeyId(String accessKeyId) {
             return accessKeyId(Output.of(accessKeyId));
         }
 
+        /**
+         * @param datakey The encryption keys used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datakey(Output<String> datakey) {
             $.datakey = datakey;
             return this;
         }
 
+        /**
+         * @param datakey The encryption keys used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datakey(String datakey) {
             return datakey(Output.of(datakey));
         }
 
+        /**
+         * @param secretAccessKey The secret key used to sign requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretAccessKey(Output<String> secretAccessKey) {
             $.secretAccessKey = secretAccessKey;
             return this;
         }
 
+        /**
+         * @param secretAccessKey The secret key used to sign requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretAccessKey(String secretAccessKey) {
             return secretAccessKey(Output.of(secretAccessKey));
         }
 
+        /**
+         * @param userId The identiﬁer for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(Output<String> userId) {
             $.userId = userId;
             return this;
         }
 
+        /**
+         * @param userId The identiﬁer for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             return userId(Output.of(userId));
         }

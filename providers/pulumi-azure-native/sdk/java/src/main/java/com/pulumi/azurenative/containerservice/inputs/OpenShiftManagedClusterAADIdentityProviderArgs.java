@@ -27,6 +27,10 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return The clientId password associated with the provider.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -38,6 +42,10 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
     @Import(name="customerAdminGroupId")
     private @Nullable Output<String> customerAdminGroupId;
 
+    /**
+     * @return The groupId to be granted cluster admin role.
+     * 
+     */
     public Optional<Output<String>> customerAdminGroupId() {
         return Optional.ofNullable(this.customerAdminGroupId);
     }
@@ -50,6 +58,11 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return The kind of the provider.
+     * Expected value is &#39;AADIdentityProvider&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -61,6 +74,10 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
     @Import(name="secret")
     private @Nullable Output<String> secret;
 
+    /**
+     * @return The secret password associated with the provider.
+     * 
+     */
     public Optional<Output<String>> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -72,6 +89,10 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return The tenantId associated with the provider.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -104,47 +125,109 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
             $ = new OpenShiftManagedClusterAADIdentityProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The clientId password associated with the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The clientId password associated with the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param customerAdminGroupId The groupId to be granted cluster admin role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerAdminGroupId(@Nullable Output<String> customerAdminGroupId) {
             $.customerAdminGroupId = customerAdminGroupId;
             return this;
         }
 
+        /**
+         * @param customerAdminGroupId The groupId to be granted cluster admin role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerAdminGroupId(String customerAdminGroupId) {
             return customerAdminGroupId(Output.of(customerAdminGroupId));
         }
 
+        /**
+         * @param kind The kind of the provider.
+         * Expected value is &#39;AADIdentityProvider&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the provider.
+         * Expected value is &#39;AADIdentityProvider&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param secret The secret password associated with the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret The secret password associated with the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }
 
+        /**
+         * @param tenantId The tenantId associated with the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenantId associated with the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

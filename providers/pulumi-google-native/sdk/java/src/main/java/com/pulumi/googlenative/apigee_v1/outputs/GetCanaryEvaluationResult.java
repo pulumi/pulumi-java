@@ -11,47 +11,47 @@ import java.util.Objects;
 @CustomType
 public final class GetCanaryEvaluationResult {
     /**
-     * The stable version that is serving requests.
+     * @return The stable version that is serving requests.
      * 
      */
     private final String control;
     /**
-     * Create time of the canary evaluation.
+     * @return Create time of the canary evaluation.
      * 
      */
     private final String createTime;
     /**
-     * End time for the evaluation&#39;s analysis.
+     * @return End time for the evaluation&#39;s analysis.
      * 
      */
     private final String endTime;
     /**
-     * Labels used to filter the metrics used for a canary evaluation.
+     * @return Labels used to filter the metrics used for a canary evaluation.
      * 
      */
     private final GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse metricLabels;
     /**
-     * Name of the canary evalution.
+     * @return Name of the canary evalution.
      * 
      */
     private final String name;
     /**
-     * Start time for the canary evaluation&#39;s analysis.
+     * @return Start time for the canary evaluation&#39;s analysis.
      * 
      */
     private final String startTime;
     /**
-     * The current state of the canary evaluation.
+     * @return The current state of the canary evaluation.
      * 
      */
     private final String state;
     /**
-     * The newer version that is serving requests.
+     * @return The newer version that is serving requests.
      * 
      */
     private final String treatment;
     /**
-     * The resulting verdict of the canary evaluations: NONE, PASS, or FAIL.
+     * @return The resulting verdict of the canary evaluations: NONE, PASS, or FAIL.
      * 
      */
     private final String verdict;
@@ -79,65 +79,65 @@ public final class GetCanaryEvaluationResult {
     }
 
     /**
-     * The stable version that is serving requests.
+     * @return The stable version that is serving requests.
      * 
-    */
+     */
     public String control() {
         return this.control;
     }
     /**
-     * Create time of the canary evaluation.
+     * @return Create time of the canary evaluation.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * End time for the evaluation&#39;s analysis.
+     * @return End time for the evaluation&#39;s analysis.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * Labels used to filter the metrics used for a canary evaluation.
+     * @return Labels used to filter the metrics used for a canary evaluation.
      * 
-    */
+     */
     public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse metricLabels() {
         return this.metricLabels;
     }
     /**
-     * Name of the canary evalution.
+     * @return Name of the canary evalution.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Start time for the canary evaluation&#39;s analysis.
+     * @return Start time for the canary evaluation&#39;s analysis.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The current state of the canary evaluation.
+     * @return The current state of the canary evaluation.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The newer version that is serving requests.
+     * @return The newer version that is serving requests.
      * 
-    */
+     */
     public String treatment() {
         return this.treatment;
     }
     /**
-     * The resulting verdict of the canary evaluations: NONE, PASS, or FAIL.
+     * @return The resulting verdict of the canary evaluations: NONE, PASS, or FAIL.
      * 
-    */
+     */
     public String verdict() {
         return this.verdict;
     }

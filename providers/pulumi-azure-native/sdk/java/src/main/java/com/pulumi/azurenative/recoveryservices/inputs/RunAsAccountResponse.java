@@ -25,6 +25,10 @@ public final class RunAsAccountResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="accountId")
     private @Nullable String accountId;
 
+    /**
+     * @return The CS RunAs account Id.
+     * 
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -36,6 +40,10 @@ public final class RunAsAccountResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="accountName")
     private @Nullable String accountName;
 
+    /**
+     * @return The CS RunAs account name.
+     * 
+     */
     public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -65,11 +73,23 @@ public final class RunAsAccountResponse extends com.pulumi.resources.InvokeArgs 
             $ = new RunAsAccountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The CS RunAs account Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(@Nullable String accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountName The CS RunAs account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable String accountName) {
             $.accountName = accountName;
             return this;

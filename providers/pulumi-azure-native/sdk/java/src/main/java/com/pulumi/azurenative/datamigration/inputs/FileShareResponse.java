@@ -25,6 +25,10 @@ public final class FileShareResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return Password credential used to connect to the share location.
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -36,6 +40,10 @@ public final class FileShareResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The folder path for this share.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -47,6 +55,10 @@ public final class FileShareResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName")
     private @Nullable String userName;
 
+    /**
+     * @return User name credential to connect to the share location
+     * 
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -77,16 +89,34 @@ public final class FileShareResponse extends com.pulumi.resources.InvokeArgs {
             $ = new FileShareResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Password credential used to connect to the share location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param path The folder path for this share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param userName User name credential to connect to the share location
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable String userName) {
             $.userName = userName;
             return this;

@@ -24,6 +24,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessString")
     private @Nullable Output<String> accessString;
 
+    /**
+     * @return The access permissions string used for this user.
+     * 
+     */
     public Optional<Output<String>> accessString() {
         return Optional.ofNullable(this.accessString);
     }
@@ -35,6 +39,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the user.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -46,6 +54,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationMode")
     private @Nullable Output<UserAuthenticationModeGetArgs> authenticationMode;
 
+    /**
+     * @return Denotes the user&#39;s authentication properties. Detailed below.
+     * 
+     */
     public Optional<Output<UserAuthenticationModeGetArgs>> authenticationMode() {
         return Optional.ofNullable(this.authenticationMode);
     }
@@ -58,6 +70,11 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
     @Import(name="minimumEngineVersion")
     private @Nullable Output<String> minimumEngineVersion;
 
+    /**
+     * @return The minimum engine version supported for the user.
+     * * `authentication_mode` configuration block
+     * 
+     */
     public Optional<Output<String>> minimumEngineVersion() {
         return Optional.ofNullable(this.minimumEngineVersion);
     }
@@ -69,6 +86,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -80,6 +101,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -91,6 +116,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName")
     private @Nullable Output<String> userName;
 
+    /**
+     * @return Name of the MemoryDB user. Up to 40 characters.
+     * 
+     */
     public Optional<Output<String>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -125,65 +154,151 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
             $ = new UserState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessString The access permissions string used for this user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessString(@Nullable Output<String> accessString) {
             $.accessString = accessString;
             return this;
         }
 
+        /**
+         * @param accessString The access permissions string used for this user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessString(String accessString) {
             return accessString(Output.of(accessString));
         }
 
+        /**
+         * @param arn The ARN of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param authenticationMode Denotes the user&#39;s authentication properties. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationMode(@Nullable Output<UserAuthenticationModeGetArgs> authenticationMode) {
             $.authenticationMode = authenticationMode;
             return this;
         }
 
+        /**
+         * @param authenticationMode Denotes the user&#39;s authentication properties. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationMode(UserAuthenticationModeGetArgs authenticationMode) {
             return authenticationMode(Output.of(authenticationMode));
         }
 
+        /**
+         * @param minimumEngineVersion The minimum engine version supported for the user.
+         * * `authentication_mode` configuration block
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumEngineVersion(@Nullable Output<String> minimumEngineVersion) {
             $.minimumEngineVersion = minimumEngineVersion;
             return this;
         }
 
+        /**
+         * @param minimumEngineVersion The minimum engine version supported for the user.
+         * * `authentication_mode` configuration block
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumEngineVersion(String minimumEngineVersion) {
             return minimumEngineVersion(Output.of(minimumEngineVersion));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param userName Name of the MemoryDB user. Up to 40 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName Name of the MemoryDB user. Up to 40 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

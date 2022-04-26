@@ -14,38 +14,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMECRoleResult {
     /**
-     * Activation key of the MEC.
+     * @return Activation key of the MEC.
      * 
      */
     private final @Nullable AsymmetricEncryptedSecretResponse connectionString;
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
      */
     private final String id;
     /**
-     * Role type.
+     * @return Role type.
      * Expected value is &#39;MEC&#39;.
      * 
      */
     private final String kind;
     /**
-     * The object name.
+     * @return The object name.
      * 
      */
     private final String name;
     /**
-     * Role status.
+     * @return Role status.
      * 
      */
     private final String roleStatus;
     /**
-     * Role configured on ASE resource
+     * @return Role configured on ASE resource
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
      */
     private final String type;
@@ -69,52 +69,52 @@ public final class GetMECRoleResult {
     }
 
     /**
-     * Activation key of the MEC.
+     * @return Activation key of the MEC.
      * 
-    */
+     */
     public Optional<AsymmetricEncryptedSecretResponse> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Role type.
+     * @return Role type.
      * Expected value is &#39;MEC&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Role status.
+     * @return Role status.
      * 
-    */
+     */
     public String roleStatus() {
         return this.roleStatus;
     }
     /**
-     * Role configured on ASE resource
+     * @return Role configured on ASE resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

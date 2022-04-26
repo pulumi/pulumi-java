@@ -27,6 +27,10 @@ public final class LoadBalancerBackendAddressArgs extends com.pulumi.resources.R
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return IP Address belonging to the referenced virtual network.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -38,6 +42,10 @@ public final class LoadBalancerBackendAddressArgs extends com.pulumi.resources.R
     @Import(name="loadBalancerFrontendIPConfiguration")
     private @Nullable Output<SubResourceArgs> loadBalancerFrontendIPConfiguration;
 
+    /**
+     * @return Reference to the frontend ip address configuration defined in regional loadbalancer.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> loadBalancerFrontendIPConfiguration() {
         return Optional.ofNullable(this.loadBalancerFrontendIPConfiguration);
     }
@@ -49,6 +57,10 @@ public final class LoadBalancerBackendAddressArgs extends com.pulumi.resources.R
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the backend address.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -60,6 +72,10 @@ public final class LoadBalancerBackendAddressArgs extends com.pulumi.resources.R
     @Import(name="subnet")
     private @Nullable Output<SubResourceArgs> subnet;
 
+    /**
+     * @return Reference to an existing subnet.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -71,6 +87,10 @@ public final class LoadBalancerBackendAddressArgs extends com.pulumi.resources.R
     @Import(name="virtualNetwork")
     private @Nullable Output<SubResourceArgs> virtualNetwork;
 
+    /**
+     * @return Reference to an existing virtual network.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> virtualNetwork() {
         return Optional.ofNullable(this.virtualNetwork);
     }
@@ -103,47 +123,107 @@ public final class LoadBalancerBackendAddressArgs extends com.pulumi.resources.R
             $ = new LoadBalancerBackendAddressArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddress IP Address belonging to the referenced virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress IP Address belonging to the referenced virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param loadBalancerFrontendIPConfiguration Reference to the frontend ip address configuration defined in regional loadbalancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerFrontendIPConfiguration(@Nullable Output<SubResourceArgs> loadBalancerFrontendIPConfiguration) {
             $.loadBalancerFrontendIPConfiguration = loadBalancerFrontendIPConfiguration;
             return this;
         }
 
+        /**
+         * @param loadBalancerFrontendIPConfiguration Reference to the frontend ip address configuration defined in regional loadbalancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerFrontendIPConfiguration(SubResourceArgs loadBalancerFrontendIPConfiguration) {
             return loadBalancerFrontendIPConfiguration(Output.of(loadBalancerFrontendIPConfiguration));
         }
 
+        /**
+         * @param name Name of the backend address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the backend address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param subnet Reference to an existing subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet Reference to an existing subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(SubResourceArgs subnet) {
             return subnet(Output.of(subnet));
         }
 
+        /**
+         * @param virtualNetwork Reference to an existing virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetwork(@Nullable Output<SubResourceArgs> virtualNetwork) {
             $.virtualNetwork = virtualNetwork;
             return this;
         }
 
+        /**
+         * @param virtualNetwork Reference to an existing virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetwork(SubResourceArgs virtualNetwork) {
             return virtualNetwork(Output.of(virtualNetwork));
         }

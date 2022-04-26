@@ -24,6 +24,11 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends com.pulumi
     @Import(name="config", required=true)
     private Output<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config;
 
+    /**
+     * @return The configuration options for matching the rule.
+     * Structure is documented below.
+     * 
+     */
     public Output<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config() {
         return this.config;
     }
@@ -35,6 +40,10 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends com.pulumi
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the rule.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +58,13 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends com.pulumi
     @Import(name="versionedExpr")
     private @Nullable Output<String> versionedExpr;
 
+    /**
+     * @return Preconfigured versioned expression. For organization security policy rules,
+     * the only supported type is &#34;FIREWALL&#34;.
+     * Default value is `FIREWALL`.
+     * Possible values are `FIREWALL`.
+     * 
+     */
     public Optional<Output<String>> versionedExpr() {
         return Optional.ofNullable(this.versionedExpr);
     }
@@ -79,29 +95,73 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends com.pulumi
             $ = new OrganizationSecurityPolicyRuleMatchGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config The configuration options for matching the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(Output<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config The configuration options for matching the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(OrganizationSecurityPolicyRuleMatchConfigGetArgs config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param description A description of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param versionedExpr Preconfigured versioned expression. For organization security policy rules,
+         * the only supported type is &#34;FIREWALL&#34;.
+         * Default value is `FIREWALL`.
+         * Possible values are `FIREWALL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionedExpr(@Nullable Output<String> versionedExpr) {
             $.versionedExpr = versionedExpr;
             return this;
         }
 
+        /**
+         * @param versionedExpr Preconfigured versioned expression. For organization security policy rules,
+         * the only supported type is &#34;FIREWALL&#34;.
+         * Default value is `FIREWALL`.
+         * Possible values are `FIREWALL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionedExpr(String versionedExpr) {
             return versionedExpr(Output.of(versionedExpr));
         }

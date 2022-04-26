@@ -29,6 +29,10 @@ public final class UnsecuredEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="credentials", required=true)
     private Output<UsernamePasswordCredentialsArgs> credentials;
 
+    /**
+     * @return Credentials to be presented to the endpoint.
+     * 
+     */
     public Output<UsernamePasswordCredentialsArgs> credentials() {
         return this.credentials;
     }
@@ -40,6 +44,10 @@ public final class UnsecuredEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tunnel")
     private @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel;
 
+    /**
+     * @return Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
+     * 
+     */
     public Optional<Output<SecureIotDeviceRemoteTunnelArgs>> tunnel() {
         return Optional.ofNullable(this.tunnel);
     }
@@ -52,6 +60,11 @@ public final class UnsecuredEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.UnsecuredEndpoint&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -63,6 +76,10 @@ public final class UnsecuredEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="url", required=true)
     private Output<String> url;
 
+    /**
+     * @return The endpoint URL for Video Analyzer to connect to.
+     * 
+     */
     public Output<String> url() {
         return this.url;
     }
@@ -94,38 +111,88 @@ public final class UnsecuredEndpointArgs extends com.pulumi.resources.ResourceAr
             $ = new UnsecuredEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credentials Credentials to be presented to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(Output<UsernamePasswordCredentialsArgs> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials Credentials to be presented to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(UsernamePasswordCredentialsArgs credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param tunnel Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tunnel(@Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel) {
             $.tunnel = tunnel;
             return this;
         }
 
+        /**
+         * @param tunnel Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tunnel(SecureIotDeviceRemoteTunnelArgs tunnel) {
             return tunnel(Output.of(tunnel));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.UnsecuredEndpoint&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.UnsecuredEndpoint&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param url The endpoint URL for Video Analyzer to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The endpoint URL for Video Analyzer to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

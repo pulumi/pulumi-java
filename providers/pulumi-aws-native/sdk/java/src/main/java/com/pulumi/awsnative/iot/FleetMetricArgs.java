@@ -26,6 +26,10 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aggregationField")
     private @Nullable Output<String> aggregationField;
 
+    /**
+     * @return The aggregation field to perform aggregation and metric emission
+     * 
+     */
     public Optional<Output<String>> aggregationField() {
         return Optional.ofNullable(this.aggregationField);
     }
@@ -44,6 +48,10 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of a fleet metric
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -55,6 +63,10 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="indexName")
     private @Nullable Output<String> indexName;
 
+    /**
+     * @return The index name of a fleet metric
+     * 
+     */
     public Optional<Output<String>> indexName() {
         return Optional.ofNullable(this.indexName);
     }
@@ -66,6 +78,10 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricName", required=true)
     private Output<String> metricName;
 
+    /**
+     * @return The name of the fleet metric
+     * 
+     */
     public Output<String> metricName() {
         return this.metricName;
     }
@@ -77,6 +93,10 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="period")
     private @Nullable Output<Integer> period;
 
+    /**
+     * @return The period of metric emission in seconds
+     * 
+     */
     public Optional<Output<Integer>> period() {
         return Optional.ofNullable(this.period);
     }
@@ -88,6 +108,10 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryString")
     private @Nullable Output<String> queryString;
 
+    /**
+     * @return The Fleet Indexing query used by a fleet metric
+     * 
+     */
     public Optional<Output<String>> queryString() {
         return Optional.ofNullable(this.queryString);
     }
@@ -99,6 +123,10 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryVersion")
     private @Nullable Output<String> queryVersion;
 
+    /**
+     * @return The version of a Fleet Indexing query used by a fleet metric
+     * 
+     */
     public Optional<Output<String>> queryVersion() {
         return Optional.ofNullable(this.queryVersion);
     }
@@ -110,6 +138,10 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<FleetMetricTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource
+     * 
+     */
     public Optional<Output<List<FleetMetricTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -121,6 +153,10 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="unit")
     private @Nullable Output<String> unit;
 
+    /**
+     * @return The unit of data points emitted by a fleet metric
+     * 
+     */
     public Optional<Output<String>> unit() {
         return Optional.ofNullable(this.unit);
     }
@@ -158,11 +194,23 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FleetMetricArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregationField The aggregation field to perform aggregation and metric emission
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregationField(@Nullable Output<String> aggregationField) {
             $.aggregationField = aggregationField;
             return this;
         }
 
+        /**
+         * @param aggregationField The aggregation field to perform aggregation and metric emission
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregationField(String aggregationField) {
             return aggregationField(Output.of(aggregationField));
         }
@@ -176,78 +224,180 @@ public final class FleetMetricArgs extends com.pulumi.resources.ResourceArgs {
             return aggregationType(Output.of(aggregationType));
         }
 
+        /**
+         * @param description The description of a fleet metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of a fleet metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param indexName The index name of a fleet metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexName(@Nullable Output<String> indexName) {
             $.indexName = indexName;
             return this;
         }
 
+        /**
+         * @param indexName The index name of a fleet metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexName(String indexName) {
             return indexName(Output.of(indexName));
         }
 
+        /**
+         * @param metricName The name of the fleet metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(Output<String> metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param metricName The name of the fleet metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             return metricName(Output.of(metricName));
         }
 
+        /**
+         * @param period The period of metric emission in seconds
+         * 
+         * @return builder
+         * 
+         */
         public Builder period(@Nullable Output<Integer> period) {
             $.period = period;
             return this;
         }
 
+        /**
+         * @param period The period of metric emission in seconds
+         * 
+         * @return builder
+         * 
+         */
         public Builder period(Integer period) {
             return period(Output.of(period));
         }
 
+        /**
+         * @param queryString The Fleet Indexing query used by a fleet metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(@Nullable Output<String> queryString) {
             $.queryString = queryString;
             return this;
         }
 
+        /**
+         * @param queryString The Fleet Indexing query used by a fleet metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(String queryString) {
             return queryString(Output.of(queryString));
         }
 
+        /**
+         * @param queryVersion The version of a Fleet Indexing query used by a fleet metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryVersion(@Nullable Output<String> queryVersion) {
             $.queryVersion = queryVersion;
             return this;
         }
 
+        /**
+         * @param queryVersion The version of a Fleet Indexing query used by a fleet metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryVersion(String queryVersion) {
             return queryVersion(Output.of(queryVersion));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<FleetMetricTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<FleetMetricTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(FleetMetricTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param unit The unit of data points emitted by a fleet metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(@Nullable Output<String> unit) {
             $.unit = unit;
             return this;
         }
 
+        /**
+         * @param unit The unit of data points emitted by a fleet metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(String unit) {
             return unit(Output.of(unit));
         }

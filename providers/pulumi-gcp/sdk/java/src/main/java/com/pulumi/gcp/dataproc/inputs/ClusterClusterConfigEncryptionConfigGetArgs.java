@@ -21,6 +21,11 @@ public final class ClusterClusterConfigEncryptionConfigGetArgs extends com.pulum
     @Import(name="kmsKeyName", required=true)
     private Output<String> kmsKeyName;
 
+    /**
+     * @return The Cloud KMS key name to use for PD disk encryption for
+     * all instances in the cluster.
+     * 
+     */
     public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -49,11 +54,25 @@ public final class ClusterClusterConfigEncryptionConfigGetArgs extends com.pulum
             $ = new ClusterClusterConfigEncryptionConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName The Cloud KMS key name to use for PD disk encryption for
+         * all instances in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName The Cloud KMS key name to use for PD disk encryption for
+         * all instances in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }

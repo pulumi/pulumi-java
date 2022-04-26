@@ -26,6 +26,10 @@ public final class DiskPoolVolumeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="endpoints")
     private @Nullable List<String> endpoints;
 
+    /**
+     * @return iSCSI provider target IP address list
+     * 
+     */
     public Optional<List<String>> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
@@ -37,6 +41,10 @@ public final class DiskPoolVolumeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="lunName")
     private @Nullable String lunName;
 
+    /**
+     * @return Name of the LUN to be used
+     * 
+     */
     public Optional<String> lunName() {
         return Optional.ofNullable(this.lunName);
     }
@@ -66,15 +74,33 @@ public final class DiskPoolVolumeResponse extends com.pulumi.resources.InvokeArg
             $ = new DiskPoolVolumeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoints iSCSI provider target IP address list
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(@Nullable List<String> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
 
+        /**
+         * @param endpoints iSCSI provider target IP address list
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(String... endpoints) {
             return endpoints(List.of(endpoints));
         }
 
+        /**
+         * @param lunName Name of the LUN to be used
+         * 
+         * @return builder
+         * 
+         */
         public Builder lunName(@Nullable String lunName) {
             $.lunName = lunName;
             return this;

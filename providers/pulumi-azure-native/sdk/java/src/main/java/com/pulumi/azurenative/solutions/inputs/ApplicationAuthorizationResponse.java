@@ -23,6 +23,10 @@ public final class ApplicationAuthorizationResponse extends com.pulumi.resources
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The provider&#39;s principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -34,6 +38,10 @@ public final class ApplicationAuthorizationResponse extends com.pulumi.resources
     @Import(name="roleDefinitionId", required=true)
     private String roleDefinitionId;
 
+    /**
+     * @return The provider&#39;s role definition identifier. This role will define all the permissions that the provider must have on the managed application&#39;s container resource group. This role definition cannot have permission to delete the resource group.
+     * 
+     */
     public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -63,11 +71,23 @@ public final class ApplicationAuthorizationResponse extends com.pulumi.resources
             $ = new ApplicationAuthorizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The provider&#39;s principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param roleDefinitionId The provider&#39;s role definition identifier. This role will define all the permissions that the provider must have on the managed application&#39;s container resource group. This role definition cannot have permission to delete the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(String roleDefinitionId) {
             $.roleDefinitionId = roleDefinitionId;
             return this;

@@ -29,6 +29,10 @@ public final class ImageStorageProfileArgs extends com.pulumi.resources.Resource
     @Import(name="dataDisks")
     private @Nullable Output<List<ImageDataDiskArgs>> dataDisks;
 
+    /**
+     * @return Specifies the parameters that are used to add a data disk to a virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+     * 
+     */
     public Optional<Output<List<ImageDataDiskArgs>>> dataDisks() {
         return Optional.ofNullable(this.dataDisks);
     }
@@ -40,6 +44,10 @@ public final class ImageStorageProfileArgs extends com.pulumi.resources.Resource
     @Import(name="osDisk")
     private @Nullable Output<ImageOSDiskArgs> osDisk;
 
+    /**
+     * @return Specifies information about the operating system disk used by the virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+     * 
+     */
     public Optional<Output<ImageOSDiskArgs>> osDisk() {
         return Optional.ofNullable(this.osDisk);
     }
@@ -51,6 +59,10 @@ public final class ImageStorageProfileArgs extends com.pulumi.resources.Resource
     @Import(name="zoneResilient")
     private @Nullable Output<Boolean> zoneResilient;
 
+    /**
+     * @return Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).
+     * 
+     */
     public Optional<Output<Boolean>> zoneResilient() {
         return Optional.ofNullable(this.zoneResilient);
     }
@@ -81,33 +93,75 @@ public final class ImageStorageProfileArgs extends com.pulumi.resources.Resource
             $ = new ImageStorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add a data disk to a virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(@Nullable Output<List<ImageDataDiskArgs>> dataDisks) {
             $.dataDisks = dataDisks;
             return this;
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add a data disk to a virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(List<ImageDataDiskArgs> dataDisks) {
             return dataDisks(Output.of(dataDisks));
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add a data disk to a virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(ImageDataDiskArgs... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
 
+        /**
+         * @param osDisk Specifies information about the operating system disk used by the virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisk(@Nullable Output<ImageOSDiskArgs> osDisk) {
             $.osDisk = osDisk;
             return this;
         }
 
+        /**
+         * @param osDisk Specifies information about the operating system disk used by the virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisk(ImageOSDiskArgs osDisk) {
             return osDisk(Output.of(osDisk));
         }
 
+        /**
+         * @param zoneResilient Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneResilient(@Nullable Output<Boolean> zoneResilient) {
             $.zoneResilient = zoneResilient;
             return this;
         }
 
+        /**
+         * @param zoneResilient Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneResilient(Boolean zoneResilient) {
             return zoneResilient(Output.of(zoneResilient));
         }

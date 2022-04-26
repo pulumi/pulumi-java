@@ -31,6 +31,10 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="bandwidthInMbps")
     private @Nullable Output<Integer> bandwidthInMbps;
 
+    /**
+     * @return The bandwidth of the connection.
+     * 
+     */
     public Optional<Output<Integer>> bandwidthInMbps() {
         return Optional.ofNullable(this.bandwidthInMbps);
     }
@@ -42,6 +46,10 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="bgpSession")
     private @Nullable Output<BgpSessionArgs> bgpSession;
 
+    /**
+     * @return The BGP session associated with the connection.
+     * 
+     */
     public Optional<Output<BgpSessionArgs>> bgpSession() {
         return Optional.ofNullable(this.bgpSession);
     }
@@ -53,6 +61,10 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="connectionIdentifier")
     private @Nullable Output<String> connectionIdentifier;
 
+    /**
+     * @return The unique identifier (GUID) for the connection.
+     * 
+     */
     public Optional<Output<String>> connectionIdentifier() {
         return Optional.ofNullable(this.connectionIdentifier);
     }
@@ -64,6 +76,10 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="peeringDBFacilityId")
     private @Nullable Output<Integer> peeringDBFacilityId;
 
+    /**
+     * @return The PeeringDB.com ID of the facility at which the connection has to be set up.
+     * 
+     */
     public Optional<Output<Integer>> peeringDBFacilityId() {
         return Optional.ofNullable(this.peeringDBFacilityId);
     }
@@ -75,6 +91,10 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sessionAddressProvider")
     private @Nullable Output<Either<String,SessionAddressProvider>> sessionAddressProvider;
 
+    /**
+     * @return The field indicating if Microsoft provides session ip addresses.
+     * 
+     */
     public Optional<Output<Either<String,SessionAddressProvider>>> sessionAddressProvider() {
         return Optional.ofNullable(this.sessionAddressProvider);
     }
@@ -86,6 +106,10 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="useForPeeringService")
     private @Nullable Output<Boolean> useForPeeringService;
 
+    /**
+     * @return The flag that indicates whether or not the connection is used for peering service.
+     * 
+     */
     public Optional<Output<Boolean>> useForPeeringService() {
         return Optional.ofNullable(this.useForPeeringService);
     }
@@ -119,64 +143,148 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
             $ = new DirectConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bandwidthInMbps The bandwidth of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthInMbps(@Nullable Output<Integer> bandwidthInMbps) {
             $.bandwidthInMbps = bandwidthInMbps;
             return this;
         }
 
+        /**
+         * @param bandwidthInMbps The bandwidth of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthInMbps(Integer bandwidthInMbps) {
             return bandwidthInMbps(Output.of(bandwidthInMbps));
         }
 
+        /**
+         * @param bgpSession The BGP session associated with the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpSession(@Nullable Output<BgpSessionArgs> bgpSession) {
             $.bgpSession = bgpSession;
             return this;
         }
 
+        /**
+         * @param bgpSession The BGP session associated with the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpSession(BgpSessionArgs bgpSession) {
             return bgpSession(Output.of(bgpSession));
         }
 
+        /**
+         * @param connectionIdentifier The unique identifier (GUID) for the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionIdentifier(@Nullable Output<String> connectionIdentifier) {
             $.connectionIdentifier = connectionIdentifier;
             return this;
         }
 
+        /**
+         * @param connectionIdentifier The unique identifier (GUID) for the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionIdentifier(String connectionIdentifier) {
             return connectionIdentifier(Output.of(connectionIdentifier));
         }
 
+        /**
+         * @param peeringDBFacilityId The PeeringDB.com ID of the facility at which the connection has to be set up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringDBFacilityId(@Nullable Output<Integer> peeringDBFacilityId) {
             $.peeringDBFacilityId = peeringDBFacilityId;
             return this;
         }
 
+        /**
+         * @param peeringDBFacilityId The PeeringDB.com ID of the facility at which the connection has to be set up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringDBFacilityId(Integer peeringDBFacilityId) {
             return peeringDBFacilityId(Output.of(peeringDBFacilityId));
         }
 
+        /**
+         * @param sessionAddressProvider The field indicating if Microsoft provides session ip addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAddressProvider(@Nullable Output<Either<String,SessionAddressProvider>> sessionAddressProvider) {
             $.sessionAddressProvider = sessionAddressProvider;
             return this;
         }
 
+        /**
+         * @param sessionAddressProvider The field indicating if Microsoft provides session ip addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAddressProvider(Either<String,SessionAddressProvider> sessionAddressProvider) {
             return sessionAddressProvider(Output.of(sessionAddressProvider));
         }
 
+        /**
+         * @param sessionAddressProvider The field indicating if Microsoft provides session ip addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAddressProvider(String sessionAddressProvider) {
             return sessionAddressProvider(Either.ofLeft(sessionAddressProvider));
         }
 
+        /**
+         * @param sessionAddressProvider The field indicating if Microsoft provides session ip addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAddressProvider(SessionAddressProvider sessionAddressProvider) {
             return sessionAddressProvider(Either.ofRight(sessionAddressProvider));
         }
 
+        /**
+         * @param useForPeeringService The flag that indicates whether or not the connection is used for peering service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useForPeeringService(@Nullable Output<Boolean> useForPeeringService) {
             $.useForPeeringService = useForPeeringService;
             return this;
         }
 
+        /**
+         * @param useForPeeringService The flag that indicates whether or not the connection is used for peering service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useForPeeringService(Boolean useForPeeringService) {
             return useForPeeringService(Output.of(useForPeeringService));
         }

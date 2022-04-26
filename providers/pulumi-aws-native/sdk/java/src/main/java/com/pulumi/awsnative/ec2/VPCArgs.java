@@ -25,6 +25,10 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cidrBlock", required=true)
     private Output<String> cidrBlock;
 
+    /**
+     * @return The primary IPv4 CIDR block for the VPC.
+     * 
+     */
     public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
@@ -36,6 +40,10 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableDnsHostnames")
     private @Nullable Output<Boolean> enableDnsHostnames;
 
+    /**
+     * @return Indicates whether the instances launched in the VPC get DNS hostnames. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not. Disabled by default for nondefault VPCs.
+     * 
+     */
     public Optional<Output<Boolean>> enableDnsHostnames() {
         return Optional.ofNullable(this.enableDnsHostnames);
     }
@@ -47,6 +55,10 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableDnsSupport")
     private @Nullable Output<Boolean> enableDnsSupport;
 
+    /**
+     * @return Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range &#34;plus two&#34; succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
+     * 
+     */
     public Optional<Output<Boolean>> enableDnsSupport() {
         return Optional.ofNullable(this.enableDnsSupport);
     }
@@ -64,6 +76,16 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceTenancy")
     private @Nullable Output<String> instanceTenancy;
 
+    /**
+     * @return The allowed tenancy of instances launched into the VPC.
+     * 
+     * &#34;default&#34;: An instance launched into the VPC runs on shared hardware by default, unless you explicitly specify a different tenancy during instance launch.
+     * 
+     * &#34;dedicated&#34;: An instance launched into the VPC is a Dedicated Instance by default, unless you explicitly specify a tenancy of host during instance launch. You cannot specify a tenancy of default during instance launch.
+     * 
+     * Updating InstanceTenancy requires no replacement only if you are updating its value from &#34;dedicated&#34; to &#34;default&#34;. Updating InstanceTenancy from &#34;default&#34; to &#34;dedicated&#34; requires replacement.
+     * 
+     */
     public Optional<Output<String>> instanceTenancy() {
         return Optional.ofNullable(this.instanceTenancy);
     }
@@ -75,6 +97,10 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<VPCTagArgs>> tags;
 
+    /**
+     * @return The tags for the VPC.
+     * 
+     */
     public Optional<Output<List<VPCTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -107,51 +133,129 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VPCArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrBlock The primary IPv4 CIDR block for the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(Output<String> cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;
         }
 
+        /**
+         * @param cidrBlock The primary IPv4 CIDR block for the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(String cidrBlock) {
             return cidrBlock(Output.of(cidrBlock));
         }
 
+        /**
+         * @param enableDnsHostnames Indicates whether the instances launched in the VPC get DNS hostnames. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not. Disabled by default for nondefault VPCs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDnsHostnames(@Nullable Output<Boolean> enableDnsHostnames) {
             $.enableDnsHostnames = enableDnsHostnames;
             return this;
         }
 
+        /**
+         * @param enableDnsHostnames Indicates whether the instances launched in the VPC get DNS hostnames. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not. Disabled by default for nondefault VPCs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDnsHostnames(Boolean enableDnsHostnames) {
             return enableDnsHostnames(Output.of(enableDnsHostnames));
         }
 
+        /**
+         * @param enableDnsSupport Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range &#34;plus two&#34; succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDnsSupport(@Nullable Output<Boolean> enableDnsSupport) {
             $.enableDnsSupport = enableDnsSupport;
             return this;
         }
 
+        /**
+         * @param enableDnsSupport Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range &#34;plus two&#34; succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDnsSupport(Boolean enableDnsSupport) {
             return enableDnsSupport(Output.of(enableDnsSupport));
         }
 
+        /**
+         * @param instanceTenancy The allowed tenancy of instances launched into the VPC.
+         * 
+         * &#34;default&#34;: An instance launched into the VPC runs on shared hardware by default, unless you explicitly specify a different tenancy during instance launch.
+         * 
+         * &#34;dedicated&#34;: An instance launched into the VPC is a Dedicated Instance by default, unless you explicitly specify a tenancy of host during instance launch. You cannot specify a tenancy of default during instance launch.
+         * 
+         * Updating InstanceTenancy requires no replacement only if you are updating its value from &#34;dedicated&#34; to &#34;default&#34;. Updating InstanceTenancy from &#34;default&#34; to &#34;dedicated&#34; requires replacement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTenancy(@Nullable Output<String> instanceTenancy) {
             $.instanceTenancy = instanceTenancy;
             return this;
         }
 
+        /**
+         * @param instanceTenancy The allowed tenancy of instances launched into the VPC.
+         * 
+         * &#34;default&#34;: An instance launched into the VPC runs on shared hardware by default, unless you explicitly specify a different tenancy during instance launch.
+         * 
+         * &#34;dedicated&#34;: An instance launched into the VPC is a Dedicated Instance by default, unless you explicitly specify a tenancy of host during instance launch. You cannot specify a tenancy of default during instance launch.
+         * 
+         * Updating InstanceTenancy requires no replacement only if you are updating its value from &#34;dedicated&#34; to &#34;default&#34;. Updating InstanceTenancy from &#34;default&#34; to &#34;dedicated&#34; requires replacement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTenancy(String instanceTenancy) {
             return instanceTenancy(Output.of(instanceTenancy));
         }
 
+        /**
+         * @param tags The tags for the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<VPCTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags for the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<VPCTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags for the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(VPCTagArgs... tags) {
             return tags(List.of(tags));
         }

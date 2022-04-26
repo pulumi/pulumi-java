@@ -21,6 +21,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
     @Import(name="contentSecurityPolicy", required=true)
     private Output<String> contentSecurityPolicy;
 
+    /**
+     * @return The policy directives and their values that CloudFront includes as values for the `Content-Security-Policy` HTTP response header.
+     * 
+     */
     public Output<String> contentSecurityPolicy() {
         return this.contentSecurityPolicy;
     }
@@ -32,6 +36,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
     @Import(name="override", required=true)
     private Output<Boolean> override;
 
+    /**
+     * @return A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
+     * 
+     */
     public Output<Boolean> override() {
         return this.override;
     }
@@ -61,20 +69,44 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
             $ = new ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentSecurityPolicy The policy directives and their values that CloudFront includes as values for the `Content-Security-Policy` HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentSecurityPolicy(Output<String> contentSecurityPolicy) {
             $.contentSecurityPolicy = contentSecurityPolicy;
             return this;
         }
 
+        /**
+         * @param contentSecurityPolicy The policy directives and their values that CloudFront includes as values for the `Content-Security-Policy` HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentSecurityPolicy(String contentSecurityPolicy) {
             return contentSecurityPolicy(Output.of(contentSecurityPolicy));
         }
 
+        /**
+         * @param override A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder override(Output<Boolean> override) {
             $.override = override;
             return this;
         }
 
+        /**
+         * @param override A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder override(Boolean override) {
             return override(Output.of(override));
         }

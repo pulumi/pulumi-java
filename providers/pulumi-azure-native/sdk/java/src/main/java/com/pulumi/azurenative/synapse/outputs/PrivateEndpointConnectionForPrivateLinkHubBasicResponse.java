@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse {
     /**
-     * identifier
+     * @return identifier
      * 
      */
     private final String id;
     /**
-     * The private endpoint which the connection belongs to.
+     * @return The private endpoint which the connection belongs to.
      * 
      */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
     /**
-     * Connection state of the private endpoint connection.
+     * @return Connection state of the private endpoint connection.
      * 
      */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
     /**
-     * Provisioning state of the private endpoint connection.
+     * @return Provisioning state of the private endpoint connection.
      * 
      */
     private final String provisioningState;
@@ -47,30 +47,30 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse {
     }
 
     /**
-     * identifier
+     * @return identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The private endpoint which the connection belongs to.
+     * @return The private endpoint which the connection belongs to.
      * 
-    */
+     */
     public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * Connection state of the private endpoint connection.
+     * @return Connection state of the private endpoint connection.
      * 
-    */
+     */
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
-     * Provisioning state of the private endpoint connection.
+     * @return Provisioning state of the private endpoint connection.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

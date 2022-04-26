@@ -24,6 +24,10 @@ public final class CassandraViewResourceArgs extends com.pulumi.resources.Resour
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Name of the Cosmos DB Cassandra view
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -35,6 +39,10 @@ public final class CassandraViewResourceArgs extends com.pulumi.resources.Resour
     @Import(name="viewDefinition", required=true)
     private Output<String> viewDefinition;
 
+    /**
+     * @return View Definition of the Cosmos DB Cassandra view
+     * 
+     */
     public Output<String> viewDefinition() {
         return this.viewDefinition;
     }
@@ -64,20 +72,44 @@ public final class CassandraViewResourceArgs extends com.pulumi.resources.Resour
             $ = new CassandraViewResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Name of the Cosmos DB Cassandra view
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Name of the Cosmos DB Cassandra view
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param viewDefinition View Definition of the Cosmos DB Cassandra view
+         * 
+         * @return builder
+         * 
+         */
         public Builder viewDefinition(Output<String> viewDefinition) {
             $.viewDefinition = viewDefinition;
             return this;
         }
 
+        /**
+         * @param viewDefinition View Definition of the Cosmos DB Cassandra view
+         * 
+         * @return builder
+         * 
+         */
         public Builder viewDefinition(String viewDefinition) {
             return viewDefinition(Output.of(viewDefinition));
         }

@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class GetRegionInstanceGroupInstance {
     /**
-     * URL to the instance.
+     * @return URL to the instance.
      * 
      */
     private final String instance;
     /**
-     * List of named ports in the group, as a list of resources, each containing:
+     * @return List of named ports in the group, as a list of resources, each containing:
      * 
      */
     private final List<GetRegionInstanceGroupInstanceNamedPort> namedPorts;
     /**
-     * String description of current state of the instance.
+     * @return String description of current state of the instance.
      * 
      */
     private final String status;
@@ -38,23 +38,23 @@ public final class GetRegionInstanceGroupInstance {
     }
 
     /**
-     * URL to the instance.
+     * @return URL to the instance.
      * 
-    */
+     */
     public String instance() {
         return this.instance;
     }
     /**
-     * List of named ports in the group, as a list of resources, each containing:
+     * @return List of named ports in the group, as a list of resources, each containing:
      * 
-    */
+     */
     public List<GetRegionInstanceGroupInstanceNamedPort> namedPorts() {
         return this.namedPorts;
     }
     /**
-     * String description of current state of the instance.
+     * @return String description of current state of the instance.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

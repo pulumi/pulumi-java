@@ -29,6 +29,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends com.pulu
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -40,6 +44,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends com.pulu
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The human-readable name of the intent, unique within the agent.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -51,6 +59,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends com.pulu
     @Import(name="isFallback", required=true)
     private Boolean isFallback;
 
+    /**
+     * @return Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation. Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
+     * 
+     */
     public Boolean isFallback() {
         return this.isFallback;
     }
@@ -62,6 +74,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends com.pulu
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols &#39;-&#39; and &#39;_&#39;. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix &#34;sys-&#34; is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. &#34;sys-head&#34; means the intent is a head intent. &#34;sys-contextual&#34; means the intent is a contextual intent.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -73,6 +89,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends com.pulu
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The unique identifier of the intent. Required for the Intents.UpdateIntent method. Intents.CreateIntent populates the name automatically. Format: `projects//locations//agents//intents/`.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -84,6 +104,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends com.pulu
     @Import(name="parameters", required=true)
     private List<GoogleCloudDialogflowCxV3beta1IntentParameterResponse> parameters;
 
+    /**
+     * @return The collection of parameters associated with the intent.
+     * 
+     */
     public List<GoogleCloudDialogflowCxV3beta1IntentParameterResponse> parameters() {
         return this.parameters;
     }
@@ -95,6 +119,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends com.pulu
     @Import(name="priority", required=true)
     private Integer priority;
 
+    /**
+     * @return The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
+     * 
+     */
     public Integer priority() {
         return this.priority;
     }
@@ -106,6 +134,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends com.pulu
     @Import(name="trainingPhrases", required=true)
     private List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> trainingPhrases;
 
+    /**
+     * @return The collection of training phrases the agent is trained on to identify the intent.
+     * 
+     */
     public List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> trainingPhrases() {
         return this.trainingPhrases;
     }
@@ -141,50 +173,110 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends com.pulu
             $ = new GoogleCloudDialogflowCxV3beta1IntentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName The human-readable name of the intent, unique within the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param isFallback Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation. Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isFallback(Boolean isFallback) {
             $.isFallback = isFallback;
             return this;
         }
 
+        /**
+         * @param labels The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols &#39;-&#39; and &#39;_&#39;. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix &#34;sys-&#34; is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. &#34;sys-head&#34; means the intent is a head intent. &#34;sys-contextual&#34; means the intent is a contextual intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param name The unique identifier of the intent. Required for the Intents.UpdateIntent method. Intents.CreateIntent populates the name automatically. Format: `projects//locations//agents//intents/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameters The collection of parameters associated with the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<GoogleCloudDialogflowCxV3beta1IntentParameterResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The collection of parameters associated with the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(GoogleCloudDialogflowCxV3beta1IntentParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param priority The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param trainingPhrases The collection of training phrases the agent is trained on to identify the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingPhrases(List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> trainingPhrases) {
             $.trainingPhrases = trainingPhrases;
             return this;
         }
 
+        /**
+         * @param trainingPhrases The collection of training phrases the agent is trained on to identify the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingPhrases(GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse... trainingPhrases) {
             return trainingPhrases(List.of(trainingPhrases));
         }

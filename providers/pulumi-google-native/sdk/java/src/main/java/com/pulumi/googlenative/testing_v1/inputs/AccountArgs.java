@@ -26,6 +26,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="googleAuto")
     private @Nullable Output<GoogleAutoArgs> googleAuto;
 
+    /**
+     * @return An automatic google login account.
+     * 
+     */
     public Optional<Output<GoogleAutoArgs>> googleAuto() {
         return Optional.ofNullable(this.googleAuto);
     }
@@ -54,11 +58,23 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param googleAuto An automatic google login account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleAuto(@Nullable Output<GoogleAutoArgs> googleAuto) {
             $.googleAuto = googleAuto;
             return this;
         }
 
+        /**
+         * @param googleAuto An automatic google login account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleAuto(GoogleAutoArgs googleAuto) {
             return googleAuto(Output.of(googleAuto));
         }

@@ -37,6 +37,10 @@ public final class StudyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="studyConfig", required=true)
     private Output<GoogleCloudMlV1__StudyConfigArgs> studyConfig;
 
+    /**
+     * @return Configuration of the study.
+     * 
+     */
     public Output<GoogleCloudMlV1__StudyConfigArgs> studyConfig() {
         return this.studyConfig;
     }
@@ -93,11 +97,23 @@ public final class StudyArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param studyConfig Configuration of the study.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studyConfig(Output<GoogleCloudMlV1__StudyConfigArgs> studyConfig) {
             $.studyConfig = studyConfig;
             return this;
         }
 
+        /**
+         * @param studyConfig Configuration of the study.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studyConfig(GoogleCloudMlV1__StudyConfigArgs studyConfig) {
             return studyConfig(Output.of(studyConfig));
         }

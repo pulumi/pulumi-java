@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetInstanceTemplateReservationAffinitySpecificReservation {
     /**
-     * The key for the node affinity label.
+     * @return The key for the node affinity label.
      * 
      */
     private final String key;
@@ -26,9 +26,9 @@ public final class GetInstanceTemplateReservationAffinitySpecificReservation {
     }
 
     /**
-     * The key for the node affinity label.
+     * @return The key for the node affinity label.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }

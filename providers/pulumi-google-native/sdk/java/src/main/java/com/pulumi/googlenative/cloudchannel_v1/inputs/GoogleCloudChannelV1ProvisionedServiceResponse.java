@@ -23,6 +23,10 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends com.pu
     @Import(name="productId", required=true)
     private String productId;
 
+    /**
+     * @return The product pertaining to the provisioning resource as specified in the Offer.
+     * 
+     */
     public String productId() {
         return this.productId;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends com.pu
     @Import(name="provisioningId", required=true)
     private String provisioningId;
 
+    /**
+     * @return Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount.&#34;
+     * 
+     */
     public String provisioningId() {
         return this.provisioningId;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends com.pu
     @Import(name="skuId", required=true)
     private String skuId;
 
+    /**
+     * @return The SKU pertaining to the provisioning resource as specified in the Offer.
+     * 
+     */
     public String skuId() {
         return this.skuId;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends com.pu
             $ = new GoogleCloudChannelV1ProvisionedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param productId The product pertaining to the provisioning resource as specified in the Offer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(String productId) {
             $.productId = productId;
             return this;
         }
 
+        /**
+         * @param provisioningId Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount.&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningId(String provisioningId) {
             $.provisioningId = provisioningId;
             return this;
         }
 
+        /**
+         * @param skuId The SKU pertaining to the provisioning resource as specified in the Offer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuId(String skuId) {
             $.skuId = skuId;
             return this;

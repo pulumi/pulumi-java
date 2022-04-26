@@ -24,6 +24,10 @@ public final class TaskStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="attemptDispatchCount", required=true)
     private Integer attemptDispatchCount;
 
+    /**
+     * @return The number of attempts dispatched. This count includes attempts which have been dispatched but haven&#39;t received a response.
+     * 
+     */
     public Integer attemptDispatchCount() {
         return this.attemptDispatchCount;
     }
@@ -35,6 +39,10 @@ public final class TaskStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="attemptResponseCount", required=true)
     private Integer attemptResponseCount;
 
+    /**
+     * @return The number of attempts which have received a response. This field is not calculated for pull tasks.
+     * 
+     */
     public Integer attemptResponseCount() {
         return this.attemptResponseCount;
     }
@@ -46,6 +54,10 @@ public final class TaskStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="firstAttemptStatus", required=true)
     private AttemptStatusResponse firstAttemptStatus;
 
+    /**
+     * @return The status of the task&#39;s first attempt. Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull tasks.
+     * 
+     */
     public AttemptStatusResponse firstAttemptStatus() {
         return this.firstAttemptStatus;
     }
@@ -57,6 +69,10 @@ public final class TaskStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastAttemptStatus", required=true)
     private AttemptStatusResponse lastAttemptStatus;
 
+    /**
+     * @return The status of the task&#39;s last attempt. This field is not calculated for pull tasks.
+     * 
+     */
     public AttemptStatusResponse lastAttemptStatus() {
         return this.lastAttemptStatus;
     }
@@ -88,21 +104,45 @@ public final class TaskStatusResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TaskStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attemptDispatchCount The number of attempts dispatched. This count includes attempts which have been dispatched but haven&#39;t received a response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attemptDispatchCount(Integer attemptDispatchCount) {
             $.attemptDispatchCount = attemptDispatchCount;
             return this;
         }
 
+        /**
+         * @param attemptResponseCount The number of attempts which have received a response. This field is not calculated for pull tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attemptResponseCount(Integer attemptResponseCount) {
             $.attemptResponseCount = attemptResponseCount;
             return this;
         }
 
+        /**
+         * @param firstAttemptStatus The status of the task&#39;s first attempt. Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstAttemptStatus(AttemptStatusResponse firstAttemptStatus) {
             $.firstAttemptStatus = firstAttemptStatus;
             return this;
         }
 
+        /**
+         * @param lastAttemptStatus The status of the task&#39;s last attempt. This field is not calculated for pull tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAttemptStatus(AttemptStatusResponse lastAttemptStatus) {
             $.lastAttemptStatus = lastAttemptStatus;
             return this;

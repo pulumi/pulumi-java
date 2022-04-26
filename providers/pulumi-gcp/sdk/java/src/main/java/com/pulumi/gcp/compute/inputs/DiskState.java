@@ -29,6 +29,10 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
     private @Nullable Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> creationTimestamp() {
         return Optional.ofNullable(this.creationTimestamp);
     }
@@ -41,6 +45,11 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -61,6 +70,19 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionKey")
     private @Nullable Output<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
 
+    /**
+     * @return Encrypts the disk using a customer-supplied encryption key.
+     * After you encrypt a disk with a customer-supplied key, you must
+     * provide the same key if you use the disk later (e.g. to create a disk
+     * snapshot or an image, or to attach the disk to a virtual machine).
+     * Customer-supplied encryption keys do not protect access to metadata of
+     * the disk.
+     * If you do not provide an encryption key when creating the disk, then
+     * the disk will be encrypted using an automatically generated key and
+     * you do not need to provide a key to use the disk later.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<DiskDiskEncryptionKeyGetArgs>> diskEncryptionKey() {
         return Optional.ofNullable(this.diskEncryptionKey);
     }
@@ -80,6 +102,18 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="image")
     private @Nullable Output<String> image;
 
+    /**
+     * @return The image from which to initialize this disk. This can be
+     * one of: the image&#39;s `self_link`, `projects/{project}/global/images/{image}`,
+     * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
+     * `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
+     * `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
+     * images names must include the family name. If they don&#39;t, use the
+     * [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
+     * For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
+     * These images can be referred by family name here.
+     * 
+     */
     public Optional<Output<String>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -95,6 +129,13 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="interface")
     private @Nullable Output<String> interface_;
 
+    /**
+     * @return Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     * @deprecated
+     * This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.
+     * 
+     */
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
     public Optional<Output<String>> interface_() {
         return Optional.ofNullable(this.interface_);
@@ -107,6 +148,10 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labelFingerprint")
     private @Nullable Output<String> labelFingerprint;
 
+    /**
+     * @return The fingerprint used for optimistic locking of this resource. Used internally during updates.
+     * 
+     */
     public Optional<Output<String>> labelFingerprint() {
         return Optional.ofNullable(this.labelFingerprint);
     }
@@ -118,6 +163,10 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels to apply to this disk.  A list of key-&gt;value pairs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -129,6 +178,10 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastAttachTimestamp")
     private @Nullable Output<String> lastAttachTimestamp;
 
+    /**
+     * @return Last attach timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> lastAttachTimestamp() {
         return Optional.ofNullable(this.lastAttachTimestamp);
     }
@@ -140,6 +193,10 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastDetachTimestamp")
     private @Nullable Output<String> lastDetachTimestamp;
 
+    /**
+     * @return Last detach timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> lastDetachTimestamp() {
         return Optional.ofNullable(this.lastDetachTimestamp);
     }
@@ -151,6 +208,10 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="multiWriter")
     private @Nullable Output<Boolean> multiWriter;
 
+    /**
+     * @return Indicates whether or not the disk can be read/write attached to more than one instance.
+     * 
+     */
     public Optional<Output<Boolean>> multiWriter() {
         return Optional.ofNullable(this.multiWriter);
     }
@@ -168,6 +229,16 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -183,6 +254,14 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="physicalBlockSizeBytes")
     private @Nullable Output<Integer> physicalBlockSizeBytes;
 
+    /**
+     * @return Physical block size of the persistent disk, in bytes. If not present
+     * in a request, a default value is used. Currently supported sizes
+     * are 4096 and 16384, other sizes may be added in the future.
+     * If an unsupported value is requested, the error message will list
+     * the supported values for the caller&#39;s project.
+     * 
+     */
     public Optional<Output<Integer>> physicalBlockSizeBytes() {
         return Optional.ofNullable(this.physicalBlockSizeBytes);
     }
@@ -195,6 +274,11 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -206,6 +290,10 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisionedIops")
     private @Nullable Output<Integer> provisionedIops;
 
+    /**
+     * @return Indicates how many IOPS must be provisioned for the disk.
+     * 
+     */
     public Optional<Output<Integer>> provisionedIops() {
         return Optional.ofNullable(this.provisionedIops);
     }
@@ -222,6 +310,15 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourcePolicies")
     private @Nullable Output<List<String>> resourcePolicies;
 
+    /**
+     * @return Resource policies applied to this disk for automatic snapshot creations.
+     * ~&gt;**NOTE** This value does not support updating the
+     * resource policy, as resource policies can not be updated more than
+     * one at a time. Use
+     * `gcp.compute.DiskResourcePolicyAttachment`
+     * to allow for updating the resource policy attached to the disk.
+     * 
+     */
     public Optional<Output<List<String>>> resourcePolicies() {
         return Optional.ofNullable(this.resourcePolicies);
     }
@@ -233,6 +330,10 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -254,6 +355,20 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="size")
     private @Nullable Output<Integer> size;
 
+    /**
+     * @return Size of the persistent disk, specified in GB. You can specify this
+     * field when creating a persistent disk using the `image` or
+     * `snapshot` parameter, or specify it alone to create an empty
+     * persistent disk.
+     * If you specify this field along with `image` or `snapshot`,
+     * the value must not be less than the size of the image
+     * or the size of the snapshot.
+     * ~&gt;**NOTE** If you change the size, the provider updates the disk size
+     * if upsizing is detected but recreates the disk if downsizing is requested.
+     * You can add `lifecycle.prevent_destroy` in the config to prevent destroying
+     * and recreating.
+     * 
+     */
     public Optional<Output<Integer>> size() {
         return Optional.ofNullable(this.size);
     }
@@ -272,6 +387,17 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshot")
     private @Nullable Output<String> snapshot;
 
+    /**
+     * @return The source snapshot used to create this disk. You can provide this as
+     * a partial or full URL to the resource. If the snapshot is in another
+     * project than this disk, you must supply a full URL. For example, the
+     * following are valid values:
+     * * `https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot`
+     * * `projects/project/global/snapshots/snapshot`
+     * * `global/snapshots/snapshot`
+     * * `snapshot`
+     * 
+     */
     public Optional<Output<String>> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }
@@ -285,6 +411,12 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceImageEncryptionKey")
     private @Nullable Output<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey;
 
+    /**
+     * @return The customer-supplied encryption key of the source image. Required if
+     * the source image is protected by a customer-supplied encryption key.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<DiskSourceImageEncryptionKeyGetArgs>> sourceImageEncryptionKey() {
         return Optional.ofNullable(this.sourceImageEncryptionKey);
     }
@@ -298,6 +430,12 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceImageId")
     private @Nullable Output<String> sourceImageId;
 
+    /**
+     * @return The ID value of the image used to create this disk. This value identifies the exact image that was used to create this
+     * persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated
+     * under the same name, the source image ID would identify the exact version of the image that was used.
+     * 
+     */
     public Optional<Output<String>> sourceImageId() {
         return Optional.ofNullable(this.sourceImageId);
     }
@@ -312,6 +450,13 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshotEncryptionKey")
     private @Nullable Output<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey;
 
+    /**
+     * @return The customer-supplied encryption key of the source snapshot. Required
+     * if the source snapshot is protected by a customer-supplied encryption
+     * key.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<DiskSourceSnapshotEncryptionKeyGetArgs>> sourceSnapshotEncryptionKey() {
         return Optional.ofNullable(this.sourceSnapshotEncryptionKey);
     }
@@ -325,6 +470,12 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshotId")
     private @Nullable Output<String> sourceSnapshotId;
 
+    /**
+     * @return The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
+     * this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
+     * recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
+     * 
+     */
     public Optional<Output<String>> sourceSnapshotId() {
         return Optional.ofNullable(this.sourceSnapshotId);
     }
@@ -337,6 +488,11 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return URL of the disk type resource describing which disk type to use to
+     * create the disk. Provide this when creating the disk.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -348,6 +504,10 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="users")
     private @Nullable Output<List<String>> users;
 
+    /**
+     * @return Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
+     * 
+     */
     public Optional<Output<List<String>>> users() {
         return Optional.ofNullable(this.users);
     }
@@ -359,6 +519,10 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return A reference to the zone where the disk resides.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -411,235 +575,682 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
             $ = new DiskState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             $.creationTimestamp = creationTimestamp;
             return this;
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(String creationTimestamp) {
             return creationTimestamp(Output.of(creationTimestamp));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when
+         * you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when
+         * you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param diskEncryptionKey Encrypts the disk using a customer-supplied encryption key.
+         * After you encrypt a disk with a customer-supplied key, you must
+         * provide the same key if you use the disk later (e.g. to create a disk
+         * snapshot or an image, or to attach the disk to a virtual machine).
+         * Customer-supplied encryption keys do not protect access to metadata of
+         * the disk.
+         * If you do not provide an encryption key when creating the disk, then
+         * the disk will be encrypted using an automatically generated key and
+         * you do not need to provide a key to use the disk later.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKey(@Nullable Output<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey) {
             $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
+        /**
+         * @param diskEncryptionKey Encrypts the disk using a customer-supplied encryption key.
+         * After you encrypt a disk with a customer-supplied key, you must
+         * provide the same key if you use the disk later (e.g. to create a disk
+         * snapshot or an image, or to attach the disk to a virtual machine).
+         * Customer-supplied encryption keys do not protect access to metadata of
+         * the disk.
+         * If you do not provide an encryption key when creating the disk, then
+         * the disk will be encrypted using an automatically generated key and
+         * you do not need to provide a key to use the disk later.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKey(DiskDiskEncryptionKeyGetArgs diskEncryptionKey) {
             return diskEncryptionKey(Output.of(diskEncryptionKey));
         }
 
+        /**
+         * @param image The image from which to initialize this disk. This can be
+         * one of: the image&#39;s `self_link`, `projects/{project}/global/images/{image}`,
+         * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
+         * `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
+         * `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
+         * images names must include the family name. If they don&#39;t, use the
+         * [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
+         * For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
+         * These images can be referred by family name here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<String> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image The image from which to initialize this disk. This can be
+         * one of: the image&#39;s `self_link`, `projects/{project}/global/images/{image}`,
+         * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
+         * `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
+         * `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
+         * images names must include the family name. If they don&#39;t, use the
+         * [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
+         * For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
+         * These images can be referred by family name here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param interface_ Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.
+         * 
+         */
+        @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
         public Builder interface_(@Nullable Output<String> interface_) {
             $.interface_ = interface_;
             return this;
         }
 
+        /**
+         * @param interface_ Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.
+         * 
+         */
+        @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
         public Builder interface_(String interface_) {
             return interface_(Output.of(interface_));
         }
 
+        /**
+         * @param labelFingerprint The fingerprint used for optimistic locking of this resource. Used internally during updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
             $.labelFingerprint = labelFingerprint;
             return this;
         }
 
+        /**
+         * @param labelFingerprint The fingerprint used for optimistic locking of this resource. Used internally during updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelFingerprint(String labelFingerprint) {
             return labelFingerprint(Output.of(labelFingerprint));
         }
 
+        /**
+         * @param labels Labels to apply to this disk.  A list of key-&gt;value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels to apply to this disk.  A list of key-&gt;value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param lastAttachTimestamp Last attach timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAttachTimestamp(@Nullable Output<String> lastAttachTimestamp) {
             $.lastAttachTimestamp = lastAttachTimestamp;
             return this;
         }
 
+        /**
+         * @param lastAttachTimestamp Last attach timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAttachTimestamp(String lastAttachTimestamp) {
             return lastAttachTimestamp(Output.of(lastAttachTimestamp));
         }
 
+        /**
+         * @param lastDetachTimestamp Last detach timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastDetachTimestamp(@Nullable Output<String> lastDetachTimestamp) {
             $.lastDetachTimestamp = lastDetachTimestamp;
             return this;
         }
 
+        /**
+         * @param lastDetachTimestamp Last detach timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastDetachTimestamp(String lastDetachTimestamp) {
             return lastDetachTimestamp(Output.of(lastDetachTimestamp));
         }
 
+        /**
+         * @param multiWriter Indicates whether or not the disk can be read/write attached to more than one instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiWriter(@Nullable Output<Boolean> multiWriter) {
             $.multiWriter = multiWriter;
             return this;
         }
 
+        /**
+         * @param multiWriter Indicates whether or not the disk can be read/write attached to more than one instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiWriter(Boolean multiWriter) {
             return multiWriter(Output.of(multiWriter));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param physicalBlockSizeBytes Physical block size of the persistent disk, in bytes. If not present
+         * in a request, a default value is used. Currently supported sizes
+         * are 4096 and 16384, other sizes may be added in the future.
+         * If an unsupported value is requested, the error message will list
+         * the supported values for the caller&#39;s project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder physicalBlockSizeBytes(@Nullable Output<Integer> physicalBlockSizeBytes) {
             $.physicalBlockSizeBytes = physicalBlockSizeBytes;
             return this;
         }
 
+        /**
+         * @param physicalBlockSizeBytes Physical block size of the persistent disk, in bytes. If not present
+         * in a request, a default value is used. Currently supported sizes
+         * are 4096 and 16384, other sizes may be added in the future.
+         * If an unsupported value is requested, the error message will list
+         * the supported values for the caller&#39;s project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder physicalBlockSizeBytes(Integer physicalBlockSizeBytes) {
             return physicalBlockSizeBytes(Output.of(physicalBlockSizeBytes));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param provisionedIops Indicates how many IOPS must be provisioned for the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionedIops(@Nullable Output<Integer> provisionedIops) {
             $.provisionedIops = provisionedIops;
             return this;
         }
 
+        /**
+         * @param provisionedIops Indicates how many IOPS must be provisioned for the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionedIops(Integer provisionedIops) {
             return provisionedIops(Output.of(provisionedIops));
         }
 
+        /**
+         * @param resourcePolicies Resource policies applied to this disk for automatic snapshot creations.
+         * ~&gt;**NOTE** This value does not support updating the
+         * resource policy, as resource policies can not be updated more than
+         * one at a time. Use
+         * `gcp.compute.DiskResourcePolicyAttachment`
+         * to allow for updating the resource policy attached to the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
             $.resourcePolicies = resourcePolicies;
             return this;
         }
 
+        /**
+         * @param resourcePolicies Resource policies applied to this disk for automatic snapshot creations.
+         * ~&gt;**NOTE** This value does not support updating the
+         * resource policy, as resource policies can not be updated more than
+         * one at a time. Use
+         * `gcp.compute.DiskResourcePolicyAttachment`
+         * to allow for updating the resource policy attached to the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(List<String> resourcePolicies) {
             return resourcePolicies(Output.of(resourcePolicies));
         }
 
+        /**
+         * @param resourcePolicies Resource policies applied to this disk for automatic snapshot creations.
+         * ~&gt;**NOTE** This value does not support updating the
+         * resource policy, as resource policies can not be updated more than
+         * one at a time. Use
+         * `gcp.compute.DiskResourcePolicyAttachment`
+         * to allow for updating the resource policy attached to the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(String... resourcePolicies) {
             return resourcePolicies(List.of(resourcePolicies));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param size Size of the persistent disk, specified in GB. You can specify this
+         * field when creating a persistent disk using the `image` or
+         * `snapshot` parameter, or specify it alone to create an empty
+         * persistent disk.
+         * If you specify this field along with `image` or `snapshot`,
+         * the value must not be less than the size of the image
+         * or the size of the snapshot.
+         * ~&gt;**NOTE** If you change the size, the provider updates the disk size
+         * if upsizing is detected but recreates the disk if downsizing is requested.
+         * You can add `lifecycle.prevent_destroy` in the config to prevent destroying
+         * and recreating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Output<Integer> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size Size of the persistent disk, specified in GB. You can specify this
+         * field when creating a persistent disk using the `image` or
+         * `snapshot` parameter, or specify it alone to create an empty
+         * persistent disk.
+         * If you specify this field along with `image` or `snapshot`,
+         * the value must not be less than the size of the image
+         * or the size of the snapshot.
+         * ~&gt;**NOTE** If you change the size, the provider updates the disk size
+         * if upsizing is detected but recreates the disk if downsizing is requested.
+         * You can add `lifecycle.prevent_destroy` in the config to prevent destroying
+         * and recreating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(Integer size) {
             return size(Output.of(size));
         }
 
+        /**
+         * @param snapshot The source snapshot used to create this disk. You can provide this as
+         * a partial or full URL to the resource. If the snapshot is in another
+         * project than this disk, you must supply a full URL. For example, the
+         * following are valid values:
+         * * `https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot`
+         * * `projects/project/global/snapshots/snapshot`
+         * * `global/snapshots/snapshot`
+         * * `snapshot`
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(@Nullable Output<String> snapshot) {
             $.snapshot = snapshot;
             return this;
         }
 
+        /**
+         * @param snapshot The source snapshot used to create this disk. You can provide this as
+         * a partial or full URL to the resource. If the snapshot is in another
+         * project than this disk, you must supply a full URL. For example, the
+         * following are valid values:
+         * * `https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot`
+         * * `projects/project/global/snapshots/snapshot`
+         * * `global/snapshots/snapshot`
+         * * `snapshot`
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(String snapshot) {
             return snapshot(Output.of(snapshot));
         }
 
+        /**
+         * @param sourceImageEncryptionKey The customer-supplied encryption key of the source image. Required if
+         * the source image is protected by a customer-supplied encryption key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImageEncryptionKey(@Nullable Output<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey) {
             $.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
 
+        /**
+         * @param sourceImageEncryptionKey The customer-supplied encryption key of the source image. Required if
+         * the source image is protected by a customer-supplied encryption key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImageEncryptionKey(DiskSourceImageEncryptionKeyGetArgs sourceImageEncryptionKey) {
             return sourceImageEncryptionKey(Output.of(sourceImageEncryptionKey));
         }
 
+        /**
+         * @param sourceImageId The ID value of the image used to create this disk. This value identifies the exact image that was used to create this
+         * persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated
+         * under the same name, the source image ID would identify the exact version of the image that was used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImageId(@Nullable Output<String> sourceImageId) {
             $.sourceImageId = sourceImageId;
             return this;
         }
 
+        /**
+         * @param sourceImageId The ID value of the image used to create this disk. This value identifies the exact image that was used to create this
+         * persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated
+         * under the same name, the source image ID would identify the exact version of the image that was used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImageId(String sourceImageId) {
             return sourceImageId(Output.of(sourceImageId));
         }
 
+        /**
+         * @param sourceSnapshotEncryptionKey The customer-supplied encryption key of the source snapshot. Required
+         * if the source snapshot is protected by a customer-supplied encryption
+         * key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshotEncryptionKey(@Nullable Output<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey) {
             $.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
 
+        /**
+         * @param sourceSnapshotEncryptionKey The customer-supplied encryption key of the source snapshot. Required
+         * if the source snapshot is protected by a customer-supplied encryption
+         * key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshotEncryptionKey(DiskSourceSnapshotEncryptionKeyGetArgs sourceSnapshotEncryptionKey) {
             return sourceSnapshotEncryptionKey(Output.of(sourceSnapshotEncryptionKey));
         }
 
+        /**
+         * @param sourceSnapshotId The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
+         * this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
+         * recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshotId(@Nullable Output<String> sourceSnapshotId) {
             $.sourceSnapshotId = sourceSnapshotId;
             return this;
         }
 
+        /**
+         * @param sourceSnapshotId The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
+         * this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
+         * recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshotId(String sourceSnapshotId) {
             return sourceSnapshotId(Output.of(sourceSnapshotId));
         }
 
+        /**
+         * @param type URL of the disk type resource describing which disk type to use to
+         * create the disk. Provide this when creating the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type URL of the disk type resource describing which disk type to use to
+         * create the disk. Provide this when creating the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param users Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder users(@Nullable Output<List<String>> users) {
             $.users = users;
             return this;
         }
 
+        /**
+         * @param users Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder users(List<String> users) {
             return users(Output.of(users));
         }
 
+        /**
+         * @param users Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder users(String... users) {
             return users(List.of(users));
         }
 
+        /**
+         * @param zone A reference to the zone where the disk resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone A reference to the zone where the disk resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

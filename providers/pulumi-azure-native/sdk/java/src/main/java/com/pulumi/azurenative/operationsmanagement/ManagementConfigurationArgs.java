@@ -23,6 +23,10 @@ public final class ManagementConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -34,6 +38,10 @@ public final class ManagementConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="managementConfigurationName")
     private @Nullable Output<String> managementConfigurationName;
 
+    /**
+     * @return User Management Configuration Name.
+     * 
+     */
     public Optional<Output<String>> managementConfigurationName() {
         return Optional.ofNullable(this.managementConfigurationName);
     }
@@ -45,6 +53,10 @@ public final class ManagementConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="properties")
     private @Nullable Output<ManagementConfigurationPropertiesArgs> properties;
 
+    /**
+     * @return Properties for ManagementConfiguration object supported by the OperationsManagement resource provider.
+     * 
+     */
     public Optional<Output<ManagementConfigurationPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class ManagementConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to get. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -87,38 +103,86 @@ public final class ManagementConfigurationArgs extends com.pulumi.resources.Reso
             $ = new ManagementConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managementConfigurationName User Management Configuration Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementConfigurationName(@Nullable Output<String> managementConfigurationName) {
             $.managementConfigurationName = managementConfigurationName;
             return this;
         }
 
+        /**
+         * @param managementConfigurationName User Management Configuration Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementConfigurationName(String managementConfigurationName) {
             return managementConfigurationName(Output.of(managementConfigurationName));
         }
 
+        /**
+         * @param properties Properties for ManagementConfiguration object supported by the OperationsManagement resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ManagementConfigurationPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties for ManagementConfiguration object supported by the OperationsManagement resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ManagementConfigurationPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to get. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to get. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

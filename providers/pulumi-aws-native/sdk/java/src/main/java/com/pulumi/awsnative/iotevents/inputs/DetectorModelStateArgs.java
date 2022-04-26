@@ -50,6 +50,10 @@ public final class DetectorModelStateArgs extends com.pulumi.resources.ResourceA
     @Import(name="stateName", required=true)
     private Output<String> stateName;
 
+    /**
+     * @return The name of the state.
+     * 
+     */
     public Output<String> stateName() {
         return this.stateName;
     }
@@ -108,11 +112,23 @@ public final class DetectorModelStateArgs extends com.pulumi.resources.ResourceA
             return onInput(Output.of(onInput));
         }
 
+        /**
+         * @param stateName The name of the state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateName(Output<String> stateName) {
             $.stateName = stateName;
             return this;
         }
 
+        /**
+         * @param stateName The name of the state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateName(String stateName) {
             return stateName(Output.of(stateName));
         }

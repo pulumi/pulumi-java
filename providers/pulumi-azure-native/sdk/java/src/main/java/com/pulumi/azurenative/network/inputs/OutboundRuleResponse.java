@@ -29,6 +29,10 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="allocatedOutboundPorts")
     private @Nullable Integer allocatedOutboundPorts;
 
+    /**
+     * @return The number of outbound ports to be used for NAT.
+     * 
+     */
     public Optional<Integer> allocatedOutboundPorts() {
         return Optional.ofNullable(this.allocatedOutboundPorts);
     }
@@ -40,6 +44,10 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="backendAddressPool", required=true)
     private SubResourceResponse backendAddressPool;
 
+    /**
+     * @return A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs.
+     * 
+     */
     public SubResourceResponse backendAddressPool() {
         return this.backendAddressPool;
     }
@@ -51,6 +59,10 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="enableTcpReset")
     private @Nullable Boolean enableTcpReset;
 
+    /**
+     * @return Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
+     * 
+     */
     public Optional<Boolean> enableTcpReset() {
         return Optional.ofNullable(this.enableTcpReset);
     }
@@ -62,6 +74,10 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -73,6 +89,10 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="frontendIPConfigurations", required=true)
     private List<SubResourceResponse> frontendIPConfigurations;
 
+    /**
+     * @return The Frontend IP addresses of the load balancer.
+     * 
+     */
     public List<SubResourceResponse> frontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
@@ -84,6 +104,10 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -95,6 +119,10 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="idleTimeoutInMinutes")
     private @Nullable Integer idleTimeoutInMinutes;
 
+    /**
+     * @return The timeout for the TCP idle connection.
+     * 
+     */
     public Optional<Integer> idleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
@@ -106,6 +134,10 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -117,6 +149,10 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="protocol", required=true)
     private String protocol;
 
+    /**
+     * @return The protocol for the outbound rule in load balancer.
+     * 
+     */
     public String protocol() {
         return this.protocol;
     }
@@ -128,6 +164,10 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the outbound rule resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -139,6 +179,10 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -177,60 +221,132 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
             $ = new OutboundRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocatedOutboundPorts The number of outbound ports to be used for NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocatedOutboundPorts(@Nullable Integer allocatedOutboundPorts) {
             $.allocatedOutboundPorts = allocatedOutboundPorts;
             return this;
         }
 
+        /**
+         * @param backendAddressPool A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddressPool(SubResourceResponse backendAddressPool) {
             $.backendAddressPool = backendAddressPool;
             return this;
         }
 
+        /**
+         * @param enableTcpReset Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
             $.enableTcpReset = enableTcpReset;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param frontendIPConfigurations The Frontend IP addresses of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(List<SubResourceResponse> frontendIPConfigurations) {
             $.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
 
+        /**
+         * @param frontendIPConfigurations The Frontend IP addresses of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(SubResourceResponse... frontendIPConfigurations) {
             return frontendIPConfigurations(List.of(frontendIPConfigurations));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param idleTimeoutInMinutes The timeout for the TCP idle connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             $.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param protocol The protocol for the outbound rule in load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the outbound rule resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

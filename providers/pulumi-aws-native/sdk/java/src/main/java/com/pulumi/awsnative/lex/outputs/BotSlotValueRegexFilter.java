@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class BotSlotValueRegexFilter {
     /**
-     * Regex pattern
+     * @return Regex pattern
      * 
      */
     private final String pattern;
@@ -21,9 +21,9 @@ public final class BotSlotValueRegexFilter {
     }
 
     /**
-     * Regex pattern
+     * @return Regex pattern
      * 
-    */
+     */
     public String pattern() {
         return this.pattern;
     }

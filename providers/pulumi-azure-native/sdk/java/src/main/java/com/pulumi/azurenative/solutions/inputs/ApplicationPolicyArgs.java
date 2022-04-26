@@ -26,6 +26,10 @@ public final class ApplicationPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The policy name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class ApplicationPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="parameters")
     private @Nullable Output<String> parameters;
 
+    /**
+     * @return The policy parameters.
+     * 
+     */
     public Optional<Output<String>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -48,6 +56,10 @@ public final class ApplicationPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="policyDefinitionId")
     private @Nullable Output<String> policyDefinitionId;
 
+    /**
+     * @return The policy definition Id.
+     * 
+     */
     public Optional<Output<String>> policyDefinitionId() {
         return Optional.ofNullable(this.policyDefinitionId);
     }
@@ -78,29 +90,65 @@ public final class ApplicationPolicyArgs extends com.pulumi.resources.ResourceAr
             $ = new ApplicationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The policy name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The policy name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters The policy parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<String> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The policy parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(String parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param policyDefinitionId The policy definition Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionId(@Nullable Output<String> policyDefinitionId) {
             $.policyDefinitionId = policyDefinitionId;
             return this;
         }
 
+        /**
+         * @param policyDefinitionId The policy definition Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionId(String policyDefinitionId) {
             return policyDefinitionId(Output.of(policyDefinitionId));
         }

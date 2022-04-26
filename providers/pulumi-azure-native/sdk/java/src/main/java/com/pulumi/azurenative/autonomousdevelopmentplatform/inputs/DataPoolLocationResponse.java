@@ -26,6 +26,10 @@ public final class DataPoolLocationResponse extends com.pulumi.resources.InvokeA
     @Import(name="encryption")
     private @Nullable DataPoolEncryptionResponse encryption;
 
+    /**
+     * @return Encryption properties of a Data Pool location
+     * 
+     */
     public Optional<DataPoolEncryptionResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -37,6 +41,10 @@ public final class DataPoolLocationResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The location name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -66,11 +74,23 @@ public final class DataPoolLocationResponse extends com.pulumi.resources.InvokeA
             $ = new DataPoolLocationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryption Encryption properties of a Data Pool location
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable DataPoolEncryptionResponse encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param name The location name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

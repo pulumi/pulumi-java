@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ContinuousModeBackupPolicyResponse {
     /**
-     * Describes the mode of backups.
+     * @return Describes the mode of backups.
      * Expected value is &#39;Continuous&#39;.
      * 
      */
@@ -22,10 +22,10 @@ public final class ContinuousModeBackupPolicyResponse {
     }
 
     /**
-     * Describes the mode of backups.
+     * @return Describes the mode of backups.
      * Expected value is &#39;Continuous&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

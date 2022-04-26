@@ -25,6 +25,10 @@ public final class MarkdownPartMetadataResponseContent extends com.pulumi.resour
     @Import(name="settings")
     private @Nullable MarkdownPartMetadataResponseSettingsSettings settings;
 
+    /**
+     * @return The setting of the content of markdown part.
+     * 
+     */
     public Optional<MarkdownPartMetadataResponseSettingsSettings> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -53,6 +57,12 @@ public final class MarkdownPartMetadataResponseContent extends com.pulumi.resour
             $ = new MarkdownPartMetadataResponseContent(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param settings The setting of the content of markdown part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable MarkdownPartMetadataResponseSettingsSettings settings) {
             $.settings = settings;
             return this;

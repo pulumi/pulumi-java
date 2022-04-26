@@ -27,6 +27,10 @@ public final class LimitResponseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queuing")
     private @Nullable Output<QueuingConfigurationArgs> queuing;
 
+    /**
+     * @return `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `&#34;Queue&#34;`.
+     * 
+     */
     public Optional<Output<QueuingConfigurationArgs>> queuing() {
         return Optional.ofNullable(this.queuing);
     }
@@ -38,6 +42,10 @@ public final class LimitResponseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return `type` is &#34;Queue&#34; or &#34;Reject&#34;. &#34;Queue&#34; means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. &#34;Reject&#34; means that requests that can not be executed upon arrival are rejected. Required.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -67,20 +75,44 @@ public final class LimitResponseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LimitResponseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queuing `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `&#34;Queue&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queuing(@Nullable Output<QueuingConfigurationArgs> queuing) {
             $.queuing = queuing;
             return this;
         }
 
+        /**
+         * @param queuing `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `&#34;Queue&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queuing(QueuingConfigurationArgs queuing) {
             return queuing(Output.of(queuing));
         }
 
+        /**
+         * @param type `type` is &#34;Queue&#34; or &#34;Reject&#34;. &#34;Queue&#34; means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. &#34;Reject&#34; means that requests that can not be executed upon arrival are rejected. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type `type` is &#34;Queue&#34; or &#34;Reject&#34;. &#34;Queue&#34; means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. &#34;Reject&#34; means that requests that can not be executed upon arrival are rejected. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

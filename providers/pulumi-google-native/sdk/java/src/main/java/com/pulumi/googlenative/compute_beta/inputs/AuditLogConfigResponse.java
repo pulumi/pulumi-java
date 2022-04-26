@@ -25,6 +25,10 @@ public final class AuditLogConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="exemptedMembers", required=true)
     private List<String> exemptedMembers;
 
+    /**
+     * @return Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
+     * 
+     */
     public List<String> exemptedMembers() {
         return this.exemptedMembers;
     }
@@ -36,6 +40,10 @@ public final class AuditLogConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="ignoreChildExemptions", required=true)
     private Boolean ignoreChildExemptions;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Boolean ignoreChildExemptions() {
         return this.ignoreChildExemptions;
     }
@@ -47,6 +55,10 @@ public final class AuditLogConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="logType", required=true)
     private String logType;
 
+    /**
+     * @return The log type that this config enables.
+     * 
+     */
     public String logType() {
         return this.logType;
     }
@@ -77,20 +89,44 @@ public final class AuditLogConfigResponse extends com.pulumi.resources.InvokeArg
             $ = new AuditLogConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exemptedMembers Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptedMembers(List<String> exemptedMembers) {
             $.exemptedMembers = exemptedMembers;
             return this;
         }
 
+        /**
+         * @param exemptedMembers Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptedMembers(String... exemptedMembers) {
             return exemptedMembers(List.of(exemptedMembers));
         }
 
+        /**
+         * @param ignoreChildExemptions This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreChildExemptions(Boolean ignoreChildExemptions) {
             $.ignoreChildExemptions = ignoreChildExemptions;
             return this;
         }
 
+        /**
+         * @param logType The log type that this config enables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logType(String logType) {
             $.logType = logType;
             return this;

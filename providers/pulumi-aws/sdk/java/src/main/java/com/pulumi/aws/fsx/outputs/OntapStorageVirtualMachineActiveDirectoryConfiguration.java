@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OntapStorageVirtualMachineActiveDirectoryConfiguration {
     /**
-     * The NetBIOS name of the Active Directory computer object that will be created for your SVM. This is often the same as the SVM name but can be different. It is limited to 15 characters because of standard NetBIOS naming limits.
+     * @return The NetBIOS name of the Active Directory computer object that will be created for your SVM. This is often the same as the SVM name but can be different. It is limited to 15 characters because of standard NetBIOS naming limits.
      * 
      */
     private final @Nullable String netbiosName;
@@ -28,9 +28,9 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfiguration {
     }
 
     /**
-     * The NetBIOS name of the Active Directory computer object that will be created for your SVM. This is often the same as the SVM name but can be different. It is limited to 15 characters because of standard NetBIOS naming limits.
+     * @return The NetBIOS name of the Active Directory computer object that will be created for your SVM. This is often the same as the SVM name but can be different. It is limited to 15 characters because of standard NetBIOS naming limits.
      * 
-    */
+     */
     public Optional<String> netbiosName() {
         return Optional.ofNullable(this.netbiosName);
     }

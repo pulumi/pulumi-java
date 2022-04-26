@@ -22,6 +22,10 @@ public final class ScopeConnectionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the scope connection.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -33,6 +37,10 @@ public final class ScopeConnectionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="networkManagerName", required=true)
     private Output<String> networkManagerName;
 
+    /**
+     * @return The name of the network manager.
+     * 
+     */
     public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
@@ -44,6 +52,10 @@ public final class ScopeConnectionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class ScopeConnectionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -66,6 +82,10 @@ public final class ScopeConnectionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scopeConnectionName")
     private @Nullable Output<String> scopeConnectionName;
 
+    /**
+     * @return Name for the cross-tenant connection.
+     * 
+     */
     public Optional<Output<String>> scopeConnectionName() {
         return Optional.ofNullable(this.scopeConnectionName);
     }
@@ -77,6 +97,10 @@ public final class ScopeConnectionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return Tenant ID.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -110,56 +134,128 @@ public final class ScopeConnectionArgs extends com.pulumi.resources.ResourceArgs
             $ = new ScopeConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of the scope connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the scope connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerName(Output<String> networkManagerName) {
             $.networkManagerName = networkManagerName;
             return this;
         }
 
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerName(String networkManagerName) {
             return networkManagerName(Output.of(networkManagerName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceId Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param scopeConnectionName Name for the cross-tenant connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeConnectionName(@Nullable Output<String> scopeConnectionName) {
             $.scopeConnectionName = scopeConnectionName;
             return this;
         }
 
+        /**
+         * @param scopeConnectionName Name for the cross-tenant connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeConnectionName(String scopeConnectionName) {
             return scopeConnectionName(Output.of(scopeConnectionName));
         }
 
+        /**
+         * @param tenantId Tenant ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

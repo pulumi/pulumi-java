@@ -31,6 +31,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cloudName")
     private @Nullable Output<Either<String,CloudName>> cloudName;
 
+    /**
+     * @return The multi cloud resource&#39;s cloud name.
+     * 
+     */
     public Optional<Output<Either<String,CloudName>>> cloudName() {
         return Optional.ofNullable(this.cloudName);
     }
@@ -42,6 +46,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="hierarchyIdentifier")
     private @Nullable Output<String> hierarchyIdentifier;
 
+    /**
+     * @return The multi cloud resource identifier (account id in case of AWS connector).
+     * 
+     */
     public Optional<Output<String>> hierarchyIdentifier() {
         return Optional.ofNullable(this.hierarchyIdentifier);
     }
@@ -53,6 +61,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of the resource
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -64,6 +76,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location where the resource is stored
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -75,6 +91,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="offerings")
     private @Nullable Output<List<Object>> offerings;
 
+    /**
+     * @return A collection of offerings for the security connector.
+     * 
+     */
     public Optional<Output<List<Object>>> offerings() {
         return Optional.ofNullable(this.offerings);
     }
@@ -86,6 +106,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="organizationalData")
     private @Nullable Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData;
 
+    /**
+     * @return The multi cloud account&#39;s organizational data
+     * 
+     */
     public Optional<Output<SecurityConnectorPropertiesOrganizationalDataArgs>> organizationalData() {
         return Optional.ofNullable(this.organizationalData);
     }
@@ -97,6 +121,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -108,6 +136,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="securityConnectorName")
     private @Nullable Output<String> securityConnectorName;
 
+    /**
+     * @return The security connector name.
+     * 
+     */
     public Optional<Output<String>> securityConnectorName() {
         return Optional.ofNullable(this.securityConnectorName);
     }
@@ -119,6 +151,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A list of key value pairs that describe the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -155,95 +191,221 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
             $ = new SecurityConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudName The multi cloud resource&#39;s cloud name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudName(@Nullable Output<Either<String,CloudName>> cloudName) {
             $.cloudName = cloudName;
             return this;
         }
 
+        /**
+         * @param cloudName The multi cloud resource&#39;s cloud name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudName(Either<String,CloudName> cloudName) {
             return cloudName(Output.of(cloudName));
         }
 
+        /**
+         * @param cloudName The multi cloud resource&#39;s cloud name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudName(String cloudName) {
             return cloudName(Either.ofLeft(cloudName));
         }
 
+        /**
+         * @param cloudName The multi cloud resource&#39;s cloud name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudName(CloudName cloudName) {
             return cloudName(Either.ofRight(cloudName));
         }
 
+        /**
+         * @param hierarchyIdentifier The multi cloud resource identifier (account id in case of AWS connector).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hierarchyIdentifier(@Nullable Output<String> hierarchyIdentifier) {
             $.hierarchyIdentifier = hierarchyIdentifier;
             return this;
         }
 
+        /**
+         * @param hierarchyIdentifier The multi cloud resource identifier (account id in case of AWS connector).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hierarchyIdentifier(String hierarchyIdentifier) {
             return hierarchyIdentifier(Output.of(hierarchyIdentifier));
         }
 
+        /**
+         * @param kind Kind of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Location where the resource is stored
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location where the resource is stored
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param offerings A collection of offerings for the security connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offerings(@Nullable Output<List<Object>> offerings) {
             $.offerings = offerings;
             return this;
         }
 
+        /**
+         * @param offerings A collection of offerings for the security connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offerings(List<Object> offerings) {
             return offerings(Output.of(offerings));
         }
 
+        /**
+         * @param offerings A collection of offerings for the security connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offerings(Object... offerings) {
             return offerings(List.of(offerings));
         }
 
+        /**
+         * @param organizationalData The multi cloud account&#39;s organizational data
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalData(@Nullable Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData) {
             $.organizationalData = organizationalData;
             return this;
         }
 
+        /**
+         * @param organizationalData The multi cloud account&#39;s organizational data
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalData(SecurityConnectorPropertiesOrganizationalDataArgs organizationalData) {
             return organizationalData(Output.of(organizationalData));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param securityConnectorName The security connector name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityConnectorName(@Nullable Output<String> securityConnectorName) {
             $.securityConnectorName = securityConnectorName;
             return this;
         }
 
+        /**
+         * @param securityConnectorName The security connector name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityConnectorName(String securityConnectorName) {
             return securityConnectorName(Output.of(securityConnectorName));
         }
 
+        /**
+         * @param tags A list of key value pairs that describe the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key value pairs that describe the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

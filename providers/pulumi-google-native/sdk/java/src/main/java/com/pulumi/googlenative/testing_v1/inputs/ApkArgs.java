@@ -27,6 +27,10 @@ public final class ApkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<FileReferenceArgs> location;
 
+    /**
+     * @return The path to an APK to be installed on the device before the test begins.
+     * 
+     */
     public Optional<Output<FileReferenceArgs>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -38,6 +42,10 @@ public final class ApkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageName")
     private @Nullable Output<String> packageName;
 
+    /**
+     * @return The java package for the APK to be installed. Value is determined by examining the application&#39;s manifest.
+     * 
+     */
     public Optional<Output<String>> packageName() {
         return Optional.ofNullable(this.packageName);
     }
@@ -67,20 +75,44 @@ public final class ApkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The path to an APK to be installed on the device before the test begins.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<FileReferenceArgs> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The path to an APK to be installed on the device before the test begins.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(FileReferenceArgs location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param packageName The java package for the APK to be installed. Value is determined by examining the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(@Nullable Output<String> packageName) {
             $.packageName = packageName;
             return this;
         }
 
+        /**
+         * @param packageName The java package for the APK to be installed. Value is determined by examining the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(String packageName) {
             return packageName(Output.of(packageName));
         }

@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetAmiFilter {
     /**
-     * The name of the AMI that was provided during image creation.
+     * @return The name of the AMI that was provided during image creation.
      * 
      */
     private final String name;
@@ -26,9 +26,9 @@ public final class GetAmiFilter {
     }
 
     /**
-     * The name of the AMI that was provided during image creation.
+     * @return The name of the AMI that was provided during image creation.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

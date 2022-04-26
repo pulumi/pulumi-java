@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
     @Import(name="cardContents", required=true)
     private List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents;
 
+    /**
+     * @return The cards in the carousel. A carousel must have at least 2 cards and at most 10.
+     * 
+     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents() {
         return this.cardContents;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
     @Import(name="cardWidth", required=true)
     private String cardWidth;
 
+    /**
+     * @return The width of the cards in the carousel.
+     * 
+     */
     public String cardWidth() {
         return this.cardWidth;
     }
@@ -65,15 +73,33 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
             $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cardContents The cards in the carousel. A carousel must have at least 2 cards and at most 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardContents(List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents) {
             $.cardContents = cardContents;
             return this;
         }
 
+        /**
+         * @param cardContents The cards in the carousel. A carousel must have at least 2 cards and at most 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardContents(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse... cardContents) {
             return cardContents(List.of(cardContents));
         }
 
+        /**
+         * @param cardWidth The width of the cards in the carousel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardWidth(String cardWidth) {
             $.cardWidth = cardWidth;
             return this;

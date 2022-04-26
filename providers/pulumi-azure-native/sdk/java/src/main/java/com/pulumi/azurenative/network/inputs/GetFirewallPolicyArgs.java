@@ -21,6 +21,10 @@ public final class GetFirewallPolicyArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetFirewallPolicyArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="firewallPolicyName", required=true)
     private String firewallPolicyName;
 
+    /**
+     * @return The name of the Firewall Policy.
+     * 
+     */
     public String firewallPolicyName() {
         return this.firewallPolicyName;
     }
@@ -43,6 +51,10 @@ public final class GetFirewallPolicyArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetFirewallPolicyArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetFirewallPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param firewallPolicyName The name of the Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallPolicyName(String firewallPolicyName) {
             $.firewallPolicyName = firewallPolicyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

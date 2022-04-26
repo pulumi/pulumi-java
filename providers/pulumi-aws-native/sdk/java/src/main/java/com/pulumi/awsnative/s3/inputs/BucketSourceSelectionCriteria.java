@@ -26,6 +26,10 @@ public final class BucketSourceSelectionCriteria extends com.pulumi.resources.In
     @Import(name="replicaModifications")
     private @Nullable BucketReplicaModifications replicaModifications;
 
+    /**
+     * @return A filter that you can specify for selection for modifications on replicas.
+     * 
+     */
     public Optional<BucketReplicaModifications> replicaModifications() {
         return Optional.ofNullable(this.replicaModifications);
     }
@@ -37,6 +41,10 @@ public final class BucketSourceSelectionCriteria extends com.pulumi.resources.In
     @Import(name="sseKmsEncryptedObjects")
     private @Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects;
 
+    /**
+     * @return A container for filter information for the selection of Amazon S3 objects encrypted with AWS KMS.
+     * 
+     */
     public Optional<BucketSseKmsEncryptedObjects> sseKmsEncryptedObjects() {
         return Optional.ofNullable(this.sseKmsEncryptedObjects);
     }
@@ -66,11 +74,23 @@ public final class BucketSourceSelectionCriteria extends com.pulumi.resources.In
             $ = new BucketSourceSelectionCriteria(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param replicaModifications A filter that you can specify for selection for modifications on replicas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaModifications(@Nullable BucketReplicaModifications replicaModifications) {
             $.replicaModifications = replicaModifications;
             return this;
         }
 
+        /**
+         * @param sseKmsEncryptedObjects A container for filter information for the selection of Amazon S3 objects encrypted with AWS KMS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sseKmsEncryptedObjects(@Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects) {
             $.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
             return this;

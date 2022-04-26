@@ -22,6 +22,10 @@ public final class ScopeAssignmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="assignedManagedNetwork")
     private @Nullable Output<String> assignedManagedNetwork;
 
+    /**
+     * @return The managed network ID with scope will be assigned to.
+     * 
+     */
     public Optional<Output<String>> assignedManagedNetwork() {
         return Optional.ofNullable(this.assignedManagedNetwork);
     }
@@ -33,6 +37,10 @@ public final class ScopeAssignmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -44,6 +52,10 @@ public final class ScopeAssignmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return The base resource of the scope assignment to create. The scope can be any REST resource instance. For example, use &#39;subscriptions/{subscription-id}&#39; for a subscription, &#39;subscriptions/{subscription-id}/resourceGroups/{resource-group-name}&#39; for a resource group, and &#39;subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}&#39; for a resource.
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -55,6 +67,10 @@ public final class ScopeAssignmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scopeAssignmentName")
     private @Nullable Output<String> scopeAssignmentName;
 
+    /**
+     * @return The name of the scope assignment to create.
+     * 
+     */
     public Optional<Output<String>> scopeAssignmentName() {
         return Optional.ofNullable(this.scopeAssignmentName);
     }
@@ -86,38 +102,86 @@ public final class ScopeAssignmentArgs extends com.pulumi.resources.ResourceArgs
             $ = new ScopeAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignedManagedNetwork The managed network ID with scope will be assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignedManagedNetwork(@Nullable Output<String> assignedManagedNetwork) {
             $.assignedManagedNetwork = assignedManagedNetwork;
             return this;
         }
 
+        /**
+         * @param assignedManagedNetwork The managed network ID with scope will be assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignedManagedNetwork(String assignedManagedNetwork) {
             return assignedManagedNetwork(Output.of(assignedManagedNetwork));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param scope The base resource of the scope assignment to create. The scope can be any REST resource instance. For example, use &#39;subscriptions/{subscription-id}&#39; for a subscription, &#39;subscriptions/{subscription-id}/resourceGroups/{resource-group-name}&#39; for a resource group, and &#39;subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}&#39; for a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The base resource of the scope assignment to create. The scope can be any REST resource instance. For example, use &#39;subscriptions/{subscription-id}&#39; for a subscription, &#39;subscriptions/{subscription-id}/resourceGroups/{resource-group-name}&#39; for a resource group, and &#39;subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}&#39; for a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param scopeAssignmentName The name of the scope assignment to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeAssignmentName(@Nullable Output<String> scopeAssignmentName) {
             $.scopeAssignmentName = scopeAssignmentName;
             return this;
         }
 
+        /**
+         * @param scopeAssignmentName The name of the scope assignment to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeAssignmentName(String scopeAssignmentName) {
             return scopeAssignmentName(Output.of(scopeAssignmentName));
         }

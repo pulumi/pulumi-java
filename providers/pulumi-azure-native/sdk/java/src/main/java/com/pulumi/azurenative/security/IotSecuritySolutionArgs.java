@@ -33,6 +33,10 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="additionalWorkspaces")
     private @Nullable Output<List<AdditionalWorkspacesPropertiesArgs>> additionalWorkspaces;
 
+    /**
+     * @return List of additional workspaces
+     * 
+     */
     public Optional<Output<List<AdditionalWorkspacesPropertiesArgs>>> additionalWorkspaces() {
         return Optional.ofNullable(this.additionalWorkspaces);
     }
@@ -44,6 +48,10 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="disabledDataSources")
     private @Nullable Output<List<Either<String,DataSource>>> disabledDataSources;
 
+    /**
+     * @return Disabled data sources. Disabling these data sources compromises the system.
+     * 
+     */
     public Optional<Output<List<Either<String,DataSource>>>> disabledDataSources() {
         return Optional.ofNullable(this.disabledDataSources);
     }
@@ -55,6 +63,10 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Resource display name.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -66,6 +78,10 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="export")
     private @Nullable Output<List<Either<String,ExportData>>> export;
 
+    /**
+     * @return List of additional options for exporting to workspace data.
+     * 
+     */
     public Optional<Output<List<Either<String,ExportData>>>> export() {
         return Optional.ofNullable(this.export);
     }
@@ -77,6 +93,10 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="iotHubs", required=true)
     private Output<List<String>> iotHubs;
 
+    /**
+     * @return IoT Hub resource IDs
+     * 
+     */
     public Output<List<String>> iotHubs() {
         return this.iotHubs;
     }
@@ -88,6 +108,10 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -99,6 +123,10 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="recommendationsConfiguration")
     private @Nullable Output<List<RecommendationConfigurationPropertiesArgs>> recommendationsConfiguration;
 
+    /**
+     * @return List of the configuration status for each recommendation type.
+     * 
+     */
     public Optional<Output<List<RecommendationConfigurationPropertiesArgs>>> recommendationsConfiguration() {
         return Optional.ofNullable(this.recommendationsConfiguration);
     }
@@ -110,6 +138,10 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -121,6 +153,10 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="solutionName")
     private @Nullable Output<String> solutionName;
 
+    /**
+     * @return The name of the IoT Security solution.
+     * 
+     */
     public Optional<Output<String>> solutionName() {
         return Optional.ofNullable(this.solutionName);
     }
@@ -132,6 +168,10 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="status")
     private @Nullable Output<Either<String,SecuritySolutionStatus>> status;
 
+    /**
+     * @return Status of the IoT Security solution.
+     * 
+     */
     public Optional<Output<Either<String,SecuritySolutionStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -143,6 +183,10 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -154,6 +198,10 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="unmaskedIpLoggingStatus")
     private @Nullable Output<Either<String,UnmaskedIpLoggingStatus>> unmaskedIpLoggingStatus;
 
+    /**
+     * @return Unmasked IP address logging status
+     * 
+     */
     public Optional<Output<Either<String,UnmaskedIpLoggingStatus>>> unmaskedIpLoggingStatus() {
         return Optional.ofNullable(this.unmaskedIpLoggingStatus);
     }
@@ -165,6 +213,10 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="userDefinedResources")
     private @Nullable Output<UserDefinedResourcesPropertiesArgs> userDefinedResources;
 
+    /**
+     * @return Properties of the IoT Security solution&#39;s user defined resources.
+     * 
+     */
     public Optional<Output<UserDefinedResourcesPropertiesArgs>> userDefinedResources() {
         return Optional.ofNullable(this.userDefinedResources);
     }
@@ -176,6 +228,10 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="workspace")
     private @Nullable Output<String> workspace;
 
+    /**
+     * @return Workspace resource ID
+     * 
+     */
     public Optional<Output<String>> workspace() {
         return Optional.ofNullable(this.workspace);
     }
@@ -217,164 +273,386 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
             $ = new IotSecuritySolutionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalWorkspaces List of additional workspaces
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalWorkspaces(@Nullable Output<List<AdditionalWorkspacesPropertiesArgs>> additionalWorkspaces) {
             $.additionalWorkspaces = additionalWorkspaces;
             return this;
         }
 
+        /**
+         * @param additionalWorkspaces List of additional workspaces
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalWorkspaces(List<AdditionalWorkspacesPropertiesArgs> additionalWorkspaces) {
             return additionalWorkspaces(Output.of(additionalWorkspaces));
         }
 
+        /**
+         * @param additionalWorkspaces List of additional workspaces
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalWorkspaces(AdditionalWorkspacesPropertiesArgs... additionalWorkspaces) {
             return additionalWorkspaces(List.of(additionalWorkspaces));
         }
 
+        /**
+         * @param disabledDataSources Disabled data sources. Disabling these data sources compromises the system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledDataSources(@Nullable Output<List<Either<String,DataSource>>> disabledDataSources) {
             $.disabledDataSources = disabledDataSources;
             return this;
         }
 
+        /**
+         * @param disabledDataSources Disabled data sources. Disabling these data sources compromises the system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledDataSources(List<Either<String,DataSource>> disabledDataSources) {
             return disabledDataSources(Output.of(disabledDataSources));
         }
 
+        /**
+         * @param disabledDataSources Disabled data sources. Disabling these data sources compromises the system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledDataSources(Either<String,DataSource>... disabledDataSources) {
             return disabledDataSources(List.of(disabledDataSources));
         }
 
+        /**
+         * @param displayName Resource display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Resource display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param export List of additional options for exporting to workspace data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder export(@Nullable Output<List<Either<String,ExportData>>> export) {
             $.export = export;
             return this;
         }
 
+        /**
+         * @param export List of additional options for exporting to workspace data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder export(List<Either<String,ExportData>> export) {
             return export(Output.of(export));
         }
 
+        /**
+         * @param export List of additional options for exporting to workspace data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder export(Either<String,ExportData>... export) {
             return export(List.of(export));
         }
 
+        /**
+         * @param iotHubs IoT Hub resource IDs
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotHubs(Output<List<String>> iotHubs) {
             $.iotHubs = iotHubs;
             return this;
         }
 
+        /**
+         * @param iotHubs IoT Hub resource IDs
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotHubs(List<String> iotHubs) {
             return iotHubs(Output.of(iotHubs));
         }
 
+        /**
+         * @param iotHubs IoT Hub resource IDs
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotHubs(String... iotHubs) {
             return iotHubs(List.of(iotHubs));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param recommendationsConfiguration List of the configuration status for each recommendation type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationsConfiguration(@Nullable Output<List<RecommendationConfigurationPropertiesArgs>> recommendationsConfiguration) {
             $.recommendationsConfiguration = recommendationsConfiguration;
             return this;
         }
 
+        /**
+         * @param recommendationsConfiguration List of the configuration status for each recommendation type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationsConfiguration(List<RecommendationConfigurationPropertiesArgs> recommendationsConfiguration) {
             return recommendationsConfiguration(Output.of(recommendationsConfiguration));
         }
 
+        /**
+         * @param recommendationsConfiguration List of the configuration status for each recommendation type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationsConfiguration(RecommendationConfigurationPropertiesArgs... recommendationsConfiguration) {
             return recommendationsConfiguration(List.of(recommendationsConfiguration));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param solutionName The name of the IoT Security solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutionName(@Nullable Output<String> solutionName) {
             $.solutionName = solutionName;
             return this;
         }
 
+        /**
+         * @param solutionName The name of the IoT Security solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutionName(String solutionName) {
             return solutionName(Output.of(solutionName));
         }
 
+        /**
+         * @param status Status of the IoT Security solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,SecuritySolutionStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the IoT Security solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,SecuritySolutionStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status Status of the IoT Security solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status Status of the IoT Security solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(SecuritySolutionStatus status) {
             return status(Either.ofRight(status));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param unmaskedIpLoggingStatus Unmasked IP address logging status
+         * 
+         * @return builder
+         * 
+         */
         public Builder unmaskedIpLoggingStatus(@Nullable Output<Either<String,UnmaskedIpLoggingStatus>> unmaskedIpLoggingStatus) {
             $.unmaskedIpLoggingStatus = unmaskedIpLoggingStatus;
             return this;
         }
 
+        /**
+         * @param unmaskedIpLoggingStatus Unmasked IP address logging status
+         * 
+         * @return builder
+         * 
+         */
         public Builder unmaskedIpLoggingStatus(Either<String,UnmaskedIpLoggingStatus> unmaskedIpLoggingStatus) {
             return unmaskedIpLoggingStatus(Output.of(unmaskedIpLoggingStatus));
         }
 
+        /**
+         * @param unmaskedIpLoggingStatus Unmasked IP address logging status
+         * 
+         * @return builder
+         * 
+         */
         public Builder unmaskedIpLoggingStatus(String unmaskedIpLoggingStatus) {
             return unmaskedIpLoggingStatus(Either.ofLeft(unmaskedIpLoggingStatus));
         }
 
+        /**
+         * @param unmaskedIpLoggingStatus Unmasked IP address logging status
+         * 
+         * @return builder
+         * 
+         */
         public Builder unmaskedIpLoggingStatus(UnmaskedIpLoggingStatus unmaskedIpLoggingStatus) {
             return unmaskedIpLoggingStatus(Either.ofRight(unmaskedIpLoggingStatus));
         }
 
+        /**
+         * @param userDefinedResources Properties of the IoT Security solution&#39;s user defined resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDefinedResources(@Nullable Output<UserDefinedResourcesPropertiesArgs> userDefinedResources) {
             $.userDefinedResources = userDefinedResources;
             return this;
         }
 
+        /**
+         * @param userDefinedResources Properties of the IoT Security solution&#39;s user defined resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDefinedResources(UserDefinedResourcesPropertiesArgs userDefinedResources) {
             return userDefinedResources(Output.of(userDefinedResources));
         }
 
+        /**
+         * @param workspace Workspace resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspace(@Nullable Output<String> workspace) {
             $.workspace = workspace;
             return this;
         }
 
+        /**
+         * @param workspace Workspace resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspace(String workspace) {
             return workspace(Output.of(workspace));
         }

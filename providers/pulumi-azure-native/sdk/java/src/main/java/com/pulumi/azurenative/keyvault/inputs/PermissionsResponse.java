@@ -26,6 +26,10 @@ public final class PermissionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="certificates")
     private @Nullable List<String> certificates;
 
+    /**
+     * @return Permissions to certificates
+     * 
+     */
     public Optional<List<String>> certificates() {
         return Optional.ofNullable(this.certificates);
     }
@@ -37,6 +41,10 @@ public final class PermissionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keys")
     private @Nullable List<String> keys;
 
+    /**
+     * @return Permissions to keys
+     * 
+     */
     public Optional<List<String>> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -48,6 +56,10 @@ public final class PermissionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="secrets")
     private @Nullable List<String> secrets;
 
+    /**
+     * @return Permissions to secrets
+     * 
+     */
     public Optional<List<String>> secrets() {
         return Optional.ofNullable(this.secrets);
     }
@@ -59,6 +71,10 @@ public final class PermissionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storage")
     private @Nullable List<String> storage;
 
+    /**
+     * @return Permissions to storage accounts
+     * 
+     */
     public Optional<List<String>> storage() {
         return Optional.ofNullable(this.storage);
     }
@@ -90,38 +106,86 @@ public final class PermissionsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PermissionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificates Permissions to certificates
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(@Nullable List<String> certificates) {
             $.certificates = certificates;
             return this;
         }
 
+        /**
+         * @param certificates Permissions to certificates
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(String... certificates) {
             return certificates(List.of(certificates));
         }
 
+        /**
+         * @param keys Permissions to keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable List<String> keys) {
             $.keys = keys;
             return this;
         }
 
+        /**
+         * @param keys Permissions to keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(String... keys) {
             return keys(List.of(keys));
         }
 
+        /**
+         * @param secrets Permissions to secrets
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(@Nullable List<String> secrets) {
             $.secrets = secrets;
             return this;
         }
 
+        /**
+         * @param secrets Permissions to secrets
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(String... secrets) {
             return secrets(List.of(secrets));
         }
 
+        /**
+         * @param storage Permissions to storage accounts
+         * 
+         * @return builder
+         * 
+         */
         public Builder storage(@Nullable List<String> storage) {
             $.storage = storage;
             return this;
         }
 
+        /**
+         * @param storage Permissions to storage accounts
+         * 
+         * @return builder
+         * 
+         */
         public Builder storage(String... storage) {
             return storage(List.of(storage));
         }

@@ -10,32 +10,32 @@ import java.util.Objects;
 @CustomType
 public final class ActiveDirectoryPropertiesResponse {
     /**
-     * Specifies the security identifier (SID) for Azure Storage.
+     * @return Specifies the security identifier (SID) for Azure Storage.
      * 
      */
     private final String azureStorageSid;
     /**
-     * Specifies the domain GUID.
+     * @return Specifies the domain GUID.
      * 
      */
     private final String domainGuid;
     /**
-     * Specifies the primary domain that the AD DNS server is authoritative for.
+     * @return Specifies the primary domain that the AD DNS server is authoritative for.
      * 
      */
     private final String domainName;
     /**
-     * Specifies the security identifier (SID).
+     * @return Specifies the security identifier (SID).
      * 
      */
     private final String domainSid;
     /**
-     * Specifies the Active Directory forest to get.
+     * @return Specifies the Active Directory forest to get.
      * 
      */
     private final String forestName;
     /**
-     * Specifies the NetBIOS domain name.
+     * @return Specifies the NetBIOS domain name.
      * 
      */
     private final String netBiosDomainName;
@@ -57,44 +57,44 @@ public final class ActiveDirectoryPropertiesResponse {
     }
 
     /**
-     * Specifies the security identifier (SID) for Azure Storage.
+     * @return Specifies the security identifier (SID) for Azure Storage.
      * 
-    */
+     */
     public String azureStorageSid() {
         return this.azureStorageSid;
     }
     /**
-     * Specifies the domain GUID.
+     * @return Specifies the domain GUID.
      * 
-    */
+     */
     public String domainGuid() {
         return this.domainGuid;
     }
     /**
-     * Specifies the primary domain that the AD DNS server is authoritative for.
+     * @return Specifies the primary domain that the AD DNS server is authoritative for.
      * 
-    */
+     */
     public String domainName() {
         return this.domainName;
     }
     /**
-     * Specifies the security identifier (SID).
+     * @return Specifies the security identifier (SID).
      * 
-    */
+     */
     public String domainSid() {
         return this.domainSid;
     }
     /**
-     * Specifies the Active Directory forest to get.
+     * @return Specifies the Active Directory forest to get.
      * 
-    */
+     */
     public String forestName() {
         return this.forestName;
     }
     /**
-     * Specifies the NetBIOS domain name.
+     * @return Specifies the NetBIOS domain name.
      * 
-    */
+     */
     public String netBiosDomainName() {
         return this.netBiosDomainName;
     }

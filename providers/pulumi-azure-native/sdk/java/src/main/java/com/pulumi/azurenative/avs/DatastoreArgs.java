@@ -24,6 +24,10 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return Name of the cluster in the private cloud
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -35,6 +39,10 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datastoreName")
     private @Nullable Output<String> datastoreName;
 
+    /**
+     * @return Name of the datastore in the private cloud cluster
+     * 
+     */
     public Optional<Output<String>> datastoreName() {
         return Optional.ofNullable(this.datastoreName);
     }
@@ -46,6 +54,10 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskPoolVolume")
     private @Nullable Output<DiskPoolVolumeArgs> diskPoolVolume;
 
+    /**
+     * @return An iSCSI volume
+     * 
+     */
     public Optional<Output<DiskPoolVolumeArgs>> diskPoolVolume() {
         return Optional.ofNullable(this.diskPoolVolume);
     }
@@ -57,6 +69,10 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="netAppVolume")
     private @Nullable Output<NetAppVolumeArgs> netAppVolume;
 
+    /**
+     * @return An Azure NetApp Files volume
+     * 
+     */
     public Optional<Output<NetAppVolumeArgs>> netAppVolume() {
         return Optional.ofNullable(this.netAppVolume);
     }
@@ -68,6 +84,10 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateCloudName", required=true)
     private Output<String> privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
@@ -79,6 +99,10 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -112,56 +136,128 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatastoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName Name of the cluster in the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName Name of the cluster in the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param datastoreName Name of the datastore in the private cloud cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreName(@Nullable Output<String> datastoreName) {
             $.datastoreName = datastoreName;
             return this;
         }
 
+        /**
+         * @param datastoreName Name of the datastore in the private cloud cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreName(String datastoreName) {
             return datastoreName(Output.of(datastoreName));
         }
 
+        /**
+         * @param diskPoolVolume An iSCSI volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskPoolVolume(@Nullable Output<DiskPoolVolumeArgs> diskPoolVolume) {
             $.diskPoolVolume = diskPoolVolume;
             return this;
         }
 
+        /**
+         * @param diskPoolVolume An iSCSI volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskPoolVolume(DiskPoolVolumeArgs diskPoolVolume) {
             return diskPoolVolume(Output.of(diskPoolVolume));
         }
 
+        /**
+         * @param netAppVolume An Azure NetApp Files volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder netAppVolume(@Nullable Output<NetAppVolumeArgs> netAppVolume) {
             $.netAppVolume = netAppVolume;
             return this;
         }
 
+        /**
+         * @param netAppVolume An Azure NetApp Files volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder netAppVolume(NetAppVolumeArgs netAppVolume) {
             return netAppVolume(Output.of(netAppVolume));
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

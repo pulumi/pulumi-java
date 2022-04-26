@@ -20,6 +20,10 @@ public final class TopicRuleLambdaGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="functionArn", required=true)
     private Output<String> functionArn;
 
+    /**
+     * @return The ARN of the Lambda function.
+     * 
+     */
     public Output<String> functionArn() {
         return this.functionArn;
     }
@@ -48,11 +52,23 @@ public final class TopicRuleLambdaGetArgs extends com.pulumi.resources.ResourceA
             $ = new TopicRuleLambdaGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functionArn The ARN of the Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionArn(Output<String> functionArn) {
             $.functionArn = functionArn;
             return this;
         }
 
+        /**
+         * @param functionArn The ARN of the Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionArn(String functionArn) {
             return functionArn(Output.of(functionArn));
         }

@@ -26,6 +26,10 @@ public final class BlobLocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
     private @Nullable Output<String> credentials;
 
+    /**
+     * @return Access credentials for the blob, if applicable (e.g. blob specified by storage account connection string + blob URI)
+     * 
+     */
     public Optional<Output<String>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -37,6 +41,10 @@ public final class BlobLocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return The URI from which the blob is accessible from. For example, aml://abc for system assets or https://xyz for user assets or payload.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -66,20 +74,44 @@ public final class BlobLocationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BlobLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credentials Access credentials for the blob, if applicable (e.g. blob specified by storage account connection string + blob URI)
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<String> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials Access credentials for the blob, if applicable (e.g. blob specified by storage account connection string + blob URI)
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(String credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param uri The URI from which the blob is accessible from. For example, aml://abc for system assets or https://xyz for user assets or payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The URI from which the blob is accessible from. For example, aml://abc for system assets or https://xyz for user assets or payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

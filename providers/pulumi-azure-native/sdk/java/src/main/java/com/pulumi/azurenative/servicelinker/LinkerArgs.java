@@ -30,6 +30,10 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authInfo")
     private @Nullable Output<Object> authInfo;
 
+    /**
+     * @return The authentication type.
+     * 
+     */
     public Optional<Output<Object>> authInfo() {
         return Optional.ofNullable(this.authInfo);
     }
@@ -41,6 +45,10 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientType")
     private @Nullable Output<Either<String,ClientType>> clientType;
 
+    /**
+     * @return The application client type
+     * 
+     */
     public Optional<Output<Either<String,ClientType>>> clientType() {
         return Optional.ofNullable(this.clientType);
     }
@@ -52,6 +60,10 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkerName")
     private @Nullable Output<String> linkerName;
 
+    /**
+     * @return The name Linker resource.
+     * 
+     */
     public Optional<Output<String>> linkerName() {
         return Optional.ofNullable(this.linkerName);
     }
@@ -63,6 +75,10 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceUri", required=true)
     private Output<String> resourceUri;
 
+    /**
+     * @return The fully qualified Azure Resource manager identifier of the resource to be connected.
+     * 
+     */
     public Output<String> resourceUri() {
         return this.resourceUri;
     }
@@ -74,6 +90,10 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetId")
     private @Nullable Output<String> targetId;
 
+    /**
+     * @return The resource Id of target service.
+     * 
+     */
     public Optional<Output<String>> targetId() {
         return Optional.ofNullable(this.targetId);
     }
@@ -106,55 +126,127 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LinkerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authInfo The authentication type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authInfo(@Nullable Output<Object> authInfo) {
             $.authInfo = authInfo;
             return this;
         }
 
+        /**
+         * @param authInfo The authentication type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authInfo(Object authInfo) {
             return authInfo(Output.of(authInfo));
         }
 
+        /**
+         * @param clientType The application client type
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientType(@Nullable Output<Either<String,ClientType>> clientType) {
             $.clientType = clientType;
             return this;
         }
 
+        /**
+         * @param clientType The application client type
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientType(Either<String,ClientType> clientType) {
             return clientType(Output.of(clientType));
         }
 
+        /**
+         * @param clientType The application client type
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientType(String clientType) {
             return clientType(Either.ofLeft(clientType));
         }
 
+        /**
+         * @param clientType The application client type
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientType(ClientType clientType) {
             return clientType(Either.ofRight(clientType));
         }
 
+        /**
+         * @param linkerName The name Linker resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkerName(@Nullable Output<String> linkerName) {
             $.linkerName = linkerName;
             return this;
         }
 
+        /**
+         * @param linkerName The name Linker resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkerName(String linkerName) {
             return linkerName(Output.of(linkerName));
         }
 
+        /**
+         * @param resourceUri The fully qualified Azure Resource manager identifier of the resource to be connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(Output<String> resourceUri) {
             $.resourceUri = resourceUri;
             return this;
         }
 
+        /**
+         * @param resourceUri The fully qualified Azure Resource manager identifier of the resource to be connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             return resourceUri(Output.of(resourceUri));
         }
 
+        /**
+         * @param targetId The resource Id of target service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(@Nullable Output<String> targetId) {
             $.targetId = targetId;
             return this;
         }
 
+        /**
+         * @param targetId The resource Id of target service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(String targetId) {
             return targetId(Output.of(targetId));
         }

@@ -125,6 +125,10 @@ public final class LinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="factoryName", required=true)
     private Output<String> factoryName;
 
+    /**
+     * @return The factory name.
+     * 
+     */
     public Output<String> factoryName() {
         return this.factoryName;
     }
@@ -136,6 +140,10 @@ public final class LinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedServiceName")
     private @Nullable Output<String> linkedServiceName;
 
+    /**
+     * @return The linked service name.
+     * 
+     */
     public Optional<Output<String>> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -147,6 +155,10 @@ public final class LinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<Object> properties;
 
+    /**
+     * @return Properties of linked service.
+     * 
+     */
     public Output<Object> properties() {
         return this.properties;
     }
@@ -158,6 +170,10 @@ public final class LinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -189,38 +205,86 @@ public final class LinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(Output<String> factoryName) {
             $.factoryName = factoryName;
             return this;
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(String factoryName) {
             return factoryName(Output.of(factoryName));
         }
 
+        /**
+         * @param linkedServiceName The linked service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable Output<String> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName The linked service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(String linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param properties Properties of linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<Object> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Object properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

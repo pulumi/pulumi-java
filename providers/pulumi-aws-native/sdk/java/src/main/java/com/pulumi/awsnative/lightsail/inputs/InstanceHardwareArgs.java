@@ -28,6 +28,10 @@ public final class InstanceHardwareArgs extends com.pulumi.resources.ResourceArg
     @Import(name="cpuCount")
     private @Nullable Output<Integer> cpuCount;
 
+    /**
+     * @return CPU count of the Instance.
+     * 
+     */
     public Optional<Output<Integer>> cpuCount() {
         return Optional.ofNullable(this.cpuCount);
     }
@@ -39,6 +43,10 @@ public final class InstanceHardwareArgs extends com.pulumi.resources.ResourceArg
     @Import(name="disks")
     private @Nullable Output<List<InstanceDiskArgs>> disks;
 
+    /**
+     * @return Disks attached to the Instance.
+     * 
+     */
     public Optional<Output<List<InstanceDiskArgs>>> disks() {
         return Optional.ofNullable(this.disks);
     }
@@ -50,6 +58,10 @@ public final class InstanceHardwareArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ramSizeInGb")
     private @Nullable Output<Integer> ramSizeInGb;
 
+    /**
+     * @return RAM Size of the Instance.
+     * 
+     */
     public Optional<Output<Integer>> ramSizeInGb() {
         return Optional.ofNullable(this.ramSizeInGb);
     }
@@ -80,33 +92,75 @@ public final class InstanceHardwareArgs extends com.pulumi.resources.ResourceArg
             $ = new InstanceHardwareArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuCount CPU count of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCount(@Nullable Output<Integer> cpuCount) {
             $.cpuCount = cpuCount;
             return this;
         }
 
+        /**
+         * @param cpuCount CPU count of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCount(Integer cpuCount) {
             return cpuCount(Output.of(cpuCount));
         }
 
+        /**
+         * @param disks Disks attached to the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(@Nullable Output<List<InstanceDiskArgs>> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks Disks attached to the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(List<InstanceDiskArgs> disks) {
             return disks(Output.of(disks));
         }
 
+        /**
+         * @param disks Disks attached to the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(InstanceDiskArgs... disks) {
             return disks(List.of(disks));
         }
 
+        /**
+         * @param ramSizeInGb RAM Size of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ramSizeInGb(@Nullable Output<Integer> ramSizeInGb) {
             $.ramSizeInGb = ramSizeInGb;
             return this;
         }
 
+        /**
+         * @param ramSizeInGb RAM Size of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ramSizeInGb(Integer ramSizeInGb) {
             return ramSizeInGb(Output.of(ramSizeInGb));
         }

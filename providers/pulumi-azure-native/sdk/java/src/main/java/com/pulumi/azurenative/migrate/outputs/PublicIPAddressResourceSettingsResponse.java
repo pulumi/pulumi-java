@@ -12,38 +12,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PublicIPAddressResourceSettingsResponse {
     /**
-     * Gets or sets the domain name label.
+     * @return Gets or sets the domain name label.
      * 
      */
     private final @Nullable String domainNameLabel;
     /**
-     * Gets or sets the fully qualified domain name.
+     * @return Gets or sets the fully qualified domain name.
      * 
      */
     private final @Nullable String fqdn;
     /**
-     * Gets or sets public IP allocation method.
+     * @return Gets or sets public IP allocation method.
      * 
      */
     private final @Nullable String publicIpAllocationMethod;
     /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is &#39;Microsoft.Network/publicIPAddresses&#39;.
      * 
      */
     private final String resourceType;
     /**
-     * Gets or sets public IP sku.
+     * @return Gets or sets public IP sku.
      * 
      */
     private final @Nullable String sku;
     /**
-     * Gets or sets the target Resource name.
+     * @return Gets or sets the target Resource name.
      * 
      */
     private final String targetResourceName;
     /**
-     * Gets or sets public IP zones.
+     * @return Gets or sets public IP zones.
      * 
      */
     private final @Nullable String zones;
@@ -67,52 +67,52 @@ public final class PublicIPAddressResourceSettingsResponse {
     }
 
     /**
-     * Gets or sets the domain name label.
+     * @return Gets or sets the domain name label.
      * 
-    */
+     */
     public Optional<String> domainNameLabel() {
         return Optional.ofNullable(this.domainNameLabel);
     }
     /**
-     * Gets or sets the fully qualified domain name.
+     * @return Gets or sets the fully qualified domain name.
      * 
-    */
+     */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
-     * Gets or sets public IP allocation method.
+     * @return Gets or sets public IP allocation method.
      * 
-    */
+     */
     public Optional<String> publicIpAllocationMethod() {
         return Optional.ofNullable(this.publicIpAllocationMethod);
     }
     /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is &#39;Microsoft.Network/publicIPAddresses&#39;.
      * 
-    */
+     */
     public String resourceType() {
         return this.resourceType;
     }
     /**
-     * Gets or sets public IP sku.
+     * @return Gets or sets public IP sku.
      * 
-    */
+     */
     public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Gets or sets the target Resource name.
+     * @return Gets or sets the target Resource name.
      * 
-    */
+     */
     public String targetResourceName() {
         return this.targetResourceName;
     }
     /**
-     * Gets or sets public IP zones.
+     * @return Gets or sets public IP zones.
      * 
-    */
+     */
     public Optional<String> zones() {
         return Optional.ofNullable(this.zones);
     }

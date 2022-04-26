@@ -25,6 +25,11 @@ public final class ReservationShareSettingsArgs extends com.pulumi.resources.Res
     @Import(name="projectMaps")
     private @Nullable Output<List<ReservationShareSettingsProjectMapArgs>> projectMaps;
 
+    /**
+     * @return A map of project number and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<ReservationShareSettingsProjectMapArgs>>> projectMaps() {
         return Optional.ofNullable(this.projectMaps);
     }
@@ -37,6 +42,11 @@ public final class ReservationShareSettingsArgs extends com.pulumi.resources.Res
     @Import(name="shareType")
     private @Nullable Output<String> shareType;
 
+    /**
+     * @return Type of sharing for this shared-reservation
+     * Possible values are `LOCAL` and `SPECIFIC_PROJECTS`.
+     * 
+     */
     public Optional<Output<String>> shareType() {
         return Optional.ofNullable(this.shareType);
     }
@@ -66,24 +76,59 @@ public final class ReservationShareSettingsArgs extends com.pulumi.resources.Res
             $ = new ReservationShareSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param projectMaps A map of project number and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectMaps(@Nullable Output<List<ReservationShareSettingsProjectMapArgs>> projectMaps) {
             $.projectMaps = projectMaps;
             return this;
         }
 
+        /**
+         * @param projectMaps A map of project number and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectMaps(List<ReservationShareSettingsProjectMapArgs> projectMaps) {
             return projectMaps(Output.of(projectMaps));
         }
 
+        /**
+         * @param projectMaps A map of project number and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectMaps(ReservationShareSettingsProjectMapArgs... projectMaps) {
             return projectMaps(List.of(projectMaps));
         }
 
+        /**
+         * @param shareType Type of sharing for this shared-reservation
+         * Possible values are `LOCAL` and `SPECIFIC_PROJECTS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareType(@Nullable Output<String> shareType) {
             $.shareType = shareType;
             return this;
         }
 
+        /**
+         * @param shareType Type of sharing for this shared-reservation
+         * Possible values are `LOCAL` and `SPECIFIC_PROJECTS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareType(String shareType) {
             return shareType(Output.of(shareType));
         }

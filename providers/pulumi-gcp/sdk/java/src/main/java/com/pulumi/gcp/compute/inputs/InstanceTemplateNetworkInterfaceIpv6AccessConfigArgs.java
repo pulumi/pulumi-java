@@ -37,6 +37,11 @@ public final class InstanceTemplateNetworkInterfaceIpv6AccessConfigArgs extends 
     @Import(name="networkTier", required=true)
     private Output<String> networkTier;
 
+    /**
+     * @return The service-level to be provided for IPv6 traffic when the
+     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * 
+     */
     public Output<String> networkTier() {
         return this.networkTier;
     }
@@ -93,11 +98,25 @@ public final class InstanceTemplateNetworkInterfaceIpv6AccessConfigArgs extends 
             return externalIpv6PrefixLength(Output.of(externalIpv6PrefixLength));
         }
 
+        /**
+         * @param networkTier The service-level to be provided for IPv6 traffic when the
+         * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTier(Output<String> networkTier) {
             $.networkTier = networkTier;
             return this;
         }
 
+        /**
+         * @param networkTier The service-level to be provided for IPv6 traffic when the
+         * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTier(String networkTier) {
             return networkTier(Output.of(networkTier));
         }

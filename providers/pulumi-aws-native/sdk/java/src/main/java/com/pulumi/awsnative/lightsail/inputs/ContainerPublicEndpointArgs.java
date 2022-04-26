@@ -28,6 +28,10 @@ public final class ContainerPublicEndpointArgs extends com.pulumi.resources.Reso
     @Import(name="containerName")
     private @Nullable Output<String> containerName;
 
+    /**
+     * @return The name of the container for the endpoint.
+     * 
+     */
     public Optional<Output<String>> containerName() {
         return Optional.ofNullable(this.containerName);
     }
@@ -39,6 +43,10 @@ public final class ContainerPublicEndpointArgs extends com.pulumi.resources.Reso
     @Import(name="containerPort")
     private @Nullable Output<Integer> containerPort;
 
+    /**
+     * @return The port of the container to which traffic is forwarded to.
+     * 
+     */
     public Optional<Output<Integer>> containerPort() {
         return Optional.ofNullable(this.containerPort);
     }
@@ -50,6 +58,10 @@ public final class ContainerPublicEndpointArgs extends com.pulumi.resources.Reso
     @Import(name="healthCheckConfig")
     private @Nullable Output<ContainerHealthCheckConfigArgs> healthCheckConfig;
 
+    /**
+     * @return An object that describes the health check configuration of the container.
+     * 
+     */
     public Optional<Output<ContainerHealthCheckConfigArgs>> healthCheckConfig() {
         return Optional.ofNullable(this.healthCheckConfig);
     }
@@ -80,29 +92,65 @@ public final class ContainerPublicEndpointArgs extends com.pulumi.resources.Reso
             $ = new ContainerPublicEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerName The name of the container for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(@Nullable Output<String> containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param containerName The name of the container for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             return containerName(Output.of(containerName));
         }
 
+        /**
+         * @param containerPort The port of the container to which traffic is forwarded to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
             $.containerPort = containerPort;
             return this;
         }
 
+        /**
+         * @param containerPort The port of the container to which traffic is forwarded to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(Integer containerPort) {
             return containerPort(Output.of(containerPort));
         }
 
+        /**
+         * @param healthCheckConfig An object that describes the health check configuration of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckConfig(@Nullable Output<ContainerHealthCheckConfigArgs> healthCheckConfig) {
             $.healthCheckConfig = healthCheckConfig;
             return this;
         }
 
+        /**
+         * @param healthCheckConfig An object that describes the health check configuration of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckConfig(ContainerHealthCheckConfigArgs healthCheckConfig) {
             return healthCheckConfig(Output.of(healthCheckConfig));
         }

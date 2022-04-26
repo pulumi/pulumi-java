@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterEncryptionConfig {
     /**
-     * The encryption provider for the cluster.
+     * @return The encryption provider for the cluster.
      * 
      */
     private final @Nullable ClusterEncryptionConfigProviderProperties provider;
     /**
-     * Specifies the resources to be encrypted. The only supported value is &#34;secrets&#34;.
+     * @return Specifies the resources to be encrypted. The only supported value is &#34;secrets&#34;.
      * 
      */
     private final @Nullable List<String> resources;
@@ -33,16 +33,16 @@ public final class ClusterEncryptionConfig {
     }
 
     /**
-     * The encryption provider for the cluster.
+     * @return The encryption provider for the cluster.
      * 
-    */
+     */
     public Optional<ClusterEncryptionConfigProviderProperties> provider() {
         return Optional.ofNullable(this.provider);
     }
     /**
-     * Specifies the resources to be encrypted. The only supported value is &#34;secrets&#34;.
+     * @return Specifies the resources to be encrypted. The only supported value is &#34;secrets&#34;.
      * 
-    */
+     */
     public List<String> resources() {
         return this.resources == null ? List.of() : this.resources;
     }

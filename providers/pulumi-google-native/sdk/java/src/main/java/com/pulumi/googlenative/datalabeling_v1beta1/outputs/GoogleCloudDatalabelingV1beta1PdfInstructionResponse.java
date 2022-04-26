@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse {
     /**
-     * PDF file for the instruction. Only gcs path is allowed.
+     * @return PDF file for the instruction. Only gcs path is allowed.
      * 
      */
     private final String gcsFileUri;
@@ -21,9 +21,9 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse {
     }
 
     /**
-     * PDF file for the instruction. Only gcs path is allowed.
+     * @return PDF file for the instruction. Only gcs path is allowed.
      * 
-    */
+     */
     public String gcsFileUri() {
         return this.gcsFileUri;
     }

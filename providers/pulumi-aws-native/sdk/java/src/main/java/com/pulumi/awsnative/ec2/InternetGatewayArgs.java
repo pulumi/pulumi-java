@@ -23,6 +23,10 @@ public final class InternetGatewayArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<List<InternetGatewayTagArgs>> tags;
 
+    /**
+     * @return Any tags to assign to the internet gateway.
+     * 
+     */
     public Optional<Output<List<InternetGatewayTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -51,15 +55,33 @@ public final class InternetGatewayArgs extends com.pulumi.resources.ResourceArgs
             $ = new InternetGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tags Any tags to assign to the internet gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<InternetGatewayTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Any tags to assign to the internet gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<InternetGatewayTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Any tags to assign to the internet gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(InternetGatewayTagArgs... tags) {
             return tags(List.of(tags));
         }

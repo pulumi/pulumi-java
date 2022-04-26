@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProvisionedProductProvisioningParameter {
     /**
-     * Parameter key.
+     * @return Parameter key.
      * 
      */
     private final String key;
     /**
-     * Whether to ignore `value` and keep the previous parameter value. Ignored when initially provisioning a product.
+     * @return Whether to ignore `value` and keep the previous parameter value. Ignored when initially provisioning a product.
      * 
      */
     private final @Nullable Boolean usePreviousValue;
     /**
-     * Parameter value.
+     * @return Parameter value.
      * 
      */
     private final @Nullable String value;
@@ -39,23 +39,23 @@ public final class ProvisionedProductProvisioningParameter {
     }
 
     /**
-     * Parameter key.
+     * @return Parameter key.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Whether to ignore `value` and keep the previous parameter value. Ignored when initially provisioning a product.
+     * @return Whether to ignore `value` and keep the previous parameter value. Ignored when initially provisioning a product.
      * 
-    */
+     */
     public Optional<Boolean> usePreviousValue() {
         return Optional.ofNullable(this.usePreviousValue);
     }
     /**
-     * Parameter value.
+     * @return Parameter value.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

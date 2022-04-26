@@ -24,6 +24,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyAlgorithm")
     private @Nullable Output<KeyKeyAlgorithm> keyAlgorithm;
 
+    /**
+     * @return Which type of key and algorithm to use for the key. The default is currently a 2K RSA key. However this may change in the future.
+     * 
+     */
     public Optional<Output<KeyKeyAlgorithm>> keyAlgorithm() {
         return Optional.ofNullable(this.keyAlgorithm);
     }
@@ -35,6 +39,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateKeyType")
     private @Nullable Output<KeyPrivateKeyType> privateKeyType;
 
+    /**
+     * @return The output format of the private key. The default value is `TYPE_GOOGLE_CREDENTIALS_FILE`, which is the Google Credentials File format.
+     * 
+     */
     public Optional<Output<KeyPrivateKeyType>> privateKeyType() {
         return Optional.ofNullable(this.privateKeyType);
     }
@@ -80,20 +88,44 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyAlgorithm Which type of key and algorithm to use for the key. The default is currently a 2K RSA key. However this may change in the future.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyAlgorithm(@Nullable Output<KeyKeyAlgorithm> keyAlgorithm) {
             $.keyAlgorithm = keyAlgorithm;
             return this;
         }
 
+        /**
+         * @param keyAlgorithm Which type of key and algorithm to use for the key. The default is currently a 2K RSA key. However this may change in the future.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyAlgorithm(KeyKeyAlgorithm keyAlgorithm) {
             return keyAlgorithm(Output.of(keyAlgorithm));
         }
 
+        /**
+         * @param privateKeyType The output format of the private key. The default value is `TYPE_GOOGLE_CREDENTIALS_FILE`, which is the Google Credentials File format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyType(@Nullable Output<KeyPrivateKeyType> privateKeyType) {
             $.privateKeyType = privateKeyType;
             return this;
         }
 
+        /**
+         * @param privateKeyType The output format of the private key. The default value is `TYPE_GOOGLE_CREDENTIALS_FILE`, which is the Google Credentials File format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyType(KeyPrivateKeyType privateKeyType) {
             return privateKeyType(Output.of(privateKeyType));
         }

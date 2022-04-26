@@ -29,6 +29,10 @@ public final class CapacitySkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return The capacity of the SKU.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -40,6 +44,10 @@ public final class CapacitySkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the SKU level.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -51,6 +59,10 @@ public final class CapacitySkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier")
     private @Nullable Output<Either<String,CapacitySkuTier>> tier;
 
+    /**
+     * @return The name of the Azure pricing tier to which the SKU applies.
+     * 
+     */
     public Optional<Output<Either<String,CapacitySkuTier>>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -81,37 +93,85 @@ public final class CapacitySkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CapacitySkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The capacity of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The capacity of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name Name of the SKU level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the SKU level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tier The name of the Azure pricing tier to which the SKU applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Either<String,CapacitySkuTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The name of the Azure pricing tier to which the SKU applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,CapacitySkuTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier The name of the Azure pricing tier to which the SKU applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier The name of the Azure pricing tier to which the SKU applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(CapacitySkuTier tier) {
             return tier(Either.ofRight(tier));
         }

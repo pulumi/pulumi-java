@@ -12,13 +12,13 @@ import java.util.Objects;
 public final class CVSSv3Response {
     private final String attackComplexity;
     /**
-     * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
+     * @return Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
      * 
      */
     private final String attackVector;
     private final String availabilityImpact;
     /**
-     * The base score is a function of the base metric scores.
+     * @return The base score is a function of the base metric scores.
      * 
      */
     private final Double baseScore;
@@ -60,9 +60,9 @@ public final class CVSSv3Response {
         return this.attackComplexity;
     }
     /**
-     * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
+     * @return Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
      * 
-    */
+     */
     public String attackVector() {
         return this.attackVector;
     }
@@ -70,9 +70,9 @@ public final class CVSSv3Response {
         return this.availabilityImpact;
     }
     /**
-     * The base score is a function of the base metric scores.
+     * @return The base score is a function of the base metric scores.
      * 
-    */
+     */
     public Double baseScore() {
         return this.baseScore;
     }

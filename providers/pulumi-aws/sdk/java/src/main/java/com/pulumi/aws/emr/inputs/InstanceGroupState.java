@@ -26,6 +26,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoscalingPolicy")
     private @Nullable Output<String> autoscalingPolicy;
 
+    /**
+     * @return The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
+     * 
+     */
     public Optional<Output<String>> autoscalingPolicy() {
         return Optional.ofNullable(this.autoscalingPolicy);
     }
@@ -37,6 +41,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="bidPrice")
     private @Nullable Output<String> bidPrice;
 
+    /**
+     * @return If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
+     * 
+     */
     public Optional<Output<String>> bidPrice() {
         return Optional.ofNullable(this.bidPrice);
     }
@@ -48,6 +56,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="clusterId")
     private @Nullable Output<String> clusterId;
 
+    /**
+     * @return ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
+     * 
+     */
     public Optional<Output<String>> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
@@ -59,6 +71,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="configurationsJson")
     private @Nullable Output<String> configurationsJson;
 
+    /**
+     * @return A JSON string for supplying list of configurations specific to the EMR instance group. Note that this can only be changed when using EMR release 5.21 or later.
+     * 
+     */
     public Optional<Output<String>> configurationsJson() {
         return Optional.ofNullable(this.configurationsJson);
     }
@@ -70,6 +86,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="ebsConfigs")
     private @Nullable Output<List<InstanceGroupEbsConfigGetArgs>> ebsConfigs;
 
+    /**
+     * @return One or more `ebs_config` blocks as defined below. Changing this forces a new resource to be created.
+     * 
+     */
     public Optional<Output<List<InstanceGroupEbsConfigGetArgs>>> ebsConfigs() {
         return Optional.ofNullable(this.ebsConfigs);
     }
@@ -81,6 +101,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="ebsOptimized")
     private @Nullable Output<Boolean> ebsOptimized;
 
+    /**
+     * @return Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a new resource to be created.
+     * 
+     */
     public Optional<Output<Boolean>> ebsOptimized() {
         return Optional.ofNullable(this.ebsOptimized);
     }
@@ -92,6 +116,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="instanceCount")
     private @Nullable Output<Integer> instanceCount;
 
+    /**
+     * @return target number of instances for the instance group. defaults to 0.
+     * 
+     */
     public Optional<Output<Integer>> instanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
@@ -103,6 +131,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The EC2 instance type for all instances in the instance group. Changing this forces a new resource to be created.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -114,6 +146,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Human friendly name given to the instance group. Changing this forces a new resource to be created.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -166,87 +202,201 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
             $ = new InstanceGroupState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscalingPolicy The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingPolicy(@Nullable Output<String> autoscalingPolicy) {
             $.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
 
+        /**
+         * @param autoscalingPolicy The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingPolicy(String autoscalingPolicy) {
             return autoscalingPolicy(Output.of(autoscalingPolicy));
         }
 
+        /**
+         * @param bidPrice If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bidPrice(@Nullable Output<String> bidPrice) {
             $.bidPrice = bidPrice;
             return this;
         }
 
+        /**
+         * @param bidPrice If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bidPrice(String bidPrice) {
             return bidPrice(Output.of(bidPrice));
         }
 
+        /**
+         * @param clusterId ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(@Nullable Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param clusterId ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(String clusterId) {
             return clusterId(Output.of(clusterId));
         }
 
+        /**
+         * @param configurationsJson A JSON string for supplying list of configurations specific to the EMR instance group. Note that this can only be changed when using EMR release 5.21 or later.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationsJson(@Nullable Output<String> configurationsJson) {
             $.configurationsJson = configurationsJson;
             return this;
         }
 
+        /**
+         * @param configurationsJson A JSON string for supplying list of configurations specific to the EMR instance group. Note that this can only be changed when using EMR release 5.21 or later.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationsJson(String configurationsJson) {
             return configurationsJson(Output.of(configurationsJson));
         }
 
+        /**
+         * @param ebsConfigs One or more `ebs_config` blocks as defined below. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsConfigs(@Nullable Output<List<InstanceGroupEbsConfigGetArgs>> ebsConfigs) {
             $.ebsConfigs = ebsConfigs;
             return this;
         }
 
+        /**
+         * @param ebsConfigs One or more `ebs_config` blocks as defined below. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsConfigs(List<InstanceGroupEbsConfigGetArgs> ebsConfigs) {
             return ebsConfigs(Output.of(ebsConfigs));
         }
 
+        /**
+         * @param ebsConfigs One or more `ebs_config` blocks as defined below. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsConfigs(InstanceGroupEbsConfigGetArgs... ebsConfigs) {
             return ebsConfigs(List.of(ebsConfigs));
         }
 
+        /**
+         * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             $.ebsOptimized = ebsOptimized;
             return this;
         }
 
+        /**
+         * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsOptimized(Boolean ebsOptimized) {
             return ebsOptimized(Output.of(ebsOptimized));
         }
 
+        /**
+         * @param instanceCount target number of instances for the instance group. defaults to 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             $.instanceCount = instanceCount;
             return this;
         }
 
+        /**
+         * @param instanceCount target number of instances for the instance group. defaults to 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(Integer instanceCount) {
             return instanceCount(Output.of(instanceCount));
         }
 
+        /**
+         * @param instanceType The EC2 instance type for all instances in the instance group. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The EC2 instance type for all instances in the instance group. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param name Human friendly name given to the instance group. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Human friendly name given to the instance group. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

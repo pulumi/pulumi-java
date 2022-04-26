@@ -17,12 +17,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobInputsResponse {
     /**
-     * List of inputs to a Job.
+     * @return List of inputs to a Job.
      * 
      */
     private final @Nullable List<Object> inputs;
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.JobInputs&#39;.
      * 
      */
@@ -37,17 +37,17 @@ public final class JobInputsResponse {
     }
 
     /**
-     * List of inputs to a Job.
+     * @return List of inputs to a Job.
      * 
-    */
+     */
     public List<Object> inputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.JobInputs&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

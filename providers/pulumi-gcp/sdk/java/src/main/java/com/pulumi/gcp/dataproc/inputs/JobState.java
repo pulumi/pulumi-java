@@ -35,6 +35,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="driverControlsFilesUri")
     private @Nullable Output<String> driverControlsFilesUri;
 
+    /**
+     * @return If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
+     * 
+     */
     public Optional<Output<String>> driverControlsFilesUri() {
         return Optional.ofNullable(this.driverControlsFilesUri);
     }
@@ -46,6 +50,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="driverOutputResourceUri")
     private @Nullable Output<String> driverOutputResourceUri;
 
+    /**
+     * @return A URI pointing to the location of the stdout of the job&#39;s driver program.
+     * 
+     */
     public Optional<Output<String>> driverOutputResourceUri() {
         return Optional.ofNullable(this.driverOutputResourceUri);
     }
@@ -59,6 +67,12 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceDelete")
     private @Nullable Output<Boolean> forceDelete;
 
+    /**
+     * @return By default, you can only delete inactive jobs within
+     * Dataproc. Setting this to true, and calling destroy, will ensure that the
+     * job is first cancelled before issuing the delete.
+     * 
+     */
     public Optional<Output<Boolean>> forceDelete() {
         return Optional.ofNullable(this.forceDelete);
     }
@@ -70,6 +84,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hadoopConfig")
     private @Nullable Output<JobHadoopConfigGetArgs> hadoopConfig;
 
+    /**
+     * @return The config of Hadoop job
+     * 
+     */
     public Optional<Output<JobHadoopConfigGetArgs>> hadoopConfig() {
         return Optional.ofNullable(this.hadoopConfig);
     }
@@ -81,6 +99,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hiveConfig")
     private @Nullable Output<JobHiveConfigGetArgs> hiveConfig;
 
+    /**
+     * @return The config of hive job
+     * 
+     */
     public Optional<Output<JobHiveConfigGetArgs>> hiveConfig() {
         return Optional.ofNullable(this.hiveConfig);
     }
@@ -92,6 +114,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The list of labels (key/value pairs) to add to the job.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -103,6 +129,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pigConfig")
     private @Nullable Output<JobPigConfigGetArgs> pigConfig;
 
+    /**
+     * @return The config of pag job.
+     * 
+     */
     public Optional<Output<JobPigConfigGetArgs>> pigConfig() {
         return Optional.ofNullable(this.pigConfig);
     }
@@ -114,6 +144,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="placement")
     private @Nullable Output<JobPlacementGetArgs> placement;
 
+    /**
+     * @return The config of job placement.
+     * 
+     */
     public Optional<Output<JobPlacementGetArgs>> placement() {
         return Optional.ofNullable(this.placement);
     }
@@ -126,6 +160,11 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project in which the `cluster` can be found and jobs
+     * subsequently run against. If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -137,6 +176,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pysparkConfig")
     private @Nullable Output<JobPysparkConfigGetArgs> pysparkConfig;
 
+    /**
+     * @return The config of pySpark job.
+     * 
+     */
     public Optional<Output<JobPysparkConfigGetArgs>> pysparkConfig() {
         return Optional.ofNullable(this.pysparkConfig);
     }
@@ -148,6 +191,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="reference")
     private @Nullable Output<JobReferenceGetArgs> reference;
 
+    /**
+     * @return The reference of the job
+     * 
+     */
     public Optional<Output<JobReferenceGetArgs>> reference() {
         return Optional.ofNullable(this.reference);
     }
@@ -160,6 +207,11 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The Cloud Dataproc region. This essentially determines which clusters are available
+     * for this job to be submitted to. If not specified, defaults to `global`.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -171,6 +223,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheduling")
     private @Nullable Output<JobSchedulingGetArgs> scheduling;
 
+    /**
+     * @return Optional. Job scheduling configuration.
+     * 
+     */
     public Optional<Output<JobSchedulingGetArgs>> scheduling() {
         return Optional.ofNullable(this.scheduling);
     }
@@ -182,6 +238,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sparkConfig")
     private @Nullable Output<JobSparkConfigGetArgs> sparkConfig;
 
+    /**
+     * @return The config of the Spark job.
+     * 
+     */
     public Optional<Output<JobSparkConfigGetArgs>> sparkConfig() {
         return Optional.ofNullable(this.sparkConfig);
     }
@@ -193,6 +253,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sparksqlConfig")
     private @Nullable Output<JobSparksqlConfigGetArgs> sparksqlConfig;
 
+    /**
+     * @return The config of SparkSql job
+     * 
+     */
     public Optional<Output<JobSparksqlConfigGetArgs>> sparksqlConfig() {
         return Optional.ofNullable(this.sparksqlConfig);
     }
@@ -204,6 +268,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="statuses")
     private @Nullable Output<List<JobStatusGetArgs>> statuses;
 
+    /**
+     * @return The status of the job.
+     * 
+     */
     public Optional<Output<List<JobStatusGetArgs>>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
@@ -247,150 +315,356 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
             $ = new JobState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param driverControlsFilesUri If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driverControlsFilesUri(@Nullable Output<String> driverControlsFilesUri) {
             $.driverControlsFilesUri = driverControlsFilesUri;
             return this;
         }
 
+        /**
+         * @param driverControlsFilesUri If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driverControlsFilesUri(String driverControlsFilesUri) {
             return driverControlsFilesUri(Output.of(driverControlsFilesUri));
         }
 
+        /**
+         * @param driverOutputResourceUri A URI pointing to the location of the stdout of the job&#39;s driver program.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driverOutputResourceUri(@Nullable Output<String> driverOutputResourceUri) {
             $.driverOutputResourceUri = driverOutputResourceUri;
             return this;
         }
 
+        /**
+         * @param driverOutputResourceUri A URI pointing to the location of the stdout of the job&#39;s driver program.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driverOutputResourceUri(String driverOutputResourceUri) {
             return driverOutputResourceUri(Output.of(driverOutputResourceUri));
         }
 
+        /**
+         * @param forceDelete By default, you can only delete inactive jobs within
+         * Dataproc. Setting this to true, and calling destroy, will ensure that the
+         * job is first cancelled before issuing the delete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
             $.forceDelete = forceDelete;
             return this;
         }
 
+        /**
+         * @param forceDelete By default, you can only delete inactive jobs within
+         * Dataproc. Setting this to true, and calling destroy, will ensure that the
+         * job is first cancelled before issuing the delete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDelete(Boolean forceDelete) {
             return forceDelete(Output.of(forceDelete));
         }
 
+        /**
+         * @param hadoopConfig The config of Hadoop job
+         * 
+         * @return builder
+         * 
+         */
         public Builder hadoopConfig(@Nullable Output<JobHadoopConfigGetArgs> hadoopConfig) {
             $.hadoopConfig = hadoopConfig;
             return this;
         }
 
+        /**
+         * @param hadoopConfig The config of Hadoop job
+         * 
+         * @return builder
+         * 
+         */
         public Builder hadoopConfig(JobHadoopConfigGetArgs hadoopConfig) {
             return hadoopConfig(Output.of(hadoopConfig));
         }
 
+        /**
+         * @param hiveConfig The config of hive job
+         * 
+         * @return builder
+         * 
+         */
         public Builder hiveConfig(@Nullable Output<JobHiveConfigGetArgs> hiveConfig) {
             $.hiveConfig = hiveConfig;
             return this;
         }
 
+        /**
+         * @param hiveConfig The config of hive job
+         * 
+         * @return builder
+         * 
+         */
         public Builder hiveConfig(JobHiveConfigGetArgs hiveConfig) {
             return hiveConfig(Output.of(hiveConfig));
         }
 
+        /**
+         * @param labels The list of labels (key/value pairs) to add to the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The list of labels (key/value pairs) to add to the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param pigConfig The config of pag job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pigConfig(@Nullable Output<JobPigConfigGetArgs> pigConfig) {
             $.pigConfig = pigConfig;
             return this;
         }
 
+        /**
+         * @param pigConfig The config of pag job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pigConfig(JobPigConfigGetArgs pigConfig) {
             return pigConfig(Output.of(pigConfig));
         }
 
+        /**
+         * @param placement The config of job placement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placement(@Nullable Output<JobPlacementGetArgs> placement) {
             $.placement = placement;
             return this;
         }
 
+        /**
+         * @param placement The config of job placement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placement(JobPlacementGetArgs placement) {
             return placement(Output.of(placement));
         }
 
+        /**
+         * @param project The project in which the `cluster` can be found and jobs
+         * subsequently run against. If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project in which the `cluster` can be found and jobs
+         * subsequently run against. If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param pysparkConfig The config of pySpark job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pysparkConfig(@Nullable Output<JobPysparkConfigGetArgs> pysparkConfig) {
             $.pysparkConfig = pysparkConfig;
             return this;
         }
 
+        /**
+         * @param pysparkConfig The config of pySpark job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pysparkConfig(JobPysparkConfigGetArgs pysparkConfig) {
             return pysparkConfig(Output.of(pysparkConfig));
         }
 
+        /**
+         * @param reference The reference of the job
+         * 
+         * @return builder
+         * 
+         */
         public Builder reference(@Nullable Output<JobReferenceGetArgs> reference) {
             $.reference = reference;
             return this;
         }
 
+        /**
+         * @param reference The reference of the job
+         * 
+         * @return builder
+         * 
+         */
         public Builder reference(JobReferenceGetArgs reference) {
             return reference(Output.of(reference));
         }
 
+        /**
+         * @param region The Cloud Dataproc region. This essentially determines which clusters are available
+         * for this job to be submitted to. If not specified, defaults to `global`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The Cloud Dataproc region. This essentially determines which clusters are available
+         * for this job to be submitted to. If not specified, defaults to `global`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param scheduling Optional. Job scheduling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(@Nullable Output<JobSchedulingGetArgs> scheduling) {
             $.scheduling = scheduling;
             return this;
         }
 
+        /**
+         * @param scheduling Optional. Job scheduling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(JobSchedulingGetArgs scheduling) {
             return scheduling(Output.of(scheduling));
         }
 
+        /**
+         * @param sparkConfig The config of the Spark job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkConfig(@Nullable Output<JobSparkConfigGetArgs> sparkConfig) {
             $.sparkConfig = sparkConfig;
             return this;
         }
 
+        /**
+         * @param sparkConfig The config of the Spark job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkConfig(JobSparkConfigGetArgs sparkConfig) {
             return sparkConfig(Output.of(sparkConfig));
         }
 
+        /**
+         * @param sparksqlConfig The config of SparkSql job
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparksqlConfig(@Nullable Output<JobSparksqlConfigGetArgs> sparksqlConfig) {
             $.sparksqlConfig = sparksqlConfig;
             return this;
         }
 
+        /**
+         * @param sparksqlConfig The config of SparkSql job
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparksqlConfig(JobSparksqlConfigGetArgs sparksqlConfig) {
             return sparksqlConfig(Output.of(sparksqlConfig));
         }
 
+        /**
+         * @param statuses The status of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(@Nullable Output<List<JobStatusGetArgs>> statuses) {
             $.statuses = statuses;
             return this;
         }
 
+        /**
+         * @param statuses The status of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(List<JobStatusGetArgs> statuses) {
             return statuses(Output.of(statuses));
         }
 
+        /**
+         * @param statuses The status of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(JobStatusGetArgs... statuses) {
             return statuses(List.of(statuses));
         }

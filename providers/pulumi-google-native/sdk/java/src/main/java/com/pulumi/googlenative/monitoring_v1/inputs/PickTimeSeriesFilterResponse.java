@@ -24,6 +24,10 @@ public final class PickTimeSeriesFilterResponse extends com.pulumi.resources.Inv
     @Import(name="direction", required=true)
     private String direction;
 
+    /**
+     * @return How to use the ranking to select time series that pass through the filter.
+     * 
+     */
     public String direction() {
         return this.direction;
     }
@@ -35,6 +39,10 @@ public final class PickTimeSeriesFilterResponse extends com.pulumi.resources.Inv
     @Import(name="numTimeSeries", required=true)
     private Integer numTimeSeries;
 
+    /**
+     * @return How many time series to allow to pass through the filter.
+     * 
+     */
     public Integer numTimeSeries() {
         return this.numTimeSeries;
     }
@@ -46,6 +54,10 @@ public final class PickTimeSeriesFilterResponse extends com.pulumi.resources.Inv
     @Import(name="rankingMethod", required=true)
     private String rankingMethod;
 
+    /**
+     * @return ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.
+     * 
+     */
     public String rankingMethod() {
         return this.rankingMethod;
     }
@@ -76,16 +88,34 @@ public final class PickTimeSeriesFilterResponse extends com.pulumi.resources.Inv
             $ = new PickTimeSeriesFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param direction How to use the ranking to select time series that pass through the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param numTimeSeries How many time series to allow to pass through the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numTimeSeries(Integer numTimeSeries) {
             $.numTimeSeries = numTimeSeries;
             return this;
         }
 
+        /**
+         * @param rankingMethod ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rankingMethod(String rankingMethod) {
             $.rankingMethod = rankingMethod;
             return this;

@@ -21,6 +21,10 @@ public final class GetOutpostsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZone")
     private @Nullable String availabilityZone;
 
+    /**
+     * @return Availability Zone name.
+     * 
+     */
     public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -32,6 +36,10 @@ public final class GetOutpostsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZoneId")
     private @Nullable String availabilityZoneId;
 
+    /**
+     * @return Availability Zone identifier.
+     * 
+     */
     public Optional<String> availabilityZoneId() {
         return Optional.ofNullable(this.availabilityZoneId);
     }
@@ -43,6 +51,10 @@ public final class GetOutpostsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ownerId")
     private @Nullable String ownerId;
 
+    /**
+     * @return AWS Account identifier of the Outpost owner.
+     * 
+     */
     public Optional<String> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
@@ -54,6 +66,10 @@ public final class GetOutpostsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="siteId")
     private @Nullable String siteId;
 
+    /**
+     * @return Site identifier.
+     * 
+     */
     public Optional<String> siteId() {
         return Optional.ofNullable(this.siteId);
     }
@@ -85,21 +101,45 @@ public final class GetOutpostsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetOutpostsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityZone Availability Zone name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(@Nullable String availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param availabilityZoneId Availability Zone identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
             $.availabilityZoneId = availabilityZoneId;
             return this;
         }
 
+        /**
+         * @param ownerId AWS Account identifier of the Outpost owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(@Nullable String ownerId) {
             $.ownerId = ownerId;
             return this;
         }
 
+        /**
+         * @param siteId Site identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteId(@Nullable String siteId) {
             $.siteId = siteId;
             return this;

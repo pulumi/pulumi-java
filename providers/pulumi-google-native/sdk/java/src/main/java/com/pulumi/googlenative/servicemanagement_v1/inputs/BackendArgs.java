@@ -27,6 +27,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
     private @Nullable Output<List<BackendRuleArgs>> rules;
 
+    /**
+     * @return A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * 
+     */
     public Optional<Output<List<BackendRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -55,15 +59,33 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BackendArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<BackendRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<BackendRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(BackendRuleArgs... rules) {
             return rules(List.of(rules));
         }

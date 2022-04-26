@@ -36,6 +36,10 @@ public final class OperationsDefinitionArgs extends com.pulumi.resources.Resourc
     @Import(name="display", required=true)
     private Output<OperationsDefinitionDisplayArgs> display;
 
+    /**
+     * @return Display information of the operation.
+     * 
+     */
     public Output<OperationsDefinitionDisplayArgs> display() {
         return this.display;
     }
@@ -47,6 +51,10 @@ public final class OperationsDefinitionArgs extends com.pulumi.resources.Resourc
     @Import(name="isDataAction")
     private @Nullable Output<Boolean> isDataAction;
 
+    /**
+     * @return Indicates whether the operation applies to data-plane.
+     * 
+     */
     public Optional<Output<Boolean>> isDataAction() {
         return Optional.ofNullable(this.isDataAction);
     }
@@ -58,6 +66,10 @@ public final class OperationsDefinitionArgs extends com.pulumi.resources.Resourc
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the operation.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -114,29 +126,65 @@ public final class OperationsDefinitionArgs extends com.pulumi.resources.Resourc
             return actionType(Output.of(actionType));
         }
 
+        /**
+         * @param display Display information of the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder display(Output<OperationsDefinitionDisplayArgs> display) {
             $.display = display;
             return this;
         }
 
+        /**
+         * @param display Display information of the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder display(OperationsDefinitionDisplayArgs display) {
             return display(Output.of(display));
         }
 
+        /**
+         * @param isDataAction Indicates whether the operation applies to data-plane.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDataAction(@Nullable Output<Boolean> isDataAction) {
             $.isDataAction = isDataAction;
             return this;
         }
 
+        /**
+         * @param isDataAction Indicates whether the operation applies to data-plane.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDataAction(Boolean isDataAction) {
             return isDataAction(Output.of(isDataAction));
         }
 
+        /**
+         * @param name Name of the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

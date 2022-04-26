@@ -28,6 +28,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="additionalContexts", required=true)
     private List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts;
 
+    /**
+     * @return If provided, some of the source code used for the build may be found in these locations, in the case where the source repository had multiple remotes or submodules. This list will not include the context specified in the context field.
+     * 
+     */
     public List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts() {
         return this.additionalContexts;
     }
@@ -39,6 +43,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="artifactStorageSource", required=true)
     private StorageSourceResponse artifactStorageSource;
 
+    /**
+     * @return If provided, the input binary artifacts for the build came from this location.
+     * 
+     */
     public StorageSourceResponse artifactStorageSource() {
         return this.artifactStorageSource;
     }
@@ -50,6 +58,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="context", required=true)
     private GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context;
 
+    /**
+     * @return If provided, the source code used for the build came from this location.
+     * 
+     */
     public GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context() {
         return this.context;
     }
@@ -61,6 +73,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fileHashes", required=true)
     private Map<String,String> fileHashes;
 
+    /**
+     * @return Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (.tar.gz), the FileHash will be for the single path to that file.
+     * 
+     */
     public Map<String,String> fileHashes() {
         return this.fileHashes;
     }
@@ -72,6 +88,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="repoSource", required=true)
     private RepoSourceResponse repoSource;
 
+    /**
+     * @return If provided, get source from this location in a Cloud Repo.
+     * 
+     */
     public RepoSourceResponse repoSource() {
         return this.repoSource;
     }
@@ -83,6 +103,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageSource", required=true)
     private StorageSourceResponse storageSource;
 
+    /**
+     * @return If provided, get the source from this location in in Google Cloud Storage.
+     * 
+     */
     public StorageSourceResponse storageSource() {
         return this.storageSource;
     }
@@ -116,35 +140,77 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalContexts If provided, some of the source code used for the build may be found in these locations, in the case where the source repository had multiple remotes or submodules. This list will not include the context specified in the context field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalContexts(List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts) {
             $.additionalContexts = additionalContexts;
             return this;
         }
 
+        /**
+         * @param additionalContexts If provided, some of the source code used for the build may be found in these locations, in the case where the source repository had multiple remotes or submodules. This list will not include the context specified in the context field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalContexts(GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse... additionalContexts) {
             return additionalContexts(List.of(additionalContexts));
         }
 
+        /**
+         * @param artifactStorageSource If provided, the input binary artifacts for the build came from this location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactStorageSource(StorageSourceResponse artifactStorageSource) {
             $.artifactStorageSource = artifactStorageSource;
             return this;
         }
 
+        /**
+         * @param context If provided, the source code used for the build came from this location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context) {
             $.context = context;
             return this;
         }
 
+        /**
+         * @param fileHashes Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (.tar.gz), the FileHash will be for the single path to that file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileHashes(Map<String,String> fileHashes) {
             $.fileHashes = fileHashes;
             return this;
         }
 
+        /**
+         * @param repoSource If provided, get source from this location in a Cloud Repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoSource(RepoSourceResponse repoSource) {
             $.repoSource = repoSource;
             return this;
         }
 
+        /**
+         * @param storageSource If provided, get the source from this location in in Google Cloud Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSource(StorageSourceResponse storageSource) {
             $.storageSource = storageSource;
             return this;

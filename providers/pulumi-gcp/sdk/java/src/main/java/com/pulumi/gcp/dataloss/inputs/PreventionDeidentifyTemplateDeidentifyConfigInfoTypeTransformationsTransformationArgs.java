@@ -26,6 +26,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="infoTypes")
     private @Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs>> infoTypes;
 
+    /**
+     * @return InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
+     * all findings that correspond to infoTypes that were requested in InspectConfig.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs>>> infoTypes() {
         return Optional.ofNullable(this.infoTypes);
     }
@@ -38,6 +44,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="primitiveTransformation", required=true)
     private Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs> primitiveTransformation;
 
+    /**
+     * @return Primitive transformation to apply to the infoType.
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs> primitiveTransformation() {
         return this.primitiveTransformation;
     }
@@ -67,24 +78,62 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param infoTypes InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
+         * all findings that correspond to infoTypes that were requested in InspectConfig.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(@Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs>> infoTypes) {
             $.infoTypes = infoTypes;
             return this;
         }
 
+        /**
+         * @param infoTypes InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
+         * all findings that correspond to infoTypes that were requested in InspectConfig.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs> infoTypes) {
             return infoTypes(Output.of(infoTypes));
         }
 
+        /**
+         * @param infoTypes InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
+         * all findings that correspond to infoTypes that were requested in InspectConfig.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }
 
+        /**
+         * @param primitiveTransformation Primitive transformation to apply to the infoType.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primitiveTransformation(Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs> primitiveTransformation) {
             $.primitiveTransformation = primitiveTransformation;
             return this;
         }
 
+        /**
+         * @param primitiveTransformation Primitive transformation to apply to the infoType.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primitiveTransformation(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs primitiveTransformation) {
             return primitiveTransformation(Output.of(primitiveTransformation));
         }

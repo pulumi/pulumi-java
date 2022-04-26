@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TestBaseAccountSKUResponse {
     /**
-     * The capabilities of a SKU.
+     * @return The capabilities of a SKU.
      * 
      */
     private final List<TestBaseAccountSKUCapabilityResponse> capabilities;
     /**
-     * The locations that the SKU is available.
+     * @return The locations that the SKU is available.
      * 
      */
     private final @Nullable List<String> locations;
     /**
-     * The name of the SKU. This is typically a letter + number code, such as B0 or S0.
+     * @return The name of the SKU. This is typically a letter + number code, such as B0 or S0.
      * 
      */
     private final String name;
     /**
-     * The type of resource the SKU applies to.
+     * @return The type of resource the SKU applies to.
      * 
      */
     private final @Nullable String resourceType;
     /**
-     * The tier of this particular SKU.
+     * @return The tier of this particular SKU.
      * 
      */
     private final String tier;
@@ -54,37 +54,37 @@ public final class TestBaseAccountSKUResponse {
     }
 
     /**
-     * The capabilities of a SKU.
+     * @return The capabilities of a SKU.
      * 
-    */
+     */
     public List<TestBaseAccountSKUCapabilityResponse> capabilities() {
         return this.capabilities;
     }
     /**
-     * The locations that the SKU is available.
+     * @return The locations that the SKU is available.
      * 
-    */
+     */
     public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
-     * The name of the SKU. This is typically a letter + number code, such as B0 or S0.
+     * @return The name of the SKU. This is typically a letter + number code, such as B0 or S0.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The type of resource the SKU applies to.
+     * @return The type of resource the SKU applies to.
      * 
-    */
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
-     * The tier of this particular SKU.
+     * @return The tier of this particular SKU.
      * 
-    */
+     */
     public String tier() {
         return this.tier;
     }

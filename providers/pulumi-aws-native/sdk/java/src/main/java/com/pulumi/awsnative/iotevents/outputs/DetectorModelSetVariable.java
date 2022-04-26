@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DetectorModelSetVariable {
     /**
-     * The new value of the variable.
+     * @return The new value of the variable.
      * 
      */
     private final String value;
     /**
-     * The name of the variable.
+     * @return The name of the variable.
      * 
      */
     private final String variableName;
@@ -29,16 +29,16 @@ public final class DetectorModelSetVariable {
     }
 
     /**
-     * The new value of the variable.
+     * @return The new value of the variable.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }
     /**
-     * The name of the variable.
+     * @return The name of the variable.
      * 
-    */
+     */
     public String variableName() {
         return this.variableName;
     }

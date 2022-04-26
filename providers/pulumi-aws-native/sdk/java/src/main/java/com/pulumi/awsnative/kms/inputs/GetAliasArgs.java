@@ -19,6 +19,10 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="aliasName", required=true)
     private String aliasName;
 
+    /**
+     * @return Specifies the alias name. This value must begin with alias/ followed by a name, such as alias/ExampleAlias. The alias name cannot begin with alias/aws/. The alias/aws/ prefix is reserved for AWS managed CMKs.
+     * 
+     */
     public String aliasName() {
         return this.aliasName;
     }
@@ -47,6 +51,12 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAliasArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aliasName Specifies the alias name. This value must begin with alias/ followed by a name, such as alias/ExampleAlias. The alias name cannot begin with alias/aws/. The alias/aws/ prefix is reserved for AWS managed CMKs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasName(String aliasName) {
             $.aliasName = aliasName;
             return this;

@@ -22,6 +22,10 @@ public final class InstanceGroupManagerStatefulDiskArgs extends com.pulumi.resou
     @Import(name="deleteRule")
     private @Nullable Output<String> deleteRule;
 
+    /**
+     * @return , A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`. `NEVER` - detach the disk when the VM is deleted, but do not delete the disk. `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently deleted from the instance group. The default is `NEVER`.
+     * 
+     */
     public Optional<Output<String>> deleteRule() {
         return Optional.ofNullable(this.deleteRule);
     }
@@ -33,6 +37,10 @@ public final class InstanceGroupManagerStatefulDiskArgs extends com.pulumi.resou
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return , The device name of the disk to be attached.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -62,20 +70,44 @@ public final class InstanceGroupManagerStatefulDiskArgs extends com.pulumi.resou
             $ = new InstanceGroupManagerStatefulDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteRule , A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`. `NEVER` - detach the disk when the VM is deleted, but do not delete the disk. `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently deleted from the instance group. The default is `NEVER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteRule(@Nullable Output<String> deleteRule) {
             $.deleteRule = deleteRule;
             return this;
         }
 
+        /**
+         * @param deleteRule , A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`. `NEVER` - detach the disk when the VM is deleted, but do not delete the disk. `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently deleted from the instance group. The default is `NEVER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteRule(String deleteRule) {
             return deleteRule(Output.of(deleteRule));
         }
 
+        /**
+         * @param deviceName , The device name of the disk to be attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName , The device name of the disk to be attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }

@@ -27,6 +27,10 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends com.pulumi.resour
     @Import(name="floatValue")
     private @Nullable Output<Double> floatValue;
 
+    /**
+     * @return Must be set if ParameterType is DOUBLE or DISCRETE.
+     * 
+     */
     public Optional<Output<Double>> floatValue() {
         return Optional.ofNullable(this.floatValue);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends com.pulumi.resour
     @Import(name="intValue")
     private @Nullable Output<String> intValue;
 
+    /**
+     * @return Must be set if ParameterType is INTEGER
+     * 
+     */
     public Optional<Output<String>> intValue() {
         return Optional.ofNullable(this.intValue);
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends com.pulumi.resour
     @Import(name="parameter")
     private @Nullable Output<String> parameter;
 
+    /**
+     * @return The name of the parameter.
+     * 
+     */
     public Optional<Output<String>> parameter() {
         return Optional.ofNullable(this.parameter);
     }
@@ -60,6 +72,10 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends com.pulumi.resour
     @Import(name="stringValue")
     private @Nullable Output<String> stringValue;
 
+    /**
+     * @return Must be set if ParameterTypeis CATEGORICAL
+     * 
+     */
     public Optional<Output<String>> stringValue() {
         return Optional.ofNullable(this.stringValue);
     }
@@ -91,38 +107,86 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends com.pulumi.resour
             $ = new GoogleCloudMlV1_Trial_ParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param floatValue Must be set if ParameterType is DOUBLE or DISCRETE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder floatValue(@Nullable Output<Double> floatValue) {
             $.floatValue = floatValue;
             return this;
         }
 
+        /**
+         * @param floatValue Must be set if ParameterType is DOUBLE or DISCRETE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder floatValue(Double floatValue) {
             return floatValue(Output.of(floatValue));
         }
 
+        /**
+         * @param intValue Must be set if ParameterType is INTEGER
+         * 
+         * @return builder
+         * 
+         */
         public Builder intValue(@Nullable Output<String> intValue) {
             $.intValue = intValue;
             return this;
         }
 
+        /**
+         * @param intValue Must be set if ParameterType is INTEGER
+         * 
+         * @return builder
+         * 
+         */
         public Builder intValue(String intValue) {
             return intValue(Output.of(intValue));
         }
 
+        /**
+         * @param parameter The name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameter(@Nullable Output<String> parameter) {
             $.parameter = parameter;
             return this;
         }
 
+        /**
+         * @param parameter The name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameter(String parameter) {
             return parameter(Output.of(parameter));
         }
 
+        /**
+         * @param stringValue Must be set if ParameterTypeis CATEGORICAL
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(@Nullable Output<String> stringValue) {
             $.stringValue = stringValue;
             return this;
         }
 
+        /**
+         * @param stringValue Must be set if ParameterTypeis CATEGORICAL
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(String stringValue) {
             return stringValue(Output.of(stringValue));
         }

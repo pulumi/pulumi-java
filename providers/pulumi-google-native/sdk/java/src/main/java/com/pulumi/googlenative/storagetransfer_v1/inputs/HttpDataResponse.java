@@ -23,6 +23,10 @@ public final class HttpDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="listUrl", required=true)
     private String listUrl;
 
+    /**
+     * @return The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
+     * 
+     */
     public String listUrl() {
         return this.listUrl;
     }
@@ -51,6 +55,12 @@ public final class HttpDataResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HttpDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param listUrl The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder listUrl(String listUrl) {
             $.listUrl = listUrl;
             return this;

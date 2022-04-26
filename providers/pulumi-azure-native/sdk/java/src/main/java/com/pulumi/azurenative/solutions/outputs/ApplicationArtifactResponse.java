@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ApplicationArtifactResponse {
     /**
-     * The managed application artifact name.
+     * @return The managed application artifact name.
      * 
      */
     private final String name;
     /**
-     * The managed application artifact type.
+     * @return The managed application artifact type.
      * 
      */
     private final String type;
     /**
-     * The managed application artifact blob uri.
+     * @return The managed application artifact blob uri.
      * 
      */
     private final String uri;
@@ -36,23 +36,23 @@ public final class ApplicationArtifactResponse {
     }
 
     /**
-     * The managed application artifact name.
+     * @return The managed application artifact name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The managed application artifact type.
+     * @return The managed application artifact type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The managed application artifact blob uri.
+     * @return The managed application artifact blob uri.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

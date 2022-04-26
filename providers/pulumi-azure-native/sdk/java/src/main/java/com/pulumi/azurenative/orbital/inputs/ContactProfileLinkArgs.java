@@ -32,6 +32,10 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
     @Import(name="channels", required=true)
     private Output<List<ContactProfileLinkChannelArgs>> channels;
 
+    /**
+     * @return Contact Profile Link Channel
+     * 
+     */
     public Output<List<ContactProfileLinkChannelArgs>> channels() {
         return this.channels;
     }
@@ -43,6 +47,10 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
     @Import(name="direction", required=true)
     private Output<Either<String,Direction>> direction;
 
+    /**
+     * @return Direction (uplink or downlink)
+     * 
+     */
     public Output<Either<String,Direction>> direction() {
         return this.direction;
     }
@@ -54,6 +62,10 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
     @Import(name="eirpdBW")
     private @Nullable Output<Double> eirpdBW;
 
+    /**
+     * @return Effective Isotropic Radiated Power (EIRP) in dBW.
+     * 
+     */
     public Optional<Output<Double>> eirpdBW() {
         return Optional.ofNullable(this.eirpdBW);
     }
@@ -65,6 +77,10 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
     @Import(name="gainOverTemperature")
     private @Nullable Output<Double> gainOverTemperature;
 
+    /**
+     * @return Gain To Noise Temperature in db/K.
+     * 
+     */
     public Optional<Output<Double>> gainOverTemperature() {
         return Optional.ofNullable(this.gainOverTemperature);
     }
@@ -76,6 +92,10 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
     @Import(name="polarization", required=true)
     private Output<Either<String,Polarization>> polarization;
 
+    /**
+     * @return polarization. eg (RHCP, LHCP)
+     * 
+     */
     public Output<Either<String,Polarization>> polarization() {
         return this.polarization;
     }
@@ -108,67 +128,157 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
             $ = new ContactProfileLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channels Contact Profile Link Channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder channels(Output<List<ContactProfileLinkChannelArgs>> channels) {
             $.channels = channels;
             return this;
         }
 
+        /**
+         * @param channels Contact Profile Link Channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder channels(List<ContactProfileLinkChannelArgs> channels) {
             return channels(Output.of(channels));
         }
 
+        /**
+         * @param channels Contact Profile Link Channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder channels(ContactProfileLinkChannelArgs... channels) {
             return channels(List.of(channels));
         }
 
+        /**
+         * @param direction Direction (uplink or downlink)
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(Output<Either<String,Direction>> direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param direction Direction (uplink or downlink)
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(Either<String,Direction> direction) {
             return direction(Output.of(direction));
         }
 
+        /**
+         * @param direction Direction (uplink or downlink)
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             return direction(Either.ofLeft(direction));
         }
 
+        /**
+         * @param direction Direction (uplink or downlink)
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(Direction direction) {
             return direction(Either.ofRight(direction));
         }
 
+        /**
+         * @param eirpdBW Effective Isotropic Radiated Power (EIRP) in dBW.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eirpdBW(@Nullable Output<Double> eirpdBW) {
             $.eirpdBW = eirpdBW;
             return this;
         }
 
+        /**
+         * @param eirpdBW Effective Isotropic Radiated Power (EIRP) in dBW.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eirpdBW(Double eirpdBW) {
             return eirpdBW(Output.of(eirpdBW));
         }
 
+        /**
+         * @param gainOverTemperature Gain To Noise Temperature in db/K.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gainOverTemperature(@Nullable Output<Double> gainOverTemperature) {
             $.gainOverTemperature = gainOverTemperature;
             return this;
         }
 
+        /**
+         * @param gainOverTemperature Gain To Noise Temperature in db/K.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gainOverTemperature(Double gainOverTemperature) {
             return gainOverTemperature(Output.of(gainOverTemperature));
         }
 
+        /**
+         * @param polarization polarization. eg (RHCP, LHCP)
+         * 
+         * @return builder
+         * 
+         */
         public Builder polarization(Output<Either<String,Polarization>> polarization) {
             $.polarization = polarization;
             return this;
         }
 
+        /**
+         * @param polarization polarization. eg (RHCP, LHCP)
+         * 
+         * @return builder
+         * 
+         */
         public Builder polarization(Either<String,Polarization> polarization) {
             return polarization(Output.of(polarization));
         }
 
+        /**
+         * @param polarization polarization. eg (RHCP, LHCP)
+         * 
+         * @return builder
+         * 
+         */
         public Builder polarization(String polarization) {
             return polarization(Either.ofLeft(polarization));
         }
 
+        /**
+         * @param polarization polarization. eg (RHCP, LHCP)
+         * 
+         * @return builder
+         * 
+         */
         public Builder polarization(Polarization polarization) {
             return polarization(Either.ofRight(polarization));
         }

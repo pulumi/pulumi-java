@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MetricConfigurationResponse {
     /**
-     * Host name for the IoT hub associated to the device.
+     * @return Host name for the IoT hub associated to the device.
      * 
      */
     private final List<MetricCounterSetResponse> counterSets;
     /**
-     * The MDM account to which the counters should be pushed.
+     * @return The MDM account to which the counters should be pushed.
      * 
      */
     private final @Nullable String mdmAccount;
     /**
-     * The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
+     * @return The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
      * 
      */
     private final @Nullable String metricNameSpace;
     /**
-     * The Resource ID on which the metrics should be pushed.
+     * @return The Resource ID on which the metrics should be pushed.
      * 
      */
     private final String resourceId;
@@ -47,30 +47,30 @@ public final class MetricConfigurationResponse {
     }
 
     /**
-     * Host name for the IoT hub associated to the device.
+     * @return Host name for the IoT hub associated to the device.
      * 
-    */
+     */
     public List<MetricCounterSetResponse> counterSets() {
         return this.counterSets;
     }
     /**
-     * The MDM account to which the counters should be pushed.
+     * @return The MDM account to which the counters should be pushed.
      * 
-    */
+     */
     public Optional<String> mdmAccount() {
         return Optional.ofNullable(this.mdmAccount);
     }
     /**
-     * The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
+     * @return The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
      * 
-    */
+     */
     public Optional<String> metricNameSpace() {
         return Optional.ofNullable(this.metricNameSpace);
     }
     /**
-     * The Resource ID on which the metrics should be pushed.
+     * @return The Resource ID on which the metrics should be pushed.
      * 
-    */
+     */
     public String resourceId() {
         return this.resourceId;
     }

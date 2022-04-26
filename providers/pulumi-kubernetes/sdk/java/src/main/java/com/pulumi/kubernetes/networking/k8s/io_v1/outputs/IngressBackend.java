@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IngressBackend {
     /**
-     * Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, a service.Name and service.Port must not be specified. This is a mutually exclusive setting with &#34;Service&#34;.
+     * @return Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, a service.Name and service.Port must not be specified. This is a mutually exclusive setting with &#34;Service&#34;.
      * 
      */
     private final @Nullable TypedLocalObjectReference resource;
     /**
-     * Service references a Service as a Backend. This is a mutually exclusive setting with &#34;Resource&#34;.
+     * @return Service references a Service as a Backend. This is a mutually exclusive setting with &#34;Resource&#34;.
      * 
      */
     private final @Nullable IngressServiceBackend service;
@@ -32,16 +32,16 @@ public final class IngressBackend {
     }
 
     /**
-     * Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, a service.Name and service.Port must not be specified. This is a mutually exclusive setting with &#34;Service&#34;.
+     * @return Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, a service.Name and service.Port must not be specified. This is a mutually exclusive setting with &#34;Service&#34;.
      * 
-    */
+     */
     public Optional<TypedLocalObjectReference> resource() {
         return Optional.ofNullable(this.resource);
     }
     /**
-     * Service references a Service as a Backend. This is a mutually exclusive setting with &#34;Resource&#34;.
+     * @return Service references a Service as a Backend. This is a mutually exclusive setting with &#34;Resource&#34;.
      * 
-    */
+     */
     public Optional<IngressServiceBackend> service() {
         return Optional.ofNullable(this.service);
     }

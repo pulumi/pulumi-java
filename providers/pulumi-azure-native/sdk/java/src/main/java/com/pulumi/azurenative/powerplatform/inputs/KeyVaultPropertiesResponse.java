@@ -26,6 +26,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Uri of KeyVault
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="key")
     private @Nullable KeyPropertiesResponse key;
 
+    /**
+     * @return Identity of the secret that includes name and version.
+     * 
+     */
     public Optional<KeyPropertiesResponse> key() {
         return Optional.ofNullable(this.key);
     }
@@ -66,11 +74,23 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
             $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Uri of KeyVault
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param key Identity of the secret that includes name and version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable KeyPropertiesResponse key) {
             $.key = key;
             return this;

@@ -27,6 +27,10 @@ public final class ConfigurationFilters extends com.pulumi.resources.InvokeArgs 
     @Import(name="filterableProperty")
     private @Nullable List<FilterableProperty> filterableProperty;
 
+    /**
+     * @return Filters specific to product
+     * 
+     */
     public Optional<List<FilterableProperty>> filterableProperty() {
         return Optional.ofNullable(this.filterableProperty);
     }
@@ -38,6 +42,10 @@ public final class ConfigurationFilters extends com.pulumi.resources.InvokeArgs 
     @Import(name="hierarchyInformation", required=true)
     private HierarchyInformation hierarchyInformation;
 
+    /**
+     * @return Product hierarchy information
+     * 
+     */
     public HierarchyInformation hierarchyInformation() {
         return this.hierarchyInformation;
     }
@@ -67,15 +75,33 @@ public final class ConfigurationFilters extends com.pulumi.resources.InvokeArgs 
             $ = new ConfigurationFilters(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filterableProperty Filters specific to product
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterableProperty(@Nullable List<FilterableProperty> filterableProperty) {
             $.filterableProperty = filterableProperty;
             return this;
         }
 
+        /**
+         * @param filterableProperty Filters specific to product
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterableProperty(FilterableProperty... filterableProperty) {
             return filterableProperty(List.of(filterableProperty));
         }
 
+        /**
+         * @param hierarchyInformation Product hierarchy information
+         * 
+         * @return builder
+         * 
+         */
         public Builder hierarchyInformation(HierarchyInformation hierarchyInformation) {
             $.hierarchyInformation = hierarchyInformation;
             return this;

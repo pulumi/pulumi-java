@@ -23,6 +23,10 @@ public final class RecommendedActionErrorInfoResponse extends com.pulumi.resourc
     @Import(name="errorCode", required=true)
     private String errorCode;
 
+    /**
+     * @return Gets the reason why the recommended action was put to error state. e.g., DatabaseHasQdsOff, IndexAlreadyExists
+     * 
+     */
     public String errorCode() {
         return this.errorCode;
     }
@@ -34,6 +38,10 @@ public final class RecommendedActionErrorInfoResponse extends com.pulumi.resourc
     @Import(name="isRetryable", required=true)
     private String isRetryable;
 
+    /**
+     * @return Gets whether the error could be ignored and recommended action could be retried. Possible values are: Yes/No
+     * 
+     */
     public String isRetryable() {
         return this.isRetryable;
     }
@@ -63,11 +71,23 @@ public final class RecommendedActionErrorInfoResponse extends com.pulumi.resourc
             $ = new RecommendedActionErrorInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorCode Gets the reason why the recommended action was put to error state. e.g., DatabaseHasQdsOff, IndexAlreadyExists
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(String errorCode) {
             $.errorCode = errorCode;
             return this;
         }
 
+        /**
+         * @param isRetryable Gets whether the error could be ignored and recommended action could be retried. Possible values are: Yes/No
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRetryable(String isRetryable) {
             $.isRetryable = isRetryable;
             return this;

@@ -25,6 +25,10 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="accountId")
     private @Nullable Output<String> accountId;
 
+    /**
+     * @return Target AWS Account ID to create a Stack based on the StackSet. Defaults to current account.
+     * 
+     */
     public Optional<Output<String>> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -36,6 +40,10 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="deploymentTargets")
     private @Nullable Output<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets;
 
+    /**
+     * @return The AWS Organizations accounts to which StackSets deploys. StackSets doesn&#39;t deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
+     * 
+     */
     public Optional<Output<StackSetInstanceDeploymentTargetsGetArgs>> deploymentTargets() {
         return Optional.ofNullable(this.deploymentTargets);
     }
@@ -47,6 +55,10 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="organizationalUnitId")
     private @Nullable Output<String> organizationalUnitId;
 
+    /**
+     * @return The organization root ID or organizational unit (OU) IDs specified for `deployment_targets`.
+     * 
+     */
     public Optional<Output<String>> organizationalUnitId() {
         return Optional.ofNullable(this.organizationalUnitId);
     }
@@ -58,6 +70,10 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="parameterOverrides")
     private @Nullable Output<Map<String,String>> parameterOverrides;
 
+    /**
+     * @return Key-value map of input parameters to override from the StackSet for this Instance.
+     * 
+     */
     public Optional<Output<Map<String,String>>> parameterOverrides() {
         return Optional.ofNullable(this.parameterOverrides);
     }
@@ -69,6 +85,10 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return Target AWS Region to create a Stack based on the StackSet. Defaults to current region.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -80,6 +100,10 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="retainStack")
     private @Nullable Output<Boolean> retainStack;
 
+    /**
+     * @return During resource destroy, remove Instance from StackSet while keeping the Stack and its associated resources. Must be enabled in the state _before_ destroy operation to take effect. You cannot reassociate a retained Stack or add an existing, saved Stack to a new StackSet. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> retainStack() {
         return Optional.ofNullable(this.retainStack);
     }
@@ -91,6 +115,10 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="stackId")
     private @Nullable Output<String> stackId;
 
+    /**
+     * @return Stack identifier
+     * 
+     */
     public Optional<Output<String>> stackId() {
         return Optional.ofNullable(this.stackId);
     }
@@ -102,6 +130,10 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="stackSetName")
     private @Nullable Output<String> stackSetName;
 
+    /**
+     * @return Name of the StackSet.
+     * 
+     */
     public Optional<Output<String>> stackSetName() {
         return Optional.ofNullable(this.stackSetName);
     }
@@ -137,74 +169,170 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
             $ = new StackSetInstanceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId Target AWS Account ID to create a Stack based on the StackSet. Defaults to current account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(@Nullable Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId Target AWS Account ID to create a Stack based on the StackSet. Defaults to current account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param deploymentTargets The AWS Organizations accounts to which StackSets deploys. StackSets doesn&#39;t deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentTargets(@Nullable Output<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets) {
             $.deploymentTargets = deploymentTargets;
             return this;
         }
 
+        /**
+         * @param deploymentTargets The AWS Organizations accounts to which StackSets deploys. StackSets doesn&#39;t deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentTargets(StackSetInstanceDeploymentTargetsGetArgs deploymentTargets) {
             return deploymentTargets(Output.of(deploymentTargets));
         }
 
+        /**
+         * @param organizationalUnitId The organization root ID or organizational unit (OU) IDs specified for `deployment_targets`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnitId(@Nullable Output<String> organizationalUnitId) {
             $.organizationalUnitId = organizationalUnitId;
             return this;
         }
 
+        /**
+         * @param organizationalUnitId The organization root ID or organizational unit (OU) IDs specified for `deployment_targets`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnitId(String organizationalUnitId) {
             return organizationalUnitId(Output.of(organizationalUnitId));
         }
 
+        /**
+         * @param parameterOverrides Key-value map of input parameters to override from the StackSet for this Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterOverrides(@Nullable Output<Map<String,String>> parameterOverrides) {
             $.parameterOverrides = parameterOverrides;
             return this;
         }
 
+        /**
+         * @param parameterOverrides Key-value map of input parameters to override from the StackSet for this Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterOverrides(Map<String,String> parameterOverrides) {
             return parameterOverrides(Output.of(parameterOverrides));
         }
 
+        /**
+         * @param region Target AWS Region to create a Stack based on the StackSet. Defaults to current region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region Target AWS Region to create a Stack based on the StackSet. Defaults to current region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param retainStack During resource destroy, remove Instance from StackSet while keeping the Stack and its associated resources. Must be enabled in the state _before_ destroy operation to take effect. You cannot reassociate a retained Stack or add an existing, saved Stack to a new StackSet. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retainStack(@Nullable Output<Boolean> retainStack) {
             $.retainStack = retainStack;
             return this;
         }
 
+        /**
+         * @param retainStack During resource destroy, remove Instance from StackSet while keeping the Stack and its associated resources. Must be enabled in the state _before_ destroy operation to take effect. You cannot reassociate a retained Stack or add an existing, saved Stack to a new StackSet. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retainStack(Boolean retainStack) {
             return retainStack(Output.of(retainStack));
         }
 
+        /**
+         * @param stackId Stack identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackId(@Nullable Output<String> stackId) {
             $.stackId = stackId;
             return this;
         }
 
+        /**
+         * @param stackId Stack identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackId(String stackId) {
             return stackId(Output.of(stackId));
         }
 
+        /**
+         * @param stackSetName Name of the StackSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackSetName(@Nullable Output<String> stackSetName) {
             $.stackSetName = stackSetName;
             return this;
         }
 
+        /**
+         * @param stackSetName Name of the StackSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackSetName(String stackSetName) {
             return stackSetName(Output.of(stackSetName));
         }

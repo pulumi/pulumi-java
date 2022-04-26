@@ -25,6 +25,10 @@ public final class UpcomingMaintenanceResponse extends com.pulumi.resources.Invo
     @Import(name="canReschedule", required=true)
     private Boolean canReschedule;
 
+    /**
+     * @return Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
+     * 
+     */
     public Boolean canReschedule() {
         return this.canReschedule;
     }
@@ -36,6 +40,10 @@ public final class UpcomingMaintenanceResponse extends com.pulumi.resources.Invo
     @Import(name="startTimeWindow", required=true)
     private UpcomingMaintenanceTimeWindowResponse startTimeWindow;
 
+    /**
+     * @return The start time window of the maintenance disruption.
+     * 
+     */
     public UpcomingMaintenanceTimeWindowResponse startTimeWindow() {
         return this.startTimeWindow;
     }
@@ -47,6 +55,10 @@ public final class UpcomingMaintenanceResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Defines the type of maintenance.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -77,16 +89,34 @@ public final class UpcomingMaintenanceResponse extends com.pulumi.resources.Invo
             $ = new UpcomingMaintenanceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canReschedule Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canReschedule(Boolean canReschedule) {
             $.canReschedule = canReschedule;
             return this;
         }
 
+        /**
+         * @param startTimeWindow The start time window of the maintenance disruption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeWindow(UpcomingMaintenanceTimeWindowResponse startTimeWindow) {
             $.startTimeWindow = startTimeWindow;
             return this;
         }
 
+        /**
+         * @param type Defines the type of maintenance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

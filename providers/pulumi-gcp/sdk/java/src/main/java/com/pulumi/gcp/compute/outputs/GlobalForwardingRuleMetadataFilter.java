@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GlobalForwardingRuleMetadataFilter {
     /**
-     * The list of label value pairs that must match labels in the
+     * @return The list of label value pairs that must match labels in the
      * provided metadata based on filterMatchCriteria
      * This list must not be empty and can have at the most 64 entries.
      * Structure is documented below.
@@ -20,7 +20,7 @@ public final class GlobalForwardingRuleMetadataFilter {
      */
     private final List<GlobalForwardingRuleMetadataFilterFilterLabel> filterLabels;
     /**
-     * Specifies how individual filterLabel matches within the list of
+     * @return Specifies how individual filterLabel matches within the list of
      * filterLabels contribute towards the overall metadataFilter match.
      * MATCH_ANY - At least one of the filterLabels must have a matching
      * label in the provided metadata.
@@ -40,17 +40,17 @@ public final class GlobalForwardingRuleMetadataFilter {
     }
 
     /**
-     * The list of label value pairs that must match labels in the
+     * @return The list of label value pairs that must match labels in the
      * provided metadata based on filterMatchCriteria
      * This list must not be empty and can have at the most 64 entries.
      * Structure is documented below.
      * 
-    */
+     */
     public List<GlobalForwardingRuleMetadataFilterFilterLabel> filterLabels() {
         return this.filterLabels;
     }
     /**
-     * Specifies how individual filterLabel matches within the list of
+     * @return Specifies how individual filterLabel matches within the list of
      * filterLabels contribute towards the overall metadataFilter match.
      * MATCH_ANY - At least one of the filterLabels must have a matching
      * label in the provided metadata.
@@ -58,7 +58,7 @@ public final class GlobalForwardingRuleMetadataFilter {
      * provided metadata.
      * Possible values are `MATCH_ANY` and `MATCH_ALL`.
      * 
-    */
+     */
     public String filterMatchCriteria() {
         return this.filterMatchCriteria;
     }

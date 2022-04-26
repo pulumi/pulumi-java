@@ -23,6 +23,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="privateIpAddress", required=true)
     private String privateIpAddress;
 
+    /**
+     * @return PrivateIp address of the Compute VM
+     * 
+     */
     public String privateIpAddress() {
         return this.privateIpAddress;
     }
@@ -34,6 +38,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="rdpAuthority", required=true)
     private String rdpAuthority;
 
+    /**
+     * @return Connection information for Windows
+     * 
+     */
     public String rdpAuthority() {
         return this.rdpAuthority;
     }
@@ -45,6 +53,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="sshAuthority", required=true)
     private String sshAuthority;
 
+    /**
+     * @return Connection information for Linux
+     * 
+     */
     public String sshAuthority() {
         return this.sshAuthority;
     }
@@ -56,6 +68,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return Username of the VM
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -87,21 +103,45 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
             $ = new NetworkInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateIpAddress PrivateIp address of the Compute VM
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(String privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param rdpAuthority Connection information for Windows
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdpAuthority(String rdpAuthority) {
             $.rdpAuthority = rdpAuthority;
             return this;
         }
 
+        /**
+         * @param sshAuthority Connection information for Linux
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshAuthority(String sshAuthority) {
             $.sshAuthority = sshAuthority;
             return this;
         }
 
+        /**
+         * @param username Username of the VM
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

@@ -24,6 +24,10 @@ public final class PackageStoreResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the package store
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class PackageStoreResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="packageStoreLinkedService", required=true)
     private EntityReferenceResponse packageStoreLinkedService;
 
+    /**
+     * @return The package store linked service reference.
+     * 
+     */
     public EntityReferenceResponse packageStoreLinkedService() {
         return this.packageStoreLinkedService;
     }
@@ -64,11 +72,23 @@ public final class PackageStoreResponse extends com.pulumi.resources.InvokeArgs 
             $ = new PackageStoreResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the package store
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param packageStoreLinkedService The package store linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageStoreLinkedService(EntityReferenceResponse packageStoreLinkedService) {
             $.packageStoreLinkedService = packageStoreLinkedService;
             return this;

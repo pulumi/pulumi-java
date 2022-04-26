@@ -28,6 +28,10 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="crowdingConfig")
     private @Nullable Output<SourceCrowdingConfigArgs> crowdingConfig;
 
+    /**
+     * @return The crowding configuration for the source.
+     * 
+     */
     public Optional<Output<SourceCrowdingConfigArgs>> crowdingConfig() {
         return Optional.ofNullable(this.crowdingConfig);
     }
@@ -39,6 +43,10 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scoringConfig")
     private @Nullable Output<SourceScoringConfigArgs> scoringConfig;
 
+    /**
+     * @return The scoring configuration for the source.
+     * 
+     */
     public Optional<Output<SourceScoringConfigArgs>> scoringConfig() {
         return Optional.ofNullable(this.scoringConfig);
     }
@@ -50,6 +58,10 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source")
     private @Nullable Output<SourceArgs> source;
 
+    /**
+     * @return The source for which this configuration is to be used.
+     * 
+     */
     public Optional<Output<SourceArgs>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -80,29 +92,65 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SourceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param crowdingConfig The crowding configuration for the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crowdingConfig(@Nullable Output<SourceCrowdingConfigArgs> crowdingConfig) {
             $.crowdingConfig = crowdingConfig;
             return this;
         }
 
+        /**
+         * @param crowdingConfig The crowding configuration for the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crowdingConfig(SourceCrowdingConfigArgs crowdingConfig) {
             return crowdingConfig(Output.of(crowdingConfig));
         }
 
+        /**
+         * @param scoringConfig The scoring configuration for the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringConfig(@Nullable Output<SourceScoringConfigArgs> scoringConfig) {
             $.scoringConfig = scoringConfig;
             return this;
         }
 
+        /**
+         * @param scoringConfig The scoring configuration for the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringConfig(SourceScoringConfigArgs scoringConfig) {
             return scoringConfig(Output.of(scoringConfig));
         }
 
+        /**
+         * @param source The source for which this configuration is to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<SourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The source for which this configuration is to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(SourceArgs source) {
             return source(Output.of(source));
         }

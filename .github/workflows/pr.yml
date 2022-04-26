@@ -28,7 +28,7 @@ env:
   PULUMI_API: https://api.pulumi-staging.io
   PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
   AWS_REGION: us-west-2
-  PULUMI_JVM_TASK_TIMEOUT_IN_MILLIS: 300000
+  PULUMI_JAVA_TASK_TIMEOUT_IN_MILLIS: 300000
   GPR_USER: ${{ secrets.GPR_USER }}
   GPR_TOKEN: ${{ secrets.GPR_TOKEN }}
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -79,7 +79,7 @@ jobs:
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
           arguments: build
-          build-root-directory: sdk/jvm
+          build-root-directory: sdk/java
       - run: make build_go
       - run: make bin/pulumi-java-gen
       - run: make bin/pulumi-language-java
@@ -103,7 +103,7 @@ jobs:
         continue-on-error: true
         with:
           arguments: publish
-          build-root-directory: sdk/jvm
+          build-root-directory: sdk/java
     strategy:
       fail-fast: true
 
@@ -150,7 +150,7 @@ jobs:
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
           arguments: publishToMavenLocal
-          build-root-directory: sdk/jvm
+          build-root-directory: sdk/java
       - name: Configure Go cache
         id: go-cache-paths
         run: |
@@ -243,10 +243,10 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.base.ref }}
       - run: make submodule_update
-      - name: Regenerate JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+      - name: Regenerate Java provider SDK from ${{ github.event.pull_request.base.ref }}
         continue-on-error: true
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
-      - name: Rebuild JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+      - name: Rebuild Java provider SDK from ${{ github.event.pull_request.base.ref }}
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         continue-on-error: true
         with:
@@ -350,10 +350,10 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.base.ref }}
       - run: make submodule_update
-      - name: Regenerate JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+      - name: Regenerate Java provider SDK from ${{ github.event.pull_request.base.ref }}
         continue-on-error: true
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
-      - name: Rebuild JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+      - name: Rebuild Java provider SDK from ${{ github.event.pull_request.base.ref }}
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         continue-on-error: true
         with:

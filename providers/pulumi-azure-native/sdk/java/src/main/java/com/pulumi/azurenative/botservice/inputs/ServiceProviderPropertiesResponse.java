@@ -27,6 +27,10 @@ public final class ServiceProviderPropertiesResponse extends com.pulumi.resource
     @Import(name="devPortalUrl", required=true)
     private String devPortalUrl;
 
+    /**
+     * @return Display Name of the Service Provider
+     * 
+     */
     public String devPortalUrl() {
         return this.devPortalUrl;
     }
@@ -38,6 +42,10 @@ public final class ServiceProviderPropertiesResponse extends com.pulumi.resource
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Display Name of the Service Provider
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -49,6 +57,10 @@ public final class ServiceProviderPropertiesResponse extends com.pulumi.resource
     @Import(name="iconUrl", required=true)
     private String iconUrl;
 
+    /**
+     * @return Display Name of the Service Provider
+     * 
+     */
     public String iconUrl() {
         return this.iconUrl;
     }
@@ -60,6 +72,10 @@ public final class ServiceProviderPropertiesResponse extends com.pulumi.resource
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Id for Service Provider
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -71,6 +87,10 @@ public final class ServiceProviderPropertiesResponse extends com.pulumi.resource
     @Import(name="parameters")
     private @Nullable List<ServiceProviderParameterResponse> parameters;
 
+    /**
+     * @return The list of parameters for the Service Provider
+     * 
+     */
     public Optional<List<ServiceProviderParameterResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -82,6 +102,10 @@ public final class ServiceProviderPropertiesResponse extends com.pulumi.resource
     @Import(name="serviceProviderName", required=true)
     private String serviceProviderName;
 
+    /**
+     * @return Display Name of the Service Provider
+     * 
+     */
     public String serviceProviderName() {
         return this.serviceProviderName;
     }
@@ -115,35 +139,77 @@ public final class ServiceProviderPropertiesResponse extends com.pulumi.resource
             $ = new ServiceProviderPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param devPortalUrl Display Name of the Service Provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder devPortalUrl(String devPortalUrl) {
             $.devPortalUrl = devPortalUrl;
             return this;
         }
 
+        /**
+         * @param displayName Display Name of the Service Provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param iconUrl Display Name of the Service Provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder iconUrl(String iconUrl) {
             $.iconUrl = iconUrl;
             return this;
         }
 
+        /**
+         * @param id Id for Service Provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param parameters The list of parameters for the Service Provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable List<ServiceProviderParameterResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The list of parameters for the Service Provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ServiceProviderParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param serviceProviderName Display Name of the Service Provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceProviderName(String serviceProviderName) {
             $.serviceProviderName = serviceProviderName;
             return this;

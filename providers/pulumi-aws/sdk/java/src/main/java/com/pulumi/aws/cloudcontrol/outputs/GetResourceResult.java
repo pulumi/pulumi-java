@@ -12,13 +12,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetResourceResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String identifier;
     /**
-     * JSON string matching the CloudFormation resource type schema with current configuration.
+     * @return JSON string matching the CloudFormation resource type schema with current configuration.
      * 
      */
     private final String properties;
@@ -43,9 +43,9 @@ public final class GetResourceResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -53,9 +53,9 @@ public final class GetResourceResult {
         return this.identifier;
     }
     /**
-     * JSON string matching the CloudFormation resource type schema with current configuration.
+     * @return JSON string matching the CloudFormation resource type schema with current configuration.
      * 
-    */
+     */
     public String properties() {
         return this.properties;
     }

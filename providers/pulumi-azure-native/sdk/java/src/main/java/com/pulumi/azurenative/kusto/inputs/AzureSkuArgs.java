@@ -30,6 +30,10 @@ public final class AzureSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return The number of instances of the cluster.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -41,6 +45,10 @@ public final class AzureSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<Either<String,AzureSkuName>> name;
 
+    /**
+     * @return SKU name.
+     * 
+     */
     public Output<Either<String,AzureSkuName>> name() {
         return this.name;
     }
@@ -52,6 +60,10 @@ public final class AzureSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier", required=true)
     private Output<Either<String,AzureSkuTier>> tier;
 
+    /**
+     * @return SKU tier.
+     * 
+     */
     public Output<Either<String,AzureSkuTier>> tier() {
         return this.tier;
     }
@@ -82,45 +94,105 @@ public final class AzureSkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AzureSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The number of instances of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The number of instances of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,AzureSkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,AzureSkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(AzureSkuName name) {
             return name(Either.ofRight(name));
         }
 
+        /**
+         * @param tier SKU tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Output<Either<String,AzureSkuTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier SKU tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,AzureSkuTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier SKU tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier SKU tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(AzureSkuTier tier) {
             return tier(Either.ofRight(tier));
         }

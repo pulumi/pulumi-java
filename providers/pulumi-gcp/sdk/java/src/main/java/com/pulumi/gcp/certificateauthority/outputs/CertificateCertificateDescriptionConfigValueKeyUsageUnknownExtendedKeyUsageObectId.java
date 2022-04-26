@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId {
     /**
-     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * 
      */
     private final @Nullable List<Integer> objectIdPaths;
@@ -23,9 +23,9 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
     }
 
     /**
-     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * 
-    */
+     */
     public List<Integer> objectIdPaths() {
         return this.objectIdPaths == null ? List.of() : this.objectIdPaths;
     }

@@ -27,6 +27,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return A unique key for this input. Must be specified when using advanced mapping and edit lists.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -38,6 +42,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preprocessingConfig")
     private @Nullable Output<PreprocessingConfigArgs> preprocessingConfig;
 
+    /**
+     * @return Preprocessing configurations.
+     * 
+     */
     public Optional<Output<PreprocessingConfigArgs>> preprocessingConfig() {
         return Optional.ofNullable(this.preprocessingConfig);
     }
@@ -49,6 +57,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated from `Job.input_uri`.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -79,29 +91,65 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key A unique key for this input. Must be specified when using advanced mapping and edit lists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key A unique key for this input. Must be specified when using advanced mapping and edit lists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param preprocessingConfig Preprocessing configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preprocessingConfig(@Nullable Output<PreprocessingConfigArgs> preprocessingConfig) {
             $.preprocessingConfig = preprocessingConfig;
             return this;
         }
 
+        /**
+         * @param preprocessingConfig Preprocessing configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preprocessingConfig(PreprocessingConfigArgs preprocessingConfig) {
             return preprocessingConfig(Output.of(preprocessingConfig));
         }
 
+        /**
+         * @param uri URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated from `Job.input_uri`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated from `Job.input_uri`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

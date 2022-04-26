@@ -19,6 +19,10 @@ public final class GetConfigurationProfileArgs extends com.pulumi.resources.Invo
     @Import(name="profileName", required=true)
     private String profileName;
 
+    /**
+     * @return The name of the configuration profile. The profile name should be set to &#39;default&#39;, all other names will be overwritten.
+     * 
+     */
     public String profileName() {
         return this.profileName;
     }
@@ -47,6 +51,12 @@ public final class GetConfigurationProfileArgs extends com.pulumi.resources.Invo
             $ = new GetConfigurationProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param profileName The name of the configuration profile. The profile name should be set to &#39;default&#39;, all other names will be overwritten.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             $.profileName = profileName;
             return this;

@@ -24,6 +24,10 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends com.pulumi.resou
     @Import(name="end", required=true)
     private String end;
 
+    /**
+     * @return Ending value of the range. Set to 0 or `null` for the last range of values.
+     * 
+     */
     public String end() {
         return this.end;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends com.pulumi.resou
     @Import(name="fee", required=true)
     private GoogleTypeMoneyResponse fee;
 
+    /**
+     * @return Fee to charge when total number of API calls falls within this range.
+     * 
+     */
     public GoogleTypeMoneyResponse fee() {
         return this.fee;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends com.pulumi.resou
     @Import(name="start", required=true)
     private String start;
 
+    /**
+     * @return Starting value of the range. Set to 0 or `null` for the initial range of values.
+     * 
+     */
     public String start() {
         return this.start;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends com.pulumi.resou
             $ = new GoogleCloudApigeeV1RateRangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param end Ending value of the range. Set to 0 or `null` for the last range of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(String end) {
             $.end = end;
             return this;
         }
 
+        /**
+         * @param fee Fee to charge when total number of API calls falls within this range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fee(GoogleTypeMoneyResponse fee) {
             $.fee = fee;
             return this;
         }
 
+        /**
+         * @param start Starting value of the range. Set to 0 or `null` for the initial range of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(String start) {
             $.start = start;
             return this;

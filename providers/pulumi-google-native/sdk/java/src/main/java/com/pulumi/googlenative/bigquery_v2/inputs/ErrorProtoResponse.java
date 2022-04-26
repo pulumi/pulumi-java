@@ -19,6 +19,10 @@ public final class ErrorProtoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="debugInfo", required=true)
     private String debugInfo;
 
+    /**
+     * @return Debugging information. This property is internal to Google and should not be used.
+     * 
+     */
     public String debugInfo() {
         return this.debugInfo;
     }
@@ -30,6 +34,10 @@ public final class ErrorProtoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return Specifies where the error occurred, if present.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -41,6 +49,10 @@ public final class ErrorProtoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return A human-readable description of the error.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -52,6 +64,10 @@ public final class ErrorProtoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="reason", required=true)
     private String reason;
 
+    /**
+     * @return A short error code that summarizes the error.
+     * 
+     */
     public String reason() {
         return this.reason;
     }
@@ -83,21 +99,45 @@ public final class ErrorProtoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ErrorProtoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param debugInfo Debugging information. This property is internal to Google and should not be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder debugInfo(String debugInfo) {
             $.debugInfo = debugInfo;
             return this;
         }
 
+        /**
+         * @param location Specifies where the error occurred, if present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param message A human-readable description of the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param reason A short error code that summarizes the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             $.reason = reason;
             return this;

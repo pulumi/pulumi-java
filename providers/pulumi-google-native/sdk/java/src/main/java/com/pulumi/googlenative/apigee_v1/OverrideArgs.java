@@ -23,6 +23,10 @@ public final class OverrideArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiProxy")
     private @Nullable Output<String> apiProxy;
 
+    /**
+     * @return ID of the API proxy that will have its trace configuration overridden.
+     * 
+     */
     public Optional<Output<String>> apiProxy() {
         return Optional.ofNullable(this.apiProxy);
     }
@@ -41,6 +45,10 @@ public final class OverrideArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return ID of the trace configuration override specified as a system-generated UUID.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +67,10 @@ public final class OverrideArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="samplingConfig")
     private @Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig;
 
+    /**
+     * @return Trace configuration to override.
+     * 
+     */
     public Optional<Output<GoogleCloudApigeeV1TraceSamplingConfigArgs>> samplingConfig() {
         return Optional.ofNullable(this.samplingConfig);
     }
@@ -91,11 +103,23 @@ public final class OverrideArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OverrideArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiProxy ID of the API proxy that will have its trace configuration overridden.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiProxy(@Nullable Output<String> apiProxy) {
             $.apiProxy = apiProxy;
             return this;
         }
 
+        /**
+         * @param apiProxy ID of the API proxy that will have its trace configuration overridden.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiProxy(String apiProxy) {
             return apiProxy(Output.of(apiProxy));
         }
@@ -109,11 +133,23 @@ public final class OverrideArgs extends com.pulumi.resources.ResourceArgs {
             return environmentId(Output.of(environmentId));
         }
 
+        /**
+         * @param name ID of the trace configuration override specified as a system-generated UUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name ID of the trace configuration override specified as a system-generated UUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -127,11 +163,23 @@ public final class OverrideArgs extends com.pulumi.resources.ResourceArgs {
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param samplingConfig Trace configuration to override.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingConfig(@Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig) {
             $.samplingConfig = samplingConfig;
             return this;
         }
 
+        /**
+         * @param samplingConfig Trace configuration to override.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingConfig(GoogleCloudApigeeV1TraceSamplingConfigArgs samplingConfig) {
             return samplingConfig(Output.of(samplingConfig));
         }

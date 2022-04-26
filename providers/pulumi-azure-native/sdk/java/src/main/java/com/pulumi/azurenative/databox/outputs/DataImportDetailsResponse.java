@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class DataImportDetailsResponse {
     /**
-     * Account details of the data to be transferred
+     * @return Account details of the data to be transferred
      * 
      */
     private final Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
@@ -23,9 +23,9 @@ public final class DataImportDetailsResponse {
     }
 
     /**
-     * Account details of the data to be transferred
+     * @return Account details of the data to be transferred
      * 
-    */
+     */
     public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails() {
         return this.accountDetails;
     }

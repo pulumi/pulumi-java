@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ConnectorProfileTrendmicroConnectorProfileCredentials {
     /**
-     * The Secret Access Key portion of the credentials.
+     * @return The Secret Access Key portion of the credentials.
      * 
      */
     private final String apiSecretKey;
@@ -21,9 +21,9 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentials {
     }
 
     /**
-     * The Secret Access Key portion of the credentials.
+     * @return The Secret Access Key portion of the credentials.
      * 
-    */
+     */
     public String apiSecretKey() {
         return this.apiSecretKey;
     }

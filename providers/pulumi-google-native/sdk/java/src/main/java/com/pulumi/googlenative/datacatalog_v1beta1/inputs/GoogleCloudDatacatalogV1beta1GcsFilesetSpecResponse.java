@@ -25,6 +25,10 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse extends c
     @Import(name="filePatterns", required=true)
     private List<String> filePatterns;
 
+    /**
+     * @return Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that bucket wildcards are currently not supported. Examples of valid file_patterns: * `gs://bucket_name/dir/*`: matches all files within `bucket_name/dir` directory. * `gs://bucket_name/dir/**`: matches all files in `bucket_name/dir` spanning all subdirectories. * `gs://bucket_name/file*`: matches files prefixed by `file` in `bucket_name` * `gs://bucket_name/??.txt`: matches files with two characters followed by `.txt` in `bucket_name` * `gs://bucket_name/[aeiou].txt`: matches files that contain a single vowel character followed by `.txt` in `bucket_name` * `gs://bucket_name/[a-m].txt`: matches files that contain `a`, `b`, ... or `m` followed by `.txt` in `bucket_name` * `gs://bucket_name/a/*{@literal /}b`: matches all files in `bucket_name` that match `a/*{@literal /}b` pattern, such as `a/c/b`, `a/d/b` * `gs://another_bucket/a.txt`: matches `gs://another_bucket/a.txt` You can combine wildcards to provide more powerful matches, for example: * `gs://bucket_name/[a-m]??.j*g`
+     * 
+     */
     public List<String> filePatterns() {
         return this.filePatterns;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse extends c
     @Import(name="sampleGcsFileSpecs", required=true)
     private List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> sampleGcsFileSpecs;
 
+    /**
+     * @return Sample files contained in this fileset, not all files contained in this fileset are represented here.
+     * 
+     */
     public List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> sampleGcsFileSpecs() {
         return this.sampleGcsFileSpecs;
     }
@@ -65,20 +73,44 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse extends c
             $ = new GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filePatterns Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that bucket wildcards are currently not supported. Examples of valid file_patterns: * `gs://bucket_name/dir/*`: matches all files within `bucket_name/dir` directory. * `gs://bucket_name/dir/**`: matches all files in `bucket_name/dir` spanning all subdirectories. * `gs://bucket_name/file*`: matches files prefixed by `file` in `bucket_name` * `gs://bucket_name/??.txt`: matches files with two characters followed by `.txt` in `bucket_name` * `gs://bucket_name/[aeiou].txt`: matches files that contain a single vowel character followed by `.txt` in `bucket_name` * `gs://bucket_name/[a-m].txt`: matches files that contain `a`, `b`, ... or `m` followed by `.txt` in `bucket_name` * `gs://bucket_name/a/*{@literal /}b`: matches all files in `bucket_name` that match `a/*{@literal /}b` pattern, such as `a/c/b`, `a/d/b` * `gs://another_bucket/a.txt`: matches `gs://another_bucket/a.txt` You can combine wildcards to provide more powerful matches, for example: * `gs://bucket_name/[a-m]??.j*g`
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePatterns(List<String> filePatterns) {
             $.filePatterns = filePatterns;
             return this;
         }
 
+        /**
+         * @param filePatterns Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that bucket wildcards are currently not supported. Examples of valid file_patterns: * `gs://bucket_name/dir/*`: matches all files within `bucket_name/dir` directory. * `gs://bucket_name/dir/**`: matches all files in `bucket_name/dir` spanning all subdirectories. * `gs://bucket_name/file*`: matches files prefixed by `file` in `bucket_name` * `gs://bucket_name/??.txt`: matches files with two characters followed by `.txt` in `bucket_name` * `gs://bucket_name/[aeiou].txt`: matches files that contain a single vowel character followed by `.txt` in `bucket_name` * `gs://bucket_name/[a-m].txt`: matches files that contain `a`, `b`, ... or `m` followed by `.txt` in `bucket_name` * `gs://bucket_name/a/*{@literal /}b`: matches all files in `bucket_name` that match `a/*{@literal /}b` pattern, such as `a/c/b`, `a/d/b` * `gs://another_bucket/a.txt`: matches `gs://another_bucket/a.txt` You can combine wildcards to provide more powerful matches, for example: * `gs://bucket_name/[a-m]??.j*g`
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePatterns(String... filePatterns) {
             return filePatterns(List.of(filePatterns));
         }
 
+        /**
+         * @param sampleGcsFileSpecs Sample files contained in this fileset, not all files contained in this fileset are represented here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleGcsFileSpecs(List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> sampleGcsFileSpecs) {
             $.sampleGcsFileSpecs = sampleGcsFileSpecs;
             return this;
         }
 
+        /**
+         * @param sampleGcsFileSpecs Sample files contained in this fileset, not all files contained in this fileset are represented here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleGcsFileSpecs(GoogleCloudDatacatalogV1beta1GcsFileSpecResponse... sampleGcsFileSpecs) {
             return sampleGcsFileSpecs(List.of(sampleGcsFileSpecs));
         }

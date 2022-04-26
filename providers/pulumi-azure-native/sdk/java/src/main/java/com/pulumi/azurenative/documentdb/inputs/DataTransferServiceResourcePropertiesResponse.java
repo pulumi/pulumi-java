@@ -29,6 +29,10 @@ public final class DataTransferServiceResourcePropertiesResponse extends com.pul
     @Import(name="creationTime", required=true)
     private String creationTime;
 
+    /**
+     * @return Time of the last state change (ISO-8601 format).
+     * 
+     */
     public String creationTime() {
         return this.creationTime;
     }
@@ -40,6 +44,10 @@ public final class DataTransferServiceResourcePropertiesResponse extends com.pul
     @Import(name="instanceCount")
     private @Nullable Integer instanceCount;
 
+    /**
+     * @return Instance count for the service.
+     * 
+     */
     public Optional<Integer> instanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
@@ -51,6 +59,10 @@ public final class DataTransferServiceResourcePropertiesResponse extends com.pul
     @Import(name="instanceSize")
     private @Nullable String instanceSize;
 
+    /**
+     * @return Instance type for the service.
+     * 
+     */
     public Optional<String> instanceSize() {
         return Optional.ofNullable(this.instanceSize);
     }
@@ -62,6 +74,10 @@ public final class DataTransferServiceResourcePropertiesResponse extends com.pul
     @Import(name="locations", required=true)
     private List<DataTransferRegionalServiceResourceResponse> locations;
 
+    /**
+     * @return An array that contains all of the locations for the service.
+     * 
+     */
     public List<DataTransferRegionalServiceResourceResponse> locations() {
         return this.locations;
     }
@@ -74,6 +90,11 @@ public final class DataTransferServiceResourcePropertiesResponse extends com.pul
     @Import(name="serviceType", required=true)
     private String serviceType;
 
+    /**
+     * @return ServiceType for the service.
+     * Expected value is &#39;DataTransfer&#39;.
+     * 
+     */
     public String serviceType() {
         return this.serviceType;
     }
@@ -85,6 +106,10 @@ public final class DataTransferServiceResourcePropertiesResponse extends com.pul
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Describes the status of a service.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -118,35 +143,78 @@ public final class DataTransferServiceResourcePropertiesResponse extends com.pul
             $ = new DataTransferServiceResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTime Time of the last state change (ISO-8601 format).
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(String creationTime) {
             $.creationTime = creationTime;
             return this;
         }
 
+        /**
+         * @param instanceCount Instance count for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(@Nullable Integer instanceCount) {
             $.instanceCount = instanceCount;
             return this;
         }
 
+        /**
+         * @param instanceSize Instance type for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceSize(@Nullable String instanceSize) {
             $.instanceSize = instanceSize;
             return this;
         }
 
+        /**
+         * @param locations An array that contains all of the locations for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(List<DataTransferRegionalServiceResourceResponse> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations An array that contains all of the locations for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(DataTransferRegionalServiceResourceResponse... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param serviceType ServiceType for the service.
+         * Expected value is &#39;DataTransfer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceType(String serviceType) {
             $.serviceType = serviceType;
             return this;
         }
 
+        /**
+         * @param status Describes the status of a service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

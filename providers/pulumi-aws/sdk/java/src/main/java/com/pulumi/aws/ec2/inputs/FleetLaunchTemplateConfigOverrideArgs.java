@@ -23,6 +23,10 @@ public final class FleetLaunchTemplateConfigOverrideArgs extends com.pulumi.reso
     @Import(name="availabilityZone")
     private @Nullable Output<String> availabilityZone;
 
+    /**
+     * @return Availability Zone in which to launch the instances.
+     * 
+     */
     public Optional<Output<String>> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -34,6 +38,10 @@ public final class FleetLaunchTemplateConfigOverrideArgs extends com.pulumi.reso
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return Instance type.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -45,6 +53,10 @@ public final class FleetLaunchTemplateConfigOverrideArgs extends com.pulumi.reso
     @Import(name="maxPrice")
     private @Nullable Output<String> maxPrice;
 
+    /**
+     * @return Maximum price per unit hour that you are willing to pay for a Spot Instance.
+     * 
+     */
     public Optional<Output<String>> maxPrice() {
         return Optional.ofNullable(this.maxPrice);
     }
@@ -56,6 +68,10 @@ public final class FleetLaunchTemplateConfigOverrideArgs extends com.pulumi.reso
     @Import(name="priority")
     private @Nullable Output<Double> priority;
 
+    /**
+     * @return Priority for the launch template override. If `on_demand_options` `allocation_strategy` is set to `prioritized`, EC2 Fleet uses priority to determine which launch template override to use first in fulfilling On-Demand capacity. The highest priority is launched first. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority. Valid values are whole numbers starting at 0.
+     * 
+     */
     public Optional<Output<Double>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -67,6 +83,10 @@ public final class FleetLaunchTemplateConfigOverrideArgs extends com.pulumi.reso
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
+    /**
+     * @return ID of the subnet in which to launch the instances.
+     * 
+     */
     public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -78,6 +98,10 @@ public final class FleetLaunchTemplateConfigOverrideArgs extends com.pulumi.reso
     @Import(name="weightedCapacity")
     private @Nullable Output<Double> weightedCapacity;
 
+    /**
+     * @return Number of units provided by the specified instance type.
+     * 
+     */
     public Optional<Output<Double>> weightedCapacity() {
         return Optional.ofNullable(this.weightedCapacity);
     }
@@ -111,56 +135,128 @@ public final class FleetLaunchTemplateConfigOverrideArgs extends com.pulumi.reso
             $ = new FleetLaunchTemplateConfigOverrideArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityZone Availability Zone in which to launch the instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param availabilityZone Availability Zone in which to launch the instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(String availabilityZone) {
             return availabilityZone(Output.of(availabilityZone));
         }
 
+        /**
+         * @param instanceType Instance type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType Instance type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param maxPrice Maximum price per unit hour that you are willing to pay for a Spot Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPrice(@Nullable Output<String> maxPrice) {
             $.maxPrice = maxPrice;
             return this;
         }
 
+        /**
+         * @param maxPrice Maximum price per unit hour that you are willing to pay for a Spot Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPrice(String maxPrice) {
             return maxPrice(Output.of(maxPrice));
         }
 
+        /**
+         * @param priority Priority for the launch template override. If `on_demand_options` `allocation_strategy` is set to `prioritized`, EC2 Fleet uses priority to determine which launch template override to use first in fulfilling On-Demand capacity. The highest priority is launched first. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority. Valid values are whole numbers starting at 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Double> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Priority for the launch template override. If `on_demand_options` `allocation_strategy` is set to `prioritized`, EC2 Fleet uses priority to determine which launch template override to use first in fulfilling On-Demand capacity. The highest priority is launched first. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority. Valid values are whole numbers starting at 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Double priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param subnetId ID of the subnet in which to launch the instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId ID of the subnet in which to launch the instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }
 
+        /**
+         * @param weightedCapacity Number of units provided by the specified instance type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedCapacity(@Nullable Output<Double> weightedCapacity) {
             $.weightedCapacity = weightedCapacity;
             return this;
         }
 
+        /**
+         * @param weightedCapacity Number of units provided by the specified instance type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedCapacity(Double weightedCapacity) {
             return weightedCapacity(Output.of(weightedCapacity));
         }

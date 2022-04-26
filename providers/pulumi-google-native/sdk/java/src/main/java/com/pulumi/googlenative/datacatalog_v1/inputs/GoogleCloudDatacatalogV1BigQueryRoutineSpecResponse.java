@@ -24,6 +24,10 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse extends c
     @Import(name="importedLibraries", required=true)
     private List<String> importedLibraries;
 
+    /**
+     * @return Paths of the imported libraries.
+     * 
+     */
     public List<String> importedLibraries() {
         return this.importedLibraries;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse extends c
             $ = new GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param importedLibraries Paths of the imported libraries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importedLibraries(List<String> importedLibraries) {
             $.importedLibraries = importedLibraries;
             return this;
         }
 
+        /**
+         * @param importedLibraries Paths of the imported libraries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importedLibraries(String... importedLibraries) {
             return importedLibraries(List.of(importedLibraries));
         }

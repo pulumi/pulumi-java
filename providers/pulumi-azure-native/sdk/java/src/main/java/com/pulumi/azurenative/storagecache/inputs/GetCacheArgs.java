@@ -19,6 +19,10 @@ public final class GetCacheArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="cacheName", required=true)
     private String cacheName;
 
+    /**
+     * @return Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
+     * 
+     */
     public String cacheName() {
         return this.cacheName;
     }
@@ -30,6 +34,10 @@ public final class GetCacheArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Target resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetCacheArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCacheArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cacheName Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheName(String cacheName) {
             $.cacheName = cacheName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Target resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -27,6 +27,10 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter")
     private @Nullable Output<String> filter;
 
+    /**
+     * @return Allows filtering on the metric&#39;s fields.
+     * 
+     */
     public Optional<Output<String>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -38,6 +42,10 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricName")
     private @Nullable Output<String> metricName;
 
+    /**
+     * @return The name of the metric.
+     * 
+     */
     public Optional<Output<String>> metricName() {
         return Optional.ofNullable(this.metricName);
     }
@@ -49,6 +57,10 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="singleInstanceAssignment")
     private @Nullable Output<Double> singleInstanceAssignment;
 
+    /**
+     * @return May be used instead of target_utilization when an instance can handle a specific amount of work/resources and the metric value is equal to the current amount of work remaining. The autoscaler will try to keep the number of instances equal to the metric value divided by single_instance_assignment.
+     * 
+     */
     public Optional<Output<Double>> singleInstanceAssignment() {
         return Optional.ofNullable(this.singleInstanceAssignment);
     }
@@ -60,6 +72,10 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetType")
     private @Nullable Output<String> targetType;
 
+    /**
+     * @return The type of the metric. Must be a string representing a Stackdriver metric type e.g. GAGUE, DELTA_PER_SECOND, etc.
+     * 
+     */
     public Optional<Output<String>> targetType() {
         return Optional.ofNullable(this.targetType);
     }
@@ -71,6 +87,10 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetUtilization")
     private @Nullable Output<Double> targetUtilization;
 
+    /**
+     * @return The target value for the metric.
+     * 
+     */
     public Optional<Output<Double>> targetUtilization() {
         return Optional.ofNullable(this.targetUtilization);
     }
@@ -103,47 +123,107 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CustomMetricArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filter Allows filtering on the metric&#39;s fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter Allows filtering on the metric&#39;s fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param metricName The name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(@Nullable Output<String> metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param metricName The name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             return metricName(Output.of(metricName));
         }
 
+        /**
+         * @param singleInstanceAssignment May be used instead of target_utilization when an instance can handle a specific amount of work/resources and the metric value is equal to the current amount of work remaining. The autoscaler will try to keep the number of instances equal to the metric value divided by single_instance_assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleInstanceAssignment(@Nullable Output<Double> singleInstanceAssignment) {
             $.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
 
+        /**
+         * @param singleInstanceAssignment May be used instead of target_utilization when an instance can handle a specific amount of work/resources and the metric value is equal to the current amount of work remaining. The autoscaler will try to keep the number of instances equal to the metric value divided by single_instance_assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleInstanceAssignment(Double singleInstanceAssignment) {
             return singleInstanceAssignment(Output.of(singleInstanceAssignment));
         }
 
+        /**
+         * @param targetType The type of the metric. Must be a string representing a Stackdriver metric type e.g. GAGUE, DELTA_PER_SECOND, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(@Nullable Output<String> targetType) {
             $.targetType = targetType;
             return this;
         }
 
+        /**
+         * @param targetType The type of the metric. Must be a string representing a Stackdriver metric type e.g. GAGUE, DELTA_PER_SECOND, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(String targetType) {
             return targetType(Output.of(targetType));
         }
 
+        /**
+         * @param targetUtilization The target value for the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUtilization(@Nullable Output<Double> targetUtilization) {
             $.targetUtilization = targetUtilization;
             return this;
         }
 
+        /**
+         * @param targetUtilization The target value for the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUtilization(Double targetUtilization) {
             return targetUtilization(Output.of(targetUtilization));
         }

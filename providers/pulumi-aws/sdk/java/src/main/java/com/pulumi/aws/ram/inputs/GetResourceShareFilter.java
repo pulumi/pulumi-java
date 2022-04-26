@@ -20,6 +20,10 @@ public final class GetResourceShareFilter extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the tag key to filter on.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -31,6 +35,10 @@ public final class GetResourceShareFilter extends com.pulumi.resources.InvokeArg
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return The value of the tag key.
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -60,16 +68,34 @@ public final class GetResourceShareFilter extends com.pulumi.resources.InvokeArg
             $ = new GetResourceShareFilter(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the tag key to filter on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param values The value of the tag key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The value of the tag key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

@@ -23,6 +23,10 @@ public final class ResourceReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The fully qualified resource Id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -51,6 +55,12 @@ public final class ResourceReferenceResponse extends com.pulumi.resources.Invoke
             $ = new ResourceReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The fully qualified resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

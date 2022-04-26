@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FeatureGroupFeatureDefinition {
     /**
-     * The name of a feature. `feature_name` cannot be any of the following: `is_deleted`, `write_time`, `api_invocation_time`.
+     * @return The name of a feature. `feature_name` cannot be any of the following: `is_deleted`, `write_time`, `api_invocation_time`.
      * 
      */
     private final @Nullable String featureName;
     /**
-     * The value type of a feature. Valid values are `Integral`, `Fractional`, or `String`.
+     * @return The value type of a feature. Valid values are `Integral`, `Fractional`, or `String`.
      * 
      */
     private final @Nullable String featureType;
@@ -31,16 +31,16 @@ public final class FeatureGroupFeatureDefinition {
     }
 
     /**
-     * The name of a feature. `feature_name` cannot be any of the following: `is_deleted`, `write_time`, `api_invocation_time`.
+     * @return The name of a feature. `feature_name` cannot be any of the following: `is_deleted`, `write_time`, `api_invocation_time`.
      * 
-    */
+     */
     public Optional<String> featureName() {
         return Optional.ofNullable(this.featureName);
     }
     /**
-     * The value type of a feature. Valid values are `Integral`, `Fractional`, or `String`.
+     * @return The value type of a feature. Valid values are `Integral`, `Fractional`, or `String`.
      * 
-    */
+     */
     public Optional<String> featureType() {
         return Optional.ofNullable(this.featureType);
     }

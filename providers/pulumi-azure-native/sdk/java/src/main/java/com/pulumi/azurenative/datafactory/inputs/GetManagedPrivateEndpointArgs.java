@@ -19,6 +19,10 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
     @Import(name="factoryName", required=true)
     private String factoryName;
 
+    /**
+     * @return The factory name.
+     * 
+     */
     public String factoryName() {
         return this.factoryName;
     }
@@ -30,6 +34,10 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
     @Import(name="managedPrivateEndpointName", required=true)
     private String managedPrivateEndpointName;
 
+    /**
+     * @return Managed private endpoint name
+     * 
+     */
     public String managedPrivateEndpointName() {
         return this.managedPrivateEndpointName;
     }
@@ -41,6 +49,10 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
     @Import(name="managedVirtualNetworkName", required=true)
     private String managedVirtualNetworkName;
 
+    /**
+     * @return Managed virtual network name
+     * 
+     */
     public String managedVirtualNetworkName() {
         return this.managedVirtualNetworkName;
     }
@@ -52,6 +64,10 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
             $ = new GetManagedPrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(String factoryName) {
             $.factoryName = factoryName;
             return this;
         }
 
+        /**
+         * @param managedPrivateEndpointName Managed private endpoint name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedPrivateEndpointName(String managedPrivateEndpointName) {
             $.managedPrivateEndpointName = managedPrivateEndpointName;
             return this;
         }
 
+        /**
+         * @param managedVirtualNetworkName Managed virtual network name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedVirtualNetworkName(String managedVirtualNetworkName) {
             $.managedVirtualNetworkName = managedVirtualNetworkName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -25,6 +25,10 @@ public final class AnalyzerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="analyzerName")
     private @Nullable Output<String> analyzerName;
 
+    /**
+     * @return Analyzer name
+     * 
+     */
     public Optional<Output<String>> analyzerName() {
         return Optional.ofNullable(this.analyzerName);
     }
@@ -43,6 +47,10 @@ public final class AnalyzerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<AnalyzerTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<AnalyzerTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -54,6 +62,10 @@ public final class AnalyzerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of the analyzer, must be ACCOUNT or ORGANIZATION
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -85,11 +97,23 @@ public final class AnalyzerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AnalyzerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analyzerName Analyzer name
+         * 
+         * @return builder
+         * 
+         */
         public Builder analyzerName(@Nullable Output<String> analyzerName) {
             $.analyzerName = analyzerName;
             return this;
         }
 
+        /**
+         * @param analyzerName Analyzer name
+         * 
+         * @return builder
+         * 
+         */
         public Builder analyzerName(String analyzerName) {
             return analyzerName(Output.of(analyzerName));
         }
@@ -107,24 +131,54 @@ public final class AnalyzerArgs extends com.pulumi.resources.ResourceArgs {
             return archiveRules(List.of(archiveRules));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<AnalyzerTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<AnalyzerTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(AnalyzerTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param type The type of the analyzer, must be ACCOUNT or ORGANIZATION
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the analyzer, must be ACCOUNT or ORGANIZATION
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

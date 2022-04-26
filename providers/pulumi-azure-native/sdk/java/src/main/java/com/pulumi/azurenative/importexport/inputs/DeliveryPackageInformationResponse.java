@@ -26,6 +26,10 @@ public final class DeliveryPackageInformationResponse extends com.pulumi.resourc
     @Import(name="carrierName", required=true)
     private String carrierName;
 
+    /**
+     * @return The name of the carrier that is used to ship the import or export drives.
+     * 
+     */
     public String carrierName() {
         return this.carrierName;
     }
@@ -37,6 +41,10 @@ public final class DeliveryPackageInformationResponse extends com.pulumi.resourc
     @Import(name="driveCount")
     private @Nullable Double driveCount;
 
+    /**
+     * @return The number of drives included in the package.
+     * 
+     */
     public Optional<Double> driveCount() {
         return Optional.ofNullable(this.driveCount);
     }
@@ -48,6 +56,10 @@ public final class DeliveryPackageInformationResponse extends com.pulumi.resourc
     @Import(name="shipDate")
     private @Nullable String shipDate;
 
+    /**
+     * @return The date when the package is shipped.
+     * 
+     */
     public Optional<String> shipDate() {
         return Optional.ofNullable(this.shipDate);
     }
@@ -59,6 +71,10 @@ public final class DeliveryPackageInformationResponse extends com.pulumi.resourc
     @Import(name="trackingNumber", required=true)
     private String trackingNumber;
 
+    /**
+     * @return The tracking number of the package.
+     * 
+     */
     public String trackingNumber() {
         return this.trackingNumber;
     }
@@ -90,21 +106,45 @@ public final class DeliveryPackageInformationResponse extends com.pulumi.resourc
             $ = new DeliveryPackageInformationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param carrierName The name of the carrier that is used to ship the import or export drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder carrierName(String carrierName) {
             $.carrierName = carrierName;
             return this;
         }
 
+        /**
+         * @param driveCount The number of drives included in the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driveCount(@Nullable Double driveCount) {
             $.driveCount = driveCount;
             return this;
         }
 
+        /**
+         * @param shipDate The date when the package is shipped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shipDate(@Nullable String shipDate) {
             $.shipDate = shipDate;
             return this;
         }
 
+        /**
+         * @param trackingNumber The tracking number of the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingNumber(String trackingNumber) {
             $.trackingNumber = trackingNumber;
             return this;

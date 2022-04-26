@@ -29,6 +29,13 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="alternativeNameServerConfig")
     private @Nullable Output<PolicyAlternativeNameServerConfigGetArgs> alternativeNameServerConfig;
 
+    /**
+     * @return Sets an alternative name server for the associated networks.
+     * When specified, all DNS queries are forwarded to a name server that you choose.
+     * Names such as .internal are not available when an alternative name server is specified.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PolicyAlternativeNameServerConfigGetArgs>> alternativeNameServerConfig() {
         return Optional.ofNullable(this.alternativeNameServerConfig);
     }
@@ -40,6 +47,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A textual description field. Defaults to &#39;Managed by Pulumi&#39;.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -54,6 +65,13 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableInboundForwarding")
     private @Nullable Output<Boolean> enableInboundForwarding;
 
+    /**
+     * @return Allows networks bound to this policy to receive DNS queries sent
+     * by VMs or applications over VPN connections. When enabled, a
+     * virtual IP address will be allocated from each of the sub-networks
+     * that are bound to this policy.
+     * 
+     */
     public Optional<Output<Boolean>> enableInboundForwarding() {
         return Optional.ofNullable(this.enableInboundForwarding);
     }
@@ -66,6 +84,11 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableLogging")
     private @Nullable Output<Boolean> enableLogging;
 
+    /**
+     * @return Controls whether logging is enabled for the networks bound to this policy.
+     * Defaults to no logging if not set.
+     * 
+     */
     public Optional<Output<Boolean>> enableLogging() {
         return Optional.ofNullable(this.enableLogging);
     }
@@ -77,6 +100,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return User assigned name for this policy.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -89,6 +116,11 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networks")
     private @Nullable Output<List<PolicyNetworkGetArgs>> networks;
 
+    /**
+     * @return List of network names specifying networks to which this policy is applied.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<PolicyNetworkGetArgs>>> networks() {
         return Optional.ofNullable(this.networks);
     }
@@ -101,6 +133,11 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -135,69 +172,178 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
             $ = new PolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alternativeNameServerConfig Sets an alternative name server for the associated networks.
+         * When specified, all DNS queries are forwarded to a name server that you choose.
+         * Names such as .internal are not available when an alternative name server is specified.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternativeNameServerConfig(@Nullable Output<PolicyAlternativeNameServerConfigGetArgs> alternativeNameServerConfig) {
             $.alternativeNameServerConfig = alternativeNameServerConfig;
             return this;
         }
 
+        /**
+         * @param alternativeNameServerConfig Sets an alternative name server for the associated networks.
+         * When specified, all DNS queries are forwarded to a name server that you choose.
+         * Names such as .internal are not available when an alternative name server is specified.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternativeNameServerConfig(PolicyAlternativeNameServerConfigGetArgs alternativeNameServerConfig) {
             return alternativeNameServerConfig(Output.of(alternativeNameServerConfig));
         }
 
+        /**
+         * @param description A textual description field. Defaults to &#39;Managed by Pulumi&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A textual description field. Defaults to &#39;Managed by Pulumi&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enableInboundForwarding Allows networks bound to this policy to receive DNS queries sent
+         * by VMs or applications over VPN connections. When enabled, a
+         * virtual IP address will be allocated from each of the sub-networks
+         * that are bound to this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableInboundForwarding(@Nullable Output<Boolean> enableInboundForwarding) {
             $.enableInboundForwarding = enableInboundForwarding;
             return this;
         }
 
+        /**
+         * @param enableInboundForwarding Allows networks bound to this policy to receive DNS queries sent
+         * by VMs or applications over VPN connections. When enabled, a
+         * virtual IP address will be allocated from each of the sub-networks
+         * that are bound to this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableInboundForwarding(Boolean enableInboundForwarding) {
             return enableInboundForwarding(Output.of(enableInboundForwarding));
         }
 
+        /**
+         * @param enableLogging Controls whether logging is enabled for the networks bound to this policy.
+         * Defaults to no logging if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             $.enableLogging = enableLogging;
             return this;
         }
 
+        /**
+         * @param enableLogging Controls whether logging is enabled for the networks bound to this policy.
+         * Defaults to no logging if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableLogging(Boolean enableLogging) {
             return enableLogging(Output.of(enableLogging));
         }
 
+        /**
+         * @param name User assigned name for this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name User assigned name for this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networks List of network names specifying networks to which this policy is applied.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(@Nullable Output<List<PolicyNetworkGetArgs>> networks) {
             $.networks = networks;
             return this;
         }
 
+        /**
+         * @param networks List of network names specifying networks to which this policy is applied.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(List<PolicyNetworkGetArgs> networks) {
             return networks(Output.of(networks));
         }
 
+        /**
+         * @param networks List of network names specifying networks to which this policy is applied.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(PolicyNetworkGetArgs... networks) {
             return networks(List.of(networks));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

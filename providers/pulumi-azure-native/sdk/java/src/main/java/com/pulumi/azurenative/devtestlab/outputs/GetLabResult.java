@@ -16,129 +16,129 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLabResult {
     /**
-     * The properties of any lab announcement associated with this lab
+     * @return The properties of any lab announcement associated with this lab
      * 
      */
     private final @Nullable LabAnnouncementPropertiesResponse announcement;
     /**
-     * The lab&#39;s artifact storage account.
+     * @return The lab&#39;s artifact storage account.
      * 
      */
     private final String artifactsStorageAccount;
     /**
-     * The creation date of the lab.
+     * @return The creation date of the lab.
      * 
      */
     private final String createdDate;
     /**
-     * The lab&#39;s default premium storage account.
+     * @return The lab&#39;s default premium storage account.
      * 
      */
     private final String defaultPremiumStorageAccount;
     /**
-     * The lab&#39;s default storage account.
+     * @return The lab&#39;s default storage account.
      * 
      */
     private final String defaultStorageAccount;
     /**
-     * The access rights to be granted to the user when provisioning an environment
+     * @return The access rights to be granted to the user when provisioning an environment
      * 
      */
     private final @Nullable String environmentPermission;
     /**
-     * Extended properties of the lab used for experimental features
+     * @return Extended properties of the lab used for experimental features
      * 
      */
     private final @Nullable Map<String,String> extendedProperties;
     /**
-     * The identifier of the resource.
+     * @return The identifier of the resource.
      * 
      */
     private final String id;
     /**
-     * Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
+     * @return Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
      * 
      */
     private final @Nullable String labStorageType;
     /**
-     * The load balancer used to for lab VMs that use shared IP address.
+     * @return The load balancer used to for lab VMs that use shared IP address.
      * 
      */
     private final String loadBalancerId;
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
      */
     private final @Nullable String location;
     /**
-     * The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
+     * @return The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
      * 
      */
     private final @Nullable List<String> mandatoryArtifactsResourceIdsLinux;
     /**
-     * The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
+     * @return The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
      * 
      */
     private final @Nullable List<String> mandatoryArtifactsResourceIdsWindows;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.
+     * @return The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.
      * 
      */
     private final String networkSecurityGroupId;
     /**
-     * The lab&#39;s premium data disk storage account.
+     * @return The lab&#39;s premium data disk storage account.
      * 
      */
     private final String premiumDataDiskStorageAccount;
     /**
-     * The setting to enable usage of premium data disks.
+     * @return The setting to enable usage of premium data disks.
      * When its value is &#39;Enabled&#39;, creation of standard or premium data disks is allowed.
      * When its value is &#39;Disabled&#39;, only creation of standard data disks is allowed.
      * 
      */
     private final @Nullable String premiumDataDisks;
     /**
-     * The provisioning status of the resource.
+     * @return The provisioning status of the resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The public IP address for the lab&#39;s load balancer.
+     * @return The public IP address for the lab&#39;s load balancer.
      * 
      */
     private final String publicIpId;
     /**
-     * The properties of any lab support message associated with this lab
+     * @return The properties of any lab support message associated with this lab
      * 
      */
     private final @Nullable LabSupportPropertiesResponse support;
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
     /**
-     * The unique immutable identifier of a resource (Guid).
+     * @return The unique immutable identifier of a resource (Guid).
      * 
      */
     private final String uniqueIdentifier;
     /**
-     * The lab&#39;s Key vault.
+     * @return The lab&#39;s Key vault.
      * 
      */
     private final String vaultName;
     /**
-     * The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.
+     * @return The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.
      * 
      */
     private final String vmCreationResourceGroup;
@@ -198,179 +198,179 @@ public final class GetLabResult {
     }
 
     /**
-     * The properties of any lab announcement associated with this lab
+     * @return The properties of any lab announcement associated with this lab
      * 
-    */
+     */
     public Optional<LabAnnouncementPropertiesResponse> announcement() {
         return Optional.ofNullable(this.announcement);
     }
     /**
-     * The lab&#39;s artifact storage account.
+     * @return The lab&#39;s artifact storage account.
      * 
-    */
+     */
     public String artifactsStorageAccount() {
         return this.artifactsStorageAccount;
     }
     /**
-     * The creation date of the lab.
+     * @return The creation date of the lab.
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * The lab&#39;s default premium storage account.
+     * @return The lab&#39;s default premium storage account.
      * 
-    */
+     */
     public String defaultPremiumStorageAccount() {
         return this.defaultPremiumStorageAccount;
     }
     /**
-     * The lab&#39;s default storage account.
+     * @return The lab&#39;s default storage account.
      * 
-    */
+     */
     public String defaultStorageAccount() {
         return this.defaultStorageAccount;
     }
     /**
-     * The access rights to be granted to the user when provisioning an environment
+     * @return The access rights to be granted to the user when provisioning an environment
      * 
-    */
+     */
     public Optional<String> environmentPermission() {
         return Optional.ofNullable(this.environmentPermission);
     }
     /**
-     * Extended properties of the lab used for experimental features
+     * @return Extended properties of the lab used for experimental features
      * 
-    */
+     */
     public Map<String,String> extendedProperties() {
         return this.extendedProperties == null ? Map.of() : this.extendedProperties;
     }
     /**
-     * The identifier of the resource.
+     * @return The identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
+     * @return Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
      * 
-    */
+     */
     public Optional<String> labStorageType() {
         return Optional.ofNullable(this.labStorageType);
     }
     /**
-     * The load balancer used to for lab VMs that use shared IP address.
+     * @return The load balancer used to for lab VMs that use shared IP address.
      * 
-    */
+     */
     public String loadBalancerId() {
         return this.loadBalancerId;
     }
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
+     * @return The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
      * 
-    */
+     */
     public List<String> mandatoryArtifactsResourceIdsLinux() {
         return this.mandatoryArtifactsResourceIdsLinux == null ? List.of() : this.mandatoryArtifactsResourceIdsLinux;
     }
     /**
-     * The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
+     * @return The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
      * 
-    */
+     */
     public List<String> mandatoryArtifactsResourceIdsWindows() {
         return this.mandatoryArtifactsResourceIdsWindows == null ? List.of() : this.mandatoryArtifactsResourceIdsWindows;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.
+     * @return The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.
      * 
-    */
+     */
     public String networkSecurityGroupId() {
         return this.networkSecurityGroupId;
     }
     /**
-     * The lab&#39;s premium data disk storage account.
+     * @return The lab&#39;s premium data disk storage account.
      * 
-    */
+     */
     public String premiumDataDiskStorageAccount() {
         return this.premiumDataDiskStorageAccount;
     }
     /**
-     * The setting to enable usage of premium data disks.
+     * @return The setting to enable usage of premium data disks.
      * When its value is &#39;Enabled&#39;, creation of standard or premium data disks is allowed.
      * When its value is &#39;Disabled&#39;, only creation of standard data disks is allowed.
      * 
-    */
+     */
     public Optional<String> premiumDataDisks() {
         return Optional.ofNullable(this.premiumDataDisks);
     }
     /**
-     * The provisioning status of the resource.
+     * @return The provisioning status of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The public IP address for the lab&#39;s load balancer.
+     * @return The public IP address for the lab&#39;s load balancer.
      * 
-    */
+     */
     public String publicIpId() {
         return this.publicIpId;
     }
     /**
-     * The properties of any lab support message associated with this lab
+     * @return The properties of any lab support message associated with this lab
      * 
-    */
+     */
     public Optional<LabSupportPropertiesResponse> support() {
         return Optional.ofNullable(this.support);
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The unique immutable identifier of a resource (Guid).
+     * @return The unique immutable identifier of a resource (Guid).
      * 
-    */
+     */
     public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
-     * The lab&#39;s Key vault.
+     * @return The lab&#39;s Key vault.
      * 
-    */
+     */
     public String vaultName() {
         return this.vaultName;
     }
     /**
-     * The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.
+     * @return The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.
      * 
-    */
+     */
     public String vmCreationResourceGroup() {
         return this.vmCreationResourceGroup;
     }

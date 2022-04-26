@@ -27,6 +27,10 @@ public final class WeekDayOfMonthArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dayOfWeek", required=true)
     private Output<WeekDayOfMonthDayOfWeek> dayOfWeek;
 
+    /**
+     * @return A day of the week.
+     * 
+     */
     public Output<WeekDayOfMonthDayOfWeek> dayOfWeek() {
         return this.dayOfWeek;
     }
@@ -38,6 +42,10 @@ public final class WeekDayOfMonthArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dayOffset")
     private @Nullable Output<Integer> dayOffset;
 
+    /**
+     * @return Optional. Represents the number of days before or after the given week day of month that the patch deployment is scheduled for. For example if `week_ordinal` and `day_of_week` values point to the second day of the month and this `day_offset` value is set to `3`, the patch deployment takes place three days after the second Tuesday of the month. If this value is negative, for example -5, the patches are deployed five days before before the second Tuesday of the month. Allowed values are in range [-30, 30].
+     * 
+     */
     public Optional<Output<Integer>> dayOffset() {
         return Optional.ofNullable(this.dayOffset);
     }
@@ -49,6 +57,10 @@ public final class WeekDayOfMonthArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="weekOrdinal", required=true)
     private Output<Integer> weekOrdinal;
 
+    /**
+     * @return Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
+     * 
+     */
     public Output<Integer> weekOrdinal() {
         return this.weekOrdinal;
     }
@@ -79,29 +91,65 @@ public final class WeekDayOfMonthArgs extends com.pulumi.resources.ResourceArgs 
             $ = new WeekDayOfMonthArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeek A day of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(Output<WeekDayOfMonthDayOfWeek> dayOfWeek) {
             $.dayOfWeek = dayOfWeek;
             return this;
         }
 
+        /**
+         * @param dayOfWeek A day of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(WeekDayOfMonthDayOfWeek dayOfWeek) {
             return dayOfWeek(Output.of(dayOfWeek));
         }
 
+        /**
+         * @param dayOffset Optional. Represents the number of days before or after the given week day of month that the patch deployment is scheduled for. For example if `week_ordinal` and `day_of_week` values point to the second day of the month and this `day_offset` value is set to `3`, the patch deployment takes place three days after the second Tuesday of the month. If this value is negative, for example -5, the patches are deployed five days before before the second Tuesday of the month. Allowed values are in range [-30, 30].
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOffset(@Nullable Output<Integer> dayOffset) {
             $.dayOffset = dayOffset;
             return this;
         }
 
+        /**
+         * @param dayOffset Optional. Represents the number of days before or after the given week day of month that the patch deployment is scheduled for. For example if `week_ordinal` and `day_of_week` values point to the second day of the month and this `day_offset` value is set to `3`, the patch deployment takes place three days after the second Tuesday of the month. If this value is negative, for example -5, the patches are deployed five days before before the second Tuesday of the month. Allowed values are in range [-30, 30].
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOffset(Integer dayOffset) {
             return dayOffset(Output.of(dayOffset));
         }
 
+        /**
+         * @param weekOrdinal Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekOrdinal(Output<Integer> weekOrdinal) {
             $.weekOrdinal = weekOrdinal;
             return this;
         }
 
+        /**
+         * @param weekOrdinal Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekOrdinal(Integer weekOrdinal) {
             return weekOrdinal(Output.of(weekOrdinal));
         }

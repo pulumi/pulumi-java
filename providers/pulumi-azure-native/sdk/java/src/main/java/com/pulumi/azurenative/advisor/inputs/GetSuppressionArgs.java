@@ -19,6 +19,10 @@ public final class GetSuppressionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the suppression.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetSuppressionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="recommendationId", required=true)
     private String recommendationId;
 
+    /**
+     * @return The recommendation ID.
+     * 
+     */
     public String recommendationId() {
         return this.recommendationId;
     }
@@ -41,6 +49,10 @@ public final class GetSuppressionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceUri", required=true)
     private String resourceUri;
 
+    /**
+     * @return The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.
+     * 
+     */
     public String resourceUri() {
         return this.resourceUri;
     }
@@ -71,16 +83,34 @@ public final class GetSuppressionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSuppressionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the suppression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param recommendationId The recommendation ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationId(String recommendationId) {
             $.recommendationId = recommendationId;
             return this;
         }
 
+        /**
+         * @param resourceUri The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             $.resourceUri = resourceUri;
             return this;

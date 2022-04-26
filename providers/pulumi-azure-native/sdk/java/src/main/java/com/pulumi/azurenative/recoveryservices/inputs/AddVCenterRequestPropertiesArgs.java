@@ -26,6 +26,10 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return The friendly name of the vCenter.
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -37,6 +41,10 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return The IP address of the vCenter to be discovered.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -48,6 +56,10 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
     @Import(name="port")
     private @Nullable Output<String> port;
 
+    /**
+     * @return The port number for discovery.
+     * 
+     */
     public Optional<Output<String>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -59,6 +71,10 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
     @Import(name="processServerId")
     private @Nullable Output<String> processServerId;
 
+    /**
+     * @return The process server Id from where the discovery is orchestrated.
+     * 
+     */
     public Optional<Output<String>> processServerId() {
         return Optional.ofNullable(this.processServerId);
     }
@@ -70,6 +86,10 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
     @Import(name="runAsAccountId")
     private @Nullable Output<String> runAsAccountId;
 
+    /**
+     * @return The account Id which has privileges to discover the vCenter.
+     * 
+     */
     public Optional<Output<String>> runAsAccountId() {
         return Optional.ofNullable(this.runAsAccountId);
     }
@@ -102,47 +122,107 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
             $ = new AddVCenterRequestPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param friendlyName The friendly name of the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName The friendly name of the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param ipAddress The IP address of the vCenter to be discovered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress The IP address of the vCenter to be discovered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param port The port number for discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<String> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port number for discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(String port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param processServerId The process server Id from where the discovery is orchestrated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServerId(@Nullable Output<String> processServerId) {
             $.processServerId = processServerId;
             return this;
         }
 
+        /**
+         * @param processServerId The process server Id from where the discovery is orchestrated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServerId(String processServerId) {
             return processServerId(Output.of(processServerId));
         }
 
+        /**
+         * @param runAsAccountId The account Id which has privileges to discover the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsAccountId(@Nullable Output<String> runAsAccountId) {
             $.runAsAccountId = runAsAccountId;
             return this;
         }
 
+        /**
+         * @param runAsAccountId The account Id which has privileges to discover the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsAccountId(String runAsAccountId) {
             return runAsAccountId(Output.of(runAsAccountId));
         }

@@ -27,6 +27,10 @@ public final class HelmReleaseSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="driver")
     private @Nullable Output<String> driver;
 
+    /**
+     * @return The backend storage driver for Helm. Values are: configmap, secret, memory, sql.
+     * 
+     */
     public Optional<Output<String>> driver() {
         return Optional.ofNullable(this.driver);
     }
@@ -38,6 +42,10 @@ public final class HelmReleaseSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="pluginsPath")
     private @Nullable Output<String> pluginsPath;
 
+    /**
+     * @return The path to the helm plugins directory.
+     * 
+     */
     public Optional<Output<String>> pluginsPath() {
         return Optional.ofNullable(this.pluginsPath);
     }
@@ -49,6 +57,10 @@ public final class HelmReleaseSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="registryConfigPath")
     private @Nullable Output<String> registryConfigPath;
 
+    /**
+     * @return The path to the registry config file.
+     * 
+     */
     public Optional<Output<String>> registryConfigPath() {
         return Optional.ofNullable(this.registryConfigPath);
     }
@@ -60,6 +72,10 @@ public final class HelmReleaseSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="repositoryCache")
     private @Nullable Output<String> repositoryCache;
 
+    /**
+     * @return The path to the file containing cached repository indexes.
+     * 
+     */
     public Optional<Output<String>> repositoryCache() {
         return Optional.ofNullable(this.repositoryCache);
     }
@@ -71,6 +87,10 @@ public final class HelmReleaseSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="repositoryConfigPath")
     private @Nullable Output<String> repositoryConfigPath;
 
+    /**
+     * @return The path to the file containing repository names and URLs.
+     * 
+     */
     public Optional<Output<String>> repositoryConfigPath() {
         return Optional.ofNullable(this.repositoryConfigPath);
     }
@@ -103,47 +123,107 @@ public final class HelmReleaseSettingsArgs extends com.pulumi.resources.Resource
             $ = new HelmReleaseSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param driver The backend storage driver for Helm. Values are: configmap, secret, memory, sql.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driver(@Nullable Output<String> driver) {
             $.driver = driver;
             return this;
         }
 
+        /**
+         * @param driver The backend storage driver for Helm. Values are: configmap, secret, memory, sql.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driver(String driver) {
             return driver(Output.of(driver));
         }
 
+        /**
+         * @param pluginsPath The path to the helm plugins directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pluginsPath(@Nullable Output<String> pluginsPath) {
             $.pluginsPath = pluginsPath;
             return this;
         }
 
+        /**
+         * @param pluginsPath The path to the helm plugins directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pluginsPath(String pluginsPath) {
             return pluginsPath(Output.of(pluginsPath));
         }
 
+        /**
+         * @param registryConfigPath The path to the registry config file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryConfigPath(@Nullable Output<String> registryConfigPath) {
             $.registryConfigPath = registryConfigPath;
             return this;
         }
 
+        /**
+         * @param registryConfigPath The path to the registry config file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryConfigPath(String registryConfigPath) {
             return registryConfigPath(Output.of(registryConfigPath));
         }
 
+        /**
+         * @param repositoryCache The path to the file containing cached repository indexes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryCache(@Nullable Output<String> repositoryCache) {
             $.repositoryCache = repositoryCache;
             return this;
         }
 
+        /**
+         * @param repositoryCache The path to the file containing cached repository indexes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryCache(String repositoryCache) {
             return repositoryCache(Output.of(repositoryCache));
         }
 
+        /**
+         * @param repositoryConfigPath The path to the file containing repository names and URLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryConfigPath(@Nullable Output<String> repositoryConfigPath) {
             $.repositoryConfigPath = repositoryConfigPath;
             return this;
         }
 
+        /**
+         * @param repositoryConfigPath The path to the file containing repository names and URLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryConfigPath(String repositoryConfigPath) {
             return repositoryConfigPath(Output.of(repositoryConfigPath));
         }

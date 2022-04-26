@@ -24,6 +24,10 @@ public final class PrivateEndpointConnectionPropertiesArgs extends com.pulumi.re
     @Import(name="privateLinkServiceConnectionState", required=true)
     private Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
+    /**
+     * @return The current state of a private endpoint connection
+     * 
+     */
     public Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
@@ -52,11 +56,23 @@ public final class PrivateEndpointConnectionPropertiesArgs extends com.pulumi.re
             $ = new PrivateEndpointConnectionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateLinkServiceConnectionState The current state of a private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState The current state of a private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }

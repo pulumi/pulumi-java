@@ -26,6 +26,10 @@ public final class EmailChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="emailAddress", required=true)
     private String emailAddress;
 
+    /**
+     * @return The email address
+     * 
+     */
     public String emailAddress() {
         return this.emailAddress;
     }
@@ -37,6 +41,10 @@ public final class EmailChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -48,6 +56,10 @@ public final class EmailChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -78,16 +90,34 @@ public final class EmailChannelPropertiesResponse extends com.pulumi.resources.I
             $ = new EmailChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailAddress The email address
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(String emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param password The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;

@@ -26,6 +26,10 @@ public final class RepoSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="branchName")
     private @Nullable Output<String> branchName;
 
+    /**
+     * @return Name of the branch to build.
+     * 
+     */
     public Optional<Output<String>> branchName() {
         return Optional.ofNullable(this.branchName);
     }
@@ -37,6 +41,10 @@ public final class RepoSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="commitSha")
     private @Nullable Output<String> commitSha;
 
+    /**
+     * @return Explicit commit SHA to build.
+     * 
+     */
     public Optional<Output<String>> commitSha() {
         return Optional.ofNullable(this.commitSha);
     }
@@ -48,6 +56,10 @@ public final class RepoSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return ID of the project that owns the repo.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -59,6 +71,10 @@ public final class RepoSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repoName")
     private @Nullable Output<String> repoName;
 
+    /**
+     * @return Name of the repo.
+     * 
+     */
     public Optional<Output<String>> repoName() {
         return Optional.ofNullable(this.repoName);
     }
@@ -70,6 +86,10 @@ public final class RepoSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagName")
     private @Nullable Output<String> tagName;
 
+    /**
+     * @return Name of the tag to build.
+     * 
+     */
     public Optional<Output<String>> tagName() {
         return Optional.ofNullable(this.tagName);
     }
@@ -102,47 +122,107 @@ public final class RepoSourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RepoSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branchName Name of the branch to build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchName(@Nullable Output<String> branchName) {
             $.branchName = branchName;
             return this;
         }
 
+        /**
+         * @param branchName Name of the branch to build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchName(String branchName) {
             return branchName(Output.of(branchName));
         }
 
+        /**
+         * @param commitSha Explicit commit SHA to build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitSha(@Nullable Output<String> commitSha) {
             $.commitSha = commitSha;
             return this;
         }
 
+        /**
+         * @param commitSha Explicit commit SHA to build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitSha(String commitSha) {
             return commitSha(Output.of(commitSha));
         }
 
+        /**
+         * @param project ID of the project that owns the repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project ID of the project that owns the repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param repoName Name of the repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoName(@Nullable Output<String> repoName) {
             $.repoName = repoName;
             return this;
         }
 
+        /**
+         * @param repoName Name of the repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoName(String repoName) {
             return repoName(Output.of(repoName));
         }
 
+        /**
+         * @param tagName Name of the tag to build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagName(@Nullable Output<String> tagName) {
             $.tagName = tagName;
             return this;
         }
 
+        /**
+         * @param tagName Name of the tag to build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagName(String tagName) {
             return tagName(Output.of(tagName));
         }

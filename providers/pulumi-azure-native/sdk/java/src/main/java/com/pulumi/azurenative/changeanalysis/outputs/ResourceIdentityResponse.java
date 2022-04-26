@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourceIdentityResponse {
     /**
-     * The principal id of the identity. This property will only be provided for a system-assigned identity.
+     * @return The principal id of the identity. This property will only be provided for a system-assigned identity.
      * 
      */
     private final String principalId;
     /**
-     * The tenant id associated with the resource&#39;s identity. This property will only be provided for a system-assigned identity.
+     * @return The tenant id associated with the resource&#39;s identity. This property will only be provided for a system-assigned identity.
      * 
      */
     private final String tenantId;
     /**
-     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
+     * @return The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
      * 
      */
     private final @Nullable String type;
@@ -38,23 +38,23 @@ public final class ResourceIdentityResponse {
     }
 
     /**
-     * The principal id of the identity. This property will only be provided for a system-assigned identity.
+     * @return The principal id of the identity. This property will only be provided for a system-assigned identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant id associated with the resource&#39;s identity. This property will only be provided for a system-assigned identity.
+     * @return The tenant id associated with the resource&#39;s identity. This property will only be provided for a system-assigned identity.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
+     * @return The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

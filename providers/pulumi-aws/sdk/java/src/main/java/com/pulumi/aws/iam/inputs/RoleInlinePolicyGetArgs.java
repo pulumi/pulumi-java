@@ -22,6 +22,10 @@ public final class RoleInlinePolicyGetArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the role policy.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -33,6 +37,10 @@ public final class RoleInlinePolicyGetArgs extends com.pulumi.resources.Resource
     @Import(name="policy")
     private @Nullable Output<String> policy;
 
+    /**
+     * @return Policy document as a JSON formatted string.
+     * 
+     */
     public Optional<Output<String>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -62,20 +70,44 @@ public final class RoleInlinePolicyGetArgs extends com.pulumi.resources.Resource
             $ = new RoleInlinePolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the role policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the role policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policy Policy document as a JSON formatted string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<String> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy Policy document as a JSON formatted string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(String policy) {
             return policy(Output.of(policy));
         }

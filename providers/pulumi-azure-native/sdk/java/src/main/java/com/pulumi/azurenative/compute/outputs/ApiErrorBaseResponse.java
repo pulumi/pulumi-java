@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApiErrorBaseResponse {
     /**
-     * The error code.
+     * @return The error code.
      * 
      */
     private final @Nullable String code;
     /**
-     * The error message.
+     * @return The error message.
      * 
      */
     private final @Nullable String message;
     /**
-     * The target of the particular error.
+     * @return The target of the particular error.
      * 
      */
     private final @Nullable String target;
@@ -38,23 +38,23 @@ public final class ApiErrorBaseResponse {
     }
 
     /**
-     * The error code.
+     * @return The error code.
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * The error message.
+     * @return The error message.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * The target of the particular error.
+     * @return The target of the particular error.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }

@@ -27,6 +27,10 @@ public final class LogsPanelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter")
     private @Nullable Output<String> filter;
 
+    /**
+     * @return A filter that chooses which log entries to return. See Advanced Logs Queries (https://cloud.google.com/logging/docs/view/advanced-queries). Only log entries that match the filter are returned. An empty filter matches all log entries.
+     * 
+     */
     public Optional<Output<String>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -38,6 +42,10 @@ public final class LogsPanelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceNames")
     private @Nullable Output<List<String>> resourceNames;
 
+    /**
+     * @return The names of logging resources to collect logs for. Currently only projects are supported. If empty, the widget will default to the host project.
+     * 
+     */
     public Optional<Output<List<String>>> resourceNames() {
         return Optional.ofNullable(this.resourceNames);
     }
@@ -67,24 +75,54 @@ public final class LogsPanelArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LogsPanelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filter A filter that chooses which log entries to return. See Advanced Logs Queries (https://cloud.google.com/logging/docs/view/advanced-queries). Only log entries that match the filter are returned. An empty filter matches all log entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter A filter that chooses which log entries to return. See Advanced Logs Queries (https://cloud.google.com/logging/docs/view/advanced-queries). Only log entries that match the filter are returned. An empty filter matches all log entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param resourceNames The names of logging resources to collect logs for. Currently only projects are supported. If empty, the widget will default to the host project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceNames(@Nullable Output<List<String>> resourceNames) {
             $.resourceNames = resourceNames;
             return this;
         }
 
+        /**
+         * @param resourceNames The names of logging resources to collect logs for. Currently only projects are supported. If empty, the widget will default to the host project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceNames(List<String> resourceNames) {
             return resourceNames(Output.of(resourceNames));
         }
 
+        /**
+         * @param resourceNames The names of logging resources to collect logs for. Currently only projects are supported. If empty, the widget will default to the host project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceNames(String... resourceNames) {
             return resourceNames(List.of(resourceNames));
         }

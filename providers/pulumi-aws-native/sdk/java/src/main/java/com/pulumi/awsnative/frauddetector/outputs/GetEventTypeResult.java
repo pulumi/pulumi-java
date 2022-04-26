@@ -17,17 +17,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEventTypeResult {
     /**
-     * The ARN of the event type.
+     * @return The ARN of the event type.
      * 
      */
     private final @Nullable String arn;
     /**
-     * The time when the event type was created.
+     * @return The time when the event type was created.
      * 
      */
     private final @Nullable String createdTime;
     /**
-     * The description of the event type.
+     * @return The description of the event type.
      * 
      */
     private final @Nullable String description;
@@ -35,12 +35,12 @@ public final class GetEventTypeResult {
     private final @Nullable List<EventTypeEventVariable> eventVariables;
     private final @Nullable List<EventTypeLabel> labels;
     /**
-     * The time when the event type was last updated.
+     * @return The time when the event type was last updated.
      * 
      */
     private final @Nullable String lastUpdatedTime;
     /**
-     * Tags associated with this event type.
+     * @return Tags associated with this event type.
      * 
      */
     private final @Nullable List<EventTypeTag> tags;
@@ -66,23 +66,23 @@ public final class GetEventTypeResult {
     }
 
     /**
-     * The ARN of the event type.
+     * @return The ARN of the event type.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The time when the event type was created.
+     * @return The time when the event type was created.
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * The description of the event type.
+     * @return The description of the event type.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -96,16 +96,16 @@ public final class GetEventTypeResult {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
-     * The time when the event type was last updated.
+     * @return The time when the event type was last updated.
      * 
-    */
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
-     * Tags associated with this event type.
+     * @return Tags associated with this event type.
      * 
-    */
+     */
     public List<EventTypeTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

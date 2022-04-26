@@ -23,6 +23,10 @@ public final class AS2ErrorSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="resendIfMDNNotReceived", required=true)
     private Boolean resendIfMDNNotReceived;
 
+    /**
+     * @return The value indicating whether to resend message If MDN is not received.
+     * 
+     */
     public Boolean resendIfMDNNotReceived() {
         return this.resendIfMDNNotReceived;
     }
@@ -34,6 +38,10 @@ public final class AS2ErrorSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="suspendDuplicateMessage", required=true)
     private Boolean suspendDuplicateMessage;
 
+    /**
+     * @return The value indicating whether to suspend duplicate message.
+     * 
+     */
     public Boolean suspendDuplicateMessage() {
         return this.suspendDuplicateMessage;
     }
@@ -63,11 +71,23 @@ public final class AS2ErrorSettingsResponse extends com.pulumi.resources.InvokeA
             $ = new AS2ErrorSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resendIfMDNNotReceived The value indicating whether to resend message If MDN is not received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resendIfMDNNotReceived(Boolean resendIfMDNNotReceived) {
             $.resendIfMDNNotReceived = resendIfMDNNotReceived;
             return this;
         }
 
+        /**
+         * @param suspendDuplicateMessage The value indicating whether to suspend duplicate message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspendDuplicateMessage(Boolean suspendDuplicateMessage) {
             $.suspendDuplicateMessage = suspendDuplicateMessage;
             return this;

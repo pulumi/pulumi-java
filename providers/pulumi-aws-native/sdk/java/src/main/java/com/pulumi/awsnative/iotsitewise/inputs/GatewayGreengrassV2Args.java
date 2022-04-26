@@ -24,6 +24,10 @@ public final class GatewayGreengrassV2Args extends com.pulumi.resources.Resource
     @Import(name="coreDeviceThingName", required=true)
     private Output<String> coreDeviceThingName;
 
+    /**
+     * @return The name of the CoreDevice in GreenGrass V2.
+     * 
+     */
     public Output<String> coreDeviceThingName() {
         return this.coreDeviceThingName;
     }
@@ -52,11 +56,23 @@ public final class GatewayGreengrassV2Args extends com.pulumi.resources.Resource
             $ = new GatewayGreengrassV2Args(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param coreDeviceThingName The name of the CoreDevice in GreenGrass V2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreDeviceThingName(Output<String> coreDeviceThingName) {
             $.coreDeviceThingName = coreDeviceThingName;
             return this;
         }
 
+        /**
+         * @param coreDeviceThingName The name of the CoreDevice in GreenGrass V2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreDeviceThingName(String coreDeviceThingName) {
             return coreDeviceThingName(Output.of(coreDeviceThingName));
         }

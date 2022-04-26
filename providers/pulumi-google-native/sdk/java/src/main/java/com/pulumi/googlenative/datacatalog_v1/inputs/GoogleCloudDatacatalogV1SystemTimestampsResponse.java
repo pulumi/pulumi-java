@@ -23,6 +23,10 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse extends com.
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return Creation timestamp of the resource within the given system.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse extends com.
     @Import(name="expireTime", required=true)
     private String expireTime;
 
+    /**
+     * @return Expiration timestamp of the resource within the given system. Currently only applicable to BigQuery resources.
+     * 
+     */
     public String expireTime() {
         return this.expireTime;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse extends com.
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return Timestamp of the last modification of the resource or its metadata within a given system. Note: Depending on the source system, not every modification updates this timestamp. For example, BigQuery timestamps every metadata modification but not data or permission changes.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse extends com.
             $ = new GoogleCloudDatacatalogV1SystemTimestampsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime Creation timestamp of the resource within the given system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param expireTime Expiration timestamp of the resource within the given system. Currently only applicable to BigQuery resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(String expireTime) {
             $.expireTime = expireTime;
             return this;
         }
 
+        /**
+         * @param updateTime Timestamp of the last modification of the resource or its metadata within a given system. Note: Depending on the source system, not every modification updates this timestamp. For example, BigQuery timestamps every metadata modification but not data or permission changes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

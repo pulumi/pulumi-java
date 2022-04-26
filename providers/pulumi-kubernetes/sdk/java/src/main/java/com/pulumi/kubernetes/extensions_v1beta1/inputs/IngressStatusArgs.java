@@ -26,6 +26,10 @@ public final class IngressStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancer")
     private @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
 
+    /**
+     * @return LoadBalancer contains the current status of the load-balancer.
+     * 
+     */
     public Optional<Output<LoadBalancerStatusArgs>> loadBalancer() {
         return Optional.ofNullable(this.loadBalancer);
     }
@@ -54,11 +58,23 @@ public final class IngressStatusArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IngressStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loadBalancer LoadBalancer contains the current status of the load-balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancer(@Nullable Output<LoadBalancerStatusArgs> loadBalancer) {
             $.loadBalancer = loadBalancer;
             return this;
         }
 
+        /**
+         * @param loadBalancer LoadBalancer contains the current status of the load-balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancer(LoadBalancerStatusArgs loadBalancer) {
             return loadBalancer(Output.of(loadBalancer));
         }

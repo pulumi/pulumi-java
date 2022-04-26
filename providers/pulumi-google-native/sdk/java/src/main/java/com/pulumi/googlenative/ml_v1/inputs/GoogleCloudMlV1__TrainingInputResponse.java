@@ -29,6 +29,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="args", required=true)
     private List<String> args;
 
+    /**
+     * @return Optional. Command-line arguments passed to the training application when it starts. If your job uses a custom container, then the arguments are passed to the container&#39;s `ENTRYPOINT` command.
+     * 
+     */
     public List<String> args() {
         return this.args;
     }
@@ -40,6 +44,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="enableWebAccess", required=true)
     private Boolean enableWebAccess;
 
+    /**
+     * @return Optional. Whether you want AI Platform Training to enable [interactive shell access](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) to training containers. If set to `true`, you can access interactive shells at the URIs given by TrainingOutput.web_access_uris or HyperparameterOutput.web_access_uris (within TrainingOutput.trials).
+     * 
+     */
     public Boolean enableWebAccess() {
         return this.enableWebAccess;
     }
@@ -51,6 +59,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="encryptionConfig", required=true)
     private GoogleCloudMlV1__EncryptionConfigResponse encryptionConfig;
 
+    /**
+     * @return Optional. Options for using customer-managed encryption keys (CMEK) to protect resources created by a training job, instead of using Google&#39;s default encryption. If this is set, then all resources created by the training job will be encrypted with the customer-managed encryption key that you specify. [Learn how and when to use CMEK with AI Platform Training](/ai-platform/training/docs/cmek).
+     * 
+     */
     public GoogleCloudMlV1__EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
     }
@@ -62,6 +74,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="evaluatorConfig", required=true)
     private GoogleCloudMlV1__ReplicaConfigResponse evaluatorConfig;
 
+    /**
+     * @return Optional. The configuration for evaluators. You should only set `evaluatorConfig.acceleratorConfig` if `evaluatorType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `evaluatorConfig.imageUri` only if you build a custom image for your evaluator. If `evaluatorConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).
+     * 
+     */
     public GoogleCloudMlV1__ReplicaConfigResponse evaluatorConfig() {
         return this.evaluatorConfig;
     }
@@ -73,6 +89,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="evaluatorCount", required=true)
     private String evaluatorCount;
 
+    /**
+     * @return Optional. The number of evaluator replicas to use for the training job. Each replica in the cluster will be of the type specified in `evaluator_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `evaluator_type`. The default value is zero.
+     * 
+     */
     public String evaluatorCount() {
         return this.evaluatorCount;
     }
@@ -84,6 +104,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="evaluatorType", required=true)
     private String evaluatorType;
 
+    /**
+     * @return Optional. Specifies the type of virtual machine to use for your training job&#39;s evaluator nodes. The supported values are the same as those described in the entry for `masterType`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. This value must be present when `scaleTier` is set to `CUSTOM` and `evaluatorCount` is greater than zero.
+     * 
+     */
     public String evaluatorType() {
         return this.evaluatorType;
     }
@@ -95,6 +119,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="hyperparameters", required=true)
     private GoogleCloudMlV1__HyperparameterSpecResponse hyperparameters;
 
+    /**
+     * @return Optional. The set of Hyperparameters to tune.
+     * 
+     */
     public GoogleCloudMlV1__HyperparameterSpecResponse hyperparameters() {
         return this.hyperparameters;
     }
@@ -106,6 +134,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="jobDir", required=true)
     private String jobDir;
 
+    /**
+     * @return Optional. A Google Cloud Storage path in which to store training outputs and other data needed for training. This path is passed to your TensorFlow program as the &#39;--job-dir&#39; command-line argument. The benefit of specifying this field is that Cloud ML validates the path for use in training.
+     * 
+     */
     public String jobDir() {
         return this.jobDir;
     }
@@ -117,6 +149,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="masterConfig", required=true)
     private GoogleCloudMlV1__ReplicaConfigResponse masterConfig;
 
+    /**
+     * @return Optional. The configuration for your master worker. You should only set `masterConfig.acceleratorConfig` if `masterType` is set to a Compute Engine machine type. Learn about [restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `masterConfig.imageUri` only if you build a custom image. Only one of `masterConfig.imageUri` and `runtimeVersion` should be set. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).
+     * 
+     */
     public GoogleCloudMlV1__ReplicaConfigResponse masterConfig() {
         return this.masterConfig;
     }
@@ -128,6 +164,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="masterType", required=true)
     private String masterType;
 
+    /**
+     * @return Optional. Specifies the type of virtual machine to use for your training job&#39;s master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. See the [list of compatible Compute Engine machine types](/ai-platform/training/docs/machine-types#compute-engine-machine-types). Alternatively, you can use the certain legacy machine types in this field. See the [list of legacy machine types](/ai-platform/training/docs/machine-types#legacy-machine-types). Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPUs](/ai-platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).
+     * 
+     */
     public String masterType() {
         return this.masterType;
     }
@@ -139,6 +179,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return Optional. The full name of the [Compute Engine network](/vpc/docs/vpc) to which the Job is peered. For example, `projects/12345/global/networks/myVPC`. The format of this field is `projects/{project}/global/networks/{network}`, where {project} is a project number (like `12345`) and {network} is network name. Private services access must already be configured for the network. If left unspecified, the Job is not peered with any network. [Learn about using VPC Network Peering.](/ai-platform/training/docs/vpc-peering).
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -150,6 +194,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="packageUris", required=true)
     private List<String> packageUris;
 
+    /**
+     * @return The Google Cloud Storage location of the packages with the training program and any additional dependencies. The maximum number of package URIs is 100.
+     * 
+     */
     public List<String> packageUris() {
         return this.packageUris;
     }
@@ -161,6 +209,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="parameterServerConfig", required=true)
     private GoogleCloudMlV1__ReplicaConfigResponse parameterServerConfig;
 
+    /**
+     * @return Optional. The configuration for parameter servers. You should only set `parameterServerConfig.acceleratorConfig` if `parameterServerType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter server. If `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).
+     * 
+     */
     public GoogleCloudMlV1__ReplicaConfigResponse parameterServerConfig() {
         return this.parameterServerConfig;
     }
@@ -172,6 +224,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="parameterServerCount", required=true)
     private String parameterServerCount;
 
+    /**
+     * @return Optional. The number of parameter server replicas to use for the training job. Each replica in the cluster will be of the type specified in `parameter_server_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `parameter_server_type`. The default value is zero.
+     * 
+     */
     public String parameterServerCount() {
         return this.parameterServerCount;
     }
@@ -183,6 +239,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="parameterServerType", required=true)
     private String parameterServerType;
 
+    /**
+     * @return Optional. Specifies the type of virtual machine to use for your training job&#39;s parameter server. The supported values are the same as those described in the entry for `master_type`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is greater than zero.
+     * 
+     */
     public String parameterServerType() {
         return this.parameterServerType;
     }
@@ -194,6 +254,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="pythonModule", required=true)
     private String pythonModule;
 
+    /**
+     * @return The Python module name to run after installing the packages.
+     * 
+     */
     public String pythonModule() {
         return this.pythonModule;
     }
@@ -205,6 +269,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="pythonVersion", required=true)
     private String pythonVersion;
 
+    /**
+     * @return Optional. The version of Python used in training. You must either specify this field or specify `masterConfig.imageUri`. The following Python versions are available: * Python &#39;3.7&#39; is available when `runtime_version` is set to &#39;1.15&#39; or later. * Python &#39;3.5&#39; is available when `runtime_version` is set to a version from &#39;1.4&#39; to &#39;1.14&#39;. * Python &#39;2.7&#39; is available when `runtime_version` is set to &#39;1.15&#39; or earlier. Read more about the Python versions available for [each runtime version](/ml-engine/docs/runtime-version-list).
+     * 
+     */
     public String pythonVersion() {
         return this.pythonVersion;
     }
@@ -216,6 +284,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return The region to run the training job in. See the [available regions](/ai-platform/training/docs/regions) for AI Platform Training.
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -227,6 +299,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="runtimeVersion", required=true)
     private String runtimeVersion;
 
+    /**
+     * @return Optional. The AI Platform runtime version to use for training. You must either specify this field or specify `masterConfig.imageUri`. For more information, see the [runtime version list](/ai-platform/training/docs/runtime-version-list) and learn [how to manage runtime versions](/ai-platform/training/docs/versioning).
+     * 
+     */
     public String runtimeVersion() {
         return this.runtimeVersion;
     }
@@ -238,6 +314,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="scaleTier", required=true)
     private String scaleTier;
 
+    /**
+     * @return Specifies the machine types, the number of replicas for workers and parameter servers.
+     * 
+     */
     public String scaleTier() {
         return this.scaleTier;
     }
@@ -249,6 +329,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="scheduling", required=true)
     private GoogleCloudMlV1__SchedulingResponse scheduling;
 
+    /**
+     * @return Optional. Scheduling options for a training job.
+     * 
+     */
     public GoogleCloudMlV1__SchedulingResponse scheduling() {
         return this.scheduling;
     }
@@ -260,6 +344,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="serviceAccount", required=true)
     private String serviceAccount;
 
+    /**
+     * @return Optional. The email address of a service account to use when running the training appplication. You must have the `iam.serviceAccounts.actAs` permission for the specified service account. In addition, the AI Platform Training Google-managed service account must have the `roles/iam.serviceAccountAdmin` role for the specified service account. [Learn more about configuring a service account.](/ai-platform/training/docs/custom-service-account) If not specified, the AI Platform Training Google-managed service account is used by default.
+     * 
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
@@ -271,6 +359,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="useChiefInTfConfig", required=true)
     private Boolean useChiefInTfConfig;
 
+    /**
+     * @return Optional. Use `chief` instead of `master` in the `TF_CONFIG` environment variable when training with a custom container. Defaults to `false`. [Learn more about this field.](/ai-platform/training/docs/distributed-training-details#chief-versus-master) This field has no effect for training jobs that don&#39;t use a custom container.
+     * 
+     */
     public Boolean useChiefInTfConfig() {
         return this.useChiefInTfConfig;
     }
@@ -282,6 +374,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="workerConfig", required=true)
     private GoogleCloudMlV1__ReplicaConfigResponse workerConfig;
 
+    /**
+     * @return Optional. The configuration for workers. You should only set `workerConfig.acceleratorConfig` if `workerType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `workerConfig.imageUri` only if you build a custom image for your worker. If `workerConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).
+     * 
+     */
     public GoogleCloudMlV1__ReplicaConfigResponse workerConfig() {
         return this.workerConfig;
     }
@@ -293,6 +389,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="workerCount", required=true)
     private String workerCount;
 
+    /**
+     * @return Optional. The number of worker replicas to use for the training job. Each replica in the cluster will be of the type specified in `worker_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `worker_type`. The default value is zero.
+     * 
+     */
     public String workerCount() {
         return this.workerCount;
     }
@@ -304,6 +404,10 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
     @Import(name="workerType", required=true)
     private String workerType;
 
+    /**
+     * @return Optional. Specifies the type of virtual machine to use for your training job&#39;s worker nodes. The supported values are the same as those described in the entry for `masterType`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine). This value must be present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater than zero.
+     * 
+     */
     public String workerType() {
         return this.workerType;
     }
@@ -357,139 +461,307 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
             $ = new GoogleCloudMlV1__TrainingInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param args Optional. Command-line arguments passed to the training application when it starts. If your job uses a custom container, then the arguments are passed to the container&#39;s `ENTRYPOINT` command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Optional. Command-line arguments passed to the training application when it starts. If your job uses a custom container, then the arguments are passed to the container&#39;s `ENTRYPOINT` command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param enableWebAccess Optional. Whether you want AI Platform Training to enable [interactive shell access](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) to training containers. If set to `true`, you can access interactive shells at the URIs given by TrainingOutput.web_access_uris or HyperparameterOutput.web_access_uris (within TrainingOutput.trials).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableWebAccess(Boolean enableWebAccess) {
             $.enableWebAccess = enableWebAccess;
             return this;
         }
 
+        /**
+         * @param encryptionConfig Optional. Options for using customer-managed encryption keys (CMEK) to protect resources created by a training job, instead of using Google&#39;s default encryption. If this is set, then all resources created by the training job will be encrypted with the customer-managed encryption key that you specify. [Learn how and when to use CMEK with AI Platform Training](/ai-platform/training/docs/cmek).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(GoogleCloudMlV1__EncryptionConfigResponse encryptionConfig) {
             $.encryptionConfig = encryptionConfig;
             return this;
         }
 
+        /**
+         * @param evaluatorConfig Optional. The configuration for evaluators. You should only set `evaluatorConfig.acceleratorConfig` if `evaluatorType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `evaluatorConfig.imageUri` only if you build a custom image for your evaluator. If `evaluatorConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluatorConfig(GoogleCloudMlV1__ReplicaConfigResponse evaluatorConfig) {
             $.evaluatorConfig = evaluatorConfig;
             return this;
         }
 
+        /**
+         * @param evaluatorCount Optional. The number of evaluator replicas to use for the training job. Each replica in the cluster will be of the type specified in `evaluator_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `evaluator_type`. The default value is zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluatorCount(String evaluatorCount) {
             $.evaluatorCount = evaluatorCount;
             return this;
         }
 
+        /**
+         * @param evaluatorType Optional. Specifies the type of virtual machine to use for your training job&#39;s evaluator nodes. The supported values are the same as those described in the entry for `masterType`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. This value must be present when `scaleTier` is set to `CUSTOM` and `evaluatorCount` is greater than zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluatorType(String evaluatorType) {
             $.evaluatorType = evaluatorType;
             return this;
         }
 
+        /**
+         * @param hyperparameters Optional. The set of Hyperparameters to tune.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hyperparameters(GoogleCloudMlV1__HyperparameterSpecResponse hyperparameters) {
             $.hyperparameters = hyperparameters;
             return this;
         }
 
+        /**
+         * @param jobDir Optional. A Google Cloud Storage path in which to store training outputs and other data needed for training. This path is passed to your TensorFlow program as the &#39;--job-dir&#39; command-line argument. The benefit of specifying this field is that Cloud ML validates the path for use in training.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobDir(String jobDir) {
             $.jobDir = jobDir;
             return this;
         }
 
+        /**
+         * @param masterConfig Optional. The configuration for your master worker. You should only set `masterConfig.acceleratorConfig` if `masterType` is set to a Compute Engine machine type. Learn about [restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `masterConfig.imageUri` only if you build a custom image. Only one of `masterConfig.imageUri` and `runtimeVersion` should be set. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterConfig(GoogleCloudMlV1__ReplicaConfigResponse masterConfig) {
             $.masterConfig = masterConfig;
             return this;
         }
 
+        /**
+         * @param masterType Optional. Specifies the type of virtual machine to use for your training job&#39;s master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. See the [list of compatible Compute Engine machine types](/ai-platform/training/docs/machine-types#compute-engine-machine-types). Alternatively, you can use the certain legacy machine types in this field. See the [list of legacy machine types](/ai-platform/training/docs/machine-types#legacy-machine-types). Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPUs](/ai-platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterType(String masterType) {
             $.masterType = masterType;
             return this;
         }
 
+        /**
+         * @param network Optional. The full name of the [Compute Engine network](/vpc/docs/vpc) to which the Job is peered. For example, `projects/12345/global/networks/myVPC`. The format of this field is `projects/{project}/global/networks/{network}`, where {project} is a project number (like `12345`) and {network} is network name. Private services access must already be configured for the network. If left unspecified, the Job is not peered with any network. [Learn about using VPC Network Peering.](/ai-platform/training/docs/vpc-peering).
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param packageUris The Google Cloud Storage location of the packages with the training program and any additional dependencies. The maximum number of package URIs is 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageUris(List<String> packageUris) {
             $.packageUris = packageUris;
             return this;
         }
 
+        /**
+         * @param packageUris The Google Cloud Storage location of the packages with the training program and any additional dependencies. The maximum number of package URIs is 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageUris(String... packageUris) {
             return packageUris(List.of(packageUris));
         }
 
+        /**
+         * @param parameterServerConfig Optional. The configuration for parameter servers. You should only set `parameterServerConfig.acceleratorConfig` if `parameterServerType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter server. If `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterServerConfig(GoogleCloudMlV1__ReplicaConfigResponse parameterServerConfig) {
             $.parameterServerConfig = parameterServerConfig;
             return this;
         }
 
+        /**
+         * @param parameterServerCount Optional. The number of parameter server replicas to use for the training job. Each replica in the cluster will be of the type specified in `parameter_server_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `parameter_server_type`. The default value is zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterServerCount(String parameterServerCount) {
             $.parameterServerCount = parameterServerCount;
             return this;
         }
 
+        /**
+         * @param parameterServerType Optional. Specifies the type of virtual machine to use for your training job&#39;s parameter server. The supported values are the same as those described in the entry for `master_type`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is greater than zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterServerType(String parameterServerType) {
             $.parameterServerType = parameterServerType;
             return this;
         }
 
+        /**
+         * @param pythonModule The Python module name to run after installing the packages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonModule(String pythonModule) {
             $.pythonModule = pythonModule;
             return this;
         }
 
+        /**
+         * @param pythonVersion Optional. The version of Python used in training. You must either specify this field or specify `masterConfig.imageUri`. The following Python versions are available: * Python &#39;3.7&#39; is available when `runtime_version` is set to &#39;1.15&#39; or later. * Python &#39;3.5&#39; is available when `runtime_version` is set to a version from &#39;1.4&#39; to &#39;1.14&#39;. * Python &#39;2.7&#39; is available when `runtime_version` is set to &#39;1.15&#39; or earlier. Read more about the Python versions available for [each runtime version](/ml-engine/docs/runtime-version-list).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonVersion(String pythonVersion) {
             $.pythonVersion = pythonVersion;
             return this;
         }
 
+        /**
+         * @param region The region to run the training job in. See the [available regions](/ai-platform/training/docs/regions) for AI Platform Training.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param runtimeVersion Optional. The AI Platform runtime version to use for training. You must either specify this field or specify `masterConfig.imageUri`. For more information, see the [runtime version list](/ai-platform/training/docs/runtime-version-list) and learn [how to manage runtime versions](/ai-platform/training/docs/versioning).
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(String runtimeVersion) {
             $.runtimeVersion = runtimeVersion;
             return this;
         }
 
+        /**
+         * @param scaleTier Specifies the machine types, the number of replicas for workers and parameter servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleTier(String scaleTier) {
             $.scaleTier = scaleTier;
             return this;
         }
 
+        /**
+         * @param scheduling Optional. Scheduling options for a training job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(GoogleCloudMlV1__SchedulingResponse scheduling) {
             $.scheduling = scheduling;
             return this;
         }
 
+        /**
+         * @param serviceAccount Optional. The email address of a service account to use when running the training appplication. You must have the `iam.serviceAccounts.actAs` permission for the specified service account. In addition, the AI Platform Training Google-managed service account must have the `roles/iam.serviceAccountAdmin` role for the specified service account. [Learn more about configuring a service account.](/ai-platform/training/docs/custom-service-account) If not specified, the AI Platform Training Google-managed service account is used by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param useChiefInTfConfig Optional. Use `chief` instead of `master` in the `TF_CONFIG` environment variable when training with a custom container. Defaults to `false`. [Learn more about this field.](/ai-platform/training/docs/distributed-training-details#chief-versus-master) This field has no effect for training jobs that don&#39;t use a custom container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useChiefInTfConfig(Boolean useChiefInTfConfig) {
             $.useChiefInTfConfig = useChiefInTfConfig;
             return this;
         }
 
+        /**
+         * @param workerConfig Optional. The configuration for workers. You should only set `workerConfig.acceleratorConfig` if `workerType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `workerConfig.imageUri` only if you build a custom image for your worker. If `workerConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(GoogleCloudMlV1__ReplicaConfigResponse workerConfig) {
             $.workerConfig = workerConfig;
             return this;
         }
 
+        /**
+         * @param workerCount Optional. The number of worker replicas to use for the training job. Each replica in the cluster will be of the type specified in `worker_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `worker_type`. The default value is zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerCount(String workerCount) {
             $.workerCount = workerCount;
             return this;
         }
 
+        /**
+         * @param workerType Optional. Specifies the type of virtual machine to use for your training job&#39;s worker nodes. The supported values are the same as those described in the entry for `masterType`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine). This value must be present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater than zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerType(String workerType) {
             $.workerType = workerType;
             return this;

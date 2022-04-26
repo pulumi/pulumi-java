@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StorageAccountResponse {
     /**
-     * The ID of the storage account resource. Video Analyzer relies on tables, queues, and blobs. The primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage).
+     * @return The ID of the storage account resource. Video Analyzer relies on tables, queues, and blobs. The primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage).
      * 
      */
     private final @Nullable String id;
     /**
-     * A managed identity that Video Analyzer will use to access the storage account.
+     * @return A managed identity that Video Analyzer will use to access the storage account.
      * 
      */
     private final @Nullable ResourceIdentityResponse identity;
     /**
-     * The current status of the storage account mapping.
+     * @return The current status of the storage account mapping.
      * 
      */
     private final String status;
@@ -39,23 +39,23 @@ public final class StorageAccountResponse {
     }
 
     /**
-     * The ID of the storage account resource. Video Analyzer relies on tables, queues, and blobs. The primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage).
+     * @return The ID of the storage account resource. Video Analyzer relies on tables, queues, and blobs. The primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage).
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * A managed identity that Video Analyzer will use to access the storage account.
+     * @return A managed identity that Video Analyzer will use to access the storage account.
      * 
-    */
+     */
     public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The current status of the storage account mapping.
+     * @return The current status of the storage account mapping.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

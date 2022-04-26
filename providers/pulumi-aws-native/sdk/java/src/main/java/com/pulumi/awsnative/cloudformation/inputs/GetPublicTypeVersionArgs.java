@@ -19,6 +19,10 @@ public final class GetPublicTypeVersionArgs extends com.pulumi.resources.InvokeA
     @Import(name="publicTypeArn", required=true)
     private String publicTypeArn;
 
+    /**
+     * @return The Amazon Resource Number (ARN) assigned to the public extension upon publication
+     * 
+     */
     public String publicTypeArn() {
         return this.publicTypeArn;
     }
@@ -47,6 +51,12 @@ public final class GetPublicTypeVersionArgs extends com.pulumi.resources.InvokeA
             $ = new GetPublicTypeVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicTypeArn The Amazon Resource Number (ARN) assigned to the public extension upon publication
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicTypeArn(String publicTypeArn) {
             $.publicTypeArn = publicTypeArn;
             return this;

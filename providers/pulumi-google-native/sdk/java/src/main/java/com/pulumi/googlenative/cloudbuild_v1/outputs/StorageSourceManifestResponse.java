@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class StorageSourceManifestResponse {
     /**
-     * Google Cloud Storage bucket containing the source manifest (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+     * @return Google Cloud Storage bucket containing the source manifest (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
      * 
      */
     private final String bucket;
     /**
-     * Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.
+     * @return Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.
      * 
      */
     private final String generation;
     /**
-     * Google Cloud Storage object containing the source manifest. This object must be a JSON file.
+     * @return Google Cloud Storage object containing the source manifest. This object must be a JSON file.
      * 
      */
     private final String object;
@@ -36,23 +36,23 @@ public final class StorageSourceManifestResponse {
     }
 
     /**
-     * Google Cloud Storage bucket containing the source manifest (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+     * @return Google Cloud Storage bucket containing the source manifest (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.
+     * @return Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.
      * 
-    */
+     */
     public String generation() {
         return this.generation;
     }
     /**
-     * Google Cloud Storage object containing the source manifest. This object must be a JSON file.
+     * @return Google Cloud Storage object containing the source manifest. This object must be a JSON file.
      * 
-    */
+     */
     public String object() {
         return this.object;
     }

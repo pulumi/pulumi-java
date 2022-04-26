@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class AvailabilityInformationResponse {
     /**
-     * Current availability stage of the product. Availability stage
+     * @return Current availability stage of the product. Availability stage
      * 
      */
     private final String availabilityStage;
     /**
-     * Reason why the product is disabled.
+     * @return Reason why the product is disabled.
      * 
      */
     private final String disabledReason;
     /**
-     * Message for why the product is disabled.
+     * @return Message for why the product is disabled.
      * 
      */
     private final String disabledReasonMessage;
@@ -36,23 +36,23 @@ public final class AvailabilityInformationResponse {
     }
 
     /**
-     * Current availability stage of the product. Availability stage
+     * @return Current availability stage of the product. Availability stage
      * 
-    */
+     */
     public String availabilityStage() {
         return this.availabilityStage;
     }
     /**
-     * Reason why the product is disabled.
+     * @return Reason why the product is disabled.
      * 
-    */
+     */
     public String disabledReason() {
         return this.disabledReason;
     }
     /**
-     * Message for why the product is disabled.
+     * @return Message for why the product is disabled.
      * 
-    */
+     */
     public String disabledReasonMessage() {
         return this.disabledReasonMessage;
     }

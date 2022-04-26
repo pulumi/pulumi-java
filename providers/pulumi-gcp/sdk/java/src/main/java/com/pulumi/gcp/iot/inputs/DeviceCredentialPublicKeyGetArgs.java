@@ -21,6 +21,11 @@ public final class DeviceCredentialPublicKeyGetArgs extends com.pulumi.resources
     @Import(name="format", required=true)
     private Output<String> format;
 
+    /**
+     * @return The format of the key.
+     * Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`.
+     * 
+     */
     public Output<String> format() {
         return this.format;
     }
@@ -32,6 +37,10 @@ public final class DeviceCredentialPublicKeyGetArgs extends com.pulumi.resources
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return The key data.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -61,20 +70,46 @@ public final class DeviceCredentialPublicKeyGetArgs extends com.pulumi.resources
             $ = new DeviceCredentialPublicKeyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param format The format of the key.
+         * Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(Output<String> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format The format of the key.
+         * Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param key The key data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The key data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }

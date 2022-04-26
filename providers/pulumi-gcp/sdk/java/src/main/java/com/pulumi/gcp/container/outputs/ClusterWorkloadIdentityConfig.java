@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterWorkloadIdentityConfig {
     /**
-     * The workload pool to attach all Kubernetes service accounts to.
+     * @return The workload pool to attach all Kubernetes service accounts to.
      * 
      */
     private final @Nullable String workloadPool;
@@ -23,9 +23,9 @@ public final class ClusterWorkloadIdentityConfig {
     }
 
     /**
-     * The workload pool to attach all Kubernetes service accounts to.
+     * @return The workload pool to attach all Kubernetes service accounts to.
      * 
-    */
+     */
     public Optional<String> workloadPool() {
         return Optional.ofNullable(this.workloadPool);
     }

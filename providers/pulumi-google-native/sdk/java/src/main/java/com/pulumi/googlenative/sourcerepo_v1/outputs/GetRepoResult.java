@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class GetRepoResult {
     /**
-     * How this repository mirrors a repository managed by another service. Read-only field.
+     * @return How this repository mirrors a repository managed by another service. Read-only field.
      * 
      */
     private final MirrorConfigResponse mirrorConfig;
     /**
-     * Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
+     * @return Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
      * 
      */
     private final String name;
     /**
-     * How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
+     * @return How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
      * 
      */
     private final Map<String,String> pubsubConfigs;
     /**
-     * The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
+     * @return The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
      * 
      */
     private final String size;
     /**
-     * URL to clone the repository from Google Cloud Source Repositories. Read-only field.
+     * @return URL to clone the repository from Google Cloud Source Repositories. Read-only field.
      * 
      */
     private final String url;
@@ -52,37 +52,37 @@ public final class GetRepoResult {
     }
 
     /**
-     * How this repository mirrors a repository managed by another service. Read-only field.
+     * @return How this repository mirrors a repository managed by another service. Read-only field.
      * 
-    */
+     */
     public MirrorConfigResponse mirrorConfig() {
         return this.mirrorConfig;
     }
     /**
-     * Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
+     * @return Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
+     * @return How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
      * 
-    */
+     */
     public Map<String,String> pubsubConfigs() {
         return this.pubsubConfigs;
     }
     /**
-     * The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
+     * @return The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
      * 
-    */
+     */
     public String size() {
         return this.size;
     }
     /**
-     * URL to clone the repository from Google Cloud Source Repositories. Read-only field.
+     * @return URL to clone the repository from Google Cloud Source Repositories. Read-only field.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

@@ -15,24 +15,24 @@ import java.util.Objects;
 public final class GetWorkspaceResult {
     private final String bundleId;
     /**
-     * The name of the WorkSpace, as seen by the operating system.
+     * @return The name of the WorkSpace, as seen by the operating system.
      * 
      */
     private final String computerName;
     private final String directoryId;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The IP address of the WorkSpace.
+     * @return The IP address of the WorkSpace.
      * 
      */
     private final String ipAddress;
     private final Boolean rootVolumeEncryptionEnabled;
     /**
-     * The operational state of the WorkSpace.
+     * @return The operational state of the WorkSpace.
      * 
      */
     private final String state;
@@ -77,9 +77,9 @@ public final class GetWorkspaceResult {
         return this.bundleId;
     }
     /**
-     * The name of the WorkSpace, as seen by the operating system.
+     * @return The name of the WorkSpace, as seen by the operating system.
      * 
-    */
+     */
     public String computerName() {
         return this.computerName;
     }
@@ -87,16 +87,16 @@ public final class GetWorkspaceResult {
         return this.directoryId;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The IP address of the WorkSpace.
+     * @return The IP address of the WorkSpace.
      * 
-    */
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
@@ -104,9 +104,9 @@ public final class GetWorkspaceResult {
         return this.rootVolumeEncryptionEnabled;
     }
     /**
-     * The operational state of the WorkSpace.
+     * @return The operational state of the WorkSpace.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

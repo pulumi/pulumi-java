@@ -22,6 +22,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="transformations", required=true)
     private Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationGetArgs>> transformations;
 
+    /**
+     * @return Transformation for each infoType. Cannot specify more than one for a given infoType.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationGetArgs>> transformations() {
         return this.transformations;
     }
@@ -50,15 +55,36 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param transformations Transformation for each infoType. Cannot specify more than one for a given infoType.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformations(Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationGetArgs>> transformations) {
             $.transformations = transformations;
             return this;
         }
 
+        /**
+         * @param transformations Transformation for each infoType. Cannot specify more than one for a given infoType.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformations(List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationGetArgs> transformations) {
             return transformations(Output.of(transformations));
         }
 
+        /**
+         * @param transformations Transformation for each infoType. Cannot specify more than one for a given infoType.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformations(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationGetArgs... transformations) {
             return transformations(List.of(transformations));
         }

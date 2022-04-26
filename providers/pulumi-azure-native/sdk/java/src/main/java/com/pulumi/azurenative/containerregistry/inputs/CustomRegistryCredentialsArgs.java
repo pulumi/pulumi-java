@@ -31,6 +31,14 @@ public final class CustomRegistryCredentialsArgs extends com.pulumi.resources.Re
     @Import(name="identity")
     private @Nullable Output<String> identity;
 
+    /**
+     * @return Indicates the managed identity assigned to the custom credential. If a user-assigned identity
+     * this value is the Client ID. If a system-assigned identity, the value will be `system`. In
+     * the case of a system-assigned identity, the Client ID will be determined by the runner. This
+     * identity may be used to authenticate to key vault to retrieve credentials or it may be the only
+     * source of authentication used for accessing the registry.
+     * 
+     */
     public Optional<Output<String>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -43,6 +51,11 @@ public final class CustomRegistryCredentialsArgs extends com.pulumi.resources.Re
     @Import(name="password")
     private @Nullable Output<SecretObjectArgs> password;
 
+    /**
+     * @return The password for logging into the custom registry. The password is a secret
+     * object that allows multiple ways of providing the value for it.
+     * 
+     */
     public Optional<Output<SecretObjectArgs>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -54,6 +67,10 @@ public final class CustomRegistryCredentialsArgs extends com.pulumi.resources.Re
     @Import(name="userName")
     private @Nullable Output<SecretObjectArgs> userName;
 
+    /**
+     * @return The username for logging into the custom registry.
+     * 
+     */
     public Optional<Output<SecretObjectArgs>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -84,29 +101,75 @@ public final class CustomRegistryCredentialsArgs extends com.pulumi.resources.Re
             $ = new CustomRegistryCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity Indicates the managed identity assigned to the custom credential. If a user-assigned identity
+         * this value is the Client ID. If a system-assigned identity, the value will be `system`. In
+         * the case of a system-assigned identity, the Client ID will be determined by the runner. This
+         * identity may be used to authenticate to key vault to retrieve credentials or it may be the only
+         * source of authentication used for accessing the registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<String> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Indicates the managed identity assigned to the custom credential. If a user-assigned identity
+         * this value is the Client ID. If a system-assigned identity, the value will be `system`. In
+         * the case of a system-assigned identity, the Client ID will be determined by the runner. This
+         * identity may be used to authenticate to key vault to retrieve credentials or it may be the only
+         * source of authentication used for accessing the registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(String identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param password The password for logging into the custom registry. The password is a secret
+         * object that allows multiple ways of providing the value for it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<SecretObjectArgs> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password for logging into the custom registry. The password is a secret
+         * object that allows multiple ways of providing the value for it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecretObjectArgs password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param userName The username for logging into the custom registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<SecretObjectArgs> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName The username for logging into the custom registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(SecretObjectArgs userName) {
             return userName(Output.of(userName));
         }

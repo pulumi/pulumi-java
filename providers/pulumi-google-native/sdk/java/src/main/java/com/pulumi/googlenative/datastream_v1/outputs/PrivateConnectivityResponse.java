@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PrivateConnectivityResponse {
     /**
-     * A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
+     * @return A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
      * 
      */
     private final String privateConnection;
@@ -21,9 +21,9 @@ public final class PrivateConnectivityResponse {
     }
 
     /**
-     * A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
+     * @return A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
      * 
-    */
+     */
     public String privateConnection() {
         return this.privateConnection;
     }

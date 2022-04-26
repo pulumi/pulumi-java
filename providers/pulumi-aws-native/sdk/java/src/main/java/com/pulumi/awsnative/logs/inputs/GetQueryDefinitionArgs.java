@@ -19,6 +19,10 @@ public final class GetQueryDefinitionArgs extends com.pulumi.resources.InvokeArg
     @Import(name="queryDefinitionId", required=true)
     private String queryDefinitionId;
 
+    /**
+     * @return Unique identifier of a query definition
+     * 
+     */
     public String queryDefinitionId() {
         return this.queryDefinitionId;
     }
@@ -47,6 +51,12 @@ public final class GetQueryDefinitionArgs extends com.pulumi.resources.InvokeArg
             $ = new GetQueryDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queryDefinitionId Unique identifier of a query definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryDefinitionId(String queryDefinitionId) {
             $.queryDefinitionId = queryDefinitionId;
             return this;

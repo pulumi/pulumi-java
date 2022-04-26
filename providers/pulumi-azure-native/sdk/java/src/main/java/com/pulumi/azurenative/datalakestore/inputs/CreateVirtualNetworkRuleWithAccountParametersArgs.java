@@ -24,6 +24,10 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends com
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The unique name of the virtual network rule to create.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends com
     @Import(name="subnetId", required=true)
     private Output<String> subnetId;
 
+    /**
+     * @return The resource identifier for the subnet.
+     * 
+     */
     public Output<String> subnetId() {
         return this.subnetId;
     }
@@ -64,20 +72,44 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends com
             $ = new CreateVirtualNetworkRuleWithAccountParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The unique name of the virtual network rule to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique name of the virtual network rule to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param subnetId The resource identifier for the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The resource identifier for the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }

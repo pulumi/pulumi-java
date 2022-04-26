@@ -28,6 +28,12 @@ public final class TwitterRegistrationArgs extends com.pulumi.resources.Resource
     @Import(name="consumerKey")
     private @Nullable Output<String> consumerKey;
 
+    /**
+     * @return The OAuth 1.0a consumer key of the Twitter application used for sign-in.
+     * This setting is required for enabling Twitter Sign-In.
+     * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
+     * 
+     */
     public Optional<Output<String>> consumerKey() {
         return Optional.ofNullable(this.consumerKey);
     }
@@ -40,6 +46,11 @@ public final class TwitterRegistrationArgs extends com.pulumi.resources.Resource
     @Import(name="consumerSecretSettingName")
     private @Nullable Output<String> consumerSecretSettingName;
 
+    /**
+     * @return The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
+     * application used for sign-in.
+     * 
+     */
     public Optional<Output<String>> consumerSecretSettingName() {
         return Optional.ofNullable(this.consumerSecretSettingName);
     }
@@ -69,20 +80,50 @@ public final class TwitterRegistrationArgs extends com.pulumi.resources.Resource
             $ = new TwitterRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumerKey The OAuth 1.0a consumer key of the Twitter application used for sign-in.
+         * This setting is required for enabling Twitter Sign-In.
+         * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerKey(@Nullable Output<String> consumerKey) {
             $.consumerKey = consumerKey;
             return this;
         }
 
+        /**
+         * @param consumerKey The OAuth 1.0a consumer key of the Twitter application used for sign-in.
+         * This setting is required for enabling Twitter Sign-In.
+         * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerKey(String consumerKey) {
             return consumerKey(Output.of(consumerKey));
         }
 
+        /**
+         * @param consumerSecretSettingName The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
+         * application used for sign-in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerSecretSettingName(@Nullable Output<String> consumerSecretSettingName) {
             $.consumerSecretSettingName = consumerSecretSettingName;
             return this;
         }
 
+        /**
+         * @param consumerSecretSettingName The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
+         * application used for sign-in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerSecretSettingName(String consumerSecretSettingName) {
             return consumerSecretSettingName(Output.of(consumerSecretSettingName));
         }

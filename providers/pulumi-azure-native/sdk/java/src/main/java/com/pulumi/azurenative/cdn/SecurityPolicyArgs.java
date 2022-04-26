@@ -23,6 +23,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="parameters")
     private @Nullable Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters;
 
+    /**
+     * @return object which contains security policy parameters
+     * 
+     */
     public Optional<Output<SecurityPolicyWebApplicationFirewallParametersArgs>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -34,6 +38,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="profileName", required=true)
     private Output<String> profileName;
 
+    /**
+     * @return Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     public Output<String> profileName() {
         return this.profileName;
     }
@@ -45,6 +53,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="securityPolicyName")
     private @Nullable Output<String> securityPolicyName;
 
+    /**
+     * @return Name of the security policy under the profile.
+     * 
+     */
     public Optional<Output<String>> securityPolicyName() {
         return Optional.ofNullable(this.securityPolicyName);
     }
@@ -87,38 +103,86 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SecurityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameters object which contains security policy parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters object which contains security policy parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(SecurityPolicyWebApplicationFirewallParametersArgs parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(Output<String> profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             return profileName(Output.of(profileName));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param securityPolicyName Name of the security policy under the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityPolicyName(@Nullable Output<String> securityPolicyName) {
             $.securityPolicyName = securityPolicyName;
             return this;
         }
 
+        /**
+         * @param securityPolicyName Name of the security policy under the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityPolicyName(String securityPolicyName) {
             return securityPolicyName(Output.of(securityPolicyName));
         }

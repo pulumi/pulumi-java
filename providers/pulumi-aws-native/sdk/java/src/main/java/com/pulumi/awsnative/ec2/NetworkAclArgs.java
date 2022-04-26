@@ -24,6 +24,10 @@ public final class NetworkAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<NetworkAclTagArgs>> tags;
 
+    /**
+     * @return The tags to assign to the network ACL.
+     * 
+     */
     public Optional<Output<List<NetworkAclTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -35,6 +39,10 @@ public final class NetworkAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId", required=true)
     private Output<String> vpcId;
 
+    /**
+     * @return The ID of the VPC.
+     * 
+     */
     public Output<String> vpcId() {
         return this.vpcId;
     }
@@ -64,24 +72,54 @@ public final class NetworkAclArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NetworkAclArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tags The tags to assign to the network ACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<NetworkAclTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags to assign to the network ACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<NetworkAclTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags to assign to the network ACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(NetworkAclTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param vpcId The ID of the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The ID of the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

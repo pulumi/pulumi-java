@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig {
     /**
-     * Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
+     * @return Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
      * 
      */
     private final @Nullable String gcePdKmsKeyName;
@@ -23,9 +23,9 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
     }
 
     /**
-     * Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
+     * @return Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
      * 
-    */
+     */
     public Optional<String> gcePdKmsKeyName() {
         return Optional.ofNullable(this.gcePdKmsKeyName);
     }

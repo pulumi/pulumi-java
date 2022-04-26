@@ -20,6 +20,10 @@ public final class LaunchTemplateHibernationOptionsGetArgs extends com.pulumi.re
     @Import(name="configured", required=true)
     private Output<Boolean> configured;
 
+    /**
+     * @return If set to `true`, the launched EC2 instance will hibernation enabled.
+     * 
+     */
     public Output<Boolean> configured() {
         return this.configured;
     }
@@ -48,11 +52,23 @@ public final class LaunchTemplateHibernationOptionsGetArgs extends com.pulumi.re
             $ = new LaunchTemplateHibernationOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configured If set to `true`, the launched EC2 instance will hibernation enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configured(Output<Boolean> configured) {
             $.configured = configured;
             return this;
         }
 
+        /**
+         * @param configured If set to `true`, the launched EC2 instance will hibernation enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configured(Boolean configured) {
             return configured(Output.of(configured));
         }

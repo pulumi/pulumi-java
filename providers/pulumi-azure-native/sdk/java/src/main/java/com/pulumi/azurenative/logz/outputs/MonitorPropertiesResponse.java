@@ -17,24 +17,24 @@ import javax.annotation.Nullable;
 public final class MonitorPropertiesResponse {
     private final String liftrResourceCategory;
     /**
-     * The priority of the resource.
+     * @return The priority of the resource.
      * 
      */
     private final Integer liftrResourcePreference;
     private final @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties;
     /**
-     * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+     * @return Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
      * 
      */
     private final @Nullable String marketplaceSubscriptionStatus;
     /**
-     * Flag specifying if the resource monitoring is enabled or disabled.
+     * @return Flag specifying if the resource monitoring is enabled or disabled.
      * 
      */
     private final @Nullable String monitoringStatus;
     private final @Nullable PlanDataResponse planData;
     /**
-     * Flag specifying if the resource provisioning state as tracked by ARM.
+     * @return Flag specifying if the resource provisioning state as tracked by ARM.
      * 
      */
     private final String provisioningState;
@@ -64,9 +64,9 @@ public final class MonitorPropertiesResponse {
         return this.liftrResourceCategory;
     }
     /**
-     * The priority of the resource.
+     * @return The priority of the resource.
      * 
-    */
+     */
     public Integer liftrResourcePreference() {
         return this.liftrResourcePreference;
     }
@@ -74,16 +74,16 @@ public final class MonitorPropertiesResponse {
         return Optional.ofNullable(this.logzOrganizationProperties);
     }
     /**
-     * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+     * @return Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
      * 
-    */
+     */
     public Optional<String> marketplaceSubscriptionStatus() {
         return Optional.ofNullable(this.marketplaceSubscriptionStatus);
     }
     /**
-     * Flag specifying if the resource monitoring is enabled or disabled.
+     * @return Flag specifying if the resource monitoring is enabled or disabled.
      * 
-    */
+     */
     public Optional<String> monitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
@@ -91,9 +91,9 @@ public final class MonitorPropertiesResponse {
         return Optional.ofNullable(this.planData);
     }
     /**
-     * Flag specifying if the resource provisioning state as tracked by ARM.
+     * @return Flag specifying if the resource provisioning state as tracked by ARM.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

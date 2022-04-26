@@ -25,6 +25,10 @@ public final class CustomRPActionRouteDefinitionResponse extends com.pulumi.reso
     @Import(name="endpoint", required=true)
     private String endpoint;
 
+    /**
+     * @return The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. &#39;https://testendpoint/&#39;) or can specify to route via a path (e.g. &#39;https://testendpoint/{requestPath}&#39;)
+     * 
+     */
     public String endpoint() {
         return this.endpoint;
     }
@@ -36,6 +40,10 @@ public final class CustomRPActionRouteDefinitionResponse extends com.pulumi.reso
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the route definition. This becomes the name for the ARM extension (e.g. &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}&#39;)
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class CustomRPActionRouteDefinitionResponse extends com.pulumi.reso
     @Import(name="routingType")
     private @Nullable String routingType;
 
+    /**
+     * @return The routing types that are supported for action requests.
+     * 
+     */
     public Optional<String> routingType() {
         return Optional.ofNullable(this.routingType);
     }
@@ -77,16 +89,34 @@ public final class CustomRPActionRouteDefinitionResponse extends com.pulumi.reso
             $ = new CustomRPActionRouteDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoint The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. &#39;https://testendpoint/&#39;) or can specify to route via a path (e.g. &#39;https://testendpoint/{requestPath}&#39;)
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param name The name of the route definition. This becomes the name for the ARM extension (e.g. &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}&#39;)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param routingType The routing types that are supported for action requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingType(@Nullable String routingType) {
             $.routingType = routingType;
             return this;

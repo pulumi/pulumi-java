@@ -26,6 +26,10 @@ public final class QuickConnectQuickConnectConfigGetArgs extends com.pulumi.reso
     @Import(name="phoneConfigs")
     private @Nullable Output<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> phoneConfigs;
 
+    /**
+     * @return Specifies the phone configuration of the Quick Connect. This is required only if `quick_connect_type` is `PHONE_NUMBER`. The `phone_config` block is documented below.
+     * 
+     */
     public Optional<Output<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>>> phoneConfigs() {
         return Optional.ofNullable(this.phoneConfigs);
     }
@@ -37,6 +41,10 @@ public final class QuickConnectQuickConnectConfigGetArgs extends com.pulumi.reso
     @Import(name="queueConfigs")
     private @Nullable Output<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> queueConfigs;
 
+    /**
+     * @return Specifies the queue configuration of the Quick Connect. This is required only if `quick_connect_type` is `QUEUE`. The `queue_config` block is documented below.
+     * 
+     */
     public Optional<Output<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>>> queueConfigs() {
         return Optional.ofNullable(this.queueConfigs);
     }
@@ -48,6 +56,10 @@ public final class QuickConnectQuickConnectConfigGetArgs extends com.pulumi.reso
     @Import(name="quickConnectType", required=true)
     private Output<String> quickConnectType;
 
+    /**
+     * @return Specifies the configuration type of the quick connect. valid values are `PHONE_NUMBER`, `QUEUE`, `USER`.
+     * 
+     */
     public Output<String> quickConnectType() {
         return this.quickConnectType;
     }
@@ -59,6 +71,10 @@ public final class QuickConnectQuickConnectConfigGetArgs extends com.pulumi.reso
     @Import(name="userConfigs")
     private @Nullable Output<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> userConfigs;
 
+    /**
+     * @return Specifies the user configuration of the Quick Connect. This is required only if `quick_connect_type` is `USER`. The `user_config` block is documented below.
+     * 
+     */
     public Optional<Output<List<QuickConnectQuickConnectConfigUserConfigGetArgs>>> userConfigs() {
         return Optional.ofNullable(this.userConfigs);
     }
@@ -90,50 +106,116 @@ public final class QuickConnectQuickConnectConfigGetArgs extends com.pulumi.reso
             $ = new QuickConnectQuickConnectConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param phoneConfigs Specifies the phone configuration of the Quick Connect. This is required only if `quick_connect_type` is `PHONE_NUMBER`. The `phone_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneConfigs(@Nullable Output<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> phoneConfigs) {
             $.phoneConfigs = phoneConfigs;
             return this;
         }
 
+        /**
+         * @param phoneConfigs Specifies the phone configuration of the Quick Connect. This is required only if `quick_connect_type` is `PHONE_NUMBER`. The `phone_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneConfigs(List<QuickConnectQuickConnectConfigPhoneConfigGetArgs> phoneConfigs) {
             return phoneConfigs(Output.of(phoneConfigs));
         }
 
+        /**
+         * @param phoneConfigs Specifies the phone configuration of the Quick Connect. This is required only if `quick_connect_type` is `PHONE_NUMBER`. The `phone_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneConfigs(QuickConnectQuickConnectConfigPhoneConfigGetArgs... phoneConfigs) {
             return phoneConfigs(List.of(phoneConfigs));
         }
 
+        /**
+         * @param queueConfigs Specifies the queue configuration of the Quick Connect. This is required only if `quick_connect_type` is `QUEUE`. The `queue_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueConfigs(@Nullable Output<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> queueConfigs) {
             $.queueConfigs = queueConfigs;
             return this;
         }
 
+        /**
+         * @param queueConfigs Specifies the queue configuration of the Quick Connect. This is required only if `quick_connect_type` is `QUEUE`. The `queue_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueConfigs(List<QuickConnectQuickConnectConfigQueueConfigGetArgs> queueConfigs) {
             return queueConfigs(Output.of(queueConfigs));
         }
 
+        /**
+         * @param queueConfigs Specifies the queue configuration of the Quick Connect. This is required only if `quick_connect_type` is `QUEUE`. The `queue_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueConfigs(QuickConnectQuickConnectConfigQueueConfigGetArgs... queueConfigs) {
             return queueConfigs(List.of(queueConfigs));
         }
 
+        /**
+         * @param quickConnectType Specifies the configuration type of the quick connect. valid values are `PHONE_NUMBER`, `QUEUE`, `USER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quickConnectType(Output<String> quickConnectType) {
             $.quickConnectType = quickConnectType;
             return this;
         }
 
+        /**
+         * @param quickConnectType Specifies the configuration type of the quick connect. valid values are `PHONE_NUMBER`, `QUEUE`, `USER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quickConnectType(String quickConnectType) {
             return quickConnectType(Output.of(quickConnectType));
         }
 
+        /**
+         * @param userConfigs Specifies the user configuration of the Quick Connect. This is required only if `quick_connect_type` is `USER`. The `user_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userConfigs(@Nullable Output<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> userConfigs) {
             $.userConfigs = userConfigs;
             return this;
         }
 
+        /**
+         * @param userConfigs Specifies the user configuration of the Quick Connect. This is required only if `quick_connect_type` is `USER`. The `user_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userConfigs(List<QuickConnectQuickConnectConfigUserConfigGetArgs> userConfigs) {
             return userConfigs(Output.of(userConfigs));
         }
 
+        /**
+         * @param userConfigs Specifies the user configuration of the Quick Connect. This is required only if `quick_connect_type` is `USER`. The `user_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userConfigs(QuickConnectQuickConnectConfigUserConfigGetArgs... userConfigs) {
             return userConfigs(List.of(userConfigs));
         }

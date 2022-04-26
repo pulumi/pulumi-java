@@ -26,6 +26,10 @@ public final class NonResourceAttributesArgs extends com.pulumi.resources.Resour
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Path is the URL path of the request
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -37,6 +41,10 @@ public final class NonResourceAttributesArgs extends com.pulumi.resources.Resour
     @Import(name="verb")
     private @Nullable Output<String> verb;
 
+    /**
+     * @return Verb is the standard HTTP verb
+     * 
+     */
     public Optional<Output<String>> verb() {
         return Optional.ofNullable(this.verb);
     }
@@ -66,20 +74,44 @@ public final class NonResourceAttributesArgs extends com.pulumi.resources.Resour
             $ = new NonResourceAttributesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path Path is the URL path of the request
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Path is the URL path of the request
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param verb Verb is the standard HTTP verb
+         * 
+         * @return builder
+         * 
+         */
         public Builder verb(@Nullable Output<String> verb) {
             $.verb = verb;
             return this;
         }
 
+        /**
+         * @param verb Verb is the standard HTTP verb
+         * 
+         * @return builder
+         * 
+         */
         public Builder verb(String verb) {
             return verb(Output.of(verb));
         }

@@ -26,6 +26,10 @@ public final class SSISPropertyOverrideResponse extends com.pulumi.resources.Inv
     @Import(name="isSensitive")
     private @Nullable Boolean isSensitive;
 
+    /**
+     * @return Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
+     * 
+     */
     public Optional<Boolean> isSensitive() {
         return Optional.ofNullable(this.isSensitive);
     }
@@ -37,6 +41,10 @@ public final class SSISPropertyOverrideResponse extends com.pulumi.resources.Inv
     @Import(name="value", required=true)
     private Object value;
 
+    /**
+     * @return SSIS package property override value. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object value() {
         return this.value;
     }
@@ -66,11 +74,23 @@ public final class SSISPropertyOverrideResponse extends com.pulumi.resources.Inv
             $ = new SSISPropertyOverrideResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isSensitive Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSensitive(@Nullable Boolean isSensitive) {
             $.isSensitive = isSensitive;
             return this;
         }
 
+        /**
+         * @param value SSIS package property override value. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Object value) {
             $.value = value;
             return this;

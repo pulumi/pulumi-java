@@ -21,6 +21,10 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="bundleId")
     private @Nullable String bundleId;
 
+    /**
+     * @return The ID of the bundle.
+     * 
+     */
     public Optional<String> bundleId() {
         return Optional.ofNullable(this.bundleId);
     }
@@ -32,6 +36,10 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the bundle. You cannot combine this parameter with `bundle_id`.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -43,6 +51,10 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="owner")
     private @Nullable String owner;
 
+    /**
+     * @return The owner of the bundles. You have to leave it blank for own bundles. You cannot combine this parameter with `bundle_id`.
+     * 
+     */
     public Optional<String> owner() {
         return Optional.ofNullable(this.owner);
     }
@@ -73,16 +85,34 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBundleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bundleId The ID of the bundle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(@Nullable String bundleId) {
             $.bundleId = bundleId;
             return this;
         }
 
+        /**
+         * @param name The name of the bundle. You cannot combine this parameter with `bundle_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param owner The owner of the bundles. You have to leave it blank for own bundles. You cannot combine this parameter with `bundle_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(@Nullable String owner) {
             $.owner = owner;
             return this;

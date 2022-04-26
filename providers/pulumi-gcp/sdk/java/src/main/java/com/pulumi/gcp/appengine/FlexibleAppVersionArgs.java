@@ -38,6 +38,11 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="apiConfig")
     private @Nullable Output<FlexibleAppVersionApiConfigArgs> apiConfig;
 
+    /**
+     * @return Serving configuration for Google Cloud Endpoints.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FlexibleAppVersionApiConfigArgs>> apiConfig() {
         return Optional.ofNullable(this.apiConfig);
     }
@@ -50,6 +55,11 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="automaticScaling")
     private @Nullable Output<FlexibleAppVersionAutomaticScalingArgs> automaticScaling;
 
+    /**
+     * @return Automatic scaling is based on request rate, response latencies, and other application metrics.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FlexibleAppVersionAutomaticScalingArgs>> automaticScaling() {
         return Optional.ofNullable(this.automaticScaling);
     }
@@ -61,6 +71,10 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="betaSettings")
     private @Nullable Output<Map<String,String>> betaSettings;
 
+    /**
+     * @return Metadata settings that are supplied to this version to enable beta runtime features.
+     * 
+     */
     public Optional<Output<Map<String,String>>> betaSettings() {
         return Optional.ofNullable(this.betaSettings);
     }
@@ -73,6 +87,11 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="defaultExpiration")
     private @Nullable Output<String> defaultExpiration;
 
+    /**
+     * @return Duration that static files should be cached by web proxies and browsers.
+     * Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
+     * 
+     */
     public Optional<Output<String>> defaultExpiration() {
         return Optional.ofNullable(this.defaultExpiration);
     }
@@ -84,6 +103,10 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="deleteServiceOnDestroy")
     private @Nullable Output<Boolean> deleteServiceOnDestroy;
 
+    /**
+     * @return If set to `true`, the service will be deleted if it is the last version.
+     * 
+     */
     public Optional<Output<Boolean>> deleteServiceOnDestroy() {
         return Optional.ofNullable(this.deleteServiceOnDestroy);
     }
@@ -96,6 +119,11 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="deployment")
     private @Nullable Output<FlexibleAppVersionDeploymentArgs> deployment;
 
+    /**
+     * @return Code and application artifacts that make up this version.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FlexibleAppVersionDeploymentArgs>> deployment() {
         return Optional.ofNullable(this.deployment);
     }
@@ -108,6 +136,11 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="endpointsApiService")
     private @Nullable Output<FlexibleAppVersionEndpointsApiServiceArgs> endpointsApiService;
 
+    /**
+     * @return Code and application artifacts that make up this version.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FlexibleAppVersionEndpointsApiServiceArgs>> endpointsApiService() {
         return Optional.ofNullable(this.endpointsApiService);
     }
@@ -120,6 +153,11 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="entrypoint")
     private @Nullable Output<FlexibleAppVersionEntrypointArgs> entrypoint;
 
+    /**
+     * @return The entrypoint for the application.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FlexibleAppVersionEntrypointArgs>> entrypoint() {
         return Optional.ofNullable(this.entrypoint);
     }
@@ -131,6 +169,10 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="envVariables")
     private @Nullable Output<Map<String,String>> envVariables;
 
+    /**
+     * @return Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
+     * 
+     */
     public Optional<Output<Map<String,String>>> envVariables() {
         return Optional.ofNullable(this.envVariables);
     }
@@ -144,6 +186,12 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="handlers")
     private @Nullable Output<List<FlexibleAppVersionHandlerArgs>> handlers;
 
+    /**
+     * @return An ordered list of URL-matching patterns that should be applied to incoming requests.
+     * The first matching URL handles the request and other request handlers are not attempted.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<FlexibleAppVersionHandlerArgs>>> handlers() {
         return Optional.ofNullable(this.handlers);
     }
@@ -156,6 +204,11 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="inboundServices")
     private @Nullable Output<List<String>> inboundServices;
 
+    /**
+     * @return A list of the types of messages that this application is able to receive.
+     * Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
+     * 
+     */
     public Optional<Output<List<String>>> inboundServices() {
         return Optional.ofNullable(this.inboundServices);
     }
@@ -170,6 +223,13 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="instanceClass")
     private @Nullable Output<String> instanceClass;
 
+    /**
+     * @return Instance class that is used to run this version. Valid values are
+     * AutomaticScaling: F1, F2, F4, F4_1G
+     * ManualScaling: B1, B2, B4, B8, B4_1G
+     * Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
+     * 
+     */
     public Optional<Output<String>> instanceClass() {
         return Optional.ofNullable(this.instanceClass);
     }
@@ -182,6 +242,11 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="livenessCheck", required=true)
     private Output<FlexibleAppVersionLivenessCheckArgs> livenessCheck;
 
+    /**
+     * @return Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+     * Structure is documented below.
+     * 
+     */
     public Output<FlexibleAppVersionLivenessCheckArgs> livenessCheck() {
         return this.livenessCheck;
     }
@@ -194,6 +259,11 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="manualScaling")
     private @Nullable Output<FlexibleAppVersionManualScalingArgs> manualScaling;
 
+    /**
+     * @return A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FlexibleAppVersionManualScalingArgs>> manualScaling() {
         return Optional.ofNullable(this.manualScaling);
     }
@@ -206,6 +276,11 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="network")
     private @Nullable Output<FlexibleAppVersionNetworkArgs> network;
 
+    /**
+     * @return Extra network settings
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FlexibleAppVersionNetworkArgs>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -217,6 +292,10 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="nobuildFilesRegex")
     private @Nullable Output<String> nobuildFilesRegex;
 
+    /**
+     * @return Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
+     * 
+     */
     public Optional<Output<String>> nobuildFilesRegex() {
         return Optional.ofNullable(this.nobuildFilesRegex);
     }
@@ -228,6 +307,10 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="noopOnDestroy")
     private @Nullable Output<Boolean> noopOnDestroy;
 
+    /**
+     * @return If set to `true`, the application version will not be deleted.
+     * 
+     */
     public Optional<Output<Boolean>> noopOnDestroy() {
         return Optional.ofNullable(this.noopOnDestroy);
     }
@@ -240,6 +323,11 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -252,6 +340,11 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="readinessCheck", required=true)
     private Output<FlexibleAppVersionReadinessCheckArgs> readinessCheck;
 
+    /**
+     * @return Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+     * Structure is documented below.
+     * 
+     */
     public Output<FlexibleAppVersionReadinessCheckArgs> readinessCheck() {
         return this.readinessCheck;
     }
@@ -264,6 +357,11 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="resources")
     private @Nullable Output<FlexibleAppVersionResourcesArgs> resources;
 
+    /**
+     * @return Machine resources for a version.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FlexibleAppVersionResourcesArgs>> resources() {
         return Optional.ofNullable(this.resources);
     }
@@ -275,6 +373,10 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="runtime", required=true)
     private Output<String> runtime;
 
+    /**
+     * @return Desired runtime. Example python27.
+     * 
+     */
     public Output<String> runtime() {
         return this.runtime;
     }
@@ -288,6 +390,12 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="runtimeApiVersion")
     private @Nullable Output<String> runtimeApiVersion;
 
+    /**
+     * @return The version of the API in the given runtime environment.
+     * Please see the app.yaml reference for valid values at `https://cloud.google.com/appengine/docs/standard/&lt;language&gt;/config/appref`\
+     * Substitute `&lt;language&gt;` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
+     * 
+     */
     public Optional<Output<String>> runtimeApiVersion() {
         return Optional.ofNullable(this.runtimeApiVersion);
     }
@@ -299,6 +407,10 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="runtimeChannel")
     private @Nullable Output<String> runtimeChannel;
 
+    /**
+     * @return The channel of the runtime to use. Only available for some runtimes.
+     * 
+     */
     public Optional<Output<String>> runtimeChannel() {
         return Optional.ofNullable(this.runtimeChannel);
     }
@@ -310,6 +422,10 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="runtimeMainExecutablePath")
     private @Nullable Output<String> runtimeMainExecutablePath;
 
+    /**
+     * @return The path or name of the app&#39;s main executable.
+     * 
+     */
     public Optional<Output<String>> runtimeMainExecutablePath() {
         return Optional.ofNullable(this.runtimeMainExecutablePath);
     }
@@ -321,6 +437,10 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="service", required=true)
     private Output<String> service;
 
+    /**
+     * @return AppEngine service resource. Can contain numbers, letters, and hyphens.
+     * 
+     */
     public Output<String> service() {
         return this.service;
     }
@@ -334,6 +454,12 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="servingStatus")
     private @Nullable Output<String> servingStatus;
 
+    /**
+     * @return Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+     * Default value is `SERVING`.
+     * Possible values are `SERVING` and `STOPPED`.
+     * 
+     */
     public Optional<Output<String>> servingStatus() {
         return Optional.ofNullable(this.servingStatus);
     }
@@ -346,6 +472,11 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="versionId")
     private @Nullable Output<String> versionId;
 
+    /**
+     * @return Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens.
+     * Reserved names,&#34;default&#34;, &#34;latest&#34;, and any name with the prefix &#34;ah-&#34;.
+     * 
+     */
     public Optional<Output<String>> versionId() {
         return Optional.ofNullable(this.versionId);
     }
@@ -358,6 +489,11 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
     @Import(name="vpcAccessConnector")
     private @Nullable Output<FlexibleAppVersionVpcAccessConnectorArgs> vpcAccessConnector;
 
+    /**
+     * @return Enables VPC connectivity for standard apps.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FlexibleAppVersionVpcAccessConnectorArgs>> vpcAccessConnector() {
         return Optional.ofNullable(this.vpcAccessConnector);
     }
@@ -413,262 +549,661 @@ public final class FlexibleAppVersionArgs extends com.pulumi.resources.ResourceA
             $ = new FlexibleAppVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiConfig Serving configuration for Google Cloud Endpoints.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiConfig(@Nullable Output<FlexibleAppVersionApiConfigArgs> apiConfig) {
             $.apiConfig = apiConfig;
             return this;
         }
 
+        /**
+         * @param apiConfig Serving configuration for Google Cloud Endpoints.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiConfig(FlexibleAppVersionApiConfigArgs apiConfig) {
             return apiConfig(Output.of(apiConfig));
         }
 
+        /**
+         * @param automaticScaling Automatic scaling is based on request rate, response latencies, and other application metrics.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticScaling(@Nullable Output<FlexibleAppVersionAutomaticScalingArgs> automaticScaling) {
             $.automaticScaling = automaticScaling;
             return this;
         }
 
+        /**
+         * @param automaticScaling Automatic scaling is based on request rate, response latencies, and other application metrics.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticScaling(FlexibleAppVersionAutomaticScalingArgs automaticScaling) {
             return automaticScaling(Output.of(automaticScaling));
         }
 
+        /**
+         * @param betaSettings Metadata settings that are supplied to this version to enable beta runtime features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder betaSettings(@Nullable Output<Map<String,String>> betaSettings) {
             $.betaSettings = betaSettings;
             return this;
         }
 
+        /**
+         * @param betaSettings Metadata settings that are supplied to this version to enable beta runtime features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder betaSettings(Map<String,String> betaSettings) {
             return betaSettings(Output.of(betaSettings));
         }
 
+        /**
+         * @param defaultExpiration Duration that static files should be cached by web proxies and browsers.
+         * Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultExpiration(@Nullable Output<String> defaultExpiration) {
             $.defaultExpiration = defaultExpiration;
             return this;
         }
 
+        /**
+         * @param defaultExpiration Duration that static files should be cached by web proxies and browsers.
+         * Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultExpiration(String defaultExpiration) {
             return defaultExpiration(Output.of(defaultExpiration));
         }
 
+        /**
+         * @param deleteServiceOnDestroy If set to `true`, the service will be deleted if it is the last version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteServiceOnDestroy(@Nullable Output<Boolean> deleteServiceOnDestroy) {
             $.deleteServiceOnDestroy = deleteServiceOnDestroy;
             return this;
         }
 
+        /**
+         * @param deleteServiceOnDestroy If set to `true`, the service will be deleted if it is the last version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteServiceOnDestroy(Boolean deleteServiceOnDestroy) {
             return deleteServiceOnDestroy(Output.of(deleteServiceOnDestroy));
         }
 
+        /**
+         * @param deployment Code and application artifacts that make up this version.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deployment(@Nullable Output<FlexibleAppVersionDeploymentArgs> deployment) {
             $.deployment = deployment;
             return this;
         }
 
+        /**
+         * @param deployment Code and application artifacts that make up this version.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deployment(FlexibleAppVersionDeploymentArgs deployment) {
             return deployment(Output.of(deployment));
         }
 
+        /**
+         * @param endpointsApiService Code and application artifacts that make up this version.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointsApiService(@Nullable Output<FlexibleAppVersionEndpointsApiServiceArgs> endpointsApiService) {
             $.endpointsApiService = endpointsApiService;
             return this;
         }
 
+        /**
+         * @param endpointsApiService Code and application artifacts that make up this version.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointsApiService(FlexibleAppVersionEndpointsApiServiceArgs endpointsApiService) {
             return endpointsApiService(Output.of(endpointsApiService));
         }
 
+        /**
+         * @param entrypoint The entrypoint for the application.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entrypoint(@Nullable Output<FlexibleAppVersionEntrypointArgs> entrypoint) {
             $.entrypoint = entrypoint;
             return this;
         }
 
+        /**
+         * @param entrypoint The entrypoint for the application.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entrypoint(FlexibleAppVersionEntrypointArgs entrypoint) {
             return entrypoint(Output.of(entrypoint));
         }
 
+        /**
+         * @param envVariables Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envVariables(@Nullable Output<Map<String,String>> envVariables) {
             $.envVariables = envVariables;
             return this;
         }
 
+        /**
+         * @param envVariables Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envVariables(Map<String,String> envVariables) {
             return envVariables(Output.of(envVariables));
         }
 
+        /**
+         * @param handlers An ordered list of URL-matching patterns that should be applied to incoming requests.
+         * The first matching URL handles the request and other request handlers are not attempted.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder handlers(@Nullable Output<List<FlexibleAppVersionHandlerArgs>> handlers) {
             $.handlers = handlers;
             return this;
         }
 
+        /**
+         * @param handlers An ordered list of URL-matching patterns that should be applied to incoming requests.
+         * The first matching URL handles the request and other request handlers are not attempted.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder handlers(List<FlexibleAppVersionHandlerArgs> handlers) {
             return handlers(Output.of(handlers));
         }
 
+        /**
+         * @param handlers An ordered list of URL-matching patterns that should be applied to incoming requests.
+         * The first matching URL handles the request and other request handlers are not attempted.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder handlers(FlexibleAppVersionHandlerArgs... handlers) {
             return handlers(List.of(handlers));
         }
 
+        /**
+         * @param inboundServices A list of the types of messages that this application is able to receive.
+         * Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundServices(@Nullable Output<List<String>> inboundServices) {
             $.inboundServices = inboundServices;
             return this;
         }
 
+        /**
+         * @param inboundServices A list of the types of messages that this application is able to receive.
+         * Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundServices(List<String> inboundServices) {
             return inboundServices(Output.of(inboundServices));
         }
 
+        /**
+         * @param inboundServices A list of the types of messages that this application is able to receive.
+         * Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundServices(String... inboundServices) {
             return inboundServices(List.of(inboundServices));
         }
 
+        /**
+         * @param instanceClass Instance class that is used to run this version. Valid values are
+         * AutomaticScaling: F1, F2, F4, F4_1G
+         * ManualScaling: B1, B2, B4, B8, B4_1G
+         * Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceClass(@Nullable Output<String> instanceClass) {
             $.instanceClass = instanceClass;
             return this;
         }
 
+        /**
+         * @param instanceClass Instance class that is used to run this version. Valid values are
+         * AutomaticScaling: F1, F2, F4, F4_1G
+         * ManualScaling: B1, B2, B4, B8, B4_1G
+         * Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceClass(String instanceClass) {
             return instanceClass(Output.of(instanceClass));
         }
 
+        /**
+         * @param livenessCheck Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder livenessCheck(Output<FlexibleAppVersionLivenessCheckArgs> livenessCheck) {
             $.livenessCheck = livenessCheck;
             return this;
         }
 
+        /**
+         * @param livenessCheck Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder livenessCheck(FlexibleAppVersionLivenessCheckArgs livenessCheck) {
             return livenessCheck(Output.of(livenessCheck));
         }
 
+        /**
+         * @param manualScaling A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualScaling(@Nullable Output<FlexibleAppVersionManualScalingArgs> manualScaling) {
             $.manualScaling = manualScaling;
             return this;
         }
 
+        /**
+         * @param manualScaling A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualScaling(FlexibleAppVersionManualScalingArgs manualScaling) {
             return manualScaling(Output.of(manualScaling));
         }
 
+        /**
+         * @param network Extra network settings
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<FlexibleAppVersionNetworkArgs> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network Extra network settings
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(FlexibleAppVersionNetworkArgs network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param nobuildFilesRegex Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nobuildFilesRegex(@Nullable Output<String> nobuildFilesRegex) {
             $.nobuildFilesRegex = nobuildFilesRegex;
             return this;
         }
 
+        /**
+         * @param nobuildFilesRegex Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nobuildFilesRegex(String nobuildFilesRegex) {
             return nobuildFilesRegex(Output.of(nobuildFilesRegex));
         }
 
+        /**
+         * @param noopOnDestroy If set to `true`, the application version will not be deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noopOnDestroy(@Nullable Output<Boolean> noopOnDestroy) {
             $.noopOnDestroy = noopOnDestroy;
             return this;
         }
 
+        /**
+         * @param noopOnDestroy If set to `true`, the application version will not be deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noopOnDestroy(Boolean noopOnDestroy) {
             return noopOnDestroy(Output.of(noopOnDestroy));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param readinessCheck Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessCheck(Output<FlexibleAppVersionReadinessCheckArgs> readinessCheck) {
             $.readinessCheck = readinessCheck;
             return this;
         }
 
+        /**
+         * @param readinessCheck Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessCheck(FlexibleAppVersionReadinessCheckArgs readinessCheck) {
             return readinessCheck(Output.of(readinessCheck));
         }
 
+        /**
+         * @param resources Machine resources for a version.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(@Nullable Output<FlexibleAppVersionResourcesArgs> resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param resources Machine resources for a version.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(FlexibleAppVersionResourcesArgs resources) {
             return resources(Output.of(resources));
         }
 
+        /**
+         * @param runtime Desired runtime. Example python27.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtime(Output<String> runtime) {
             $.runtime = runtime;
             return this;
         }
 
+        /**
+         * @param runtime Desired runtime. Example python27.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtime(String runtime) {
             return runtime(Output.of(runtime));
         }
 
+        /**
+         * @param runtimeApiVersion The version of the API in the given runtime environment.
+         * Please see the app.yaml reference for valid values at `https://cloud.google.com/appengine/docs/standard/&lt;language&gt;/config/appref`\
+         * Substitute `&lt;language&gt;` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeApiVersion(@Nullable Output<String> runtimeApiVersion) {
             $.runtimeApiVersion = runtimeApiVersion;
             return this;
         }
 
+        /**
+         * @param runtimeApiVersion The version of the API in the given runtime environment.
+         * Please see the app.yaml reference for valid values at `https://cloud.google.com/appengine/docs/standard/&lt;language&gt;/config/appref`\
+         * Substitute `&lt;language&gt;` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeApiVersion(String runtimeApiVersion) {
             return runtimeApiVersion(Output.of(runtimeApiVersion));
         }
 
+        /**
+         * @param runtimeChannel The channel of the runtime to use. Only available for some runtimes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeChannel(@Nullable Output<String> runtimeChannel) {
             $.runtimeChannel = runtimeChannel;
             return this;
         }
 
+        /**
+         * @param runtimeChannel The channel of the runtime to use. Only available for some runtimes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeChannel(String runtimeChannel) {
             return runtimeChannel(Output.of(runtimeChannel));
         }
 
+        /**
+         * @param runtimeMainExecutablePath The path or name of the app&#39;s main executable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeMainExecutablePath(@Nullable Output<String> runtimeMainExecutablePath) {
             $.runtimeMainExecutablePath = runtimeMainExecutablePath;
             return this;
         }
 
+        /**
+         * @param runtimeMainExecutablePath The path or name of the app&#39;s main executable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeMainExecutablePath(String runtimeMainExecutablePath) {
             return runtimeMainExecutablePath(Output.of(runtimeMainExecutablePath));
         }
 
+        /**
+         * @param service AppEngine service resource. Can contain numbers, letters, and hyphens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service AppEngine service resource. Can contain numbers, letters, and hyphens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param servingStatus Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+         * Default value is `SERVING`.
+         * Possible values are `SERVING` and `STOPPED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servingStatus(@Nullable Output<String> servingStatus) {
             $.servingStatus = servingStatus;
             return this;
         }
 
+        /**
+         * @param servingStatus Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+         * Default value is `SERVING`.
+         * Possible values are `SERVING` and `STOPPED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servingStatus(String servingStatus) {
             return servingStatus(Output.of(servingStatus));
         }
 
+        /**
+         * @param versionId Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens.
+         * Reserved names,&#34;default&#34;, &#34;latest&#34;, and any name with the prefix &#34;ah-&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionId(@Nullable Output<String> versionId) {
             $.versionId = versionId;
             return this;
         }
 
+        /**
+         * @param versionId Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens.
+         * Reserved names,&#34;default&#34;, &#34;latest&#34;, and any name with the prefix &#34;ah-&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionId(String versionId) {
             return versionId(Output.of(versionId));
         }
 
+        /**
+         * @param vpcAccessConnector Enables VPC connectivity for standard apps.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcAccessConnector(@Nullable Output<FlexibleAppVersionVpcAccessConnectorArgs> vpcAccessConnector) {
             $.vpcAccessConnector = vpcAccessConnector;
             return this;
         }
 
+        /**
+         * @param vpcAccessConnector Enables VPC connectivity for standard apps.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcAccessConnector(FlexibleAppVersionVpcAccessConnectorArgs vpcAccessConnector) {
             return vpcAccessConnector(Output.of(vpcAccessConnector));
         }

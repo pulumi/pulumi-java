@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse extends com.pulumi.reso
     @Import(name="hotwordRegex", required=true)
     private GooglePrivacyDlpV2RegexResponse hotwordRegex;
 
+    /**
+     * @return Regular expression pattern defining what qualifies as a hotword.
+     * 
+     */
     public GooglePrivacyDlpV2RegexResponse hotwordRegex() {
         return this.hotwordRegex;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse extends com.pulumi.reso
     @Import(name="likelihoodAdjustment", required=true)
     private GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment;
 
+    /**
+     * @return Likelihood adjustment to apply to all matching findings.
+     * 
+     */
     public GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment() {
         return this.likelihoodAdjustment;
     }
@@ -47,6 +55,10 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse extends com.pulumi.reso
     @Import(name="proximity", required=true)
     private GooglePrivacyDlpV2ProximityResponse proximity;
 
+    /**
+     * @return Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex &#34;\(\d{3}\) \d{3}-\d{4}&#34; could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex &#34;\(xxx\)&#34;, where &#34;xxx&#34; is the area code in question.
+     * 
+     */
     public GooglePrivacyDlpV2ProximityResponse proximity() {
         return this.proximity;
     }
@@ -77,16 +89,34 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse extends com.pulumi.reso
             $ = new GooglePrivacyDlpV2HotwordRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hotwordRegex Regular expression pattern defining what qualifies as a hotword.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hotwordRegex(GooglePrivacyDlpV2RegexResponse hotwordRegex) {
             $.hotwordRegex = hotwordRegex;
             return this;
         }
 
+        /**
+         * @param likelihoodAdjustment Likelihood adjustment to apply to all matching findings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder likelihoodAdjustment(GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment) {
             $.likelihoodAdjustment = likelihoodAdjustment;
             return this;
         }
 
+        /**
+         * @param proximity Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex &#34;\(\d{3}\) \d{3}-\d{4}&#34; could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex &#34;\(xxx\)&#34;, where &#34;xxx&#34; is the area code in question.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proximity(GooglePrivacyDlpV2ProximityResponse proximity) {
             $.proximity = proximity;
             return this;

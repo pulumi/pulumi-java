@@ -29,6 +29,10 @@ public final class ResourcesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cpu")
     private @Nullable Output<Double> cpu;
 
+    /**
+     * @return Number of CPU cores needed.
+     * 
+     */
     public Optional<Output<Double>> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -40,6 +44,10 @@ public final class ResourcesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskGb")
     private @Nullable Output<Double> diskGb;
 
+    /**
+     * @return Disk size (GB) needed.
+     * 
+     */
     public Optional<Output<Double>> diskGb() {
         return Optional.ofNullable(this.diskGb);
     }
@@ -51,6 +59,10 @@ public final class ResourcesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyReference")
     private @Nullable Output<String> kmsKeyReference;
 
+    /**
+     * @return The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud Composer to encrypt the vm disk
+     * 
+     */
     public Optional<Output<String>> kmsKeyReference() {
         return Optional.ofNullable(this.kmsKeyReference);
     }
@@ -62,6 +74,10 @@ public final class ResourcesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="memoryGb")
     private @Nullable Output<Double> memoryGb;
 
+    /**
+     * @return Memory (GB) needed.
+     * 
+     */
     public Optional<Output<Double>> memoryGb() {
         return Optional.ofNullable(this.memoryGb);
     }
@@ -73,6 +89,10 @@ public final class ResourcesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumes")
     private @Nullable Output<List<VolumeArgs>> volumes;
 
+    /**
+     * @return User specified volumes.
+     * 
+     */
     public Optional<Output<List<VolumeArgs>>> volumes() {
         return Optional.ofNullable(this.volumes);
     }
@@ -105,51 +125,117 @@ public final class ResourcesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourcesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu Number of CPU cores needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Output<Double> cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param cpu Number of CPU cores needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Double cpu) {
             return cpu(Output.of(cpu));
         }
 
+        /**
+         * @param diskGb Disk size (GB) needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskGb(@Nullable Output<Double> diskGb) {
             $.diskGb = diskGb;
             return this;
         }
 
+        /**
+         * @param diskGb Disk size (GB) needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskGb(Double diskGb) {
             return diskGb(Output.of(diskGb));
         }
 
+        /**
+         * @param kmsKeyReference The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud Composer to encrypt the vm disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyReference(@Nullable Output<String> kmsKeyReference) {
             $.kmsKeyReference = kmsKeyReference;
             return this;
         }
 
+        /**
+         * @param kmsKeyReference The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud Composer to encrypt the vm disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyReference(String kmsKeyReference) {
             return kmsKeyReference(Output.of(kmsKeyReference));
         }
 
+        /**
+         * @param memoryGb Memory (GB) needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryGb(@Nullable Output<Double> memoryGb) {
             $.memoryGb = memoryGb;
             return this;
         }
 
+        /**
+         * @param memoryGb Memory (GB) needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryGb(Double memoryGb) {
             return memoryGb(Output.of(memoryGb));
         }
 
+        /**
+         * @param volumes User specified volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             $.volumes = volumes;
             return this;
         }
 
+        /**
+         * @param volumes User specified volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(List<VolumeArgs> volumes) {
             return volumes(Output.of(volumes));
         }
 
+        /**
+         * @param volumes User specified volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(VolumeArgs... volumes) {
             return volumes(List.of(volumes));
         }

@@ -24,6 +24,10 @@ public final class ContainerGroupNetworkProfileArgs extends com.pulumi.resources
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The identifier for a network profile.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -52,11 +56,23 @@ public final class ContainerGroupNetworkProfileArgs extends com.pulumi.resources
             $ = new ContainerGroupNetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The identifier for a network profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The identifier for a network profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

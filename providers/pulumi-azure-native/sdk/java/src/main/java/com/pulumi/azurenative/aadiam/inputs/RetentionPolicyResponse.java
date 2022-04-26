@@ -24,6 +24,10 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="days", required=true)
     private Integer days;
 
+    /**
+     * @return The number of days for the retention in days. A value of 0 will retain the events indefinitely.
+     * 
+     */
     public Integer days() {
         return this.days;
     }
@@ -35,6 +39,10 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return A value indicating whether the retention policy is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -64,11 +72,23 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
             $ = new RetentionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param days The number of days for the retention in days. A value of 0 will retain the events indefinitely.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(Integer days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param enabled A value indicating whether the retention policy is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

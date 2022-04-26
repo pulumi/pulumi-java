@@ -19,6 +19,10 @@ public final class GetApiDiagnosticArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="apiId", required=true)
     private String apiId;
 
+    /**
+     * @return API identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public String apiId() {
         return this.apiId;
     }
@@ -30,6 +34,10 @@ public final class GetApiDiagnosticArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="diagnosticId", required=true)
     private String diagnosticId;
 
+    /**
+     * @return Diagnostic identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public String diagnosticId() {
         return this.diagnosticId;
     }
@@ -41,6 +49,10 @@ public final class GetApiDiagnosticArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetApiDiagnosticArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -83,21 +99,45 @@ public final class GetApiDiagnosticArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetApiDiagnosticArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId API identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param diagnosticId Diagnostic identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnosticId(String diagnosticId) {
             $.diagnosticId = diagnosticId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

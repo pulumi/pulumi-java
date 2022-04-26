@@ -25,6 +25,10 @@ public final class ContainerGroupResponseInstanceView extends com.pulumi.resourc
     @Import(name="events", required=true)
     private List<EventResponse> events;
 
+    /**
+     * @return The events of this container group.
+     * 
+     */
     public List<EventResponse> events() {
         return this.events;
     }
@@ -36,6 +40,10 @@ public final class ContainerGroupResponseInstanceView extends com.pulumi.resourc
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The state of the container group. Only valid in response.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -65,15 +73,33 @@ public final class ContainerGroupResponseInstanceView extends com.pulumi.resourc
             $ = new ContainerGroupResponseInstanceView(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param events The events of this container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(List<EventResponse> events) {
             $.events = events;
             return this;
         }
 
+        /**
+         * @param events The events of this container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(EventResponse... events) {
             return events(List.of(events));
         }
 
+        /**
+         * @param state The state of the container group. Only valid in response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

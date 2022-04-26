@@ -15,20 +15,20 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DatabaseInstanceSettingsIpConfiguration {
     /**
-     * The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
+     * @return The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
      * 
      */
     private final @Nullable String allocatedIpRange;
     private final @Nullable List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork> authorizedNetworks;
     /**
-     * Whether this Cloud SQL instance should be assigned
+     * @return Whether this Cloud SQL instance should be assigned
      * a public IPV4 address. At least `ipv4_enabled` must be enabled or a
      * `private_network` must be configured.
      * 
      */
     private final @Nullable Boolean ipv4Enabled;
     /**
-     * The VPC network from which the Cloud SQL
+     * @return The VPC network from which the Cloud SQL
      * instance is accessible for private IP. For example, projects/myProject/global/networks/default.
      * Specifying a network enables private IP.
      * At least `ipv4_enabled` must be enabled or a `private_network` must be configured.
@@ -37,7 +37,7 @@ public final class DatabaseInstanceSettingsIpConfiguration {
      */
     private final @Nullable String privateNetwork;
     /**
-     * Whether SSL connections over IP are enforced or not.
+     * @return Whether SSL connections over IP are enforced or not.
      * 
      */
     private final @Nullable Boolean requireSsl;
@@ -57,9 +57,9 @@ public final class DatabaseInstanceSettingsIpConfiguration {
     }
 
     /**
-     * The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
+     * @return The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
      * 
-    */
+     */
     public Optional<String> allocatedIpRange() {
         return Optional.ofNullable(this.allocatedIpRange);
     }
@@ -67,29 +67,29 @@ public final class DatabaseInstanceSettingsIpConfiguration {
         return this.authorizedNetworks == null ? List.of() : this.authorizedNetworks;
     }
     /**
-     * Whether this Cloud SQL instance should be assigned
+     * @return Whether this Cloud SQL instance should be assigned
      * a public IPV4 address. At least `ipv4_enabled` must be enabled or a
      * `private_network` must be configured.
      * 
-    */
+     */
     public Optional<Boolean> ipv4Enabled() {
         return Optional.ofNullable(this.ipv4Enabled);
     }
     /**
-     * The VPC network from which the Cloud SQL
+     * @return The VPC network from which the Cloud SQL
      * instance is accessible for private IP. For example, projects/myProject/global/networks/default.
      * Specifying a network enables private IP.
      * At least `ipv4_enabled` must be enabled or a `private_network` must be configured.
      * This setting can be updated, but it cannot be removed after it is set.
      * 
-    */
+     */
     public Optional<String> privateNetwork() {
         return Optional.ofNullable(this.privateNetwork);
     }
     /**
-     * Whether SSL connections over IP are enforced or not.
+     * @return Whether SSL connections over IP are enforced or not.
      * 
-    */
+     */
     public Optional<Boolean> requireSsl() {
         return Optional.ofNullable(this.requireSsl);
     }

@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryResponse extends com.
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return Update time of the variants.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryResponse extends com.
     @Import(name="versionVariants", required=true)
     private GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants;
 
+    /**
+     * @return The flow versions as the variants.
+     * 
+     */
     public GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants() {
         return this.versionVariants;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryResponse extends com.
             $ = new GoogleCloudDialogflowCxV3VariantsHistoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param updateTime Update time of the variants.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param versionVariants The flow versions as the variants.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionVariants(GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants) {
             $.versionVariants = versionVariants;
             return this;

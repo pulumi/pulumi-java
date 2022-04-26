@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ValidationCAResponse {
     /**
-     * The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
+     * @return The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
      * 
      */
     private final CertificateProviderInstanceResponse certificateProviderInstance;
     /**
-     * gRPC specific configuration to access the gRPC server to obtain the CA certificate.
+     * @return gRPC specific configuration to access the gRPC server to obtain the CA certificate.
      * 
      */
     private final GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint;
@@ -30,16 +30,16 @@ public final class ValidationCAResponse {
     }
 
     /**
-     * The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
+     * @return The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
      * 
-    */
+     */
     public CertificateProviderInstanceResponse certificateProviderInstance() {
         return this.certificateProviderInstance;
     }
     /**
-     * gRPC specific configuration to access the gRPC server to obtain the CA certificate.
+     * @return gRPC specific configuration to access the gRPC server to obtain the CA certificate.
      * 
-    */
+     */
     public GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint() {
         return this.grpcEndpoint;
     }

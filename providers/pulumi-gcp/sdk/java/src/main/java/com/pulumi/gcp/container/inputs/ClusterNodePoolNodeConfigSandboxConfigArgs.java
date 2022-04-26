@@ -21,6 +21,11 @@ public final class ClusterNodePoolNodeConfigSandboxConfigArgs extends com.pulumi
     @Import(name="sandboxType", required=true)
     private Output<String> sandboxType;
 
+    /**
+     * @return Which sandbox to use for pods in the node pool.
+     * Accepted values are:
+     * 
+     */
     public Output<String> sandboxType() {
         return this.sandboxType;
     }
@@ -49,11 +54,25 @@ public final class ClusterNodePoolNodeConfigSandboxConfigArgs extends com.pulumi
             $ = new ClusterNodePoolNodeConfigSandboxConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sandboxType Which sandbox to use for pods in the node pool.
+         * Accepted values are:
+         * 
+         * @return builder
+         * 
+         */
         public Builder sandboxType(Output<String> sandboxType) {
             $.sandboxType = sandboxType;
             return this;
         }
 
+        /**
+         * @param sandboxType Which sandbox to use for pods in the node pool.
+         * Accepted values are:
+         * 
+         * @return builder
+         * 
+         */
         public Builder sandboxType(String sandboxType) {
             return sandboxType(Output.of(sandboxType));
         }

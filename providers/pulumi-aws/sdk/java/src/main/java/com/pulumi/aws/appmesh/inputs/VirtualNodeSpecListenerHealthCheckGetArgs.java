@@ -23,6 +23,10 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends com.pulumi.
     @Import(name="healthyThreshold", required=true)
     private Output<Integer> healthyThreshold;
 
+    /**
+     * @return The number of consecutive successful health checks that must occur before declaring listener healthy.
+     * 
+     */
     public Output<Integer> healthyThreshold() {
         return this.healthyThreshold;
     }
@@ -34,6 +38,10 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends com.pulumi.
     @Import(name="intervalMillis", required=true)
     private Output<Integer> intervalMillis;
 
+    /**
+     * @return The time period in milliseconds between each health check execution.
+     * 
+     */
     public Output<Integer> intervalMillis() {
         return this.intervalMillis;
     }
@@ -45,6 +53,10 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends com.pulumi.
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -56,6 +68,10 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends com.pulumi.
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -67,6 +83,10 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends com.pulumi.
     @Import(name="protocol", required=true)
     private Output<String> protocol;
 
+    /**
+     * @return The protocol for the health check request. Valid values are `http`, `http2`, `tcp` and `grpc`.
+     * 
+     */
     public Output<String> protocol() {
         return this.protocol;
     }
@@ -78,6 +98,10 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends com.pulumi.
     @Import(name="timeoutMillis", required=true)
     private Output<Integer> timeoutMillis;
 
+    /**
+     * @return The amount of time to wait when receiving a response from the health check, in milliseconds.
+     * 
+     */
     public Output<Integer> timeoutMillis() {
         return this.timeoutMillis;
     }
@@ -89,6 +113,10 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends com.pulumi.
     @Import(name="unhealthyThreshold", required=true)
     private Output<Integer> unhealthyThreshold;
 
+    /**
+     * @return The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
+     * 
+     */
     public Output<Integer> unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
@@ -123,65 +151,149 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends com.pulumi.
             $ = new VirtualNodeSpecListenerHealthCheckGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthyThreshold The number of consecutive successful health checks that must occur before declaring listener healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthyThreshold(Output<Integer> healthyThreshold) {
             $.healthyThreshold = healthyThreshold;
             return this;
         }
 
+        /**
+         * @param healthyThreshold The number of consecutive successful health checks that must occur before declaring listener healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthyThreshold(Integer healthyThreshold) {
             return healthyThreshold(Output.of(healthyThreshold));
         }
 
+        /**
+         * @param intervalMillis The time period in milliseconds between each health check execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalMillis(Output<Integer> intervalMillis) {
             $.intervalMillis = intervalMillis;
             return this;
         }
 
+        /**
+         * @param intervalMillis The time period in milliseconds between each health check execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalMillis(Integer intervalMillis) {
             return intervalMillis(Output.of(intervalMillis));
         }
 
+        /**
+         * @param path The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param port The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param protocol The protocol for the health check request. Valid values are `http`, `http2`, `tcp` and `grpc`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The protocol for the health check request. Valid values are `http`, `http2`, `tcp` and `grpc`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param timeoutMillis The amount of time to wait when receiving a response from the health check, in milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutMillis(Output<Integer> timeoutMillis) {
             $.timeoutMillis = timeoutMillis;
             return this;
         }
 
+        /**
+         * @param timeoutMillis The amount of time to wait when receiving a response from the health check, in milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutMillis(Integer timeoutMillis) {
             return timeoutMillis(Output.of(timeoutMillis));
         }
 
+        /**
+         * @param unhealthyThreshold The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unhealthyThreshold(Output<Integer> unhealthyThreshold) {
             $.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
 
+        /**
+         * @param unhealthyThreshold The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             return unhealthyThreshold(Output.of(unhealthyThreshold));
         }

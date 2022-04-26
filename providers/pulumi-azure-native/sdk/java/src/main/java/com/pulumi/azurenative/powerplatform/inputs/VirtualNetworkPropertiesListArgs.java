@@ -28,6 +28,10 @@ public final class VirtualNetworkPropertiesListArgs extends com.pulumi.resources
     @Import(name="nextLink")
     private @Nullable Output<String> nextLink;
 
+    /**
+     * @return Next page link if any.
+     * 
+     */
     public Optional<Output<String>> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
@@ -39,6 +43,10 @@ public final class VirtualNetworkPropertiesListArgs extends com.pulumi.resources
     @Import(name="value")
     private @Nullable Output<List<VirtualNetworkPropertiesArgs>> value;
 
+    /**
+     * @return Array of virtual networks.
+     * 
+     */
     public Optional<Output<List<VirtualNetworkPropertiesArgs>>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -68,24 +76,54 @@ public final class VirtualNetworkPropertiesListArgs extends com.pulumi.resources
             $ = new VirtualNetworkPropertiesListArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nextLink Next page link if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextLink(@Nullable Output<String> nextLink) {
             $.nextLink = nextLink;
             return this;
         }
 
+        /**
+         * @param nextLink Next page link if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextLink(String nextLink) {
             return nextLink(Output.of(nextLink));
         }
 
+        /**
+         * @param value Array of virtual networks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<List<VirtualNetworkPropertiesArgs>> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Array of virtual networks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(List<VirtualNetworkPropertiesArgs> value) {
             return value(Output.of(value));
         }
 
+        /**
+         * @param value Array of virtual networks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(VirtualNetworkPropertiesArgs... value) {
             return value(List.of(value));
         }

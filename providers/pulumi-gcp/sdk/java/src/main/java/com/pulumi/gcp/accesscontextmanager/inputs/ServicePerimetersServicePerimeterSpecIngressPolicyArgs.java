@@ -25,6 +25,12 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyArgs extend
     @Import(name="ingressFrom")
     private @Nullable Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromArgs> ingressFrom;
 
+    /**
+     * @return Defines the conditions on the source of a request causing this `IngressPolicy`
+     * to apply.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromArgs>> ingressFrom() {
         return Optional.ofNullable(this.ingressFrom);
     }
@@ -38,6 +44,12 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyArgs extend
     @Import(name="ingressTo")
     private @Nullable Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToArgs> ingressTo;
 
+    /**
+     * @return Defines the conditions on the `ApiOperation` and request destination that cause
+     * this `IngressPolicy` to apply.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToArgs>> ingressTo() {
         return Optional.ofNullable(this.ingressTo);
     }
@@ -67,20 +79,52 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyArgs extend
             $ = new ServicePerimetersServicePerimeterSpecIngressPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ingressFrom Defines the conditions on the source of a request causing this `IngressPolicy`
+         * to apply.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressFrom(@Nullable Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromArgs> ingressFrom) {
             $.ingressFrom = ingressFrom;
             return this;
         }
 
+        /**
+         * @param ingressFrom Defines the conditions on the source of a request causing this `IngressPolicy`
+         * to apply.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressFrom(ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromArgs ingressFrom) {
             return ingressFrom(Output.of(ingressFrom));
         }
 
+        /**
+         * @param ingressTo Defines the conditions on the `ApiOperation` and request destination that cause
+         * this `IngressPolicy` to apply.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressTo(@Nullable Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToArgs> ingressTo) {
             $.ingressTo = ingressTo;
             return this;
         }
 
+        /**
+         * @param ingressTo Defines the conditions on the `ApiOperation` and request destination that cause
+         * this `IngressPolicy` to apply.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressTo(ServicePerimetersServicePerimeterSpecIngressPolicyIngressToArgs ingressTo) {
             return ingressTo(Output.of(ingressTo));
         }

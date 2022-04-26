@@ -26,6 +26,10 @@ public final class PosixGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gid")
     private @Nullable Output<String> gid;
 
+    /**
+     * @return GID of the POSIX group.
+     * 
+     */
     public Optional<Output<String>> gid() {
         return Optional.ofNullable(this.gid);
     }
@@ -37,6 +41,10 @@ public final class PosixGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the POSIX group.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class PosixGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="systemId")
     private @Nullable Output<String> systemId;
 
+    /**
+     * @return System identifier for which group name and gid apply to. If not specified it will default to empty value.
+     * 
+     */
     public Optional<Output<String>> systemId() {
         return Optional.ofNullable(this.systemId);
     }
@@ -78,29 +90,65 @@ public final class PosixGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PosixGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gid GID of the POSIX group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gid(@Nullable Output<String> gid) {
             $.gid = gid;
             return this;
         }
 
+        /**
+         * @param gid GID of the POSIX group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gid(String gid) {
             return gid(Output.of(gid));
         }
 
+        /**
+         * @param name Name of the POSIX group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the POSIX group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param systemId System identifier for which group name and gid apply to. If not specified it will default to empty value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemId(@Nullable Output<String> systemId) {
             $.systemId = systemId;
             return this;
         }
 
+        /**
+         * @param systemId System identifier for which group name and gid apply to. If not specified it will default to empty value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemId(String systemId) {
             return systemId(Output.of(systemId));
         }

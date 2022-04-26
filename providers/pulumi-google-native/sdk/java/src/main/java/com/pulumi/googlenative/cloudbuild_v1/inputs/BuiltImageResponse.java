@@ -24,6 +24,10 @@ public final class BuiltImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="digest", required=true)
     private String digest;
 
+    /**
+     * @return Docker Registry 2.0 digest.
+     * 
+     */
     public String digest() {
         return this.digest;
     }
@@ -35,6 +39,10 @@ public final class BuiltImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name used to push the container image to Google Container Registry, as presented to `docker push`.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -46,6 +54,10 @@ public final class BuiltImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pushTiming", required=true)
     private TimeSpanResponse pushTiming;
 
+    /**
+     * @return Stores timing information for pushing the specified image.
+     * 
+     */
     public TimeSpanResponse pushTiming() {
         return this.pushTiming;
     }
@@ -76,16 +88,34 @@ public final class BuiltImageResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BuiltImageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param digest Docker Registry 2.0 digest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder digest(String digest) {
             $.digest = digest;
             return this;
         }
 
+        /**
+         * @param name Name used to push the container image to Google Container Registry, as presented to `docker push`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param pushTiming Stores timing information for pushing the specified image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushTiming(TimeSpanResponse pushTiming) {
             $.pushTiming = pushTiming;
             return this;

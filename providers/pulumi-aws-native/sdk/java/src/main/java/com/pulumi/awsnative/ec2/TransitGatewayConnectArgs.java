@@ -25,6 +25,10 @@ public final class TransitGatewayConnectArgs extends com.pulumi.resources.Resour
     @Import(name="options", required=true)
     private Output<TransitGatewayConnectOptionsArgs> options;
 
+    /**
+     * @return The Connect attachment options.
+     * 
+     */
     public Output<TransitGatewayConnectOptionsArgs> options() {
         return this.options;
     }
@@ -36,6 +40,10 @@ public final class TransitGatewayConnectArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<List<TransitGatewayConnectTagArgs>> tags;
 
+    /**
+     * @return The tags for the attachment.
+     * 
+     */
     public Optional<Output<List<TransitGatewayConnectTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -47,6 +55,10 @@ public final class TransitGatewayConnectArgs extends com.pulumi.resources.Resour
     @Import(name="transportTransitGatewayAttachmentId", required=true)
     private Output<String> transportTransitGatewayAttachmentId;
 
+    /**
+     * @return The ID of the attachment from which the Connect attachment was created.
+     * 
+     */
     public Output<String> transportTransitGatewayAttachmentId() {
         return this.transportTransitGatewayAttachmentId;
     }
@@ -77,33 +89,75 @@ public final class TransitGatewayConnectArgs extends com.pulumi.resources.Resour
             $ = new TransitGatewayConnectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param options The Connect attachment options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(Output<TransitGatewayConnectOptionsArgs> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options The Connect attachment options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(TransitGatewayConnectOptionsArgs options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param tags The tags for the attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<TransitGatewayConnectTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags for the attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<TransitGatewayConnectTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags for the attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(TransitGatewayConnectTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param transportTransitGatewayAttachmentId The ID of the attachment from which the Connect attachment was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportTransitGatewayAttachmentId(Output<String> transportTransitGatewayAttachmentId) {
             $.transportTransitGatewayAttachmentId = transportTransitGatewayAttachmentId;
             return this;
         }
 
+        /**
+         * @param transportTransitGatewayAttachmentId The ID of the attachment from which the Connect attachment was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportTransitGatewayAttachmentId(String transportTransitGatewayAttachmentId) {
             return transportTransitGatewayAttachmentId(Output.of(transportTransitGatewayAttachmentId));
         }

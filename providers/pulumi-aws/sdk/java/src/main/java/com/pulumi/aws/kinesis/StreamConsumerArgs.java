@@ -22,6 +22,10 @@ public final class StreamConsumerArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the stream consumer.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -33,6 +37,10 @@ public final class StreamConsumerArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="streamArn", required=true)
     private Output<String> streamArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the data stream the consumer is registered with.
+     * 
+     */
     public Output<String> streamArn() {
         return this.streamArn;
     }
@@ -62,20 +70,44 @@ public final class StreamConsumerArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StreamConsumerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the stream consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the stream consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param streamArn Amazon Resource Name (ARN) of the data stream the consumer is registered with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamArn(Output<String> streamArn) {
             $.streamArn = streamArn;
             return this;
         }
 
+        /**
+         * @param streamArn Amazon Resource Name (ARN) of the data stream the consumer is registered with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamArn(String streamArn) {
             return streamArn(Output.of(streamArn));
         }

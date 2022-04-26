@@ -29,6 +29,10 @@ public final class AzureOperationalStoreParametersArgs extends com.pulumi.resour
     @Import(name="dataStoreType", required=true)
     private Output<Either<String,DataStoreTypes>> dataStoreType;
 
+    /**
+     * @return type of datastore; Operational/Vault/Archive
+     * 
+     */
     public Output<Either<String,DataStoreTypes>> dataStoreType() {
         return this.dataStoreType;
     }
@@ -41,6 +45,11 @@ public final class AzureOperationalStoreParametersArgs extends com.pulumi.resour
     @Import(name="objectType", required=true)
     private Output<String> objectType;
 
+    /**
+     * @return Type of the specific object - used for deserializing
+     * Expected value is &#39;AzureOperationalStoreParameters&#39;.
+     * 
+     */
     public Output<String> objectType() {
         return this.objectType;
     }
@@ -52,6 +61,10 @@ public final class AzureOperationalStoreParametersArgs extends com.pulumi.resour
     @Import(name="resourceGroupId")
     private @Nullable Output<String> resourceGroupId;
 
+    /**
+     * @return Gets or sets the Snapshot Resource Group Uri.
+     * 
+     */
     public Optional<Output<String>> resourceGroupId() {
         return Optional.ofNullable(this.resourceGroupId);
     }
@@ -82,37 +95,87 @@ public final class AzureOperationalStoreParametersArgs extends com.pulumi.resour
             $ = new AzureOperationalStoreParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataStoreType type of datastore; Operational/Vault/Archive
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreType(Output<Either<String,DataStoreTypes>> dataStoreType) {
             $.dataStoreType = dataStoreType;
             return this;
         }
 
+        /**
+         * @param dataStoreType type of datastore; Operational/Vault/Archive
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreType(Either<String,DataStoreTypes> dataStoreType) {
             return dataStoreType(Output.of(dataStoreType));
         }
 
+        /**
+         * @param dataStoreType type of datastore; Operational/Vault/Archive
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreType(String dataStoreType) {
             return dataStoreType(Either.ofLeft(dataStoreType));
         }
 
+        /**
+         * @param dataStoreType type of datastore; Operational/Vault/Archive
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreType(DataStoreTypes dataStoreType) {
             return dataStoreType(Either.ofRight(dataStoreType));
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;AzureOperationalStoreParameters&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(Output<String> objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;AzureOperationalStoreParameters&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             return objectType(Output.of(objectType));
         }
 
+        /**
+         * @param resourceGroupId Gets or sets the Snapshot Resource Group Uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupId(@Nullable Output<String> resourceGroupId) {
             $.resourceGroupId = resourceGroupId;
             return this;
         }
 
+        /**
+         * @param resourceGroupId Gets or sets the Snapshot Resource Group Uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupId(String resourceGroupId) {
             return resourceGroupId(Output.of(resourceGroupId));
         }

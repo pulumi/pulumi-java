@@ -23,6 +23,10 @@ public final class JwtClaimsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="audience", required=true)
     private String audience;
 
+    /**
+     * @return Value for the &#34;aud&#34; claim.
+     * 
+     */
     public String audience() {
         return this.audience;
     }
@@ -34,6 +38,10 @@ public final class JwtClaimsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="issuer", required=true)
     private String issuer;
 
+    /**
+     * @return Value for the &#34;iss&#34; claim.
+     * 
+     */
     public String issuer() {
         return this.issuer;
     }
@@ -45,6 +53,10 @@ public final class JwtClaimsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subject", required=true)
     private String subject;
 
+    /**
+     * @return Value for the &#34;sub&#34; claim.
+     * 
+     */
     public String subject() {
         return this.subject;
     }
@@ -75,16 +87,34 @@ public final class JwtClaimsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JwtClaimsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audience Value for the &#34;aud&#34; claim.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(String audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param issuer Value for the &#34;iss&#34; claim.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(String issuer) {
             $.issuer = issuer;
             return this;
         }
 
+        /**
+         * @param subject Value for the &#34;sub&#34; claim.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(String subject) {
             $.subject = subject;
             return this;

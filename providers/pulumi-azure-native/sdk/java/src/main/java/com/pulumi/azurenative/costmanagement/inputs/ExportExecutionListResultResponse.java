@@ -24,6 +24,10 @@ public final class ExportExecutionListResultResponse extends com.pulumi.resource
     @Import(name="value", required=true)
     private List<ExportExecutionResponse> value;
 
+    /**
+     * @return A list of export executions.
+     * 
+     */
     public List<ExportExecutionResponse> value() {
         return this.value;
     }
@@ -52,11 +56,23 @@ public final class ExportExecutionListResultResponse extends com.pulumi.resource
             $ = new ExportExecutionListResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value A list of export executions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(List<ExportExecutionResponse> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value A list of export executions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(ExportExecutionResponse... value) {
             return value(List.of(value));
         }

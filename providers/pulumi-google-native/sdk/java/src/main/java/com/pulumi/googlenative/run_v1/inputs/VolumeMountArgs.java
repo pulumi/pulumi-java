@@ -27,6 +27,10 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mountPath")
     private @Nullable Output<String> mountPath;
 
+    /**
+     * @return Path within the container at which the volume should be mounted. Must not contain &#39;:&#39;.
+     * 
+     */
     public Optional<Output<String>> mountPath() {
         return Optional.ofNullable(this.mountPath);
     }
@@ -38,6 +42,10 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the volume. There must be a corresponding Volume with the same name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return (Optional) Only true is accepted. Defaults to true.
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -60,6 +72,10 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subPath")
     private @Nullable Output<String> subPath;
 
+    /**
+     * @return (Optional) Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
+     * 
+     */
     public Optional<Output<String>> subPath() {
         return Optional.ofNullable(this.subPath);
     }
@@ -91,38 +107,86 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VolumeMountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mountPath Path within the container at which the volume should be mounted. Must not contain &#39;:&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(@Nullable Output<String> mountPath) {
             $.mountPath = mountPath;
             return this;
         }
 
+        /**
+         * @param mountPath Path within the container at which the volume should be mounted. Must not contain &#39;:&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(String mountPath) {
             return mountPath(Output.of(mountPath));
         }
 
+        /**
+         * @param name The name of the volume. There must be a corresponding Volume with the same name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the volume. There must be a corresponding Volume with the same name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param readOnly (Optional) Only true is accepted. Defaults to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly (Optional) Only true is accepted. Defaults to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }
 
+        /**
+         * @param subPath (Optional) Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subPath(@Nullable Output<String> subPath) {
             $.subPath = subPath;
             return this;
         }
 
+        /**
+         * @param subPath (Optional) Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subPath(String subPath) {
             return subPath(Output.of(subPath));
         }

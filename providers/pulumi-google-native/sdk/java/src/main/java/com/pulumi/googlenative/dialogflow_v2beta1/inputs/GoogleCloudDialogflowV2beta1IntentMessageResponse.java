@@ -43,6 +43,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="basicCard", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard;
 
+    /**
+     * @return Displays a basic card for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard() {
         return this.basicCard;
     }
@@ -54,6 +58,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="browseCarouselCard", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard;
 
+    /**
+     * @return Browse carousel card for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard() {
         return this.browseCarouselCard;
     }
@@ -65,6 +73,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="card", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageCardResponse card;
 
+    /**
+     * @return Displays a card.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageCardResponse card() {
         return this.card;
     }
@@ -76,6 +88,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="carouselSelect", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect;
 
+    /**
+     * @return Displays a carousel card for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect() {
         return this.carouselSelect;
     }
@@ -87,6 +103,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="image", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
 
+    /**
+     * @return Displays an image.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse image() {
         return this.image;
     }
@@ -98,6 +118,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="linkOutSuggestion", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
 
+    /**
+     * @return Displays a link out suggestion chip for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion() {
         return this.linkOutSuggestion;
     }
@@ -109,6 +133,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="listSelect", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect;
 
+    /**
+     * @return Displays a list card for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect() {
         return this.listSelect;
     }
@@ -120,6 +148,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="mediaContent", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent;
 
+    /**
+     * @return The media content card for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent() {
         return this.mediaContent;
     }
@@ -131,6 +163,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="payload", required=true)
     private Map<String,String> payload;
 
+    /**
+     * @return A custom platform-specific response.
+     * 
+     */
     public Map<String,String> payload() {
         return this.payload;
     }
@@ -142,6 +178,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="platform", required=true)
     private String platform;
 
+    /**
+     * @return Optional. The platform that this message is intended for.
+     * 
+     */
     public String platform() {
         return this.platform;
     }
@@ -153,6 +193,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="quickReplies", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies;
 
+    /**
+     * @return Displays quick replies.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies() {
         return this.quickReplies;
     }
@@ -164,6 +208,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="rbmCarouselRichCard", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard;
 
+    /**
+     * @return Rich Business Messaging (RBM) carousel rich card response.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard() {
         return this.rbmCarouselRichCard;
     }
@@ -175,6 +223,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="rbmStandaloneRichCard", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard;
 
+    /**
+     * @return Standalone Rich Business Messaging (RBM) rich card response.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard() {
         return this.rbmStandaloneRichCard;
     }
@@ -186,6 +238,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="rbmText", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText;
 
+    /**
+     * @return Rich Business Messaging (RBM) text response. RBM allows businesses to send enriched and branded versions of SMS. See https://jibe.google.com/business-messaging.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText() {
         return this.rbmText;
     }
@@ -197,6 +253,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="simpleResponses", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses;
 
+    /**
+     * @return Returns a voice or text-only response for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses() {
         return this.simpleResponses;
     }
@@ -208,6 +268,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="suggestions", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions;
 
+    /**
+     * @return Displays suggestion chips for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions() {
         return this.suggestions;
     }
@@ -219,6 +283,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="tableCard", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard;
 
+    /**
+     * @return Table card for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard() {
         return this.tableCard;
     }
@@ -230,6 +298,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="telephonyPlayAudio", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio;
 
+    /**
+     * @return Plays audio from a file in Telephony Gateway.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio() {
         return this.telephonyPlayAudio;
     }
@@ -241,6 +313,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="telephonySynthesizeSpeech", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech;
 
+    /**
+     * @return Synthesizes speech in Telephony Gateway.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech() {
         return this.telephonySynthesizeSpeech;
     }
@@ -252,6 +328,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="telephonyTransferCall", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall;
 
+    /**
+     * @return Transfers the call in Telephony Gateway.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall() {
         return this.telephonyTransferCall;
     }
@@ -263,6 +343,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
     @Import(name="text", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageTextResponse text;
 
+    /**
+     * @return Returns a text response.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageTextResponse text() {
         return this.text;
     }
@@ -311,106 +395,232 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
             $ = new GoogleCloudDialogflowV2beta1IntentMessageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basicCard Displays a basic card for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicCard(GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard) {
             $.basicCard = basicCard;
             return this;
         }
 
+        /**
+         * @param browseCarouselCard Browse carousel card for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder browseCarouselCard(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard) {
             $.browseCarouselCard = browseCarouselCard;
             return this;
         }
 
+        /**
+         * @param card Displays a card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder card(GoogleCloudDialogflowV2beta1IntentMessageCardResponse card) {
             $.card = card;
             return this;
         }
 
+        /**
+         * @param carouselSelect Displays a carousel card for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder carouselSelect(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect) {
             $.carouselSelect = carouselSelect;
             return this;
         }
 
+        /**
+         * @param image Displays an image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageResponse image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param linkOutSuggestion Displays a link out suggestion chip for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkOutSuggestion(GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion) {
             $.linkOutSuggestion = linkOutSuggestion;
             return this;
         }
 
+        /**
+         * @param listSelect Displays a list card for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder listSelect(GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect) {
             $.listSelect = listSelect;
             return this;
         }
 
+        /**
+         * @param mediaContent The media content card for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaContent(GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent) {
             $.mediaContent = mediaContent;
             return this;
         }
 
+        /**
+         * @param payload A custom platform-specific response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payload(Map<String,String> payload) {
             $.payload = payload;
             return this;
         }
 
+        /**
+         * @param platform Optional. The platform that this message is intended for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(String platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param quickReplies Displays quick replies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quickReplies(GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies) {
             $.quickReplies = quickReplies;
             return this;
         }
 
+        /**
+         * @param rbmCarouselRichCard Rich Business Messaging (RBM) carousel rich card response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rbmCarouselRichCard(GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard) {
             $.rbmCarouselRichCard = rbmCarouselRichCard;
             return this;
         }
 
+        /**
+         * @param rbmStandaloneRichCard Standalone Rich Business Messaging (RBM) rich card response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rbmStandaloneRichCard(GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard) {
             $.rbmStandaloneRichCard = rbmStandaloneRichCard;
             return this;
         }
 
+        /**
+         * @param rbmText Rich Business Messaging (RBM) text response. RBM allows businesses to send enriched and branded versions of SMS. See https://jibe.google.com/business-messaging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rbmText(GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText) {
             $.rbmText = rbmText;
             return this;
         }
 
+        /**
+         * @param simpleResponses Returns a voice or text-only response for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder simpleResponses(GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses) {
             $.simpleResponses = simpleResponses;
             return this;
         }
 
+        /**
+         * @param suggestions Displays suggestion chips for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suggestions(GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions) {
             $.suggestions = suggestions;
             return this;
         }
 
+        /**
+         * @param tableCard Table card for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableCard(GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard) {
             $.tableCard = tableCard;
             return this;
         }
 
+        /**
+         * @param telephonyPlayAudio Plays audio from a file in Telephony Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder telephonyPlayAudio(GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio) {
             $.telephonyPlayAudio = telephonyPlayAudio;
             return this;
         }
 
+        /**
+         * @param telephonySynthesizeSpeech Synthesizes speech in Telephony Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder telephonySynthesizeSpeech(GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech) {
             $.telephonySynthesizeSpeech = telephonySynthesizeSpeech;
             return this;
         }
 
+        /**
+         * @param telephonyTransferCall Transfers the call in Telephony Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder telephonyTransferCall(GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall) {
             $.telephonyTransferCall = telephonyTransferCall;
             return this;
         }
 
+        /**
+         * @param text Returns a text response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(GoogleCloudDialogflowV2beta1IntentMessageTextResponse text) {
             $.text = text;
             return this;

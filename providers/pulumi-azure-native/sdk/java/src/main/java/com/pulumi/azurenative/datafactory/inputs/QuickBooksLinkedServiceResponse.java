@@ -34,6 +34,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="accessToken")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
 
+    /**
+     * @return The access token for OAuth 1.0 authentication.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
@@ -45,6 +49,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="accessTokenSecret")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret;
 
+    /**
+     * @return The access token secret for OAuth 1.0 authentication.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accessTokenSecret() {
         return Optional.ofNullable(this.accessTokenSecret);
     }
@@ -56,6 +64,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -67,6 +79,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="companyId")
     private @Nullable Object companyId;
 
+    /**
+     * @return The company ID of the QuickBooks company to authorize.
+     * 
+     */
     public Optional<Object> companyId() {
         return Optional.ofNullable(this.companyId);
     }
@@ -78,6 +94,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -89,6 +109,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="connectionProperties")
     private @Nullable Object connectionProperties;
 
+    /**
+     * @return Properties used to connect to QuickBooks. It is mutually exclusive with any other properties in the linked service. Type: object.
+     * 
+     */
     public Optional<Object> connectionProperties() {
         return Optional.ofNullable(this.connectionProperties);
     }
@@ -100,6 +124,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="consumerKey")
     private @Nullable Object consumerKey;
 
+    /**
+     * @return The consumer key for OAuth 1.0 authentication.
+     * 
+     */
     public Optional<Object> consumerKey() {
         return Optional.ofNullable(this.consumerKey);
     }
@@ -111,6 +139,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="consumerSecret")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret;
 
+    /**
+     * @return The consumer secret for OAuth 1.0 authentication.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> consumerSecret() {
         return Optional.ofNullable(this.consumerSecret);
     }
@@ -122,6 +154,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -133,6 +169,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -144,6 +184,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="endpoint")
     private @Nullable Object endpoint;
 
+    /**
+     * @return The endpoint of the QuickBooks server. (i.e. quickbooks.api.intuit.com)
+     * 
+     */
     public Optional<Object> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -155,6 +199,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -167,6 +215,11 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;QuickBooks&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -178,6 +231,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="useEncryptedEndpoints")
     private @Nullable Object useEncryptedEndpoints;
 
+    /**
+     * @return Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+     * 
+     */
     public Optional<Object> useEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
@@ -219,99 +276,226 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
             $ = new QuickBooksLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessToken The access token for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken) {
             $.accessToken = accessToken;
             return this;
         }
 
+        /**
+         * @param accessToken The access token for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(AzureKeyVaultSecretReferenceResponse accessToken) {
             return accessToken(Either.ofLeft(accessToken));
         }
 
+        /**
+         * @param accessToken The access token for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(SecureStringResponse accessToken) {
             return accessToken(Either.ofRight(accessToken));
         }
 
+        /**
+         * @param accessTokenSecret The access token secret for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTokenSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret) {
             $.accessTokenSecret = accessTokenSecret;
             return this;
         }
 
+        /**
+         * @param accessTokenSecret The access token secret for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTokenSecret(AzureKeyVaultSecretReferenceResponse accessTokenSecret) {
             return accessTokenSecret(Either.ofLeft(accessTokenSecret));
         }
 
+        /**
+         * @param accessTokenSecret The access token secret for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTokenSecret(SecureStringResponse accessTokenSecret) {
             return accessTokenSecret(Either.ofRight(accessTokenSecret));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param companyId The company ID of the QuickBooks company to authorize.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyId(@Nullable Object companyId) {
             $.companyId = companyId;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectionProperties Properties used to connect to QuickBooks. It is mutually exclusive with any other properties in the linked service. Type: object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionProperties(@Nullable Object connectionProperties) {
             $.connectionProperties = connectionProperties;
             return this;
         }
 
+        /**
+         * @param consumerKey The consumer key for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerKey(@Nullable Object consumerKey) {
             $.consumerKey = consumerKey;
             return this;
         }
 
+        /**
+         * @param consumerSecret The consumer secret for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret) {
             $.consumerSecret = consumerSecret;
             return this;
         }
 
+        /**
+         * @param consumerSecret The consumer secret for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerSecret(AzureKeyVaultSecretReferenceResponse consumerSecret) {
             return consumerSecret(Either.ofLeft(consumerSecret));
         }
 
+        /**
+         * @param consumerSecret The consumer secret for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerSecret(SecureStringResponse consumerSecret) {
             return consumerSecret(Either.ofRight(consumerSecret));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param endpoint The endpoint of the QuickBooks server. (i.e. quickbooks.api.intuit.com)
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable Object endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;QuickBooks&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param useEncryptedEndpoints Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
             $.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;

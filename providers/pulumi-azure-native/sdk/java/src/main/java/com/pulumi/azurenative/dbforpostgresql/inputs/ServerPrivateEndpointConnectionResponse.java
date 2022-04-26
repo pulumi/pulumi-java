@@ -24,6 +24,10 @@ public final class ServerPrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource ID of the Private Endpoint Connection.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -35,6 +39,10 @@ public final class ServerPrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="properties", required=true)
     private ServerPrivateEndpointConnectionPropertiesResponse properties;
 
+    /**
+     * @return Private endpoint connection properties
+     * 
+     */
     public ServerPrivateEndpointConnectionPropertiesResponse properties() {
         return this.properties;
     }
@@ -64,11 +72,23 @@ public final class ServerPrivateEndpointConnectionResponse extends com.pulumi.re
             $ = new ServerPrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID of the Private Endpoint Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param properties Private endpoint connection properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ServerPrivateEndpointConnectionPropertiesResponse properties) {
             $.properties = properties;
             return this;

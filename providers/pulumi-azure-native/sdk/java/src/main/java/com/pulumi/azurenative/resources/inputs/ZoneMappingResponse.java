@@ -22,6 +22,10 @@ public final class ZoneMappingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return The location of the zone mapping.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -58,6 +62,12 @@ public final class ZoneMappingResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ZoneMappingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The location of the zone mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;

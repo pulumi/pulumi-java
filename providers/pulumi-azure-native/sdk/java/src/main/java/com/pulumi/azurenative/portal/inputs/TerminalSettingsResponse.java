@@ -25,6 +25,10 @@ public final class TerminalSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="fontSize")
     private @Nullable String fontSize;
 
+    /**
+     * @return Size of terminal font.
+     * 
+     */
     public Optional<String> fontSize() {
         return Optional.ofNullable(this.fontSize);
     }
@@ -36,6 +40,10 @@ public final class TerminalSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="fontStyle")
     private @Nullable String fontStyle;
 
+    /**
+     * @return Style of terminal font.
+     * 
+     */
     public Optional<String> fontStyle() {
         return Optional.ofNullable(this.fontStyle);
     }
@@ -65,11 +73,23 @@ public final class TerminalSettingsResponse extends com.pulumi.resources.InvokeA
             $ = new TerminalSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fontSize Size of terminal font.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fontSize(@Nullable String fontSize) {
             $.fontSize = fontSize;
             return this;
         }
 
+        /**
+         * @param fontStyle Style of terminal font.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fontStyle(@Nullable String fontStyle) {
             $.fontStyle = fontStyle;
             return this;

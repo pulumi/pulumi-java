@@ -42,6 +42,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the instance profile.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -54,6 +58,11 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="blockDeviceMappings")
     private @Nullable Output<List<LaunchTemplateBlockDeviceMappingGetArgs>> blockDeviceMappings;
 
+    /**
+     * @return Specify volumes to attach to the instance besides the volumes specified by the AMI.
+     * See Block Devices below for details.
+     * 
+     */
     public Optional<Output<List<LaunchTemplateBlockDeviceMappingGetArgs>>> blockDeviceMappings() {
         return Optional.ofNullable(this.blockDeviceMappings);
     }
@@ -65,6 +74,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="capacityReservationSpecification")
     private @Nullable Output<LaunchTemplateCapacityReservationSpecificationGetArgs> capacityReservationSpecification;
 
+    /**
+     * @return Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
+     * 
+     */
     public Optional<Output<LaunchTemplateCapacityReservationSpecificationGetArgs>> capacityReservationSpecification() {
         return Optional.ofNullable(this.capacityReservationSpecification);
     }
@@ -76,6 +89,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="cpuOptions")
     private @Nullable Output<LaunchTemplateCpuOptionsGetArgs> cpuOptions;
 
+    /**
+     * @return The CPU options for the instance. See CPU Options below for more details.
+     * 
+     */
     public Optional<Output<LaunchTemplateCpuOptionsGetArgs>> cpuOptions() {
         return Optional.ofNullable(this.cpuOptions);
     }
@@ -88,6 +105,11 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="creditSpecification")
     private @Nullable Output<LaunchTemplateCreditSpecificationGetArgs> creditSpecification;
 
+    /**
+     * @return Customize the credit specification of the instance. See Credit
+     * Specification below for more details.
+     * 
+     */
     public Optional<Output<LaunchTemplateCreditSpecificationGetArgs>> creditSpecification() {
         return Optional.ofNullable(this.creditSpecification);
     }
@@ -99,6 +121,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="defaultVersion")
     private @Nullable Output<Integer> defaultVersion;
 
+    /**
+     * @return Default Version of the launch template.
+     * 
+     */
     public Optional<Output<Integer>> defaultVersion() {
         return Optional.ofNullable(this.defaultVersion);
     }
@@ -110,6 +136,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the launch template.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -122,6 +152,11 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="disableApiTermination")
     private @Nullable Output<Boolean> disableApiTermination;
 
+    /**
+     * @return If `true`, enables [EC2 Instance
+     * Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
+     * 
+     */
     public Optional<Output<Boolean>> disableApiTermination() {
         return Optional.ofNullable(this.disableApiTermination);
     }
@@ -133,6 +168,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="ebsOptimized")
     private @Nullable Output<String> ebsOptimized;
 
+    /**
+     * @return If `true`, the launched EC2 instance will be EBS-optimized.
+     * 
+     */
     public Optional<Output<String>> ebsOptimized() {
         return Optional.ofNullable(this.ebsOptimized);
     }
@@ -145,6 +184,11 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="elasticGpuSpecifications")
     private @Nullable Output<List<LaunchTemplateElasticGpuSpecificationGetArgs>> elasticGpuSpecifications;
 
+    /**
+     * @return The elastic GPU to attach to the instance. See Elastic GPU
+     * below for more details.
+     * 
+     */
     public Optional<Output<List<LaunchTemplateElasticGpuSpecificationGetArgs>>> elasticGpuSpecifications() {
         return Optional.ofNullable(this.elasticGpuSpecifications);
     }
@@ -156,6 +200,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="elasticInferenceAccelerator")
     private @Nullable Output<LaunchTemplateElasticInferenceAcceleratorGetArgs> elasticInferenceAccelerator;
 
+    /**
+     * @return Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
+     * 
+     */
     public Optional<Output<LaunchTemplateElasticInferenceAcceleratorGetArgs>> elasticInferenceAccelerator() {
         return Optional.ofNullable(this.elasticInferenceAccelerator);
     }
@@ -167,6 +215,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="enclaveOptions")
     private @Nullable Output<LaunchTemplateEnclaveOptionsGetArgs> enclaveOptions;
 
+    /**
+     * @return Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
+     * 
+     */
     public Optional<Output<LaunchTemplateEnclaveOptionsGetArgs>> enclaveOptions() {
         return Optional.ofNullable(this.enclaveOptions);
     }
@@ -178,6 +230,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="hibernationOptions")
     private @Nullable Output<LaunchTemplateHibernationOptionsGetArgs> hibernationOptions;
 
+    /**
+     * @return The hibernation options for the instance. See Hibernation Options below for more details.
+     * 
+     */
     public Optional<Output<LaunchTemplateHibernationOptionsGetArgs>> hibernationOptions() {
         return Optional.ofNullable(this.hibernationOptions);
     }
@@ -190,6 +246,11 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="iamInstanceProfile")
     private @Nullable Output<LaunchTemplateIamInstanceProfileGetArgs> iamInstanceProfile;
 
+    /**
+     * @return The IAM Instance Profile to launch the instance with. See Instance Profile
+     * below for more details.
+     * 
+     */
     public Optional<Output<LaunchTemplateIamInstanceProfileGetArgs>> iamInstanceProfile() {
         return Optional.ofNullable(this.iamInstanceProfile);
     }
@@ -201,6 +262,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="imageId")
     private @Nullable Output<String> imageId;
 
+    /**
+     * @return The AMI from which to launch the instance.
+     * 
+     */
     public Optional<Output<String>> imageId() {
         return Optional.ofNullable(this.imageId);
     }
@@ -213,6 +278,11 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceInitiatedShutdownBehavior")
     private @Nullable Output<String> instanceInitiatedShutdownBehavior;
 
+    /**
+     * @return Shutdown behavior for the instance. Can be `stop` or `terminate`.
+     * (Default: `stop`).
+     * 
+     */
     public Optional<Output<String>> instanceInitiatedShutdownBehavior() {
         return Optional.ofNullable(this.instanceInitiatedShutdownBehavior);
     }
@@ -225,6 +295,11 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceMarketOptions")
     private @Nullable Output<LaunchTemplateInstanceMarketOptionsGetArgs> instanceMarketOptions;
 
+    /**
+     * @return The market (purchasing) option for the instance. See Market Options
+     * below for details.
+     * 
+     */
     public Optional<Output<LaunchTemplateInstanceMarketOptionsGetArgs>> instanceMarketOptions() {
         return Optional.ofNullable(this.instanceMarketOptions);
     }
@@ -236,6 +311,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The type of the instance.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -247,6 +326,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="kernelId")
     private @Nullable Output<String> kernelId;
 
+    /**
+     * @return The kernel ID.
+     * 
+     */
     public Optional<Output<String>> kernelId() {
         return Optional.ofNullable(this.kernelId);
     }
@@ -258,6 +341,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="keyName")
     private @Nullable Output<String> keyName;
 
+    /**
+     * @return The key name to use for the instance.
+     * 
+     */
     public Optional<Output<String>> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -269,6 +356,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="latestVersion")
     private @Nullable Output<Integer> latestVersion;
 
+    /**
+     * @return The latest version of the launch template.
+     * 
+     */
     public Optional<Output<Integer>> latestVersion() {
         return Optional.ofNullable(this.latestVersion);
     }
@@ -280,6 +371,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="licenseSpecifications")
     private @Nullable Output<List<LaunchTemplateLicenseSpecificationGetArgs>> licenseSpecifications;
 
+    /**
+     * @return A list of license specifications to associate with. See License Specification below for more details.
+     * 
+     */
     public Optional<Output<List<LaunchTemplateLicenseSpecificationGetArgs>>> licenseSpecifications() {
         return Optional.ofNullable(this.licenseSpecifications);
     }
@@ -291,6 +386,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="metadataOptions")
     private @Nullable Output<LaunchTemplateMetadataOptionsGetArgs> metadataOptions;
 
+    /**
+     * @return Customize the metadata options for the instance. See Metadata Options below for more details.
+     * 
+     */
     public Optional<Output<LaunchTemplateMetadataOptionsGetArgs>> metadataOptions() {
         return Optional.ofNullable(this.metadataOptions);
     }
@@ -302,6 +401,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="monitoring")
     private @Nullable Output<LaunchTemplateMonitoringGetArgs> monitoring;
 
+    /**
+     * @return The monitoring option for the instance. See Monitoring below for more details.
+     * 
+     */
     public Optional<Output<LaunchTemplateMonitoringGetArgs>> monitoring() {
         return Optional.ofNullable(this.monitoring);
     }
@@ -313,6 +416,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -324,6 +431,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="namePrefix")
     private @Nullable Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+     * 
+     */
     public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -336,6 +447,11 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="networkInterfaces")
     private @Nullable Output<List<LaunchTemplateNetworkInterfaceGetArgs>> networkInterfaces;
 
+    /**
+     * @return Customize network interfaces to be attached at instance boot time. See Network
+     * Interfaces below for more details.
+     * 
+     */
     public Optional<Output<List<LaunchTemplateNetworkInterfaceGetArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
@@ -347,6 +463,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="placement")
     private @Nullable Output<LaunchTemplatePlacementGetArgs> placement;
 
+    /**
+     * @return The placement of the instance. See Placement below for more details.
+     * 
+     */
     public Optional<Output<LaunchTemplatePlacementGetArgs>> placement() {
         return Optional.ofNullable(this.placement);
     }
@@ -358,6 +478,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="ramDiskId")
     private @Nullable Output<String> ramDiskId;
 
+    /**
+     * @return The ID of the RAM disk.
+     * 
+     */
     public Optional<Output<String>> ramDiskId() {
         return Optional.ofNullable(this.ramDiskId);
     }
@@ -370,6 +494,11 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="securityGroupNames")
     private @Nullable Output<List<String>> securityGroupNames;
 
+    /**
+     * @return A list of security group names to associate with. If you are creating Instances in a VPC, use
+     * `vpc_security_group_ids` instead.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroupNames() {
         return Optional.ofNullable(this.securityGroupNames);
     }
@@ -381,6 +510,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="tagSpecifications")
     private @Nullable Output<List<LaunchTemplateTagSpecificationGetArgs>> tagSpecifications;
 
+    /**
+     * @return The tags to apply to the resources during launch. See Tag Specifications below for more details.
+     * 
+     */
     public Optional<Output<List<LaunchTemplateTagSpecificationGetArgs>>> tagSpecifications() {
         return Optional.ofNullable(this.tagSpecifications);
     }
@@ -392,6 +525,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the launch template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -403,6 +540,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -414,6 +555,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="updateDefaultVersion")
     private @Nullable Output<Boolean> updateDefaultVersion;
 
+    /**
+     * @return Whether to update Default Version each update. Conflicts with `default_version`.
+     * 
+     */
     public Optional<Output<Boolean>> updateDefaultVersion() {
         return Optional.ofNullable(this.updateDefaultVersion);
     }
@@ -425,6 +570,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="userData")
     private @Nullable Output<String> userData;
 
+    /**
+     * @return The Base64-encoded user data to provide when launching the instance.
+     * 
+     */
     public Optional<Output<String>> userData() {
         return Optional.ofNullable(this.userData);
     }
@@ -436,6 +585,10 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="vpcSecurityGroupIds")
     private @Nullable Output<List<String>> vpcSecurityGroupIds;
 
+    /**
+     * @return A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
+     * 
+     */
     public Optional<Output<List<String>>> vpcSecurityGroupIds() {
         return Optional.ofNullable(this.vpcSecurityGroupIds);
     }
@@ -499,354 +652,850 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
             $ = new LaunchTemplateState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the instance profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the instance profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param blockDeviceMappings Specify volumes to attach to the instance besides the volumes specified by the AMI.
+         * See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockDeviceMappings(@Nullable Output<List<LaunchTemplateBlockDeviceMappingGetArgs>> blockDeviceMappings) {
             $.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
+        /**
+         * @param blockDeviceMappings Specify volumes to attach to the instance besides the volumes specified by the AMI.
+         * See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockDeviceMappings(List<LaunchTemplateBlockDeviceMappingGetArgs> blockDeviceMappings) {
             return blockDeviceMappings(Output.of(blockDeviceMappings));
         }
 
+        /**
+         * @param blockDeviceMappings Specify volumes to attach to the instance besides the volumes specified by the AMI.
+         * See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockDeviceMappings(LaunchTemplateBlockDeviceMappingGetArgs... blockDeviceMappings) {
             return blockDeviceMappings(List.of(blockDeviceMappings));
         }
 
+        /**
+         * @param capacityReservationSpecification Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationSpecification(@Nullable Output<LaunchTemplateCapacityReservationSpecificationGetArgs> capacityReservationSpecification) {
             $.capacityReservationSpecification = capacityReservationSpecification;
             return this;
         }
 
+        /**
+         * @param capacityReservationSpecification Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationSpecification(LaunchTemplateCapacityReservationSpecificationGetArgs capacityReservationSpecification) {
             return capacityReservationSpecification(Output.of(capacityReservationSpecification));
         }
 
+        /**
+         * @param cpuOptions The CPU options for the instance. See CPU Options below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuOptions(@Nullable Output<LaunchTemplateCpuOptionsGetArgs> cpuOptions) {
             $.cpuOptions = cpuOptions;
             return this;
         }
 
+        /**
+         * @param cpuOptions The CPU options for the instance. See CPU Options below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuOptions(LaunchTemplateCpuOptionsGetArgs cpuOptions) {
             return cpuOptions(Output.of(cpuOptions));
         }
 
+        /**
+         * @param creditSpecification Customize the credit specification of the instance. See Credit
+         * Specification below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creditSpecification(@Nullable Output<LaunchTemplateCreditSpecificationGetArgs> creditSpecification) {
             $.creditSpecification = creditSpecification;
             return this;
         }
 
+        /**
+         * @param creditSpecification Customize the credit specification of the instance. See Credit
+         * Specification below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creditSpecification(LaunchTemplateCreditSpecificationGetArgs creditSpecification) {
             return creditSpecification(Output.of(creditSpecification));
         }
 
+        /**
+         * @param defaultVersion Default Version of the launch template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultVersion(@Nullable Output<Integer> defaultVersion) {
             $.defaultVersion = defaultVersion;
             return this;
         }
 
+        /**
+         * @param defaultVersion Default Version of the launch template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultVersion(Integer defaultVersion) {
             return defaultVersion(Output.of(defaultVersion));
         }
 
+        /**
+         * @param description Description of the launch template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the launch template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param disableApiTermination If `true`, enables [EC2 Instance
+         * Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableApiTermination(@Nullable Output<Boolean> disableApiTermination) {
             $.disableApiTermination = disableApiTermination;
             return this;
         }
 
+        /**
+         * @param disableApiTermination If `true`, enables [EC2 Instance
+         * Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableApiTermination(Boolean disableApiTermination) {
             return disableApiTermination(Output.of(disableApiTermination));
         }
 
+        /**
+         * @param ebsOptimized If `true`, the launched EC2 instance will be EBS-optimized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsOptimized(@Nullable Output<String> ebsOptimized) {
             $.ebsOptimized = ebsOptimized;
             return this;
         }
 
+        /**
+         * @param ebsOptimized If `true`, the launched EC2 instance will be EBS-optimized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsOptimized(String ebsOptimized) {
             return ebsOptimized(Output.of(ebsOptimized));
         }
 
+        /**
+         * @param elasticGpuSpecifications The elastic GPU to attach to the instance. See Elastic GPU
+         * below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticGpuSpecifications(@Nullable Output<List<LaunchTemplateElasticGpuSpecificationGetArgs>> elasticGpuSpecifications) {
             $.elasticGpuSpecifications = elasticGpuSpecifications;
             return this;
         }
 
+        /**
+         * @param elasticGpuSpecifications The elastic GPU to attach to the instance. See Elastic GPU
+         * below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticGpuSpecifications(List<LaunchTemplateElasticGpuSpecificationGetArgs> elasticGpuSpecifications) {
             return elasticGpuSpecifications(Output.of(elasticGpuSpecifications));
         }
 
+        /**
+         * @param elasticGpuSpecifications The elastic GPU to attach to the instance. See Elastic GPU
+         * below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticGpuSpecifications(LaunchTemplateElasticGpuSpecificationGetArgs... elasticGpuSpecifications) {
             return elasticGpuSpecifications(List.of(elasticGpuSpecifications));
         }
 
+        /**
+         * @param elasticInferenceAccelerator Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticInferenceAccelerator(@Nullable Output<LaunchTemplateElasticInferenceAcceleratorGetArgs> elasticInferenceAccelerator) {
             $.elasticInferenceAccelerator = elasticInferenceAccelerator;
             return this;
         }
 
+        /**
+         * @param elasticInferenceAccelerator Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticInferenceAccelerator(LaunchTemplateElasticInferenceAcceleratorGetArgs elasticInferenceAccelerator) {
             return elasticInferenceAccelerator(Output.of(elasticInferenceAccelerator));
         }
 
+        /**
+         * @param enclaveOptions Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enclaveOptions(@Nullable Output<LaunchTemplateEnclaveOptionsGetArgs> enclaveOptions) {
             $.enclaveOptions = enclaveOptions;
             return this;
         }
 
+        /**
+         * @param enclaveOptions Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enclaveOptions(LaunchTemplateEnclaveOptionsGetArgs enclaveOptions) {
             return enclaveOptions(Output.of(enclaveOptions));
         }
 
+        /**
+         * @param hibernationOptions The hibernation options for the instance. See Hibernation Options below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hibernationOptions(@Nullable Output<LaunchTemplateHibernationOptionsGetArgs> hibernationOptions) {
             $.hibernationOptions = hibernationOptions;
             return this;
         }
 
+        /**
+         * @param hibernationOptions The hibernation options for the instance. See Hibernation Options below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hibernationOptions(LaunchTemplateHibernationOptionsGetArgs hibernationOptions) {
             return hibernationOptions(Output.of(hibernationOptions));
         }
 
+        /**
+         * @param iamInstanceProfile The IAM Instance Profile to launch the instance with. See Instance Profile
+         * below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamInstanceProfile(@Nullable Output<LaunchTemplateIamInstanceProfileGetArgs> iamInstanceProfile) {
             $.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
 
+        /**
+         * @param iamInstanceProfile The IAM Instance Profile to launch the instance with. See Instance Profile
+         * below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamInstanceProfile(LaunchTemplateIamInstanceProfileGetArgs iamInstanceProfile) {
             return iamInstanceProfile(Output.of(iamInstanceProfile));
         }
 
+        /**
+         * @param imageId The AMI from which to launch the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageId(@Nullable Output<String> imageId) {
             $.imageId = imageId;
             return this;
         }
 
+        /**
+         * @param imageId The AMI from which to launch the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageId(String imageId) {
             return imageId(Output.of(imageId));
         }
 
+        /**
+         * @param instanceInitiatedShutdownBehavior Shutdown behavior for the instance. Can be `stop` or `terminate`.
+         * (Default: `stop`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceInitiatedShutdownBehavior(@Nullable Output<String> instanceInitiatedShutdownBehavior) {
             $.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
             return this;
         }
 
+        /**
+         * @param instanceInitiatedShutdownBehavior Shutdown behavior for the instance. Can be `stop` or `terminate`.
+         * (Default: `stop`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceInitiatedShutdownBehavior(String instanceInitiatedShutdownBehavior) {
             return instanceInitiatedShutdownBehavior(Output.of(instanceInitiatedShutdownBehavior));
         }
 
+        /**
+         * @param instanceMarketOptions The market (purchasing) option for the instance. See Market Options
+         * below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceMarketOptions(@Nullable Output<LaunchTemplateInstanceMarketOptionsGetArgs> instanceMarketOptions) {
             $.instanceMarketOptions = instanceMarketOptions;
             return this;
         }
 
+        /**
+         * @param instanceMarketOptions The market (purchasing) option for the instance. See Market Options
+         * below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceMarketOptions(LaunchTemplateInstanceMarketOptionsGetArgs instanceMarketOptions) {
             return instanceMarketOptions(Output.of(instanceMarketOptions));
         }
 
+        /**
+         * @param instanceType The type of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The type of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param kernelId The kernel ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelId(@Nullable Output<String> kernelId) {
             $.kernelId = kernelId;
             return this;
         }
 
+        /**
+         * @param kernelId The kernel ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelId(String kernelId) {
             return kernelId(Output.of(kernelId));
         }
 
+        /**
+         * @param keyName The key name to use for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName The key name to use for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param latestVersion The latest version of the launch template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestVersion(@Nullable Output<Integer> latestVersion) {
             $.latestVersion = latestVersion;
             return this;
         }
 
+        /**
+         * @param latestVersion The latest version of the launch template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestVersion(Integer latestVersion) {
             return latestVersion(Output.of(latestVersion));
         }
 
+        /**
+         * @param licenseSpecifications A list of license specifications to associate with. See License Specification below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseSpecifications(@Nullable Output<List<LaunchTemplateLicenseSpecificationGetArgs>> licenseSpecifications) {
             $.licenseSpecifications = licenseSpecifications;
             return this;
         }
 
+        /**
+         * @param licenseSpecifications A list of license specifications to associate with. See License Specification below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseSpecifications(List<LaunchTemplateLicenseSpecificationGetArgs> licenseSpecifications) {
             return licenseSpecifications(Output.of(licenseSpecifications));
         }
 
+        /**
+         * @param licenseSpecifications A list of license specifications to associate with. See License Specification below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseSpecifications(LaunchTemplateLicenseSpecificationGetArgs... licenseSpecifications) {
             return licenseSpecifications(List.of(licenseSpecifications));
         }
 
+        /**
+         * @param metadataOptions Customize the metadata options for the instance. See Metadata Options below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataOptions(@Nullable Output<LaunchTemplateMetadataOptionsGetArgs> metadataOptions) {
             $.metadataOptions = metadataOptions;
             return this;
         }
 
+        /**
+         * @param metadataOptions Customize the metadata options for the instance. See Metadata Options below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataOptions(LaunchTemplateMetadataOptionsGetArgs metadataOptions) {
             return metadataOptions(Output.of(metadataOptions));
         }
 
+        /**
+         * @param monitoring The monitoring option for the instance. See Monitoring below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoring(@Nullable Output<LaunchTemplateMonitoringGetArgs> monitoring) {
             $.monitoring = monitoring;
             return this;
         }
 
+        /**
+         * @param monitoring The monitoring option for the instance. See Monitoring below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoring(LaunchTemplateMonitoringGetArgs monitoring) {
             return monitoring(Output.of(monitoring));
         }
 
+        /**
+         * @param name The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param networkInterfaces Customize network interfaces to be attached at instance boot time. See Network
+         * Interfaces below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(@Nullable Output<List<LaunchTemplateNetworkInterfaceGetArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces Customize network interfaces to be attached at instance boot time. See Network
+         * Interfaces below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(List<LaunchTemplateNetworkInterfaceGetArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
+        /**
+         * @param networkInterfaces Customize network interfaces to be attached at instance boot time. See Network
+         * Interfaces below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(LaunchTemplateNetworkInterfaceGetArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
+        /**
+         * @param placement The placement of the instance. See Placement below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placement(@Nullable Output<LaunchTemplatePlacementGetArgs> placement) {
             $.placement = placement;
             return this;
         }
 
+        /**
+         * @param placement The placement of the instance. See Placement below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placement(LaunchTemplatePlacementGetArgs placement) {
             return placement(Output.of(placement));
         }
 
+        /**
+         * @param ramDiskId The ID of the RAM disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ramDiskId(@Nullable Output<String> ramDiskId) {
             $.ramDiskId = ramDiskId;
             return this;
         }
 
+        /**
+         * @param ramDiskId The ID of the RAM disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ramDiskId(String ramDiskId) {
             return ramDiskId(Output.of(ramDiskId));
         }
 
+        /**
+         * @param securityGroupNames A list of security group names to associate with. If you are creating Instances in a VPC, use
+         * `vpc_security_group_ids` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupNames(@Nullable Output<List<String>> securityGroupNames) {
             $.securityGroupNames = securityGroupNames;
             return this;
         }
 
+        /**
+         * @param securityGroupNames A list of security group names to associate with. If you are creating Instances in a VPC, use
+         * `vpc_security_group_ids` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupNames(List<String> securityGroupNames) {
             return securityGroupNames(Output.of(securityGroupNames));
         }
 
+        /**
+         * @param securityGroupNames A list of security group names to associate with. If you are creating Instances in a VPC, use
+         * `vpc_security_group_ids` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupNames(String... securityGroupNames) {
             return securityGroupNames(List.of(securityGroupNames));
         }
 
+        /**
+         * @param tagSpecifications The tags to apply to the resources during launch. See Tag Specifications below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagSpecifications(@Nullable Output<List<LaunchTemplateTagSpecificationGetArgs>> tagSpecifications) {
             $.tagSpecifications = tagSpecifications;
             return this;
         }
 
+        /**
+         * @param tagSpecifications The tags to apply to the resources during launch. See Tag Specifications below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagSpecifications(List<LaunchTemplateTagSpecificationGetArgs> tagSpecifications) {
             return tagSpecifications(Output.of(tagSpecifications));
         }
 
+        /**
+         * @param tagSpecifications The tags to apply to the resources during launch. See Tag Specifications below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagSpecifications(LaunchTemplateTagSpecificationGetArgs... tagSpecifications) {
             return tagSpecifications(List.of(tagSpecifications));
         }
 
+        /**
+         * @param tags A map of tags to assign to the launch template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the launch template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param updateDefaultVersion Whether to update Default Version each update. Conflicts with `default_version`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateDefaultVersion(@Nullable Output<Boolean> updateDefaultVersion) {
             $.updateDefaultVersion = updateDefaultVersion;
             return this;
         }
 
+        /**
+         * @param updateDefaultVersion Whether to update Default Version each update. Conflicts with `default_version`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateDefaultVersion(Boolean updateDefaultVersion) {
             return updateDefaultVersion(Output.of(updateDefaultVersion));
         }
 
+        /**
+         * @param userData The Base64-encoded user data to provide when launching the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userData(@Nullable Output<String> userData) {
             $.userData = userData;
             return this;
         }
 
+        /**
+         * @param userData The Base64-encoded user data to provide when launching the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userData(String userData) {
             return userData(Output.of(userData));
         }
 
+        /**
+         * @param vpcSecurityGroupIds A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             $.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
+        /**
+         * @param vpcSecurityGroupIds A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(Output.of(vpcSecurityGroupIds));
         }
 
+        /**
+         * @param vpcSecurityGroupIds A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
         }

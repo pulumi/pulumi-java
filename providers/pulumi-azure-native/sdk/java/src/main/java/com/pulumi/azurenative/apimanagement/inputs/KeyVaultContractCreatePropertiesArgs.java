@@ -26,6 +26,10 @@ public final class KeyVaultContractCreatePropertiesArgs extends com.pulumi.resou
     @Import(name="identityClientId")
     private @Nullable Output<String> identityClientId;
 
+    /**
+     * @return SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
+     * 
+     */
     public Optional<Output<String>> identityClientId() {
         return Optional.ofNullable(this.identityClientId);
     }
@@ -37,6 +41,10 @@ public final class KeyVaultContractCreatePropertiesArgs extends com.pulumi.resou
     @Import(name="secretIdentifier")
     private @Nullable Output<String> secretIdentifier;
 
+    /**
+     * @return Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
+     * 
+     */
     public Optional<Output<String>> secretIdentifier() {
         return Optional.ofNullable(this.secretIdentifier);
     }
@@ -66,20 +74,44 @@ public final class KeyVaultContractCreatePropertiesArgs extends com.pulumi.resou
             $ = new KeyVaultContractCreatePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityClientId SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityClientId(@Nullable Output<String> identityClientId) {
             $.identityClientId = identityClientId;
             return this;
         }
 
+        /**
+         * @param identityClientId SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityClientId(String identityClientId) {
             return identityClientId(Output.of(identityClientId));
         }
 
+        /**
+         * @param secretIdentifier Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretIdentifier(@Nullable Output<String> secretIdentifier) {
             $.secretIdentifier = secretIdentifier;
             return this;
         }
 
+        /**
+         * @param secretIdentifier Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretIdentifier(String secretIdentifier) {
             return secretIdentifier(Output.of(secretIdentifier));
         }

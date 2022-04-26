@@ -25,6 +25,10 @@ public final class MobilityServiceUpdateResponse extends com.pulumi.resources.In
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return The OS type.
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -36,6 +40,10 @@ public final class MobilityServiceUpdateResponse extends com.pulumi.resources.In
     @Import(name="rebootStatus")
     private @Nullable String rebootStatus;
 
+    /**
+     * @return The reboot status of the update - whether it is required or not.
+     * 
+     */
     public Optional<String> rebootStatus() {
         return Optional.ofNullable(this.rebootStatus);
     }
@@ -47,6 +55,10 @@ public final class MobilityServiceUpdateResponse extends com.pulumi.resources.In
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return The version of the latest update.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -77,16 +89,34 @@ public final class MobilityServiceUpdateResponse extends com.pulumi.resources.In
             $ = new MobilityServiceUpdateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param osType The OS type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param rebootStatus The reboot status of the update - whether it is required or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rebootStatus(@Nullable String rebootStatus) {
             $.rebootStatus = rebootStatus;
             return this;
         }
 
+        /**
+         * @param version The version of the latest update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

@@ -29,6 +29,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The Smart Detector description. By default this is not populated, unless it&#39;s specified in expandDetector
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -40,6 +44,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The detector id.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -51,6 +59,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imagePaths")
     private @Nullable Output<List<String>> imagePaths;
 
+    /**
+     * @return The Smart Detector image path. By default this is not populated, unless it&#39;s specified in expandDetector
+     * 
+     */
     public Optional<Output<List<String>>> imagePaths() {
         return Optional.ofNullable(this.imagePaths);
     }
@@ -62,6 +74,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The Smart Detector name. By default this is not populated, unless it&#39;s specified in expandDetector
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -73,6 +89,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<Map<String,Object>> parameters;
 
+    /**
+     * @return The detector&#39;s parameters.&#39;
+     * 
+     */
     public Optional<Output<Map<String,Object>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -84,6 +104,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportedResourceTypes")
     private @Nullable Output<List<String>> supportedResourceTypes;
 
+    /**
+     * @return The Smart Detector supported resource types. By default this is not populated, unless it&#39;s specified in expandDetector
+     * 
+     */
     public Optional<Output<List<String>>> supportedResourceTypes() {
         return Optional.ofNullable(this.supportedResourceTypes);
     }
@@ -117,64 +141,148 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DetectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The Smart Detector description. By default this is not populated, unless it&#39;s specified in expandDetector
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The Smart Detector description. By default this is not populated, unless it&#39;s specified in expandDetector
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param id The detector id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The detector id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param imagePaths The Smart Detector image path. By default this is not populated, unless it&#39;s specified in expandDetector
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePaths(@Nullable Output<List<String>> imagePaths) {
             $.imagePaths = imagePaths;
             return this;
         }
 
+        /**
+         * @param imagePaths The Smart Detector image path. By default this is not populated, unless it&#39;s specified in expandDetector
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePaths(List<String> imagePaths) {
             return imagePaths(Output.of(imagePaths));
         }
 
+        /**
+         * @param imagePaths The Smart Detector image path. By default this is not populated, unless it&#39;s specified in expandDetector
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePaths(String... imagePaths) {
             return imagePaths(List.of(imagePaths));
         }
 
+        /**
+         * @param name The Smart Detector name. By default this is not populated, unless it&#39;s specified in expandDetector
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The Smart Detector name. By default this is not populated, unless it&#39;s specified in expandDetector
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters The detector&#39;s parameters.&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The detector&#39;s parameters.&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,Object> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param supportedResourceTypes The Smart Detector supported resource types. By default this is not populated, unless it&#39;s specified in expandDetector
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedResourceTypes(@Nullable Output<List<String>> supportedResourceTypes) {
             $.supportedResourceTypes = supportedResourceTypes;
             return this;
         }
 
+        /**
+         * @param supportedResourceTypes The Smart Detector supported resource types. By default this is not populated, unless it&#39;s specified in expandDetector
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedResourceTypes(List<String> supportedResourceTypes) {
             return supportedResourceTypes(Output.of(supportedResourceTypes));
         }
 
+        /**
+         * @param supportedResourceTypes The Smart Detector supported resource types. By default this is not populated, unless it&#39;s specified in expandDetector
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedResourceTypes(String... supportedResourceTypes) {
             return supportedResourceTypes(List.of(supportedResourceTypes));
         }

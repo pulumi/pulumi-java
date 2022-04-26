@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class NetworkProfileResponseOutboundIPs {
     /**
-     * A list of public IP addresses.
+     * @return A list of public IP addresses.
      * 
      */
     private final List<String> publicIPs;
@@ -22,9 +22,9 @@ public final class NetworkProfileResponseOutboundIPs {
     }
 
     /**
-     * A list of public IP addresses.
+     * @return A list of public IP addresses.
      * 
-    */
+     */
     public List<String> publicIPs() {
         return this.publicIPs;
     }

@@ -20,6 +20,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="cryptoKeyName", required=true)
     private Output<String> cryptoKeyName;
 
+    /**
+     * @return The resource name of the KMS CryptoKey to use for unwrapping.
+     * 
+     */
     public Output<String> cryptoKeyName() {
         return this.cryptoKeyName;
     }
@@ -32,6 +36,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="wrappedKey", required=true)
     private Output<String> wrappedKey;
 
+    /**
+     * @return The wrapped data crypto key.
+     * A base64-encoded string.
+     * 
+     */
     public Output<String> wrappedKey() {
         return this.wrappedKey;
     }
@@ -61,20 +70,46 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cryptoKeyName The resource name of the KMS CryptoKey to use for unwrapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKeyName(Output<String> cryptoKeyName) {
             $.cryptoKeyName = cryptoKeyName;
             return this;
         }
 
+        /**
+         * @param cryptoKeyName The resource name of the KMS CryptoKey to use for unwrapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKeyName(String cryptoKeyName) {
             return cryptoKeyName(Output.of(cryptoKeyName));
         }
 
+        /**
+         * @param wrappedKey The wrapped data crypto key.
+         * A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wrappedKey(Output<String> wrappedKey) {
             $.wrappedKey = wrappedKey;
             return this;
         }
 
+        /**
+         * @param wrappedKey The wrapped data crypto key.
+         * A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wrappedKey(String wrappedKey) {
             return wrappedKey(Output.of(wrappedKey));
         }

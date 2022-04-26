@@ -23,6 +23,10 @@ public final class ApplianceCredentialKubeconfigResponse extends com.pulumi.reso
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name which contains the role of the kubeconfig.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class ApplianceCredentialKubeconfigResponse extends com.pulumi.reso
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Contains the kubeconfig value.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class ApplianceCredentialKubeconfigResponse extends com.pulumi.reso
             $ = new ApplianceCredentialKubeconfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name which contains the role of the kubeconfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value Contains the kubeconfig value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

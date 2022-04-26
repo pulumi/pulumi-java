@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class NodeTemplateServerBinding {
     /**
-     * Type of server binding policy. If `RESTART_NODE_ON_ANY_SERVER`,
+     * @return Type of server binding policy. If `RESTART_NODE_ON_ANY_SERVER`,
      * nodes using this template will restart on any physical server
      * following a maintenance event.
      * If `RESTART_NODE_ON_MINIMAL_SERVER`, nodes using this template
@@ -32,7 +32,7 @@ public final class NodeTemplateServerBinding {
     }
 
     /**
-     * Type of server binding policy. If `RESTART_NODE_ON_ANY_SERVER`,
+     * @return Type of server binding policy. If `RESTART_NODE_ON_ANY_SERVER`,
      * nodes using this template will restart on any physical server
      * following a maintenance event.
      * If `RESTART_NODE_ON_MINIMAL_SERVER`, nodes using this template
@@ -45,7 +45,7 @@ public final class NodeTemplateServerBinding {
      * nodes will experience outages while maintenance is applied.
      * Possible values are `RESTART_NODE_ON_ANY_SERVER` and `RESTART_NODE_ON_MINIMAL_SERVERS`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

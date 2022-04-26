@@ -18,7 +18,7 @@ public final class GetOrganizationPolicyResult {
     private final String constraint;
     private final String etag;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -60,9 +60,9 @@ public final class GetOrganizationPolicyResult {
         return this.etag;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

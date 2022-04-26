@@ -14,19 +14,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MetastoreServiceHiveMetastoreConfig {
     /**
-     * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml).
+     * @return A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml).
      * The mappings override system defaults (some keys cannot be overridden)
      * 
      */
     private final @Nullable Map<String,String> configOverrides;
     /**
-     * Information used to configure the Hive metastore service as a service principal in a Kerberos realm.
+     * @return Information used to configure the Hive metastore service as a service principal in a Kerberos realm.
      * Structure is documented below.
      * 
      */
     private final @Nullable MetastoreServiceHiveMetastoreConfigKerberosConfig kerberosConfig;
     /**
-     * The Hive metastore schema version.
+     * @return The Hive metastore schema version.
      * 
      */
     private final String version;
@@ -42,25 +42,25 @@ public final class MetastoreServiceHiveMetastoreConfig {
     }
 
     /**
-     * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml).
+     * @return A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml).
      * The mappings override system defaults (some keys cannot be overridden)
      * 
-    */
+     */
     public Map<String,String> configOverrides() {
         return this.configOverrides == null ? Map.of() : this.configOverrides;
     }
     /**
-     * Information used to configure the Hive metastore service as a service principal in a Kerberos realm.
+     * @return Information used to configure the Hive metastore service as a service principal in a Kerberos realm.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<MetastoreServiceHiveMetastoreConfigKerberosConfig> kerberosConfig() {
         return Optional.ofNullable(this.kerberosConfig);
     }
     /**
-     * The Hive metastore schema version.
+     * @return The Hive metastore schema version.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

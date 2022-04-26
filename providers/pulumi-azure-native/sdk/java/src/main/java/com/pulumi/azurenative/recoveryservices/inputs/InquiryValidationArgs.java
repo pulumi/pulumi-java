@@ -26,6 +26,10 @@ public final class InquiryValidationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Status for the Inquiry Validation.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -54,11 +58,23 @@ public final class InquiryValidationArgs extends com.pulumi.resources.ResourceAr
             $ = new InquiryValidationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status Status for the Inquiry Validation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status for the Inquiry Validation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

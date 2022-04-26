@@ -23,6 +23,10 @@ public final class EtcdInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Etcd type
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -34,6 +38,10 @@ public final class EtcdInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Etcd version
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -63,11 +71,23 @@ public final class EtcdInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EtcdInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Etcd type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param version Etcd version
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

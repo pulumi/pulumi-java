@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class DicomServiceAuthenticationConfigurationResponse {
     /**
-     * The audiences for the service
+     * @return The audiences for the service
      * 
      */
     private final List<String> audiences;
     /**
-     * The authority url for the service
+     * @return The authority url for the service
      * 
      */
     private final String authority;
@@ -30,16 +30,16 @@ public final class DicomServiceAuthenticationConfigurationResponse {
     }
 
     /**
-     * The audiences for the service
+     * @return The audiences for the service
      * 
-    */
+     */
     public List<String> audiences() {
         return this.audiences;
     }
     /**
-     * The authority url for the service
+     * @return The authority url for the service
      * 
-    */
+     */
     public String authority() {
         return this.authority;
     }

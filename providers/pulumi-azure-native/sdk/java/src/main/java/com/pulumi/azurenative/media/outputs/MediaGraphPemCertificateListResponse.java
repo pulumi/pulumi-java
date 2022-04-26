@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class MediaGraphPemCertificateListResponse {
     /**
-     * PEM formatted public certificates, one per entry.
+     * @return PEM formatted public certificates, one per entry.
      * 
      */
     private final List<String> certificates;
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.MediaGraphPemCertificateList&#39;.
      * 
      */
@@ -31,17 +31,17 @@ public final class MediaGraphPemCertificateListResponse {
     }
 
     /**
-     * PEM formatted public certificates, one per entry.
+     * @return PEM formatted public certificates, one per entry.
      * 
-    */
+     */
     public List<String> certificates() {
         return this.certificates;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.MediaGraphPemCertificateList&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

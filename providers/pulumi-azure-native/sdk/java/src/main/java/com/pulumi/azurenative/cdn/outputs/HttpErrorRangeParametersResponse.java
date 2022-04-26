@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HttpErrorRangeParametersResponse {
     /**
-     * The inclusive start of the http status code range.
+     * @return The inclusive start of the http status code range.
      * 
      */
     private final @Nullable Integer begin;
     /**
-     * The inclusive end of the http status code range.
+     * @return The inclusive end of the http status code range.
      * 
      */
     private final @Nullable Integer end;
@@ -31,16 +31,16 @@ public final class HttpErrorRangeParametersResponse {
     }
 
     /**
-     * The inclusive start of the http status code range.
+     * @return The inclusive start of the http status code range.
      * 
-    */
+     */
     public Optional<Integer> begin() {
         return Optional.ofNullable(this.begin);
     }
     /**
-     * The inclusive end of the http status code range.
+     * @return The inclusive end of the http status code range.
      * 
-    */
+     */
     public Optional<Integer> end() {
         return Optional.ofNullable(this.end);
     }

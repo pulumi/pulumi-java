@@ -36,6 +36,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the Batch account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -47,6 +51,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationLicenses")
     private @Nullable Output<List<String>> applicationLicenses;
 
+    /**
+     * @return The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.
+     * 
+     */
     public Optional<Output<List<String>>> applicationLicenses() {
         return Optional.ofNullable(this.applicationLicenses);
     }
@@ -58,6 +66,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationPackages")
     private @Nullable Output<List<ApplicationPackageReferenceArgs>> applicationPackages;
 
+    /**
+     * @return Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.
+     * 
+     */
     public Optional<Output<List<ApplicationPackageReferenceArgs>>> applicationPackages() {
         return Optional.ofNullable(this.applicationPackages);
     }
@@ -69,6 +81,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificates")
     private @Nullable Output<List<CertificateReferenceArgs>> certificates;
 
+    /**
+     * @return For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of &#39;remoteUser&#39;, a &#39;certs&#39; directory is created in the user&#39;s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
+     * 
+     */
     public Optional<Output<List<CertificateReferenceArgs>>> certificates() {
         return Optional.ofNullable(this.certificates);
     }
@@ -80,6 +96,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentConfiguration")
     private @Nullable Output<DeploymentConfigurationArgs> deploymentConfiguration;
 
+    /**
+     * @return Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).
+     * 
+     */
     public Optional<Output<DeploymentConfigurationArgs>> deploymentConfiguration() {
         return Optional.ofNullable(this.deploymentConfiguration);
     }
@@ -91,6 +111,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -102,6 +126,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<BatchPoolIdentityArgs> identity;
 
+    /**
+     * @return The type of identity used for the Batch Pool.
+     * 
+     */
     public Optional<Output<BatchPoolIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -113,6 +141,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="interNodeCommunication")
     private @Nullable Output<InterNodeCommunicationState> interNodeCommunication;
 
+    /**
+     * @return This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to &#39;Disabled&#39;.
+     * 
+     */
     public Optional<Output<InterNodeCommunicationState>> interNodeCommunication() {
         return Optional.ofNullable(this.interNodeCommunication);
     }
@@ -124,6 +156,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<List<MetadataItemArgs>> metadata;
 
+    /**
+     * @return The Batch service does not assign any meaning to metadata; it is solely for the use of user code.
+     * 
+     */
     public Optional<Output<List<MetadataItemArgs>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -135,6 +171,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mountConfiguration")
     private @Nullable Output<List<MountConfigurationArgs>> mountConfiguration;
 
+    /**
+     * @return This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.
+     * 
+     */
     public Optional<Output<List<MountConfigurationArgs>>> mountConfiguration() {
         return Optional.ofNullable(this.mountConfiguration);
     }
@@ -146,6 +186,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkConfiguration")
     private @Nullable Output<NetworkConfigurationArgs> networkConfiguration;
 
+    /**
+     * @return The network configuration for a pool.
+     * 
+     */
     public Optional<Output<NetworkConfigurationArgs>> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
@@ -157,6 +201,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="poolName")
     private @Nullable Output<String> poolName;
 
+    /**
+     * @return The pool name. This must be unique within the account.
+     * 
+     */
     public Optional<Output<String>> poolName() {
         return Optional.ofNullable(this.poolName);
     }
@@ -168,6 +216,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the Batch account.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -179,6 +231,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scaleSettings")
     private @Nullable Output<ScaleSettingsArgs> scaleSettings;
 
+    /**
+     * @return Defines the desired size of the pool. This can either be &#39;fixedScale&#39; where the requested targetDedicatedNodes is specified, or &#39;autoScale&#39; which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
+     * 
+     */
     public Optional<Output<ScaleSettingsArgs>> scaleSettings() {
         return Optional.ofNullable(this.scaleSettings);
     }
@@ -190,6 +246,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startTask")
     private @Nullable Output<StartTaskArgs> startTask;
 
+    /**
+     * @return In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.
+     * 
+     */
     public Optional<Output<StartTaskArgs>> startTask() {
         return Optional.ofNullable(this.startTask);
     }
@@ -201,6 +261,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskSchedulingPolicy")
     private @Nullable Output<TaskSchedulingPolicyArgs> taskSchedulingPolicy;
 
+    /**
+     * @return If not specified, the default is spread.
+     * 
+     */
     public Optional<Output<TaskSchedulingPolicyArgs>> taskSchedulingPolicy() {
         return Optional.ofNullable(this.taskSchedulingPolicy);
     }
@@ -212,6 +276,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskSlotsPerNode")
     private @Nullable Output<Integer> taskSlotsPerNode;
 
+    /**
+     * @return The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.
+     * 
+     */
     public Optional<Output<Integer>> taskSlotsPerNode() {
         return Optional.ofNullable(this.taskSlotsPerNode);
     }
@@ -230,6 +298,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vmSize")
     private @Nullable Output<String> vmSize;
 
+    /**
+     * @return For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supports all Cloud Services VM sizes except ExtraSmall. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
+     * 
+     */
     public Optional<Output<String>> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -276,175 +348,409 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param applicationLicenses The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationLicenses(@Nullable Output<List<String>> applicationLicenses) {
             $.applicationLicenses = applicationLicenses;
             return this;
         }
 
+        /**
+         * @param applicationLicenses The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationLicenses(List<String> applicationLicenses) {
             return applicationLicenses(Output.of(applicationLicenses));
         }
 
+        /**
+         * @param applicationLicenses The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationLicenses(String... applicationLicenses) {
             return applicationLicenses(List.of(applicationLicenses));
         }
 
+        /**
+         * @param applicationPackages Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationPackages(@Nullable Output<List<ApplicationPackageReferenceArgs>> applicationPackages) {
             $.applicationPackages = applicationPackages;
             return this;
         }
 
+        /**
+         * @param applicationPackages Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationPackages(List<ApplicationPackageReferenceArgs> applicationPackages) {
             return applicationPackages(Output.of(applicationPackages));
         }
 
+        /**
+         * @param applicationPackages Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationPackages(ApplicationPackageReferenceArgs... applicationPackages) {
             return applicationPackages(List.of(applicationPackages));
         }
 
+        /**
+         * @param certificates For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of &#39;remoteUser&#39;, a &#39;certs&#39; directory is created in the user&#39;s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(@Nullable Output<List<CertificateReferenceArgs>> certificates) {
             $.certificates = certificates;
             return this;
         }
 
+        /**
+         * @param certificates For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of &#39;remoteUser&#39;, a &#39;certs&#39; directory is created in the user&#39;s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(List<CertificateReferenceArgs> certificates) {
             return certificates(Output.of(certificates));
         }
 
+        /**
+         * @param certificates For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of &#39;remoteUser&#39;, a &#39;certs&#39; directory is created in the user&#39;s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(CertificateReferenceArgs... certificates) {
             return certificates(List.of(certificates));
         }
 
+        /**
+         * @param deploymentConfiguration Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentConfiguration(@Nullable Output<DeploymentConfigurationArgs> deploymentConfiguration) {
             $.deploymentConfiguration = deploymentConfiguration;
             return this;
         }
 
+        /**
+         * @param deploymentConfiguration Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentConfiguration(DeploymentConfigurationArgs deploymentConfiguration) {
             return deploymentConfiguration(Output.of(deploymentConfiguration));
         }
 
+        /**
+         * @param displayName The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param identity The type of identity used for the Batch Pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<BatchPoolIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The type of identity used for the Batch Pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(BatchPoolIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param interNodeCommunication This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to &#39;Disabled&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interNodeCommunication(@Nullable Output<InterNodeCommunicationState> interNodeCommunication) {
             $.interNodeCommunication = interNodeCommunication;
             return this;
         }
 
+        /**
+         * @param interNodeCommunication This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to &#39;Disabled&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interNodeCommunication(InterNodeCommunicationState interNodeCommunication) {
             return interNodeCommunication(Output.of(interNodeCommunication));
         }
 
+        /**
+         * @param metadata The Batch service does not assign any meaning to metadata; it is solely for the use of user code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<List<MetadataItemArgs>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The Batch service does not assign any meaning to metadata; it is solely for the use of user code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(List<MetadataItemArgs> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param metadata The Batch service does not assign any meaning to metadata; it is solely for the use of user code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(MetadataItemArgs... metadata) {
             return metadata(List.of(metadata));
         }
 
+        /**
+         * @param mountConfiguration This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountConfiguration(@Nullable Output<List<MountConfigurationArgs>> mountConfiguration) {
             $.mountConfiguration = mountConfiguration;
             return this;
         }
 
+        /**
+         * @param mountConfiguration This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountConfiguration(List<MountConfigurationArgs> mountConfiguration) {
             return mountConfiguration(Output.of(mountConfiguration));
         }
 
+        /**
+         * @param mountConfiguration This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountConfiguration(MountConfigurationArgs... mountConfiguration) {
             return mountConfiguration(List.of(mountConfiguration));
         }
 
+        /**
+         * @param networkConfiguration The network configuration for a pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfiguration(@Nullable Output<NetworkConfigurationArgs> networkConfiguration) {
             $.networkConfiguration = networkConfiguration;
             return this;
         }
 
+        /**
+         * @param networkConfiguration The network configuration for a pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfiguration(NetworkConfigurationArgs networkConfiguration) {
             return networkConfiguration(Output.of(networkConfiguration));
         }
 
+        /**
+         * @param poolName The pool name. This must be unique within the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolName(@Nullable Output<String> poolName) {
             $.poolName = poolName;
             return this;
         }
 
+        /**
+         * @param poolName The pool name. This must be unique within the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolName(String poolName) {
             return poolName(Output.of(poolName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scaleSettings Defines the desired size of the pool. This can either be &#39;fixedScale&#39; where the requested targetDedicatedNodes is specified, or &#39;autoScale&#39; which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleSettings(@Nullable Output<ScaleSettingsArgs> scaleSettings) {
             $.scaleSettings = scaleSettings;
             return this;
         }
 
+        /**
+         * @param scaleSettings Defines the desired size of the pool. This can either be &#39;fixedScale&#39; where the requested targetDedicatedNodes is specified, or &#39;autoScale&#39; which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleSettings(ScaleSettingsArgs scaleSettings) {
             return scaleSettings(Output.of(scaleSettings));
         }
 
+        /**
+         * @param startTask In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTask(@Nullable Output<StartTaskArgs> startTask) {
             $.startTask = startTask;
             return this;
         }
 
+        /**
+         * @param startTask In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTask(StartTaskArgs startTask) {
             return startTask(Output.of(startTask));
         }
 
+        /**
+         * @param taskSchedulingPolicy If not specified, the default is spread.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskSchedulingPolicy(@Nullable Output<TaskSchedulingPolicyArgs> taskSchedulingPolicy) {
             $.taskSchedulingPolicy = taskSchedulingPolicy;
             return this;
         }
 
+        /**
+         * @param taskSchedulingPolicy If not specified, the default is spread.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskSchedulingPolicy(TaskSchedulingPolicyArgs taskSchedulingPolicy) {
             return taskSchedulingPolicy(Output.of(taskSchedulingPolicy));
         }
 
+        /**
+         * @param taskSlotsPerNode The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskSlotsPerNode(@Nullable Output<Integer> taskSlotsPerNode) {
             $.taskSlotsPerNode = taskSlotsPerNode;
             return this;
         }
 
+        /**
+         * @param taskSlotsPerNode The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskSlotsPerNode(Integer taskSlotsPerNode) {
             return taskSlotsPerNode(Output.of(taskSlotsPerNode));
         }
@@ -462,11 +768,23 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
             return userAccounts(List.of(userAccounts));
         }
 
+        /**
+         * @param vmSize For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supports all Cloud Services VM sizes except ExtraSmall. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(@Nullable Output<String> vmSize) {
             $.vmSize = vmSize;
             return this;
         }
 
+        /**
+         * @param vmSize For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supports all Cloud Services VM sizes except ExtraSmall. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(String vmSize) {
             return vmSize(Output.of(vmSize));
         }

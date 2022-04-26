@@ -24,6 +24,10 @@ public final class ModelDefinitionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="modelOptions")
     private @Nullable Output<ModelDefinitionModelOptionsArgs> modelOptions;
 
+    /**
+     * @return [Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.
+     * 
+     */
     public Optional<Output<ModelDefinitionModelOptionsArgs>> modelOptions() {
         return Optional.ofNullable(this.modelOptions);
     }
@@ -35,6 +39,10 @@ public final class ModelDefinitionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="trainingRuns")
     private @Nullable Output<List<BqmlTrainingRunArgs>> trainingRuns;
 
+    /**
+     * @return [Output-only, Beta] Information about ml training runs, each training run comprises of multiple iterations and there may be multiple training runs for the model if warm start is used or if a user decides to continue a previously cancelled query.
+     * 
+     */
     public Optional<Output<List<BqmlTrainingRunArgs>>> trainingRuns() {
         return Optional.ofNullable(this.trainingRuns);
     }
@@ -64,24 +72,54 @@ public final class ModelDefinitionArgs extends com.pulumi.resources.ResourceArgs
             $ = new ModelDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param modelOptions [Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelOptions(@Nullable Output<ModelDefinitionModelOptionsArgs> modelOptions) {
             $.modelOptions = modelOptions;
             return this;
         }
 
+        /**
+         * @param modelOptions [Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelOptions(ModelDefinitionModelOptionsArgs modelOptions) {
             return modelOptions(Output.of(modelOptions));
         }
 
+        /**
+         * @param trainingRuns [Output-only, Beta] Information about ml training runs, each training run comprises of multiple iterations and there may be multiple training runs for the model if warm start is used or if a user decides to continue a previously cancelled query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingRuns(@Nullable Output<List<BqmlTrainingRunArgs>> trainingRuns) {
             $.trainingRuns = trainingRuns;
             return this;
         }
 
+        /**
+         * @param trainingRuns [Output-only, Beta] Information about ml training runs, each training run comprises of multiple iterations and there may be multiple training runs for the model if warm start is used or if a user decides to continue a previously cancelled query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingRuns(List<BqmlTrainingRunArgs> trainingRuns) {
             return trainingRuns(Output.of(trainingRuns));
         }
 
+        /**
+         * @param trainingRuns [Output-only, Beta] Information about ml training runs, each training run comprises of multiple iterations and there may be multiple training runs for the model if warm start is used or if a user decides to continue a previously cancelled query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingRuns(BqmlTrainingRunArgs... trainingRuns) {
             return trainingRuns(List.of(trainingRuns));
         }

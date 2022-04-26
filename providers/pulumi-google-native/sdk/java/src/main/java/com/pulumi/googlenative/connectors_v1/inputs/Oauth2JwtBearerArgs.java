@@ -27,6 +27,10 @@ public final class Oauth2JwtBearerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clientKey")
     private @Nullable Output<SecretArgs> clientKey;
 
+    /**
+     * @return Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization grant. Specified in the form as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
+     * 
+     */
     public Optional<Output<SecretArgs>> clientKey() {
         return Optional.ofNullable(this.clientKey);
     }
@@ -38,6 +42,10 @@ public final class Oauth2JwtBearerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="jwtClaims")
     private @Nullable Output<JwtClaimsArgs> jwtClaims;
 
+    /**
+     * @return JwtClaims providers fields to generate the token.
+     * 
+     */
     public Optional<Output<JwtClaimsArgs>> jwtClaims() {
         return Optional.ofNullable(this.jwtClaims);
     }
@@ -67,20 +75,44 @@ public final class Oauth2JwtBearerArgs extends com.pulumi.resources.ResourceArgs
             $ = new Oauth2JwtBearerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientKey Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization grant. Specified in the form as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKey(@Nullable Output<SecretArgs> clientKey) {
             $.clientKey = clientKey;
             return this;
         }
 
+        /**
+         * @param clientKey Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization grant. Specified in the form as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKey(SecretArgs clientKey) {
             return clientKey(Output.of(clientKey));
         }
 
+        /**
+         * @param jwtClaims JwtClaims providers fields to generate the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jwtClaims(@Nullable Output<JwtClaimsArgs> jwtClaims) {
             $.jwtClaims = jwtClaims;
             return this;
         }
 
+        /**
+         * @param jwtClaims JwtClaims providers fields to generate the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jwtClaims(JwtClaimsArgs jwtClaims) {
             return jwtClaims(Output.of(jwtClaims));
         }

@@ -16,12 +16,12 @@ public final class GetIAMPolicyResult {
     private final @Nullable List<GetIAMPolicyAuditConfig> auditConfigs;
     private final @Nullable List<GetIAMPolicyBinding> bindings;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The above bindings serialized in a format suitable for
+     * @return The above bindings serialized in a format suitable for
      * referencing from a resource that supports IAM.
      * 
      */
@@ -46,17 +46,17 @@ public final class GetIAMPolicyResult {
         return this.bindings == null ? List.of() : this.bindings;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The above bindings serialized in a format suitable for
+     * @return The above bindings serialized in a format suitable for
      * referencing from a resource that supports IAM.
      * 
-    */
+     */
     public String policyData() {
         return this.policyData;
     }

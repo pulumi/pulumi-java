@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class DeploymentTargetConfig {
     /**
-     * The full contents of the template that you want to import.
+     * @return The full contents of the template that you want to import.
      * 
      */
     private final String content;
@@ -21,9 +21,9 @@ public final class DeploymentTargetConfig {
     }
 
     /**
-     * The full contents of the template that you want to import.
+     * @return The full contents of the template that you want to import.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }

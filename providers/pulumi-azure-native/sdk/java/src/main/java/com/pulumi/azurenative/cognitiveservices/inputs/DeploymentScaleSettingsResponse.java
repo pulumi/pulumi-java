@@ -26,6 +26,10 @@ public final class DeploymentScaleSettingsResponse extends com.pulumi.resources.
     @Import(name="capacity")
     private @Nullable Integer capacity;
 
+    /**
+     * @return Deployment capacity.
+     * 
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class DeploymentScaleSettingsResponse extends com.pulumi.resources.
     @Import(name="scaleType")
     private @Nullable String scaleType;
 
+    /**
+     * @return Deployment scale type.
+     * 
+     */
     public Optional<String> scaleType() {
         return Optional.ofNullable(this.scaleType);
     }
@@ -66,11 +74,23 @@ public final class DeploymentScaleSettingsResponse extends com.pulumi.resources.
             $ = new DeploymentScaleSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Deployment capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param scaleType Deployment scale type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(@Nullable String scaleType) {
             $.scaleType = scaleType;
             return this;

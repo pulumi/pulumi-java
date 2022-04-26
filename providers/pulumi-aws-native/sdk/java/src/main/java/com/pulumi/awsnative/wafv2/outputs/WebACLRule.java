@@ -25,7 +25,7 @@ public final class WebACLRule {
     private final @Nullable WebACLOverrideAction overrideAction;
     private final Integer priority;
     /**
-     * Collection of Rule Labels.
+     * @return Collection of Rule Labels.
      * 
      */
     private final @Nullable List<WebACLLabel> ruleLabels;
@@ -68,9 +68,9 @@ public final class WebACLRule {
         return this.priority;
     }
     /**
-     * Collection of Rule Labels.
+     * @return Collection of Rule Labels.
      * 
-    */
+     */
     public List<WebACLLabel> ruleLabels() {
         return this.ruleLabels == null ? List.of() : this.ruleLabels;
     }

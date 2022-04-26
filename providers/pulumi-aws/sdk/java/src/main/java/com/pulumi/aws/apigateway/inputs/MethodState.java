@@ -25,6 +25,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiKeyRequired")
     private @Nullable Output<Boolean> apiKeyRequired;
 
+    /**
+     * @return Specify if the method requires an API key
+     * 
+     */
     public Optional<Output<Boolean>> apiKeyRequired() {
         return Optional.ofNullable(this.apiKeyRequired);
     }
@@ -36,6 +40,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorization")
     private @Nullable Output<String> authorization;
 
+    /**
+     * @return The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
+     * 
+     */
     public Optional<Output<String>> authorization() {
         return Optional.ofNullable(this.authorization);
     }
@@ -47,6 +55,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizationScopes")
     private @Nullable Output<List<String>> authorizationScopes;
 
+    /**
+     * @return The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
+     * 
+     */
     public Optional<Output<List<String>>> authorizationScopes() {
         return Optional.ofNullable(this.authorizationScopes);
     }
@@ -58,6 +70,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerId")
     private @Nullable Output<String> authorizerId;
 
+    /**
+     * @return The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
+     * 
+     */
     public Optional<Output<String>> authorizerId() {
         return Optional.ofNullable(this.authorizerId);
     }
@@ -69,6 +85,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpMethod")
     private @Nullable Output<String> httpMethod;
 
+    /**
+     * @return The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
+     * 
+     */
     public Optional<Output<String>> httpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
@@ -80,6 +100,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="operationName")
     private @Nullable Output<String> operationName;
 
+    /**
+     * @return The function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.
+     * 
+     */
     public Optional<Output<String>> operationName() {
         return Optional.ofNullable(this.operationName);
     }
@@ -93,6 +117,12 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestModels")
     private @Nullable Output<Map<String,String>> requestModels;
 
+    /**
+     * @return A map of the API models used for the request&#39;s content type
+     * where key is the content type (e.g., `application/json`)
+     * and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`&#39;s `name`.
+     * 
+     */
     public Optional<Output<Map<String,String>>> requestModels() {
         return Optional.ofNullable(this.requestModels);
     }
@@ -105,6 +135,11 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestParameters")
     private @Nullable Output<Map<String,Boolean>> requestParameters;
 
+    /**
+     * @return A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
+     * For example: `request_parameters = {&#34;method.request.header.X-Some-Header&#34; = true &#34;method.request.querystring.some-query-param&#34; = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
+     * 
+     */
     public Optional<Output<Map<String,Boolean>>> requestParameters() {
         return Optional.ofNullable(this.requestParameters);
     }
@@ -116,6 +151,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestValidatorId")
     private @Nullable Output<String> requestValidatorId;
 
+    /**
+     * @return The ID of a `aws.apigateway.RequestValidator`
+     * 
+     */
     public Optional<Output<String>> requestValidatorId() {
         return Optional.ofNullable(this.requestValidatorId);
     }
@@ -127,6 +166,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The API resource ID
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -138,6 +181,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="restApi")
     private @Nullable Output<String> restApi;
 
+    /**
+     * @return The ID of the associated REST API
+     * 
+     */
     public Optional<Output<String>> restApi() {
         return Optional.ofNullable(this.restApi);
     }
@@ -176,105 +223,249 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
             $ = new MethodState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiKeyRequired Specify if the method requires an API key
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiKeyRequired(@Nullable Output<Boolean> apiKeyRequired) {
             $.apiKeyRequired = apiKeyRequired;
             return this;
         }
 
+        /**
+         * @param apiKeyRequired Specify if the method requires an API key
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiKeyRequired(Boolean apiKeyRequired) {
             return apiKeyRequired(Output.of(apiKeyRequired));
         }
 
+        /**
+         * @param authorization The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorization(@Nullable Output<String> authorization) {
             $.authorization = authorization;
             return this;
         }
 
+        /**
+         * @param authorization The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorization(String authorization) {
             return authorization(Output.of(authorization));
         }
 
+        /**
+         * @param authorizationScopes The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationScopes(@Nullable Output<List<String>> authorizationScopes) {
             $.authorizationScopes = authorizationScopes;
             return this;
         }
 
+        /**
+         * @param authorizationScopes The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationScopes(List<String> authorizationScopes) {
             return authorizationScopes(Output.of(authorizationScopes));
         }
 
+        /**
+         * @param authorizationScopes The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationScopes(String... authorizationScopes) {
             return authorizationScopes(List.of(authorizationScopes));
         }
 
+        /**
+         * @param authorizerId The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerId(@Nullable Output<String> authorizerId) {
             $.authorizerId = authorizerId;
             return this;
         }
 
+        /**
+         * @param authorizerId The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerId(String authorizerId) {
             return authorizerId(Output.of(authorizerId));
         }
 
+        /**
+         * @param httpMethod The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
             $.httpMethod = httpMethod;
             return this;
         }
 
+        /**
+         * @param httpMethod The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(String httpMethod) {
             return httpMethod(Output.of(httpMethod));
         }
 
+        /**
+         * @param operationName The function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationName(@Nullable Output<String> operationName) {
             $.operationName = operationName;
             return this;
         }
 
+        /**
+         * @param operationName The function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationName(String operationName) {
             return operationName(Output.of(operationName));
         }
 
+        /**
+         * @param requestModels A map of the API models used for the request&#39;s content type
+         * where key is the content type (e.g., `application/json`)
+         * and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`&#39;s `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestModels(@Nullable Output<Map<String,String>> requestModels) {
             $.requestModels = requestModels;
             return this;
         }
 
+        /**
+         * @param requestModels A map of the API models used for the request&#39;s content type
+         * where key is the content type (e.g., `application/json`)
+         * and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`&#39;s `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestModels(Map<String,String> requestModels) {
             return requestModels(Output.of(requestModels));
         }
 
+        /**
+         * @param requestParameters A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
+         * For example: `request_parameters = {&#34;method.request.header.X-Some-Header&#34; = true &#34;method.request.querystring.some-query-param&#34; = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestParameters(@Nullable Output<Map<String,Boolean>> requestParameters) {
             $.requestParameters = requestParameters;
             return this;
         }
 
+        /**
+         * @param requestParameters A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
+         * For example: `request_parameters = {&#34;method.request.header.X-Some-Header&#34; = true &#34;method.request.querystring.some-query-param&#34; = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestParameters(Map<String,Boolean> requestParameters) {
             return requestParameters(Output.of(requestParameters));
         }
 
+        /**
+         * @param requestValidatorId The ID of a `aws.apigateway.RequestValidator`
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestValidatorId(@Nullable Output<String> requestValidatorId) {
             $.requestValidatorId = requestValidatorId;
             return this;
         }
 
+        /**
+         * @param requestValidatorId The ID of a `aws.apigateway.RequestValidator`
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestValidatorId(String requestValidatorId) {
             return requestValidatorId(Output.of(requestValidatorId));
         }
 
+        /**
+         * @param resourceId The API resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The API resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param restApi The ID of the associated REST API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApi(@Nullable Output<String> restApi) {
             $.restApi = restApi;
             return this;
         }
 
+        /**
+         * @param restApi The ID of the associated REST API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApi(String restApi) {
             return restApi(Output.of(restApi));
         }

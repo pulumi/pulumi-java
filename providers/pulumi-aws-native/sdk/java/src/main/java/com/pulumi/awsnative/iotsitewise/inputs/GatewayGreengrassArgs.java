@@ -24,6 +24,10 @@ public final class GatewayGreengrassArgs extends com.pulumi.resources.ResourceAr
     @Import(name="groupArn", required=true)
     private Output<String> groupArn;
 
+    /**
+     * @return The ARN of the Greengrass group.
+     * 
+     */
     public Output<String> groupArn() {
         return this.groupArn;
     }
@@ -52,11 +56,23 @@ public final class GatewayGreengrassArgs extends com.pulumi.resources.ResourceAr
             $ = new GatewayGreengrassArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupArn The ARN of the Greengrass group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupArn(Output<String> groupArn) {
             $.groupArn = groupArn;
             return this;
         }
 
+        /**
+         * @param groupArn The ARN of the Greengrass group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupArn(String groupArn) {
             return groupArn(Output.of(groupArn));
         }

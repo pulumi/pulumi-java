@@ -24,6 +24,10 @@ public final class ProtectionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="aggregation", required=true)
     private Output<String> aggregation;
 
+    /**
+     * @return Defines how AWS Shield combines resource data for the group in order to detect, mitigate, and report events.
+     * 
+     */
     public Output<String> aggregation() {
         return this.aggregation;
     }
@@ -35,6 +39,10 @@ public final class ProtectionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="members")
     private @Nullable Output<List<String>> members;
 
+    /**
+     * @return The Amazon Resource Names (ARNs) of the resources to include in the protection group. You must set this when you set `pattern` to ARBITRARY and you must not set it for any other `pattern` setting.
+     * 
+     */
     public Optional<Output<List<String>>> members() {
         return Optional.ofNullable(this.members);
     }
@@ -46,6 +54,10 @@ public final class ProtectionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="pattern", required=true)
     private Output<String> pattern;
 
+    /**
+     * @return The criteria to use to choose the protected resources for inclusion in the group.
+     * 
+     */
     public Output<String> pattern() {
         return this.pattern;
     }
@@ -57,6 +69,10 @@ public final class ProtectionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="protectionGroupId", required=true)
     private Output<String> protectionGroupId;
 
+    /**
+     * @return The name of the protection group.
+     * 
+     */
     public Output<String> protectionGroupId() {
         return this.protectionGroupId;
     }
@@ -68,6 +84,10 @@ public final class ProtectionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceType")
     private @Nullable Output<String> resourceType;
 
+    /**
+     * @return The resource type to include in the protection group. You must set this when you set `pattern` to BY_RESOURCE_TYPE and you must not set it for any other `pattern` setting.
+     * 
+     */
     public Optional<Output<String>> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -79,6 +99,10 @@ public final class ProtectionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -112,60 +136,138 @@ public final class ProtectionGroupArgs extends com.pulumi.resources.ResourceArgs
             $ = new ProtectionGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregation Defines how AWS Shield combines resource data for the group in order to detect, mitigate, and report events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregation(Output<String> aggregation) {
             $.aggregation = aggregation;
             return this;
         }
 
+        /**
+         * @param aggregation Defines how AWS Shield combines resource data for the group in order to detect, mitigate, and report events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregation(String aggregation) {
             return aggregation(Output.of(aggregation));
         }
 
+        /**
+         * @param members The Amazon Resource Names (ARNs) of the resources to include in the protection group. You must set this when you set `pattern` to ARBITRARY and you must not set it for any other `pattern` setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(@Nullable Output<List<String>> members) {
             $.members = members;
             return this;
         }
 
+        /**
+         * @param members The Amazon Resource Names (ARNs) of the resources to include in the protection group. You must set this when you set `pattern` to ARBITRARY and you must not set it for any other `pattern` setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(List<String> members) {
             return members(Output.of(members));
         }
 
+        /**
+         * @param members The Amazon Resource Names (ARNs) of the resources to include in the protection group. You must set this when you set `pattern` to ARBITRARY and you must not set it for any other `pattern` setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(String... members) {
             return members(List.of(members));
         }
 
+        /**
+         * @param pattern The criteria to use to choose the protected resources for inclusion in the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(Output<String> pattern) {
             $.pattern = pattern;
             return this;
         }
 
+        /**
+         * @param pattern The criteria to use to choose the protected resources for inclusion in the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(String pattern) {
             return pattern(Output.of(pattern));
         }
 
+        /**
+         * @param protectionGroupId The name of the protection group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionGroupId(Output<String> protectionGroupId) {
             $.protectionGroupId = protectionGroupId;
             return this;
         }
 
+        /**
+         * @param protectionGroupId The name of the protection group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionGroupId(String protectionGroupId) {
             return protectionGroupId(Output.of(protectionGroupId));
         }
 
+        /**
+         * @param resourceType The resource type to include in the protection group. You must set this when you set `pattern` to BY_RESOURCE_TYPE and you must not set it for any other `pattern` setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type to include in the protection group. You must set this when you set `pattern` to BY_RESOURCE_TYPE and you must not set it for any other `pattern` setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

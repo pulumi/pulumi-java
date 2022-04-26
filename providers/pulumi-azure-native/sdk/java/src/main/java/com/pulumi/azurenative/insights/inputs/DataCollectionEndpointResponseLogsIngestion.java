@@ -23,6 +23,10 @@ public final class DataCollectionEndpointResponseLogsIngestion extends com.pulum
     @Import(name="endpoint", required=true)
     private String endpoint;
 
+    /**
+     * @return The endpoint. This property is READ-ONLY.
+     * 
+     */
     public String endpoint() {
         return this.endpoint;
     }
@@ -51,6 +55,12 @@ public final class DataCollectionEndpointResponseLogsIngestion extends com.pulum
             $ = new DataCollectionEndpointResponseLogsIngestion(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoint The endpoint. This property is READ-ONLY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             $.endpoint = endpoint;
             return this;

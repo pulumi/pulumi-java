@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GroupMembershipRole {
     /**
-     * The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
+     * @return The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
      * Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
      * 
      */
@@ -22,10 +22,10 @@ public final class GroupMembershipRole {
     }
 
     /**
-     * The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
+     * @return The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
      * Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

@@ -27,6 +27,10 @@ public final class DenoiseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="strength")
     private @Nullable Output<Double> strength;
 
+    /**
+     * @return Set strength of the denoise. Enter a value between 0 and 1. The higher the value, the smoother the image. 0 is no denoising. The default is 0.
+     * 
+     */
     public Optional<Output<Double>> strength() {
         return Optional.ofNullable(this.strength);
     }
@@ -38,6 +42,10 @@ public final class DenoiseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tune")
     private @Nullable Output<String> tune;
 
+    /**
+     * @return Set the denoiser mode. The default is `standard`. Supported denoiser modes: - `standard` - `grain`
+     * 
+     */
     public Optional<Output<String>> tune() {
         return Optional.ofNullable(this.tune);
     }
@@ -67,20 +75,44 @@ public final class DenoiseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DenoiseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param strength Set strength of the denoise. Enter a value between 0 and 1. The higher the value, the smoother the image. 0 is no denoising. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strength(@Nullable Output<Double> strength) {
             $.strength = strength;
             return this;
         }
 
+        /**
+         * @param strength Set strength of the denoise. Enter a value between 0 and 1. The higher the value, the smoother the image. 0 is no denoising. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strength(Double strength) {
             return strength(Output.of(strength));
         }
 
+        /**
+         * @param tune Set the denoiser mode. The default is `standard`. Supported denoiser modes: - `standard` - `grain`
+         * 
+         * @return builder
+         * 
+         */
         public Builder tune(@Nullable Output<String> tune) {
             $.tune = tune;
             return this;
         }
 
+        /**
+         * @param tune Set the denoiser mode. The default is `standard`. Supported denoiser modes: - `standard` - `grain`
+         * 
+         * @return builder
+         * 
+         */
         public Builder tune(String tune) {
             return tune(Output.of(tune));
         }

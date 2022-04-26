@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceInstanceConfiguration {
     /**
-     * CPU
+     * @return CPU
      * 
      */
     private final @Nullable String cpu;
     /**
-     * Instance Role Arn
+     * @return Instance Role Arn
      * 
      */
     private final @Nullable String instanceRoleArn;
     /**
-     * Memory
+     * @return Memory
      * 
      */
     private final @Nullable String memory;
@@ -38,23 +38,23 @@ public final class ServiceInstanceConfiguration {
     }
 
     /**
-     * CPU
+     * @return CPU
      * 
-    */
+     */
     public Optional<String> cpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
-     * Instance Role Arn
+     * @return Instance Role Arn
      * 
-    */
+     */
     public Optional<String> instanceRoleArn() {
         return Optional.ofNullable(this.instanceRoleArn);
     }
     /**
-     * Memory
+     * @return Memory
      * 
-    */
+     */
     public Optional<String> memory() {
         return Optional.ofNullable(this.memory);
     }

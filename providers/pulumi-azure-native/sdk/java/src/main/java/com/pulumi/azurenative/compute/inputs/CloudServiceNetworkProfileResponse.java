@@ -27,6 +27,10 @@ public final class CloudServiceNetworkProfileResponse extends com.pulumi.resourc
     @Import(name="loadBalancerConfigurations")
     private @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations;
 
+    /**
+     * @return List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.
+     * 
+     */
     public Optional<List<LoadBalancerConfigurationResponse>> loadBalancerConfigurations() {
         return Optional.ofNullable(this.loadBalancerConfigurations);
     }
@@ -38,6 +42,10 @@ public final class CloudServiceNetworkProfileResponse extends com.pulumi.resourc
     @Import(name="swappableCloudService")
     private @Nullable SubResourceResponse swappableCloudService;
 
+    /**
+     * @return The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.
+     * 
+     */
     public Optional<SubResourceResponse> swappableCloudService() {
         return Optional.ofNullable(this.swappableCloudService);
     }
@@ -67,15 +75,33 @@ public final class CloudServiceNetworkProfileResponse extends com.pulumi.resourc
             $ = new CloudServiceNetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loadBalancerConfigurations List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations) {
             $.loadBalancerConfigurations = loadBalancerConfigurations;
             return this;
         }
 
+        /**
+         * @param loadBalancerConfigurations List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerConfigurations(LoadBalancerConfigurationResponse... loadBalancerConfigurations) {
             return loadBalancerConfigurations(List.of(loadBalancerConfigurations));
         }
 
+        /**
+         * @param swappableCloudService The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder swappableCloudService(@Nullable SubResourceResponse swappableCloudService) {
             $.swappableCloudService = swappableCloudService;
             return this;

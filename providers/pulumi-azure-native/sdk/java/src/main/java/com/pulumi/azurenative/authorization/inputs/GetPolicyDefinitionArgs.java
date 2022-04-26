@@ -19,6 +19,10 @@ public final class GetPolicyDefinitionArgs extends com.pulumi.resources.InvokeAr
     @Import(name="policyDefinitionName", required=true)
     private String policyDefinitionName;
 
+    /**
+     * @return The name of the policy definition to get.
+     * 
+     */
     public String policyDefinitionName() {
         return this.policyDefinitionName;
     }
@@ -47,6 +51,12 @@ public final class GetPolicyDefinitionArgs extends com.pulumi.resources.InvokeAr
             $ = new GetPolicyDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyDefinitionName The name of the policy definition to get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionName(String policyDefinitionName) {
             $.policyDefinitionName = policyDefinitionName;
             return this;

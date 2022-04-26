@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ImageOutputResourceAmi {
     /**
-     * Account identifier of the AMI.
+     * @return Account identifier of the AMI.
      * 
      */
     private final @Nullable String accountId;
     /**
-     * Description of the AMI.
+     * @return Description of the AMI.
      * 
      */
     private final @Nullable String description;
     /**
-     * Identifier of the AMI.
+     * @return Identifier of the AMI.
      * 
      */
     private final @Nullable String image;
     /**
-     * Name of the AMI.
+     * @return Name of the AMI.
      * 
      */
     private final @Nullable String name;
     /**
-     * Region of the AMI.
+     * @return Region of the AMI.
      * 
      */
     private final @Nullable String region;
@@ -52,37 +52,37 @@ public final class ImageOutputResourceAmi {
     }
 
     /**
-     * Account identifier of the AMI.
+     * @return Account identifier of the AMI.
      * 
-    */
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
     /**
-     * Description of the AMI.
+     * @return Description of the AMI.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Identifier of the AMI.
+     * @return Identifier of the AMI.
      * 
-    */
+     */
     public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
     /**
-     * Name of the AMI.
+     * @return Name of the AMI.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Region of the AMI.
+     * @return Region of the AMI.
      * 
-    */
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }

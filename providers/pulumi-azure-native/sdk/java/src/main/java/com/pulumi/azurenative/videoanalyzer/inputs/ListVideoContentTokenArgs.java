@@ -19,6 +19,10 @@ public final class ListVideoContentTokenArgs extends com.pulumi.resources.Invoke
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The Azure Video Analyzer account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class ListVideoContentTokenArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class ListVideoContentTokenArgs extends com.pulumi.resources.Invoke
     @Import(name="videoName", required=true)
     private String videoName;
 
+    /**
+     * @return The Video name.
+     * 
+     */
     public String videoName() {
         return this.videoName;
     }
@@ -71,16 +83,34 @@ public final class ListVideoContentTokenArgs extends com.pulumi.resources.Invoke
             $ = new ListVideoContentTokenArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Azure Video Analyzer account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param videoName The Video name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoName(String videoName) {
             $.videoName = videoName;
             return this;

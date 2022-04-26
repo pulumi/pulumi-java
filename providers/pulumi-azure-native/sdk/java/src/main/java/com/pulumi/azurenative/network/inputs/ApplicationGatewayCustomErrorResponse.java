@@ -25,6 +25,10 @@ public final class ApplicationGatewayCustomErrorResponse extends com.pulumi.reso
     @Import(name="customErrorPageUrl")
     private @Nullable String customErrorPageUrl;
 
+    /**
+     * @return Error page URL of the application gateway customer error.
+     * 
+     */
     public Optional<String> customErrorPageUrl() {
         return Optional.ofNullable(this.customErrorPageUrl);
     }
@@ -36,6 +40,10 @@ public final class ApplicationGatewayCustomErrorResponse extends com.pulumi.reso
     @Import(name="statusCode")
     private @Nullable String statusCode;
 
+    /**
+     * @return Status code of the application gateway customer error.
+     * 
+     */
     public Optional<String> statusCode() {
         return Optional.ofNullable(this.statusCode);
     }
@@ -65,11 +73,23 @@ public final class ApplicationGatewayCustomErrorResponse extends com.pulumi.reso
             $ = new ApplicationGatewayCustomErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customErrorPageUrl Error page URL of the application gateway customer error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customErrorPageUrl(@Nullable String customErrorPageUrl) {
             $.customErrorPageUrl = customErrorPageUrl;
             return this;
         }
 
+        /**
+         * @param statusCode Status code of the application gateway customer error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(@Nullable String statusCode) {
             $.statusCode = statusCode;
             return this;

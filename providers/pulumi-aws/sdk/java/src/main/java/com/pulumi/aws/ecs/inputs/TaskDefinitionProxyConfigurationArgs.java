@@ -23,6 +23,10 @@ public final class TaskDefinitionProxyConfigurationArgs extends com.pulumi.resou
     @Import(name="containerName", required=true)
     private Output<String> containerName;
 
+    /**
+     * @return Name of the container that will serve as the App Mesh proxy.
+     * 
+     */
     public Output<String> containerName() {
         return this.containerName;
     }
@@ -34,6 +38,10 @@ public final class TaskDefinitionProxyConfigurationArgs extends com.pulumi.resou
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return Set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -45,6 +53,10 @@ public final class TaskDefinitionProxyConfigurationArgs extends com.pulumi.resou
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -75,29 +87,65 @@ public final class TaskDefinitionProxyConfigurationArgs extends com.pulumi.resou
             $ = new TaskDefinitionProxyConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerName Name of the container that will serve as the App Mesh proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(Output<String> containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param containerName Name of the container that will serve as the App Mesh proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             return containerName(Output.of(containerName));
         }
 
+        /**
+         * @param properties Set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param type Proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

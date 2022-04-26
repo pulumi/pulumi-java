@@ -28,6 +28,10 @@ public final class PeriodicModeBackupPolicyArgs extends com.pulumi.resources.Res
     @Import(name="periodicModeProperties")
     private @Nullable Output<PeriodicModePropertiesArgs> periodicModeProperties;
 
+    /**
+     * @return Configuration values for periodic mode backup
+     * 
+     */
     public Optional<Output<PeriodicModePropertiesArgs>> periodicModeProperties() {
         return Optional.ofNullable(this.periodicModeProperties);
     }
@@ -40,6 +44,11 @@ public final class PeriodicModeBackupPolicyArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Describes the mode of backups.
+     * Expected value is &#39;Periodic&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -69,20 +78,46 @@ public final class PeriodicModeBackupPolicyArgs extends com.pulumi.resources.Res
             $ = new PeriodicModeBackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param periodicModeProperties Configuration values for periodic mode backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodicModeProperties(@Nullable Output<PeriodicModePropertiesArgs> periodicModeProperties) {
             $.periodicModeProperties = periodicModeProperties;
             return this;
         }
 
+        /**
+         * @param periodicModeProperties Configuration values for periodic mode backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodicModeProperties(PeriodicModePropertiesArgs periodicModeProperties) {
             return periodicModeProperties(Output.of(periodicModeProperties));
         }
 
+        /**
+         * @param type Describes the mode of backups.
+         * Expected value is &#39;Periodic&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Describes the mode of backups.
+         * Expected value is &#39;Periodic&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

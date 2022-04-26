@@ -25,6 +25,10 @@ public final class ImageDescriptorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="digest")
     private @Nullable String digest;
 
+    /**
+     * @return The sha256-based digest of the image manifest.
+     * 
+     */
     public Optional<String> digest() {
         return Optional.ofNullable(this.digest);
     }
@@ -36,6 +40,10 @@ public final class ImageDescriptorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="registry")
     private @Nullable String registry;
 
+    /**
+     * @return The registry login server.
+     * 
+     */
     public Optional<String> registry() {
         return Optional.ofNullable(this.registry);
     }
@@ -47,6 +55,10 @@ public final class ImageDescriptorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="repository")
     private @Nullable String repository;
 
+    /**
+     * @return The repository name.
+     * 
+     */
     public Optional<String> repository() {
         return Optional.ofNullable(this.repository);
     }
@@ -58,6 +70,10 @@ public final class ImageDescriptorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tag")
     private @Nullable String tag;
 
+    /**
+     * @return The tag name.
+     * 
+     */
     public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -89,21 +105,45 @@ public final class ImageDescriptorResponse extends com.pulumi.resources.InvokeAr
             $ = new ImageDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param digest The sha256-based digest of the image manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder digest(@Nullable String digest) {
             $.digest = digest;
             return this;
         }
 
+        /**
+         * @param registry The registry login server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registry(@Nullable String registry) {
             $.registry = registry;
             return this;
         }
 
+        /**
+         * @param repository The repository name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(@Nullable String repository) {
             $.repository = repository;
             return this;
         }
 
+        /**
+         * @param tag The tag name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable String tag) {
             $.tag = tag;
             return this;

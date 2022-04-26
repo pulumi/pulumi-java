@@ -11,40 +11,40 @@ import java.util.Objects;
 @CustomType
 public final class GetContactFlowModuleResult {
     /**
-     * The Amazon Resource Name (ARN) of the Contact Flow Module.
+     * @return The Amazon Resource Name (ARN) of the Contact Flow Module.
      * 
      */
     private final String arn;
     private final String contactFlowModuleId;
     /**
-     * Specifies the logic of the Contact Flow Module.
+     * @return Specifies the logic of the Contact Flow Module.
      * 
      */
     private final String content;
     /**
-     * Specifies the description of the Contact Flow Module.
+     * @return Specifies the description of the Contact Flow Module.
      * 
      */
     private final String description;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String instanceId;
     private final String name;
     /**
-     * Specifies the type of Contact Flow Module Module. Values are either `ACTIVE` or `ARCHIVED`.
+     * @return Specifies the type of Contact Flow Module Module. Values are either `ACTIVE` or `ARCHIVED`.
      * 
      */
     private final String state;
     /**
-     * The status of the Contact Flow Module Module. Values are either `PUBLISHED` or `SAVED`.
+     * @return The status of the Contact Flow Module Module. Values are either `PUBLISHED` or `SAVED`.
      * 
      */
     private final String status;
     /**
-     * A map of tags to assign to the Contact Flow Module.
+     * @return A map of tags to assign to the Contact Flow Module.
      * 
      */
     private final Map<String,String> tags;
@@ -74,9 +74,9 @@ public final class GetContactFlowModuleResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the Contact Flow Module.
+     * @return The Amazon Resource Name (ARN) of the Contact Flow Module.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
@@ -84,23 +84,23 @@ public final class GetContactFlowModuleResult {
         return this.contactFlowModuleId;
     }
     /**
-     * Specifies the logic of the Contact Flow Module.
+     * @return Specifies the logic of the Contact Flow Module.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }
     /**
-     * Specifies the description of the Contact Flow Module.
+     * @return Specifies the description of the Contact Flow Module.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -111,23 +111,23 @@ public final class GetContactFlowModuleResult {
         return this.name;
     }
     /**
-     * Specifies the type of Contact Flow Module Module. Values are either `ACTIVE` or `ARCHIVED`.
+     * @return Specifies the type of Contact Flow Module Module. Values are either `ACTIVE` or `ARCHIVED`.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The status of the Contact Flow Module Module. Values are either `PUBLISHED` or `SAVED`.
+     * @return The status of the Contact Flow Module Module. Values are either `PUBLISHED` or `SAVED`.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * A map of tags to assign to the Contact Flow Module.
+     * @return A map of tags to assign to the Contact Flow Module.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

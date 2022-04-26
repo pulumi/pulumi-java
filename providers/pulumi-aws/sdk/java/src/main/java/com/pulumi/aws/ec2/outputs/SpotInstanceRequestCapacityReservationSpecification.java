@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SpotInstanceRequestCapacityReservationSpecification {
     /**
-     * Indicates the instance&#39;s Capacity Reservation preferences. Can be `&#34;open&#34;` or `&#34;none&#34;`. (Default: `&#34;open&#34;`).
+     * @return Indicates the instance&#39;s Capacity Reservation preferences. Can be `&#34;open&#34;` or `&#34;none&#34;`. (Default: `&#34;open&#34;`).
      * 
      */
     private final @Nullable String capacityReservationPreference;
     /**
-     * Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
+     * @return Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
      * 
      */
     private final @Nullable SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget;
@@ -32,16 +32,16 @@ public final class SpotInstanceRequestCapacityReservationSpecification {
     }
 
     /**
-     * Indicates the instance&#39;s Capacity Reservation preferences. Can be `&#34;open&#34;` or `&#34;none&#34;`. (Default: `&#34;open&#34;`).
+     * @return Indicates the instance&#39;s Capacity Reservation preferences. Can be `&#34;open&#34;` or `&#34;none&#34;`. (Default: `&#34;open&#34;`).
      * 
-    */
+     */
     public Optional<String> capacityReservationPreference() {
         return Optional.ofNullable(this.capacityReservationPreference);
     }
     /**
-     * Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
+     * @return Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
      * 
-    */
+     */
     public Optional<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTarget> capacityReservationTarget() {
         return Optional.ofNullable(this.capacityReservationTarget);
     }

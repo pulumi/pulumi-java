@@ -27,6 +27,10 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -38,6 +42,10 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="clientId")
     private @Nullable String clientId;
 
+    /**
+     * @return GitHub bring your own app client id.
+     * 
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -49,6 +57,10 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="clientSecret")
     private @Nullable GitHubClientSecretResponse clientSecret;
 
+    /**
+     * @return GitHub bring your own app client secret information.
+     * 
+     */
     public Optional<GitHubClientSecretResponse> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -60,6 +72,10 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="collaborationBranch", required=true)
     private String collaborationBranch;
 
+    /**
+     * @return Collaboration branch.
+     * 
+     */
     public String collaborationBranch() {
         return this.collaborationBranch;
     }
@@ -71,6 +87,10 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="hostName")
     private @Nullable String hostName;
 
+    /**
+     * @return GitHub Enterprise host name. For example: https://github.mydomain.com
+     * 
+     */
     public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
@@ -82,6 +102,10 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="lastCommitId")
     private @Nullable String lastCommitId;
 
+    /**
+     * @return Last commit id.
+     * 
+     */
     public Optional<String> lastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
@@ -93,6 +117,10 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="repositoryName", required=true)
     private String repositoryName;
 
+    /**
+     * @return Repository name.
+     * 
+     */
     public String repositoryName() {
         return this.repositoryName;
     }
@@ -104,6 +132,10 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="rootFolder", required=true)
     private String rootFolder;
 
+    /**
+     * @return Root folder.
+     * 
+     */
     public String rootFolder() {
         return this.rootFolder;
     }
@@ -116,6 +148,11 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of repo configuration.
+     * Expected value is &#39;FactoryGitHubConfiguration&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -152,46 +189,101 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
             $ = new FactoryGitHubConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param clientId GitHub bring your own app client id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientSecret GitHub bring your own app client secret information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable GitHubClientSecretResponse clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param collaborationBranch Collaboration branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collaborationBranch(String collaborationBranch) {
             $.collaborationBranch = collaborationBranch;
             return this;
         }
 
+        /**
+         * @param hostName GitHub Enterprise host name. For example: https://github.mydomain.com
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(@Nullable String hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param lastCommitId Last commit id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastCommitId(@Nullable String lastCommitId) {
             $.lastCommitId = lastCommitId;
             return this;
         }
 
+        /**
+         * @param repositoryName Repository name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(String repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
 
+        /**
+         * @param rootFolder Root folder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootFolder(String rootFolder) {
             $.rootFolder = rootFolder;
             return this;
         }
 
+        /**
+         * @param type Type of repo configuration.
+         * Expected value is &#39;FactoryGitHubConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

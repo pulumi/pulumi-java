@@ -23,6 +23,10 @@ public final class GooRepositoryResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the repository.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class GooRepositoryResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return The url of the repository.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -63,11 +71,23 @@ public final class GooRepositoryResponse extends com.pulumi.resources.InvokeArgs
             $ = new GooRepositoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param url The url of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

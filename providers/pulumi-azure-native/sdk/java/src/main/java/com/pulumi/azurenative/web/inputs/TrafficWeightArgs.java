@@ -29,6 +29,10 @@ public final class TrafficWeightArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="latestRevision")
     private @Nullable Output<Boolean> latestRevision;
 
+    /**
+     * @return Indicates that the traffic weight belongs to a latest stable revision
+     * 
+     */
     public Optional<Output<Boolean>> latestRevision() {
         return Optional.ofNullable(this.latestRevision);
     }
@@ -40,6 +44,10 @@ public final class TrafficWeightArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="revisionName")
     private @Nullable Output<String> revisionName;
 
+    /**
+     * @return Name of a revision
+     * 
+     */
     public Optional<Output<String>> revisionName() {
         return Optional.ofNullable(this.revisionName);
     }
@@ -51,6 +59,10 @@ public final class TrafficWeightArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="weight")
     private @Nullable Output<Integer> weight;
 
+    /**
+     * @return Traffic weight assigned to a revision
+     * 
+     */
     public Optional<Output<Integer>> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -81,29 +93,65 @@ public final class TrafficWeightArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TrafficWeightArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param latestRevision Indicates that the traffic weight belongs to a latest stable revision
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestRevision(@Nullable Output<Boolean> latestRevision) {
             $.latestRevision = latestRevision;
             return this;
         }
 
+        /**
+         * @param latestRevision Indicates that the traffic weight belongs to a latest stable revision
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestRevision(Boolean latestRevision) {
             return latestRevision(Output.of(latestRevision));
         }
 
+        /**
+         * @param revisionName Name of a revision
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionName(@Nullable Output<String> revisionName) {
             $.revisionName = revisionName;
             return this;
         }
 
+        /**
+         * @param revisionName Name of a revision
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionName(String revisionName) {
             return revisionName(Output.of(revisionName));
         }
 
+        /**
+         * @param weight Traffic weight assigned to a revision
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable Output<Integer> weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param weight Traffic weight assigned to a revision
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Integer weight) {
             return weight(Output.of(weight));
         }

@@ -16,23 +16,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PackagingConfigurationHlsManifest {
     /**
-     * This setting controls how ad markers are included in the packaged OriginEndpoint. &#34;NONE&#34; will omit all SCTE-35 ad markers from the output. &#34;PASSTHROUGH&#34; causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. &#34;SCTE35_ENHANCED&#34; generates ad markers and blackout tags based on SCTE-35 messages in the input source.
+     * @return This setting controls how ad markers are included in the packaged OriginEndpoint. &#34;NONE&#34; will omit all SCTE-35 ad markers from the output. &#34;PASSTHROUGH&#34; causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. &#34;SCTE35_ENHANCED&#34; generates ad markers and blackout tags based on SCTE-35 messages in the input source.
      * 
      */
     private final @Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers;
     /**
-     * When enabled, an I-Frame only stream will be included in the output.
+     * @return When enabled, an I-Frame only stream will be included in the output.
      * 
      */
     private final @Nullable Boolean includeIframeOnlyStream;
     private final @Nullable String manifestName;
     /**
-     * The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
+     * @return The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
      * 
      */
     private final @Nullable Integer programDateTimeIntervalSeconds;
     /**
-     * When enabled, the EXT-X-KEY tag will be repeated in output manifests.
+     * @return When enabled, the EXT-X-KEY tag will be repeated in output manifests.
      * 
      */
     private final @Nullable Boolean repeatExtXKey;
@@ -55,16 +55,16 @@ public final class PackagingConfigurationHlsManifest {
     }
 
     /**
-     * This setting controls how ad markers are included in the packaged OriginEndpoint. &#34;NONE&#34; will omit all SCTE-35 ad markers from the output. &#34;PASSTHROUGH&#34; causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. &#34;SCTE35_ENHANCED&#34; generates ad markers and blackout tags based on SCTE-35 messages in the input source.
+     * @return This setting controls how ad markers are included in the packaged OriginEndpoint. &#34;NONE&#34; will omit all SCTE-35 ad markers from the output. &#34;PASSTHROUGH&#34; causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. &#34;SCTE35_ENHANCED&#34; generates ad markers and blackout tags based on SCTE-35 messages in the input source.
      * 
-    */
+     */
     public Optional<PackagingConfigurationHlsManifestAdMarkers> adMarkers() {
         return Optional.ofNullable(this.adMarkers);
     }
     /**
-     * When enabled, an I-Frame only stream will be included in the output.
+     * @return When enabled, an I-Frame only stream will be included in the output.
      * 
-    */
+     */
     public Optional<Boolean> includeIframeOnlyStream() {
         return Optional.ofNullable(this.includeIframeOnlyStream);
     }
@@ -72,16 +72,16 @@ public final class PackagingConfigurationHlsManifest {
         return Optional.ofNullable(this.manifestName);
     }
     /**
-     * The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
+     * @return The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
      * 
-    */
+     */
     public Optional<Integer> programDateTimeIntervalSeconds() {
         return Optional.ofNullable(this.programDateTimeIntervalSeconds);
     }
     /**
-     * When enabled, the EXT-X-KEY tag will be repeated in output manifests.
+     * @return When enabled, the EXT-X-KEY tag will be repeated in output manifests.
      * 
-    */
+     */
     public Optional<Boolean> repeatExtXKey() {
         return Optional.ofNullable(this.repeatExtXKey);
     }

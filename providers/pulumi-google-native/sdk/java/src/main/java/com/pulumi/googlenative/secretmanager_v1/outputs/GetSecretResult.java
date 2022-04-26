@@ -15,47 +15,47 @@ import java.util.Objects;
 @CustomType
 public final class GetSecretResult {
     /**
-     * The time at which the Secret was created.
+     * @return The time at which the Secret was created.
      * 
      */
     private final String createTime;
     /**
-     * Optional. Etag of the currently stored Secret.
+     * @return Optional. Etag of the currently stored Secret.
      * 
      */
     private final String etag;
     /**
-     * Optional. Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+     * @return Optional. Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
      * 
      */
     private final String expireTime;
     /**
-     * The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.
+     * @return The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The resource name of the Secret in the format `projects/*{@literal /}secrets/*`.
+     * @return The resource name of the Secret in the format `projects/*{@literal /}secrets/*`.
      * 
      */
     private final String name;
     /**
-     * Immutable. The replication policy of the secret data attached to the Secret. The replication policy cannot be changed after the Secret has been created.
+     * @return Immutable. The replication policy of the secret data attached to the Secret. The replication policy cannot be changed after the Secret has been created.
      * 
      */
     private final ReplicationResponse replication;
     /**
-     * Optional. Rotation policy attached to the Secret. May be excluded if there is no rotation policy.
+     * @return Optional. Rotation policy attached to the Secret. May be excluded if there is no rotation policy.
      * 
      */
     private final RotationResponse rotation;
     /**
-     * Optional. A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
+     * @return Optional. A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
      * 
      */
     private final List<TopicResponse> topics;
     /**
-     * Input only. The TTL for the Secret.
+     * @return Input only. The TTL for the Secret.
      * 
      */
     private final String ttl;
@@ -83,65 +83,65 @@ public final class GetSecretResult {
     }
 
     /**
-     * The time at which the Secret was created.
+     * @return The time at which the Secret was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Optional. Etag of the currently stored Secret.
+     * @return Optional. Etag of the currently stored Secret.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Optional. Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
+     * @return Optional. Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
      * 
-    */
+     */
     public String expireTime() {
         return this.expireTime;
     }
     /**
-     * The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.
+     * @return The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The resource name of the Secret in the format `projects/*{@literal /}secrets/*`.
+     * @return The resource name of the Secret in the format `projects/*{@literal /}secrets/*`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Immutable. The replication policy of the secret data attached to the Secret. The replication policy cannot be changed after the Secret has been created.
+     * @return Immutable. The replication policy of the secret data attached to the Secret. The replication policy cannot be changed after the Secret has been created.
      * 
-    */
+     */
     public ReplicationResponse replication() {
         return this.replication;
     }
     /**
-     * Optional. Rotation policy attached to the Secret. May be excluded if there is no rotation policy.
+     * @return Optional. Rotation policy attached to the Secret. May be excluded if there is no rotation policy.
      * 
-    */
+     */
     public RotationResponse rotation() {
         return this.rotation;
     }
     /**
-     * Optional. A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
+     * @return Optional. A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
      * 
-    */
+     */
     public List<TopicResponse> topics() {
         return this.topics;
     }
     /**
-     * Input only. The TTL for the Secret.
+     * @return Input only. The TTL for the Secret.
      * 
-    */
+     */
     public String ttl() {
         return this.ttl;
     }

@@ -22,6 +22,10 @@ public final class SqlResourceSqlRoleAssignmentArgs extends com.pulumi.resources
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -33,6 +37,10 @@ public final class SqlResourceSqlRoleAssignmentArgs extends com.pulumi.resources
     @Import(name="principalId")
     private @Nullable Output<String> principalId;
 
+    /**
+     * @return The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
+     * 
+     */
     public Optional<Output<String>> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -44,6 +52,10 @@ public final class SqlResourceSqlRoleAssignmentArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class SqlResourceSqlRoleAssignmentArgs extends com.pulumi.resources
     @Import(name="roleAssignmentId")
     private @Nullable Output<String> roleAssignmentId;
 
+    /**
+     * @return The GUID for the Role Assignment.
+     * 
+     */
     public Optional<Output<String>> roleAssignmentId() {
         return Optional.ofNullable(this.roleAssignmentId);
     }
@@ -66,6 +82,10 @@ public final class SqlResourceSqlRoleAssignmentArgs extends com.pulumi.resources
     @Import(name="roleDefinitionId")
     private @Nullable Output<String> roleDefinitionId;
 
+    /**
+     * @return The unique identifier for the associated Role Definition.
+     * 
+     */
     public Optional<Output<String>> roleDefinitionId() {
         return Optional.ofNullable(this.roleDefinitionId);
     }
@@ -77,6 +97,10 @@ public final class SqlResourceSqlRoleAssignmentArgs extends com.pulumi.resources
     @Import(name="scope")
     private @Nullable Output<String> scope;
 
+    /**
+     * @return The data plane resource path for which access is being granted through this Role Assignment.
+     * 
+     */
     public Optional<Output<String>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -110,56 +134,128 @@ public final class SqlResourceSqlRoleAssignmentArgs extends com.pulumi.resources
             $ = new SqlResourceSqlRoleAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param principalId The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param roleAssignmentId The GUID for the Role Assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleAssignmentId(@Nullable Output<String> roleAssignmentId) {
             $.roleAssignmentId = roleAssignmentId;
             return this;
         }
 
+        /**
+         * @param roleAssignmentId The GUID for the Role Assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleAssignmentId(String roleAssignmentId) {
             return roleAssignmentId(Output.of(roleAssignmentId));
         }
 
+        /**
+         * @param roleDefinitionId The unique identifier for the associated Role Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             $.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
+        /**
+         * @param roleDefinitionId The unique identifier for the associated Role Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(String roleDefinitionId) {
             return roleDefinitionId(Output.of(roleDefinitionId));
         }
 
+        /**
+         * @param scope The data plane resource path for which access is being granted through this Role Assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The data plane resource path for which access is being granted through this Role Assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }

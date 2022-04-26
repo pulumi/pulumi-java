@@ -19,6 +19,10 @@ public final class GetRegistrationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="registrationName", required=true)
     private String registrationName;
 
+    /**
+     * @return Name of the Azure Stack registration.
+     * 
+     */
     public String registrationName() {
         return this.registrationName;
     }
@@ -30,6 +34,10 @@ public final class GetRegistrationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroup", required=true)
     private String resourceGroup;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public String resourceGroup() {
         return this.resourceGroup;
     }
@@ -59,11 +67,23 @@ public final class GetRegistrationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param registrationName Name of the Azure Stack registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationName(String registrationName) {
             $.registrationName = registrationName;
             return this;
         }
 
+        /**
+         * @param resourceGroup Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;

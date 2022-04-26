@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class GetJobResult {
     /**
-     * Gets the job resource identifier.
+     * @return Gets the job resource identifier.
      * 
      */
     private final String id;
     /**
-     * Gets the job resource name.
+     * @return Gets the job resource name.
      * 
      */
     private final String name;
     /**
-     * Gets or sets the job properties.
+     * @return Gets or sets the job properties.
      * 
      */
     private final JobPropertiesResponse properties;
     /**
-     * Gets the job resource type.
+     * @return Gets the job resource type.
      * 
      */
     private final String type;
@@ -44,30 +44,30 @@ public final class GetJobResult {
     }
 
     /**
-     * Gets the job resource identifier.
+     * @return Gets the job resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets the job resource name.
+     * @return Gets the job resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets or sets the job properties.
+     * @return Gets or sets the job properties.
      * 
-    */
+     */
     public JobPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Gets the job resource type.
+     * @return Gets the job resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

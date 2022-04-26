@@ -26,6 +26,10 @@ public final class MetadataAuthorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="email")
     private @Nullable Output<String> email;
 
+    /**
+     * @return Email of author contact
+     * 
+     */
     public Optional<Output<String>> email() {
         return Optional.ofNullable(this.email);
     }
@@ -37,6 +41,10 @@ public final class MetadataAuthorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="link")
     private @Nullable Output<String> link;
 
+    /**
+     * @return Link for author/vendor page
+     * 
+     */
     public Optional<Output<String>> link() {
         return Optional.ofNullable(this.link);
     }
@@ -48,6 +56,10 @@ public final class MetadataAuthorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the author. Company or person.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -78,29 +90,65 @@ public final class MetadataAuthorArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MetadataAuthorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email Email of author contact
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email Email of author contact
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param link Link for author/vendor page
+         * 
+         * @return builder
+         * 
+         */
         public Builder link(@Nullable Output<String> link) {
             $.link = link;
             return this;
         }
 
+        /**
+         * @param link Link for author/vendor page
+         * 
+         * @return builder
+         * 
+         */
         public Builder link(String link) {
             return link(Output.of(link));
         }
 
+        /**
+         * @param name Name of the author. Company or person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the author. Company or person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

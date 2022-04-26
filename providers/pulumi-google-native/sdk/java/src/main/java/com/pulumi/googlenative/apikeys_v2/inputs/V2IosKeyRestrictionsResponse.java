@@ -24,6 +24,10 @@ public final class V2IosKeyRestrictionsResponse extends com.pulumi.resources.Inv
     @Import(name="allowedBundleIds", required=true)
     private List<String> allowedBundleIds;
 
+    /**
+     * @return A list of bundle IDs that are allowed when making API calls with this key.
+     * 
+     */
     public List<String> allowedBundleIds() {
         return this.allowedBundleIds;
     }
@@ -52,11 +56,23 @@ public final class V2IosKeyRestrictionsResponse extends com.pulumi.resources.Inv
             $ = new V2IosKeyRestrictionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedBundleIds A list of bundle IDs that are allowed when making API calls with this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedBundleIds(List<String> allowedBundleIds) {
             $.allowedBundleIds = allowedBundleIds;
             return this;
         }
 
+        /**
+         * @param allowedBundleIds A list of bundle IDs that are allowed when making API calls with this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedBundleIds(String... allowedBundleIds) {
             return allowedBundleIds(List.of(allowedBundleIds));
         }

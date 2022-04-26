@@ -27,6 +27,10 @@ public final class SSISLogLocationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="accessCredential")
     private @Nullable SSISAccessCredentialResponse accessCredential;
 
+    /**
+     * @return The package execution log access credential.
+     * 
+     */
     public Optional<SSISAccessCredentialResponse> accessCredential() {
         return Optional.ofNullable(this.accessCredential);
     }
@@ -38,6 +42,10 @@ public final class SSISLogLocationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="logPath", required=true)
     private Object logPath;
 
+    /**
+     * @return The SSIS package execution log path. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object logPath() {
         return this.logPath;
     }
@@ -49,6 +57,10 @@ public final class SSISLogLocationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="logRefreshInterval")
     private @Nullable Object logRefreshInterval;
 
+    /**
+     * @return Specifies the interval to refresh log. The default interval is 5 minutes. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> logRefreshInterval() {
         return Optional.ofNullable(this.logRefreshInterval);
     }
@@ -60,6 +72,10 @@ public final class SSISLogLocationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of SSIS log location.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -91,21 +107,45 @@ public final class SSISLogLocationResponse extends com.pulumi.resources.InvokeAr
             $ = new SSISLogLocationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessCredential The package execution log access credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessCredential(@Nullable SSISAccessCredentialResponse accessCredential) {
             $.accessCredential = accessCredential;
             return this;
         }
 
+        /**
+         * @param logPath The SSIS package execution log path. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPath(Object logPath) {
             $.logPath = logPath;
             return this;
         }
 
+        /**
+         * @param logRefreshInterval Specifies the interval to refresh log. The default interval is 5 minutes. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder logRefreshInterval(@Nullable Object logRefreshInterval) {
             $.logRefreshInterval = logRefreshInterval;
             return this;
         }
 
+        /**
+         * @param type The type of SSIS log location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

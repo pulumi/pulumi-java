@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class ContainerRegistryCredentialsResponse {
     /**
-     * The ACR login server name. User name is the first part of the FQDN.
+     * @return The ACR login server name. User name is the first part of the FQDN.
      * 
      */
     private final String loginServer;
     /**
-     * The ACR primary password.
+     * @return The ACR primary password.
      * 
      */
     private final String password;
     /**
-     * The ACR secondary password.
+     * @return The ACR secondary password.
      * 
      */
     private final String password2;
     /**
-     * The ACR login username.
+     * @return The ACR login username.
      * 
      */
     private final String username;
@@ -43,30 +43,30 @@ public final class ContainerRegistryCredentialsResponse {
     }
 
     /**
-     * The ACR login server name. User name is the first part of the FQDN.
+     * @return The ACR login server name. User name is the first part of the FQDN.
      * 
-    */
+     */
     public String loginServer() {
         return this.loginServer;
     }
     /**
-     * The ACR primary password.
+     * @return The ACR primary password.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * The ACR secondary password.
+     * @return The ACR secondary password.
      * 
-    */
+     */
     public String password2() {
         return this.password2;
     }
     /**
-     * The ACR login username.
+     * @return The ACR login username.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

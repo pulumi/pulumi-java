@@ -26,6 +26,10 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
     @Import(name="commitTime")
     private @Nullable String commitTime;
 
+    /**
+     * @return Commit Time.
+     * 
+     */
     public Optional<String> commitTime() {
         return Optional.ofNullable(this.commitTime);
     }
@@ -37,6 +41,10 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
     @Import(name="configurationIds")
     private @Nullable List<String> configurationIds;
 
+    /**
+     * @return List of configuration ids.
+     * 
+     */
     public Optional<List<String>> configurationIds() {
         return Optional.ofNullable(this.configurationIds);
     }
@@ -48,6 +56,10 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
     @Import(name="deploymentStatus")
     private @Nullable String deploymentStatus;
 
+    /**
+     * @return Deployment Status.
+     * 
+     */
     public Optional<String> deploymentStatus() {
         return Optional.ofNullable(this.deploymentStatus);
     }
@@ -59,6 +71,10 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
     @Import(name="deploymentType")
     private @Nullable String deploymentType;
 
+    /**
+     * @return Configuration Deployment Type.
+     * 
+     */
     public Optional<String> deploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
@@ -70,6 +86,10 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
     @Import(name="errorMessage")
     private @Nullable String errorMessage;
 
+    /**
+     * @return Error Message.
+     * 
+     */
     public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
@@ -81,6 +101,10 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
     @Import(name="region")
     private @Nullable String region;
 
+    /**
+     * @return Region Name.
+     * 
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
@@ -114,35 +138,77 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
             $ = new NetworkManagerDeploymentStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commitTime Commit Time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitTime(@Nullable String commitTime) {
             $.commitTime = commitTime;
             return this;
         }
 
+        /**
+         * @param configurationIds List of configuration ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationIds(@Nullable List<String> configurationIds) {
             $.configurationIds = configurationIds;
             return this;
         }
 
+        /**
+         * @param configurationIds List of configuration ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationIds(String... configurationIds) {
             return configurationIds(List.of(configurationIds));
         }
 
+        /**
+         * @param deploymentStatus Deployment Status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentStatus(@Nullable String deploymentStatus) {
             $.deploymentStatus = deploymentStatus;
             return this;
         }
 
+        /**
+         * @param deploymentType Configuration Deployment Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentType(@Nullable String deploymentType) {
             $.deploymentType = deploymentType;
             return this;
         }
 
+        /**
+         * @param errorMessage Error Message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorMessage(@Nullable String errorMessage) {
             $.errorMessage = errorMessage;
             return this;
         }
 
+        /**
+         * @param region Region Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable String region) {
             $.region = region;
             return this;

@@ -28,6 +28,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="assessmentSolutionId")
     private @Nullable String assessmentSolutionId;
 
+    /**
+     * @return Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.
+     * 
+     */
     public Optional<String> assessmentSolutionId() {
         return Optional.ofNullable(this.assessmentSolutionId);
     }
@@ -39,6 +43,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="createdTimestamp", required=true)
     private String createdTimestamp;
 
+    /**
+     * @return Time when this project was created. Date-Time represented in ISO-8601 format.
+     * 
+     */
     public String createdTimestamp() {
         return this.createdTimestamp;
     }
@@ -50,6 +58,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="customerStorageAccountArmId")
     private @Nullable String customerStorageAccountArmId;
 
+    /**
+     * @return The ARM id of the storage account used for interactions when public access is disabled.
+     * 
+     */
     public Optional<String> customerStorageAccountArmId() {
         return Optional.ofNullable(this.customerStorageAccountArmId);
     }
@@ -61,6 +73,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="customerWorkspaceId")
     private @Nullable String customerWorkspaceId;
 
+    /**
+     * @return The ARM id of service map workspace created by customer.
+     * 
+     */
     public Optional<String> customerWorkspaceId() {
         return Optional.ofNullable(this.customerWorkspaceId);
     }
@@ -72,6 +88,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="customerWorkspaceLocation")
     private @Nullable String customerWorkspaceLocation;
 
+    /**
+     * @return Location of service map workspace created by customer.
+     * 
+     */
     public Optional<String> customerWorkspaceLocation() {
         return Optional.ofNullable(this.customerWorkspaceLocation);
     }
@@ -83,6 +103,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="lastAssessmentTimestamp", required=true)
     private String lastAssessmentTimestamp;
 
+    /**
+     * @return Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.
+     * 
+     */
     public String lastAssessmentTimestamp() {
         return this.lastAssessmentTimestamp;
     }
@@ -94,6 +118,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="numberOfAssessments", required=true)
     private Integer numberOfAssessments;
 
+    /**
+     * @return Number of assessments created in the project.
+     * 
+     */
     public Integer numberOfAssessments() {
         return this.numberOfAssessments;
     }
@@ -105,6 +133,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="numberOfGroups", required=true)
     private Integer numberOfGroups;
 
+    /**
+     * @return Number of groups created in the project.
+     * 
+     */
     public Integer numberOfGroups() {
         return this.numberOfGroups;
     }
@@ -116,6 +148,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="numberOfMachines", required=true)
     private Integer numberOfMachines;
 
+    /**
+     * @return Number of machines in the project.
+     * 
+     */
     public Integer numberOfMachines() {
         return this.numberOfMachines;
     }
@@ -127,6 +163,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="privateEndpointConnections", required=true)
     private List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
+    /**
+     * @return The list of private endpoint connections to the project.
+     * 
+     */
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
@@ -138,6 +178,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="projectStatus")
     private @Nullable String projectStatus;
 
+    /**
+     * @return Assessment project status.
+     * 
+     */
     public Optional<String> projectStatus() {
         return Optional.ofNullable(this.projectStatus);
     }
@@ -149,6 +193,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state of the project.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -160,6 +208,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="publicNetworkAccess")
     private @Nullable String publicNetworkAccess;
 
+    /**
+     * @return This value can be set to &#39;enabled&#39; to avoid breaking changes on existing customer resources and templates. If set to &#39;disabled&#39;, traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
+     * 
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -171,6 +223,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="serviceEndpoint", required=true)
     private String serviceEndpoint;
 
+    /**
+     * @return Endpoint at which the collector agent can call agent REST API.
+     * 
+     */
     public String serviceEndpoint() {
         return this.serviceEndpoint;
     }
@@ -182,6 +238,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="updatedTimestamp", required=true)
     private String updatedTimestamp;
 
+    /**
+     * @return Time when this project was last updated. Date-Time represented in ISO-8601 format.
+     * 
+     */
     public String updatedTimestamp() {
         return this.updatedTimestamp;
     }
@@ -224,80 +284,176 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new ProjectPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assessmentSolutionId Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentSolutionId(@Nullable String assessmentSolutionId) {
             $.assessmentSolutionId = assessmentSolutionId;
             return this;
         }
 
+        /**
+         * @param createdTimestamp Time when this project was created. Date-Time represented in ISO-8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTimestamp(String createdTimestamp) {
             $.createdTimestamp = createdTimestamp;
             return this;
         }
 
+        /**
+         * @param customerStorageAccountArmId The ARM id of the storage account used for interactions when public access is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerStorageAccountArmId(@Nullable String customerStorageAccountArmId) {
             $.customerStorageAccountArmId = customerStorageAccountArmId;
             return this;
         }
 
+        /**
+         * @param customerWorkspaceId The ARM id of service map workspace created by customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerWorkspaceId(@Nullable String customerWorkspaceId) {
             $.customerWorkspaceId = customerWorkspaceId;
             return this;
         }
 
+        /**
+         * @param customerWorkspaceLocation Location of service map workspace created by customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerWorkspaceLocation(@Nullable String customerWorkspaceLocation) {
             $.customerWorkspaceLocation = customerWorkspaceLocation;
             return this;
         }
 
+        /**
+         * @param lastAssessmentTimestamp Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAssessmentTimestamp(String lastAssessmentTimestamp) {
             $.lastAssessmentTimestamp = lastAssessmentTimestamp;
             return this;
         }
 
+        /**
+         * @param numberOfAssessments Number of assessments created in the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfAssessments(Integer numberOfAssessments) {
             $.numberOfAssessments = numberOfAssessments;
             return this;
         }
 
+        /**
+         * @param numberOfGroups Number of groups created in the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfGroups(Integer numberOfGroups) {
             $.numberOfGroups = numberOfGroups;
             return this;
         }
 
+        /**
+         * @param numberOfMachines Number of machines in the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfMachines(Integer numberOfMachines) {
             $.numberOfMachines = numberOfMachines;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections The list of private endpoint connections to the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections The list of private endpoint connections to the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
 
+        /**
+         * @param projectStatus Assessment project status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectStatus(@Nullable String projectStatus) {
             $.projectStatus = projectStatus;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess This value can be set to &#39;enabled&#39; to avoid breaking changes on existing customer resources and templates. If set to &#39;disabled&#39;, traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param serviceEndpoint Endpoint at which the collector agent can call agent REST API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpoint(String serviceEndpoint) {
             $.serviceEndpoint = serviceEndpoint;
             return this;
         }
 
+        /**
+         * @param updatedTimestamp Time when this project was last updated. Date-Time represented in ISO-8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedTimestamp(String updatedTimestamp) {
             $.updatedTimestamp = updatedTimestamp;
             return this;

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualNetworkRuleResponse {
     /**
-     * The action of virtual network rule.
+     * @return The action of virtual network rule.
      * 
      */
     private final @Nullable String action;
     /**
-     * Gets the state of virtual network rule.
+     * @return Gets the state of virtual network rule.
      * 
      */
     private final @Nullable String state;
     /**
-     * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
+     * @return Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
      * 
      */
     private final String virtualNetworkResourceId;
@@ -38,23 +38,23 @@ public final class VirtualNetworkRuleResponse {
     }
 
     /**
-     * The action of virtual network rule.
+     * @return The action of virtual network rule.
      * 
-    */
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * Gets the state of virtual network rule.
+     * @return Gets the state of virtual network rule.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
+     * @return Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
      * 
-    */
+     */
     public String virtualNetworkResourceId() {
         return this.virtualNetworkResourceId;
     }

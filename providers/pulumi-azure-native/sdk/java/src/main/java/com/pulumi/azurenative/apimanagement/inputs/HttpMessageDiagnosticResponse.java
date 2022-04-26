@@ -28,6 +28,10 @@ public final class HttpMessageDiagnosticResponse extends com.pulumi.resources.In
     @Import(name="body")
     private @Nullable BodyDiagnosticSettingsResponse body;
 
+    /**
+     * @return Body logging settings.
+     * 
+     */
     public Optional<BodyDiagnosticSettingsResponse> body() {
         return Optional.ofNullable(this.body);
     }
@@ -39,6 +43,10 @@ public final class HttpMessageDiagnosticResponse extends com.pulumi.resources.In
     @Import(name="dataMasking")
     private @Nullable DataMaskingResponse dataMasking;
 
+    /**
+     * @return Data masking settings.
+     * 
+     */
     public Optional<DataMaskingResponse> dataMasking() {
         return Optional.ofNullable(this.dataMasking);
     }
@@ -50,6 +58,10 @@ public final class HttpMessageDiagnosticResponse extends com.pulumi.resources.In
     @Import(name="headers")
     private @Nullable List<String> headers;
 
+    /**
+     * @return Array of HTTP Headers to log.
+     * 
+     */
     public Optional<List<String>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -80,21 +92,45 @@ public final class HttpMessageDiagnosticResponse extends com.pulumi.resources.In
             $ = new HttpMessageDiagnosticResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param body Body logging settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable BodyDiagnosticSettingsResponse body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param dataMasking Data masking settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataMasking(@Nullable DataMaskingResponse dataMasking) {
             $.dataMasking = dataMasking;
             return this;
         }
 
+        /**
+         * @param headers Array of HTTP Headers to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable List<String> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers Array of HTTP Headers to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(String... headers) {
             return headers(List.of(headers));
         }

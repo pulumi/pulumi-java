@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ApiManagementServiceSkuPropertiesResponse {
     /**
-     * Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.
+     * @return Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.
      * 
      */
     private final Integer capacity;
     /**
-     * Name of the Sku.
+     * @return Name of the Sku.
      * 
      */
     private final String name;
@@ -30,16 +30,16 @@ public final class ApiManagementServiceSkuPropertiesResponse {
     }
 
     /**
-     * Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.
+     * @return Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.
      * 
-    */
+     */
     public Integer capacity() {
         return this.capacity;
     }
     /**
-     * Name of the Sku.
+     * @return Name of the Sku.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

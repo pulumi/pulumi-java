@@ -27,6 +27,10 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends com
     @Import(name="annotationType", required=true)
     private String annotationType;
 
+    /**
+     * @return Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.
+     * 
+     */
     public String annotationType() {
         return this.annotationType;
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends com
     @Import(name="bigquerySource", required=true)
     private GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource;
 
+    /**
+     * @return Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.
+     * 
+     */
     public GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource() {
         return this.bigquerySource;
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends com
     @Import(name="classificationMetadata", required=true)
     private GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata;
 
+    /**
+     * @return Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.
+     * 
+     */
     public GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata() {
         return this.classificationMetadata;
     }
@@ -60,6 +72,10 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends com
     @Import(name="dataType", required=true)
     private String dataType;
 
+    /**
+     * @return Data type must be specifed when user tries to import data.
+     * 
+     */
     public String dataType() {
         return this.dataType;
     }
@@ -71,6 +87,10 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends com
     @Import(name="gcsSource", required=true)
     private GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource;
 
+    /**
+     * @return Source located in Cloud Storage.
+     * 
+     */
     public GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource() {
         return this.gcsSource;
     }
@@ -82,6 +102,10 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends com
     @Import(name="textMetadata", required=true)
     private GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata;
 
+    /**
+     * @return Required for text import, as language code must be specified.
+     * 
+     */
     public GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata() {
         return this.textMetadata;
     }
@@ -115,31 +139,67 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends com
             $ = new GoogleCloudDatalabelingV1beta1InputConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotationType Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationType(String annotationType) {
             $.annotationType = annotationType;
             return this;
         }
 
+        /**
+         * @param bigquerySource Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigquerySource(GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource) {
             $.bigquerySource = bigquerySource;
             return this;
         }
 
+        /**
+         * @param classificationMetadata Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationMetadata(GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata) {
             $.classificationMetadata = classificationMetadata;
             return this;
         }
 
+        /**
+         * @param dataType Data type must be specifed when user tries to import data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(String dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param gcsSource Source located in Cloud Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsSource(GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource) {
             $.gcsSource = gcsSource;
             return this;
         }
 
+        /**
+         * @param textMetadata Required for text import, as language code must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textMetadata(GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata) {
             $.textMetadata = textMetadata;
             return this;

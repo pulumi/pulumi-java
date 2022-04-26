@@ -26,6 +26,10 @@ public final class LogConfigCounterOptionsCustomFieldArgs extends com.pulumi.res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class LogConfigCounterOptionsCustomFieldArgs extends com.pulumi.res
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -66,20 +74,44 @@ public final class LogConfigCounterOptionsCustomFieldArgs extends com.pulumi.res
             $ = new LogConfigCounterOptionsCustomFieldArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

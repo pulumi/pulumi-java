@@ -26,6 +26,10 @@ public final class SizeAvailabilityResponse extends com.pulumi.resources.InvokeA
     @Import(name="isAvailable")
     private @Nullable Boolean isAvailable;
 
+    /**
+     * @return Whether or not this size category is available
+     * 
+     */
     public Optional<Boolean> isAvailable() {
         return Optional.ofNullable(this.isAvailable);
     }
@@ -37,6 +41,10 @@ public final class SizeAvailabilityResponse extends com.pulumi.resources.InvokeA
     @Import(name="sizeCategory")
     private @Nullable String sizeCategory;
 
+    /**
+     * @return The category of the size (Basic, Standard, Performance).
+     * 
+     */
     public Optional<String> sizeCategory() {
         return Optional.ofNullable(this.sizeCategory);
     }
@@ -66,11 +74,23 @@ public final class SizeAvailabilityResponse extends com.pulumi.resources.InvokeA
             $ = new SizeAvailabilityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isAvailable Whether or not this size category is available
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAvailable(@Nullable Boolean isAvailable) {
             $.isAvailable = isAvailable;
             return this;
         }
 
+        /**
+         * @param sizeCategory The category of the size (Basic, Standard, Performance).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeCategory(@Nullable String sizeCategory) {
             $.sizeCategory = sizeCategory;
             return this;

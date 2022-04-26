@@ -30,6 +30,10 @@ public final class ConnectionMonitorTcpConfigurationArgs extends com.pulumi.reso
     @Import(name="destinationPortBehavior")
     private @Nullable Output<Either<String,DestinationPortBehavior>> destinationPortBehavior;
 
+    /**
+     * @return Destination port behavior.
+     * 
+     */
     public Optional<Output<Either<String,DestinationPortBehavior>>> destinationPortBehavior() {
         return Optional.ofNullable(this.destinationPortBehavior);
     }
@@ -41,6 +45,10 @@ public final class ConnectionMonitorTcpConfigurationArgs extends com.pulumi.reso
     @Import(name="disableTraceRoute")
     private @Nullable Output<Boolean> disableTraceRoute;
 
+    /**
+     * @return Value indicating whether path evaluation with trace route should be disabled.
+     * 
+     */
     public Optional<Output<Boolean>> disableTraceRoute() {
         return Optional.ofNullable(this.disableTraceRoute);
     }
@@ -52,6 +60,10 @@ public final class ConnectionMonitorTcpConfigurationArgs extends com.pulumi.reso
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The port to connect to.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -82,37 +94,85 @@ public final class ConnectionMonitorTcpConfigurationArgs extends com.pulumi.reso
             $ = new ConnectionMonitorTcpConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationPortBehavior Destination port behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortBehavior(@Nullable Output<Either<String,DestinationPortBehavior>> destinationPortBehavior) {
             $.destinationPortBehavior = destinationPortBehavior;
             return this;
         }
 
+        /**
+         * @param destinationPortBehavior Destination port behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortBehavior(Either<String,DestinationPortBehavior> destinationPortBehavior) {
             return destinationPortBehavior(Output.of(destinationPortBehavior));
         }
 
+        /**
+         * @param destinationPortBehavior Destination port behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortBehavior(String destinationPortBehavior) {
             return destinationPortBehavior(Either.ofLeft(destinationPortBehavior));
         }
 
+        /**
+         * @param destinationPortBehavior Destination port behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortBehavior(DestinationPortBehavior destinationPortBehavior) {
             return destinationPortBehavior(Either.ofRight(destinationPortBehavior));
         }
 
+        /**
+         * @param disableTraceRoute Value indicating whether path evaluation with trace route should be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableTraceRoute(@Nullable Output<Boolean> disableTraceRoute) {
             $.disableTraceRoute = disableTraceRoute;
             return this;
         }
 
+        /**
+         * @param disableTraceRoute Value indicating whether path evaluation with trace route should be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableTraceRoute(Boolean disableTraceRoute) {
             return disableTraceRoute(Output.of(disableTraceRoute));
         }
 
+        /**
+         * @param port The port to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

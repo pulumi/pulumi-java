@@ -27,6 +27,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="dataIntegrityValidationResult", required=true)
     private DataIntegrityValidationResultResponse dataIntegrityValidationResult;
 
+    /**
+     * @return Provides data integrity validation result between the source and target tables that are migrated.
+     * 
+     */
     public DataIntegrityValidationResultResponse dataIntegrityValidationResult() {
         return this.dataIntegrityValidationResult;
     }
@@ -38,6 +42,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="endedOn", required=true)
     private String endedOn;
 
+    /**
+     * @return Validation end time
+     * 
+     */
     public String endedOn() {
         return this.endedOn;
     }
@@ -49,6 +57,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -60,6 +72,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="migrationId", required=true)
     private String migrationId;
 
+    /**
+     * @return Migration Identifier
+     * 
+     */
     public String migrationId() {
         return this.migrationId;
     }
@@ -71,6 +87,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="queryAnalysisValidationResult", required=true)
     private QueryAnalysisValidationResultResponse queryAnalysisValidationResult;
 
+    /**
+     * @return Results of some of the query execution result between source and target database
+     * 
+     */
     public QueryAnalysisValidationResultResponse queryAnalysisValidationResult() {
         return this.queryAnalysisValidationResult;
     }
@@ -83,6 +103,11 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Result type
+     * Expected value is &#39;MigrationDatabaseLevelValidationOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -94,6 +119,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="schemaValidationResult", required=true)
     private SchemaComparisonValidationResultResponse schemaValidationResult;
 
+    /**
+     * @return Provides schema comparison result between source and target database
+     * 
+     */
     public SchemaComparisonValidationResultResponse schemaValidationResult() {
         return this.schemaValidationResult;
     }
@@ -105,6 +134,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="sourceDatabaseName", required=true)
     private String sourceDatabaseName;
 
+    /**
+     * @return Name of the source database
+     * 
+     */
     public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
@@ -116,6 +149,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="startedOn", required=true)
     private String startedOn;
 
+    /**
+     * @return Validation start time
+     * 
+     */
     public String startedOn() {
         return this.startedOn;
     }
@@ -127,6 +164,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Current status of validation at the database level
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -138,6 +179,10 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="targetDatabaseName", required=true)
     private String targetDatabaseName;
 
+    /**
+     * @return Name of the target database
+     * 
+     */
     public String targetDatabaseName() {
         return this.targetDatabaseName;
     }
@@ -176,56 +221,123 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
             $ = new MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataIntegrityValidationResult Provides data integrity validation result between the source and target tables that are migrated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataIntegrityValidationResult(DataIntegrityValidationResultResponse dataIntegrityValidationResult) {
             $.dataIntegrityValidationResult = dataIntegrityValidationResult;
             return this;
         }
 
+        /**
+         * @param endedOn Validation end time
+         * 
+         * @return builder
+         * 
+         */
         public Builder endedOn(String endedOn) {
             $.endedOn = endedOn;
             return this;
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param migrationId Migration Identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationId(String migrationId) {
             $.migrationId = migrationId;
             return this;
         }
 
+        /**
+         * @param queryAnalysisValidationResult Results of some of the query execution result between source and target database
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryAnalysisValidationResult(QueryAnalysisValidationResultResponse queryAnalysisValidationResult) {
             $.queryAnalysisValidationResult = queryAnalysisValidationResult;
             return this;
         }
 
+        /**
+         * @param resultType Result type
+         * Expected value is &#39;MigrationDatabaseLevelValidationOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;
         }
 
+        /**
+         * @param schemaValidationResult Provides schema comparison result between source and target database
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaValidationResult(SchemaComparisonValidationResultResponse schemaValidationResult) {
             $.schemaValidationResult = schemaValidationResult;
             return this;
         }
 
+        /**
+         * @param sourceDatabaseName Name of the source database
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabaseName(String sourceDatabaseName) {
             $.sourceDatabaseName = sourceDatabaseName;
             return this;
         }
 
+        /**
+         * @param startedOn Validation start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder startedOn(String startedOn) {
             $.startedOn = startedOn;
             return this;
         }
 
+        /**
+         * @param status Current status of validation at the database level
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param targetDatabaseName Name of the target database
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDatabaseName(String targetDatabaseName) {
             $.targetDatabaseName = targetDatabaseName;
             return this;

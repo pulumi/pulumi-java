@@ -25,6 +25,10 @@ public final class ObjectReferenceDefinitionResponse extends com.pulumi.resource
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the object
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class ObjectReferenceDefinitionResponse extends com.pulumi.resource
     @Import(name="namespace")
     private @Nullable String namespace;
 
+    /**
+     * @return Namespace of the object
+     * 
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -65,11 +73,23 @@ public final class ObjectReferenceDefinitionResponse extends com.pulumi.resource
             $ = new ObjectReferenceDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the object
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param namespace Namespace of the object
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable String namespace) {
             $.namespace = namespace;
             return this;

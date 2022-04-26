@@ -24,6 +24,10 @@ public final class IPSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="activate")
     private @Nullable Output<Boolean> activate;
 
+    /**
+     * @return Specifies whether GuardDuty is to start using the uploaded IPSet.
+     * 
+     */
     public Optional<Output<Boolean>> activate() {
         return Optional.ofNullable(this.activate);
     }
@@ -35,6 +39,10 @@ public final class IPSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the GuardDuty IPSet.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -46,6 +54,10 @@ public final class IPSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="detectorId")
     private @Nullable Output<String> detectorId;
 
+    /**
+     * @return The detector ID of the GuardDuty.
+     * 
+     */
     public Optional<Output<String>> detectorId() {
         return Optional.ofNullable(this.detectorId);
     }
@@ -57,6 +69,10 @@ public final class IPSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="format")
     private @Nullable Output<String> format;
 
+    /**
+     * @return The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
+     * 
+     */
     public Optional<Output<String>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -68,6 +84,10 @@ public final class IPSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The URI of the file that contains the IPSet.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -79,6 +99,10 @@ public final class IPSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The friendly name to identify the IPSet.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -90,6 +114,10 @@ public final class IPSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,6 +129,10 @@ public final class IPSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -136,74 +168,170 @@ public final class IPSetState extends com.pulumi.resources.ResourceArgs {
             $ = new IPSetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activate Specifies whether GuardDuty is to start using the uploaded IPSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activate(@Nullable Output<Boolean> activate) {
             $.activate = activate;
             return this;
         }
 
+        /**
+         * @param activate Specifies whether GuardDuty is to start using the uploaded IPSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activate(Boolean activate) {
             return activate(Output.of(activate));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the GuardDuty IPSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the GuardDuty IPSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param detectorId The detector ID of the GuardDuty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectorId(@Nullable Output<String> detectorId) {
             $.detectorId = detectorId;
             return this;
         }
 
+        /**
+         * @param detectorId The detector ID of the GuardDuty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectorId(String detectorId) {
             return detectorId(Output.of(detectorId));
         }
 
+        /**
+         * @param format The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<String> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param location The URI of the file that contains the IPSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The URI of the file that contains the IPSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The friendly name to identify the IPSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The friendly name to identify the IPSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

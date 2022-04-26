@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExpressRouteCircuitStatsResponse {
     /**
-     * The Primary BytesIn of the peering.
+     * @return The Primary BytesIn of the peering.
      * 
      */
     private final @Nullable Double primarybytesIn;
     /**
-     * The primary BytesOut of the peering.
+     * @return The primary BytesOut of the peering.
      * 
      */
     private final @Nullable Double primarybytesOut;
     /**
-     * The secondary BytesIn of the peering.
+     * @return The secondary BytesIn of the peering.
      * 
      */
     private final @Nullable Double secondarybytesIn;
     /**
-     * The secondary BytesOut of the peering.
+     * @return The secondary BytesOut of the peering.
      * 
      */
     private final @Nullable Double secondarybytesOut;
@@ -45,30 +45,30 @@ public final class ExpressRouteCircuitStatsResponse {
     }
 
     /**
-     * The Primary BytesIn of the peering.
+     * @return The Primary BytesIn of the peering.
      * 
-    */
+     */
     public Optional<Double> primarybytesIn() {
         return Optional.ofNullable(this.primarybytesIn);
     }
     /**
-     * The primary BytesOut of the peering.
+     * @return The primary BytesOut of the peering.
      * 
-    */
+     */
     public Optional<Double> primarybytesOut() {
         return Optional.ofNullable(this.primarybytesOut);
     }
     /**
-     * The secondary BytesIn of the peering.
+     * @return The secondary BytesIn of the peering.
      * 
-    */
+     */
     public Optional<Double> secondarybytesIn() {
         return Optional.ofNullable(this.secondarybytesIn);
     }
     /**
-     * The secondary BytesOut of the peering.
+     * @return The secondary BytesOut of the peering.
      * 
-    */
+     */
     public Optional<Double> secondarybytesOut() {
         return Optional.ofNullable(this.secondarybytesOut);
     }

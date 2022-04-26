@@ -24,6 +24,10 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifactName")
     private @Nullable Output<String> artifactName;
 
+    /**
+     * @return Name of the blueprint artifact.
+     * 
+     */
     public Optional<Output<String>> artifactName() {
         return Optional.ofNullable(this.artifactName);
     }
@@ -35,6 +39,10 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blueprintName", required=true)
     private Output<String> blueprintName;
 
+    /**
+     * @return Name of the blueprint definition.
+     * 
+     */
     public Output<String> blueprintName() {
         return this.blueprintName;
     }
@@ -46,6 +54,10 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<Either<String,ArtifactKind>> kind;
 
+    /**
+     * @return Specifies the kind of blueprint artifact.
+     * 
+     */
     public Output<Either<String,ArtifactKind>> kind() {
         return this.kind;
     }
@@ -57,6 +69,10 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceScope", required=true)
     private Output<String> resourceScope;
 
+    /**
+     * @return The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+     * 
+     */
     public Output<String> resourceScope() {
         return this.resourceScope;
     }
@@ -88,46 +104,106 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ArtifactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactName Name of the blueprint artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactName(@Nullable Output<String> artifactName) {
             $.artifactName = artifactName;
             return this;
         }
 
+        /**
+         * @param artifactName Name of the blueprint artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactName(String artifactName) {
             return artifactName(Output.of(artifactName));
         }
 
+        /**
+         * @param blueprintName Name of the blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blueprintName(Output<String> blueprintName) {
             $.blueprintName = blueprintName;
             return this;
         }
 
+        /**
+         * @param blueprintName Name of the blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blueprintName(String blueprintName) {
             return blueprintName(Output.of(blueprintName));
         }
 
+        /**
+         * @param kind Specifies the kind of blueprint artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,ArtifactKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Specifies the kind of blueprint artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,ArtifactKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind Specifies the kind of blueprint artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind Specifies the kind of blueprint artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(ArtifactKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param resourceScope The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceScope(Output<String> resourceScope) {
             $.resourceScope = resourceScope;
             return this;
         }
 
+        /**
+         * @param resourceScope The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceScope(String resourceScope) {
             return resourceScope(Output.of(resourceScope));
         }

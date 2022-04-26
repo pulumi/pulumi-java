@@ -26,6 +26,10 @@ public final class OSPolicyResourceExecResourceArgs extends com.pulumi.resources
     @Import(name="enforce")
     private @Nullable Output<OSPolicyResourceExecResourceExecArgs> enforce;
 
+    /**
+     * @return What to run to bring this resource into the desired state. An exit code of 100 indicates &#34;success&#34;, any other exit code indicates a failure running enforce.
+     * 
+     */
     public Optional<Output<OSPolicyResourceExecResourceExecArgs>> enforce() {
         return Optional.ofNullable(this.enforce);
     }
@@ -37,6 +41,10 @@ public final class OSPolicyResourceExecResourceArgs extends com.pulumi.resources
     @Import(name="validate", required=true)
     private Output<OSPolicyResourceExecResourceExecArgs> validate;
 
+    /**
+     * @return What to run to validate this resource is in the desired state. An exit code of 100 indicates &#34;in desired state&#34;, and exit code of 101 indicates &#34;not in desired state&#34;. Any other exit code indicates a failure running validate.
+     * 
+     */
     public Output<OSPolicyResourceExecResourceExecArgs> validate() {
         return this.validate;
     }
@@ -66,20 +74,44 @@ public final class OSPolicyResourceExecResourceArgs extends com.pulumi.resources
             $ = new OSPolicyResourceExecResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enforce What to run to bring this resource into the desired state. An exit code of 100 indicates &#34;success&#34;, any other exit code indicates a failure running enforce.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforce(@Nullable Output<OSPolicyResourceExecResourceExecArgs> enforce) {
             $.enforce = enforce;
             return this;
         }
 
+        /**
+         * @param enforce What to run to bring this resource into the desired state. An exit code of 100 indicates &#34;success&#34;, any other exit code indicates a failure running enforce.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforce(OSPolicyResourceExecResourceExecArgs enforce) {
             return enforce(Output.of(enforce));
         }
 
+        /**
+         * @param validate What to run to validate this resource is in the desired state. An exit code of 100 indicates &#34;in desired state&#34;, and exit code of 101 indicates &#34;not in desired state&#34;. Any other exit code indicates a failure running validate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validate(Output<OSPolicyResourceExecResourceExecArgs> validate) {
             $.validate = validate;
             return this;
         }
 
+        /**
+         * @param validate What to run to validate this resource is in the desired state. An exit code of 100 indicates &#34;in desired state&#34;, and exit code of 101 indicates &#34;not in desired state&#34;. Any other exit code indicates a failure running validate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validate(OSPolicyResourceExecResourceExecArgs validate) {
             return validate(Output.of(validate));
         }

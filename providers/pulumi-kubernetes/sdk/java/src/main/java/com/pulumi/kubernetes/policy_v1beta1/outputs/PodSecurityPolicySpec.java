@@ -24,126 +24,126 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PodSecurityPolicySpec {
     /**
-     * allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to true.
+     * @return allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to true.
      * 
      */
     private final @Nullable Boolean allowPrivilegeEscalation;
     /**
-     * AllowedCSIDrivers is an allowlist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is a beta field, and is only honored if the API server enables the CSIInlineVolume feature gate.
+     * @return AllowedCSIDrivers is an allowlist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is a beta field, and is only honored if the API server enables the CSIInlineVolume feature gate.
      * 
      */
     private final @Nullable List<AllowedCSIDriver> allowedCSIDrivers;
     /**
-     * allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author&#39;s discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
+     * @return allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author&#39;s discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
      * 
      */
     private final @Nullable List<String> allowedCapabilities;
     /**
-     * allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the &#34;volumes&#34; field.
+     * @return allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the &#34;volumes&#34; field.
      * 
      */
     private final @Nullable List<AllowedFlexVolume> allowedFlexVolumes;
     /**
-     * allowedHostPaths is an allowlist of host paths. Empty indicates that all host paths may be used.
+     * @return allowedHostPaths is an allowlist of host paths. Empty indicates that all host paths may be used.
      * 
      */
     private final @Nullable List<AllowedHostPath> allowedHostPaths;
     /**
-     * AllowedProcMountTypes is an allowlist of allowed ProcMountTypes. Empty or nil indicates that only the DefaultProcMountType may be used. This requires the ProcMountType feature flag to be enabled.
+     * @return AllowedProcMountTypes is an allowlist of allowed ProcMountTypes. Empty or nil indicates that only the DefaultProcMountType may be used. This requires the ProcMountType feature flag to be enabled.
      * 
      */
     private final @Nullable List<String> allowedProcMountTypes;
     /**
-     * allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
+     * @return allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
      * 
      * Examples: e.g. &#34;foo/*&#34; allows &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; allows &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
      * 
      */
     private final @Nullable List<String> allowedUnsafeSysctls;
     /**
-     * defaultAddCapabilities is the default set of capabilities that will be added to the container unless the pod spec specifically drops the capability.  You may not list a capability in both defaultAddCapabilities and requiredDropCapabilities. Capabilities added here are implicitly allowed, and need not be included in the allowedCapabilities list.
+     * @return defaultAddCapabilities is the default set of capabilities that will be added to the container unless the pod spec specifically drops the capability.  You may not list a capability in both defaultAddCapabilities and requiredDropCapabilities. Capabilities added here are implicitly allowed, and need not be included in the allowedCapabilities list.
      * 
      */
     private final @Nullable List<String> defaultAddCapabilities;
     /**
-     * defaultAllowPrivilegeEscalation controls the default setting for whether a process can gain more privileges than its parent process.
+     * @return defaultAllowPrivilegeEscalation controls the default setting for whether a process can gain more privileges than its parent process.
      * 
      */
     private final @Nullable Boolean defaultAllowPrivilegeEscalation;
     /**
-     * forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
+     * @return forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
      * 
      * Examples: e.g. &#34;foo/*&#34; forbids &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; forbids &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
      * 
      */
     private final @Nullable List<String> forbiddenSysctls;
     /**
-     * fsGroup is the strategy that will dictate what fs group is used by the SecurityContext.
+     * @return fsGroup is the strategy that will dictate what fs group is used by the SecurityContext.
      * 
      */
     private final FSGroupStrategyOptions fsGroup;
     /**
-     * hostIPC determines if the policy allows the use of HostIPC in the pod spec.
+     * @return hostIPC determines if the policy allows the use of HostIPC in the pod spec.
      * 
      */
     private final @Nullable Boolean hostIPC;
     /**
-     * hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.
+     * @return hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.
      * 
      */
     private final @Nullable Boolean hostNetwork;
     /**
-     * hostPID determines if the policy allows the use of HostPID in the pod spec.
+     * @return hostPID determines if the policy allows the use of HostPID in the pod spec.
      * 
      */
     private final @Nullable Boolean hostPID;
     /**
-     * hostPorts determines which host port ranges are allowed to be exposed.
+     * @return hostPorts determines which host port ranges are allowed to be exposed.
      * 
      */
     private final @Nullable List<HostPortRange> hostPorts;
     /**
-     * privileged determines if a pod can request to be run as privileged.
+     * @return privileged determines if a pod can request to be run as privileged.
      * 
      */
     private final @Nullable Boolean privileged;
     /**
-     * readOnlyRootFilesystem when set to true will force containers to run with a read only root file system.  If the container specifically requests to run with a non-read only root file system the PSP should deny the pod. If set to false the container may run with a read only root file system if it wishes but it will not be forced to.
+     * @return readOnlyRootFilesystem when set to true will force containers to run with a read only root file system.  If the container specifically requests to run with a non-read only root file system the PSP should deny the pod. If set to false the container may run with a read only root file system if it wishes but it will not be forced to.
      * 
      */
     private final @Nullable Boolean readOnlyRootFilesystem;
     /**
-     * requiredDropCapabilities are the capabilities that will be dropped from the container.  These are required to be dropped and cannot be added.
+     * @return requiredDropCapabilities are the capabilities that will be dropped from the container.  These are required to be dropped and cannot be added.
      * 
      */
     private final @Nullable List<String> requiredDropCapabilities;
     /**
-     * RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod&#39;s RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.
+     * @return RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod&#39;s RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.
      * 
      */
     private final @Nullable RunAsGroupStrategyOptions runAsGroup;
     /**
-     * runAsUser is the strategy that will dictate the allowable RunAsUser values that may be set.
+     * @return runAsUser is the strategy that will dictate the allowable RunAsUser values that may be set.
      * 
      */
     private final RunAsUserStrategyOptions runAsUser;
     /**
-     * runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod&#39;s runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.
+     * @return runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod&#39;s runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.
      * 
      */
     private final @Nullable RuntimeClassStrategyOptions runtimeClass;
     /**
-     * seLinux is the strategy that will dictate the allowable labels that may be set.
+     * @return seLinux is the strategy that will dictate the allowable labels that may be set.
      * 
      */
     private final SELinuxStrategyOptions seLinux;
     /**
-     * supplementalGroups is the strategy that will dictate what supplemental groups are used by the SecurityContext.
+     * @return supplementalGroups is the strategy that will dictate what supplemental groups are used by the SecurityContext.
      * 
      */
     private final SupplementalGroupsStrategyOptions supplementalGroups;
     /**
-     * volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use &#39;*&#39;.
+     * @return volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use &#39;*&#39;.
      * 
      */
     private final @Nullable List<String> volumes;
@@ -201,174 +201,174 @@ public final class PodSecurityPolicySpec {
     }
 
     /**
-     * allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to true.
+     * @return allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to true.
      * 
-    */
+     */
     public Optional<Boolean> allowPrivilegeEscalation() {
         return Optional.ofNullable(this.allowPrivilegeEscalation);
     }
     /**
-     * AllowedCSIDrivers is an allowlist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is a beta field, and is only honored if the API server enables the CSIInlineVolume feature gate.
+     * @return AllowedCSIDrivers is an allowlist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is a beta field, and is only honored if the API server enables the CSIInlineVolume feature gate.
      * 
-    */
+     */
     public List<AllowedCSIDriver> allowedCSIDrivers() {
         return this.allowedCSIDrivers == null ? List.of() : this.allowedCSIDrivers;
     }
     /**
-     * allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author&#39;s discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
+     * @return allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author&#39;s discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
      * 
-    */
+     */
     public List<String> allowedCapabilities() {
         return this.allowedCapabilities == null ? List.of() : this.allowedCapabilities;
     }
     /**
-     * allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the &#34;volumes&#34; field.
+     * @return allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the &#34;volumes&#34; field.
      * 
-    */
+     */
     public List<AllowedFlexVolume> allowedFlexVolumes() {
         return this.allowedFlexVolumes == null ? List.of() : this.allowedFlexVolumes;
     }
     /**
-     * allowedHostPaths is an allowlist of host paths. Empty indicates that all host paths may be used.
+     * @return allowedHostPaths is an allowlist of host paths. Empty indicates that all host paths may be used.
      * 
-    */
+     */
     public List<AllowedHostPath> allowedHostPaths() {
         return this.allowedHostPaths == null ? List.of() : this.allowedHostPaths;
     }
     /**
-     * AllowedProcMountTypes is an allowlist of allowed ProcMountTypes. Empty or nil indicates that only the DefaultProcMountType may be used. This requires the ProcMountType feature flag to be enabled.
+     * @return AllowedProcMountTypes is an allowlist of allowed ProcMountTypes. Empty or nil indicates that only the DefaultProcMountType may be used. This requires the ProcMountType feature flag to be enabled.
      * 
-    */
+     */
     public List<String> allowedProcMountTypes() {
         return this.allowedProcMountTypes == null ? List.of() : this.allowedProcMountTypes;
     }
     /**
-     * allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
+     * @return allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
      * 
      * Examples: e.g. &#34;foo/*&#34; allows &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; allows &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
      * 
-    */
+     */
     public List<String> allowedUnsafeSysctls() {
         return this.allowedUnsafeSysctls == null ? List.of() : this.allowedUnsafeSysctls;
     }
     /**
-     * defaultAddCapabilities is the default set of capabilities that will be added to the container unless the pod spec specifically drops the capability.  You may not list a capability in both defaultAddCapabilities and requiredDropCapabilities. Capabilities added here are implicitly allowed, and need not be included in the allowedCapabilities list.
+     * @return defaultAddCapabilities is the default set of capabilities that will be added to the container unless the pod spec specifically drops the capability.  You may not list a capability in both defaultAddCapabilities and requiredDropCapabilities. Capabilities added here are implicitly allowed, and need not be included in the allowedCapabilities list.
      * 
-    */
+     */
     public List<String> defaultAddCapabilities() {
         return this.defaultAddCapabilities == null ? List.of() : this.defaultAddCapabilities;
     }
     /**
-     * defaultAllowPrivilegeEscalation controls the default setting for whether a process can gain more privileges than its parent process.
+     * @return defaultAllowPrivilegeEscalation controls the default setting for whether a process can gain more privileges than its parent process.
      * 
-    */
+     */
     public Optional<Boolean> defaultAllowPrivilegeEscalation() {
         return Optional.ofNullable(this.defaultAllowPrivilegeEscalation);
     }
     /**
-     * forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
+     * @return forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
      * 
      * Examples: e.g. &#34;foo/*&#34; forbids &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; forbids &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
      * 
-    */
+     */
     public List<String> forbiddenSysctls() {
         return this.forbiddenSysctls == null ? List.of() : this.forbiddenSysctls;
     }
     /**
-     * fsGroup is the strategy that will dictate what fs group is used by the SecurityContext.
+     * @return fsGroup is the strategy that will dictate what fs group is used by the SecurityContext.
      * 
-    */
+     */
     public FSGroupStrategyOptions fsGroup() {
         return this.fsGroup;
     }
     /**
-     * hostIPC determines if the policy allows the use of HostIPC in the pod spec.
+     * @return hostIPC determines if the policy allows the use of HostIPC in the pod spec.
      * 
-    */
+     */
     public Optional<Boolean> hostIPC() {
         return Optional.ofNullable(this.hostIPC);
     }
     /**
-     * hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.
+     * @return hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.
      * 
-    */
+     */
     public Optional<Boolean> hostNetwork() {
         return Optional.ofNullable(this.hostNetwork);
     }
     /**
-     * hostPID determines if the policy allows the use of HostPID in the pod spec.
+     * @return hostPID determines if the policy allows the use of HostPID in the pod spec.
      * 
-    */
+     */
     public Optional<Boolean> hostPID() {
         return Optional.ofNullable(this.hostPID);
     }
     /**
-     * hostPorts determines which host port ranges are allowed to be exposed.
+     * @return hostPorts determines which host port ranges are allowed to be exposed.
      * 
-    */
+     */
     public List<HostPortRange> hostPorts() {
         return this.hostPorts == null ? List.of() : this.hostPorts;
     }
     /**
-     * privileged determines if a pod can request to be run as privileged.
+     * @return privileged determines if a pod can request to be run as privileged.
      * 
-    */
+     */
     public Optional<Boolean> privileged() {
         return Optional.ofNullable(this.privileged);
     }
     /**
-     * readOnlyRootFilesystem when set to true will force containers to run with a read only root file system.  If the container specifically requests to run with a non-read only root file system the PSP should deny the pod. If set to false the container may run with a read only root file system if it wishes but it will not be forced to.
+     * @return readOnlyRootFilesystem when set to true will force containers to run with a read only root file system.  If the container specifically requests to run with a non-read only root file system the PSP should deny the pod. If set to false the container may run with a read only root file system if it wishes but it will not be forced to.
      * 
-    */
+     */
     public Optional<Boolean> readOnlyRootFilesystem() {
         return Optional.ofNullable(this.readOnlyRootFilesystem);
     }
     /**
-     * requiredDropCapabilities are the capabilities that will be dropped from the container.  These are required to be dropped and cannot be added.
+     * @return requiredDropCapabilities are the capabilities that will be dropped from the container.  These are required to be dropped and cannot be added.
      * 
-    */
+     */
     public List<String> requiredDropCapabilities() {
         return this.requiredDropCapabilities == null ? List.of() : this.requiredDropCapabilities;
     }
     /**
-     * RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod&#39;s RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.
+     * @return RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod&#39;s RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.
      * 
-    */
+     */
     public Optional<RunAsGroupStrategyOptions> runAsGroup() {
         return Optional.ofNullable(this.runAsGroup);
     }
     /**
-     * runAsUser is the strategy that will dictate the allowable RunAsUser values that may be set.
+     * @return runAsUser is the strategy that will dictate the allowable RunAsUser values that may be set.
      * 
-    */
+     */
     public RunAsUserStrategyOptions runAsUser() {
         return this.runAsUser;
     }
     /**
-     * runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod&#39;s runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.
+     * @return runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod&#39;s runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.
      * 
-    */
+     */
     public Optional<RuntimeClassStrategyOptions> runtimeClass() {
         return Optional.ofNullable(this.runtimeClass);
     }
     /**
-     * seLinux is the strategy that will dictate the allowable labels that may be set.
+     * @return seLinux is the strategy that will dictate the allowable labels that may be set.
      * 
-    */
+     */
     public SELinuxStrategyOptions seLinux() {
         return this.seLinux;
     }
     /**
-     * supplementalGroups is the strategy that will dictate what supplemental groups are used by the SecurityContext.
+     * @return supplementalGroups is the strategy that will dictate what supplemental groups are used by the SecurityContext.
      * 
-    */
+     */
     public SupplementalGroupsStrategyOptions supplementalGroups() {
         return this.supplementalGroups;
     }
     /**
-     * volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use &#39;*&#39;.
+     * @return volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use &#39;*&#39;.
      * 
-    */
+     */
     public List<String> volumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }

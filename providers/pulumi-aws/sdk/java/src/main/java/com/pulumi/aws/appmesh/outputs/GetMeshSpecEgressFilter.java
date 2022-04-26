@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetMeshSpecEgressFilter {
     /**
-     * The egress filter type.
+     * @return The egress filter type.
      * 
      */
     private final String type;
@@ -21,9 +21,9 @@ public final class GetMeshSpecEgressFilter {
     }
 
     /**
-     * The egress filter type.
+     * @return The egress filter type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

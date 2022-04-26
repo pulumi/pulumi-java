@@ -27,6 +27,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
     private @Nullable Output<String> apiId;
 
+    /**
+     * @return The API ID for the GraphQL API for the DataSource.
+     * 
+     */
     public Optional<Output<String>> apiId() {
         return Optional.ofNullable(this.apiId);
     }
@@ -38,6 +42,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -49,6 +57,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the DataSource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -60,6 +72,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dynamodbConfig")
     private @Nullable Output<DataSourceDynamodbConfigGetArgs> dynamodbConfig;
 
+    /**
+     * @return DynamoDB settings. See below
+     * 
+     */
     public Optional<Output<DataSourceDynamodbConfigGetArgs>> dynamodbConfig() {
         return Optional.ofNullable(this.dynamodbConfig);
     }
@@ -71,6 +87,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="elasticsearchConfig")
     private @Nullable Output<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig;
 
+    /**
+     * @return Amazon Elasticsearch settings. See below
+     * 
+     */
     public Optional<Output<DataSourceElasticsearchConfigGetArgs>> elasticsearchConfig() {
         return Optional.ofNullable(this.elasticsearchConfig);
     }
@@ -82,6 +102,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpConfig")
     private @Nullable Output<DataSourceHttpConfigGetArgs> httpConfig;
 
+    /**
+     * @return HTTP settings. See below
+     * 
+     */
     public Optional<Output<DataSourceHttpConfigGetArgs>> httpConfig() {
         return Optional.ofNullable(this.httpConfig);
     }
@@ -93,6 +117,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lambdaConfig")
     private @Nullable Output<DataSourceLambdaConfigGetArgs> lambdaConfig;
 
+    /**
+     * @return AWS Lambda settings. See below
+     * 
+     */
     public Optional<Output<DataSourceLambdaConfigGetArgs>> lambdaConfig() {
         return Optional.ofNullable(this.lambdaConfig);
     }
@@ -104,6 +132,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A user-supplied name for the DataSource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -115,6 +147,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="relationalDatabaseConfig")
     private @Nullable Output<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig;
 
+    /**
+     * @return AWS RDS settings. See Relational Database Config
+     * 
+     */
     public Optional<Output<DataSourceRelationalDatabaseConfigGetArgs>> relationalDatabaseConfig() {
         return Optional.ofNullable(this.relationalDatabaseConfig);
     }
@@ -126,6 +162,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceRoleArn")
     private @Nullable Output<String> serviceRoleArn;
 
+    /**
+     * @return The IAM service role ARN for the data source.
+     * 
+     */
     public Optional<Output<String>> serviceRoleArn() {
         return Optional.ofNullable(this.serviceRoleArn);
     }
@@ -137,6 +177,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`, `RELATIONAL_DATABASE`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -175,101 +219,233 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
             $ = new DataSourceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId The API ID for the GraphQL API for the DataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(@Nullable Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId The API ID for the GraphQL API for the DataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param arn The ARN
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param description A description of the DataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the DataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param dynamodbConfig DynamoDB settings. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamodbConfig(@Nullable Output<DataSourceDynamodbConfigGetArgs> dynamodbConfig) {
             $.dynamodbConfig = dynamodbConfig;
             return this;
         }
 
+        /**
+         * @param dynamodbConfig DynamoDB settings. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamodbConfig(DataSourceDynamodbConfigGetArgs dynamodbConfig) {
             return dynamodbConfig(Output.of(dynamodbConfig));
         }
 
+        /**
+         * @param elasticsearchConfig Amazon Elasticsearch settings. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticsearchConfig(@Nullable Output<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig) {
             $.elasticsearchConfig = elasticsearchConfig;
             return this;
         }
 
+        /**
+         * @param elasticsearchConfig Amazon Elasticsearch settings. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticsearchConfig(DataSourceElasticsearchConfigGetArgs elasticsearchConfig) {
             return elasticsearchConfig(Output.of(elasticsearchConfig));
         }
 
+        /**
+         * @param httpConfig HTTP settings. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpConfig(@Nullable Output<DataSourceHttpConfigGetArgs> httpConfig) {
             $.httpConfig = httpConfig;
             return this;
         }
 
+        /**
+         * @param httpConfig HTTP settings. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpConfig(DataSourceHttpConfigGetArgs httpConfig) {
             return httpConfig(Output.of(httpConfig));
         }
 
+        /**
+         * @param lambdaConfig AWS Lambda settings. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaConfig(@Nullable Output<DataSourceLambdaConfigGetArgs> lambdaConfig) {
             $.lambdaConfig = lambdaConfig;
             return this;
         }
 
+        /**
+         * @param lambdaConfig AWS Lambda settings. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaConfig(DataSourceLambdaConfigGetArgs lambdaConfig) {
             return lambdaConfig(Output.of(lambdaConfig));
         }
 
+        /**
+         * @param name A user-supplied name for the DataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A user-supplied name for the DataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param relationalDatabaseConfig AWS RDS settings. See Relational Database Config
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationalDatabaseConfig(@Nullable Output<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig) {
             $.relationalDatabaseConfig = relationalDatabaseConfig;
             return this;
         }
 
+        /**
+         * @param relationalDatabaseConfig AWS RDS settings. See Relational Database Config
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationalDatabaseConfig(DataSourceRelationalDatabaseConfigGetArgs relationalDatabaseConfig) {
             return relationalDatabaseConfig(Output.of(relationalDatabaseConfig));
         }
 
+        /**
+         * @param serviceRoleArn The IAM service role ARN for the data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
             $.serviceRoleArn = serviceRoleArn;
             return this;
         }
 
+        /**
+         * @param serviceRoleArn The IAM service role ARN for the data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRoleArn(String serviceRoleArn) {
             return serviceRoleArn(Output.of(serviceRoleArn));
         }
 
+        /**
+         * @param type The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`, `RELATIONAL_DATABASE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`, `RELATIONAL_DATABASE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

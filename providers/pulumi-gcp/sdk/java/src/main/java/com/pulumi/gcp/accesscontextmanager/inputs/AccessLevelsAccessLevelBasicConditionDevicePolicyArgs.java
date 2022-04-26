@@ -27,6 +27,12 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyArgs extends
     @Import(name="allowedDeviceManagementLevels")
     private @Nullable Output<List<String>> allowedDeviceManagementLevels;
 
+    /**
+     * @return A list of allowed device management levels.
+     * An empty list allows all management levels.
+     * Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
+     * 
+     */
     public Optional<Output<List<String>>> allowedDeviceManagementLevels() {
         return Optional.ofNullable(this.allowedDeviceManagementLevels);
     }
@@ -40,6 +46,12 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyArgs extends
     @Import(name="allowedEncryptionStatuses")
     private @Nullable Output<List<String>> allowedEncryptionStatuses;
 
+    /**
+     * @return A list of allowed encryptions statuses.
+     * An empty list allows all statuses.
+     * Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
+     * 
+     */
     public Optional<Output<List<String>>> allowedEncryptionStatuses() {
         return Optional.ofNullable(this.allowedEncryptionStatuses);
     }
@@ -53,6 +65,12 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyArgs extends
     @Import(name="osConstraints")
     private @Nullable Output<List<AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArgs>> osConstraints;
 
+    /**
+     * @return A list of allowed OS versions.
+     * An empty list allows all types and all versions.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArgs>>> osConstraints() {
         return Optional.ofNullable(this.osConstraints);
     }
@@ -64,6 +82,10 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyArgs extends
     @Import(name="requireAdminApproval")
     private @Nullable Output<Boolean> requireAdminApproval;
 
+    /**
+     * @return Whether the device needs to be approved by the customer admin.
+     * 
+     */
     public Optional<Output<Boolean>> requireAdminApproval() {
         return Optional.ofNullable(this.requireAdminApproval);
     }
@@ -75,6 +97,10 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyArgs extends
     @Import(name="requireCorpOwned")
     private @Nullable Output<Boolean> requireCorpOwned;
 
+    /**
+     * @return Whether the device needs to be corp owned.
+     * 
+     */
     public Optional<Output<Boolean>> requireCorpOwned() {
         return Optional.ofNullable(this.requireCorpOwned);
     }
@@ -87,6 +113,11 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyArgs extends
     @Import(name="requireScreenLock")
     private @Nullable Output<Boolean> requireScreenLock;
 
+    /**
+     * @return Whether or not screenlock is required for the DevicePolicy
+     * to be true. Defaults to false.
+     * 
+     */
     public Optional<Output<Boolean>> requireScreenLock() {
         return Optional.ofNullable(this.requireScreenLock);
     }
@@ -120,68 +151,178 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyArgs extends
             $ = new AccessLevelsAccessLevelBasicConditionDevicePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedDeviceManagementLevels A list of allowed device management levels.
+         * An empty list allows all management levels.
+         * Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedDeviceManagementLevels(@Nullable Output<List<String>> allowedDeviceManagementLevels) {
             $.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
             return this;
         }
 
+        /**
+         * @param allowedDeviceManagementLevels A list of allowed device management levels.
+         * An empty list allows all management levels.
+         * Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedDeviceManagementLevels(List<String> allowedDeviceManagementLevels) {
             return allowedDeviceManagementLevels(Output.of(allowedDeviceManagementLevels));
         }
 
+        /**
+         * @param allowedDeviceManagementLevels A list of allowed device management levels.
+         * An empty list allows all management levels.
+         * Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedDeviceManagementLevels(String... allowedDeviceManagementLevels) {
             return allowedDeviceManagementLevels(List.of(allowedDeviceManagementLevels));
         }
 
+        /**
+         * @param allowedEncryptionStatuses A list of allowed encryptions statuses.
+         * An empty list allows all statuses.
+         * Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedEncryptionStatuses(@Nullable Output<List<String>> allowedEncryptionStatuses) {
             $.allowedEncryptionStatuses = allowedEncryptionStatuses;
             return this;
         }
 
+        /**
+         * @param allowedEncryptionStatuses A list of allowed encryptions statuses.
+         * An empty list allows all statuses.
+         * Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedEncryptionStatuses(List<String> allowedEncryptionStatuses) {
             return allowedEncryptionStatuses(Output.of(allowedEncryptionStatuses));
         }
 
+        /**
+         * @param allowedEncryptionStatuses A list of allowed encryptions statuses.
+         * An empty list allows all statuses.
+         * Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedEncryptionStatuses(String... allowedEncryptionStatuses) {
             return allowedEncryptionStatuses(List.of(allowedEncryptionStatuses));
         }
 
+        /**
+         * @param osConstraints A list of allowed OS versions.
+         * An empty list allows all types and all versions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osConstraints(@Nullable Output<List<AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArgs>> osConstraints) {
             $.osConstraints = osConstraints;
             return this;
         }
 
+        /**
+         * @param osConstraints A list of allowed OS versions.
+         * An empty list allows all types and all versions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osConstraints(List<AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArgs> osConstraints) {
             return osConstraints(Output.of(osConstraints));
         }
 
+        /**
+         * @param osConstraints A list of allowed OS versions.
+         * An empty list allows all types and all versions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osConstraints(AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArgs... osConstraints) {
             return osConstraints(List.of(osConstraints));
         }
 
+        /**
+         * @param requireAdminApproval Whether the device needs to be approved by the customer admin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireAdminApproval(@Nullable Output<Boolean> requireAdminApproval) {
             $.requireAdminApproval = requireAdminApproval;
             return this;
         }
 
+        /**
+         * @param requireAdminApproval Whether the device needs to be approved by the customer admin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireAdminApproval(Boolean requireAdminApproval) {
             return requireAdminApproval(Output.of(requireAdminApproval));
         }
 
+        /**
+         * @param requireCorpOwned Whether the device needs to be corp owned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireCorpOwned(@Nullable Output<Boolean> requireCorpOwned) {
             $.requireCorpOwned = requireCorpOwned;
             return this;
         }
 
+        /**
+         * @param requireCorpOwned Whether the device needs to be corp owned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireCorpOwned(Boolean requireCorpOwned) {
             return requireCorpOwned(Output.of(requireCorpOwned));
         }
 
+        /**
+         * @param requireScreenLock Whether or not screenlock is required for the DevicePolicy
+         * to be true. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireScreenLock(@Nullable Output<Boolean> requireScreenLock) {
             $.requireScreenLock = requireScreenLock;
             return this;
         }
 
+        /**
+         * @param requireScreenLock Whether or not screenlock is required for the DevicePolicy
+         * to be true. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireScreenLock(Boolean requireScreenLock) {
             return requireScreenLock(Output.of(requireScreenLock));
         }

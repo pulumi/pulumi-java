@@ -24,6 +24,10 @@ public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs ext
     @Import(name="domainNameLabel", required=true)
     private Output<String> domainNameLabel;
 
+    /**
+     * @return The Domain name label prefix of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the domain name label and vm network profile unique ID.
+     * 
+     */
     public Output<String> domainNameLabel() {
         return this.domainNameLabel;
     }
@@ -52,11 +56,23 @@ public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs ext
             $ = new VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainNameLabel The Domain name label prefix of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the domain name label and vm network profile unique ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNameLabel(Output<String> domainNameLabel) {
             $.domainNameLabel = domainNameLabel;
             return this;
         }
 
+        /**
+         * @param domainNameLabel The Domain name label prefix of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the domain name label and vm network profile unique ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNameLabel(String domainNameLabel) {
             return domainNameLabel(Output.of(domainNameLabel));
         }

@@ -26,6 +26,10 @@ public final class ServerEndpointRecallStatusResponse extends com.pulumi.resourc
     @Import(name="lastUpdatedTimestamp", required=true)
     private String lastUpdatedTimestamp;
 
+    /**
+     * @return Last updated timestamp
+     * 
+     */
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
@@ -37,6 +41,10 @@ public final class ServerEndpointRecallStatusResponse extends com.pulumi.resourc
     @Import(name="recallErrors", required=true)
     private List<ServerEndpointRecallErrorResponse> recallErrors;
 
+    /**
+     * @return Array of recall errors
+     * 
+     */
     public List<ServerEndpointRecallErrorResponse> recallErrors() {
         return this.recallErrors;
     }
@@ -48,6 +56,10 @@ public final class ServerEndpointRecallStatusResponse extends com.pulumi.resourc
     @Import(name="totalRecallErrorsCount", required=true)
     private Double totalRecallErrorsCount;
 
+    /**
+     * @return Total count of recall errors.
+     * 
+     */
     public Double totalRecallErrorsCount() {
         return this.totalRecallErrorsCount;
     }
@@ -78,20 +90,44 @@ public final class ServerEndpointRecallStatusResponse extends com.pulumi.resourc
             $ = new ServerEndpointRecallStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastUpdatedTimestamp Last updated timestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;
         }
 
+        /**
+         * @param recallErrors Array of recall errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder recallErrors(List<ServerEndpointRecallErrorResponse> recallErrors) {
             $.recallErrors = recallErrors;
             return this;
         }
 
+        /**
+         * @param recallErrors Array of recall errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder recallErrors(ServerEndpointRecallErrorResponse... recallErrors) {
             return recallErrors(List.of(recallErrors));
         }
 
+        /**
+         * @param totalRecallErrorsCount Total count of recall errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalRecallErrorsCount(Double totalRecallErrorsCount) {
             $.totalRecallErrorsCount = totalRecallErrorsCount;
             return this;

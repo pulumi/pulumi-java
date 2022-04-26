@@ -13,28 +13,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LineChannelResponse {
     /**
-     * The channel name
+     * @return The channel name
      * Expected value is &#39;LineChannel&#39;.
      * 
      */
     private final String channelName;
     /**
-     * Entity Tag of the resource
+     * @return Entity Tag of the resource
      * 
      */
     private final @Nullable String etag;
     /**
-     * Specifies the location of the resource.
+     * @return Specifies the location of the resource.
      * 
      */
     private final @Nullable String location;
     /**
-     * The set of properties specific to line channel resource
+     * @return The set of properties specific to line channel resource
      * 
      */
     private final @Nullable LineChannelPropertiesResponse properties;
     /**
-     * Provisioning state of the resource
+     * @return Provisioning state of the resource
      * 
      */
     private final String provisioningState;
@@ -54,38 +54,38 @@ public final class LineChannelResponse {
     }
 
     /**
-     * The channel name
+     * @return The channel name
      * Expected value is &#39;LineChannel&#39;.
      * 
-    */
+     */
     public String channelName() {
         return this.channelName;
     }
     /**
-     * Entity Tag of the resource
+     * @return Entity Tag of the resource
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Specifies the location of the resource.
+     * @return Specifies the location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The set of properties specific to line channel resource
+     * @return The set of properties specific to line channel resource
      * 
-    */
+     */
     public Optional<LineChannelPropertiesResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
     /**
-     * Provisioning state of the resource
+     * @return Provisioning state of the resource
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

@@ -125,6 +125,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DomainTagArgs>> tags;
 
+    /**
+     * @return An arbitrary set of tags (key-value pairs) for this Domain.
+     * 
+     */
     public Optional<Output<List<DomainTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -291,15 +295,33 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
             return snapshotOptions(Output.of(snapshotOptions));
         }
 
+        /**
+         * @param tags An arbitrary set of tags (key-value pairs) for this Domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DomainTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An arbitrary set of tags (key-value pairs) for this Domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DomainTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An arbitrary set of tags (key-value pairs) for this Domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DomainTagArgs... tags) {
             return tags(List.of(tags));
         }

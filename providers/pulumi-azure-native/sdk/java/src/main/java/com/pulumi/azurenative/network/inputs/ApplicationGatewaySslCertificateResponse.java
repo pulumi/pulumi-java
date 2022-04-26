@@ -25,6 +25,10 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="data")
     private @Nullable String data;
 
+    /**
+     * @return Base-64 encoded pfx certificate. Only applicable in PUT Request.
+     * 
+     */
     public Optional<String> data() {
         return Optional.ofNullable(this.data);
     }
@@ -36,6 +40,10 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -47,6 +55,10 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -58,6 +70,10 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="keyVaultSecretId")
     private @Nullable String keyVaultSecretId;
 
+    /**
+     * @return Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+     * 
+     */
     public Optional<String> keyVaultSecretId() {
         return Optional.ofNullable(this.keyVaultSecretId);
     }
@@ -69,6 +85,10 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the SSL certificate that is unique within an Application Gateway.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +100,10 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return Password for the pfx file specified in data. Only applicable in PUT request.
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -91,6 +115,10 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the SSL certificate resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -102,6 +130,10 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="publicCertData", required=true)
     private String publicCertData;
 
+    /**
+     * @return Base-64 encoded Public cert data corresponding to pfx specified in data. Only applicable in GET request.
+     * 
+     */
     public String publicCertData() {
         return this.publicCertData;
     }
@@ -113,6 +145,10 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -149,46 +185,100 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
             $ = new ApplicationGatewaySslCertificateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param data Base-64 encoded pfx certificate. Only applicable in PUT Request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(@Nullable String data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param keyVaultSecretId Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
             $.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
 
+        /**
+         * @param name Name of the SSL certificate that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param password Password for the pfx file specified in data. Only applicable in PUT request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the SSL certificate resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publicCertData Base-64 encoded Public cert data corresponding to pfx specified in data. Only applicable in GET request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicCertData(String publicCertData) {
             $.publicCertData = publicCertData;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

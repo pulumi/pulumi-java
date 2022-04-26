@@ -24,6 +24,10 @@ public final class CallCredentialsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="callCredentialType", required=true)
     private String callCredentialType;
 
+    /**
+     * @return The type of call credentials to use for GRPC requests to the SDS server. This field can be set to one of the following: - GCE_VM: The local GCE VM service account credentials are used to access the SDS server. - FROM_PLUGIN: Custom authenticator credentials are used to access the SDS server.
+     * 
+     */
     public String callCredentialType() {
         return this.callCredentialType;
     }
@@ -35,6 +39,10 @@ public final class CallCredentialsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="fromPlugin", required=true)
     private MetadataCredentialsFromPluginResponse fromPlugin;
 
+    /**
+     * @return Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN.
+     * 
+     */
     public MetadataCredentialsFromPluginResponse fromPlugin() {
         return this.fromPlugin;
     }
@@ -64,11 +72,23 @@ public final class CallCredentialsResponse extends com.pulumi.resources.InvokeAr
             $ = new CallCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param callCredentialType The type of call credentials to use for GRPC requests to the SDS server. This field can be set to one of the following: - GCE_VM: The local GCE VM service account credentials are used to access the SDS server. - FROM_PLUGIN: Custom authenticator credentials are used to access the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callCredentialType(String callCredentialType) {
             $.callCredentialType = callCredentialType;
             return this;
         }
 
+        /**
+         * @param fromPlugin Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromPlugin(MetadataCredentialsFromPluginResponse fromPlugin) {
             $.fromPlugin = fromPlugin;
             return this;

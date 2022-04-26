@@ -28,6 +28,10 @@ public final class DeploymentSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="cpu")
     private @Nullable Integer cpu;
 
+    /**
+     * @return Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
+     * 
+     */
     public Optional<Integer> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -39,6 +43,10 @@ public final class DeploymentSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="environmentVariables")
     private @Nullable Map<String,String> environmentVariables;
 
+    /**
+     * @return Collection of environment variables
+     * 
+     */
     public Optional<Map<String,String>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -50,6 +58,10 @@ public final class DeploymentSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="jvmOptions")
     private @Nullable String jvmOptions;
 
+    /**
+     * @return JVM parameter
+     * 
+     */
     public Optional<String> jvmOptions() {
         return Optional.ofNullable(this.jvmOptions);
     }
@@ -61,6 +73,10 @@ public final class DeploymentSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="memoryInGB")
     private @Nullable Integer memoryInGB;
 
+    /**
+     * @return Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
+     * 
+     */
     public Optional<Integer> memoryInGB() {
         return Optional.ofNullable(this.memoryInGB);
     }
@@ -72,6 +88,10 @@ public final class DeploymentSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="netCoreMainEntryPath")
     private @Nullable String netCoreMainEntryPath;
 
+    /**
+     * @return The path to the .NET executable relative to zip root
+     * 
+     */
     public Optional<String> netCoreMainEntryPath() {
         return Optional.ofNullable(this.netCoreMainEntryPath);
     }
@@ -83,6 +103,10 @@ public final class DeploymentSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="runtimeVersion")
     private @Nullable String runtimeVersion;
 
+    /**
+     * @return Runtime version
+     * 
+     */
     public Optional<String> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
@@ -116,31 +140,67 @@ public final class DeploymentSettingsResponse extends com.pulumi.resources.Invok
             $ = new DeploymentSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Integer cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param environmentVariables Collection of environment variables
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param jvmOptions JVM parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder jvmOptions(@Nullable String jvmOptions) {
             $.jvmOptions = jvmOptions;
             return this;
         }
 
+        /**
+         * @param memoryInGB Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(@Nullable Integer memoryInGB) {
             $.memoryInGB = memoryInGB;
             return this;
         }
 
+        /**
+         * @param netCoreMainEntryPath The path to the .NET executable relative to zip root
+         * 
+         * @return builder
+         * 
+         */
         public Builder netCoreMainEntryPath(@Nullable String netCoreMainEntryPath) {
             $.netCoreMainEntryPath = netCoreMainEntryPath;
             return this;
         }
 
+        /**
+         * @param runtimeVersion Runtime version
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
             $.runtimeVersion = runtimeVersion;
             return this;

@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse {
     /**
-     * Issue model that generates the result. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
+     * @return Issue model that generates the result. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
      * 
      */
     private final String issueModel;
     /**
-     * All the matched issues.
+     * @return All the matched issues.
      * 
      */
     private final List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues;
@@ -31,16 +31,16 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse {
     }
 
     /**
-     * Issue model that generates the result. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
+     * @return Issue model that generates the result. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
      * 
-    */
+     */
     public String issueModel() {
         return this.issueModel;
     }
     /**
-     * All the matched issues.
+     * @return All the matched issues.
      * 
-    */
+     */
     public List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues() {
         return this.issues;
     }

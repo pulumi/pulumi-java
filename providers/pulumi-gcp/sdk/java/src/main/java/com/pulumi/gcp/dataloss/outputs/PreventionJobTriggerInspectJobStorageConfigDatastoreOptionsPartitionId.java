@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId {
     /**
-     * If not empty, the ID of the namespace to which the entities belong.
+     * @return If not empty, the ID of the namespace to which the entities belong.
      * 
      */
     private final @Nullable String namespaceId;
     /**
-     * The Google Cloud Platform project ID of the project containing the table.
+     * @return The Google Cloud Platform project ID of the project containing the table.
      * 
      */
     private final String projectId;
@@ -31,16 +31,16 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
     }
 
     /**
-     * If not empty, the ID of the namespace to which the entities belong.
+     * @return If not empty, the ID of the namespace to which the entities belong.
      * 
-    */
+     */
     public Optional<String> namespaceId() {
         return Optional.ofNullable(this.namespaceId);
     }
     /**
-     * The Google Cloud Platform project ID of the project containing the table.
+     * @return The Google Cloud Platform project ID of the project containing the table.
      * 
-    */
+     */
     public String projectId() {
         return this.projectId;
     }

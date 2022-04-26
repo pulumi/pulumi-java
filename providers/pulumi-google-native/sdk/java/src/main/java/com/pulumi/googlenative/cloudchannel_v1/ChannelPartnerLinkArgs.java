@@ -28,6 +28,10 @@ public final class ChannelPartnerLinkArgs extends com.pulumi.resources.ResourceA
     @Import(name="linkState", required=true)
     private Output<ChannelPartnerLinkLinkState> linkState;
 
+    /**
+     * @return State of the channel partner link.
+     * 
+     */
     public Output<ChannelPartnerLinkLinkState> linkState() {
         return this.linkState;
     }
@@ -39,6 +43,10 @@ public final class ChannelPartnerLinkArgs extends com.pulumi.resources.ResourceA
     @Import(name="resellerCloudIdentityId", required=true)
     private Output<String> resellerCloudIdentityId;
 
+    /**
+     * @return Cloud Identity ID of the linked reseller.
+     * 
+     */
     public Output<String> resellerCloudIdentityId() {
         return this.resellerCloudIdentityId;
     }
@@ -78,20 +86,44 @@ public final class ChannelPartnerLinkArgs extends com.pulumi.resources.ResourceA
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param linkState State of the channel partner link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkState(Output<ChannelPartnerLinkLinkState> linkState) {
             $.linkState = linkState;
             return this;
         }
 
+        /**
+         * @param linkState State of the channel partner link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkState(ChannelPartnerLinkLinkState linkState) {
             return linkState(Output.of(linkState));
         }
 
+        /**
+         * @param resellerCloudIdentityId Cloud Identity ID of the linked reseller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resellerCloudIdentityId(Output<String> resellerCloudIdentityId) {
             $.resellerCloudIdentityId = resellerCloudIdentityId;
             return this;
         }
 
+        /**
+         * @param resellerCloudIdentityId Cloud Identity ID of the linked reseller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resellerCloudIdentityId(String resellerCloudIdentityId) {
             return resellerCloudIdentityId(Output.of(resellerCloudIdentityId));
         }

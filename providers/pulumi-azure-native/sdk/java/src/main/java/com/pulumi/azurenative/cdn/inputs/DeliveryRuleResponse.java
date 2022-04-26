@@ -50,6 +50,10 @@ public final class DeliveryRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="actions", required=true)
     private List<Object> actions;
 
+    /**
+     * @return A list of actions that are executed when all the conditions of a rule are satisfied.
+     * 
+     */
     public List<Object> actions() {
         return this.actions;
     }
@@ -61,6 +65,10 @@ public final class DeliveryRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="conditions")
     private @Nullable List<Object> conditions;
 
+    /**
+     * @return A list of conditions that must be matched for the actions to be executed
+     * 
+     */
     public Optional<List<Object>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -72,6 +80,10 @@ public final class DeliveryRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the rule
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,6 +95,10 @@ public final class DeliveryRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="order", required=true)
     private Integer order;
 
+    /**
+     * @return The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
+     * 
+     */
     public Integer order() {
         return this.order;
     }
@@ -114,29 +130,65 @@ public final class DeliveryRuleResponse extends com.pulumi.resources.InvokeArgs 
             $ = new DeliveryRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions A list of actions that are executed when all the conditions of a rule are satisfied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<Object> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions A list of actions that are executed when all the conditions of a rule are satisfied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Object... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param conditions A list of conditions that must be matched for the actions to be executed
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable List<Object> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions A list of conditions that must be matched for the actions to be executed
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(Object... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param name Name of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param order The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(Integer order) {
             $.order = order;
             return this;

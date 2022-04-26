@@ -25,6 +25,10 @@ public final class JitApproverDefinitionResponse extends com.pulumi.resources.In
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The approver display name.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -36,6 +40,10 @@ public final class JitApproverDefinitionResponse extends com.pulumi.resources.In
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The approver service principal Id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +55,10 @@ public final class JitApproverDefinitionResponse extends com.pulumi.resources.In
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The approver type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -77,16 +89,34 @@ public final class JitApproverDefinitionResponse extends com.pulumi.resources.In
             $ = new JitApproverDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The approver display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param id The approver service principal Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param type The approver type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

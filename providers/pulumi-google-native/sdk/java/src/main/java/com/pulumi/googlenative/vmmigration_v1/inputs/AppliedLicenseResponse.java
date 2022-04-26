@@ -23,6 +23,10 @@ public final class AppliedLicenseResponse extends com.pulumi.resources.InvokeArg
     @Import(name="osLicense", required=true)
     private String osLicense;
 
+    /**
+     * @return The OS license returned from the adaptation module&#39;s report.
+     * 
+     */
     public String osLicense() {
         return this.osLicense;
     }
@@ -34,6 +38,10 @@ public final class AppliedLicenseResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The license type that was used in OS adaptation.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -63,11 +71,23 @@ public final class AppliedLicenseResponse extends com.pulumi.resources.InvokeArg
             $ = new AppliedLicenseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param osLicense The OS license returned from the adaptation module&#39;s report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osLicense(String osLicense) {
             $.osLicense = osLicense;
             return this;
         }
 
+        /**
+         * @param type The license type that was used in OS adaptation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -21,6 +21,10 @@ public final class WindowsDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="cpeUri", required=true)
     private String cpeUri;
 
+    /**
+     * @return The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability affects.
+     * 
+     */
     public String cpeUri() {
         return this.cpeUri;
     }
@@ -32,6 +36,10 @@ public final class WindowsDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return The description of this vulnerability.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -43,6 +51,10 @@ public final class WindowsDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="fixingKbs", required=true)
     private List<KnowledgeBaseResponse> fixingKbs;
 
+    /**
+     * @return The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed KBs presence is considered a fix.
+     * 
+     */
     public List<KnowledgeBaseResponse> fixingKbs() {
         return this.fixingKbs;
     }
@@ -54,6 +66,10 @@ public final class WindowsDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of this vulnerability.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -85,25 +101,55 @@ public final class WindowsDetailResponse extends com.pulumi.resources.InvokeArgs
             $ = new WindowsDetailResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpeUri The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability affects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpeUri(String cpeUri) {
             $.cpeUri = cpeUri;
             return this;
         }
 
+        /**
+         * @param description The description of this vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param fixingKbs The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed KBs presence is considered a fix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixingKbs(List<KnowledgeBaseResponse> fixingKbs) {
             $.fixingKbs = fixingKbs;
             return this;
         }
 
+        /**
+         * @param fixingKbs The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed KBs presence is considered a fix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixingKbs(KnowledgeBaseResponse... fixingKbs) {
             return fixingKbs(List.of(fixingKbs));
         }
 
+        /**
+         * @param name The name of this vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

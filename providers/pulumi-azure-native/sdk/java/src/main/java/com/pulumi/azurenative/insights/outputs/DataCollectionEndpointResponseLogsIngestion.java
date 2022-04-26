@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class DataCollectionEndpointResponseLogsIngestion {
     /**
-     * The endpoint. This property is READ-ONLY.
+     * @return The endpoint. This property is READ-ONLY.
      * 
      */
     private final String endpoint;
@@ -21,9 +21,9 @@ public final class DataCollectionEndpointResponseLogsIngestion {
     }
 
     /**
-     * The endpoint. This property is READ-ONLY.
+     * @return The endpoint. This property is READ-ONLY.
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }

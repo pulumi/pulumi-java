@@ -25,6 +25,10 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends com.pulumi.r
     @Import(name="cost", required=true)
     private Double cost;
 
+    /**
+     * @return The costs associated with the sale of a particular product. Used for gross profit reporting. * Profit = price - cost Google Merchant Center property [cost_of_goods_sold](https://support.google.com/merchants/answer/9017895).
+     * 
+     */
     public Double cost() {
         return this.cost;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends com.pulumi.r
     @Import(name="currencyCode", required=true)
     private String currencyCode;
 
+    /**
+     * @return The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned. The Product.Type.VARIANT Products with the same Product.primary_product_id must share the same currency_code. Otherwise, a FAILED_PRECONDITION error is returned.
+     * 
+     */
     public String currencyCode() {
         return this.currencyCode;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends com.pulumi.r
     @Import(name="originalPrice", required=true)
     private Double originalPrice;
 
+    /**
+     * @return Price of the product without any discount. If zero, by default set to be the price.
+     * 
+     */
     public Double originalPrice() {
         return this.originalPrice;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends com.pulumi.r
     @Import(name="price", required=true)
     private Double price;
 
+    /**
+     * @return Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.price](https://schema.org/price).
+     * 
+     */
     public Double price() {
         return this.price;
     }
@@ -69,6 +85,10 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends com.pulumi.r
     @Import(name="priceEffectiveTime", required=true)
     private String priceEffectiveTime;
 
+    /**
+     * @return The timestamp when the price starts to be effective. This can be set as a future timestamp, and the price is only used for search after price_effective_time. If so, the original_price must be set and original_price is used before price_effective_time. Do not set if price is always effective because it will cause additional latency during search.
+     * 
+     */
     public String priceEffectiveTime() {
         return this.priceEffectiveTime;
     }
@@ -80,6 +100,10 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends com.pulumi.r
     @Import(name="priceExpireTime", required=true)
     private String priceExpireTime;
 
+    /**
+     * @return The timestamp when the price stops to be effective. The price is used for search before price_expire_time. If this field is set, the original_price must be set and original_price is used after price_expire_time. Do not set if price is always effective because it will cause additional latency during search.
+     * 
+     */
     public String priceExpireTime() {
         return this.priceExpireTime;
     }
@@ -91,6 +115,10 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends com.pulumi.r
     @Import(name="priceRange", required=true)
     private GoogleCloudRetailV2betaPriceInfoPriceRangeResponse priceRange;
 
+    /**
+     * @return The price range of all the child Product.Type.VARIANT Products grouped together on the Product.Type.PRIMARY Product. Only populated for Product.Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.
+     * 
+     */
     public GoogleCloudRetailV2betaPriceInfoPriceRangeResponse priceRange() {
         return this.priceRange;
     }
@@ -125,36 +153,78 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends com.pulumi.r
             $ = new GoogleCloudRetailV2betaPriceInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cost The costs associated with the sale of a particular product. Used for gross profit reporting. * Profit = price - cost Google Merchant Center property [cost_of_goods_sold](https://support.google.com/merchants/answer/9017895).
+         * 
+         * @return builder
+         * 
+         */
         public Builder cost(Double cost) {
             $.cost = cost;
             return this;
         }
 
+        /**
+         * @param currencyCode The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned. The Product.Type.VARIANT Products with the same Product.primary_product_id must share the same currency_code. Otherwise, a FAILED_PRECONDITION error is returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currencyCode(String currencyCode) {
             $.currencyCode = currencyCode;
             return this;
         }
 
+        /**
+         * @param originalPrice Price of the product without any discount. If zero, by default set to be the price.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalPrice(Double originalPrice) {
             $.originalPrice = originalPrice;
             return this;
         }
 
+        /**
+         * @param price Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.price](https://schema.org/price).
+         * 
+         * @return builder
+         * 
+         */
         public Builder price(Double price) {
             $.price = price;
             return this;
         }
 
+        /**
+         * @param priceEffectiveTime The timestamp when the price starts to be effective. This can be set as a future timestamp, and the price is only used for search after price_effective_time. If so, the original_price must be set and original_price is used before price_effective_time. Do not set if price is always effective because it will cause additional latency during search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priceEffectiveTime(String priceEffectiveTime) {
             $.priceEffectiveTime = priceEffectiveTime;
             return this;
         }
 
+        /**
+         * @param priceExpireTime The timestamp when the price stops to be effective. The price is used for search before price_expire_time. If this field is set, the original_price must be set and original_price is used after price_expire_time. Do not set if price is always effective because it will cause additional latency during search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priceExpireTime(String priceExpireTime) {
             $.priceExpireTime = priceExpireTime;
             return this;
         }
 
+        /**
+         * @param priceRange The price range of all the child Product.Type.VARIANT Products grouped together on the Product.Type.PRIMARY Product. Only populated for Product.Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priceRange(GoogleCloudRetailV2betaPriceInfoPriceRangeResponse priceRange) {
             $.priceRange = priceRange;
             return this;

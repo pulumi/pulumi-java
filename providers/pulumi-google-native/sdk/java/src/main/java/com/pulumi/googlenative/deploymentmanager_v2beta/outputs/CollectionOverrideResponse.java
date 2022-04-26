@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class CollectionOverrideResponse {
     /**
-     * The collection that identifies this resource within its service.
+     * @return The collection that identifies this resource within its service.
      * 
      */
     private final String collection;
     /**
-     * The options to apply to this resource-level override
+     * @return The options to apply to this resource-level override
      * 
      */
     private final OptionsResponse options;
@@ -30,16 +30,16 @@ public final class CollectionOverrideResponse {
     }
 
     /**
-     * The collection that identifies this resource within its service.
+     * @return The collection that identifies this resource within its service.
      * 
-    */
+     */
     public String collection() {
         return this.collection;
     }
     /**
-     * The options to apply to this resource-level override
+     * @return The options to apply to this resource-level override
      * 
-    */
+     */
     public OptionsResponse options() {
         return this.options;
     }

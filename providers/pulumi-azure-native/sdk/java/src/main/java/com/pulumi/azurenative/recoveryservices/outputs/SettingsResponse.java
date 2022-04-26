@@ -13,18 +13,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SettingsResponse {
     /**
-     * Workload compression flag. This has been added so that &#39;isSqlCompression&#39;
+     * @return Workload compression flag. This has been added so that &#39;isSqlCompression&#39;
      * will be deprecated once clients upgrade to consider this flag.
      * 
      */
     private final @Nullable Boolean isCompression;
     /**
-     * SQL compression flag
+     * @return SQL compression flag
      * 
      */
     private final @Nullable Boolean issqlcompression;
     /**
-     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+     * @return TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
      */
     private final @Nullable String timeZone;
@@ -40,24 +40,24 @@ public final class SettingsResponse {
     }
 
     /**
-     * Workload compression flag. This has been added so that &#39;isSqlCompression&#39;
+     * @return Workload compression flag. This has been added so that &#39;isSqlCompression&#39;
      * will be deprecated once clients upgrade to consider this flag.
      * 
-    */
+     */
     public Optional<Boolean> isCompression() {
         return Optional.ofNullable(this.isCompression);
     }
     /**
-     * SQL compression flag
+     * @return SQL compression flag
      * 
-    */
+     */
     public Optional<Boolean> issqlcompression() {
         return Optional.ofNullable(this.issqlcompression);
     }
     /**
-     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+     * @return TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
-    */
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }

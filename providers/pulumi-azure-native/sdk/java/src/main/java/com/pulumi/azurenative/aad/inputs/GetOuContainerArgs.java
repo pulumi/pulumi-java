@@ -19,6 +19,10 @@ public final class GetOuContainerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domainServiceName", required=true)
     private String domainServiceName;
 
+    /**
+     * @return The name of the domain service.
+     * 
+     */
     public String domainServiceName() {
         return this.domainServiceName;
     }
@@ -30,6 +34,10 @@ public final class GetOuContainerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ouContainerName", required=true)
     private String ouContainerName;
 
+    /**
+     * @return The name of the OuContainer.
+     * 
+     */
     public String ouContainerName() {
         return this.ouContainerName;
     }
@@ -41,6 +49,10 @@ public final class GetOuContainerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetOuContainerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetOuContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainServiceName The name of the domain service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainServiceName(String domainServiceName) {
             $.domainServiceName = domainServiceName;
             return this;
         }
 
+        /**
+         * @param ouContainerName The name of the OuContainer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ouContainerName(String ouContainerName) {
             $.ouContainerName = ouContainerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

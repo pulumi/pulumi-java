@@ -27,6 +27,10 @@ public final class ReportDefinitionResponse extends com.pulumi.resources.InvokeA
     @Import(name="dataset")
     private @Nullable ReportDatasetResponse dataset;
 
+    /**
+     * @return Has definition for data in this report.
+     * 
+     */
     public Optional<ReportDatasetResponse> dataset() {
         return Optional.ofNullable(this.dataset);
     }
@@ -38,6 +42,10 @@ public final class ReportDefinitionResponse extends com.pulumi.resources.InvokeA
     @Import(name="timePeriod")
     private @Nullable ReportTimePeriodResponse timePeriod;
 
+    /**
+     * @return Has time period for pulling data for the report.
+     * 
+     */
     public Optional<ReportTimePeriodResponse> timePeriod() {
         return Optional.ofNullable(this.timePeriod);
     }
@@ -49,6 +57,10 @@ public final class ReportDefinitionResponse extends com.pulumi.resources.InvokeA
     @Import(name="timeframe", required=true)
     private String timeframe;
 
+    /**
+     * @return The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+     * 
+     */
     public String timeframe() {
         return this.timeframe;
     }
@@ -60,6 +72,10 @@ public final class ReportDefinitionResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the report.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -91,21 +107,45 @@ public final class ReportDefinitionResponse extends com.pulumi.resources.InvokeA
             $ = new ReportDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset Has definition for data in this report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(@Nullable ReportDatasetResponse dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param timePeriod Has time period for pulling data for the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePeriod(@Nullable ReportTimePeriodResponse timePeriod) {
             $.timePeriod = timePeriod;
             return this;
         }
 
+        /**
+         * @param timeframe The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeframe(String timeframe) {
             $.timeframe = timeframe;
             return this;
         }
 
+        /**
+         * @param type The type of the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

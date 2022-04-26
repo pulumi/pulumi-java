@@ -23,6 +23,10 @@ public final class ResourceAnnotationResponse extends com.pulumi.resources.Invok
     @Import(name="label", required=true)
     private String label;
 
+    /**
+     * @return A description of the annotation record.
+     * 
+     */
     public String label() {
         return this.label;
     }
@@ -51,6 +55,12 @@ public final class ResourceAnnotationResponse extends com.pulumi.resources.Invok
             $ = new ResourceAnnotationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param label A description of the annotation record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             $.label = label;
             return this;

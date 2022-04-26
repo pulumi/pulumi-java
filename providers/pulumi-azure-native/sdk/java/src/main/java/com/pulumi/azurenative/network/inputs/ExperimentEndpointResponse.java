@@ -25,6 +25,10 @@ public final class ExperimentEndpointResponse extends com.pulumi.resources.Invok
     @Import(name="endpoint")
     private @Nullable String endpoint;
 
+    /**
+     * @return The endpoint URL
+     * 
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -36,6 +40,10 @@ public final class ExperimentEndpointResponse extends com.pulumi.resources.Invok
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the endpoint
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -65,11 +73,23 @@ public final class ExperimentEndpointResponse extends com.pulumi.resources.Invok
             $ = new ExperimentEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoint The endpoint URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable String endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param name The name of the endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

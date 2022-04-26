@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListShareSynchronizationsResult {
     /**
-     * The Url of next result page.
+     * @return The Url of next result page.
      * 
      */
     private final @Nullable String nextLink;
     /**
-     * Collection of items of type DataTransferObjects.
+     * @return Collection of items of type DataTransferObjects.
      * 
      */
     private final List<ShareSynchronizationResponse> value;
@@ -33,16 +33,16 @@ public final class ListShareSynchronizationsResult {
     }
 
     /**
-     * The Url of next result page.
+     * @return The Url of next result page.
      * 
-    */
+     */
     public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
-     * Collection of items of type DataTransferObjects.
+     * @return Collection of items of type DataTransferObjects.
      * 
-    */
+     */
     public List<ShareSynchronizationResponse> value() {
         return this.value;
     }

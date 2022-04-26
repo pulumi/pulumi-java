@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MountTargetPropertiesResponse {
     /**
-     * UUID v4 used to identify the MountTarget
+     * @return UUID v4 used to identify the MountTarget
      * 
      */
     private final String fileSystemId;
     /**
-     * The mount target&#39;s IPv4 address
+     * @return The mount target&#39;s IPv4 address
      * 
      */
     private final String ipAddress;
     /**
-     * UUID v4 used to identify the MountTarget
+     * @return UUID v4 used to identify the MountTarget
      * 
      */
     private final String mountTargetId;
     /**
-     * The SMB server&#39;s Fully Qualified Domain Name, FQDN
+     * @return The SMB server&#39;s Fully Qualified Domain Name, FQDN
      * 
      */
     private final @Nullable String smbServerFqdn;
@@ -45,30 +45,30 @@ public final class MountTargetPropertiesResponse {
     }
 
     /**
-     * UUID v4 used to identify the MountTarget
+     * @return UUID v4 used to identify the MountTarget
      * 
-    */
+     */
     public String fileSystemId() {
         return this.fileSystemId;
     }
     /**
-     * The mount target&#39;s IPv4 address
+     * @return The mount target&#39;s IPv4 address
      * 
-    */
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
     /**
-     * UUID v4 used to identify the MountTarget
+     * @return UUID v4 used to identify the MountTarget
      * 
-    */
+     */
     public String mountTargetId() {
         return this.mountTargetId;
     }
     /**
-     * The SMB server&#39;s Fully Qualified Domain Name, FQDN
+     * @return The SMB server&#39;s Fully Qualified Domain Name, FQDN
      * 
-    */
+     */
     public Optional<String> smbServerFqdn() {
         return Optional.ofNullable(this.smbServerFqdn);
     }

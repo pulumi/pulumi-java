@@ -27,6 +27,10 @@ public final class VolumeContainerFailoverMetadataResponse extends com.pulumi.re
     @Import(name="volumeContainerId")
     private @Nullable String volumeContainerId;
 
+    /**
+     * @return The path ID of the volume container.
+     * 
+     */
     public Optional<String> volumeContainerId() {
         return Optional.ofNullable(this.volumeContainerId);
     }
@@ -38,6 +42,10 @@ public final class VolumeContainerFailoverMetadataResponse extends com.pulumi.re
     @Import(name="volumes")
     private @Nullable List<VolumeFailoverMetadataResponse> volumes;
 
+    /**
+     * @return The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.
+     * 
+     */
     public Optional<List<VolumeFailoverMetadataResponse>> volumes() {
         return Optional.ofNullable(this.volumes);
     }
@@ -67,16 +75,34 @@ public final class VolumeContainerFailoverMetadataResponse extends com.pulumi.re
             $ = new VolumeContainerFailoverMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param volumeContainerId The path ID of the volume container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeContainerId(@Nullable String volumeContainerId) {
             $.volumeContainerId = volumeContainerId;
             return this;
         }
 
+        /**
+         * @param volumes The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(@Nullable List<VolumeFailoverMetadataResponse> volumes) {
             $.volumes = volumes;
             return this;
         }
 
+        /**
+         * @param volumes The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(VolumeFailoverMetadataResponse... volumes) {
             return volumes(List.of(volumes));
         }

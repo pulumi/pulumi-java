@@ -22,6 +22,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether an availability SLI is enabled or not. Must be set to ` true. Defaults to  `true`.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -50,11 +54,23 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
             $ = new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether an availability SLI is enabled or not. Must be set to ` true. Defaults to  `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether an availability SLI is enabled or not. Must be set to ` true. Defaults to  `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

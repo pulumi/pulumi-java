@@ -27,6 +27,10 @@ public final class FlowFailoverConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="recoveryWindow")
     private @Nullable Output<Integer> recoveryWindow;
 
+    /**
+     * @return Search window time to look for dash-7 packets
+     * 
+     */
     public Optional<Output<Integer>> recoveryWindow() {
         return Optional.ofNullable(this.recoveryWindow);
     }
@@ -63,11 +67,23 @@ public final class FlowFailoverConfigArgs extends com.pulumi.resources.ResourceA
             $ = new FlowFailoverConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recoveryWindow Search window time to look for dash-7 packets
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryWindow(@Nullable Output<Integer> recoveryWindow) {
             $.recoveryWindow = recoveryWindow;
             return this;
         }
 
+        /**
+         * @param recoveryWindow Search window time to look for dash-7 packets
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryWindow(Integer recoveryWindow) {
             return recoveryWindow(Output.of(recoveryWindow));
         }

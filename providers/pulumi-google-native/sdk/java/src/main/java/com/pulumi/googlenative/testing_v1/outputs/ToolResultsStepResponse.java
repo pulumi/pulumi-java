@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class ToolResultsStepResponse {
     /**
-     * A tool results execution ID.
+     * @return A tool results execution ID.
      * 
      */
     private final String executionId;
     /**
-     * A tool results history ID.
+     * @return A tool results history ID.
      * 
      */
     private final String historyId;
     /**
-     * The cloud project that owns the tool results step.
+     * @return The cloud project that owns the tool results step.
      * 
      */
     private final String project;
     /**
-     * A tool results step ID.
+     * @return A tool results step ID.
      * 
      */
     private final String stepId;
@@ -43,30 +43,30 @@ public final class ToolResultsStepResponse {
     }
 
     /**
-     * A tool results execution ID.
+     * @return A tool results execution ID.
      * 
-    */
+     */
     public String executionId() {
         return this.executionId;
     }
     /**
-     * A tool results history ID.
+     * @return A tool results history ID.
      * 
-    */
+     */
     public String historyId() {
         return this.historyId;
     }
     /**
-     * The cloud project that owns the tool results step.
+     * @return The cloud project that owns the tool results step.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * A tool results step ID.
+     * @return A tool results step ID.
      * 
-    */
+     */
     public String stepId() {
         return this.stepId;
     }

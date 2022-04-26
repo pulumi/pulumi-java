@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetInventoryItemResult {
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * They inventory type.
+     * @return They inventory type.
      * 
      */
     private final String inventoryType;
     /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Gets or sets the tracked resource id corresponding to the inventory resource.
+     * @return Gets or sets the tracked resource id corresponding to the inventory resource.
      * 
      */
     private final @Nullable String managedResourceId;
     /**
-     * Gets or sets the vCenter Managed Object name for the inventory item.
+     * @return Gets or sets the vCenter Managed Object name for the inventory item.
      * 
      */
     private final @Nullable String moName;
     /**
-     * Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
+     * @return Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
      * 
      */
     private final @Nullable String moRefId;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Gets or sets the provisioning state.
+     * @return Gets or sets the provisioning state.
      * 
      */
     private final String provisioningState;
     /**
-     * The system data.
+     * @return The system data.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -88,72 +88,72 @@ public final class GetInventoryItemResult {
     }
 
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * They inventory type.
+     * @return They inventory type.
      * 
-    */
+     */
     public String inventoryType() {
         return this.inventoryType;
     }
     /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Gets or sets the tracked resource id corresponding to the inventory resource.
+     * @return Gets or sets the tracked resource id corresponding to the inventory resource.
      * 
-    */
+     */
     public Optional<String> managedResourceId() {
         return Optional.ofNullable(this.managedResourceId);
     }
     /**
-     * Gets or sets the vCenter Managed Object name for the inventory item.
+     * @return Gets or sets the vCenter Managed Object name for the inventory item.
      * 
-    */
+     */
     public Optional<String> moName() {
         return Optional.ofNullable(this.moName);
     }
     /**
-     * Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
+     * @return Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
      * 
-    */
+     */
     public Optional<String> moRefId() {
         return Optional.ofNullable(this.moRefId);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets or sets the provisioning state.
+     * @return Gets or sets the provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The system data.
+     * @return The system data.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -27,6 +27,10 @@ public final class PackagingConfigurationHlsEncryption extends com.pulumi.resour
     @Import(name="constantInitializationVector")
     private @Nullable String constantInitializationVector;
 
+    /**
+     * @return An HTTP Live Streaming (HLS) encryption configuration.
+     * 
+     */
     public Optional<String> constantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
@@ -38,6 +42,10 @@ public final class PackagingConfigurationHlsEncryption extends com.pulumi.resour
     @Import(name="encryptionMethod")
     private @Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod;
 
+    /**
+     * @return The encryption method to use.
+     * 
+     */
     public Optional<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod() {
         return Optional.ofNullable(this.encryptionMethod);
     }
@@ -75,11 +83,23 @@ public final class PackagingConfigurationHlsEncryption extends com.pulumi.resour
             $ = new PackagingConfigurationHlsEncryption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param constantInitializationVector An HTTP Live Streaming (HLS) encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             $.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
+        /**
+         * @param encryptionMethod The encryption method to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionMethod(@Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod) {
             $.encryptionMethod = encryptionMethod;
             return this;

@@ -23,6 +23,10 @@ public final class Int64RangeMatchResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rangeEnd", required=true)
     private String rangeEnd;
 
+    /**
+     * @return The end of the range (exclusive) in signed long integer format.
+     * 
+     */
     public String rangeEnd() {
         return this.rangeEnd;
     }
@@ -34,6 +38,10 @@ public final class Int64RangeMatchResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rangeStart", required=true)
     private String rangeStart;
 
+    /**
+     * @return The start of the range (inclusive) in signed long integer format.
+     * 
+     */
     public String rangeStart() {
         return this.rangeStart;
     }
@@ -63,11 +71,23 @@ public final class Int64RangeMatchResponse extends com.pulumi.resources.InvokeAr
             $ = new Int64RangeMatchResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rangeEnd The end of the range (exclusive) in signed long integer format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeEnd(String rangeEnd) {
             $.rangeEnd = rangeEnd;
             return this;
         }
 
+        /**
+         * @param rangeStart The start of the range (inclusive) in signed long integer format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeStart(String rangeStart) {
             $.rangeStart = rangeStart;
             return this;

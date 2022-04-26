@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HubIPAddressesResponse {
     /**
-     * Private IP Address associated with azure firewall.
+     * @return Private IP Address associated with azure firewall.
      * 
      */
     private final @Nullable String privateIPAddress;
     /**
-     * Public IP addresses associated with azure firewall.
+     * @return Public IP addresses associated with azure firewall.
      * 
      */
     private final @Nullable HubPublicIPAddressesResponse publicIPs;
@@ -32,16 +32,16 @@ public final class HubIPAddressesResponse {
     }
 
     /**
-     * Private IP Address associated with azure firewall.
+     * @return Private IP Address associated with azure firewall.
      * 
-    */
+     */
     public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
-     * Public IP addresses associated with azure firewall.
+     * @return Public IP addresses associated with azure firewall.
      * 
-    */
+     */
     public Optional<HubPublicIPAddressesResponse> publicIPs() {
         return Optional.ofNullable(this.publicIPs);
     }

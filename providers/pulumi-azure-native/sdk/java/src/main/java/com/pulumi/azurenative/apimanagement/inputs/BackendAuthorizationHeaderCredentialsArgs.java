@@ -24,6 +24,10 @@ public final class BackendAuthorizationHeaderCredentialsArgs extends com.pulumi.
     @Import(name="parameter", required=true)
     private Output<String> parameter;
 
+    /**
+     * @return Authentication Parameter value.
+     * 
+     */
     public Output<String> parameter() {
         return this.parameter;
     }
@@ -35,6 +39,10 @@ public final class BackendAuthorizationHeaderCredentialsArgs extends com.pulumi.
     @Import(name="scheme", required=true)
     private Output<String> scheme;
 
+    /**
+     * @return Authentication Scheme name.
+     * 
+     */
     public Output<String> scheme() {
         return this.scheme;
     }
@@ -64,20 +72,44 @@ public final class BackendAuthorizationHeaderCredentialsArgs extends com.pulumi.
             $ = new BackendAuthorizationHeaderCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameter Authentication Parameter value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameter(Output<String> parameter) {
             $.parameter = parameter;
             return this;
         }
 
+        /**
+         * @param parameter Authentication Parameter value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameter(String parameter) {
             return parameter(Output.of(parameter));
         }
 
+        /**
+         * @param scheme Authentication Scheme name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(Output<String> scheme) {
             $.scheme = scheme;
             return this;
         }
 
+        /**
+         * @param scheme Authentication Scheme name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(String scheme) {
             return scheme(Output.of(scheme));
         }

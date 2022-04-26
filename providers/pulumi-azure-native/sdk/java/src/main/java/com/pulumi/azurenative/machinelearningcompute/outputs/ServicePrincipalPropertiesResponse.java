@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ServicePrincipalPropertiesResponse {
     /**
-     * The service principal client ID
+     * @return The service principal client ID
      * 
      */
     private final String clientId;
     /**
-     * The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.
+     * @return The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.
      * 
      */
     private final String secret;
@@ -29,16 +29,16 @@ public final class ServicePrincipalPropertiesResponse {
     }
 
     /**
-     * The service principal client ID
+     * @return The service principal client ID
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.
+     * @return The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.
      * 
-    */
+     */
     public String secret() {
         return this.secret;
     }

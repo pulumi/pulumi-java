@@ -26,6 +26,10 @@ public final class SecurityPolicyCloudArmorConfigArgs extends com.pulumi.resourc
     @Import(name="enableMl")
     private @Nullable Output<Boolean> enableMl;
 
+    /**
+     * @return If set to true, enables Cloud Armor Machine Learning.
+     * 
+     */
     public Optional<Output<Boolean>> enableMl() {
         return Optional.ofNullable(this.enableMl);
     }
@@ -54,11 +58,23 @@ public final class SecurityPolicyCloudArmorConfigArgs extends com.pulumi.resourc
             $ = new SecurityPolicyCloudArmorConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableMl If set to true, enables Cloud Armor Machine Learning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMl(@Nullable Output<Boolean> enableMl) {
             $.enableMl = enableMl;
             return this;
         }
 
+        /**
+         * @param enableMl If set to true, enables Cloud Armor Machine Learning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMl(Boolean enableMl) {
             return enableMl(Output.of(enableMl));
         }

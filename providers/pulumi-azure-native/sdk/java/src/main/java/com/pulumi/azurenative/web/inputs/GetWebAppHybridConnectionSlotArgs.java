@@ -19,6 +19,10 @@ public final class GetWebAppHybridConnectionSlotArgs extends com.pulumi.resource
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the web app.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetWebAppHybridConnectionSlotArgs extends com.pulumi.resource
     @Import(name="namespaceName", required=true)
     private String namespaceName;
 
+    /**
+     * @return The namespace for this hybrid connection.
+     * 
+     */
     public String namespaceName() {
         return this.namespaceName;
     }
@@ -41,6 +49,10 @@ public final class GetWebAppHybridConnectionSlotArgs extends com.pulumi.resource
     @Import(name="relayName", required=true)
     private String relayName;
 
+    /**
+     * @return The relay name for this hybrid connection.
+     * 
+     */
     public String relayName() {
         return this.relayName;
     }
@@ -52,6 +64,10 @@ public final class GetWebAppHybridConnectionSlotArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -63,6 +79,10 @@ public final class GetWebAppHybridConnectionSlotArgs extends com.pulumi.resource
     @Import(name="slot", required=true)
     private String slot;
 
+    /**
+     * @return The name of the slot for the web app.
+     * 
+     */
     public String slot() {
         return this.slot;
     }
@@ -95,26 +115,56 @@ public final class GetWebAppHybridConnectionSlotArgs extends com.pulumi.resource
             $ = new GetWebAppHybridConnectionSlotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the web app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param namespaceName The namespace for this hybrid connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param relayName The relay name for this hybrid connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relayName(String relayName) {
             $.relayName = relayName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param slot The name of the slot for the web app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(String slot) {
             $.slot = slot;
             return this;

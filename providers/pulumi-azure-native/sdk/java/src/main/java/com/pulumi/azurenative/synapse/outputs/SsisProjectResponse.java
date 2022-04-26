@@ -16,43 +16,43 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SsisProjectResponse {
     /**
-     * Metadata description.
+     * @return Metadata description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Environment reference in project
+     * @return Environment reference in project
      * 
      */
     private final @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs;
     /**
-     * Folder id which contains project.
+     * @return Folder id which contains project.
      * 
      */
     private final @Nullable Double folderId;
     /**
-     * Metadata id.
+     * @return Metadata id.
      * 
      */
     private final @Nullable Double id;
     /**
-     * Metadata name.
+     * @return Metadata name.
      * 
      */
     private final @Nullable String name;
     /**
-     * Parameters in project
+     * @return Parameters in project
      * 
      */
     private final @Nullable List<SsisParameterResponse> parameters;
     /**
-     * The type of SSIS object metadata.
+     * @return The type of SSIS object metadata.
      * Expected value is &#39;Project&#39;.
      * 
      */
     private final String type;
     /**
-     * Project version.
+     * @return Project version.
      * 
      */
     private final @Nullable Double version;
@@ -78,59 +78,59 @@ public final class SsisProjectResponse {
     }
 
     /**
-     * Metadata description.
+     * @return Metadata description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Environment reference in project
+     * @return Environment reference in project
      * 
-    */
+     */
     public List<SsisEnvironmentReferenceResponse> environmentRefs() {
         return this.environmentRefs == null ? List.of() : this.environmentRefs;
     }
     /**
-     * Folder id which contains project.
+     * @return Folder id which contains project.
      * 
-    */
+     */
     public Optional<Double> folderId() {
         return Optional.ofNullable(this.folderId);
     }
     /**
-     * Metadata id.
+     * @return Metadata id.
      * 
-    */
+     */
     public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Metadata name.
+     * @return Metadata name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Parameters in project
+     * @return Parameters in project
      * 
-    */
+     */
     public List<SsisParameterResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
-     * The type of SSIS object metadata.
+     * @return The type of SSIS object metadata.
      * Expected value is &#39;Project&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Project version.
+     * @return Project version.
      * 
-    */
+     */
     public Optional<Double> version() {
         return Optional.ofNullable(this.version);
     }

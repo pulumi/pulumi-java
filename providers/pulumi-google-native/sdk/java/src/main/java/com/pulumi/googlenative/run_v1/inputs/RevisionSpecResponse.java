@@ -29,6 +29,10 @@ public final class RevisionSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="containerConcurrency", required=true)
     private Integer containerConcurrency;
 
+    /**
+     * @return ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.
+     * 
+     */
     public Integer containerConcurrency() {
         return this.containerConcurrency;
     }
@@ -40,6 +44,10 @@ public final class RevisionSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="containers", required=true)
     private List<ContainerResponse> containers;
 
+    /**
+     * @return Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is documented here: https://github.com/knative/serving/blob/main/docs/runtime-contract.md
+     * 
+     */
     public List<ContainerResponse> containers() {
         return this.containers;
     }
@@ -51,6 +59,10 @@ public final class RevisionSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="enableServiceLinks", required=true)
     private Boolean enableServiceLinks;
 
+    /**
+     * @return Indicates whether information about services should be injected into pod&#39;s environment variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported, defaults to true.
+     * 
+     */
     public Boolean enableServiceLinks() {
         return this.enableServiceLinks;
     }
@@ -62,6 +74,10 @@ public final class RevisionSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="imagePullSecrets", required=true)
     private List<LocalObjectReferenceResponse> imagePullSecrets;
 
+    /**
+     * @return ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported.
+     * 
+     */
     public List<LocalObjectReferenceResponse> imagePullSecrets() {
         return this.imagePullSecrets;
     }
@@ -73,6 +89,10 @@ public final class RevisionSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="serviceAccountName", required=true)
     private String serviceAccountName;
 
+    /**
+     * @return Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project&#39;s default service account.
+     * 
+     */
     public String serviceAccountName() {
         return this.serviceAccountName;
     }
@@ -84,6 +104,10 @@ public final class RevisionSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="timeoutSeconds", required=true)
     private Integer timeoutSeconds;
 
+    /**
+     * @return TimeoutSeconds holds the max duration the instance is allowed for responding to a request. Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600 seconds (1 hour). Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed value is configurable by the cluster operator.
+     * 
+     */
     public Integer timeoutSeconds() {
         return this.timeoutSeconds;
     }
@@ -125,39 +149,87 @@ public final class RevisionSpecResponse extends com.pulumi.resources.InvokeArgs 
             $ = new RevisionSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerConcurrency ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerConcurrency(Integer containerConcurrency) {
             $.containerConcurrency = containerConcurrency;
             return this;
         }
 
+        /**
+         * @param containers Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is documented here: https://github.com/knative/serving/blob/main/docs/runtime-contract.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(List<ContainerResponse> containers) {
             $.containers = containers;
             return this;
         }
 
+        /**
+         * @param containers Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is documented here: https://github.com/knative/serving/blob/main/docs/runtime-contract.md
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(ContainerResponse... containers) {
             return containers(List.of(containers));
         }
 
+        /**
+         * @param enableServiceLinks Indicates whether information about services should be injected into pod&#39;s environment variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported, defaults to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableServiceLinks(Boolean enableServiceLinks) {
             $.enableServiceLinks = enableServiceLinks;
             return this;
         }
 
+        /**
+         * @param imagePullSecrets ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePullSecrets(List<LocalObjectReferenceResponse> imagePullSecrets) {
             $.imagePullSecrets = imagePullSecrets;
             return this;
         }
 
+        /**
+         * @param imagePullSecrets ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePullSecrets(LocalObjectReferenceResponse... imagePullSecrets) {
             return imagePullSecrets(List.of(imagePullSecrets));
         }
 
+        /**
+         * @param serviceAccountName Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project&#39;s default service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountName(String serviceAccountName) {
             $.serviceAccountName = serviceAccountName;
             return this;
         }
 
+        /**
+         * @param timeoutSeconds TimeoutSeconds holds the max duration the instance is allowed for responding to a request. Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600 seconds (1 hour). Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed value is configurable by the cluster operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             $.timeoutSeconds = timeoutSeconds;
             return this;

@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DeploymentSettingsResponse {
     /**
-     * Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
+     * @return Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
      * 
      */
     private final @Nullable Integer cpu;
     /**
-     * Collection of environment variables
+     * @return Collection of environment variables
      * 
      */
     private final @Nullable Map<String,String> environmentVariables;
     /**
-     * JVM parameter
+     * @return JVM parameter
      * 
      */
     private final @Nullable String jvmOptions;
     /**
-     * Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
+     * @return Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
      * 
      */
     private final @Nullable Integer memoryInGB;
     /**
-     * The path to the .NET executable relative to zip root
+     * @return The path to the .NET executable relative to zip root
      * 
      */
     private final @Nullable String netCoreMainEntryPath;
     /**
-     * Runtime version
+     * @return Runtime version
      * 
      */
     private final @Nullable String runtimeVersion;
@@ -61,44 +61,44 @@ public final class DeploymentSettingsResponse {
     }
 
     /**
-     * Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
+     * @return Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
      * 
-    */
+     */
     public Optional<Integer> cpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
-     * Collection of environment variables
+     * @return Collection of environment variables
      * 
-    */
+     */
     public Map<String,String> environmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
-     * JVM parameter
+     * @return JVM parameter
      * 
-    */
+     */
     public Optional<String> jvmOptions() {
         return Optional.ofNullable(this.jvmOptions);
     }
     /**
-     * Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
+     * @return Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
      * 
-    */
+     */
     public Optional<Integer> memoryInGB() {
         return Optional.ofNullable(this.memoryInGB);
     }
     /**
-     * The path to the .NET executable relative to zip root
+     * @return The path to the .NET executable relative to zip root
      * 
-    */
+     */
     public Optional<String> netCoreMainEntryPath() {
         return Optional.ofNullable(this.netCoreMainEntryPath);
     }
     /**
-     * Runtime version
+     * @return Runtime version
      * 
-    */
+     */
     public Optional<String> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }

@@ -25,6 +25,12 @@ public final class ServiceTemplateArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="metadata")
     private @Nullable Output<ServiceTemplateMetadataArgs> metadata;
 
+    /**
+     * @return Metadata associated with this Service, including name, namespace, labels,
+     * and annotations.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ServiceTemplateMetadataArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -37,6 +43,11 @@ public final class ServiceTemplateArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="spec")
     private @Nullable Output<ServiceTemplateSpecArgs> spec;
 
+    /**
+     * @return RevisionSpec holds the desired state of the Revision (from the client).
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ServiceTemplateSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
@@ -66,20 +77,50 @@ public final class ServiceTemplateArgs extends com.pulumi.resources.ResourceArgs
             $ = new ServiceTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadata Metadata associated with this Service, including name, namespace, labels,
+         * and annotations.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<ServiceTemplateMetadataArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Metadata associated with this Service, including name, namespace, labels,
+         * and annotations.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(ServiceTemplateMetadataArgs metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param spec RevisionSpec holds the desired state of the Revision (from the client).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(@Nullable Output<ServiceTemplateSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec RevisionSpec holds the desired state of the Revision (from the client).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(ServiceTemplateSpecArgs spec) {
             return spec(Output.of(spec));
         }

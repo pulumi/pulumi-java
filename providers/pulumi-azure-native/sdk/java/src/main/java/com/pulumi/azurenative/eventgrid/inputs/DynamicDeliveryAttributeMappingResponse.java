@@ -26,6 +26,10 @@ public final class DynamicDeliveryAttributeMappingResponse extends com.pulumi.re
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the delivery attribute or header.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class DynamicDeliveryAttributeMappingResponse extends com.pulumi.re
     @Import(name="sourceField")
     private @Nullable String sourceField;
 
+    /**
+     * @return JSON path in the event which contains attribute value.
+     * 
+     */
     public Optional<String> sourceField() {
         return Optional.ofNullable(this.sourceField);
     }
@@ -49,6 +57,11 @@ public final class DynamicDeliveryAttributeMappingResponse extends com.pulumi.re
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the delivery attribute or header name.
+     * Expected value is &#39;Dynamic&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -79,16 +92,35 @@ public final class DynamicDeliveryAttributeMappingResponse extends com.pulumi.re
             $ = new DynamicDeliveryAttributeMappingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the delivery attribute or header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param sourceField JSON path in the event which contains attribute value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceField(@Nullable String sourceField) {
             $.sourceField = sourceField;
             return this;
         }
 
+        /**
+         * @param type Type of the delivery attribute or header name.
+         * Expected value is &#39;Dynamic&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -25,6 +25,10 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return Name of the Cluster
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -36,6 +40,10 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="fargateProfileName")
     private @Nullable Output<String> fargateProfileName;
 
+    /**
+     * @return Name of FargateProfile
+     * 
+     */
     public Optional<Output<String>> fargateProfileName() {
         return Optional.ofNullable(this.fargateProfileName);
     }
@@ -47,6 +55,10 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="podExecutionRoleArn", required=true)
     private Output<String> podExecutionRoleArn;
 
+    /**
+     * @return The IAM policy arn for pods
+     * 
+     */
     public Output<String> podExecutionRoleArn() {
         return this.podExecutionRoleArn;
     }
@@ -72,6 +84,10 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<List<FargateProfileTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<FargateProfileTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -105,29 +121,65 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new FargateProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName Name of the Cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName Name of the Cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param fargateProfileName Name of FargateProfile
+         * 
+         * @return builder
+         * 
+         */
         public Builder fargateProfileName(@Nullable Output<String> fargateProfileName) {
             $.fargateProfileName = fargateProfileName;
             return this;
         }
 
+        /**
+         * @param fargateProfileName Name of FargateProfile
+         * 
+         * @return builder
+         * 
+         */
         public Builder fargateProfileName(String fargateProfileName) {
             return fargateProfileName(Output.of(fargateProfileName));
         }
 
+        /**
+         * @param podExecutionRoleArn The IAM policy arn for pods
+         * 
+         * @return builder
+         * 
+         */
         public Builder podExecutionRoleArn(Output<String> podExecutionRoleArn) {
             $.podExecutionRoleArn = podExecutionRoleArn;
             return this;
         }
 
+        /**
+         * @param podExecutionRoleArn The IAM policy arn for pods
+         * 
+         * @return builder
+         * 
+         */
         public Builder podExecutionRoleArn(String podExecutionRoleArn) {
             return podExecutionRoleArn(Output.of(podExecutionRoleArn));
         }
@@ -158,15 +210,33 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
             return subnets(List.of(subnets));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<FargateProfileTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<FargateProfileTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(FargateProfileTagArgs... tags) {
             return tags(List.of(tags));
         }

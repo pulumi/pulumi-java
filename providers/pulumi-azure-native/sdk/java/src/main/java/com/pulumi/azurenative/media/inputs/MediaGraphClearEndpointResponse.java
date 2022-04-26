@@ -27,6 +27,10 @@ public final class MediaGraphClearEndpointResponse extends com.pulumi.resources.
     @Import(name="credentials")
     private @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
 
+    /**
+     * @return Polymorphic credentials to present to the endpoint.
+     * 
+     */
     public Optional<MediaGraphUsernamePasswordCredentialsResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -39,6 +43,11 @@ public final class MediaGraphClearEndpointResponse extends com.pulumi.resources.
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphClearEndpoint&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -50,6 +59,10 @@ public final class MediaGraphClearEndpointResponse extends com.pulumi.resources.
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return Url for the endpoint.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -80,16 +93,35 @@ public final class MediaGraphClearEndpointResponse extends com.pulumi.resources.
             $ = new MediaGraphClearEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credentials Polymorphic credentials to present to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable MediaGraphUsernamePasswordCredentialsResponse credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.MediaGraphClearEndpoint&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param url Url for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

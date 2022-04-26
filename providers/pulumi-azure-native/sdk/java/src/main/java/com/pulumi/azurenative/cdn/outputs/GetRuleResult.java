@@ -38,48 +38,48 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRuleResult {
     /**
-     * A list of actions that are executed when all the conditions of a rule are satisfied.
+     * @return A list of actions that are executed when all the conditions of a rule are satisfied.
      * 
      */
     private final List<Object> actions;
     /**
-     * A list of conditions that must be matched for the actions to be executed
+     * @return A list of conditions that must be matched for the actions to be executed
      * 
      */
     private final @Nullable List<Object> conditions;
     private final String deploymentStatus;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+     * @return If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
      * 
      */
     private final @Nullable String matchProcessingBehavior;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
+     * @return The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
      * 
      */
     private final Integer order;
     /**
-     * Provisioning status
+     * @return Provisioning status
      * 
      */
     private final String provisioningState;
     /**
-     * Read only system data
+     * @return Read only system data
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -109,16 +109,16 @@ public final class GetRuleResult {
     }
 
     /**
-     * A list of actions that are executed when all the conditions of a rule are satisfied.
+     * @return A list of actions that are executed when all the conditions of a rule are satisfied.
      * 
-    */
+     */
     public List<Object> actions() {
         return this.actions;
     }
     /**
-     * A list of conditions that must be matched for the actions to be executed
+     * @return A list of conditions that must be matched for the actions to be executed
      * 
-    */
+     */
     public List<Object> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
@@ -126,51 +126,51 @@ public final class GetRuleResult {
         return this.deploymentStatus;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+     * @return If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
      * 
-    */
+     */
     public Optional<String> matchProcessingBehavior() {
         return Optional.ofNullable(this.matchProcessingBehavior);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
+     * @return The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
      * 
-    */
+     */
     public Integer order() {
         return this.order;
     }
     /**
-     * Provisioning status
+     * @return Provisioning status
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Read only system data
+     * @return Read only system data
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

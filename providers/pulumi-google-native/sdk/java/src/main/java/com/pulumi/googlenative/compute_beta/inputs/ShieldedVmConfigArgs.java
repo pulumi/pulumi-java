@@ -26,6 +26,10 @@ public final class ShieldedVmConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enableIntegrityMonitoring")
     private @Nullable Output<Boolean> enableIntegrityMonitoring;
 
+    /**
+     * @return Defines whether the instance has integrity monitoring enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
@@ -37,6 +41,10 @@ public final class ShieldedVmConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enableSecureBoot")
     private @Nullable Output<Boolean> enableSecureBoot;
 
+    /**
+     * @return Defines whether the instance has Secure Boot enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
@@ -48,6 +56,10 @@ public final class ShieldedVmConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enableVtpm")
     private @Nullable Output<Boolean> enableVtpm;
 
+    /**
+     * @return Defines whether the instance has the vTPM enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }
@@ -78,29 +90,65 @@ public final class ShieldedVmConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new ShieldedVmConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableIntegrityMonitoring Defines whether the instance has integrity monitoring enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntegrityMonitoring(@Nullable Output<Boolean> enableIntegrityMonitoring) {
             $.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
 
+        /**
+         * @param enableIntegrityMonitoring Defines whether the instance has integrity monitoring enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
             return enableIntegrityMonitoring(Output.of(enableIntegrityMonitoring));
         }
 
+        /**
+         * @param enableSecureBoot Defines whether the instance has Secure Boot enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
             $.enableSecureBoot = enableSecureBoot;
             return this;
         }
 
+        /**
+         * @param enableSecureBoot Defines whether the instance has Secure Boot enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSecureBoot(Boolean enableSecureBoot) {
             return enableSecureBoot(Output.of(enableSecureBoot));
         }
 
+        /**
+         * @param enableVtpm Defines whether the instance has the vTPM enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableVtpm(@Nullable Output<Boolean> enableVtpm) {
             $.enableVtpm = enableVtpm;
             return this;
         }
 
+        /**
+         * @param enableVtpm Defines whether the instance has the vTPM enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableVtpm(Boolean enableVtpm) {
             return enableVtpm(Output.of(enableVtpm));
         }

@@ -26,6 +26,10 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
     @Import(name="defaultDatabase", required=true)
     private String defaultDatabase;
 
+    /**
+     * @return The default database for the login.
+     * 
+     */
     public String defaultDatabase() {
         return this.defaultDatabase;
     }
@@ -37,6 +41,10 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -48,6 +56,10 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return The state of the login.
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -59,6 +71,10 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
     @Import(name="loginType", required=true)
     private String loginType;
 
+    /**
+     * @return The type of login.
+     * 
+     */
     public String loginType() {
         return this.loginType;
     }
@@ -70,6 +86,10 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
     @Import(name="migrationEligibility", required=true)
     private MigrationEligibilityInfoResponse migrationEligibility;
 
+    /**
+     * @return Information about eligibility of login for migration.
+     * 
+     */
     public MigrationEligibilityInfoResponse migrationEligibility() {
         return this.migrationEligibility;
     }
@@ -81,6 +101,10 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Login name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -93,6 +117,11 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Type of result - database level or task level
+     * Expected value is &#39;LoginLevelOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -127,36 +156,79 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
             $ = new ConnectToSourceSqlServerTaskOutputLoginLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultDatabase The default database for the login.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultDatabase(String defaultDatabase) {
             $.defaultDatabase = defaultDatabase;
             return this;
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param isEnabled The state of the login.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param loginType The type of login.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginType(String loginType) {
             $.loginType = loginType;
             return this;
         }
 
+        /**
+         * @param migrationEligibility Information about eligibility of login for migration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationEligibility(MigrationEligibilityInfoResponse migrationEligibility) {
             $.migrationEligibility = migrationEligibility;
             return this;
         }
 
+        /**
+         * @param name Login name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resultType Type of result - database level or task level
+         * Expected value is &#39;LoginLevelOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;

@@ -21,6 +21,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="identityClientId")
     private @Nullable String identityClientId;
 
+    /**
+     * @return For future use - The client id of the identity which will be used to access key vault.
+     * 
+     */
     public Optional<String> identityClientId() {
         return Optional.ofNullable(this.identityClientId);
     }
@@ -32,6 +36,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyIdentifier", required=true)
     private String keyIdentifier;
 
+    /**
+     * @return Key vault uri to access the encryption key.
+     * 
+     */
     public String keyIdentifier() {
         return this.keyIdentifier;
     }
@@ -43,6 +51,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyVaultArmId", required=true)
     private String keyVaultArmId;
 
+    /**
+     * @return The ArmId of the keyVault where the customer owned encryption key is present.
+     * 
+     */
     public String keyVaultArmId() {
         return this.keyVaultArmId;
     }
@@ -73,16 +85,34 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
             $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityClientId For future use - The client id of the identity which will be used to access key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityClientId(@Nullable String identityClientId) {
             $.identityClientId = identityClientId;
             return this;
         }
 
+        /**
+         * @param keyIdentifier Key vault uri to access the encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyIdentifier(String keyIdentifier) {
             $.keyIdentifier = keyIdentifier;
             return this;
         }
 
+        /**
+         * @param keyVaultArmId The ArmId of the keyVault where the customer owned encryption key is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultArmId(String keyVaultArmId) {
             $.keyVaultArmId = keyVaultArmId;
             return this;

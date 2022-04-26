@@ -27,6 +27,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends com
     @Import(name="projectRepoId")
     private @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId;
 
+    /**
+     * @return A combination of a project ID and a repo name.
+     * 
+     */
     public Optional<Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs>> projectRepoId() {
         return Optional.ofNullable(this.projectRepoId);
     }
@@ -38,6 +42,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends com
     @Import(name="uid")
     private @Nullable Output<String> uid;
 
+    /**
+     * @return A server-assigned, globally unique identifier.
+     * 
+     */
     public Optional<Output<String>> uid() {
         return Optional.ofNullable(this.uid);
     }
@@ -67,20 +75,44 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends com
             $ = new GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param projectRepoId A combination of a project ID and a repo name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectRepoId(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId) {
             $.projectRepoId = projectRepoId;
             return this;
         }
 
+        /**
+         * @param projectRepoId A combination of a project ID and a repo name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectRepoId(GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs projectRepoId) {
             return projectRepoId(Output.of(projectRepoId));
         }
 
+        /**
+         * @param uid A server-assigned, globally unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(@Nullable Output<String> uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param uid A server-assigned, globally unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             return uid(Output.of(uid));
         }

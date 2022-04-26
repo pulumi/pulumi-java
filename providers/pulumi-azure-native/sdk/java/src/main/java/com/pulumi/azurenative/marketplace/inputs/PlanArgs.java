@@ -24,6 +24,10 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessibility")
     private @Nullable Output<Either<String,Accessibility>> accessibility;
 
+    /**
+     * @return Plan accessibility
+     * 
+     */
     public Optional<Output<Either<String,Accessibility>>> accessibility() {
         return Optional.ofNullable(this.accessibility);
     }
@@ -52,19 +56,43 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessibility Plan accessibility
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessibility(@Nullable Output<Either<String,Accessibility>> accessibility) {
             $.accessibility = accessibility;
             return this;
         }
 
+        /**
+         * @param accessibility Plan accessibility
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessibility(Either<String,Accessibility> accessibility) {
             return accessibility(Output.of(accessibility));
         }
 
+        /**
+         * @param accessibility Plan accessibility
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessibility(String accessibility) {
             return accessibility(Either.ofLeft(accessibility));
         }
 
+        /**
+         * @param accessibility Plan accessibility
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessibility(Accessibility accessibility) {
             return accessibility(Either.ofRight(accessibility));
         }

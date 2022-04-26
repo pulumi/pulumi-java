@@ -28,6 +28,10 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse extends com.pulumi.
     @Import(name="inputEndpoints")
     private @Nullable List<InputEndpointResponse> inputEndpoints;
 
+    /**
+     * @return The Azure VM input endpoints.
+     * 
+     */
     public Optional<List<InputEndpointResponse>> inputEndpoints() {
         return Optional.ofNullable(this.inputEndpoints);
     }
@@ -39,6 +43,10 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse extends com.pulumi.
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return The Azure VM tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -68,15 +76,33 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse extends com.pulumi.
             $ = new AzureToAzureVmSyncedConfigDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputEndpoints The Azure VM input endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputEndpoints(@Nullable List<InputEndpointResponse> inputEndpoints) {
             $.inputEndpoints = inputEndpoints;
             return this;
         }
 
+        /**
+         * @param inputEndpoints The Azure VM input endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputEndpoints(InputEndpointResponse... inputEndpoints) {
             return inputEndpoints(List.of(inputEndpoints));
         }
 
+        /**
+         * @param tags The Azure VM tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

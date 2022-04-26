@@ -30,6 +30,10 @@ public final class OSPolicyResourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="exec")
     private @Nullable Output<OSPolicyResourceExecResourceArgs> exec;
 
+    /**
+     * @return Exec resource
+     * 
+     */
     public Optional<Output<OSPolicyResourceExecResourceArgs>> exec() {
         return Optional.ofNullable(this.exec);
     }
@@ -41,6 +45,10 @@ public final class OSPolicyResourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="file")
     private @Nullable Output<OSPolicyResourceFileResourceArgs> file;
 
+    /**
+     * @return File resource
+     * 
+     */
     public Optional<Output<OSPolicyResourceFileResourceArgs>> file() {
         return Optional.ofNullable(this.file);
     }
@@ -52,6 +60,10 @@ public final class OSPolicyResourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The id of the resource with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the OS policy.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -63,6 +75,10 @@ public final class OSPolicyResourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="pkg")
     private @Nullable Output<OSPolicyResourcePackageResourceArgs> pkg;
 
+    /**
+     * @return Package resource
+     * 
+     */
     public Optional<Output<OSPolicyResourcePackageResourceArgs>> pkg() {
         return Optional.ofNullable(this.pkg);
     }
@@ -74,6 +90,10 @@ public final class OSPolicyResourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="repository")
     private @Nullable Output<OSPolicyResourceRepositoryResourceArgs> repository;
 
+    /**
+     * @return Package repository resource
+     * 
+     */
     public Optional<Output<OSPolicyResourceRepositoryResourceArgs>> repository() {
         return Optional.ofNullable(this.repository);
     }
@@ -106,47 +126,107 @@ public final class OSPolicyResourceArgs extends com.pulumi.resources.ResourceArg
             $ = new OSPolicyResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exec Exec resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder exec(@Nullable Output<OSPolicyResourceExecResourceArgs> exec) {
             $.exec = exec;
             return this;
         }
 
+        /**
+         * @param exec Exec resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder exec(OSPolicyResourceExecResourceArgs exec) {
             return exec(Output.of(exec));
         }
 
+        /**
+         * @param file File resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(@Nullable Output<OSPolicyResourceFileResourceArgs> file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param file File resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(OSPolicyResourceFileResourceArgs file) {
             return file(Output.of(file));
         }
 
+        /**
+         * @param id The id of the resource with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the OS policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The id of the resource with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the OS policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param pkg Package resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder pkg(@Nullable Output<OSPolicyResourcePackageResourceArgs> pkg) {
             $.pkg = pkg;
             return this;
         }
 
+        /**
+         * @param pkg Package resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder pkg(OSPolicyResourcePackageResourceArgs pkg) {
             return pkg(Output.of(pkg));
         }
 
+        /**
+         * @param repository Package repository resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(@Nullable Output<OSPolicyResourceRepositoryResourceArgs> repository) {
             $.repository = repository;
             return this;
         }
 
+        /**
+         * @param repository Package repository resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(OSPolicyResourceRepositoryResourceArgs repository) {
             return repository(Output.of(repository));
         }

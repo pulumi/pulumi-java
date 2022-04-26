@@ -25,6 +25,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="cloudwatchLoggingOptions")
     private @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
+    /**
+     * @return The CloudWatch Logging Options for the delivery stream. More details are given below.
+     * 
+     */
     public Optional<Output<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsGetArgs>> cloudwatchLoggingOptions() {
         return Optional.ofNullable(this.cloudwatchLoggingOptions);
     }
@@ -36,6 +40,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="hecAcknowledgmentTimeout")
     private @Nullable Output<Integer> hecAcknowledgmentTimeout;
 
+    /**
+     * @return The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
+     * 
+     */
     public Optional<Output<Integer>> hecAcknowledgmentTimeout() {
         return Optional.ofNullable(this.hecAcknowledgmentTimeout);
     }
@@ -47,6 +55,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="hecEndpoint", required=true)
     private Output<String> hecEndpoint;
 
+    /**
+     * @return The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
+     * 
+     */
     public Output<String> hecEndpoint() {
         return this.hecEndpoint;
     }
@@ -58,6 +70,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="hecEndpointType")
     private @Nullable Output<String> hecEndpointType;
 
+    /**
+     * @return The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
+     * 
+     */
     public Optional<Output<String>> hecEndpointType() {
         return Optional.ofNullable(this.hecEndpointType);
     }
@@ -69,6 +85,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="hecToken", required=true)
     private Output<String> hecToken;
 
+    /**
+     * @return The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.
+     * 
+     */
     public Output<String> hecToken() {
         return this.hecToken;
     }
@@ -80,6 +100,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="processingConfiguration")
     private @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationGetArgs> processingConfiguration;
 
+    /**
+     * @return The data processing configuration.  More details are given below.
+     * 
+     */
     public Optional<Output<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationGetArgs>> processingConfiguration() {
         return Optional.ofNullable(this.processingConfiguration);
     }
@@ -91,6 +115,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="retryDuration")
     private @Nullable Output<Integer> retryDuration;
 
+    /**
+     * @return After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
+     * 
+     */
     public Optional<Output<Integer>> retryDuration() {
         return Optional.ofNullable(this.retryDuration);
     }
@@ -102,6 +130,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="s3BackupMode")
     private @Nullable Output<String> s3BackupMode;
 
+    /**
+     * @return Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
+     * 
+     */
     public Optional<Output<String>> s3BackupMode() {
         return Optional.ofNullable(this.s3BackupMode);
     }
@@ -137,74 +169,170 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
             $ = new FirehoseDeliveryStreamSplunkConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudwatchLoggingOptions The CloudWatch Logging Options for the delivery stream. More details are given below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLoggingOptions(@Nullable Output<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
             $.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
+        /**
+         * @param cloudwatchLoggingOptions The CloudWatch Logging Options for the delivery stream. More details are given below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLoggingOptions(FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
             return cloudwatchLoggingOptions(Output.of(cloudwatchLoggingOptions));
         }
 
+        /**
+         * @param hecAcknowledgmentTimeout The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hecAcknowledgmentTimeout(@Nullable Output<Integer> hecAcknowledgmentTimeout) {
             $.hecAcknowledgmentTimeout = hecAcknowledgmentTimeout;
             return this;
         }
 
+        /**
+         * @param hecAcknowledgmentTimeout The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hecAcknowledgmentTimeout(Integer hecAcknowledgmentTimeout) {
             return hecAcknowledgmentTimeout(Output.of(hecAcknowledgmentTimeout));
         }
 
+        /**
+         * @param hecEndpoint The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hecEndpoint(Output<String> hecEndpoint) {
             $.hecEndpoint = hecEndpoint;
             return this;
         }
 
+        /**
+         * @param hecEndpoint The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hecEndpoint(String hecEndpoint) {
             return hecEndpoint(Output.of(hecEndpoint));
         }
 
+        /**
+         * @param hecEndpointType The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hecEndpointType(@Nullable Output<String> hecEndpointType) {
             $.hecEndpointType = hecEndpointType;
             return this;
         }
 
+        /**
+         * @param hecEndpointType The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hecEndpointType(String hecEndpointType) {
             return hecEndpointType(Output.of(hecEndpointType));
         }
 
+        /**
+         * @param hecToken The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hecToken(Output<String> hecToken) {
             $.hecToken = hecToken;
             return this;
         }
 
+        /**
+         * @param hecToken The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hecToken(String hecToken) {
             return hecToken(Output.of(hecToken));
         }
 
+        /**
+         * @param processingConfiguration The data processing configuration.  More details are given below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingConfiguration(@Nullable Output<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationGetArgs> processingConfiguration) {
             $.processingConfiguration = processingConfiguration;
             return this;
         }
 
+        /**
+         * @param processingConfiguration The data processing configuration.  More details are given below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingConfiguration(FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationGetArgs processingConfiguration) {
             return processingConfiguration(Output.of(processingConfiguration));
         }
 
+        /**
+         * @param retryDuration After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryDuration(@Nullable Output<Integer> retryDuration) {
             $.retryDuration = retryDuration;
             return this;
         }
 
+        /**
+         * @param retryDuration After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryDuration(Integer retryDuration) {
             return retryDuration(Output.of(retryDuration));
         }
 
+        /**
+         * @param s3BackupMode Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3BackupMode(@Nullable Output<String> s3BackupMode) {
             $.s3BackupMode = s3BackupMode;
             return this;
         }
 
+        /**
+         * @param s3BackupMode Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3BackupMode(String s3BackupMode) {
             return s3BackupMode(Output.of(s3BackupMode));
         }

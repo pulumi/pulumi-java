@@ -26,6 +26,10 @@ public final class SslSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateId")
     private @Nullable Output<String> certificateId;
 
+    /**
+     * @return ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify no_managed_certificate on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.
+     * 
+     */
     public Optional<Output<String>> certificateId() {
         return Optional.ofNullable(this.certificateId);
     }
@@ -54,11 +58,23 @@ public final class SslSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SslSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateId ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify no_managed_certificate on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(@Nullable Output<String> certificateId) {
             $.certificateId = certificateId;
             return this;
         }
 
+        /**
+         * @param certificateId ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify no_managed_certificate on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(String certificateId) {
             return certificateId(Output.of(certificateId));
         }

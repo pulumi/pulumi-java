@@ -26,6 +26,10 @@ public final class ArmTemplateParameterArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return name of the parameter.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class ArmTemplateParameterArgs extends com.pulumi.resources.Resourc
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return value for the parameter. In Jtoken
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -66,20 +74,44 @@ public final class ArmTemplateParameterArgs extends com.pulumi.resources.Resourc
             $ = new ArmTemplateParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value value for the parameter. In Jtoken
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value value for the parameter. In Jtoken
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

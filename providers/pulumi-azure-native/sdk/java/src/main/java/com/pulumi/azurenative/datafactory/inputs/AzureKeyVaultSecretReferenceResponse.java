@@ -28,6 +28,10 @@ public final class AzureKeyVaultSecretReferenceResponse extends com.pulumi.resou
     @Import(name="secretName", required=true)
     private Object secretName;
 
+    /**
+     * @return The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object secretName() {
         return this.secretName;
     }
@@ -39,6 +43,10 @@ public final class AzureKeyVaultSecretReferenceResponse extends com.pulumi.resou
     @Import(name="secretVersion")
     private @Nullable Object secretVersion;
 
+    /**
+     * @return The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
@@ -50,6 +58,10 @@ public final class AzureKeyVaultSecretReferenceResponse extends com.pulumi.resou
     @Import(name="store", required=true)
     private LinkedServiceReferenceResponse store;
 
+    /**
+     * @return The Azure Key Vault linked service reference.
+     * 
+     */
     public LinkedServiceReferenceResponse store() {
         return this.store;
     }
@@ -62,6 +74,11 @@ public final class AzureKeyVaultSecretReferenceResponse extends com.pulumi.resou
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the secret.
+     * Expected value is &#39;AzureKeyVaultSecret&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -93,21 +110,46 @@ public final class AzureKeyVaultSecretReferenceResponse extends com.pulumi.resou
             $ = new AzureKeyVaultSecretReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secretName The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(Object secretName) {
             $.secretName = secretName;
             return this;
         }
 
+        /**
+         * @param secretVersion The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(@Nullable Object secretVersion) {
             $.secretVersion = secretVersion;
             return this;
         }
 
+        /**
+         * @param store The Azure Key Vault linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder store(LinkedServiceReferenceResponse store) {
             $.store = store;
             return this;
         }
 
+        /**
+         * @param type Type of the secret.
+         * Expected value is &#39;AzureKeyVaultSecret&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

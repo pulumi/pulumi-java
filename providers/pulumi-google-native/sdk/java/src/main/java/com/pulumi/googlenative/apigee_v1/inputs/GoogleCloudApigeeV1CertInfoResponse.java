@@ -25,6 +25,10 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
     @Import(name="basicConstraints", required=true)
     private String basicConstraints;
 
+    /**
+     * @return X.509 basic constraints extension.
+     * 
+     */
     public String basicConstraints() {
         return this.basicConstraints;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
     @Import(name="expiryDate", required=true)
     private String expiryDate;
 
+    /**
+     * @return X.509 `notAfter` validity period in milliseconds since epoch.
+     * 
+     */
     public String expiryDate() {
         return this.expiryDate;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
     @Import(name="isValid", required=true)
     private String isValid;
 
+    /**
+     * @return Flag that specifies whether the certificate is valid. Flag is set to `Yes` if the certificate is valid, `No` if expired, or `Not yet` if not yet valid.
+     * 
+     */
     public String isValid() {
         return this.isValid;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
     @Import(name="issuer", required=true)
     private String issuer;
 
+    /**
+     * @return X.509 issuer.
+     * 
+     */
     public String issuer() {
         return this.issuer;
     }
@@ -69,6 +85,10 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
     @Import(name="publicKey", required=true)
     private String publicKey;
 
+    /**
+     * @return Public key component of the X.509 subject public key info.
+     * 
+     */
     public String publicKey() {
         return this.publicKey;
     }
@@ -80,6 +100,10 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
     @Import(name="serialNumber", required=true)
     private String serialNumber;
 
+    /**
+     * @return X.509 serial number.
+     * 
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
@@ -91,6 +115,10 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
     @Import(name="sigAlgName", required=true)
     private String sigAlgName;
 
+    /**
+     * @return X.509 signatureAlgorithm.
+     * 
+     */
     public String sigAlgName() {
         return this.sigAlgName;
     }
@@ -102,6 +130,10 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
     @Import(name="subject", required=true)
     private String subject;
 
+    /**
+     * @return X.509 subject.
+     * 
+     */
     public String subject() {
         return this.subject;
     }
@@ -113,6 +145,10 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
     @Import(name="subjectAlternativeNames", required=true)
     private List<String> subjectAlternativeNames;
 
+    /**
+     * @return X.509 subject alternative names (SANs) extension.
+     * 
+     */
     public List<String> subjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
@@ -124,6 +160,10 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
     @Import(name="validFrom", required=true)
     private String validFrom;
 
+    /**
+     * @return X.509 `notBefore` validity period in milliseconds since epoch.
+     * 
+     */
     public String validFrom() {
         return this.validFrom;
     }
@@ -135,6 +175,10 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
     @Import(name="version", required=true)
     private Integer version;
 
+    /**
+     * @return X.509 version.
+     * 
+     */
     public Integer version() {
         return this.version;
     }
@@ -173,60 +217,132 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
             $ = new GoogleCloudApigeeV1CertInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basicConstraints X.509 basic constraints extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicConstraints(String basicConstraints) {
             $.basicConstraints = basicConstraints;
             return this;
         }
 
+        /**
+         * @param expiryDate X.509 `notAfter` validity period in milliseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryDate(String expiryDate) {
             $.expiryDate = expiryDate;
             return this;
         }
 
+        /**
+         * @param isValid Flag that specifies whether the certificate is valid. Flag is set to `Yes` if the certificate is valid, `No` if expired, or `Not yet` if not yet valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isValid(String isValid) {
             $.isValid = isValid;
             return this;
         }
 
+        /**
+         * @param issuer X.509 issuer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(String issuer) {
             $.issuer = issuer;
             return this;
         }
 
+        /**
+         * @param publicKey Public key component of the X.509 subject public key info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(String publicKey) {
             $.publicKey = publicKey;
             return this;
         }
 
+        /**
+         * @param serialNumber X.509 serial number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialNumber(String serialNumber) {
             $.serialNumber = serialNumber;
             return this;
         }
 
+        /**
+         * @param sigAlgName X.509 signatureAlgorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sigAlgName(String sigAlgName) {
             $.sigAlgName = sigAlgName;
             return this;
         }
 
+        /**
+         * @param subject X.509 subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(String subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param subjectAlternativeNames X.509 subject alternative names (SANs) extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(List<String> subjectAlternativeNames) {
             $.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
+        /**
+         * @param subjectAlternativeNames X.509 subject alternative names (SANs) extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
             return subjectAlternativeNames(List.of(subjectAlternativeNames));
         }
 
+        /**
+         * @param validFrom X.509 `notBefore` validity period in milliseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validFrom(String validFrom) {
             $.validFrom = validFrom;
             return this;
         }
 
+        /**
+         * @param version X.509 version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Integer version) {
             $.version = version;
             return this;

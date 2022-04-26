@@ -25,6 +25,10 @@ public final class ResourceSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return NLB resource ARN.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class ResourceSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceSetName")
     private @Nullable Output<String> resourceSetName;
 
+    /**
+     * @return Unique name describing the resource set.
+     * 
+     */
     public Optional<Output<String>> resourceSetName() {
         return Optional.ofNullable(this.resourceSetName);
     }
@@ -47,6 +55,10 @@ public final class ResourceSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceSetType")
     private @Nullable Output<String> resourceSetType;
 
+    /**
+     * @return Type of the resources in the resource set.
+     * 
+     */
     public Optional<Output<String>> resourceSetType() {
         return Optional.ofNullable(this.resourceSetType);
     }
@@ -58,6 +70,10 @@ public final class ResourceSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="resources")
     private @Nullable Output<List<ResourceSetResourceGetArgs>> resources;
 
+    /**
+     * @return List of resources to add to this resource set. See below.
+     * 
+     */
     public Optional<Output<List<ResourceSetResourceGetArgs>>> resources() {
         return Optional.ofNullable(this.resources);
     }
@@ -69,6 +85,10 @@ public final class ResourceSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -80,6 +100,10 @@ public final class ResourceSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -113,60 +137,138 @@ public final class ResourceSetState extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceSetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn NLB resource ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn NLB resource ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param resourceSetName Unique name describing the resource set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSetName(@Nullable Output<String> resourceSetName) {
             $.resourceSetName = resourceSetName;
             return this;
         }
 
+        /**
+         * @param resourceSetName Unique name describing the resource set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSetName(String resourceSetName) {
             return resourceSetName(Output.of(resourceSetName));
         }
 
+        /**
+         * @param resourceSetType Type of the resources in the resource set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSetType(@Nullable Output<String> resourceSetType) {
             $.resourceSetType = resourceSetType;
             return this;
         }
 
+        /**
+         * @param resourceSetType Type of the resources in the resource set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSetType(String resourceSetType) {
             return resourceSetType(Output.of(resourceSetType));
         }
 
+        /**
+         * @param resources List of resources to add to this resource set. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(@Nullable Output<List<ResourceSetResourceGetArgs>> resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param resources List of resources to add to this resource set. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(List<ResourceSetResourceGetArgs> resources) {
             return resources(Output.of(resources));
         }
 
+        /**
+         * @param resources List of resources to add to this resource set. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(ResourceSetResourceGetArgs... resources) {
             return resources(List.of(resources));
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

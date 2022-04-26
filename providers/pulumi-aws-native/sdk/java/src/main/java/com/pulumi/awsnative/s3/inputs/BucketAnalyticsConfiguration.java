@@ -28,6 +28,10 @@ public final class BucketAnalyticsConfiguration extends com.pulumi.resources.Inv
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The ID that identifies the analytics configuration.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -39,6 +43,10 @@ public final class BucketAnalyticsConfiguration extends com.pulumi.resources.Inv
     @Import(name="prefix")
     private @Nullable String prefix;
 
+    /**
+     * @return The prefix that an object must have to be included in the analytics results.
+     * 
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -84,11 +92,23 @@ public final class BucketAnalyticsConfiguration extends com.pulumi.resources.Inv
             $ = new BucketAnalyticsConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID that identifies the analytics configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param prefix The prefix that an object must have to be included in the analytics results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable String prefix) {
             $.prefix = prefix;
             return this;

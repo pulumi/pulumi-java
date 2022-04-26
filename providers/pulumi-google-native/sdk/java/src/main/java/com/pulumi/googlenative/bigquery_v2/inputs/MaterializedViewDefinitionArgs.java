@@ -23,6 +23,10 @@ public final class MaterializedViewDefinitionArgs extends com.pulumi.resources.R
     @Import(name="enableRefresh")
     private @Nullable Output<Boolean> enableRefresh;
 
+    /**
+     * @return [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is &#34;true&#34;.
+     * 
+     */
     public Optional<Output<Boolean>> enableRefresh() {
         return Optional.ofNullable(this.enableRefresh);
     }
@@ -34,6 +38,10 @@ public final class MaterializedViewDefinitionArgs extends com.pulumi.resources.R
     @Import(name="query")
     private @Nullable Output<String> query;
 
+    /**
+     * @return [Required] A query whose result is persisted.
+     * 
+     */
     public Optional<Output<String>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -45,6 +53,10 @@ public final class MaterializedViewDefinitionArgs extends com.pulumi.resources.R
     @Import(name="refreshIntervalMs")
     private @Nullable Output<String> refreshIntervalMs;
 
+    /**
+     * @return [Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is &#34;1800000&#34; (30 minutes).
+     * 
+     */
     public Optional<Output<String>> refreshIntervalMs() {
         return Optional.ofNullable(this.refreshIntervalMs);
     }
@@ -75,29 +87,65 @@ public final class MaterializedViewDefinitionArgs extends com.pulumi.resources.R
             $ = new MaterializedViewDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableRefresh [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is &#34;true&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRefresh(@Nullable Output<Boolean> enableRefresh) {
             $.enableRefresh = enableRefresh;
             return this;
         }
 
+        /**
+         * @param enableRefresh [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is &#34;true&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRefresh(Boolean enableRefresh) {
             return enableRefresh(Output.of(enableRefresh));
         }
 
+        /**
+         * @param query [Required] A query whose result is persisted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query [Required] A query whose result is persisted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param refreshIntervalMs [Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is &#34;1800000&#34; (30 minutes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshIntervalMs(@Nullable Output<String> refreshIntervalMs) {
             $.refreshIntervalMs = refreshIntervalMs;
             return this;
         }
 
+        /**
+         * @param refreshIntervalMs [Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is &#34;1800000&#34; (30 minutes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshIntervalMs(String refreshIntervalMs) {
             return refreshIntervalMs(Output.of(refreshIntervalMs));
         }

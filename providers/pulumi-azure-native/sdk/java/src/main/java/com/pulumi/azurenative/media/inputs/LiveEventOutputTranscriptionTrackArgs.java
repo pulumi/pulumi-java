@@ -24,6 +24,10 @@ public final class LiveEventOutputTranscriptionTrackArgs extends com.pulumi.reso
     @Import(name="trackName", required=true)
     private Output<String> trackName;
 
+    /**
+     * @return The output track name. This property is reserved for future use, any value set on this property will be ignored.
+     * 
+     */
     public Output<String> trackName() {
         return this.trackName;
     }
@@ -52,11 +56,23 @@ public final class LiveEventOutputTranscriptionTrackArgs extends com.pulumi.reso
             $ = new LiveEventOutputTranscriptionTrackArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param trackName The output track name. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackName(Output<String> trackName) {
             $.trackName = trackName;
             return this;
         }
 
+        /**
+         * @param trackName The output track name. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackName(String trackName) {
             return trackName(Output.of(trackName));
         }

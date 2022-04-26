@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends com.pul
     @Import(name="lastUpdateTime")
     private @Nullable Output<String> lastUpdateTime;
 
+    /**
+     * @return The last time the experiment&#39;s stats data was updated. Will have default value if stats have never been computed for this experiment.
+     * 
+     */
     public Optional<Output<String>> lastUpdateTime() {
         return Optional.ofNullable(this.lastUpdateTime);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends com.pul
     @Import(name="versionMetrics")
     private @Nullable Output<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> versionMetrics;
 
+    /**
+     * @return Version variants and metrics.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>>> versionMetrics() {
         return Optional.ofNullable(this.versionMetrics);
     }
@@ -68,24 +76,54 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends com.pul
             $ = new GoogleCloudDialogflowCxV3ExperimentResultArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastUpdateTime The last time the experiment&#39;s stats data was updated. Will have default value if stats have never been computed for this experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdateTime(@Nullable Output<String> lastUpdateTime) {
             $.lastUpdateTime = lastUpdateTime;
             return this;
         }
 
+        /**
+         * @param lastUpdateTime The last time the experiment&#39;s stats data was updated. Will have default value if stats have never been computed for this experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdateTime(String lastUpdateTime) {
             return lastUpdateTime(Output.of(lastUpdateTime));
         }
 
+        /**
+         * @param versionMetrics Version variants and metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionMetrics(@Nullable Output<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> versionMetrics) {
             $.versionMetrics = versionMetrics;
             return this;
         }
 
+        /**
+         * @param versionMetrics Version variants and metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionMetrics(List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs> versionMetrics) {
             return versionMetrics(Output.of(versionMetrics));
         }
 
+        /**
+         * @param versionMetrics Version variants and metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionMetrics(GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs... versionMetrics) {
             return versionMetrics(List.of(versionMetrics));
         }

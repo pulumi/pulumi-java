@@ -27,6 +27,10 @@ public final class StaticSiteTemplateOptionsArgs extends com.pulumi.resources.Re
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the newly generated repository.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class StaticSiteTemplateOptionsArgs extends com.pulumi.resources.Re
     @Import(name="isPrivate")
     private @Nullable Output<Boolean> isPrivate;
 
+    /**
+     * @return Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).
+     * 
+     */
     public Optional<Output<Boolean>> isPrivate() {
         return Optional.ofNullable(this.isPrivate);
     }
@@ -49,6 +57,10 @@ public final class StaticSiteTemplateOptionsArgs extends com.pulumi.resources.Re
     @Import(name="owner")
     private @Nullable Output<String> owner;
 
+    /**
+     * @return Owner of the newly generated repository.
+     * 
+     */
     public Optional<Output<String>> owner() {
         return Optional.ofNullable(this.owner);
     }
@@ -60,6 +72,10 @@ public final class StaticSiteTemplateOptionsArgs extends com.pulumi.resources.Re
     @Import(name="repositoryName")
     private @Nullable Output<String> repositoryName;
 
+    /**
+     * @return Name of the newly generated repository.
+     * 
+     */
     public Optional<Output<String>> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
@@ -71,6 +87,10 @@ public final class StaticSiteTemplateOptionsArgs extends com.pulumi.resources.Re
     @Import(name="templateRepositoryUrl")
     private @Nullable Output<String> templateRepositoryUrl;
 
+    /**
+     * @return URL of the template repository. The newly generated repository will be based on this one.
+     * 
+     */
     public Optional<Output<String>> templateRepositoryUrl() {
         return Optional.ofNullable(this.templateRepositoryUrl);
     }
@@ -103,47 +123,107 @@ public final class StaticSiteTemplateOptionsArgs extends com.pulumi.resources.Re
             $ = new StaticSiteTemplateOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the newly generated repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the newly generated repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param isPrivate Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPrivate(@Nullable Output<Boolean> isPrivate) {
             $.isPrivate = isPrivate;
             return this;
         }
 
+        /**
+         * @param isPrivate Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPrivate(Boolean isPrivate) {
             return isPrivate(Output.of(isPrivate));
         }
 
+        /**
+         * @param owner Owner of the newly generated repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(@Nullable Output<String> owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param owner Owner of the newly generated repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(String owner) {
             return owner(Output.of(owner));
         }
 
+        /**
+         * @param repositoryName Name of the newly generated repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
 
+        /**
+         * @param repositoryName Name of the newly generated repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(String repositoryName) {
             return repositoryName(Output.of(repositoryName));
         }
 
+        /**
+         * @param templateRepositoryUrl URL of the template repository. The newly generated repository will be based on this one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateRepositoryUrl(@Nullable Output<String> templateRepositoryUrl) {
             $.templateRepositoryUrl = templateRepositoryUrl;
             return this;
         }
 
+        /**
+         * @param templateRepositoryUrl URL of the template repository. The newly generated repository will be based on this one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateRepositoryUrl(String templateRepositoryUrl) {
             return templateRepositoryUrl(Output.of(templateRepositoryUrl));
         }

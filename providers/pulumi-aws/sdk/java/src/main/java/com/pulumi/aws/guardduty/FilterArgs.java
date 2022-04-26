@@ -25,6 +25,10 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
     private Output<String> action;
 
+    /**
+     * @return Specifies the action that is to be applied to the findings that match the filter. Can be one of `ARCHIVE` or `NOOP`.
+     * 
+     */
     public Output<String> action() {
         return this.action;
     }
@@ -36,6 +40,10 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the filter.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="detectorId", required=true)
     private Output<String> detectorId;
 
+    /**
+     * @return ID of a GuardDuty detector, attached to your account.
+     * 
+     */
     public Output<String> detectorId() {
         return this.detectorId;
     }
@@ -58,6 +70,10 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="findingCriteria", required=true)
     private Output<FilterFindingCriteriaArgs> findingCriteria;
 
+    /**
+     * @return Represents the criteria to be used in the filter for querying findings. Contains one or more `criterion` blocks, documented below.
+     * 
+     */
     public Output<FilterFindingCriteriaArgs> findingCriteria() {
         return this.findingCriteria;
     }
@@ -69,6 +85,10 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of your filter.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +100,10 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rank", required=true)
     private Output<Integer> rank;
 
+    /**
+     * @return Specifies the position of the filter in the list of current filters. Also specifies the order in which this filter is applied to the findings.
+     * 
+     */
     public Output<Integer> rank() {
         return this.rank;
     }
@@ -91,6 +115,10 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags that you want to add to the Filter resource. A tag consists of a key and a value. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,65 +153,149 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Specifies the action that is to be applied to the findings that match the filter. Can be one of `ARCHIVE` or `NOOP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Specifies the action that is to be applied to the findings that match the filter. Can be one of `ARCHIVE` or `NOOP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param description Description of the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param detectorId ID of a GuardDuty detector, attached to your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectorId(Output<String> detectorId) {
             $.detectorId = detectorId;
             return this;
         }
 
+        /**
+         * @param detectorId ID of a GuardDuty detector, attached to your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectorId(String detectorId) {
             return detectorId(Output.of(detectorId));
         }
 
+        /**
+         * @param findingCriteria Represents the criteria to be used in the filter for querying findings. Contains one or more `criterion` blocks, documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingCriteria(Output<FilterFindingCriteriaArgs> findingCriteria) {
             $.findingCriteria = findingCriteria;
             return this;
         }
 
+        /**
+         * @param findingCriteria Represents the criteria to be used in the filter for querying findings. Contains one or more `criterion` blocks, documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingCriteria(FilterFindingCriteriaArgs findingCriteria) {
             return findingCriteria(Output.of(findingCriteria));
         }
 
+        /**
+         * @param name The name of your filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of your filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param rank Specifies the position of the filter in the list of current filters. Also specifies the order in which this filter is applied to the findings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rank(Output<Integer> rank) {
             $.rank = rank;
             return this;
         }
 
+        /**
+         * @param rank Specifies the position of the filter in the list of current filters. Also specifies the order in which this filter is applied to the findings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rank(Integer rank) {
             return rank(Output.of(rank));
         }
 
+        /**
+         * @param tags The tags that you want to add to the Filter resource. A tag consists of a key and a value. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags that you want to add to the Filter resource. A tag consists of a key and a value. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

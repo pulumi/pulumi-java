@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CacheIdentityResponse {
     /**
-     * The principal id of the cache.
+     * @return The principal id of the cache.
      * 
      */
     private final String principalId;
     /**
-     * The tenant id associated with the cache.
+     * @return The tenant id associated with the cache.
      * 
      */
     private final String tenantId;
     /**
-     * The type of identity used for the cache
+     * @return The type of identity used for the cache
      * 
      */
     private final @Nullable String type;
@@ -38,23 +38,23 @@ public final class CacheIdentityResponse {
     }
 
     /**
-     * The principal id of the cache.
+     * @return The principal id of the cache.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant id associated with the cache.
+     * @return The tenant id associated with the cache.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of identity used for the cache
+     * @return The type of identity used for the cache
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

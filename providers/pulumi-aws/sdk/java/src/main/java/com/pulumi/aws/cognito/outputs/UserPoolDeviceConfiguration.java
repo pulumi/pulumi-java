@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UserPoolDeviceConfiguration {
     /**
-     * Whether a challenge is required on a new device. Only applicable to a new device.
+     * @return Whether a challenge is required on a new device. Only applicable to a new device.
      * 
      */
     private final @Nullable Boolean challengeRequiredOnNewDevice;
     /**
-     * Whether a device is only remembered on user prompt. `false` equates to &#34;Always&#34; remember, `true` is &#34;User Opt In,&#34; and not using a `device_configuration` block is &#34;No.&#34;
+     * @return Whether a device is only remembered on user prompt. `false` equates to &#34;Always&#34; remember, `true` is &#34;User Opt In,&#34; and not using a `device_configuration` block is &#34;No.&#34;
      * 
      */
     private final @Nullable Boolean deviceOnlyRememberedOnUserPrompt;
@@ -31,16 +31,16 @@ public final class UserPoolDeviceConfiguration {
     }
 
     /**
-     * Whether a challenge is required on a new device. Only applicable to a new device.
+     * @return Whether a challenge is required on a new device. Only applicable to a new device.
      * 
-    */
+     */
     public Optional<Boolean> challengeRequiredOnNewDevice() {
         return Optional.ofNullable(this.challengeRequiredOnNewDevice);
     }
     /**
-     * Whether a device is only remembered on user prompt. `false` equates to &#34;Always&#34; remember, `true` is &#34;User Opt In,&#34; and not using a `device_configuration` block is &#34;No.&#34;
+     * @return Whether a device is only remembered on user prompt. `false` equates to &#34;Always&#34; remember, `true` is &#34;User Opt In,&#34; and not using a `device_configuration` block is &#34;No.&#34;
      * 
-    */
+     */
     public Optional<Boolean> deviceOnlyRememberedOnUserPrompt() {
         return Optional.ofNullable(this.deviceOnlyRememberedOnUserPrompt);
     }

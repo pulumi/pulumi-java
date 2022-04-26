@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse extend
     @Import(name="accessibilityText", required=true)
     private String accessibilityText;
 
+    /**
+     * @return A text description of the image to be used for accessibility, e.g., screen readers. Required if image_uri is set for CarouselSelect.
+     * 
+     */
     public String accessibilityText() {
         return this.accessibilityText;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse extend
     @Import(name="imageUri", required=true)
     private String imageUri;
 
+    /**
+     * @return Optional. The public URI to an image file.
+     * 
+     */
     public String imageUri() {
         return this.imageUri;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse extend
             $ = new GoogleCloudDialogflowV2beta1IntentMessageImageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessibilityText A text description of the image to be used for accessibility, e.g., screen readers. Required if image_uri is set for CarouselSelect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessibilityText(String accessibilityText) {
             $.accessibilityText = accessibilityText;
             return this;
         }
 
+        /**
+         * @param imageUri Optional. The public URI to an image file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUri(String imageUri) {
             $.imageUri = imageUri;
             return this;

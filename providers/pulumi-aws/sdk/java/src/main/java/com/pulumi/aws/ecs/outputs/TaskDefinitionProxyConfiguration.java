@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TaskDefinitionProxyConfiguration {
     /**
-     * Name of the container that will serve as the App Mesh proxy.
+     * @return Name of the container that will serve as the App Mesh proxy.
      * 
      */
     private final String containerName;
     /**
-     * Set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.
+     * @return Set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.
      * 
      */
     private final @Nullable Map<String,String> properties;
     /**
-     * Proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
+     * @return Proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
      * 
      */
     private final @Nullable String type;
@@ -39,23 +39,23 @@ public final class TaskDefinitionProxyConfiguration {
     }
 
     /**
-     * Name of the container that will serve as the App Mesh proxy.
+     * @return Name of the container that will serve as the App Mesh proxy.
      * 
-    */
+     */
     public String containerName() {
         return this.containerName;
     }
     /**
-     * Set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.
+     * @return Set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * Proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
+     * @return Proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs extends
     @Import(name="text", required=true)
     private Output<List<String>> text;
 
+    /**
+     * @return A collection of text responses.
+     * 
+     */
     public Output<List<String>> text() {
         return this.text;
     }
@@ -53,15 +57,33 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs extends
             $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param text A collection of text responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(Output<List<String>> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text A collection of text responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(List<String> text) {
             return text(Output.of(text));
         }
 
+        /**
+         * @param text A collection of text responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String... text) {
             return text(List.of(text));
         }

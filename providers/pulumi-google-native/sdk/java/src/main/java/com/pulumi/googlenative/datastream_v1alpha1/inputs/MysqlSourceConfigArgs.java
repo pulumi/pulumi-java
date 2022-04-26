@@ -26,6 +26,10 @@ public final class MysqlSourceConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="allowlist")
     private @Nullable Output<MysqlRdbmsArgs> allowlist;
 
+    /**
+     * @return MySQL objects to retrieve from the source.
+     * 
+     */
     public Optional<Output<MysqlRdbmsArgs>> allowlist() {
         return Optional.ofNullable(this.allowlist);
     }
@@ -37,6 +41,10 @@ public final class MysqlSourceConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="rejectlist")
     private @Nullable Output<MysqlRdbmsArgs> rejectlist;
 
+    /**
+     * @return MySQL objects to exclude from the stream.
+     * 
+     */
     public Optional<Output<MysqlRdbmsArgs>> rejectlist() {
         return Optional.ofNullable(this.rejectlist);
     }
@@ -66,20 +74,44 @@ public final class MysqlSourceConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new MysqlSourceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowlist MySQL objects to retrieve from the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowlist(@Nullable Output<MysqlRdbmsArgs> allowlist) {
             $.allowlist = allowlist;
             return this;
         }
 
+        /**
+         * @param allowlist MySQL objects to retrieve from the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowlist(MysqlRdbmsArgs allowlist) {
             return allowlist(Output.of(allowlist));
         }
 
+        /**
+         * @param rejectlist MySQL objects to exclude from the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectlist(@Nullable Output<MysqlRdbmsArgs> rejectlist) {
             $.rejectlist = rejectlist;
             return this;
         }
 
+        /**
+         * @param rejectlist MySQL objects to exclude from the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectlist(MysqlRdbmsArgs rejectlist) {
             return rejectlist(Output.of(rejectlist));
         }

@@ -27,6 +27,10 @@ public final class DeploymentResourcePropertiesArgs extends com.pulumi.resources
     @Import(name="deploymentSettings")
     private @Nullable Output<DeploymentSettingsArgs> deploymentSettings;
 
+    /**
+     * @return Deployment settings of the Deployment
+     * 
+     */
     public Optional<Output<DeploymentSettingsArgs>> deploymentSettings() {
         return Optional.ofNullable(this.deploymentSettings);
     }
@@ -38,6 +42,10 @@ public final class DeploymentResourcePropertiesArgs extends com.pulumi.resources
     @Import(name="source")
     private @Nullable Output<UserSourceInfoArgs> source;
 
+    /**
+     * @return Uploaded source information of the deployment.
+     * 
+     */
     public Optional<Output<UserSourceInfoArgs>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -67,20 +75,44 @@ public final class DeploymentResourcePropertiesArgs extends com.pulumi.resources
             $ = new DeploymentResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentSettings Deployment settings of the Deployment
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentSettings(@Nullable Output<DeploymentSettingsArgs> deploymentSettings) {
             $.deploymentSettings = deploymentSettings;
             return this;
         }
 
+        /**
+         * @param deploymentSettings Deployment settings of the Deployment
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentSettings(DeploymentSettingsArgs deploymentSettings) {
             return deploymentSettings(Output.of(deploymentSettings));
         }
 
+        /**
+         * @param source Uploaded source information of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<UserSourceInfoArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Uploaded source information of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(UserSourceInfoArgs source) {
             return source(Output.of(source));
         }

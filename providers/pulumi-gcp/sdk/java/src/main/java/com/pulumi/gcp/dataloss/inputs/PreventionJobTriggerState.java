@@ -25,6 +25,10 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the job trigger.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return User set display name of the job trigger.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -48,6 +56,11 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
     @Import(name="inspectJob")
     private @Nullable Output<PreventionJobTriggerInspectJobGetArgs> inspectJob;
 
+    /**
+     * @return Controls what and how to inspect for findings.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionJobTriggerInspectJobGetArgs>> inspectJob() {
         return Optional.ofNullable(this.inspectJob);
     }
@@ -59,6 +72,10 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
     @Import(name="lastRunTime")
     private @Nullable Output<String> lastRunTime;
 
+    /**
+     * @return The timestamp of the last time this trigger executed.
+     * 
+     */
     public Optional<Output<String>> lastRunTime() {
         return Optional.ofNullable(this.lastRunTime);
     }
@@ -70,6 +87,10 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Datastore kind.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -82,6 +103,11 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return The parent of the trigger, either in the format `projects/{{project}}`
+     * or `projects/{{project}}/locations/{{location}}`
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -95,6 +121,12 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Whether the trigger is currently active.
+     * Default value is `HEALTHY`.
+     * Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -107,6 +139,11 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
     @Import(name="triggers")
     private @Nullable Output<List<PreventionJobTriggerTriggerGetArgs>> triggers;
 
+    /**
+     * @return What event needs to occur for a new job to be started.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<PreventionJobTriggerTriggerGetArgs>>> triggers() {
         return Optional.ofNullable(this.triggers);
     }
@@ -142,78 +179,191 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
             $ = new PreventionJobTriggerState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of the job trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the job trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName User set display name of the job trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User set display name of the job trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param inspectJob Controls what and how to inspect for findings.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectJob(@Nullable Output<PreventionJobTriggerInspectJobGetArgs> inspectJob) {
             $.inspectJob = inspectJob;
             return this;
         }
 
+        /**
+         * @param inspectJob Controls what and how to inspect for findings.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectJob(PreventionJobTriggerInspectJobGetArgs inspectJob) {
             return inspectJob(Output.of(inspectJob));
         }
 
+        /**
+         * @param lastRunTime The timestamp of the last time this trigger executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRunTime(@Nullable Output<String> lastRunTime) {
             $.lastRunTime = lastRunTime;
             return this;
         }
 
+        /**
+         * @param lastRunTime The timestamp of the last time this trigger executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRunTime(String lastRunTime) {
             return lastRunTime(Output.of(lastRunTime));
         }
 
+        /**
+         * @param name The name of the Datastore kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Datastore kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parent The parent of the trigger, either in the format `projects/{{project}}`
+         * or `projects/{{project}}/locations/{{location}}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The parent of the trigger, either in the format `projects/{{project}}`
+         * or `projects/{{project}}/locations/{{location}}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param status Whether the trigger is currently active.
+         * Default value is `HEALTHY`.
+         * Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Whether the trigger is currently active.
+         * Default value is `HEALTHY`.
+         * Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param triggers What event needs to occur for a new job to be started.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggers(@Nullable Output<List<PreventionJobTriggerTriggerGetArgs>> triggers) {
             $.triggers = triggers;
             return this;
         }
 
+        /**
+         * @param triggers What event needs to occur for a new job to be started.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggers(List<PreventionJobTriggerTriggerGetArgs> triggers) {
             return triggers(Output.of(triggers));
         }
 
+        /**
+         * @param triggers What event needs to occur for a new job to be started.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggers(PreventionJobTriggerTriggerGetArgs... triggers) {
             return triggers(List.of(triggers));
         }

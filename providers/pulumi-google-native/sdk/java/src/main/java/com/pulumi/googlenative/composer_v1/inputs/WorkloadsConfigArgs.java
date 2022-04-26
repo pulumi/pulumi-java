@@ -28,6 +28,10 @@ public final class WorkloadsConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scheduler")
     private @Nullable Output<SchedulerResourceArgs> scheduler;
 
+    /**
+     * @return Optional. Resources used by Airflow schedulers.
+     * 
+     */
     public Optional<Output<SchedulerResourceArgs>> scheduler() {
         return Optional.ofNullable(this.scheduler);
     }
@@ -39,6 +43,10 @@ public final class WorkloadsConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="webServer")
     private @Nullable Output<WebServerResourceArgs> webServer;
 
+    /**
+     * @return Optional. Resources used by Airflow web server.
+     * 
+     */
     public Optional<Output<WebServerResourceArgs>> webServer() {
         return Optional.ofNullable(this.webServer);
     }
@@ -50,6 +58,10 @@ public final class WorkloadsConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="worker")
     private @Nullable Output<WorkerResourceArgs> worker;
 
+    /**
+     * @return Optional. Resources used by Airflow workers.
+     * 
+     */
     public Optional<Output<WorkerResourceArgs>> worker() {
         return Optional.ofNullable(this.worker);
     }
@@ -80,29 +92,65 @@ public final class WorkloadsConfigArgs extends com.pulumi.resources.ResourceArgs
             $ = new WorkloadsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scheduler Optional. Resources used by Airflow schedulers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduler(@Nullable Output<SchedulerResourceArgs> scheduler) {
             $.scheduler = scheduler;
             return this;
         }
 
+        /**
+         * @param scheduler Optional. Resources used by Airflow schedulers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduler(SchedulerResourceArgs scheduler) {
             return scheduler(Output.of(scheduler));
         }
 
+        /**
+         * @param webServer Optional. Resources used by Airflow web server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webServer(@Nullable Output<WebServerResourceArgs> webServer) {
             $.webServer = webServer;
             return this;
         }
 
+        /**
+         * @param webServer Optional. Resources used by Airflow web server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webServer(WebServerResourceArgs webServer) {
             return webServer(Output.of(webServer));
         }
 
+        /**
+         * @param worker Optional. Resources used by Airflow workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder worker(@Nullable Output<WorkerResourceArgs> worker) {
             $.worker = worker;
             return this;
         }
 
+        /**
+         * @param worker Optional. Resources used by Airflow workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder worker(WorkerResourceArgs worker) {
             return worker(Output.of(worker));
         }

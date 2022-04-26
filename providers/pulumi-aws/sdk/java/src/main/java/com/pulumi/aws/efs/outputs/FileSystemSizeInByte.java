@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FileSystemSizeInByte {
     /**
-     * The latest known metered size (in bytes) of data stored in the file system.
+     * @return The latest known metered size (in bytes) of data stored in the file system.
      * 
      */
     private final @Nullable Integer value;
     /**
-     * The latest known metered size (in bytes) of data stored in the Infrequent Access storage class.
+     * @return The latest known metered size (in bytes) of data stored in the Infrequent Access storage class.
      * 
      */
     private final @Nullable Integer valueInIa;
     /**
-     * The latest known metered size (in bytes) of data stored in the Standard storage class.
+     * @return The latest known metered size (in bytes) of data stored in the Standard storage class.
      * 
      */
     private final @Nullable Integer valueInStandard;
@@ -38,23 +38,23 @@ public final class FileSystemSizeInByte {
     }
 
     /**
-     * The latest known metered size (in bytes) of data stored in the file system.
+     * @return The latest known metered size (in bytes) of data stored in the file system.
      * 
-    */
+     */
     public Optional<Integer> value() {
         return Optional.ofNullable(this.value);
     }
     /**
-     * The latest known metered size (in bytes) of data stored in the Infrequent Access storage class.
+     * @return The latest known metered size (in bytes) of data stored in the Infrequent Access storage class.
      * 
-    */
+     */
     public Optional<Integer> valueInIa() {
         return Optional.ofNullable(this.valueInIa);
     }
     /**
-     * The latest known metered size (in bytes) of data stored in the Standard storage class.
+     * @return The latest known metered size (in bytes) of data stored in the Standard storage class.
      * 
-    */
+     */
     public Optional<Integer> valueInStandard() {
         return Optional.ofNullable(this.valueInStandard);
     }

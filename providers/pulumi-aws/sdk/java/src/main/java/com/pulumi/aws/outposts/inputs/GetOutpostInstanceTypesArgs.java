@@ -19,6 +19,10 @@ public final class GetOutpostInstanceTypesArgs extends com.pulumi.resources.Invo
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return Outpost Amazon Resource Name (ARN).
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetOutpostInstanceTypesArgs extends com.pulumi.resources.Invo
             $ = new GetOutpostInstanceTypesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Outpost Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

@@ -22,6 +22,10 @@ public final class ProcessorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return The time the processor was created.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -33,6 +37,10 @@ public final class ProcessorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultProcessorVersion")
     private @Nullable Output<String> defaultProcessorVersion;
 
+    /**
+     * @return The default processor version.
+     * 
+     */
     public Optional<Output<String>> defaultProcessorVersion() {
         return Optional.ofNullable(this.defaultProcessorVersion);
     }
@@ -44,6 +52,10 @@ public final class ProcessorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name of the processor.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -55,6 +67,10 @@ public final class ProcessorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
     private @Nullable Output<String> kmsKeyName;
 
+    /**
+     * @return The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
+     * 
+     */
     public Optional<Output<String>> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
@@ -80,6 +96,10 @@ public final class ProcessorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -114,38 +134,86 @@ public final class ProcessorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProcessorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime The time the processor was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime The time the processor was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param defaultProcessorVersion The default processor version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultProcessorVersion(@Nullable Output<String> defaultProcessorVersion) {
             $.defaultProcessorVersion = defaultProcessorVersion;
             return this;
         }
 
+        /**
+         * @param defaultProcessorVersion The default processor version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultProcessorVersion(String defaultProcessorVersion) {
             return defaultProcessorVersion(Output.of(defaultProcessorVersion));
         }
 
+        /**
+         * @param displayName The display name of the processor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the processor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param kmsKeyName The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }
@@ -168,11 +236,23 @@ public final class ProcessorArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param type The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

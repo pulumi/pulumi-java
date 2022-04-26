@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class GetEnvgroupResult {
     /**
-     * The time at which the environment group was created as milliseconds since epoch.
+     * @return The time at which the environment group was created as milliseconds since epoch.
      * 
      */
     private final String createdAt;
     /**
-     * Host names for this environment group.
+     * @return Host names for this environment group.
      * 
      */
     private final List<String> hostnames;
     /**
-     * The time at which the environment group was last updated as milliseconds since epoch.
+     * @return The time at which the environment group was last updated as milliseconds since epoch.
      * 
      */
     private final String lastModifiedAt;
     /**
-     * ID of the environment group.
+     * @return ID of the environment group.
      * 
      */
     private final String name;
     /**
-     * State of the environment group. Values other than ACTIVE means the resource is not ready to use.
+     * @return State of the environment group. Values other than ACTIVE means the resource is not ready to use.
      * 
      */
     private final String state;
@@ -51,37 +51,37 @@ public final class GetEnvgroupResult {
     }
 
     /**
-     * The time at which the environment group was created as milliseconds since epoch.
+     * @return The time at which the environment group was created as milliseconds since epoch.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * Host names for this environment group.
+     * @return Host names for this environment group.
      * 
-    */
+     */
     public List<String> hostnames() {
         return this.hostnames;
     }
     /**
-     * The time at which the environment group was last updated as milliseconds since epoch.
+     * @return The time at which the environment group was last updated as milliseconds since epoch.
      * 
-    */
+     */
     public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
-     * ID of the environment group.
+     * @return ID of the environment group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * State of the environment group. Values other than ACTIVE means the resource is not ready to use.
+     * @return State of the environment group. Values other than ACTIVE means the resource is not ready to use.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

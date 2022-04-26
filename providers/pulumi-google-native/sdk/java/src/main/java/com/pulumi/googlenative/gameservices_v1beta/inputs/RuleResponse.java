@@ -26,6 +26,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="action", required=true)
     private String action;
 
+    /**
+     * @return Required
+     * 
+     */
     public String action() {
         return this.action;
     }
@@ -37,6 +41,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="conditions", required=true)
     private List<ConditionResponse> conditions;
 
+    /**
+     * @return Additional restrictions that must be met. All conditions must pass for the rule to match.
+     * 
+     */
     public List<ConditionResponse> conditions() {
         return this.conditions;
     }
@@ -48,6 +56,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Human-readable description of the rule.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -59,6 +71,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="in", required=true)
     private List<String> in;
 
+    /**
+     * @return If one or more &#39;in&#39; clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in at least one of these entries.
+     * 
+     */
     public List<String> in() {
         return this.in;
     }
@@ -70,6 +86,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="logConfig", required=true)
     private List<LogConfigResponse> logConfig;
 
+    /**
+     * @return The config returned to callers of CheckPolicy for any entries that match the LOG action.
+     * 
+     */
     public List<LogConfigResponse> logConfig() {
         return this.logConfig;
     }
@@ -81,6 +101,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="notIn", required=true)
     private List<String> notIn;
 
+    /**
+     * @return If one or more &#39;not_in&#39; clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries. The format for in and not_in entries can be found at in the Local IAM documentation (see go/local-iam#features).
+     * 
+     */
     public List<String> notIn() {
         return this.notIn;
     }
@@ -92,6 +116,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="permissions", required=true)
     private List<String> permissions;
 
+    /**
+     * @return A permission is a string of form &#39;..&#39; (e.g., &#39;storage.buckets.list&#39;). A value of &#39;*&#39; matches all permissions, and a verb part of &#39;*&#39; (e.g., &#39;storage.buckets.*&#39;) matches all verbs.
+     * 
+     */
     public List<String> permissions() {
         return this.permissions;
     }
@@ -126,57 +154,129 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param conditions Additional restrictions that must be met. All conditions must pass for the rule to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<ConditionResponse> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Additional restrictions that must be met. All conditions must pass for the rule to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(ConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param description Human-readable description of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param in If one or more &#39;in&#39; clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in at least one of these entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder in(List<String> in) {
             $.in = in;
             return this;
         }
 
+        /**
+         * @param in If one or more &#39;in&#39; clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in at least one of these entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder in(String... in) {
             return in(List.of(in));
         }
 
+        /**
+         * @param logConfig The config returned to callers of CheckPolicy for any entries that match the LOG action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(List<LogConfigResponse> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
 
+        /**
+         * @param logConfig The config returned to callers of CheckPolicy for any entries that match the LOG action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(LogConfigResponse... logConfig) {
             return logConfig(List.of(logConfig));
         }
 
+        /**
+         * @param notIn If one or more &#39;not_in&#39; clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries. The format for in and not_in entries can be found at in the Local IAM documentation (see go/local-iam#features).
+         * 
+         * @return builder
+         * 
+         */
         public Builder notIn(List<String> notIn) {
             $.notIn = notIn;
             return this;
         }
 
+        /**
+         * @param notIn If one or more &#39;not_in&#39; clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries. The format for in and not_in entries can be found at in the Local IAM documentation (see go/local-iam#features).
+         * 
+         * @return builder
+         * 
+         */
         public Builder notIn(String... notIn) {
             return notIn(List.of(notIn));
         }
 
+        /**
+         * @param permissions A permission is a string of form &#39;..&#39; (e.g., &#39;storage.buckets.list&#39;). A value of &#39;*&#39; matches all permissions, and a verb part of &#39;*&#39; (e.g., &#39;storage.buckets.*&#39;) matches all verbs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<String> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions A permission is a string of form &#39;..&#39; (e.g., &#39;storage.buckets.list&#39;). A value of &#39;*&#39; matches all permissions, and a verb part of &#39;*&#39; (e.g., &#39;storage.buckets.*&#39;) matches all verbs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
         }

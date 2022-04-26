@@ -24,6 +24,10 @@ public final class ApplicationSubComponentTypeConfiguration extends com.pulumi.r
     @Import(name="subComponentConfigurationDetails", required=true)
     private ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails;
 
+    /**
+     * @return The configuration settings of sub components.
+     * 
+     */
     public ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails() {
         return this.subComponentConfigurationDetails;
     }
@@ -35,6 +39,10 @@ public final class ApplicationSubComponentTypeConfiguration extends com.pulumi.r
     @Import(name="subComponentType", required=true)
     private ApplicationSubComponentTypeConfigurationSubComponentType subComponentType;
 
+    /**
+     * @return The sub component type.
+     * 
+     */
     public ApplicationSubComponentTypeConfigurationSubComponentType subComponentType() {
         return this.subComponentType;
     }
@@ -64,11 +72,23 @@ public final class ApplicationSubComponentTypeConfiguration extends com.pulumi.r
             $ = new ApplicationSubComponentTypeConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subComponentConfigurationDetails The configuration settings of sub components.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subComponentConfigurationDetails(ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails) {
             $.subComponentConfigurationDetails = subComponentConfigurationDetails;
             return this;
         }
 
+        /**
+         * @param subComponentType The sub component type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subComponentType(ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
             $.subComponentType = subComponentType;
             return this;

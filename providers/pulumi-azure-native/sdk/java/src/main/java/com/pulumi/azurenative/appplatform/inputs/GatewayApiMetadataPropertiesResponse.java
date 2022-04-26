@@ -25,6 +25,10 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Detailed description of the APIs available on the Gateway instance (default: `Generated OpenAPI 3 document that describes the API routes configured.`)
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
     @Import(name="documentation")
     private @Nullable String documentation;
 
+    /**
+     * @return Location of additional documentation for the APIs available on the Gateway instance
+     * 
+     */
     public Optional<String> documentation() {
         return Optional.ofNullable(this.documentation);
     }
@@ -47,6 +55,10 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
     @Import(name="serverUrl")
     private @Nullable String serverUrl;
 
+    /**
+     * @return Base URL that API consumers will use to access APIs on the Gateway instance.
+     * 
+     */
     public Optional<String> serverUrl() {
         return Optional.ofNullable(this.serverUrl);
     }
@@ -58,6 +70,10 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
     @Import(name="title")
     private @Nullable String title;
 
+    /**
+     * @return Title describing the context of the APIs available on the Gateway instance (default: `Spring Cloud Gateway for K8S`)
+     * 
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
@@ -69,6 +85,10 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return Version of APIs available on this Gateway instance (default: `unspecified`).
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -101,26 +121,56 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
             $ = new GatewayApiMetadataPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Detailed description of the APIs available on the Gateway instance (default: `Generated OpenAPI 3 document that describes the API routes configured.`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param documentation Location of additional documentation for the APIs available on the Gateway instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentation(@Nullable String documentation) {
             $.documentation = documentation;
             return this;
         }
 
+        /**
+         * @param serverUrl Base URL that API consumers will use to access APIs on the Gateway instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverUrl(@Nullable String serverUrl) {
             $.serverUrl = serverUrl;
             return this;
         }
 
+        /**
+         * @param title Title describing the context of the APIs available on the Gateway instance (default: `Spring Cloud Gateway for K8S`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable String title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param version Version of APIs available on this Gateway instance (default: `unspecified`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

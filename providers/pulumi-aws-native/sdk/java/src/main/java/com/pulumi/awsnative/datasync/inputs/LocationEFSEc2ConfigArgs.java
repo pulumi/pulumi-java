@@ -25,6 +25,10 @@ public final class LocationEFSEc2ConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="securityGroupArns", required=true)
     private Output<List<String>> securityGroupArns;
 
+    /**
+     * @return The Amazon Resource Names (ARNs) of the security groups that are configured for the Amazon EC2 resource.
+     * 
+     */
     public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns;
     }
@@ -36,6 +40,10 @@ public final class LocationEFSEc2ConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="subnetArn", required=true)
     private Output<String> subnetArn;
 
+    /**
+     * @return The ARN of the subnet that DataSync uses to access the target EFS file system.
+     * 
+     */
     public Output<String> subnetArn() {
         return this.subnetArn;
     }
@@ -65,24 +73,54 @@ public final class LocationEFSEc2ConfigArgs extends com.pulumi.resources.Resourc
             $ = new LocationEFSEc2ConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityGroupArns The Amazon Resource Names (ARNs) of the security groups that are configured for the Amazon EC2 resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupArns(Output<List<String>> securityGroupArns) {
             $.securityGroupArns = securityGroupArns;
             return this;
         }
 
+        /**
+         * @param securityGroupArns The Amazon Resource Names (ARNs) of the security groups that are configured for the Amazon EC2 resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupArns(List<String> securityGroupArns) {
             return securityGroupArns(Output.of(securityGroupArns));
         }
 
+        /**
+         * @param securityGroupArns The Amazon Resource Names (ARNs) of the security groups that are configured for the Amazon EC2 resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupArns(String... securityGroupArns) {
             return securityGroupArns(List.of(securityGroupArns));
         }
 
+        /**
+         * @param subnetArn The ARN of the subnet that DataSync uses to access the target EFS file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetArn(Output<String> subnetArn) {
             $.subnetArn = subnetArn;
             return this;
         }
 
+        /**
+         * @param subnetArn The ARN of the subnet that DataSync uses to access the target EFS file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetArn(String subnetArn) {
             return subnetArn(Output.of(subnetArn));
         }

@@ -25,6 +25,10 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The plan ID.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="product")
     private @Nullable String product;
 
+    /**
+     * @return Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
+     * 
+     */
     public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
@@ -47,6 +55,10 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="promotionCode")
     private @Nullable String promotionCode;
 
+    /**
+     * @return The promotion code.
+     * 
+     */
     public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
@@ -58,6 +70,10 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="publisher")
     private @Nullable String publisher;
 
+    /**
+     * @return The publisher ID.
+     * 
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -89,21 +105,45 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PlanResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The plan ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param product Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(@Nullable String product) {
             $.product = product;
             return this;
         }
 
+        /**
+         * @param promotionCode The promotion code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionCode(@Nullable String promotionCode) {
             $.promotionCode = promotionCode;
             return this;
         }
 
+        /**
+         * @param publisher The publisher ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable String publisher) {
             $.publisher = publisher;
             return this;

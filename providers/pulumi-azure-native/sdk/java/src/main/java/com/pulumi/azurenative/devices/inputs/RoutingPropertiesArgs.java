@@ -30,6 +30,10 @@ public final class RoutingPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="endpoints")
     private @Nullable Output<RoutingEndpointsArgs> endpoints;
 
+    /**
+     * @return The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.
+     * 
+     */
     public Optional<Output<RoutingEndpointsArgs>> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
@@ -41,6 +45,10 @@ public final class RoutingPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="enrichments")
     private @Nullable Output<List<EnrichmentPropertiesArgs>> enrichments;
 
+    /**
+     * @return The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid
+     * 
+     */
     public Optional<Output<List<EnrichmentPropertiesArgs>>> enrichments() {
         return Optional.ofNullable(this.enrichments);
     }
@@ -52,6 +60,10 @@ public final class RoutingPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="fallbackRoute")
     private @Nullable Output<FallbackRoutePropertiesArgs> fallbackRoute;
 
+    /**
+     * @return The properties of the route that is used as a fall-back route when none of the conditions specified in the &#39;routes&#39; section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the &#39;routes&#39; section get routed to the built-in eventhub endpoint.
+     * 
+     */
     public Optional<Output<FallbackRoutePropertiesArgs>> fallbackRoute() {
         return Optional.ofNullable(this.fallbackRoute);
     }
@@ -63,6 +75,10 @@ public final class RoutingPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="routes")
     private @Nullable Output<List<RoutePropertiesArgs>> routes;
 
+    /**
+     * @return The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.
+     * 
+     */
     public Optional<Output<List<RoutePropertiesArgs>>> routes() {
         return Optional.ofNullable(this.routes);
     }
@@ -94,46 +110,106 @@ public final class RoutingPropertiesArgs extends com.pulumi.resources.ResourceAr
             $ = new RoutingPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoints The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(@Nullable Output<RoutingEndpointsArgs> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
 
+        /**
+         * @param endpoints The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(RoutingEndpointsArgs endpoints) {
             return endpoints(Output.of(endpoints));
         }
 
+        /**
+         * @param enrichments The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid
+         * 
+         * @return builder
+         * 
+         */
         public Builder enrichments(@Nullable Output<List<EnrichmentPropertiesArgs>> enrichments) {
             $.enrichments = enrichments;
             return this;
         }
 
+        /**
+         * @param enrichments The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid
+         * 
+         * @return builder
+         * 
+         */
         public Builder enrichments(List<EnrichmentPropertiesArgs> enrichments) {
             return enrichments(Output.of(enrichments));
         }
 
+        /**
+         * @param enrichments The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid
+         * 
+         * @return builder
+         * 
+         */
         public Builder enrichments(EnrichmentPropertiesArgs... enrichments) {
             return enrichments(List.of(enrichments));
         }
 
+        /**
+         * @param fallbackRoute The properties of the route that is used as a fall-back route when none of the conditions specified in the &#39;routes&#39; section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the &#39;routes&#39; section get routed to the built-in eventhub endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fallbackRoute(@Nullable Output<FallbackRoutePropertiesArgs> fallbackRoute) {
             $.fallbackRoute = fallbackRoute;
             return this;
         }
 
+        /**
+         * @param fallbackRoute The properties of the route that is used as a fall-back route when none of the conditions specified in the &#39;routes&#39; section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the &#39;routes&#39; section get routed to the built-in eventhub endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fallbackRoute(FallbackRoutePropertiesArgs fallbackRoute) {
             return fallbackRoute(Output.of(fallbackRoute));
         }
 
+        /**
+         * @param routes The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(@Nullable Output<List<RoutePropertiesArgs>> routes) {
             $.routes = routes;
             return this;
         }
 
+        /**
+         * @param routes The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(List<RoutePropertiesArgs> routes) {
             return routes(Output.of(routes));
         }
 
+        /**
+         * @param routes The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(RoutePropertiesArgs... routes) {
             return routes(List.of(routes));
         }

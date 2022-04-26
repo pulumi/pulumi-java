@@ -26,6 +26,10 @@ public final class KpiGroupByMetadataResponse extends com.pulumi.resources.Invok
     @Import(name="displayName")
     private @Nullable Map<String,String> displayName;
 
+    /**
+     * @return The display name.
+     * 
+     */
     public Optional<Map<String,String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -37,6 +41,10 @@ public final class KpiGroupByMetadataResponse extends com.pulumi.resources.Invok
     @Import(name="fieldName")
     private @Nullable String fieldName;
 
+    /**
+     * @return The name of the field.
+     * 
+     */
     public Optional<String> fieldName() {
         return Optional.ofNullable(this.fieldName);
     }
@@ -48,6 +56,10 @@ public final class KpiGroupByMetadataResponse extends com.pulumi.resources.Invok
     @Import(name="fieldType")
     private @Nullable String fieldType;
 
+    /**
+     * @return The type of the field.
+     * 
+     */
     public Optional<String> fieldType() {
         return Optional.ofNullable(this.fieldType);
     }
@@ -78,16 +90,34 @@ public final class KpiGroupByMetadataResponse extends com.pulumi.resources.Invok
             $ = new KpiGroupByMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Map<String,String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param fieldName The name of the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldName(@Nullable String fieldName) {
             $.fieldName = fieldName;
             return this;
         }
 
+        /**
+         * @param fieldType The type of the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldType(@Nullable String fieldType) {
             $.fieldType = fieldType;
             return this;

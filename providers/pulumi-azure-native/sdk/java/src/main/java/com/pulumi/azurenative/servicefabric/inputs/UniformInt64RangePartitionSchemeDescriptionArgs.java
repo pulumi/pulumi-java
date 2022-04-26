@@ -26,6 +26,10 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends com.p
     @Import(name="count", required=true)
     private Output<Integer> count;
 
+    /**
+     * @return The number of partitions.
+     * 
+     */
     public Output<Integer> count() {
         return this.count;
     }
@@ -38,6 +42,11 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends com.p
     @Import(name="highKey", required=true)
     private Output<String> highKey;
 
+    /**
+     * @return String indicating the upper bound of the partition key range that
+     * should be split between the partition ‘count’
+     * 
+     */
     public Output<String> highKey() {
         return this.highKey;
     }
@@ -50,6 +59,11 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends com.p
     @Import(name="lowKey", required=true)
     private Output<String> lowKey;
 
+    /**
+     * @return String indicating the lower bound of the partition key range that
+     * should be split between the partition ‘count’
+     * 
+     */
     public Output<String> lowKey() {
         return this.lowKey;
     }
@@ -62,6 +76,11 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends com.p
     @Import(name="partitionScheme", required=true)
     private Output<String> partitionScheme;
 
+    /**
+     * @return Enumerates the ways that a service can be partitioned.
+     * Expected value is &#39;UniformInt64Range&#39;.
+     * 
+     */
     public Output<String> partitionScheme() {
         return this.partitionScheme;
     }
@@ -93,38 +112,92 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends com.p
             $ = new UniformInt64RangePartitionSchemeDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count The number of partitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count The number of partitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param highKey String indicating the upper bound of the partition key range that
+         * should be split between the partition ‘count’
+         * 
+         * @return builder
+         * 
+         */
         public Builder highKey(Output<String> highKey) {
             $.highKey = highKey;
             return this;
         }
 
+        /**
+         * @param highKey String indicating the upper bound of the partition key range that
+         * should be split between the partition ‘count’
+         * 
+         * @return builder
+         * 
+         */
         public Builder highKey(String highKey) {
             return highKey(Output.of(highKey));
         }
 
+        /**
+         * @param lowKey String indicating the lower bound of the partition key range that
+         * should be split between the partition ‘count’
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowKey(Output<String> lowKey) {
             $.lowKey = lowKey;
             return this;
         }
 
+        /**
+         * @param lowKey String indicating the lower bound of the partition key range that
+         * should be split between the partition ‘count’
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowKey(String lowKey) {
             return lowKey(Output.of(lowKey));
         }
 
+        /**
+         * @param partitionScheme Enumerates the ways that a service can be partitioned.
+         * Expected value is &#39;UniformInt64Range&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionScheme(Output<String> partitionScheme) {
             $.partitionScheme = partitionScheme;
             return this;
         }
 
+        /**
+         * @param partitionScheme Enumerates the ways that a service can be partitioned.
+         * Expected value is &#39;UniformInt64Range&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionScheme(String partitionScheme) {
             return partitionScheme(Output.of(partitionScheme));
         }

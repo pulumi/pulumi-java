@@ -44,6 +44,11 @@ public final class DatabaseInstanceServerCaCertArgs extends com.pulumi.resources
     @Import(name="expirationTime")
     private @Nullable Output<String> expirationTime;
 
+    /**
+     * @return The [RFC 3339](https://tools.ietf.org/html/rfc3339)
+     * formatted date time string indicating when this whitelist expires.
+     * 
+     */
     public Optional<Output<String>> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
@@ -110,11 +115,25 @@ public final class DatabaseInstanceServerCaCertArgs extends com.pulumi.resources
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param expirationTime The [RFC 3339](https://tools.ietf.org/html/rfc3339)
+         * formatted date time string indicating when this whitelist expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param expirationTime The [RFC 3339](https://tools.ietf.org/html/rfc3339)
+         * formatted date time string indicating when this whitelist expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(String expirationTime) {
             return expirationTime(Output.of(expirationTime));
         }

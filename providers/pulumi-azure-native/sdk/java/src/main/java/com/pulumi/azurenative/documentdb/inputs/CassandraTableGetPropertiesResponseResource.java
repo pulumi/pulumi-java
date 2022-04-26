@@ -24,6 +24,10 @@ public final class CassandraTableGetPropertiesResponseResource extends com.pulum
     @Import(name="analyticalStorageTtl")
     private @Nullable Integer analyticalStorageTtl;
 
+    /**
+     * @return Analytical TTL.
+     * 
+     */
     public Optional<Integer> analyticalStorageTtl() {
         return Optional.ofNullable(this.analyticalStorageTtl);
     }
@@ -35,6 +39,10 @@ public final class CassandraTableGetPropertiesResponseResource extends com.pulum
     @Import(name="defaultTtl")
     private @Nullable Integer defaultTtl;
 
+    /**
+     * @return Time to live of the Cosmos DB Cassandra table
+     * 
+     */
     public Optional<Integer> defaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
@@ -46,6 +54,10 @@ public final class CassandraTableGetPropertiesResponseResource extends com.pulum
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A system generated property representing the resource etag required for optimistic concurrency control.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -57,6 +69,10 @@ public final class CassandraTableGetPropertiesResponseResource extends com.pulum
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Name of the Cosmos DB Cassandra table
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -68,6 +84,10 @@ public final class CassandraTableGetPropertiesResponseResource extends com.pulum
     @Import(name="rid", required=true)
     private String rid;
 
+    /**
+     * @return A system generated property. A unique identifier.
+     * 
+     */
     public String rid() {
         return this.rid;
     }
@@ -79,6 +99,10 @@ public final class CassandraTableGetPropertiesResponseResource extends com.pulum
     @Import(name="schema")
     private @Nullable CassandraSchemaResponse schema;
 
+    /**
+     * @return Schema of the Cosmos DB Cassandra table
+     * 
+     */
     public Optional<CassandraSchemaResponse> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -90,6 +114,10 @@ public final class CassandraTableGetPropertiesResponseResource extends com.pulum
     @Import(name="ts", required=true)
     private Double ts;
 
+    /**
+     * @return A system generated property that denotes the last updated timestamp of the resource.
+     * 
+     */
     public Double ts() {
         return this.ts;
     }
@@ -124,36 +152,78 @@ public final class CassandraTableGetPropertiesResponseResource extends com.pulum
             $ = new CassandraTableGetPropertiesResponseResource(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analyticalStorageTtl Analytical TTL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
             $.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
 
+        /**
+         * @param defaultTtl Time to live of the Cosmos DB Cassandra table
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
             $.defaultTtl = defaultTtl;
             return this;
         }
 
+        /**
+         * @param etag A system generated property representing the resource etag required for optimistic concurrency control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Name of the Cosmos DB Cassandra table
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param rid A system generated property. A unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rid(String rid) {
             $.rid = rid;
             return this;
         }
 
+        /**
+         * @param schema Schema of the Cosmos DB Cassandra table
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable CassandraSchemaResponse schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param ts A system generated property that denotes the last updated timestamp of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ts(Double ts) {
             $.ts = ts;
             return this;

@@ -20,6 +20,10 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
     @Import(name="items", required=true)
     private List<String> items;
 
+    /**
+     * @return A list of item names (`cookies`, `headers`, or `query_strings`).
+     * 
+     */
     public List<String> items() {
         return this.items;
     }
@@ -48,11 +52,23 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
             $ = new GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param items A list of item names (`cookies`, `headers`, or `query_strings`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<String> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items A list of item names (`cookies`, `headers`, or `query_strings`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(String... items) {
             return items(List.of(items));
         }

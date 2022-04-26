@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs extends
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The name of the rollout step;
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs extends
     @Import(name="minDuration")
     private @Nullable Output<String> minDuration;
 
+    /**
+     * @return The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.
+     * 
+     */
     public Optional<Output<String>> minDuration() {
         return Optional.ofNullable(this.minDuration);
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs extends
     @Import(name="trafficPercent")
     private @Nullable Output<Integer> trafficPercent;
 
+    /**
+     * @return The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].
+     * 
+     */
     public Optional<Output<Integer>> trafficPercent() {
         return Optional.ofNullable(this.trafficPercent);
     }
@@ -79,29 +91,65 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs extends
             $ = new GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The name of the rollout step;
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The name of the rollout step;
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param minDuration The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minDuration(@Nullable Output<String> minDuration) {
             $.minDuration = minDuration;
             return this;
         }
 
+        /**
+         * @param minDuration The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minDuration(String minDuration) {
             return minDuration(Output.of(minDuration));
         }
 
+        /**
+         * @param trafficPercent The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficPercent(@Nullable Output<Integer> trafficPercent) {
             $.trafficPercent = trafficPercent;
             return this;
         }
 
+        /**
+         * @param trafficPercent The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficPercent(Integer trafficPercent) {
             return trafficPercent(Output.of(trafficPercent));
         }

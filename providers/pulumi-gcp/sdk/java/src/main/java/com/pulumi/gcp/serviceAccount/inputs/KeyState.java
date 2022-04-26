@@ -24,6 +24,10 @@ public final class KeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
     private @Nullable Output<Map<String,Object>> keepers;
 
+    /**
+     * @return Arbitrary map of values that, when changed, will trigger a new key to be generated.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> keepers() {
         return Optional.ofNullable(this.keepers);
     }
@@ -38,6 +42,13 @@ public final class KeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyAlgorithm")
     private @Nullable Output<String> keyAlgorithm;
 
+    /**
+     * @return The algorithm used to generate the key. KEY_ALG_RSA_2048 is the default algorithm.
+     * Valid values are listed at
+     * [ServiceAccountPrivateKeyType](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys#ServiceAccountKeyAlgorithm)
+     * (only used on create)
+     * 
+     */
     public Optional<Output<String>> keyAlgorithm() {
         return Optional.ofNullable(this.keyAlgorithm);
     }
@@ -49,6 +60,10 @@ public final class KeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name used for this key pair
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +76,11 @@ public final class KeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateKey")
     private @Nullable Output<String> privateKey;
 
+    /**
+     * @return The private key in JSON format, base64 encoded. This is what you normally get as a file when creating
+     * service account keys through the CLI or web console. This is only populated when creating a new key.
+     * 
+     */
     public Optional<Output<String>> privateKey() {
         return Optional.ofNullable(this.privateKey);
     }
@@ -72,6 +92,10 @@ public final class KeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateKeyType")
     private @Nullable Output<String> privateKeyType;
 
+    /**
+     * @return The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
+     * 
+     */
     public Optional<Output<String>> privateKeyType() {
         return Optional.ofNullable(this.privateKeyType);
     }
@@ -83,6 +107,10 @@ public final class KeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
     private @Nullable Output<String> publicKey;
 
+    /**
+     * @return The public key, base64 encoded
+     * 
+     */
     public Optional<Output<String>> publicKey() {
         return Optional.ofNullable(this.publicKey);
     }
@@ -94,6 +122,10 @@ public final class KeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKeyData")
     private @Nullable Output<String> publicKeyData;
 
+    /**
+     * @return Public key data to create a service account key for given service account. The expected format for this field is a base64 encoded X509_PEM and it conflicts with `public_key_type` and `private_key_type`.
+     * 
+     */
     public Optional<Output<String>> publicKeyData() {
         return Optional.ofNullable(this.publicKeyData);
     }
@@ -105,6 +137,10 @@ public final class KeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKeyType")
     private @Nullable Output<String> publicKeyType;
 
+    /**
+     * @return The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
+     * 
+     */
     public Optional<Output<String>> publicKeyType() {
         return Optional.ofNullable(this.publicKeyType);
     }
@@ -118,6 +154,12 @@ public final class KeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountId")
     private @Nullable Output<String> serviceAccountId;
 
+    /**
+     * @return The Service account id of the Key. This can be a string in the format
+     * `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`, where `{ACCOUNT}` is the email address or
+     * unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
+     * 
+     */
     public Optional<Output<String>> serviceAccountId() {
         return Optional.ofNullable(this.serviceAccountId);
     }
@@ -129,6 +171,10 @@ public final class KeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="validAfter")
     private @Nullable Output<String> validAfter;
 
+    /**
+     * @return The key can be used after this timestamp. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> validAfter() {
         return Optional.ofNullable(this.validAfter);
     }
@@ -141,6 +187,11 @@ public final class KeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="validBefore")
     private @Nullable Output<String> validBefore;
 
+    /**
+     * @return The key can be used before this timestamp.
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> validBefore() {
         return Optional.ofNullable(this.validBefore);
     }
@@ -179,101 +230,247 @@ public final class KeyState extends com.pulumi.resources.ResourceArgs {
             $ = new KeyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger a new key to be generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             $.keepers = keepers;
             return this;
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger a new key to be generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(Map<String,Object> keepers) {
             return keepers(Output.of(keepers));
         }
 
+        /**
+         * @param keyAlgorithm The algorithm used to generate the key. KEY_ALG_RSA_2048 is the default algorithm.
+         * Valid values are listed at
+         * [ServiceAccountPrivateKeyType](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys#ServiceAccountKeyAlgorithm)
+         * (only used on create)
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyAlgorithm(@Nullable Output<String> keyAlgorithm) {
             $.keyAlgorithm = keyAlgorithm;
             return this;
         }
 
+        /**
+         * @param keyAlgorithm The algorithm used to generate the key. KEY_ALG_RSA_2048 is the default algorithm.
+         * Valid values are listed at
+         * [ServiceAccountPrivateKeyType](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys#ServiceAccountKeyAlgorithm)
+         * (only used on create)
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyAlgorithm(String keyAlgorithm) {
             return keyAlgorithm(Output.of(keyAlgorithm));
         }
 
+        /**
+         * @param name The name used for this key pair
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name used for this key pair
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param privateKey The private key in JSON format, base64 encoded. This is what you normally get as a file when creating
+         * service account keys through the CLI or web console. This is only populated when creating a new key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(@Nullable Output<String> privateKey) {
             $.privateKey = privateKey;
             return this;
         }
 
+        /**
+         * @param privateKey The private key in JSON format, base64 encoded. This is what you normally get as a file when creating
+         * service account keys through the CLI or web console. This is only populated when creating a new key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(String privateKey) {
             return privateKey(Output.of(privateKey));
         }
 
+        /**
+         * @param privateKeyType The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyType(@Nullable Output<String> privateKeyType) {
             $.privateKeyType = privateKeyType;
             return this;
         }
 
+        /**
+         * @param privateKeyType The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyType(String privateKeyType) {
             return privateKeyType(Output.of(privateKeyType));
         }
 
+        /**
+         * @param publicKey The public key, base64 encoded
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(@Nullable Output<String> publicKey) {
             $.publicKey = publicKey;
             return this;
         }
 
+        /**
+         * @param publicKey The public key, base64 encoded
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(String publicKey) {
             return publicKey(Output.of(publicKey));
         }
 
+        /**
+         * @param publicKeyData Public key data to create a service account key for given service account. The expected format for this field is a base64 encoded X509_PEM and it conflicts with `public_key_type` and `private_key_type`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyData(@Nullable Output<String> publicKeyData) {
             $.publicKeyData = publicKeyData;
             return this;
         }
 
+        /**
+         * @param publicKeyData Public key data to create a service account key for given service account. The expected format for this field is a base64 encoded X509_PEM and it conflicts with `public_key_type` and `private_key_type`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyData(String publicKeyData) {
             return publicKeyData(Output.of(publicKeyData));
         }
 
+        /**
+         * @param publicKeyType The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyType(@Nullable Output<String> publicKeyType) {
             $.publicKeyType = publicKeyType;
             return this;
         }
 
+        /**
+         * @param publicKeyType The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyType(String publicKeyType) {
             return publicKeyType(Output.of(publicKeyType));
         }
 
+        /**
+         * @param serviceAccountId The Service account id of the Key. This can be a string in the format
+         * `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`, where `{ACCOUNT}` is the email address or
+         * unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountId(@Nullable Output<String> serviceAccountId) {
             $.serviceAccountId = serviceAccountId;
             return this;
         }
 
+        /**
+         * @param serviceAccountId The Service account id of the Key. This can be a string in the format
+         * `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`, where `{ACCOUNT}` is the email address or
+         * unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountId(String serviceAccountId) {
             return serviceAccountId(Output.of(serviceAccountId));
         }
 
+        /**
+         * @param validAfter The key can be used after this timestamp. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validAfter(@Nullable Output<String> validAfter) {
             $.validAfter = validAfter;
             return this;
         }
 
+        /**
+         * @param validAfter The key can be used after this timestamp. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validAfter(String validAfter) {
             return validAfter(Output.of(validAfter));
         }
 
+        /**
+         * @param validBefore The key can be used before this timestamp.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validBefore(@Nullable Output<String> validBefore) {
             $.validBefore = validBefore;
             return this;
         }
 
+        /**
+         * @param validBefore The key can be used before this timestamp.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validBefore(String validBefore) {
             return validBefore(Output.of(validBefore));
         }

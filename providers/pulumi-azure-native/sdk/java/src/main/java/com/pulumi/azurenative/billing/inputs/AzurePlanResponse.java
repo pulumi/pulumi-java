@@ -25,6 +25,10 @@ public final class AzurePlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="skuDescription", required=true)
     private String skuDescription;
 
+    /**
+     * @return The sku description.
+     * 
+     */
     public String skuDescription() {
         return this.skuDescription;
     }
@@ -36,6 +40,10 @@ public final class AzurePlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="skuId")
     private @Nullable String skuId;
 
+    /**
+     * @return The sku id.
+     * 
+     */
     public Optional<String> skuId() {
         return Optional.ofNullable(this.skuId);
     }
@@ -65,11 +73,23 @@ public final class AzurePlanResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AzurePlanResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param skuDescription The sku description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuDescription(String skuDescription) {
             $.skuDescription = skuDescription;
             return this;
         }
 
+        /**
+         * @param skuId The sku id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuId(@Nullable String skuId) {
             $.skuId = skuId;
             return this;

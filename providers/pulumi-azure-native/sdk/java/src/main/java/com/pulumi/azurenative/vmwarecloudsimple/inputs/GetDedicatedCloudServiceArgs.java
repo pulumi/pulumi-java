@@ -19,6 +19,10 @@ public final class GetDedicatedCloudServiceArgs extends com.pulumi.resources.Inv
     @Import(name="dedicatedCloudServiceName", required=true)
     private String dedicatedCloudServiceName;
 
+    /**
+     * @return dedicated cloud Service name
+     * 
+     */
     public String dedicatedCloudServiceName() {
         return this.dedicatedCloudServiceName;
     }
@@ -30,6 +34,10 @@ public final class GetDedicatedCloudServiceArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetDedicatedCloudServiceArgs extends com.pulumi.resources.Inv
             $ = new GetDedicatedCloudServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dedicatedCloudServiceName dedicated cloud Service name
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedicatedCloudServiceName(String dedicatedCloudServiceName) {
             $.dedicatedCloudServiceName = dedicatedCloudServiceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

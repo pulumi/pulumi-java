@@ -26,6 +26,10 @@ public final class CopyActivityLogSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="enableReliableLogging")
     private @Nullable Output<Object> enableReliableLogging;
 
+    /**
+     * @return Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> enableReliableLogging() {
         return Optional.ofNullable(this.enableReliableLogging);
     }
@@ -37,6 +41,10 @@ public final class CopyActivityLogSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="logLevel")
     private @Nullable Output<Object> logLevel;
 
+    /**
+     * @return Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
@@ -66,20 +74,44 @@ public final class CopyActivityLogSettingsArgs extends com.pulumi.resources.Reso
             $ = new CopyActivityLogSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableReliableLogging Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableReliableLogging(@Nullable Output<Object> enableReliableLogging) {
             $.enableReliableLogging = enableReliableLogging;
             return this;
         }
 
+        /**
+         * @param enableReliableLogging Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableReliableLogging(Object enableReliableLogging) {
             return enableReliableLogging(Output.of(enableReliableLogging));
         }
 
+        /**
+         * @param logLevel Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(@Nullable Output<Object> logLevel) {
             $.logLevel = logLevel;
             return this;
         }
 
+        /**
+         * @param logLevel Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(Object logLevel) {
             return logLevel(Output.of(logLevel));
         }

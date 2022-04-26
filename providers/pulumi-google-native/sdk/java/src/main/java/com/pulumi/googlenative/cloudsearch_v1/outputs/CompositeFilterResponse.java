@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class CompositeFilterResponse {
     /**
-     * The logic operator of the sub filter.
+     * @return The logic operator of the sub filter.
      * 
      */
     private final String logicOperator;
     /**
-     * Sub filters.
+     * @return Sub filters.
      * 
      */
     private final List<FilterResponse> subFilters;
@@ -31,16 +31,16 @@ public final class CompositeFilterResponse {
     }
 
     /**
-     * The logic operator of the sub filter.
+     * @return The logic operator of the sub filter.
      * 
-    */
+     */
     public String logicOperator() {
         return this.logicOperator;
     }
     /**
-     * Sub filters.
+     * @return Sub filters.
      * 
-    */
+     */
     public List<FilterResponse> subFilters() {
         return this.subFilters;
     }

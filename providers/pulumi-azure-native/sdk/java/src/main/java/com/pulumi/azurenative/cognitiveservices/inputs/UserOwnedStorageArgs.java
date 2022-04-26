@@ -26,6 +26,10 @@ public final class UserOwnedStorageArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return Full resource id of a Microsoft.Storage resource.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -54,11 +58,23 @@ public final class UserOwnedStorageArgs extends com.pulumi.resources.ResourceArg
             $ = new UserOwnedStorageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId Full resource id of a Microsoft.Storage resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Full resource id of a Microsoft.Storage resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

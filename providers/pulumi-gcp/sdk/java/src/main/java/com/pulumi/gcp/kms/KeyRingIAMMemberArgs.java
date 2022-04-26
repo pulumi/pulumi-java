@@ -24,6 +24,11 @@ public final class KeyRingIAMMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="condition")
     private @Nullable Output<KeyRingIAMMemberConditionArgs> condition;
 
+    /**
+     * @return ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<KeyRingIAMMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -38,6 +43,13 @@ public final class KeyRingIAMMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="keyRingId", required=true)
     private Output<String> keyRingId;
 
+    /**
+     * @return The key ring ID, in the form
+     * `{project_id}/{location_name}/{key_ring_name}` or
+     * `{location_name}/{key_ring_name}`. In the second form, the provider&#39;s
+     * project setting will be used as a fallback.
+     * 
+     */
     public Output<String> keyRingId() {
         return this.keyRingId;
     }
@@ -58,6 +70,12 @@ public final class KeyRingIAMMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.kms.KeyRingIAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -89,20 +107,52 @@ public final class KeyRingIAMMemberArgs extends com.pulumi.resources.ResourceArg
             $ = new KeyRingIAMMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<KeyRingIAMMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(KeyRingIAMMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param keyRingId The key ring ID, in the form
+         * `{project_id}/{location_name}/{key_ring_name}` or
+         * `{location_name}/{key_ring_name}`. In the second form, the provider&#39;s
+         * project setting will be used as a fallback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRingId(Output<String> keyRingId) {
             $.keyRingId = keyRingId;
             return this;
         }
 
+        /**
+         * @param keyRingId The key ring ID, in the form
+         * `{project_id}/{location_name}/{key_ring_name}` or
+         * `{location_name}/{key_ring_name}`. In the second form, the provider&#39;s
+         * project setting will be used as a fallback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRingId(String keyRingId) {
             return keyRingId(Output.of(keyRingId));
         }
@@ -116,11 +166,27 @@ public final class KeyRingIAMMemberArgs extends com.pulumi.resources.ResourceArg
             return member(Output.of(member));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.kms.KeyRingIAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.kms.KeyRingIAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

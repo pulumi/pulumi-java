@@ -26,6 +26,11 @@ public final class UrlRewriteActionResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the action for the delivery rule.
+     * Expected value is &#39;UrlRewrite&#39;.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -37,6 +42,10 @@ public final class UrlRewriteActionResponse extends com.pulumi.resources.InvokeA
     @Import(name="parameters", required=true)
     private UrlRewriteActionParametersResponse parameters;
 
+    /**
+     * @return Defines the parameters for the action.
+     * 
+     */
     public UrlRewriteActionParametersResponse parameters() {
         return this.parameters;
     }
@@ -66,11 +75,24 @@ public final class UrlRewriteActionResponse extends com.pulumi.resources.InvokeA
             $ = new UrlRewriteActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the action for the delivery rule.
+         * Expected value is &#39;UrlRewrite&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameters Defines the parameters for the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(UrlRewriteActionParametersResponse parameters) {
             $.parameters = parameters;
             return this;

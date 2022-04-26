@@ -27,6 +27,10 @@ public final class EmailReceiverResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="emailAddress", required=true)
     private String emailAddress;
 
+    /**
+     * @return The email address of this receiver.
+     * 
+     */
     public String emailAddress() {
         return this.emailAddress;
     }
@@ -38,6 +42,10 @@ public final class EmailReceiverResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the email receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class EmailReceiverResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The receiver status of the e-mail.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -60,6 +72,10 @@ public final class EmailReceiverResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="useCommonAlertSchema")
     private @Nullable Boolean useCommonAlertSchema;
 
+    /**
+     * @return Indicates whether to use common alert schema.
+     * 
+     */
     public Optional<Boolean> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
@@ -91,21 +107,45 @@ public final class EmailReceiverResponse extends com.pulumi.resources.InvokeArgs
             $ = new EmailReceiverResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailAddress The email address of this receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(String emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param name The name of the email receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param status The receiver status of the e-mail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             $.useCommonAlertSchema = useCommonAlertSchema;
             return this;

@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class HeaderResponse {
     /**
-     * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
+     * @return The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
      * 
      */
     private final String glob;
     /**
-     * The additional headers to add to the response.
+     * @return The additional headers to add to the response.
      * 
      */
     private final Map<String,String> headers;
     /**
-     * The user-supplied RE2 regular expression to match against the request URL path.
+     * @return The user-supplied RE2 regular expression to match against the request URL path.
      * 
      */
     private final String regex;
@@ -37,23 +37,23 @@ public final class HeaderResponse {
     }
 
     /**
-     * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
+     * @return The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
      * 
-    */
+     */
     public String glob() {
         return this.glob;
     }
     /**
-     * The additional headers to add to the response.
+     * @return The additional headers to add to the response.
      * 
-    */
+     */
     public Map<String,String> headers() {
         return this.headers;
     }
     /**
-     * The user-supplied RE2 regular expression to match against the request URL path.
+     * @return The user-supplied RE2 regular expression to match against the request URL path.
      * 
-    */
+     */
     public String regex() {
         return this.regex;
     }

@@ -33,6 +33,10 @@ public final class ThresholdRuleConditionArgs extends com.pulumi.resources.Resou
     @Import(name="dataSource")
     private @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
+    /**
+     * @return the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+     * 
+     */
     public Optional<Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>>> dataSource() {
         return Optional.ofNullable(this.dataSource);
     }
@@ -45,6 +49,11 @@ public final class ThresholdRuleConditionArgs extends com.pulumi.resources.Resou
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -56,6 +65,10 @@ public final class ThresholdRuleConditionArgs extends com.pulumi.resources.Resou
     @Import(name="operator", required=true)
     private Output<ConditionOperator> operator;
 
+    /**
+     * @return the operator used to compare the data and the threshold.
+     * 
+     */
     public Output<ConditionOperator> operator() {
         return this.operator;
     }
@@ -67,6 +80,10 @@ public final class ThresholdRuleConditionArgs extends com.pulumi.resources.Resou
     @Import(name="threshold", required=true)
     private Output<Double> threshold;
 
+    /**
+     * @return the threshold value that activates the alert.
+     * 
+     */
     public Output<Double> threshold() {
         return this.threshold;
     }
@@ -78,6 +95,10 @@ public final class ThresholdRuleConditionArgs extends com.pulumi.resources.Resou
     @Import(name="timeAggregation")
     private @Nullable Output<TimeAggregationOperator> timeAggregation;
 
+    /**
+     * @return the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
+     * 
+     */
     public Optional<Output<TimeAggregationOperator>> timeAggregation() {
         return Optional.ofNullable(this.timeAggregation);
     }
@@ -89,6 +110,10 @@ public final class ThresholdRuleConditionArgs extends com.pulumi.resources.Resou
     @Import(name="windowSize")
     private @Nullable Output<String> windowSize;
 
+    /**
+     * @return the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+     * 
+     */
     public Optional<Output<String>> windowSize() {
         return Optional.ofNullable(this.windowSize);
     }
@@ -122,64 +147,150 @@ public final class ThresholdRuleConditionArgs extends com.pulumi.resources.Resou
             $ = new ThresholdRuleConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSource the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(@Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
             $.dataSource = dataSource;
             return this;
         }
 
+        /**
+         * @param dataSource the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
             return dataSource(Output.of(dataSource));
         }
 
+        /**
+         * @param dataSource the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(RuleManagementEventDataSourceArgs dataSource) {
             return dataSource(Either.ofLeft(dataSource));
         }
 
+        /**
+         * @param dataSource the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(RuleMetricDataSourceArgs dataSource) {
             return dataSource(Either.ofRight(dataSource));
         }
 
+        /**
+         * @param odataType specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
+         * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
+         * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param operator the operator used to compare the data and the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<ConditionOperator> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator the operator used to compare the data and the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(ConditionOperator operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param threshold the threshold value that activates the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Output<Double> threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param threshold the threshold value that activates the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Double threshold) {
             return threshold(Output.of(threshold));
         }
 
+        /**
+         * @param timeAggregation the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAggregation(@Nullable Output<TimeAggregationOperator> timeAggregation) {
             $.timeAggregation = timeAggregation;
             return this;
         }
 
+        /**
+         * @param timeAggregation the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAggregation(TimeAggregationOperator timeAggregation) {
             return timeAggregation(Output.of(timeAggregation));
         }
 
+        /**
+         * @param windowSize the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowSize(@Nullable Output<String> windowSize) {
             $.windowSize = windowSize;
             return this;
         }
 
+        /**
+         * @param windowSize the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowSize(String windowSize) {
             return windowSize(Output.of(windowSize));
         }

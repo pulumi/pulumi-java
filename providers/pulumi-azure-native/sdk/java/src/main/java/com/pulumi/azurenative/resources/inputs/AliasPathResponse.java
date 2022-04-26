@@ -28,6 +28,10 @@ public final class AliasPathResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="apiVersions")
     private @Nullable List<String> apiVersions;
 
+    /**
+     * @return The API versions.
+     * 
+     */
     public Optional<List<String>> apiVersions() {
         return Optional.ofNullable(this.apiVersions);
     }
@@ -39,6 +43,10 @@ public final class AliasPathResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="metadata", required=true)
     private AliasPathMetadataResponse metadata;
 
+    /**
+     * @return The metadata of the alias path. If missing, fall back to the default metadata of the alias.
+     * 
+     */
     public AliasPathMetadataResponse metadata() {
         return this.metadata;
     }
@@ -50,6 +58,10 @@ public final class AliasPathResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return The path of an alias.
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -61,6 +73,10 @@ public final class AliasPathResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pattern")
     private @Nullable AliasPatternResponse pattern;
 
+    /**
+     * @return The pattern for an alias path.
+     * 
+     */
     public Optional<AliasPatternResponse> pattern() {
         return Optional.ofNullable(this.pattern);
     }
@@ -92,25 +108,55 @@ public final class AliasPathResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AliasPathResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersions The API versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersions(@Nullable List<String> apiVersions) {
             $.apiVersions = apiVersions;
             return this;
         }
 
+        /**
+         * @param apiVersions The API versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersions(String... apiVersions) {
             return apiVersions(List.of(apiVersions));
         }
 
+        /**
+         * @param metadata The metadata of the alias path. If missing, fall back to the default metadata of the alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(AliasPathMetadataResponse metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param path The path of an alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param pattern The pattern for an alias path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(@Nullable AliasPatternResponse pattern) {
             $.pattern = pattern;
             return this;

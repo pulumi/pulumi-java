@@ -26,6 +26,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifactStore", required=true)
     private Output<PipelineArtifactStoreArgs> artifactStore;
 
+    /**
+     * @return One or more artifact_store blocks. Artifact stores are documented below.
+     * 
+     */
     public Output<PipelineArtifactStoreArgs> artifactStore() {
         return this.artifactStore;
     }
@@ -37,6 +41,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the pipeline.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -59,6 +71,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stages", required=true)
     private Output<List<PipelineStageArgs>> stages;
 
+    /**
+     * @return A stage block. Stages are documented below.
+     * 
+     */
     public Output<List<PipelineStageArgs>> stages() {
         return this.stages;
     }
@@ -70,6 +86,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -102,51 +122,117 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PipelineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactStore One or more artifact_store blocks. Artifact stores are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactStore(Output<PipelineArtifactStoreArgs> artifactStore) {
             $.artifactStore = artifactStore;
             return this;
         }
 
+        /**
+         * @param artifactStore One or more artifact_store blocks. Artifact stores are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactStore(PipelineArtifactStoreArgs artifactStore) {
             return artifactStore(Output.of(artifactStore));
         }
 
+        /**
+         * @param name The name of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param roleArn A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param stages A stage block. Stages are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stages(Output<List<PipelineStageArgs>> stages) {
             $.stages = stages;
             return this;
         }
 
+        /**
+         * @param stages A stage block. Stages are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stages(List<PipelineStageArgs> stages) {
             return stages(Output.of(stages));
         }
 
+        /**
+         * @param stages A stage block. Stages are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stages(PipelineStageArgs... stages) {
             return stages(List.of(stages));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

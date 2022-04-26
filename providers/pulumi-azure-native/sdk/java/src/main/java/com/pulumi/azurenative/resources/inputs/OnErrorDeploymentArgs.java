@@ -27,6 +27,10 @@ public final class OnErrorDeploymentArgs extends com.pulumi.resources.ResourceAr
     @Import(name="deploymentName")
     private @Nullable Output<String> deploymentName;
 
+    /**
+     * @return The deployment to be used on error case.
+     * 
+     */
     public Optional<Output<String>> deploymentName() {
         return Optional.ofNullable(this.deploymentName);
     }
@@ -38,6 +42,10 @@ public final class OnErrorDeploymentArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type")
     private @Nullable Output<OnErrorDeploymentType> type;
 
+    /**
+     * @return The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
+     * 
+     */
     public Optional<Output<OnErrorDeploymentType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -67,20 +75,44 @@ public final class OnErrorDeploymentArgs extends com.pulumi.resources.ResourceAr
             $ = new OnErrorDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentName The deployment to be used on error case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(@Nullable Output<String> deploymentName) {
             $.deploymentName = deploymentName;
             return this;
         }
 
+        /**
+         * @param deploymentName The deployment to be used on error case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(String deploymentName) {
             return deploymentName(Output.of(deploymentName));
         }
 
+        /**
+         * @param type The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<OnErrorDeploymentType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(OnErrorDeploymentType type) {
             return type(Output.of(type));
         }

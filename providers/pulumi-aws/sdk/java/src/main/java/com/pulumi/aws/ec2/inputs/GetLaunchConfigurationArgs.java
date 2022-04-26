@@ -19,6 +19,10 @@ public final class GetLaunchConfigurationArgs extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the launch configuration.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetLaunchConfigurationArgs extends com.pulumi.resources.Invok
             $ = new GetLaunchConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the launch configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

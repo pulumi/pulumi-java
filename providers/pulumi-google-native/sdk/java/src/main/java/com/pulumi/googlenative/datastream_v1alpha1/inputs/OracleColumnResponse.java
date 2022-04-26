@@ -25,6 +25,10 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="columnName", required=true)
     private String columnName;
 
+    /**
+     * @return Column name.
+     * 
+     */
     public String columnName() {
         return this.columnName;
     }
@@ -36,6 +40,10 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dataType", required=true)
     private String dataType;
 
+    /**
+     * @return The Oracle data type.
+     * 
+     */
     public String dataType() {
         return this.dataType;
     }
@@ -47,6 +55,10 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="encoding", required=true)
     private String encoding;
 
+    /**
+     * @return Column encoding.
+     * 
+     */
     public String encoding() {
         return this.encoding;
     }
@@ -58,6 +70,10 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="length", required=true)
     private Integer length;
 
+    /**
+     * @return Column length.
+     * 
+     */
     public Integer length() {
         return this.length;
     }
@@ -69,6 +85,10 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="nullable", required=true)
     private Boolean nullable;
 
+    /**
+     * @return Whether or not the column can accept a null value.
+     * 
+     */
     public Boolean nullable() {
         return this.nullable;
     }
@@ -80,6 +100,10 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="ordinalPosition", required=true)
     private Integer ordinalPosition;
 
+    /**
+     * @return The ordinal position of the column in the table.
+     * 
+     */
     public Integer ordinalPosition() {
         return this.ordinalPosition;
     }
@@ -91,6 +115,10 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="precision", required=true)
     private Integer precision;
 
+    /**
+     * @return Column precision.
+     * 
+     */
     public Integer precision() {
         return this.precision;
     }
@@ -102,6 +130,10 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="primaryKey", required=true)
     private Boolean primaryKey;
 
+    /**
+     * @return Whether or not the column represents a primary key.
+     * 
+     */
     public Boolean primaryKey() {
         return this.primaryKey;
     }
@@ -113,6 +145,10 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="scale", required=true)
     private Integer scale;
 
+    /**
+     * @return Column scale.
+     * 
+     */
     public Integer scale() {
         return this.scale;
     }
@@ -149,46 +185,100 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
             $ = new OracleColumnResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnName Column name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnName(String columnName) {
             $.columnName = columnName;
             return this;
         }
 
+        /**
+         * @param dataType The Oracle data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(String dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param encoding Column encoding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(String encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param length Column length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder length(Integer length) {
             $.length = length;
             return this;
         }
 
+        /**
+         * @param nullable Whether or not the column can accept a null value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nullable(Boolean nullable) {
             $.nullable = nullable;
             return this;
         }
 
+        /**
+         * @param ordinalPosition The ordinal position of the column in the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ordinalPosition(Integer ordinalPosition) {
             $.ordinalPosition = ordinalPosition;
             return this;
         }
 
+        /**
+         * @param precision Column precision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder precision(Integer precision) {
             $.precision = precision;
             return this;
         }
 
+        /**
+         * @param primaryKey Whether or not the column represents a primary key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(Boolean primaryKey) {
             $.primaryKey = primaryKey;
             return this;
         }
 
+        /**
+         * @param scale Column scale.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(Integer scale) {
             $.scale = scale;
             return this;

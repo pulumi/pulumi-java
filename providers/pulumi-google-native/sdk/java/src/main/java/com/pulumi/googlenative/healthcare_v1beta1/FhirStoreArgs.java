@@ -37,6 +37,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultSearchHandlingStrict")
     private @Nullable Output<Boolean> defaultSearchHandlingStrict;
 
+    /**
+     * @return If true, overrides the default search behavior for this FHIR store to `handling=strict` which returns an error for unrecognized search parameters. If false, uses the FHIR specification default `handling=lenient` which ignores unrecognized search parameters. The handling can always be changed from the default on an individual API call by setting the HTTP header `Prefer: handling=strict` or `Prefer: handling=lenient`.
+     * 
+     */
     public Optional<Output<Boolean>> defaultSearchHandlingStrict() {
         return Optional.ofNullable(this.defaultSearchHandlingStrict);
     }
@@ -48,6 +52,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableReferentialIntegrity")
     private @Nullable Output<Boolean> disableReferentialIntegrity;
 
+    /**
+     * @return Immutable. Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The default value is false, meaning that the API enforces referential integrity and fails the requests that result in inconsistent state in the FHIR store. When this field is set to true, the API skips referential integrity checks. Consequently, operations that rely on references, such as GetPatientEverything, do not return all the results if broken references exist.
+     * 
+     */
     public Optional<Output<Boolean>> disableReferentialIntegrity() {
         return Optional.ofNullable(this.disableReferentialIntegrity);
     }
@@ -59,6 +67,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableResourceVersioning")
     private @Nullable Output<Boolean> disableResourceVersioning;
 
+    /**
+     * @return Immutable. Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR store. If set to false, which is the default behavior, all write operations cause historical versions to be recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set to true, no historical versions are kept. The server sends errors for attempts to read the historical versions.
+     * 
+     */
     public Optional<Output<Boolean>> disableResourceVersioning() {
         return Optional.ofNullable(this.disableResourceVersioning);
     }
@@ -70,6 +82,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableUpdateCreate")
     private @Nullable Output<Boolean> enableUpdateCreate;
 
+    /**
+     * @return Whether this FHIR store has the [updateCreate capability](https://www.hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This determines if the client can use an Update operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and attempts to update a non-existent resource return errors. It is strongly advised not to include or encode any sensitive data such as patient identifiers in client-specified resource IDs. Those IDs are part of the FHIR resource path recorded in Cloud audit logs and Pub/Sub notifications. Those IDs can also be contained in reference fields within other resources.
+     * 
+     */
     public Optional<Output<Boolean>> enableUpdateCreate() {
         return Optional.ofNullable(this.enableUpdateCreate);
     }
@@ -88,6 +104,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -106,6 +126,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfig")
     private @Nullable Output<NotificationConfigArgs> notificationConfig;
 
+    /**
+     * @return If non-empty, publish all resource modifications of this FHIR store to this destination. The Pub/Sub message attributes contain a map with a string describing the action that has triggered the notification. For example, &#34;action&#34;:&#34;CreateResource&#34;.
+     * 
+     */
     public Optional<Output<NotificationConfigArgs>> notificationConfig() {
         return Optional.ofNullable(this.notificationConfig);
     }
@@ -124,6 +148,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="searchConfig")
     private @Nullable Output<SearchConfigArgs> searchConfig;
 
+    /**
+     * @return Configuration for how FHIR resource can be searched.
+     * 
+     */
     public Optional<Output<SearchConfigArgs>> searchConfig() {
         return Optional.ofNullable(this.searchConfig);
     }
@@ -135,6 +163,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="streamConfigs")
     private @Nullable Output<List<StreamConfigArgs>> streamConfigs;
 
+    /**
+     * @return A list of streaming configs that configure the destinations of streaming export for every resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next resource mutation is streamed to the new location in addition to the existing ones. When a location is removed from the list, the server stops streaming to that location. Before adding a new config, you must add the required [`bigquery.dataEditor`](https://cloud.google.com/bigquery/docs/access-control#bigquery.dataEditor) role to your project&#39;s **Cloud Healthcare Service Agent** [service account](https://cloud.google.com/iam/docs/service-accounts). Some lag (typically on the order of dozens of seconds) is expected before the results show up in the streaming destination.
+     * 
+     */
     public Optional<Output<List<StreamConfigArgs>>> streamConfigs() {
         return Optional.ofNullable(this.streamConfigs);
     }
@@ -146,6 +178,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="validationConfig")
     private @Nullable Output<ValidationConfigArgs> validationConfig;
 
+    /**
+     * @return Configuration for how to validate incoming FHIR resources against configured profiles.
+     * 
+     */
     public Optional<Output<ValidationConfigArgs>> validationConfig() {
         return Optional.ofNullable(this.validationConfig);
     }
@@ -157,6 +193,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<FhirStoreVersion> version;
 
+    /**
+     * @return Immutable. The FHIR specification version that this FHIR store supports natively. This field is immutable after store creation. Requests are rejected if they contain FHIR resources of a different version. Version is required for every FHIR store.
+     * 
+     */
     public Optional<Output<FhirStoreVersion>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -207,38 +247,86 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param defaultSearchHandlingStrict If true, overrides the default search behavior for this FHIR store to `handling=strict` which returns an error for unrecognized search parameters. If false, uses the FHIR specification default `handling=lenient` which ignores unrecognized search parameters. The handling can always be changed from the default on an individual API call by setting the HTTP header `Prefer: handling=strict` or `Prefer: handling=lenient`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSearchHandlingStrict(@Nullable Output<Boolean> defaultSearchHandlingStrict) {
             $.defaultSearchHandlingStrict = defaultSearchHandlingStrict;
             return this;
         }
 
+        /**
+         * @param defaultSearchHandlingStrict If true, overrides the default search behavior for this FHIR store to `handling=strict` which returns an error for unrecognized search parameters. If false, uses the FHIR specification default `handling=lenient` which ignores unrecognized search parameters. The handling can always be changed from the default on an individual API call by setting the HTTP header `Prefer: handling=strict` or `Prefer: handling=lenient`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSearchHandlingStrict(Boolean defaultSearchHandlingStrict) {
             return defaultSearchHandlingStrict(Output.of(defaultSearchHandlingStrict));
         }
 
+        /**
+         * @param disableReferentialIntegrity Immutable. Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The default value is false, meaning that the API enforces referential integrity and fails the requests that result in inconsistent state in the FHIR store. When this field is set to true, the API skips referential integrity checks. Consequently, operations that rely on references, such as GetPatientEverything, do not return all the results if broken references exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableReferentialIntegrity(@Nullable Output<Boolean> disableReferentialIntegrity) {
             $.disableReferentialIntegrity = disableReferentialIntegrity;
             return this;
         }
 
+        /**
+         * @param disableReferentialIntegrity Immutable. Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The default value is false, meaning that the API enforces referential integrity and fails the requests that result in inconsistent state in the FHIR store. When this field is set to true, the API skips referential integrity checks. Consequently, operations that rely on references, such as GetPatientEverything, do not return all the results if broken references exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableReferentialIntegrity(Boolean disableReferentialIntegrity) {
             return disableReferentialIntegrity(Output.of(disableReferentialIntegrity));
         }
 
+        /**
+         * @param disableResourceVersioning Immutable. Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR store. If set to false, which is the default behavior, all write operations cause historical versions to be recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set to true, no historical versions are kept. The server sends errors for attempts to read the historical versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableResourceVersioning(@Nullable Output<Boolean> disableResourceVersioning) {
             $.disableResourceVersioning = disableResourceVersioning;
             return this;
         }
 
+        /**
+         * @param disableResourceVersioning Immutable. Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR store. If set to false, which is the default behavior, all write operations cause historical versions to be recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set to true, no historical versions are kept. The server sends errors for attempts to read the historical versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableResourceVersioning(Boolean disableResourceVersioning) {
             return disableResourceVersioning(Output.of(disableResourceVersioning));
         }
 
+        /**
+         * @param enableUpdateCreate Whether this FHIR store has the [updateCreate capability](https://www.hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This determines if the client can use an Update operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and attempts to update a non-existent resource return errors. It is strongly advised not to include or encode any sensitive data such as patient identifiers in client-specified resource IDs. Those IDs are part of the FHIR resource path recorded in Cloud audit logs and Pub/Sub notifications. Those IDs can also be contained in reference fields within other resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableUpdateCreate(@Nullable Output<Boolean> enableUpdateCreate) {
             $.enableUpdateCreate = enableUpdateCreate;
             return this;
         }
 
+        /**
+         * @param enableUpdateCreate Whether this FHIR store has the [updateCreate capability](https://www.hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This determines if the client can use an Update operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and attempts to update a non-existent resource return errors. It is strongly advised not to include or encode any sensitive data such as patient identifiers in client-specified resource IDs. Those IDs are part of the FHIR resource path recorded in Cloud audit logs and Pub/Sub notifications. Those IDs can also be contained in reference fields within other resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableUpdateCreate(Boolean enableUpdateCreate) {
             return enableUpdateCreate(Output.of(enableUpdateCreate));
         }
@@ -252,11 +340,23 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
             return fhirStoreId(Output.of(fhirStoreId));
         }
 
+        /**
+         * @param labels User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -270,11 +370,23 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param notificationConfig If non-empty, publish all resource modifications of this FHIR store to this destination. The Pub/Sub message attributes contain a map with a string describing the action that has triggered the notification. For example, &#34;action&#34;:&#34;CreateResource&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationConfig(@Nullable Output<NotificationConfigArgs> notificationConfig) {
             $.notificationConfig = notificationConfig;
             return this;
         }
 
+        /**
+         * @param notificationConfig If non-empty, publish all resource modifications of this FHIR store to this destination. The Pub/Sub message attributes contain a map with a string describing the action that has triggered the notification. For example, &#34;action&#34;:&#34;CreateResource&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationConfig(NotificationConfigArgs notificationConfig) {
             return notificationConfig(Output.of(notificationConfig));
         }
@@ -288,42 +400,96 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param searchConfig Configuration for how FHIR resource can be searched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchConfig(@Nullable Output<SearchConfigArgs> searchConfig) {
             $.searchConfig = searchConfig;
             return this;
         }
 
+        /**
+         * @param searchConfig Configuration for how FHIR resource can be searched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchConfig(SearchConfigArgs searchConfig) {
             return searchConfig(Output.of(searchConfig));
         }
 
+        /**
+         * @param streamConfigs A list of streaming configs that configure the destinations of streaming export for every resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next resource mutation is streamed to the new location in addition to the existing ones. When a location is removed from the list, the server stops streaming to that location. Before adding a new config, you must add the required [`bigquery.dataEditor`](https://cloud.google.com/bigquery/docs/access-control#bigquery.dataEditor) role to your project&#39;s **Cloud Healthcare Service Agent** [service account](https://cloud.google.com/iam/docs/service-accounts). Some lag (typically on the order of dozens of seconds) is expected before the results show up in the streaming destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamConfigs(@Nullable Output<List<StreamConfigArgs>> streamConfigs) {
             $.streamConfigs = streamConfigs;
             return this;
         }
 
+        /**
+         * @param streamConfigs A list of streaming configs that configure the destinations of streaming export for every resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next resource mutation is streamed to the new location in addition to the existing ones. When a location is removed from the list, the server stops streaming to that location. Before adding a new config, you must add the required [`bigquery.dataEditor`](https://cloud.google.com/bigquery/docs/access-control#bigquery.dataEditor) role to your project&#39;s **Cloud Healthcare Service Agent** [service account](https://cloud.google.com/iam/docs/service-accounts). Some lag (typically on the order of dozens of seconds) is expected before the results show up in the streaming destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamConfigs(List<StreamConfigArgs> streamConfigs) {
             return streamConfigs(Output.of(streamConfigs));
         }
 
+        /**
+         * @param streamConfigs A list of streaming configs that configure the destinations of streaming export for every resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next resource mutation is streamed to the new location in addition to the existing ones. When a location is removed from the list, the server stops streaming to that location. Before adding a new config, you must add the required [`bigquery.dataEditor`](https://cloud.google.com/bigquery/docs/access-control#bigquery.dataEditor) role to your project&#39;s **Cloud Healthcare Service Agent** [service account](https://cloud.google.com/iam/docs/service-accounts). Some lag (typically on the order of dozens of seconds) is expected before the results show up in the streaming destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamConfigs(StreamConfigArgs... streamConfigs) {
             return streamConfigs(List.of(streamConfigs));
         }
 
+        /**
+         * @param validationConfig Configuration for how to validate incoming FHIR resources against configured profiles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationConfig(@Nullable Output<ValidationConfigArgs> validationConfig) {
             $.validationConfig = validationConfig;
             return this;
         }
 
+        /**
+         * @param validationConfig Configuration for how to validate incoming FHIR resources against configured profiles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationConfig(ValidationConfigArgs validationConfig) {
             return validationConfig(Output.of(validationConfig));
         }
 
+        /**
+         * @param version Immutable. The FHIR specification version that this FHIR store supports natively. This field is immutable after store creation. Requests are rejected if they contain FHIR resources of a different version. Version is required for every FHIR store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<FhirStoreVersion> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Immutable. The FHIR specification version that this FHIR store supports natively. This field is immutable after store creation. Requests are rejected if they contain FHIR resources of a different version. Version is required for every FHIR store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(FhirStoreVersion version) {
             return version(Output.of(version));
         }

@@ -27,6 +27,10 @@ public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extend
     @Import(name="httpPutResponseHopLimit")
     private @Nullable Output<Integer> httpPutResponseHopLimit;
 
+    /**
+     * @return Limit the number of hops that an instance metadata request can traverse to reach its destination.
+     * 
+     */
     public Optional<Output<Integer>> httpPutResponseHopLimit() {
         return Optional.ofNullable(this.httpPutResponseHopLimit);
     }
@@ -38,6 +42,10 @@ public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extend
     @Import(name="httpTokens")
     private @Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens;
 
+    /**
+     * @return Indicates whether a signed token header is required for instance metadata retrieval requests. The values affect the response as follows:
+     * 
+     */
     public Optional<Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens>> httpTokens() {
         return Optional.ofNullable(this.httpTokens);
     }
@@ -67,20 +75,44 @@ public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extend
             $ = new InfrastructureConfigurationInstanceMetadataOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpPutResponseHopLimit Limit the number of hops that an instance metadata request can traverse to reach its destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpPutResponseHopLimit(@Nullable Output<Integer> httpPutResponseHopLimit) {
             $.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
 
+        /**
+         * @param httpPutResponseHopLimit Limit the number of hops that an instance metadata request can traverse to reach its destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             return httpPutResponseHopLimit(Output.of(httpPutResponseHopLimit));
         }
 
+        /**
+         * @param httpTokens Indicates whether a signed token header is required for instance metadata retrieval requests. The values affect the response as follows:
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpTokens(@Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens) {
             $.httpTokens = httpTokens;
             return this;
         }
 
+        /**
+         * @param httpTokens Indicates whether a signed token header is required for instance metadata retrieval requests. The values affect the response as follows:
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpTokens(InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens) {
             return httpTokens(Output.of(httpTokens));
         }

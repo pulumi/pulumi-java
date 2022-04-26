@@ -26,6 +26,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="organizationArns")
     private @Nullable List<String> organizationArns;
 
+    /**
+     * @return The ARN for an Amazon Web Services Organization that you want to share your AMI with.
+     * 
+     */
     public Optional<List<String>> organizationArns() {
         return Optional.ofNullable(this.organizationArns);
     }
@@ -37,6 +41,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="organizationalUnitArns")
     private @Nullable List<String> organizationalUnitArns;
 
+    /**
+     * @return The ARN for an Organizations organizational unit (OU) that you want to share your AMI with.
+     * 
+     */
     public Optional<List<String>> organizationalUnitArns() {
         return Optional.ofNullable(this.organizationalUnitArns);
     }
@@ -48,6 +56,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="userGroups")
     private @Nullable List<String> userGroups;
 
+    /**
+     * @return The name of the group.
+     * 
+     */
     public Optional<List<String>> userGroups() {
         return Optional.ofNullable(this.userGroups);
     }
@@ -59,6 +71,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="userIds")
     private @Nullable List<String> userIds;
 
+    /**
+     * @return The AWS account ID.
+     * 
+     */
     public Optional<List<String>> userIds() {
         return Optional.ofNullable(this.userIds);
     }
@@ -90,38 +106,86 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             $ = new DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param organizationArns The ARN for an Amazon Web Services Organization that you want to share your AMI with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationArns(@Nullable List<String> organizationArns) {
             $.organizationArns = organizationArns;
             return this;
         }
 
+        /**
+         * @param organizationArns The ARN for an Amazon Web Services Organization that you want to share your AMI with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationArns(String... organizationArns) {
             return organizationArns(List.of(organizationArns));
         }
 
+        /**
+         * @param organizationalUnitArns The ARN for an Organizations organizational unit (OU) that you want to share your AMI with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnitArns(@Nullable List<String> organizationalUnitArns) {
             $.organizationalUnitArns = organizationalUnitArns;
             return this;
         }
 
+        /**
+         * @param organizationalUnitArns The ARN for an Organizations organizational unit (OU) that you want to share your AMI with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnitArns(String... organizationalUnitArns) {
             return organizationalUnitArns(List.of(organizationalUnitArns));
         }
 
+        /**
+         * @param userGroups The name of the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userGroups(@Nullable List<String> userGroups) {
             $.userGroups = userGroups;
             return this;
         }
 
+        /**
+         * @param userGroups The name of the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userGroups(String... userGroups) {
             return userGroups(List.of(userGroups));
         }
 
+        /**
+         * @param userIds The AWS account ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userIds(@Nullable List<String> userIds) {
             $.userIds = userIds;
             return this;
         }
 
+        /**
+         * @param userIds The AWS account ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userIds(String... userIds) {
             return userIds(List.of(userIds));
         }

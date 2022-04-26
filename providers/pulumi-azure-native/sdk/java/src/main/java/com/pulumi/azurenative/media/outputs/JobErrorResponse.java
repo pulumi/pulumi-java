@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class JobErrorResponse {
     /**
-     * Helps with categorization of errors.
+     * @return Helps with categorization of errors.
      * 
      */
     private final String category;
     /**
-     * Error code describing the error.
+     * @return Error code describing the error.
      * 
      */
     private final String code;
     /**
-     * An array of details about specific errors that led to this reported error.
+     * @return An array of details about specific errors that led to this reported error.
      * 
      */
     private final List<JobErrorDetailResponse> details;
     /**
-     * A human-readable language-dependent representation of the error.
+     * @return A human-readable language-dependent representation of the error.
      * 
      */
     private final String message;
     /**
-     * Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.
+     * @return Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.
      * 
      */
     private final String retry;
@@ -52,37 +52,37 @@ public final class JobErrorResponse {
     }
 
     /**
-     * Helps with categorization of errors.
+     * @return Helps with categorization of errors.
      * 
-    */
+     */
     public String category() {
         return this.category;
     }
     /**
-     * Error code describing the error.
+     * @return Error code describing the error.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * An array of details about specific errors that led to this reported error.
+     * @return An array of details about specific errors that led to this reported error.
      * 
-    */
+     */
     public List<JobErrorDetailResponse> details() {
         return this.details;
     }
     /**
-     * A human-readable language-dependent representation of the error.
+     * @return A human-readable language-dependent representation of the error.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.
+     * @return Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.
      * 
-    */
+     */
     public String retry() {
         return this.retry;
     }

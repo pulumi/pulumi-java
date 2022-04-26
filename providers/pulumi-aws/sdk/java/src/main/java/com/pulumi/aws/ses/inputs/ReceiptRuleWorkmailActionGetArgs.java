@@ -23,6 +23,10 @@ public final class ReceiptRuleWorkmailActionGetArgs extends com.pulumi.resources
     @Import(name="organizationArn", required=true)
     private Output<String> organizationArn;
 
+    /**
+     * @return The ARN of the WorkMail organization
+     * 
+     */
     public Output<String> organizationArn() {
         return this.organizationArn;
     }
@@ -34,6 +38,10 @@ public final class ReceiptRuleWorkmailActionGetArgs extends com.pulumi.resources
     @Import(name="position", required=true)
     private Output<Integer> position;
 
+    /**
+     * @return The position of the action in the receipt rule
+     * 
+     */
     public Output<Integer> position() {
         return this.position;
     }
@@ -45,6 +53,10 @@ public final class ReceiptRuleWorkmailActionGetArgs extends com.pulumi.resources
     @Import(name="topicArn")
     private @Nullable Output<String> topicArn;
 
+    /**
+     * @return The ARN of an SNS topic to notify
+     * 
+     */
     public Optional<Output<String>> topicArn() {
         return Optional.ofNullable(this.topicArn);
     }
@@ -75,29 +87,65 @@ public final class ReceiptRuleWorkmailActionGetArgs extends com.pulumi.resources
             $ = new ReceiptRuleWorkmailActionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param organizationArn The ARN of the WorkMail organization
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationArn(Output<String> organizationArn) {
             $.organizationArn = organizationArn;
             return this;
         }
 
+        /**
+         * @param organizationArn The ARN of the WorkMail organization
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationArn(String organizationArn) {
             return organizationArn(Output.of(organizationArn));
         }
 
+        /**
+         * @param position The position of the action in the receipt rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder position(Output<Integer> position) {
             $.position = position;
             return this;
         }
 
+        /**
+         * @param position The position of the action in the receipt rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder position(Integer position) {
             return position(Output.of(position));
         }
 
+        /**
+         * @param topicArn The ARN of an SNS topic to notify
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicArn(@Nullable Output<String> topicArn) {
             $.topicArn = topicArn;
             return this;
         }
 
+        /**
+         * @param topicArn The ARN of an SNS topic to notify
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicArn(String topicArn) {
             return topicArn(Output.of(topicArn));
         }

@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class StorageAccountDetailsResponse {
     /**
-     * Account Type of the data to be transferred.
+     * @return Account Type of the data to be transferred.
      * Expected value is &#39;StorageAccount&#39;.
      * 
      */
     private final String dataAccountType;
     /**
-     * Storage Account Resource Id.
+     * @return Storage Account Resource Id.
      * 
      */
     private final String storageAccountId;
@@ -30,17 +30,17 @@ public final class StorageAccountDetailsResponse {
     }
 
     /**
-     * Account Type of the data to be transferred.
+     * @return Account Type of the data to be transferred.
      * Expected value is &#39;StorageAccount&#39;.
      * 
-    */
+     */
     public String dataAccountType() {
         return this.dataAccountType;
     }
     /**
-     * Storage Account Resource Id.
+     * @return Storage Account Resource Id.
      * 
-    */
+     */
     public String storageAccountId() {
         return this.storageAccountId;
     }

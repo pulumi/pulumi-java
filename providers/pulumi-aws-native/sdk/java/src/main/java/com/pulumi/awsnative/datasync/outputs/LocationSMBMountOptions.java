@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LocationSMBMountOptions {
     /**
-     * The specific SMB version that you want DataSync to use to mount your SMB share.
+     * @return The specific SMB version that you want DataSync to use to mount your SMB share.
      * 
      */
     private final @Nullable LocationSMBMountOptionsVersion version;
@@ -23,9 +23,9 @@ public final class LocationSMBMountOptions {
     }
 
     /**
-     * The specific SMB version that you want DataSync to use to mount your SMB share.
+     * @return The specific SMB version that you want DataSync to use to mount your SMB share.
      * 
-    */
+     */
     public Optional<LocationSMBMountOptionsVersion> version() {
         return Optional.ofNullable(this.version);
     }

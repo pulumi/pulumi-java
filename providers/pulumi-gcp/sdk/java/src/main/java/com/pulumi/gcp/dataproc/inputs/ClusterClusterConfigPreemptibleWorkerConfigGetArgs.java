@@ -25,6 +25,10 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends co
     @Import(name="diskConfig")
     private @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig;
 
+    /**
+     * @return Disk Config
+     * 
+     */
     public Optional<Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs>> diskConfig() {
         return Optional.ofNullable(this.diskConfig);
     }
@@ -44,6 +48,11 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends co
     @Import(name="numInstances")
     private @Nullable Output<Integer> numInstances;
 
+    /**
+     * @return Specifies the number of preemptible nodes to create.
+     * Defaults to 0.
+     * 
+     */
     public Optional<Output<Integer>> numInstances() {
         return Optional.ofNullable(this.numInstances);
     }
@@ -74,11 +83,23 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends co
             $ = new ClusterClusterConfigPreemptibleWorkerConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskConfig Disk Config
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfig(@Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig) {
             $.diskConfig = diskConfig;
             return this;
         }
 
+        /**
+         * @param diskConfig Disk Config
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfig(ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs diskConfig) {
             return diskConfig(Output.of(diskConfig));
         }
@@ -96,11 +117,25 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends co
             return instanceNames(List.of(instanceNames));
         }
 
+        /**
+         * @param numInstances Specifies the number of preemptible nodes to create.
+         * Defaults to 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numInstances(@Nullable Output<Integer> numInstances) {
             $.numInstances = numInstances;
             return this;
         }
 
+        /**
+         * @param numInstances Specifies the number of preemptible nodes to create.
+         * Defaults to 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numInstances(Integer numInstances) {
             return numInstances(Output.of(numInstances));
         }

@@ -30,6 +30,10 @@ public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="asyncOptions")
     private @Nullable Output<List<AsyncOptionsArgs>> asyncOptions;
 
+    /**
+     * @return Options regarding how to thread async requests.
+     * 
+     */
     public Optional<Output<List<AsyncOptionsArgs>>> asyncOptions() {
         return Optional.ofNullable(this.asyncOptions);
     }
@@ -41,6 +45,10 @@ public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputMappings")
     private @Nullable Output<List<InputMappingArgs>> inputMappings;
 
+    /**
+     * @return The mappings that apply for requests.
+     * 
+     */
     public Optional<Output<List<InputMappingArgs>>> inputMappings() {
         return Optional.ofNullable(this.inputMappings);
     }
@@ -52,6 +60,10 @@ public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="validationOptions")
     private @Nullable Output<ValidationOptionsArgs> validationOptions;
 
+    /**
+     * @return Options for how to validate and process properties on a resource.
+     * 
+     */
     public Optional<Output<ValidationOptionsArgs>> validationOptions() {
         return Optional.ofNullable(this.validationOptions);
     }
@@ -63,6 +75,10 @@ public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualProperties")
     private @Nullable Output<String> virtualProperties;
 
+    /**
+     * @return Additional properties block described as a jsonSchema, these properties will never be part of the json payload, but they can be consumed by InputMappings, this must be a valid json schema draft-04. The properties specified here will be decouple in a different section. This schema will be merged to the schema validation, and properties here will be extracted From the payload and consumed explicitly by InputMappings. ex: field1: type: string field2: type: number
+     * 
+     */
     public Optional<Output<String>> virtualProperties() {
         return Optional.ofNullable(this.virtualProperties);
     }
@@ -94,46 +110,106 @@ public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param asyncOptions Options regarding how to thread async requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asyncOptions(@Nullable Output<List<AsyncOptionsArgs>> asyncOptions) {
             $.asyncOptions = asyncOptions;
             return this;
         }
 
+        /**
+         * @param asyncOptions Options regarding how to thread async requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asyncOptions(List<AsyncOptionsArgs> asyncOptions) {
             return asyncOptions(Output.of(asyncOptions));
         }
 
+        /**
+         * @param asyncOptions Options regarding how to thread async requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asyncOptions(AsyncOptionsArgs... asyncOptions) {
             return asyncOptions(List.of(asyncOptions));
         }
 
+        /**
+         * @param inputMappings The mappings that apply for requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputMappings(@Nullable Output<List<InputMappingArgs>> inputMappings) {
             $.inputMappings = inputMappings;
             return this;
         }
 
+        /**
+         * @param inputMappings The mappings that apply for requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputMappings(List<InputMappingArgs> inputMappings) {
             return inputMappings(Output.of(inputMappings));
         }
 
+        /**
+         * @param inputMappings The mappings that apply for requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputMappings(InputMappingArgs... inputMappings) {
             return inputMappings(List.of(inputMappings));
         }
 
+        /**
+         * @param validationOptions Options for how to validate and process properties on a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOptions(@Nullable Output<ValidationOptionsArgs> validationOptions) {
             $.validationOptions = validationOptions;
             return this;
         }
 
+        /**
+         * @param validationOptions Options for how to validate and process properties on a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOptions(ValidationOptionsArgs validationOptions) {
             return validationOptions(Output.of(validationOptions));
         }
 
+        /**
+         * @param virtualProperties Additional properties block described as a jsonSchema, these properties will never be part of the json payload, but they can be consumed by InputMappings, this must be a valid json schema draft-04. The properties specified here will be decouple in a different section. This schema will be merged to the schema validation, and properties here will be extracted From the payload and consumed explicitly by InputMappings. ex: field1: type: string field2: type: number
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualProperties(@Nullable Output<String> virtualProperties) {
             $.virtualProperties = virtualProperties;
             return this;
         }
 
+        /**
+         * @param virtualProperties Additional properties block described as a jsonSchema, these properties will never be part of the json payload, but they can be consumed by InputMappings, this must be a valid json schema draft-04. The properties specified here will be decouple in a different section. This schema will be merged to the schema validation, and properties here will be extracted From the payload and consumed explicitly by InputMappings. ex: field1: type: string field2: type: number
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualProperties(String virtualProperties) {
             return virtualProperties(Output.of(virtualProperties));
         }

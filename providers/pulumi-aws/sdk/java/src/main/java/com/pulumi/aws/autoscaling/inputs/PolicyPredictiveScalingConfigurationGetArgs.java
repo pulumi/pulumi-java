@@ -23,6 +23,10 @@ public final class PolicyPredictiveScalingConfigurationGetArgs extends com.pulum
     @Import(name="maxCapacityBreachBehavior")
     private @Nullable Output<String> maxCapacityBreachBehavior;
 
+    /**
+     * @return Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity of the Auto Scaling group. Valid values are `HonorMaxCapacity` or `IncreaseMaxCapacity`. Default is `HonorMaxCapacity`.
+     * 
+     */
     public Optional<Output<String>> maxCapacityBreachBehavior() {
         return Optional.ofNullable(this.maxCapacityBreachBehavior);
     }
@@ -34,6 +38,10 @@ public final class PolicyPredictiveScalingConfigurationGetArgs extends com.pulum
     @Import(name="maxCapacityBuffer")
     private @Nullable Output<String> maxCapacityBuffer;
 
+    /**
+     * @return The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity. Valid range is `0` to `100`. If set to `0`, Amazon EC2 Auto Scaling may scale capacity higher than the maximum capacity to equal but not exceed forecast capacity.
+     * 
+     */
     public Optional<Output<String>> maxCapacityBuffer() {
         return Optional.ofNullable(this.maxCapacityBuffer);
     }
@@ -45,6 +53,10 @@ public final class PolicyPredictiveScalingConfigurationGetArgs extends com.pulum
     @Import(name="metricSpecification", required=true)
     private Output<PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs> metricSpecification;
 
+    /**
+     * @return This structure includes the metrics and target utilization to use for predictive scaling.
+     * 
+     */
     public Output<PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs> metricSpecification() {
         return this.metricSpecification;
     }
@@ -56,6 +68,10 @@ public final class PolicyPredictiveScalingConfigurationGetArgs extends com.pulum
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
+    /**
+     * @return The predictive scaling mode. Valid values are `ForecastAndScale` and `ForecastOnly`. Default is `ForecastOnly`.
+     * 
+     */
     public Optional<Output<String>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -67,6 +83,10 @@ public final class PolicyPredictiveScalingConfigurationGetArgs extends com.pulum
     @Import(name="schedulingBufferTime")
     private @Nullable Output<String> schedulingBufferTime;
 
+    /**
+     * @return The amount of time, in seconds, by which the instance launch time can be advanced. Minimum is `0`.
+     * 
+     */
     public Optional<Output<String>> schedulingBufferTime() {
         return Optional.ofNullable(this.schedulingBufferTime);
     }
@@ -99,47 +119,107 @@ public final class PolicyPredictiveScalingConfigurationGetArgs extends com.pulum
             $ = new PolicyPredictiveScalingConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxCapacityBreachBehavior Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity of the Auto Scaling group. Valid values are `HonorMaxCapacity` or `IncreaseMaxCapacity`. Default is `HonorMaxCapacity`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCapacityBreachBehavior(@Nullable Output<String> maxCapacityBreachBehavior) {
             $.maxCapacityBreachBehavior = maxCapacityBreachBehavior;
             return this;
         }
 
+        /**
+         * @param maxCapacityBreachBehavior Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity of the Auto Scaling group. Valid values are `HonorMaxCapacity` or `IncreaseMaxCapacity`. Default is `HonorMaxCapacity`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCapacityBreachBehavior(String maxCapacityBreachBehavior) {
             return maxCapacityBreachBehavior(Output.of(maxCapacityBreachBehavior));
         }
 
+        /**
+         * @param maxCapacityBuffer The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity. Valid range is `0` to `100`. If set to `0`, Amazon EC2 Auto Scaling may scale capacity higher than the maximum capacity to equal but not exceed forecast capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCapacityBuffer(@Nullable Output<String> maxCapacityBuffer) {
             $.maxCapacityBuffer = maxCapacityBuffer;
             return this;
         }
 
+        /**
+         * @param maxCapacityBuffer The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity. Valid range is `0` to `100`. If set to `0`, Amazon EC2 Auto Scaling may scale capacity higher than the maximum capacity to equal but not exceed forecast capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCapacityBuffer(String maxCapacityBuffer) {
             return maxCapacityBuffer(Output.of(maxCapacityBuffer));
         }
 
+        /**
+         * @param metricSpecification This structure includes the metrics and target utilization to use for predictive scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSpecification(Output<PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs> metricSpecification) {
             $.metricSpecification = metricSpecification;
             return this;
         }
 
+        /**
+         * @param metricSpecification This structure includes the metrics and target utilization to use for predictive scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSpecification(PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs metricSpecification) {
             return metricSpecification(Output.of(metricSpecification));
         }
 
+        /**
+         * @param mode The predictive scaling mode. Valid values are `ForecastAndScale` and `ForecastOnly`. Default is `ForecastOnly`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<String> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode The predictive scaling mode. Valid values are `ForecastAndScale` and `ForecastOnly`. Default is `ForecastOnly`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param schedulingBufferTime The amount of time, in seconds, by which the instance launch time can be advanced. Minimum is `0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulingBufferTime(@Nullable Output<String> schedulingBufferTime) {
             $.schedulingBufferTime = schedulingBufferTime;
             return this;
         }
 
+        /**
+         * @param schedulingBufferTime The amount of time, in seconds, by which the instance launch time can be advanced. Minimum is `0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulingBufferTime(String schedulingBufferTime) {
             return schedulingBufferTime(Output.of(schedulingBufferTime));
         }

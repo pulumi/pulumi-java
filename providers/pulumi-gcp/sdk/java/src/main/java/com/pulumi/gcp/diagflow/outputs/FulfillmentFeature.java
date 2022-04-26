@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class FulfillmentFeature {
     /**
-     * The type of the feature that enabled for fulfillment.
+     * @return The type of the feature that enabled for fulfillment.
      * * SMALLTALK: Fulfillment is enabled for SmallTalk.
      *   Possible values are `SMALLTALK`.
      * 
@@ -23,11 +23,11 @@ public final class FulfillmentFeature {
     }
 
     /**
-     * The type of the feature that enabled for fulfillment.
+     * @return The type of the feature that enabled for fulfillment.
      * * SMALLTALK: Fulfillment is enabled for SmallTalk.
      *   Possible values are `SMALLTALK`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

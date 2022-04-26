@@ -26,6 +26,10 @@ public final class AttachNewDataDiskOptionsResponse extends com.pulumi.resources
     @Import(name="diskName")
     private @Nullable String diskName;
 
+    /**
+     * @return The name of the disk to be attached.
+     * 
+     */
     public Optional<String> diskName() {
         return Optional.ofNullable(this.diskName);
     }
@@ -37,6 +41,10 @@ public final class AttachNewDataDiskOptionsResponse extends com.pulumi.resources
     @Import(name="diskSizeGiB")
     private @Nullable Integer diskSizeGiB;
 
+    /**
+     * @return Size of the disk to be attached in Gibibytes.
+     * 
+     */
     public Optional<Integer> diskSizeGiB() {
         return Optional.ofNullable(this.diskSizeGiB);
     }
@@ -48,6 +56,10 @@ public final class AttachNewDataDiskOptionsResponse extends com.pulumi.resources
     @Import(name="diskType")
     private @Nullable String diskType;
 
+    /**
+     * @return The storage type for the disk (i.e. Standard, Premium).
+     * 
+     */
     public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -78,16 +90,34 @@ public final class AttachNewDataDiskOptionsResponse extends com.pulumi.resources
             $ = new AttachNewDataDiskOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskName The name of the disk to be attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(@Nullable String diskName) {
             $.diskName = diskName;
             return this;
         }
 
+        /**
+         * @param diskSizeGiB Size of the disk to be attached in Gibibytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
             $.diskSizeGiB = diskSizeGiB;
             return this;
         }
 
+        /**
+         * @param diskType The storage type for the disk (i.e. Standard, Premium).
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(@Nullable String diskType) {
             $.diskType = diskType;
             return this;

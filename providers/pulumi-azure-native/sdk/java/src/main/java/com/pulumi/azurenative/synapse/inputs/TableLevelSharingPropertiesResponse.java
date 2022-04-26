@@ -26,6 +26,10 @@ public final class TableLevelSharingPropertiesResponse extends com.pulumi.resour
     @Import(name="externalTablesToExclude")
     private @Nullable List<String> externalTablesToExclude;
 
+    /**
+     * @return List of external tables exclude from the follower database
+     * 
+     */
     public Optional<List<String>> externalTablesToExclude() {
         return Optional.ofNullable(this.externalTablesToExclude);
     }
@@ -37,6 +41,10 @@ public final class TableLevelSharingPropertiesResponse extends com.pulumi.resour
     @Import(name="externalTablesToInclude")
     private @Nullable List<String> externalTablesToInclude;
 
+    /**
+     * @return List of external tables to include in the follower database
+     * 
+     */
     public Optional<List<String>> externalTablesToInclude() {
         return Optional.ofNullable(this.externalTablesToInclude);
     }
@@ -48,6 +56,10 @@ public final class TableLevelSharingPropertiesResponse extends com.pulumi.resour
     @Import(name="materializedViewsToExclude")
     private @Nullable List<String> materializedViewsToExclude;
 
+    /**
+     * @return List of materialized views exclude from the follower database
+     * 
+     */
     public Optional<List<String>> materializedViewsToExclude() {
         return Optional.ofNullable(this.materializedViewsToExclude);
     }
@@ -59,6 +71,10 @@ public final class TableLevelSharingPropertiesResponse extends com.pulumi.resour
     @Import(name="materializedViewsToInclude")
     private @Nullable List<String> materializedViewsToInclude;
 
+    /**
+     * @return List of materialized views to include in the follower database
+     * 
+     */
     public Optional<List<String>> materializedViewsToInclude() {
         return Optional.ofNullable(this.materializedViewsToInclude);
     }
@@ -70,6 +86,10 @@ public final class TableLevelSharingPropertiesResponse extends com.pulumi.resour
     @Import(name="tablesToExclude")
     private @Nullable List<String> tablesToExclude;
 
+    /**
+     * @return List of tables to exclude from the follower database
+     * 
+     */
     public Optional<List<String>> tablesToExclude() {
         return Optional.ofNullable(this.tablesToExclude);
     }
@@ -81,6 +101,10 @@ public final class TableLevelSharingPropertiesResponse extends com.pulumi.resour
     @Import(name="tablesToInclude")
     private @Nullable List<String> tablesToInclude;
 
+    /**
+     * @return List of tables to include in the follower database
+     * 
+     */
     public Optional<List<String>> tablesToInclude() {
         return Optional.ofNullable(this.tablesToInclude);
     }
@@ -114,56 +138,128 @@ public final class TableLevelSharingPropertiesResponse extends com.pulumi.resour
             $ = new TableLevelSharingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param externalTablesToExclude List of external tables exclude from the follower database
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalTablesToExclude(@Nullable List<String> externalTablesToExclude) {
             $.externalTablesToExclude = externalTablesToExclude;
             return this;
         }
 
+        /**
+         * @param externalTablesToExclude List of external tables exclude from the follower database
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalTablesToExclude(String... externalTablesToExclude) {
             return externalTablesToExclude(List.of(externalTablesToExclude));
         }
 
+        /**
+         * @param externalTablesToInclude List of external tables to include in the follower database
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalTablesToInclude(@Nullable List<String> externalTablesToInclude) {
             $.externalTablesToInclude = externalTablesToInclude;
             return this;
         }
 
+        /**
+         * @param externalTablesToInclude List of external tables to include in the follower database
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalTablesToInclude(String... externalTablesToInclude) {
             return externalTablesToInclude(List.of(externalTablesToInclude));
         }
 
+        /**
+         * @param materializedViewsToExclude List of materialized views exclude from the follower database
+         * 
+         * @return builder
+         * 
+         */
         public Builder materializedViewsToExclude(@Nullable List<String> materializedViewsToExclude) {
             $.materializedViewsToExclude = materializedViewsToExclude;
             return this;
         }
 
+        /**
+         * @param materializedViewsToExclude List of materialized views exclude from the follower database
+         * 
+         * @return builder
+         * 
+         */
         public Builder materializedViewsToExclude(String... materializedViewsToExclude) {
             return materializedViewsToExclude(List.of(materializedViewsToExclude));
         }
 
+        /**
+         * @param materializedViewsToInclude List of materialized views to include in the follower database
+         * 
+         * @return builder
+         * 
+         */
         public Builder materializedViewsToInclude(@Nullable List<String> materializedViewsToInclude) {
             $.materializedViewsToInclude = materializedViewsToInclude;
             return this;
         }
 
+        /**
+         * @param materializedViewsToInclude List of materialized views to include in the follower database
+         * 
+         * @return builder
+         * 
+         */
         public Builder materializedViewsToInclude(String... materializedViewsToInclude) {
             return materializedViewsToInclude(List.of(materializedViewsToInclude));
         }
 
+        /**
+         * @param tablesToExclude List of tables to exclude from the follower database
+         * 
+         * @return builder
+         * 
+         */
         public Builder tablesToExclude(@Nullable List<String> tablesToExclude) {
             $.tablesToExclude = tablesToExclude;
             return this;
         }
 
+        /**
+         * @param tablesToExclude List of tables to exclude from the follower database
+         * 
+         * @return builder
+         * 
+         */
         public Builder tablesToExclude(String... tablesToExclude) {
             return tablesToExclude(List.of(tablesToExclude));
         }
 
+        /**
+         * @param tablesToInclude List of tables to include in the follower database
+         * 
+         * @return builder
+         * 
+         */
         public Builder tablesToInclude(@Nullable List<String> tablesToInclude) {
             $.tablesToInclude = tablesToInclude;
             return this;
         }
 
+        /**
+         * @param tablesToInclude List of tables to include in the follower database
+         * 
+         * @return builder
+         * 
+         */
         public Builder tablesToInclude(String... tablesToInclude) {
             return tablesToInclude(List.of(tablesToInclude));
         }

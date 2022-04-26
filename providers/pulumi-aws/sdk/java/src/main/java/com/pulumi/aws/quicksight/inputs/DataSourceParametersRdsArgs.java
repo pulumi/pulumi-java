@@ -20,6 +20,10 @@ public final class DataSourceParametersRdsArgs extends com.pulumi.resources.Reso
     @Import(name="database", required=true)
     private Output<String> database;
 
+    /**
+     * @return The database to which to connect.
+     * 
+     */
     public Output<String> database() {
         return this.database;
     }
@@ -31,6 +35,10 @@ public final class DataSourceParametersRdsArgs extends com.pulumi.resources.Reso
     @Import(name="instanceId", required=true)
     private Output<String> instanceId;
 
+    /**
+     * @return The instance ID to which to connect.
+     * 
+     */
     public Output<String> instanceId() {
         return this.instanceId;
     }
@@ -60,20 +68,44 @@ public final class DataSourceParametersRdsArgs extends com.pulumi.resources.Reso
             $ = new DataSourceParametersRdsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param database The database to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(Output<String> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database The database to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param instanceId The instance ID to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId The instance ID to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }

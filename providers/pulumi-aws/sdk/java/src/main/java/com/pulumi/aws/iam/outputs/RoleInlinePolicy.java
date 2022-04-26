@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RoleInlinePolicy {
     /**
-     * Name of the role policy.
+     * @return Name of the role policy.
      * 
      */
     private final @Nullable String name;
     /**
-     * Policy document as a JSON formatted string.
+     * @return Policy document as a JSON formatted string.
      * 
      */
     private final @Nullable String policy;
@@ -31,16 +31,16 @@ public final class RoleInlinePolicy {
     }
 
     /**
-     * Name of the role policy.
+     * @return Name of the role policy.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Policy document as a JSON formatted string.
+     * @return Policy document as a JSON formatted string.
      * 
-    */
+     */
     public Optional<String> policy() {
         return Optional.ofNullable(this.policy);
     }

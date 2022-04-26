@@ -25,6 +25,10 @@ public final class PivotPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Data field to show in view.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class PivotPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Data type to show in view.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -65,11 +73,23 @@ public final class PivotPropertiesResponse extends com.pulumi.resources.InvokeAr
             $ = new PivotPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Data field to show in view.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Data type to show in view.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

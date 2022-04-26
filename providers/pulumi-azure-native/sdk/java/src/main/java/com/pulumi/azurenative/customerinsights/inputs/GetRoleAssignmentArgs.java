@@ -19,6 +19,10 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="assignmentName", required=true)
     private String assignmentName;
 
+    /**
+     * @return The name of the role assignment.
+     * 
+     */
     public String assignmentName() {
         return this.assignmentName;
     }
@@ -30,6 +34,10 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="hubName", required=true)
     private String hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public String hubName() {
         return this.hubName;
     }
@@ -41,6 +49,10 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetRoleAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignmentName The name of the role assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignmentName(String assignmentName) {
             $.assignmentName = assignmentName;
             return this;
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

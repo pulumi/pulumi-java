@@ -19,6 +19,10 @@ public final class GetVirtualApplianceSiteArgs extends com.pulumi.resources.Invo
     @Import(name="networkVirtualApplianceName", required=true)
     private String networkVirtualApplianceName;
 
+    /**
+     * @return The name of the Network Virtual Appliance.
+     * 
+     */
     public String networkVirtualApplianceName() {
         return this.networkVirtualApplianceName;
     }
@@ -30,6 +34,10 @@ public final class GetVirtualApplianceSiteArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetVirtualApplianceSiteArgs extends com.pulumi.resources.Invo
     @Import(name="siteName", required=true)
     private String siteName;
 
+    /**
+     * @return The name of the site.
+     * 
+     */
     public String siteName() {
         return this.siteName;
     }
@@ -71,16 +83,34 @@ public final class GetVirtualApplianceSiteArgs extends com.pulumi.resources.Invo
             $ = new GetVirtualApplianceSiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkVirtualApplianceName The name of the Network Virtual Appliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkVirtualApplianceName(String networkVirtualApplianceName) {
             $.networkVirtualApplianceName = networkVirtualApplianceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param siteName The name of the site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(String siteName) {
             $.siteName = siteName;
             return this;

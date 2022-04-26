@@ -24,6 +24,10 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse e
     @Import(name="maxRetentionDays", required=true)
     private Integer maxRetentionDays;
 
+    /**
+     * @return Maximum age of the snapshot that is allowed to be kept.
+     * 
+     */
     public Integer maxRetentionDays() {
         return this.maxRetentionDays;
     }
@@ -42,6 +46,10 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse e
     @Import(name="onSourceDiskDelete", required=true)
     private String onSourceDiskDelete;
 
+    /**
+     * @return Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.
+     * 
+     */
     public String onSourceDiskDelete() {
         return this.onSourceDiskDelete;
     }
@@ -72,6 +80,12 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse e
             $ = new ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxRetentionDays Maximum age of the snapshot that is allowed to be kept.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRetentionDays(Integer maxRetentionDays) {
             $.maxRetentionDays = maxRetentionDays;
             return this;
@@ -82,6 +96,12 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse e
             return this;
         }
 
+        /**
+         * @param onSourceDiskDelete Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onSourceDiskDelete(String onSourceDiskDelete) {
             $.onSourceDiskDelete = onSourceDiskDelete;
             return this;

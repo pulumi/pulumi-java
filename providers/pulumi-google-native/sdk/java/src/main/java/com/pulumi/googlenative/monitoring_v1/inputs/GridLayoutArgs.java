@@ -28,6 +28,10 @@ public final class GridLayoutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="columns")
     private @Nullable Output<String> columns;
 
+    /**
+     * @return The number of columns into which the view&#39;s width is divided. If omitted or set to zero, a system default will be used while rendering.
+     * 
+     */
     public Optional<Output<String>> columns() {
         return Optional.ofNullable(this.columns);
     }
@@ -39,6 +43,10 @@ public final class GridLayoutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="widgets")
     private @Nullable Output<List<WidgetArgs>> widgets;
 
+    /**
+     * @return The informational elements that are arranged into the columns row-first.
+     * 
+     */
     public Optional<Output<List<WidgetArgs>>> widgets() {
         return Optional.ofNullable(this.widgets);
     }
@@ -68,24 +76,54 @@ public final class GridLayoutArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GridLayoutArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns The number of columns into which the view&#39;s width is divided. If omitted or set to zero, a system default will be used while rendering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(@Nullable Output<String> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns The number of columns into which the view&#39;s width is divided. If omitted or set to zero, a system default will be used while rendering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(String columns) {
             return columns(Output.of(columns));
         }
 
+        /**
+         * @param widgets The informational elements that are arranged into the columns row-first.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widgets(@Nullable Output<List<WidgetArgs>> widgets) {
             $.widgets = widgets;
             return this;
         }
 
+        /**
+         * @param widgets The informational elements that are arranged into the columns row-first.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widgets(List<WidgetArgs> widgets) {
             return widgets(Output.of(widgets));
         }
 
+        /**
+         * @param widgets The informational elements that are arranged into the columns row-first.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widgets(WidgetArgs... widgets) {
             return widgets(List.of(widgets));
         }

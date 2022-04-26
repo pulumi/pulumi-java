@@ -27,6 +27,10 @@ public final class BatchConfigurationPropertiesResponse extends com.pulumi.resou
     @Import(name="batchGroupName", required=true)
     private String batchGroupName;
 
+    /**
+     * @return The name of the batch group.
+     * 
+     */
     public String batchGroupName() {
         return this.batchGroupName;
     }
@@ -38,6 +42,10 @@ public final class BatchConfigurationPropertiesResponse extends com.pulumi.resou
     @Import(name="changedTime")
     private @Nullable String changedTime;
 
+    /**
+     * @return The artifact changed time.
+     * 
+     */
     public Optional<String> changedTime() {
         return Optional.ofNullable(this.changedTime);
     }
@@ -49,6 +57,10 @@ public final class BatchConfigurationPropertiesResponse extends com.pulumi.resou
     @Import(name="createdTime")
     private @Nullable String createdTime;
 
+    /**
+     * @return The artifact creation time.
+     * 
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -67,6 +79,10 @@ public final class BatchConfigurationPropertiesResponse extends com.pulumi.resou
     @Import(name="releaseCriteria", required=true)
     private BatchReleaseCriteriaResponse releaseCriteria;
 
+    /**
+     * @return The batch release criteria.
+     * 
+     */
     public BatchReleaseCriteriaResponse releaseCriteria() {
         return this.releaseCriteria;
     }
@@ -99,16 +115,34 @@ public final class BatchConfigurationPropertiesResponse extends com.pulumi.resou
             $ = new BatchConfigurationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param batchGroupName The name of the batch group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchGroupName(String batchGroupName) {
             $.batchGroupName = batchGroupName;
             return this;
         }
 
+        /**
+         * @param changedTime The artifact changed time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder changedTime(@Nullable String changedTime) {
             $.changedTime = changedTime;
             return this;
         }
 
+        /**
+         * @param createdTime The artifact creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable String createdTime) {
             $.createdTime = createdTime;
             return this;
@@ -119,6 +153,12 @@ public final class BatchConfigurationPropertiesResponse extends com.pulumi.resou
             return this;
         }
 
+        /**
+         * @param releaseCriteria The batch release criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseCriteria(BatchReleaseCriteriaResponse releaseCriteria) {
             $.releaseCriteria = releaseCriteria;
             return this;

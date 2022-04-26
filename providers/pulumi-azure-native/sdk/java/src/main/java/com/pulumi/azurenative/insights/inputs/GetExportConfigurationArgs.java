@@ -19,6 +19,10 @@ public final class GetExportConfigurationArgs extends com.pulumi.resources.Invok
     @Import(name="exportId", required=true)
     private String exportId;
 
+    /**
+     * @return The Continuous Export configuration ID. This is unique within a Application Insights component.
+     * 
+     */
     public String exportId() {
         return this.exportId;
     }
@@ -30,6 +34,10 @@ public final class GetExportConfigurationArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetExportConfigurationArgs extends com.pulumi.resources.Invok
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the Application Insights component resource.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -71,16 +83,34 @@ public final class GetExportConfigurationArgs extends com.pulumi.resources.Invok
             $ = new GetExportConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exportId The Continuous Export configuration ID. This is unique within a Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportId(String exportId) {
             $.exportId = exportId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

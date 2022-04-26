@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class PollingOptionsResponse {
     /**
-     * An array of diagnostics to be collected by Deployment Manager, these diagnostics will be displayed to the user.
+     * @return An array of diagnostics to be collected by Deployment Manager, these diagnostics will be displayed to the user.
      * 
      */
     private final List<DiagnosticResponse> diagnostics;
     /**
-     * JsonPath expression that determines if the request failed.
+     * @return JsonPath expression that determines if the request failed.
      * 
      */
     private final String failCondition;
     /**
-     * JsonPath expression that determines if the request is completed.
+     * @return JsonPath expression that determines if the request is completed.
      * 
      */
     private final String finishCondition;
     /**
-     * JsonPath expression that evaluates to string, it indicates where to poll.
+     * @return JsonPath expression that evaluates to string, it indicates where to poll.
      * 
      */
     private final String pollingLink;
     /**
-     * JsonPath expression, after polling is completed, indicates where to fetch the resource.
+     * @return JsonPath expression, after polling is completed, indicates where to fetch the resource.
      * 
      */
     private final String targetLink;
@@ -52,37 +52,37 @@ public final class PollingOptionsResponse {
     }
 
     /**
-     * An array of diagnostics to be collected by Deployment Manager, these diagnostics will be displayed to the user.
+     * @return An array of diagnostics to be collected by Deployment Manager, these diagnostics will be displayed to the user.
      * 
-    */
+     */
     public List<DiagnosticResponse> diagnostics() {
         return this.diagnostics;
     }
     /**
-     * JsonPath expression that determines if the request failed.
+     * @return JsonPath expression that determines if the request failed.
      * 
-    */
+     */
     public String failCondition() {
         return this.failCondition;
     }
     /**
-     * JsonPath expression that determines if the request is completed.
+     * @return JsonPath expression that determines if the request is completed.
      * 
-    */
+     */
     public String finishCondition() {
         return this.finishCondition;
     }
     /**
-     * JsonPath expression that evaluates to string, it indicates where to poll.
+     * @return JsonPath expression that evaluates to string, it indicates where to poll.
      * 
-    */
+     */
     public String pollingLink() {
         return this.pollingLink;
     }
     /**
-     * JsonPath expression, after polling is completed, indicates where to fetch the resource.
+     * @return JsonPath expression, after polling is completed, indicates where to fetch the resource.
      * 
-    */
+     */
     public String targetLink() {
         return this.targetLink;
     }

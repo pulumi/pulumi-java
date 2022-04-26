@@ -22,6 +22,10 @@ public final class DisasterRecoveryConfigurationArgs extends com.pulumi.resource
     @Import(name="disasterRecoveryConfigurationName")
     private @Nullable Output<String> disasterRecoveryConfigurationName;
 
+    /**
+     * @return The name of the disaster recovery configuration to be created/updated.
+     * 
+     */
     public Optional<Output<String>> disasterRecoveryConfigurationName() {
         return Optional.ofNullable(this.disasterRecoveryConfigurationName);
     }
@@ -33,6 +37,10 @@ public final class DisasterRecoveryConfigurationArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -44,6 +52,10 @@ public final class DisasterRecoveryConfigurationArgs extends com.pulumi.resource
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -74,29 +86,65 @@ public final class DisasterRecoveryConfigurationArgs extends com.pulumi.resource
             $ = new DisasterRecoveryConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disasterRecoveryConfigurationName The name of the disaster recovery configuration to be created/updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disasterRecoveryConfigurationName(@Nullable Output<String> disasterRecoveryConfigurationName) {
             $.disasterRecoveryConfigurationName = disasterRecoveryConfigurationName;
             return this;
         }
 
+        /**
+         * @param disasterRecoveryConfigurationName The name of the disaster recovery configuration to be created/updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disasterRecoveryConfigurationName(String disasterRecoveryConfigurationName) {
             return disasterRecoveryConfigurationName(Output.of(disasterRecoveryConfigurationName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }

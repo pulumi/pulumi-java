@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class SubordinateConfigChainResponse {
     /**
-     * Expected to be in leaf-to-root order according to RFC 5246.
+     * @return Expected to be in leaf-to-root order according to RFC 5246.
      * 
      */
     private final List<String> pemCertificates;
@@ -22,9 +22,9 @@ public final class SubordinateConfigChainResponse {
     }
 
     /**
-     * Expected to be in leaf-to-root order according to RFC 5246.
+     * @return Expected to be in leaf-to-root order according to RFC 5246.
      * 
-    */
+     */
     public List<String> pemCertificates() {
         return this.pemCertificates;
     }

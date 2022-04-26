@@ -30,6 +30,10 @@ public final class AppResourcePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="activeDeploymentName")
     private @Nullable Output<String> activeDeploymentName;
 
+    /**
+     * @return Name of the active deployment of the App
+     * 
+     */
     public Optional<Output<String>> activeDeploymentName() {
         return Optional.ofNullable(this.activeDeploymentName);
     }
@@ -41,6 +45,10 @@ public final class AppResourcePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="fqdn")
     private @Nullable Output<String> fqdn;
 
+    /**
+     * @return Fully qualified dns Name.
+     * 
+     */
     public Optional<Output<String>> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
@@ -52,6 +60,10 @@ public final class AppResourcePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="httpsOnly")
     private @Nullable Output<Boolean> httpsOnly;
 
+    /**
+     * @return Indicate if only https is allowed.
+     * 
+     */
     public Optional<Output<Boolean>> httpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
@@ -63,6 +75,10 @@ public final class AppResourcePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="persistentDisk")
     private @Nullable Output<PersistentDiskArgs> persistentDisk;
 
+    /**
+     * @return Persistent disk settings
+     * 
+     */
     public Optional<Output<PersistentDiskArgs>> persistentDisk() {
         return Optional.ofNullable(this.persistentDisk);
     }
@@ -74,6 +90,10 @@ public final class AppResourcePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="public")
     private @Nullable Output<Boolean> public_;
 
+    /**
+     * @return Indicates whether the App exposes public endpoint
+     * 
+     */
     public Optional<Output<Boolean>> public_() {
         return Optional.ofNullable(this.public_);
     }
@@ -85,6 +105,10 @@ public final class AppResourcePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="temporaryDisk")
     private @Nullable Output<TemporaryDiskArgs> temporaryDisk;
 
+    /**
+     * @return Temporary disk settings
+     * 
+     */
     public Optional<Output<TemporaryDiskArgs>> temporaryDisk() {
         return Optional.ofNullable(this.temporaryDisk);
     }
@@ -118,56 +142,128 @@ public final class AppResourcePropertiesArgs extends com.pulumi.resources.Resour
             $ = new AppResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeDeploymentName Name of the active deployment of the App
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDeploymentName(@Nullable Output<String> activeDeploymentName) {
             $.activeDeploymentName = activeDeploymentName;
             return this;
         }
 
+        /**
+         * @param activeDeploymentName Name of the active deployment of the App
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDeploymentName(String activeDeploymentName) {
             return activeDeploymentName(Output.of(activeDeploymentName));
         }
 
+        /**
+         * @param fqdn Fully qualified dns Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(@Nullable Output<String> fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param fqdn Fully qualified dns Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(String fqdn) {
             return fqdn(Output.of(fqdn));
         }
 
+        /**
+         * @param httpsOnly Indicate if only https is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsOnly(@Nullable Output<Boolean> httpsOnly) {
             $.httpsOnly = httpsOnly;
             return this;
         }
 
+        /**
+         * @param httpsOnly Indicate if only https is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsOnly(Boolean httpsOnly) {
             return httpsOnly(Output.of(httpsOnly));
         }
 
+        /**
+         * @param persistentDisk Persistent disk settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder persistentDisk(@Nullable Output<PersistentDiskArgs> persistentDisk) {
             $.persistentDisk = persistentDisk;
             return this;
         }
 
+        /**
+         * @param persistentDisk Persistent disk settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder persistentDisk(PersistentDiskArgs persistentDisk) {
             return persistentDisk(Output.of(persistentDisk));
         }
 
+        /**
+         * @param public_ Indicates whether the App exposes public endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder public_(@Nullable Output<Boolean> public_) {
             $.public_ = public_;
             return this;
         }
 
+        /**
+         * @param public_ Indicates whether the App exposes public endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder public_(Boolean public_) {
             return public_(Output.of(public_));
         }
 
+        /**
+         * @param temporaryDisk Temporary disk settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryDisk(@Nullable Output<TemporaryDiskArgs> temporaryDisk) {
             $.temporaryDisk = temporaryDisk;
             return this;
         }
 
+        /**
+         * @param temporaryDisk Temporary disk settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryDisk(TemporaryDiskArgs temporaryDisk) {
             return temporaryDisk(Output.of(temporaryDisk));
         }

@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LocalTimestampResponse {
     /**
-     * An enum that represents the format of the local timestamp property that needs to be set.
+     * @return An enum that represents the format of the local timestamp property that needs to be set.
      * 
      */
     private final @Nullable String format;
     /**
-     * An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
+     * @return An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
      * 
      */
     private final @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset;
@@ -32,16 +32,16 @@ public final class LocalTimestampResponse {
     }
 
     /**
-     * An enum that represents the format of the local timestamp property that needs to be set.
+     * @return An enum that represents the format of the local timestamp property that needs to be set.
      * 
-    */
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
     /**
-     * An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
+     * @return An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
      * 
-    */
+     */
     public Optional<LocalTimestampResponseTimeZoneOffset> timeZoneOffset() {
         return Optional.ofNullable(this.timeZoneOffset);
     }

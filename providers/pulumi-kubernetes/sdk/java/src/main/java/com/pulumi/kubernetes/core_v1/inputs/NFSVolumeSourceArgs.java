@@ -27,6 +27,10 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return Path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -38,6 +42,10 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -49,6 +57,10 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="server", required=true)
     private Output<String> server;
 
+    /**
+     * @return Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * 
+     */
     public Output<String> server() {
         return this.server;
     }
@@ -79,29 +91,65 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
             $ = new NFSVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path Path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param readOnly ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }
 
+        /**
+         * @param server Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(Output<String> server) {
             $.server = server;
             return this;
         }
 
+        /**
+         * @param server Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(String server) {
             return server(Output.of(server));
         }

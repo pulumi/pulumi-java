@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PortworxVolumeSource {
     /**
-     * FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     private final @Nullable String fsType;
     /**
-     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     private final @Nullable Boolean readOnly;
     /**
-     * VolumeID uniquely identifies a Portworx volume
+     * @return VolumeID uniquely identifies a Portworx volume
      * 
      */
     private final String volumeID;
@@ -39,23 +39,23 @@ public final class PortworxVolumeSource {
     }
 
     /**
-     * FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
-    */
+     */
     public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
-     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
-    */
+     */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * VolumeID uniquely identifies a Portworx volume
+     * @return VolumeID uniquely identifies a Portworx volume
      * 
-    */
+     */
     public String volumeID() {
         return this.volumeID;
     }

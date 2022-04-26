@@ -26,6 +26,10 @@ public final class HttpFilterConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="config")
     private @Nullable Output<String> config;
 
+    /**
+     * @return The configuration needed to enable the networkservices.HttpFilter resource. The configuration must be YAML formatted and only contain fields defined in the protobuf identified in configTypeUrl
+     * 
+     */
     public Optional<Output<String>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -37,6 +41,10 @@ public final class HttpFilterConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="configTypeUrl")
     private @Nullable Output<String> configTypeUrl;
 
+    /**
+     * @return The fully qualified versioned proto3 type url of the protobuf that the filter expects for its contextual settings, for example: type.googleapis.com/google.protobuf.Struct
+     * 
+     */
     public Optional<Output<String>> configTypeUrl() {
         return Optional.ofNullable(this.configTypeUrl);
     }
@@ -48,6 +56,10 @@ public final class HttpFilterConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="filterName")
     private @Nullable Output<String> filterName;
 
+    /**
+     * @return Name of the networkservices.HttpFilter resource this configuration belongs to. This name must be known to the xDS client. Example: envoy.wasm
+     * 
+     */
     public Optional<Output<String>> filterName() {
         return Optional.ofNullable(this.filterName);
     }
@@ -78,29 +90,65 @@ public final class HttpFilterConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new HttpFilterConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config The configuration needed to enable the networkservices.HttpFilter resource. The configuration must be YAML formatted and only contain fields defined in the protobuf identified in configTypeUrl
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<String> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config The configuration needed to enable the networkservices.HttpFilter resource. The configuration must be YAML formatted and only contain fields defined in the protobuf identified in configTypeUrl
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(String config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param configTypeUrl The fully qualified versioned proto3 type url of the protobuf that the filter expects for its contextual settings, for example: type.googleapis.com/google.protobuf.Struct
+         * 
+         * @return builder
+         * 
+         */
         public Builder configTypeUrl(@Nullable Output<String> configTypeUrl) {
             $.configTypeUrl = configTypeUrl;
             return this;
         }
 
+        /**
+         * @param configTypeUrl The fully qualified versioned proto3 type url of the protobuf that the filter expects for its contextual settings, for example: type.googleapis.com/google.protobuf.Struct
+         * 
+         * @return builder
+         * 
+         */
         public Builder configTypeUrl(String configTypeUrl) {
             return configTypeUrl(Output.of(configTypeUrl));
         }
 
+        /**
+         * @param filterName Name of the networkservices.HttpFilter resource this configuration belongs to. This name must be known to the xDS client. Example: envoy.wasm
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterName(@Nullable Output<String> filterName) {
             $.filterName = filterName;
             return this;
         }
 
+        /**
+         * @param filterName Name of the networkservices.HttpFilter resource this configuration belongs to. This name must be known to the xDS client. Example: envoy.wasm
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterName(String filterName) {
             return filterName(Output.of(filterName));
         }

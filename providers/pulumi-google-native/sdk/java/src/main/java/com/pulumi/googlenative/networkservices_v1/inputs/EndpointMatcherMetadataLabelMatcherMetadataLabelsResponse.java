@@ -23,6 +23,10 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse ext
     @Import(name="labelName", required=true)
     private String labelName;
 
+    /**
+     * @return Label name presented as key in xDS Node Metadata.
+     * 
+     */
     public String labelName() {
         return this.labelName;
     }
@@ -34,6 +38,10 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse ext
     @Import(name="labelValue", required=true)
     private String labelValue;
 
+    /**
+     * @return Label value presented as value corresponding to the above key, in xDS Node Metadata.
+     * 
+     */
     public String labelValue() {
         return this.labelValue;
     }
@@ -63,11 +71,23 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse ext
             $ = new EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labelName Label name presented as key in xDS Node Metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelName(String labelName) {
             $.labelName = labelName;
             return this;
         }
 
+        /**
+         * @param labelValue Label value presented as value corresponding to the above key, in xDS Node Metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelValue(String labelValue) {
             $.labelValue = labelValue;
             return this;

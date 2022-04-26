@@ -29,6 +29,10 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends com.pulumi.r
     @Import(name="dataDisks")
     private @Nullable Output<List<VirtualMachineScaleSetDataDiskArgs>> dataDisks;
 
+    /**
+     * @return Specifies the parameters that are used to add data disks to the virtual machines in the scale set. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * 
+     */
     public Optional<Output<List<VirtualMachineScaleSetDataDiskArgs>>> dataDisks() {
         return Optional.ofNullable(this.dataDisks);
     }
@@ -40,6 +44,10 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends com.pulumi.r
     @Import(name="imageReference")
     private @Nullable Output<ImageReferenceArgs> imageReference;
 
+    /**
+     * @return Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
+     * 
+     */
     public Optional<Output<ImageReferenceArgs>> imageReference() {
         return Optional.ofNullable(this.imageReference);
     }
@@ -51,6 +59,10 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends com.pulumi.r
     @Import(name="osDisk")
     private @Nullable Output<VirtualMachineScaleSetOSDiskArgs> osDisk;
 
+    /**
+     * @return Specifies information about the operating system disk used by the virtual machines in the scale set. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * 
+     */
     public Optional<Output<VirtualMachineScaleSetOSDiskArgs>> osDisk() {
         return Optional.ofNullable(this.osDisk);
     }
@@ -81,33 +93,75 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends com.pulumi.r
             $ = new VirtualMachineScaleSetStorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add data disks to the virtual machines in the scale set. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(@Nullable Output<List<VirtualMachineScaleSetDataDiskArgs>> dataDisks) {
             $.dataDisks = dataDisks;
             return this;
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add data disks to the virtual machines in the scale set. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(List<VirtualMachineScaleSetDataDiskArgs> dataDisks) {
             return dataDisks(Output.of(dataDisks));
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add data disks to the virtual machines in the scale set. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(VirtualMachineScaleSetDataDiskArgs... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
 
+        /**
+         * @param imageReference Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageReference(@Nullable Output<ImageReferenceArgs> imageReference) {
             $.imageReference = imageReference;
             return this;
         }
 
+        /**
+         * @param imageReference Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageReference(ImageReferenceArgs imageReference) {
             return imageReference(Output.of(imageReference));
         }
 
+        /**
+         * @param osDisk Specifies information about the operating system disk used by the virtual machines in the scale set. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisk(@Nullable Output<VirtualMachineScaleSetOSDiskArgs> osDisk) {
             $.osDisk = osDisk;
             return this;
         }
 
+        /**
+         * @param osDisk Specifies information about the operating system disk used by the virtual machines in the scale set. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisk(VirtualMachineScaleSetOSDiskArgs osDisk) {
             return osDisk(Output.of(osDisk));
         }

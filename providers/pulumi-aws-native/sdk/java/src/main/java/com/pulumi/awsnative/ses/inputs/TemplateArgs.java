@@ -26,6 +26,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="htmlPart")
     private @Nullable Output<String> htmlPart;
 
+    /**
+     * @return The HTML body of the email.
+     * 
+     */
     public Optional<Output<String>> htmlPart() {
         return Optional.ofNullable(this.htmlPart);
     }
@@ -37,6 +41,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subjectPart", required=true)
     private Output<String> subjectPart;
 
+    /**
+     * @return The subject line of the email.
+     * 
+     */
     public Output<String> subjectPart() {
         return this.subjectPart;
     }
@@ -48,6 +56,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateName")
     private @Nullable Output<String> templateName;
 
+    /**
+     * @return The name of the template.
+     * 
+     */
     public Optional<Output<String>> templateName() {
         return Optional.ofNullable(this.templateName);
     }
@@ -59,6 +71,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="textPart")
     private @Nullable Output<String> textPart;
 
+    /**
+     * @return The email body that is visible to recipients whose email clients do not display HTML content.
+     * 
+     */
     public Optional<Output<String>> textPart() {
         return Optional.ofNullable(this.textPart);
     }
@@ -90,38 +106,86 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param htmlPart The HTML body of the email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder htmlPart(@Nullable Output<String> htmlPart) {
             $.htmlPart = htmlPart;
             return this;
         }
 
+        /**
+         * @param htmlPart The HTML body of the email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder htmlPart(String htmlPart) {
             return htmlPart(Output.of(htmlPart));
         }
 
+        /**
+         * @param subjectPart The subject line of the email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectPart(Output<String> subjectPart) {
             $.subjectPart = subjectPart;
             return this;
         }
 
+        /**
+         * @param subjectPart The subject line of the email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectPart(String subjectPart) {
             return subjectPart(Output.of(subjectPart));
         }
 
+        /**
+         * @param templateName The name of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateName(@Nullable Output<String> templateName) {
             $.templateName = templateName;
             return this;
         }
 
+        /**
+         * @param templateName The name of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateName(String templateName) {
             return templateName(Output.of(templateName));
         }
 
+        /**
+         * @param textPart The email body that is visible to recipients whose email clients do not display HTML content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textPart(@Nullable Output<String> textPart) {
             $.textPart = textPart;
             return this;
         }
 
+        /**
+         * @param textPart The email body that is visible to recipients whose email clients do not display HTML content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textPart(String textPart) {
             return textPart(Output.of(textPart));
         }

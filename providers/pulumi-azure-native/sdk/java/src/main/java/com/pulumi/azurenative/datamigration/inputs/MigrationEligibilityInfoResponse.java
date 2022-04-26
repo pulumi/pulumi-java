@@ -25,6 +25,10 @@ public final class MigrationEligibilityInfoResponse extends com.pulumi.resources
     @Import(name="isEligibleForMigration", required=true)
     private Boolean isEligibleForMigration;
 
+    /**
+     * @return Whether object is eligible for migration or not.
+     * 
+     */
     public Boolean isEligibleForMigration() {
         return this.isEligibleForMigration;
     }
@@ -36,6 +40,10 @@ public final class MigrationEligibilityInfoResponse extends com.pulumi.resources
     @Import(name="validationMessages", required=true)
     private List<String> validationMessages;
 
+    /**
+     * @return Information about eligibility failure for the server object.
+     * 
+     */
     public List<String> validationMessages() {
         return this.validationMessages;
     }
@@ -65,16 +73,34 @@ public final class MigrationEligibilityInfoResponse extends com.pulumi.resources
             $ = new MigrationEligibilityInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isEligibleForMigration Whether object is eligible for migration or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEligibleForMigration(Boolean isEligibleForMigration) {
             $.isEligibleForMigration = isEligibleForMigration;
             return this;
         }
 
+        /**
+         * @param validationMessages Information about eligibility failure for the server object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationMessages(List<String> validationMessages) {
             $.validationMessages = validationMessages;
             return this;
         }
 
+        /**
+         * @param validationMessages Information about eligibility failure for the server object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationMessages(String... validationMessages) {
             return validationMessages(List.of(validationMessages));
         }

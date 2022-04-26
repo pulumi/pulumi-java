@@ -29,6 +29,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="backupManagementType")
     private @Nullable String backupManagementType;
 
+    /**
+     * @return Type of backup management for the backed up item.
+     * 
+     */
     public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -40,6 +44,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="backupSetName")
     private @Nullable String backupSetName;
 
+    /**
+     * @return Name of the backup set the backup item belongs to
+     * 
+     */
     public Optional<String> backupSetName() {
         return Optional.ofNullable(this.backupSetName);
     }
@@ -51,6 +59,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="containerName")
     private @Nullable String containerName;
 
+    /**
+     * @return Unique name of container
+     * 
+     */
     public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
@@ -62,6 +74,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="createMode")
     private @Nullable String createMode;
 
+    /**
+     * @return Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
+     * 
+     */
     public Optional<String> createMode() {
         return Optional.ofNullable(this.createMode);
     }
@@ -73,6 +89,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="deferredDeleteTimeInUTC")
     private @Nullable String deferredDeleteTimeInUTC;
 
+    /**
+     * @return Time for deferred deletion in UTC
+     * 
+     */
     public Optional<String> deferredDeleteTimeInUTC() {
         return Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
@@ -84,6 +104,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="deferredDeleteTimeRemaining")
     private @Nullable String deferredDeleteTimeRemaining;
 
+    /**
+     * @return Time remaining before the DS marked for deferred delete is permanently deleted
+     * 
+     */
     public Optional<String> deferredDeleteTimeRemaining() {
         return Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
@@ -95,6 +119,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="fabricName")
     private @Nullable String fabricName;
 
+    /**
+     * @return Name of this backup item&#39;s fabric.
+     * 
+     */
     public Optional<String> fabricName() {
         return Optional.ofNullable(this.fabricName);
     }
@@ -106,6 +134,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return Friendly name of the container.
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -117,6 +149,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="isDeferredDeleteScheduleUpcoming")
     private @Nullable Boolean isDeferredDeleteScheduleUpcoming;
 
+    /**
+     * @return Flag to identify whether the deferred deleted DS is to be purged soon
+     * 
+     */
     public Optional<Boolean> isDeferredDeleteScheduleUpcoming() {
         return Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
@@ -128,6 +164,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="isRehydrate")
     private @Nullable Boolean isRehydrate;
 
+    /**
+     * @return Flag to identify that deferred deleted DS is to be moved into Pause state
+     * 
+     */
     public Optional<Boolean> isRehydrate() {
         return Optional.ofNullable(this.isRehydrate);
     }
@@ -139,6 +179,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="isScheduledForDeferredDelete")
     private @Nullable Boolean isScheduledForDeferredDelete;
 
+    /**
+     * @return Flag to identify whether the DS is scheduled for deferred delete
+     * 
+     */
     public Optional<Boolean> isScheduledForDeferredDelete() {
         return Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
@@ -150,6 +194,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="lastRecoveryPoint")
     private @Nullable String lastRecoveryPoint;
 
+    /**
+     * @return Timestamp when the last (latest) backup copy was created for this backup item.
+     * 
+     */
     public Optional<String> lastRecoveryPoint() {
         return Optional.ofNullable(this.lastRecoveryPoint);
     }
@@ -161,6 +209,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="policyId")
     private @Nullable String policyId;
 
+    /**
+     * @return ID of the backup policy with which this item is backed up.
+     * 
+     */
     public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -172,6 +224,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="policyState")
     private @Nullable String policyState;
 
+    /**
+     * @return Indicates consistency of policy object and policy applied to this backup item.
+     * 
+     */
     public Optional<String> policyState() {
         return Optional.ofNullable(this.policyState);
     }
@@ -183,6 +239,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="protectedItemId")
     private @Nullable Double protectedItemId;
 
+    /**
+     * @return Data Plane Service ID of the protected item.
+     * 
+     */
     public Optional<Double> protectedItemId() {
         return Optional.ofNullable(this.protectedItemId);
     }
@@ -195,6 +255,11 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="protectedItemType", required=true)
     private String protectedItemType;
 
+    /**
+     * @return backup item type.
+     * Expected value is &#39;GenericProtectedItem&#39;.
+     * 
+     */
     public String protectedItemType() {
         return this.protectedItemType;
     }
@@ -206,6 +271,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="protectionState")
     private @Nullable String protectionState;
 
+    /**
+     * @return Backup state of this backup item.
+     * 
+     */
     public Optional<String> protectionState() {
         return Optional.ofNullable(this.protectionState);
     }
@@ -217,6 +286,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="sourceAssociations")
     private @Nullable Map<String,String> sourceAssociations;
 
+    /**
+     * @return Loosely coupled (type, value) associations (example - parent of a protected item)
+     * 
+     */
     public Optional<Map<String,String>> sourceAssociations() {
         return Optional.ofNullable(this.sourceAssociations);
     }
@@ -228,6 +301,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="sourceResourceId")
     private @Nullable String sourceResourceId;
 
+    /**
+     * @return ARM ID of the resource to be backed up.
+     * 
+     */
     public Optional<String> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
@@ -239,6 +316,10 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     @Import(name="workloadType")
     private @Nullable String workloadType;
 
+    /**
+     * @return Type of workload this item represents.
+     * 
+     */
     public Optional<String> workloadType() {
         return Optional.ofNullable(this.workloadType);
     }
@@ -286,101 +367,222 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
             $ = new GenericProtectedItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the backed up item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(@Nullable String backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param backupSetName Name of the backup set the backup item belongs to
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupSetName(@Nullable String backupSetName) {
             $.backupSetName = backupSetName;
             return this;
         }
 
+        /**
+         * @param containerName Unique name of container
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(@Nullable String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param createMode Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createMode(@Nullable String createMode) {
             $.createMode = createMode;
             return this;
         }
 
+        /**
+         * @param deferredDeleteTimeInUTC Time for deferred deletion in UTC
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
             $.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
 
+        /**
+         * @param deferredDeleteTimeRemaining Time remaining before the DS marked for deferred delete is permanently deleted
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
             $.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
 
+        /**
+         * @param fabricName Name of this backup item&#39;s fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(@Nullable String fabricName) {
             $.fabricName = fabricName;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param isDeferredDeleteScheduleUpcoming Flag to identify whether the deferred deleted DS is to be purged soon
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
             $.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
 
+        /**
+         * @param isRehydrate Flag to identify that deferred deleted DS is to be moved into Pause state
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRehydrate(@Nullable Boolean isRehydrate) {
             $.isRehydrate = isRehydrate;
             return this;
         }
 
+        /**
+         * @param isScheduledForDeferredDelete Flag to identify whether the DS is scheduled for deferred delete
+         * 
+         * @return builder
+         * 
+         */
         public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
             $.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
 
+        /**
+         * @param lastRecoveryPoint Timestamp when the last (latest) backup copy was created for this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
             $.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
 
+        /**
+         * @param policyId ID of the backup policy with which this item is backed up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable String policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param policyState Indicates consistency of policy object and policy applied to this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyState(@Nullable String policyState) {
             $.policyState = policyState;
             return this;
         }
 
+        /**
+         * @param protectedItemId Data Plane Service ID of the protected item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemId(@Nullable Double protectedItemId) {
             $.protectedItemId = protectedItemId;
             return this;
         }
 
+        /**
+         * @param protectedItemType backup item type.
+         * Expected value is &#39;GenericProtectedItem&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemType(String protectedItemType) {
             $.protectedItemType = protectedItemType;
             return this;
         }
 
+        /**
+         * @param protectionState Backup state of this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionState(@Nullable String protectionState) {
             $.protectionState = protectionState;
             return this;
         }
 
+        /**
+         * @param sourceAssociations Loosely coupled (type, value) associations (example - parent of a protected item)
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAssociations(@Nullable Map<String,String> sourceAssociations) {
             $.sourceAssociations = sourceAssociations;
             return this;
         }
 
+        /**
+         * @param sourceResourceId ARM ID of the resource to be backed up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             $.sourceResourceId = sourceResourceId;
             return this;
         }
 
+        /**
+         * @param workloadType Type of workload this item represents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadType(@Nullable String workloadType) {
             $.workloadType = workloadType;
             return this;

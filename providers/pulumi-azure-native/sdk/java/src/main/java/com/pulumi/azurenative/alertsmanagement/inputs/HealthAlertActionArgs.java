@@ -27,6 +27,10 @@ public final class HealthAlertActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="actionGroupId")
     private @Nullable Output<String> actionGroupId;
 
+    /**
+     * @return the id of the action group to use.
+     * 
+     */
     public Optional<Output<String>> actionGroupId() {
         return Optional.ofNullable(this.actionGroupId);
     }
@@ -38,6 +42,10 @@ public final class HealthAlertActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="webHookProperties")
     private @Nullable Output<Map<String,String>> webHookProperties;
 
+    /**
+     * @return The properties of a webhook object.
+     * 
+     */
     public Optional<Output<Map<String,String>>> webHookProperties() {
         return Optional.ofNullable(this.webHookProperties);
     }
@@ -67,20 +75,44 @@ public final class HealthAlertActionArgs extends com.pulumi.resources.ResourceAr
             $ = new HealthAlertActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionGroupId the id of the action group to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroupId(@Nullable Output<String> actionGroupId) {
             $.actionGroupId = actionGroupId;
             return this;
         }
 
+        /**
+         * @param actionGroupId the id of the action group to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroupId(String actionGroupId) {
             return actionGroupId(Output.of(actionGroupId));
         }
 
+        /**
+         * @param webHookProperties The properties of a webhook object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webHookProperties(@Nullable Output<Map<String,String>> webHookProperties) {
             $.webHookProperties = webHookProperties;
             return this;
         }
 
+        /**
+         * @param webHookProperties The properties of a webhook object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webHookProperties(Map<String,String> webHookProperties) {
             return webHookProperties(Output.of(webHookProperties));
         }

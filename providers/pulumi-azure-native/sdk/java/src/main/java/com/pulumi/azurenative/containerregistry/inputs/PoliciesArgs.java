@@ -28,6 +28,10 @@ public final class PoliciesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="quarantinePolicy")
     private @Nullable Output<QuarantinePolicyArgs> quarantinePolicy;
 
+    /**
+     * @return The quarantine policy for a container registry.
+     * 
+     */
     public Optional<Output<QuarantinePolicyArgs>> quarantinePolicy() {
         return Optional.ofNullable(this.quarantinePolicy);
     }
@@ -39,6 +43,10 @@ public final class PoliciesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionPolicy")
     private @Nullable Output<RetentionPolicyArgs> retentionPolicy;
 
+    /**
+     * @return The retention policy for a container registry.
+     * 
+     */
     public Optional<Output<RetentionPolicyArgs>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -50,6 +58,10 @@ public final class PoliciesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trustPolicy")
     private @Nullable Output<TrustPolicyArgs> trustPolicy;
 
+    /**
+     * @return The content trust policy for a container registry.
+     * 
+     */
     public Optional<Output<TrustPolicyArgs>> trustPolicy() {
         return Optional.ofNullable(this.trustPolicy);
     }
@@ -80,29 +92,65 @@ public final class PoliciesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PoliciesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param quarantinePolicy The quarantine policy for a container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quarantinePolicy(@Nullable Output<QuarantinePolicyArgs> quarantinePolicy) {
             $.quarantinePolicy = quarantinePolicy;
             return this;
         }
 
+        /**
+         * @param quarantinePolicy The quarantine policy for a container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quarantinePolicy(QuarantinePolicyArgs quarantinePolicy) {
             return quarantinePolicy(Output.of(quarantinePolicy));
         }
 
+        /**
+         * @param retentionPolicy The retention policy for a container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable Output<RetentionPolicyArgs> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy The retention policy for a container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(RetentionPolicyArgs retentionPolicy) {
             return retentionPolicy(Output.of(retentionPolicy));
         }
 
+        /**
+         * @param trustPolicy The content trust policy for a container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustPolicy(@Nullable Output<TrustPolicyArgs> trustPolicy) {
             $.trustPolicy = trustPolicy;
             return this;
         }
 
+        /**
+         * @param trustPolicy The content trust policy for a container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustPolicy(TrustPolicyArgs trustPolicy) {
             return trustPolicy(Output.of(trustPolicy));
         }

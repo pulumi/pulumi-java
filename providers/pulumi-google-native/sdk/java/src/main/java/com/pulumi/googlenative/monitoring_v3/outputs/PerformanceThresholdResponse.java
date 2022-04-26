@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class PerformanceThresholdResponse {
     /**
-     * BasicSli to evaluate to judge window quality.
+     * @return BasicSli to evaluate to judge window quality.
      * 
      */
     private final BasicSliResponse basicSliPerformance;
     /**
-     * RequestBasedSli to evaluate to judge window quality.
+     * @return RequestBasedSli to evaluate to judge window quality.
      * 
      */
     private final RequestBasedSliResponse performance;
     /**
-     * If window performance &gt;= threshold, the window is counted as good.
+     * @return If window performance &gt;= threshold, the window is counted as good.
      * 
      */
     private final Double threshold;
@@ -38,23 +38,23 @@ public final class PerformanceThresholdResponse {
     }
 
     /**
-     * BasicSli to evaluate to judge window quality.
+     * @return BasicSli to evaluate to judge window quality.
      * 
-    */
+     */
     public BasicSliResponse basicSliPerformance() {
         return this.basicSliPerformance;
     }
     /**
-     * RequestBasedSli to evaluate to judge window quality.
+     * @return RequestBasedSli to evaluate to judge window quality.
      * 
-    */
+     */
     public RequestBasedSliResponse performance() {
         return this.performance;
     }
     /**
-     * If window performance &gt;= threshold, the window is counted as good.
+     * @return If window performance &gt;= threshold, the window is counted as good.
      * 
-    */
+     */
     public Double threshold() {
         return this.threshold;
     }

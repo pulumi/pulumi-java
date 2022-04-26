@@ -15,23 +15,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TenantInboundSamlConfigIdpConfig {
     /**
-     * The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
+     * @return The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
      * Structure is documented below.
      * 
      */
     private final List<TenantInboundSamlConfigIdpConfigIdpCertificate> idpCertificates;
     /**
-     * Unique identifier for all SAML entities
+     * @return Unique identifier for all SAML entities
      * 
      */
     private final String idpEntityId;
     /**
-     * Indicates if outbounding SAMLRequest should be signed.
+     * @return Indicates if outbounding SAMLRequest should be signed.
      * 
      */
     private final @Nullable Boolean signRequest;
     /**
-     * URL to send Authentication request to.
+     * @return URL to send Authentication request to.
      * 
      */
     private final String ssoUrl;
@@ -49,31 +49,31 @@ public final class TenantInboundSamlConfigIdpConfig {
     }
 
     /**
-     * The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
+     * @return The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
      * Structure is documented below.
      * 
-    */
+     */
     public List<TenantInboundSamlConfigIdpConfigIdpCertificate> idpCertificates() {
         return this.idpCertificates;
     }
     /**
-     * Unique identifier for all SAML entities
+     * @return Unique identifier for all SAML entities
      * 
-    */
+     */
     public String idpEntityId() {
         return this.idpEntityId;
     }
     /**
-     * Indicates if outbounding SAMLRequest should be signed.
+     * @return Indicates if outbounding SAMLRequest should be signed.
      * 
-    */
+     */
     public Optional<Boolean> signRequest() {
         return Optional.ofNullable(this.signRequest);
     }
     /**
-     * URL to send Authentication request to.
+     * @return URL to send Authentication request to.
      * 
-    */
+     */
     public String ssoUrl() {
         return this.ssoUrl;
     }

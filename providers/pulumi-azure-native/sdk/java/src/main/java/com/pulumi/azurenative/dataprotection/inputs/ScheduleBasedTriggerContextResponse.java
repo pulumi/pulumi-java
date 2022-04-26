@@ -28,6 +28,11 @@ public final class ScheduleBasedTriggerContextResponse extends com.pulumi.resour
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return Type of the specific object - used for deserializing
+     * Expected value is &#39;ScheduleBasedTriggerContext&#39;.
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -39,6 +44,10 @@ public final class ScheduleBasedTriggerContextResponse extends com.pulumi.resour
     @Import(name="schedule", required=true)
     private BackupScheduleResponse schedule;
 
+    /**
+     * @return Schedule for this backup
+     * 
+     */
     public BackupScheduleResponse schedule() {
         return this.schedule;
     }
@@ -50,6 +59,10 @@ public final class ScheduleBasedTriggerContextResponse extends com.pulumi.resour
     @Import(name="taggingCriteria", required=true)
     private List<TaggingCriteriaResponse> taggingCriteria;
 
+    /**
+     * @return List of tags that can be applicable for given schedule.
+     * 
+     */
     public List<TaggingCriteriaResponse> taggingCriteria() {
         return this.taggingCriteria;
     }
@@ -80,21 +93,46 @@ public final class ScheduleBasedTriggerContextResponse extends com.pulumi.resour
             $ = new ScheduleBasedTriggerContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;ScheduleBasedTriggerContext&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param schedule Schedule for this backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(BackupScheduleResponse schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param taggingCriteria List of tags that can be applicable for given schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taggingCriteria(List<TaggingCriteriaResponse> taggingCriteria) {
             $.taggingCriteria = taggingCriteria;
             return this;
         }
 
+        /**
+         * @param taggingCriteria List of tags that can be applicable for given schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taggingCriteria(TaggingCriteriaResponse... taggingCriteria) {
             return taggingCriteria(List.of(taggingCriteria));
         }

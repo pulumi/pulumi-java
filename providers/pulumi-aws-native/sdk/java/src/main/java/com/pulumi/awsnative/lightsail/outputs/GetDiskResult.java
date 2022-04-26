@@ -18,54 +18,54 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDiskResult {
     /**
-     * An array of objects representing the add-ons to enable for the new instance.
+     * @return An array of objects representing the add-ons to enable for the new instance.
      * 
      */
     private final @Nullable List<DiskAddOn> addOns;
     /**
-     * Name of the attached Lightsail Instance
+     * @return Name of the attached Lightsail Instance
      * 
      */
     private final @Nullable String attachedTo;
     /**
-     * Attachment State of the Lightsail disk
+     * @return Attachment State of the Lightsail disk
      * 
      */
     private final @Nullable String attachmentState;
     private final @Nullable String diskArn;
     /**
-     * Iops of the Lightsail disk
+     * @return Iops of the Lightsail disk
      * 
      */
     private final @Nullable Integer iops;
     /**
-     * Check is Disk is attached state
+     * @return Check is Disk is attached state
      * 
      */
     private final @Nullable Boolean isAttached;
     private final @Nullable DiskLocation location;
     /**
-     * Path of the  attached Disk
+     * @return Path of the  attached Disk
      * 
      */
     private final @Nullable String path;
     /**
-     * Resource type of Lightsail instance.
+     * @return Resource type of Lightsail instance.
      * 
      */
     private final @Nullable String resourceType;
     /**
-     * State of the Lightsail disk
+     * @return State of the Lightsail disk
      * 
      */
     private final @Nullable String state;
     /**
-     * Support code to help identify any issues
+     * @return Support code to help identify any issues
      * 
      */
     private final @Nullable String supportCode;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<DiskTag> tags;
@@ -99,23 +99,23 @@ public final class GetDiskResult {
     }
 
     /**
-     * An array of objects representing the add-ons to enable for the new instance.
+     * @return An array of objects representing the add-ons to enable for the new instance.
      * 
-    */
+     */
     public List<DiskAddOn> addOns() {
         return this.addOns == null ? List.of() : this.addOns;
     }
     /**
-     * Name of the attached Lightsail Instance
+     * @return Name of the attached Lightsail Instance
      * 
-    */
+     */
     public Optional<String> attachedTo() {
         return Optional.ofNullable(this.attachedTo);
     }
     /**
-     * Attachment State of the Lightsail disk
+     * @return Attachment State of the Lightsail disk
      * 
-    */
+     */
     public Optional<String> attachmentState() {
         return Optional.ofNullable(this.attachmentState);
     }
@@ -123,16 +123,16 @@ public final class GetDiskResult {
         return Optional.ofNullable(this.diskArn);
     }
     /**
-     * Iops of the Lightsail disk
+     * @return Iops of the Lightsail disk
      * 
-    */
+     */
     public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
     /**
-     * Check is Disk is attached state
+     * @return Check is Disk is attached state
      * 
-    */
+     */
     public Optional<Boolean> isAttached() {
         return Optional.ofNullable(this.isAttached);
     }
@@ -140,37 +140,37 @@ public final class GetDiskResult {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Path of the  attached Disk
+     * @return Path of the  attached Disk
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * Resource type of Lightsail instance.
+     * @return Resource type of Lightsail instance.
      * 
-    */
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
-     * State of the Lightsail disk
+     * @return State of the Lightsail disk
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * Support code to help identify any issues
+     * @return Support code to help identify any issues
      * 
-    */
+     */
     public Optional<String> supportCode() {
         return Optional.ofNullable(this.supportCode);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<DiskTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -26,6 +26,10 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
     @Import(name="groupId")
     private @Nullable String groupId;
 
+    /**
+     * @return The group ID of the resource.
+     * 
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -37,6 +41,10 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The ID of the private link resource.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -48,6 +56,10 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the private link resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
     @Import(name="privateLinkServiceID", required=true)
     private String privateLinkServiceID;
 
+    /**
+     * @return The private link service ID of the resource, this field is exposed only to NRP internally.
+     * 
+     */
     public String privateLinkServiceID() {
         return this.privateLinkServiceID;
     }
@@ -70,6 +86,10 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
     @Import(name="requiredMembers")
     private @Nullable List<String> requiredMembers;
 
+    /**
+     * @return RequiredMembers of the resource
+     * 
+     */
     public Optional<List<String>> requiredMembers() {
         return Optional.ofNullable(this.requiredMembers);
     }
@@ -81,6 +101,10 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -114,35 +138,77 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
             $ = new PrivateLinkResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId The group ID of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable String groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param id The ID of the private link resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the private link resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceID The private link service ID of the resource, this field is exposed only to NRP internally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceID(String privateLinkServiceID) {
             $.privateLinkServiceID = privateLinkServiceID;
             return this;
         }
 
+        /**
+         * @param requiredMembers RequiredMembers of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredMembers(@Nullable List<String> requiredMembers) {
             $.requiredMembers = requiredMembers;
             return this;
         }
 
+        /**
+         * @param requiredMembers RequiredMembers of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredMembers(String... requiredMembers) {
             return requiredMembers(List.of(requiredMembers));
         }
 
+        /**
+         * @param type The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

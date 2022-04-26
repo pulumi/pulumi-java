@@ -19,6 +19,10 @@ public final class GetCustomAssessmentAutomationArgs extends com.pulumi.resource
     @Import(name="customAssessmentAutomationName", required=true)
     private String customAssessmentAutomationName;
 
+    /**
+     * @return Name of the Custom Assessment Automation.
+     * 
+     */
     public String customAssessmentAutomationName() {
         return this.customAssessmentAutomationName;
     }
@@ -30,6 +34,10 @@ public final class GetCustomAssessmentAutomationArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetCustomAssessmentAutomationArgs extends com.pulumi.resource
             $ = new GetCustomAssessmentAutomationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customAssessmentAutomationName Name of the Custom Assessment Automation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customAssessmentAutomationName(String customAssessmentAutomationName) {
             $.customAssessmentAutomationName = customAssessmentAutomationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

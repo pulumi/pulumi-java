@@ -27,6 +27,10 @@ public final class LegalHoldPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="hasLegalHold", required=true)
     private Boolean hasLegalHold;
 
+    /**
+     * @return The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.
+     * 
+     */
     public Boolean hasLegalHold() {
         return this.hasLegalHold;
     }
@@ -38,6 +42,10 @@ public final class LegalHoldPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="tags")
     private @Nullable List<TagPropertyResponse> tags;
 
+    /**
+     * @return The list of LegalHold tags of a blob container.
+     * 
+     */
     public Optional<List<TagPropertyResponse>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -67,16 +75,34 @@ public final class LegalHoldPropertiesResponse extends com.pulumi.resources.Invo
             $ = new LegalHoldPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hasLegalHold The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasLegalHold(Boolean hasLegalHold) {
             $.hasLegalHold = hasLegalHold;
             return this;
         }
 
+        /**
+         * @param tags The list of LegalHold tags of a blob container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable List<TagPropertyResponse> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The list of LegalHold tags of a blob container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(TagPropertyResponse... tags) {
             return tags(List.of(tags));
         }

@@ -24,6 +24,10 @@ public final class TimeWindowResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return The time that the window ends. The end time should take place after the start time.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -35,6 +39,10 @@ public final class TimeWindowResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maintenanceExclusionOptions", required=true)
     private MaintenanceExclusionOptionsResponse maintenanceExclusionOptions;
 
+    /**
+     * @return MaintenanceExclusionOptions provides maintenance exclusion related options.
+     * 
+     */
     public MaintenanceExclusionOptionsResponse maintenanceExclusionOptions() {
         return this.maintenanceExclusionOptions;
     }
@@ -46,6 +54,10 @@ public final class TimeWindowResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The time that the window first starts.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -76,16 +88,34 @@ public final class TimeWindowResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TimeWindowResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime The time that the window ends. The end time should take place after the start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param maintenanceExclusionOptions MaintenanceExclusionOptions provides maintenance exclusion related options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceExclusionOptions(MaintenanceExclusionOptionsResponse maintenanceExclusionOptions) {
             $.maintenanceExclusionOptions = maintenanceExclusionOptions;
             return this;
         }
 
+        /**
+         * @param startTime The time that the window first starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

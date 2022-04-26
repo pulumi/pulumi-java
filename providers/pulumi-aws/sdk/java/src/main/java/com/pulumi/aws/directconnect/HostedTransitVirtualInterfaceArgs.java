@@ -23,6 +23,10 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="addressFamily", required=true)
     private Output<String> addressFamily;
 
+    /**
+     * @return The address family for the BGP peer. ` ipv4  ` or `ipv6`.
+     * 
+     */
     public Output<String> addressFamily() {
         return this.addressFamily;
     }
@@ -34,6 +38,10 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="amazonAddress")
     private @Nullable Output<String> amazonAddress;
 
+    /**
+     * @return The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+     * 
+     */
     public Optional<Output<String>> amazonAddress() {
         return Optional.ofNullable(this.amazonAddress);
     }
@@ -45,6 +53,10 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="bgpAsn", required=true)
     private Output<Integer> bgpAsn;
 
+    /**
+     * @return The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+     * 
+     */
     public Output<Integer> bgpAsn() {
         return this.bgpAsn;
     }
@@ -56,6 +68,10 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="bgpAuthKey")
     private @Nullable Output<String> bgpAuthKey;
 
+    /**
+     * @return The authentication key for BGP configuration.
+     * 
+     */
     public Optional<Output<String>> bgpAuthKey() {
         return Optional.ofNullable(this.bgpAuthKey);
     }
@@ -67,6 +83,10 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="connectionId", required=true)
     private Output<String> connectionId;
 
+    /**
+     * @return The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+     * 
+     */
     public Output<String> connectionId() {
         return this.connectionId;
     }
@@ -78,6 +98,10 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="customerAddress")
     private @Nullable Output<String> customerAddress;
 
+    /**
+     * @return The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+     * 
+     */
     public Optional<Output<String>> customerAddress() {
         return Optional.ofNullable(this.customerAddress);
     }
@@ -89,6 +113,10 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="mtu")
     private @Nullable Output<Integer> mtu;
 
+    /**
+     * @return The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
+     * 
+     */
     public Optional<Output<Integer>> mtu() {
         return Optional.ofNullable(this.mtu);
     }
@@ -100,6 +128,10 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for the virtual interface.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -111,6 +143,10 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="ownerAccountId", required=true)
     private Output<String> ownerAccountId;
 
+    /**
+     * @return The AWS account that will own the new virtual interface.
+     * 
+     */
     public Output<String> ownerAccountId() {
         return this.ownerAccountId;
     }
@@ -122,6 +158,10 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="vlan", required=true)
     private Output<Integer> vlan;
 
+    /**
+     * @return The VLAN ID.
+     * 
+     */
     public Output<Integer> vlan() {
         return this.vlan;
     }
@@ -159,92 +199,212 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
             $ = new HostedTransitVirtualInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressFamily The address family for the BGP peer. ` ipv4  ` or `ipv6`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressFamily(Output<String> addressFamily) {
             $.addressFamily = addressFamily;
             return this;
         }
 
+        /**
+         * @param addressFamily The address family for the BGP peer. ` ipv4  ` or `ipv6`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressFamily(String addressFamily) {
             return addressFamily(Output.of(addressFamily));
         }
 
+        /**
+         * @param amazonAddress The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amazonAddress(@Nullable Output<String> amazonAddress) {
             $.amazonAddress = amazonAddress;
             return this;
         }
 
+        /**
+         * @param amazonAddress The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amazonAddress(String amazonAddress) {
             return amazonAddress(Output.of(amazonAddress));
         }
 
+        /**
+         * @param bgpAsn The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpAsn(Output<Integer> bgpAsn) {
             $.bgpAsn = bgpAsn;
             return this;
         }
 
+        /**
+         * @param bgpAsn The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpAsn(Integer bgpAsn) {
             return bgpAsn(Output.of(bgpAsn));
         }
 
+        /**
+         * @param bgpAuthKey The authentication key for BGP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpAuthKey(@Nullable Output<String> bgpAuthKey) {
             $.bgpAuthKey = bgpAuthKey;
             return this;
         }
 
+        /**
+         * @param bgpAuthKey The authentication key for BGP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpAuthKey(String bgpAuthKey) {
             return bgpAuthKey(Output.of(bgpAuthKey));
         }
 
+        /**
+         * @param connectionId The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(Output<String> connectionId) {
             $.connectionId = connectionId;
             return this;
         }
 
+        /**
+         * @param connectionId The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(String connectionId) {
             return connectionId(Output.of(connectionId));
         }
 
+        /**
+         * @param customerAddress The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerAddress(@Nullable Output<String> customerAddress) {
             $.customerAddress = customerAddress;
             return this;
         }
 
+        /**
+         * @param customerAddress The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerAddress(String customerAddress) {
             return customerAddress(Output.of(customerAddress));
         }
 
+        /**
+         * @param mtu The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mtu(@Nullable Output<Integer> mtu) {
             $.mtu = mtu;
             return this;
         }
 
+        /**
+         * @param mtu The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mtu(Integer mtu) {
             return mtu(Output.of(mtu));
         }
 
+        /**
+         * @param name The name for the virtual interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for the virtual interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param ownerAccountId The AWS account that will own the new virtual interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerAccountId(Output<String> ownerAccountId) {
             $.ownerAccountId = ownerAccountId;
             return this;
         }
 
+        /**
+         * @param ownerAccountId The AWS account that will own the new virtual interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerAccountId(String ownerAccountId) {
             return ownerAccountId(Output.of(ownerAccountId));
         }
 
+        /**
+         * @param vlan The VLAN ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vlan(Output<Integer> vlan) {
             $.vlan = vlan;
             return this;
         }
 
+        /**
+         * @param vlan The VLAN ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vlan(Integer vlan) {
             return vlan(Output.of(vlan));
         }

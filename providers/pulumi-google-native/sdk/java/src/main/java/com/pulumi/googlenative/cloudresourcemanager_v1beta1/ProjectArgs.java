@@ -25,6 +25,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return Creation time. Read-only.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -36,6 +40,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The labels associated with this Project. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: a-z{0,62}. Label values must be between 0 and 63 characters long and must conform to the regular expression [a-z0-9_-]{0,63}. A label value can be empty. No more than 256 labels can be associated with a given resource. Clients should store labels in a representation such as JSON that does not depend on specific characters being disallowed. Example: `&#34;environment&#34; : &#34;dev&#34;` Read-write.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -47,6 +55,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lifecycleState")
     private @Nullable Output<ProjectLifecycleState> lifecycleState;
 
+    /**
+     * @return The Project lifecycle state. Read-only.
+     * 
+     */
     public Optional<Output<ProjectLifecycleState>> lifecycleState() {
         return Optional.ofNullable(this.lifecycleState);
     }
@@ -58,6 +70,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The optional user-assigned display name of the Project. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `My Project` Read-write.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +85,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent")
     private @Nullable Output<ResourceIdArgs> parent;
 
+    /**
+     * @return An optional reference to a parent Resource. Supported parent types include &#34;organization&#34; and &#34;folder&#34;. Once set, the parent cannot be cleared. The `parent` can be set on creation or using the `UpdateProject` method; the end user must have the `resourcemanager.projects.create` permission on the parent. Read-write.
+     * 
+     */
     public Optional<Output<ResourceIdArgs>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -80,6 +100,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectId")
     private @Nullable Output<String> projectId;
 
+    /**
+     * @return The unique, user-assigned ID of the Project. It must be 6 to 30 lowercase letters, digits, or hyphens. It must start with a letter. Trailing hyphens are prohibited. Example: `tokyo-rain-123` Read-only after creation.
+     * 
+     */
     public Optional<Output<String>> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -91,6 +115,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectNumber")
     private @Nullable Output<String> projectNumber;
 
+    /**
+     * @return The number uniquely identifying the project. Example: `415104041262` Read-only.
+     * 
+     */
     public Optional<Output<String>> projectNumber() {
         return Optional.ofNullable(this.projectNumber);
     }
@@ -133,65 +161,149 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime Creation time. Read-only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime Creation time. Read-only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param labels The labels associated with this Project. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: a-z{0,62}. Label values must be between 0 and 63 characters long and must conform to the regular expression [a-z0-9_-]{0,63}. A label value can be empty. No more than 256 labels can be associated with a given resource. Clients should store labels in a representation such as JSON that does not depend on specific characters being disallowed. Example: `&#34;environment&#34; : &#34;dev&#34;` Read-write.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The labels associated with this Project. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: a-z{0,62}. Label values must be between 0 and 63 characters long and must conform to the regular expression [a-z0-9_-]{0,63}. A label value can be empty. No more than 256 labels can be associated with a given resource. Clients should store labels in a representation such as JSON that does not depend on specific characters being disallowed. Example: `&#34;environment&#34; : &#34;dev&#34;` Read-write.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param lifecycleState The Project lifecycle state. Read-only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleState(@Nullable Output<ProjectLifecycleState> lifecycleState) {
             $.lifecycleState = lifecycleState;
             return this;
         }
 
+        /**
+         * @param lifecycleState The Project lifecycle state. Read-only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleState(ProjectLifecycleState lifecycleState) {
             return lifecycleState(Output.of(lifecycleState));
         }
 
+        /**
+         * @param name The optional user-assigned display name of the Project. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `My Project` Read-write.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The optional user-assigned display name of the Project. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `My Project` Read-write.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parent An optional reference to a parent Resource. Supported parent types include &#34;organization&#34; and &#34;folder&#34;. Once set, the parent cannot be cleared. The `parent` can be set on creation or using the `UpdateProject` method; the end user must have the `resourcemanager.projects.create` permission on the parent. Read-write.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<ResourceIdArgs> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent An optional reference to a parent Resource. Supported parent types include &#34;organization&#34; and &#34;folder&#34;. Once set, the parent cannot be cleared. The `parent` can be set on creation or using the `UpdateProject` method; the end user must have the `resourcemanager.projects.create` permission on the parent. Read-write.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(ResourceIdArgs parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param projectId The unique, user-assigned ID of the Project. It must be 6 to 30 lowercase letters, digits, or hyphens. It must start with a letter. Trailing hyphens are prohibited. Example: `tokyo-rain-123` Read-only after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(@Nullable Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId The unique, user-assigned ID of the Project. It must be 6 to 30 lowercase letters, digits, or hyphens. It must start with a letter. Trailing hyphens are prohibited. Example: `tokyo-rain-123` Read-only after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }
 
+        /**
+         * @param projectNumber The number uniquely identifying the project. Example: `415104041262` Read-only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectNumber(@Nullable Output<String> projectNumber) {
             $.projectNumber = projectNumber;
             return this;
         }
 
+        /**
+         * @param projectNumber The number uniquely identifying the project. Example: `415104041262` Read-only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectNumber(String projectNumber) {
             return projectNumber(Output.of(projectNumber));
         }

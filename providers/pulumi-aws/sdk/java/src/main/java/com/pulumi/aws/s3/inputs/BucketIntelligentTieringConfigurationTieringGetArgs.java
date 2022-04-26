@@ -21,6 +21,10 @@ public final class BucketIntelligentTieringConfigurationTieringGetArgs extends c
     @Import(name="accessTier", required=true)
     private Output<String> accessTier;
 
+    /**
+     * @return S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_CONFIGURATION`, `DEEP_ARCHIVE_CONFIGURATION`.
+     * 
+     */
     public Output<String> accessTier() {
         return this.accessTier;
     }
@@ -32,6 +36,10 @@ public final class BucketIntelligentTieringConfigurationTieringGetArgs extends c
     @Import(name="days", required=true)
     private Output<Integer> days;
 
+    /**
+     * @return The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier.
+     * 
+     */
     public Output<Integer> days() {
         return this.days;
     }
@@ -61,20 +69,44 @@ public final class BucketIntelligentTieringConfigurationTieringGetArgs extends c
             $ = new BucketIntelligentTieringConfigurationTieringGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessTier S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_CONFIGURATION`, `DEEP_ARCHIVE_CONFIGURATION`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTier(Output<String> accessTier) {
             $.accessTier = accessTier;
             return this;
         }
 
+        /**
+         * @param accessTier S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_CONFIGURATION`, `DEEP_ARCHIVE_CONFIGURATION`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTier(String accessTier) {
             return accessTier(Output.of(accessTier));
         }
 
+        /**
+         * @param days The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(Output<Integer> days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param days The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(Integer days) {
             return days(Output.of(days));
         }

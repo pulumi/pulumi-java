@@ -21,6 +21,10 @@ public final class VmUptimeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="daysPerMonth")
     private @Nullable Double daysPerMonth;
 
+    /**
+     * @return Number of days in a month for VM uptime.
+     * 
+     */
     public Optional<Double> daysPerMonth() {
         return Optional.ofNullable(this.daysPerMonth);
     }
@@ -32,6 +36,10 @@ public final class VmUptimeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hoursPerDay")
     private @Nullable Double hoursPerDay;
 
+    /**
+     * @return Number of hours per day for VM uptime.
+     * 
+     */
     public Optional<Double> hoursPerDay() {
         return Optional.ofNullable(this.hoursPerDay);
     }
@@ -61,11 +69,23 @@ public final class VmUptimeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VmUptimeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysPerMonth Number of days in a month for VM uptime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysPerMonth(@Nullable Double daysPerMonth) {
             $.daysPerMonth = daysPerMonth;
             return this;
         }
 
+        /**
+         * @param hoursPerDay Number of hours per day for VM uptime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hoursPerDay(@Nullable Double hoursPerDay) {
             $.hoursPerDay = hoursPerDay;
             return this;

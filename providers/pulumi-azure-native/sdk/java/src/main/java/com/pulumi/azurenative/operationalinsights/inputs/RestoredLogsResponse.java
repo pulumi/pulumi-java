@@ -25,6 +25,10 @@ public final class RestoredLogsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="endRestoreTime")
     private @Nullable String endRestoreTime;
 
+    /**
+     * @return The timestamp to end the restore by (UTC).
+     * 
+     */
     public Optional<String> endRestoreTime() {
         return Optional.ofNullable(this.endRestoreTime);
     }
@@ -36,6 +40,10 @@ public final class RestoredLogsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceTable", required=true)
     private String sourceTable;
 
+    /**
+     * @return The table to restore data from.
+     * 
+     */
     public String sourceTable() {
         return this.sourceTable;
     }
@@ -47,6 +55,10 @@ public final class RestoredLogsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="startRestoreTime")
     private @Nullable String startRestoreTime;
 
+    /**
+     * @return The timestamp to start the restore from (UTC).
+     * 
+     */
     public Optional<String> startRestoreTime() {
         return Optional.ofNullable(this.startRestoreTime);
     }
@@ -77,16 +89,34 @@ public final class RestoredLogsResponse extends com.pulumi.resources.InvokeArgs 
             $ = new RestoredLogsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endRestoreTime The timestamp to end the restore by (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder endRestoreTime(@Nullable String endRestoreTime) {
             $.endRestoreTime = endRestoreTime;
             return this;
         }
 
+        /**
+         * @param sourceTable The table to restore data from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTable(String sourceTable) {
             $.sourceTable = sourceTable;
             return this;
         }
 
+        /**
+         * @param startRestoreTime The timestamp to start the restore from (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder startRestoreTime(@Nullable String startRestoreTime) {
             $.startRestoreTime = startRestoreTime;
             return this;

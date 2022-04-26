@@ -27,6 +27,10 @@ public final class SchedulerAcceleratorConfigArgs extends com.pulumi.resources.R
     @Import(name="coreCount")
     private @Nullable Output<String> coreCount;
 
+    /**
+     * @return Count of cores of this accelerator.
+     * 
+     */
     public Optional<Output<String>> coreCount() {
         return Optional.ofNullable(this.coreCount);
     }
@@ -38,6 +42,10 @@ public final class SchedulerAcceleratorConfigArgs extends com.pulumi.resources.R
     @Import(name="type")
     private @Nullable Output<SchedulerAcceleratorConfigType> type;
 
+    /**
+     * @return Type of this accelerator.
+     * 
+     */
     public Optional<Output<SchedulerAcceleratorConfigType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -67,20 +75,44 @@ public final class SchedulerAcceleratorConfigArgs extends com.pulumi.resources.R
             $ = new SchedulerAcceleratorConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param coreCount Count of cores of this accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreCount(@Nullable Output<String> coreCount) {
             $.coreCount = coreCount;
             return this;
         }
 
+        /**
+         * @param coreCount Count of cores of this accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreCount(String coreCount) {
             return coreCount(Output.of(coreCount));
         }
 
+        /**
+         * @param type Type of this accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<SchedulerAcceleratorConfigType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of this accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(SchedulerAcceleratorConfigType type) {
             return type(Output.of(type));
         }

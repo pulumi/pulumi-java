@@ -21,6 +21,10 @@ public final class GetNetblockIPRangesArgs extends com.pulumi.resources.InvokeAr
     @Import(name="rangeType")
     private @Nullable String rangeType;
 
+    /**
+     * @return The type of range for which to provide results.
+     * 
+     */
     public Optional<String> rangeType() {
         return Optional.ofNullable(this.rangeType);
     }
@@ -49,6 +53,12 @@ public final class GetNetblockIPRangesArgs extends com.pulumi.resources.InvokeAr
             $ = new GetNetblockIPRangesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rangeType The type of range for which to provide results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeType(@Nullable String rangeType) {
             $.rangeType = rangeType;
             return this;

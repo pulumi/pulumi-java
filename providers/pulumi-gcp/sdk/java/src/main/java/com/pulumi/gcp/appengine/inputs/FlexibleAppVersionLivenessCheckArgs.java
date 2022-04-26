@@ -23,6 +23,10 @@ public final class FlexibleAppVersionLivenessCheckArgs extends com.pulumi.resour
     @Import(name="checkInterval")
     private @Nullable Output<String> checkInterval;
 
+    /**
+     * @return Interval between health checks.
+     * 
+     */
     public Optional<Output<String>> checkInterval() {
         return Optional.ofNullable(this.checkInterval);
     }
@@ -34,6 +38,10 @@ public final class FlexibleAppVersionLivenessCheckArgs extends com.pulumi.resour
     @Import(name="failureThreshold")
     private @Nullable Output<Double> failureThreshold;
 
+    /**
+     * @return Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
+     * 
+     */
     public Optional<Output<Double>> failureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
@@ -45,6 +53,10 @@ public final class FlexibleAppVersionLivenessCheckArgs extends com.pulumi.resour
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -56,6 +68,10 @@ public final class FlexibleAppVersionLivenessCheckArgs extends com.pulumi.resour
     @Import(name="initialDelay")
     private @Nullable Output<String> initialDelay;
 
+    /**
+     * @return The initial delay before starting to execute the checks. Default: &#34;300s&#34;
+     * 
+     */
     public Optional<Output<String>> initialDelay() {
         return Optional.ofNullable(this.initialDelay);
     }
@@ -68,6 +84,11 @@ public final class FlexibleAppVersionLivenessCheckArgs extends com.pulumi.resour
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return Path to the static files matched by the URL pattern, from the application root directory.
+     * The path can refer to text matched in groupings in the URL pattern.
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -79,6 +100,10 @@ public final class FlexibleAppVersionLivenessCheckArgs extends com.pulumi.resour
     @Import(name="successThreshold")
     private @Nullable Output<Double> successThreshold;
 
+    /**
+     * @return Number of consecutive successful checks required before considering the VM healthy. Default: 2.
+     * 
+     */
     public Optional<Output<Double>> successThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
@@ -90,6 +115,10 @@ public final class FlexibleAppVersionLivenessCheckArgs extends com.pulumi.resour
     @Import(name="timeout")
     private @Nullable Output<String> timeout;
 
+    /**
+     * @return Time before the check is considered failed. Default: &#34;4s&#34;
+     * 
+     */
     public Optional<Output<String>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -124,65 +153,151 @@ public final class FlexibleAppVersionLivenessCheckArgs extends com.pulumi.resour
             $ = new FlexibleAppVersionLivenessCheckArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checkInterval Interval between health checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkInterval(@Nullable Output<String> checkInterval) {
             $.checkInterval = checkInterval;
             return this;
         }
 
+        /**
+         * @param checkInterval Interval between health checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkInterval(String checkInterval) {
             return checkInterval(Output.of(checkInterval));
         }
 
+        /**
+         * @param failureThreshold Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureThreshold(@Nullable Output<Double> failureThreshold) {
             $.failureThreshold = failureThreshold;
             return this;
         }
 
+        /**
+         * @param failureThreshold Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureThreshold(Double failureThreshold) {
             return failureThreshold(Output.of(failureThreshold));
         }
 
+        /**
+         * @param host Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param initialDelay The initial delay before starting to execute the checks. Default: &#34;300s&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelay(@Nullable Output<String> initialDelay) {
             $.initialDelay = initialDelay;
             return this;
         }
 
+        /**
+         * @param initialDelay The initial delay before starting to execute the checks. Default: &#34;300s&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelay(String initialDelay) {
             return initialDelay(Output.of(initialDelay));
         }
 
+        /**
+         * @param path Path to the static files matched by the URL pattern, from the application root directory.
+         * The path can refer to text matched in groupings in the URL pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Path to the static files matched by the URL pattern, from the application root directory.
+         * The path can refer to text matched in groupings in the URL pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param successThreshold Number of consecutive successful checks required before considering the VM healthy. Default: 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successThreshold(@Nullable Output<Double> successThreshold) {
             $.successThreshold = successThreshold;
             return this;
         }
 
+        /**
+         * @param successThreshold Number of consecutive successful checks required before considering the VM healthy. Default: 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successThreshold(Double successThreshold) {
             return successThreshold(Output.of(successThreshold));
         }
 
+        /**
+         * @param timeout Time before the check is considered failed. Default: &#34;4s&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<String> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Time before the check is considered failed. Default: &#34;4s&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             return timeout(Output.of(timeout));
         }

@@ -26,6 +26,10 @@ public final class UserAssignedPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return Arm resource id for user assigned identity to be used to fetch MSI token.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -54,11 +58,23 @@ public final class UserAssignedPropertiesArgs extends com.pulumi.resources.Resou
             $ = new UserAssignedPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId Arm resource id for user assigned identity to be used to fetch MSI token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Arm resource id for user assigned identity to be used to fetch MSI token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

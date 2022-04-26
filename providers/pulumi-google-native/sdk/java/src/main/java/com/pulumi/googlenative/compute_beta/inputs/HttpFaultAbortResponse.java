@@ -24,6 +24,10 @@ public final class HttpFaultAbortResponse extends com.pulumi.resources.InvokeArg
     @Import(name="httpStatus", required=true)
     private Integer httpStatus;
 
+    /**
+     * @return The HTTP status code used to abort the request. The value must be from 200 to 599 inclusive. For gRPC protocol, the gRPC status code is mapped to HTTP status code according to this mapping table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status is currently not supported by Traffic Director.
+     * 
+     */
     public Integer httpStatus() {
         return this.httpStatus;
     }
@@ -35,6 +39,10 @@ public final class HttpFaultAbortResponse extends com.pulumi.resources.InvokeArg
     @Import(name="percentage", required=true)
     private Double percentage;
 
+    /**
+     * @return The percentage of traffic for connections, operations, or requests that is aborted as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+     * 
+     */
     public Double percentage() {
         return this.percentage;
     }
@@ -64,11 +72,23 @@ public final class HttpFaultAbortResponse extends com.pulumi.resources.InvokeArg
             $ = new HttpFaultAbortResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpStatus The HTTP status code used to abort the request. The value must be from 200 to 599 inclusive. For gRPC protocol, the gRPC status code is mapped to HTTP status code according to this mapping table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status is currently not supported by Traffic Director.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpStatus(Integer httpStatus) {
             $.httpStatus = httpStatus;
             return this;
         }
 
+        /**
+         * @param percentage The percentage of traffic for connections, operations, or requests that is aborted as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(Double percentage) {
             $.percentage = percentage;
             return this;

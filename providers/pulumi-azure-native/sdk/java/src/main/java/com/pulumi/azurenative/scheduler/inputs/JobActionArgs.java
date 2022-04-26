@@ -28,6 +28,10 @@ public final class JobActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="errorAction")
     private @Nullable Output<JobErrorActionArgs> errorAction;
 
+    /**
+     * @return Gets or sets the error action.
+     * 
+     */
     public Optional<Output<JobErrorActionArgs>> errorAction() {
         return Optional.ofNullable(this.errorAction);
     }
@@ -39,6 +43,10 @@ public final class JobActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queueMessage")
     private @Nullable Output<StorageQueueMessageArgs> queueMessage;
 
+    /**
+     * @return Gets or sets the storage queue message.
+     * 
+     */
     public Optional<Output<StorageQueueMessageArgs>> queueMessage() {
         return Optional.ofNullable(this.queueMessage);
     }
@@ -50,6 +58,10 @@ public final class JobActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="request")
     private @Nullable Output<HttpRequestArgs> request;
 
+    /**
+     * @return Gets or sets the http requests.
+     * 
+     */
     public Optional<Output<HttpRequestArgs>> request() {
         return Optional.ofNullable(this.request);
     }
@@ -61,6 +73,10 @@ public final class JobActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retryPolicy")
     private @Nullable Output<RetryPolicyArgs> retryPolicy;
 
+    /**
+     * @return Gets or sets the retry policy.
+     * 
+     */
     public Optional<Output<RetryPolicyArgs>> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
@@ -72,6 +88,10 @@ public final class JobActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceBusQueueMessage")
     private @Nullable Output<ServiceBusQueueMessageArgs> serviceBusQueueMessage;
 
+    /**
+     * @return Gets or sets the service bus queue message.
+     * 
+     */
     public Optional<Output<ServiceBusQueueMessageArgs>> serviceBusQueueMessage() {
         return Optional.ofNullable(this.serviceBusQueueMessage);
     }
@@ -83,6 +103,10 @@ public final class JobActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceBusTopicMessage")
     private @Nullable Output<ServiceBusTopicMessageArgs> serviceBusTopicMessage;
 
+    /**
+     * @return Gets or sets the service bus topic message.
+     * 
+     */
     public Optional<Output<ServiceBusTopicMessageArgs>> serviceBusTopicMessage() {
         return Optional.ofNullable(this.serviceBusTopicMessage);
     }
@@ -94,6 +118,10 @@ public final class JobActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<JobActionType> type;
 
+    /**
+     * @return Gets or sets the job action type.
+     * 
+     */
     public Optional<Output<JobActionType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -128,65 +156,149 @@ public final class JobActionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorAction Gets or sets the error action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorAction(@Nullable Output<JobErrorActionArgs> errorAction) {
             $.errorAction = errorAction;
             return this;
         }
 
+        /**
+         * @param errorAction Gets or sets the error action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorAction(JobErrorActionArgs errorAction) {
             return errorAction(Output.of(errorAction));
         }
 
+        /**
+         * @param queueMessage Gets or sets the storage queue message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueMessage(@Nullable Output<StorageQueueMessageArgs> queueMessage) {
             $.queueMessage = queueMessage;
             return this;
         }
 
+        /**
+         * @param queueMessage Gets or sets the storage queue message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueMessage(StorageQueueMessageArgs queueMessage) {
             return queueMessage(Output.of(queueMessage));
         }
 
+        /**
+         * @param request Gets or sets the http requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(@Nullable Output<HttpRequestArgs> request) {
             $.request = request;
             return this;
         }
 
+        /**
+         * @param request Gets or sets the http requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(HttpRequestArgs request) {
             return request(Output.of(request));
         }
 
+        /**
+         * @param retryPolicy Gets or sets the retry policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
             $.retryPolicy = retryPolicy;
             return this;
         }
 
+        /**
+         * @param retryPolicy Gets or sets the retry policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(RetryPolicyArgs retryPolicy) {
             return retryPolicy(Output.of(retryPolicy));
         }
 
+        /**
+         * @param serviceBusQueueMessage Gets or sets the service bus queue message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusQueueMessage(@Nullable Output<ServiceBusQueueMessageArgs> serviceBusQueueMessage) {
             $.serviceBusQueueMessage = serviceBusQueueMessage;
             return this;
         }
 
+        /**
+         * @param serviceBusQueueMessage Gets or sets the service bus queue message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusQueueMessage(ServiceBusQueueMessageArgs serviceBusQueueMessage) {
             return serviceBusQueueMessage(Output.of(serviceBusQueueMessage));
         }
 
+        /**
+         * @param serviceBusTopicMessage Gets or sets the service bus topic message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusTopicMessage(@Nullable Output<ServiceBusTopicMessageArgs> serviceBusTopicMessage) {
             $.serviceBusTopicMessage = serviceBusTopicMessage;
             return this;
         }
 
+        /**
+         * @param serviceBusTopicMessage Gets or sets the service bus topic message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusTopicMessage(ServiceBusTopicMessageArgs serviceBusTopicMessage) {
             return serviceBusTopicMessage(Output.of(serviceBusTopicMessage));
         }
 
+        /**
+         * @param type Gets or sets the job action type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<JobActionType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the job action type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(JobActionType type) {
             return type(Output.of(type));
         }

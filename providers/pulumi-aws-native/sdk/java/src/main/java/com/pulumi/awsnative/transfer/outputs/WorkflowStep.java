@@ -16,22 +16,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WorkflowStep {
     /**
-     * Details for a step that performs a file copy.
+     * @return Details for a step that performs a file copy.
      * 
      */
     private final @Nullable WorkflowStepCopyStepDetailsProperties copyStepDetails;
     /**
-     * Details for a step that invokes a lambda function.
+     * @return Details for a step that invokes a lambda function.
      * 
      */
     private final @Nullable WorkflowStepCustomStepDetailsProperties customStepDetails;
     /**
-     * Details for a step that deletes the file.
+     * @return Details for a step that deletes the file.
      * 
      */
     private final @Nullable WorkflowStepDeleteStepDetailsProperties deleteStepDetails;
     /**
-     * Details for a step that creates one or more tags.
+     * @return Details for a step that creates one or more tags.
      * 
      */
     private final @Nullable WorkflowStepTagStepDetailsProperties tagStepDetails;
@@ -52,30 +52,30 @@ public final class WorkflowStep {
     }
 
     /**
-     * Details for a step that performs a file copy.
+     * @return Details for a step that performs a file copy.
      * 
-    */
+     */
     public Optional<WorkflowStepCopyStepDetailsProperties> copyStepDetails() {
         return Optional.ofNullable(this.copyStepDetails);
     }
     /**
-     * Details for a step that invokes a lambda function.
+     * @return Details for a step that invokes a lambda function.
      * 
-    */
+     */
     public Optional<WorkflowStepCustomStepDetailsProperties> customStepDetails() {
         return Optional.ofNullable(this.customStepDetails);
     }
     /**
-     * Details for a step that deletes the file.
+     * @return Details for a step that deletes the file.
      * 
-    */
+     */
     public Optional<WorkflowStepDeleteStepDetailsProperties> deleteStepDetails() {
         return Optional.ofNullable(this.deleteStepDetails);
     }
     /**
-     * Details for a step that creates one or more tags.
+     * @return Details for a step that creates one or more tags.
      * 
-    */
+     */
     public Optional<WorkflowStepTagStepDetailsProperties> tagStepDetails() {
         return Optional.ofNullable(this.tagStepDetails);
     }

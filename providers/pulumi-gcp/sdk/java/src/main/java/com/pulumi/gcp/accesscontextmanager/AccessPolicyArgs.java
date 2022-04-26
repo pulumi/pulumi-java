@@ -21,6 +21,11 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
     private Output<String> parent;
 
+    /**
+     * @return The parent of this AccessPolicy in the Cloud Resource Hierarchy.
+     * Format: organizations/{organization_id}
+     * 
+     */
     public Output<String> parent() {
         return this.parent;
     }
@@ -32,6 +37,10 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="title", required=true)
     private Output<String> title;
 
+    /**
+     * @return Human readable title. Does not affect behavior.
+     * 
+     */
     public Output<String> title() {
         return this.title;
     }
@@ -61,20 +70,46 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parent The parent of this AccessPolicy in the Cloud Resource Hierarchy.
+         * Format: organizations/{organization_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The parent of this AccessPolicy in the Cloud Resource Hierarchy.
+         * Format: organizations/{organization_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param title Human readable title. Does not affect behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Human readable title. Does not affect behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

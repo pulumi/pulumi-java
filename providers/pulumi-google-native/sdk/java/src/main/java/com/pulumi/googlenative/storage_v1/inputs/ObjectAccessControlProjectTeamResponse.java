@@ -23,6 +23,10 @@ public final class ObjectAccessControlProjectTeamResponse extends com.pulumi.res
     @Import(name="projectNumber", required=true)
     private String projectNumber;
 
+    /**
+     * @return The project number.
+     * 
+     */
     public String projectNumber() {
         return this.projectNumber;
     }
@@ -34,6 +38,10 @@ public final class ObjectAccessControlProjectTeamResponse extends com.pulumi.res
     @Import(name="team", required=true)
     private String team;
 
+    /**
+     * @return The team.
+     * 
+     */
     public String team() {
         return this.team;
     }
@@ -63,11 +71,23 @@ public final class ObjectAccessControlProjectTeamResponse extends com.pulumi.res
             $ = new ObjectAccessControlProjectTeamResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param projectNumber The project number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectNumber(String projectNumber) {
             $.projectNumber = projectNumber;
             return this;
         }
 
+        /**
+         * @param team The team.
+         * 
+         * @return builder
+         * 
+         */
         public Builder team(String team) {
             $.team = team;
             return this;

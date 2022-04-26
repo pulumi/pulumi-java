@@ -19,6 +19,10 @@ public final class GetB2CTenantArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetB2CTenantArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The initial domain name of the B2C tenant.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -59,11 +67,23 @@ public final class GetB2CTenantArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetB2CTenantArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The initial domain name of the B2C tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

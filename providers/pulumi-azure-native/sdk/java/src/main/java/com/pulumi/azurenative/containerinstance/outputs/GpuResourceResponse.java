@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GpuResourceResponse {
     /**
-     * The count of the GPU resource.
+     * @return The count of the GPU resource.
      * 
      */
     private final Integer count;
     /**
-     * The SKU of the GPU resource.
+     * @return The SKU of the GPU resource.
      * 
      */
     private final String sku;
@@ -30,16 +30,16 @@ public final class GpuResourceResponse {
     }
 
     /**
-     * The count of the GPU resource.
+     * @return The count of the GPU resource.
      * 
-    */
+     */
     public Integer count() {
         return this.count;
     }
     /**
-     * The SKU of the GPU resource.
+     * @return The SKU of the GPU resource.
      * 
-    */
+     */
     public String sku() {
         return this.sku;
     }

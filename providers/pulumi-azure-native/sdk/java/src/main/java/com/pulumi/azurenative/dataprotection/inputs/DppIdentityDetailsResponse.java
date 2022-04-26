@@ -25,6 +25,10 @@ public final class DppIdentityDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The object ID of the service principal object for the managed identity that is used to grant role-based access to an Azure resource.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -36,6 +40,10 @@ public final class DppIdentityDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return A Globally Unique Identifier (GUID) that represents the Azure AD tenant where the resource is now a member.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -47,6 +55,10 @@ public final class DppIdentityDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The identityType which can be either SystemAssigned or None
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -77,16 +89,34 @@ public final class DppIdentityDetailsResponse extends com.pulumi.resources.Invok
             $ = new DppIdentityDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The object ID of the service principal object for the managed identity that is used to grant role-based access to an Azure resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId A Globally Unique Identifier (GUID) that represents the Azure AD tenant where the resource is now a member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The identityType which can be either SystemAssigned or None
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

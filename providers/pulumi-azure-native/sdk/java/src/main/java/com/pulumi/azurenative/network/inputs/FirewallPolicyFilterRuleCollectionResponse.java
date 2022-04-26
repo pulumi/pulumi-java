@@ -33,6 +33,10 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends com.pulumi
     @Import(name="action")
     private @Nullable FirewallPolicyFilterRuleCollectionActionResponse action;
 
+    /**
+     * @return The action type of a Filter rule collection.
+     * 
+     */
     public Optional<FirewallPolicyFilterRuleCollectionActionResponse> action() {
         return Optional.ofNullable(this.action);
     }
@@ -44,6 +48,10 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends com.pulumi
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the rule collection.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,6 +63,10 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends com.pulumi
     @Import(name="priority")
     private @Nullable Integer priority;
 
+    /**
+     * @return Priority of the Firewall Policy Rule Collection resource.
+     * 
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -67,6 +79,11 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends com.pulumi
     @Import(name="ruleCollectionType", required=true)
     private String ruleCollectionType;
 
+    /**
+     * @return The type of the rule collection.
+     * Expected value is &#39;FirewallPolicyFilterRuleCollection&#39;.
+     * 
+     */
     public String ruleCollectionType() {
         return this.ruleCollectionType;
     }
@@ -78,6 +95,10 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends com.pulumi
     @Import(name="rules")
     private @Nullable List<Object> rules;
 
+    /**
+     * @return List of rules included in a rule collection.
+     * 
+     */
     public Optional<List<Object>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -110,31 +131,68 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends com.pulumi
             $ = new FirewallPolicyFilterRuleCollectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action type of a Filter rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable FirewallPolicyFilterRuleCollectionActionResponse action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param name The name of the rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param priority Priority of the Firewall Policy Rule Collection resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param ruleCollectionType The type of the rule collection.
+         * Expected value is &#39;FirewallPolicyFilterRuleCollection&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleCollectionType(String ruleCollectionType) {
             $.ruleCollectionType = ruleCollectionType;
             return this;
         }
 
+        /**
+         * @param rules List of rules included in a rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable List<Object> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules List of rules included in a rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(Object... rules) {
             return rules(List.of(rules));
         }

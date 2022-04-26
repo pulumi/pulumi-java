@@ -25,6 +25,10 @@ public final class ExpressRouteGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="autoScaleConfiguration")
     private @Nullable Output<ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs> autoScaleConfiguration;
 
+    /**
+     * @return Configuration for auto scaling.
+     * 
+     */
     public Optional<Output<ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs>> autoScaleConfiguration() {
         return Optional.ofNullable(this.autoScaleConfiguration);
     }
@@ -36,6 +40,10 @@ public final class ExpressRouteGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="expressRouteGatewayName")
     private @Nullable Output<String> expressRouteGatewayName;
 
+    /**
+     * @return The name of the ExpressRoute gateway.
+     * 
+     */
     public Optional<Output<String>> expressRouteGatewayName() {
         return Optional.ofNullable(this.expressRouteGatewayName);
     }
@@ -47,6 +55,10 @@ public final class ExpressRouteGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -58,6 +70,10 @@ public final class ExpressRouteGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -69,6 +85,10 @@ public final class ExpressRouteGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -80,6 +100,10 @@ public final class ExpressRouteGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -91,6 +115,10 @@ public final class ExpressRouteGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="virtualHub", required=true)
     private Output<VirtualHubIdArgs> virtualHub;
 
+    /**
+     * @return The Virtual Hub where the ExpressRoute gateway is or will be deployed.
+     * 
+     */
     public Output<VirtualHubIdArgs> virtualHub() {
         return this.virtualHub;
     }
@@ -125,65 +153,149 @@ public final class ExpressRouteGatewayArgs extends com.pulumi.resources.Resource
             $ = new ExpressRouteGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoScaleConfiguration Configuration for auto scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScaleConfiguration(@Nullable Output<ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs> autoScaleConfiguration) {
             $.autoScaleConfiguration = autoScaleConfiguration;
             return this;
         }
 
+        /**
+         * @param autoScaleConfiguration Configuration for auto scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScaleConfiguration(ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs autoScaleConfiguration) {
             return autoScaleConfiguration(Output.of(autoScaleConfiguration));
         }
 
+        /**
+         * @param expressRouteGatewayName The name of the ExpressRoute gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressRouteGatewayName(@Nullable Output<String> expressRouteGatewayName) {
             $.expressRouteGatewayName = expressRouteGatewayName;
             return this;
         }
 
+        /**
+         * @param expressRouteGatewayName The name of the ExpressRoute gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressRouteGatewayName(String expressRouteGatewayName) {
             return expressRouteGatewayName(Output.of(expressRouteGatewayName));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param virtualHub The Virtual Hub where the ExpressRoute gateway is or will be deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHub(Output<VirtualHubIdArgs> virtualHub) {
             $.virtualHub = virtualHub;
             return this;
         }
 
+        /**
+         * @param virtualHub The Virtual Hub where the ExpressRoute gateway is or will be deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHub(VirtualHubIdArgs virtualHub) {
             return virtualHub(Output.of(virtualHub));
         }

@@ -26,6 +26,10 @@ public final class ReferenceVmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return The password of the virtual machine. This will be set to null in GET resource API
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -37,6 +41,10 @@ public final class ReferenceVmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
     private Output<String> userName;
 
+    /**
+     * @return The username of the virtual machine
+     * 
+     */
     public Output<String> userName() {
         return this.userName;
     }
@@ -66,20 +74,44 @@ public final class ReferenceVmArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReferenceVmArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password The password of the virtual machine. This will be set to null in GET resource API
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password of the virtual machine. This will be set to null in GET resource API
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param userName The username of the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName The username of the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

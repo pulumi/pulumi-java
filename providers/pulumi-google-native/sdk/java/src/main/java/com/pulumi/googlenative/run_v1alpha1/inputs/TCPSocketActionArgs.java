@@ -27,6 +27,10 @@ public final class TCPSocketActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return (Optional) Optional: Host name to connect to, defaults to the pod IP.
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -38,6 +42,10 @@ public final class TCPSocketActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto&#39;s inability to properly support the IntOrString golang type.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -67,20 +75,44 @@ public final class TCPSocketActionArgs extends com.pulumi.resources.ResourceArgs
             $ = new TCPSocketActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host (Optional) Optional: Host name to connect to, defaults to the pod IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host (Optional) Optional: Host name to connect to, defaults to the pod IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param port Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto&#39;s inability to properly support the IntOrString golang type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto&#39;s inability to properly support the IntOrString golang type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

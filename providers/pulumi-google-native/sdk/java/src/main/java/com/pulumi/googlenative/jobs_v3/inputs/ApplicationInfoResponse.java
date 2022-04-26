@@ -24,6 +24,10 @@ public final class ApplicationInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="emails", required=true)
     private List<String> emails;
 
+    /**
+     * @return Optional but at least one of uris, emails or instruction must be specified. Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.
+     * 
+     */
     public List<String> emails() {
         return this.emails;
     }
@@ -35,6 +39,10 @@ public final class ApplicationInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="instruction", required=true)
     private String instruction;
 
+    /**
+     * @return Optional but at least one of uris, emails or instruction must be specified. Use this field to provide instructions, such as &#34;Mail your application to ...&#34;, that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.
+     * 
+     */
     public String instruction() {
         return this.instruction;
     }
@@ -46,6 +54,10 @@ public final class ApplicationInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="uris", required=true)
     private List<String> uris;
 
+    /**
+     * @return Optional but at least one of uris, emails or instruction must be specified. Use this URI field to direct an applicant to a website, for example to link to an online application form. The maximum number of allowed characters for each entry is 2,000.
+     * 
+     */
     public List<String> uris() {
         return this.uris;
     }
@@ -76,25 +88,55 @@ public final class ApplicationInfoResponse extends com.pulumi.resources.InvokeAr
             $ = new ApplicationInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emails Optional but at least one of uris, emails or instruction must be specified. Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emails(List<String> emails) {
             $.emails = emails;
             return this;
         }
 
+        /**
+         * @param emails Optional but at least one of uris, emails or instruction must be specified. Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emails(String... emails) {
             return emails(List.of(emails));
         }
 
+        /**
+         * @param instruction Optional but at least one of uris, emails or instruction must be specified. Use this field to provide instructions, such as &#34;Mail your application to ...&#34;, that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instruction(String instruction) {
             $.instruction = instruction;
             return this;
         }
 
+        /**
+         * @param uris Optional but at least one of uris, emails or instruction must be specified. Use this URI field to direct an applicant to a website, for example to link to an online application form. The maximum number of allowed characters for each entry is 2,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(List<String> uris) {
             $.uris = uris;
             return this;
         }
 
+        /**
+         * @param uris Optional but at least one of uris, emails or instruction must be specified. Use this URI field to direct an applicant to a website, for example to link to an online application form. The maximum number of allowed characters for each entry is 2,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(String... uris) {
             return uris(List.of(uris));
         }

@@ -25,6 +25,10 @@ public final class VirtualMachineScaleSetIpTagResponse extends com.pulumi.resour
     @Import(name="ipTagType")
     private @Nullable String ipTagType;
 
+    /**
+     * @return IP tag type. Example: FirstPartyUsage.
+     * 
+     */
     public Optional<String> ipTagType() {
         return Optional.ofNullable(this.ipTagType);
     }
@@ -36,6 +40,10 @@ public final class VirtualMachineScaleSetIpTagResponse extends com.pulumi.resour
     @Import(name="tag")
     private @Nullable String tag;
 
+    /**
+     * @return IP tag associated with the public IP. Example: SQL, Storage etc.
+     * 
+     */
     public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -65,11 +73,23 @@ public final class VirtualMachineScaleSetIpTagResponse extends com.pulumi.resour
             $ = new VirtualMachineScaleSetIpTagResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipTagType IP tag type. Example: FirstPartyUsage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipTagType(@Nullable String ipTagType) {
             $.ipTagType = ipTagType;
             return this;
         }
 
+        /**
+         * @param tag IP tag associated with the public IP. Example: SQL, Storage etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable String tag) {
             $.tag = tag;
             return this;

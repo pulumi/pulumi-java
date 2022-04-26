@@ -24,6 +24,10 @@ public final class CloudAuditLoggingFeatureSpecResponse extends com.pulumi.resou
     @Import(name="allowlistedServiceAccounts", required=true)
     private List<String> allowlistedServiceAccounts;
 
+    /**
+     * @return Service account that should be allowlisted to send the audit logs; eg cloudauditlogging@gcp-project.iam.gserviceaccount.com. These accounts must already exist, but do not need to have any permissions granted to them. The customer&#39;s entitlements will be checked prior to allowlisting (i.e. the customer must be an Anthos customer.)
+     * 
+     */
     public List<String> allowlistedServiceAccounts() {
         return this.allowlistedServiceAccounts;
     }
@@ -52,11 +56,23 @@ public final class CloudAuditLoggingFeatureSpecResponse extends com.pulumi.resou
             $ = new CloudAuditLoggingFeatureSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowlistedServiceAccounts Service account that should be allowlisted to send the audit logs; eg cloudauditlogging@gcp-project.iam.gserviceaccount.com. These accounts must already exist, but do not need to have any permissions granted to them. The customer&#39;s entitlements will be checked prior to allowlisting (i.e. the customer must be an Anthos customer.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowlistedServiceAccounts(List<String> allowlistedServiceAccounts) {
             $.allowlistedServiceAccounts = allowlistedServiceAccounts;
             return this;
         }
 
+        /**
+         * @param allowlistedServiceAccounts Service account that should be allowlisted to send the audit logs; eg cloudauditlogging@gcp-project.iam.gserviceaccount.com. These accounts must already exist, but do not need to have any permissions granted to them. The customer&#39;s entitlements will be checked prior to allowlisting (i.e. the customer must be an Anthos customer.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowlistedServiceAccounts(String... allowlistedServiceAccounts) {
             return allowlistedServiceAccounts(List.of(allowlistedServiceAccounts));
         }

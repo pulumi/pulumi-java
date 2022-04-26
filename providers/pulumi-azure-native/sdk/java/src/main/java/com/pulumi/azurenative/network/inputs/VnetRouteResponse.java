@@ -26,6 +26,10 @@ public final class VnetRouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="staticRoutes")
     private @Nullable List<StaticRouteResponse> staticRoutes;
 
+    /**
+     * @return List of all Static Routes.
+     * 
+     */
     public Optional<List<StaticRouteResponse>> staticRoutes() {
         return Optional.ofNullable(this.staticRoutes);
     }
@@ -54,11 +58,23 @@ public final class VnetRouteResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VnetRouteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param staticRoutes List of all Static Routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticRoutes(@Nullable List<StaticRouteResponse> staticRoutes) {
             $.staticRoutes = staticRoutes;
             return this;
         }
 
+        /**
+         * @param staticRoutes List of all Static Routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticRoutes(StaticRouteResponse... staticRoutes) {
             return staticRoutes(List.of(staticRoutes));
         }

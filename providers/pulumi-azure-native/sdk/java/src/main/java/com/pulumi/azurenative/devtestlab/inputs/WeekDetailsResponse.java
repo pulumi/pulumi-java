@@ -26,6 +26,10 @@ public final class WeekDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="time")
     private @Nullable String time;
 
+    /**
+     * @return The time of the day the schedule will occur.
+     * 
+     */
     public Optional<String> time() {
         return Optional.ofNullable(this.time);
     }
@@ -37,6 +41,10 @@ public final class WeekDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="weekdays")
     private @Nullable List<String> weekdays;
 
+    /**
+     * @return The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
+     * 
+     */
     public Optional<List<String>> weekdays() {
         return Optional.ofNullable(this.weekdays);
     }
@@ -66,16 +74,34 @@ public final class WeekDetailsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new WeekDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param time The time of the day the schedule will occur.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(@Nullable String time) {
             $.time = time;
             return this;
         }
 
+        /**
+         * @param weekdays The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekdays(@Nullable List<String> weekdays) {
             $.weekdays = weekdays;
             return this;
         }
 
+        /**
+         * @param weekdays The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekdays(String... weekdays) {
             return weekdays(List.of(weekdays));
         }

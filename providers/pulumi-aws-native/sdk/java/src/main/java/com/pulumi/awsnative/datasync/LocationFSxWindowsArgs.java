@@ -24,6 +24,10 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
     @Import(name="domain")
     private @Nullable Output<String> domain;
 
+    /**
+     * @return The name of the Windows domain that the FSx for Windows server belongs to.
+     * 
+     */
     public Optional<Output<String>> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -35,6 +39,10 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
     @Import(name="fsxFilesystemArn", required=true)
     private Output<String> fsxFilesystemArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the FSx for Windows file system.
+     * 
+     */
     public Output<String> fsxFilesystemArn() {
         return this.fsxFilesystemArn;
     }
@@ -46,6 +54,10 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return The password of the user who has the permissions to access files and folders in the FSx for Windows file system.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -57,6 +69,10 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
     @Import(name="securityGroupArns", required=true)
     private Output<List<String>> securityGroupArns;
 
+    /**
+     * @return The ARNs of the security groups that are to use to configure the FSx for Windows file system.
+     * 
+     */
     public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns;
     }
@@ -68,6 +84,10 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
     @Import(name="subdirectory")
     private @Nullable Output<String> subdirectory;
 
+    /**
+     * @return A subdirectory in the location&#39;s path.
+     * 
+     */
     public Optional<Output<String>> subdirectory() {
         return Optional.ofNullable(this.subdirectory);
     }
@@ -79,6 +99,10 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<List<LocationFSxWindowsTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<LocationFSxWindowsTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -90,6 +114,10 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
     @Import(name="user", required=true)
     private Output<String> user;
 
+    /**
+     * @return The user who has the permissions to access files and folders in the FSx for Windows file system.
+     * 
+     */
     public Output<String> user() {
         return this.user;
     }
@@ -124,73 +152,169 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
             $ = new LocationFSxWindowsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain The name of the Windows domain that the FSx for Windows server belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain The name of the Windows domain that the FSx for Windows server belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param fsxFilesystemArn The Amazon Resource Name (ARN) for the FSx for Windows file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsxFilesystemArn(Output<String> fsxFilesystemArn) {
             $.fsxFilesystemArn = fsxFilesystemArn;
             return this;
         }
 
+        /**
+         * @param fsxFilesystemArn The Amazon Resource Name (ARN) for the FSx for Windows file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsxFilesystemArn(String fsxFilesystemArn) {
             return fsxFilesystemArn(Output.of(fsxFilesystemArn));
         }
 
+        /**
+         * @param password The password of the user who has the permissions to access files and folders in the FSx for Windows file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password of the user who has the permissions to access files and folders in the FSx for Windows file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param securityGroupArns The ARNs of the security groups that are to use to configure the FSx for Windows file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupArns(Output<List<String>> securityGroupArns) {
             $.securityGroupArns = securityGroupArns;
             return this;
         }
 
+        /**
+         * @param securityGroupArns The ARNs of the security groups that are to use to configure the FSx for Windows file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupArns(List<String> securityGroupArns) {
             return securityGroupArns(Output.of(securityGroupArns));
         }
 
+        /**
+         * @param securityGroupArns The ARNs of the security groups that are to use to configure the FSx for Windows file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupArns(String... securityGroupArns) {
             return securityGroupArns(List.of(securityGroupArns));
         }
 
+        /**
+         * @param subdirectory A subdirectory in the location&#39;s path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             $.subdirectory = subdirectory;
             return this;
         }
 
+        /**
+         * @param subdirectory A subdirectory in the location&#39;s path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(String subdirectory) {
             return subdirectory(Output.of(subdirectory));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<LocationFSxWindowsTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<LocationFSxWindowsTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(LocationFSxWindowsTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param user The user who has the permissions to access files and folders in the FSx for Windows file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(Output<String> user) {
             $.user = user;
             return this;
         }
 
+        /**
+         * @param user The user who has the permissions to access files and folders in the FSx for Windows file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(String user) {
             return user(Output.of(user));
         }

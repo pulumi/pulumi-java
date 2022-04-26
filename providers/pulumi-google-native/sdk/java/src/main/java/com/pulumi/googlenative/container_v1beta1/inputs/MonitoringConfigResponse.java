@@ -24,6 +24,10 @@ public final class MonitoringConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="componentConfig", required=true)
     private MonitoringComponentConfigResponse componentConfig;
 
+    /**
+     * @return Monitoring components configuration
+     * 
+     */
     public MonitoringComponentConfigResponse componentConfig() {
         return this.componentConfig;
     }
@@ -35,6 +39,10 @@ public final class MonitoringConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="managedPrometheusConfig", required=true)
     private ManagedPrometheusConfigResponse managedPrometheusConfig;
 
+    /**
+     * @return Enable Google Cloud Managed Service for Prometheus in the cluster.
+     * 
+     */
     public ManagedPrometheusConfigResponse managedPrometheusConfig() {
         return this.managedPrometheusConfig;
     }
@@ -64,11 +72,23 @@ public final class MonitoringConfigResponse extends com.pulumi.resources.InvokeA
             $ = new MonitoringConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentConfig Monitoring components configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentConfig(MonitoringComponentConfigResponse componentConfig) {
             $.componentConfig = componentConfig;
             return this;
         }
 
+        /**
+         * @param managedPrometheusConfig Enable Google Cloud Managed Service for Prometheus in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedPrometheusConfig(ManagedPrometheusConfigResponse managedPrometheusConfig) {
             $.managedPrometheusConfig = managedPrometheusConfig;
             return this;

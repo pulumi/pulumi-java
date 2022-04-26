@@ -21,6 +21,10 @@ public final class MethodSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="methodPath", required=true)
     private Output<String> methodPath;
 
+    /**
+     * @return Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*{@literal /}*` for overriding all methods in the stage. Ensure to trim any leading forward slashes in the path (e.g., `trimprefix(aws_api_gateway_resource.example.path, &#34;/&#34;)`).
+     * 
+     */
     public Output<String> methodPath() {
         return this.methodPath;
     }
@@ -32,6 +36,10 @@ public final class MethodSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="restApi", required=true)
     private Output<String> restApi;
 
+    /**
+     * @return The ID of the REST API
+     * 
+     */
     public Output<String> restApi() {
         return this.restApi;
     }
@@ -43,6 +51,10 @@ public final class MethodSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="settings", required=true)
     private Output<MethodSettingsSettingsArgs> settings;
 
+    /**
+     * @return The settings block, see below.
+     * 
+     */
     public Output<MethodSettingsSettingsArgs> settings() {
         return this.settings;
     }
@@ -54,6 +66,10 @@ public final class MethodSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="stageName", required=true)
     private Output<String> stageName;
 
+    /**
+     * @return The name of the stage
+     * 
+     */
     public Output<String> stageName() {
         return this.stageName;
     }
@@ -85,38 +101,86 @@ public final class MethodSettingsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MethodSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param methodPath Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*{@literal /}*` for overriding all methods in the stage. Ensure to trim any leading forward slashes in the path (e.g., `trimprefix(aws_api_gateway_resource.example.path, &#34;/&#34;)`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodPath(Output<String> methodPath) {
             $.methodPath = methodPath;
             return this;
         }
 
+        /**
+         * @param methodPath Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*{@literal /}*` for overriding all methods in the stage. Ensure to trim any leading forward slashes in the path (e.g., `trimprefix(aws_api_gateway_resource.example.path, &#34;/&#34;)`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodPath(String methodPath) {
             return methodPath(Output.of(methodPath));
         }
 
+        /**
+         * @param restApi The ID of the REST API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApi(Output<String> restApi) {
             $.restApi = restApi;
             return this;
         }
 
+        /**
+         * @param restApi The ID of the REST API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApi(String restApi) {
             return restApi(Output.of(restApi));
         }
 
+        /**
+         * @param settings The settings block, see below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(Output<MethodSettingsSettingsArgs> settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param settings The settings block, see below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(MethodSettingsSettingsArgs settings) {
             return settings(Output.of(settings));
         }
 
+        /**
+         * @param stageName The name of the stage
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageName(Output<String> stageName) {
             $.stageName = stageName;
             return this;
         }
 
+        /**
+         * @param stageName The name of the stage
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageName(String stageName) {
             return stageName(Output.of(stageName));
         }

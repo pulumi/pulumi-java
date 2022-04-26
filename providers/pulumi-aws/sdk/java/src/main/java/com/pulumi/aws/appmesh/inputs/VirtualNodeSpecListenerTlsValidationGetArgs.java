@@ -23,6 +23,10 @@ public final class VirtualNodeSpecListenerTlsValidationGetArgs extends com.pulum
     @Import(name="subjectAlternativeNames")
     private @Nullable Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
 
+    /**
+     * @return The SANs for a TLS validation context.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs>> subjectAlternativeNames() {
         return Optional.ofNullable(this.subjectAlternativeNames);
     }
@@ -34,6 +38,10 @@ public final class VirtualNodeSpecListenerTlsValidationGetArgs extends com.pulum
     @Import(name="trust", required=true)
     private Output<VirtualNodeSpecListenerTlsValidationTrustGetArgs> trust;
 
+    /**
+     * @return The TLS validation context trust.
+     * 
+     */
     public Output<VirtualNodeSpecListenerTlsValidationTrustGetArgs> trust() {
         return this.trust;
     }
@@ -63,20 +71,44 @@ public final class VirtualNodeSpecListenerTlsValidationGetArgs extends com.pulum
             $ = new VirtualNodeSpecListenerTlsValidationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subjectAlternativeNames The SANs for a TLS validation context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(@Nullable Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames) {
             $.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
+        /**
+         * @param subjectAlternativeNames The SANs for a TLS validation context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs subjectAlternativeNames) {
             return subjectAlternativeNames(Output.of(subjectAlternativeNames));
         }
 
+        /**
+         * @param trust The TLS validation context trust.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trust(Output<VirtualNodeSpecListenerTlsValidationTrustGetArgs> trust) {
             $.trust = trust;
             return this;
         }
 
+        /**
+         * @param trust The TLS validation context trust.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trust(VirtualNodeSpecListenerTlsValidationTrustGetArgs trust) {
             return trust(Output.of(trust));
         }

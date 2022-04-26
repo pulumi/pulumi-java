@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ForwardInfoResponse {
     /**
-     * URI of the resource that the packet is forwarded to.
+     * @return URI of the resource that the packet is forwarded to.
      * 
      */
     private final String resourceUri;
     /**
-     * Target type where this packet is forwarded to.
+     * @return Target type where this packet is forwarded to.
      * 
      */
     private final String target;
@@ -29,16 +29,16 @@ public final class ForwardInfoResponse {
     }
 
     /**
-     * URI of the resource that the packet is forwarded to.
+     * @return URI of the resource that the packet is forwarded to.
      * 
-    */
+     */
     public String resourceUri() {
         return this.resourceUri;
     }
     /**
-     * Target type where this packet is forwarded to.
+     * @return Target type where this packet is forwarded to.
      * 
-    */
+     */
     public String target() {
         return this.target;
     }

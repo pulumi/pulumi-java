@@ -26,6 +26,10 @@ public final class CanonicalProfileDefinitionResponseProperties extends com.pulu
     @Import(name="profileName")
     private @Nullable String profileName;
 
+    /**
+     * @return Profile name.
+     * 
+     */
     public Optional<String> profileName() {
         return Optional.ofNullable(this.profileName);
     }
@@ -37,6 +41,10 @@ public final class CanonicalProfileDefinitionResponseProperties extends com.pulu
     @Import(name="profilePropertyName")
     private @Nullable String profilePropertyName;
 
+    /**
+     * @return Property name of profile.
+     * 
+     */
     public Optional<String> profilePropertyName() {
         return Optional.ofNullable(this.profilePropertyName);
     }
@@ -48,6 +56,10 @@ public final class CanonicalProfileDefinitionResponseProperties extends com.pulu
     @Import(name="rank")
     private @Nullable Integer rank;
 
+    /**
+     * @return The rank.
+     * 
+     */
     public Optional<Integer> rank() {
         return Optional.ofNullable(this.rank);
     }
@@ -59,6 +71,10 @@ public final class CanonicalProfileDefinitionResponseProperties extends com.pulu
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of canonical property value.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -70,6 +86,10 @@ public final class CanonicalProfileDefinitionResponseProperties extends com.pulu
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Value of the canonical property.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -102,26 +122,56 @@ public final class CanonicalProfileDefinitionResponseProperties extends com.pulu
             $ = new CanonicalProfileDefinitionResponseProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param profileName Profile name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(@Nullable String profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param profilePropertyName Property name of profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profilePropertyName(@Nullable String profilePropertyName) {
             $.profilePropertyName = profilePropertyName;
             return this;
         }
 
+        /**
+         * @param rank The rank.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rank(@Nullable Integer rank) {
             $.rank = rank;
             return this;
         }
 
+        /**
+         * @param type Type of canonical property value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value Value of the canonical property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

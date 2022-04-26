@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PrivateEndpointResponse {
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
      */
     private final String id;
@@ -21,9 +21,9 @@ public final class PrivateEndpointResponse {
     }
 
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

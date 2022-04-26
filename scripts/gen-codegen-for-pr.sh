@@ -15,11 +15,6 @@ codegen_branch="codegen/$(git branch --show-current)"
 
 git checkout -b "$codegen_branch"
 
-git checkout 'origin/main' 'pkg/codegen/testing'
-PULUMI_ACCEPT=true make install_sdk codegen_tests
-git add 'pkg/codegen/testing' || echo "git add returned $? for codegen tests"
-git commit -m "[codegen] built and added added codegen_tests" || echo "git commit returned $? for codegen tests"
-
 git checkout 'origin/main' 'providers'
 make providers_all
 

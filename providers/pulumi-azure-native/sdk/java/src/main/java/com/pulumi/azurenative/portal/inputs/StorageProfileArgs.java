@@ -27,6 +27,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="diskSizeInGB")
     private @Nullable Output<Integer> diskSizeInGB;
 
+    /**
+     * @return Size of file share
+     * 
+     */
     public Optional<Output<Integer>> diskSizeInGB() {
         return Optional.ofNullable(this.diskSizeInGB);
     }
@@ -38,6 +42,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="fileShareName")
     private @Nullable Output<String> fileShareName;
 
+    /**
+     * @return Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
+     * 
+     */
     public Optional<Output<String>> fileShareName() {
         return Optional.ofNullable(this.fileShareName);
     }
@@ -49,6 +57,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storageAccountResourceId")
     private @Nullable Output<String> storageAccountResourceId;
 
+    /**
+     * @return Full resource ID of storage account.
+     * 
+     */
     public Optional<Output<String>> storageAccountResourceId() {
         return Optional.ofNullable(this.storageAccountResourceId);
     }
@@ -79,29 +91,65 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSizeInGB Size of file share
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeInGB(@Nullable Output<Integer> diskSizeInGB) {
             $.diskSizeInGB = diskSizeInGB;
             return this;
         }
 
+        /**
+         * @param diskSizeInGB Size of file share
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeInGB(Integer diskSizeInGB) {
             return diskSizeInGB(Output.of(diskSizeInGB));
         }
 
+        /**
+         * @param fileShareName Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShareName(@Nullable Output<String> fileShareName) {
             $.fileShareName = fileShareName;
             return this;
         }
 
+        /**
+         * @param fileShareName Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShareName(String fileShareName) {
             return fileShareName(Output.of(fileShareName));
         }
 
+        /**
+         * @param storageAccountResourceId Full resource ID of storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountResourceId(@Nullable Output<String> storageAccountResourceId) {
             $.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
 
+        /**
+         * @param storageAccountResourceId Full resource ID of storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountResourceId(String storageAccountResourceId) {
             return storageAccountResourceId(Output.of(storageAccountResourceId));
         }

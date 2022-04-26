@@ -27,6 +27,10 @@ public final class ResourceGroupDefinitionResponse extends com.pulumi.resources.
     @Import(name="dependsOn")
     private @Nullable List<String> dependsOn;
 
+    /**
+     * @return Artifacts which need to be deployed before this resource group.
+     * 
+     */
     public Optional<List<String>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -38,6 +42,10 @@ public final class ResourceGroupDefinitionResponse extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of this parameter/resourceGroup.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class ResourceGroupDefinitionResponse extends com.pulumi.resources.
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return DisplayName of this parameter/resourceGroup.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -60,6 +72,10 @@ public final class ResourceGroupDefinitionResponse extends com.pulumi.resources.
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -71,6 +87,10 @@ public final class ResourceGroupDefinitionResponse extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -82,6 +102,10 @@ public final class ResourceGroupDefinitionResponse extends com.pulumi.resources.
     @Import(name="strongType")
     private @Nullable String strongType;
 
+    /**
+     * @return StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
+     * 
+     */
     public Optional<String> strongType() {
         return Optional.ofNullable(this.strongType);
     }
@@ -93,6 +117,10 @@ public final class ResourceGroupDefinitionResponse extends com.pulumi.resources.
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Tags to be assigned to this resource group.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -127,40 +155,88 @@ public final class ResourceGroupDefinitionResponse extends com.pulumi.resources.
             $ = new ResourceGroupDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOn Artifacts which need to be deployed before this resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<String> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Artifacts which need to be deployed before this resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(String... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Description of this parameter/resourceGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName DisplayName of this parameter/resourceGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param location Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param strongType StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strongType(@Nullable String strongType) {
             $.strongType = strongType;
             return this;
         }
 
+        /**
+         * @param tags Tags to be assigned to this resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

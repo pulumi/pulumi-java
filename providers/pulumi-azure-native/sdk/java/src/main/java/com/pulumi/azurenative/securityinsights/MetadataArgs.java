@@ -30,6 +30,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="author")
     private @Nullable Output<MetadataAuthorArgs> author;
 
+    /**
+     * @return The creator of the content item.
+     * 
+     */
     public Optional<Output<MetadataAuthorArgs>> author() {
         return Optional.ofNullable(this.author);
     }
@@ -41,6 +45,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="categories")
     private @Nullable Output<MetadataCategoriesArgs> categories;
 
+    /**
+     * @return Categories for the solution content item
+     * 
+     */
     public Optional<Output<MetadataCategoriesArgs>> categories() {
         return Optional.ofNullable(this.categories);
     }
@@ -52,6 +60,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentId")
     private @Nullable Output<String> contentId;
 
+    /**
+     * @return Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name
+     * 
+     */
     public Optional<Output<String>> contentId() {
         return Optional.ofNullable(this.contentId);
     }
@@ -63,6 +75,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dependencies")
     private @Nullable Output<MetadataDependenciesArgs> dependencies;
 
+    /**
+     * @return Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.
+     * 
+     */
     public Optional<Output<MetadataDependenciesArgs>> dependencies() {
         return Optional.ofNullable(this.dependencies);
     }
@@ -74,6 +90,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firstPublishDate")
     private @Nullable Output<String> firstPublishDate;
 
+    /**
+     * @return first publish date solution content item
+     * 
+     */
     public Optional<Output<String>> firstPublishDate() {
         return Optional.ofNullable(this.firstPublishDate);
     }
@@ -85,6 +105,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<Either<String,Kind>> kind;
 
+    /**
+     * @return The kind of content the metadata is for.
+     * 
+     */
     public Output<Either<String,Kind>> kind() {
         return this.kind;
     }
@@ -96,6 +120,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastPublishDate")
     private @Nullable Output<String> lastPublishDate;
 
+    /**
+     * @return last publish date for the solution content item
+     * 
+     */
     public Optional<Output<String>> lastPublishDate() {
         return Optional.ofNullable(this.lastPublishDate);
     }
@@ -107,6 +135,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadataName")
     private @Nullable Output<String> metadataName;
 
+    /**
+     * @return The Metadata name.
+     * 
+     */
     public Optional<Output<String>> metadataName() {
         return Optional.ofNullable(this.metadataName);
     }
@@ -118,6 +150,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
     private Output<String> operationalInsightsResourceProvider;
 
+    /**
+     * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
@@ -129,6 +165,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentId", required=true)
     private Output<String> parentId;
 
+    /**
+     * @return Full parent resource ID of the content item the metadata is for.  This is the full resource ID including the scope (subscription and resource group)
+     * 
+     */
     public Output<String> parentId() {
         return this.parentId;
     }
@@ -140,6 +180,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providers")
     private @Nullable Output<List<String>> providers;
 
+    /**
+     * @return Providers for the solution content item
+     * 
+     */
     public Optional<Output<List<String>>> providers() {
         return Optional.ofNullable(this.providers);
     }
@@ -151,6 +195,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -162,6 +210,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source")
     private @Nullable Output<MetadataSourceArgs> source;
 
+    /**
+     * @return Source of the content.  This is where/how it was created.
+     * 
+     */
     public Optional<Output<MetadataSourceArgs>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -173,6 +225,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="support")
     private @Nullable Output<MetadataSupportArgs> support;
 
+    /**
+     * @return Support information for the metadata - type, name, contact information
+     * 
+     */
     public Optional<Output<MetadataSupportArgs>> support() {
         return Optional.ofNullable(this.support);
     }
@@ -184,6 +240,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Version of the content.  Default and recommended format is numeric (e.g. 1, 1.0, 1.0.0, 1.0.0.0), following ARM template best practices.  Can also be any string, but then we cannot guarantee any version checks
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -195,6 +255,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -238,158 +302,368 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param author The creator of the content item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder author(@Nullable Output<MetadataAuthorArgs> author) {
             $.author = author;
             return this;
         }
 
+        /**
+         * @param author The creator of the content item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder author(MetadataAuthorArgs author) {
             return author(Output.of(author));
         }
 
+        /**
+         * @param categories Categories for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(@Nullable Output<MetadataCategoriesArgs> categories) {
             $.categories = categories;
             return this;
         }
 
+        /**
+         * @param categories Categories for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(MetadataCategoriesArgs categories) {
             return categories(Output.of(categories));
         }
 
+        /**
+         * @param contentId Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentId(@Nullable Output<String> contentId) {
             $.contentId = contentId;
             return this;
         }
 
+        /**
+         * @param contentId Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentId(String contentId) {
             return contentId(Output.of(contentId));
         }
 
+        /**
+         * @param dependencies Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependencies(@Nullable Output<MetadataDependenciesArgs> dependencies) {
             $.dependencies = dependencies;
             return this;
         }
 
+        /**
+         * @param dependencies Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependencies(MetadataDependenciesArgs dependencies) {
             return dependencies(Output.of(dependencies));
         }
 
+        /**
+         * @param firstPublishDate first publish date solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstPublishDate(@Nullable Output<String> firstPublishDate) {
             $.firstPublishDate = firstPublishDate;
             return this;
         }
 
+        /**
+         * @param firstPublishDate first publish date solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstPublishDate(String firstPublishDate) {
             return firstPublishDate(Output.of(firstPublishDate));
         }
 
+        /**
+         * @param kind The kind of content the metadata is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,Kind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of content the metadata is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,Kind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind The kind of content the metadata is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind The kind of content the metadata is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Kind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param lastPublishDate last publish date for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastPublishDate(@Nullable Output<String> lastPublishDate) {
             $.lastPublishDate = lastPublishDate;
             return this;
         }
 
+        /**
+         * @param lastPublishDate last publish date for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastPublishDate(String lastPublishDate) {
             return lastPublishDate(Output.of(lastPublishDate));
         }
 
+        /**
+         * @param metadataName The Metadata name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataName(@Nullable Output<String> metadataName) {
             $.metadataName = metadataName;
             return this;
         }
 
+        /**
+         * @param metadataName The Metadata name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataName(String metadataName) {
             return metadataName(Output.of(metadataName));
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
 
+        /**
+         * @param parentId Full parent resource ID of the content item the metadata is for.  This is the full resource ID including the scope (subscription and resource group)
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentId(Output<String> parentId) {
             $.parentId = parentId;
             return this;
         }
 
+        /**
+         * @param parentId Full parent resource ID of the content item the metadata is for.  This is the full resource ID including the scope (subscription and resource group)
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentId(String parentId) {
             return parentId(Output.of(parentId));
         }
 
+        /**
+         * @param providers Providers for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(@Nullable Output<List<String>> providers) {
             $.providers = providers;
             return this;
         }
 
+        /**
+         * @param providers Providers for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(List<String> providers) {
             return providers(Output.of(providers));
         }
 
+        /**
+         * @param providers Providers for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(String... providers) {
             return providers(List.of(providers));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param source Source of the content.  This is where/how it was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<MetadataSourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Source of the content.  This is where/how it was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(MetadataSourceArgs source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param support Support information for the metadata - type, name, contact information
+         * 
+         * @return builder
+         * 
+         */
         public Builder support(@Nullable Output<MetadataSupportArgs> support) {
             $.support = support;
             return this;
         }
 
+        /**
+         * @param support Support information for the metadata - type, name, contact information
+         * 
+         * @return builder
+         * 
+         */
         public Builder support(MetadataSupportArgs support) {
             return support(Output.of(support));
         }
 
+        /**
+         * @param version Version of the content.  Default and recommended format is numeric (e.g. 1, 1.0, 1.0.0, 1.0.0.0), following ARM template best practices.  Can also be any string, but then we cannot guarantee any version checks
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Version of the content.  Default and recommended format is numeric (e.g. 1, 1.0, 1.0.0, 1.0.0.0), following ARM template best practices.  Can also be any string, but then we cannot guarantee any version checks
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

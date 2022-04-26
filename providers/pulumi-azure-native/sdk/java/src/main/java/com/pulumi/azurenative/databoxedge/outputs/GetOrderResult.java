@@ -17,57 +17,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetOrderResult {
     /**
-     * The contact details.
+     * @return The contact details.
      * 
      */
     private final ContactDetailsResponse contactInformation;
     /**
-     * Current status of the order.
+     * @return Current status of the order.
      * 
      */
     private final OrderStatusResponse currentStatus;
     /**
-     * Tracking information for the package delivered to the customer whether it has an original or a replacement device.
+     * @return Tracking information for the package delivered to the customer whether it has an original or a replacement device.
      * 
      */
     private final List<TrackingInfoResponse> deliveryTrackingInfo;
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
      */
     private final String id;
     /**
-     * The object name.
+     * @return The object name.
      * 
      */
     private final String name;
     /**
-     * List of status changes in the order.
+     * @return List of status changes in the order.
      * 
      */
     private final List<OrderStatusResponse> orderHistory;
     /**
-     * Tracking information for the package returned from the customer whether it has an original or a replacement device.
+     * @return Tracking information for the package returned from the customer whether it has an original or a replacement device.
      * 
      */
     private final List<TrackingInfoResponse> returnTrackingInfo;
     /**
-     * Serial number of the device.
+     * @return Serial number of the device.
      * 
      */
     private final String serialNumber;
     /**
-     * ShipmentType of the order
+     * @return ShipmentType of the order
      * 
      */
     private final @Nullable String shipmentType;
     /**
-     * The shipping address.
+     * @return The shipping address.
      * 
      */
     private final @Nullable AddressResponse shippingAddress;
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
      */
     private final String type;
@@ -99,79 +99,79 @@ public final class GetOrderResult {
     }
 
     /**
-     * The contact details.
+     * @return The contact details.
      * 
-    */
+     */
     public ContactDetailsResponse contactInformation() {
         return this.contactInformation;
     }
     /**
-     * Current status of the order.
+     * @return Current status of the order.
      * 
-    */
+     */
     public OrderStatusResponse currentStatus() {
         return this.currentStatus;
     }
     /**
-     * Tracking information for the package delivered to the customer whether it has an original or a replacement device.
+     * @return Tracking information for the package delivered to the customer whether it has an original or a replacement device.
      * 
-    */
+     */
     public List<TrackingInfoResponse> deliveryTrackingInfo() {
         return this.deliveryTrackingInfo;
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of status changes in the order.
+     * @return List of status changes in the order.
      * 
-    */
+     */
     public List<OrderStatusResponse> orderHistory() {
         return this.orderHistory;
     }
     /**
-     * Tracking information for the package returned from the customer whether it has an original or a replacement device.
+     * @return Tracking information for the package returned from the customer whether it has an original or a replacement device.
      * 
-    */
+     */
     public List<TrackingInfoResponse> returnTrackingInfo() {
         return this.returnTrackingInfo;
     }
     /**
-     * Serial number of the device.
+     * @return Serial number of the device.
      * 
-    */
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
     /**
-     * ShipmentType of the order
+     * @return ShipmentType of the order
      * 
-    */
+     */
     public Optional<String> shipmentType() {
         return Optional.ofNullable(this.shipmentType);
     }
     /**
-     * The shipping address.
+     * @return The shipping address.
      * 
-    */
+     */
     public Optional<AddressResponse> shippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

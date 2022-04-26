@@ -13,67 +13,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceBusBrokeredMessagePropertiesResponse {
     /**
-     * Gets or sets the content type.
+     * @return Gets or sets the content type.
      * 
      */
     private final @Nullable String contentType;
     /**
-     * Gets or sets the correlation ID.
+     * @return Gets or sets the correlation ID.
      * 
      */
     private final @Nullable String correlationId;
     /**
-     * Gets or sets the force persistence.
+     * @return Gets or sets the force persistence.
      * 
      */
     private final @Nullable Boolean forcePersistence;
     /**
-     * Gets or sets the label.
+     * @return Gets or sets the label.
      * 
      */
     private final @Nullable String label;
     /**
-     * Gets or sets the message ID.
+     * @return Gets or sets the message ID.
      * 
      */
     private final @Nullable String messageId;
     /**
-     * Gets or sets the partition key.
+     * @return Gets or sets the partition key.
      * 
      */
     private final @Nullable String partitionKey;
     /**
-     * Gets or sets the reply to.
+     * @return Gets or sets the reply to.
      * 
      */
     private final @Nullable String replyTo;
     /**
-     * Gets or sets the reply to session ID.
+     * @return Gets or sets the reply to session ID.
      * 
      */
     private final @Nullable String replyToSessionId;
     /**
-     * Gets or sets the scheduled enqueue time UTC.
+     * @return Gets or sets the scheduled enqueue time UTC.
      * 
      */
     private final @Nullable String scheduledEnqueueTimeUtc;
     /**
-     * Gets or sets the session ID.
+     * @return Gets or sets the session ID.
      * 
      */
     private final @Nullable String sessionId;
     /**
-     * Gets or sets the time to live.
+     * @return Gets or sets the time to live.
      * 
      */
     private final @Nullable String timeToLive;
     /**
-     * Gets or sets the to.
+     * @return Gets or sets the to.
      * 
      */
     private final @Nullable String to;
     /**
-     * Gets or sets the via partition key.
+     * @return Gets or sets the via partition key.
      * 
      */
     private final @Nullable String viaPartitionKey;
@@ -109,93 +109,93 @@ public final class ServiceBusBrokeredMessagePropertiesResponse {
     }
 
     /**
-     * Gets or sets the content type.
+     * @return Gets or sets the content type.
      * 
-    */
+     */
     public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
-     * Gets or sets the correlation ID.
+     * @return Gets or sets the correlation ID.
      * 
-    */
+     */
     public Optional<String> correlationId() {
         return Optional.ofNullable(this.correlationId);
     }
     /**
-     * Gets or sets the force persistence.
+     * @return Gets or sets the force persistence.
      * 
-    */
+     */
     public Optional<Boolean> forcePersistence() {
         return Optional.ofNullable(this.forcePersistence);
     }
     /**
-     * Gets or sets the label.
+     * @return Gets or sets the label.
      * 
-    */
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
-     * Gets or sets the message ID.
+     * @return Gets or sets the message ID.
      * 
-    */
+     */
     public Optional<String> messageId() {
         return Optional.ofNullable(this.messageId);
     }
     /**
-     * Gets or sets the partition key.
+     * @return Gets or sets the partition key.
      * 
-    */
+     */
     public Optional<String> partitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
     /**
-     * Gets or sets the reply to.
+     * @return Gets or sets the reply to.
      * 
-    */
+     */
     public Optional<String> replyTo() {
         return Optional.ofNullable(this.replyTo);
     }
     /**
-     * Gets or sets the reply to session ID.
+     * @return Gets or sets the reply to session ID.
      * 
-    */
+     */
     public Optional<String> replyToSessionId() {
         return Optional.ofNullable(this.replyToSessionId);
     }
     /**
-     * Gets or sets the scheduled enqueue time UTC.
+     * @return Gets or sets the scheduled enqueue time UTC.
      * 
-    */
+     */
     public Optional<String> scheduledEnqueueTimeUtc() {
         return Optional.ofNullable(this.scheduledEnqueueTimeUtc);
     }
     /**
-     * Gets or sets the session ID.
+     * @return Gets or sets the session ID.
      * 
-    */
+     */
     public Optional<String> sessionId() {
         return Optional.ofNullable(this.sessionId);
     }
     /**
-     * Gets or sets the time to live.
+     * @return Gets or sets the time to live.
      * 
-    */
+     */
     public Optional<String> timeToLive() {
         return Optional.ofNullable(this.timeToLive);
     }
     /**
-     * Gets or sets the to.
+     * @return Gets or sets the to.
      * 
-    */
+     */
     public Optional<String> to() {
         return Optional.ofNullable(this.to);
     }
     /**
-     * Gets or sets the via partition key.
+     * @return Gets or sets the via partition key.
      * 
-    */
+     */
     public Optional<String> viaPartitionKey() {
         return Optional.ofNullable(this.viaPartitionKey);
     }

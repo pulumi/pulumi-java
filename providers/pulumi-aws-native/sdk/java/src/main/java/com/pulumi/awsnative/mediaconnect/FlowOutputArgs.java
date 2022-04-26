@@ -27,6 +27,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cidrAllowList")
     private @Nullable Output<List<String>> cidrAllowList;
 
+    /**
+     * @return The range of IP addresses that should be allowed to initiate output requests to this flow. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
+     * 
+     */
     public Optional<Output<List<String>>> cidrAllowList() {
         return Optional.ofNullable(this.cidrAllowList);
     }
@@ -38,6 +42,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the output.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destination")
     private @Nullable Output<String> destination;
 
+    /**
+     * @return The address where you want to send the output.
+     * 
+     */
     public Optional<Output<String>> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -60,6 +72,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
     private @Nullable Output<FlowOutputEncryptionArgs> encryption;
 
+    /**
+     * @return The type of key used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
+     * 
+     */
     public Optional<Output<FlowOutputEncryptionArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -71,6 +87,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="flowArn", required=true)
     private Output<String> flowArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+     * 
+     */
     public Output<String> flowArn() {
         return this.flowArn;
     }
@@ -82,6 +102,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxLatency")
     private @Nullable Output<Integer> maxLatency;
 
+    /**
+     * @return The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+     * 
+     */
     public Optional<Output<Integer>> maxLatency() {
         return Optional.ofNullable(this.maxLatency);
     }
@@ -93,6 +117,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minLatency")
     private @Nullable Output<Integer> minLatency;
 
+    /**
+     * @return The minimum latency in milliseconds.
+     * 
+     */
     public Optional<Output<Integer>> minLatency() {
         return Optional.ofNullable(this.minLatency);
     }
@@ -104,6 +132,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the output. This value must be unique within the current flow.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -115,6 +147,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The port to use when content is distributed to this output.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -126,6 +162,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol", required=true)
     private Output<FlowOutputProtocol> protocol;
 
+    /**
+     * @return The protocol that is used by the source or output.
+     * 
+     */
     public Output<FlowOutputProtocol> protocol() {
         return this.protocol;
     }
@@ -137,6 +177,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="remoteId")
     private @Nullable Output<String> remoteId;
 
+    /**
+     * @return The remote ID for the Zixi-pull stream.
+     * 
+     */
     public Optional<Output<String>> remoteId() {
         return Optional.ofNullable(this.remoteId);
     }
@@ -148,6 +192,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="smoothingLatency")
     private @Nullable Output<Integer> smoothingLatency;
 
+    /**
+     * @return The smoothing latency in milliseconds for RIST, RTP, and RTP-FEC streams.
+     * 
+     */
     public Optional<Output<Integer>> smoothingLatency() {
         return Optional.ofNullable(this.smoothingLatency);
     }
@@ -159,6 +207,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="streamId")
     private @Nullable Output<String> streamId;
 
+    /**
+     * @return The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
+     * 
+     */
     public Optional<Output<String>> streamId() {
         return Optional.ofNullable(this.streamId);
     }
@@ -170,6 +222,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcInterfaceAttachment")
     private @Nullable Output<FlowOutputVpcInterfaceAttachmentArgs> vpcInterfaceAttachment;
 
+    /**
+     * @return The name of the VPC interface attachment to use for this output.
+     * 
+     */
     public Optional<Output<FlowOutputVpcInterfaceAttachmentArgs>> vpcInterfaceAttachment() {
         return Optional.ofNullable(this.vpcInterfaceAttachment);
     }
@@ -211,132 +267,306 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FlowOutputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrAllowList The range of IP addresses that should be allowed to initiate output requests to this flow. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrAllowList(@Nullable Output<List<String>> cidrAllowList) {
             $.cidrAllowList = cidrAllowList;
             return this;
         }
 
+        /**
+         * @param cidrAllowList The range of IP addresses that should be allowed to initiate output requests to this flow. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrAllowList(List<String> cidrAllowList) {
             return cidrAllowList(Output.of(cidrAllowList));
         }
 
+        /**
+         * @param cidrAllowList The range of IP addresses that should be allowed to initiate output requests to this flow. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrAllowList(String... cidrAllowList) {
             return cidrAllowList(List.of(cidrAllowList));
         }
 
+        /**
+         * @param description A description of the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param destination The address where you want to send the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable Output<String> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination The address where you want to send the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(String destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param encryption The type of key used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<FlowOutputEncryptionArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption The type of key used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(FlowOutputEncryptionArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param flowArn The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowArn(Output<String> flowArn) {
             $.flowArn = flowArn;
             return this;
         }
 
+        /**
+         * @param flowArn The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowArn(String flowArn) {
             return flowArn(Output.of(flowArn));
         }
 
+        /**
+         * @param maxLatency The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxLatency(@Nullable Output<Integer> maxLatency) {
             $.maxLatency = maxLatency;
             return this;
         }
 
+        /**
+         * @param maxLatency The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxLatency(Integer maxLatency) {
             return maxLatency(Output.of(maxLatency));
         }
 
+        /**
+         * @param minLatency The minimum latency in milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minLatency(@Nullable Output<Integer> minLatency) {
             $.minLatency = minLatency;
             return this;
         }
 
+        /**
+         * @param minLatency The minimum latency in milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minLatency(Integer minLatency) {
             return minLatency(Output.of(minLatency));
         }
 
+        /**
+         * @param name The name of the output. This value must be unique within the current flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the output. This value must be unique within the current flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param port The port to use when content is distributed to this output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port to use when content is distributed to this output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param protocol The protocol that is used by the source or output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Output<FlowOutputProtocol> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The protocol that is used by the source or output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(FlowOutputProtocol protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param remoteId The remote ID for the Zixi-pull stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteId(@Nullable Output<String> remoteId) {
             $.remoteId = remoteId;
             return this;
         }
 
+        /**
+         * @param remoteId The remote ID for the Zixi-pull stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteId(String remoteId) {
             return remoteId(Output.of(remoteId));
         }
 
+        /**
+         * @param smoothingLatency The smoothing latency in milliseconds for RIST, RTP, and RTP-FEC streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smoothingLatency(@Nullable Output<Integer> smoothingLatency) {
             $.smoothingLatency = smoothingLatency;
             return this;
         }
 
+        /**
+         * @param smoothingLatency The smoothing latency in milliseconds for RIST, RTP, and RTP-FEC streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smoothingLatency(Integer smoothingLatency) {
             return smoothingLatency(Output.of(smoothingLatency));
         }
 
+        /**
+         * @param streamId The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamId(@Nullable Output<String> streamId) {
             $.streamId = streamId;
             return this;
         }
 
+        /**
+         * @param streamId The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamId(String streamId) {
             return streamId(Output.of(streamId));
         }
 
+        /**
+         * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcInterfaceAttachment(@Nullable Output<FlowOutputVpcInterfaceAttachmentArgs> vpcInterfaceAttachment) {
             $.vpcInterfaceAttachment = vpcInterfaceAttachment;
             return this;
         }
 
+        /**
+         * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcInterfaceAttachment(FlowOutputVpcInterfaceAttachmentArgs vpcInterfaceAttachment) {
             return vpcInterfaceAttachment(Output.of(vpcInterfaceAttachment));
         }

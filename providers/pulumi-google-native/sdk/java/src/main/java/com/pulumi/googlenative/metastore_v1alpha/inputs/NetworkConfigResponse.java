@@ -24,6 +24,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="consumers", required=true)
     private List<ConsumerResponse> consumers;
 
+    /**
+     * @return Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
+     * 
+     */
     public List<ConsumerResponse> consumers() {
         return this.consumers;
     }
@@ -52,11 +56,23 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new NetworkConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumers Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumers(List<ConsumerResponse> consumers) {
             $.consumers = consumers;
             return this;
         }
 
+        /**
+         * @param consumers Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumers(ConsumerResponse... consumers) {
             return consumers(List.of(consumers));
         }

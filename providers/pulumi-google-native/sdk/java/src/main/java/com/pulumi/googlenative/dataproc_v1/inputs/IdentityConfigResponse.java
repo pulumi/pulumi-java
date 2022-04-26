@@ -24,6 +24,10 @@ public final class IdentityConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="userServiceAccountMapping", required=true)
     private Map<String,String> userServiceAccountMapping;
 
+    /**
+     * @return Map of user to service account.
+     * 
+     */
     public Map<String,String> userServiceAccountMapping() {
         return this.userServiceAccountMapping;
     }
@@ -52,6 +56,12 @@ public final class IdentityConfigResponse extends com.pulumi.resources.InvokeArg
             $ = new IdentityConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userServiceAccountMapping Map of user to service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userServiceAccountMapping(Map<String,String> userServiceAccountMapping) {
             $.userServiceAccountMapping = userServiceAccountMapping;
             return this;

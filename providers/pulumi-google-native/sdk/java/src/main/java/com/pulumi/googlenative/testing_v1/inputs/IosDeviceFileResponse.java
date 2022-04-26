@@ -24,6 +24,10 @@ public final class IosDeviceFileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="bundleId", required=true)
     private String bundleId;
 
+    /**
+     * @return The bundle id of the app where this file lives. iOS apps sandbox their own filesystem, so app files must specify which app installed on the device.
+     * 
+     */
     public String bundleId() {
         return this.bundleId;
     }
@@ -35,6 +39,10 @@ public final class IosDeviceFileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="content", required=true)
     private FileReferenceResponse content;
 
+    /**
+     * @return The source file
+     * 
+     */
     public FileReferenceResponse content() {
         return this.content;
     }
@@ -46,6 +54,10 @@ public final class IosDeviceFileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="devicePath", required=true)
     private String devicePath;
 
+    /**
+     * @return Location of the file on the device, inside the app&#39;s sandboxed filesystem
+     * 
+     */
     public String devicePath() {
         return this.devicePath;
     }
@@ -76,16 +88,34 @@ public final class IosDeviceFileResponse extends com.pulumi.resources.InvokeArgs
             $ = new IosDeviceFileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bundleId The bundle id of the app where this file lives. iOS apps sandbox their own filesystem, so app files must specify which app installed on the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(String bundleId) {
             $.bundleId = bundleId;
             return this;
         }
 
+        /**
+         * @param content The source file
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(FileReferenceResponse content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param devicePath Location of the file on the device, inside the app&#39;s sandboxed filesystem
+         * 
+         * @return builder
+         * 
+         */
         public Builder devicePath(String devicePath) {
             $.devicePath = devicePath;
             return this;

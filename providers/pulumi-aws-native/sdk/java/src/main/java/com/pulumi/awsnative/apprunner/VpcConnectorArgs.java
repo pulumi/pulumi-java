@@ -24,6 +24,10 @@ public final class VpcConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroups")
     private @Nullable Output<List<String>> securityGroups;
 
+    /**
+     * @return A list of IDs of security groups that App Runner should use for access to AWS resources under the specified subnets. If not specified, App Runner uses the default security group of the Amazon VPC. The default security group allows all outbound traffic.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroups() {
         return Optional.ofNullable(this.securityGroups);
     }
@@ -35,6 +39,10 @@ public final class VpcConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnets", required=true)
     private Output<List<String>> subnets;
 
+    /**
+     * @return A list of IDs of subnets that App Runner should use when it associates your service with a custom Amazon VPC. Specify IDs of subnets of a single Amazon VPC. App Runner determines the Amazon VPC from the subnets you specify.
+     * 
+     */
     public Output<List<String>> subnets() {
         return this.subnets;
     }
@@ -46,6 +54,10 @@ public final class VpcConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<VpcConnectorTagArgs>> tags;
 
+    /**
+     * @return A list of metadata items that you can associate with your VPC connector resource. A tag is a key-value pair.
+     * 
+     */
     public Optional<Output<List<VpcConnectorTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -57,6 +69,10 @@ public final class VpcConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcConnectorName")
     private @Nullable Output<String> vpcConnectorName;
 
+    /**
+     * @return A name for the VPC connector. If you don&#39;t specify a name, AWS CloudFormation generates a name for your VPC connector.
+     * 
+     */
     public Optional<Output<String>> vpcConnectorName() {
         return Optional.ofNullable(this.vpcConnectorName);
     }
@@ -88,50 +104,116 @@ public final class VpcConnectorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VpcConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityGroups A list of IDs of security groups that App Runner should use for access to AWS resources under the specified subnets. If not specified, App Runner uses the default security group of the Amazon VPC. The default security group allows all outbound traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             $.securityGroups = securityGroups;
             return this;
         }
 
+        /**
+         * @param securityGroups A list of IDs of security groups that App Runner should use for access to AWS resources under the specified subnets. If not specified, App Runner uses the default security group of the Amazon VPC. The default security group allows all outbound traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(List<String> securityGroups) {
             return securityGroups(Output.of(securityGroups));
         }
 
+        /**
+         * @param securityGroups A list of IDs of security groups that App Runner should use for access to AWS resources under the specified subnets. If not specified, App Runner uses the default security group of the Amazon VPC. The default security group allows all outbound traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
 
+        /**
+         * @param subnets A list of IDs of subnets that App Runner should use when it associates your service with a custom Amazon VPC. Specify IDs of subnets of a single Amazon VPC. App Runner determines the Amazon VPC from the subnets you specify.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(Output<List<String>> subnets) {
             $.subnets = subnets;
             return this;
         }
 
+        /**
+         * @param subnets A list of IDs of subnets that App Runner should use when it associates your service with a custom Amazon VPC. Specify IDs of subnets of a single Amazon VPC. App Runner determines the Amazon VPC from the subnets you specify.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(List<String> subnets) {
             return subnets(Output.of(subnets));
         }
 
+        /**
+         * @param subnets A list of IDs of subnets that App Runner should use when it associates your service with a custom Amazon VPC. Specify IDs of subnets of a single Amazon VPC. App Runner determines the Amazon VPC from the subnets you specify.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(String... subnets) {
             return subnets(List.of(subnets));
         }
 
+        /**
+         * @param tags A list of metadata items that you can associate with your VPC connector resource. A tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<VpcConnectorTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of metadata items that you can associate with your VPC connector resource. A tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<VpcConnectorTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of metadata items that you can associate with your VPC connector resource. A tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(VpcConnectorTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param vpcConnectorName A name for the VPC connector. If you don&#39;t specify a name, AWS CloudFormation generates a name for your VPC connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConnectorName(@Nullable Output<String> vpcConnectorName) {
             $.vpcConnectorName = vpcConnectorName;
             return this;
         }
 
+        /**
+         * @param vpcConnectorName A name for the VPC connector. If you don&#39;t specify a name, AWS CloudFormation generates a name for your VPC connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConnectorName(String vpcConnectorName) {
             return vpcConnectorName(Output.of(vpcConnectorName));
         }

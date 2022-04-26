@@ -27,6 +27,10 @@ public final class SignalRCorsSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="allowedOrigins")
     private @Nullable Output<List<String>> allowedOrigins;
 
+    /**
+     * @return Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use &#34;*&#34; to allow all. If omitted, allow all by default.
+     * 
+     */
     public Optional<Output<List<String>>> allowedOrigins() {
         return Optional.ofNullable(this.allowedOrigins);
     }
@@ -55,15 +59,33 @@ public final class SignalRCorsSettingsArgs extends com.pulumi.resources.Resource
             $ = new SignalRCorsSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedOrigins Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use &#34;*&#34; to allow all. If omitted, allow all by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(@Nullable Output<List<String>> allowedOrigins) {
             $.allowedOrigins = allowedOrigins;
             return this;
         }
 
+        /**
+         * @param allowedOrigins Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use &#34;*&#34; to allow all. If omitted, allow all by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(List<String> allowedOrigins) {
             return allowedOrigins(Output.of(allowedOrigins));
         }
 
+        /**
+         * @param allowedOrigins Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use &#34;*&#34; to allow all. If omitted, allow all by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(String... allowedOrigins) {
             return allowedOrigins(List.of(allowedOrigins));
         }

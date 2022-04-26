@@ -19,6 +19,10 @@ public final class GetLicenseArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="licenseArn", required=true)
     private String licenseArn;
 
+    /**
+     * @return Amazon Resource Name is a unique name for each resource.
+     * 
+     */
     public String licenseArn() {
         return this.licenseArn;
     }
@@ -47,6 +51,12 @@ public final class GetLicenseArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLicenseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param licenseArn Amazon Resource Name is a unique name for each resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseArn(String licenseArn) {
             $.licenseArn = licenseArn;
             return this;

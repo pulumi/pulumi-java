@@ -26,6 +26,10 @@ public final class SecretAttributesResponse extends com.pulumi.resources.InvokeA
     @Import(name="created", required=true)
     private Integer created;
 
+    /**
+     * @return Creation time in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     public Integer created() {
         return this.created;
     }
@@ -37,6 +41,10 @@ public final class SecretAttributesResponse extends com.pulumi.resources.InvokeA
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Determines whether the object is enabled.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -48,6 +56,10 @@ public final class SecretAttributesResponse extends com.pulumi.resources.InvokeA
     @Import(name="expires")
     private @Nullable Integer expires;
 
+    /**
+     * @return Expiry date in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     public Optional<Integer> expires() {
         return Optional.ofNullable(this.expires);
     }
@@ -59,6 +71,10 @@ public final class SecretAttributesResponse extends com.pulumi.resources.InvokeA
     @Import(name="notBefore")
     private @Nullable Integer notBefore;
 
+    /**
+     * @return Not before date in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     public Optional<Integer> notBefore() {
         return Optional.ofNullable(this.notBefore);
     }
@@ -70,6 +86,10 @@ public final class SecretAttributesResponse extends com.pulumi.resources.InvokeA
     @Import(name="updated", required=true)
     private Integer updated;
 
+    /**
+     * @return Last updated time in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     public Integer updated() {
         return this.updated;
     }
@@ -102,26 +122,56 @@ public final class SecretAttributesResponse extends com.pulumi.resources.InvokeA
             $ = new SecretAttributesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param created Creation time in seconds since 1970-01-01T00:00:00Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder created(Integer created) {
             $.created = created;
             return this;
         }
 
+        /**
+         * @param enabled Determines whether the object is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param expires Expiry date in seconds since 1970-01-01T00:00:00Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expires(@Nullable Integer expires) {
             $.expires = expires;
             return this;
         }
 
+        /**
+         * @param notBefore Not before date in seconds since 1970-01-01T00:00:00Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notBefore(@Nullable Integer notBefore) {
             $.notBefore = notBefore;
             return this;
         }
 
+        /**
+         * @param updated Last updated time in seconds since 1970-01-01T00:00:00Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updated(Integer updated) {
             $.updated = updated;
             return this;

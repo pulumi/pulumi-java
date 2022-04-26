@@ -21,6 +21,10 @@ public final class OsPolicyAssignmentRolloutGetArgs extends com.pulumi.resources
     @Import(name="disruptionBudget", required=true)
     private Output<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> disruptionBudget;
 
+    /**
+     * @return Required. The maximum number (or percentage) of VMs per zone to disrupt at any given moment.
+     * 
+     */
     public Output<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> disruptionBudget() {
         return this.disruptionBudget;
     }
@@ -32,6 +36,10 @@ public final class OsPolicyAssignmentRolloutGetArgs extends com.pulumi.resources
     @Import(name="minWaitDuration", required=true)
     private Output<String> minWaitDuration;
 
+    /**
+     * @return Required. This determines the minimum duration of time to wait after the configuration changes are applied through the current rollout. A VM continues to count towards the `disruption_budget` at least until this duration of time has passed after configuration changes are applied.
+     * 
+     */
     public Output<String> minWaitDuration() {
         return this.minWaitDuration;
     }
@@ -61,20 +69,44 @@ public final class OsPolicyAssignmentRolloutGetArgs extends com.pulumi.resources
             $ = new OsPolicyAssignmentRolloutGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disruptionBudget Required. The maximum number (or percentage) of VMs per zone to disrupt at any given moment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disruptionBudget(Output<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> disruptionBudget) {
             $.disruptionBudget = disruptionBudget;
             return this;
         }
 
+        /**
+         * @param disruptionBudget Required. The maximum number (or percentage) of VMs per zone to disrupt at any given moment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disruptionBudget(OsPolicyAssignmentRolloutDisruptionBudgetGetArgs disruptionBudget) {
             return disruptionBudget(Output.of(disruptionBudget));
         }
 
+        /**
+         * @param minWaitDuration Required. This determines the minimum duration of time to wait after the configuration changes are applied through the current rollout. A VM continues to count towards the `disruption_budget` at least until this duration of time has passed after configuration changes are applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minWaitDuration(Output<String> minWaitDuration) {
             $.minWaitDuration = minWaitDuration;
             return this;
         }
 
+        /**
+         * @param minWaitDuration Required. This determines the minimum duration of time to wait after the configuration changes are applied through the current rollout. A VM continues to count towards the `disruption_budget` at least until this duration of time has passed after configuration changes are applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minWaitDuration(String minWaitDuration) {
             return minWaitDuration(Output.of(minWaitDuration));
         }

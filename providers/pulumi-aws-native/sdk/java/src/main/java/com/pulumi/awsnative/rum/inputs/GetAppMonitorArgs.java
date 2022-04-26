@@ -19,6 +19,10 @@ public final class GetAppMonitorArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return A name for the app monitor
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetAppMonitorArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAppMonitorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A name for the app monitor
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

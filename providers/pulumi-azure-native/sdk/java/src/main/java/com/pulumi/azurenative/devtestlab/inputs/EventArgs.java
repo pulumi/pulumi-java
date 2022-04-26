@@ -28,6 +28,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventName")
     private @Nullable Output<Either<String,NotificationChannelEventType>> eventName;
 
+    /**
+     * @return The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
+     * 
+     */
     public Optional<Output<Either<String,NotificationChannelEventType>>> eventName() {
         return Optional.ofNullable(this.eventName);
     }
@@ -56,19 +60,43 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EventArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventName The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventName(@Nullable Output<Either<String,NotificationChannelEventType>> eventName) {
             $.eventName = eventName;
             return this;
         }
 
+        /**
+         * @param eventName The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventName(Either<String,NotificationChannelEventType> eventName) {
             return eventName(Output.of(eventName));
         }
 
+        /**
+         * @param eventName The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventName(String eventName) {
             return eventName(Either.ofLeft(eventName));
         }
 
+        /**
+         * @param eventName The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventName(NotificationChannelEventType eventName) {
             return eventName(Either.ofRight(eventName));
         }

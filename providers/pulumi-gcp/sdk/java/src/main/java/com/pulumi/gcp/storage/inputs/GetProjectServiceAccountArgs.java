@@ -21,6 +21,10 @@ public final class GetProjectServiceAccountArgs extends com.pulumi.resources.Inv
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The project the unique service account was created for. If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -33,6 +37,11 @@ public final class GetProjectServiceAccountArgs extends com.pulumi.resources.Inv
     @Import(name="userProject")
     private @Nullable String userProject;
 
+    /**
+     * @return The project the lookup originates from. This field is used if you are making the request
+     * from a different account than the one you are finding the service account for.
+     * 
+     */
     public Optional<String> userProject() {
         return Optional.ofNullable(this.userProject);
     }
@@ -62,11 +71,24 @@ public final class GetProjectServiceAccountArgs extends com.pulumi.resources.Inv
             $ = new GetProjectServiceAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project The project the unique service account was created for. If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param userProject The project the lookup originates from. This field is used if you are making the request
+         * from a different account than the one you are finding the service account for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProject(@Nullable String userProject) {
             $.userProject = userProject;
             return this;

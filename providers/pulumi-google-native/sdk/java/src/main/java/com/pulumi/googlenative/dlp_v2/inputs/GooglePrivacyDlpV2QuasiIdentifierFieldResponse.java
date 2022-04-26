@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldResponse extends com.pu
     @Import(name="customTag", required=true)
     private String customTag;
 
+    /**
+     * @return A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
+     * 
+     */
     public String customTag() {
         return this.customTag;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldResponse extends com.pu
     @Import(name="field", required=true)
     private GooglePrivacyDlpV2FieldIdResponse field;
 
+    /**
+     * @return Identifies the column.
+     * 
+     */
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldResponse extends com.pu
             $ = new GooglePrivacyDlpV2QuasiIdentifierFieldResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customTag A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customTag(String customTag) {
             $.customTag = customTag;
             return this;
         }
 
+        /**
+         * @param field Identifies the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             $.field = field;
             return this;

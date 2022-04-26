@@ -26,6 +26,10 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="category", required=true)
     private Output<String> category;
 
+    /**
+     * @return Workbook category, as defined by the user at creation time.
+     * 
+     */
     public Output<String> category() {
         return this.category;
     }
@@ -37,6 +41,10 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The user-defined name (display name) of the workbook.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -48,6 +56,10 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Azure resource Id
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -59,6 +71,10 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<WorkbookManagedIdentityArgs> identity;
 
+    /**
+     * @return Identity used for BYOS
+     * 
+     */
     public Optional<Output<WorkbookManagedIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -70,6 +86,10 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<Either<String,Kind>> kind;
 
+    /**
+     * @return The kind of workbook. Choices are user and shared.
+     * 
+     */
     public Optional<Output<Either<String,Kind>>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -81,6 +101,10 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -92,6 +116,10 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Azure resource name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -103,6 +131,10 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -114,6 +146,10 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The name of the Application Insights component resource.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -125,6 +161,10 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serializedData", required=true)
     private Output<String> serializedData;
 
+    /**
+     * @return Configuration of this particular workbook. Configuration data is a string containing valid JSON
+     * 
+     */
     public Output<String> serializedData() {
         return this.serializedData;
     }
@@ -136,6 +176,10 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceId")
     private @Nullable Output<String> sourceId;
 
+    /**
+     * @return ResourceId for a source resource.
+     * 
+     */
     public Optional<Output<String>> sourceId() {
         return Optional.ofNullable(this.sourceId);
     }
@@ -147,6 +191,10 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageUri")
     private @Nullable Output<String> storageUri;
 
+    /**
+     * @return BYOS Storage Account URI
+     * 
+     */
     public Optional<Output<String>> storageUri() {
         return Optional.ofNullable(this.storageUri);
     }
@@ -158,6 +206,10 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -169,6 +221,10 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Azure resource type
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -180,6 +236,10 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Workbook version
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -222,145 +282,337 @@ public final class WorkbookArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkbookArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category Workbook category, as defined by the user at creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(Output<String> category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param category Workbook category, as defined by the user at creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             return category(Output.of(category));
         }
 
+        /**
+         * @param displayName The user-defined name (display name) of the workbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The user-defined name (display name) of the workbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param id Azure resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Azure resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param identity Identity used for BYOS
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<WorkbookManagedIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Identity used for BYOS
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(WorkbookManagedIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param kind The kind of workbook. Choices are user and shared.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of workbook. Choices are user and shared.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,Kind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind The kind of workbook. Choices are user and shared.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind The kind of workbook. Choices are user and shared.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Kind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Azure resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Azure resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param serializedData Configuration of this particular workbook. Configuration data is a string containing valid JSON
+         * 
+         * @return builder
+         * 
+         */
         public Builder serializedData(Output<String> serializedData) {
             $.serializedData = serializedData;
             return this;
         }
 
+        /**
+         * @param serializedData Configuration of this particular workbook. Configuration data is a string containing valid JSON
+         * 
+         * @return builder
+         * 
+         */
         public Builder serializedData(String serializedData) {
             return serializedData(Output.of(serializedData));
         }
 
+        /**
+         * @param sourceId ResourceId for a source resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceId(@Nullable Output<String> sourceId) {
             $.sourceId = sourceId;
             return this;
         }
 
+        /**
+         * @param sourceId ResourceId for a source resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceId(String sourceId) {
             return sourceId(Output.of(sourceId));
         }
 
+        /**
+         * @param storageUri BYOS Storage Account URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageUri(@Nullable Output<String> storageUri) {
             $.storageUri = storageUri;
             return this;
         }
 
+        /**
+         * @param storageUri BYOS Storage Account URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageUri(String storageUri) {
             return storageUri(Output.of(storageUri));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param type Azure resource type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Azure resource type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param version Workbook version
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Workbook version
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

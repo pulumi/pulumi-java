@@ -27,6 +27,10 @@ public final class UrlRewriteActionParametersArgs extends com.pulumi.resources.R
     @Import(name="destination", required=true)
     private Output<String> destination;
 
+    /**
+     * @return Define the relative URL to which the above requests will be rewritten by.
+     * 
+     */
     public Output<String> destination() {
         return this.destination;
     }
@@ -45,6 +49,10 @@ public final class UrlRewriteActionParametersArgs extends com.pulumi.resources.R
     @Import(name="preserveUnmatchedPath")
     private @Nullable Output<Boolean> preserveUnmatchedPath;
 
+    /**
+     * @return Whether to preserve unmatched path. Default value is true.
+     * 
+     */
     public Optional<Output<Boolean>> preserveUnmatchedPath() {
         return Optional.ofNullable(this.preserveUnmatchedPath);
     }
@@ -56,6 +64,10 @@ public final class UrlRewriteActionParametersArgs extends com.pulumi.resources.R
     @Import(name="sourcePattern", required=true)
     private Output<String> sourcePattern;
 
+    /**
+     * @return define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
+     * 
+     */
     public Output<String> sourcePattern() {
         return this.sourcePattern;
     }
@@ -87,11 +99,23 @@ public final class UrlRewriteActionParametersArgs extends com.pulumi.resources.R
             $ = new UrlRewriteActionParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Define the relative URL to which the above requests will be rewritten by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(Output<String> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Define the relative URL to which the above requests will be rewritten by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(String destination) {
             return destination(Output.of(destination));
         }
@@ -105,20 +129,44 @@ public final class UrlRewriteActionParametersArgs extends com.pulumi.resources.R
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param preserveUnmatchedPath Whether to preserve unmatched path. Default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveUnmatchedPath(@Nullable Output<Boolean> preserveUnmatchedPath) {
             $.preserveUnmatchedPath = preserveUnmatchedPath;
             return this;
         }
 
+        /**
+         * @param preserveUnmatchedPath Whether to preserve unmatched path. Default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveUnmatchedPath(Boolean preserveUnmatchedPath) {
             return preserveUnmatchedPath(Output.of(preserveUnmatchedPath));
         }
 
+        /**
+         * @param sourcePattern define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePattern(Output<String> sourcePattern) {
             $.sourcePattern = sourcePattern;
             return this;
         }
 
+        /**
+         * @param sourcePattern define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePattern(String sourcePattern) {
             return sourcePattern(Output.of(sourcePattern));
         }

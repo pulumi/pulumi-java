@@ -19,6 +19,10 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="applicationResourceName", required=true)
     private String applicationResourceName;
 
+    /**
+     * @return The identity of the application.
+     * 
+     */
     public String applicationResourceName() {
         return this.applicationResourceName;
     }
@@ -30,6 +34,10 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Azure resource group name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationResourceName The identity of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationResourceName(String applicationResourceName) {
             $.applicationResourceName = applicationResourceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

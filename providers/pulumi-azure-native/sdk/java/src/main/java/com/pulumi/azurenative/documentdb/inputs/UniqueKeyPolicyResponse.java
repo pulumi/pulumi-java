@@ -26,6 +26,10 @@ public final class UniqueKeyPolicyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="uniqueKeys")
     private @Nullable List<UniqueKeyResponse> uniqueKeys;
 
+    /**
+     * @return List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
+     * 
+     */
     public Optional<List<UniqueKeyResponse>> uniqueKeys() {
         return Optional.ofNullable(this.uniqueKeys);
     }
@@ -54,11 +58,23 @@ public final class UniqueKeyPolicyResponse extends com.pulumi.resources.InvokeAr
             $ = new UniqueKeyPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param uniqueKeys List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueKeys(@Nullable List<UniqueKeyResponse> uniqueKeys) {
             $.uniqueKeys = uniqueKeys;
             return this;
         }
 
+        /**
+         * @param uniqueKeys List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueKeys(UniqueKeyResponse... uniqueKeys) {
             return uniqueKeys(List.of(uniqueKeys));
         }

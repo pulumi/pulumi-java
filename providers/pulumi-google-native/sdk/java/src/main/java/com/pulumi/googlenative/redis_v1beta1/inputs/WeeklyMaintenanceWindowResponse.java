@@ -24,6 +24,10 @@ public final class WeeklyMaintenanceWindowResponse extends com.pulumi.resources.
     @Import(name="day", required=true)
     private String day;
 
+    /**
+     * @return The day of week that maintenance updates occur.
+     * 
+     */
     public String day() {
         return this.day;
     }
@@ -35,6 +39,10 @@ public final class WeeklyMaintenanceWindowResponse extends com.pulumi.resources.
     @Import(name="duration", required=true)
     private String duration;
 
+    /**
+     * @return Duration of the maintenance window. The current window is fixed at 1 hour.
+     * 
+     */
     public String duration() {
         return this.duration;
     }
@@ -46,6 +54,10 @@ public final class WeeklyMaintenanceWindowResponse extends com.pulumi.resources.
     @Import(name="startTime", required=true)
     private TimeOfDayResponse startTime;
 
+    /**
+     * @return Start time of the window in UTC time.
+     * 
+     */
     public TimeOfDayResponse startTime() {
         return this.startTime;
     }
@@ -76,16 +88,34 @@ public final class WeeklyMaintenanceWindowResponse extends com.pulumi.resources.
             $ = new WeeklyMaintenanceWindowResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day The day of week that maintenance updates occur.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(String day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param duration Duration of the maintenance window. The current window is fixed at 1 hour.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param startTime Start time of the window in UTC time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(TimeOfDayResponse startTime) {
             $.startTime = startTime;
             return this;

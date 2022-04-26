@@ -24,6 +24,10 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
     @Import(name="day", required=true)
     private Integer day;
 
+    /**
+     * @return day of week (1-7), starting on Monday.
+     * 
+     */
     public Integer day() {
         return this.day;
     }
@@ -35,6 +39,10 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
     @Import(name="hour", required=true)
     private Integer hour;
 
+    /**
+     * @return hour of day - 0 to 23.
+     * 
+     */
     public Integer hour() {
         return this.hour;
     }
@@ -46,6 +54,10 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return This is always `sql#maintenanceWindow`.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -57,6 +69,10 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
     @Import(name="updateTrack", required=true)
     private String updateTrack;
 
+    /**
+     * @return Maintenance timing setting: `canary` (Earlier) or `stable` (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
+     * 
+     */
     public String updateTrack() {
         return this.updateTrack;
     }
@@ -88,21 +104,45 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
             $ = new MaintenanceWindowResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day day of week (1-7), starting on Monday.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(Integer day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param hour hour of day - 0 to 23.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hour(Integer hour) {
             $.hour = hour;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#maintenanceWindow`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param updateTrack Maintenance timing setting: `canary` (Earlier) or `stable` (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTrack(String updateTrack) {
             $.updateTrack = updateTrack;
             return this;

@@ -29,6 +29,10 @@ public final class ComponentSetupResponse extends com.pulumi.resources.InvokeArg
     @Import(name="componentName", required=true)
     private String componentName;
 
+    /**
+     * @return The name of the 3rd party component.
+     * 
+     */
     public String componentName() {
         return this.componentName;
     }
@@ -40,6 +44,10 @@ public final class ComponentSetupResponse extends com.pulumi.resources.InvokeArg
     @Import(name="licenseKey")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey;
 
+    /**
+     * @return The license key to activate the component.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> licenseKey() {
         return Optional.ofNullable(this.licenseKey);
     }
@@ -52,6 +60,11 @@ public final class ComponentSetupResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of custom setup.
+     * Expected value is &#39;ComponentSetup&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -82,24 +95,55 @@ public final class ComponentSetupResponse extends com.pulumi.resources.InvokeArg
             $ = new ComponentSetupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentName The name of the 3rd party component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentName(String componentName) {
             $.componentName = componentName;
             return this;
         }
 
+        /**
+         * @param licenseKey The license key to activate the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey) {
             $.licenseKey = licenseKey;
             return this;
         }
 
+        /**
+         * @param licenseKey The license key to activate the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseKey(AzureKeyVaultSecretReferenceResponse licenseKey) {
             return licenseKey(Either.ofLeft(licenseKey));
         }
 
+        /**
+         * @param licenseKey The license key to activate the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseKey(SecureStringResponse licenseKey) {
             return licenseKey(Either.ofRight(licenseKey));
         }
 
+        /**
+         * @param type The type of custom setup.
+         * Expected value is &#39;ComponentSetup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

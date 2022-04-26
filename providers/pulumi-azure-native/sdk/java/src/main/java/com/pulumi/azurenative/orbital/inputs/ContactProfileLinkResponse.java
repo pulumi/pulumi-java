@@ -28,6 +28,10 @@ public final class ContactProfileLinkResponse extends com.pulumi.resources.Invok
     @Import(name="channels", required=true)
     private List<ContactProfileLinkChannelResponse> channels;
 
+    /**
+     * @return Contact Profile Link Channel
+     * 
+     */
     public List<ContactProfileLinkChannelResponse> channels() {
         return this.channels;
     }
@@ -39,6 +43,10 @@ public final class ContactProfileLinkResponse extends com.pulumi.resources.Invok
     @Import(name="direction", required=true)
     private String direction;
 
+    /**
+     * @return Direction (uplink or downlink)
+     * 
+     */
     public String direction() {
         return this.direction;
     }
@@ -50,6 +58,10 @@ public final class ContactProfileLinkResponse extends com.pulumi.resources.Invok
     @Import(name="eirpdBW")
     private @Nullable Double eirpdBW;
 
+    /**
+     * @return Effective Isotropic Radiated Power (EIRP) in dBW.
+     * 
+     */
     public Optional<Double> eirpdBW() {
         return Optional.ofNullable(this.eirpdBW);
     }
@@ -61,6 +73,10 @@ public final class ContactProfileLinkResponse extends com.pulumi.resources.Invok
     @Import(name="gainOverTemperature")
     private @Nullable Double gainOverTemperature;
 
+    /**
+     * @return Gain To Noise Temperature in db/K.
+     * 
+     */
     public Optional<Double> gainOverTemperature() {
         return Optional.ofNullable(this.gainOverTemperature);
     }
@@ -72,6 +88,10 @@ public final class ContactProfileLinkResponse extends com.pulumi.resources.Invok
     @Import(name="polarization", required=true)
     private String polarization;
 
+    /**
+     * @return polarization. eg (RHCP, LHCP)
+     * 
+     */
     public String polarization() {
         return this.polarization;
     }
@@ -104,30 +124,66 @@ public final class ContactProfileLinkResponse extends com.pulumi.resources.Invok
             $ = new ContactProfileLinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channels Contact Profile Link Channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder channels(List<ContactProfileLinkChannelResponse> channels) {
             $.channels = channels;
             return this;
         }
 
+        /**
+         * @param channels Contact Profile Link Channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder channels(ContactProfileLinkChannelResponse... channels) {
             return channels(List.of(channels));
         }
 
+        /**
+         * @param direction Direction (uplink or downlink)
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param eirpdBW Effective Isotropic Radiated Power (EIRP) in dBW.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eirpdBW(@Nullable Double eirpdBW) {
             $.eirpdBW = eirpdBW;
             return this;
         }
 
+        /**
+         * @param gainOverTemperature Gain To Noise Temperature in db/K.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gainOverTemperature(@Nullable Double gainOverTemperature) {
             $.gainOverTemperature = gainOverTemperature;
             return this;
         }
 
+        /**
+         * @param polarization polarization. eg (RHCP, LHCP)
+         * 
+         * @return builder
+         * 
+         */
         public Builder polarization(String polarization) {
             $.polarization = polarization;
             return this;

@@ -25,6 +25,10 @@ public final class B2CTenantArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location in which the resource is hosted and data resides. Can be one of &#39;United States&#39;, &#39;Europe&#39;, &#39;Asia Pacific&#39;, or &#39;Australia&#39; (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -43,6 +47,10 @@ public final class B2CTenantArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -54,6 +62,10 @@ public final class B2CTenantArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The initial domain name of the B2C tenant.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -65,6 +77,10 @@ public final class B2CTenantArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
     private Output<B2CResourceSKUArgs> sku;
 
+    /**
+     * @return SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).
+     * 
+     */
     public Output<B2CResourceSKUArgs> sku() {
         return this.sku;
     }
@@ -76,6 +92,10 @@ public final class B2CTenantArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource Tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -109,11 +129,23 @@ public final class B2CTenantArgs extends com.pulumi.resources.ResourceArgs {
             $ = new B2CTenantArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The location in which the resource is hosted and data resides. Can be one of &#39;United States&#39;, &#39;Europe&#39;, &#39;Asia Pacific&#39;, or &#39;Australia&#39; (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location in which the resource is hosted and data resides. Can be one of &#39;United States&#39;, &#39;Europe&#39;, &#39;Asia Pacific&#39;, or &#39;Australia&#39; (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
@@ -127,38 +159,86 @@ public final class B2CTenantArgs extends com.pulumi.resources.ResourceArgs {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The initial domain name of the B2C tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The initial domain name of the B2C tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param sku SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<B2CResourceSKUArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(B2CResourceSKUArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource Tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource Tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

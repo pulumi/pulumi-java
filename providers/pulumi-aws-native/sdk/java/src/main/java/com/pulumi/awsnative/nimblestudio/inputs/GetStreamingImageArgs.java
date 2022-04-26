@@ -26,6 +26,10 @@ public final class GetStreamingImageArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="studioId", required=true)
     private String studioId;
 
+    /**
+     * @return &lt;p&gt;The studioId. &lt;/p&gt;
+     * 
+     */
     public String studioId() {
         return this.studioId;
     }
@@ -60,6 +64,12 @@ public final class GetStreamingImageArgs extends com.pulumi.resources.InvokeArgs
             return this;
         }
 
+        /**
+         * @param studioId &lt;p&gt;The studioId. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioId(String studioId) {
             $.studioId = studioId;
             return this;

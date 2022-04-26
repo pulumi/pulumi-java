@@ -25,6 +25,10 @@ public final class KubernetesIPConfigurationResponse extends com.pulumi.resource
     @Import(name="ipAddress")
     private @Nullable String ipAddress;
 
+    /**
+     * @return IP address of the Kubernetes node.
+     * 
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -36,6 +40,10 @@ public final class KubernetesIPConfigurationResponse extends com.pulumi.resource
     @Import(name="port", required=true)
     private String port;
 
+    /**
+     * @return Port of the Kubernetes node.
+     * 
+     */
     public String port() {
         return this.port;
     }
@@ -65,11 +73,23 @@ public final class KubernetesIPConfigurationResponse extends com.pulumi.resource
             $ = new KubernetesIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddress IP address of the Kubernetes node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param port Port of the Kubernetes node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(String port) {
             $.port = port;
             return this;

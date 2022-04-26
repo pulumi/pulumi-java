@@ -25,6 +25,10 @@ public final class VideoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Node name. Must be unique within the topology.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -36,6 +40,10 @@ public final class VideoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timeSequences", required=true)
     private VideoSequenceAbsoluteTimeMarkersResponse timeSequences;
 
+    /**
+     * @return Describes a sequence of datetime ranges. The video source only picks up recorded media within these ranges.
+     * 
+     */
     public VideoSequenceAbsoluteTimeMarkersResponse timeSequences() {
         return this.timeSequences;
     }
@@ -48,6 +56,11 @@ public final class VideoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSource&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -59,6 +72,10 @@ public final class VideoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="videoName", required=true)
     private String videoName;
 
+    /**
+     * @return Name of the Video Analyzer video resource to be used as the source.
+     * 
+     */
     public String videoName() {
         return this.videoName;
     }
@@ -90,21 +107,46 @@ public final class VideoSourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VideoSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Node name. Must be unique within the topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param timeSequences Describes a sequence of datetime ranges. The video source only picks up recorded media within these ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSequences(VideoSequenceAbsoluteTimeMarkersResponse timeSequences) {
             $.timeSequences = timeSequences;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param videoName Name of the Video Analyzer video resource to be used as the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoName(String videoName) {
             $.videoName = videoName;
             return this;

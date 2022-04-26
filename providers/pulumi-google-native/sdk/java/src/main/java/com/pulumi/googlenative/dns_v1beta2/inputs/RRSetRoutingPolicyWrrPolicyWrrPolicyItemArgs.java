@@ -42,6 +42,10 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends com.pulu
     @Import(name="signatureRrdatas")
     private @Nullable Output<List<String>> signatureRrdatas;
 
+    /**
+     * @return DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
+     * 
+     */
     public Optional<Output<List<String>>> signatureRrdatas() {
         return Optional.ofNullable(this.signatureRrdatas);
     }
@@ -53,6 +57,10 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends com.pulu
     @Import(name="weight")
     private @Nullable Output<Double> weight;
 
+    /**
+     * @return The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.
+     * 
+     */
     public Optional<Output<Double>> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -106,24 +114,54 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends com.pulu
             return rrdatas(List.of(rrdatas));
         }
 
+        /**
+         * @param signatureRrdatas DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureRrdatas(@Nullable Output<List<String>> signatureRrdatas) {
             $.signatureRrdatas = signatureRrdatas;
             return this;
         }
 
+        /**
+         * @param signatureRrdatas DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureRrdatas(List<String> signatureRrdatas) {
             return signatureRrdatas(Output.of(signatureRrdatas));
         }
 
+        /**
+         * @param signatureRrdatas DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureRrdatas(String... signatureRrdatas) {
             return signatureRrdatas(List.of(signatureRrdatas));
         }
 
+        /**
+         * @param weight The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable Output<Double> weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param weight The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Double weight) {
             return weight(Output.of(weight));
         }

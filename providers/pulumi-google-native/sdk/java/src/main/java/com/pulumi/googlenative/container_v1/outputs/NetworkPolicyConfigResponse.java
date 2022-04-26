@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class NetworkPolicyConfigResponse {
     /**
-     * Whether NetworkPolicy is enabled for this cluster.
+     * @return Whether NetworkPolicy is enabled for this cluster.
      * 
      */
     private final Boolean disabled;
@@ -21,9 +21,9 @@ public final class NetworkPolicyConfigResponse {
     }
 
     /**
-     * Whether NetworkPolicy is enabled for this cluster.
+     * @return Whether NetworkPolicy is enabled for this cluster.
      * 
-    */
+     */
     public Boolean disabled() {
         return this.disabled;
     }

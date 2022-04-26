@@ -24,6 +24,10 @@ public final class BotButtonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="text", required=true)
     private Output<String> text;
 
+    /**
+     * @return The text that appears on the button.
+     * 
+     */
     public Output<String> text() {
         return this.text;
     }
@@ -35,6 +39,10 @@ public final class BotButtonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The value returned to Amazon Lex when the user chooses this button.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -64,20 +72,44 @@ public final class BotButtonArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BotButtonArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param text The text that appears on the button.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(Output<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text The text that appears on the button.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             return text(Output.of(text));
         }
 
+        /**
+         * @param value The value returned to Amazon Lex when the user chooses this button.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value returned to Amazon Lex when the user chooses this button.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

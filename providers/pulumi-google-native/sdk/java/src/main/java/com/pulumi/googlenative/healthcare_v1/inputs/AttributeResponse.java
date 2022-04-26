@@ -24,6 +24,10 @@ public final class AttributeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="attributeDefinitionId", required=true)
     private String attributeDefinitionId;
 
+    /**
+     * @return Indicates the name of an attribute defined in the consent store.
+     * 
+     */
     public String attributeDefinitionId() {
         return this.attributeDefinitionId;
     }
@@ -35,6 +39,10 @@ public final class AttributeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines &#34;data type&#34; with acceptable values &#34;questionnaire&#34; and &#34;step-count&#34;, when the attribute name is data type, this field must contain one of those values.
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -64,16 +72,34 @@ public final class AttributeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AttributeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributeDefinitionId Indicates the name of an attribute defined in the consent store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributeDefinitionId(String attributeDefinitionId) {
             $.attributeDefinitionId = attributeDefinitionId;
             return this;
         }
 
+        /**
+         * @param values The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines &#34;data type&#34; with acceptable values &#34;questionnaire&#34; and &#34;step-count&#34;, when the attribute name is data type, this field must contain one of those values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines &#34;data type&#34; with acceptable values &#34;questionnaire&#34; and &#34;step-count&#34;, when the attribute name is data type, this field must contain one of those values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

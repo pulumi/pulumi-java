@@ -28,6 +28,10 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends com.pu
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -39,6 +43,10 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends com.pu
     @Import(name="ipConfigurations")
     private @Nullable Output<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> ipConfigurations;
 
+    /**
+     * @return An array of application gateway private link ip configurations.
+     * 
+     */
     public Optional<Output<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>>> ipConfigurations() {
         return Optional.ofNullable(this.ipConfigurations);
     }
@@ -50,6 +58,10 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends com.pu
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the private link configuration that is unique within an Application Gateway.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,33 +92,75 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends com.pu
             $ = new ApplicationGatewayPrivateLinkConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ipConfigurations An array of application gateway private link ip configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(@Nullable Output<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> ipConfigurations) {
             $.ipConfigurations = ipConfigurations;
             return this;
         }
 
+        /**
+         * @param ipConfigurations An array of application gateway private link ip configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(List<ApplicationGatewayPrivateLinkIpConfigurationArgs> ipConfigurations) {
             return ipConfigurations(Output.of(ipConfigurations));
         }
 
+        /**
+         * @param ipConfigurations An array of application gateway private link ip configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(ApplicationGatewayPrivateLinkIpConfigurationArgs... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
 
+        /**
+         * @param name Name of the private link configuration that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the private link configuration that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

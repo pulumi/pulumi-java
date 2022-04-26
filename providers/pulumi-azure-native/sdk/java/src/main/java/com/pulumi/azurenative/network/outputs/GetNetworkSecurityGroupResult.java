@@ -18,67 +18,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetNetworkSecurityGroupResult {
     /**
-     * The default security rules of network security group.
+     * @return The default security rules of network security group.
      * 
      */
     private final List<SecurityRuleResponse> defaultSecurityRules;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * A collection of references to flow log resources.
+     * @return A collection of references to flow log resources.
      * 
      */
     private final List<FlowLogResponse> flowLogs;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * A collection of references to network interfaces.
+     * @return A collection of references to network interfaces.
      * 
      */
     private final List<NetworkInterfaceResponse> networkInterfaces;
     /**
-     * The provisioning state of the network security group resource.
+     * @return The provisioning state of the network security group resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The resource GUID property of the network security group resource.
+     * @return The resource GUID property of the network security group resource.
      * 
      */
     private final String resourceGuid;
     /**
-     * A collection of security rules of the network security group.
+     * @return A collection of security rules of the network security group.
      * 
      */
     private final @Nullable List<SecurityRuleResponse> securityRules;
     /**
-     * A collection of references to subnets.
+     * @return A collection of references to subnets.
      * 
      */
     private final List<SubnetResponse> subnets;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -114,93 +114,93 @@ public final class GetNetworkSecurityGroupResult {
     }
 
     /**
-     * The default security rules of network security group.
+     * @return The default security rules of network security group.
      * 
-    */
+     */
     public List<SecurityRuleResponse> defaultSecurityRules() {
         return this.defaultSecurityRules;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * A collection of references to flow log resources.
+     * @return A collection of references to flow log resources.
      * 
-    */
+     */
     public List<FlowLogResponse> flowLogs() {
         return this.flowLogs;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A collection of references to network interfaces.
+     * @return A collection of references to network interfaces.
      * 
-    */
+     */
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
-     * The provisioning state of the network security group resource.
+     * @return The provisioning state of the network security group resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource GUID property of the network security group resource.
+     * @return The resource GUID property of the network security group resource.
      * 
-    */
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
-     * A collection of security rules of the network security group.
+     * @return A collection of security rules of the network security group.
      * 
-    */
+     */
     public List<SecurityRuleResponse> securityRules() {
         return this.securityRules == null ? List.of() : this.securityRules;
     }
     /**
-     * A collection of references to subnets.
+     * @return A collection of references to subnets.
      * 
-    */
+     */
     public List<SubnetResponse> subnets() {
         return this.subnets;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

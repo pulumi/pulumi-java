@@ -26,6 +26,10 @@ public final class ClientTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clientCertificate")
     private @Nullable Output<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs> clientCertificate;
 
+    /**
+     * @return Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.
+     * 
+     */
     public Optional<Output<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs>> clientCertificate() {
         return Optional.ofNullable(this.clientCertificate);
     }
@@ -44,6 +48,10 @@ public final class ClientTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. Free-text description of the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -55,6 +63,10 @@ public final class ClientTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Set of label tags associated with the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -73,6 +85,10 @@ public final class ClientTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -91,6 +107,10 @@ public final class ClientTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="serverValidationCa")
     private @Nullable Output<List<ValidationCAArgs>> serverValidationCa;
 
+    /**
+     * @return Optional. Defines the mechanism to obtain the Certificate Authority certificate to validate the server certificate. If empty, client does not validate the server certificate.
+     * 
+     */
     public Optional<Output<List<ValidationCAArgs>>> serverValidationCa() {
         return Optional.ofNullable(this.serverValidationCa);
     }
@@ -102,6 +122,10 @@ public final class ClientTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sni")
     private @Nullable Output<String> sni;
 
+    /**
+     * @return Optional. Server Name Indication string to present to the server during TLS handshake. E.g: &#34;secure.example.com&#34;.
+     * 
+     */
     public Optional<Output<String>> sni() {
         return Optional.ofNullable(this.sni);
     }
@@ -138,11 +162,23 @@ public final class ClientTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
             $ = new ClientTlsPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientCertificate Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificate(@Nullable Output<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs> clientCertificate) {
             $.clientCertificate = clientCertificate;
             return this;
         }
 
+        /**
+         * @param clientCertificate Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificate(GoogleCloudNetworksecurityV1beta1CertificateProviderArgs clientCertificate) {
             return clientCertificate(Output.of(clientCertificate));
         }
@@ -156,20 +192,44 @@ public final class ClientTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
             return clientTlsPolicyId(Output.of(clientTlsPolicyId));
         }
 
+        /**
+         * @param description Optional. Free-text description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. Free-text description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param labels Optional. Set of label tags associated with the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. Set of label tags associated with the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -183,11 +243,23 @@ public final class ClientTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -201,24 +273,54 @@ public final class ClientTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
             return project(Output.of(project));
         }
 
+        /**
+         * @param serverValidationCa Optional. Defines the mechanism to obtain the Certificate Authority certificate to validate the server certificate. If empty, client does not validate the server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverValidationCa(@Nullable Output<List<ValidationCAArgs>> serverValidationCa) {
             $.serverValidationCa = serverValidationCa;
             return this;
         }
 
+        /**
+         * @param serverValidationCa Optional. Defines the mechanism to obtain the Certificate Authority certificate to validate the server certificate. If empty, client does not validate the server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverValidationCa(List<ValidationCAArgs> serverValidationCa) {
             return serverValidationCa(Output.of(serverValidationCa));
         }
 
+        /**
+         * @param serverValidationCa Optional. Defines the mechanism to obtain the Certificate Authority certificate to validate the server certificate. If empty, client does not validate the server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverValidationCa(ValidationCAArgs... serverValidationCa) {
             return serverValidationCa(List.of(serverValidationCa));
         }
 
+        /**
+         * @param sni Optional. Server Name Indication string to present to the server during TLS handshake. E.g: &#34;secure.example.com&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sni(@Nullable Output<String> sni) {
             $.sni = sni;
             return this;
         }
 
+        /**
+         * @param sni Optional. Server Name Indication string to present to the server during TLS handshake. E.g: &#34;secure.example.com&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sni(String sni) {
             return sni(Output.of(sni));
         }

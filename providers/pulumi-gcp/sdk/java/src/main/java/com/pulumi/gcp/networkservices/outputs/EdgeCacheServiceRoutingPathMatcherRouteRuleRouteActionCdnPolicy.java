@@ -15,20 +15,20 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy {
     /**
-     * Defines the request parameters that contribute to the cache key.
+     * @return Defines the request parameters that contribute to the cache key.
      * Structure is documented below.
      * 
      */
     private final @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy cacheKeyPolicy;
     /**
-     * Cache modes allow users to control the behaviour of the cache, what content it should cache automatically, whether to respect origin headers, or whether to unconditionally cache all responses.
+     * @return Cache modes allow users to control the behaviour of the cache, what content it should cache automatically, whether to respect origin headers, or whether to unconditionally cache all responses.
      * For all cache modes, Cache-Control headers will be passed to the client. Use clientTtl to override what is sent to the client.
      * Possible values are `CACHE_ALL_STATIC`, `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `BYPASS_CACHE`.
      * 
      */
     private final @Nullable String cacheMode;
     /**
-     * Specifies a separate client (e.g. browser client) TTL, separate from the TTL used by the edge caches. Leaving this empty will use the same cache TTL for both the CDN and the client-facing response.
+     * @return Specifies a separate client (e.g. browser client) TTL, separate from the TTL used by the edge caches. Leaving this empty will use the same cache TTL for both the CDN and the client-facing response.
      * - The TTL must be &gt; 0 and &lt;= 86400s (1 day)
      * - The clientTtl cannot be larger than the defaultTtl (if set)
      * - Fractions of a second are not allowed.
@@ -39,7 +39,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      */
     private final @Nullable String clientTtl;
     /**
-     * Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age).
+     * @return Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age).
      * Defaults to 3600s (1 hour).
      * - The TTL must be &gt;= 0 and &lt;= 2592000s (1 month)
      * - Setting a TTL of &#34;0&#34; means &#34;always revalidate&#34; (equivalent to must-revalidate)
@@ -53,7 +53,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      */
     private final @Nullable String defaultTtl;
     /**
-     * Specifies the maximum allowed TTL for cached content served by this origin.
+     * @return Specifies the maximum allowed TTL for cached content served by this origin.
      * Defaults to 86400s (1 day).
      * Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTtl seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive.
      * - The TTL must be &gt;= 0 and &lt;= 2592000s (1 month)
@@ -66,7 +66,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      */
     private final @Nullable String maxTtl;
     /**
-     * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects. This can reduce the load on your origin and improve end-user experience by reducing response latency.
+     * @return Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects. This can reduce the load on your origin and improve end-user experience by reducing response latency.
      * By default, the CDNPolicy will apply the following default TTLs to these status codes:
      * - HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m
      * - HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s
@@ -76,7 +76,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      */
     private final @Nullable Boolean negativeCaching;
     /**
-     * Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
+     * @return Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
      * - Omitting the policy and leaving negativeCaching enabled will use the default TTLs for each status code, defined in negativeCaching.
      * - TTLs must be &gt;= 0 (where 0 is &#34;always revalidate&#34;) and &lt;= 86400s (1 day)
      *   Note that when specifying an explicit negativeCachingPolicy, you should take care to specify a cache TTL for all response codes that you wish to cache. The CDNPolicy will not apply any default negative caching when a policy exists.
@@ -84,12 +84,12 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      */
     private final @Nullable Map<String,String> negativeCachingPolicy;
     /**
-     * The EdgeCacheKeyset containing the set of public keys used to validate signed requests at the edge.
+     * @return The EdgeCacheKeyset containing the set of public keys used to validate signed requests at the edge.
      * 
      */
     private final @Nullable String signedRequestKeyset;
     /**
-     * Whether to enforce signed requests. The default value is DISABLED, which means all content is public, and does not authorize access.
+     * @return Whether to enforce signed requests. The default value is DISABLED, which means all content is public, and does not authorize access.
      * You must also set a signedRequestKeyset to enable signed requests.
      * When set to REQUIRE_SIGNATURES, all matching requests will have their signature validated. Requests that were not signed with the corresponding private key, or that are otherwise invalid (expired, do not match the signature, IP address, or header) will be rejected with a HTTP 403 and (if enabled) logged.
      * Possible values are `DISABLED` and `REQUIRE_SIGNATURES`.
@@ -120,24 +120,24 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     }
 
     /**
-     * Defines the request parameters that contribute to the cache key.
+     * @return Defines the request parameters that contribute to the cache key.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy> cacheKeyPolicy() {
         return Optional.ofNullable(this.cacheKeyPolicy);
     }
     /**
-     * Cache modes allow users to control the behaviour of the cache, what content it should cache automatically, whether to respect origin headers, or whether to unconditionally cache all responses.
+     * @return Cache modes allow users to control the behaviour of the cache, what content it should cache automatically, whether to respect origin headers, or whether to unconditionally cache all responses.
      * For all cache modes, Cache-Control headers will be passed to the client. Use clientTtl to override what is sent to the client.
      * Possible values are `CACHE_ALL_STATIC`, `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `BYPASS_CACHE`.
      * 
-    */
+     */
     public Optional<String> cacheMode() {
         return Optional.ofNullable(this.cacheMode);
     }
     /**
-     * Specifies a separate client (e.g. browser client) TTL, separate from the TTL used by the edge caches. Leaving this empty will use the same cache TTL for both the CDN and the client-facing response.
+     * @return Specifies a separate client (e.g. browser client) TTL, separate from the TTL used by the edge caches. Leaving this empty will use the same cache TTL for both the CDN and the client-facing response.
      * - The TTL must be &gt; 0 and &lt;= 86400s (1 day)
      * - The clientTtl cannot be larger than the defaultTtl (if set)
      * - Fractions of a second are not allowed.
@@ -145,12 +145,12 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   When the cache mode is set to &#34;USE_ORIGIN_HEADERS&#34; or &#34;BYPASS_CACHE&#34;, you must omit this field.
      *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
-    */
+     */
     public Optional<String> clientTtl() {
         return Optional.ofNullable(this.clientTtl);
     }
     /**
-     * Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age).
+     * @return Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age).
      * Defaults to 3600s (1 hour).
      * - The TTL must be &gt;= 0 and &lt;= 2592000s (1 month)
      * - Setting a TTL of &#34;0&#34; means &#34;always revalidate&#34; (equivalent to must-revalidate)
@@ -161,12 +161,12 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   When the cache mode is set to &#34;USE_ORIGIN_HEADERS&#34; or &#34;BYPASS_CACHE&#34;, you must omit this field.
      *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
-    */
+     */
     public Optional<String> defaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
     /**
-     * Specifies the maximum allowed TTL for cached content served by this origin.
+     * @return Specifies the maximum allowed TTL for cached content served by this origin.
      * Defaults to 86400s (1 day).
      * Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTtl seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive.
      * - The TTL must be &gt;= 0 and &lt;= 2592000s (1 month)
@@ -176,46 +176,46 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * - When the cache mode is set to &#34;USE_ORIGIN_HEADERS&#34;, &#34;FORCE_CACHE_ALL&#34;, or &#34;BYPASS_CACHE&#34;, you must omit this field.
      *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
-    */
+     */
     public Optional<String> maxTtl() {
         return Optional.ofNullable(this.maxTtl);
     }
     /**
-     * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects. This can reduce the load on your origin and improve end-user experience by reducing response latency.
+     * @return Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects. This can reduce the load on your origin and improve end-user experience by reducing response latency.
      * By default, the CDNPolicy will apply the following default TTLs to these status codes:
      * - HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m
      * - HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s
      * - HTTP 405 (Method Not Found), 414 (URI Too Long), 501 (Not Implemented): 60s
      *   These defaults can be overridden in negativeCachingPolicy
      * 
-    */
+     */
     public Optional<Boolean> negativeCaching() {
         return Optional.ofNullable(this.negativeCaching);
     }
     /**
-     * Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
+     * @return Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
      * - Omitting the policy and leaving negativeCaching enabled will use the default TTLs for each status code, defined in negativeCaching.
      * - TTLs must be &gt;= 0 (where 0 is &#34;always revalidate&#34;) and &lt;= 86400s (1 day)
      *   Note that when specifying an explicit negativeCachingPolicy, you should take care to specify a cache TTL for all response codes that you wish to cache. The CDNPolicy will not apply any default negative caching when a policy exists.
      * 
-    */
+     */
     public Map<String,String> negativeCachingPolicy() {
         return this.negativeCachingPolicy == null ? Map.of() : this.negativeCachingPolicy;
     }
     /**
-     * The EdgeCacheKeyset containing the set of public keys used to validate signed requests at the edge.
+     * @return The EdgeCacheKeyset containing the set of public keys used to validate signed requests at the edge.
      * 
-    */
+     */
     public Optional<String> signedRequestKeyset() {
         return Optional.ofNullable(this.signedRequestKeyset);
     }
     /**
-     * Whether to enforce signed requests. The default value is DISABLED, which means all content is public, and does not authorize access.
+     * @return Whether to enforce signed requests. The default value is DISABLED, which means all content is public, and does not authorize access.
      * You must also set a signedRequestKeyset to enable signed requests.
      * When set to REQUIRE_SIGNATURES, all matching requests will have their signature validated. Requests that were not signed with the corresponding private key, or that are otherwise invalid (expired, do not match the signature, IP address, or header) will be rejected with a HTTP 403 and (if enabled) logged.
      * Possible values are `DISABLED` and `REQUIRE_SIGNATURES`.
      * 
-    */
+     */
     public Optional<String> signedRequestMode() {
         return Optional.ofNullable(this.signedRequestMode);
     }

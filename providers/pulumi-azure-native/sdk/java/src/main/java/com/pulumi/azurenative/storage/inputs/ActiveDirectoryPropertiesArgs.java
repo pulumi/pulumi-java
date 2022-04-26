@@ -24,6 +24,10 @@ public final class ActiveDirectoryPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="azureStorageSid", required=true)
     private Output<String> azureStorageSid;
 
+    /**
+     * @return Specifies the security identifier (SID) for Azure Storage.
+     * 
+     */
     public Output<String> azureStorageSid() {
         return this.azureStorageSid;
     }
@@ -35,6 +39,10 @@ public final class ActiveDirectoryPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="domainGuid", required=true)
     private Output<String> domainGuid;
 
+    /**
+     * @return Specifies the domain GUID.
+     * 
+     */
     public Output<String> domainGuid() {
         return this.domainGuid;
     }
@@ -46,6 +54,10 @@ public final class ActiveDirectoryPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return Specifies the primary domain that the AD DNS server is authoritative for.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -57,6 +69,10 @@ public final class ActiveDirectoryPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="domainSid", required=true)
     private Output<String> domainSid;
 
+    /**
+     * @return Specifies the security identifier (SID).
+     * 
+     */
     public Output<String> domainSid() {
         return this.domainSid;
     }
@@ -68,6 +84,10 @@ public final class ActiveDirectoryPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="forestName", required=true)
     private Output<String> forestName;
 
+    /**
+     * @return Specifies the Active Directory forest to get.
+     * 
+     */
     public Output<String> forestName() {
         return this.forestName;
     }
@@ -79,6 +99,10 @@ public final class ActiveDirectoryPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="netBiosDomainName", required=true)
     private Output<String> netBiosDomainName;
 
+    /**
+     * @return Specifies the NetBIOS domain name.
+     * 
+     */
     public Output<String> netBiosDomainName() {
         return this.netBiosDomainName;
     }
@@ -112,56 +136,128 @@ public final class ActiveDirectoryPropertiesArgs extends com.pulumi.resources.Re
             $ = new ActiveDirectoryPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureStorageSid Specifies the security identifier (SID) for Azure Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureStorageSid(Output<String> azureStorageSid) {
             $.azureStorageSid = azureStorageSid;
             return this;
         }
 
+        /**
+         * @param azureStorageSid Specifies the security identifier (SID) for Azure Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureStorageSid(String azureStorageSid) {
             return azureStorageSid(Output.of(azureStorageSid));
         }
 
+        /**
+         * @param domainGuid Specifies the domain GUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainGuid(Output<String> domainGuid) {
             $.domainGuid = domainGuid;
             return this;
         }
 
+        /**
+         * @param domainGuid Specifies the domain GUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainGuid(String domainGuid) {
             return domainGuid(Output.of(domainGuid));
         }
 
+        /**
+         * @param domainName Specifies the primary domain that the AD DNS server is authoritative for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName Specifies the primary domain that the AD DNS server is authoritative for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param domainSid Specifies the security identifier (SID).
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainSid(Output<String> domainSid) {
             $.domainSid = domainSid;
             return this;
         }
 
+        /**
+         * @param domainSid Specifies the security identifier (SID).
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainSid(String domainSid) {
             return domainSid(Output.of(domainSid));
         }
 
+        /**
+         * @param forestName Specifies the Active Directory forest to get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forestName(Output<String> forestName) {
             $.forestName = forestName;
             return this;
         }
 
+        /**
+         * @param forestName Specifies the Active Directory forest to get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forestName(String forestName) {
             return forestName(Output.of(forestName));
         }
 
+        /**
+         * @param netBiosDomainName Specifies the NetBIOS domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netBiosDomainName(Output<String> netBiosDomainName) {
             $.netBiosDomainName = netBiosDomainName;
             return this;
         }
 
+        /**
+         * @param netBiosDomainName Specifies the NetBIOS domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netBiosDomainName(String netBiosDomainName) {
             return netBiosDomainName(Output.of(netBiosDomainName));
         }

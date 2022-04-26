@@ -12,22 +12,22 @@ import java.util.Objects;
 @CustomType
 public final class DiscreteActionResponse {
     /**
-     * String that represents a Capability URN.
+     * @return String that represents a Capability URN.
      * 
      */
     private final String name;
     /**
-     * List of key value pairs.
+     * @return List of key value pairs.
      * 
      */
     private final List<KeyValuePairResponse> parameters;
     /**
-     * String that represents a selector.
+     * @return String that represents a selector.
      * 
      */
     private final String selectorId;
     /**
-     * Enum that discriminates between action models.
+     * @return Enum that discriminates between action models.
      * Expected value is &#39;discrete&#39;.
      * 
      */
@@ -46,31 +46,31 @@ public final class DiscreteActionResponse {
     }
 
     /**
-     * String that represents a Capability URN.
+     * @return String that represents a Capability URN.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of key value pairs.
+     * @return List of key value pairs.
      * 
-    */
+     */
     public List<KeyValuePairResponse> parameters() {
         return this.parameters;
     }
     /**
-     * String that represents a selector.
+     * @return String that represents a selector.
      * 
-    */
+     */
     public String selectorId() {
         return this.selectorId;
     }
     /**
-     * Enum that discriminates between action models.
+     * @return Enum that discriminates between action models.
      * Expected value is &#39;discrete&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

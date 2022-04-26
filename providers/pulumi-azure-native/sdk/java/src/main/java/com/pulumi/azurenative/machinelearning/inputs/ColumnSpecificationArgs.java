@@ -32,6 +32,10 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
     @Import(name="enum")
     private @Nullable Output<List<Object>> enum_;
 
+    /**
+     * @return If the data type is categorical, this provides the list of accepted categories.
+     * 
+     */
     public Optional<Output<List<Object>>> enum_() {
         return Optional.ofNullable(this.enum_);
     }
@@ -43,6 +47,10 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
     @Import(name="format")
     private @Nullable Output<Either<String,ColumnFormat>> format;
 
+    /**
+     * @return Additional format information for the data type.
+     * 
+     */
     public Optional<Output<Either<String,ColumnFormat>>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -54,6 +62,10 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
     private Output<Either<String,ColumnType>> type;
 
+    /**
+     * @return Data type of the column.
+     * 
+     */
     public Output<Either<String,ColumnType>> type() {
         return this.type;
     }
@@ -65,6 +77,10 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
     @Import(name="xMsIsnullable")
     private @Nullable Output<Boolean> xMsIsnullable;
 
+    /**
+     * @return Flag indicating if the type supports null values or not.
+     * 
+     */
     public Optional<Output<Boolean>> xMsIsnullable() {
         return Optional.ofNullable(this.xMsIsnullable);
     }
@@ -76,6 +92,10 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
     @Import(name="xMsIsordered")
     private @Nullable Output<Boolean> xMsIsordered;
 
+    /**
+     * @return Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
+     * 
+     */
     public Optional<Output<Boolean>> xMsIsordered() {
         return Optional.ofNullable(this.xMsIsordered);
     }
@@ -108,67 +128,157 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
             $ = new ColumnSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enum_ If the data type is categorical, this provides the list of accepted categories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enum_(@Nullable Output<List<Object>> enum_) {
             $.enum_ = enum_;
             return this;
         }
 
+        /**
+         * @param enum_ If the data type is categorical, this provides the list of accepted categories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enum_(List<Object> enum_) {
             return enum_(Output.of(enum_));
         }
 
+        /**
+         * @param enum_ If the data type is categorical, this provides the list of accepted categories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enum_(Object... enum_) {
             return enum_(List.of(enum_));
         }
 
+        /**
+         * @param format Additional format information for the data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<Either<String,ColumnFormat>> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format Additional format information for the data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(Either<String,ColumnFormat> format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param format Additional format information for the data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             return format(Either.ofLeft(format));
         }
 
+        /**
+         * @param format Additional format information for the data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(ColumnFormat format) {
             return format(Either.ofRight(format));
         }
 
+        /**
+         * @param type Data type of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,ColumnType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Data type of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ColumnType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Data type of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Data type of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ColumnType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param xMsIsnullable Flag indicating if the type supports null values or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xMsIsnullable(@Nullable Output<Boolean> xMsIsnullable) {
             $.xMsIsnullable = xMsIsnullable;
             return this;
         }
 
+        /**
+         * @param xMsIsnullable Flag indicating if the type supports null values or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xMsIsnullable(Boolean xMsIsnullable) {
             return xMsIsnullable(Output.of(xMsIsnullable));
         }
 
+        /**
+         * @param xMsIsordered Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xMsIsordered(@Nullable Output<Boolean> xMsIsordered) {
             $.xMsIsordered = xMsIsordered;
             return this;
         }
 
+        /**
+         * @param xMsIsordered Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xMsIsordered(Boolean xMsIsordered) {
             return xMsIsordered(Output.of(xMsIsordered));
         }

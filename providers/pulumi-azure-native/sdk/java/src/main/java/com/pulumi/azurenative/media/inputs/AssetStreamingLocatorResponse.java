@@ -23,6 +23,10 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
     @Import(name="assetName", required=true)
     private String assetName;
 
+    /**
+     * @return Asset Name.
+     * 
+     */
     public String assetName() {
         return this.assetName;
     }
@@ -34,6 +38,10 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
     @Import(name="created", required=true)
     private String created;
 
+    /**
+     * @return The creation time of the Streaming Locator.
+     * 
+     */
     public String created() {
         return this.created;
     }
@@ -45,6 +53,10 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
     @Import(name="defaultContentKeyPolicyName", required=true)
     private String defaultContentKeyPolicyName;
 
+    /**
+     * @return Name of the default ContentKeyPolicy used by this Streaming Locator.
+     * 
+     */
     public String defaultContentKeyPolicyName() {
         return this.defaultContentKeyPolicyName;
     }
@@ -56,6 +68,10 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return The end time of the Streaming Locator.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -67,6 +83,10 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Streaming Locator name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -78,6 +98,10 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The start time of the Streaming Locator.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -89,6 +113,10 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
     @Import(name="streamingLocatorId", required=true)
     private String streamingLocatorId;
 
+    /**
+     * @return StreamingLocatorId of the Streaming Locator.
+     * 
+     */
     public String streamingLocatorId() {
         return this.streamingLocatorId;
     }
@@ -100,6 +128,10 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
     @Import(name="streamingPolicyName", required=true)
     private String streamingPolicyName;
 
+    /**
+     * @return Name of the Streaming Policy used by this Streaming Locator.
+     * 
+     */
     public String streamingPolicyName() {
         return this.streamingPolicyName;
     }
@@ -135,41 +167,89 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
             $ = new AssetStreamingLocatorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetName Asset Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(String assetName) {
             $.assetName = assetName;
             return this;
         }
 
+        /**
+         * @param created The creation time of the Streaming Locator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder created(String created) {
             $.created = created;
             return this;
         }
 
+        /**
+         * @param defaultContentKeyPolicyName Name of the default ContentKeyPolicy used by this Streaming Locator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultContentKeyPolicyName(String defaultContentKeyPolicyName) {
             $.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
             return this;
         }
 
+        /**
+         * @param endTime The end time of the Streaming Locator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param name Streaming Locator name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param startTime The start time of the Streaming Locator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param streamingLocatorId StreamingLocatorId of the Streaming Locator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingLocatorId(String streamingLocatorId) {
             $.streamingLocatorId = streamingLocatorId;
             return this;
         }
 
+        /**
+         * @param streamingPolicyName Name of the Streaming Policy used by this Streaming Locator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingPolicyName(String streamingPolicyName) {
             $.streamingPolicyName = streamingPolicyName;
             return this;

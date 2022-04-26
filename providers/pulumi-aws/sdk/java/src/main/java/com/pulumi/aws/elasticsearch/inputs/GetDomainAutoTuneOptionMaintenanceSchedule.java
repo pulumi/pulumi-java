@@ -21,6 +21,10 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule extends com.pulumi
     @Import(name="cronExpressionForRecurrence", required=true)
     private String cronExpressionForRecurrence;
 
+    /**
+     * @return A cron expression specifying the recurrence pattern for an Auto-Tune maintenance schedule.
+     * 
+     */
     public String cronExpressionForRecurrence() {
         return this.cronExpressionForRecurrence;
     }
@@ -32,6 +36,10 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule extends com.pulumi
     @Import(name="durations", required=true)
     private List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations;
 
+    /**
+     * @return Configuration block for the duration of the Auto-Tune maintenance window.
+     * 
+     */
     public List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations() {
         return this.durations;
     }
@@ -43,6 +51,10 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule extends com.pulumi
     @Import(name="startAt", required=true)
     private String startAt;
 
+    /**
+     * @return Date and time at which the Auto-Tune maintenance schedule starts in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+     * 
+     */
     public String startAt() {
         return this.startAt;
     }
@@ -73,20 +85,44 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule extends com.pulumi
             $ = new GetDomainAutoTuneOptionMaintenanceSchedule(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cronExpressionForRecurrence A cron expression specifying the recurrence pattern for an Auto-Tune maintenance schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cronExpressionForRecurrence(String cronExpressionForRecurrence) {
             $.cronExpressionForRecurrence = cronExpressionForRecurrence;
             return this;
         }
 
+        /**
+         * @param durations Configuration block for the duration of the Auto-Tune maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durations(List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations) {
             $.durations = durations;
             return this;
         }
 
+        /**
+         * @param durations Configuration block for the duration of the Auto-Tune maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durations(GetDomainAutoTuneOptionMaintenanceScheduleDuration... durations) {
             return durations(List.of(durations));
         }
 
+        /**
+         * @param startAt Date and time at which the Auto-Tune maintenance schedule starts in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+         * 
+         * @return builder
+         * 
+         */
         public Builder startAt(String startAt) {
             $.startAt = startAt;
             return this;

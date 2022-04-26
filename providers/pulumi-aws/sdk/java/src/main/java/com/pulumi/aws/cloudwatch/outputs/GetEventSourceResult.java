@@ -12,28 +12,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEventSourceResult {
     /**
-     * The ARN of the partner event source
+     * @return The ARN of the partner event source
      * 
      */
     private final String arn;
     /**
-     * The name of the SaaS partner that created the event source
+     * @return The name of the SaaS partner that created the event source
      * 
      */
     private final String createdBy;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The name of the event source
+     * @return The name of the event source
      * 
      */
     private final String name;
     private final @Nullable String namePrefix;
     /**
-     * The state of the event source (`ACTIVE` or `PENDING`)
+     * @return The state of the event source (`ACTIVE` or `PENDING`)
      * 
      */
     private final String state;
@@ -55,30 +55,30 @@ public final class GetEventSourceResult {
     }
 
     /**
-     * The ARN of the partner event source
+     * @return The ARN of the partner event source
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The name of the SaaS partner that created the event source
+     * @return The name of the SaaS partner that created the event source
      * 
-    */
+     */
     public String createdBy() {
         return this.createdBy;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the event source
+     * @return The name of the event source
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -86,9 +86,9 @@ public final class GetEventSourceResult {
         return Optional.ofNullable(this.namePrefix);
     }
     /**
-     * The state of the event source (`ACTIVE` or `PENDING`)
+     * @return The state of the event source (`ACTIVE` or `PENDING`)
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

@@ -22,6 +22,10 @@ public final class CertificateAuthorityCertificateArgs extends com.pulumi.resour
     @Import(name="certificate", required=true)
     private Output<String> certificate;
 
+    /**
+     * @return The PEM-encoded certificate for the Certificate Authority.
+     * 
+     */
     public Output<String> certificate() {
         return this.certificate;
     }
@@ -33,6 +37,10 @@ public final class CertificateAuthorityCertificateArgs extends com.pulumi.resour
     @Import(name="certificateAuthorityArn", required=true)
     private Output<String> certificateAuthorityArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Certificate Authority.
+     * 
+     */
     public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
@@ -44,6 +52,10 @@ public final class CertificateAuthorityCertificateArgs extends com.pulumi.resour
     @Import(name="certificateChain")
     private @Nullable Output<String> certificateChain;
 
+    /**
+     * @return The PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA. Required for subordinate Certificate Authorities. Not allowed for root Certificate Authorities.
+     * 
+     */
     public Optional<Output<String>> certificateChain() {
         return Optional.ofNullable(this.certificateChain);
     }
@@ -74,29 +86,65 @@ public final class CertificateAuthorityCertificateArgs extends com.pulumi.resour
             $ = new CertificateAuthorityCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificate The PEM-encoded certificate for the Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(Output<String> certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param certificate The PEM-encoded certificate for the Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(String certificate) {
             return certificate(Output.of(certificate));
         }
 
+        /**
+         * @param certificateAuthorityArn Amazon Resource Name (ARN) of the Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArn(Output<String> certificateAuthorityArn) {
             $.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
 
+        /**
+         * @param certificateAuthorityArn Amazon Resource Name (ARN) of the Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             return certificateAuthorityArn(Output.of(certificateAuthorityArn));
         }
 
+        /**
+         * @param certificateChain The PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA. Required for subordinate Certificate Authorities. Not allowed for root Certificate Authorities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
             $.certificateChain = certificateChain;
             return this;
         }
 
+        /**
+         * @param certificateChain The PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA. Required for subordinate Certificate Authorities. Not allowed for root Certificate Authorities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateChain(String certificateChain) {
             return certificateChain(Output.of(certificateChain));
         }

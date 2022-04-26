@@ -23,6 +23,10 @@ public final class SasTokenInformationResponse extends com.pulumi.resources.Invo
     @Import(name="accessToken", required=true)
     private String accessToken;
 
+    /**
+     * @return The access token for the associated Azure Storage Container.
+     * 
+     */
     public String accessToken() {
         return this.accessToken;
     }
@@ -51,6 +55,12 @@ public final class SasTokenInformationResponse extends com.pulumi.resources.Invo
             $ = new SasTokenInformationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessToken The access token for the associated Azure Storage Container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(String accessToken) {
             $.accessToken = accessToken;
             return this;

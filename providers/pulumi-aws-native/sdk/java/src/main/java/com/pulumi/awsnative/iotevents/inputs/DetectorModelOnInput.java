@@ -27,6 +27,10 @@ public final class DetectorModelOnInput extends com.pulumi.resources.InvokeArgs 
     @Import(name="events")
     private @Nullable List<DetectorModelEvent> events;
 
+    /**
+     * @return Specifies the `actions` performed when the `condition` evaluates to `TRUE`.
+     * 
+     */
     public Optional<List<DetectorModelEvent>> events() {
         return Optional.ofNullable(this.events);
     }
@@ -38,6 +42,10 @@ public final class DetectorModelOnInput extends com.pulumi.resources.InvokeArgs 
     @Import(name="transitionEvents")
     private @Nullable List<DetectorModelTransitionEvent> transitionEvents;
 
+    /**
+     * @return Specifies the `actions` performed, and the next `state` entered, when a `condition` evaluates to `TRUE`.
+     * 
+     */
     public Optional<List<DetectorModelTransitionEvent>> transitionEvents() {
         return Optional.ofNullable(this.transitionEvents);
     }
@@ -67,20 +75,44 @@ public final class DetectorModelOnInput extends com.pulumi.resources.InvokeArgs 
             $ = new DetectorModelOnInput(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param events Specifies the `actions` performed when the `condition` evaluates to `TRUE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(@Nullable List<DetectorModelEvent> events) {
             $.events = events;
             return this;
         }
 
+        /**
+         * @param events Specifies the `actions` performed when the `condition` evaluates to `TRUE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(DetectorModelEvent... events) {
             return events(List.of(events));
         }
 
+        /**
+         * @param transitionEvents Specifies the `actions` performed, and the next `state` entered, when a `condition` evaluates to `TRUE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionEvents(@Nullable List<DetectorModelTransitionEvent> transitionEvents) {
             $.transitionEvents = transitionEvents;
             return this;
         }
 
+        /**
+         * @param transitionEvents Specifies the `actions` performed, and the next `state` entered, when a `condition` evaluates to `TRUE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionEvents(DetectorModelTransitionEvent... transitionEvents) {
             return transitionEvents(List.of(transitionEvents));
         }

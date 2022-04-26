@@ -28,6 +28,10 @@ public final class MetricCounterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalDimensions")
     private @Nullable Output<List<MetricDimensionArgs>> additionalDimensions;
 
+    /**
+     * @return The additional dimensions to be added to metric.
+     * 
+     */
     public Optional<Output<List<MetricDimensionArgs>>> additionalDimensions() {
         return Optional.ofNullable(this.additionalDimensions);
     }
@@ -39,6 +43,10 @@ public final class MetricCounterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dimensionFilter")
     private @Nullable Output<List<MetricDimensionArgs>> dimensionFilter;
 
+    /**
+     * @return The dimension filter.
+     * 
+     */
     public Optional<Output<List<MetricDimensionArgs>>> dimensionFilter() {
         return Optional.ofNullable(this.dimensionFilter);
     }
@@ -50,6 +58,10 @@ public final class MetricCounterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instance")
     private @Nullable Output<String> instance;
 
+    /**
+     * @return The instance from which counter should be collected.
+     * 
+     */
     public Optional<Output<String>> instance() {
         return Optional.ofNullable(this.instance);
     }
@@ -61,6 +73,10 @@ public final class MetricCounterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The counter name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -92,46 +108,106 @@ public final class MetricCounterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MetricCounterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalDimensions The additional dimensions to be added to metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalDimensions(@Nullable Output<List<MetricDimensionArgs>> additionalDimensions) {
             $.additionalDimensions = additionalDimensions;
             return this;
         }
 
+        /**
+         * @param additionalDimensions The additional dimensions to be added to metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalDimensions(List<MetricDimensionArgs> additionalDimensions) {
             return additionalDimensions(Output.of(additionalDimensions));
         }
 
+        /**
+         * @param additionalDimensions The additional dimensions to be added to metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalDimensions(MetricDimensionArgs... additionalDimensions) {
             return additionalDimensions(List.of(additionalDimensions));
         }
 
+        /**
+         * @param dimensionFilter The dimension filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionFilter(@Nullable Output<List<MetricDimensionArgs>> dimensionFilter) {
             $.dimensionFilter = dimensionFilter;
             return this;
         }
 
+        /**
+         * @param dimensionFilter The dimension filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionFilter(List<MetricDimensionArgs> dimensionFilter) {
             return dimensionFilter(Output.of(dimensionFilter));
         }
 
+        /**
+         * @param dimensionFilter The dimension filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionFilter(MetricDimensionArgs... dimensionFilter) {
             return dimensionFilter(List.of(dimensionFilter));
         }
 
+        /**
+         * @param instance The instance from which counter should be collected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(@Nullable Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param instance The instance from which counter should be collected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             return instance(Output.of(instance));
         }
 
+        /**
+         * @param name The counter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The counter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

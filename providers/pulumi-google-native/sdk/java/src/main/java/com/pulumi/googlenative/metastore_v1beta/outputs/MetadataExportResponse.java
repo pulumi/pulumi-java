@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class MetadataExportResponse {
     /**
-     * The type of the database dump.
+     * @return The type of the database dump.
      * 
      */
     private final String databaseDumpType;
     /**
-     * A Cloud Storage URI of a folder that metadata are exported to, in the form of gs:////, where is automatically generated.
+     * @return A Cloud Storage URI of a folder that metadata are exported to, in the form of gs:////, where is automatically generated.
      * 
      */
     private final String destinationGcsUri;
     /**
-     * The time when the export ended.
+     * @return The time when the export ended.
      * 
      */
     private final String endTime;
     /**
-     * The time when the export started.
+     * @return The time when the export started.
      * 
      */
     private final String startTime;
     /**
-     * The current state of the export.
+     * @return The current state of the export.
      * 
      */
     private final String state;
@@ -50,37 +50,37 @@ public final class MetadataExportResponse {
     }
 
     /**
-     * The type of the database dump.
+     * @return The type of the database dump.
      * 
-    */
+     */
     public String databaseDumpType() {
         return this.databaseDumpType;
     }
     /**
-     * A Cloud Storage URI of a folder that metadata are exported to, in the form of gs:////, where is automatically generated.
+     * @return A Cloud Storage URI of a folder that metadata are exported to, in the form of gs:////, where is automatically generated.
      * 
-    */
+     */
     public String destinationGcsUri() {
         return this.destinationGcsUri;
     }
     /**
-     * The time when the export ended.
+     * @return The time when the export ended.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * The time when the export started.
+     * @return The time when the export started.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The current state of the export.
+     * @return The current state of the export.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

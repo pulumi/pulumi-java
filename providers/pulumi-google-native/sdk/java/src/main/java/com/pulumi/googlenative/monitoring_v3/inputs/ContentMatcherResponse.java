@@ -23,6 +23,10 @@ public final class ContentMatcherResponse extends com.pulumi.resources.InvokeArg
     @Import(name="content", required=true)
     private String content;
 
+    /**
+     * @return String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
+     * 
+     */
     public String content() {
         return this.content;
     }
@@ -34,6 +38,10 @@ public final class ContentMatcherResponse extends com.pulumi.resources.InvokeArg
     @Import(name="matcher", required=true)
     private String matcher;
 
+    /**
+     * @return The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+     * 
+     */
     public String matcher() {
         return this.matcher;
     }
@@ -63,11 +71,23 @@ public final class ContentMatcherResponse extends com.pulumi.resources.InvokeArg
             $ = new ContentMatcherResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param matcher The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matcher(String matcher) {
             $.matcher = matcher;
             return this;

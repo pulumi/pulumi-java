@@ -19,6 +19,10 @@ public final class GetFunctionFileSystemConfig extends com.pulumi.resources.Invo
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return Unqualified (no `:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `qualified_arn`.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -55,6 +59,12 @@ public final class GetFunctionFileSystemConfig extends com.pulumi.resources.Invo
             $ = new GetFunctionFileSystemConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Unqualified (no `:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `qualified_arn`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

@@ -25,6 +25,10 @@ public final class RowResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="weight", required=true)
     private String weight;
 
+    /**
+     * @return The relative weight of this row. The row weight is used to adjust the height of rows on the screen (relative to peers). Greater the weight, greater the height of the row on the screen. If omitted, a value of 1 is used while rendering.
+     * 
+     */
     public String weight() {
         return this.weight;
     }
@@ -36,6 +40,10 @@ public final class RowResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="widgets", required=true)
     private List<WidgetResponse> widgets;
 
+    /**
+     * @return The display widgets arranged horizontally in this row.
+     * 
+     */
     public List<WidgetResponse> widgets() {
         return this.widgets;
     }
@@ -65,16 +73,34 @@ public final class RowResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RowResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param weight The relative weight of this row. The row weight is used to adjust the height of rows on the screen (relative to peers). Greater the weight, greater the height of the row on the screen. If omitted, a value of 1 is used while rendering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(String weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param widgets The display widgets arranged horizontally in this row.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widgets(List<WidgetResponse> widgets) {
             $.widgets = widgets;
             return this;
         }
 
+        /**
+         * @param widgets The display widgets arranged horizontally in this row.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widgets(WidgetResponse... widgets) {
             return widgets(List.of(widgets));
         }

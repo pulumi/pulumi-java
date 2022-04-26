@@ -23,6 +23,10 @@ public final class HealthCheckAlarmIdentifier extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class HealthCheckAlarmIdentifier extends com.pulumi.resources.Invok
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -63,11 +71,23 @@ public final class HealthCheckAlarmIdentifier extends com.pulumi.resources.Invok
             $ = new HealthCheckAlarmIdentifier(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param region For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;

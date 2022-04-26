@@ -27,6 +27,10 @@ public final class SsisFolderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Metadata description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class SsisFolderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable Double id;
 
+    /**
+     * @return Metadata id.
+     * 
+     */
     public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
@@ -49,6 +57,10 @@ public final class SsisFolderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Metadata name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +73,11 @@ public final class SsisFolderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of SSIS object metadata.
+     * Expected value is &#39;Folder&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -92,21 +109,46 @@ public final class SsisFolderResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SsisFolderResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Metadata description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param id Metadata id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Double id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Metadata name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The type of SSIS object metadata.
+         * Expected value is &#39;Folder&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

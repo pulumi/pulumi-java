@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class ScanRunErrorTraceResponse {
     /**
-     * Indicates the error reason code.
+     * @return Indicates the error reason code.
      * 
      */
     private final String code;
     /**
-     * If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error code, if such is available. For example, if this code is 404, the scan has encountered too many NOT_FOUND responses.
+     * @return If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error code, if such is available. For example, if this code is 404, the scan has encountered too many NOT_FOUND responses.
      * 
      */
     private final Integer mostCommonHttpErrorCode;
     /**
-     * If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.
+     * @return If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.
      * 
      */
     private final ScanConfigErrorResponse scanConfigError;
@@ -38,23 +38,23 @@ public final class ScanRunErrorTraceResponse {
     }
 
     /**
-     * Indicates the error reason code.
+     * @return Indicates the error reason code.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error code, if such is available. For example, if this code is 404, the scan has encountered too many NOT_FOUND responses.
+     * @return If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error code, if such is available. For example, if this code is 404, the scan has encountered too many NOT_FOUND responses.
      * 
-    */
+     */
     public Integer mostCommonHttpErrorCode() {
         return this.mostCommonHttpErrorCode;
     }
     /**
-     * If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.
+     * @return If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.
      * 
-    */
+     */
     public ScanConfigErrorResponse scanConfigError() {
         return this.scanConfigError;
     }

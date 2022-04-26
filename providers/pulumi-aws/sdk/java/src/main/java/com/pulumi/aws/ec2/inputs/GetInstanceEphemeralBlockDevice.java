@@ -22,6 +22,10 @@ public final class GetInstanceEphemeralBlockDevice extends com.pulumi.resources.
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The physical name of the device.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -33,6 +37,10 @@ public final class GetInstanceEphemeralBlockDevice extends com.pulumi.resources.
     @Import(name="noDevice")
     private @Nullable Boolean noDevice;
 
+    /**
+     * @return Whether the specified device included in the device mapping was suppressed or not (Boolean).
+     * 
+     */
     public Optional<Boolean> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
@@ -44,6 +52,10 @@ public final class GetInstanceEphemeralBlockDevice extends com.pulumi.resources.
     @Import(name="virtualName")
     private @Nullable String virtualName;
 
+    /**
+     * @return The virtual device name.
+     * 
+     */
     public Optional<String> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }
@@ -74,16 +86,34 @@ public final class GetInstanceEphemeralBlockDevice extends com.pulumi.resources.
             $ = new GetInstanceEphemeralBlockDevice(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The physical name of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param noDevice Whether the specified device included in the device mapping was suppressed or not (Boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder noDevice(@Nullable Boolean noDevice) {
             $.noDevice = noDevice;
             return this;
         }
 
+        /**
+         * @param virtualName The virtual device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualName(@Nullable String virtualName) {
             $.virtualName = virtualName;
             return this;

@@ -23,6 +23,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
     private @Nullable Output<String> accountId;
 
+    /**
+     * @return The ID of the member AWS account.
+     * 
+     */
     public Optional<Output<String>> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -34,6 +38,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="email")
     private @Nullable Output<String> email;
 
+    /**
+     * @return The email of the member AWS account.
+     * 
+     */
     public Optional<Output<String>> email() {
         return Optional.ofNullable(this.email);
     }
@@ -45,6 +53,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="invite")
     private @Nullable Output<Boolean> invite;
 
+    /**
+     * @return Boolean whether to invite the account to Security Hub as a member. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> invite() {
         return Optional.ofNullable(this.invite);
     }
@@ -56,6 +68,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterId")
     private @Nullable Output<String> masterId;
 
+    /**
+     * @return The ID of the master Security Hub AWS account.
+     * 
+     */
     public Optional<Output<String>> masterId() {
         return Optional.ofNullable(this.masterId);
     }
@@ -67,6 +83,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="memberStatus")
     private @Nullable Output<String> memberStatus;
 
+    /**
+     * @return The status of the member account relationship.
+     * 
+     */
     public Optional<Output<String>> memberStatus() {
         return Optional.ofNullable(this.memberStatus);
     }
@@ -99,47 +119,107 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
             $ = new MemberState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The ID of the member AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(@Nullable Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId The ID of the member AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param email The email of the member AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email The email of the member AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param invite Boolean whether to invite the account to Security Hub as a member. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invite(@Nullable Output<Boolean> invite) {
             $.invite = invite;
             return this;
         }
 
+        /**
+         * @param invite Boolean whether to invite the account to Security Hub as a member. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invite(Boolean invite) {
             return invite(Output.of(invite));
         }
 
+        /**
+         * @param masterId The ID of the master Security Hub AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterId(@Nullable Output<String> masterId) {
             $.masterId = masterId;
             return this;
         }
 
+        /**
+         * @param masterId The ID of the master Security Hub AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterId(String masterId) {
             return masterId(Output.of(masterId));
         }
 
+        /**
+         * @param memberStatus The status of the member account relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberStatus(@Nullable Output<String> memberStatus) {
             $.memberStatus = memberStatus;
             return this;
         }
 
+        /**
+         * @param memberStatus The status of the member account relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberStatus(String memberStatus) {
             return memberStatus(Output.of(memberStatus));
         }

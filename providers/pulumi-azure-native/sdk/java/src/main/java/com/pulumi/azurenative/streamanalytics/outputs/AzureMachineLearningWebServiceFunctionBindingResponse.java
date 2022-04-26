@@ -16,32 +16,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureMachineLearningWebServiceFunctionBindingResponse {
     /**
-     * The API key used to authenticate with Request-Response endpoint.
+     * @return The API key used to authenticate with Request-Response endpoint.
      * 
      */
     private final @Nullable String apiKey;
     /**
-     * Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.
+     * @return Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.
      * 
      */
     private final @Nullable Integer batchSize;
     /**
-     * The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs
+     * @return The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs
      * 
      */
     private final @Nullable String endpoint;
     /**
-     * The inputs for the Azure Machine Learning web service endpoint.
+     * @return The inputs for the Azure Machine Learning web service endpoint.
      * 
      */
     private final @Nullable AzureMachineLearningWebServiceInputsResponse inputs;
     /**
-     * A list of outputs from the Azure Machine Learning web service endpoint execution.
+     * @return A list of outputs from the Azure Machine Learning web service endpoint execution.
      * 
      */
     private final @Nullable List<AzureMachineLearningWebServiceOutputColumnResponse> outputs;
     /**
-     * Indicates the function binding type.
+     * @return Indicates the function binding type.
      * Expected value is &#39;Microsoft.MachineLearning/WebService&#39;.
      * 
      */
@@ -64,45 +64,45 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse {
     }
 
     /**
-     * The API key used to authenticate with Request-Response endpoint.
+     * @return The API key used to authenticate with Request-Response endpoint.
      * 
-    */
+     */
     public Optional<String> apiKey() {
         return Optional.ofNullable(this.apiKey);
     }
     /**
-     * Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.
+     * @return Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.
      * 
-    */
+     */
     public Optional<Integer> batchSize() {
         return Optional.ofNullable(this.batchSize);
     }
     /**
-     * The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs
+     * @return The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs
      * 
-    */
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
-     * The inputs for the Azure Machine Learning web service endpoint.
+     * @return The inputs for the Azure Machine Learning web service endpoint.
      * 
-    */
+     */
     public Optional<AzureMachineLearningWebServiceInputsResponse> inputs() {
         return Optional.ofNullable(this.inputs);
     }
     /**
-     * A list of outputs from the Azure Machine Learning web service endpoint execution.
+     * @return A list of outputs from the Azure Machine Learning web service endpoint execution.
      * 
-    */
+     */
     public List<AzureMachineLearningWebServiceOutputColumnResponse> outputs() {
         return this.outputs == null ? List.of() : this.outputs;
     }
     /**
-     * Indicates the function binding type.
+     * @return Indicates the function binding type.
      * Expected value is &#39;Microsoft.MachineLearning/WebService&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

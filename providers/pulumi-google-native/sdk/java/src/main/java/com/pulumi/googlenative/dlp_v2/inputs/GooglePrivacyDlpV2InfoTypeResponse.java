@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2InfoTypeResponse extends com.pulumi.resourc
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class GooglePrivacyDlpV2InfoTypeResponse extends com.pulumi.resourc
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Optional version name for this InfoType.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -63,11 +71,23 @@ public final class GooglePrivacyDlpV2InfoTypeResponse extends com.pulumi.resourc
             $ = new GooglePrivacyDlpV2InfoTypeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version Optional version name for this InfoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

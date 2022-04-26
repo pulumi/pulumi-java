@@ -25,6 +25,10 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="aadAuthority")
     private @Nullable String aadAuthority;
 
+    /**
+     * @return AAD Authority URL which was used to request the token for the service principal.
+     * 
+     */
     public Optional<String> aadAuthority() {
         return Optional.ofNullable(this.aadAuthority);
     }
@@ -36,6 +40,10 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="applicationId")
     private @Nullable String applicationId;
 
+    /**
+     * @return Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -47,6 +55,10 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="audience")
     private @Nullable String audience;
 
+    /**
+     * @return Intended audience for the service principal.
+     * 
+     */
     public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
@@ -58,6 +70,10 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="objectId")
     private @Nullable String objectId;
 
+    /**
+     * @return Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -69,6 +85,10 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="rawCertData")
     private @Nullable String rawCertData;
 
+    /**
+     * @return Raw certificate data for building certificate expiry flows.
+     * 
+     */
     public Optional<String> rawCertData() {
         return Optional.ofNullable(this.rawCertData);
     }
@@ -80,6 +100,10 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -113,31 +137,67 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new SiteSpnPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadAuthority AAD Authority URL which was used to request the token for the service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadAuthority(@Nullable String aadAuthority) {
             $.aadAuthority = aadAuthority;
             return this;
         }
 
+        /**
+         * @param applicationId Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable String applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param audience Intended audience for the service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(@Nullable String audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param objectId Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param rawCertData Raw certificate data for building certificate expiry flows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawCertData(@Nullable String rawCertData) {
             $.rawCertData = rawCertData;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;

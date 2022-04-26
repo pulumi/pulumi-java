@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends com.pulumi.re
     @Import(name="datasetId", required=true)
     private String datasetId;
 
+    /**
+     * @return Dataset ID of the table.
+     * 
+     */
     public String datasetId() {
         return this.datasetId;
     }
@@ -34,6 +38,10 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends com.pulumi.re
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -45,6 +53,10 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends com.pulumi.re
     @Import(name="tableId", required=true)
     private String tableId;
 
+    /**
+     * @return Name of the table.
+     * 
+     */
     public String tableId() {
         return this.tableId;
     }
@@ -75,16 +87,34 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends com.pulumi.re
             $ = new GooglePrivacyDlpV2BigQueryTableResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId Dataset ID of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param project The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param tableId Name of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(String tableId) {
             $.tableId = tableId;
             return this;

@@ -22,6 +22,10 @@ public final class UserAssignedIdentityArgs extends com.pulumi.resources.Resourc
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return The client id of the user assigned identity.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -33,6 +37,10 @@ public final class UserAssignedIdentityArgs extends com.pulumi.resources.Resourc
     @Import(name="objectId")
     private @Nullable Output<String> objectId;
 
+    /**
+     * @return The object id of the user assigned identity.
+     * 
+     */
     public Optional<Output<String>> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -44,6 +52,10 @@ public final class UserAssignedIdentityArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The resource id of the user assigned identity.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -74,29 +86,65 @@ public final class UserAssignedIdentityArgs extends com.pulumi.resources.Resourc
             $ = new UserAssignedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The client id of the user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The client id of the user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param objectId The object id of the user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable Output<String> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId The object id of the user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             return objectId(Output.of(objectId));
         }
 
+        /**
+         * @param resourceId The resource id of the user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The resource id of the user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

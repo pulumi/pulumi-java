@@ -20,52 +20,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Office365LinkedServiceResponse {
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object encryptedCredential;
     /**
-     * Azure tenant ID to which the Office 365 account belongs. Type: string (or Expression with resultType string).
+     * @return Azure tenant ID to which the Office 365 account belongs. Type: string (or Expression with resultType string).
      * 
      */
     private final Object office365TenantId;
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
-     * Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
+     * @return Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
      * 
      */
     private final Object servicePrincipalId;
     /**
-     * Specify the application&#39;s key.
+     * @return Specify the application&#39;s key.
      * 
      */
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
     /**
-     * Specify the tenant information under which your Azure AD web application resides. Type: string (or Expression with resultType string).
+     * @return Specify the tenant information under which your Azure AD web application resides. Type: string (or Expression with resultType string).
      * 
      */
     private final Object servicePrincipalTenantId;
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;Office365&#39;.
      * 
      */
@@ -96,73 +96,73 @@ public final class Office365LinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * Azure tenant ID to which the Office 365 account belongs. Type: string (or Expression with resultType string).
+     * @return Azure tenant ID to which the Office 365 account belongs. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object office365TenantId() {
         return this.office365TenantId;
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
+     * @return Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object servicePrincipalId() {
         return this.servicePrincipalId;
     }
     /**
-     * Specify the application&#39;s key.
+     * @return Specify the application&#39;s key.
      * 
-    */
+     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
         return this.servicePrincipalKey;
     }
     /**
-     * Specify the tenant information under which your Azure AD web application resides. Type: string (or Expression with resultType string).
+     * @return Specify the tenant information under which your Azure AD web application resides. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object servicePrincipalTenantId() {
         return this.servicePrincipalTenantId;
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;Office365&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

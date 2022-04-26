@@ -14,57 +14,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFavoriteResult {
     /**
-     * Favorite category, as defined by the user at creation time.
+     * @return Favorite category, as defined by the user at creation time.
      * 
      */
     private final @Nullable String category;
     /**
-     * Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON
+     * @return Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON
      * 
      */
     private final @Nullable String config;
     /**
-     * Internally assigned unique id of the favorite definition.
+     * @return Internally assigned unique id of the favorite definition.
      * 
      */
     private final String favoriteId;
     /**
-     * Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+     * @return Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.
      * 
      */
     private final @Nullable String favoriteType;
     /**
-     * Flag denoting wether or not this favorite was generated from a template.
+     * @return Flag denoting wether or not this favorite was generated from a template.
      * 
      */
     private final @Nullable Boolean isGeneratedFromTemplate;
     /**
-     * The user-defined name of the favorite.
+     * @return The user-defined name of the favorite.
      * 
      */
     private final @Nullable String name;
     /**
-     * The source of the favorite definition.
+     * @return The source of the favorite definition.
      * 
      */
     private final @Nullable String sourceType;
     /**
-     * A list of 0 or more tags that are associated with this favorite definition
+     * @return A list of 0 or more tags that are associated with this favorite definition
      * 
      */
     private final @Nullable List<String> tags;
     /**
-     * Date and time in UTC of the last modification that was made to this favorite definition.
+     * @return Date and time in UTC of the last modification that was made to this favorite definition.
      * 
      */
     private final String timeModified;
     /**
-     * Unique user id of the specific user that owns this favorite.
+     * @return Unique user id of the specific user that owns this favorite.
      * 
      */
     private final String userId;
     /**
-     * This instance&#39;s version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
+     * @return This instance&#39;s version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
      * 
      */
     private final @Nullable String version;
@@ -96,79 +96,79 @@ public final class GetFavoriteResult {
     }
 
     /**
-     * Favorite category, as defined by the user at creation time.
+     * @return Favorite category, as defined by the user at creation time.
      * 
-    */
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
     /**
-     * Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON
+     * @return Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON
      * 
-    */
+     */
     public Optional<String> config() {
         return Optional.ofNullable(this.config);
     }
     /**
-     * Internally assigned unique id of the favorite definition.
+     * @return Internally assigned unique id of the favorite definition.
      * 
-    */
+     */
     public String favoriteId() {
         return this.favoriteId;
     }
     /**
-     * Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+     * @return Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.
      * 
-    */
+     */
     public Optional<String> favoriteType() {
         return Optional.ofNullable(this.favoriteType);
     }
     /**
-     * Flag denoting wether or not this favorite was generated from a template.
+     * @return Flag denoting wether or not this favorite was generated from a template.
      * 
-    */
+     */
     public Optional<Boolean> isGeneratedFromTemplate() {
         return Optional.ofNullable(this.isGeneratedFromTemplate);
     }
     /**
-     * The user-defined name of the favorite.
+     * @return The user-defined name of the favorite.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The source of the favorite definition.
+     * @return The source of the favorite definition.
      * 
-    */
+     */
     public Optional<String> sourceType() {
         return Optional.ofNullable(this.sourceType);
     }
     /**
-     * A list of 0 or more tags that are associated with this favorite definition
+     * @return A list of 0 or more tags that are associated with this favorite definition
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * Date and time in UTC of the last modification that was made to this favorite definition.
+     * @return Date and time in UTC of the last modification that was made to this favorite definition.
      * 
-    */
+     */
     public String timeModified() {
         return this.timeModified;
     }
     /**
-     * Unique user id of the specific user that owns this favorite.
+     * @return Unique user id of the specific user that owns this favorite.
      * 
-    */
+     */
     public String userId() {
         return this.userId;
     }
     /**
-     * This instance&#39;s version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
+     * @return This instance&#39;s version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

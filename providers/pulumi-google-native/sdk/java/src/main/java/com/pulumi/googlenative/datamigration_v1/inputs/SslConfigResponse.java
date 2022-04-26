@@ -23,6 +23,10 @@ public final class SslConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="caCertificate", required=true)
     private String caCertificate;
 
+    /**
+     * @return Input only. The x509 PEM-encoded certificate of the CA that signed the source database server&#39;s certificate. The replica will use this certificate to verify it&#39;s connecting to the right host.
+     * 
+     */
     public String caCertificate() {
         return this.caCertificate;
     }
@@ -34,6 +38,10 @@ public final class SslConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="clientCertificate", required=true)
     private String clientCertificate;
 
+    /**
+     * @return Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the &#39;client_key&#39; field is mandatory.
+     * 
+     */
     public String clientCertificate() {
         return this.clientCertificate;
     }
@@ -45,6 +53,10 @@ public final class SslConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="clientKey", required=true)
     private String clientKey;
 
+    /**
+     * @return Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the &#39;client_certificate&#39; field is mandatory.
+     * 
+     */
     public String clientKey() {
         return this.clientKey;
     }
@@ -56,6 +68,10 @@ public final class SslConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The ssl config type according to &#39;client_key&#39;, &#39;client_certificate&#39; and &#39;ca_certificate&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -87,21 +103,45 @@ public final class SslConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SslConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caCertificate Input only. The x509 PEM-encoded certificate of the CA that signed the source database server&#39;s certificate. The replica will use this certificate to verify it&#39;s connecting to the right host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificate(String caCertificate) {
             $.caCertificate = caCertificate;
             return this;
         }
 
+        /**
+         * @param clientCertificate Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the &#39;client_key&#39; field is mandatory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificate(String clientCertificate) {
             $.clientCertificate = clientCertificate;
             return this;
         }
 
+        /**
+         * @param clientKey Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the &#39;client_certificate&#39; field is mandatory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKey(String clientKey) {
             $.clientKey = clientKey;
             return this;
         }
 
+        /**
+         * @param type The ssl config type according to &#39;client_key&#39;, &#39;client_certificate&#39; and &#39;ca_certificate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

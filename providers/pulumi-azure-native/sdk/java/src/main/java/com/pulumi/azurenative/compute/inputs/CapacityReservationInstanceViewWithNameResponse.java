@@ -28,6 +28,10 @@ public final class CapacityReservationInstanceViewWithNameResponse extends com.p
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the capacity reservation.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -39,6 +43,10 @@ public final class CapacityReservationInstanceViewWithNameResponse extends com.p
     @Import(name="statuses")
     private @Nullable List<InstanceViewStatusResponse> statuses;
 
+    /**
+     * @return The resource status information.
+     * 
+     */
     public Optional<List<InstanceViewStatusResponse>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
@@ -50,6 +58,10 @@ public final class CapacityReservationInstanceViewWithNameResponse extends com.p
     @Import(name="utilizationInfo")
     private @Nullable CapacityReservationUtilizationResponse utilizationInfo;
 
+    /**
+     * @return Unutilized capacity of the capacity reservation.
+     * 
+     */
     public Optional<CapacityReservationUtilizationResponse> utilizationInfo() {
         return Optional.ofNullable(this.utilizationInfo);
     }
@@ -80,20 +92,44 @@ public final class CapacityReservationInstanceViewWithNameResponse extends com.p
             $ = new CapacityReservationInstanceViewWithNameResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the capacity reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             $.statuses = statuses;
             return this;
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(InstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
         }
 
+        /**
+         * @param utilizationInfo Unutilized capacity of the capacity reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder utilizationInfo(@Nullable CapacityReservationUtilizationResponse utilizationInfo) {
             $.utilizationInfo = utilizationInfo;
             return this;

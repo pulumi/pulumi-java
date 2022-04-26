@@ -26,6 +26,10 @@ public final class ExternalVpnGatewayArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class ExternalVpnGatewayArgs extends com.pulumi.resources.ResourceA
     @Import(name="interfaces")
     private @Nullable Output<List<ExternalVpnGatewayInterfaceArgs>> interfaces;
 
+    /**
+     * @return A list of interfaces for this external VPN gateway. If your peer-side gateway is an on-premises gateway and non-AWS cloud providers&#39; gateway, at most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS virtual private gateway, four interfaces should be provided for an external VPN gateway.
+     * 
+     */
     public Optional<Output<List<ExternalVpnGatewayInterfaceArgs>>> interfaces() {
         return Optional.ofNullable(this.interfaces);
     }
@@ -48,6 +56,10 @@ public final class ExternalVpnGatewayArgs extends com.pulumi.resources.ResourceA
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -59,6 +71,10 @@ public final class ExternalVpnGatewayArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -77,6 +93,10 @@ public final class ExternalVpnGatewayArgs extends com.pulumi.resources.ResourceA
     @Import(name="redundancyType")
     private @Nullable Output<ExternalVpnGatewayRedundancyType> redundancyType;
 
+    /**
+     * @return Indicates the user-supplied redundancy type of this external VPN gateway.
+     * 
+     */
     public Optional<Output<ExternalVpnGatewayRedundancyType>> redundancyType() {
         return Optional.ofNullable(this.redundancyType);
     }
@@ -118,42 +138,96 @@ public final class ExternalVpnGatewayArgs extends com.pulumi.resources.ResourceA
             $ = new ExternalVpnGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param interfaces A list of interfaces for this external VPN gateway. If your peer-side gateway is an on-premises gateway and non-AWS cloud providers&#39; gateway, at most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS virtual private gateway, four interfaces should be provided for an external VPN gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaces(@Nullable Output<List<ExternalVpnGatewayInterfaceArgs>> interfaces) {
             $.interfaces = interfaces;
             return this;
         }
 
+        /**
+         * @param interfaces A list of interfaces for this external VPN gateway. If your peer-side gateway is an on-premises gateway and non-AWS cloud providers&#39; gateway, at most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS virtual private gateway, four interfaces should be provided for an external VPN gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaces(List<ExternalVpnGatewayInterfaceArgs> interfaces) {
             return interfaces(Output.of(interfaces));
         }
 
+        /**
+         * @param interfaces A list of interfaces for this external VPN gateway. If your peer-side gateway is an on-premises gateway and non-AWS cloud providers&#39; gateway, at most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS virtual private gateway, four interfaces should be provided for an external VPN gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaces(ExternalVpnGatewayInterfaceArgs... interfaces) {
             return interfaces(List.of(interfaces));
         }
 
+        /**
+         * @param labels Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -167,11 +241,23 @@ public final class ExternalVpnGatewayArgs extends com.pulumi.resources.ResourceA
             return project(Output.of(project));
         }
 
+        /**
+         * @param redundancyType Indicates the user-supplied redundancy type of this external VPN gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redundancyType(@Nullable Output<ExternalVpnGatewayRedundancyType> redundancyType) {
             $.redundancyType = redundancyType;
             return this;
         }
 
+        /**
+         * @param redundancyType Indicates the user-supplied redundancy type of this external VPN gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redundancyType(ExternalVpnGatewayRedundancyType redundancyType) {
             return redundancyType(Output.of(redundancyType));
         }

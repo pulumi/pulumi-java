@@ -20,6 +20,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKi
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the Datastore kind.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -48,11 +52,23 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKi
             $ = new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the Datastore kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Datastore kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

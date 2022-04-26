@@ -25,6 +25,10 @@ public final class BudgetFilterPropertiesResponse extends com.pulumi.resources.I
     @Import(name="dimensions")
     private @Nullable BudgetComparisonExpressionResponse dimensions;
 
+    /**
+     * @return Has comparison expression for a dimension
+     * 
+     */
     public Optional<BudgetComparisonExpressionResponse> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
@@ -36,6 +40,10 @@ public final class BudgetFilterPropertiesResponse extends com.pulumi.resources.I
     @Import(name="tags")
     private @Nullable BudgetComparisonExpressionResponse tags;
 
+    /**
+     * @return Has comparison expression for a tag
+     * 
+     */
     public Optional<BudgetComparisonExpressionResponse> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -65,11 +73,23 @@ public final class BudgetFilterPropertiesResponse extends com.pulumi.resources.I
             $ = new BudgetFilterPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dimensions Has comparison expression for a dimension
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(@Nullable BudgetComparisonExpressionResponse dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param tags Has comparison expression for a tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable BudgetComparisonExpressionResponse tags) {
             $.tags = tags;
             return this;

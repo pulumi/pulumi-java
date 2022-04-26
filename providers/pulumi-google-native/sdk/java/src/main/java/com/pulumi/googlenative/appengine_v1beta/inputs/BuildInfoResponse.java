@@ -23,6 +23,10 @@ public final class BuildInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cloudBuildId", required=true)
     private String cloudBuildId;
 
+    /**
+     * @return The Google Cloud Build id. Example: &#34;f966068f-08b2-42c8-bdfe-74137dff2bf9&#34;
+     * 
+     */
     public String cloudBuildId() {
         return this.cloudBuildId;
     }
@@ -51,6 +55,12 @@ public final class BuildInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BuildInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudBuildId The Google Cloud Build id. Example: &#34;f966068f-08b2-42c8-bdfe-74137dff2bf9&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudBuildId(String cloudBuildId) {
             $.cloudBuildId = cloudBuildId;
             return this;

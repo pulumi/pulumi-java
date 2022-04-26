@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProtectionStatusDetailsResponse {
     /**
-     * Specifies the protection status error of the resource
+     * @return Specifies the protection status error of the resource
      * 
      */
     private final @Nullable UserFacingErrorResponse errorDetails;
     /**
-     * Specifies the protection status of the resource
+     * @return Specifies the protection status of the resource
      * 
      */
     private final @Nullable String status;
@@ -32,16 +32,16 @@ public final class ProtectionStatusDetailsResponse {
     }
 
     /**
-     * Specifies the protection status error of the resource
+     * @return Specifies the protection status error of the resource
      * 
-    */
+     */
     public Optional<UserFacingErrorResponse> errorDetails() {
         return Optional.ofNullable(this.errorDetails);
     }
     /**
-     * Specifies the protection status of the resource
+     * @return Specifies the protection status of the resource
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

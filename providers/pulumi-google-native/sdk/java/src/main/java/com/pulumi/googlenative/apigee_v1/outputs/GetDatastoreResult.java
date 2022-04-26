@@ -11,37 +11,37 @@ import java.util.Objects;
 @CustomType
 public final class GetDatastoreResult {
     /**
-     * Datastore create time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
+     * @return Datastore create time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
      * 
      */
     private final String createTime;
     /**
-     * Datastore Configurations.
+     * @return Datastore Configurations.
      * 
      */
     private final GoogleCloudApigeeV1DatastoreConfigResponse datastoreConfig;
     /**
-     * Display name in UI
+     * @return Display name in UI
      * 
      */
     private final String displayName;
     /**
-     * Datastore last update time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
+     * @return Datastore last update time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
      * 
      */
     private final String lastUpdateTime;
     /**
-     * Organization that the datastore belongs to
+     * @return Organization that the datastore belongs to
      * 
      */
     private final String org;
     /**
-     * Resource link of Datastore. Example: `/organizations/{org}/analytics/datastores/{uuid}`
+     * @return Resource link of Datastore. Example: `/organizations/{org}/analytics/datastores/{uuid}`
      * 
      */
     private final String self;
     /**
-     * Destination storage type. Supported types `gcs` or `bigquery`.
+     * @return Destination storage type. Supported types `gcs` or `bigquery`.
      * 
      */
     private final String targetType;
@@ -65,51 +65,51 @@ public final class GetDatastoreResult {
     }
 
     /**
-     * Datastore create time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
+     * @return Datastore create time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Datastore Configurations.
+     * @return Datastore Configurations.
      * 
-    */
+     */
     public GoogleCloudApigeeV1DatastoreConfigResponse datastoreConfig() {
         return this.datastoreConfig;
     }
     /**
-     * Display name in UI
+     * @return Display name in UI
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Datastore last update time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
+     * @return Datastore last update time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
      * 
-    */
+     */
     public String lastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
-     * Organization that the datastore belongs to
+     * @return Organization that the datastore belongs to
      * 
-    */
+     */
     public String org() {
         return this.org;
     }
     /**
-     * Resource link of Datastore. Example: `/organizations/{org}/analytics/datastores/{uuid}`
+     * @return Resource link of Datastore. Example: `/organizations/{org}/analytics/datastores/{uuid}`
      * 
-    */
+     */
     public String self() {
         return this.self;
     }
     /**
-     * Destination storage type. Supported types `gcs` or `bigquery`.
+     * @return Destination storage type. Supported types `gcs` or `bigquery`.
      * 
-    */
+     */
     public String targetType() {
         return this.targetType;
     }

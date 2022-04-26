@@ -23,6 +23,10 @@ public final class ContainerAppSecretResponse extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Secret Name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class ContainerAppSecretResponse extends com.pulumi.resources.Invok
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Secret Value.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class ContainerAppSecretResponse extends com.pulumi.resources.Invok
             $ = new ContainerAppSecretResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Secret Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value Secret Value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

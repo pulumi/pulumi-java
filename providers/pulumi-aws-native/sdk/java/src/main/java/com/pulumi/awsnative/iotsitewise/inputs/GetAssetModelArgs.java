@@ -19,6 +19,10 @@ public final class GetAssetModelArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="assetModelId", required=true)
     private String assetModelId;
 
+    /**
+     * @return The ID of the asset model.
+     * 
+     */
     public String assetModelId() {
         return this.assetModelId;
     }
@@ -47,6 +51,12 @@ public final class GetAssetModelArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAssetModelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetModelId The ID of the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelId(String assetModelId) {
             $.assetModelId = assetModelId;
             return this;

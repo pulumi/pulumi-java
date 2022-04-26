@@ -27,6 +27,10 @@ public final class SsisVariableResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dataType")
     private @Nullable String dataType;
 
+    /**
+     * @return Variable type.
+     * 
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -38,6 +42,10 @@ public final class SsisVariableResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Variable description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class SsisVariableResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id")
     private @Nullable Double id;
 
+    /**
+     * @return Variable id.
+     * 
+     */
     public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
@@ -60,6 +72,10 @@ public final class SsisVariableResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Variable name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -71,6 +87,10 @@ public final class SsisVariableResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sensitive")
     private @Nullable Boolean sensitive;
 
+    /**
+     * @return Whether variable is sensitive.
+     * 
+     */
     public Optional<Boolean> sensitive() {
         return Optional.ofNullable(this.sensitive);
     }
@@ -82,6 +102,10 @@ public final class SsisVariableResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sensitiveValue")
     private @Nullable String sensitiveValue;
 
+    /**
+     * @return Variable sensitive value.
+     * 
+     */
     public Optional<String> sensitiveValue() {
         return Optional.ofNullable(this.sensitiveValue);
     }
@@ -93,6 +117,10 @@ public final class SsisVariableResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Variable value.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -127,36 +155,78 @@ public final class SsisVariableResponse extends com.pulumi.resources.InvokeArgs 
             $ = new SsisVariableResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataType Variable type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(@Nullable String dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param description Variable description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param id Variable id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Double id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Variable name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param sensitive Whether variable is sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitive(@Nullable Boolean sensitive) {
             $.sensitive = sensitive;
             return this;
         }
 
+        /**
+         * @param sensitiveValue Variable sensitive value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitiveValue(@Nullable String sensitiveValue) {
             $.sensitiveValue = sensitiveValue;
             return this;
         }
 
+        /**
+         * @param value Variable value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

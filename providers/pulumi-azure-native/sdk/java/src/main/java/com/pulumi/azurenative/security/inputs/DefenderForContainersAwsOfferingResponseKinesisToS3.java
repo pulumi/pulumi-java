@@ -25,6 +25,10 @@ public final class DefenderForContainersAwsOfferingResponseKinesisToS3 extends c
     @Import(name="cloudRoleArn")
     private @Nullable String cloudRoleArn;
 
+    /**
+     * @return The cloud role ARN in AWS for this feature
+     * 
+     */
     public Optional<String> cloudRoleArn() {
         return Optional.ofNullable(this.cloudRoleArn);
     }
@@ -53,6 +57,12 @@ public final class DefenderForContainersAwsOfferingResponseKinesisToS3 extends c
             $ = new DefenderForContainersAwsOfferingResponseKinesisToS3(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudRoleArn The cloud role ARN in AWS for this feature
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
             $.cloudRoleArn = cloudRoleArn;
             return this;

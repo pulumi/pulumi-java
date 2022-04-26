@@ -26,6 +26,10 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="encryptedSecret")
     private @Nullable AsymmetricEncryptedSecretResponse encryptedSecret;
 
+    /**
+     * @return Encrypted (using device public key) secret value.
+     * 
+     */
     public Optional<AsymmetricEncryptedSecretResponse> encryptedSecret() {
         return Optional.ofNullable(this.encryptedSecret);
     }
@@ -37,6 +41,10 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyVaultId")
     private @Nullable String keyVaultId;
 
+    /**
+     * @return Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).
+     * 
+     */
     public Optional<String> keyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
@@ -66,11 +74,23 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SecretResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptedSecret Encrypted (using device public key) secret value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedSecret(@Nullable AsymmetricEncryptedSecretResponse encryptedSecret) {
             $.encryptedSecret = encryptedSecret;
             return this;
         }
 
+        /**
+         * @param keyVaultId Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultId(@Nullable String keyVaultId) {
             $.keyVaultId = keyVaultId;
             return this;

@@ -17,33 +17,33 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureVmWorkloadProtectionPolicyResponse {
     /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is &#39;AzureWorkload&#39;.
      * 
      */
     private final String backupManagementType;
     /**
-     * Fix the policy inconsistency
+     * @return Fix the policy inconsistency
      * 
      */
     private final @Nullable Boolean makePolicyConsistent;
     /**
-     * Number of items associated with this policy.
+     * @return Number of items associated with this policy.
      * 
      */
     private final @Nullable Integer protectedItemsCount;
     /**
-     * Common settings for the backup management
+     * @return Common settings for the backup management
      * 
      */
     private final @Nullable SettingsResponse settings;
     /**
-     * List of sub-protection policies which includes schedule and retention
+     * @return List of sub-protection policies which includes schedule and retention
      * 
      */
     private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
     /**
-     * Type of workload for the backup management
+     * @return Type of workload for the backup management
      * 
      */
     private final @Nullable String workLoadType;
@@ -65,45 +65,45 @@ public final class AzureVmWorkloadProtectionPolicyResponse {
     }
 
     /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is &#39;AzureWorkload&#39;.
      * 
-    */
+     */
     public String backupManagementType() {
         return this.backupManagementType;
     }
     /**
-     * Fix the policy inconsistency
+     * @return Fix the policy inconsistency
      * 
-    */
+     */
     public Optional<Boolean> makePolicyConsistent() {
         return Optional.ofNullable(this.makePolicyConsistent);
     }
     /**
-     * Number of items associated with this policy.
+     * @return Number of items associated with this policy.
      * 
-    */
+     */
     public Optional<Integer> protectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
     /**
-     * Common settings for the backup management
+     * @return Common settings for the backup management
      * 
-    */
+     */
     public Optional<SettingsResponse> settings() {
         return Optional.ofNullable(this.settings);
     }
     /**
-     * List of sub-protection policies which includes schedule and retention
+     * @return List of sub-protection policies which includes schedule and retention
      * 
-    */
+     */
     public List<SubProtectionPolicyResponse> subProtectionPolicy() {
         return this.subProtectionPolicy == null ? List.of() : this.subProtectionPolicy;
     }
     /**
-     * Type of workload for the backup management
+     * @return Type of workload for the backup management
      * 
-    */
+     */
     public Optional<String> workLoadType() {
         return Optional.ofNullable(this.workLoadType);
     }

@@ -19,6 +19,10 @@ public final class GetGroupLaunchTemplate extends com.pulumi.resources.InvokeArg
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Name of the Auto Scaling Group.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -30,6 +34,10 @@ public final class GetGroupLaunchTemplate extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Specify the exact name of the desired autoscaling group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -67,11 +75,23 @@ public final class GetGroupLaunchTemplate extends com.pulumi.resources.InvokeArg
             $ = new GetGroupLaunchTemplate(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Name of the Auto Scaling Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Specify the exact name of the desired autoscaling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

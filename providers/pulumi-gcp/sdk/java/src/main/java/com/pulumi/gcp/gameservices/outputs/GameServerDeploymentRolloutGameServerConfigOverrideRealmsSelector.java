@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector {
     /**
-     * List of realms to match against.
+     * @return List of realms to match against.
      * 
      */
     private final @Nullable List<String> realms;
@@ -23,9 +23,9 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
     }
 
     /**
-     * List of realms to match against.
+     * @return List of realms to match against.
      * 
-    */
+     */
     public List<String> realms() {
         return this.realms == null ? List.of() : this.realms;
     }

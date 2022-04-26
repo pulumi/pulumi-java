@@ -26,6 +26,10 @@ public final class CustomDnsConfigPropertiesFormatResponse extends com.pulumi.re
     @Import(name="fqdn")
     private @Nullable String fqdn;
 
+    /**
+     * @return Fqdn that resolves to private endpoint ip address.
+     * 
+     */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
@@ -37,6 +41,10 @@ public final class CustomDnsConfigPropertiesFormatResponse extends com.pulumi.re
     @Import(name="ipAddresses")
     private @Nullable List<String> ipAddresses;
 
+    /**
+     * @return A list of private ip addresses of the private endpoint.
+     * 
+     */
     public Optional<List<String>> ipAddresses() {
         return Optional.ofNullable(this.ipAddresses);
     }
@@ -66,16 +74,34 @@ public final class CustomDnsConfigPropertiesFormatResponse extends com.pulumi.re
             $ = new CustomDnsConfigPropertiesFormatResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fqdn Fqdn that resolves to private endpoint ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(@Nullable String fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param ipAddresses A list of private ip addresses of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
+        /**
+         * @param ipAddresses A list of private ip addresses of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }

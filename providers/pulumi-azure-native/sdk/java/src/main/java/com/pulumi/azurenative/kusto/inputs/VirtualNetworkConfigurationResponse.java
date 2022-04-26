@@ -23,6 +23,10 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
     @Import(name="dataManagementPublicIpId", required=true)
     private String dataManagementPublicIpId;
 
+    /**
+     * @return Data management&#39;s service public IP address resource id.
+     * 
+     */
     public String dataManagementPublicIpId() {
         return this.dataManagementPublicIpId;
     }
@@ -34,6 +38,10 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
     @Import(name="enginePublicIpId", required=true)
     private String enginePublicIpId;
 
+    /**
+     * @return Engine service&#39;s public IP address resource id.
+     * 
+     */
     public String enginePublicIpId() {
         return this.enginePublicIpId;
     }
@@ -45,6 +53,10 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
     @Import(name="subnetId", required=true)
     private String subnetId;
 
+    /**
+     * @return The subnet resource id.
+     * 
+     */
     public String subnetId() {
         return this.subnetId;
     }
@@ -75,16 +87,34 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
             $ = new VirtualNetworkConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataManagementPublicIpId Data management&#39;s service public IP address resource id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataManagementPublicIpId(String dataManagementPublicIpId) {
             $.dataManagementPublicIpId = dataManagementPublicIpId;
             return this;
         }
 
+        /**
+         * @param enginePublicIpId Engine service&#39;s public IP address resource id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enginePublicIpId(String enginePublicIpId) {
             $.enginePublicIpId = enginePublicIpId;
             return this;
         }
 
+        /**
+         * @param subnetId The subnet resource id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             $.subnetId = subnetId;
             return this;

@@ -12,37 +12,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetExpressRouteCircuitAuthorizationResult {
     /**
-     * The authorization key.
+     * @return The authorization key.
      * 
      */
     private final @Nullable String authorizationKey;
     /**
-     * The authorization use status.
+     * @return The authorization use status.
      * 
      */
     private final @Nullable String authorizationUseStatus;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * The provisioning state of the authorization resource.
+     * @return The provisioning state of the authorization resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -66,51 +66,51 @@ public final class GetExpressRouteCircuitAuthorizationResult {
     }
 
     /**
-     * The authorization key.
+     * @return The authorization key.
      * 
-    */
+     */
     public Optional<String> authorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
     /**
-     * The authorization use status.
+     * @return The authorization use status.
      * 
-    */
+     */
     public Optional<String> authorizationUseStatus() {
         return Optional.ofNullable(this.authorizationUseStatus);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the authorization resource.
+     * @return The provisioning state of the authorization resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

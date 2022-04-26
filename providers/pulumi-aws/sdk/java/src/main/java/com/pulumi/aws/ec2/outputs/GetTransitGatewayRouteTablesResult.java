@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 public final class GetTransitGatewayRouteTablesResult {
     private final @Nullable List<GetTransitGatewayRouteTablesFilter> filters;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * Set of Transit Gateway Route Table identifiers.
+     * @return Set of Transit Gateway Route Table identifiers.
      * 
      */
     private final List<String> ids;
@@ -42,16 +42,16 @@ public final class GetTransitGatewayRouteTablesResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Set of Transit Gateway Route Table identifiers.
+     * @return Set of Transit Gateway Route Table identifiers.
      * 
-    */
+     */
     public List<String> ids() {
         return this.ids;
     }

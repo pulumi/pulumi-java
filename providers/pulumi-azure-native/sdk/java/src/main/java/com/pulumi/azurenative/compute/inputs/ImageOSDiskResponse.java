@@ -28,6 +28,10 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="blobUri")
     private @Nullable String blobUri;
 
+    /**
+     * @return The Virtual Hard Disk.
+     * 
+     */
     public Optional<String> blobUri() {
         return Optional.ofNullable(this.blobUri);
     }
@@ -39,6 +43,10 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="caching")
     private @Nullable String caching;
 
+    /**
+     * @return Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+     * 
+     */
     public Optional<String> caching() {
         return Optional.ofNullable(this.caching);
     }
@@ -50,6 +58,10 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskEncryptionSet")
     private @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
 
+    /**
+     * @return Specifies the customer managed disk encryption set resource id for the managed image disk.
+     * 
+     */
     public Optional<DiskEncryptionSetParametersResponse> diskEncryptionSet() {
         return Optional.ofNullable(this.diskEncryptionSet);
     }
@@ -61,6 +73,10 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGB")
     private @Nullable Integer diskSizeGB;
 
+    /**
+     * @return Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+     * 
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -72,6 +88,10 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="managedDisk")
     private @Nullable SubResourceResponse managedDisk;
 
+    /**
+     * @return The managedDisk.
+     * 
+     */
     public Optional<SubResourceResponse> managedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
@@ -83,6 +103,10 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osState", required=true)
     private String osState;
 
+    /**
+     * @return The OS State.
+     * 
+     */
     public String osState() {
         return this.osState;
     }
@@ -94,6 +118,10 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osType", required=true)
     private String osType;
 
+    /**
+     * @return This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
+     * 
+     */
     public String osType() {
         return this.osType;
     }
@@ -105,6 +133,10 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="snapshot")
     private @Nullable SubResourceResponse snapshot;
 
+    /**
+     * @return The snapshot.
+     * 
+     */
     public Optional<SubResourceResponse> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }
@@ -116,6 +148,10 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageAccountType")
     private @Nullable String storageAccountType;
 
+    /**
+     * @return Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+     * 
+     */
     public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
@@ -152,46 +188,100 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ImageOSDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobUri The Virtual Hard Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobUri(@Nullable String blobUri) {
             $.blobUri = blobUri;
             return this;
         }
 
+        /**
+         * @param caching Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+         * 
+         * @return builder
+         * 
+         */
         public Builder caching(@Nullable String caching) {
             $.caching = caching;
             return this;
         }
 
+        /**
+         * @param diskEncryptionSet Specifies the customer managed disk encryption set resource id for the managed image disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersResponse diskEncryptionSet) {
             $.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
 
+        /**
+         * @param diskSizeGB Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param managedDisk The managedDisk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedDisk(@Nullable SubResourceResponse managedDisk) {
             $.managedDisk = managedDisk;
             return this;
         }
 
+        /**
+         * @param osState The OS State.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osState(String osState) {
             $.osState = osState;
             return this;
         }
 
+        /**
+         * @param osType This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param snapshot The snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(@Nullable SubResourceResponse snapshot) {
             $.snapshot = snapshot;
             return this;
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(@Nullable String storageAccountType) {
             $.storageAccountType = storageAccountType;
             return this;

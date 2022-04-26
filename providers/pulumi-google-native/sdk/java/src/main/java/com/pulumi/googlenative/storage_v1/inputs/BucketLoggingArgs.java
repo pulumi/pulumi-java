@@ -26,6 +26,10 @@ public final class BucketLoggingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logBucket")
     private @Nullable Output<String> logBucket;
 
+    /**
+     * @return The destination bucket where the current bucket&#39;s logs should be placed.
+     * 
+     */
     public Optional<Output<String>> logBucket() {
         return Optional.ofNullable(this.logBucket);
     }
@@ -37,6 +41,10 @@ public final class BucketLoggingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logObjectPrefix")
     private @Nullable Output<String> logObjectPrefix;
 
+    /**
+     * @return A prefix for log object names.
+     * 
+     */
     public Optional<Output<String>> logObjectPrefix() {
         return Optional.ofNullable(this.logObjectPrefix);
     }
@@ -66,20 +74,44 @@ public final class BucketLoggingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BucketLoggingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logBucket The destination bucket where the current bucket&#39;s logs should be placed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logBucket(@Nullable Output<String> logBucket) {
             $.logBucket = logBucket;
             return this;
         }
 
+        /**
+         * @param logBucket The destination bucket where the current bucket&#39;s logs should be placed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logBucket(String logBucket) {
             return logBucket(Output.of(logBucket));
         }
 
+        /**
+         * @param logObjectPrefix A prefix for log object names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logObjectPrefix(@Nullable Output<String> logObjectPrefix) {
             $.logObjectPrefix = logObjectPrefix;
             return this;
         }
 
+        /**
+         * @param logObjectPrefix A prefix for log object names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logObjectPrefix(String logObjectPrefix) {
             return logObjectPrefix(Output.of(logObjectPrefix));
         }

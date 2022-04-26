@@ -23,6 +23,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
     @Import(name="exactMatch")
     private @Nullable Output<String> exactMatch;
 
+    /**
+     * @return The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
+     * 
+     */
     public Optional<Output<String>> exactMatch() {
         return Optional.ofNullable(this.exactMatch);
     }
@@ -34,6 +38,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -45,6 +53,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
     @Import(name="presentMatch")
     private @Nullable Output<Boolean> presentMatch;
 
+    /**
+     * @return Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
+     * 
+     */
     public Optional<Output<Boolean>> presentMatch() {
         return Optional.ofNullable(this.presentMatch);
     }
@@ -75,29 +87,65 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
             $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exactMatch The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exactMatch(@Nullable Output<String> exactMatch) {
             $.exactMatch = exactMatch;
             return this;
         }
 
+        /**
+         * @param exactMatch The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exactMatch(String exactMatch) {
             return exactMatch(Output.of(exactMatch));
         }
 
+        /**
+         * @param name The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param presentMatch Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presentMatch(@Nullable Output<Boolean> presentMatch) {
             $.presentMatch = presentMatch;
             return this;
         }
 
+        /**
+         * @param presentMatch Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presentMatch(Boolean presentMatch) {
             return presentMatch(Output.of(presentMatch));
         }

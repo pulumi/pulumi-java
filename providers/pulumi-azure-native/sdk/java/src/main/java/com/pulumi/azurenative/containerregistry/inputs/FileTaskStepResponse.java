@@ -29,6 +29,10 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="baseImageDependencies", required=true)
     private List<BaseImageDependencyResponse> baseImageDependencies;
 
+    /**
+     * @return List of base image dependencies for a step.
+     * 
+     */
     public List<BaseImageDependencyResponse> baseImageDependencies() {
         return this.baseImageDependencies;
     }
@@ -40,6 +44,10 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="contextAccessToken")
     private @Nullable String contextAccessToken;
 
+    /**
+     * @return The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+     * 
+     */
     public Optional<String> contextAccessToken() {
         return Optional.ofNullable(this.contextAccessToken);
     }
@@ -51,6 +59,10 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="contextPath")
     private @Nullable String contextPath;
 
+    /**
+     * @return The URL(absolute or relative) of the source context for the task step.
+     * 
+     */
     public Optional<String> contextPath() {
         return Optional.ofNullable(this.contextPath);
     }
@@ -62,6 +74,10 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="taskFilePath", required=true)
     private String taskFilePath;
 
+    /**
+     * @return The task template/definition file path relative to the source context.
+     * 
+     */
     public String taskFilePath() {
         return this.taskFilePath;
     }
@@ -74,6 +90,11 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the step.
+     * Expected value is &#39;FileTask&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -85,6 +106,10 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="values")
     private @Nullable List<SetValueResponse> values;
 
+    /**
+     * @return The collection of overridable values that can be passed when running a task.
+     * 
+     */
     public Optional<List<SetValueResponse>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -96,6 +121,10 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="valuesFilePath")
     private @Nullable String valuesFilePath;
 
+    /**
+     * @return The task values/parameters file path relative to the source context.
+     * 
+     */
     public Optional<String> valuesFilePath() {
         return Optional.ofNullable(this.valuesFilePath);
     }
@@ -130,44 +159,99 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
             $ = new FileTaskStepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseImageDependencies List of base image dependencies for a step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
             $.baseImageDependencies = baseImageDependencies;
             return this;
         }
 
+        /**
+         * @param baseImageDependencies List of base image dependencies for a step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageDependencies(BaseImageDependencyResponse... baseImageDependencies) {
             return baseImageDependencies(List.of(baseImageDependencies));
         }
 
+        /**
+         * @param contextAccessToken The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contextAccessToken(@Nullable String contextAccessToken) {
             $.contextAccessToken = contextAccessToken;
             return this;
         }
 
+        /**
+         * @param contextPath The URL(absolute or relative) of the source context for the task step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contextPath(@Nullable String contextPath) {
             $.contextPath = contextPath;
             return this;
         }
 
+        /**
+         * @param taskFilePath The task template/definition file path relative to the source context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskFilePath(String taskFilePath) {
             $.taskFilePath = taskFilePath;
             return this;
         }
 
+        /**
+         * @param type The type of the step.
+         * Expected value is &#39;FileTask&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param values The collection of overridable values that can be passed when running a task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable List<SetValueResponse> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The collection of overridable values that can be passed when running a task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(SetValueResponse... values) {
             return values(List.of(values));
         }
 
+        /**
+         * @param valuesFilePath The task values/parameters file path relative to the source context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valuesFilePath(@Nullable String valuesFilePath) {
             $.valuesFilePath = valuesFilePath;
             return this;

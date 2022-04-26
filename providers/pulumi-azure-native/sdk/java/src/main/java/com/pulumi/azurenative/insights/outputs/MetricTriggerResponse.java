@@ -16,62 +16,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MetricTriggerResponse {
     /**
-     * List of dimension conditions. For example: [{&#34;DimensionName&#34;:&#34;AppName&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;App1&#34;]},{&#34;DimensionName&#34;:&#34;Deployment&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;default&#34;]}].
+     * @return List of dimension conditions. For example: [{&#34;DimensionName&#34;:&#34;AppName&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;App1&#34;]},{&#34;DimensionName&#34;:&#34;Deployment&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;default&#34;]}].
      * 
      */
     private final @Nullable List<ScaleRuleMetricDimensionResponse> dimensions;
     /**
-     * a value indicating whether metric should divide per instance.
+     * @return a value indicating whether metric should divide per instance.
      * 
      */
     private final @Nullable Boolean dividePerInstance;
     /**
-     * the name of the metric that defines what the rule monitors.
+     * @return the name of the metric that defines what the rule monitors.
      * 
      */
     private final String metricName;
     /**
-     * the namespace of the metric that defines what the rule monitors.
+     * @return the namespace of the metric that defines what the rule monitors.
      * 
      */
     private final @Nullable String metricNamespace;
     /**
-     * the location of the resource the rule monitors.
+     * @return the location of the resource the rule monitors.
      * 
      */
     private final @Nullable String metricResourceLocation;
     /**
-     * the resource identifier of the resource the rule monitors.
+     * @return the resource identifier of the resource the rule monitors.
      * 
      */
     private final String metricResourceUri;
     /**
-     * the operator that is used to compare the metric data and the threshold.
+     * @return the operator that is used to compare the metric data and the threshold.
      * 
      */
     private final String operator;
     /**
-     * the metric statistic type. How the metrics from multiple instances are combined.
+     * @return the metric statistic type. How the metrics from multiple instances are combined.
      * 
      */
     private final String statistic;
     /**
-     * the threshold of the metric that triggers the scale action.
+     * @return the threshold of the metric that triggers the scale action.
      * 
      */
     private final Double threshold;
     /**
-     * time aggregation type. How the data that is collected should be combined over time. The default value is Average.
+     * @return time aggregation type. How the data that is collected should be combined over time. The default value is Average.
      * 
      */
     private final String timeAggregation;
     /**
-     * the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.
+     * @return the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.
      * 
      */
     private final String timeGrain;
     /**
-     * the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.
+     * @return the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.
      * 
      */
     private final String timeWindow;
@@ -105,86 +105,86 @@ public final class MetricTriggerResponse {
     }
 
     /**
-     * List of dimension conditions. For example: [{&#34;DimensionName&#34;:&#34;AppName&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;App1&#34;]},{&#34;DimensionName&#34;:&#34;Deployment&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;default&#34;]}].
+     * @return List of dimension conditions. For example: [{&#34;DimensionName&#34;:&#34;AppName&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;App1&#34;]},{&#34;DimensionName&#34;:&#34;Deployment&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;default&#34;]}].
      * 
-    */
+     */
     public List<ScaleRuleMetricDimensionResponse> dimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
     }
     /**
-     * a value indicating whether metric should divide per instance.
+     * @return a value indicating whether metric should divide per instance.
      * 
-    */
+     */
     public Optional<Boolean> dividePerInstance() {
         return Optional.ofNullable(this.dividePerInstance);
     }
     /**
-     * the name of the metric that defines what the rule monitors.
+     * @return the name of the metric that defines what the rule monitors.
      * 
-    */
+     */
     public String metricName() {
         return this.metricName;
     }
     /**
-     * the namespace of the metric that defines what the rule monitors.
+     * @return the namespace of the metric that defines what the rule monitors.
      * 
-    */
+     */
     public Optional<String> metricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
     /**
-     * the location of the resource the rule monitors.
+     * @return the location of the resource the rule monitors.
      * 
-    */
+     */
     public Optional<String> metricResourceLocation() {
         return Optional.ofNullable(this.metricResourceLocation);
     }
     /**
-     * the resource identifier of the resource the rule monitors.
+     * @return the resource identifier of the resource the rule monitors.
      * 
-    */
+     */
     public String metricResourceUri() {
         return this.metricResourceUri;
     }
     /**
-     * the operator that is used to compare the metric data and the threshold.
+     * @return the operator that is used to compare the metric data and the threshold.
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * the metric statistic type. How the metrics from multiple instances are combined.
+     * @return the metric statistic type. How the metrics from multiple instances are combined.
      * 
-    */
+     */
     public String statistic() {
         return this.statistic;
     }
     /**
-     * the threshold of the metric that triggers the scale action.
+     * @return the threshold of the metric that triggers the scale action.
      * 
-    */
+     */
     public Double threshold() {
         return this.threshold;
     }
     /**
-     * time aggregation type. How the data that is collected should be combined over time. The default value is Average.
+     * @return time aggregation type. How the data that is collected should be combined over time. The default value is Average.
      * 
-    */
+     */
     public String timeAggregation() {
         return this.timeAggregation;
     }
     /**
-     * the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.
+     * @return the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.
      * 
-    */
+     */
     public String timeGrain() {
         return this.timeGrain;
     }
     /**
-     * the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.
+     * @return the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.
      * 
-    */
+     */
     public String timeWindow() {
         return this.timeWindow;
     }

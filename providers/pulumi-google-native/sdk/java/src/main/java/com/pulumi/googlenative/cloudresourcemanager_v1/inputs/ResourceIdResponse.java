@@ -23,6 +23,10 @@ public final class ResourceIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The resource type this id is for. At present, the valid types are: &#34;organization&#34;, &#34;folder&#34;, and &#34;project&#34;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -51,6 +55,12 @@ public final class ResourceIdResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ResourceIdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The resource type this id is for. At present, the valid types are: &#34;organization&#34;, &#34;folder&#34;, and &#34;project&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

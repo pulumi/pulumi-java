@@ -19,6 +19,10 @@ public final class GetSqlResourceSqlRoleAssignmentArgs extends com.pulumi.resour
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetSqlResourceSqlRoleAssignmentArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetSqlResourceSqlRoleAssignmentArgs extends com.pulumi.resour
     @Import(name="roleAssignmentId", required=true)
     private String roleAssignmentId;
 
+    /**
+     * @return The GUID for the Role Assignment.
+     * 
+     */
     public String roleAssignmentId() {
         return this.roleAssignmentId;
     }
@@ -71,16 +83,34 @@ public final class GetSqlResourceSqlRoleAssignmentArgs extends com.pulumi.resour
             $ = new GetSqlResourceSqlRoleAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param roleAssignmentId The GUID for the Role Assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleAssignmentId(String roleAssignmentId) {
             $.roleAssignmentId = roleAssignmentId;
             return this;

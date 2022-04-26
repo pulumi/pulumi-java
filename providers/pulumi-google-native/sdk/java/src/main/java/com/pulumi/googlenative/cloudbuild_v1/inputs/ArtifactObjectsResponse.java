@@ -25,6 +25,10 @@ public final class ArtifactObjectsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;. (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -36,6 +40,10 @@ public final class ArtifactObjectsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="paths", required=true)
     private List<String> paths;
 
+    /**
+     * @return Path globs used to match files in the build&#39;s workspace.
+     * 
+     */
     public List<String> paths() {
         return this.paths;
     }
@@ -47,6 +55,10 @@ public final class ArtifactObjectsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="timing", required=true)
     private TimeSpanResponse timing;
 
+    /**
+     * @return Stores timing information for pushing all artifact objects.
+     * 
+     */
     public TimeSpanResponse timing() {
         return this.timing;
     }
@@ -77,20 +89,44 @@ public final class ArtifactObjectsResponse extends com.pulumi.resources.InvokeAr
             $ = new ArtifactObjectsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;. (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param paths Path globs used to match files in the build&#39;s workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(List<String> paths) {
             $.paths = paths;
             return this;
         }
 
+        /**
+         * @param paths Path globs used to match files in the build&#39;s workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }
 
+        /**
+         * @param timing Stores timing information for pushing all artifact objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timing(TimeSpanResponse timing) {
             $.timing = timing;
             return this;

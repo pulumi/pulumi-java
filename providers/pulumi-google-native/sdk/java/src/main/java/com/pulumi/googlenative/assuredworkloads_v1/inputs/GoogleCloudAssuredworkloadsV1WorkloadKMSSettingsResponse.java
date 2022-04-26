@@ -23,6 +23,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse exte
     @Import(name="nextRotationTime", required=true)
     private String nextRotationTime;
 
+    /**
+     * @return Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.
+     * 
+     */
     public String nextRotationTime() {
         return this.nextRotationTime;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse exte
     @Import(name="rotationPeriod", required=true)
     private String rotationPeriod;
 
+    /**
+     * @return Input only. Immutable. [next_rotation_time] will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.
+     * 
+     */
     public String rotationPeriod() {
         return this.rotationPeriod;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse exte
             $ = new GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nextRotationTime Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextRotationTime(String nextRotationTime) {
             $.nextRotationTime = nextRotationTime;
             return this;
         }
 
+        /**
+         * @param rotationPeriod Input only. Immutable. [next_rotation_time] will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotationPeriod(String rotationPeriod) {
             $.rotationPeriod = rotationPeriod;
             return this;

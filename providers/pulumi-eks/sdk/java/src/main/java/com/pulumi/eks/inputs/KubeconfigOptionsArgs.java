@@ -43,6 +43,12 @@ public final class KubeconfigOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="profileName")
     private @Nullable Output<String> profileName;
 
+    /**
+     * @return AWS credential profile name to always use instead of the default AWS credential provider chain.
+     * 
+     * The profile is passed to kubeconfig as an authentication environment setting.
+     * 
+     */
     public Optional<Output<String>> profileName() {
         return Optional.ofNullable(this.profileName);
     }
@@ -56,6 +62,12 @@ public final class KubeconfigOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="roleArn")
     private @Nullable Output<String> roleArn;
 
+    /**
+     * @return Role ARN to assume instead of the default AWS credential provider chain.
+     * 
+     * The role is passed to kubeconfig as an authentication exec argument.
+     * 
+     */
     public Optional<Output<String>> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -85,20 +97,52 @@ public final class KubeconfigOptionsArgs extends com.pulumi.resources.ResourceAr
             $ = new KubeconfigOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param profileName AWS credential profile name to always use instead of the default AWS credential provider chain.
+         * 
+         * The profile is passed to kubeconfig as an authentication environment setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(@Nullable Output<String> profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param profileName AWS credential profile name to always use instead of the default AWS credential provider chain.
+         * 
+         * The profile is passed to kubeconfig as an authentication environment setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             return profileName(Output.of(profileName));
         }
 
+        /**
+         * @param roleArn Role ARN to assume instead of the default AWS credential provider chain.
+         * 
+         * The role is passed to kubeconfig as an authentication exec argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(@Nullable Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn Role ARN to assume instead of the default AWS credential provider chain.
+         * 
+         * The role is passed to kubeconfig as an authentication exec argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

@@ -28,6 +28,10 @@ public final class EmailReceiverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="emailAddress", required=true)
     private Output<String> emailAddress;
 
+    /**
+     * @return The email address of this receiver.
+     * 
+     */
     public Output<String> emailAddress() {
         return this.emailAddress;
     }
@@ -39,6 +43,10 @@ public final class EmailReceiverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the email receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -50,6 +58,10 @@ public final class EmailReceiverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="useCommonAlertSchema")
     private @Nullable Output<Boolean> useCommonAlertSchema;
 
+    /**
+     * @return Indicates whether to use common alert schema.
+     * 
+     */
     public Optional<Output<Boolean>> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
@@ -80,29 +92,65 @@ public final class EmailReceiverArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EmailReceiverArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailAddress The email address of this receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(Output<String> emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param emailAddress The email address of this receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(String emailAddress) {
             return emailAddress(Output.of(emailAddress));
         }
 
+        /**
+         * @param name The name of the email receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the email receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
             $.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(Boolean useCommonAlertSchema) {
             return useCommonAlertSchema(Output.of(useCommonAlertSchema));
         }

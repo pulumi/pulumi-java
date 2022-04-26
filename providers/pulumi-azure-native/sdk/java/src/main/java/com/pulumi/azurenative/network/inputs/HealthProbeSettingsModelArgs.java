@@ -32,6 +32,10 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
     @Import(name="enabledState")
     private @Nullable Output<Either<String,HealthProbeEnabled>> enabledState;
 
+    /**
+     * @return Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+     * 
+     */
     public Optional<Output<Either<String,HealthProbeEnabled>>> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -43,6 +47,10 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
     @Import(name="healthProbeMethod")
     private @Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod;
 
+    /**
+     * @return Configures which HTTP method to use to probe the backends defined under backendPools.
+     * 
+     */
     public Optional<Output<Either<String,FrontDoorHealthProbeMethod>>> healthProbeMethod() {
         return Optional.ofNullable(this.healthProbeMethod);
     }
@@ -54,6 +62,10 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -65,6 +77,10 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
     @Import(name="intervalInSeconds")
     private @Nullable Output<Integer> intervalInSeconds;
 
+    /**
+     * @return The number of seconds between health probes.
+     * 
+     */
     public Optional<Output<Integer>> intervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
@@ -76,6 +92,10 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -87,6 +107,10 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The path to use for the health probe. Default is /
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -98,6 +122,10 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
     @Import(name="protocol")
     private @Nullable Output<Either<String,FrontDoorProtocol>> protocol;
 
+    /**
+     * @return Protocol scheme to use for this probe
+     * 
+     */
     public Optional<Output<Either<String,FrontDoorProtocol>>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -132,89 +160,209 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
             $ = new HealthProbeSettingsModelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabledState Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable Output<Either<String,HealthProbeEnabled>> enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param enabledState Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(Either<String,HealthProbeEnabled> enabledState) {
             return enabledState(Output.of(enabledState));
         }
 
+        /**
+         * @param enabledState Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(String enabledState) {
             return enabledState(Either.ofLeft(enabledState));
         }
 
+        /**
+         * @param enabledState Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(HealthProbeEnabled enabledState) {
             return enabledState(Either.ofRight(enabledState));
         }
 
+        /**
+         * @param healthProbeMethod Configures which HTTP method to use to probe the backends defined under backendPools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeMethod(@Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod) {
             $.healthProbeMethod = healthProbeMethod;
             return this;
         }
 
+        /**
+         * @param healthProbeMethod Configures which HTTP method to use to probe the backends defined under backendPools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeMethod(Either<String,FrontDoorHealthProbeMethod> healthProbeMethod) {
             return healthProbeMethod(Output.of(healthProbeMethod));
         }
 
+        /**
+         * @param healthProbeMethod Configures which HTTP method to use to probe the backends defined under backendPools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeMethod(String healthProbeMethod) {
             return healthProbeMethod(Either.ofLeft(healthProbeMethod));
         }
 
+        /**
+         * @param healthProbeMethod Configures which HTTP method to use to probe the backends defined under backendPools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeMethod(FrontDoorHealthProbeMethod healthProbeMethod) {
             return healthProbeMethod(Either.ofRight(healthProbeMethod));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param intervalInSeconds The number of seconds between health probes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
             $.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
+        /**
+         * @param intervalInSeconds The number of seconds between health probes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalInSeconds(Integer intervalInSeconds) {
             return intervalInSeconds(Output.of(intervalInSeconds));
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param path The path to use for the health probe. Default is /
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path to use for the health probe. Default is /
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param protocol Protocol scheme to use for this probe
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<Either<String,FrontDoorProtocol>> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Protocol scheme to use for this probe
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Either<String,FrontDoorProtocol> protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param protocol Protocol scheme to use for this probe
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Either.ofLeft(protocol));
         }
 
+        /**
+         * @param protocol Protocol scheme to use for this probe
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(FrontDoorProtocol protocol) {
             return protocol(Either.ofRight(protocol));
         }

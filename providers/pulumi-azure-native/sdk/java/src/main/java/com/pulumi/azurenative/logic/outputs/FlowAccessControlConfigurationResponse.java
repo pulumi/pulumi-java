@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FlowAccessControlConfigurationResponse {
     /**
-     * The access control configuration for workflow actions.
+     * @return The access control configuration for workflow actions.
      * 
      */
     private final @Nullable FlowAccessControlConfigurationPolicyResponse actions;
     /**
-     * The access control configuration for accessing workflow run contents.
+     * @return The access control configuration for accessing workflow run contents.
      * 
      */
     private final @Nullable FlowAccessControlConfigurationPolicyResponse contents;
     /**
-     * The access control configuration for invoking workflow triggers.
+     * @return The access control configuration for invoking workflow triggers.
      * 
      */
     private final @Nullable FlowAccessControlConfigurationPolicyResponse triggers;
     /**
-     * The access control configuration for workflow management.
+     * @return The access control configuration for workflow management.
      * 
      */
     private final @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement;
@@ -45,30 +45,30 @@ public final class FlowAccessControlConfigurationResponse {
     }
 
     /**
-     * The access control configuration for workflow actions.
+     * @return The access control configuration for workflow actions.
      * 
-    */
+     */
     public Optional<FlowAccessControlConfigurationPolicyResponse> actions() {
         return Optional.ofNullable(this.actions);
     }
     /**
-     * The access control configuration for accessing workflow run contents.
+     * @return The access control configuration for accessing workflow run contents.
      * 
-    */
+     */
     public Optional<FlowAccessControlConfigurationPolicyResponse> contents() {
         return Optional.ofNullable(this.contents);
     }
     /**
-     * The access control configuration for invoking workflow triggers.
+     * @return The access control configuration for invoking workflow triggers.
      * 
-    */
+     */
     public Optional<FlowAccessControlConfigurationPolicyResponse> triggers() {
         return Optional.ofNullable(this.triggers);
     }
     /**
-     * The access control configuration for workflow management.
+     * @return The access control configuration for workflow management.
      * 
-    */
+     */
     public Optional<FlowAccessControlConfigurationPolicyResponse> workflowManagement() {
         return Optional.ofNullable(this.workflowManagement);
     }

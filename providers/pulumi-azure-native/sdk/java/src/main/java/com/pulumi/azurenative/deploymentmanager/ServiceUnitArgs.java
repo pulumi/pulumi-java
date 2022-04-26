@@ -25,6 +25,10 @@ public final class ServiceUnitArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifacts")
     private @Nullable Output<ServiceUnitArtifactsArgs> artifacts;
 
+    /**
+     * @return The artifacts for the service unit.
+     * 
+     */
     public Optional<Output<ServiceUnitArtifactsArgs>> artifacts() {
         return Optional.ofNullable(this.artifacts);
     }
@@ -36,6 +40,10 @@ public final class ServiceUnitArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentMode", required=true)
     private Output<DeploymentMode> deploymentMode;
 
+    /**
+     * @return Describes the type of ARM deployment to be performed on the resource.
+     * 
+     */
     public Output<DeploymentMode> deploymentMode() {
         return this.deploymentMode;
     }
@@ -47,6 +55,10 @@ public final class ServiceUnitArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -58,6 +70,10 @@ public final class ServiceUnitArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +85,10 @@ public final class ServiceUnitArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the service resource.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -80,6 +100,10 @@ public final class ServiceUnitArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceTopologyName", required=true)
     private Output<String> serviceTopologyName;
 
+    /**
+     * @return The name of the service topology .
+     * 
+     */
     public Output<String> serviceTopologyName() {
         return this.serviceTopologyName;
     }
@@ -91,6 +115,10 @@ public final class ServiceUnitArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceUnitName")
     private @Nullable Output<String> serviceUnitName;
 
+    /**
+     * @return The name of the service unit resource.
+     * 
+     */
     public Optional<Output<String>> serviceUnitName() {
         return Optional.ofNullable(this.serviceUnitName);
     }
@@ -102,6 +130,10 @@ public final class ServiceUnitArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,6 +145,10 @@ public final class ServiceUnitArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetResourceGroup", required=true)
     private Output<String> targetResourceGroup;
 
+    /**
+     * @return The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
+     * 
+     */
     public Output<String> targetResourceGroup() {
         return this.targetResourceGroup;
     }
@@ -149,83 +185,191 @@ public final class ServiceUnitArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceUnitArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifacts The artifacts for the service unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(@Nullable Output<ServiceUnitArtifactsArgs> artifacts) {
             $.artifacts = artifacts;
             return this;
         }
 
+        /**
+         * @param artifacts The artifacts for the service unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(ServiceUnitArtifactsArgs artifacts) {
             return artifacts(Output.of(artifacts));
         }
 
+        /**
+         * @param deploymentMode Describes the type of ARM deployment to be performed on the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMode(Output<DeploymentMode> deploymentMode) {
             $.deploymentMode = deploymentMode;
             return this;
         }
 
+        /**
+         * @param deploymentMode Describes the type of ARM deployment to be performed on the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMode(DeploymentMode deploymentMode) {
             return deploymentMode(Output.of(deploymentMode));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param serviceTopologyName The name of the service topology .
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTopologyName(Output<String> serviceTopologyName) {
             $.serviceTopologyName = serviceTopologyName;
             return this;
         }
 
+        /**
+         * @param serviceTopologyName The name of the service topology .
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTopologyName(String serviceTopologyName) {
             return serviceTopologyName(Output.of(serviceTopologyName));
         }
 
+        /**
+         * @param serviceUnitName The name of the service unit resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUnitName(@Nullable Output<String> serviceUnitName) {
             $.serviceUnitName = serviceUnitName;
             return this;
         }
 
+        /**
+         * @param serviceUnitName The name of the service unit resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUnitName(String serviceUnitName) {
             return serviceUnitName(Output.of(serviceUnitName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param targetResourceGroup The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceGroup(Output<String> targetResourceGroup) {
             $.targetResourceGroup = targetResourceGroup;
             return this;
         }
 
+        /**
+         * @param targetResourceGroup The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceGroup(String targetResourceGroup) {
             return targetResourceGroup(Output.of(targetResourceGroup));
         }

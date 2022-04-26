@@ -28,6 +28,10 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="build", required=true)
     private BuildInfoResponse build;
 
+    /**
+     * @return Google Cloud Build build information. Only applicable for instances running in the App Engine flexible environment.
+     * 
+     */
     public BuildInfoResponse build() {
         return this.build;
     }
@@ -39,6 +43,10 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cloudBuildOptions", required=true)
     private CloudBuildOptionsResponse cloudBuildOptions;
 
+    /**
+     * @return Options for any Google Cloud Build builds created as a part of this deployment.These options will only be used if a new build is created, such as when deploying to the App Engine flexible environment using files or zip.
+     * 
+     */
     public CloudBuildOptionsResponse cloudBuildOptions() {
         return this.cloudBuildOptions;
     }
@@ -50,6 +58,10 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="container", required=true)
     private ContainerInfoResponse container;
 
+    /**
+     * @return The Docker image for the container that runs the version. Only applicable for instances running in the App Engine flexible environment.
+     * 
+     */
     public ContainerInfoResponse container() {
         return this.container;
     }
@@ -61,6 +73,10 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="files", required=true)
     private Map<String,String> files;
 
+    /**
+     * @return Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call.
+     * 
+     */
     public Map<String,String> files() {
         return this.files;
     }
@@ -72,6 +88,10 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="zip", required=true)
     private ZipInfoResponse zip;
 
+    /**
+     * @return The zip file for this deployment, if this is a zip deployment.
+     * 
+     */
     public ZipInfoResponse zip() {
         return this.zip;
     }
@@ -104,26 +124,56 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DeploymentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param build Google Cloud Build build information. Only applicable for instances running in the App Engine flexible environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder build(BuildInfoResponse build) {
             $.build = build;
             return this;
         }
 
+        /**
+         * @param cloudBuildOptions Options for any Google Cloud Build builds created as a part of this deployment.These options will only be used if a new build is created, such as when deploying to the App Engine flexible environment using files or zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudBuildOptions(CloudBuildOptionsResponse cloudBuildOptions) {
             $.cloudBuildOptions = cloudBuildOptions;
             return this;
         }
 
+        /**
+         * @param container The Docker image for the container that runs the version. Only applicable for instances running in the App Engine flexible environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(ContainerInfoResponse container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param files Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(Map<String,String> files) {
             $.files = files;
             return this;
         }
 
+        /**
+         * @param zip The zip file for this deployment, if this is a zip deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zip(ZipInfoResponse zip) {
             $.zip = zip;
             return this;

@@ -27,6 +27,10 @@ public final class ChannelCredentialsArgs extends com.pulumi.resources.ResourceA
     @Import(name="certificates")
     private @Nullable Output<TlsCertificatePathsArgs> certificates;
 
+    /**
+     * @return The call credentials to access the SDS server.
+     * 
+     */
     public Optional<Output<TlsCertificatePathsArgs>> certificates() {
         return Optional.ofNullable(this.certificates);
     }
@@ -38,6 +42,10 @@ public final class ChannelCredentialsArgs extends com.pulumi.resources.ResourceA
     @Import(name="channelCredentialType")
     private @Nullable Output<ChannelCredentialsChannelCredentialType> channelCredentialType;
 
+    /**
+     * @return The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.
+     * 
+     */
     public Optional<Output<ChannelCredentialsChannelCredentialType>> channelCredentialType() {
         return Optional.ofNullable(this.channelCredentialType);
     }
@@ -67,20 +75,44 @@ public final class ChannelCredentialsArgs extends com.pulumi.resources.ResourceA
             $ = new ChannelCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificates The call credentials to access the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(@Nullable Output<TlsCertificatePathsArgs> certificates) {
             $.certificates = certificates;
             return this;
         }
 
+        /**
+         * @param certificates The call credentials to access the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(TlsCertificatePathsArgs certificates) {
             return certificates(Output.of(certificates));
         }
 
+        /**
+         * @param channelCredentialType The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelCredentialType(@Nullable Output<ChannelCredentialsChannelCredentialType> channelCredentialType) {
             $.channelCredentialType = channelCredentialType;
             return this;
         }
 
+        /**
+         * @param channelCredentialType The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelCredentialType(ChannelCredentialsChannelCredentialType channelCredentialType) {
             return channelCredentialType(Output.of(channelCredentialType));
         }

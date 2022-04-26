@@ -26,6 +26,12 @@ public final class GameServerDeploymentRolloutState extends com.pulumi.resources
     @Import(name="defaultGameServerConfig")
     private @Nullable Output<String> defaultGameServerConfig;
 
+    /**
+     * @return This field points to the game server config that is
+     * applied by default to all realms and clusters. For example,
+     * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+     * 
+     */
     public Optional<Output<String>> defaultGameServerConfig() {
         return Optional.ofNullable(this.defaultGameServerConfig);
     }
@@ -37,6 +43,10 @@ public final class GameServerDeploymentRolloutState extends com.pulumi.resources
     @Import(name="deploymentId")
     private @Nullable Output<String> deploymentId;
 
+    /**
+     * @return The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
+     * 
+     */
     public Optional<Output<String>> deploymentId() {
         return Optional.ofNullable(this.deploymentId);
     }
@@ -52,6 +62,14 @@ public final class GameServerDeploymentRolloutState extends com.pulumi.resources
     @Import(name="gameServerConfigOverrides")
     private @Nullable Output<List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs>> gameServerConfigOverrides;
 
+    /**
+     * @return The game_server_config_overrides contains the per game server config
+     * overrides. The overrides are processed in the order they are listed. As
+     * soon as a match is found for a cluster, the rest of the list is not
+     * processed.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs>>> gameServerConfigOverrides() {
         return Optional.ofNullable(this.gameServerConfigOverrides);
     }
@@ -64,6 +82,11 @@ public final class GameServerDeploymentRolloutState extends com.pulumi.resources
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource id of the game server deployment eg:
+     * &#39;projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout&#39;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -76,6 +99,11 @@ public final class GameServerDeploymentRolloutState extends com.pulumi.resources
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -108,51 +136,137 @@ public final class GameServerDeploymentRolloutState extends com.pulumi.resources
             $ = new GameServerDeploymentRolloutState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultGameServerConfig This field points to the game server config that is
+         * applied by default to all realms and clusters. For example,
+         * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultGameServerConfig(@Nullable Output<String> defaultGameServerConfig) {
             $.defaultGameServerConfig = defaultGameServerConfig;
             return this;
         }
 
+        /**
+         * @param defaultGameServerConfig This field points to the game server config that is
+         * applied by default to all realms and clusters. For example,
+         * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultGameServerConfig(String defaultGameServerConfig) {
             return defaultGameServerConfig(Output.of(defaultGameServerConfig));
         }
 
+        /**
+         * @param deploymentId The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(@Nullable Output<String> deploymentId) {
             $.deploymentId = deploymentId;
             return this;
         }
 
+        /**
+         * @param deploymentId The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(String deploymentId) {
             return deploymentId(Output.of(deploymentId));
         }
 
+        /**
+         * @param gameServerConfigOverrides The game_server_config_overrides contains the per game server config
+         * overrides. The overrides are processed in the order they are listed. As
+         * soon as a match is found for a cluster, the rest of the list is not
+         * processed.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gameServerConfigOverrides(@Nullable Output<List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs>> gameServerConfigOverrides) {
             $.gameServerConfigOverrides = gameServerConfigOverrides;
             return this;
         }
 
+        /**
+         * @param gameServerConfigOverrides The game_server_config_overrides contains the per game server config
+         * overrides. The overrides are processed in the order they are listed. As
+         * soon as a match is found for a cluster, the rest of the list is not
+         * processed.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gameServerConfigOverrides(List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs> gameServerConfigOverrides) {
             return gameServerConfigOverrides(Output.of(gameServerConfigOverrides));
         }
 
+        /**
+         * @param gameServerConfigOverrides The game_server_config_overrides contains the per game server config
+         * overrides. The overrides are processed in the order they are listed. As
+         * soon as a match is found for a cluster, the rest of the list is not
+         * processed.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gameServerConfigOverrides(GameServerDeploymentRolloutGameServerConfigOverrideGetArgs... gameServerConfigOverrides) {
             return gameServerConfigOverrides(List.of(gameServerConfigOverrides));
         }
 
+        /**
+         * @param name The resource id of the game server deployment eg:
+         * &#39;projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource id of the game server deployment eg:
+         * &#39;projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

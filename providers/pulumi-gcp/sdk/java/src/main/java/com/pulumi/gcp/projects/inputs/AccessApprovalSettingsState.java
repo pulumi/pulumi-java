@@ -26,6 +26,11 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
     @Import(name="enrolledAncestor")
     private @Nullable Output<Boolean> enrolledAncestor;
 
+    /**
+     * @return If the field is true, that indicates that at least one service is enrolled for Access Approval in one or more ancestors
+     * of the Project.
+     * 
+     */
     public Optional<Output<Boolean>> enrolledAncestor() {
         return Optional.ofNullable(this.enrolledAncestor);
     }
@@ -41,6 +46,14 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
     @Import(name="enrolledServices")
     private @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
 
+    /**
+     * @return A list of Google Cloud Services for which the given resource has Access Approval enrolled.
+     * Access requests for the resource given by name against any of these services contained here will be required
+     * to have explicit approval. Enrollment can only be done on an all or nothing basis.
+     * A maximum of 10 enrolled services will be enforced, to be expanded as the set of supported services is expanded.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>>> enrolledServices() {
         return Optional.ofNullable(this.enrolledServices);
     }
@@ -52,6 +65,10 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the settings. Format is &#34;projects/{project_id}/accessApprovalSettings&#34;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -65,6 +82,12 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
     @Import(name="notificationEmails")
     private @Nullable Output<List<String>> notificationEmails;
 
+    /**
+     * @return A list of email addresses to which notifications relating to approval requests should be sent.
+     * Notifications relating to a resource will be sent to all emails in the settings of ancestor
+     * resources of that resource. A maximum of 50 email addresses are allowed.
+     * 
+     */
     public Optional<Output<List<String>>> notificationEmails() {
         return Optional.ofNullable(this.notificationEmails);
     }
@@ -82,6 +105,15 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return -
+     * (Optional, Deprecated)
+     * Deprecated in favor of `project_id`
+     * 
+     * @deprecated
+     * Deprecated in favor of `project_id`
+     * 
+     */
     @Deprecated /* Deprecated in favor of `project_id` */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
@@ -94,6 +126,10 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
     @Import(name="projectId")
     private @Nullable Output<String> projectId;
 
+    /**
+     * @return ID of the project of the access approval settings.
+     * 
+     */
     public Optional<Output<String>> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -127,64 +163,180 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
             $ = new AccessApprovalSettingsState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enrolledAncestor If the field is true, that indicates that at least one service is enrolled for Access Approval in one or more ancestors
+         * of the Project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enrolledAncestor(@Nullable Output<Boolean> enrolledAncestor) {
             $.enrolledAncestor = enrolledAncestor;
             return this;
         }
 
+        /**
+         * @param enrolledAncestor If the field is true, that indicates that at least one service is enrolled for Access Approval in one or more ancestors
+         * of the Project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enrolledAncestor(Boolean enrolledAncestor) {
             return enrolledAncestor(Output.of(enrolledAncestor));
         }
 
+        /**
+         * @param enrolledServices A list of Google Cloud Services for which the given resource has Access Approval enrolled.
+         * Access requests for the resource given by name against any of these services contained here will be required
+         * to have explicit approval. Enrollment can only be done on an all or nothing basis.
+         * A maximum of 10 enrolled services will be enforced, to be expanded as the set of supported services is expanded.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enrolledServices(@Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices) {
             $.enrolledServices = enrolledServices;
             return this;
         }
 
+        /**
+         * @param enrolledServices A list of Google Cloud Services for which the given resource has Access Approval enrolled.
+         * Access requests for the resource given by name against any of these services contained here will be required
+         * to have explicit approval. Enrollment can only be done on an all or nothing basis.
+         * A maximum of 10 enrolled services will be enforced, to be expanded as the set of supported services is expanded.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enrolledServices(List<AccessApprovalSettingsEnrolledServiceGetArgs> enrolledServices) {
             return enrolledServices(Output.of(enrolledServices));
         }
 
+        /**
+         * @param enrolledServices A list of Google Cloud Services for which the given resource has Access Approval enrolled.
+         * Access requests for the resource given by name against any of these services contained here will be required
+         * to have explicit approval. Enrollment can only be done on an all or nothing basis.
+         * A maximum of 10 enrolled services will be enforced, to be expanded as the set of supported services is expanded.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enrolledServices(AccessApprovalSettingsEnrolledServiceGetArgs... enrolledServices) {
             return enrolledServices(List.of(enrolledServices));
         }
 
+        /**
+         * @param name The resource name of the settings. Format is &#34;projects/{project_id}/accessApprovalSettings&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the settings. Format is &#34;projects/{project_id}/accessApprovalSettings&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param notificationEmails A list of email addresses to which notifications relating to approval requests should be sent.
+         * Notifications relating to a resource will be sent to all emails in the settings of ancestor
+         * resources of that resource. A maximum of 50 email addresses are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEmails(@Nullable Output<List<String>> notificationEmails) {
             $.notificationEmails = notificationEmails;
             return this;
         }
 
+        /**
+         * @param notificationEmails A list of email addresses to which notifications relating to approval requests should be sent.
+         * Notifications relating to a resource will be sent to all emails in the settings of ancestor
+         * resources of that resource. A maximum of 50 email addresses are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEmails(List<String> notificationEmails) {
             return notificationEmails(Output.of(notificationEmails));
         }
 
+        /**
+         * @param notificationEmails A list of email addresses to which notifications relating to approval requests should be sent.
+         * Notifications relating to a resource will be sent to all emails in the settings of ancestor
+         * resources of that resource. A maximum of 50 email addresses are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEmails(String... notificationEmails) {
             return notificationEmails(List.of(notificationEmails));
         }
 
+        /**
+         * @param project -
+         * (Optional, Deprecated)
+         * Deprecated in favor of `project_id`
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of `project_id`
+         * 
+         */
+        @Deprecated /* Deprecated in favor of `project_id` */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project -
+         * (Optional, Deprecated)
+         * Deprecated in favor of `project_id`
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of `project_id`
+         * 
+         */
+        @Deprecated /* Deprecated in favor of `project_id` */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param projectId ID of the project of the access approval settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(@Nullable Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId ID of the project of the access approval settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }

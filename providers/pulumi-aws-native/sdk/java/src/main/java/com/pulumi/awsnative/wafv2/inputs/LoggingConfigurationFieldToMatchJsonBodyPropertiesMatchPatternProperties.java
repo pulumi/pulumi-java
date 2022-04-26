@@ -27,6 +27,10 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
     @Import(name="all")
     private @Nullable Object all;
 
+    /**
+     * @return Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.
+     * 
+     */
     public Optional<Object> all() {
         return Optional.ofNullable(this.all);
     }
@@ -38,6 +42,10 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
     @Import(name="includedPaths")
     private @Nullable List<String> includedPaths;
 
+    /**
+     * @return Match only the specified include paths. See also MatchScope in JsonBody.
+     * 
+     */
     public Optional<List<String>> includedPaths() {
         return Optional.ofNullable(this.includedPaths);
     }
@@ -67,16 +75,34 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
             $ = new LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param all Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder all(@Nullable Object all) {
             $.all = all;
             return this;
         }
 
+        /**
+         * @param includedPaths Match only the specified include paths. See also MatchScope in JsonBody.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPaths(@Nullable List<String> includedPaths) {
             $.includedPaths = includedPaths;
             return this;
         }
 
+        /**
+         * @param includedPaths Match only the specified include paths. See also MatchScope in JsonBody.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPaths(String... includedPaths) {
             return includedPaths(List.of(includedPaths));
         }

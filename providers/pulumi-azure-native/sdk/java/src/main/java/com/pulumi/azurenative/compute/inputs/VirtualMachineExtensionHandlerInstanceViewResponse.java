@@ -26,6 +26,10 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends co
     @Import(name="status")
     private @Nullable InstanceViewStatusResponse status;
 
+    /**
+     * @return The extension handler status.
+     * 
+     */
     public Optional<InstanceViewStatusResponse> status() {
         return Optional.ofNullable(this.status);
     }
@@ -37,6 +41,10 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends co
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -48,6 +56,10 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends co
     @Import(name="typeHandlerVersion")
     private @Nullable String typeHandlerVersion;
 
+    /**
+     * @return Specifies the version of the script handler.
+     * 
+     */
     public Optional<String> typeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }
@@ -78,16 +90,34 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends co
             $ = new VirtualMachineExtensionHandlerInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status The extension handler status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable InstanceViewStatusResponse status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param typeHandlerVersion Specifies the version of the script handler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             $.typeHandlerVersion = typeHandlerVersion;
             return this;

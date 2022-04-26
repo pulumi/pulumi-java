@@ -35,6 +35,10 @@ public final class IndexingPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="automatic")
     private @Nullable Output<Boolean> automatic;
 
+    /**
+     * @return Indicates if the indexing policy is automatic
+     * 
+     */
     public Optional<Output<Boolean>> automatic() {
         return Optional.ofNullable(this.automatic);
     }
@@ -46,6 +50,10 @@ public final class IndexingPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="compositeIndexes")
     private @Nullable Output<List<List<CompositePathArgs>>> compositeIndexes;
 
+    /**
+     * @return List of composite path list
+     * 
+     */
     public Optional<Output<List<List<CompositePathArgs>>>> compositeIndexes() {
         return Optional.ofNullable(this.compositeIndexes);
     }
@@ -57,6 +65,10 @@ public final class IndexingPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="excludedPaths")
     private @Nullable Output<List<ExcludedPathArgs>> excludedPaths;
 
+    /**
+     * @return List of paths to exclude from indexing
+     * 
+     */
     public Optional<Output<List<ExcludedPathArgs>>> excludedPaths() {
         return Optional.ofNullable(this.excludedPaths);
     }
@@ -68,6 +80,10 @@ public final class IndexingPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="includedPaths")
     private @Nullable Output<List<IncludedPathArgs>> includedPaths;
 
+    /**
+     * @return List of paths to include in the indexing
+     * 
+     */
     public Optional<Output<List<IncludedPathArgs>>> includedPaths() {
         return Optional.ofNullable(this.includedPaths);
     }
@@ -79,6 +95,10 @@ public final class IndexingPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="indexingMode")
     private @Nullable Output<Either<String,IndexingMode>> indexingMode;
 
+    /**
+     * @return Indicates the indexing mode.
+     * 
+     */
     public Optional<Output<Either<String,IndexingMode>>> indexingMode() {
         return Optional.ofNullable(this.indexingMode);
     }
@@ -90,6 +110,10 @@ public final class IndexingPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="spatialIndexes")
     private @Nullable Output<List<SpatialSpecArgs>> spatialIndexes;
 
+    /**
+     * @return List of spatial specifics
+     * 
+     */
     public Optional<Output<List<SpatialSpecArgs>>> spatialIndexes() {
         return Optional.ofNullable(this.spatialIndexes);
     }
@@ -123,80 +147,188 @@ public final class IndexingPolicyArgs extends com.pulumi.resources.ResourceArgs 
             $ = new IndexingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automatic Indicates if the indexing policy is automatic
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatic(@Nullable Output<Boolean> automatic) {
             $.automatic = automatic;
             return this;
         }
 
+        /**
+         * @param automatic Indicates if the indexing policy is automatic
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatic(Boolean automatic) {
             return automatic(Output.of(automatic));
         }
 
+        /**
+         * @param compositeIndexes List of composite path list
+         * 
+         * @return builder
+         * 
+         */
         public Builder compositeIndexes(@Nullable Output<List<List<CompositePathArgs>>> compositeIndexes) {
             $.compositeIndexes = compositeIndexes;
             return this;
         }
 
+        /**
+         * @param compositeIndexes List of composite path list
+         * 
+         * @return builder
+         * 
+         */
         public Builder compositeIndexes(List<List<CompositePathArgs>> compositeIndexes) {
             return compositeIndexes(Output.of(compositeIndexes));
         }
 
+        /**
+         * @param compositeIndexes List of composite path list
+         * 
+         * @return builder
+         * 
+         */
         public Builder compositeIndexes(List<CompositePathArgs>... compositeIndexes) {
             return compositeIndexes(List.of(compositeIndexes));
         }
 
+        /**
+         * @param excludedPaths List of paths to exclude from indexing
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPaths(@Nullable Output<List<ExcludedPathArgs>> excludedPaths) {
             $.excludedPaths = excludedPaths;
             return this;
         }
 
+        /**
+         * @param excludedPaths List of paths to exclude from indexing
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPaths(List<ExcludedPathArgs> excludedPaths) {
             return excludedPaths(Output.of(excludedPaths));
         }
 
+        /**
+         * @param excludedPaths List of paths to exclude from indexing
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPaths(ExcludedPathArgs... excludedPaths) {
             return excludedPaths(List.of(excludedPaths));
         }
 
+        /**
+         * @param includedPaths List of paths to include in the indexing
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPaths(@Nullable Output<List<IncludedPathArgs>> includedPaths) {
             $.includedPaths = includedPaths;
             return this;
         }
 
+        /**
+         * @param includedPaths List of paths to include in the indexing
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPaths(List<IncludedPathArgs> includedPaths) {
             return includedPaths(Output.of(includedPaths));
         }
 
+        /**
+         * @param includedPaths List of paths to include in the indexing
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPaths(IncludedPathArgs... includedPaths) {
             return includedPaths(List.of(includedPaths));
         }
 
+        /**
+         * @param indexingMode Indicates the indexing mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexingMode(@Nullable Output<Either<String,IndexingMode>> indexingMode) {
             $.indexingMode = indexingMode;
             return this;
         }
 
+        /**
+         * @param indexingMode Indicates the indexing mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexingMode(Either<String,IndexingMode> indexingMode) {
             return indexingMode(Output.of(indexingMode));
         }
 
+        /**
+         * @param indexingMode Indicates the indexing mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexingMode(String indexingMode) {
             return indexingMode(Either.ofLeft(indexingMode));
         }
 
+        /**
+         * @param indexingMode Indicates the indexing mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexingMode(IndexingMode indexingMode) {
             return indexingMode(Either.ofRight(indexingMode));
         }
 
+        /**
+         * @param spatialIndexes List of spatial specifics
+         * 
+         * @return builder
+         * 
+         */
         public Builder spatialIndexes(@Nullable Output<List<SpatialSpecArgs>> spatialIndexes) {
             $.spatialIndexes = spatialIndexes;
             return this;
         }
 
+        /**
+         * @param spatialIndexes List of spatial specifics
+         * 
+         * @return builder
+         * 
+         */
         public Builder spatialIndexes(List<SpatialSpecArgs> spatialIndexes) {
             return spatialIndexes(Output.of(spatialIndexes));
         }
 
+        /**
+         * @param spatialIndexes List of spatial specifics
+         * 
+         * @return builder
+         * 
+         */
         public Builder spatialIndexes(SpatialSpecArgs... spatialIndexes) {
             return spatialIndexes(List.of(spatialIndexes));
         }

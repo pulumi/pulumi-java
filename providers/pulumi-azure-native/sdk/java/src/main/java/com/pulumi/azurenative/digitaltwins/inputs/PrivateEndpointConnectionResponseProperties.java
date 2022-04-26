@@ -24,6 +24,10 @@ public final class PrivateEndpointConnectionResponseProperties extends com.pulum
     @Import(name="groupIds")
     private @Nullable List<String> groupIds;
 
+    /**
+     * @return The list of group ids for the private endpoint connection.
+     * 
+     */
     public Optional<List<String>> groupIds() {
         return Optional.ofNullable(this.groupIds);
     }
@@ -49,6 +53,10 @@ public final class PrivateEndpointConnectionResponseProperties extends com.pulum
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -80,11 +88,23 @@ public final class PrivateEndpointConnectionResponseProperties extends com.pulum
             $ = new PrivateEndpointConnectionResponseProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupIds The list of group ids for the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(@Nullable List<String> groupIds) {
             $.groupIds = groupIds;
             return this;
         }
 
+        /**
+         * @param groupIds The list of group ids for the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(String... groupIds) {
             return groupIds(List.of(groupIds));
         }
@@ -99,6 +119,12 @@ public final class PrivateEndpointConnectionResponseProperties extends com.pulum
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

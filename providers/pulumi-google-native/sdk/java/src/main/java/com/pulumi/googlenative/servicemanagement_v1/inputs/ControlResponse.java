@@ -23,6 +23,10 @@ public final class ControlResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="environment", required=true)
     private String environment;
 
+    /**
+     * @return The service controller environment to use. If empty, no control plane feature (like quota and billing) will be enabled. The recommended value for most services is servicecontrol.googleapis.com
+     * 
+     */
     public String environment() {
         return this.environment;
     }
@@ -51,6 +55,12 @@ public final class ControlResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ControlResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environment The service controller environment to use. If empty, no control plane feature (like quota and billing) will be enabled. The recommended value for most services is servicecontrol.googleapis.com
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(String environment) {
             $.environment = environment;
             return this;

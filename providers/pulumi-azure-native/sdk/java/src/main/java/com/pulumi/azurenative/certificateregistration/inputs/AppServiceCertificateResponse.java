@@ -25,6 +25,10 @@ public final class AppServiceCertificateResponse extends com.pulumi.resources.In
     @Import(name="keyVaultId")
     private @Nullable String keyVaultId;
 
+    /**
+     * @return Key Vault resource Id.
+     * 
+     */
     public Optional<String> keyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
@@ -36,6 +40,10 @@ public final class AppServiceCertificateResponse extends com.pulumi.resources.In
     @Import(name="keyVaultSecretName")
     private @Nullable String keyVaultSecretName;
 
+    /**
+     * @return Key Vault secret name.
+     * 
+     */
     public Optional<String> keyVaultSecretName() {
         return Optional.ofNullable(this.keyVaultSecretName);
     }
@@ -47,6 +55,10 @@ public final class AppServiceCertificateResponse extends com.pulumi.resources.In
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Status of the Key Vault secret.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -77,16 +89,34 @@ public final class AppServiceCertificateResponse extends com.pulumi.resources.In
             $ = new AppServiceCertificateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultId Key Vault resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultId(@Nullable String keyVaultId) {
             $.keyVaultId = keyVaultId;
             return this;
         }
 
+        /**
+         * @param keyVaultSecretName Key Vault secret name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultSecretName(@Nullable String keyVaultSecretName) {
             $.keyVaultSecretName = keyVaultSecretName;
             return this;
         }
 
+        /**
+         * @param provisioningState Status of the Key Vault secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

@@ -28,6 +28,10 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
     @Import(name="authCertificate")
     private @Nullable Output<String> authCertificate;
 
+    /**
+     * @return The certificate to be used for AAD authentication.
+     * 
+     */
     public Optional<Output<String>> authCertificate() {
         return Optional.ofNullable(this.authCertificate);
     }
@@ -40,6 +44,11 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return Gets the class type.
+     * Expected value is &#39;InMageRcm&#39;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -51,6 +60,10 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
     @Import(name="physicalSiteId")
     private @Nullable Output<String> physicalSiteId;
 
+    /**
+     * @return The ARM Id of the physical site.
+     * 
+     */
     public Optional<Output<String>> physicalSiteId() {
         return Optional.ofNullable(this.physicalSiteId);
     }
@@ -62,6 +75,10 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
     @Import(name="sourceAgentIdentity")
     private @Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity;
 
+    /**
+     * @return The identity provider input for source agent authentication.
+     * 
+     */
     public Optional<Output<IdentityProviderInputArgs>> sourceAgentIdentity() {
         return Optional.ofNullable(this.sourceAgentIdentity);
     }
@@ -73,6 +90,10 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
     @Import(name="vmwareSiteId")
     private @Nullable Output<String> vmwareSiteId;
 
+    /**
+     * @return The ARM Id of the VMware site.
+     * 
+     */
     public Optional<Output<String>> vmwareSiteId() {
         return Optional.ofNullable(this.vmwareSiteId);
     }
@@ -105,47 +126,109 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
             $ = new InMageRcmFabricCreationInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authCertificate The certificate to be used for AAD authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authCertificate(@Nullable Output<String> authCertificate) {
             $.authCertificate = authCertificate;
             return this;
         }
 
+        /**
+         * @param authCertificate The certificate to be used for AAD authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authCertificate(String authCertificate) {
             return authCertificate(Output.of(authCertificate));
         }
 
+        /**
+         * @param instanceType Gets the class type.
+         * Expected value is &#39;InMageRcm&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the class type.
+         * Expected value is &#39;InMageRcm&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param physicalSiteId The ARM Id of the physical site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder physicalSiteId(@Nullable Output<String> physicalSiteId) {
             $.physicalSiteId = physicalSiteId;
             return this;
         }
 
+        /**
+         * @param physicalSiteId The ARM Id of the physical site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder physicalSiteId(String physicalSiteId) {
             return physicalSiteId(Output.of(physicalSiteId));
         }
 
+        /**
+         * @param sourceAgentIdentity The identity provider input for source agent authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAgentIdentity(@Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity) {
             $.sourceAgentIdentity = sourceAgentIdentity;
             return this;
         }
 
+        /**
+         * @param sourceAgentIdentity The identity provider input for source agent authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAgentIdentity(IdentityProviderInputArgs sourceAgentIdentity) {
             return sourceAgentIdentity(Output.of(sourceAgentIdentity));
         }
 
+        /**
+         * @param vmwareSiteId The ARM Id of the VMware site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmwareSiteId(@Nullable Output<String> vmwareSiteId) {
             $.vmwareSiteId = vmwareSiteId;
             return this;
         }
 
+        /**
+         * @param vmwareSiteId The ARM Id of the VMware site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmwareSiteId(String vmwareSiteId) {
             return vmwareSiteId(Output.of(vmwareSiteId));
         }

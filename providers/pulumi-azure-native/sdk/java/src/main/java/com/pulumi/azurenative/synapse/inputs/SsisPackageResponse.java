@@ -29,6 +29,10 @@ public final class SsisPackageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Metadata description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -40,6 +44,10 @@ public final class SsisPackageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="folderId")
     private @Nullable Double folderId;
 
+    /**
+     * @return Folder id which contains package.
+     * 
+     */
     public Optional<Double> folderId() {
         return Optional.ofNullable(this.folderId);
     }
@@ -51,6 +59,10 @@ public final class SsisPackageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable Double id;
 
+    /**
+     * @return Metadata id.
+     * 
+     */
     public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
@@ -62,6 +74,10 @@ public final class SsisPackageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Metadata name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -73,6 +89,10 @@ public final class SsisPackageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameters")
     private @Nullable List<SsisParameterResponse> parameters;
 
+    /**
+     * @return Parameters in package
+     * 
+     */
     public Optional<List<SsisParameterResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -84,6 +104,10 @@ public final class SsisPackageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="projectId")
     private @Nullable Double projectId;
 
+    /**
+     * @return Project id which contains package.
+     * 
+     */
     public Optional<Double> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -95,6 +119,10 @@ public final class SsisPackageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="projectVersion")
     private @Nullable Double projectVersion;
 
+    /**
+     * @return Project version which contains package.
+     * 
+     */
     public Optional<Double> projectVersion() {
         return Optional.ofNullable(this.projectVersion);
     }
@@ -107,6 +135,11 @@ public final class SsisPackageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of SSIS object metadata.
+     * Expected value is &#39;Package&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -142,45 +175,100 @@ public final class SsisPackageResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SsisPackageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Metadata description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param folderId Folder id which contains package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderId(@Nullable Double folderId) {
             $.folderId = folderId;
             return this;
         }
 
+        /**
+         * @param id Metadata id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Double id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Metadata name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameters Parameters in package
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable List<SsisParameterResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters in package
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(SsisParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param projectId Project id which contains package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(@Nullable Double projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectVersion Project version which contains package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectVersion(@Nullable Double projectVersion) {
             $.projectVersion = projectVersion;
             return this;
         }
 
+        /**
+         * @param type The type of SSIS object metadata.
+         * Expected value is &#39;Package&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

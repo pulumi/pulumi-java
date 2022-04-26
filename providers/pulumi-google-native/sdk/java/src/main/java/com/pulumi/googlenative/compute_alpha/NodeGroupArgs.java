@@ -27,6 +27,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingPolicy")
     private @Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
 
+    /**
+     * @return Specifies how autoscaling should behave.
+     * 
+     */
     public Optional<Output<NodeGroupAutoscalingPolicyArgs>> autoscalingPolicy() {
         return Optional.ofNullable(this.autoscalingPolicy);
     }
@@ -38,6 +42,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -56,6 +64,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locationHint")
     private @Nullable Output<String> locationHint;
 
+    /**
+     * @return An opaque location hint used to place the Node close to other resources. This field is for use by internal tools that use the public API. The location hint here on the NodeGroup overrides any location_hint present in the NodeTemplate.
+     * 
+     */
     public Optional<Output<String>> locationHint() {
         return Optional.ofNullable(this.locationHint);
     }
@@ -67,6 +79,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maintenancePolicy")
     private @Nullable Output<NodeGroupMaintenancePolicy> maintenancePolicy;
 
+    /**
+     * @return Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see Maintenance policies.
+     * 
+     */
     public Optional<Output<NodeGroupMaintenancePolicy>> maintenancePolicy() {
         return Optional.ofNullable(this.maintenancePolicy);
     }
@@ -85,6 +101,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -96,6 +116,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeTemplate")
     private @Nullable Output<String> nodeTemplate;
 
+    /**
+     * @return URL of the node template to create the node group from.
+     * 
+     */
     public Optional<Output<String>> nodeTemplate() {
         return Optional.ofNullable(this.nodeTemplate);
     }
@@ -121,6 +145,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareSettings")
     private @Nullable Output<ShareSettingsArgs> shareSettings;
 
+    /**
+     * @return Share-settings for the node group
+     * 
+     */
     public Optional<Output<ShareSettingsArgs>> shareSettings() {
         return Optional.ofNullable(this.shareSettings);
     }
@@ -175,20 +203,44 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NodeGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscalingPolicy Specifies how autoscaling should behave.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingPolicy(@Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy) {
             $.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
 
+        /**
+         * @param autoscalingPolicy Specifies how autoscaling should behave.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingPolicy(NodeGroupAutoscalingPolicyArgs autoscalingPolicy) {
             return autoscalingPolicy(Output.of(autoscalingPolicy));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
@@ -202,20 +254,44 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
             return initialNodeCount(Output.of(initialNodeCount));
         }
 
+        /**
+         * @param locationHint An opaque location hint used to place the Node close to other resources. This field is for use by internal tools that use the public API. The location hint here on the NodeGroup overrides any location_hint present in the NodeTemplate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationHint(@Nullable Output<String> locationHint) {
             $.locationHint = locationHint;
             return this;
         }
 
+        /**
+         * @param locationHint An opaque location hint used to place the Node close to other resources. This field is for use by internal tools that use the public API. The location hint here on the NodeGroup overrides any location_hint present in the NodeTemplate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationHint(String locationHint) {
             return locationHint(Output.of(locationHint));
         }
 
+        /**
+         * @param maintenancePolicy Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see Maintenance policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenancePolicy(@Nullable Output<NodeGroupMaintenancePolicy> maintenancePolicy) {
             $.maintenancePolicy = maintenancePolicy;
             return this;
         }
 
+        /**
+         * @param maintenancePolicy Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see Maintenance policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenancePolicy(NodeGroupMaintenancePolicy maintenancePolicy) {
             return maintenancePolicy(Output.of(maintenancePolicy));
         }
@@ -229,20 +305,44 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
             return maintenanceWindow(Output.of(maintenanceWindow));
         }
 
+        /**
+         * @param name The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nodeTemplate URL of the node template to create the node group from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeTemplate(@Nullable Output<String> nodeTemplate) {
             $.nodeTemplate = nodeTemplate;
             return this;
         }
 
+        /**
+         * @param nodeTemplate URL of the node template to create the node group from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeTemplate(String nodeTemplate) {
             return nodeTemplate(Output.of(nodeTemplate));
         }
@@ -265,11 +365,23 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param shareSettings Share-settings for the node group
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSettings(@Nullable Output<ShareSettingsArgs> shareSettings) {
             $.shareSettings = shareSettings;
             return this;
         }
 
+        /**
+         * @param shareSettings Share-settings for the node group
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSettings(ShareSettingsArgs shareSettings) {
             return shareSettings(Output.of(shareSettings));
         }

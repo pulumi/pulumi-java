@@ -25,6 +25,10 @@ public final class OrderBy extends com.pulumi.resources.InvokeArgs {
     @Import(name="field")
     private @Nullable String field;
 
+    /**
+     * @return Describes the actual column name to sort by
+     * 
+     */
     public Optional<String> field() {
         return Optional.ofNullable(this.field);
     }
@@ -36,6 +40,10 @@ public final class OrderBy extends com.pulumi.resources.InvokeArgs {
     @Import(name="order")
     private @Nullable String order;
 
+    /**
+     * @return Describes if results should be in ascending/descending order
+     * 
+     */
     public Optional<String> order() {
         return Optional.ofNullable(this.order);
     }
@@ -65,11 +73,23 @@ public final class OrderBy extends com.pulumi.resources.InvokeArgs {
             $ = new OrderBy(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field Describes the actual column name to sort by
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable String field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param order Describes if results should be in ascending/descending order
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(@Nullable String order) {
             $.order = order;
             return this;

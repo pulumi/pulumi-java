@@ -25,6 +25,10 @@ public final class SoftwareRecipeStepInstallMsiResponse extends com.pulumi.resou
     @Import(name="allowedExitCodes", required=true)
     private List<Integer> allowedExitCodes;
 
+    /**
+     * @return Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * 
+     */
     public List<Integer> allowedExitCodes() {
         return this.allowedExitCodes;
     }
@@ -36,6 +40,10 @@ public final class SoftwareRecipeStepInstallMsiResponse extends com.pulumi.resou
     @Import(name="artifactId", required=true)
     private String artifactId;
 
+    /**
+     * @return The id of the relevant artifact in the recipe.
+     * 
+     */
     public String artifactId() {
         return this.artifactId;
     }
@@ -47,6 +55,10 @@ public final class SoftwareRecipeStepInstallMsiResponse extends com.pulumi.resou
     @Import(name="flags", required=true)
     private List<String> flags;
 
+    /**
+     * @return The flags to use when installing the MSI defaults to [&#34;/i&#34;] (i.e. the install flag).
+     * 
+     */
     public List<String> flags() {
         return this.flags;
     }
@@ -77,25 +89,55 @@ public final class SoftwareRecipeStepInstallMsiResponse extends com.pulumi.resou
             $ = new SoftwareRecipeStepInstallMsiResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedExitCodes Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExitCodes(List<Integer> allowedExitCodes) {
             $.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
+        /**
+         * @param allowedExitCodes Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExitCodes(Integer... allowedExitCodes) {
             return allowedExitCodes(List.of(allowedExitCodes));
         }
 
+        /**
+         * @param artifactId The id of the relevant artifact in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactId(String artifactId) {
             $.artifactId = artifactId;
             return this;
         }
 
+        /**
+         * @param flags The flags to use when installing the MSI defaults to [&#34;/i&#34;] (i.e. the install flag).
+         * 
+         * @return builder
+         * 
+         */
         public Builder flags(List<String> flags) {
             $.flags = flags;
             return this;
         }
 
+        /**
+         * @param flags The flags to use when installing the MSI defaults to [&#34;/i&#34;] (i.e. the install flag).
+         * 
+         * @return builder
+         * 
+         */
         public Builder flags(String... flags) {
             return flags(List.of(flags));
         }

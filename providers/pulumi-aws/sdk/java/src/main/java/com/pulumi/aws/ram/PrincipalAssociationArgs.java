@@ -20,6 +20,10 @@ public final class PrincipalAssociationArgs extends com.pulumi.resources.Resourc
     @Import(name="principal", required=true)
     private Output<String> principal;
 
+    /**
+     * @return The principal to associate with the resource share. Possible values are an AWS account ID, an AWS Organizations Organization ARN, or an AWS Organizations Organization Unit ARN.
+     * 
+     */
     public Output<String> principal() {
         return this.principal;
     }
@@ -31,6 +35,10 @@ public final class PrincipalAssociationArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceShareArn", required=true)
     private Output<String> resourceShareArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the resource share.
+     * 
+     */
     public Output<String> resourceShareArn() {
         return this.resourceShareArn;
     }
@@ -60,20 +68,44 @@ public final class PrincipalAssociationArgs extends com.pulumi.resources.Resourc
             $ = new PrincipalAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principal The principal to associate with the resource share. Possible values are an AWS account ID, an AWS Organizations Organization ARN, or an AWS Organizations Organization Unit ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(Output<String> principal) {
             $.principal = principal;
             return this;
         }
 
+        /**
+         * @param principal The principal to associate with the resource share. Possible values are an AWS account ID, an AWS Organizations Organization ARN, or an AWS Organizations Organization Unit ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(String principal) {
             return principal(Output.of(principal));
         }
 
+        /**
+         * @param resourceShareArn The Amazon Resource Name (ARN) of the resource share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceShareArn(Output<String> resourceShareArn) {
             $.resourceShareArn = resourceShareArn;
             return this;
         }
 
+        /**
+         * @param resourceShareArn The Amazon Resource Name (ARN) of the resource share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceShareArn(String resourceShareArn) {
             return resourceShareArn(Output.of(resourceShareArn));
         }

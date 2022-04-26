@@ -23,6 +23,10 @@ public final class ClientCertificateConfigResponse extends com.pulumi.resources.
     @Import(name="issueClientCertificate", required=true)
     private Boolean issueClientCertificate;
 
+    /**
+     * @return Issue a client certificate.
+     * 
+     */
     public Boolean issueClientCertificate() {
         return this.issueClientCertificate;
     }
@@ -51,6 +55,12 @@ public final class ClientCertificateConfigResponse extends com.pulumi.resources.
             $ = new ClientCertificateConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param issueClientCertificate Issue a client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issueClientCertificate(Boolean issueClientCertificate) {
             $.issueClientCertificate = issueClientCertificate;
             return this;

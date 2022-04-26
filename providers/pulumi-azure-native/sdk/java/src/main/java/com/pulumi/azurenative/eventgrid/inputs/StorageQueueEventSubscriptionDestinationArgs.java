@@ -28,6 +28,11 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends com.pulu
     @Import(name="endpointType", required=true)
     private Output<String> endpointType;
 
+    /**
+     * @return Type of the endpoint for the event subscription destination.
+     * Expected value is &#39;StorageQueue&#39;.
+     * 
+     */
     public Output<String> endpointType() {
         return this.endpointType;
     }
@@ -39,6 +44,10 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends com.pulu
     @Import(name="queueName")
     private @Nullable Output<String> queueName;
 
+    /**
+     * @return The name of the Storage queue under a storage account that is the destination of an event subscription.
+     * 
+     */
     public Optional<Output<String>> queueName() {
         return Optional.ofNullable(this.queueName);
     }
@@ -50,6 +59,10 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends com.pulu
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -80,29 +93,67 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends com.pulu
             $ = new StorageQueueEventSubscriptionDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointType Type of the endpoint for the event subscription destination.
+         * Expected value is &#39;StorageQueue&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(Output<String> endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param endpointType Type of the endpoint for the event subscription destination.
+         * Expected value is &#39;StorageQueue&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             return endpointType(Output.of(endpointType));
         }
 
+        /**
+         * @param queueName The name of the Storage queue under a storage account that is the destination of an event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueName(@Nullable Output<String> queueName) {
             $.queueName = queueName;
             return this;
         }
 
+        /**
+         * @param queueName The name of the Storage queue under a storage account that is the destination of an event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueName(String queueName) {
             return queueName(Output.of(queueName));
         }
 
+        /**
+         * @param resourceId The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

@@ -24,6 +24,10 @@ public final class VaultArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The supported Azure location where the key vault should be created.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -35,6 +39,10 @@ public final class VaultArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<VaultPropertiesArgs> properties;
 
+    /**
+     * @return Properties of the vault
+     * 
+     */
     public Output<VaultPropertiesArgs> properties() {
         return this.properties;
     }
@@ -46,6 +54,10 @@ public final class VaultArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the Resource Group to which the server belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class VaultArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags that will be assigned to the key vault.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -68,6 +84,10 @@ public final class VaultArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vaultName")
     private @Nullable Output<String> vaultName;
 
+    /**
+     * @return Name of the vault
+     * 
+     */
     public Optional<Output<String>> vaultName() {
         return Optional.ofNullable(this.vaultName);
     }
@@ -100,47 +120,107 @@ public final class VaultArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VaultArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The supported Azure location where the key vault should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The supported Azure location where the key vault should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties Properties of the vault
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<VaultPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the vault
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(VaultPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the Resource Group to which the server belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Resource Group to which the server belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The tags that will be assigned to the key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags that will be assigned to the key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vaultName Name of the vault
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(@Nullable Output<String> vaultName) {
             $.vaultName = vaultName;
             return this;
         }
 
+        /**
+         * @param vaultName Name of the vault
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             return vaultName(Output.of(vaultName));
         }

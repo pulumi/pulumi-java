@@ -25,6 +25,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bookmarkId")
     private @Nullable Output<String> bookmarkId;
 
+    /**
+     * @return Bookmark ID
+     * 
+     */
     public Optional<Output<String>> bookmarkId() {
         return Optional.ofNullable(this.bookmarkId);
     }
@@ -36,6 +40,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="created")
     private @Nullable Output<String> created;
 
+    /**
+     * @return The time the bookmark was created
+     * 
+     */
     public Optional<Output<String>> created() {
         return Optional.ofNullable(this.created);
     }
@@ -47,6 +55,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
     private @Nullable Output<UserInfoArgs> createdBy;
 
+    /**
+     * @return Describes a user that created the bookmark
+     * 
+     */
     public Optional<Output<UserInfoArgs>> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
@@ -58,6 +70,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The display name of the bookmark
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -69,6 +85,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventTime")
     private @Nullable Output<String> eventTime;
 
+    /**
+     * @return The bookmark event time
+     * 
+     */
     public Optional<Output<String>> eventTime() {
         return Optional.ofNullable(this.eventTime);
     }
@@ -80,6 +100,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="incidentInfo")
     private @Nullable Output<IncidentInfoArgs> incidentInfo;
 
+    /**
+     * @return Describes an incident that relates to bookmark
+     * 
+     */
     public Optional<Output<IncidentInfoArgs>> incidentInfo() {
         return Optional.ofNullable(this.incidentInfo);
     }
@@ -91,6 +115,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<List<String>> labels;
 
+    /**
+     * @return List of labels relevant to this bookmark
+     * 
+     */
     public Optional<Output<List<String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -102,6 +130,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notes")
     private @Nullable Output<String> notes;
 
+    /**
+     * @return The notes of the bookmark
+     * 
+     */
     public Optional<Output<String>> notes() {
         return Optional.ofNullable(this.notes);
     }
@@ -113,6 +145,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="query", required=true)
     private Output<String> query;
 
+    /**
+     * @return The query of the bookmark.
+     * 
+     */
     public Output<String> query() {
         return this.query;
     }
@@ -124,6 +160,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryEndTime")
     private @Nullable Output<String> queryEndTime;
 
+    /**
+     * @return The end time for the query
+     * 
+     */
     public Optional<Output<String>> queryEndTime() {
         return Optional.ofNullable(this.queryEndTime);
     }
@@ -135,6 +175,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryResult")
     private @Nullable Output<String> queryResult;
 
+    /**
+     * @return The query result of the bookmark.
+     * 
+     */
     public Optional<Output<String>> queryResult() {
         return Optional.ofNullable(this.queryResult);
     }
@@ -146,6 +190,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryStartTime")
     private @Nullable Output<String> queryStartTime;
 
+    /**
+     * @return The start time for the query
+     * 
+     */
     public Optional<Output<String>> queryStartTime() {
         return Optional.ofNullable(this.queryStartTime);
     }
@@ -157,6 +205,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -168,6 +220,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="updated")
     private @Nullable Output<String> updated;
 
+    /**
+     * @return The last time the bookmark was updated
+     * 
+     */
     public Optional<Output<String>> updated() {
         return Optional.ofNullable(this.updated);
     }
@@ -179,6 +235,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="updatedBy")
     private @Nullable Output<UserInfoArgs> updatedBy;
 
+    /**
+     * @return Describes a user that updated the bookmark
+     * 
+     */
     public Optional<Output<UserInfoArgs>> updatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
@@ -190,6 +250,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -233,150 +297,348 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BookmarkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bookmarkId Bookmark ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder bookmarkId(@Nullable Output<String> bookmarkId) {
             $.bookmarkId = bookmarkId;
             return this;
         }
 
+        /**
+         * @param bookmarkId Bookmark ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder bookmarkId(String bookmarkId) {
             return bookmarkId(Output.of(bookmarkId));
         }
 
+        /**
+         * @param created The time the bookmark was created
+         * 
+         * @return builder
+         * 
+         */
         public Builder created(@Nullable Output<String> created) {
             $.created = created;
             return this;
         }
 
+        /**
+         * @param created The time the bookmark was created
+         * 
+         * @return builder
+         * 
+         */
         public Builder created(String created) {
             return created(Output.of(created));
         }
 
+        /**
+         * @param createdBy Describes a user that created the bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(@Nullable Output<UserInfoArgs> createdBy) {
             $.createdBy = createdBy;
             return this;
         }
 
+        /**
+         * @param createdBy Describes a user that created the bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(UserInfoArgs createdBy) {
             return createdBy(Output.of(createdBy));
         }
 
+        /**
+         * @param displayName The display name of the bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param eventTime The bookmark event time
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTime(@Nullable Output<String> eventTime) {
             $.eventTime = eventTime;
             return this;
         }
 
+        /**
+         * @param eventTime The bookmark event time
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTime(String eventTime) {
             return eventTime(Output.of(eventTime));
         }
 
+        /**
+         * @param incidentInfo Describes an incident that relates to bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder incidentInfo(@Nullable Output<IncidentInfoArgs> incidentInfo) {
             $.incidentInfo = incidentInfo;
             return this;
         }
 
+        /**
+         * @param incidentInfo Describes an incident that relates to bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder incidentInfo(IncidentInfoArgs incidentInfo) {
             return incidentInfo(Output.of(incidentInfo));
         }
 
+        /**
+         * @param labels List of labels relevant to this bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<List<String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels List of labels relevant to this bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param labels List of labels relevant to this bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(String... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param notes The notes of the bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(@Nullable Output<String> notes) {
             $.notes = notes;
             return this;
         }
 
+        /**
+         * @param notes The notes of the bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(String notes) {
             return notes(Output.of(notes));
         }
 
+        /**
+         * @param query The query of the bookmark.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query The query of the bookmark.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param queryEndTime The end time for the query
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryEndTime(@Nullable Output<String> queryEndTime) {
             $.queryEndTime = queryEndTime;
             return this;
         }
 
+        /**
+         * @param queryEndTime The end time for the query
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryEndTime(String queryEndTime) {
             return queryEndTime(Output.of(queryEndTime));
         }
 
+        /**
+         * @param queryResult The query result of the bookmark.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryResult(@Nullable Output<String> queryResult) {
             $.queryResult = queryResult;
             return this;
         }
 
+        /**
+         * @param queryResult The query result of the bookmark.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryResult(String queryResult) {
             return queryResult(Output.of(queryResult));
         }
 
+        /**
+         * @param queryStartTime The start time for the query
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStartTime(@Nullable Output<String> queryStartTime) {
             $.queryStartTime = queryStartTime;
             return this;
         }
 
+        /**
+         * @param queryStartTime The start time for the query
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStartTime(String queryStartTime) {
             return queryStartTime(Output.of(queryStartTime));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param updated The last time the bookmark was updated
+         * 
+         * @return builder
+         * 
+         */
         public Builder updated(@Nullable Output<String> updated) {
             $.updated = updated;
             return this;
         }
 
+        /**
+         * @param updated The last time the bookmark was updated
+         * 
+         * @return builder
+         * 
+         */
         public Builder updated(String updated) {
             return updated(Output.of(updated));
         }
 
+        /**
+         * @param updatedBy Describes a user that updated the bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedBy(@Nullable Output<UserInfoArgs> updatedBy) {
             $.updatedBy = updatedBy;
             return this;
         }
 
+        /**
+         * @param updatedBy Describes a user that updated the bookmark
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedBy(UserInfoArgs updatedBy) {
             return updatedBy(Output.of(updatedBy));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

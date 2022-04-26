@@ -19,6 +19,10 @@ public final class GetReportDefinitionArgs extends com.pulumi.resources.InvokeAr
     @Import(name="reportName", required=true)
     private String reportName;
 
+    /**
+     * @return The name of the report definition to match.
+     * 
+     */
     public String reportName() {
         return this.reportName;
     }
@@ -47,6 +51,12 @@ public final class GetReportDefinitionArgs extends com.pulumi.resources.InvokeAr
             $ = new GetReportDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param reportName The name of the report definition to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportName(String reportName) {
             $.reportName = reportName;
             return this;

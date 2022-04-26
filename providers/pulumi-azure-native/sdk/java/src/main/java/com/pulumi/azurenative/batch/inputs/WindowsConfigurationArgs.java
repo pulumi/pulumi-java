@@ -22,6 +22,10 @@ public final class WindowsConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="enableAutomaticUpdates")
     private @Nullable Output<Boolean> enableAutomaticUpdates;
 
+    /**
+     * @return If omitted, the default value is true.
+     * 
+     */
     public Optional<Output<Boolean>> enableAutomaticUpdates() {
         return Optional.ofNullable(this.enableAutomaticUpdates);
     }
@@ -50,11 +54,23 @@ public final class WindowsConfigurationArgs extends com.pulumi.resources.Resourc
             $ = new WindowsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableAutomaticUpdates If omitted, the default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutomaticUpdates(@Nullable Output<Boolean> enableAutomaticUpdates) {
             $.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
         }
 
+        /**
+         * @param enableAutomaticUpdates If omitted, the default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutomaticUpdates(Boolean enableAutomaticUpdates) {
             return enableAutomaticUpdates(Output.of(enableAutomaticUpdates));
         }

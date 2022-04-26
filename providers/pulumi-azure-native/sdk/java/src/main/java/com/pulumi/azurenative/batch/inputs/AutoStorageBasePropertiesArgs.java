@@ -24,6 +24,10 @@ public final class AutoStorageBasePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="storageAccountId", required=true)
     private Output<String> storageAccountId;
 
+    /**
+     * @return The resource ID of the storage account to be used for auto-storage account.
+     * 
+     */
     public Output<String> storageAccountId() {
         return this.storageAccountId;
     }
@@ -52,11 +56,23 @@ public final class AutoStorageBasePropertiesArgs extends com.pulumi.resources.Re
             $ = new AutoStorageBasePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param storageAccountId The resource ID of the storage account to be used for auto-storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(Output<String> storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;
         }
 
+        /**
+         * @param storageAccountId The resource ID of the storage account to be used for auto-storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(String storageAccountId) {
             return storageAccountId(Output.of(storageAccountId));
         }

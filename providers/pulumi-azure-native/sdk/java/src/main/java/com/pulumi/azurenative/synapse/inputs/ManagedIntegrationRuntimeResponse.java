@@ -28,6 +28,10 @@ public final class ManagedIntegrationRuntimeResponse extends com.pulumi.resource
     @Import(name="computeProperties")
     private @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties;
 
+    /**
+     * @return The compute resource for managed integration runtime.
+     * 
+     */
     public Optional<IntegrationRuntimeComputePropertiesResponse> computeProperties() {
         return Optional.ofNullable(this.computeProperties);
     }
@@ -39,6 +43,10 @@ public final class ManagedIntegrationRuntimeResponse extends com.pulumi.resource
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Integration runtime description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class ManagedIntegrationRuntimeResponse extends com.pulumi.resource
     @Import(name="ssisProperties")
     private @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties;
 
+    /**
+     * @return SSIS properties for managed integration runtime.
+     * 
+     */
     public Optional<IntegrationRuntimeSsisPropertiesResponse> ssisProperties() {
         return Optional.ofNullable(this.ssisProperties);
     }
@@ -61,6 +73,10 @@ public final class ManagedIntegrationRuntimeResponse extends com.pulumi.resource
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Integration runtime state, only valid for managed dedicated integration runtime.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -73,6 +89,11 @@ public final class ManagedIntegrationRuntimeResponse extends com.pulumi.resource
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of integration runtime.
+     * Expected value is &#39;Managed&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -105,26 +126,57 @@ public final class ManagedIntegrationRuntimeResponse extends com.pulumi.resource
             $ = new ManagedIntegrationRuntimeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeProperties The compute resource for managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeProperties(@Nullable IntegrationRuntimeComputePropertiesResponse computeProperties) {
             $.computeProperties = computeProperties;
             return this;
         }
 
+        /**
+         * @param description Integration runtime description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param ssisProperties SSIS properties for managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssisProperties(@Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties) {
             $.ssisProperties = ssisProperties;
             return this;
         }
 
+        /**
+         * @param state Integration runtime state, only valid for managed dedicated integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param type The type of integration runtime.
+         * Expected value is &#39;Managed&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

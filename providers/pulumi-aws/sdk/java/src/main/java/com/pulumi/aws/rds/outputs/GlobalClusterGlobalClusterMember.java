@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GlobalClusterGlobalClusterMember {
     /**
-     * Amazon Resource Name (ARN) of member DB Cluster
+     * @return Amazon Resource Name (ARN) of member DB Cluster
      * 
      */
     private final @Nullable String dbClusterArn;
     /**
-     * Whether the member is the primary DB Cluster
+     * @return Whether the member is the primary DB Cluster
      * 
      */
     private final @Nullable Boolean isWriter;
@@ -32,16 +32,16 @@ public final class GlobalClusterGlobalClusterMember {
     }
 
     /**
-     * Amazon Resource Name (ARN) of member DB Cluster
+     * @return Amazon Resource Name (ARN) of member DB Cluster
      * 
-    */
+     */
     public Optional<String> dbClusterArn() {
         return Optional.ofNullable(this.dbClusterArn);
     }
     /**
-     * Whether the member is the primary DB Cluster
+     * @return Whether the member is the primary DB Cluster
      * 
-    */
+     */
     public Optional<Boolean> isWriter() {
         return Optional.ofNullable(this.isWriter);
     }

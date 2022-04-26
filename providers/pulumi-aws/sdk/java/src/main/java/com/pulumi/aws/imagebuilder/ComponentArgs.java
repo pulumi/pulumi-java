@@ -24,6 +24,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="changeDescription")
     private @Nullable Output<String> changeDescription;
 
+    /**
+     * @return Change description of the component.
+     * 
+     */
     public Optional<Output<String>> changeDescription() {
         return Optional.ofNullable(this.changeDescription);
     }
@@ -35,6 +39,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="data")
     private @Nullable Output<String> data;
 
+    /**
+     * @return Inline YAML string with data of the component. Exactly one of `data` and `uri` can be specified. the provider will only perform drift detection of its value when present in a configuration.
+     * 
+     */
     public Optional<Output<String>> data() {
         return Optional.ofNullable(this.data);
     }
@@ -46,6 +54,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the component.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -57,6 +69,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encrypt the component.
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -68,6 +84,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the component.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -79,6 +99,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="platform", required=true)
     private Output<String> platform;
 
+    /**
+     * @return Platform of the component.
+     * 
+     */
     public Output<String> platform() {
         return this.platform;
     }
@@ -90,6 +114,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportedOsVersions")
     private @Nullable Output<List<String>> supportedOsVersions;
 
+    /**
+     * @return Set of Operating Systems (OS) supported by the component.
+     * 
+     */
     public Optional<Output<List<String>>> supportedOsVersions() {
         return Optional.ofNullable(this.supportedOsVersions);
     }
@@ -101,6 +129,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags for the component. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -112,6 +144,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return S3 URI with data of the component. Exactly one of `data` and `uri` can be specified.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -123,6 +159,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version", required=true)
     private Output<String> version;
 
+    /**
+     * @return Version of the component.
+     * 
+     */
     public Output<String> version() {
         return this.version;
     }
@@ -160,96 +200,222 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ComponentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param changeDescription Change description of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder changeDescription(@Nullable Output<String> changeDescription) {
             $.changeDescription = changeDescription;
             return this;
         }
 
+        /**
+         * @param changeDescription Change description of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder changeDescription(String changeDescription) {
             return changeDescription(Output.of(changeDescription));
         }
 
+        /**
+         * @param data Inline YAML string with data of the component. Exactly one of `data` and `uri` can be specified. the provider will only perform drift detection of its value when present in a configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(@Nullable Output<String> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data Inline YAML string with data of the component. Exactly one of `data` and `uri` can be specified. the provider will only perform drift detection of its value when present in a configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             return data(Output.of(data));
         }
 
+        /**
+         * @param description Description of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param kmsKeyId Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encrypt the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encrypt the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
 
+        /**
+         * @param name Name of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param platform Platform of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(Output<String> platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param platform Platform of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(String platform) {
             return platform(Output.of(platform));
         }
 
+        /**
+         * @param supportedOsVersions Set of Operating Systems (OS) supported by the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedOsVersions(@Nullable Output<List<String>> supportedOsVersions) {
             $.supportedOsVersions = supportedOsVersions;
             return this;
         }
 
+        /**
+         * @param supportedOsVersions Set of Operating Systems (OS) supported by the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedOsVersions(List<String> supportedOsVersions) {
             return supportedOsVersions(Output.of(supportedOsVersions));
         }
 
+        /**
+         * @param supportedOsVersions Set of Operating Systems (OS) supported by the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedOsVersions(String... supportedOsVersions) {
             return supportedOsVersions(List.of(supportedOsVersions));
         }
 
+        /**
+         * @param tags Key-value map of resource tags for the component. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags for the component. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param uri S3 URI with data of the component. Exactly one of `data` and `uri` can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri S3 URI with data of the component. Exactly one of `data` and `uri` can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }
 
+        /**
+         * @param version Version of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Version of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

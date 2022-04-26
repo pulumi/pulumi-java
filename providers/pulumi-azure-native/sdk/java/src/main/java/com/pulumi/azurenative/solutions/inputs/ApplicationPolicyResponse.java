@@ -25,6 +25,10 @@ public final class ApplicationPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The policy name
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class ApplicationPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="parameters")
     private @Nullable String parameters;
 
+    /**
+     * @return The policy parameters.
+     * 
+     */
     public Optional<String> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -47,6 +55,10 @@ public final class ApplicationPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="policyDefinitionId")
     private @Nullable String policyDefinitionId;
 
+    /**
+     * @return The policy definition Id.
+     * 
+     */
     public Optional<String> policyDefinitionId() {
         return Optional.ofNullable(this.policyDefinitionId);
     }
@@ -77,16 +89,34 @@ public final class ApplicationPolicyResponse extends com.pulumi.resources.Invoke
             $ = new ApplicationPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The policy name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameters The policy parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable String parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param policyDefinitionId The policy definition Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
             $.policyDefinitionId = policyDefinitionId;
             return this;

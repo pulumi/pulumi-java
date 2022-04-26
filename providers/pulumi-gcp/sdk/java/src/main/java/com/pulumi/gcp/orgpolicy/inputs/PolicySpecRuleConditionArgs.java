@@ -22,6 +22,10 @@ public final class PolicySpecRuleConditionArgs extends com.pulumi.resources.Reso
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -33,6 +37,10 @@ public final class PolicySpecRuleConditionArgs extends com.pulumi.resources.Reso
     @Import(name="expression")
     private @Nullable Output<String> expression;
 
+    /**
+     * @return Textual representation of an expression in Common Expression Language syntax.
+     * 
+     */
     public Optional<Output<String>> expression() {
         return Optional.ofNullable(this.expression);
     }
@@ -44,6 +52,10 @@ public final class PolicySpecRuleConditionArgs extends com.pulumi.resources.Reso
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -55,6 +67,10 @@ public final class PolicySpecRuleConditionArgs extends com.pulumi.resources.Reso
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -86,38 +102,86 @@ public final class PolicySpecRuleConditionArgs extends com.pulumi.resources.Reso
             $ = new PolicySpecRuleConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param expression Textual representation of an expression in Common Expression Language syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(@Nullable Output<String> expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param expression Textual representation of an expression in Common Expression Language syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             return expression(Output.of(expression));
         }
 
+        /**
+         * @param location Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param title Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

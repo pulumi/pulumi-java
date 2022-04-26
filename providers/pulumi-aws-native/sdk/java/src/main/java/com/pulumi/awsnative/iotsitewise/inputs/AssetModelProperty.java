@@ -28,6 +28,10 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataType", required=true)
     private AssetModelDataType dataType;
 
+    /**
+     * @return The data type of the asset model property.
+     * 
+     */
     public AssetModelDataType dataType() {
         return this.dataType;
     }
@@ -39,6 +43,10 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataTypeSpec")
     private @Nullable AssetModelDataTypeSpec dataTypeSpec;
 
+    /**
+     * @return The data type of the structure for this property.
+     * 
+     */
     public Optional<AssetModelDataTypeSpec> dataTypeSpec() {
         return Optional.ofNullable(this.dataTypeSpec);
     }
@@ -50,6 +58,10 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="logicalId", required=true)
     private String logicalId;
 
+    /**
+     * @return Customer provided ID for property.
+     * 
+     */
     public String logicalId() {
         return this.logicalId;
     }
@@ -61,6 +73,10 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the asset model property.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -72,6 +88,10 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private AssetModelPropertyType type;
 
+    /**
+     * @return The property type
+     * 
+     */
     public AssetModelPropertyType type() {
         return this.type;
     }
@@ -83,6 +103,10 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="unit")
     private @Nullable String unit;
 
+    /**
+     * @return The unit of the asset model property, such as Newtons or RPM.
+     * 
+     */
     public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }
@@ -116,31 +140,67 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
             $ = new AssetModelProperty(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataType The data type of the asset model property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(AssetModelDataType dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param dataTypeSpec The data type of the structure for this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypeSpec(@Nullable AssetModelDataTypeSpec dataTypeSpec) {
             $.dataTypeSpec = dataTypeSpec;
             return this;
         }
 
+        /**
+         * @param logicalId Customer provided ID for property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalId(String logicalId) {
             $.logicalId = logicalId;
             return this;
         }
 
+        /**
+         * @param name The name of the asset model property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The property type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(AssetModelPropertyType type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param unit The unit of the asset model property, such as Newtons or RPM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(@Nullable String unit) {
             $.unit = unit;
             return this;

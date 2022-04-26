@@ -25,6 +25,10 @@ public final class VICredentialResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return Gets or sets username to connect with the vCenter.
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -53,6 +57,12 @@ public final class VICredentialResponse extends com.pulumi.resources.InvokeArgs 
             $ = new VICredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param username Gets or sets username to connect with the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

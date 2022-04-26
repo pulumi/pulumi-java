@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class CompletenessResponse {
     /**
-     * If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
+     * @return If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
      * 
      */
     private final Boolean arguments;
     /**
-     * If true, the builder claims that recipe.environment is claimed to be complete.
+     * @return If true, the builder claims that recipe.environment is claimed to be complete.
      * 
      */
     private final Boolean environment;
     /**
-     * If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called &#34;hermetic&#34;.
+     * @return If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called &#34;hermetic&#34;.
      * 
      */
     private final Boolean materials;
@@ -36,23 +36,23 @@ public final class CompletenessResponse {
     }
 
     /**
-     * If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
+     * @return If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
      * 
-    */
+     */
     public Boolean arguments() {
         return this.arguments;
     }
     /**
-     * If true, the builder claims that recipe.environment is claimed to be complete.
+     * @return If true, the builder claims that recipe.environment is claimed to be complete.
      * 
-    */
+     */
     public Boolean environment() {
         return this.environment;
     }
     /**
-     * If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called &#34;hermetic&#34;.
+     * @return If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called &#34;hermetic&#34;.
      * 
-    */
+     */
     public Boolean materials() {
         return this.materials;
     }

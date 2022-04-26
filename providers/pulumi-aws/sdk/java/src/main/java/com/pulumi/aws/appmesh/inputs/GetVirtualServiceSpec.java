@@ -20,6 +20,10 @@ public final class GetVirtualServiceSpec extends com.pulumi.resources.InvokeArgs
     @Import(name="providers", required=true)
     private List<GetVirtualServiceSpecProvider> providers;
 
+    /**
+     * @return The App Mesh object that is acting as the provider for a virtual service.
+     * 
+     */
     public List<GetVirtualServiceSpecProvider> providers() {
         return this.providers;
     }
@@ -48,11 +52,23 @@ public final class GetVirtualServiceSpec extends com.pulumi.resources.InvokeArgs
             $ = new GetVirtualServiceSpec(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param providers The App Mesh object that is acting as the provider for a virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(List<GetVirtualServiceSpecProvider> providers) {
             $.providers = providers;
             return this;
         }
 
+        /**
+         * @param providers The App Mesh object that is acting as the provider for a virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(GetVirtualServiceSpecProvider... providers) {
             return providers(List.of(providers));
         }

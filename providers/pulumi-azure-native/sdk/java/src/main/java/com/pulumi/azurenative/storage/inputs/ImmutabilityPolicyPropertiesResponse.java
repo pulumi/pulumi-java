@@ -29,6 +29,10 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
     @Import(name="allowProtectedAppendWrites")
     private @Nullable Boolean allowProtectedAppendWrites;
 
+    /**
+     * @return This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
+     * 
+     */
     public Optional<Boolean> allowProtectedAppendWrites() {
         return Optional.ofNullable(this.allowProtectedAppendWrites);
     }
@@ -40,6 +44,10 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return ImmutabilityPolicy Etag.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -51,6 +59,10 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
     @Import(name="immutabilityPeriodSinceCreationInDays")
     private @Nullable Integer immutabilityPeriodSinceCreationInDays;
 
+    /**
+     * @return The immutability period for the blobs in the container since the policy creation, in days.
+     * 
+     */
     public Optional<Integer> immutabilityPeriodSinceCreationInDays() {
         return Optional.ofNullable(this.immutabilityPeriodSinceCreationInDays);
     }
@@ -62,6 +74,10 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -73,6 +89,10 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
     @Import(name="updateHistory", required=true)
     private List<UpdateHistoryPropertyResponse> updateHistory;
 
+    /**
+     * @return The ImmutabilityPolicy update history of the blob container.
+     * 
+     */
     public List<UpdateHistoryPropertyResponse> updateHistory() {
         return this.updateHistory;
     }
@@ -105,31 +125,67 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
             $ = new ImmutabilityPolicyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowProtectedAppendWrites This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowProtectedAppendWrites(@Nullable Boolean allowProtectedAppendWrites) {
             $.allowProtectedAppendWrites = allowProtectedAppendWrites;
             return this;
         }
 
+        /**
+         * @param etag ImmutabilityPolicy Etag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param immutabilityPeriodSinceCreationInDays The immutability period for the blobs in the container since the policy creation, in days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder immutabilityPeriodSinceCreationInDays(@Nullable Integer immutabilityPeriodSinceCreationInDays) {
             $.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
             return this;
         }
 
+        /**
+         * @param state The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param updateHistory The ImmutabilityPolicy update history of the blob container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateHistory(List<UpdateHistoryPropertyResponse> updateHistory) {
             $.updateHistory = updateHistory;
             return this;
         }
 
+        /**
+         * @param updateHistory The ImmutabilityPolicy update history of the blob container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateHistory(UpdateHistoryPropertyResponse... updateHistory) {
             return updateHistory(List.of(updateHistory));
         }

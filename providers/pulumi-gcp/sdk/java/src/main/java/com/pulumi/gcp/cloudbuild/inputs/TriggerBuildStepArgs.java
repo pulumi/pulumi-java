@@ -28,6 +28,14 @@ public final class TriggerBuildStepArgs extends com.pulumi.resources.ResourceArg
     @Import(name="args")
     private @Nullable Output<List<String>> args;
 
+    /**
+     * @return A list of arguments that will be presented to the step when it is started.
+     * If the image used to run the step&#39;s container has an entrypoint, the args
+     * are used as arguments to that entrypoint. If the image does not define an
+     * entrypoint, the first element in args is used as the entrypoint, and the
+     * remainder will be used as arguments.
+     * 
+     */
     public Optional<Output<List<String>>> args() {
         return Optional.ofNullable(this.args);
     }
@@ -47,6 +55,18 @@ public final class TriggerBuildStepArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dir")
     private @Nullable Output<String> dir;
 
+    /**
+     * @return Working directory to use when running this step&#39;s container.
+     * If this value is a relative path, it is relative to the build&#39;s working
+     * directory. If this value is absolute, it may be outside the build&#39;s working
+     * directory, in which case the contents of the path may not be persisted
+     * across build step executions, unless a `volume` for that path is specified.
+     * If the build specifies a `RepoSource` with `dir` and a step with a
+     * `dir`,
+     * which specifies an absolute path, the `RepoSource` `dir` is ignored
+     * for the step&#39;s execution.
+     * 
+     */
     public Optional<Output<String>> dir() {
         return Optional.ofNullable(this.dir);
     }
@@ -60,6 +80,12 @@ public final class TriggerBuildStepArgs extends com.pulumi.resources.ResourceArg
     @Import(name="entrypoint")
     private @Nullable Output<String> entrypoint;
 
+    /**
+     * @return Entrypoint to be used instead of the build step image&#39;s
+     * default entrypoint.
+     * If unset, the image&#39;s default entrypoint is used
+     * 
+     */
     public Optional<Output<String>> entrypoint() {
         return Optional.ofNullable(this.entrypoint);
     }
@@ -74,6 +100,13 @@ public final class TriggerBuildStepArgs extends com.pulumi.resources.ResourceArg
     @Import(name="envs")
     private @Nullable Output<List<String>> envs;
 
+    /**
+     * @return A list of global environment variable definitions that will exist for all build steps
+     * in this build. If a variable is defined in both globally and in a build step,
+     * the variable will use the build step value.
+     * The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
+     * 
+     */
     public Optional<Output<List<String>>> envs() {
         return Optional.ofNullable(this.envs);
     }
@@ -86,6 +119,11 @@ public final class TriggerBuildStepArgs extends com.pulumi.resources.ResourceArg
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Unique identifier for this build step, used in `wait_for` to
+     * reference this build step as a dependency.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -99,6 +137,12 @@ public final class TriggerBuildStepArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the volume to mount.
+     * Volume names must be unique per build step and must be valid names for Docker volumes.
+     * Each named volume must be used by at least two build steps.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -112,6 +156,12 @@ public final class TriggerBuildStepArgs extends com.pulumi.resources.ResourceArg
     @Import(name="secretEnvs")
     private @Nullable Output<List<String>> secretEnvs;
 
+    /**
+     * @return A list of global environment variables, which are encrypted using a Cloud Key Management
+     * Service crypto key. These values must be specified in the build&#39;s Secret. These variables
+     * will be available to all build steps in this build.
+     * 
+     */
     public Optional<Output<List<String>>> secretEnvs() {
         return Optional.ofNullable(this.secretEnvs);
     }
@@ -126,6 +176,13 @@ public final class TriggerBuildStepArgs extends com.pulumi.resources.ResourceArg
     @Import(name="timeout")
     private @Nullable Output<String> timeout;
 
+    /**
+     * @return Time limit for executing this build step. If not defined,
+     * the step has no
+     * time limit and will be allowed to continue to run until either it
+     * completes or the build itself times out.
+     * 
+     */
     public Optional<Output<String>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -139,6 +196,12 @@ public final class TriggerBuildStepArgs extends com.pulumi.resources.ResourceArg
     @Import(name="timing")
     private @Nullable Output<String> timing;
 
+    /**
+     * @return -
+     * Output only. Stores timing information for pushing all artifact objects.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<String>> timing() {
         return Optional.ofNullable(this.timing);
     }
@@ -156,6 +219,16 @@ public final class TriggerBuildStepArgs extends com.pulumi.resources.ResourceArg
     @Import(name="volumes")
     private @Nullable Output<List<TriggerBuildStepVolumeArgs>> volumes;
 
+    /**
+     * @return Global list of volumes to mount for ALL build steps
+     * Each volume is created as an empty volume prior to starting the build process.
+     * Upon completion of the build, volumes and their contents are discarded. Global
+     * volume names and paths cannot conflict with the volumes defined a build step.
+     * Using a global volume in a build with only one step is not valid as it is indicative
+     * of a build request with an incorrect configuration.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<TriggerBuildStepVolumeArgs>>> volumes() {
         return Optional.ofNullable(this.volumes);
     }
@@ -171,6 +244,14 @@ public final class TriggerBuildStepArgs extends com.pulumi.resources.ResourceArg
     @Import(name="waitFors")
     private @Nullable Output<List<String>> waitFors;
 
+    /**
+     * @return The ID(s) of the step(s) that this build step depends on.
+     * This build step will not start until all the build steps in `wait_for`
+     * have completed successfully. If `wait_for` is empty, this build step
+     * will start when all previous build steps in the `Build.Steps` list
+     * have completed successfully.
+     * 
+     */
     public Optional<Output<List<String>>> waitFors() {
         return Optional.ofNullable(this.waitFors);
     }
@@ -209,121 +290,376 @@ public final class TriggerBuildStepArgs extends com.pulumi.resources.ResourceArg
             $ = new TriggerBuildStepArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param args A list of arguments that will be presented to the step when it is started.
+         * If the image used to run the step&#39;s container has an entrypoint, the args
+         * are used as arguments to that entrypoint. If the image does not define an
+         * entrypoint, the first element in args is used as the entrypoint, and the
+         * remainder will be used as arguments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(@Nullable Output<List<String>> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args A list of arguments that will be presented to the step when it is started.
+         * If the image used to run the step&#39;s container has an entrypoint, the args
+         * are used as arguments to that entrypoint. If the image does not define an
+         * entrypoint, the first element in args is used as the entrypoint, and the
+         * remainder will be used as arguments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             return args(Output.of(args));
         }
 
+        /**
+         * @param args A list of arguments that will be presented to the step when it is started.
+         * If the image used to run the step&#39;s container has an entrypoint, the args
+         * are used as arguments to that entrypoint. If the image does not define an
+         * entrypoint, the first element in args is used as the entrypoint, and the
+         * remainder will be used as arguments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param dir Working directory to use when running this step&#39;s container.
+         * If this value is a relative path, it is relative to the build&#39;s working
+         * directory. If this value is absolute, it may be outside the build&#39;s working
+         * directory, in which case the contents of the path may not be persisted
+         * across build step executions, unless a `volume` for that path is specified.
+         * If the build specifies a `RepoSource` with `dir` and a step with a
+         * `dir`,
+         * which specifies an absolute path, the `RepoSource` `dir` is ignored
+         * for the step&#39;s execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dir(@Nullable Output<String> dir) {
             $.dir = dir;
             return this;
         }
 
+        /**
+         * @param dir Working directory to use when running this step&#39;s container.
+         * If this value is a relative path, it is relative to the build&#39;s working
+         * directory. If this value is absolute, it may be outside the build&#39;s working
+         * directory, in which case the contents of the path may not be persisted
+         * across build step executions, unless a `volume` for that path is specified.
+         * If the build specifies a `RepoSource` with `dir` and a step with a
+         * `dir`,
+         * which specifies an absolute path, the `RepoSource` `dir` is ignored
+         * for the step&#39;s execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dir(String dir) {
             return dir(Output.of(dir));
         }
 
+        /**
+         * @param entrypoint Entrypoint to be used instead of the build step image&#39;s
+         * default entrypoint.
+         * If unset, the image&#39;s default entrypoint is used
+         * 
+         * @return builder
+         * 
+         */
         public Builder entrypoint(@Nullable Output<String> entrypoint) {
             $.entrypoint = entrypoint;
             return this;
         }
 
+        /**
+         * @param entrypoint Entrypoint to be used instead of the build step image&#39;s
+         * default entrypoint.
+         * If unset, the image&#39;s default entrypoint is used
+         * 
+         * @return builder
+         * 
+         */
         public Builder entrypoint(String entrypoint) {
             return entrypoint(Output.of(entrypoint));
         }
 
+        /**
+         * @param envs A list of global environment variable definitions that will exist for all build steps
+         * in this build. If a variable is defined in both globally and in a build step,
+         * the variable will use the build step value.
+         * The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envs(@Nullable Output<List<String>> envs) {
             $.envs = envs;
             return this;
         }
 
+        /**
+         * @param envs A list of global environment variable definitions that will exist for all build steps
+         * in this build. If a variable is defined in both globally and in a build step,
+         * the variable will use the build step value.
+         * The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envs(List<String> envs) {
             return envs(Output.of(envs));
         }
 
+        /**
+         * @param envs A list of global environment variable definitions that will exist for all build steps
+         * in this build. If a variable is defined in both globally and in a build step,
+         * the variable will use the build step value.
+         * The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envs(String... envs) {
             return envs(List.of(envs));
         }
 
+        /**
+         * @param id Unique identifier for this build step, used in `wait_for` to
+         * reference this build step as a dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Unique identifier for this build step, used in `wait_for` to
+         * reference this build step as a dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name of the volume to mount.
+         * Volume names must be unique per build step and must be valid names for Docker volumes.
+         * Each named volume must be used by at least two build steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the volume to mount.
+         * Volume names must be unique per build step and must be valid names for Docker volumes.
+         * Each named volume must be used by at least two build steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param secretEnvs A list of global environment variables, which are encrypted using a Cloud Key Management
+         * Service crypto key. These values must be specified in the build&#39;s Secret. These variables
+         * will be available to all build steps in this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretEnvs(@Nullable Output<List<String>> secretEnvs) {
             $.secretEnvs = secretEnvs;
             return this;
         }
 
+        /**
+         * @param secretEnvs A list of global environment variables, which are encrypted using a Cloud Key Management
+         * Service crypto key. These values must be specified in the build&#39;s Secret. These variables
+         * will be available to all build steps in this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretEnvs(List<String> secretEnvs) {
             return secretEnvs(Output.of(secretEnvs));
         }
 
+        /**
+         * @param secretEnvs A list of global environment variables, which are encrypted using a Cloud Key Management
+         * Service crypto key. These values must be specified in the build&#39;s Secret. These variables
+         * will be available to all build steps in this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretEnvs(String... secretEnvs) {
             return secretEnvs(List.of(secretEnvs));
         }
 
+        /**
+         * @param timeout Time limit for executing this build step. If not defined,
+         * the step has no
+         * time limit and will be allowed to continue to run until either it
+         * completes or the build itself times out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<String> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Time limit for executing this build step. If not defined,
+         * the step has no
+         * time limit and will be allowed to continue to run until either it
+         * completes or the build itself times out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             return timeout(Output.of(timeout));
         }
 
+        /**
+         * @param timing -
+         * Output only. Stores timing information for pushing all artifact objects.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timing(@Nullable Output<String> timing) {
             $.timing = timing;
             return this;
         }
 
+        /**
+         * @param timing -
+         * Output only. Stores timing information for pushing all artifact objects.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timing(String timing) {
             return timing(Output.of(timing));
         }
 
+        /**
+         * @param volumes Global list of volumes to mount for ALL build steps
+         * Each volume is created as an empty volume prior to starting the build process.
+         * Upon completion of the build, volumes and their contents are discarded. Global
+         * volume names and paths cannot conflict with the volumes defined a build step.
+         * Using a global volume in a build with only one step is not valid as it is indicative
+         * of a build request with an incorrect configuration.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(@Nullable Output<List<TriggerBuildStepVolumeArgs>> volumes) {
             $.volumes = volumes;
             return this;
         }
 
+        /**
+         * @param volumes Global list of volumes to mount for ALL build steps
+         * Each volume is created as an empty volume prior to starting the build process.
+         * Upon completion of the build, volumes and their contents are discarded. Global
+         * volume names and paths cannot conflict with the volumes defined a build step.
+         * Using a global volume in a build with only one step is not valid as it is indicative
+         * of a build request with an incorrect configuration.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(List<TriggerBuildStepVolumeArgs> volumes) {
             return volumes(Output.of(volumes));
         }
 
+        /**
+         * @param volumes Global list of volumes to mount for ALL build steps
+         * Each volume is created as an empty volume prior to starting the build process.
+         * Upon completion of the build, volumes and their contents are discarded. Global
+         * volume names and paths cannot conflict with the volumes defined a build step.
+         * Using a global volume in a build with only one step is not valid as it is indicative
+         * of a build request with an incorrect configuration.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(TriggerBuildStepVolumeArgs... volumes) {
             return volumes(List.of(volumes));
         }
 
+        /**
+         * @param waitFors The ID(s) of the step(s) that this build step depends on.
+         * This build step will not start until all the build steps in `wait_for`
+         * have completed successfully. If `wait_for` is empty, this build step
+         * will start when all previous build steps in the `Build.Steps` list
+         * have completed successfully.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitFors(@Nullable Output<List<String>> waitFors) {
             $.waitFors = waitFors;
             return this;
         }
 
+        /**
+         * @param waitFors The ID(s) of the step(s) that this build step depends on.
+         * This build step will not start until all the build steps in `wait_for`
+         * have completed successfully. If `wait_for` is empty, this build step
+         * will start when all previous build steps in the `Build.Steps` list
+         * have completed successfully.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitFors(List<String> waitFors) {
             return waitFors(Output.of(waitFors));
         }
 
+        /**
+         * @param waitFors The ID(s) of the step(s) that this build step depends on.
+         * This build step will not start until all the build steps in `wait_for`
+         * have completed successfully. If `wait_for` is empty, this build step
+         * will start when all previous build steps in the `Build.Steps` list
+         * have completed successfully.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitFors(String... waitFors) {
             return waitFors(List.of(waitFors));
         }

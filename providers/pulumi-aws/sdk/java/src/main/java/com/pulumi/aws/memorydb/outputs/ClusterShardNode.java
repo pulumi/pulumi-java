@@ -14,18 +14,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterShardNode {
     /**
-     * The Availability Zone in which the node resides.
+     * @return The Availability Zone in which the node resides.
      * 
      */
     private final @Nullable String availabilityZone;
     /**
-     * The date and time when the node was created. Example: `2022-01-01T21:00:00Z`.
+     * @return The date and time when the node was created. Example: `2022-01-01T21:00:00Z`.
      * 
      */
     private final @Nullable String createTime;
     private final @Nullable List<ClusterShardNodeEndpoint> endpoints;
     /**
-     * Name of this node.
+     * @return Name of this node.
      * * `endpoint`
      * 
      */
@@ -44,16 +44,16 @@ public final class ClusterShardNode {
     }
 
     /**
-     * The Availability Zone in which the node resides.
+     * @return The Availability Zone in which the node resides.
      * 
-    */
+     */
     public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
     /**
-     * The date and time when the node was created. Example: `2022-01-01T21:00:00Z`.
+     * @return The date and time when the node was created. Example: `2022-01-01T21:00:00Z`.
      * 
-    */
+     */
     public Optional<String> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -61,10 +61,10 @@ public final class ClusterShardNode {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
     /**
-     * Name of this node.
+     * @return Name of this node.
      * * `endpoint`
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

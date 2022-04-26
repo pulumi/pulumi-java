@@ -25,6 +25,10 @@ public final class IdentityProviderDetailsResponse extends com.pulumi.resources.
     @Import(name="aadAuthority")
     private @Nullable String aadAuthority;
 
+    /**
+     * @return The base authority for Azure Active Directory authentication.
+     * 
+     */
     public Optional<String> aadAuthority() {
         return Optional.ofNullable(this.aadAuthority);
     }
@@ -36,6 +40,10 @@ public final class IdentityProviderDetailsResponse extends com.pulumi.resources.
     @Import(name="applicationId")
     private @Nullable String applicationId;
 
+    /**
+     * @return The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -47,6 +55,10 @@ public final class IdentityProviderDetailsResponse extends com.pulumi.resources.
     @Import(name="audience")
     private @Nullable String audience;
 
+    /**
+     * @return The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
@@ -58,6 +70,10 @@ public final class IdentityProviderDetailsResponse extends com.pulumi.resources.
     @Import(name="objectId")
     private @Nullable String objectId;
 
+    /**
+     * @return The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -69,6 +85,10 @@ public final class IdentityProviderDetailsResponse extends com.pulumi.resources.
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -101,26 +121,56 @@ public final class IdentityProviderDetailsResponse extends com.pulumi.resources.
             $ = new IdentityProviderDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadAuthority The base authority for Azure Active Directory authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadAuthority(@Nullable String aadAuthority) {
             $.aadAuthority = aadAuthority;
             return this;
         }
 
+        /**
+         * @param applicationId The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable String applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param audience The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(@Nullable String audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param objectId The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;

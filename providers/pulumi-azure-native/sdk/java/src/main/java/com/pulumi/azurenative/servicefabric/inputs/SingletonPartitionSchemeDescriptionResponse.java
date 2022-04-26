@@ -25,6 +25,11 @@ public final class SingletonPartitionSchemeDescriptionResponse extends com.pulum
     @Import(name="partitionScheme", required=true)
     private String partitionScheme;
 
+    /**
+     * @return Enumerates the ways that a service can be partitioned.
+     * Expected value is &#39;Singleton&#39;.
+     * 
+     */
     public String partitionScheme() {
         return this.partitionScheme;
     }
@@ -53,6 +58,13 @@ public final class SingletonPartitionSchemeDescriptionResponse extends com.pulum
             $ = new SingletonPartitionSchemeDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partitionScheme Enumerates the ways that a service can be partitioned.
+         * Expected value is &#39;Singleton&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionScheme(String partitionScheme) {
             $.partitionScheme = partitionScheme;
             return this;

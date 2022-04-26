@@ -11,13 +11,13 @@ import java.util.Objects;
 @CustomType
 public final class WebAnonymousAuthenticationResponse {
     /**
-     * Type of authentication used to connect to the web table source.
+     * @return Type of authentication used to connect to the web table source.
      * Expected value is &#39;Anonymous&#39;.
      * 
      */
     private final String authenticationType;
     /**
-     * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+     * @return The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
      * 
      */
     private final Object url;
@@ -31,17 +31,17 @@ public final class WebAnonymousAuthenticationResponse {
     }
 
     /**
-     * Type of authentication used to connect to the web table source.
+     * @return Type of authentication used to connect to the web table source.
      * Expected value is &#39;Anonymous&#39;.
      * 
-    */
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
     /**
-     * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+     * @return The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object url() {
         return this.url;
     }

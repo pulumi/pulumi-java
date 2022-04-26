@@ -14,14 +14,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StudioComponentInitializationScript {
     /**
-     * &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid version is &#34;2021-03-31&#34;.&lt;/p&gt;
+     * @return &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid version is &#34;2021-03-31&#34;.&lt;/p&gt;
      * 
      */
     private final @Nullable String launchProfileProtocolVersion;
     private final @Nullable StudioComponentLaunchProfilePlatform platform;
     private final @Nullable StudioComponentInitializationScriptRunContext runContext;
     /**
-     * &lt;p&gt;The initialization script.&lt;/p&gt;
+     * @return &lt;p&gt;The initialization script.&lt;/p&gt;
      * 
      */
     private final @Nullable String script;
@@ -39,9 +39,9 @@ public final class StudioComponentInitializationScript {
     }
 
     /**
-     * &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid version is &#34;2021-03-31&#34;.&lt;/p&gt;
+     * @return &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid version is &#34;2021-03-31&#34;.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> launchProfileProtocolVersion() {
         return Optional.ofNullable(this.launchProfileProtocolVersion);
     }
@@ -52,9 +52,9 @@ public final class StudioComponentInitializationScript {
         return Optional.ofNullable(this.runContext);
     }
     /**
-     * &lt;p&gt;The initialization script.&lt;/p&gt;
+     * @return &lt;p&gt;The initialization script.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }

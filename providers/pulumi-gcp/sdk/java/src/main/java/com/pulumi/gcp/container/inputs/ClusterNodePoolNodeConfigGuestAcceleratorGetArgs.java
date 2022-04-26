@@ -23,6 +23,10 @@ public final class ClusterNodePoolNodeConfigGuestAcceleratorGetArgs extends com.
     @Import(name="count", required=true)
     private Output<Integer> count;
 
+    /**
+     * @return The number of the guest accelerator cards exposed to this instance.
+     * 
+     */
     public Output<Integer> count() {
         return this.count;
     }
@@ -34,6 +38,10 @@ public final class ClusterNodePoolNodeConfigGuestAcceleratorGetArgs extends com.
     @Import(name="gpuPartitionSize")
     private @Nullable Output<String> gpuPartitionSize;
 
+    /**
+     * @return Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+     * 
+     */
     public Optional<Output<String>> gpuPartitionSize() {
         return Optional.ofNullable(this.gpuPartitionSize);
     }
@@ -45,6 +53,10 @@ public final class ClusterNodePoolNodeConfigGuestAcceleratorGetArgs extends com.
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -75,29 +87,65 @@ public final class ClusterNodePoolNodeConfigGuestAcceleratorGetArgs extends com.
             $ = new ClusterNodePoolNodeConfigGuestAcceleratorGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count The number of the guest accelerator cards exposed to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count The number of the guest accelerator cards exposed to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param gpuPartitionSize Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpuPartitionSize(@Nullable Output<String> gpuPartitionSize) {
             $.gpuPartitionSize = gpuPartitionSize;
             return this;
         }
 
+        /**
+         * @param gpuPartitionSize Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpuPartitionSize(String gpuPartitionSize) {
             return gpuPartitionSize(Output.of(gpuPartitionSize));
         }
 
+        /**
+         * @param type The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

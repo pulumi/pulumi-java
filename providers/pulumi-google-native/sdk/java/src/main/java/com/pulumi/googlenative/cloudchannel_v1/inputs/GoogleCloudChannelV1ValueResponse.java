@@ -26,6 +26,10 @@ public final class GoogleCloudChannelV1ValueResponse extends com.pulumi.resource
     @Import(name="boolValue", required=true)
     private Boolean boolValue;
 
+    /**
+     * @return Represents a boolean value.
+     * 
+     */
     public Boolean boolValue() {
         return this.boolValue;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudChannelV1ValueResponse extends com.pulumi.resource
     @Import(name="doubleValue", required=true)
     private Double doubleValue;
 
+    /**
+     * @return Represents a double value.
+     * 
+     */
     public Double doubleValue() {
         return this.doubleValue;
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudChannelV1ValueResponse extends com.pulumi.resource
     @Import(name="int64Value", required=true)
     private String int64Value;
 
+    /**
+     * @return Represents an int64 value.
+     * 
+     */
     public String int64Value() {
         return this.int64Value;
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudChannelV1ValueResponse extends com.pulumi.resource
     @Import(name="protoValue", required=true)
     private Map<String,String> protoValue;
 
+    /**
+     * @return Represents an &#39;Any&#39; proto value.
+     * 
+     */
     public Map<String,String> protoValue() {
         return this.protoValue;
     }
@@ -70,6 +86,10 @@ public final class GoogleCloudChannelV1ValueResponse extends com.pulumi.resource
     @Import(name="stringValue", required=true)
     private String stringValue;
 
+    /**
+     * @return Represents a string value.
+     * 
+     */
     public String stringValue() {
         return this.stringValue;
     }
@@ -102,26 +122,56 @@ public final class GoogleCloudChannelV1ValueResponse extends com.pulumi.resource
             $ = new GoogleCloudChannelV1ValueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param boolValue Represents a boolean value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boolValue(Boolean boolValue) {
             $.boolValue = boolValue;
             return this;
         }
 
+        /**
+         * @param doubleValue Represents a double value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleValue(Double doubleValue) {
             $.doubleValue = doubleValue;
             return this;
         }
 
+        /**
+         * @param int64Value Represents an int64 value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder int64Value(String int64Value) {
             $.int64Value = int64Value;
             return this;
         }
 
+        /**
+         * @param protoValue Represents an &#39;Any&#39; proto value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protoValue(Map<String,String> protoValue) {
             $.protoValue = protoValue;
             return this;
         }
 
+        /**
+         * @param stringValue Represents a string value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(String stringValue) {
             $.stringValue = stringValue;
             return this;

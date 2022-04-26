@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobCollectionPropertiesResponse {
     /**
-     * Gets or sets the job collection quota.
+     * @return Gets or sets the job collection quota.
      * 
      */
     private final @Nullable JobCollectionQuotaResponse quota;
     /**
-     * Gets or sets the SKU.
+     * @return Gets or sets the SKU.
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * Gets or sets the state.
+     * @return Gets or sets the state.
      * 
      */
     private final @Nullable String state;
@@ -40,23 +40,23 @@ public final class JobCollectionPropertiesResponse {
     }
 
     /**
-     * Gets or sets the job collection quota.
+     * @return Gets or sets the job collection quota.
      * 
-    */
+     */
     public Optional<JobCollectionQuotaResponse> quota() {
         return Optional.ofNullable(this.quota);
     }
     /**
-     * Gets or sets the SKU.
+     * @return Gets or sets the SKU.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Gets or sets the state.
+     * @return Gets or sets the state.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

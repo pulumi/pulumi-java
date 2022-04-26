@@ -31,6 +31,10 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="aggregation")
     private @Nullable Map<String,ReportAggregationResponse> aggregation;
 
+    /**
+     * @return Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
+     * 
+     */
     public Optional<Map<String,ReportAggregationResponse>> aggregation() {
         return Optional.ofNullable(this.aggregation);
     }
@@ -42,6 +46,10 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="configuration")
     private @Nullable ReportDatasetConfigurationResponse configuration;
 
+    /**
+     * @return Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
+     * 
+     */
     public Optional<ReportDatasetConfigurationResponse> configuration() {
         return Optional.ofNullable(this.configuration);
     }
@@ -53,6 +61,10 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="filter")
     private @Nullable ReportFilterResponse filter;
 
+    /**
+     * @return Has filter expression to use in the report.
+     * 
+     */
     public Optional<ReportFilterResponse> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -64,6 +76,10 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="granularity")
     private @Nullable String granularity;
 
+    /**
+     * @return The granularity of rows in the report.
+     * 
+     */
     public Optional<String> granularity() {
         return Optional.ofNullable(this.granularity);
     }
@@ -75,6 +91,10 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="grouping")
     private @Nullable List<ReportGroupingResponse> grouping;
 
+    /**
+     * @return Array of group by expression to use in the report. Report can have up to 2 group by clauses.
+     * 
+     */
     public Optional<List<ReportGroupingResponse>> grouping() {
         return Optional.ofNullable(this.grouping);
     }
@@ -107,31 +127,67 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
             $ = new ReportDatasetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregation Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregation(@Nullable Map<String,ReportAggregationResponse> aggregation) {
             $.aggregation = aggregation;
             return this;
         }
 
+        /**
+         * @param configuration Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(@Nullable ReportDatasetConfigurationResponse configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param filter Has filter expression to use in the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable ReportFilterResponse filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param granularity The granularity of rows in the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder granularity(@Nullable String granularity) {
             $.granularity = granularity;
             return this;
         }
 
+        /**
+         * @param grouping Array of group by expression to use in the report. Report can have up to 2 group by clauses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grouping(@Nullable List<ReportGroupingResponse> grouping) {
             $.grouping = grouping;
             return this;
         }
 
+        /**
+         * @param grouping Array of group by expression to use in the report. Report can have up to 2 group by clauses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grouping(ReportGroupingResponse... grouping) {
             return grouping(List.of(grouping));
         }

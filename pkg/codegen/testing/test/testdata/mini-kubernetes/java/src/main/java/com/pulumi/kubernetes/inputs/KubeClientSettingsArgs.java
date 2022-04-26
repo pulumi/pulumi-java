@@ -28,6 +28,10 @@ public final class KubeClientSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="burst")
     private @Nullable Output<Integer> burst;
 
+    /**
+     * @return Maximum burst for throttle. Default value is 10.
+     * 
+     */
     public Optional<Output<Integer>> burst() {
         return Optional.ofNullable(this.burst);
     }
@@ -39,6 +43,10 @@ public final class KubeClientSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="qps")
     private @Nullable Output<Double> qps;
 
+    /**
+     * @return Maximum queries per second (QPS) to the API server from this client. Default value is 5.
+     * 
+     */
     public Optional<Output<Double>> qps() {
         return Optional.ofNullable(this.qps);
     }
@@ -68,20 +76,44 @@ public final class KubeClientSettingsArgs extends com.pulumi.resources.ResourceA
             $ = new KubeClientSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param burst Maximum burst for throttle. Default value is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder burst(@Nullable Output<Integer> burst) {
             $.burst = burst;
             return this;
         }
 
+        /**
+         * @param burst Maximum burst for throttle. Default value is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder burst(Integer burst) {
             return burst(Output.of(burst));
         }
 
+        /**
+         * @param qps Maximum queries per second (QPS) to the API server from this client. Default value is 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder qps(@Nullable Output<Double> qps) {
             $.qps = qps;
             return this;
         }
 
+        /**
+         * @param qps Maximum queries per second (QPS) to the API server from this client. Default value is 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder qps(Double qps) {
             return qps(Output.of(qps));
         }

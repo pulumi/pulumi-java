@@ -24,6 +24,10 @@ public final class ObbFileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="obb", required=true)
     private FileReferenceResponse obb;
 
+    /**
+     * @return Opaque Binary Blob (OBB) file(s) to install on the device.
+     * 
+     */
     public FileReferenceResponse obb() {
         return this.obb;
     }
@@ -35,6 +39,10 @@ public final class ObbFileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="obbFileName", required=true)
     private String obbFileName;
 
+    /**
+     * @return OBB file name which must conform to the format as specified by Android e.g. [main|patch].0300110.com.example.android.obb which will be installed into \/Android/obb/\/ on the device.
+     * 
+     */
     public String obbFileName() {
         return this.obbFileName;
     }
@@ -64,11 +72,23 @@ public final class ObbFileResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ObbFileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param obb Opaque Binary Blob (OBB) file(s) to install on the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder obb(FileReferenceResponse obb) {
             $.obb = obb;
             return this;
         }
 
+        /**
+         * @param obbFileName OBB file name which must conform to the format as specified by Android e.g. [main|patch].0300110.com.example.android.obb which will be installed into \/Android/obb/\/ on the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder obbFileName(String obbFileName) {
             $.obbFileName = obbFileName;
             return this;

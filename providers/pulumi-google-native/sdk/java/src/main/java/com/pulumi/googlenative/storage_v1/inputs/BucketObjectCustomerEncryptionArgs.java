@@ -26,6 +26,10 @@ public final class BucketObjectCustomerEncryptionArgs extends com.pulumi.resourc
     @Import(name="encryptionAlgorithm")
     private @Nullable Output<String> encryptionAlgorithm;
 
+    /**
+     * @return The encryption algorithm.
+     * 
+     */
     public Optional<Output<String>> encryptionAlgorithm() {
         return Optional.ofNullable(this.encryptionAlgorithm);
     }
@@ -37,6 +41,10 @@ public final class BucketObjectCustomerEncryptionArgs extends com.pulumi.resourc
     @Import(name="keySha256")
     private @Nullable Output<String> keySha256;
 
+    /**
+     * @return SHA256 hash value of the encryption key.
+     * 
+     */
     public Optional<Output<String>> keySha256() {
         return Optional.ofNullable(this.keySha256);
     }
@@ -66,20 +74,44 @@ public final class BucketObjectCustomerEncryptionArgs extends com.pulumi.resourc
             $ = new BucketObjectCustomerEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionAlgorithm The encryption algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(@Nullable Output<String> encryptionAlgorithm) {
             $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
 
+        /**
+         * @param encryptionAlgorithm The encryption algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             return encryptionAlgorithm(Output.of(encryptionAlgorithm));
         }
 
+        /**
+         * @param keySha256 SHA256 hash value of the encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySha256(@Nullable Output<String> keySha256) {
             $.keySha256 = keySha256;
             return this;
         }
 
+        /**
+         * @param keySha256 SHA256 hash value of the encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySha256(String keySha256) {
             return keySha256(Output.of(keySha256));
         }

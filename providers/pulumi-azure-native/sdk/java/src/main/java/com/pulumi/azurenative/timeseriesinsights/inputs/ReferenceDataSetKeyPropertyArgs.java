@@ -28,6 +28,10 @@ public final class ReferenceDataSetKeyPropertyArgs extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the key property.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -39,6 +43,10 @@ public final class ReferenceDataSetKeyPropertyArgs extends com.pulumi.resources.
     @Import(name="type")
     private @Nullable Output<Either<String,ReferenceDataKeyPropertyType>> type;
 
+    /**
+     * @return The type of the key property.
+     * 
+     */
     public Optional<Output<Either<String,ReferenceDataKeyPropertyType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -68,28 +76,64 @@ public final class ReferenceDataSetKeyPropertyArgs extends com.pulumi.resources.
             $ = new ReferenceDataSetKeyPropertyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the key property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the key property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type The type of the key property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ReferenceDataKeyPropertyType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the key property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ReferenceDataKeyPropertyType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of the key property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of the key property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ReferenceDataKeyPropertyType type) {
             return type(Either.ofRight(type));
         }

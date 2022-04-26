@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class RuleGroupCustomRequestHandling {
     /**
-     * Collection of HTTP headers.
+     * @return Collection of HTTP headers.
      * 
      */
     private final List<RuleGroupCustomHTTPHeader> insertHeaders;
@@ -22,9 +22,9 @@ public final class RuleGroupCustomRequestHandling {
     }
 
     /**
-     * Collection of HTTP headers.
+     * @return Collection of HTTP headers.
      * 
-    */
+     */
     public List<RuleGroupCustomHTTPHeader> insertHeaders() {
         return this.insertHeaders;
     }

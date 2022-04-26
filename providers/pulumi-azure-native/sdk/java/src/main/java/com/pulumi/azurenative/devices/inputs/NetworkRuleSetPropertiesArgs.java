@@ -32,6 +32,10 @@ public final class NetworkRuleSetPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="applyToBuiltInEventHubEndpoint", required=true)
     private Output<Boolean> applyToBuiltInEventHubEndpoint;
 
+    /**
+     * @return If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub
+     * 
+     */
     public Output<Boolean> applyToBuiltInEventHubEndpoint() {
         return this.applyToBuiltInEventHubEndpoint;
     }
@@ -43,6 +47,10 @@ public final class NetworkRuleSetPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="defaultAction")
     private @Nullable Output<Either<String,DefaultAction>> defaultAction;
 
+    /**
+     * @return Default Action for Network Rule Set
+     * 
+     */
     public Optional<Output<Either<String,DefaultAction>>> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
@@ -54,6 +62,10 @@ public final class NetworkRuleSetPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="ipRules", required=true)
     private Output<List<NetworkRuleSetIpRuleArgs>> ipRules;
 
+    /**
+     * @return List of IP Rules
+     * 
+     */
     public Output<List<NetworkRuleSetIpRuleArgs>> ipRules() {
         return this.ipRules;
     }
@@ -84,41 +96,95 @@ public final class NetworkRuleSetPropertiesArgs extends com.pulumi.resources.Res
             $ = new NetworkRuleSetPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applyToBuiltInEventHubEndpoint If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyToBuiltInEventHubEndpoint(Output<Boolean> applyToBuiltInEventHubEndpoint) {
             $.applyToBuiltInEventHubEndpoint = applyToBuiltInEventHubEndpoint;
             return this;
         }
 
+        /**
+         * @param applyToBuiltInEventHubEndpoint If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyToBuiltInEventHubEndpoint(Boolean applyToBuiltInEventHubEndpoint) {
             return applyToBuiltInEventHubEndpoint(Output.of(applyToBuiltInEventHubEndpoint));
         }
 
+        /**
+         * @param defaultAction Default Action for Network Rule Set
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(@Nullable Output<Either<String,DefaultAction>> defaultAction) {
             $.defaultAction = defaultAction;
             return this;
         }
 
+        /**
+         * @param defaultAction Default Action for Network Rule Set
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(Either<String,DefaultAction> defaultAction) {
             return defaultAction(Output.of(defaultAction));
         }
 
+        /**
+         * @param defaultAction Default Action for Network Rule Set
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(String defaultAction) {
             return defaultAction(Either.ofLeft(defaultAction));
         }
 
+        /**
+         * @param defaultAction Default Action for Network Rule Set
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(DefaultAction defaultAction) {
             return defaultAction(Either.ofRight(defaultAction));
         }
 
+        /**
+         * @param ipRules List of IP Rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(Output<List<NetworkRuleSetIpRuleArgs>> ipRules) {
             $.ipRules = ipRules;
             return this;
         }
 
+        /**
+         * @param ipRules List of IP Rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(List<NetworkRuleSetIpRuleArgs> ipRules) {
             return ipRules(Output.of(ipRules));
         }
 
+        /**
+         * @param ipRules List of IP Rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(NetworkRuleSetIpRuleArgs... ipRules) {
             return ipRules(List.of(ipRules));
         }

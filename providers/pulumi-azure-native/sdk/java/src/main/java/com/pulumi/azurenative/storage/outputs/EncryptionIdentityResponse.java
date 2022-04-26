@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EncryptionIdentityResponse {
     /**
-     * Resource identifier of the UserAssigned identity to be associated with server-side encryption on the storage account.
+     * @return Resource identifier of the UserAssigned identity to be associated with server-side encryption on the storage account.
      * 
      */
     private final @Nullable String encryptionUserAssignedIdentity;
@@ -23,9 +23,9 @@ public final class EncryptionIdentityResponse {
     }
 
     /**
-     * Resource identifier of the UserAssigned identity to be associated with server-side encryption on the storage account.
+     * @return Resource identifier of the UserAssigned identity to be associated with server-side encryption on the storage account.
      * 
-    */
+     */
     public Optional<String> encryptionUserAssignedIdentity() {
         return Optional.ofNullable(this.encryptionUserAssignedIdentity);
     }

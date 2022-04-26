@@ -19,6 +19,10 @@ public final class GetOrganizationalUnitsChildren extends com.pulumi.resources.I
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return ARN of the organizational unit
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -30,6 +34,10 @@ public final class GetOrganizationalUnitsChildren extends com.pulumi.resources.I
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Parent identifier of the organizational units.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -41,6 +49,10 @@ public final class GetOrganizationalUnitsChildren extends com.pulumi.resources.I
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the organizational unit
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -71,16 +83,34 @@ public final class GetOrganizationalUnitsChildren extends com.pulumi.resources.I
             $ = new GetOrganizationalUnitsChildren(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn ARN of the organizational unit
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param id Parent identifier of the organizational units.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the organizational unit
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

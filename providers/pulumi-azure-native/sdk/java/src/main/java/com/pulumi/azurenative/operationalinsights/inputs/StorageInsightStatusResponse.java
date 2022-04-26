@@ -25,6 +25,10 @@ public final class StorageInsightStatusResponse extends com.pulumi.resources.Inv
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the state of the storage insight.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class StorageInsightStatusResponse extends com.pulumi.resources.Inv
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The state of the storage insight connection to the workspace
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -65,11 +73,23 @@ public final class StorageInsightStatusResponse extends com.pulumi.resources.Inv
             $ = new StorageInsightStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the state of the storage insight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param state The state of the storage insight connection to the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

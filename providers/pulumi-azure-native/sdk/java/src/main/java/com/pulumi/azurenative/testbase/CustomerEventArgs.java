@@ -24,6 +24,10 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerEventName")
     private @Nullable Output<String> customerEventName;
 
+    /**
+     * @return The resource name of the Test Base Customer event.
+     * 
+     */
     public Optional<Output<String>> customerEventName() {
         return Optional.ofNullable(this.customerEventName);
     }
@@ -35,6 +39,10 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventName", required=true)
     private Output<String> eventName;
 
+    /**
+     * @return The name of the event subscribed to.
+     * 
+     */
     public Output<String> eventName() {
         return this.eventName;
     }
@@ -46,6 +54,10 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="receivers", required=true)
     private Output<List<NotificationEventReceiverArgs>> receivers;
 
+    /**
+     * @return The notification event receivers.
+     * 
+     */
     public Output<List<NotificationEventReceiverArgs>> receivers() {
         return this.receivers;
     }
@@ -57,6 +69,10 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="testBaseAccountName", required=true)
     private Output<String> testBaseAccountName;
 
+    /**
+     * @return The resource name of the Test Base Account.
+     * 
+     */
     public Output<String> testBaseAccountName() {
         return this.testBaseAccountName;
     }
@@ -100,51 +120,117 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CustomerEventArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customerEventName The resource name of the Test Base Customer event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerEventName(@Nullable Output<String> customerEventName) {
             $.customerEventName = customerEventName;
             return this;
         }
 
+        /**
+         * @param customerEventName The resource name of the Test Base Customer event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerEventName(String customerEventName) {
             return customerEventName(Output.of(customerEventName));
         }
 
+        /**
+         * @param eventName The name of the event subscribed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventName(Output<String> eventName) {
             $.eventName = eventName;
             return this;
         }
 
+        /**
+         * @param eventName The name of the event subscribed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventName(String eventName) {
             return eventName(Output.of(eventName));
         }
 
+        /**
+         * @param receivers The notification event receivers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receivers(Output<List<NotificationEventReceiverArgs>> receivers) {
             $.receivers = receivers;
             return this;
         }
 
+        /**
+         * @param receivers The notification event receivers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receivers(List<NotificationEventReceiverArgs> receivers) {
             return receivers(Output.of(receivers));
         }
 
+        /**
+         * @param receivers The notification event receivers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receivers(NotificationEventReceiverArgs... receivers) {
             return receivers(List.of(receivers));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testBaseAccountName(Output<String> testBaseAccountName) {
             $.testBaseAccountName = testBaseAccountName;
             return this;
         }
 
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testBaseAccountName(String testBaseAccountName) {
             return testBaseAccountName(Output.of(testBaseAccountName));
         }

@@ -26,6 +26,10 @@ public final class MongoIndexResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="key")
     private @Nullable MongoIndexKeysResponse key;
 
+    /**
+     * @return Cosmos DB MongoDB collection index keys
+     * 
+     */
     public Optional<MongoIndexKeysResponse> key() {
         return Optional.ofNullable(this.key);
     }
@@ -37,6 +41,10 @@ public final class MongoIndexResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="options")
     private @Nullable MongoIndexOptionsResponse options;
 
+    /**
+     * @return Cosmos DB MongoDB collection index key options
+     * 
+     */
     public Optional<MongoIndexOptionsResponse> options() {
         return Optional.ofNullable(this.options);
     }
@@ -66,11 +74,23 @@ public final class MongoIndexResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MongoIndexResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Cosmos DB MongoDB collection index keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable MongoIndexKeysResponse key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param options Cosmos DB MongoDB collection index key options
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable MongoIndexOptionsResponse options) {
             $.options = options;
             return this;

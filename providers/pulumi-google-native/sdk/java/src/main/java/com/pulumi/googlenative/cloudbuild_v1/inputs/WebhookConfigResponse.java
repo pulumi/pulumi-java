@@ -23,6 +23,10 @@ public final class WebhookConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="secret", required=true)
     private String secret;
 
+    /**
+     * @return Resource name for the secret required as a URL parameter.
+     * 
+     */
     public String secret() {
         return this.secret;
     }
@@ -34,6 +38,10 @@ public final class WebhookConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -63,11 +71,23 @@ public final class WebhookConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new WebhookConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secret Resource name for the secret required as a URL parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param state Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

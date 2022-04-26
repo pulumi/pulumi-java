@@ -23,6 +23,10 @@ public final class SoftwareRecipeStepInstallRpmResponse extends com.pulumi.resou
     @Import(name="artifactId", required=true)
     private String artifactId;
 
+    /**
+     * @return The id of the relevant artifact in the recipe.
+     * 
+     */
     public String artifactId() {
         return this.artifactId;
     }
@@ -51,6 +55,12 @@ public final class SoftwareRecipeStepInstallRpmResponse extends com.pulumi.resou
             $ = new SoftwareRecipeStepInstallRpmResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactId The id of the relevant artifact in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactId(String artifactId) {
             $.artifactId = artifactId;
             return this;

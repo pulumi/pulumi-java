@@ -21,6 +21,11 @@ public final class PreventionInspectTemplateInspectConfigInfoTypeArgs extends co
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+     * or `projects/project-id/storedInfoTypes/432452342`.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -49,11 +54,25 @@ public final class PreventionInspectTemplateInspectConfigInfoTypeArgs extends co
             $ = new PreventionInspectTemplateInspectConfigInfoTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+         * or `projects/project-id/storedInfoTypes/432452342`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+         * or `projects/project-id/storedInfoTypes/432452342`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

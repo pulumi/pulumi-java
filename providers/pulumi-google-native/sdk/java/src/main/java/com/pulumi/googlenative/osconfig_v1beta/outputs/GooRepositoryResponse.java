@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GooRepositoryResponse {
     /**
-     * The name of the repository.
+     * @return The name of the repository.
      * 
      */
     private final String name;
     /**
-     * The url of the repository.
+     * @return The url of the repository.
      * 
      */
     private final String url;
@@ -29,16 +29,16 @@ public final class GooRepositoryResponse {
     }
 
     /**
-     * The name of the repository.
+     * @return The name of the repository.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The url of the repository.
+     * @return The url of the repository.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

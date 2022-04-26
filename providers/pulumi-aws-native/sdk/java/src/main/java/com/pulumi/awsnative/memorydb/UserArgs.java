@@ -25,6 +25,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessString", required=true)
     private Output<String> accessString;
 
+    /**
+     * @return Access permissions string used for this user account.
+     * 
+     */
     public Output<String> accessString() {
         return this.accessString;
     }
@@ -43,6 +47,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<UserTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this user.
+     * 
+     */
     public Optional<Output<List<UserTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -54,6 +62,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName")
     private @Nullable Output<String> userName;
 
+    /**
+     * @return The name of the user.
+     * 
+     */
     public Optional<Output<String>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -85,11 +97,23 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessString Access permissions string used for this user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessString(Output<String> accessString) {
             $.accessString = accessString;
             return this;
         }
 
+        /**
+         * @param accessString Access permissions string used for this user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessString(String accessString) {
             return accessString(Output.of(accessString));
         }
@@ -103,24 +127,54 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
             return authenticationMode(Output.of(authenticationMode));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<UserTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<UserTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(UserTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param userName The name of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName The name of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

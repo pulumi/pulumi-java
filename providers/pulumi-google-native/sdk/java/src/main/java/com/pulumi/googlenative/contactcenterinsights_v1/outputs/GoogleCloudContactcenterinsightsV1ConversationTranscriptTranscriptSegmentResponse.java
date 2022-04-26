@@ -17,47 +17,47 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse {
     /**
-     * For conversations derived from multi-channel audio, this is the channel number corresponding to the audio from that channel. For audioChannelCount = N, its output values can range from &#39;1&#39; to &#39;N&#39;. A channel tag of 0 indicates that the audio is mono.
+     * @return For conversations derived from multi-channel audio, this is the channel number corresponding to the audio from that channel. For audioChannelCount = N, its output values can range from &#39;1&#39; to &#39;N&#39;. A channel tag of 0 indicates that the audio is mono.
      * 
      */
     private final Integer channelTag;
     /**
-     * A confidence estimate between 0.0 and 1.0 of the fidelity of this segment. A default value of 0.0 indicates that the value is unset.
+     * @return A confidence estimate between 0.0 and 1.0 of the fidelity of this segment. A default value of 0.0 indicates that the value is unset.
      * 
      */
     private final Double confidence;
     /**
-     * CCAI metadata relating to the current transcript segment.
+     * @return CCAI metadata relating to the current transcript segment.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata;
     /**
-     * The language code of this segment as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: &#34;en-US&#34;.
+     * @return The language code of this segment as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: &#34;en-US&#34;.
      * 
      */
     private final String languageCode;
     /**
-     * The time that the message occurred, if provided.
+     * @return The time that the message occurred, if provided.
      * 
      */
     private final String messageTime;
     /**
-     * The participant of this segment.
+     * @return The participant of this segment.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant;
     /**
-     * The sentiment for this transcript segment.
+     * @return The sentiment for this transcript segment.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
     /**
-     * The text of this segment.
+     * @return The text of this segment.
      * 
      */
     private final String text;
     /**
-     * A list of the word-specific information for each word in the segment.
+     * @return A list of the word-specific information for each word in the segment.
      * 
      */
     private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words;
@@ -85,65 +85,65 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     }
 
     /**
-     * For conversations derived from multi-channel audio, this is the channel number corresponding to the audio from that channel. For audioChannelCount = N, its output values can range from &#39;1&#39; to &#39;N&#39;. A channel tag of 0 indicates that the audio is mono.
+     * @return For conversations derived from multi-channel audio, this is the channel number corresponding to the audio from that channel. For audioChannelCount = N, its output values can range from &#39;1&#39; to &#39;N&#39;. A channel tag of 0 indicates that the audio is mono.
      * 
-    */
+     */
     public Integer channelTag() {
         return this.channelTag;
     }
     /**
-     * A confidence estimate between 0.0 and 1.0 of the fidelity of this segment. A default value of 0.0 indicates that the value is unset.
+     * @return A confidence estimate between 0.0 and 1.0 of the fidelity of this segment. A default value of 0.0 indicates that the value is unset.
      * 
-    */
+     */
     public Double confidence() {
         return this.confidence;
     }
     /**
-     * CCAI metadata relating to the current transcript segment.
+     * @return CCAI metadata relating to the current transcript segment.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata() {
         return this.dialogflowSegmentMetadata;
     }
     /**
-     * The language code of this segment as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: &#34;en-US&#34;.
+     * @return The language code of this segment as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: &#34;en-US&#34;.
      * 
-    */
+     */
     public String languageCode() {
         return this.languageCode;
     }
     /**
-     * The time that the message occurred, if provided.
+     * @return The time that the message occurred, if provided.
      * 
-    */
+     */
     public String messageTime() {
         return this.messageTime;
     }
     /**
-     * The participant of this segment.
+     * @return The participant of this segment.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant() {
         return this.segmentParticipant;
     }
     /**
-     * The sentiment for this transcript segment.
+     * @return The sentiment for this transcript segment.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment() {
         return this.sentiment;
     }
     /**
-     * The text of this segment.
+     * @return The text of this segment.
      * 
-    */
+     */
     public String text() {
         return this.text;
     }
     /**
-     * A list of the word-specific information for each word in the segment.
+     * @return A list of the word-specific information for each word in the segment.
      * 
-    */
+     */
     public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words() {
         return this.words;
     }

@@ -29,6 +29,10 @@ public final class VirtualNetworkGatewaySkuArgs extends com.pulumi.resources.Res
     @Import(name="name")
     private @Nullable Output<Either<String,VirtualNetworkGatewaySkuName>> name;
 
+    /**
+     * @return Gateway SKU name.
+     * 
+     */
     public Optional<Output<Either<String,VirtualNetworkGatewaySkuName>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -40,6 +44,10 @@ public final class VirtualNetworkGatewaySkuArgs extends com.pulumi.resources.Res
     @Import(name="tier")
     private @Nullable Output<Either<String,VirtualNetworkGatewaySkuTier>> tier;
 
+    /**
+     * @return Gateway SKU tier.
+     * 
+     */
     public Optional<Output<Either<String,VirtualNetworkGatewaySkuTier>>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -69,36 +77,84 @@ public final class VirtualNetworkGatewaySkuArgs extends com.pulumi.resources.Res
             $ = new VirtualNetworkGatewaySkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Gateway SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,VirtualNetworkGatewaySkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gateway SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,VirtualNetworkGatewaySkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Gateway SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Gateway SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(VirtualNetworkGatewaySkuName name) {
             return name(Either.ofRight(name));
         }
 
+        /**
+         * @param tier Gateway SKU tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Either<String,VirtualNetworkGatewaySkuTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Gateway SKU tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,VirtualNetworkGatewaySkuTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier Gateway SKU tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier Gateway SKU tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(VirtualNetworkGatewaySkuTier tier) {
             return tier(Either.ofRight(tier));
         }

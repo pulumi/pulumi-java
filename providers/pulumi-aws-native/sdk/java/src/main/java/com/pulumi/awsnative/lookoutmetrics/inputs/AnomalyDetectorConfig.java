@@ -19,6 +19,10 @@ public final class AnomalyDetectorConfig extends com.pulumi.resources.InvokeArgs
     @Import(name="anomalyDetectorFrequency", required=true)
     private AnomalyDetectorFrequency anomalyDetectorFrequency;
 
+    /**
+     * @return Frequency of anomaly detection
+     * 
+     */
     public AnomalyDetectorFrequency anomalyDetectorFrequency() {
         return this.anomalyDetectorFrequency;
     }
@@ -47,6 +51,12 @@ public final class AnomalyDetectorConfig extends com.pulumi.resources.InvokeArgs
             $ = new AnomalyDetectorConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param anomalyDetectorFrequency Frequency of anomaly detection
+         * 
+         * @return builder
+         * 
+         */
         public Builder anomalyDetectorFrequency(AnomalyDetectorFrequency anomalyDetectorFrequency) {
             $.anomalyDetectorFrequency = anomalyDetectorFrequency;
             return this;

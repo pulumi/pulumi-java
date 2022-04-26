@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDashboardResult {
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
      */
     private final @Nullable String arn;
     /**
-     * &lt;p&gt;The last time that this dataset was published.&lt;/p&gt;
+     * @return &lt;p&gt;The last time that this dataset was published.&lt;/p&gt;
      * 
      */
     private final @Nullable String lastPublishedTime;
     /**
-     * &lt;p&gt;The display name of the dashboard.&lt;/p&gt;
+     * @return &lt;p&gt;The display name of the dashboard.&lt;/p&gt;
      * 
      */
     private final @Nullable String name;
     /**
-     * &lt;p&gt;A structure that contains the permissions of the dashboard. You can use this structure
+     * @return &lt;p&gt;A structure that contains the permissions of the dashboard. You can use this structure
      *             for granting permissions by providing a list of IAM action information for each
      *             principal ARN. &lt;/p&gt;
      * 
@@ -39,7 +39,7 @@ public final class GetDashboardResult {
      */
     private final @Nullable List<DashboardResourcePermission> permissions;
     /**
-     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
      *             dashboard.&lt;/p&gt;
      * 
      */
@@ -60,42 +60,42 @@ public final class GetDashboardResult {
     }
 
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * &lt;p&gt;The last time that this dataset was published.&lt;/p&gt;
+     * @return &lt;p&gt;The last time that this dataset was published.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> lastPublishedTime() {
         return Optional.ofNullable(this.lastPublishedTime);
     }
     /**
-     * &lt;p&gt;The display name of the dashboard.&lt;/p&gt;
+     * @return &lt;p&gt;The display name of the dashboard.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * &lt;p&gt;A structure that contains the permissions of the dashboard. You can use this structure
+     * @return &lt;p&gt;A structure that contains the permissions of the dashboard. You can use this structure
      *             for granting permissions by providing a list of IAM action information for each
      *             principal ARN. &lt;/p&gt;
      * 
      *         &lt;p&gt;To specify no permissions, omit the permissions list.&lt;/p&gt;
      * 
-    */
+     */
     public List<DashboardResourcePermission> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
-     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
      *             dashboard.&lt;/p&gt;
      * 
-    */
+     */
     public List<DashboardTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

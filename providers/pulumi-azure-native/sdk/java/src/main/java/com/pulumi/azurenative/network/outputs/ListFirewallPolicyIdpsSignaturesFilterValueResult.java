@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListFirewallPolicyIdpsSignaturesFilterValueResult {
     /**
-     * Describes the possible values
+     * @return Describes the possible values
      * 
      */
     private final @Nullable List<String> filterValues;
@@ -23,9 +23,9 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueResult {
     }
 
     /**
-     * Describes the possible values
+     * @return Describes the possible values
      * 
-    */
+     */
     public List<String> filterValues() {
         return this.filterValues == null ? List.of() : this.filterValues;
     }

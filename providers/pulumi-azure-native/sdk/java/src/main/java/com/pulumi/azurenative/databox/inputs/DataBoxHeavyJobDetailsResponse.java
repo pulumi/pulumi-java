@@ -41,6 +41,10 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="chainOfCustodySasKey", required=true)
     private String chainOfCustodySasKey;
 
+    /**
+     * @return Shared access key to download the chain of custody logs
+     * 
+     */
     public String chainOfCustodySasKey() {
         return this.chainOfCustodySasKey;
     }
@@ -52,6 +56,10 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="contactDetails", required=true)
     private ContactDetailsResponse contactDetails;
 
+    /**
+     * @return Contact details for notification and shipping.
+     * 
+     */
     public ContactDetailsResponse contactDetails() {
         return this.contactDetails;
     }
@@ -63,6 +71,10 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="copyLogDetails", required=true)
     private List<Object> copyLogDetails;
 
+    /**
+     * @return List of copy log details.
+     * 
+     */
     public List<Object> copyLogDetails() {
         return this.copyLogDetails;
     }
@@ -74,6 +86,10 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="copyProgress", required=true)
     private List<CopyProgressResponse> copyProgress;
 
+    /**
+     * @return Copy progress per account.
+     * 
+     */
     public List<CopyProgressResponse> copyProgress() {
         return this.copyProgress;
     }
@@ -85,6 +101,10 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="dataExportDetails")
     private @Nullable List<DataExportDetailsResponse> dataExportDetails;
 
+    /**
+     * @return Details of the data to be exported from azure.
+     * 
+     */
     public Optional<List<DataExportDetailsResponse>> dataExportDetails() {
         return Optional.ofNullable(this.dataExportDetails);
     }
@@ -96,6 +116,10 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="dataImportDetails")
     private @Nullable List<DataImportDetailsResponse> dataImportDetails;
 
+    /**
+     * @return Details of the data to be imported into azure.
+     * 
+     */
     public Optional<List<DataImportDetailsResponse>> dataImportDetails() {
         return Optional.ofNullable(this.dataImportDetails);
     }
@@ -107,6 +131,10 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="deliveryPackage", required=true)
     private PackageShippingDetailsResponse deliveryPackage;
 
+    /**
+     * @return Delivery package shipping details.
+     * 
+     */
     public PackageShippingDetailsResponse deliveryPackage() {
         return this.deliveryPackage;
     }
@@ -118,6 +146,10 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="devicePassword")
     private @Nullable String devicePassword;
 
+    /**
+     * @return Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+     * 
+     */
     public Optional<String> devicePassword() {
         return Optional.ofNullable(this.devicePassword);
     }
@@ -129,6 +161,10 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="expectedDataSizeInTeraBytes")
     private @Nullable Integer expectedDataSizeInTeraBytes;
 
+    /**
+     * @return The expected size of the data, which needs to be transferred in this job, in terabytes.
+     * 
+     */
     public Optional<Integer> expectedDataSizeInTeraBytes() {
         return Optional.ofNullable(this.expectedDataSizeInTeraBytes);
     }
@@ -141,6 +177,11 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="jobDetailsType", required=true)
     private String jobDetailsType;
 
+    /**
+     * @return Indicates the type of job details.
+     * Expected value is &#39;DataBoxHeavy&#39;.
+     * 
+     */
     public String jobDetailsType() {
         return this.jobDetailsType;
     }
@@ -152,6 +193,10 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="jobStages", required=true)
     private List<JobStagesResponse> jobStages;
 
+    /**
+     * @return List of stages that run in the job.
+     * 
+     */
     public List<JobStagesResponse> jobStages() {
         return this.jobStages;
     }
@@ -163,6 +208,10 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="keyEncryptionKey")
     private @Nullable KeyEncryptionKeyResponse keyEncryptionKey;
 
+    /**
+     * @return Details about which key encryption type is being used.
+     * 
+     */
     public Optional<KeyEncryptionKeyResponse> keyEncryptionKey() {
         return Optional.ofNullable(this.keyEncryptionKey);
     }
@@ -174,6 +223,10 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="preferences")
     private @Nullable PreferencesResponse preferences;
 
+    /**
+     * @return Preferences for the order.
+     * 
+     */
     public Optional<PreferencesResponse> preferences() {
         return Optional.ofNullable(this.preferences);
     }
@@ -185,6 +238,10 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="returnPackage", required=true)
     private PackageShippingDetailsResponse returnPackage;
 
+    /**
+     * @return Return package shipping details.
+     * 
+     */
     public PackageShippingDetailsResponse returnPackage() {
         return this.returnPackage;
     }
@@ -196,6 +253,10 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="reverseShipmentLabelSasKey", required=true)
     private String reverseShipmentLabelSasKey;
 
+    /**
+     * @return Shared access key to download the return shipment label
+     * 
+     */
     public String reverseShipmentLabelSasKey() {
         return this.reverseShipmentLabelSasKey;
     }
@@ -207,6 +268,10 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
     @Import(name="shippingAddress")
     private @Nullable ShippingAddressResponse shippingAddress;
 
+    /**
+     * @return Shipping address of the customer.
+     * 
+     */
     public Optional<ShippingAddressResponse> shippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }
@@ -250,101 +315,228 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
             $ = new DataBoxHeavyJobDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param chainOfCustodySasKey Shared access key to download the chain of custody logs
+         * 
+         * @return builder
+         * 
+         */
         public Builder chainOfCustodySasKey(String chainOfCustodySasKey) {
             $.chainOfCustodySasKey = chainOfCustodySasKey;
             return this;
         }
 
+        /**
+         * @param contactDetails Contact details for notification and shipping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactDetails(ContactDetailsResponse contactDetails) {
             $.contactDetails = contactDetails;
             return this;
         }
 
+        /**
+         * @param copyLogDetails List of copy log details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyLogDetails(List<Object> copyLogDetails) {
             $.copyLogDetails = copyLogDetails;
             return this;
         }
 
+        /**
+         * @param copyLogDetails List of copy log details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyLogDetails(Object... copyLogDetails) {
             return copyLogDetails(List.of(copyLogDetails));
         }
 
+        /**
+         * @param copyProgress Copy progress per account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyProgress(List<CopyProgressResponse> copyProgress) {
             $.copyProgress = copyProgress;
             return this;
         }
 
+        /**
+         * @param copyProgress Copy progress per account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyProgress(CopyProgressResponse... copyProgress) {
             return copyProgress(List.of(copyProgress));
         }
 
+        /**
+         * @param dataExportDetails Details of the data to be exported from azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataExportDetails(@Nullable List<DataExportDetailsResponse> dataExportDetails) {
             $.dataExportDetails = dataExportDetails;
             return this;
         }
 
+        /**
+         * @param dataExportDetails Details of the data to be exported from azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataExportDetails(DataExportDetailsResponse... dataExportDetails) {
             return dataExportDetails(List.of(dataExportDetails));
         }
 
+        /**
+         * @param dataImportDetails Details of the data to be imported into azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataImportDetails(@Nullable List<DataImportDetailsResponse> dataImportDetails) {
             $.dataImportDetails = dataImportDetails;
             return this;
         }
 
+        /**
+         * @param dataImportDetails Details of the data to be imported into azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataImportDetails(DataImportDetailsResponse... dataImportDetails) {
             return dataImportDetails(List.of(dataImportDetails));
         }
 
+        /**
+         * @param deliveryPackage Delivery package shipping details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryPackage(PackageShippingDetailsResponse deliveryPackage) {
             $.deliveryPackage = deliveryPackage;
             return this;
         }
 
+        /**
+         * @param devicePassword Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+         * 
+         * @return builder
+         * 
+         */
         public Builder devicePassword(@Nullable String devicePassword) {
             $.devicePassword = devicePassword;
             return this;
         }
 
+        /**
+         * @param expectedDataSizeInTeraBytes The expected size of the data, which needs to be transferred in this job, in terabytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedDataSizeInTeraBytes(@Nullable Integer expectedDataSizeInTeraBytes) {
             $.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
             return this;
         }
 
+        /**
+         * @param jobDetailsType Indicates the type of job details.
+         * Expected value is &#39;DataBoxHeavy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobDetailsType(String jobDetailsType) {
             $.jobDetailsType = jobDetailsType;
             return this;
         }
 
+        /**
+         * @param jobStages List of stages that run in the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobStages(List<JobStagesResponse> jobStages) {
             $.jobStages = jobStages;
             return this;
         }
 
+        /**
+         * @param jobStages List of stages that run in the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobStages(JobStagesResponse... jobStages) {
             return jobStages(List.of(jobStages));
         }
 
+        /**
+         * @param keyEncryptionKey Details about which key encryption type is being used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyEncryptionKey(@Nullable KeyEncryptionKeyResponse keyEncryptionKey) {
             $.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
 
+        /**
+         * @param preferences Preferences for the order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferences(@Nullable PreferencesResponse preferences) {
             $.preferences = preferences;
             return this;
         }
 
+        /**
+         * @param returnPackage Return package shipping details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnPackage(PackageShippingDetailsResponse returnPackage) {
             $.returnPackage = returnPackage;
             return this;
         }
 
+        /**
+         * @param reverseShipmentLabelSasKey Shared access key to download the return shipment label
+         * 
+         * @return builder
+         * 
+         */
         public Builder reverseShipmentLabelSasKey(String reverseShipmentLabelSasKey) {
             $.reverseShipmentLabelSasKey = reverseShipmentLabelSasKey;
             return this;
         }
 
+        /**
+         * @param shippingAddress Shipping address of the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shippingAddress(@Nullable ShippingAddressResponse shippingAddress) {
             $.shippingAddress = shippingAddress;
             return this;

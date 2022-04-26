@@ -23,6 +23,10 @@ public final class FeatureResourceStateResponse extends com.pulumi.resources.Inv
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The current state of the Feature resource in the Hub API.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -51,6 +55,12 @@ public final class FeatureResourceStateResponse extends com.pulumi.resources.Inv
             $ = new FeatureResourceStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param state The current state of the Feature resource in the Hub API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

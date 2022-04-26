@@ -19,6 +19,10 @@ public final class ApplicationUserAssignedIdentityResponse extends com.pulumi.re
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The friendly name of user assigned identity.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class ApplicationUserAssignedIdentityResponse extends com.pulumi.re
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal id of user assigned identity.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -59,11 +67,23 @@ public final class ApplicationUserAssignedIdentityResponse extends com.pulumi.re
             $ = new ApplicationUserAssignedIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The friendly name of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param principalId The principal id of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;

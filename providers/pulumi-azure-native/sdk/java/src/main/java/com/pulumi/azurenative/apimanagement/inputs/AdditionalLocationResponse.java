@@ -30,6 +30,10 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="disableGateway")
     private @Nullable Boolean disableGateway;
 
+    /**
+     * @return Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in this additional location.
+     * 
+     */
     public Optional<Boolean> disableGateway() {
         return Optional.ofNullable(this.disableGateway);
     }
@@ -41,6 +45,10 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="gatewayRegionalUrl", required=true)
     private String gatewayRegionalUrl;
 
+    /**
+     * @return Gateway URL of the API Management service in the Region.
+     * 
+     */
     public String gatewayRegionalUrl() {
         return this.gatewayRegionalUrl;
     }
@@ -52,6 +60,10 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The location name of the additional region among Azure Data center regions.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -63,6 +75,10 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="privateIPAddresses", required=true)
     private List<String> privateIPAddresses;
 
+    /**
+     * @return Private Static Load Balanced IP addresses of the API Management service which is deployed in an Internal Virtual Network in a particular additional location. Available only for Basic, Standard, Premium and Isolated SKU.
+     * 
+     */
     public List<String> privateIPAddresses() {
         return this.privateIPAddresses;
     }
@@ -74,6 +90,10 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="publicIPAddresses", required=true)
     private List<String> publicIPAddresses;
 
+    /**
+     * @return Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard, Premium and Isolated SKU.
+     * 
+     */
     public List<String> publicIPAddresses() {
         return this.publicIPAddresses;
     }
@@ -85,6 +105,10 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="sku", required=true)
     private ApiManagementServiceSkuPropertiesResponse sku;
 
+    /**
+     * @return SKU properties of the API Management service.
+     * 
+     */
     public ApiManagementServiceSkuPropertiesResponse sku() {
         return this.sku;
     }
@@ -96,6 +120,10 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="virtualNetworkConfiguration")
     private @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration;
 
+    /**
+     * @return Virtual network configuration for the location.
+     * 
+     */
     public Optional<VirtualNetworkConfigurationResponse> virtualNetworkConfiguration() {
         return Optional.ofNullable(this.virtualNetworkConfiguration);
     }
@@ -107,6 +135,10 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="zones")
     private @Nullable List<String> zones;
 
+    /**
+     * @return A list of availability zones denoting where the resource needs to come from.
+     * 
+     */
     public Optional<List<String>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -142,54 +174,120 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
             $ = new AdditionalLocationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableGateway Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in this additional location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableGateway(@Nullable Boolean disableGateway) {
             $.disableGateway = disableGateway;
             return this;
         }
 
+        /**
+         * @param gatewayRegionalUrl Gateway URL of the API Management service in the Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayRegionalUrl(String gatewayRegionalUrl) {
             $.gatewayRegionalUrl = gatewayRegionalUrl;
             return this;
         }
 
+        /**
+         * @param location The location name of the additional region among Azure Data center regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param privateIPAddresses Private Static Load Balanced IP addresses of the API Management service which is deployed in an Internal Virtual Network in a particular additional location. Available only for Basic, Standard, Premium and Isolated SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddresses(List<String> privateIPAddresses) {
             $.privateIPAddresses = privateIPAddresses;
             return this;
         }
 
+        /**
+         * @param privateIPAddresses Private Static Load Balanced IP addresses of the API Management service which is deployed in an Internal Virtual Network in a particular additional location. Available only for Basic, Standard, Premium and Isolated SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddresses(String... privateIPAddresses) {
             return privateIPAddresses(List.of(privateIPAddresses));
         }
 
+        /**
+         * @param publicIPAddresses Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard, Premium and Isolated SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddresses(List<String> publicIPAddresses) {
             $.publicIPAddresses = publicIPAddresses;
             return this;
         }
 
+        /**
+         * @param publicIPAddresses Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard, Premium and Isolated SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddresses(String... publicIPAddresses) {
             return publicIPAddresses(List.of(publicIPAddresses));
         }
 
+        /**
+         * @param sku SKU properties of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(ApiManagementServiceSkuPropertiesResponse sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param virtualNetworkConfiguration Virtual network configuration for the location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration) {
             $.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
 
+        /**
+         * @param zones A list of availability zones denoting where the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable List<String> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones A list of availability zones denoting where the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

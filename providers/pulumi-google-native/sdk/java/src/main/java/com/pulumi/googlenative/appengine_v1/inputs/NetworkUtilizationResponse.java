@@ -23,6 +23,10 @@ public final class NetworkUtilizationResponse extends com.pulumi.resources.Invok
     @Import(name="targetReceivedBytesPerSecond", required=true)
     private Integer targetReceivedBytesPerSecond;
 
+    /**
+     * @return Target bytes received per second.
+     * 
+     */
     public Integer targetReceivedBytesPerSecond() {
         return this.targetReceivedBytesPerSecond;
     }
@@ -34,6 +38,10 @@ public final class NetworkUtilizationResponse extends com.pulumi.resources.Invok
     @Import(name="targetReceivedPacketsPerSecond", required=true)
     private Integer targetReceivedPacketsPerSecond;
 
+    /**
+     * @return Target packets received per second.
+     * 
+     */
     public Integer targetReceivedPacketsPerSecond() {
         return this.targetReceivedPacketsPerSecond;
     }
@@ -45,6 +53,10 @@ public final class NetworkUtilizationResponse extends com.pulumi.resources.Invok
     @Import(name="targetSentBytesPerSecond", required=true)
     private Integer targetSentBytesPerSecond;
 
+    /**
+     * @return Target bytes sent per second.
+     * 
+     */
     public Integer targetSentBytesPerSecond() {
         return this.targetSentBytesPerSecond;
     }
@@ -56,6 +68,10 @@ public final class NetworkUtilizationResponse extends com.pulumi.resources.Invok
     @Import(name="targetSentPacketsPerSecond", required=true)
     private Integer targetSentPacketsPerSecond;
 
+    /**
+     * @return Target packets sent per second.
+     * 
+     */
     public Integer targetSentPacketsPerSecond() {
         return this.targetSentPacketsPerSecond;
     }
@@ -87,21 +103,45 @@ public final class NetworkUtilizationResponse extends com.pulumi.resources.Invok
             $ = new NetworkUtilizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetReceivedBytesPerSecond Target bytes received per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetReceivedBytesPerSecond(Integer targetReceivedBytesPerSecond) {
             $.targetReceivedBytesPerSecond = targetReceivedBytesPerSecond;
             return this;
         }
 
+        /**
+         * @param targetReceivedPacketsPerSecond Target packets received per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetReceivedPacketsPerSecond(Integer targetReceivedPacketsPerSecond) {
             $.targetReceivedPacketsPerSecond = targetReceivedPacketsPerSecond;
             return this;
         }
 
+        /**
+         * @param targetSentBytesPerSecond Target bytes sent per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSentBytesPerSecond(Integer targetSentBytesPerSecond) {
             $.targetSentBytesPerSecond = targetSentBytesPerSecond;
             return this;
         }
 
+        /**
+         * @param targetSentPacketsPerSecond Target packets sent per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSentPacketsPerSecond(Integer targetSentPacketsPerSecond) {
             $.targetSentPacketsPerSecond = targetSentPacketsPerSecond;
             return this;

@@ -26,6 +26,10 @@ public final class ModelExplainabilityJobDefinitionConstraintsResourceArgs exten
     @Import(name="s3Uri")
     private @Nullable Output<String> s3Uri;
 
+    /**
+     * @return The Amazon S3 URI for baseline constraint file in Amazon S3 that the current monitoring job should validated against.
+     * 
+     */
     public Optional<Output<String>> s3Uri() {
         return Optional.ofNullable(this.s3Uri);
     }
@@ -54,11 +58,23 @@ public final class ModelExplainabilityJobDefinitionConstraintsResourceArgs exten
             $ = new ModelExplainabilityJobDefinitionConstraintsResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3Uri The Amazon S3 URI for baseline constraint file in Amazon S3 that the current monitoring job should validated against.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Uri(@Nullable Output<String> s3Uri) {
             $.s3Uri = s3Uri;
             return this;
         }
 
+        /**
+         * @param s3Uri The Amazon S3 URI for baseline constraint file in Amazon S3 that the current monitoring job should validated against.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Uri(String s3Uri) {
             return s3Uri(Output.of(s3Uri));
         }

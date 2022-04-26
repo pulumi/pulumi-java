@@ -23,6 +23,10 @@ public final class GSuitePrincipalArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="gsuiteDomain")
     private @Nullable Output<Boolean> gsuiteDomain;
 
+    /**
+     * @return This principal represents all users of the G Suite domain of the customer.
+     * 
+     */
     public Optional<Output<Boolean>> gsuiteDomain() {
         return Optional.ofNullable(this.gsuiteDomain);
     }
@@ -34,6 +38,10 @@ public final class GSuitePrincipalArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="gsuiteGroupEmail")
     private @Nullable Output<String> gsuiteGroupEmail;
 
+    /**
+     * @return This principal references a G Suite group account
+     * 
+     */
     public Optional<Output<String>> gsuiteGroupEmail() {
         return Optional.ofNullable(this.gsuiteGroupEmail);
     }
@@ -45,6 +53,10 @@ public final class GSuitePrincipalArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="gsuiteUserEmail")
     private @Nullable Output<String> gsuiteUserEmail;
 
+    /**
+     * @return This principal references a G Suite user account
+     * 
+     */
     public Optional<Output<String>> gsuiteUserEmail() {
         return Optional.ofNullable(this.gsuiteUserEmail);
     }
@@ -75,29 +87,65 @@ public final class GSuitePrincipalArgs extends com.pulumi.resources.ResourceArgs
             $ = new GSuitePrincipalArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gsuiteDomain This principal represents all users of the G Suite domain of the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gsuiteDomain(@Nullable Output<Boolean> gsuiteDomain) {
             $.gsuiteDomain = gsuiteDomain;
             return this;
         }
 
+        /**
+         * @param gsuiteDomain This principal represents all users of the G Suite domain of the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gsuiteDomain(Boolean gsuiteDomain) {
             return gsuiteDomain(Output.of(gsuiteDomain));
         }
 
+        /**
+         * @param gsuiteGroupEmail This principal references a G Suite group account
+         * 
+         * @return builder
+         * 
+         */
         public Builder gsuiteGroupEmail(@Nullable Output<String> gsuiteGroupEmail) {
             $.gsuiteGroupEmail = gsuiteGroupEmail;
             return this;
         }
 
+        /**
+         * @param gsuiteGroupEmail This principal references a G Suite group account
+         * 
+         * @return builder
+         * 
+         */
         public Builder gsuiteGroupEmail(String gsuiteGroupEmail) {
             return gsuiteGroupEmail(Output.of(gsuiteGroupEmail));
         }
 
+        /**
+         * @param gsuiteUserEmail This principal references a G Suite user account
+         * 
+         * @return builder
+         * 
+         */
         public Builder gsuiteUserEmail(@Nullable Output<String> gsuiteUserEmail) {
             $.gsuiteUserEmail = gsuiteUserEmail;
             return this;
         }
 
+        /**
+         * @param gsuiteUserEmail This principal references a G Suite user account
+         * 
+         * @return builder
+         * 
+         */
         public Builder gsuiteUserEmail(String gsuiteUserEmail) {
             return gsuiteUserEmail(Output.of(gsuiteUserEmail));
         }

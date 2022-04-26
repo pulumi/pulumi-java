@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class MetricDescriptorMetadataResponse {
     /**
-     * The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors.
+     * @return The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors.
      * 
      */
     private final String ingestDelay;
     /**
-     * The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period.
+     * @return The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period.
      * 
      */
     private final String samplePeriod;
@@ -29,16 +29,16 @@ public final class MetricDescriptorMetadataResponse {
     }
 
     /**
-     * The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors.
+     * @return The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors.
      * 
-    */
+     */
     public String ingestDelay() {
         return this.ingestDelay;
     }
     /**
-     * The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period.
+     * @return The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period.
      * 
-    */
+     */
     public String samplePeriod() {
         return this.samplePeriod;
     }

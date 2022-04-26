@@ -28,6 +28,10 @@ public final class ParameterDefinitionsValueResponse extends com.pulumi.resource
     @Import(name="allowedValues")
     private @Nullable List<Object> allowedValues;
 
+    /**
+     * @return The allowed values for the parameter.
+     * 
+     */
     public Optional<List<Object>> allowedValues() {
         return Optional.ofNullable(this.allowedValues);
     }
@@ -39,6 +43,10 @@ public final class ParameterDefinitionsValueResponse extends com.pulumi.resource
     @Import(name="defaultValue")
     private @Nullable Object defaultValue;
 
+    /**
+     * @return The default value for the parameter if no value is provided.
+     * 
+     */
     public Optional<Object> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -50,6 +58,10 @@ public final class ParameterDefinitionsValueResponse extends com.pulumi.resource
     @Import(name="metadata")
     private @Nullable ParameterDefinitionsValueResponseMetadata metadata;
 
+    /**
+     * @return General metadata for the parameter.
+     * 
+     */
     public Optional<ParameterDefinitionsValueResponseMetadata> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -61,6 +73,10 @@ public final class ParameterDefinitionsValueResponse extends com.pulumi.resource
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The data type of the parameter.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -92,25 +108,55 @@ public final class ParameterDefinitionsValueResponse extends com.pulumi.resource
             $ = new ParameterDefinitionsValueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedValues The allowed values for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(@Nullable List<Object> allowedValues) {
             $.allowedValues = allowedValues;
             return this;
         }
 
+        /**
+         * @param allowedValues The allowed values for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(Object... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
 
+        /**
+         * @param defaultValue The default value for the parameter if no value is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable Object defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param metadata General metadata for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable ParameterDefinitionsValueResponseMetadata metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param type The data type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

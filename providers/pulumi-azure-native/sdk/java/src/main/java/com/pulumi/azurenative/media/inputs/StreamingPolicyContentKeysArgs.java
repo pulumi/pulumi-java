@@ -28,6 +28,10 @@ public final class StreamingPolicyContentKeysArgs extends com.pulumi.resources.R
     @Import(name="defaultKey")
     private @Nullable Output<DefaultKeyArgs> defaultKey;
 
+    /**
+     * @return Default content key for an encryption scheme
+     * 
+     */
     public Optional<Output<DefaultKeyArgs>> defaultKey() {
         return Optional.ofNullable(this.defaultKey);
     }
@@ -39,6 +43,10 @@ public final class StreamingPolicyContentKeysArgs extends com.pulumi.resources.R
     @Import(name="keyToTrackMappings")
     private @Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings;
 
+    /**
+     * @return Representing tracks needs separate content key
+     * 
+     */
     public Optional<Output<List<StreamingPolicyContentKeyArgs>>> keyToTrackMappings() {
         return Optional.ofNullable(this.keyToTrackMappings);
     }
@@ -68,24 +76,54 @@ public final class StreamingPolicyContentKeysArgs extends com.pulumi.resources.R
             $ = new StreamingPolicyContentKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultKey Default content key for an encryption scheme
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultKey(@Nullable Output<DefaultKeyArgs> defaultKey) {
             $.defaultKey = defaultKey;
             return this;
         }
 
+        /**
+         * @param defaultKey Default content key for an encryption scheme
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultKey(DefaultKeyArgs defaultKey) {
             return defaultKey(Output.of(defaultKey));
         }
 
+        /**
+         * @param keyToTrackMappings Representing tracks needs separate content key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyToTrackMappings(@Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings) {
             $.keyToTrackMappings = keyToTrackMappings;
             return this;
         }
 
+        /**
+         * @param keyToTrackMappings Representing tracks needs separate content key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyToTrackMappings(List<StreamingPolicyContentKeyArgs> keyToTrackMappings) {
             return keyToTrackMappings(Output.of(keyToTrackMappings));
         }
 
+        /**
+         * @param keyToTrackMappings Representing tracks needs separate content key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyToTrackMappings(StreamingPolicyContentKeyArgs... keyToTrackMappings) {
             return keyToTrackMappings(List.of(keyToTrackMappings));
         }

@@ -13,27 +13,27 @@ import java.util.Objects;
 @CustomType
 public final class ResourcesResponse {
     /**
-     * Number of CPU cores needed.
+     * @return Number of CPU cores needed.
      * 
      */
     private final Double cpu;
     /**
-     * Disk size (GB) needed.
+     * @return Disk size (GB) needed.
      * 
      */
     private final Double diskGb;
     /**
-     * The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud Composer to encrypt the vm disk
+     * @return The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud Composer to encrypt the vm disk
      * 
      */
     private final String kmsKeyReference;
     /**
-     * Memory (GB) needed.
+     * @return Memory (GB) needed.
      * 
      */
     private final Double memoryGb;
     /**
-     * User specified volumes.
+     * @return User specified volumes.
      * 
      */
     private final List<VolumeResponse> volumes;
@@ -53,37 +53,37 @@ public final class ResourcesResponse {
     }
 
     /**
-     * Number of CPU cores needed.
+     * @return Number of CPU cores needed.
      * 
-    */
+     */
     public Double cpu() {
         return this.cpu;
     }
     /**
-     * Disk size (GB) needed.
+     * @return Disk size (GB) needed.
      * 
-    */
+     */
     public Double diskGb() {
         return this.diskGb;
     }
     /**
-     * The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud Composer to encrypt the vm disk
+     * @return The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud Composer to encrypt the vm disk
      * 
-    */
+     */
     public String kmsKeyReference() {
         return this.kmsKeyReference;
     }
     /**
-     * Memory (GB) needed.
+     * @return Memory (GB) needed.
      * 
-    */
+     */
     public Double memoryGb() {
         return this.memoryGb;
     }
     /**
-     * User specified volumes.
+     * @return User specified volumes.
      * 
-    */
+     */
     public List<VolumeResponse> volumes() {
         return this.volumes;
     }

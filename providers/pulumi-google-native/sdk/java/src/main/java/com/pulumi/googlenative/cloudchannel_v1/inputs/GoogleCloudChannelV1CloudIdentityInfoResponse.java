@@ -25,6 +25,10 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
     @Import(name="adminConsoleUri", required=true)
     private String adminConsoleUri;
 
+    /**
+     * @return URI of Customer&#39;s Admin console dashboard.
+     * 
+     */
     public String adminConsoleUri() {
         return this.adminConsoleUri;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
     @Import(name="alternateEmail", required=true)
     private String alternateEmail;
 
+    /**
+     * @return The alternate email.
+     * 
+     */
     public String alternateEmail() {
         return this.alternateEmail;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
     @Import(name="customerType", required=true)
     private String customerType;
 
+    /**
+     * @return CustomerType indicates verification type needed for using services.
+     * 
+     */
     public String customerType() {
         return this.customerType;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
     @Import(name="eduData", required=true)
     private GoogleCloudChannelV1EduDataResponse eduData;
 
+    /**
+     * @return Edu information about the customer.
+     * 
+     */
     public GoogleCloudChannelV1EduDataResponse eduData() {
         return this.eduData;
     }
@@ -69,6 +85,10 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
     @Import(name="isDomainVerified", required=true)
     private Boolean isDomainVerified;
 
+    /**
+     * @return Whether the domain is verified. This field is not returned for a Customer&#39;s cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK&#39;s Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
+     * 
+     */
     public Boolean isDomainVerified() {
         return this.isDomainVerified;
     }
@@ -80,6 +100,10 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
     @Import(name="languageCode", required=true)
     private String languageCode;
 
+    /**
+     * @return Language code.
+     * 
+     */
     public String languageCode() {
         return this.languageCode;
     }
@@ -91,6 +115,10 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
     @Import(name="phoneNumber", required=true)
     private String phoneNumber;
 
+    /**
+     * @return Phone number associated with the Cloud Identity.
+     * 
+     */
     public String phoneNumber() {
         return this.phoneNumber;
     }
@@ -102,6 +130,10 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
     @Import(name="primaryDomain", required=true)
     private String primaryDomain;
 
+    /**
+     * @return The primary domain name.
+     * 
+     */
     public String primaryDomain() {
         return this.primaryDomain;
     }
@@ -137,41 +169,89 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
             $ = new GoogleCloudChannelV1CloudIdentityInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminConsoleUri URI of Customer&#39;s Admin console dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminConsoleUri(String adminConsoleUri) {
             $.adminConsoleUri = adminConsoleUri;
             return this;
         }
 
+        /**
+         * @param alternateEmail The alternate email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternateEmail(String alternateEmail) {
             $.alternateEmail = alternateEmail;
             return this;
         }
 
+        /**
+         * @param customerType CustomerType indicates verification type needed for using services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerType(String customerType) {
             $.customerType = customerType;
             return this;
         }
 
+        /**
+         * @param eduData Edu information about the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eduData(GoogleCloudChannelV1EduDataResponse eduData) {
             $.eduData = eduData;
             return this;
         }
 
+        /**
+         * @param isDomainVerified Whether the domain is verified. This field is not returned for a Customer&#39;s cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK&#39;s Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDomainVerified(Boolean isDomainVerified) {
             $.isDomainVerified = isDomainVerified;
             return this;
         }
 
+        /**
+         * @param languageCode Language code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(String languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
+        /**
+         * @param phoneNumber Phone number associated with the Cloud Identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(String phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;
         }
 
+        /**
+         * @param primaryDomain The primary domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryDomain(String primaryDomain) {
             $.primaryDomain = primaryDomain;
             return this;

@@ -20,6 +20,10 @@ public final class EventIntegrationTagArgs extends com.pulumi.resources.Resource
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return A key to identify the tag.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -31,6 +35,10 @@ public final class EventIntegrationTagArgs extends com.pulumi.resources.Resource
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Corresponding tag value for the key.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -60,20 +68,44 @@ public final class EventIntegrationTagArgs extends com.pulumi.resources.Resource
             $ = new EventIntegrationTagArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key A key to identify the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key A key to identify the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param value Corresponding tag value for the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Corresponding tag value for the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

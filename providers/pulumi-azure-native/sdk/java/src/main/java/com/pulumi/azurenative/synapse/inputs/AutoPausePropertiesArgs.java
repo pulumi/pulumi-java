@@ -27,6 +27,10 @@ public final class AutoPausePropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="delayInMinutes")
     private @Nullable Output<Integer> delayInMinutes;
 
+    /**
+     * @return Number of minutes of idle time before the Big Data pool is automatically paused.
+     * 
+     */
     public Optional<Output<Integer>> delayInMinutes() {
         return Optional.ofNullable(this.delayInMinutes);
     }
@@ -38,6 +42,10 @@ public final class AutoPausePropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether auto-pausing is enabled for the Big Data pool.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -67,20 +75,44 @@ public final class AutoPausePropertiesArgs extends com.pulumi.resources.Resource
             $ = new AutoPausePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delayInMinutes Number of minutes of idle time before the Big Data pool is automatically paused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delayInMinutes(@Nullable Output<Integer> delayInMinutes) {
             $.delayInMinutes = delayInMinutes;
             return this;
         }
 
+        /**
+         * @param delayInMinutes Number of minutes of idle time before the Big Data pool is automatically paused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delayInMinutes(Integer delayInMinutes) {
             return delayInMinutes(Output.of(delayInMinutes));
         }
 
+        /**
+         * @param enabled Whether auto-pausing is enabled for the Big Data pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether auto-pausing is enabled for the Big Data pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

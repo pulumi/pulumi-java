@@ -26,6 +26,10 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets or sets the frontend IP configuration name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,11 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
     @Import(name="privateIpAddress")
     private @Nullable String privateIpAddress;
 
+    /**
+     * @return Gets or sets the IP address of the Load Balancer.This is only specified if a specific
+     * private IP address shall be allocated from the subnet specified in subnetRef.
+     * 
+     */
     public Optional<String> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
@@ -49,6 +58,10 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
     @Import(name="privateIpAllocationMethod")
     private @Nullable String privateIpAllocationMethod;
 
+    /**
+     * @return Gets or sets PrivateIP allocation method (Static/Dynamic).
+     * 
+     */
     public Optional<String> privateIpAllocationMethod() {
         return Optional.ofNullable(this.privateIpAllocationMethod);
     }
@@ -60,6 +73,10 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
     @Import(name="subnet")
     private @Nullable SubnetReferenceResponse subnet;
 
+    /**
+     * @return Defines reference to subnet.
+     * 
+     */
     public Optional<SubnetReferenceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -71,6 +88,10 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
     @Import(name="zones")
     private @Nullable String zones;
 
+    /**
+     * @return Gets or sets the csv list of zones.
+     * 
+     */
     public Optional<String> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -103,26 +124,57 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
             $ = new LBFrontendIPConfigurationResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Gets or sets the frontend IP configuration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateIpAddress Gets or sets the IP address of the Load Balancer.This is only specified if a specific
+         * private IP address shall be allocated from the subnet specified in subnetRef.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param privateIpAllocationMethod Gets or sets PrivateIP allocation method (Static/Dynamic).
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
             $.privateIpAllocationMethod = privateIpAllocationMethod;
             return this;
         }
 
+        /**
+         * @param subnet Defines reference to subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable SubnetReferenceResponse subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param zones Gets or sets the csv list of zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable String zones) {
             $.zones = zones;
             return this;

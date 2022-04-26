@@ -24,6 +24,10 @@ public final class LogConfigCloudAuditOptionsResponse extends com.pulumi.resourc
     @Import(name="authorizationLoggingOptions", required=true)
     private AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public AuthorizationLoggingOptionsResponse authorizationLoggingOptions() {
         return this.authorizationLoggingOptions;
     }
@@ -35,6 +39,10 @@ public final class LogConfigCloudAuditOptionsResponse extends com.pulumi.resourc
     @Import(name="logName", required=true)
     private String logName;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public String logName() {
         return this.logName;
     }
@@ -64,11 +72,23 @@ public final class LogConfigCloudAuditOptionsResponse extends com.pulumi.resourc
             $ = new LogConfigCloudAuditOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationLoggingOptions This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationLoggingOptions(AuthorizationLoggingOptionsResponse authorizationLoggingOptions) {
             $.authorizationLoggingOptions = authorizationLoggingOptions;
             return this;
         }
 
+        /**
+         * @param logName This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logName(String logName) {
             $.logName = logName;
             return this;

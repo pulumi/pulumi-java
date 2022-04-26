@@ -26,6 +26,10 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="latLng", required=true)
     private LatLngResponse latLng;
 
+    /**
+     * @return An object representing a latitude/longitude pair.
+     * 
+     */
     public LatLngResponse latLng() {
         return this.latLng;
     }
@@ -37,6 +41,10 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="locationType", required=true)
     private String locationType;
 
+    /**
+     * @return The type of a location, which corresponds to the address lines field of PostalAddress. For example, &#34;Downtown, Atlanta, GA, USA&#34; has a type of LocationType#NEIGHBORHOOD, and &#34;Kansas City, KS, USA&#34; has a type of LocationType#LOCALITY.
+     * 
+     */
     public String locationType() {
         return this.locationType;
     }
@@ -48,6 +56,10 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="postalAddress", required=true)
     private PostalAddressResponse postalAddress;
 
+    /**
+     * @return Postal address of the location that includes human readable information, such as postal delivery and payments addresses. Given a postal address, a postal service can deliver items to a premises, P.O. Box, or other delivery location.
+     * 
+     */
     public PostalAddressResponse postalAddress() {
         return this.postalAddress;
     }
@@ -59,6 +71,10 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="radiusInMiles", required=true)
     private Double radiusInMiles;
 
+    /**
+     * @return Radius in miles of the job location. This value is derived from the location bounding box in which a circle with the specified radius centered from LatLng covers the area associated with the job location. For example, currently, &#34;Mountain View, CA, USA&#34; has a radius of 6.17 miles.
+     * 
+     */
     public Double radiusInMiles() {
         return this.radiusInMiles;
     }
@@ -90,21 +106,45 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LocationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param latLng An object representing a latitude/longitude pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latLng(LatLngResponse latLng) {
             $.latLng = latLng;
             return this;
         }
 
+        /**
+         * @param locationType The type of a location, which corresponds to the address lines field of PostalAddress. For example, &#34;Downtown, Atlanta, GA, USA&#34; has a type of LocationType#NEIGHBORHOOD, and &#34;Kansas City, KS, USA&#34; has a type of LocationType#LOCALITY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationType(String locationType) {
             $.locationType = locationType;
             return this;
         }
 
+        /**
+         * @param postalAddress Postal address of the location that includes human readable information, such as postal delivery and payments addresses. Given a postal address, a postal service can deliver items to a premises, P.O. Box, or other delivery location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalAddress(PostalAddressResponse postalAddress) {
             $.postalAddress = postalAddress;
             return this;
         }
 
+        /**
+         * @param radiusInMiles Radius in miles of the job location. This value is derived from the location bounding box in which a circle with the specified radius centered from LatLng covers the area associated with the job location. For example, currently, &#34;Mountain View, CA, USA&#34; has a radius of 6.17 miles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusInMiles(Double radiusInMiles) {
             $.radiusInMiles = radiusInMiles;
             return this;

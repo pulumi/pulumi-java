@@ -25,6 +25,10 @@ public final class DeployableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceUri", required=true)
     private Output<List<String>> resourceUri;
 
+    /**
+     * @return Resource URI for the artifact being deployed.
+     * 
+     */
     public Output<List<String>> resourceUri() {
         return this.resourceUri;
     }
@@ -53,15 +57,33 @@ public final class DeployableArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeployableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceUri Resource URI for the artifact being deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(Output<List<String>> resourceUri) {
             $.resourceUri = resourceUri;
             return this;
         }
 
+        /**
+         * @param resourceUri Resource URI for the artifact being deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(List<String> resourceUri) {
             return resourceUri(Output.of(resourceUri));
         }
 
+        /**
+         * @param resourceUri Resource URI for the artifact being deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String... resourceUri) {
             return resourceUri(List.of(resourceUri));
         }

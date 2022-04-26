@@ -24,6 +24,10 @@ public final class GraphParameterLinkArgs extends com.pulumi.resources.ResourceA
     @Import(name="nodeId", required=true)
     private Output<String> nodeId;
 
+    /**
+     * @return The graph node&#39;s identifier
+     * 
+     */
     public Output<String> nodeId() {
         return this.nodeId;
     }
@@ -35,6 +39,10 @@ public final class GraphParameterLinkArgs extends com.pulumi.resources.ResourceA
     @Import(name="parameterKey", required=true)
     private Output<String> parameterKey;
 
+    /**
+     * @return The identifier of the node parameter that the global parameter maps to.
+     * 
+     */
     public Output<String> parameterKey() {
         return this.parameterKey;
     }
@@ -64,20 +72,44 @@ public final class GraphParameterLinkArgs extends com.pulumi.resources.ResourceA
             $ = new GraphParameterLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodeId The graph node&#39;s identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeId(Output<String> nodeId) {
             $.nodeId = nodeId;
             return this;
         }
 
+        /**
+         * @param nodeId The graph node&#39;s identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeId(String nodeId) {
             return nodeId(Output.of(nodeId));
         }
 
+        /**
+         * @param parameterKey The identifier of the node parameter that the global parameter maps to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterKey(Output<String> parameterKey) {
             $.parameterKey = parameterKey;
             return this;
         }
 
+        /**
+         * @param parameterKey The identifier of the node parameter that the global parameter maps to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterKey(String parameterKey) {
             return parameterKey(Output.of(parameterKey));
         }

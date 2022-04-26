@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagedClusterAutoUpgradeProfileResponse {
     /**
-     * upgrade channel for auto upgrade.
+     * @return upgrade channel for auto upgrade.
      * 
      */
     private final @Nullable String upgradeChannel;
@@ -23,9 +23,9 @@ public final class ManagedClusterAutoUpgradeProfileResponse {
     }
 
     /**
-     * upgrade channel for auto upgrade.
+     * @return upgrade channel for auto upgrade.
      * 
-    */
+     */
     public Optional<String> upgradeChannel() {
         return Optional.ofNullable(this.upgradeChannel);
     }

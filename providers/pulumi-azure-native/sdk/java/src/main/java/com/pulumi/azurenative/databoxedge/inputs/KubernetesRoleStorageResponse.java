@@ -27,6 +27,10 @@ public final class KubernetesRoleStorageResponse extends com.pulumi.resources.In
     @Import(name="endpoints")
     private @Nullable List<MountPointMapResponse> endpoints;
 
+    /**
+     * @return Mount points of shares in role(s).
+     * 
+     */
     public Optional<List<MountPointMapResponse>> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
@@ -38,6 +42,10 @@ public final class KubernetesRoleStorageResponse extends com.pulumi.resources.In
     @Import(name="storageClasses", required=true)
     private List<KubernetesRoleStorageClassInfoResponse> storageClasses;
 
+    /**
+     * @return Kubernetes storage class info.
+     * 
+     */
     public List<KubernetesRoleStorageClassInfoResponse> storageClasses() {
         return this.storageClasses;
     }
@@ -67,20 +75,44 @@ public final class KubernetesRoleStorageResponse extends com.pulumi.resources.In
             $ = new KubernetesRoleStorageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoints Mount points of shares in role(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(@Nullable List<MountPointMapResponse> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
 
+        /**
+         * @param endpoints Mount points of shares in role(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(MountPointMapResponse... endpoints) {
             return endpoints(List.of(endpoints));
         }
 
+        /**
+         * @param storageClasses Kubernetes storage class info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClasses(List<KubernetesRoleStorageClassInfoResponse> storageClasses) {
             $.storageClasses = storageClasses;
             return this;
         }
 
+        /**
+         * @param storageClasses Kubernetes storage class info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClasses(KubernetesRoleStorageClassInfoResponse... storageClasses) {
             return storageClasses(List.of(storageClasses));
         }

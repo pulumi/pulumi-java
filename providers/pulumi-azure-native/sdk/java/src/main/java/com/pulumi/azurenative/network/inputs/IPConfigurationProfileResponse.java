@@ -26,6 +26,10 @@ public final class IPConfigurationProfileResponse extends com.pulumi.resources.I
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -37,6 +41,10 @@ public final class IPConfigurationProfileResponse extends com.pulumi.resources.I
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -48,6 +56,10 @@ public final class IPConfigurationProfileResponse extends com.pulumi.resources.I
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class IPConfigurationProfileResponse extends com.pulumi.resources.I
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the IP configuration profile resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -70,6 +86,10 @@ public final class IPConfigurationProfileResponse extends com.pulumi.resources.I
     @Import(name="subnet")
     private @Nullable SubnetResponse subnet;
 
+    /**
+     * @return The reference to the subnet resource to create a container network interface ip configuration.
+     * 
+     */
     public Optional<SubnetResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -81,6 +101,10 @@ public final class IPConfigurationProfileResponse extends com.pulumi.resources.I
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Sub Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -114,31 +138,67 @@ public final class IPConfigurationProfileResponse extends com.pulumi.resources.I
             $ = new IPConfigurationProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the IP configuration profile resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param subnet The reference to the subnet resource to create a container network interface ip configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable SubnetResponse subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param type Sub Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

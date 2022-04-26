@@ -25,6 +25,10 @@ public final class LiveEventInputTrackSelectionResponse extends com.pulumi.resou
     @Import(name="operation")
     private @Nullable String operation;
 
+    /**
+     * @return Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
+     * 
+     */
     public Optional<String> operation() {
         return Optional.ofNullable(this.operation);
     }
@@ -36,6 +40,10 @@ public final class LiveEventInputTrackSelectionResponse extends com.pulumi.resou
     @Import(name="property")
     private @Nullable String property;
 
+    /**
+     * @return Property name to select. This property is reserved for future use, any value set on this property will be ignored.
+     * 
+     */
     public Optional<String> property() {
         return Optional.ofNullable(this.property);
     }
@@ -47,6 +55,10 @@ public final class LiveEventInputTrackSelectionResponse extends com.pulumi.resou
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Property value to select. This property is reserved for future use, any value set on this property will be ignored.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -77,16 +89,34 @@ public final class LiveEventInputTrackSelectionResponse extends com.pulumi.resou
             $ = new LiveEventInputTrackSelectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operation Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(@Nullable String operation) {
             $.operation = operation;
             return this;
         }
 
+        /**
+         * @param property Property name to select. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(@Nullable String property) {
             $.property = property;
             return this;
         }
 
+        /**
+         * @param value Property value to select. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

@@ -25,6 +25,10 @@ public final class ContainerAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
     private @Nullable Output<ConfigurationArgs> configuration;
 
+    /**
+     * @return Non versioned Container App configuration properties.
+     * 
+     */
     public Optional<Output<ConfigurationArgs>> configuration() {
         return Optional.ofNullable(this.configuration);
     }
@@ -36,6 +40,10 @@ public final class ContainerAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -47,6 +55,10 @@ public final class ContainerAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kubeEnvironmentId")
     private @Nullable Output<String> kubeEnvironmentId;
 
+    /**
+     * @return Resource ID of the Container App&#39;s KubeEnvironment.
+     * 
+     */
     public Optional<Output<String>> kubeEnvironmentId() {
         return Optional.ofNullable(this.kubeEnvironmentId);
     }
@@ -58,6 +70,10 @@ public final class ContainerAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource Location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -69,6 +85,10 @@ public final class ContainerAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the Container App.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +100,10 @@ public final class ContainerAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +115,10 @@ public final class ContainerAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -102,6 +130,10 @@ public final class ContainerAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="template")
     private @Nullable Output<TemplateArgs> template;
 
+    /**
+     * @return Container App versioned application definition.
+     * 
+     */
     public Optional<Output<TemplateArgs>> template() {
         return Optional.ofNullable(this.template);
     }
@@ -137,74 +169,170 @@ public final class ContainerAppArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContainerAppArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configuration Non versioned Container App configuration properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(@Nullable Output<ConfigurationArgs> configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param configuration Non versioned Container App configuration properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(ConfigurationArgs configuration) {
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kubeEnvironmentId Resource ID of the Container App&#39;s KubeEnvironment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeEnvironmentId(@Nullable Output<String> kubeEnvironmentId) {
             $.kubeEnvironmentId = kubeEnvironmentId;
             return this;
         }
 
+        /**
+         * @param kubeEnvironmentId Resource ID of the Container App&#39;s KubeEnvironment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeEnvironmentId(String kubeEnvironmentId) {
             return kubeEnvironmentId(Output.of(kubeEnvironmentId));
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Name of the Container App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the Container App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param template Container App versioned application definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(@Nullable Output<TemplateArgs> template) {
             $.template = template;
             return this;
         }
 
+        /**
+         * @param template Container App versioned application definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(TemplateArgs template) {
             return template(Output.of(template));
         }

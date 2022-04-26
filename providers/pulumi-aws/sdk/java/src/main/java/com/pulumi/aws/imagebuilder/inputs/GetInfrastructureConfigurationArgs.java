@@ -22,6 +22,10 @@ public final class GetInfrastructureConfigurationArgs extends com.pulumi.resourc
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the infrastructure configuration.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -33,6 +37,10 @@ public final class GetInfrastructureConfigurationArgs extends com.pulumi.resourc
     @Import(name="resourceTags")
     private @Nullable Map<String,String> resourceTags;
 
+    /**
+     * @return Key-value map of resource tags for the infrastructure created by the infrastructure configuration.
+     * 
+     */
     public Optional<Map<String,String>> resourceTags() {
         return Optional.ofNullable(this.resourceTags);
     }
@@ -44,6 +52,10 @@ public final class GetInfrastructureConfigurationArgs extends com.pulumi.resourc
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Key-value map of resource tags for the infrastructure configuration.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -74,16 +86,34 @@ public final class GetInfrastructureConfigurationArgs extends com.pulumi.resourc
             $ = new GetInfrastructureConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param resourceTags Key-value map of resource tags for the infrastructure created by the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTags(@Nullable Map<String,String> resourceTags) {
             $.resourceTags = resourceTags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags for the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

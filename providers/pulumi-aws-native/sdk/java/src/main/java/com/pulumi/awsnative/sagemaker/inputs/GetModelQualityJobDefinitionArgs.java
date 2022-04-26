@@ -19,6 +19,10 @@ public final class GetModelQualityJobDefinitionArgs extends com.pulumi.resources
     @Import(name="jobDefinitionArn", required=true)
     private String jobDefinitionArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of job definition.
+     * 
+     */
     public String jobDefinitionArn() {
         return this.jobDefinitionArn;
     }
@@ -47,6 +51,12 @@ public final class GetModelQualityJobDefinitionArgs extends com.pulumi.resources
             $ = new GetModelQualityJobDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobDefinitionArn The Amazon Resource Name (ARN) of job definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobDefinitionArn(String jobDefinitionArn) {
             $.jobDefinitionArn = jobDefinitionArn;
             return this;

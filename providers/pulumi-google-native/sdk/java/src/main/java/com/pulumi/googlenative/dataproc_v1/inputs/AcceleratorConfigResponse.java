@@ -24,6 +24,10 @@ public final class AcceleratorConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="acceleratorCount", required=true)
     private Integer acceleratorCount;
 
+    /**
+     * @return The number of the accelerator cards of this type exposed to this instance.
+     * 
+     */
     public Integer acceleratorCount() {
         return this.acceleratorCount;
     }
@@ -35,6 +39,10 @@ public final class AcceleratorConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="acceleratorTypeUri", required=true)
     private String acceleratorTypeUri;
 
+    /**
+     * @return Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See Compute Engine AcceleratorTypes (https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes).Examples: https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 nvidia-tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, nvidia-tesla-k80.
+     * 
+     */
     public String acceleratorTypeUri() {
         return this.acceleratorTypeUri;
     }
@@ -64,11 +72,23 @@ public final class AcceleratorConfigResponse extends com.pulumi.resources.Invoke
             $ = new AcceleratorConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorCount The number of the accelerator cards of this type exposed to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(Integer acceleratorCount) {
             $.acceleratorCount = acceleratorCount;
             return this;
         }
 
+        /**
+         * @param acceleratorTypeUri Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See Compute Engine AcceleratorTypes (https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes).Examples: https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 nvidia-tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, nvidia-tesla-k80.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorTypeUri(String acceleratorTypeUri) {
             $.acceleratorTypeUri = acceleratorTypeUri;
             return this;

@@ -34,6 +34,10 @@ public final class JsonSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="disableMetricsCollection")
     private @Nullable Object disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -45,6 +49,10 @@ public final class JsonSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="formatSettings")
     private @Nullable JsonWriteSettingsResponse formatSettings;
 
+    /**
+     * @return Json format settings.
+     * 
+     */
     public Optional<JsonWriteSettingsResponse> formatSettings() {
         return Optional.ofNullable(this.formatSettings);
     }
@@ -56,6 +64,10 @@ public final class JsonSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxConcurrentConnections")
     private @Nullable Object maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -67,6 +79,10 @@ public final class JsonSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sinkRetryCount")
     private @Nullable Object sinkRetryCount;
 
+    /**
+     * @return Sink retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> sinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
@@ -78,6 +94,10 @@ public final class JsonSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sinkRetryWait")
     private @Nullable Object sinkRetryWait;
 
+    /**
+     * @return Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> sinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
@@ -89,6 +109,10 @@ public final class JsonSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storeSettings")
     private @Nullable Object storeSettings;
 
+    /**
+     * @return Json store settings.
+     * 
+     */
     public Optional<Object> storeSettings() {
         return Optional.ofNullable(this.storeSettings);
     }
@@ -101,6 +125,11 @@ public final class JsonSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Copy sink type.
+     * Expected value is &#39;JsonSink&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -112,6 +141,10 @@ public final class JsonSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="writeBatchSize")
     private @Nullable Object writeBatchSize;
 
+    /**
+     * @return Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Object> writeBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
@@ -123,6 +156,10 @@ public final class JsonSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="writeBatchTimeout")
     private @Nullable Object writeBatchTimeout;
 
+    /**
+     * @return Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> writeBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
@@ -159,46 +196,101 @@ public final class JsonSinkResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JsonSinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param formatSettings Json format settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formatSettings(@Nullable JsonWriteSettingsResponse formatSettings) {
             $.formatSettings = formatSettings;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param sinkRetryCount Sink retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             $.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
+        /**
+         * @param sinkRetryWait Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             $.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
+        /**
+         * @param storeSettings Json store settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storeSettings(@Nullable Object storeSettings) {
             $.storeSettings = storeSettings;
             return this;
         }
 
+        /**
+         * @param type Copy sink type.
+         * Expected value is &#39;JsonSink&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param writeBatchSize Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             $.writeBatchSize = writeBatchSize;
             return this;
         }
 
+        /**
+         * @param writeBatchTimeout Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             $.writeBatchTimeout = writeBatchTimeout;
             return this;

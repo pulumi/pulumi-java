@@ -26,6 +26,10 @@ public final class DetectorModelIotTopicPublish extends com.pulumi.resources.Inv
     @Import(name="mqttTopic", required=true)
     private String mqttTopic;
 
+    /**
+     * @return The MQTT topic of the message. You can use a string expression that includes variables (`$variable.&lt;variable-name&gt;`) and input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`) as the topic string.
+     * 
+     */
     public String mqttTopic() {
         return this.mqttTopic;
     }
@@ -62,6 +66,12 @@ public final class DetectorModelIotTopicPublish extends com.pulumi.resources.Inv
             $ = new DetectorModelIotTopicPublish(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mqttTopic The MQTT topic of the message. You can use a string expression that includes variables (`$variable.&lt;variable-name&gt;`) and input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`) as the topic string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mqttTopic(String mqttTopic) {
             $.mqttTopic = mqttTopic;
             return this;

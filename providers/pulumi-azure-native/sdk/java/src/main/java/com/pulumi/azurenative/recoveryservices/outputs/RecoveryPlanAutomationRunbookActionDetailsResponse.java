@@ -12,23 +12,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RecoveryPlanAutomationRunbookActionDetailsResponse {
     /**
-     * The fabric location.
+     * @return The fabric location.
      * 
      */
     private final String fabricLocation;
     /**
-     * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+     * @return Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
      * Expected value is &#39;AutomationRunbookActionDetails&#39;.
      * 
      */
     private final String instanceType;
     /**
-     * The runbook ARM Id.
+     * @return The runbook ARM Id.
      * 
      */
     private final @Nullable String runbookId;
     /**
-     * The runbook timeout.
+     * @return The runbook timeout.
      * 
      */
     private final @Nullable String timeout;
@@ -46,31 +46,31 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse {
     }
 
     /**
-     * The fabric location.
+     * @return The fabric location.
      * 
-    */
+     */
     public String fabricLocation() {
         return this.fabricLocation;
     }
     /**
-     * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+     * @return Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
      * Expected value is &#39;AutomationRunbookActionDetails&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The runbook ARM Id.
+     * @return The runbook ARM Id.
      * 
-    */
+     */
     public Optional<String> runbookId() {
         return Optional.ofNullable(this.runbookId);
     }
     /**
-     * The runbook timeout.
+     * @return The runbook timeout.
      * 
-    */
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }

@@ -26,6 +26,10 @@ public final class ClfsTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="target")
     private @Nullable Output<String> target;
 
+    /**
+     * @return Resource ID of storage container.
+     * 
+     */
     public Optional<Output<String>> target() {
         return Optional.ofNullable(this.target);
     }
@@ -54,11 +58,23 @@ public final class ClfsTargetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClfsTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param target Resource ID of storage container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target Resource ID of storage container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }

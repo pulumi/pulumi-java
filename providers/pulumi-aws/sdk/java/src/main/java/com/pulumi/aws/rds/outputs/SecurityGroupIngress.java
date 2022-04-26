@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityGroupIngress {
     /**
-     * The CIDR block to accept
+     * @return The CIDR block to accept
      * 
      */
     private final @Nullable String cidr;
     /**
-     * The ID of the security group to authorize
+     * @return The ID of the security group to authorize
      * 
      */
     private final @Nullable String securityGroupId;
     /**
-     * The name of the security group to authorize
+     * @return The name of the security group to authorize
      * 
      */
     private final @Nullable String securityGroupName;
     /**
-     * The owner Id of the security group provided
+     * @return The owner Id of the security group provided
      * by `security_group_name`.
      * 
      */
@@ -46,31 +46,31 @@ public final class SecurityGroupIngress {
     }
 
     /**
-     * The CIDR block to accept
+     * @return The CIDR block to accept
      * 
-    */
+     */
     public Optional<String> cidr() {
         return Optional.ofNullable(this.cidr);
     }
     /**
-     * The ID of the security group to authorize
+     * @return The ID of the security group to authorize
      * 
-    */
+     */
     public Optional<String> securityGroupId() {
         return Optional.ofNullable(this.securityGroupId);
     }
     /**
-     * The name of the security group to authorize
+     * @return The name of the security group to authorize
      * 
-    */
+     */
     public Optional<String> securityGroupName() {
         return Optional.ofNullable(this.securityGroupName);
     }
     /**
-     * The owner Id of the security group provided
+     * @return The owner Id of the security group provided
      * by `security_group_name`.
      * 
-    */
+     */
     public Optional<String> securityGroupOwnerId() {
         return Optional.ofNullable(this.securityGroupOwnerId);
     }

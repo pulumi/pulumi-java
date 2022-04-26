@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TriggerGithubPush {
     /**
-     * Regex of branches to match.  Specify only one of branch or tag.
+     * @return Regex of branches to match.  Specify only one of branch or tag.
      * 
      */
     private final @Nullable String branch;
     /**
-     * Only trigger a build if the revision regex does NOT match the revision regex.
+     * @return Only trigger a build if the revision regex does NOT match the revision regex.
      * 
      */
     private final @Nullable Boolean invertRegex;
     /**
-     * Regex of tags to match.  Specify only one of branch or tag.
+     * @return Regex of tags to match.  Specify only one of branch or tag.
      * 
      */
     private final @Nullable String tag;
@@ -39,23 +39,23 @@ public final class TriggerGithubPush {
     }
 
     /**
-     * Regex of branches to match.  Specify only one of branch or tag.
+     * @return Regex of branches to match.  Specify only one of branch or tag.
      * 
-    */
+     */
     public Optional<String> branch() {
         return Optional.ofNullable(this.branch);
     }
     /**
-     * Only trigger a build if the revision regex does NOT match the revision regex.
+     * @return Only trigger a build if the revision regex does NOT match the revision regex.
      * 
-    */
+     */
     public Optional<Boolean> invertRegex() {
         return Optional.ofNullable(this.invertRegex);
     }
     /**
-     * Regex of tags to match.  Specify only one of branch or tag.
+     * @return Regex of tags to match.  Specify only one of branch or tag.
      * 
-    */
+     */
     public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }

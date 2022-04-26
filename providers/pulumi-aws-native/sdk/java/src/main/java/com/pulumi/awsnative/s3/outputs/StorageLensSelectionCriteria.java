@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StorageLensSelectionCriteria {
     /**
-     * Delimiter to divide S3 key into hierarchy of prefixes.
+     * @return Delimiter to divide S3 key into hierarchy of prefixes.
      * 
      */
     private final @Nullable String delimiter;
     /**
-     * Max depth of prefixes of S3 key that Amazon S3 Storage Lens will analyze.
+     * @return Max depth of prefixes of S3 key that Amazon S3 Storage Lens will analyze.
      * 
      */
     private final @Nullable Integer maxDepth;
     /**
-     * The minimum storage bytes threshold for the prefixes to be included in the analysis.
+     * @return The minimum storage bytes threshold for the prefixes to be included in the analysis.
      * 
      */
     private final @Nullable Double minStorageBytesPercentage;
@@ -40,23 +40,23 @@ public final class StorageLensSelectionCriteria {
     }
 
     /**
-     * Delimiter to divide S3 key into hierarchy of prefixes.
+     * @return Delimiter to divide S3 key into hierarchy of prefixes.
      * 
-    */
+     */
     public Optional<String> delimiter() {
         return Optional.ofNullable(this.delimiter);
     }
     /**
-     * Max depth of prefixes of S3 key that Amazon S3 Storage Lens will analyze.
+     * @return Max depth of prefixes of S3 key that Amazon S3 Storage Lens will analyze.
      * 
-    */
+     */
     public Optional<Integer> maxDepth() {
         return Optional.ofNullable(this.maxDepth);
     }
     /**
-     * The minimum storage bytes threshold for the prefixes to be included in the analysis.
+     * @return The minimum storage bytes threshold for the prefixes to be included in the analysis.
      * 
-    */
+     */
     public Optional<Double> minStorageBytesPercentage() {
         return Optional.ofNullable(this.minStorageBytesPercentage);
     }

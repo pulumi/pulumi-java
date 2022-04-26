@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class ClientInfoResponse {
     /**
-     * The list of detailed information about client.
+     * @return The list of detailed information about client.
      * 
      */
     private final List<ClientInfoDetailResponse> clientInfoDetails;
     /**
-     * Client name, such as gcloud.
+     * @return Client name, such as gcloud.
      * 
      */
     private final String name;
@@ -31,16 +31,16 @@ public final class ClientInfoResponse {
     }
 
     /**
-     * The list of detailed information about client.
+     * @return The list of detailed information about client.
      * 
-    */
+     */
     public List<ClientInfoDetailResponse> clientInfoDetails() {
         return this.clientInfoDetails;
     }
     /**
-     * Client name, such as gcloud.
+     * @return Client name, such as gcloud.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

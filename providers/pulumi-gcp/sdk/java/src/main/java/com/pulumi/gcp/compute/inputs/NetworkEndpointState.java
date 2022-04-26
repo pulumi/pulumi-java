@@ -25,6 +25,12 @@ public final class NetworkEndpointState extends com.pulumi.resources.ResourceArg
     @Import(name="instance")
     private @Nullable Output<String> instance;
 
+    /**
+     * @return The name for a specific VM instance that the IP address belongs to.
+     * This is required for network endpoints of type GCE_VM_IP_PORT.
+     * The instance must be in the same zone of network endpoint group.
+     * 
+     */
     public Optional<Output<String>> instance() {
         return Optional.ofNullable(this.instance);
     }
@@ -38,6 +44,12 @@ public final class NetworkEndpointState extends com.pulumi.resources.ResourceArg
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return IPv4 address of network endpoint. The IP address must belong
+     * to a VM in GCE (either the primary IP or as part of an aliased IP
+     * range).
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -49,6 +61,10 @@ public final class NetworkEndpointState extends com.pulumi.resources.ResourceArg
     @Import(name="networkEndpointGroup")
     private @Nullable Output<String> networkEndpointGroup;
 
+    /**
+     * @return The network endpoint group this endpoint is part of.
+     * 
+     */
     public Optional<Output<String>> networkEndpointGroup() {
         return Optional.ofNullable(this.networkEndpointGroup);
     }
@@ -60,6 +76,10 @@ public final class NetworkEndpointState extends com.pulumi.resources.ResourceArg
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return Port number of network endpoint.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -72,6 +92,11 @@ public final class NetworkEndpointState extends com.pulumi.resources.ResourceArg
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -83,6 +108,10 @@ public final class NetworkEndpointState extends com.pulumi.resources.ResourceArg
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return Zone where the containing network endpoint group is located.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -116,56 +145,138 @@ public final class NetworkEndpointState extends com.pulumi.resources.ResourceArg
             $ = new NetworkEndpointState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instance The name for a specific VM instance that the IP address belongs to.
+         * This is required for network endpoints of type GCE_VM_IP_PORT.
+         * The instance must be in the same zone of network endpoint group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(@Nullable Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param instance The name for a specific VM instance that the IP address belongs to.
+         * This is required for network endpoints of type GCE_VM_IP_PORT.
+         * The instance must be in the same zone of network endpoint group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             return instance(Output.of(instance));
         }
 
+        /**
+         * @param ipAddress IPv4 address of network endpoint. The IP address must belong
+         * to a VM in GCE (either the primary IP or as part of an aliased IP
+         * range).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress IPv4 address of network endpoint. The IP address must belong
+         * to a VM in GCE (either the primary IP or as part of an aliased IP
+         * range).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param networkEndpointGroup The network endpoint group this endpoint is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkEndpointGroup(@Nullable Output<String> networkEndpointGroup) {
             $.networkEndpointGroup = networkEndpointGroup;
             return this;
         }
 
+        /**
+         * @param networkEndpointGroup The network endpoint group this endpoint is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkEndpointGroup(String networkEndpointGroup) {
             return networkEndpointGroup(Output.of(networkEndpointGroup));
         }
 
+        /**
+         * @param port Port number of network endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port number of network endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param zone Zone where the containing network endpoint group is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone Zone where the containing network endpoint group is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

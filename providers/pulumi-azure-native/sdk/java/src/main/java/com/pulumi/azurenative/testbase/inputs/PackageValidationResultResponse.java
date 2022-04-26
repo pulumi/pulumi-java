@@ -25,6 +25,10 @@ public final class PackageValidationResultResponse extends com.pulumi.resources.
     @Import(name="errors", required=true)
     private List<String> errors;
 
+    /**
+     * @return Error information.
+     * 
+     */
     public List<String> errors() {
         return this.errors;
     }
@@ -36,6 +40,10 @@ public final class PackageValidationResultResponse extends com.pulumi.resources.
     @Import(name="isValid", required=true)
     private Boolean isValid;
 
+    /**
+     * @return Indicates whether the package passed the validation.
+     * 
+     */
     public Boolean isValid() {
         return this.isValid;
     }
@@ -47,6 +55,10 @@ public final class PackageValidationResultResponse extends com.pulumi.resources.
     @Import(name="validationName", required=true)
     private String validationName;
 
+    /**
+     * @return Validation name.
+     * 
+     */
     public String validationName() {
         return this.validationName;
     }
@@ -77,20 +89,44 @@ public final class PackageValidationResultResponse extends com.pulumi.resources.
             $ = new PackageValidationResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errors Error information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(List<String> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors Error information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(String... errors) {
             return errors(List.of(errors));
         }
 
+        /**
+         * @param isValid Indicates whether the package passed the validation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isValid(Boolean isValid) {
             $.isValid = isValid;
             return this;
         }
 
+        /**
+         * @param validationName Validation name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationName(String validationName) {
             $.validationName = validationName;
             return this;

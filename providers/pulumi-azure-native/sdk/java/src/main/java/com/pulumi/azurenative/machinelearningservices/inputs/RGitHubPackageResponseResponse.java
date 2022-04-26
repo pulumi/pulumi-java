@@ -21,6 +21,10 @@ public final class RGitHubPackageResponseResponse extends com.pulumi.resources.I
     @Import(name="repository")
     private @Nullable String repository;
 
+    /**
+     * @return Repository address in the format username/repo[/subdir][@ref|#pull].
+     * 
+     */
     public Optional<String> repository() {
         return Optional.ofNullable(this.repository);
     }
@@ -49,6 +53,12 @@ public final class RGitHubPackageResponseResponse extends com.pulumi.resources.I
             $ = new RGitHubPackageResponseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param repository Repository address in the format username/repo[/subdir][@ref|#pull].
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(@Nullable String repository) {
             $.repository = repository;
             return this;

@@ -23,6 +23,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
     @Import(name="maxSize", required=true)
     private String maxSize;
 
+    /**
+     * @return The maximal number of workers. Must be equal to or greater than min_size.
+     * 
+     */
     public String maxSize() {
         return this.maxSize;
     }
@@ -34,6 +38,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
     @Import(name="minSize", required=true)
     private String minSize;
 
+    /**
+     * @return The minimal number of workers. Must be greater than 0.
+     * 
+     */
     public String minSize() {
         return this.minSize;
     }
@@ -63,11 +71,23 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
             $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxSize The maximal number of workers. Must be equal to or greater than min_size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSize(String maxSize) {
             $.maxSize = maxSize;
             return this;
         }
 
+        /**
+         * @param minSize The minimal number of workers. Must be greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSize(String minSize) {
             $.minSize = minSize;
             return this;

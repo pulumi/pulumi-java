@@ -24,6 +24,10 @@ public final class DelayActionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="duration", required=true)
     private String duration;
 
+    /**
+     * @return ISO8601 formatted string that represents a duration.
+     * 
+     */
     public String duration() {
         return this.duration;
     }
@@ -35,6 +39,10 @@ public final class DelayActionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return String that represents a Capability URN.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,11 @@ public final class DelayActionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Enum that discriminates between action models.
+     * Expected value is &#39;delay&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -77,16 +90,35 @@ public final class DelayActionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DelayActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param duration ISO8601 formatted string that represents a duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param name String that represents a Capability URN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Enum that discriminates between action models.
+         * Expected value is &#39;delay&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

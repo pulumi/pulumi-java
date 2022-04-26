@@ -28,6 +28,10 @@ public final class FlowDestinationFlowConfigArgs extends com.pulumi.resources.Re
     @Import(name="connectorProfileName")
     private @Nullable Output<String> connectorProfileName;
 
+    /**
+     * @return Name of destination connector profile
+     * 
+     */
     public Optional<Output<String>> connectorProfileName() {
         return Optional.ofNullable(this.connectorProfileName);
     }
@@ -39,6 +43,10 @@ public final class FlowDestinationFlowConfigArgs extends com.pulumi.resources.Re
     @Import(name="connectorType", required=true)
     private Output<FlowConnectorType> connectorType;
 
+    /**
+     * @return Destination connector type
+     * 
+     */
     public Output<FlowConnectorType> connectorType() {
         return this.connectorType;
     }
@@ -50,6 +58,10 @@ public final class FlowDestinationFlowConfigArgs extends com.pulumi.resources.Re
     @Import(name="destinationConnectorProperties", required=true)
     private Output<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties;
 
+    /**
+     * @return Destination connector details
+     * 
+     */
     public Output<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties() {
         return this.destinationConnectorProperties;
     }
@@ -80,29 +92,65 @@ public final class FlowDestinationFlowConfigArgs extends com.pulumi.resources.Re
             $ = new FlowDestinationFlowConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectorProfileName Name of destination connector profile
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorProfileName(@Nullable Output<String> connectorProfileName) {
             $.connectorProfileName = connectorProfileName;
             return this;
         }
 
+        /**
+         * @param connectorProfileName Name of destination connector profile
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorProfileName(String connectorProfileName) {
             return connectorProfileName(Output.of(connectorProfileName));
         }
 
+        /**
+         * @param connectorType Destination connector type
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorType(Output<FlowConnectorType> connectorType) {
             $.connectorType = connectorType;
             return this;
         }
 
+        /**
+         * @param connectorType Destination connector type
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorType(FlowConnectorType connectorType) {
             return connectorType(Output.of(connectorType));
         }
 
+        /**
+         * @param destinationConnectorProperties Destination connector details
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationConnectorProperties(Output<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties) {
             $.destinationConnectorProperties = destinationConnectorProperties;
             return this;
         }
 
+        /**
+         * @param destinationConnectorProperties Destination connector details
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationConnectorProperties(FlowDestinationConnectorPropertiesArgs destinationConnectorProperties) {
             return destinationConnectorProperties(Output.of(destinationConnectorProperties));
         }

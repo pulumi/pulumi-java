@@ -23,6 +23,10 @@ public final class PermissionsTableArgs extends com.pulumi.resources.ResourceArg
     @Import(name="catalogId")
     private @Nullable Output<String> catalogId;
 
+    /**
+     * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
+     * 
+     */
     public Optional<Output<String>> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
@@ -34,6 +38,10 @@ public final class PermissionsTableArgs extends com.pulumi.resources.ResourceArg
     @Import(name="databaseName", required=true)
     private Output<String> databaseName;
 
+    /**
+     * @return Name of the database for the table with columns resource. Unique to the Data Catalog.
+     * 
+     */
     public Output<String> databaseName() {
         return this.databaseName;
     }
@@ -45,6 +53,10 @@ public final class PermissionsTableArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the table resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,29 +95,65 @@ public final class PermissionsTableArgs extends com.pulumi.resources.ResourceArg
             $ = new PermissionsTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogId Identifier for the Data Catalog. By default, it is the account ID of the caller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(@Nullable Output<String> catalogId) {
             $.catalogId = catalogId;
             return this;
         }
 
+        /**
+         * @param catalogId Identifier for the Data Catalog. By default, it is the account ID of the caller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(String catalogId) {
             return catalogId(Output.of(catalogId));
         }
 
+        /**
+         * @param databaseName Name of the database for the table with columns resource. Unique to the Data Catalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName Name of the database for the table with columns resource. Unique to the Data Catalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param name Name of the table resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the table resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

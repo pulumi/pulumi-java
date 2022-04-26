@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetImageOutputResource {
     /**
-     * Set of objects with each Amazon Machine Image (AMI) created.
+     * @return Set of objects with each Amazon Machine Image (AMI) created.
      * 
      */
     private final List<GetImageOutputResourceAmi> amis;
@@ -22,9 +22,9 @@ public final class GetImageOutputResource {
     }
 
     /**
-     * Set of objects with each Amazon Machine Image (AMI) created.
+     * @return Set of objects with each Amazon Machine Image (AMI) created.
      * 
-    */
+     */
     public List<GetImageOutputResourceAmi> amis() {
         return this.amis;
     }

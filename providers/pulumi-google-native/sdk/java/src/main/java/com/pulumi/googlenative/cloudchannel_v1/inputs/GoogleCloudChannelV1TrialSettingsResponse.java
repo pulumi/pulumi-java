@@ -24,6 +24,10 @@ public final class GoogleCloudChannelV1TrialSettingsResponse extends com.pulumi.
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return Date when the trial ends. The value is in milliseconds using the UNIX Epoch format. See an example [Epoch converter](https://www.epochconverter.com).
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudChannelV1TrialSettingsResponse extends com.pulumi.
     @Import(name="trial", required=true)
     private Boolean trial;
 
+    /**
+     * @return Determines if the entitlement is in a trial or not: * `true` - The entitlement is in trial. * `false` - The entitlement is not in trial.
+     * 
+     */
     public Boolean trial() {
         return this.trial;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudChannelV1TrialSettingsResponse extends com.pulumi.
             $ = new GoogleCloudChannelV1TrialSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime Date when the trial ends. The value is in milliseconds using the UNIX Epoch format. See an example [Epoch converter](https://www.epochconverter.com).
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param trial Determines if the entitlement is in a trial or not: * `true` - The entitlement is in trial. * `false` - The entitlement is not in trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trial(Boolean trial) {
             $.trial = trial;
             return this;

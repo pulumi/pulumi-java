@@ -25,6 +25,10 @@ public final class VideoStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="h264", required=true)
     private H264CodecSettingsResponse h264;
 
+    /**
+     * @return H264 codec settings.
+     * 
+     */
     public H264CodecSettingsResponse h264() {
         return this.h264;
     }
@@ -36,6 +40,10 @@ public final class VideoStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="h265", required=true)
     private H265CodecSettingsResponse h265;
 
+    /**
+     * @return H265 codec settings.
+     * 
+     */
     public H265CodecSettingsResponse h265() {
         return this.h265;
     }
@@ -47,6 +55,10 @@ public final class VideoStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vp9", required=true)
     private Vp9CodecSettingsResponse vp9;
 
+    /**
+     * @return VP9 codec settings.
+     * 
+     */
     public Vp9CodecSettingsResponse vp9() {
         return this.vp9;
     }
@@ -77,16 +89,34 @@ public final class VideoStreamResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VideoStreamResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param h264 H264 codec settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder h264(H264CodecSettingsResponse h264) {
             $.h264 = h264;
             return this;
         }
 
+        /**
+         * @param h265 H265 codec settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder h265(H265CodecSettingsResponse h265) {
             $.h265 = h265;
             return this;
         }
 
+        /**
+         * @param vp9 VP9 codec settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vp9(Vp9CodecSettingsResponse vp9) {
             $.vp9 = vp9;
             return this;

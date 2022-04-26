@@ -27,6 +27,10 @@ public final class RegionalAvailabilityResponse extends com.pulumi.resources.Inv
     @Import(name="region")
     private @Nullable String region;
 
+    /**
+     * @return Corresponding region
+     * 
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
@@ -38,6 +42,10 @@ public final class RegionalAvailabilityResponse extends com.pulumi.resources.Inv
     @Import(name="sizeAvailabilities")
     private @Nullable List<SizeAvailabilityResponse> sizeAvailabilities;
 
+    /**
+     * @return List of all the size information for the region
+     * 
+     */
     public Optional<List<SizeAvailabilityResponse>> sizeAvailabilities() {
         return Optional.ofNullable(this.sizeAvailabilities);
     }
@@ -67,16 +75,34 @@ public final class RegionalAvailabilityResponse extends com.pulumi.resources.Inv
             $ = new RegionalAvailabilityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param region Corresponding region
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param sizeAvailabilities List of all the size information for the region
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeAvailabilities(@Nullable List<SizeAvailabilityResponse> sizeAvailabilities) {
             $.sizeAvailabilities = sizeAvailabilities;
             return this;
         }
 
+        /**
+         * @param sizeAvailabilities List of all the size information for the region
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeAvailabilities(SizeAvailabilityResponse... sizeAvailabilities) {
             return sizeAvailabilities(List.of(sizeAvailabilities));
         }

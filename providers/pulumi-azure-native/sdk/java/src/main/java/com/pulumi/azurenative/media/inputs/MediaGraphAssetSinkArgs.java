@@ -26,6 +26,10 @@ public final class MediaGraphAssetSinkArgs extends com.pulumi.resources.Resource
     @Import(name="assetName", required=true)
     private Output<String> assetName;
 
+    /**
+     * @return Asset name.
+     * 
+     */
     public Output<String> assetName() {
         return this.assetName;
     }
@@ -37,6 +41,10 @@ public final class MediaGraphAssetSinkArgs extends com.pulumi.resources.Resource
     @Import(name="inputs", required=true)
     private Output<List<String>> inputs;
 
+    /**
+     * @return Sink inputs.
+     * 
+     */
     public Output<List<String>> inputs() {
         return this.inputs;
     }
@@ -48,6 +56,10 @@ public final class MediaGraphAssetSinkArgs extends com.pulumi.resources.Resource
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Sink name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -60,6 +72,11 @@ public final class MediaGraphAssetSinkArgs extends com.pulumi.resources.Resource
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphAssetSink&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -91,42 +108,98 @@ public final class MediaGraphAssetSinkArgs extends com.pulumi.resources.Resource
             $ = new MediaGraphAssetSinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetName Asset name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(Output<String> assetName) {
             $.assetName = assetName;
             return this;
         }
 
+        /**
+         * @param assetName Asset name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(String assetName) {
             return assetName(Output.of(assetName));
         }
 
+        /**
+         * @param inputs Sink inputs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(Output<List<String>> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs Sink inputs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(List<String> inputs) {
             return inputs(Output.of(inputs));
         }
 
+        /**
+         * @param inputs Sink inputs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(String... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param name Sink name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Sink name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.MediaGraphAssetSink&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.MediaGraphAssetSink&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }

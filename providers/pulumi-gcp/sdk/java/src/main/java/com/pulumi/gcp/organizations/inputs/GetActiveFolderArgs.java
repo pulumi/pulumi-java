@@ -19,6 +19,10 @@ public final class GetActiveFolderArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The folder&#39;s display name.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -30,6 +34,10 @@ public final class GetActiveFolderArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="parent", required=true)
     private String parent;
 
+    /**
+     * @return The resource name of the parent Folder or Organization.
+     * 
+     */
     public String parent() {
         return this.parent;
     }
@@ -59,11 +67,23 @@ public final class GetActiveFolderArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetActiveFolderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The folder&#39;s display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param parent The resource name of the parent Folder or Organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             $.parent = parent;
             return this;

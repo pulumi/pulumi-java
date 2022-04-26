@@ -24,6 +24,10 @@ public final class BucketEventBridgeConfigurationArgs extends com.pulumi.resourc
     @Import(name="eventBridgeEnabled", required=true)
     private Output<Boolean> eventBridgeEnabled;
 
+    /**
+     * @return Specifies whether to send notifications to Amazon EventBridge when events occur in an Amazon S3 bucket.
+     * 
+     */
     public Output<Boolean> eventBridgeEnabled() {
         return this.eventBridgeEnabled;
     }
@@ -52,11 +56,23 @@ public final class BucketEventBridgeConfigurationArgs extends com.pulumi.resourc
             $ = new BucketEventBridgeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventBridgeEnabled Specifies whether to send notifications to Amazon EventBridge when events occur in an Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventBridgeEnabled(Output<Boolean> eventBridgeEnabled) {
             $.eventBridgeEnabled = eventBridgeEnabled;
             return this;
         }
 
+        /**
+         * @param eventBridgeEnabled Specifies whether to send notifications to Amazon EventBridge when events occur in an Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventBridgeEnabled(Boolean eventBridgeEnabled) {
             return eventBridgeEnabled(Output.of(eventBridgeEnabled));
         }

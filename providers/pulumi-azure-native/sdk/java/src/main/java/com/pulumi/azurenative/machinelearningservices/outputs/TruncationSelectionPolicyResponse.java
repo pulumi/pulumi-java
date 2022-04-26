@@ -13,22 +13,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TruncationSelectionPolicyResponse {
     /**
-     * Number of intervals by which to delay the first evaluation.
+     * @return Number of intervals by which to delay the first evaluation.
      * 
      */
     private final @Nullable Integer delayEvaluation;
     /**
-     * Interval (number of runs) between policy evaluations.
+     * @return Interval (number of runs) between policy evaluations.
      * 
      */
     private final @Nullable Integer evaluationInterval;
     /**
+     * @return
      * Expected value is &#39;TruncationSelection&#39;.
      * 
      */
     private final String policyType;
     /**
-     * The percentage of runs to cancel at each evaluation interval.
+     * @return The percentage of runs to cancel at each evaluation interval.
      * 
      */
     private final @Nullable Integer truncationPercentage;
@@ -46,30 +47,31 @@ public final class TruncationSelectionPolicyResponse {
     }
 
     /**
-     * Number of intervals by which to delay the first evaluation.
+     * @return Number of intervals by which to delay the first evaluation.
      * 
-    */
+     */
     public Optional<Integer> delayEvaluation() {
         return Optional.ofNullable(this.delayEvaluation);
     }
     /**
-     * Interval (number of runs) between policy evaluations.
+     * @return Interval (number of runs) between policy evaluations.
      * 
-    */
+     */
     public Optional<Integer> evaluationInterval() {
         return Optional.ofNullable(this.evaluationInterval);
     }
     /**
+     * @return
      * Expected value is &#39;TruncationSelection&#39;.
      * 
-    */
+     */
     public String policyType() {
         return this.policyType;
     }
     /**
-     * The percentage of runs to cancel at each evaluation interval.
+     * @return The percentage of runs to cancel at each evaluation interval.
      * 
-    */
+     */
     public Optional<Integer> truncationPercentage() {
         return Optional.ofNullable(this.truncationPercentage);
     }

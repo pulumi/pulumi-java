@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TriggerPredicateCondition {
     /**
-     * The condition crawl state. Currently, the values supported are `RUNNING`, `SUCCEEDED`, `CANCELLED`, and `FAILED`. If this is specified, `crawler_name` must also be specified. Conflicts with `state`.
+     * @return The condition crawl state. Currently, the values supported are `RUNNING`, `SUCCEEDED`, `CANCELLED`, and `FAILED`. If this is specified, `crawler_name` must also be specified. Conflicts with `state`.
      * 
      */
     private final @Nullable String crawlState;
     /**
-     * The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
+     * @return The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
      * 
      */
     private final @Nullable String crawlerName;
     /**
-     * The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
+     * @return The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
      * 
      */
     private final @Nullable String jobName;
     /**
-     * A logical operator. Defaults to `EQUALS`.
+     * @return A logical operator. Defaults to `EQUALS`.
      * 
      */
     private final @Nullable String logicalOperator;
     /**
-     * The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
+     * @return The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
      * 
      */
     private final @Nullable String state;
@@ -52,37 +52,37 @@ public final class TriggerPredicateCondition {
     }
 
     /**
-     * The condition crawl state. Currently, the values supported are `RUNNING`, `SUCCEEDED`, `CANCELLED`, and `FAILED`. If this is specified, `crawler_name` must also be specified. Conflicts with `state`.
+     * @return The condition crawl state. Currently, the values supported are `RUNNING`, `SUCCEEDED`, `CANCELLED`, and `FAILED`. If this is specified, `crawler_name` must also be specified. Conflicts with `state`.
      * 
-    */
+     */
     public Optional<String> crawlState() {
         return Optional.ofNullable(this.crawlState);
     }
     /**
-     * The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
+     * @return The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
      * 
-    */
+     */
     public Optional<String> crawlerName() {
         return Optional.ofNullable(this.crawlerName);
     }
     /**
-     * The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
+     * @return The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
      * 
-    */
+     */
     public Optional<String> jobName() {
         return Optional.ofNullable(this.jobName);
     }
     /**
-     * A logical operator. Defaults to `EQUALS`.
+     * @return A logical operator. Defaults to `EQUALS`.
      * 
-    */
+     */
     public Optional<String> logicalOperator() {
         return Optional.ofNullable(this.logicalOperator);
     }
     /**
-     * The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
+     * @return The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

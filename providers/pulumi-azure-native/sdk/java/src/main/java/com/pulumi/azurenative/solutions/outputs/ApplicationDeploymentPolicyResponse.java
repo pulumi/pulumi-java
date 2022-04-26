@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ApplicationDeploymentPolicyResponse {
     /**
-     * The managed application deployment mode.
+     * @return The managed application deployment mode.
      * 
      */
     private final String deploymentMode;
@@ -21,9 +21,9 @@ public final class ApplicationDeploymentPolicyResponse {
     }
 
     /**
-     * The managed application deployment mode.
+     * @return The managed application deployment mode.
      * 
-    */
+     */
     public String deploymentMode() {
         return this.deploymentMode;
     }

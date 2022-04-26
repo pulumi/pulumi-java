@@ -16,22 +16,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLoggingConfigurationResult {
     /**
-     * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
+     * @return The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
      * 
      */
     private final @Nullable List<String> logDestinationConfigs;
     /**
-     * Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation.
+     * @return Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation.
      * 
      */
     private final @Nullable LoggingFilterProperties loggingFilter;
     /**
-     * Indicates whether the logging configuration was created by AWS Firewall Manager, as part of an AWS WAF policy configuration. If true, only Firewall Manager can modify or delete the configuration.
+     * @return Indicates whether the logging configuration was created by AWS Firewall Manager, as part of an AWS WAF policy configuration. If true, only Firewall Manager can modify or delete the configuration.
      * 
      */
     private final @Nullable Boolean managedByFirewallManager;
     /**
-     * The parts of the request that you want to keep out of the logs. For example, if you redact the HEADER field, the HEADER field in the firehose will be xxx.
+     * @return The parts of the request that you want to keep out of the logs. For example, if you redact the HEADER field, the HEADER field in the firehose will be xxx.
      * 
      */
     private final @Nullable List<LoggingConfigurationFieldToMatch> redactedFields;
@@ -49,30 +49,30 @@ public final class GetLoggingConfigurationResult {
     }
 
     /**
-     * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
+     * @return The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
      * 
-    */
+     */
     public List<String> logDestinationConfigs() {
         return this.logDestinationConfigs == null ? List.of() : this.logDestinationConfigs;
     }
     /**
-     * Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation.
+     * @return Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation.
      * 
-    */
+     */
     public Optional<LoggingFilterProperties> loggingFilter() {
         return Optional.ofNullable(this.loggingFilter);
     }
     /**
-     * Indicates whether the logging configuration was created by AWS Firewall Manager, as part of an AWS WAF policy configuration. If true, only Firewall Manager can modify or delete the configuration.
+     * @return Indicates whether the logging configuration was created by AWS Firewall Manager, as part of an AWS WAF policy configuration. If true, only Firewall Manager can modify or delete the configuration.
      * 
-    */
+     */
     public Optional<Boolean> managedByFirewallManager() {
         return Optional.ofNullable(this.managedByFirewallManager);
     }
     /**
-     * The parts of the request that you want to keep out of the logs. For example, if you redact the HEADER field, the HEADER field in the firehose will be xxx.
+     * @return The parts of the request that you want to keep out of the logs. For example, if you redact the HEADER field, the HEADER field in the firehose will be xxx.
      * 
-    */
+     */
     public List<LoggingConfigurationFieldToMatch> redactedFields() {
         return this.redactedFields == null ? List.of() : this.redactedFields;
     }

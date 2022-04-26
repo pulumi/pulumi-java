@@ -27,6 +27,10 @@ public final class ResourceQuotaStatusArgs extends com.pulumi.resources.Resource
     @Import(name="hard")
     private @Nullable Output<Map<String,String>> hard;
 
+    /**
+     * @return Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
+     * 
+     */
     public Optional<Output<Map<String,String>>> hard() {
         return Optional.ofNullable(this.hard);
     }
@@ -38,6 +42,10 @@ public final class ResourceQuotaStatusArgs extends com.pulumi.resources.Resource
     @Import(name="used")
     private @Nullable Output<Map<String,String>> used;
 
+    /**
+     * @return Used is the current observed total usage of the resource in the namespace.
+     * 
+     */
     public Optional<Output<Map<String,String>>> used() {
         return Optional.ofNullable(this.used);
     }
@@ -67,20 +75,44 @@ public final class ResourceQuotaStatusArgs extends com.pulumi.resources.Resource
             $ = new ResourceQuotaStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hard Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
+         * 
+         * @return builder
+         * 
+         */
         public Builder hard(@Nullable Output<Map<String,String>> hard) {
             $.hard = hard;
             return this;
         }
 
+        /**
+         * @param hard Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
+         * 
+         * @return builder
+         * 
+         */
         public Builder hard(Map<String,String> hard) {
             return hard(Output.of(hard));
         }
 
+        /**
+         * @param used Used is the current observed total usage of the resource in the namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder used(@Nullable Output<Map<String,String>> used) {
             $.used = used;
             return this;
         }
 
+        /**
+         * @param used Used is the current observed total usage of the resource in the namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder used(Map<String,String> used) {
             return used(Output.of(used));
         }

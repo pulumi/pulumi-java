@@ -28,6 +28,10 @@ public final class ScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxReplicas")
     private @Nullable Output<Integer> maxReplicas;
 
+    /**
+     * @return Optional. Maximum number of container replicas. Defaults to 10 if not set.
+     * 
+     */
     public Optional<Output<Integer>> maxReplicas() {
         return Optional.ofNullable(this.maxReplicas);
     }
@@ -39,6 +43,10 @@ public final class ScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minReplicas")
     private @Nullable Output<Integer> minReplicas;
 
+    /**
+     * @return Optional. Minimum number of container replicas.
+     * 
+     */
     public Optional<Output<Integer>> minReplicas() {
         return Optional.ofNullable(this.minReplicas);
     }
@@ -50,6 +58,10 @@ public final class ScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
     private @Nullable Output<List<ScaleRuleArgs>> rules;
 
+    /**
+     * @return Scaling rules.
+     * 
+     */
     public Optional<Output<List<ScaleRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -80,33 +92,75 @@ public final class ScaleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScaleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxReplicas Optional. Maximum number of container replicas. Defaults to 10 if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxReplicas(@Nullable Output<Integer> maxReplicas) {
             $.maxReplicas = maxReplicas;
             return this;
         }
 
+        /**
+         * @param maxReplicas Optional. Maximum number of container replicas. Defaults to 10 if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxReplicas(Integer maxReplicas) {
             return maxReplicas(Output.of(maxReplicas));
         }
 
+        /**
+         * @param minReplicas Optional. Minimum number of container replicas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
             $.minReplicas = minReplicas;
             return this;
         }
 
+        /**
+         * @param minReplicas Optional. Minimum number of container replicas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReplicas(Integer minReplicas) {
             return minReplicas(Output.of(minReplicas));
         }
 
+        /**
+         * @param rules Scaling rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<ScaleRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Scaling rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<ScaleRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules Scaling rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(ScaleRuleArgs... rules) {
             return rules(List.of(rules));
         }

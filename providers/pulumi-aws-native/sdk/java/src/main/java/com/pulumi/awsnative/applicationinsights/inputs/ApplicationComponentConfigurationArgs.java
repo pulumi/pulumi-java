@@ -28,6 +28,10 @@ public final class ApplicationComponentConfigurationArgs extends com.pulumi.reso
     @Import(name="configurationDetails")
     private @Nullable Output<ApplicationConfigurationDetailsArgs> configurationDetails;
 
+    /**
+     * @return The configuration settings
+     * 
+     */
     public Optional<Output<ApplicationConfigurationDetailsArgs>> configurationDetails() {
         return Optional.ofNullable(this.configurationDetails);
     }
@@ -39,6 +43,10 @@ public final class ApplicationComponentConfigurationArgs extends com.pulumi.reso
     @Import(name="subComponentTypeConfigurations")
     private @Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations;
 
+    /**
+     * @return Sub component configurations of the component.
+     * 
+     */
     public Optional<Output<List<ApplicationSubComponentTypeConfigurationArgs>>> subComponentTypeConfigurations() {
         return Optional.ofNullable(this.subComponentTypeConfigurations);
     }
@@ -68,24 +76,54 @@ public final class ApplicationComponentConfigurationArgs extends com.pulumi.reso
             $ = new ApplicationComponentConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationDetails The configuration settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationDetails(@Nullable Output<ApplicationConfigurationDetailsArgs> configurationDetails) {
             $.configurationDetails = configurationDetails;
             return this;
         }
 
+        /**
+         * @param configurationDetails The configuration settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationDetails(ApplicationConfigurationDetailsArgs configurationDetails) {
             return configurationDetails(Output.of(configurationDetails));
         }
 
+        /**
+         * @param subComponentTypeConfigurations Sub component configurations of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subComponentTypeConfigurations(@Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations) {
             $.subComponentTypeConfigurations = subComponentTypeConfigurations;
             return this;
         }
 
+        /**
+         * @param subComponentTypeConfigurations Sub component configurations of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subComponentTypeConfigurations(List<ApplicationSubComponentTypeConfigurationArgs> subComponentTypeConfigurations) {
             return subComponentTypeConfigurations(Output.of(subComponentTypeConfigurations));
         }
 
+        /**
+         * @param subComponentTypeConfigurations Sub component configurations of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subComponentTypeConfigurations(ApplicationSubComponentTypeConfigurationArgs... subComponentTypeConfigurations) {
             return subComponentTypeConfigurations(List.of(subComponentTypeConfigurations));
         }

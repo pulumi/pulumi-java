@@ -27,6 +27,10 @@ public final class SourceInstanceParamsArgs extends com.pulumi.resources.Resourc
     @Import(name="diskConfigs")
     private @Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs;
 
+    /**
+     * @return Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
+     * 
+     */
     public Optional<Output<List<DiskInstantiationConfigArgs>>> diskConfigs() {
         return Optional.ofNullable(this.diskConfigs);
     }
@@ -55,15 +59,33 @@ public final class SourceInstanceParamsArgs extends com.pulumi.resources.Resourc
             $ = new SourceInstanceParamsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskConfigs Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfigs(@Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs) {
             $.diskConfigs = diskConfigs;
             return this;
         }
 
+        /**
+         * @param diskConfigs Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfigs(List<DiskInstantiationConfigArgs> diskConfigs) {
             return diskConfigs(Output.of(diskConfigs));
         }
 
+        /**
+         * @param diskConfigs Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfigs(DiskInstantiationConfigArgs... diskConfigs) {
             return diskConfigs(List.of(diskConfigs));
         }

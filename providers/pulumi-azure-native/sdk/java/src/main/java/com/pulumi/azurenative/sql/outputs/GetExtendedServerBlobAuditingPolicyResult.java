@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetExtendedServerBlobAuditingPolicyResult {
     /**
-     * Specifies the Actions-Groups and Actions to audit.
+     * @return Specifies the Actions-Groups and Actions to audit.
      * 
      * The recommended set of action groups to use is the following combination - this will audit all the queries and stored procedures executed against the database, as well as successful and failed logins:
      * 
@@ -76,12 +76,12 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
      */
     private final @Nullable List<String> auditActionsAndGroups;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Specifies whether audit events are sent to Azure Monitor.
+     * @return Specifies whether audit events are sent to Azure Monitor.
      * In order to send the events to Azure Monitor, specify &#39;State&#39; as &#39;Enabled&#39; and &#39;IsAzureMonitorTargetEnabled&#39; as true.
      * 
      * When using REST API to configure auditing, Diagnostic Settings with &#39;SQLSecurityAuditEvents&#39; diagnostic logs category on the database should be also created.
@@ -96,7 +96,7 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
      */
     private final @Nullable Boolean isAzureMonitorTargetEnabled;
     /**
-     * Specifies the state of devops audit. If state is Enabled, devops logs will be sent to Azure Monitor.
+     * @return Specifies the state of devops audit. If state is Enabled, devops logs will be sent to Azure Monitor.
      * In order to send the events to Azure Monitor, specify &#39;State&#39; as &#39;Enabled&#39;, &#39;IsAzureMonitorTargetEnabled&#39; as true and &#39;IsDevopsAuditEnabled&#39; as true
      * 
      * When using REST API to configure auditing, Diagnostic Settings with &#39;DevOpsOperationsAudit&#39; diagnostic logs category on the master database should also be created.
@@ -110,48 +110,48 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
      */
     private final @Nullable Boolean isDevopsAuditEnabled;
     /**
-     * Specifies whether storageAccountAccessKey value is the storage&#39;s secondary key.
+     * @return Specifies whether storageAccountAccessKey value is the storage&#39;s secondary key.
      * 
      */
     private final @Nullable Boolean isStorageSecondaryKeyInUse;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Specifies condition of where clause when creating an audit.
+     * @return Specifies condition of where clause when creating an audit.
      * 
      */
     private final @Nullable String predicateExpression;
     /**
-     * Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
+     * @return Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
      * The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
      * 
      */
     private final @Nullable Integer queueDelayMs;
     /**
-     * Specifies the number of days to keep in the audit logs in the storage account.
+     * @return Specifies the number of days to keep in the audit logs in the storage account.
      * 
      */
     private final @Nullable Integer retentionDays;
     /**
-     * Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
+     * @return Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
      * 
      */
     private final String state;
     /**
-     * Specifies the blob storage subscription Id.
+     * @return Specifies the blob storage subscription Id.
      * 
      */
     private final @Nullable String storageAccountSubscriptionId;
     /**
-     * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
+     * @return Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
      * 
      */
     private final @Nullable String storageEndpoint;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -187,7 +187,7 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
     }
 
     /**
-     * Specifies the Actions-Groups and Actions to audit.
+     * @return Specifies the Actions-Groups and Actions to audit.
      * 
      * The recommended set of action groups to use is the following combination - this will audit all the queries and stored procedures executed against the database, as well as successful and failed logins:
      * 
@@ -245,19 +245,19 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
      * 
      * For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
      * 
-    */
+     */
     public List<String> auditActionsAndGroups() {
         return this.auditActionsAndGroups == null ? List.of() : this.auditActionsAndGroups;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specifies whether audit events are sent to Azure Monitor.
+     * @return Specifies whether audit events are sent to Azure Monitor.
      * In order to send the events to Azure Monitor, specify &#39;State&#39; as &#39;Enabled&#39; and &#39;IsAzureMonitorTargetEnabled&#39; as true.
      * 
      * When using REST API to configure auditing, Diagnostic Settings with &#39;SQLSecurityAuditEvents&#39; diagnostic logs category on the database should be also created.
@@ -269,12 +269,12 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
      * For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
      * or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
      * 
-    */
+     */
     public Optional<Boolean> isAzureMonitorTargetEnabled() {
         return Optional.ofNullable(this.isAzureMonitorTargetEnabled);
     }
     /**
-     * Specifies the state of devops audit. If state is Enabled, devops logs will be sent to Azure Monitor.
+     * @return Specifies the state of devops audit. If state is Enabled, devops logs will be sent to Azure Monitor.
      * In order to send the events to Azure Monitor, specify &#39;State&#39; as &#39;Enabled&#39;, &#39;IsAzureMonitorTargetEnabled&#39; as true and &#39;IsDevopsAuditEnabled&#39; as true
      * 
      * When using REST API to configure auditing, Diagnostic Settings with &#39;DevOpsOperationsAudit&#39; diagnostic logs category on the master database should also be created.
@@ -285,71 +285,71 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
      * For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
      * or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
      * 
-    */
+     */
     public Optional<Boolean> isDevopsAuditEnabled() {
         return Optional.ofNullable(this.isDevopsAuditEnabled);
     }
     /**
-     * Specifies whether storageAccountAccessKey value is the storage&#39;s secondary key.
+     * @return Specifies whether storageAccountAccessKey value is the storage&#39;s secondary key.
      * 
-    */
+     */
     public Optional<Boolean> isStorageSecondaryKeyInUse() {
         return Optional.ofNullable(this.isStorageSecondaryKeyInUse);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies condition of where clause when creating an audit.
+     * @return Specifies condition of where clause when creating an audit.
      * 
-    */
+     */
     public Optional<String> predicateExpression() {
         return Optional.ofNullable(this.predicateExpression);
     }
     /**
-     * Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
+     * @return Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
      * The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
      * 
-    */
+     */
     public Optional<Integer> queueDelayMs() {
         return Optional.ofNullable(this.queueDelayMs);
     }
     /**
-     * Specifies the number of days to keep in the audit logs in the storage account.
+     * @return Specifies the number of days to keep in the audit logs in the storage account.
      * 
-    */
+     */
     public Optional<Integer> retentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
     /**
-     * Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
+     * @return Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Specifies the blob storage subscription Id.
+     * @return Specifies the blob storage subscription Id.
      * 
-    */
+     */
     public Optional<String> storageAccountSubscriptionId() {
         return Optional.ofNullable(this.storageAccountSubscriptionId);
     }
     /**
-     * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
+     * @return Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
      * 
-    */
+     */
     public Optional<String> storageEndpoint() {
         return Optional.ofNullable(this.storageEndpoint);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

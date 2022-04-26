@@ -22,6 +22,10 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterArgs extends com.
     @Import(name="gkeClusterName")
     private @Nullable Output<String> gkeClusterName;
 
+    /**
+     * @return The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like: projects/*{@literal /}locations/*{@literal /}clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get
+     * 
+     */
     public Optional<Output<String>> gkeClusterName() {
         return Optional.ofNullable(this.gkeClusterName);
     }
@@ -58,11 +62,23 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterArgs extends com.
             $ = new ManagedZonePrivateVisibilityConfigGKEClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gkeClusterName The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like: projects/*{@literal /}locations/*{@literal /}clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusterName(@Nullable Output<String> gkeClusterName) {
             $.gkeClusterName = gkeClusterName;
             return this;
         }
 
+        /**
+         * @param gkeClusterName The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like: projects/*{@literal /}locations/*{@literal /}clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusterName(String gkeClusterName) {
             return gkeClusterName(Output.of(gkeClusterName));
         }

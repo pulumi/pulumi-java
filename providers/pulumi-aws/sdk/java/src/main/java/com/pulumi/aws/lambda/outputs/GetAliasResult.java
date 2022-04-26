@@ -10,28 +10,28 @@ import java.util.Objects;
 @CustomType
 public final class GetAliasResult {
     /**
-     * The Amazon Resource Name (ARN) identifying the Lambda function alias.
+     * @return The Amazon Resource Name (ARN) identifying the Lambda function alias.
      * 
      */
     private final String arn;
     /**
-     * Description of alias.
+     * @return Description of alias.
      * 
      */
     private final String description;
     private final String functionName;
     /**
-     * Lambda function version which the alias uses.
+     * @return Lambda function version which the alias uses.
      * 
      */
     private final String functionVersion;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The ARN to be used for invoking Lambda Function from API Gateway - to be used in aws_api_gateway_integration&#39;s `uri`.
+     * @return The ARN to be used for invoking Lambda Function from API Gateway - to be used in aws_api_gateway_integration&#39;s `uri`.
      * 
      */
     private final String invokeArn;
@@ -56,16 +56,16 @@ public final class GetAliasResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) identifying the Lambda function alias.
+     * @return The Amazon Resource Name (ARN) identifying the Lambda function alias.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Description of alias.
+     * @return Description of alias.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
@@ -73,23 +73,23 @@ public final class GetAliasResult {
         return this.functionName;
     }
     /**
-     * Lambda function version which the alias uses.
+     * @return Lambda function version which the alias uses.
      * 
-    */
+     */
     public String functionVersion() {
         return this.functionVersion;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The ARN to be used for invoking Lambda Function from API Gateway - to be used in aws_api_gateway_integration&#39;s `uri`.
+     * @return The ARN to be used for invoking Lambda Function from API Gateway - to be used in aws_api_gateway_integration&#39;s `uri`.
      * 
-    */
+     */
     public String invokeArn() {
         return this.invokeArn;
     }

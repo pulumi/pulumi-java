@@ -27,6 +27,10 @@ public final class ApplicationGatewayIPConfigurationArgs extends com.pulumi.reso
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -38,6 +42,10 @@ public final class ApplicationGatewayIPConfigurationArgs extends com.pulumi.reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the IP configuration that is unique within an Application Gateway.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class ApplicationGatewayIPConfigurationArgs extends com.pulumi.reso
     @Import(name="subnet")
     private @Nullable Output<SubResourceArgs> subnet;
 
+    /**
+     * @return Reference to the subnet resource. A subnet from where application gateway gets its private address.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -79,29 +91,65 @@ public final class ApplicationGatewayIPConfigurationArgs extends com.pulumi.reso
             $ = new ApplicationGatewayIPConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name of the IP configuration that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the IP configuration that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param subnet Reference to the subnet resource. A subnet from where application gateway gets its private address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet Reference to the subnet resource. A subnet from where application gateway gets its private address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(SubResourceArgs subnet) {
             return subnet(Output.of(subnet));
         }

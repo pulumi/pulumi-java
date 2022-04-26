@@ -26,6 +26,10 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
     @Import(name="alertType", required=true)
     private String alertType;
 
+    /**
+     * @return The name of the alert type.
+     * 
+     */
     public String alertType() {
         return this.alertType;
     }
@@ -37,6 +41,10 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
     @Import(name="azureResourceId", required=true)
     private String azureResourceId;
 
+    /**
+     * @return The alert azure resource id.
+     * 
+     */
     public String azureResourceId() {
         return this.azureResourceId;
     }
@@ -48,6 +56,10 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The alert description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -59,6 +71,10 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The alert name.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -70,6 +86,10 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
     @Import(name="endTimeUtc", required=true)
     private String endTimeUtc;
 
+    /**
+     * @return The alert end time.
+     * 
+     */
     public String endTimeUtc() {
         return this.endTimeUtc;
     }
@@ -82,6 +102,11 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return The entity query kind
+     * Expected value is &#39;SecurityAlert&#39;.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -93,6 +118,10 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
     @Import(name="productName")
     private @Nullable String productName;
 
+    /**
+     * @return The alert product name.
+     * 
+     */
     public Optional<String> productName() {
         return Optional.ofNullable(this.productName);
     }
@@ -104,6 +133,10 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
     @Import(name="severity", required=true)
     private String severity;
 
+    /**
+     * @return The alert severity.
+     * 
+     */
     public String severity() {
         return this.severity;
     }
@@ -115,6 +148,10 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
     @Import(name="startTimeUtc", required=true)
     private String startTimeUtc;
 
+    /**
+     * @return The alert start time.
+     * 
+     */
     public String startTimeUtc() {
         return this.startTimeUtc;
     }
@@ -126,6 +163,10 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
     @Import(name="timeGenerated", required=true)
     private String timeGenerated;
 
+    /**
+     * @return The alert generated time.
+     * 
+     */
     public String timeGenerated() {
         return this.timeGenerated;
     }
@@ -163,51 +204,112 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
             $ = new SecurityAlertTimelineItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertType The name of the alert type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertType(String alertType) {
             $.alertType = alertType;
             return this;
         }
 
+        /**
+         * @param azureResourceId The alert azure resource id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureResourceId(String azureResourceId) {
             $.azureResourceId = azureResourceId;
             return this;
         }
 
+        /**
+         * @param description The alert description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName The alert name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param endTimeUtc The alert end time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimeUtc(String endTimeUtc) {
             $.endTimeUtc = endTimeUtc;
             return this;
         }
 
+        /**
+         * @param kind The entity query kind
+         * Expected value is &#39;SecurityAlert&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param productName The alert product name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productName(@Nullable String productName) {
             $.productName = productName;
             return this;
         }
 
+        /**
+         * @param severity The alert severity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param startTimeUtc The alert start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeUtc(String startTimeUtc) {
             $.startTimeUtc = startTimeUtc;
             return this;
         }
 
+        /**
+         * @param timeGenerated The alert generated time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeGenerated(String timeGenerated) {
             $.timeGenerated = timeGenerated;
             return this;

@@ -22,6 +22,12 @@ public final class EdgeCacheKeysetPublicKeyArgs extends com.pulumi.resources.Res
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The ID of the public key. The ID must be 1-63 characters long, and comply with RFC1035.
+     * The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]*
+     * which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -35,6 +41,12 @@ public final class EdgeCacheKeysetPublicKeyArgs extends com.pulumi.resources.Res
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The base64-encoded value of the Ed25519 public key. The base64 encoding can be padded (44 bytes) or unpadded (43 bytes).
+     * Representations or encodings of the public key other than this will be rejected with an error.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -64,20 +76,52 @@ public final class EdgeCacheKeysetPublicKeyArgs extends com.pulumi.resources.Res
             $ = new EdgeCacheKeysetPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the public key. The ID must be 1-63 characters long, and comply with RFC1035.
+         * The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]*
+         * which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The ID of the public key. The ID must be 1-63 characters long, and comply with RFC1035.
+         * The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]*
+         * which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param value The base64-encoded value of the Ed25519 public key. The base64 encoding can be padded (44 bytes) or unpadded (43 bytes).
+         * Representations or encodings of the public key other than this will be rejected with an error.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The base64-encoded value of the Ed25519 public key. The base64 encoding can be padded (44 bytes) or unpadded (43 bytes).
+         * Representations or encodings of the public key other than this will be rejected with an error.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

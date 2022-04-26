@@ -27,6 +27,10 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deserializer")
     private @Nullable Object deserializer;
 
+    /**
+     * @return Deserializer. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> deserializer() {
         return Optional.ofNullable(this.deserializer);
     }
@@ -38,6 +42,10 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="encodingName")
     private @Nullable Object encodingName;
 
+    /**
+     * @return The code page name of the preferred encoding. If not provided, the default value is &#39;utf-8&#39;, unless the byte order mark (BOM) denotes another Unicode encoding. The full list of supported values can be found in the &#39;Name&#39; column of the table of encodings in the following reference: https://go.microsoft.com/fwlink/?linkid=861078. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encodingName() {
         return Optional.ofNullable(this.encodingName);
     }
@@ -49,6 +57,10 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="filePattern")
     private @Nullable Object filePattern;
 
+    /**
+     * @return File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is &#39;setOfObjects&#39;. It is case-sensitive.
+     * 
+     */
     public Optional<Object> filePattern() {
         return Optional.ofNullable(this.filePattern);
     }
@@ -60,6 +72,10 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jsonNodeReference")
     private @Nullable Object jsonNodeReference;
 
+    /**
+     * @return The JSONPath of the JSON array element to be flattened. Example: &#34;$.ArrayPath&#34;. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> jsonNodeReference() {
         return Optional.ofNullable(this.jsonNodeReference);
     }
@@ -71,6 +87,10 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jsonPathDefinition")
     private @Nullable Object jsonPathDefinition;
 
+    /**
+     * @return The JSONPath definition for each column mapping with a customized column name to extract data from JSON file. For fields under root object, start with &#34;$&#34;; for fields inside the array chosen by jsonNodeReference property, start from the array element. Example: {&#34;Column1&#34;: &#34;$.Column1Path&#34;, &#34;Column2&#34;: &#34;Column2PathInArray&#34;}. Type: object (or Expression with resultType object).
+     * 
+     */
     public Optional<Object> jsonPathDefinition() {
         return Optional.ofNullable(this.jsonPathDefinition);
     }
@@ -82,6 +102,10 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nestingSeparator")
     private @Nullable Object nestingSeparator;
 
+    /**
+     * @return The character used to separate nesting levels. Default value is &#39;.&#39; (dot). Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> nestingSeparator() {
         return Optional.ofNullable(this.nestingSeparator);
     }
@@ -93,6 +117,10 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serializer")
     private @Nullable Object serializer;
 
+    /**
+     * @return Serializer. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> serializer() {
         return Optional.ofNullable(this.serializer);
     }
@@ -105,6 +133,11 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of dataset storage format.
+     * Expected value is &#39;JsonFormat&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -140,41 +173,90 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JsonFormatResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deserializer Deserializer. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder deserializer(@Nullable Object deserializer) {
             $.deserializer = deserializer;
             return this;
         }
 
+        /**
+         * @param encodingName The code page name of the preferred encoding. If not provided, the default value is &#39;utf-8&#39;, unless the byte order mark (BOM) denotes another Unicode encoding. The full list of supported values can be found in the &#39;Name&#39; column of the table of encodings in the following reference: https://go.microsoft.com/fwlink/?linkid=861078. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodingName(@Nullable Object encodingName) {
             $.encodingName = encodingName;
             return this;
         }
 
+        /**
+         * @param filePattern File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is &#39;setOfObjects&#39;. It is case-sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePattern(@Nullable Object filePattern) {
             $.filePattern = filePattern;
             return this;
         }
 
+        /**
+         * @param jsonNodeReference The JSONPath of the JSON array element to be flattened. Example: &#34;$.ArrayPath&#34;. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonNodeReference(@Nullable Object jsonNodeReference) {
             $.jsonNodeReference = jsonNodeReference;
             return this;
         }
 
+        /**
+         * @param jsonPathDefinition The JSONPath definition for each column mapping with a customized column name to extract data from JSON file. For fields under root object, start with &#34;$&#34;; for fields inside the array chosen by jsonNodeReference property, start from the array element. Example: {&#34;Column1&#34;: &#34;$.Column1Path&#34;, &#34;Column2&#34;: &#34;Column2PathInArray&#34;}. Type: object (or Expression with resultType object).
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonPathDefinition(@Nullable Object jsonPathDefinition) {
             $.jsonPathDefinition = jsonPathDefinition;
             return this;
         }
 
+        /**
+         * @param nestingSeparator The character used to separate nesting levels. Default value is &#39;.&#39; (dot). Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder nestingSeparator(@Nullable Object nestingSeparator) {
             $.nestingSeparator = nestingSeparator;
             return this;
         }
 
+        /**
+         * @param serializer Serializer. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder serializer(@Nullable Object serializer) {
             $.serializer = serializer;
             return this;
         }
 
+        /**
+         * @param type Type of dataset storage format.
+         * Expected value is &#39;JsonFormat&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

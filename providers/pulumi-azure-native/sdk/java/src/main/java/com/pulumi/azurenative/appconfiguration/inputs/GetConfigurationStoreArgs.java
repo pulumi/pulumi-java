@@ -19,6 +19,10 @@ public final class GetConfigurationStoreArgs extends com.pulumi.resources.Invoke
     @Import(name="configStoreName", required=true)
     private String configStoreName;
 
+    /**
+     * @return The name of the configuration store.
+     * 
+     */
     public String configStoreName() {
         return this.configStoreName;
     }
@@ -30,6 +34,10 @@ public final class GetConfigurationStoreArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetConfigurationStoreArgs extends com.pulumi.resources.Invoke
             $ = new GetConfigurationStoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configStoreName The name of the configuration store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configStoreName(String configStoreName) {
             $.configStoreName = configStoreName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

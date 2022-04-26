@@ -26,6 +26,10 @@ public final class NodeConfigDefaultsArgs extends com.pulumi.resources.ResourceA
     @Import(name="gcfsConfig")
     private @Nullable Output<GcfsConfigArgs> gcfsConfig;
 
+    /**
+     * @return GCFS (Google Container File System, a.k.a Riptide) options.
+     * 
+     */
     public Optional<Output<GcfsConfigArgs>> gcfsConfig() {
         return Optional.ofNullable(this.gcfsConfig);
     }
@@ -54,11 +58,23 @@ public final class NodeConfigDefaultsArgs extends com.pulumi.resources.ResourceA
             $ = new NodeConfigDefaultsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gcfsConfig GCFS (Google Container File System, a.k.a Riptide) options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcfsConfig(@Nullable Output<GcfsConfigArgs> gcfsConfig) {
             $.gcfsConfig = gcfsConfig;
             return this;
         }
 
+        /**
+         * @param gcfsConfig GCFS (Google Container File System, a.k.a Riptide) options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcfsConfig(GcfsConfigArgs gcfsConfig) {
             return gcfsConfig(Output.of(gcfsConfig));
         }

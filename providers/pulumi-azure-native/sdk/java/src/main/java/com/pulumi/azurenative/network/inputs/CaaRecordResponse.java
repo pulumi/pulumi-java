@@ -26,6 +26,10 @@ public final class CaaRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="flags")
     private @Nullable Integer flags;
 
+    /**
+     * @return The flags for this CAA record as an integer between 0 and 255.
+     * 
+     */
     public Optional<Integer> flags() {
         return Optional.ofNullable(this.flags);
     }
@@ -37,6 +41,10 @@ public final class CaaRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tag")
     private @Nullable String tag;
 
+    /**
+     * @return The tag for this CAA record.
+     * 
+     */
     public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -48,6 +56,10 @@ public final class CaaRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The value for this CAA record.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -78,16 +90,34 @@ public final class CaaRecordResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CaaRecordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param flags The flags for this CAA record as an integer between 0 and 255.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flags(@Nullable Integer flags) {
             $.flags = flags;
             return this;
         }
 
+        /**
+         * @param tag The tag for this CAA record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable String tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param value The value for this CAA record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

@@ -26,6 +26,10 @@ public final class VolumeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="driver")
     private @Nullable Output<String> driver;
 
+    /**
+     * @return Driver type for the volume. Defaults to `local`.
+     * 
+     */
     public Optional<Output<String>> driver() {
         return Optional.ofNullable(this.driver);
     }
@@ -37,6 +41,10 @@ public final class VolumeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="driverOpts")
     private @Nullable Output<Map<String,Object>> driverOpts;
 
+    /**
+     * @return Options specific to the driver.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> driverOpts() {
         return Optional.ofNullable(this.driverOpts);
     }
@@ -48,6 +56,10 @@ public final class VolumeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<List<VolumeLabelGetArgs>> labels;
 
+    /**
+     * @return User-defined key/value metadata
+     * 
+     */
     public Optional<Output<List<VolumeLabelGetArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -59,6 +71,10 @@ public final class VolumeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="mountpoint")
     private @Nullable Output<String> mountpoint;
 
+    /**
+     * @return The mountpoint of the volume.
+     * 
+     */
     public Optional<Output<String>> mountpoint() {
         return Optional.ofNullable(this.mountpoint);
     }
@@ -70,6 +86,10 @@ public final class VolumeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Docker volume (will be generated if not provided).
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -102,51 +122,117 @@ public final class VolumeState extends com.pulumi.resources.ResourceArgs {
             $ = new VolumeState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param driver Driver type for the volume. Defaults to `local`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driver(@Nullable Output<String> driver) {
             $.driver = driver;
             return this;
         }
 
+        /**
+         * @param driver Driver type for the volume. Defaults to `local`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driver(String driver) {
             return driver(Output.of(driver));
         }
 
+        /**
+         * @param driverOpts Options specific to the driver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driverOpts(@Nullable Output<Map<String,Object>> driverOpts) {
             $.driverOpts = driverOpts;
             return this;
         }
 
+        /**
+         * @param driverOpts Options specific to the driver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driverOpts(Map<String,Object> driverOpts) {
             return driverOpts(Output.of(driverOpts));
         }
 
+        /**
+         * @param labels User-defined key/value metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<List<VolumeLabelGetArgs>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels User-defined key/value metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<VolumeLabelGetArgs> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param labels User-defined key/value metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(VolumeLabelGetArgs... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param mountpoint The mountpoint of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountpoint(@Nullable Output<String> mountpoint) {
             $.mountpoint = mountpoint;
             return this;
         }
 
+        /**
+         * @param mountpoint The mountpoint of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountpoint(String mountpoint) {
             return mountpoint(Output.of(mountpoint));
         }
 
+        /**
+         * @param name The name of the Docker volume (will be generated if not provided).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Docker volume (will be generated if not provided).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

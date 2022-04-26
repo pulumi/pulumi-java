@@ -22,6 +22,10 @@ public final class AppProductionBranchArgs extends com.pulumi.resources.Resource
     @Import(name="branchName")
     private @Nullable Output<String> branchName;
 
+    /**
+     * @return The branch name for the production branch.
+     * 
+     */
     public Optional<Output<String>> branchName() {
         return Optional.ofNullable(this.branchName);
     }
@@ -33,6 +37,10 @@ public final class AppProductionBranchArgs extends com.pulumi.resources.Resource
     @Import(name="lastDeployTime")
     private @Nullable Output<String> lastDeployTime;
 
+    /**
+     * @return The last deploy time of the production branch.
+     * 
+     */
     public Optional<Output<String>> lastDeployTime() {
         return Optional.ofNullable(this.lastDeployTime);
     }
@@ -44,6 +52,10 @@ public final class AppProductionBranchArgs extends com.pulumi.resources.Resource
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -55,6 +67,10 @@ public final class AppProductionBranchArgs extends com.pulumi.resources.Resource
     @Import(name="thumbnailUrl")
     private @Nullable Output<String> thumbnailUrl;
 
+    /**
+     * @return The thumbnail URL for the production branch.
+     * 
+     */
     public Optional<Output<String>> thumbnailUrl() {
         return Optional.ofNullable(this.thumbnailUrl);
     }
@@ -86,38 +102,86 @@ public final class AppProductionBranchArgs extends com.pulumi.resources.Resource
             $ = new AppProductionBranchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branchName The branch name for the production branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchName(@Nullable Output<String> branchName) {
             $.branchName = branchName;
             return this;
         }
 
+        /**
+         * @param branchName The branch name for the production branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchName(String branchName) {
             return branchName(Output.of(branchName));
         }
 
+        /**
+         * @param lastDeployTime The last deploy time of the production branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastDeployTime(@Nullable Output<String> lastDeployTime) {
             $.lastDeployTime = lastDeployTime;
             return this;
         }
 
+        /**
+         * @param lastDeployTime The last deploy time of the production branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastDeployTime(String lastDeployTime) {
             return lastDeployTime(Output.of(lastDeployTime));
         }
 
+        /**
+         * @param status The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param thumbnailUrl The thumbnail URL for the production branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbnailUrl(@Nullable Output<String> thumbnailUrl) {
             $.thumbnailUrl = thumbnailUrl;
             return this;
         }
 
+        /**
+         * @param thumbnailUrl The thumbnail URL for the production branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbnailUrl(String thumbnailUrl) {
             return thumbnailUrl(Output.of(thumbnailUrl));
         }

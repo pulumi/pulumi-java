@@ -20,6 +20,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecRes
     @Import(name="values", required=true)
     private List<Double> values;
 
+    /**
+     * @return Must be specified if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
+     * 
+     */
     public List<Double> values() {
         return this.values;
     }
@@ -48,11 +52,23 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecRes
             $ = new GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param values Must be specified if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<Double> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Must be specified if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Double... values) {
             return values(List.of(values));
         }

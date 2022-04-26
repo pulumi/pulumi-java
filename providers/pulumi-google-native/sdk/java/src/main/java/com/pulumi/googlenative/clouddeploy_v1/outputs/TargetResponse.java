@@ -16,67 +16,67 @@ import java.util.Objects;
 @CustomType
 public final class TargetResponse {
     /**
-     * Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+     * @return Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
     private final Map<String,String> annotations;
     /**
-     * Information specifying an Anthos Cluster.
+     * @return Information specifying an Anthos Cluster.
      * 
      */
     private final AnthosClusterResponse anthosCluster;
     /**
-     * Time at which the `Target` was created.
+     * @return Time at which the `Target` was created.
      * 
      */
     private final String createTime;
     /**
-     * Optional. Description of the `Target`. Max length is 255 characters.
+     * @return Optional. Description of the `Target`. Max length is 255 characters.
      * 
      */
     private final String description;
     /**
-     * Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+     * @return Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
     private final String etag;
     /**
-     * Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
+     * @return Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
      * 
      */
     private final List<ExecutionConfigResponse> executionConfigs;
     /**
-     * Information specifying a GKE Cluster.
+     * @return Information specifying a GKE Cluster.
      * 
      */
     private final GkeClusterResponse gke;
     /**
-     * Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+     * @return Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
+     * @return Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
      * 
      */
     private final String name;
     /**
-     * Optional. Whether or not the `Target` requires approval.
+     * @return Optional. Whether or not the `Target` requires approval.
      * 
      */
     private final Boolean requireApproval;
     /**
-     * Resource id of the `Target`.
+     * @return Resource id of the `Target`.
      * 
      */
     private final String targetId;
     /**
-     * Unique identifier of the `Target`.
+     * @return Unique identifier of the `Target`.
      * 
      */
     private final String uid;
     /**
-     * Most recent time at which the `Target` was updated.
+     * @return Most recent time at which the `Target` was updated.
      * 
      */
     private final String updateTime;
@@ -112,93 +112,93 @@ public final class TargetResponse {
     }
 
     /**
-     * Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+     * @return Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
-    */
+     */
     public Map<String,String> annotations() {
         return this.annotations;
     }
     /**
-     * Information specifying an Anthos Cluster.
+     * @return Information specifying an Anthos Cluster.
      * 
-    */
+     */
     public AnthosClusterResponse anthosCluster() {
         return this.anthosCluster;
     }
     /**
-     * Time at which the `Target` was created.
+     * @return Time at which the `Target` was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Optional. Description of the `Target`. Max length is 255 characters.
+     * @return Optional. Description of the `Target`. Max length is 255 characters.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+     * @return Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
+     * @return Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
      * 
-    */
+     */
     public List<ExecutionConfigResponse> executionConfigs() {
         return this.executionConfigs;
     }
     /**
-     * Information specifying a GKE Cluster.
+     * @return Information specifying a GKE Cluster.
      * 
-    */
+     */
     public GkeClusterResponse gke() {
         return this.gke;
     }
     /**
-     * Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+     * @return Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
+     * @return Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Optional. Whether or not the `Target` requires approval.
+     * @return Optional. Whether or not the `Target` requires approval.
      * 
-    */
+     */
     public Boolean requireApproval() {
         return this.requireApproval;
     }
     /**
-     * Resource id of the `Target`.
+     * @return Resource id of the `Target`.
      * 
-    */
+     */
     public String targetId() {
         return this.targetId;
     }
     /**
-     * Unique identifier of the `Target`.
+     * @return Unique identifier of the `Target`.
      * 
-    */
+     */
     public String uid() {
         return this.uid;
     }
     /**
-     * Most recent time at which the `Target` was updated.
+     * @return Most recent time at which the `Target` was updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

@@ -36,6 +36,10 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentConfig")
     private @Nullable Output<EnvironmentConfigArgs> environmentConfig;
 
+    /**
+     * @return Optional. Environment configuration for the batch execution.
+     * 
+     */
     public Optional<Output<EnvironmentConfigArgs>> environmentConfig() {
         return Optional.ofNullable(this.environmentConfig);
     }
@@ -47,6 +51,10 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. The labels to associate with this batch. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a batch.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -72,6 +80,10 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pysparkBatch")
     private @Nullable Output<PySparkBatchArgs> pysparkBatch;
 
+    /**
+     * @return Optional. PySpark batch config.
+     * 
+     */
     public Optional<Output<PySparkBatchArgs>> pysparkBatch() {
         return Optional.ofNullable(this.pysparkBatch);
     }
@@ -90,6 +102,10 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runtimeConfig")
     private @Nullable Output<RuntimeConfigArgs> runtimeConfig;
 
+    /**
+     * @return Optional. Runtime configuration for the batch execution.
+     * 
+     */
     public Optional<Output<RuntimeConfigArgs>> runtimeConfig() {
         return Optional.ofNullable(this.runtimeConfig);
     }
@@ -101,6 +117,10 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sparkBatch")
     private @Nullable Output<SparkBatchArgs> sparkBatch;
 
+    /**
+     * @return Optional. Spark batch config.
+     * 
+     */
     public Optional<Output<SparkBatchArgs>> sparkBatch() {
         return Optional.ofNullable(this.sparkBatch);
     }
@@ -112,6 +132,10 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sparkRBatch")
     private @Nullable Output<SparkRBatchArgs> sparkRBatch;
 
+    /**
+     * @return Optional. SparkR batch config.
+     * 
+     */
     public Optional<Output<SparkRBatchArgs>> sparkRBatch() {
         return Optional.ofNullable(this.sparkRBatch);
     }
@@ -123,6 +147,10 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sparkSqlBatch")
     private @Nullable Output<SparkSqlBatchArgs> sparkSqlBatch;
 
+    /**
+     * @return Optional. SparkSql batch config.
+     * 
+     */
     public Optional<Output<SparkSqlBatchArgs>> sparkSqlBatch() {
         return Optional.ofNullable(this.sparkSqlBatch);
     }
@@ -170,20 +198,44 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
             return batchId(Output.of(batchId));
         }
 
+        /**
+         * @param environmentConfig Optional. Environment configuration for the batch execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentConfig(@Nullable Output<EnvironmentConfigArgs> environmentConfig) {
             $.environmentConfig = environmentConfig;
             return this;
         }
 
+        /**
+         * @param environmentConfig Optional. Environment configuration for the batch execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentConfig(EnvironmentConfigArgs environmentConfig) {
             return environmentConfig(Output.of(environmentConfig));
         }
 
+        /**
+         * @param labels Optional. The labels to associate with this batch. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a batch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. The labels to associate with this batch. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a batch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -206,11 +258,23 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param pysparkBatch Optional. PySpark batch config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pysparkBatch(@Nullable Output<PySparkBatchArgs> pysparkBatch) {
             $.pysparkBatch = pysparkBatch;
             return this;
         }
 
+        /**
+         * @param pysparkBatch Optional. PySpark batch config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pysparkBatch(PySparkBatchArgs pysparkBatch) {
             return pysparkBatch(Output.of(pysparkBatch));
         }
@@ -224,38 +288,86 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param runtimeConfig Optional. Runtime configuration for the batch execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeConfig(@Nullable Output<RuntimeConfigArgs> runtimeConfig) {
             $.runtimeConfig = runtimeConfig;
             return this;
         }
 
+        /**
+         * @param runtimeConfig Optional. Runtime configuration for the batch execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeConfig(RuntimeConfigArgs runtimeConfig) {
             return runtimeConfig(Output.of(runtimeConfig));
         }
 
+        /**
+         * @param sparkBatch Optional. Spark batch config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkBatch(@Nullable Output<SparkBatchArgs> sparkBatch) {
             $.sparkBatch = sparkBatch;
             return this;
         }
 
+        /**
+         * @param sparkBatch Optional. Spark batch config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkBatch(SparkBatchArgs sparkBatch) {
             return sparkBatch(Output.of(sparkBatch));
         }
 
+        /**
+         * @param sparkRBatch Optional. SparkR batch config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkRBatch(@Nullable Output<SparkRBatchArgs> sparkRBatch) {
             $.sparkRBatch = sparkRBatch;
             return this;
         }
 
+        /**
+         * @param sparkRBatch Optional. SparkR batch config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkRBatch(SparkRBatchArgs sparkRBatch) {
             return sparkRBatch(Output.of(sparkRBatch));
         }
 
+        /**
+         * @param sparkSqlBatch Optional. SparkSql batch config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkSqlBatch(@Nullable Output<SparkSqlBatchArgs> sparkSqlBatch) {
             $.sparkSqlBatch = sparkSqlBatch;
             return this;
         }
 
+        /**
+         * @param sparkSqlBatch Optional. SparkSql batch config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkSqlBatch(SparkSqlBatchArgs sparkSqlBatch) {
             return sparkSqlBatch(Output.of(sparkSqlBatch));
         }

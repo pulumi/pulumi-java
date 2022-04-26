@@ -26,6 +26,10 @@ public final class Int64RangeMatchArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="rangeEnd")
     private @Nullable Output<String> rangeEnd;
 
+    /**
+     * @return The end of the range (exclusive) in signed long integer format.
+     * 
+     */
     public Optional<Output<String>> rangeEnd() {
         return Optional.ofNullable(this.rangeEnd);
     }
@@ -37,6 +41,10 @@ public final class Int64RangeMatchArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="rangeStart")
     private @Nullable Output<String> rangeStart;
 
+    /**
+     * @return The start of the range (inclusive) in signed long integer format.
+     * 
+     */
     public Optional<Output<String>> rangeStart() {
         return Optional.ofNullable(this.rangeStart);
     }
@@ -66,20 +74,44 @@ public final class Int64RangeMatchArgs extends com.pulumi.resources.ResourceArgs
             $ = new Int64RangeMatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rangeEnd The end of the range (exclusive) in signed long integer format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeEnd(@Nullable Output<String> rangeEnd) {
             $.rangeEnd = rangeEnd;
             return this;
         }
 
+        /**
+         * @param rangeEnd The end of the range (exclusive) in signed long integer format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeEnd(String rangeEnd) {
             return rangeEnd(Output.of(rangeEnd));
         }
 
+        /**
+         * @param rangeStart The start of the range (inclusive) in signed long integer format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeStart(@Nullable Output<String> rangeStart) {
             $.rangeStart = rangeStart;
             return this;
         }
 
+        /**
+         * @param rangeStart The start of the range (inclusive) in signed long integer format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeStart(String rangeStart) {
             return rangeStart(Output.of(rangeStart));
         }

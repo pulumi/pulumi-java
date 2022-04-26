@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ChannelTypeDescriptionResponse {
     /**
-     * Text description for the channel
+     * @return Text description for the channel
      * 
      */
     private final @Nullable String channelDescription;
     /**
-     * All the available functions for the channel
+     * @return All the available functions for the channel
      * 
      */
     private final @Nullable List<String> channelFunctions;
     /**
-     * Channel type
+     * @return Channel type
      * 
      */
     private final @Nullable String channelType;
@@ -39,23 +39,23 @@ public final class ChannelTypeDescriptionResponse {
     }
 
     /**
-     * Text description for the channel
+     * @return Text description for the channel
      * 
-    */
+     */
     public Optional<String> channelDescription() {
         return Optional.ofNullable(this.channelDescription);
     }
     /**
-     * All the available functions for the channel
+     * @return All the available functions for the channel
      * 
-    */
+     */
     public List<String> channelFunctions() {
         return this.channelFunctions == null ? List.of() : this.channelFunctions;
     }
     /**
-     * Channel type
+     * @return Channel type
      * 
-    */
+     */
     public Optional<String> channelType() {
         return Optional.ofNullable(this.channelType);
     }

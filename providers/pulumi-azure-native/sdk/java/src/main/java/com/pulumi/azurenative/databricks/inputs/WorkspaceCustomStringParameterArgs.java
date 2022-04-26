@@ -24,6 +24,10 @@ public final class WorkspaceCustomStringParameterArgs extends com.pulumi.resourc
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The value which should be used for this field.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -52,11 +56,23 @@ public final class WorkspaceCustomStringParameterArgs extends com.pulumi.resourc
             $ = new WorkspaceCustomStringParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The value which should be used for this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value which should be used for this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

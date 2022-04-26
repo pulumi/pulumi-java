@@ -31,6 +31,10 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse extends com.
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. &#34;us-east1&#34;, &#34;southamerica-east1&#34;, &#34;asia-east1&#34;, etc.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -49,6 +53,10 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse extends com.
     @Import(name="signatureRrdatas", required=true)
     private List<String> signatureRrdatas;
 
+    /**
+     * @return DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
+     * 
+     */
     public List<String> signatureRrdatas() {
         return this.signatureRrdatas;
     }
@@ -85,6 +93,12 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse extends com.
             return this;
         }
 
+        /**
+         * @param location The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. &#34;us-east1&#34;, &#34;southamerica-east1&#34;, &#34;asia-east1&#34;, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
@@ -99,11 +113,23 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse extends com.
             return rrdatas(List.of(rrdatas));
         }
 
+        /**
+         * @param signatureRrdatas DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureRrdatas(List<String> signatureRrdatas) {
             $.signatureRrdatas = signatureRrdatas;
             return this;
         }
 
+        /**
+         * @param signatureRrdatas DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureRrdatas(String... signatureRrdatas) {
             return signatureRrdatas(List.of(signatureRrdatas));
         }

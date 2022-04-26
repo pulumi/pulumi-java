@@ -27,6 +27,10 @@ public final class PropagatedRouteTableResponse extends com.pulumi.resources.Inv
     @Import(name="ids")
     private @Nullable List<SubResourceResponse> ids;
 
+    /**
+     * @return The list of resource ids of all the RouteTables.
+     * 
+     */
     public Optional<List<SubResourceResponse>> ids() {
         return Optional.ofNullable(this.ids);
     }
@@ -38,6 +42,10 @@ public final class PropagatedRouteTableResponse extends com.pulumi.resources.Inv
     @Import(name="labels")
     private @Nullable List<String> labels;
 
+    /**
+     * @return The list of labels.
+     * 
+     */
     public Optional<List<String>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -67,20 +75,44 @@ public final class PropagatedRouteTableResponse extends com.pulumi.resources.Inv
             $ = new PropagatedRouteTableResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ids The list of resource ids of all the RouteTables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ids(@Nullable List<SubResourceResponse> ids) {
             $.ids = ids;
             return this;
         }
 
+        /**
+         * @param ids The list of resource ids of all the RouteTables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ids(SubResourceResponse... ids) {
             return ids(List.of(ids));
         }
 
+        /**
+         * @param labels The list of labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable List<String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The list of labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(String... labels) {
             return labels(List.of(labels));
         }

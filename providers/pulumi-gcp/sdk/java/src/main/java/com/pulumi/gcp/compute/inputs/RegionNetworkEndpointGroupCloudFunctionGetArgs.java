@@ -24,6 +24,12 @@ public final class RegionNetworkEndpointGroupCloudFunctionGetArgs extends com.pu
     @Import(name="function")
     private @Nullable Output<String> function;
 
+    /**
+     * @return A user-defined name of the Cloud Function.
+     * The function name is case-sensitive and must be 1-63 characters long.
+     * Example value: &#34;func1&#34;.
+     * 
+     */
     public Optional<Output<String>> function() {
         return Optional.ofNullable(this.function);
     }
@@ -40,6 +46,15 @@ public final class RegionNetworkEndpointGroupCloudFunctionGetArgs extends com.pu
     @Import(name="urlMask")
     private @Nullable Output<String> urlMask;
 
+    /**
+     * @return A template to parse function field from a request URL. URL mask allows
+     * for routing to multiple Cloud Functions without having to create
+     * multiple Network Endpoint Groups and backend services.
+     * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
+     * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
+     * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
+     * 
+     */
     public Optional<Output<String>> urlMask() {
         return Optional.ofNullable(this.urlMask);
     }
@@ -69,20 +84,58 @@ public final class RegionNetworkEndpointGroupCloudFunctionGetArgs extends com.pu
             $ = new RegionNetworkEndpointGroupCloudFunctionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param function A user-defined name of the Cloud Function.
+         * The function name is case-sensitive and must be 1-63 characters long.
+         * Example value: &#34;func1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(@Nullable Output<String> function) {
             $.function = function;
             return this;
         }
 
+        /**
+         * @param function A user-defined name of the Cloud Function.
+         * The function name is case-sensitive and must be 1-63 characters long.
+         * Example value: &#34;func1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(String function) {
             return function(Output.of(function));
         }
 
+        /**
+         * @param urlMask A template to parse function field from a request URL. URL mask allows
+         * for routing to multiple Cloud Functions without having to create
+         * multiple Network Endpoint Groups and backend services.
+         * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
+         * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
+         * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlMask(@Nullable Output<String> urlMask) {
             $.urlMask = urlMask;
             return this;
         }
 
+        /**
+         * @param urlMask A template to parse function field from a request URL. URL mask allows
+         * for routing to multiple Cloud Functions without having to create
+         * multiple Network Endpoint Groups and backend services.
+         * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
+         * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
+         * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlMask(String urlMask) {
             return urlMask(Output.of(urlMask));
         }

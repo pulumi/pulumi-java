@@ -24,6 +24,10 @@ public final class ModelBiasJobDefinitionStoppingConditionArgs extends com.pulum
     @Import(name="maxRuntimeInSeconds", required=true)
     private Output<Integer> maxRuntimeInSeconds;
 
+    /**
+     * @return The maximum runtime allowed in seconds.
+     * 
+     */
     public Output<Integer> maxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
     }
@@ -52,11 +56,23 @@ public final class ModelBiasJobDefinitionStoppingConditionArgs extends com.pulum
             $ = new ModelBiasJobDefinitionStoppingConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxRuntimeInSeconds The maximum runtime allowed in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRuntimeInSeconds(Output<Integer> maxRuntimeInSeconds) {
             $.maxRuntimeInSeconds = maxRuntimeInSeconds;
             return this;
         }
 
+        /**
+         * @param maxRuntimeInSeconds The maximum runtime allowed in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
             return maxRuntimeInSeconds(Output.of(maxRuntimeInSeconds));
         }

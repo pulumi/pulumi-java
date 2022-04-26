@@ -26,6 +26,11 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="build")
     private @Nullable Output<RemoteImageBuildGetArgs> build;
 
+    /**
+     * @return Configuration to build an image. Please see [docker build command
+     * reference](https://docs.docker.com/engine/reference/commandline/build/#options) too.
+     * 
+     */
     public Optional<Output<RemoteImageBuildGetArgs>> build() {
         return Optional.ofNullable(this.build);
     }
@@ -37,6 +42,10 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceRemove")
     private @Nullable Output<Boolean> forceRemove;
 
+    /**
+     * @return If true, then the image is removed forcibly when the resource is destroyed.
+     * 
+     */
     public Optional<Output<Boolean>> forceRemove() {
         return Optional.ofNullable(this.forceRemove);
     }
@@ -49,6 +58,11 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keepLocally")
     private @Nullable Output<Boolean> keepLocally;
 
+    /**
+     * @return If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
+     * the docker local storage on destroy operation.
+     * 
+     */
     public Optional<Output<Boolean>> keepLocally() {
         return Optional.ofNullable(this.keepLocally);
     }
@@ -64,6 +78,13 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="latest")
     private @Nullable Output<String> latest;
 
+    /**
+     * @return The ID of the image in the form of `sha256:&lt;hash&gt;` image digest. Do not confuse it with the default `latest` tag.
+     * 
+     * @deprecated
+     * Use repo_digest instead
+     * 
+     */
     @Deprecated /* Use repo_digest instead */
     public Optional<Output<String>> latest() {
         return Optional.ofNullable(this.latest);
@@ -76,6 +97,10 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Docker image, including any tags or SHA256 repo digests.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -89,6 +114,11 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="output")
     private @Nullable Output<String> output;
 
+    /**
+     * @deprecated
+     * Is unused and will be removed.
+     * 
+     */
     @Deprecated /* Is unused and will be removed. */
     public Optional<Output<String>> output() {
         return Optional.ofNullable(this.output);
@@ -105,6 +135,13 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pullTrigger")
     private @Nullable Output<String> pullTrigger;
 
+    /**
+     * @return A value which cause an image pull when changed
+     * 
+     * @deprecated
+     * Use field pull_triggers instead
+     * 
+     */
     @Deprecated /* Use field pull_triggers instead */
     public Optional<Output<String>> pullTrigger() {
         return Optional.ofNullable(this.pullTrigger);
@@ -118,6 +155,11 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pullTriggers")
     private @Nullable Output<List<String>> pullTriggers;
 
+    /**
+     * @return List of values which cause an image pull when changed. This is used to store the image digest from the registry when
+     * using the [docker_registry_image](../data-sources/registry_image.md).
+     * 
+     */
     public Optional<Output<List<String>>> pullTriggers() {
         return Optional.ofNullable(this.pullTriggers);
     }
@@ -129,6 +171,10 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="repoDigest")
     private @Nullable Output<String> repoDigest;
 
+    /**
+     * @return The image sha256 digest in the form of `repo[:tag]@sha256:&lt;hash&gt;`.
+     * 
+     */
     public Optional<Output<String>> repoDigest() {
         return Optional.ofNullable(this.repoDigest);
     }
@@ -165,87 +211,228 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
             $ = new RemoteImageState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param build Configuration to build an image. Please see [docker build command
+         * reference](https://docs.docker.com/engine/reference/commandline/build/#options) too.
+         * 
+         * @return builder
+         * 
+         */
         public Builder build(@Nullable Output<RemoteImageBuildGetArgs> build) {
             $.build = build;
             return this;
         }
 
+        /**
+         * @param build Configuration to build an image. Please see [docker build command
+         * reference](https://docs.docker.com/engine/reference/commandline/build/#options) too.
+         * 
+         * @return builder
+         * 
+         */
         public Builder build(RemoteImageBuildGetArgs build) {
             return build(Output.of(build));
         }
 
+        /**
+         * @param forceRemove If true, then the image is removed forcibly when the resource is destroyed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceRemove(@Nullable Output<Boolean> forceRemove) {
             $.forceRemove = forceRemove;
             return this;
         }
 
+        /**
+         * @param forceRemove If true, then the image is removed forcibly when the resource is destroyed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceRemove(Boolean forceRemove) {
             return forceRemove(Output.of(forceRemove));
         }
 
+        /**
+         * @param keepLocally If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
+         * the docker local storage on destroy operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepLocally(@Nullable Output<Boolean> keepLocally) {
             $.keepLocally = keepLocally;
             return this;
         }
 
+        /**
+         * @param keepLocally If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
+         * the docker local storage on destroy operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepLocally(Boolean keepLocally) {
             return keepLocally(Output.of(keepLocally));
         }
 
+        /**
+         * @param latest The ID of the image in the form of `sha256:&lt;hash&gt;` image digest. Do not confuse it with the default `latest` tag.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use repo_digest instead
+         * 
+         */
+        @Deprecated /* Use repo_digest instead */
         public Builder latest(@Nullable Output<String> latest) {
             $.latest = latest;
             return this;
         }
 
+        /**
+         * @param latest The ID of the image in the form of `sha256:&lt;hash&gt;` image digest. Do not confuse it with the default `latest` tag.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use repo_digest instead
+         * 
+         */
+        @Deprecated /* Use repo_digest instead */
         public Builder latest(String latest) {
             return latest(Output.of(latest));
         }
 
+        /**
+         * @param name The name of the Docker image, including any tags or SHA256 repo digests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Docker image, including any tags or SHA256 repo digests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * Is unused and will be removed.
+         * 
+         */
+        @Deprecated /* Is unused and will be removed. */
         public Builder output(@Nullable Output<String> output) {
             $.output = output;
             return this;
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * Is unused and will be removed.
+         * 
+         */
+        @Deprecated /* Is unused and will be removed. */
         public Builder output(String output) {
             return output(Output.of(output));
         }
 
+        /**
+         * @param pullTrigger A value which cause an image pull when changed
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use field pull_triggers instead
+         * 
+         */
+        @Deprecated /* Use field pull_triggers instead */
         public Builder pullTrigger(@Nullable Output<String> pullTrigger) {
             $.pullTrigger = pullTrigger;
             return this;
         }
 
+        /**
+         * @param pullTrigger A value which cause an image pull when changed
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use field pull_triggers instead
+         * 
+         */
+        @Deprecated /* Use field pull_triggers instead */
         public Builder pullTrigger(String pullTrigger) {
             return pullTrigger(Output.of(pullTrigger));
         }
 
+        /**
+         * @param pullTriggers List of values which cause an image pull when changed. This is used to store the image digest from the registry when
+         * using the [docker_registry_image](../data-sources/registry_image.md).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullTriggers(@Nullable Output<List<String>> pullTriggers) {
             $.pullTriggers = pullTriggers;
             return this;
         }
 
+        /**
+         * @param pullTriggers List of values which cause an image pull when changed. This is used to store the image digest from the registry when
+         * using the [docker_registry_image](../data-sources/registry_image.md).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullTriggers(List<String> pullTriggers) {
             return pullTriggers(Output.of(pullTriggers));
         }
 
+        /**
+         * @param pullTriggers List of values which cause an image pull when changed. This is used to store the image digest from the registry when
+         * using the [docker_registry_image](../data-sources/registry_image.md).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullTriggers(String... pullTriggers) {
             return pullTriggers(List.of(pullTriggers));
         }
 
+        /**
+         * @param repoDigest The image sha256 digest in the form of `repo[:tag]@sha256:&lt;hash&gt;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoDigest(@Nullable Output<String> repoDigest) {
             $.repoDigest = repoDigest;
             return this;
         }
 
+        /**
+         * @param repoDigest The image sha256 digest in the form of `repo[:tag]@sha256:&lt;hash&gt;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoDigest(String repoDigest) {
             return repoDigest(Output.of(repoDigest));
         }

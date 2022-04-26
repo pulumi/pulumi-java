@@ -28,6 +28,10 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends com.p
     @Import(name="computerAttributes")
     private @Nullable Output<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes;
 
+    /**
+     * @return &lt;p&gt;A collection of custom attributes for an Active Directory computer.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<StudioComponentActiveDirectoryComputerAttributeArgs>>> computerAttributes() {
         return Optional.ofNullable(this.computerAttributes);
     }
@@ -39,6 +43,10 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends com.p
     @Import(name="directoryId")
     private @Nullable Output<String> directoryId;
 
+    /**
+     * @return &lt;p&gt;The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> directoryId() {
         return Optional.ofNullable(this.directoryId);
     }
@@ -50,6 +58,10 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends com.p
     @Import(name="organizationalUnitDistinguishedName")
     private @Nullable Output<String> organizationalUnitDistinguishedName;
 
+    /**
+     * @return &lt;p&gt;The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> organizationalUnitDistinguishedName() {
         return Optional.ofNullable(this.organizationalUnitDistinguishedName);
     }
@@ -80,33 +92,75 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends com.p
             $ = new StudioComponentActiveDirectoryConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computerAttributes &lt;p&gt;A collection of custom attributes for an Active Directory computer.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerAttributes(@Nullable Output<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes) {
             $.computerAttributes = computerAttributes;
             return this;
         }
 
+        /**
+         * @param computerAttributes &lt;p&gt;A collection of custom attributes for an Active Directory computer.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerAttributes(List<StudioComponentActiveDirectoryComputerAttributeArgs> computerAttributes) {
             return computerAttributes(Output.of(computerAttributes));
         }
 
+        /**
+         * @param computerAttributes &lt;p&gt;A collection of custom attributes for an Active Directory computer.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerAttributes(StudioComponentActiveDirectoryComputerAttributeArgs... computerAttributes) {
             return computerAttributes(List.of(computerAttributes));
         }
 
+        /**
+         * @param directoryId &lt;p&gt;The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryId(@Nullable Output<String> directoryId) {
             $.directoryId = directoryId;
             return this;
         }
 
+        /**
+         * @param directoryId &lt;p&gt;The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryId(String directoryId) {
             return directoryId(Output.of(directoryId));
         }
 
+        /**
+         * @param organizationalUnitDistinguishedName &lt;p&gt;The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnitDistinguishedName(@Nullable Output<String> organizationalUnitDistinguishedName) {
             $.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
 
+        /**
+         * @param organizationalUnitDistinguishedName &lt;p&gt;The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnitDistinguishedName(String organizationalUnitDistinguishedName) {
             return organizationalUnitDistinguishedName(Output.of(organizationalUnitDistinguishedName));
         }

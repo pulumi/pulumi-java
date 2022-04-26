@@ -22,6 +22,10 @@ public final class ResourceGuardResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="allowAutoApprovals", required=true)
     private Boolean allowAutoApprovals;
 
+    /**
+     * @return This flag indicates whether auto approval is allowed or not.
+     * 
+     */
     public Boolean allowAutoApprovals() {
         return this.allowAutoApprovals;
     }
@@ -33,6 +37,10 @@ public final class ResourceGuardResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Description about the pre-req steps to perform all the critical operations.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -44,6 +52,10 @@ public final class ResourceGuardResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state of the BackupVault resource
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -55,6 +67,10 @@ public final class ResourceGuardResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGuardOperations", required=true)
     private List<ResourceGuardOperationResponse> resourceGuardOperations;
 
+    /**
+     * @return {readonly} List of operation details those are protected by the ResourceGuard resource
+     * 
+     */
     public List<ResourceGuardOperationResponse> resourceGuardOperations() {
         return this.resourceGuardOperations;
     }
@@ -66,6 +82,10 @@ public final class ResourceGuardResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="vaultCriticalOperationExclusionList", required=true)
     private List<String> vaultCriticalOperationExclusionList;
 
+    /**
+     * @return List of critical operations which are not protected by this resourceGuard
+     * 
+     */
     public List<String> vaultCriticalOperationExclusionList() {
         return this.vaultCriticalOperationExclusionList;
     }
@@ -98,35 +118,77 @@ public final class ResourceGuardResponse extends com.pulumi.resources.InvokeArgs
             $ = new ResourceGuardResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowAutoApprovals This flag indicates whether auto approval is allowed or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowAutoApprovals(Boolean allowAutoApprovals) {
             $.allowAutoApprovals = allowAutoApprovals;
             return this;
         }
 
+        /**
+         * @param description Description about the pre-req steps to perform all the critical operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the BackupVault resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param resourceGuardOperations {readonly} List of operation details those are protected by the ResourceGuard resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGuardOperations(List<ResourceGuardOperationResponse> resourceGuardOperations) {
             $.resourceGuardOperations = resourceGuardOperations;
             return this;
         }
 
+        /**
+         * @param resourceGuardOperations {readonly} List of operation details those are protected by the ResourceGuard resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGuardOperations(ResourceGuardOperationResponse... resourceGuardOperations) {
             return resourceGuardOperations(List.of(resourceGuardOperations));
         }
 
+        /**
+         * @param vaultCriticalOperationExclusionList List of critical operations which are not protected by this resourceGuard
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultCriticalOperationExclusionList(List<String> vaultCriticalOperationExclusionList) {
             $.vaultCriticalOperationExclusionList = vaultCriticalOperationExclusionList;
             return this;
         }
 
+        /**
+         * @param vaultCriticalOperationExclusionList List of critical operations which are not protected by this resourceGuard
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultCriticalOperationExclusionList(String... vaultCriticalOperationExclusionList) {
             return vaultCriticalOperationExclusionList(List.of(vaultCriticalOperationExclusionList));
         }

@@ -27,6 +27,10 @@ public final class SubscriptionLogSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="category")
     private @Nullable Output<String> category;
 
+    /**
+     * @return Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.
+     * 
+     */
     public Optional<Output<String>> category() {
         return Optional.ofNullable(this.category);
     }
@@ -38,6 +42,10 @@ public final class SubscriptionLogSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return a value indicating whether this log is enabled.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -67,20 +75,44 @@ public final class SubscriptionLogSettingsArgs extends com.pulumi.resources.Reso
             $ = new SubscriptionLogSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(@Nullable Output<String> category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param category Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             return category(Output.of(category));
         }
 
+        /**
+         * @param enabled a value indicating whether this log is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled a value indicating whether this log is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

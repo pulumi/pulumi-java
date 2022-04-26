@@ -27,6 +27,10 @@ public final class ApiManagementServiceSkuPropertiesArgs extends com.pulumi.reso
     @Import(name="capacity", required=true)
     private Output<Integer> capacity;
 
+    /**
+     * @return Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.
+     * 
+     */
     public Output<Integer> capacity() {
         return this.capacity;
     }
@@ -38,6 +42,10 @@ public final class ApiManagementServiceSkuPropertiesArgs extends com.pulumi.reso
     @Import(name="name", required=true)
     private Output<Either<String,SkuType>> name;
 
+    /**
+     * @return Name of the Sku.
+     * 
+     */
     public Output<Either<String,SkuType>> name() {
         return this.name;
     }
@@ -67,28 +75,64 @@ public final class ApiManagementServiceSkuPropertiesArgs extends com.pulumi.reso
             $ = new ApiManagementServiceSkuPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name Name of the Sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,SkuType>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the Sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,SkuType> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Name of the Sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Name of the Sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SkuType name) {
             return name(Either.ofRight(name));
         }

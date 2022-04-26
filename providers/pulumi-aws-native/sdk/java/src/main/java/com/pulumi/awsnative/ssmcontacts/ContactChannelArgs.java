@@ -24,6 +24,10 @@ public final class ContactChannelArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="channelAddress")
     private @Nullable Output<String> channelAddress;
 
+    /**
+     * @return The details that SSM Incident Manager uses when trying to engage the contact channel.
+     * 
+     */
     public Optional<Output<String>> channelAddress() {
         return Optional.ofNullable(this.channelAddress);
     }
@@ -35,6 +39,10 @@ public final class ContactChannelArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="channelName")
     private @Nullable Output<String> channelName;
 
+    /**
+     * @return The device name. String of 6 to 50 alphabetical, numeric, dash, and underscore characters.
+     * 
+     */
     public Optional<Output<String>> channelName() {
         return Optional.ofNullable(this.channelName);
     }
@@ -46,6 +54,10 @@ public final class ContactChannelArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="channelType")
     private @Nullable Output<ContactChannelChannelType> channelType;
 
+    /**
+     * @return Device type, which specify notification channel. Currently supported values: “SMS”, “VOICE”, “EMAIL”, “CHATBOT.
+     * 
+     */
     public Optional<Output<ContactChannelChannelType>> channelType() {
         return Optional.ofNullable(this.channelType);
     }
@@ -57,6 +69,10 @@ public final class ContactChannelArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contactId")
     private @Nullable Output<String> contactId;
 
+    /**
+     * @return ARN of the contact resource
+     * 
+     */
     public Optional<Output<String>> contactId() {
         return Optional.ofNullable(this.contactId);
     }
@@ -68,6 +84,10 @@ public final class ContactChannelArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="deferActivation")
     private @Nullable Output<Boolean> deferActivation;
 
+    /**
+     * @return If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can&#39;t engage your contact channel until it has been activated.
+     * 
+     */
     public Optional<Output<Boolean>> deferActivation() {
         return Optional.ofNullable(this.deferActivation);
     }
@@ -100,47 +120,107 @@ public final class ContactChannelArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ContactChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channelAddress The details that SSM Incident Manager uses when trying to engage the contact channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelAddress(@Nullable Output<String> channelAddress) {
             $.channelAddress = channelAddress;
             return this;
         }
 
+        /**
+         * @param channelAddress The details that SSM Incident Manager uses when trying to engage the contact channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelAddress(String channelAddress) {
             return channelAddress(Output.of(channelAddress));
         }
 
+        /**
+         * @param channelName The device name. String of 6 to 50 alphabetical, numeric, dash, and underscore characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelName(@Nullable Output<String> channelName) {
             $.channelName = channelName;
             return this;
         }
 
+        /**
+         * @param channelName The device name. String of 6 to 50 alphabetical, numeric, dash, and underscore characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelName(String channelName) {
             return channelName(Output.of(channelName));
         }
 
+        /**
+         * @param channelType Device type, which specify notification channel. Currently supported values: “SMS”, “VOICE”, “EMAIL”, “CHATBOT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelType(@Nullable Output<ContactChannelChannelType> channelType) {
             $.channelType = channelType;
             return this;
         }
 
+        /**
+         * @param channelType Device type, which specify notification channel. Currently supported values: “SMS”, “VOICE”, “EMAIL”, “CHATBOT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelType(ContactChannelChannelType channelType) {
             return channelType(Output.of(channelType));
         }
 
+        /**
+         * @param contactId ARN of the contact resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactId(@Nullable Output<String> contactId) {
             $.contactId = contactId;
             return this;
         }
 
+        /**
+         * @param contactId ARN of the contact resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactId(String contactId) {
             return contactId(Output.of(contactId));
         }
 
+        /**
+         * @param deferActivation If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can&#39;t engage your contact channel until it has been activated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferActivation(@Nullable Output<Boolean> deferActivation) {
             $.deferActivation = deferActivation;
             return this;
         }
 
+        /**
+         * @param deferActivation If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can&#39;t engage your contact channel until it has been activated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferActivation(Boolean deferActivation) {
             return deferActivation(Output.of(deferActivation));
         }

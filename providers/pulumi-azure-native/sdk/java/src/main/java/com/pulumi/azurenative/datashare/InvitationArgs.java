@@ -22,6 +22,10 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -33,6 +37,10 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expirationDate")
     private @Nullable Output<String> expirationDate;
 
+    /**
+     * @return The expiration date for the invitation and share subscription.
+     * 
+     */
     public Optional<Output<String>> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
@@ -44,6 +52,10 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="invitationName")
     private @Nullable Output<String> invitationName;
 
+    /**
+     * @return The name of the invitation.
+     * 
+     */
     public Optional<Output<String>> invitationName() {
         return Optional.ofNullable(this.invitationName);
     }
@@ -55,6 +67,10 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -66,6 +82,10 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareName", required=true)
     private Output<String> shareName;
 
+    /**
+     * @return The name of the share to send the invitation for.
+     * 
+     */
     public Output<String> shareName() {
         return this.shareName;
     }
@@ -77,6 +97,10 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetActiveDirectoryId")
     private @Nullable Output<String> targetActiveDirectoryId;
 
+    /**
+     * @return The target Azure AD Id. Can&#39;t be combined with email.
+     * 
+     */
     public Optional<Output<String>> targetActiveDirectoryId() {
         return Optional.ofNullable(this.targetActiveDirectoryId);
     }
@@ -88,6 +112,10 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetEmail")
     private @Nullable Output<String> targetEmail;
 
+    /**
+     * @return The email the invitation is directed to.
+     * 
+     */
     public Optional<Output<String>> targetEmail() {
         return Optional.ofNullable(this.targetEmail);
     }
@@ -101,6 +129,12 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetObjectId")
     private @Nullable Output<String> targetObjectId;
 
+    /**
+     * @return The target user or application Id that invitation is being sent to.
+     * Must be specified along TargetActiveDirectoryId. This enables sending
+     * invitations to specific users or applications in an AD tenant.
+     * 
+     */
     public Optional<Output<String>> targetObjectId() {
         return Optional.ofNullable(this.targetObjectId);
     }
@@ -136,74 +170,174 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InvitationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param expirationDate The expiration date for the invitation and share subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
             $.expirationDate = expirationDate;
             return this;
         }
 
+        /**
+         * @param expirationDate The expiration date for the invitation and share subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(String expirationDate) {
             return expirationDate(Output.of(expirationDate));
         }
 
+        /**
+         * @param invitationName The name of the invitation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invitationName(@Nullable Output<String> invitationName) {
             $.invitationName = invitationName;
             return this;
         }
 
+        /**
+         * @param invitationName The name of the invitation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invitationName(String invitationName) {
             return invitationName(Output.of(invitationName));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param shareName The name of the share to send the invitation for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(Output<String> shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param shareName The name of the share to send the invitation for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             return shareName(Output.of(shareName));
         }
 
+        /**
+         * @param targetActiveDirectoryId The target Azure AD Id. Can&#39;t be combined with email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetActiveDirectoryId(@Nullable Output<String> targetActiveDirectoryId) {
             $.targetActiveDirectoryId = targetActiveDirectoryId;
             return this;
         }
 
+        /**
+         * @param targetActiveDirectoryId The target Azure AD Id. Can&#39;t be combined with email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetActiveDirectoryId(String targetActiveDirectoryId) {
             return targetActiveDirectoryId(Output.of(targetActiveDirectoryId));
         }
 
+        /**
+         * @param targetEmail The email the invitation is directed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetEmail(@Nullable Output<String> targetEmail) {
             $.targetEmail = targetEmail;
             return this;
         }
 
+        /**
+         * @param targetEmail The email the invitation is directed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetEmail(String targetEmail) {
             return targetEmail(Output.of(targetEmail));
         }
 
+        /**
+         * @param targetObjectId The target user or application Id that invitation is being sent to.
+         * Must be specified along TargetActiveDirectoryId. This enables sending
+         * invitations to specific users or applications in an AD tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetObjectId(@Nullable Output<String> targetObjectId) {
             $.targetObjectId = targetObjectId;
             return this;
         }
 
+        /**
+         * @param targetObjectId The target user or application Id that invitation is being sent to.
+         * Must be specified along TargetActiveDirectoryId. This enables sending
+         * invitations to specific users or applications in an AD tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetObjectId(String targetObjectId) {
             return targetObjectId(Output.of(targetObjectId));
         }

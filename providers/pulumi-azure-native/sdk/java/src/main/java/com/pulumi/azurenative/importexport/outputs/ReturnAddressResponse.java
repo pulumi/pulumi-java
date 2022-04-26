@@ -12,47 +12,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ReturnAddressResponse {
     /**
-     * The city name to use when returning the drives.
+     * @return The city name to use when returning the drives.
      * 
      */
     private final String city;
     /**
-     * The country or region to use when returning the drives.
+     * @return The country or region to use when returning the drives.
      * 
      */
     private final String countryOrRegion;
     /**
-     * Email address of the recipient of the returned drives.
+     * @return Email address of the recipient of the returned drives.
      * 
      */
     private final String email;
     /**
-     * Phone number of the recipient of the returned drives.
+     * @return Phone number of the recipient of the returned drives.
      * 
      */
     private final String phone;
     /**
-     * The postal code to use when returning the drives.
+     * @return The postal code to use when returning the drives.
      * 
      */
     private final String postalCode;
     /**
-     * The name of the recipient who will receive the hard drives when they are returned.
+     * @return The name of the recipient who will receive the hard drives when they are returned.
      * 
      */
     private final String recipientName;
     /**
-     * The state or province to use when returning the drives.
+     * @return The state or province to use when returning the drives.
      * 
      */
     private final @Nullable String stateOrProvince;
     /**
-     * The first line of the street address to use when returning the drives.
+     * @return The first line of the street address to use when returning the drives.
      * 
      */
     private final String streetAddress1;
     /**
-     * The second line of the street address to use when returning the drives.
+     * @return The second line of the street address to use when returning the drives.
      * 
      */
     private final @Nullable String streetAddress2;
@@ -80,65 +80,65 @@ public final class ReturnAddressResponse {
     }
 
     /**
-     * The city name to use when returning the drives.
+     * @return The city name to use when returning the drives.
      * 
-    */
+     */
     public String city() {
         return this.city;
     }
     /**
-     * The country or region to use when returning the drives.
+     * @return The country or region to use when returning the drives.
      * 
-    */
+     */
     public String countryOrRegion() {
         return this.countryOrRegion;
     }
     /**
-     * Email address of the recipient of the returned drives.
+     * @return Email address of the recipient of the returned drives.
      * 
-    */
+     */
     public String email() {
         return this.email;
     }
     /**
-     * Phone number of the recipient of the returned drives.
+     * @return Phone number of the recipient of the returned drives.
      * 
-    */
+     */
     public String phone() {
         return this.phone;
     }
     /**
-     * The postal code to use when returning the drives.
+     * @return The postal code to use when returning the drives.
      * 
-    */
+     */
     public String postalCode() {
         return this.postalCode;
     }
     /**
-     * The name of the recipient who will receive the hard drives when they are returned.
+     * @return The name of the recipient who will receive the hard drives when they are returned.
      * 
-    */
+     */
     public String recipientName() {
         return this.recipientName;
     }
     /**
-     * The state or province to use when returning the drives.
+     * @return The state or province to use when returning the drives.
      * 
-    */
+     */
     public Optional<String> stateOrProvince() {
         return Optional.ofNullable(this.stateOrProvince);
     }
     /**
-     * The first line of the street address to use when returning the drives.
+     * @return The first line of the street address to use when returning the drives.
      * 
-    */
+     */
     public String streetAddress1() {
         return this.streetAddress1;
     }
     /**
-     * The second line of the street address to use when returning the drives.
+     * @return The second line of the street address to use when returning the drives.
      * 
-    */
+     */
     public Optional<String> streetAddress2() {
         return Optional.ofNullable(this.streetAddress2);
     }

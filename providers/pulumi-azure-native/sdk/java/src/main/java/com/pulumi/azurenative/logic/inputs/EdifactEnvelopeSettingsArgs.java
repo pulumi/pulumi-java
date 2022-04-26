@@ -28,6 +28,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="applicationReferenceId")
     private @Nullable Output<String> applicationReferenceId;
 
+    /**
+     * @return The application reference id.
+     * 
+     */
     public Optional<Output<String>> applicationReferenceId() {
         return Optional.ofNullable(this.applicationReferenceId);
     }
@@ -39,6 +43,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="applyDelimiterStringAdvice", required=true)
     private Output<Boolean> applyDelimiterStringAdvice;
 
+    /**
+     * @return The value indicating whether to apply delimiter string advice.
+     * 
+     */
     public Output<Boolean> applyDelimiterStringAdvice() {
         return this.applyDelimiterStringAdvice;
     }
@@ -50,6 +58,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="communicationAgreementId")
     private @Nullable Output<String> communicationAgreementId;
 
+    /**
+     * @return The communication agreement id.
+     * 
+     */
     public Optional<Output<String>> communicationAgreementId() {
         return Optional.ofNullable(this.communicationAgreementId);
     }
@@ -61,6 +73,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="createGroupingSegments", required=true)
     private Output<Boolean> createGroupingSegments;
 
+    /**
+     * @return The value indicating whether to create grouping segments.
+     * 
+     */
     public Output<Boolean> createGroupingSegments() {
         return this.createGroupingSegments;
     }
@@ -72,6 +88,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="enableDefaultGroupHeaders", required=true)
     private Output<Boolean> enableDefaultGroupHeaders;
 
+    /**
+     * @return The value indicating whether to enable default group headers.
+     * 
+     */
     public Output<Boolean> enableDefaultGroupHeaders() {
         return this.enableDefaultGroupHeaders;
     }
@@ -83,6 +103,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="functionalGroupId")
     private @Nullable Output<String> functionalGroupId;
 
+    /**
+     * @return The functional group id.
+     * 
+     */
     public Optional<Output<String>> functionalGroupId() {
         return Optional.ofNullable(this.functionalGroupId);
     }
@@ -94,6 +118,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="groupApplicationPassword")
     private @Nullable Output<String> groupApplicationPassword;
 
+    /**
+     * @return The group application password.
+     * 
+     */
     public Optional<Output<String>> groupApplicationPassword() {
         return Optional.ofNullable(this.groupApplicationPassword);
     }
@@ -105,6 +133,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="groupApplicationReceiverId")
     private @Nullable Output<String> groupApplicationReceiverId;
 
+    /**
+     * @return The group application receiver id.
+     * 
+     */
     public Optional<Output<String>> groupApplicationReceiverId() {
         return Optional.ofNullable(this.groupApplicationReceiverId);
     }
@@ -116,6 +148,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="groupApplicationReceiverQualifier")
     private @Nullable Output<String> groupApplicationReceiverQualifier;
 
+    /**
+     * @return The group application receiver qualifier.
+     * 
+     */
     public Optional<Output<String>> groupApplicationReceiverQualifier() {
         return Optional.ofNullable(this.groupApplicationReceiverQualifier);
     }
@@ -127,6 +163,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="groupApplicationSenderId")
     private @Nullable Output<String> groupApplicationSenderId;
 
+    /**
+     * @return The group application sender id.
+     * 
+     */
     public Optional<Output<String>> groupApplicationSenderId() {
         return Optional.ofNullable(this.groupApplicationSenderId);
     }
@@ -138,6 +178,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="groupApplicationSenderQualifier")
     private @Nullable Output<String> groupApplicationSenderQualifier;
 
+    /**
+     * @return The group application sender qualifier.
+     * 
+     */
     public Optional<Output<String>> groupApplicationSenderQualifier() {
         return Optional.ofNullable(this.groupApplicationSenderQualifier);
     }
@@ -149,6 +193,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="groupAssociationAssignedCode")
     private @Nullable Output<String> groupAssociationAssignedCode;
 
+    /**
+     * @return The group association assigned code.
+     * 
+     */
     public Optional<Output<String>> groupAssociationAssignedCode() {
         return Optional.ofNullable(this.groupAssociationAssignedCode);
     }
@@ -160,6 +208,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="groupControlNumberLowerBound", required=true)
     private Output<Double> groupControlNumberLowerBound;
 
+    /**
+     * @return The group control number lower bound.
+     * 
+     */
     public Output<Double> groupControlNumberLowerBound() {
         return this.groupControlNumberLowerBound;
     }
@@ -171,6 +223,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="groupControlNumberPrefix")
     private @Nullable Output<String> groupControlNumberPrefix;
 
+    /**
+     * @return The group control number prefix.
+     * 
+     */
     public Optional<Output<String>> groupControlNumberPrefix() {
         return Optional.ofNullable(this.groupControlNumberPrefix);
     }
@@ -182,6 +238,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="groupControlNumberSuffix")
     private @Nullable Output<String> groupControlNumberSuffix;
 
+    /**
+     * @return The group control number suffix.
+     * 
+     */
     public Optional<Output<String>> groupControlNumberSuffix() {
         return Optional.ofNullable(this.groupControlNumberSuffix);
     }
@@ -193,6 +253,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="groupControlNumberUpperBound", required=true)
     private Output<Double> groupControlNumberUpperBound;
 
+    /**
+     * @return The group control number upper bound.
+     * 
+     */
     public Output<Double> groupControlNumberUpperBound() {
         return this.groupControlNumberUpperBound;
     }
@@ -204,6 +268,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="groupControllingAgencyCode")
     private @Nullable Output<String> groupControllingAgencyCode;
 
+    /**
+     * @return The group controlling agency code.
+     * 
+     */
     public Optional<Output<String>> groupControllingAgencyCode() {
         return Optional.ofNullable(this.groupControllingAgencyCode);
     }
@@ -215,6 +283,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="groupMessageRelease")
     private @Nullable Output<String> groupMessageRelease;
 
+    /**
+     * @return The group message release.
+     * 
+     */
     public Optional<Output<String>> groupMessageRelease() {
         return Optional.ofNullable(this.groupMessageRelease);
     }
@@ -226,6 +298,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="groupMessageVersion")
     private @Nullable Output<String> groupMessageVersion;
 
+    /**
+     * @return The group message version.
+     * 
+     */
     public Optional<Output<String>> groupMessageVersion() {
         return Optional.ofNullable(this.groupMessageVersion);
     }
@@ -237,6 +313,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="interchangeControlNumberLowerBound", required=true)
     private Output<Double> interchangeControlNumberLowerBound;
 
+    /**
+     * @return The interchange control number lower bound.
+     * 
+     */
     public Output<Double> interchangeControlNumberLowerBound() {
         return this.interchangeControlNumberLowerBound;
     }
@@ -248,6 +328,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="interchangeControlNumberPrefix")
     private @Nullable Output<String> interchangeControlNumberPrefix;
 
+    /**
+     * @return The interchange control number prefix.
+     * 
+     */
     public Optional<Output<String>> interchangeControlNumberPrefix() {
         return Optional.ofNullable(this.interchangeControlNumberPrefix);
     }
@@ -259,6 +343,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="interchangeControlNumberSuffix")
     private @Nullable Output<String> interchangeControlNumberSuffix;
 
+    /**
+     * @return The interchange control number suffix.
+     * 
+     */
     public Optional<Output<String>> interchangeControlNumberSuffix() {
         return Optional.ofNullable(this.interchangeControlNumberSuffix);
     }
@@ -270,6 +358,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="interchangeControlNumberUpperBound", required=true)
     private Output<Double> interchangeControlNumberUpperBound;
 
+    /**
+     * @return The interchange control number upper bound.
+     * 
+     */
     public Output<Double> interchangeControlNumberUpperBound() {
         return this.interchangeControlNumberUpperBound;
     }
@@ -281,6 +373,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="isTestInterchange", required=true)
     private Output<Boolean> isTestInterchange;
 
+    /**
+     * @return The value indicating whether the message is a test interchange.
+     * 
+     */
     public Output<Boolean> isTestInterchange() {
         return this.isTestInterchange;
     }
@@ -292,6 +388,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="overwriteExistingTransactionSetControlNumber", required=true)
     private Output<Boolean> overwriteExistingTransactionSetControlNumber;
 
+    /**
+     * @return The value indicating whether to overwrite existing transaction set control number.
+     * 
+     */
     public Output<Boolean> overwriteExistingTransactionSetControlNumber() {
         return this.overwriteExistingTransactionSetControlNumber;
     }
@@ -303,6 +403,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="processingPriorityCode")
     private @Nullable Output<String> processingPriorityCode;
 
+    /**
+     * @return The processing priority code.
+     * 
+     */
     public Optional<Output<String>> processingPriorityCode() {
         return Optional.ofNullable(this.processingPriorityCode);
     }
@@ -314,6 +418,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="receiverInternalIdentification")
     private @Nullable Output<String> receiverInternalIdentification;
 
+    /**
+     * @return The receiver internal identification.
+     * 
+     */
     public Optional<Output<String>> receiverInternalIdentification() {
         return Optional.ofNullable(this.receiverInternalIdentification);
     }
@@ -325,6 +433,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="receiverInternalSubIdentification")
     private @Nullable Output<String> receiverInternalSubIdentification;
 
+    /**
+     * @return The receiver internal sub identification.
+     * 
+     */
     public Optional<Output<String>> receiverInternalSubIdentification() {
         return Optional.ofNullable(this.receiverInternalSubIdentification);
     }
@@ -336,6 +448,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="receiverReverseRoutingAddress")
     private @Nullable Output<String> receiverReverseRoutingAddress;
 
+    /**
+     * @return The receiver reverse routing address.
+     * 
+     */
     public Optional<Output<String>> receiverReverseRoutingAddress() {
         return Optional.ofNullable(this.receiverReverseRoutingAddress);
     }
@@ -347,6 +463,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="recipientReferencePasswordQualifier")
     private @Nullable Output<String> recipientReferencePasswordQualifier;
 
+    /**
+     * @return The recipient reference password qualifier.
+     * 
+     */
     public Optional<Output<String>> recipientReferencePasswordQualifier() {
         return Optional.ofNullable(this.recipientReferencePasswordQualifier);
     }
@@ -358,6 +478,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="recipientReferencePasswordValue")
     private @Nullable Output<String> recipientReferencePasswordValue;
 
+    /**
+     * @return The recipient reference password value.
+     * 
+     */
     public Optional<Output<String>> recipientReferencePasswordValue() {
         return Optional.ofNullable(this.recipientReferencePasswordValue);
     }
@@ -369,6 +493,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="rolloverGroupControlNumber", required=true)
     private Output<Boolean> rolloverGroupControlNumber;
 
+    /**
+     * @return The value indicating whether to rollover group control number.
+     * 
+     */
     public Output<Boolean> rolloverGroupControlNumber() {
         return this.rolloverGroupControlNumber;
     }
@@ -380,6 +508,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="rolloverInterchangeControlNumber", required=true)
     private Output<Boolean> rolloverInterchangeControlNumber;
 
+    /**
+     * @return The value indicating whether to rollover interchange control number.
+     * 
+     */
     public Output<Boolean> rolloverInterchangeControlNumber() {
         return this.rolloverInterchangeControlNumber;
     }
@@ -391,6 +523,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="rolloverTransactionSetControlNumber", required=true)
     private Output<Boolean> rolloverTransactionSetControlNumber;
 
+    /**
+     * @return The value indicating whether to rollover transaction set control number.
+     * 
+     */
     public Output<Boolean> rolloverTransactionSetControlNumber() {
         return this.rolloverTransactionSetControlNumber;
     }
@@ -402,6 +538,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="senderInternalIdentification")
     private @Nullable Output<String> senderInternalIdentification;
 
+    /**
+     * @return The sender internal identification.
+     * 
+     */
     public Optional<Output<String>> senderInternalIdentification() {
         return Optional.ofNullable(this.senderInternalIdentification);
     }
@@ -413,6 +553,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="senderInternalSubIdentification")
     private @Nullable Output<String> senderInternalSubIdentification;
 
+    /**
+     * @return The sender internal sub identification.
+     * 
+     */
     public Optional<Output<String>> senderInternalSubIdentification() {
         return Optional.ofNullable(this.senderInternalSubIdentification);
     }
@@ -424,6 +568,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="senderReverseRoutingAddress")
     private @Nullable Output<String> senderReverseRoutingAddress;
 
+    /**
+     * @return The sender reverse routing address.
+     * 
+     */
     public Optional<Output<String>> senderReverseRoutingAddress() {
         return Optional.ofNullable(this.senderReverseRoutingAddress);
     }
@@ -435,6 +583,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="transactionSetControlNumberLowerBound", required=true)
     private Output<Double> transactionSetControlNumberLowerBound;
 
+    /**
+     * @return The transaction set control number lower bound.
+     * 
+     */
     public Output<Double> transactionSetControlNumberLowerBound() {
         return this.transactionSetControlNumberLowerBound;
     }
@@ -446,6 +598,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="transactionSetControlNumberPrefix")
     private @Nullable Output<String> transactionSetControlNumberPrefix;
 
+    /**
+     * @return The transaction set control number prefix.
+     * 
+     */
     public Optional<Output<String>> transactionSetControlNumberPrefix() {
         return Optional.ofNullable(this.transactionSetControlNumberPrefix);
     }
@@ -457,6 +613,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="transactionSetControlNumberSuffix")
     private @Nullable Output<String> transactionSetControlNumberSuffix;
 
+    /**
+     * @return The transaction set control number suffix.
+     * 
+     */
     public Optional<Output<String>> transactionSetControlNumberSuffix() {
         return Optional.ofNullable(this.transactionSetControlNumberSuffix);
     }
@@ -468,6 +628,10 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="transactionSetControlNumberUpperBound", required=true)
     private Output<Double> transactionSetControlNumberUpperBound;
 
+    /**
+     * @return The transaction set control number upper bound.
+     * 
+     */
     public Output<Double> transactionSetControlNumberUpperBound() {
         return this.transactionSetControlNumberUpperBound;
     }
@@ -536,371 +700,863 @@ public final class EdifactEnvelopeSettingsArgs extends com.pulumi.resources.Reso
             $ = new EdifactEnvelopeSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationReferenceId The application reference id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationReferenceId(@Nullable Output<String> applicationReferenceId) {
             $.applicationReferenceId = applicationReferenceId;
             return this;
         }
 
+        /**
+         * @param applicationReferenceId The application reference id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationReferenceId(String applicationReferenceId) {
             return applicationReferenceId(Output.of(applicationReferenceId));
         }
 
+        /**
+         * @param applyDelimiterStringAdvice The value indicating whether to apply delimiter string advice.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyDelimiterStringAdvice(Output<Boolean> applyDelimiterStringAdvice) {
             $.applyDelimiterStringAdvice = applyDelimiterStringAdvice;
             return this;
         }
 
+        /**
+         * @param applyDelimiterStringAdvice The value indicating whether to apply delimiter string advice.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyDelimiterStringAdvice(Boolean applyDelimiterStringAdvice) {
             return applyDelimiterStringAdvice(Output.of(applyDelimiterStringAdvice));
         }
 
+        /**
+         * @param communicationAgreementId The communication agreement id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder communicationAgreementId(@Nullable Output<String> communicationAgreementId) {
             $.communicationAgreementId = communicationAgreementId;
             return this;
         }
 
+        /**
+         * @param communicationAgreementId The communication agreement id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder communicationAgreementId(String communicationAgreementId) {
             return communicationAgreementId(Output.of(communicationAgreementId));
         }
 
+        /**
+         * @param createGroupingSegments The value indicating whether to create grouping segments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createGroupingSegments(Output<Boolean> createGroupingSegments) {
             $.createGroupingSegments = createGroupingSegments;
             return this;
         }
 
+        /**
+         * @param createGroupingSegments The value indicating whether to create grouping segments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createGroupingSegments(Boolean createGroupingSegments) {
             return createGroupingSegments(Output.of(createGroupingSegments));
         }
 
+        /**
+         * @param enableDefaultGroupHeaders The value indicating whether to enable default group headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDefaultGroupHeaders(Output<Boolean> enableDefaultGroupHeaders) {
             $.enableDefaultGroupHeaders = enableDefaultGroupHeaders;
             return this;
         }
 
+        /**
+         * @param enableDefaultGroupHeaders The value indicating whether to enable default group headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDefaultGroupHeaders(Boolean enableDefaultGroupHeaders) {
             return enableDefaultGroupHeaders(Output.of(enableDefaultGroupHeaders));
         }
 
+        /**
+         * @param functionalGroupId The functional group id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionalGroupId(@Nullable Output<String> functionalGroupId) {
             $.functionalGroupId = functionalGroupId;
             return this;
         }
 
+        /**
+         * @param functionalGroupId The functional group id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionalGroupId(String functionalGroupId) {
             return functionalGroupId(Output.of(functionalGroupId));
         }
 
+        /**
+         * @param groupApplicationPassword The group application password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupApplicationPassword(@Nullable Output<String> groupApplicationPassword) {
             $.groupApplicationPassword = groupApplicationPassword;
             return this;
         }
 
+        /**
+         * @param groupApplicationPassword The group application password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupApplicationPassword(String groupApplicationPassword) {
             return groupApplicationPassword(Output.of(groupApplicationPassword));
         }
 
+        /**
+         * @param groupApplicationReceiverId The group application receiver id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupApplicationReceiverId(@Nullable Output<String> groupApplicationReceiverId) {
             $.groupApplicationReceiverId = groupApplicationReceiverId;
             return this;
         }
 
+        /**
+         * @param groupApplicationReceiverId The group application receiver id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupApplicationReceiverId(String groupApplicationReceiverId) {
             return groupApplicationReceiverId(Output.of(groupApplicationReceiverId));
         }
 
+        /**
+         * @param groupApplicationReceiverQualifier The group application receiver qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupApplicationReceiverQualifier(@Nullable Output<String> groupApplicationReceiverQualifier) {
             $.groupApplicationReceiverQualifier = groupApplicationReceiverQualifier;
             return this;
         }
 
+        /**
+         * @param groupApplicationReceiverQualifier The group application receiver qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupApplicationReceiverQualifier(String groupApplicationReceiverQualifier) {
             return groupApplicationReceiverQualifier(Output.of(groupApplicationReceiverQualifier));
         }
 
+        /**
+         * @param groupApplicationSenderId The group application sender id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupApplicationSenderId(@Nullable Output<String> groupApplicationSenderId) {
             $.groupApplicationSenderId = groupApplicationSenderId;
             return this;
         }
 
+        /**
+         * @param groupApplicationSenderId The group application sender id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupApplicationSenderId(String groupApplicationSenderId) {
             return groupApplicationSenderId(Output.of(groupApplicationSenderId));
         }
 
+        /**
+         * @param groupApplicationSenderQualifier The group application sender qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupApplicationSenderQualifier(@Nullable Output<String> groupApplicationSenderQualifier) {
             $.groupApplicationSenderQualifier = groupApplicationSenderQualifier;
             return this;
         }
 
+        /**
+         * @param groupApplicationSenderQualifier The group application sender qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupApplicationSenderQualifier(String groupApplicationSenderQualifier) {
             return groupApplicationSenderQualifier(Output.of(groupApplicationSenderQualifier));
         }
 
+        /**
+         * @param groupAssociationAssignedCode The group association assigned code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupAssociationAssignedCode(@Nullable Output<String> groupAssociationAssignedCode) {
             $.groupAssociationAssignedCode = groupAssociationAssignedCode;
             return this;
         }
 
+        /**
+         * @param groupAssociationAssignedCode The group association assigned code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupAssociationAssignedCode(String groupAssociationAssignedCode) {
             return groupAssociationAssignedCode(Output.of(groupAssociationAssignedCode));
         }
 
+        /**
+         * @param groupControlNumberLowerBound The group control number lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControlNumberLowerBound(Output<Double> groupControlNumberLowerBound) {
             $.groupControlNumberLowerBound = groupControlNumberLowerBound;
             return this;
         }
 
+        /**
+         * @param groupControlNumberLowerBound The group control number lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControlNumberLowerBound(Double groupControlNumberLowerBound) {
             return groupControlNumberLowerBound(Output.of(groupControlNumberLowerBound));
         }
 
+        /**
+         * @param groupControlNumberPrefix The group control number prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControlNumberPrefix(@Nullable Output<String> groupControlNumberPrefix) {
             $.groupControlNumberPrefix = groupControlNumberPrefix;
             return this;
         }
 
+        /**
+         * @param groupControlNumberPrefix The group control number prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControlNumberPrefix(String groupControlNumberPrefix) {
             return groupControlNumberPrefix(Output.of(groupControlNumberPrefix));
         }
 
+        /**
+         * @param groupControlNumberSuffix The group control number suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControlNumberSuffix(@Nullable Output<String> groupControlNumberSuffix) {
             $.groupControlNumberSuffix = groupControlNumberSuffix;
             return this;
         }
 
+        /**
+         * @param groupControlNumberSuffix The group control number suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControlNumberSuffix(String groupControlNumberSuffix) {
             return groupControlNumberSuffix(Output.of(groupControlNumberSuffix));
         }
 
+        /**
+         * @param groupControlNumberUpperBound The group control number upper bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControlNumberUpperBound(Output<Double> groupControlNumberUpperBound) {
             $.groupControlNumberUpperBound = groupControlNumberUpperBound;
             return this;
         }
 
+        /**
+         * @param groupControlNumberUpperBound The group control number upper bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControlNumberUpperBound(Double groupControlNumberUpperBound) {
             return groupControlNumberUpperBound(Output.of(groupControlNumberUpperBound));
         }
 
+        /**
+         * @param groupControllingAgencyCode The group controlling agency code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControllingAgencyCode(@Nullable Output<String> groupControllingAgencyCode) {
             $.groupControllingAgencyCode = groupControllingAgencyCode;
             return this;
         }
 
+        /**
+         * @param groupControllingAgencyCode The group controlling agency code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControllingAgencyCode(String groupControllingAgencyCode) {
             return groupControllingAgencyCode(Output.of(groupControllingAgencyCode));
         }
 
+        /**
+         * @param groupMessageRelease The group message release.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupMessageRelease(@Nullable Output<String> groupMessageRelease) {
             $.groupMessageRelease = groupMessageRelease;
             return this;
         }
 
+        /**
+         * @param groupMessageRelease The group message release.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupMessageRelease(String groupMessageRelease) {
             return groupMessageRelease(Output.of(groupMessageRelease));
         }
 
+        /**
+         * @param groupMessageVersion The group message version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupMessageVersion(@Nullable Output<String> groupMessageVersion) {
             $.groupMessageVersion = groupMessageVersion;
             return this;
         }
 
+        /**
+         * @param groupMessageVersion The group message version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupMessageVersion(String groupMessageVersion) {
             return groupMessageVersion(Output.of(groupMessageVersion));
         }
 
+        /**
+         * @param interchangeControlNumberLowerBound The interchange control number lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberLowerBound(Output<Double> interchangeControlNumberLowerBound) {
             $.interchangeControlNumberLowerBound = interchangeControlNumberLowerBound;
             return this;
         }
 
+        /**
+         * @param interchangeControlNumberLowerBound The interchange control number lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberLowerBound(Double interchangeControlNumberLowerBound) {
             return interchangeControlNumberLowerBound(Output.of(interchangeControlNumberLowerBound));
         }
 
+        /**
+         * @param interchangeControlNumberPrefix The interchange control number prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberPrefix(@Nullable Output<String> interchangeControlNumberPrefix) {
             $.interchangeControlNumberPrefix = interchangeControlNumberPrefix;
             return this;
         }
 
+        /**
+         * @param interchangeControlNumberPrefix The interchange control number prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberPrefix(String interchangeControlNumberPrefix) {
             return interchangeControlNumberPrefix(Output.of(interchangeControlNumberPrefix));
         }
 
+        /**
+         * @param interchangeControlNumberSuffix The interchange control number suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberSuffix(@Nullable Output<String> interchangeControlNumberSuffix) {
             $.interchangeControlNumberSuffix = interchangeControlNumberSuffix;
             return this;
         }
 
+        /**
+         * @param interchangeControlNumberSuffix The interchange control number suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberSuffix(String interchangeControlNumberSuffix) {
             return interchangeControlNumberSuffix(Output.of(interchangeControlNumberSuffix));
         }
 
+        /**
+         * @param interchangeControlNumberUpperBound The interchange control number upper bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberUpperBound(Output<Double> interchangeControlNumberUpperBound) {
             $.interchangeControlNumberUpperBound = interchangeControlNumberUpperBound;
             return this;
         }
 
+        /**
+         * @param interchangeControlNumberUpperBound The interchange control number upper bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberUpperBound(Double interchangeControlNumberUpperBound) {
             return interchangeControlNumberUpperBound(Output.of(interchangeControlNumberUpperBound));
         }
 
+        /**
+         * @param isTestInterchange The value indicating whether the message is a test interchange.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isTestInterchange(Output<Boolean> isTestInterchange) {
             $.isTestInterchange = isTestInterchange;
             return this;
         }
 
+        /**
+         * @param isTestInterchange The value indicating whether the message is a test interchange.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isTestInterchange(Boolean isTestInterchange) {
             return isTestInterchange(Output.of(isTestInterchange));
         }
 
+        /**
+         * @param overwriteExistingTransactionSetControlNumber The value indicating whether to overwrite existing transaction set control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overwriteExistingTransactionSetControlNumber(Output<Boolean> overwriteExistingTransactionSetControlNumber) {
             $.overwriteExistingTransactionSetControlNumber = overwriteExistingTransactionSetControlNumber;
             return this;
         }
 
+        /**
+         * @param overwriteExistingTransactionSetControlNumber The value indicating whether to overwrite existing transaction set control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overwriteExistingTransactionSetControlNumber(Boolean overwriteExistingTransactionSetControlNumber) {
             return overwriteExistingTransactionSetControlNumber(Output.of(overwriteExistingTransactionSetControlNumber));
         }
 
+        /**
+         * @param processingPriorityCode The processing priority code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingPriorityCode(@Nullable Output<String> processingPriorityCode) {
             $.processingPriorityCode = processingPriorityCode;
             return this;
         }
 
+        /**
+         * @param processingPriorityCode The processing priority code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingPriorityCode(String processingPriorityCode) {
             return processingPriorityCode(Output.of(processingPriorityCode));
         }
 
+        /**
+         * @param receiverInternalIdentification The receiver internal identification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverInternalIdentification(@Nullable Output<String> receiverInternalIdentification) {
             $.receiverInternalIdentification = receiverInternalIdentification;
             return this;
         }
 
+        /**
+         * @param receiverInternalIdentification The receiver internal identification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverInternalIdentification(String receiverInternalIdentification) {
             return receiverInternalIdentification(Output.of(receiverInternalIdentification));
         }
 
+        /**
+         * @param receiverInternalSubIdentification The receiver internal sub identification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverInternalSubIdentification(@Nullable Output<String> receiverInternalSubIdentification) {
             $.receiverInternalSubIdentification = receiverInternalSubIdentification;
             return this;
         }
 
+        /**
+         * @param receiverInternalSubIdentification The receiver internal sub identification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverInternalSubIdentification(String receiverInternalSubIdentification) {
             return receiverInternalSubIdentification(Output.of(receiverInternalSubIdentification));
         }
 
+        /**
+         * @param receiverReverseRoutingAddress The receiver reverse routing address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverReverseRoutingAddress(@Nullable Output<String> receiverReverseRoutingAddress) {
             $.receiverReverseRoutingAddress = receiverReverseRoutingAddress;
             return this;
         }
 
+        /**
+         * @param receiverReverseRoutingAddress The receiver reverse routing address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverReverseRoutingAddress(String receiverReverseRoutingAddress) {
             return receiverReverseRoutingAddress(Output.of(receiverReverseRoutingAddress));
         }
 
+        /**
+         * @param recipientReferencePasswordQualifier The recipient reference password qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipientReferencePasswordQualifier(@Nullable Output<String> recipientReferencePasswordQualifier) {
             $.recipientReferencePasswordQualifier = recipientReferencePasswordQualifier;
             return this;
         }
 
+        /**
+         * @param recipientReferencePasswordQualifier The recipient reference password qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipientReferencePasswordQualifier(String recipientReferencePasswordQualifier) {
             return recipientReferencePasswordQualifier(Output.of(recipientReferencePasswordQualifier));
         }
 
+        /**
+         * @param recipientReferencePasswordValue The recipient reference password value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipientReferencePasswordValue(@Nullable Output<String> recipientReferencePasswordValue) {
             $.recipientReferencePasswordValue = recipientReferencePasswordValue;
             return this;
         }
 
+        /**
+         * @param recipientReferencePasswordValue The recipient reference password value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipientReferencePasswordValue(String recipientReferencePasswordValue) {
             return recipientReferencePasswordValue(Output.of(recipientReferencePasswordValue));
         }
 
+        /**
+         * @param rolloverGroupControlNumber The value indicating whether to rollover group control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloverGroupControlNumber(Output<Boolean> rolloverGroupControlNumber) {
             $.rolloverGroupControlNumber = rolloverGroupControlNumber;
             return this;
         }
 
+        /**
+         * @param rolloverGroupControlNumber The value indicating whether to rollover group control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloverGroupControlNumber(Boolean rolloverGroupControlNumber) {
             return rolloverGroupControlNumber(Output.of(rolloverGroupControlNumber));
         }
 
+        /**
+         * @param rolloverInterchangeControlNumber The value indicating whether to rollover interchange control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloverInterchangeControlNumber(Output<Boolean> rolloverInterchangeControlNumber) {
             $.rolloverInterchangeControlNumber = rolloverInterchangeControlNumber;
             return this;
         }
 
+        /**
+         * @param rolloverInterchangeControlNumber The value indicating whether to rollover interchange control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloverInterchangeControlNumber(Boolean rolloverInterchangeControlNumber) {
             return rolloverInterchangeControlNumber(Output.of(rolloverInterchangeControlNumber));
         }
 
+        /**
+         * @param rolloverTransactionSetControlNumber The value indicating whether to rollover transaction set control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloverTransactionSetControlNumber(Output<Boolean> rolloverTransactionSetControlNumber) {
             $.rolloverTransactionSetControlNumber = rolloverTransactionSetControlNumber;
             return this;
         }
 
+        /**
+         * @param rolloverTransactionSetControlNumber The value indicating whether to rollover transaction set control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloverTransactionSetControlNumber(Boolean rolloverTransactionSetControlNumber) {
             return rolloverTransactionSetControlNumber(Output.of(rolloverTransactionSetControlNumber));
         }
 
+        /**
+         * @param senderInternalIdentification The sender internal identification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderInternalIdentification(@Nullable Output<String> senderInternalIdentification) {
             $.senderInternalIdentification = senderInternalIdentification;
             return this;
         }
 
+        /**
+         * @param senderInternalIdentification The sender internal identification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderInternalIdentification(String senderInternalIdentification) {
             return senderInternalIdentification(Output.of(senderInternalIdentification));
         }
 
+        /**
+         * @param senderInternalSubIdentification The sender internal sub identification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderInternalSubIdentification(@Nullable Output<String> senderInternalSubIdentification) {
             $.senderInternalSubIdentification = senderInternalSubIdentification;
             return this;
         }
 
+        /**
+         * @param senderInternalSubIdentification The sender internal sub identification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderInternalSubIdentification(String senderInternalSubIdentification) {
             return senderInternalSubIdentification(Output.of(senderInternalSubIdentification));
         }
 
+        /**
+         * @param senderReverseRoutingAddress The sender reverse routing address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderReverseRoutingAddress(@Nullable Output<String> senderReverseRoutingAddress) {
             $.senderReverseRoutingAddress = senderReverseRoutingAddress;
             return this;
         }
 
+        /**
+         * @param senderReverseRoutingAddress The sender reverse routing address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderReverseRoutingAddress(String senderReverseRoutingAddress) {
             return senderReverseRoutingAddress(Output.of(senderReverseRoutingAddress));
         }
 
+        /**
+         * @param transactionSetControlNumberLowerBound The transaction set control number lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberLowerBound(Output<Double> transactionSetControlNumberLowerBound) {
             $.transactionSetControlNumberLowerBound = transactionSetControlNumberLowerBound;
             return this;
         }
 
+        /**
+         * @param transactionSetControlNumberLowerBound The transaction set control number lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberLowerBound(Double transactionSetControlNumberLowerBound) {
             return transactionSetControlNumberLowerBound(Output.of(transactionSetControlNumberLowerBound));
         }
 
+        /**
+         * @param transactionSetControlNumberPrefix The transaction set control number prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberPrefix(@Nullable Output<String> transactionSetControlNumberPrefix) {
             $.transactionSetControlNumberPrefix = transactionSetControlNumberPrefix;
             return this;
         }
 
+        /**
+         * @param transactionSetControlNumberPrefix The transaction set control number prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberPrefix(String transactionSetControlNumberPrefix) {
             return transactionSetControlNumberPrefix(Output.of(transactionSetControlNumberPrefix));
         }
 
+        /**
+         * @param transactionSetControlNumberSuffix The transaction set control number suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberSuffix(@Nullable Output<String> transactionSetControlNumberSuffix) {
             $.transactionSetControlNumberSuffix = transactionSetControlNumberSuffix;
             return this;
         }
 
+        /**
+         * @param transactionSetControlNumberSuffix The transaction set control number suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberSuffix(String transactionSetControlNumberSuffix) {
             return transactionSetControlNumberSuffix(Output.of(transactionSetControlNumberSuffix));
         }
 
+        /**
+         * @param transactionSetControlNumberUpperBound The transaction set control number upper bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberUpperBound(Output<Double> transactionSetControlNumberUpperBound) {
             $.transactionSetControlNumberUpperBound = transactionSetControlNumberUpperBound;
             return this;
         }
 
+        /**
+         * @param transactionSetControlNumberUpperBound The transaction set control number upper bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberUpperBound(Double transactionSetControlNumberUpperBound) {
             return transactionSetControlNumberUpperBound(Output.of(transactionSetControlNumberUpperBound));
         }

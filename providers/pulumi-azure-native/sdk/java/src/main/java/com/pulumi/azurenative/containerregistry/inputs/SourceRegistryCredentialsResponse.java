@@ -27,6 +27,12 @@ public final class SourceRegistryCredentialsResponse extends com.pulumi.resource
     @Import(name="loginMode")
     private @Nullable String loginMode;
 
+    /**
+     * @return The authentication mode which determines the source registry login scope. The credentials for the source registry
+     * will be generated using the given scope. These credentials will be used to login to
+     * the source registry during the run.
+     * 
+     */
     public Optional<String> loginMode() {
         return Optional.ofNullable(this.loginMode);
     }
@@ -55,6 +61,14 @@ public final class SourceRegistryCredentialsResponse extends com.pulumi.resource
             $ = new SourceRegistryCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loginMode The authentication mode which determines the source registry login scope. The credentials for the source registry
+         * will be generated using the given scope. These credentials will be used to login to
+         * the source registry during the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginMode(@Nullable String loginMode) {
             $.loginMode = loginMode;
             return this;

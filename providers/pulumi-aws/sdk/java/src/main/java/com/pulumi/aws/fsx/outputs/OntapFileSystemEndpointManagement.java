@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OntapFileSystemEndpointManagement {
     /**
-     * The Domain Name Service (DNS) name for the file system. You can mount your file system using its DNS name.
+     * @return The Domain Name Service (DNS) name for the file system. You can mount your file system using its DNS name.
      * 
      */
     private final @Nullable String dnsName;
     /**
-     * IP addresses of the file system endpoint.
+     * @return IP addresses of the file system endpoint.
      * 
      */
     private final @Nullable List<String> ipAddresses;
@@ -32,16 +32,16 @@ public final class OntapFileSystemEndpointManagement {
     }
 
     /**
-     * The Domain Name Service (DNS) name for the file system. You can mount your file system using its DNS name.
+     * @return The Domain Name Service (DNS) name for the file system. You can mount your file system using its DNS name.
      * 
-    */
+     */
     public Optional<String> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
     /**
-     * IP addresses of the file system endpoint.
+     * @return IP addresses of the file system endpoint.
      * 
-    */
+     */
     public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }

@@ -23,6 +23,10 @@ public final class AdvancedMachineFeaturesResponse extends com.pulumi.resources.
     @Import(name="threadsPerCore", required=true)
     private String threadsPerCore;
 
+    /**
+     * @return The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+     * 
+     */
     public String threadsPerCore() {
         return this.threadsPerCore;
     }
@@ -51,6 +55,12 @@ public final class AdvancedMachineFeaturesResponse extends com.pulumi.resources.
             $ = new AdvancedMachineFeaturesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param threadsPerCore The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threadsPerCore(String threadsPerCore) {
             $.threadsPerCore = threadsPerCore;
             return this;

@@ -20,6 +20,10 @@ public final class BucketReplicationConfigurationRuleDestinationAccessControlTra
     @Import(name="owner", required=true)
     private Output<String> owner;
 
+    /**
+     * @return The override value for the owner on replicated objects. Currently only `Destination` is supported.
+     * 
+     */
     public Output<String> owner() {
         return this.owner;
     }
@@ -48,11 +52,23 @@ public final class BucketReplicationConfigurationRuleDestinationAccessControlTra
             $ = new BucketReplicationConfigurationRuleDestinationAccessControlTranslationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param owner The override value for the owner on replicated objects. Currently only `Destination` is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(Output<String> owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param owner The override value for the owner on replicated objects. Currently only `Destination` is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(String owner) {
             return owner(Output.of(owner));
         }

@@ -20,6 +20,10 @@ public final class ImageRecipeComponentGetArgs extends com.pulumi.resources.Reso
     @Import(name="componentArn", required=true)
     private Output<String> componentArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Image Builder Component to associate.
+     * 
+     */
     public Output<String> componentArn() {
         return this.componentArn;
     }
@@ -48,11 +52,23 @@ public final class ImageRecipeComponentGetArgs extends com.pulumi.resources.Reso
             $ = new ImageRecipeComponentGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentArn Amazon Resource Name (ARN) of the Image Builder Component to associate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentArn(Output<String> componentArn) {
             $.componentArn = componentArn;
             return this;
         }
 
+        /**
+         * @param componentArn Amazon Resource Name (ARN) of the Image Builder Component to associate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentArn(String componentArn) {
             return componentArn(Output.of(componentArn));
         }

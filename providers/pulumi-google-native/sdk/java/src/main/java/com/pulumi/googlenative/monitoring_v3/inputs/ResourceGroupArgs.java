@@ -27,6 +27,10 @@ public final class ResourceGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupId")
     private @Nullable Output<String> groupId;
 
+    /**
+     * @return The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].
+     * 
+     */
     public Optional<Output<String>> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -38,6 +42,10 @@ public final class ResourceGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceType")
     private @Nullable Output<ResourceGroupResourceType> resourceType;
 
+    /**
+     * @return The resource type of the group members.
+     * 
+     */
     public Optional<Output<ResourceGroupResourceType>> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -67,20 +75,44 @@ public final class ResourceGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param groupId The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 
+        /**
+         * @param resourceType The resource type of the group members.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable Output<ResourceGroupResourceType> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type of the group members.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(ResourceGroupResourceType resourceType) {
             return resourceType(Output.of(resourceType));
         }

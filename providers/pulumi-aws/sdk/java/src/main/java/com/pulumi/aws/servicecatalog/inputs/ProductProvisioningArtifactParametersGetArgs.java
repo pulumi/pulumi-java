@@ -23,6 +23,10 @@ public final class ProductProvisioningArtifactParametersGetArgs extends com.pulu
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class ProductProvisioningArtifactParametersGetArgs extends com.pulu
     @Import(name="disableTemplateValidation")
     private @Nullable Output<Boolean> disableTemplateValidation;
 
+    /**
+     * @return Whether AWS Service Catalog stops validating the specified provisioning artifact template even if it is invalid.
+     * 
+     */
     public Optional<Output<Boolean>> disableTemplateValidation() {
         return Optional.ofNullable(this.disableTemplateValidation);
     }
@@ -45,6 +53,10 @@ public final class ProductProvisioningArtifactParametersGetArgs extends com.pulu
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,6 +68,10 @@ public final class ProductProvisioningArtifactParametersGetArgs extends com.pulu
     @Import(name="templatePhysicalId")
     private @Nullable Output<String> templatePhysicalId;
 
+    /**
+     * @return Template source as the physical ID of the resource that contains the template. Currently only supports CloudFormation stack ARN. Specify the physical ID as `arn:[partition]:cloudformation:[region]:[account ID]:stack/[stack name]/[resource ID]`.
+     * 
+     */
     public Optional<Output<String>> templatePhysicalId() {
         return Optional.ofNullable(this.templatePhysicalId);
     }
@@ -67,6 +83,10 @@ public final class ProductProvisioningArtifactParametersGetArgs extends com.pulu
     @Import(name="templateUrl")
     private @Nullable Output<String> templateUrl;
 
+    /**
+     * @return Template source as URL of the CloudFormation template in Amazon S3.
+     * 
+     */
     public Optional<Output<String>> templateUrl() {
         return Optional.ofNullable(this.templateUrl);
     }
@@ -78,6 +98,10 @@ public final class ProductProvisioningArtifactParametersGetArgs extends com.pulu
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -111,56 +135,128 @@ public final class ProductProvisioningArtifactParametersGetArgs extends com.pulu
             $ = new ProductProvisioningArtifactParametersGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param disableTemplateValidation Whether AWS Service Catalog stops validating the specified provisioning artifact template even if it is invalid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableTemplateValidation(@Nullable Output<Boolean> disableTemplateValidation) {
             $.disableTemplateValidation = disableTemplateValidation;
             return this;
         }
 
+        /**
+         * @param disableTemplateValidation Whether AWS Service Catalog stops validating the specified provisioning artifact template even if it is invalid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableTemplateValidation(Boolean disableTemplateValidation) {
             return disableTemplateValidation(Output.of(disableTemplateValidation));
         }
 
+        /**
+         * @param name Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param templatePhysicalId Template source as the physical ID of the resource that contains the template. Currently only supports CloudFormation stack ARN. Specify the physical ID as `arn:[partition]:cloudformation:[region]:[account ID]:stack/[stack name]/[resource ID]`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templatePhysicalId(@Nullable Output<String> templatePhysicalId) {
             $.templatePhysicalId = templatePhysicalId;
             return this;
         }
 
+        /**
+         * @param templatePhysicalId Template source as the physical ID of the resource that contains the template. Currently only supports CloudFormation stack ARN. Specify the physical ID as `arn:[partition]:cloudformation:[region]:[account ID]:stack/[stack name]/[resource ID]`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templatePhysicalId(String templatePhysicalId) {
             return templatePhysicalId(Output.of(templatePhysicalId));
         }
 
+        /**
+         * @param templateUrl Template source as URL of the CloudFormation template in Amazon S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateUrl(@Nullable Output<String> templateUrl) {
             $.templateUrl = templateUrl;
             return this;
         }
 
+        /**
+         * @param templateUrl Template source as URL of the CloudFormation template in Amazon S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateUrl(String templateUrl) {
             return templateUrl(Output.of(templateUrl));
         }
 
+        /**
+         * @param type Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -24,6 +24,10 @@ public final class CertificateIdentityConstraintsResponse extends com.pulumi.res
     @Import(name="allowSubjectAltNamesPassthrough", required=true)
     private Boolean allowSubjectAltNamesPassthrough;
 
+    /**
+     * @return If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.
+     * 
+     */
     public Boolean allowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
     }
@@ -35,6 +39,10 @@ public final class CertificateIdentityConstraintsResponse extends com.pulumi.res
     @Import(name="allowSubjectPassthrough", required=true)
     private Boolean allowSubjectPassthrough;
 
+    /**
+     * @return If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded.
+     * 
+     */
     public Boolean allowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
     }
@@ -46,6 +54,10 @@ public final class CertificateIdentityConstraintsResponse extends com.pulumi.res
     @Import(name="celExpression", required=true)
     private ExprResponse celExpression;
 
+    /**
+     * @return Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
+     * 
+     */
     public ExprResponse celExpression() {
         return this.celExpression;
     }
@@ -76,16 +88,34 @@ public final class CertificateIdentityConstraintsResponse extends com.pulumi.res
             $ = new CertificateIdentityConstraintsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowSubjectAltNamesPassthrough If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
             $.allowSubjectAltNamesPassthrough = allowSubjectAltNamesPassthrough;
             return this;
         }
 
+        /**
+         * @param allowSubjectPassthrough If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
             $.allowSubjectPassthrough = allowSubjectPassthrough;
             return this;
         }
 
+        /**
+         * @param celExpression Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
+         * 
+         * @return builder
+         * 
+         */
         public Builder celExpression(ExprResponse celExpression) {
             $.celExpression = celExpression;
             return this;

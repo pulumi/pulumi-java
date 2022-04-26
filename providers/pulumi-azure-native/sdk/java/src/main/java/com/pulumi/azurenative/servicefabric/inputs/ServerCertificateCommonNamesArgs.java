@@ -28,6 +28,10 @@ public final class ServerCertificateCommonNamesArgs extends com.pulumi.resources
     @Import(name="commonNames")
     private @Nullable Output<List<ServerCertificateCommonNameArgs>> commonNames;
 
+    /**
+     * @return The list of server certificates referenced by common name that are used to secure the cluster.
+     * 
+     */
     public Optional<Output<List<ServerCertificateCommonNameArgs>>> commonNames() {
         return Optional.ofNullable(this.commonNames);
     }
@@ -39,6 +43,10 @@ public final class ServerCertificateCommonNamesArgs extends com.pulumi.resources
     @Import(name="x509StoreName")
     private @Nullable Output<String> x509StoreName;
 
+    /**
+     * @return The local certificate store location.
+     * 
+     */
     public Optional<Output<String>> x509StoreName() {
         return Optional.ofNullable(this.x509StoreName);
     }
@@ -68,24 +76,54 @@ public final class ServerCertificateCommonNamesArgs extends com.pulumi.resources
             $ = new ServerCertificateCommonNamesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commonNames The list of server certificates referenced by common name that are used to secure the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonNames(@Nullable Output<List<ServerCertificateCommonNameArgs>> commonNames) {
             $.commonNames = commonNames;
             return this;
         }
 
+        /**
+         * @param commonNames The list of server certificates referenced by common name that are used to secure the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonNames(List<ServerCertificateCommonNameArgs> commonNames) {
             return commonNames(Output.of(commonNames));
         }
 
+        /**
+         * @param commonNames The list of server certificates referenced by common name that are used to secure the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonNames(ServerCertificateCommonNameArgs... commonNames) {
             return commonNames(List.of(commonNames));
         }
 
+        /**
+         * @param x509StoreName The local certificate store location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509StoreName(@Nullable Output<String> x509StoreName) {
             $.x509StoreName = x509StoreName;
             return this;
         }
 
+        /**
+         * @param x509StoreName The local certificate store location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509StoreName(String x509StoreName) {
             return x509StoreName(Output.of(x509StoreName));
         }

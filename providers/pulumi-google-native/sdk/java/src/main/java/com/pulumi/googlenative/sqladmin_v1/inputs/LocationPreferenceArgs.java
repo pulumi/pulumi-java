@@ -26,6 +26,10 @@ public final class LocationPreferenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="followGaeApplication")
     private @Nullable Output<String> followGaeApplication;
 
+    /**
+     * @return The App Engine application to follow, it must be in the same region as the Cloud SQL instance. WARNING: Changing this might restart the instance.
+     * 
+     */
     public Optional<Output<String>> followGaeApplication() {
         return Optional.ofNullable(this.followGaeApplication);
     }
@@ -37,6 +41,10 @@ public final class LocationPreferenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return This is always `sql#locationPreference`.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -48,6 +56,10 @@ public final class LocationPreferenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="secondaryZone")
     private @Nullable Output<String> secondaryZone;
 
+    /**
+     * @return The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
+     * 
+     */
     public Optional<Output<String>> secondaryZone() {
         return Optional.ofNullable(this.secondaryZone);
     }
@@ -59,6 +71,10 @@ public final class LocationPreferenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING: Changing this might restart the instance.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -90,38 +106,86 @@ public final class LocationPreferenceArgs extends com.pulumi.resources.ResourceA
             $ = new LocationPreferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param followGaeApplication The App Engine application to follow, it must be in the same region as the Cloud SQL instance. WARNING: Changing this might restart the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder followGaeApplication(@Nullable Output<String> followGaeApplication) {
             $.followGaeApplication = followGaeApplication;
             return this;
         }
 
+        /**
+         * @param followGaeApplication The App Engine application to follow, it must be in the same region as the Cloud SQL instance. WARNING: Changing this might restart the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder followGaeApplication(String followGaeApplication) {
             return followGaeApplication(Output.of(followGaeApplication));
         }
 
+        /**
+         * @param kind This is always `sql#locationPreference`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#locationPreference`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param secondaryZone The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryZone(@Nullable Output<String> secondaryZone) {
             $.secondaryZone = secondaryZone;
             return this;
         }
 
+        /**
+         * @param secondaryZone The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryZone(String secondaryZone) {
             return secondaryZone(Output.of(secondaryZone));
         }
 
+        /**
+         * @param zone The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING: Changing this might restart the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING: Changing this might restart the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

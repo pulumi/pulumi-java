@@ -25,6 +25,10 @@ public final class ContactTargetInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="contactId", required=true)
     private Output<String> contactId;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the contact.
+     * 
+     */
     public Output<String> contactId() {
         return this.contactId;
     }
@@ -36,6 +40,10 @@ public final class ContactTargetInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="isEssential", required=true)
     private Output<Boolean> isEssential;
 
+    /**
+     * @return A Boolean value determining if the contact&#39;s acknowledgement stops the progress of stages in the plan.
+     * 
+     */
     public Output<Boolean> isEssential() {
         return this.isEssential;
     }
@@ -65,20 +73,44 @@ public final class ContactTargetInfoArgs extends com.pulumi.resources.ResourceAr
             $ = new ContactTargetInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactId The Amazon Resource Name (ARN) of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactId(Output<String> contactId) {
             $.contactId = contactId;
             return this;
         }
 
+        /**
+         * @param contactId The Amazon Resource Name (ARN) of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactId(String contactId) {
             return contactId(Output.of(contactId));
         }
 
+        /**
+         * @param isEssential A Boolean value determining if the contact&#39;s acknowledgement stops the progress of stages in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEssential(Output<Boolean> isEssential) {
             $.isEssential = isEssential;
             return this;
         }
 
+        /**
+         * @param isEssential A Boolean value determining if the contact&#39;s acknowledgement stops the progress of stages in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEssential(Boolean isEssential) {
             return isEssential(Output.of(isEssential));
         }

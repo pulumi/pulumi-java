@@ -24,6 +24,12 @@ public final class ClientState extends com.pulumi.resources.ResourceArgs {
     @Import(name="brand")
     private @Nullable Output<String> brand;
 
+    /**
+     * @return Identifier of the brand to which this client
+     * is attached to. The format is
+     * `projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}`.
+     * 
+     */
     public Optional<Output<String>> brand() {
         return Optional.ofNullable(this.brand);
     }
@@ -35,6 +41,10 @@ public final class ClientState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return Output only. Unique identifier of the OAuth client.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -46,6 +56,10 @@ public final class ClientState extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Human-friendly name given to the OAuth client.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -57,6 +71,10 @@ public final class ClientState extends com.pulumi.resources.ResourceArgs {
     @Import(name="secret")
     private @Nullable Output<String> secret;
 
+    /**
+     * @return Output only. Client secret of the OAuth client.
+     * 
+     */
     public Optional<Output<String>> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -88,38 +106,90 @@ public final class ClientState extends com.pulumi.resources.ResourceArgs {
             $ = new ClientState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param brand Identifier of the brand to which this client
+         * is attached to. The format is
+         * `projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder brand(@Nullable Output<String> brand) {
             $.brand = brand;
             return this;
         }
 
+        /**
+         * @param brand Identifier of the brand to which this client
+         * is attached to. The format is
+         * `projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder brand(String brand) {
             return brand(Output.of(brand));
         }
 
+        /**
+         * @param clientId Output only. Unique identifier of the OAuth client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId Output only. Unique identifier of the OAuth client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param displayName Human-friendly name given to the OAuth client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Human-friendly name given to the OAuth client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param secret Output only. Client secret of the OAuth client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret Output only. Client secret of the OAuth client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }

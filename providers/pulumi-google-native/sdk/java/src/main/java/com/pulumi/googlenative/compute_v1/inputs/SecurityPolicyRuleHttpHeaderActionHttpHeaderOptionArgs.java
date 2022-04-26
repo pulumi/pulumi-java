@@ -22,6 +22,10 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
     @Import(name="headerName")
     private @Nullable Output<String> headerName;
 
+    /**
+     * @return The name of the header to set.
+     * 
+     */
     public Optional<Output<String>> headerName() {
         return Optional.ofNullable(this.headerName);
     }
@@ -33,6 +37,10 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
     @Import(name="headerValue")
     private @Nullable Output<String> headerValue;
 
+    /**
+     * @return The value to set the named header to.
+     * 
+     */
     public Optional<Output<String>> headerValue() {
         return Optional.ofNullable(this.headerValue);
     }
@@ -62,20 +70,44 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
             $ = new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerName The name of the header to set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(@Nullable Output<String> headerName) {
             $.headerName = headerName;
             return this;
         }
 
+        /**
+         * @param headerName The name of the header to set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             return headerName(Output.of(headerName));
         }
 
+        /**
+         * @param headerValue The value to set the named header to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerValue(@Nullable Output<String> headerValue) {
             $.headerValue = headerValue;
             return this;
         }
 
+        /**
+         * @param headerValue The value to set the named header to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerValue(String headerValue) {
             return headerValue(Output.of(headerValue));
         }

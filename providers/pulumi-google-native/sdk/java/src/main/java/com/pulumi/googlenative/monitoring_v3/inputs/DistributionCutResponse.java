@@ -24,6 +24,10 @@ public final class DistributionCutResponse extends com.pulumi.resources.InvokeAr
     @Import(name="distributionFilter", required=true)
     private String distributionFilter;
 
+    /**
+     * @return A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.
+     * 
+     */
     public String distributionFilter() {
         return this.distributionFilter;
     }
@@ -35,6 +39,10 @@ public final class DistributionCutResponse extends com.pulumi.resources.InvokeAr
     @Import(name="range", required=true)
     private GoogleMonitoringV3RangeResponse range;
 
+    /**
+     * @return Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
+     * 
+     */
     public GoogleMonitoringV3RangeResponse range() {
         return this.range;
     }
@@ -64,11 +72,23 @@ public final class DistributionCutResponse extends com.pulumi.resources.InvokeAr
             $ = new DistributionCutResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionFilter A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionFilter(String distributionFilter) {
             $.distributionFilter = distributionFilter;
             return this;
         }
 
+        /**
+         * @param range Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(GoogleMonitoringV3RangeResponse range) {
             $.range = range;
             return this;

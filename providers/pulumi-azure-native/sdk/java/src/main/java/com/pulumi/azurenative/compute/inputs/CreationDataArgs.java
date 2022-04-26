@@ -31,6 +31,10 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createOption", required=true)
     private Output<Either<String,DiskCreateOption>> createOption;
 
+    /**
+     * @return This enumerates the possible sources of a disk&#39;s creation.
+     * 
+     */
     public Output<Either<String,DiskCreateOption>> createOption() {
         return this.createOption;
     }
@@ -42,6 +46,10 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="galleryImageReference")
     private @Nullable Output<ImageDiskReferenceArgs> galleryImageReference;
 
+    /**
+     * @return Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.
+     * 
+     */
     public Optional<Output<ImageDiskReferenceArgs>> galleryImageReference() {
         return Optional.ofNullable(this.galleryImageReference);
     }
@@ -53,6 +61,10 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageReference")
     private @Nullable Output<ImageDiskReferenceArgs> imageReference;
 
+    /**
+     * @return Disk source information.
+     * 
+     */
     public Optional<Output<ImageDiskReferenceArgs>> imageReference() {
         return Optional.ofNullable(this.imageReference);
     }
@@ -64,6 +76,10 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logicalSectorSize")
     private @Nullable Output<Integer> logicalSectorSize;
 
+    /**
+     * @return Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
+     * 
+     */
     public Optional<Output<Integer>> logicalSectorSize() {
         return Optional.ofNullable(this.logicalSectorSize);
     }
@@ -75,6 +91,10 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceResourceId")
     private @Nullable Output<String> sourceResourceId;
 
+    /**
+     * @return If createOption is Copy, this is the ARM id of the source snapshot or disk.
+     * 
+     */
     public Optional<Output<String>> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
@@ -86,6 +106,10 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceUri")
     private @Nullable Output<String> sourceUri;
 
+    /**
+     * @return If createOption is Import, this is the URI of a blob to be imported into a managed disk.
+     * 
+     */
     public Optional<Output<String>> sourceUri() {
         return Optional.ofNullable(this.sourceUri);
     }
@@ -97,6 +121,10 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountId")
     private @Nullable Output<String> storageAccountId;
 
+    /**
+     * @return Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
+     * 
+     */
     public Optional<Output<String>> storageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
@@ -108,6 +136,10 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uploadSizeBytes")
     private @Nullable Output<Double> uploadSizeBytes;
 
+    /**
+     * @return If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
+     * 
+     */
     public Optional<Output<Double>> uploadSizeBytes() {
         return Optional.ofNullable(this.uploadSizeBytes);
     }
@@ -143,82 +175,190 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CreationDataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createOption This enumerates the possible sources of a disk&#39;s creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(Output<Either<String,DiskCreateOption>> createOption) {
             $.createOption = createOption;
             return this;
         }
 
+        /**
+         * @param createOption This enumerates the possible sources of a disk&#39;s creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(Either<String,DiskCreateOption> createOption) {
             return createOption(Output.of(createOption));
         }
 
+        /**
+         * @param createOption This enumerates the possible sources of a disk&#39;s creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(String createOption) {
             return createOption(Either.ofLeft(createOption));
         }
 
+        /**
+         * @param createOption This enumerates the possible sources of a disk&#39;s creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(DiskCreateOption createOption) {
             return createOption(Either.ofRight(createOption));
         }
 
+        /**
+         * @param galleryImageReference Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryImageReference(@Nullable Output<ImageDiskReferenceArgs> galleryImageReference) {
             $.galleryImageReference = galleryImageReference;
             return this;
         }
 
+        /**
+         * @param galleryImageReference Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryImageReference(ImageDiskReferenceArgs galleryImageReference) {
             return galleryImageReference(Output.of(galleryImageReference));
         }
 
+        /**
+         * @param imageReference Disk source information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageReference(@Nullable Output<ImageDiskReferenceArgs> imageReference) {
             $.imageReference = imageReference;
             return this;
         }
 
+        /**
+         * @param imageReference Disk source information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageReference(ImageDiskReferenceArgs imageReference) {
             return imageReference(Output.of(imageReference));
         }
 
+        /**
+         * @param logicalSectorSize Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalSectorSize(@Nullable Output<Integer> logicalSectorSize) {
             $.logicalSectorSize = logicalSectorSize;
             return this;
         }
 
+        /**
+         * @param logicalSectorSize Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalSectorSize(Integer logicalSectorSize) {
             return logicalSectorSize(Output.of(logicalSectorSize));
         }
 
+        /**
+         * @param sourceResourceId If createOption is Copy, this is the ARM id of the source snapshot or disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             $.sourceResourceId = sourceResourceId;
             return this;
         }
 
+        /**
+         * @param sourceResourceId If createOption is Copy, this is the ARM id of the source snapshot or disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResourceId(String sourceResourceId) {
             return sourceResourceId(Output.of(sourceResourceId));
         }
 
+        /**
+         * @param sourceUri If createOption is Import, this is the URI of a blob to be imported into a managed disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUri(@Nullable Output<String> sourceUri) {
             $.sourceUri = sourceUri;
             return this;
         }
 
+        /**
+         * @param sourceUri If createOption is Import, this is the URI of a blob to be imported into a managed disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUri(String sourceUri) {
             return sourceUri(Output.of(sourceUri));
         }
 
+        /**
+         * @param storageAccountId Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;
         }
 
+        /**
+         * @param storageAccountId Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(String storageAccountId) {
             return storageAccountId(Output.of(storageAccountId));
         }
 
+        /**
+         * @param uploadSizeBytes If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadSizeBytes(@Nullable Output<Double> uploadSizeBytes) {
             $.uploadSizeBytes = uploadSizeBytes;
             return this;
         }
 
+        /**
+         * @param uploadSizeBytes If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadSizeBytes(Double uploadSizeBytes) {
             return uploadSizeBytes(Output.of(uploadSizeBytes));
         }

@@ -24,6 +24,10 @@ public final class AuthenticationModePropertiesArgs extends com.pulumi.resources
     @Import(name="passwords")
     private @Nullable Output<List<String>> passwords;
 
+    /**
+     * @return Passwords used for this user account. You can create up to two passwords for each user.
+     * 
+     */
     public Optional<Output<List<String>>> passwords() {
         return Optional.ofNullable(this.passwords);
     }
@@ -35,6 +39,10 @@ public final class AuthenticationModePropertiesArgs extends com.pulumi.resources
     @Import(name="type")
     private @Nullable Output<UserAuthenticationModePropertiesType> type;
 
+    /**
+     * @return Type of authentication strategy for this user.
+     * 
+     */
     public Optional<Output<UserAuthenticationModePropertiesType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -64,24 +72,54 @@ public final class AuthenticationModePropertiesArgs extends com.pulumi.resources
             $ = new AuthenticationModePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param passwords Passwords used for this user account. You can create up to two passwords for each user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwords(@Nullable Output<List<String>> passwords) {
             $.passwords = passwords;
             return this;
         }
 
+        /**
+         * @param passwords Passwords used for this user account. You can create up to two passwords for each user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwords(List<String> passwords) {
             return passwords(Output.of(passwords));
         }
 
+        /**
+         * @param passwords Passwords used for this user account. You can create up to two passwords for each user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwords(String... passwords) {
             return passwords(List.of(passwords));
         }
 
+        /**
+         * @param type Type of authentication strategy for this user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<UserAuthenticationModePropertiesType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of authentication strategy for this user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(UserAuthenticationModePropertiesType type) {
             return type(Output.of(type));
         }

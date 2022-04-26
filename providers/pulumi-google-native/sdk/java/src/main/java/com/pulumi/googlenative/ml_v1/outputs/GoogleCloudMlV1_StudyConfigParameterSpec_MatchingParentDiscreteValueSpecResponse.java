@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse {
     /**
-     * Matches values of the parent parameter with type &#39;DISCRETE&#39;. All values must exist in `discrete_value_spec` of parent parameter.
+     * @return Matches values of the parent parameter with type &#39;DISCRETE&#39;. All values must exist in `discrete_value_spec` of parent parameter.
      * 
      */
     private final List<Double> values;
@@ -22,9 +22,9 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscre
     }
 
     /**
-     * Matches values of the parent parameter with type &#39;DISCRETE&#39;. All values must exist in `discrete_value_spec` of parent parameter.
+     * @return Matches values of the parent parameter with type &#39;DISCRETE&#39;. All values must exist in `discrete_value_spec` of parent parameter.
      * 
-    */
+     */
     public List<Double> values() {
         return this.values;
     }

@@ -27,6 +27,10 @@ public final class OSPolicyResourcePackageResourceRPMArgs extends com.pulumi.res
     @Import(name="pullDeps")
     private @Nullable Output<Boolean> pullDeps;
 
+    /**
+     * @return Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+     * 
+     */
     public Optional<Output<Boolean>> pullDeps() {
         return Optional.ofNullable(this.pullDeps);
     }
@@ -38,6 +42,10 @@ public final class OSPolicyResourcePackageResourceRPMArgs extends com.pulumi.res
     @Import(name="source", required=true)
     private Output<OSPolicyResourceFileArgs> source;
 
+    /**
+     * @return An rpm package.
+     * 
+     */
     public Output<OSPolicyResourceFileArgs> source() {
         return this.source;
     }
@@ -67,20 +75,44 @@ public final class OSPolicyResourcePackageResourceRPMArgs extends com.pulumi.res
             $ = new OSPolicyResourcePackageResourceRPMArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pullDeps Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullDeps(@Nullable Output<Boolean> pullDeps) {
             $.pullDeps = pullDeps;
             return this;
         }
 
+        /**
+         * @param pullDeps Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullDeps(Boolean pullDeps) {
             return pullDeps(Output.of(pullDeps));
         }
 
+        /**
+         * @param source An rpm package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<OSPolicyResourceFileArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source An rpm package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(OSPolicyResourceFileArgs source) {
             return source(Output.of(source));
         }

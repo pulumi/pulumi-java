@@ -22,6 +22,10 @@ public final class AppCustomRuleGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="condition")
     private @Nullable Output<String> condition;
 
+    /**
+     * @return The condition for a URL rewrite or redirect rule, such as a country code.
+     * 
+     */
     public Optional<Output<String>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -33,6 +37,10 @@ public final class AppCustomRuleGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="source", required=true)
     private Output<String> source;
 
+    /**
+     * @return The source pattern for a URL rewrite or redirect rule.
+     * 
+     */
     public Output<String> source() {
         return this.source;
     }
@@ -44,6 +52,10 @@ public final class AppCustomRuleGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -55,6 +67,10 @@ public final class AppCustomRuleGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="target", required=true)
     private Output<String> target;
 
+    /**
+     * @return The target pattern for a URL rewrite or redirect rule.
+     * 
+     */
     public Output<String> target() {
         return this.target;
     }
@@ -86,38 +102,86 @@ public final class AppCustomRuleGetArgs extends com.pulumi.resources.ResourceArg
             $ = new AppCustomRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition The condition for a URL rewrite or redirect rule, such as a country code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<String> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition The condition for a URL rewrite or redirect rule, such as a country code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(String condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param source The source pattern for a URL rewrite or redirect rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The source pattern for a URL rewrite or redirect rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param status The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param target The target pattern for a URL rewrite or redirect rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target The target pattern for a URL rewrite or redirect rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }

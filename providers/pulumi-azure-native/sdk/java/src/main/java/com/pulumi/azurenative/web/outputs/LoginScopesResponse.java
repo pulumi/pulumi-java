@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LoginScopesResponse {
     /**
-     * A list of the scopes that should be requested while authenticating.
+     * @return A list of the scopes that should be requested while authenticating.
      * 
      */
     private final @Nullable List<String> scopes;
@@ -23,9 +23,9 @@ public final class LoginScopesResponse {
     }
 
     /**
-     * A list of the scopes that should be requested while authenticating.
+     * @return A list of the scopes that should be requested while authenticating.
      * 
-    */
+     */
     public List<String> scopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }

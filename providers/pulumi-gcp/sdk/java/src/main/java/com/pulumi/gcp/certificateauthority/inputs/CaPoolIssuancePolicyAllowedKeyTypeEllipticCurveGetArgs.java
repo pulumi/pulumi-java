@@ -21,6 +21,11 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs extend
     @Import(name="signatureAlgorithm", required=true)
     private Output<String> signatureAlgorithm;
 
+    /**
+     * @return The algorithm used.
+     * Possible values are `ECDSA_P256`, `ECDSA_P384`, and `EDDSA_25519`.
+     * 
+     */
     public Output<String> signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
@@ -49,11 +54,25 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs extend
             $ = new CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param signatureAlgorithm The algorithm used.
+         * Possible values are `ECDSA_P256`, `ECDSA_P384`, and `EDDSA_25519`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureAlgorithm(Output<String> signatureAlgorithm) {
             $.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
 
+        /**
+         * @param signatureAlgorithm The algorithm used.
+         * Possible values are `ECDSA_P256`, `ECDSA_P384`, and `EDDSA_25519`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureAlgorithm(String signatureAlgorithm) {
             return signatureAlgorithm(Output.of(signatureAlgorithm));
         }

@@ -27,6 +27,10 @@ public final class SpecificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="androidTest")
     private @Nullable Output<AndroidTestArgs> androidTest;
 
+    /**
+     * @return An Android mobile test execution specification.
+     * 
+     */
     public Optional<Output<AndroidTestArgs>> androidTest() {
         return Optional.ofNullable(this.androidTest);
     }
@@ -38,6 +42,10 @@ public final class SpecificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iosTest")
     private @Nullable Output<IosTestArgs> iosTest;
 
+    /**
+     * @return An iOS mobile test execution specification.
+     * 
+     */
     public Optional<Output<IosTestArgs>> iosTest() {
         return Optional.ofNullable(this.iosTest);
     }
@@ -67,20 +75,44 @@ public final class SpecificationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidTest An Android mobile test execution specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidTest(@Nullable Output<AndroidTestArgs> androidTest) {
             $.androidTest = androidTest;
             return this;
         }
 
+        /**
+         * @param androidTest An Android mobile test execution specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidTest(AndroidTestArgs androidTest) {
             return androidTest(Output.of(androidTest));
         }
 
+        /**
+         * @param iosTest An iOS mobile test execution specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosTest(@Nullable Output<IosTestArgs> iosTest) {
             $.iosTest = iosTest;
             return this;
         }
 
+        /**
+         * @param iosTest An iOS mobile test execution specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosTest(IosTestArgs iosTest) {
             return iosTest(Output.of(iosTest));
         }

@@ -28,6 +28,10 @@ public final class ServiceInputOutputSpecificationResponse extends com.pulumi.re
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description of the Swagger schema.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,10 @@ public final class ServiceInputOutputSpecificationResponse extends com.pulumi.re
     @Import(name="properties", required=true)
     private Map<String,TableSpecificationResponse> properties;
 
+    /**
+     * @return Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
+     * 
+     */
     public Map<String,TableSpecificationResponse> properties() {
         return this.properties;
     }
@@ -50,6 +58,10 @@ public final class ServiceInputOutputSpecificationResponse extends com.pulumi.re
     @Import(name="title")
     private @Nullable String title;
 
+    /**
+     * @return The title of your Swagger schema.
+     * 
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
@@ -61,6 +73,10 @@ public final class ServiceInputOutputSpecificationResponse extends com.pulumi.re
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the entity described in swagger. Always &#39;object&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -92,21 +108,45 @@ public final class ServiceInputOutputSpecificationResponse extends com.pulumi.re
             $ = new ServiceInputOutputSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the Swagger schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param properties Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,TableSpecificationResponse> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param title The title of your Swagger schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable String title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param type The type of the entity described in swagger. Always &#39;object&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

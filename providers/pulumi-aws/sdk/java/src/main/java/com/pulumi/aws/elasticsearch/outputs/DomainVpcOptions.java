@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class DomainVpcOptions {
     private final @Nullable List<String> availabilityZones;
     /**
-     * List of VPC Security Group IDs to be applied to the Elasticsearch domain endpoints. If omitted, the default Security Group for the VPC will be used.
+     * @return List of VPC Security Group IDs to be applied to the Elasticsearch domain endpoints. If omitted, the default Security Group for the VPC will be used.
      * 
      */
     private final @Nullable List<String> securityGroupIds;
     /**
-     * List of VPC Subnet IDs for the Elasticsearch domain endpoints to be created in.
+     * @return List of VPC Subnet IDs for the Elasticsearch domain endpoints to be created in.
      * 
      */
     private final @Nullable List<String> subnetIds;
@@ -41,16 +41,16 @@ public final class DomainVpcOptions {
         return this.availabilityZones == null ? List.of() : this.availabilityZones;
     }
     /**
-     * List of VPC Security Group IDs to be applied to the Elasticsearch domain endpoints. If omitted, the default Security Group for the VPC will be used.
+     * @return List of VPC Security Group IDs to be applied to the Elasticsearch domain endpoints. If omitted, the default Security Group for the VPC will be used.
      * 
-    */
+     */
     public List<String> securityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
-     * List of VPC Subnet IDs for the Elasticsearch domain endpoints to be created in.
+     * @return List of VPC Subnet IDs for the Elasticsearch domain endpoints to be created in.
      * 
-    */
+     */
     public List<String> subnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }

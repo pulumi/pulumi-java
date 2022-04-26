@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ACIServiceResponseResponseEncryptionProperties {
     /**
-     * Encryption Key name
+     * @return Encryption Key name
      * 
      */
     private final String keyName;
     /**
-     * Encryption Key Version
+     * @return Encryption Key Version
      * 
      */
     private final String keyVersion;
     /**
-     * vault base Url
+     * @return vault base Url
      * 
      */
     private final String vaultBaseUrl;
@@ -36,23 +36,23 @@ public final class ACIServiceResponseResponseEncryptionProperties {
     }
 
     /**
-     * Encryption Key name
+     * @return Encryption Key name
      * 
-    */
+     */
     public String keyName() {
         return this.keyName;
     }
     /**
-     * Encryption Key Version
+     * @return Encryption Key Version
      * 
-    */
+     */
     public String keyVersion() {
         return this.keyVersion;
     }
     /**
-     * vault base Url
+     * @return vault base Url
      * 
-    */
+     */
     public String vaultBaseUrl() {
         return this.vaultBaseUrl;
     }

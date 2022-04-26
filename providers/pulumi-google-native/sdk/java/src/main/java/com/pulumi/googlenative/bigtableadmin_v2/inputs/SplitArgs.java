@@ -26,6 +26,10 @@ public final class SplitArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return Row key to use as an initial tablet boundary.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -54,11 +58,23 @@ public final class SplitArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SplitArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Row key to use as an initial tablet boundary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Row key to use as an initial tablet boundary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }

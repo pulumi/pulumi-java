@@ -27,6 +27,10 @@ public final class DownwardAPIProjectionArgs extends com.pulumi.resources.Resour
     @Import(name="items")
     private @Nullable Output<List<DownwardAPIVolumeFileArgs>> items;
 
+    /**
+     * @return Items is a list of DownwardAPIVolume file
+     * 
+     */
     public Optional<Output<List<DownwardAPIVolumeFileArgs>>> items() {
         return Optional.ofNullable(this.items);
     }
@@ -55,15 +59,33 @@ public final class DownwardAPIProjectionArgs extends com.pulumi.resources.Resour
             $ = new DownwardAPIProjectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param items Items is a list of DownwardAPIVolume file
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(@Nullable Output<List<DownwardAPIVolumeFileArgs>> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items Items is a list of DownwardAPIVolume file
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<DownwardAPIVolumeFileArgs> items) {
             return items(Output.of(items));
         }
 
+        /**
+         * @param items Items is a list of DownwardAPIVolume file
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(DownwardAPIVolumeFileArgs... items) {
             return items(List.of(items));
         }

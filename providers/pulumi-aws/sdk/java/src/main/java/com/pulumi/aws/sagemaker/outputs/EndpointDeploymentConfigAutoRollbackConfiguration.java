@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EndpointDeploymentConfigAutoRollbackConfiguration {
     /**
-     * List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker rolls back the deployment. See Alarms.
+     * @return List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker rolls back the deployment. See Alarms.
      * 
      */
     private final @Nullable List<EndpointDeploymentConfigAutoRollbackConfigurationAlarm> alarms;
@@ -23,9 +23,9 @@ public final class EndpointDeploymentConfigAutoRollbackConfiguration {
     }
 
     /**
-     * List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker rolls back the deployment. See Alarms.
+     * @return List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker rolls back the deployment. See Alarms.
      * 
-    */
+     */
     public List<EndpointDeploymentConfigAutoRollbackConfigurationAlarm> alarms() {
         return this.alarms == null ? List.of() : this.alarms;
     }

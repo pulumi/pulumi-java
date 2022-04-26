@@ -29,6 +29,10 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="deltaHealthPolicy")
     private @Nullable Output<ClusterUpgradeDeltaHealthPolicyArgs> deltaHealthPolicy;
 
+    /**
+     * @return The cluster delta health policy used when upgrading the cluster.
+     * 
+     */
     public Optional<Output<ClusterUpgradeDeltaHealthPolicyArgs>> deltaHealthPolicy() {
         return Optional.ofNullable(this.deltaHealthPolicy);
     }
@@ -40,6 +44,10 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="forceRestart")
     private @Nullable Output<Boolean> forceRestart;
 
+    /**
+     * @return If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
+     * 
+     */
     public Optional<Output<Boolean>> forceRestart() {
         return Optional.ofNullable(this.forceRestart);
     }
@@ -51,6 +59,10 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="healthCheckRetryTimeout", required=true)
     private Output<String> healthCheckRetryTimeout;
 
+    /**
+     * @return The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+     * 
+     */
     public Output<String> healthCheckRetryTimeout() {
         return this.healthCheckRetryTimeout;
     }
@@ -62,6 +74,10 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="healthCheckStableDuration", required=true)
     private Output<String> healthCheckStableDuration;
 
+    /**
+     * @return The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+     * 
+     */
     public Output<String> healthCheckStableDuration() {
         return this.healthCheckStableDuration;
     }
@@ -73,6 +89,10 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="healthCheckWaitDuration", required=true)
     private Output<String> healthCheckWaitDuration;
 
+    /**
+     * @return The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+     * 
+     */
     public Output<String> healthCheckWaitDuration() {
         return this.healthCheckWaitDuration;
     }
@@ -84,6 +104,10 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="healthPolicy", required=true)
     private Output<ClusterHealthPolicyArgs> healthPolicy;
 
+    /**
+     * @return The cluster health policy used when upgrading the cluster.
+     * 
+     */
     public Output<ClusterHealthPolicyArgs> healthPolicy() {
         return this.healthPolicy;
     }
@@ -95,6 +119,10 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="upgradeDomainTimeout", required=true)
     private Output<String> upgradeDomainTimeout;
 
+    /**
+     * @return The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+     * 
+     */
     public Output<String> upgradeDomainTimeout() {
         return this.upgradeDomainTimeout;
     }
@@ -106,6 +134,10 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="upgradeReplicaSetCheckTimeout", required=true)
     private Output<String> upgradeReplicaSetCheckTimeout;
 
+    /**
+     * @return The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+     * 
+     */
     public Output<String> upgradeReplicaSetCheckTimeout() {
         return this.upgradeReplicaSetCheckTimeout;
     }
@@ -117,6 +149,10 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="upgradeTimeout", required=true)
     private Output<String> upgradeTimeout;
 
+    /**
+     * @return The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+     * 
+     */
     public Output<String> upgradeTimeout() {
         return this.upgradeTimeout;
     }
@@ -153,83 +189,191 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
             $ = new ClusterUpgradePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deltaHealthPolicy The cluster delta health policy used when upgrading the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deltaHealthPolicy(@Nullable Output<ClusterUpgradeDeltaHealthPolicyArgs> deltaHealthPolicy) {
             $.deltaHealthPolicy = deltaHealthPolicy;
             return this;
         }
 
+        /**
+         * @param deltaHealthPolicy The cluster delta health policy used when upgrading the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deltaHealthPolicy(ClusterUpgradeDeltaHealthPolicyArgs deltaHealthPolicy) {
             return deltaHealthPolicy(Output.of(deltaHealthPolicy));
         }
 
+        /**
+         * @param forceRestart If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceRestart(@Nullable Output<Boolean> forceRestart) {
             $.forceRestart = forceRestart;
             return this;
         }
 
+        /**
+         * @param forceRestart If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceRestart(Boolean forceRestart) {
             return forceRestart(Output.of(forceRestart));
         }
 
+        /**
+         * @param healthCheckRetryTimeout The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckRetryTimeout(Output<String> healthCheckRetryTimeout) {
             $.healthCheckRetryTimeout = healthCheckRetryTimeout;
             return this;
         }
 
+        /**
+         * @param healthCheckRetryTimeout The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckRetryTimeout(String healthCheckRetryTimeout) {
             return healthCheckRetryTimeout(Output.of(healthCheckRetryTimeout));
         }
 
+        /**
+         * @param healthCheckStableDuration The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckStableDuration(Output<String> healthCheckStableDuration) {
             $.healthCheckStableDuration = healthCheckStableDuration;
             return this;
         }
 
+        /**
+         * @param healthCheckStableDuration The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckStableDuration(String healthCheckStableDuration) {
             return healthCheckStableDuration(Output.of(healthCheckStableDuration));
         }
 
+        /**
+         * @param healthCheckWaitDuration The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckWaitDuration(Output<String> healthCheckWaitDuration) {
             $.healthCheckWaitDuration = healthCheckWaitDuration;
             return this;
         }
 
+        /**
+         * @param healthCheckWaitDuration The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckWaitDuration(String healthCheckWaitDuration) {
             return healthCheckWaitDuration(Output.of(healthCheckWaitDuration));
         }
 
+        /**
+         * @param healthPolicy The cluster health policy used when upgrading the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthPolicy(Output<ClusterHealthPolicyArgs> healthPolicy) {
             $.healthPolicy = healthPolicy;
             return this;
         }
 
+        /**
+         * @param healthPolicy The cluster health policy used when upgrading the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthPolicy(ClusterHealthPolicyArgs healthPolicy) {
             return healthPolicy(Output.of(healthPolicy));
         }
 
+        /**
+         * @param upgradeDomainTimeout The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeDomainTimeout(Output<String> upgradeDomainTimeout) {
             $.upgradeDomainTimeout = upgradeDomainTimeout;
             return this;
         }
 
+        /**
+         * @param upgradeDomainTimeout The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeDomainTimeout(String upgradeDomainTimeout) {
             return upgradeDomainTimeout(Output.of(upgradeDomainTimeout));
         }
 
+        /**
+         * @param upgradeReplicaSetCheckTimeout The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeReplicaSetCheckTimeout(Output<String> upgradeReplicaSetCheckTimeout) {
             $.upgradeReplicaSetCheckTimeout = upgradeReplicaSetCheckTimeout;
             return this;
         }
 
+        /**
+         * @param upgradeReplicaSetCheckTimeout The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeReplicaSetCheckTimeout(String upgradeReplicaSetCheckTimeout) {
             return upgradeReplicaSetCheckTimeout(Output.of(upgradeReplicaSetCheckTimeout));
         }
 
+        /**
+         * @param upgradeTimeout The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeTimeout(Output<String> upgradeTimeout) {
             $.upgradeTimeout = upgradeTimeout;
             return this;
         }
 
+        /**
+         * @param upgradeTimeout The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeTimeout(String upgradeTimeout) {
             return upgradeTimeout(Output.of(upgradeTimeout));
         }

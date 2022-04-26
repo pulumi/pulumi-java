@@ -22,6 +22,10 @@ public final class DomainMappingStatusResourceRecordArgs extends com.pulumi.reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,11 +70,23 @@ public final class DomainMappingStatusResourceRecordArgs extends com.pulumi.reso
             $ = new DomainMappingStatusResourceRecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

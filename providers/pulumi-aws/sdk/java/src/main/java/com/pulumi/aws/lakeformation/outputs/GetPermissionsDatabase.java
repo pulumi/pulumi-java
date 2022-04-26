@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GetPermissionsDatabase {
     /**
-     * Identifier for the Data Catalog. By default, it is the account ID of the caller.
+     * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
      */
     private final String catalogId;
     /**
-     * Name of the table resource.
+     * @return Name of the table resource.
      * 
      */
     private final String name;
@@ -29,16 +29,16 @@ public final class GetPermissionsDatabase {
     }
 
     /**
-     * Identifier for the Data Catalog. By default, it is the account ID of the caller.
+     * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
-    */
+     */
     public String catalogId() {
         return this.catalogId;
     }
     /**
-     * Name of the table resource.
+     * @return Name of the table resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

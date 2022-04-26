@@ -27,6 +27,10 @@ public final class ClusterResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="networkProfile")
     private @Nullable NetworkProfileResponse networkProfile;
 
+    /**
+     * @return Network profile of the Service
+     * 
+     */
     public Optional<NetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
@@ -38,6 +42,10 @@ public final class ClusterResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state of the Service
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -49,6 +57,10 @@ public final class ClusterResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="serviceId", required=true)
     private String serviceId;
 
+    /**
+     * @return ServiceInstanceEntity GUID which uniquely identifies a created resource
+     * 
+     */
     public String serviceId() {
         return this.serviceId;
     }
@@ -60,6 +72,10 @@ public final class ClusterResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="version", required=true)
     private Integer version;
 
+    /**
+     * @return Version of the Service
+     * 
+     */
     public Integer version() {
         return this.version;
     }
@@ -91,21 +107,45 @@ public final class ClusterResourcePropertiesResponse extends com.pulumi.resource
             $ = new ClusterResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkProfile Network profile of the Service
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             $.networkProfile = networkProfile;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the Service
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param serviceId ServiceInstanceEntity GUID which uniquely identifies a created resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(String serviceId) {
             $.serviceId = serviceId;
             return this;
         }
 
+        /**
+         * @param version Version of the Service
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Integer version) {
             $.version = version;
             return this;

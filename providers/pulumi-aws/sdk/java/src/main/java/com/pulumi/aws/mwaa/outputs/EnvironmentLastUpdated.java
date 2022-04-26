@@ -14,14 +14,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EnvironmentLastUpdated {
     /**
-     * The Created At date of the MWAA Environment
+     * @return The Created At date of the MWAA Environment
      * * `logging_configuration[0].&lt;LOG_CONFIGURATION_TYPE&gt;[0].cloud_watch_log_group_arn` - Provides the ARN for the CloudWatch group where the logs will be published
      * 
      */
     private final @Nullable String createdAt;
     private final @Nullable List<EnvironmentLastUpdatedError> errors;
     /**
-     * The status of the Amazon MWAA Environment
+     * @return The status of the Amazon MWAA Environment
      * 
      */
     private final @Nullable String status;
@@ -37,10 +37,10 @@ public final class EnvironmentLastUpdated {
     }
 
     /**
-     * The Created At date of the MWAA Environment
+     * @return The Created At date of the MWAA Environment
      * * `logging_configuration[0].&lt;LOG_CONFIGURATION_TYPE&gt;[0].cloud_watch_log_group_arn` - Provides the ARN for the CloudWatch group where the logs will be published
      * 
-    */
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -48,9 +48,9 @@ public final class EnvironmentLastUpdated {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
-     * The status of the Amazon MWAA Environment
+     * @return The status of the Amazon MWAA Environment
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

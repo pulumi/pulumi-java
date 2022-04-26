@@ -24,6 +24,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionName")
     private @Nullable Output<String> connectionName;
 
+    /**
+     * @return The name of the connection. Connection names must be unique in an AWS user account.
+     * 
+     */
     public Optional<Output<String>> connectionName() {
         return Optional.ofNullable(this.connectionName);
     }
@@ -35,6 +39,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostArn")
     private @Nullable Output<String> hostArn;
 
+    /**
+     * @return The host arn configured to represent the infrastructure where your third-party provider is installed. You must specify either a ProviderType or a HostArn.
+     * 
+     */
     public Optional<Output<String>> hostArn() {
         return Optional.ofNullable(this.hostArn);
     }
@@ -46,6 +54,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerType")
     private @Nullable Output<String> providerType;
 
+    /**
+     * @return The name of the external provider where your third-party code repository is configured. You must specify either a ProviderType or a HostArn.
+     * 
+     */
     public Optional<Output<String>> providerType() {
         return Optional.ofNullable(this.providerType);
     }
@@ -57,6 +69,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ConnectionTagArgs>> tags;
 
+    /**
+     * @return Specifies the tags applied to a connection.
+     * 
+     */
     public Optional<Output<List<ConnectionTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -88,42 +104,96 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionName The name of the connection. Connection names must be unique in an AWS user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(@Nullable Output<String> connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param connectionName The name of the connection. Connection names must be unique in an AWS user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             return connectionName(Output.of(connectionName));
         }
 
+        /**
+         * @param hostArn The host arn configured to represent the infrastructure where your third-party provider is installed. You must specify either a ProviderType or a HostArn.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostArn(@Nullable Output<String> hostArn) {
             $.hostArn = hostArn;
             return this;
         }
 
+        /**
+         * @param hostArn The host arn configured to represent the infrastructure where your third-party provider is installed. You must specify either a ProviderType or a HostArn.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostArn(String hostArn) {
             return hostArn(Output.of(hostArn));
         }
 
+        /**
+         * @param providerType The name of the external provider where your third-party code repository is configured. You must specify either a ProviderType or a HostArn.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerType(@Nullable Output<String> providerType) {
             $.providerType = providerType;
             return this;
         }
 
+        /**
+         * @param providerType The name of the external provider where your third-party code repository is configured. You must specify either a ProviderType or a HostArn.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerType(String providerType) {
             return providerType(Output.of(providerType));
         }
 
+        /**
+         * @param tags Specifies the tags applied to a connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ConnectionTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Specifies the tags applied to a connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ConnectionTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Specifies the tags applied to a connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ConnectionTagArgs... tags) {
             return tags(List.of(tags));
         }

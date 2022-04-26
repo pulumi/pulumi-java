@@ -24,6 +24,10 @@ public final class SimulationApplicationRenderingEngine extends com.pulumi.resou
     @Import(name="name", required=true)
     private SimulationApplicationRenderingEngineName name;
 
+    /**
+     * @return The name of the rendering engine.
+     * 
+     */
     public SimulationApplicationRenderingEngineName name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class SimulationApplicationRenderingEngine extends com.pulumi.resou
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The version of the rendering engine.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -64,11 +72,23 @@ public final class SimulationApplicationRenderingEngine extends com.pulumi.resou
             $ = new SimulationApplicationRenderingEngine(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the rendering engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SimulationApplicationRenderingEngineName name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version The version of the rendering engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

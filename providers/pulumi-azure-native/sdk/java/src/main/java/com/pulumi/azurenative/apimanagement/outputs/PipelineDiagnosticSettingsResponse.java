@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PipelineDiagnosticSettingsResponse {
     /**
-     * Diagnostic settings for request.
+     * @return Diagnostic settings for request.
      * 
      */
     private final @Nullable HttpMessageDiagnosticResponse request;
     /**
-     * Diagnostic settings for response.
+     * @return Diagnostic settings for response.
      * 
      */
     private final @Nullable HttpMessageDiagnosticResponse response;
@@ -31,16 +31,16 @@ public final class PipelineDiagnosticSettingsResponse {
     }
 
     /**
-     * Diagnostic settings for request.
+     * @return Diagnostic settings for request.
      * 
-    */
+     */
     public Optional<HttpMessageDiagnosticResponse> request() {
         return Optional.ofNullable(this.request);
     }
     /**
-     * Diagnostic settings for response.
+     * @return Diagnostic settings for response.
      * 
-    */
+     */
     public Optional<HttpMessageDiagnosticResponse> response() {
         return Optional.ofNullable(this.response);
     }

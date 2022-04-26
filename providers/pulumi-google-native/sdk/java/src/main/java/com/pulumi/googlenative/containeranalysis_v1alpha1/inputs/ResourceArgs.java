@@ -27,6 +27,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentHash")
     private @Nullable Output<HashArgs> contentHash;
 
+    /**
+     * @return The hash of the resource content. E.g., the Docker digest.
+     * 
+     */
     public Optional<Output<HashArgs>> contentHash() {
         return Optional.ofNullable(this.contentHash);
     }
@@ -38,6 +42,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource. E.g., the name of a Docker image - &#34;Debian&#34;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return The unique URI of the resource. E.g., &#34;https://gcr.io/project/image@sha256:foo&#34; for a Docker image.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -79,29 +91,65 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentHash The hash of the resource content. E.g., the Docker digest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentHash(@Nullable Output<HashArgs> contentHash) {
             $.contentHash = contentHash;
             return this;
         }
 
+        /**
+         * @param contentHash The hash of the resource content. E.g., the Docker digest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentHash(HashArgs contentHash) {
             return contentHash(Output.of(contentHash));
         }
 
+        /**
+         * @param name The name of the resource. E.g., the name of a Docker image - &#34;Debian&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource. E.g., the name of a Docker image - &#34;Debian&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param uri The unique URI of the resource. E.g., &#34;https://gcr.io/project/image@sha256:foo&#34; for a Docker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The unique URI of the resource. E.g., &#34;https://gcr.io/project/image@sha256:foo&#34; for a Docker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

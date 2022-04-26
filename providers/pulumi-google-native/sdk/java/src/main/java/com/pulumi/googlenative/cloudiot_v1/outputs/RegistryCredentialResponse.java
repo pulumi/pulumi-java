@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class RegistryCredentialResponse {
     /**
-     * A public key certificate used to verify the device credentials.
+     * @return A public key certificate used to verify the device credentials.
      * 
      */
     private final PublicKeyCertificateResponse publicKeyCertificate;
@@ -21,9 +21,9 @@ public final class RegistryCredentialResponse {
     }
 
     /**
-     * A public key certificate used to verify the device credentials.
+     * @return A public key certificate used to verify the device credentials.
      * 
-    */
+     */
     public PublicKeyCertificateResponse publicKeyCertificate() {
         return this.publicKeyCertificate;
     }

@@ -23,6 +23,10 @@ public final class DatastoreIODetailsResponse extends com.pulumi.resources.Invok
     @Import(name="namespace", required=true)
     private String namespace;
 
+    /**
+     * @return Namespace used in the connection.
+     * 
+     */
     public String namespace() {
         return this.namespace;
     }
@@ -34,6 +38,10 @@ public final class DatastoreIODetailsResponse extends com.pulumi.resources.Invok
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return ProjectId accessed in the connection.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -63,11 +71,23 @@ public final class DatastoreIODetailsResponse extends com.pulumi.resources.Invok
             $ = new DatastoreIODetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespace Namespace used in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param project ProjectId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;

@@ -25,6 +25,10 @@ public final class ToolOutputReferenceResponse extends com.pulumi.resources.Invo
     @Import(name="creationTime", required=true)
     private TimestampResponse creationTime;
 
+    /**
+     * @return The creation time of the file. - In response: present if set by create/update request - In create/update request: optional
+     * 
+     */
     public TimestampResponse creationTime() {
         return this.creationTime;
     }
@@ -36,6 +40,10 @@ public final class ToolOutputReferenceResponse extends com.pulumi.resources.Invo
     @Import(name="output", required=true)
     private FileReferenceResponse output;
 
+    /**
+     * @return A FileReference to an output file. - In response: always set - In create/update request: always set
+     * 
+     */
     public FileReferenceResponse output() {
         return this.output;
     }
@@ -47,6 +55,10 @@ public final class ToolOutputReferenceResponse extends com.pulumi.resources.Invo
     @Import(name="testCase", required=true)
     private TestCaseReferenceResponse testCase;
 
+    /**
+     * @return The test case to which this output file belongs. - In response: present if set by create/update request - In create/update request: optional
+     * 
+     */
     public TestCaseReferenceResponse testCase() {
         return this.testCase;
     }
@@ -77,16 +89,34 @@ public final class ToolOutputReferenceResponse extends com.pulumi.resources.Invo
             $ = new ToolOutputReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTime The creation time of the file. - In response: present if set by create/update request - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(TimestampResponse creationTime) {
             $.creationTime = creationTime;
             return this;
         }
 
+        /**
+         * @param output A FileReference to an output file. - In response: always set - In create/update request: always set
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(FileReferenceResponse output) {
             $.output = output;
             return this;
         }
 
+        /**
+         * @param testCase The test case to which this output file belongs. - In response: present if set by create/update request - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder testCase(TestCaseReferenceResponse testCase) {
             $.testCase = testCase;
             return this;

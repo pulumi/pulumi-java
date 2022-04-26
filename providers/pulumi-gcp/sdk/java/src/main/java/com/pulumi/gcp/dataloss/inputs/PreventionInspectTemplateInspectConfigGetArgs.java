@@ -29,6 +29,11 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends com.pul
     @Import(name="contentOptions")
     private @Nullable Output<List<String>> contentOptions;
 
+    /**
+     * @return List of options defining data content to scan. If empty, text, images, and other content will be included.
+     * Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
+     * 
+     */
     public Optional<Output<List<String>>> contentOptions() {
         return Optional.ofNullable(this.contentOptions);
     }
@@ -41,6 +46,11 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends com.pul
     @Import(name="customInfoTypes")
     private @Nullable Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes;
 
+    /**
+     * @return Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>>> customInfoTypes() {
         return Optional.ofNullable(this.customInfoTypes);
     }
@@ -53,6 +63,11 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends com.pul
     @Import(name="excludeInfoTypes")
     private @Nullable Output<Boolean> excludeInfoTypes;
 
+    /**
+     * @return Set of infoTypes for which findings would affect this rule.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<Boolean>> excludeInfoTypes() {
         return Optional.ofNullable(this.excludeInfoTypes);
     }
@@ -64,6 +79,10 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends com.pul
     @Import(name="includeQuote")
     private @Nullable Output<Boolean> includeQuote;
 
+    /**
+     * @return When true, a contextual quote from the data that triggered a finding is included in the response.
+     * 
+     */
     public Optional<Output<Boolean>> includeQuote() {
         return Optional.ofNullable(this.includeQuote);
     }
@@ -76,6 +95,11 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends com.pul
     @Import(name="infoTypes")
     private @Nullable Output<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes;
 
+    /**
+     * @return If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>>> infoTypes() {
         return Optional.ofNullable(this.infoTypes);
     }
@@ -88,6 +112,11 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends com.pul
     @Import(name="limits")
     private @Nullable Output<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits;
 
+    /**
+     * @return Configuration to control the number of findings returned.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionInspectTemplateInspectConfigLimitsGetArgs>> limits() {
         return Optional.ofNullable(this.limits);
     }
@@ -101,6 +130,12 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends com.pul
     @Import(name="minLikelihood")
     private @Nullable Output<String> minLikelihood;
 
+    /**
+     * @return Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info
+     * Default value is `POSSIBLE`.
+     * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
+     * 
+     */
     public Optional<Output<String>> minLikelihood() {
         return Optional.ofNullable(this.minLikelihood);
     }
@@ -114,6 +149,12 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends com.pul
     @Import(name="ruleSets")
     private @Nullable Output<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets;
 
+    /**
+     * @return Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
+     * other rules are executed in the order they are specified for each info type.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>>> ruleSets() {
         return Optional.ofNullable(this.ruleSets);
     }
@@ -149,90 +190,233 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends com.pul
             $ = new PreventionInspectTemplateInspectConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentOptions List of options defining data content to scan. If empty, text, images, and other content will be included.
+         * Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentOptions(@Nullable Output<List<String>> contentOptions) {
             $.contentOptions = contentOptions;
             return this;
         }
 
+        /**
+         * @param contentOptions List of options defining data content to scan. If empty, text, images, and other content will be included.
+         * Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentOptions(List<String> contentOptions) {
             return contentOptions(Output.of(contentOptions));
         }
 
+        /**
+         * @param contentOptions List of options defining data content to scan. If empty, text, images, and other content will be included.
+         * Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentOptions(String... contentOptions) {
             return contentOptions(List.of(contentOptions));
         }
 
+        /**
+         * @param customInfoTypes Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customInfoTypes(@Nullable Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes) {
             $.customInfoTypes = customInfoTypes;
             return this;
         }
 
+        /**
+         * @param customInfoTypes Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customInfoTypes(List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs> customInfoTypes) {
             return customInfoTypes(Output.of(customInfoTypes));
         }
 
+        /**
+         * @param customInfoTypes Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customInfoTypes(PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs... customInfoTypes) {
             return customInfoTypes(List.of(customInfoTypes));
         }
 
+        /**
+         * @param excludeInfoTypes Set of infoTypes for which findings would affect this rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeInfoTypes(@Nullable Output<Boolean> excludeInfoTypes) {
             $.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
 
+        /**
+         * @param excludeInfoTypes Set of infoTypes for which findings would affect this rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeInfoTypes(Boolean excludeInfoTypes) {
             return excludeInfoTypes(Output.of(excludeInfoTypes));
         }
 
+        /**
+         * @param includeQuote When true, a contextual quote from the data that triggered a finding is included in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeQuote(@Nullable Output<Boolean> includeQuote) {
             $.includeQuote = includeQuote;
             return this;
         }
 
+        /**
+         * @param includeQuote When true, a contextual quote from the data that triggered a finding is included in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeQuote(Boolean includeQuote) {
             return includeQuote(Output.of(includeQuote));
         }
 
+        /**
+         * @param infoTypes If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(@Nullable Output<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes) {
             $.infoTypes = infoTypes;
             return this;
         }
 
+        /**
+         * @param infoTypes If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs> infoTypes) {
             return infoTypes(Output.of(infoTypes));
         }
 
+        /**
+         * @param infoTypes If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(PreventionInspectTemplateInspectConfigInfoTypeGetArgs... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }
 
+        /**
+         * @param limits Configuration to control the number of findings returned.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(@Nullable Output<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits) {
             $.limits = limits;
             return this;
         }
 
+        /**
+         * @param limits Configuration to control the number of findings returned.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(PreventionInspectTemplateInspectConfigLimitsGetArgs limits) {
             return limits(Output.of(limits));
         }
 
+        /**
+         * @param minLikelihood Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info
+         * Default value is `POSSIBLE`.
+         * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minLikelihood(@Nullable Output<String> minLikelihood) {
             $.minLikelihood = minLikelihood;
             return this;
         }
 
+        /**
+         * @param minLikelihood Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info
+         * Default value is `POSSIBLE`.
+         * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minLikelihood(String minLikelihood) {
             return minLikelihood(Output.of(minLikelihood));
         }
 
+        /**
+         * @param ruleSets Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
+         * other rules are executed in the order they are specified for each info type.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSets(@Nullable Output<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets) {
             $.ruleSets = ruleSets;
             return this;
         }
 
+        /**
+         * @param ruleSets Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
+         * other rules are executed in the order they are specified for each info type.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSets(List<PreventionInspectTemplateInspectConfigRuleSetGetArgs> ruleSets) {
             return ruleSets(Output.of(ruleSets));
         }
 
+        /**
+         * @param ruleSets Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
+         * other rules are executed in the order they are specified for each info type.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSets(PreventionInspectTemplateInspectConfigRuleSetGetArgs... ruleSets) {
             return ruleSets(List.of(ruleSets));
         }

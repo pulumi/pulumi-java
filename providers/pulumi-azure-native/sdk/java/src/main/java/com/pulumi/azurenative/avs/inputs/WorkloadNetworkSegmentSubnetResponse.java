@@ -26,6 +26,10 @@ public final class WorkloadNetworkSegmentSubnetResponse extends com.pulumi.resou
     @Import(name="dhcpRanges")
     private @Nullable List<String> dhcpRanges;
 
+    /**
+     * @return DHCP Range assigned for subnet.
+     * 
+     */
     public Optional<List<String>> dhcpRanges() {
         return Optional.ofNullable(this.dhcpRanges);
     }
@@ -37,6 +41,10 @@ public final class WorkloadNetworkSegmentSubnetResponse extends com.pulumi.resou
     @Import(name="gatewayAddress")
     private @Nullable String gatewayAddress;
 
+    /**
+     * @return Gateway address.
+     * 
+     */
     public Optional<String> gatewayAddress() {
         return Optional.ofNullable(this.gatewayAddress);
     }
@@ -66,15 +74,33 @@ public final class WorkloadNetworkSegmentSubnetResponse extends com.pulumi.resou
             $ = new WorkloadNetworkSegmentSubnetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dhcpRanges DHCP Range assigned for subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpRanges(@Nullable List<String> dhcpRanges) {
             $.dhcpRanges = dhcpRanges;
             return this;
         }
 
+        /**
+         * @param dhcpRanges DHCP Range assigned for subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpRanges(String... dhcpRanges) {
             return dhcpRanges(List.of(dhcpRanges));
         }
 
+        /**
+         * @param gatewayAddress Gateway address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayAddress(@Nullable String gatewayAddress) {
             $.gatewayAddress = gatewayAddress;
             return this;

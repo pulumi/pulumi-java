@@ -20,6 +20,10 @@ public final class ThingPrincipalAttachmentArgs extends com.pulumi.resources.Res
     @Import(name="principal", required=true)
     private Output<String> principal;
 
+    /**
+     * @return The AWS IoT Certificate ARN or Amazon Cognito Identity ID.
+     * 
+     */
     public Output<String> principal() {
         return this.principal;
     }
@@ -31,6 +35,10 @@ public final class ThingPrincipalAttachmentArgs extends com.pulumi.resources.Res
     @Import(name="thing", required=true)
     private Output<String> thing;
 
+    /**
+     * @return The name of the thing.
+     * 
+     */
     public Output<String> thing() {
         return this.thing;
     }
@@ -60,20 +68,44 @@ public final class ThingPrincipalAttachmentArgs extends com.pulumi.resources.Res
             $ = new ThingPrincipalAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principal The AWS IoT Certificate ARN or Amazon Cognito Identity ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(Output<String> principal) {
             $.principal = principal;
             return this;
         }
 
+        /**
+         * @param principal The AWS IoT Certificate ARN or Amazon Cognito Identity ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(String principal) {
             return principal(Output.of(principal));
         }
 
+        /**
+         * @param thing The name of the thing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thing(Output<String> thing) {
             $.thing = thing;
             return this;
         }
 
+        /**
+         * @param thing The name of the thing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thing(String thing) {
             return thing(Output.of(thing));
         }

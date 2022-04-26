@@ -24,6 +24,10 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse extends com.pulumi.r
     @Import(name="ranges", required=true)
     private String ranges;
 
+    /**
+     * @return The sequence of datetime ranges. Example: &#39;[[&#34;2021-10-05T03:30:00Z&#34;, &#34;2021-10-05T03:40:00Z&#34;]]&#39;.
+     * 
+     */
     public String ranges() {
         return this.ranges;
     }
@@ -36,6 +40,11 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse extends com.pulumi.r
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSequenceAbsoluteTimeMarkers&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -65,11 +74,24 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse extends com.pulumi.r
             $ = new VideoSequenceAbsoluteTimeMarkersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ranges The sequence of datetime ranges. Example: &#39;[[&#34;2021-10-05T03:30:00Z&#34;, &#34;2021-10-05T03:40:00Z&#34;]]&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ranges(String ranges) {
             $.ranges = ranges;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSequenceAbsoluteTimeMarkers&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

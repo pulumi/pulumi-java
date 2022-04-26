@@ -15,47 +15,47 @@ import java.util.Objects;
 @CustomType
 public final class TestExecutionResponse {
     /**
-     * How the host machine(s) are configured.
+     * @return How the host machine(s) are configured.
      * 
      */
     private final EnvironmentResponse environment;
     /**
-     * Id of the containing TestMatrix.
+     * @return Id of the containing TestMatrix.
      * 
      */
     private final String matrixId;
     /**
-     * The cloud project that owns the test execution.
+     * @return The cloud project that owns the test execution.
      * 
      */
     private final String project;
     /**
-     * Details about the shard.
+     * @return Details about the shard.
      * 
      */
     private final ShardResponse shard;
     /**
-     * Indicates the current progress of the test execution (e.g., FINISHED).
+     * @return Indicates the current progress of the test execution (e.g., FINISHED).
      * 
      */
     private final String state;
     /**
-     * Additional details about the running test.
+     * @return Additional details about the running test.
      * 
      */
     private final TestDetailsResponse testDetails;
     /**
-     * How to run the test.
+     * @return How to run the test.
      * 
      */
     private final TestSpecificationResponse testSpecification;
     /**
-     * The time this test execution was initially created.
+     * @return The time this test execution was initially created.
      * 
      */
     private final String timestamp;
     /**
-     * Where the results for this execution are written.
+     * @return Where the results for this execution are written.
      * 
      */
     private final ToolResultsStepResponse toolResultsStep;
@@ -83,65 +83,65 @@ public final class TestExecutionResponse {
     }
 
     /**
-     * How the host machine(s) are configured.
+     * @return How the host machine(s) are configured.
      * 
-    */
+     */
     public EnvironmentResponse environment() {
         return this.environment;
     }
     /**
-     * Id of the containing TestMatrix.
+     * @return Id of the containing TestMatrix.
      * 
-    */
+     */
     public String matrixId() {
         return this.matrixId;
     }
     /**
-     * The cloud project that owns the test execution.
+     * @return The cloud project that owns the test execution.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * Details about the shard.
+     * @return Details about the shard.
      * 
-    */
+     */
     public ShardResponse shard() {
         return this.shard;
     }
     /**
-     * Indicates the current progress of the test execution (e.g., FINISHED).
+     * @return Indicates the current progress of the test execution (e.g., FINISHED).
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Additional details about the running test.
+     * @return Additional details about the running test.
      * 
-    */
+     */
     public TestDetailsResponse testDetails() {
         return this.testDetails;
     }
     /**
-     * How to run the test.
+     * @return How to run the test.
      * 
-    */
+     */
     public TestSpecificationResponse testSpecification() {
         return this.testSpecification;
     }
     /**
-     * The time this test execution was initially created.
+     * @return The time this test execution was initially created.
      * 
-    */
+     */
     public String timestamp() {
         return this.timestamp;
     }
     /**
-     * Where the results for this execution are written.
+     * @return Where the results for this execution are written.
      * 
-    */
+     */
     public ToolResultsStepResponse toolResultsStep() {
         return this.toolResultsStep;
     }

@@ -26,6 +26,10 @@ public final class StorageSourceManifestArgs extends com.pulumi.resources.Resour
     @Import(name="bucket")
     private @Nullable Output<String> bucket;
 
+    /**
+     * @return Google Cloud Storage bucket containing the source manifest (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+     * 
+     */
     public Optional<Output<String>> bucket() {
         return Optional.ofNullable(this.bucket);
     }
@@ -37,6 +41,10 @@ public final class StorageSourceManifestArgs extends com.pulumi.resources.Resour
     @Import(name="generation")
     private @Nullable Output<String> generation;
 
+    /**
+     * @return Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.
+     * 
+     */
     public Optional<Output<String>> generation() {
         return Optional.ofNullable(this.generation);
     }
@@ -48,6 +56,10 @@ public final class StorageSourceManifestArgs extends com.pulumi.resources.Resour
     @Import(name="object")
     private @Nullable Output<String> object;
 
+    /**
+     * @return Google Cloud Storage object containing the source manifest. This object must be a JSON file.
+     * 
+     */
     public Optional<Output<String>> object() {
         return Optional.ofNullable(this.object);
     }
@@ -78,29 +90,65 @@ public final class StorageSourceManifestArgs extends com.pulumi.resources.Resour
             $ = new StorageSourceManifestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Google Cloud Storage bucket containing the source manifest (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(@Nullable Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket Google Cloud Storage bucket containing the source manifest (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param generation Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generation(@Nullable Output<String> generation) {
             $.generation = generation;
             return this;
         }
 
+        /**
+         * @param generation Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generation(String generation) {
             return generation(Output.of(generation));
         }
 
+        /**
+         * @param object Google Cloud Storage object containing the source manifest. This object must be a JSON file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(@Nullable Output<String> object) {
             $.object = object;
             return this;
         }
 
+        /**
+         * @param object Google Cloud Storage object containing the source manifest. This object must be a JSON file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(String object) {
             return object(Output.of(object));
         }

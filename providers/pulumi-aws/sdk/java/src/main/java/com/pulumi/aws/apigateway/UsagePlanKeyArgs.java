@@ -20,6 +20,10 @@ public final class UsagePlanKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyId", required=true)
     private Output<String> keyId;
 
+    /**
+     * @return The identifier of the API key resource.
+     * 
+     */
     public Output<String> keyId() {
         return this.keyId;
     }
@@ -31,6 +35,10 @@ public final class UsagePlanKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyType", required=true)
     private Output<String> keyType;
 
+    /**
+     * @return The type of the API key resource. Currently, the valid key type is API_KEY.
+     * 
+     */
     public Output<String> keyType() {
         return this.keyType;
     }
@@ -42,6 +50,10 @@ public final class UsagePlanKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="usagePlanId", required=true)
     private Output<String> usagePlanId;
 
+    /**
+     * @return The Id of the usage plan resource representing to associate the key to.
+     * 
+     */
     public Output<String> usagePlanId() {
         return this.usagePlanId;
     }
@@ -72,29 +84,65 @@ public final class UsagePlanKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UsagePlanKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyId The identifier of the API key resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(Output<String> keyId) {
             $.keyId = keyId;
             return this;
         }
 
+        /**
+         * @param keyId The identifier of the API key resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             return keyId(Output.of(keyId));
         }
 
+        /**
+         * @param keyType The type of the API key resource. Currently, the valid key type is API_KEY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(Output<String> keyType) {
             $.keyType = keyType;
             return this;
         }
 
+        /**
+         * @param keyType The type of the API key resource. Currently, the valid key type is API_KEY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(String keyType) {
             return keyType(Output.of(keyType));
         }
 
+        /**
+         * @param usagePlanId The Id of the usage plan resource representing to associate the key to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usagePlanId(Output<String> usagePlanId) {
             $.usagePlanId = usagePlanId;
             return this;
         }
 
+        /**
+         * @param usagePlanId The Id of the usage plan resource representing to associate the key to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usagePlanId(String usagePlanId) {
             return usagePlanId(Output.of(usagePlanId));
         }

@@ -25,6 +25,10 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="links")
     private @Nullable Output<List<SpacecraftLinkArgs>> links;
 
+    /**
+     * @return Links of the Spacecraft
+     * 
+     */
     public Optional<Output<List<SpacecraftLinkArgs>>> links() {
         return Optional.ofNullable(this.links);
     }
@@ -36,6 +40,10 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -47,6 +55,10 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="noradId", required=true)
     private Output<String> noradId;
 
+    /**
+     * @return NORAD ID of the spacecraft.
+     * 
+     */
     public Output<String> noradId() {
         return this.noradId;
     }
@@ -58,6 +70,10 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +85,10 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spacecraftName")
     private @Nullable Output<String> spacecraftName;
 
+    /**
+     * @return Spacecraft ID
+     * 
+     */
     public Optional<Output<String>> spacecraftName() {
         return Optional.ofNullable(this.spacecraftName);
     }
@@ -80,6 +100,10 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -91,6 +115,10 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="titleLine")
     private @Nullable Output<String> titleLine;
 
+    /**
+     * @return Title line of Two Line Element (TLE).
+     * 
+     */
     public Optional<Output<String>> titleLine() {
         return Optional.ofNullable(this.titleLine);
     }
@@ -102,6 +130,10 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tleLine1")
     private @Nullable Output<String> tleLine1;
 
+    /**
+     * @return Line 1 of Two Line Element (TLE).
+     * 
+     */
     public Optional<Output<String>> tleLine1() {
         return Optional.ofNullable(this.tleLine1);
     }
@@ -113,6 +145,10 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tleLine2")
     private @Nullable Output<String> tleLine2;
 
+    /**
+     * @return Line 2 of Two Line Element (TLE).
+     * 
+     */
     public Optional<Output<String>> tleLine2() {
         return Optional.ofNullable(this.tleLine2);
     }
@@ -149,87 +185,201 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SpacecraftArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param links Links of the Spacecraft
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(@Nullable Output<List<SpacecraftLinkArgs>> links) {
             $.links = links;
             return this;
         }
 
+        /**
+         * @param links Links of the Spacecraft
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(List<SpacecraftLinkArgs> links) {
             return links(Output.of(links));
         }
 
+        /**
+         * @param links Links of the Spacecraft
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(SpacecraftLinkArgs... links) {
             return links(List.of(links));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param noradId NORAD ID of the spacecraft.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noradId(Output<String> noradId) {
             $.noradId = noradId;
             return this;
         }
 
+        /**
+         * @param noradId NORAD ID of the spacecraft.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noradId(String noradId) {
             return noradId(Output.of(noradId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param spacecraftName Spacecraft ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder spacecraftName(@Nullable Output<String> spacecraftName) {
             $.spacecraftName = spacecraftName;
             return this;
         }
 
+        /**
+         * @param spacecraftName Spacecraft ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder spacecraftName(String spacecraftName) {
             return spacecraftName(Output.of(spacecraftName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param titleLine Title line of Two Line Element (TLE).
+         * 
+         * @return builder
+         * 
+         */
         public Builder titleLine(@Nullable Output<String> titleLine) {
             $.titleLine = titleLine;
             return this;
         }
 
+        /**
+         * @param titleLine Title line of Two Line Element (TLE).
+         * 
+         * @return builder
+         * 
+         */
         public Builder titleLine(String titleLine) {
             return titleLine(Output.of(titleLine));
         }
 
+        /**
+         * @param tleLine1 Line 1 of Two Line Element (TLE).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tleLine1(@Nullable Output<String> tleLine1) {
             $.tleLine1 = tleLine1;
             return this;
         }
 
+        /**
+         * @param tleLine1 Line 1 of Two Line Element (TLE).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tleLine1(String tleLine1) {
             return tleLine1(Output.of(tleLine1));
         }
 
+        /**
+         * @param tleLine2 Line 2 of Two Line Element (TLE).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tleLine2(@Nullable Output<String> tleLine2) {
             $.tleLine2 = tleLine2;
             return this;
         }
 
+        /**
+         * @param tleLine2 Line 2 of Two Line Element (TLE).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tleLine2(String tleLine2) {
             return tleLine2(Output.of(tleLine2));
         }

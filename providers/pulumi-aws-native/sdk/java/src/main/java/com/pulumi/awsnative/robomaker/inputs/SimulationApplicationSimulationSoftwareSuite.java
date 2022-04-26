@@ -26,6 +26,10 @@ public final class SimulationApplicationSimulationSoftwareSuite extends com.pulu
     @Import(name="name", required=true)
     private SimulationApplicationSimulationSoftwareSuiteName name;
 
+    /**
+     * @return The name of the simulation software suite.
+     * 
+     */
     public SimulationApplicationSimulationSoftwareSuiteName name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class SimulationApplicationSimulationSoftwareSuite extends com.pulu
     @Import(name="version")
     private @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version;
 
+    /**
+     * @return The version of the simulation software suite.
+     * 
+     */
     public Optional<SimulationApplicationSimulationSoftwareSuiteVersion> version() {
         return Optional.ofNullable(this.version);
     }
@@ -66,11 +74,23 @@ public final class SimulationApplicationSimulationSoftwareSuite extends com.pulu
             $ = new SimulationApplicationSimulationSoftwareSuite(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the simulation software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SimulationApplicationSimulationSoftwareSuiteName name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version The version of the simulation software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
             $.version = version;
             return this;

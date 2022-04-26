@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FlexibleAppVersionAutomaticScalingRequestUtilization {
     /**
-     * Target number of concurrent requests.
+     * @return Target number of concurrent requests.
      * 
      */
     private final @Nullable Double targetConcurrentRequests;
     /**
-     * Target requests per second.
+     * @return Target requests per second.
      * 
      */
     private final @Nullable String targetRequestCountPerSecond;
@@ -32,16 +32,16 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilization {
     }
 
     /**
-     * Target number of concurrent requests.
+     * @return Target number of concurrent requests.
      * 
-    */
+     */
     public Optional<Double> targetConcurrentRequests() {
         return Optional.ofNullable(this.targetConcurrentRequests);
     }
     /**
-     * Target requests per second.
+     * @return Target requests per second.
      * 
-    */
+     */
     public Optional<String> targetRequestCountPerSecond() {
         return Optional.ofNullable(this.targetRequestCountPerSecond);
     }

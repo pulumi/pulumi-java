@@ -27,6 +27,10 @@ public final class AutomationRuleRunPlaybookActionArgs extends com.pulumi.resour
     @Import(name="actionConfiguration", required=true)
     private Output<AutomationRuleRunPlaybookActionActionConfigurationArgs> actionConfiguration;
 
+    /**
+     * @return The configuration of the run playbook automation rule action
+     * 
+     */
     public Output<AutomationRuleRunPlaybookActionActionConfigurationArgs> actionConfiguration() {
         return this.actionConfiguration;
     }
@@ -39,6 +43,11 @@ public final class AutomationRuleRunPlaybookActionArgs extends com.pulumi.resour
     @Import(name="actionType", required=true)
     private Output<String> actionType;
 
+    /**
+     * @return The type of the automation rule action
+     * Expected value is &#39;RunPlaybook&#39;.
+     * 
+     */
     public Output<String> actionType() {
         return this.actionType;
     }
@@ -50,6 +59,10 @@ public final class AutomationRuleRunPlaybookActionArgs extends com.pulumi.resour
     @Import(name="order", required=true)
     private Output<Integer> order;
 
+    /**
+     * @return The order of execution of the automation rule action
+     * 
+     */
     public Output<Integer> order() {
         return this.order;
     }
@@ -80,29 +93,67 @@ public final class AutomationRuleRunPlaybookActionArgs extends com.pulumi.resour
             $ = new AutomationRuleRunPlaybookActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionConfiguration The configuration of the run playbook automation rule action
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionConfiguration(Output<AutomationRuleRunPlaybookActionActionConfigurationArgs> actionConfiguration) {
             $.actionConfiguration = actionConfiguration;
             return this;
         }
 
+        /**
+         * @param actionConfiguration The configuration of the run playbook automation rule action
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionConfiguration(AutomationRuleRunPlaybookActionActionConfigurationArgs actionConfiguration) {
             return actionConfiguration(Output.of(actionConfiguration));
         }
 
+        /**
+         * @param actionType The type of the automation rule action
+         * Expected value is &#39;RunPlaybook&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(Output<String> actionType) {
             $.actionType = actionType;
             return this;
         }
 
+        /**
+         * @param actionType The type of the automation rule action
+         * Expected value is &#39;RunPlaybook&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(String actionType) {
             return actionType(Output.of(actionType));
         }
 
+        /**
+         * @param order The order of execution of the automation rule action
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(Output<Integer> order) {
             $.order = order;
             return this;
         }
 
+        /**
+         * @param order The order of execution of the automation rule action
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(Integer order) {
             return order(Output.of(order));
         }

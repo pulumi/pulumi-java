@@ -16,32 +16,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WorkflowTemplateJobSparkSqlJob {
     /**
-     * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * @return Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
      */
     private final @Nullable List<String> jarFileUris;
     /**
-     * Optional. The runtime log config for job execution.
+     * @return Optional. The runtime log config for job execution.
      * 
      */
     private final @Nullable WorkflowTemplateJobSparkSqlJobLoggingConfig loggingConfig;
     /**
-     * Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+     * @return Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
      * 
      */
     private final @Nullable Map<String,String> properties;
     /**
-     * The HCFS URI of the script that contains SQL queries.
+     * @return The HCFS URI of the script that contains SQL queries.
      * 
      */
     private final @Nullable String queryFileUri;
     /**
-     * A list of queries.
+     * @return A list of queries.
      * 
      */
     private final @Nullable WorkflowTemplateJobSparkSqlJobQueryList queryList;
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name=&#34;value&#34;;`).
+     * @return Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name=&#34;value&#34;;`).
      * 
      */
     private final @Nullable Map<String,String> scriptVariables;
@@ -63,44 +63,44 @@ public final class WorkflowTemplateJobSparkSqlJob {
     }
 
     /**
-     * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * @return Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
-    */
+     */
     public List<String> jarFileUris() {
         return this.jarFileUris == null ? List.of() : this.jarFileUris;
     }
     /**
-     * Optional. The runtime log config for job execution.
+     * @return Optional. The runtime log config for job execution.
      * 
-    */
+     */
     public Optional<WorkflowTemplateJobSparkSqlJobLoggingConfig> loggingConfig() {
         return Optional.ofNullable(this.loggingConfig);
     }
     /**
-     * Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+     * @return Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * The HCFS URI of the script that contains SQL queries.
+     * @return The HCFS URI of the script that contains SQL queries.
      * 
-    */
+     */
     public Optional<String> queryFileUri() {
         return Optional.ofNullable(this.queryFileUri);
     }
     /**
-     * A list of queries.
+     * @return A list of queries.
      * 
-    */
+     */
     public Optional<WorkflowTemplateJobSparkSqlJobQueryList> queryList() {
         return Optional.ofNullable(this.queryList);
     }
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name=&#34;value&#34;;`).
+     * @return Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name=&#34;value&#34;;`).
      * 
-    */
+     */
     public Map<String,String> scriptVariables() {
         return this.scriptVariables == null ? Map.of() : this.scriptVariables;
     }

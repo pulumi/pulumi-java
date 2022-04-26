@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ACIServiceResponseResponseVnetConfiguration {
     /**
-     * The name of the virtual network subnet.
+     * @return The name of the virtual network subnet.
      * 
      */
     private final @Nullable String subnetName;
     /**
-     * The name of the virtual network.
+     * @return The name of the virtual network.
      * 
      */
     private final @Nullable String vnetName;
@@ -31,16 +31,16 @@ public final class ACIServiceResponseResponseVnetConfiguration {
     }
 
     /**
-     * The name of the virtual network subnet.
+     * @return The name of the virtual network subnet.
      * 
-    */
+     */
     public Optional<String> subnetName() {
         return Optional.ofNullable(this.subnetName);
     }
     /**
-     * The name of the virtual network.
+     * @return The name of the virtual network.
      * 
-    */
+     */
     public Optional<String> vnetName() {
         return Optional.ofNullable(this.vnetName);
     }

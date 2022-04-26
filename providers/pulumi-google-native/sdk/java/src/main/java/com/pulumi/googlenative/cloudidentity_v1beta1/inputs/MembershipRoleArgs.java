@@ -28,6 +28,10 @@ public final class MembershipRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="expiryDetail")
     private @Nullable Output<ExpiryDetailArgs> expiryDetail;
 
+    /**
+     * @return The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.
+     * 
+     */
     public Optional<Output<ExpiryDetailArgs>> expiryDetail() {
         return Optional.ofNullable(this.expiryDetail);
     }
@@ -39,6 +43,10 @@ public final class MembershipRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +58,10 @@ public final class MembershipRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="restrictionEvaluations")
     private @Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations;
 
+    /**
+     * @return Evaluations of restrictions applied to parent group on this membership.
+     * 
+     */
     public Optional<Output<RestrictionEvaluationsArgs>> restrictionEvaluations() {
         return Optional.ofNullable(this.restrictionEvaluations);
     }
@@ -80,29 +92,65 @@ public final class MembershipRoleArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MembershipRoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expiryDetail The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryDetail(@Nullable Output<ExpiryDetailArgs> expiryDetail) {
             $.expiryDetail = expiryDetail;
             return this;
         }
 
+        /**
+         * @param expiryDetail The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryDetail(ExpiryDetailArgs expiryDetail) {
             return expiryDetail(Output.of(expiryDetail));
         }
 
+        /**
+         * @param name The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param restrictionEvaluations Evaluations of restrictions applied to parent group on this membership.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictionEvaluations(@Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations) {
             $.restrictionEvaluations = restrictionEvaluations;
             return this;
         }
 
+        /**
+         * @param restrictionEvaluations Evaluations of restrictions applied to parent group on this membership.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictionEvaluations(RestrictionEvaluationsArgs restrictionEvaluations) {
             return restrictionEvaluations(Output.of(restrictionEvaluations));
         }

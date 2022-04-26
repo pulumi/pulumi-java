@@ -25,6 +25,10 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
     @Import(name="customContextTag")
     private @Nullable Output<String> customContextTag;
 
+    /**
+     * @return A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+     * 
+     */
     public Optional<Output<String>> customContextTag() {
         return Optional.ofNullable(this.customContextTag);
     }
@@ -36,6 +40,10 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return Creates or updates a trigger
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -48,6 +56,11 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Trigger Kind.
+     * Expected value is &#39;PeriodicTimerEvent&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -59,6 +72,10 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The trigger name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +87,10 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -81,6 +102,10 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
     @Import(name="sinkInfo", required=true)
     private Output<RoleSinkInfoArgs> sinkInfo;
 
+    /**
+     * @return Role Sink information.
+     * 
+     */
     public Output<RoleSinkInfoArgs> sinkInfo() {
         return this.sinkInfo;
     }
@@ -92,6 +117,10 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
     @Import(name="sourceInfo", required=true)
     private Output<PeriodicTimerSourceInfoArgs> sourceInfo;
 
+    /**
+     * @return Periodic timer details.
+     * 
+     */
     public Output<PeriodicTimerSourceInfoArgs> sourceInfo() {
         return this.sourceInfo;
     }
@@ -126,65 +155,151 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
             $ = new PeriodicTimerEventTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customContextTag A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customContextTag(@Nullable Output<String> customContextTag) {
             $.customContextTag = customContextTag;
             return this;
         }
 
+        /**
+         * @param customContextTag A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customContextTag(String customContextTag) {
             return customContextTag(Output.of(customContextTag));
         }
 
+        /**
+         * @param deviceName Creates or updates a trigger
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName Creates or updates a trigger
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param kind Trigger Kind.
+         * Expected value is &#39;PeriodicTimerEvent&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Trigger Kind.
+         * Expected value is &#39;PeriodicTimerEvent&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name The trigger name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The trigger name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sinkInfo Role Sink information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkInfo(Output<RoleSinkInfoArgs> sinkInfo) {
             $.sinkInfo = sinkInfo;
             return this;
         }
 
+        /**
+         * @param sinkInfo Role Sink information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkInfo(RoleSinkInfoArgs sinkInfo) {
             return sinkInfo(Output.of(sinkInfo));
         }
 
+        /**
+         * @param sourceInfo Periodic timer details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInfo(Output<PeriodicTimerSourceInfoArgs> sourceInfo) {
             $.sourceInfo = sourceInfo;
             return this;
         }
 
+        /**
+         * @param sourceInfo Periodic timer details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInfo(PeriodicTimerSourceInfoArgs sourceInfo) {
             return sourceInfo(Output.of(sourceInfo));
         }

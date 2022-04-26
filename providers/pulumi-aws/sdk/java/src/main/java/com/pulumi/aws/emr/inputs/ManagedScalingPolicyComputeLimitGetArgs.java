@@ -23,6 +23,10 @@ public final class ManagedScalingPolicyComputeLimitGetArgs extends com.pulumi.re
     @Import(name="maximumCapacityUnits", required=true)
     private Output<Integer> maximumCapacityUnits;
 
+    /**
+     * @return The upper boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
+     * 
+     */
     public Output<Integer> maximumCapacityUnits() {
         return this.maximumCapacityUnits;
     }
@@ -34,6 +38,10 @@ public final class ManagedScalingPolicyComputeLimitGetArgs extends com.pulumi.re
     @Import(name="maximumCoreCapacityUnits")
     private @Nullable Output<Integer> maximumCoreCapacityUnits;
 
+    /**
+     * @return The upper boundary of EC2 units for core node type in a cluster. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The core units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between core and task nodes.
+     * 
+     */
     public Optional<Output<Integer>> maximumCoreCapacityUnits() {
         return Optional.ofNullable(this.maximumCoreCapacityUnits);
     }
@@ -45,6 +53,10 @@ public final class ManagedScalingPolicyComputeLimitGetArgs extends com.pulumi.re
     @Import(name="maximumOndemandCapacityUnits")
     private @Nullable Output<Integer> maximumOndemandCapacityUnits;
 
+    /**
+     * @return The upper boundary of On-Demand EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The On-Demand units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between On-Demand and Spot instances.
+     * 
+     */
     public Optional<Output<Integer>> maximumOndemandCapacityUnits() {
         return Optional.ofNullable(this.maximumOndemandCapacityUnits);
     }
@@ -56,6 +68,10 @@ public final class ManagedScalingPolicyComputeLimitGetArgs extends com.pulumi.re
     @Import(name="minimumCapacityUnits", required=true)
     private Output<Integer> minimumCapacityUnits;
 
+    /**
+     * @return The lower boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
+     * 
+     */
     public Output<Integer> minimumCapacityUnits() {
         return this.minimumCapacityUnits;
     }
@@ -67,6 +83,10 @@ public final class ManagedScalingPolicyComputeLimitGetArgs extends com.pulumi.re
     @Import(name="unitType", required=true)
     private Output<String> unitType;
 
+    /**
+     * @return The unit type used for specifying a managed scaling policy. Valid Values: `InstanceFleetUnits` | `Instances` | `VCPU`
+     * 
+     */
     public Output<String> unitType() {
         return this.unitType;
     }
@@ -99,47 +119,107 @@ public final class ManagedScalingPolicyComputeLimitGetArgs extends com.pulumi.re
             $ = new ManagedScalingPolicyComputeLimitGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maximumCapacityUnits The upper boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumCapacityUnits(Output<Integer> maximumCapacityUnits) {
             $.maximumCapacityUnits = maximumCapacityUnits;
             return this;
         }
 
+        /**
+         * @param maximumCapacityUnits The upper boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumCapacityUnits(Integer maximumCapacityUnits) {
             return maximumCapacityUnits(Output.of(maximumCapacityUnits));
         }
 
+        /**
+         * @param maximumCoreCapacityUnits The upper boundary of EC2 units for core node type in a cluster. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The core units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between core and task nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumCoreCapacityUnits(@Nullable Output<Integer> maximumCoreCapacityUnits) {
             $.maximumCoreCapacityUnits = maximumCoreCapacityUnits;
             return this;
         }
 
+        /**
+         * @param maximumCoreCapacityUnits The upper boundary of EC2 units for core node type in a cluster. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The core units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between core and task nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumCoreCapacityUnits(Integer maximumCoreCapacityUnits) {
             return maximumCoreCapacityUnits(Output.of(maximumCoreCapacityUnits));
         }
 
+        /**
+         * @param maximumOndemandCapacityUnits The upper boundary of On-Demand EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The On-Demand units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between On-Demand and Spot instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumOndemandCapacityUnits(@Nullable Output<Integer> maximumOndemandCapacityUnits) {
             $.maximumOndemandCapacityUnits = maximumOndemandCapacityUnits;
             return this;
         }
 
+        /**
+         * @param maximumOndemandCapacityUnits The upper boundary of On-Demand EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The On-Demand units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between On-Demand and Spot instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumOndemandCapacityUnits(Integer maximumOndemandCapacityUnits) {
             return maximumOndemandCapacityUnits(Output.of(maximumOndemandCapacityUnits));
         }
 
+        /**
+         * @param minimumCapacityUnits The lower boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumCapacityUnits(Output<Integer> minimumCapacityUnits) {
             $.minimumCapacityUnits = minimumCapacityUnits;
             return this;
         }
 
+        /**
+         * @param minimumCapacityUnits The lower boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumCapacityUnits(Integer minimumCapacityUnits) {
             return minimumCapacityUnits(Output.of(minimumCapacityUnits));
         }
 
+        /**
+         * @param unitType The unit type used for specifying a managed scaling policy. Valid Values: `InstanceFleetUnits` | `Instances` | `VCPU`
+         * 
+         * @return builder
+         * 
+         */
         public Builder unitType(Output<String> unitType) {
             $.unitType = unitType;
             return this;
         }
 
+        /**
+         * @param unitType The unit type used for specifying a managed scaling policy. Valid Values: `InstanceFleetUnits` | `Instances` | `VCPU`
+         * 
+         * @return builder
+         * 
+         */
         public Builder unitType(String unitType) {
             return unitType(Output.of(unitType));
         }

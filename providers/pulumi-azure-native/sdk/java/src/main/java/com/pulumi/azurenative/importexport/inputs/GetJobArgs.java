@@ -19,6 +19,10 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="jobName", required=true)
     private String jobName;
 
+    /**
+     * @return The name of the import/export job.
+     * 
+     */
     public String jobName() {
         return this.jobName;
     }
@@ -30,6 +34,10 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name uniquely identifies the resource group within the user subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetJobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobName The name of the import/export job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name uniquely identifies the resource group within the user subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

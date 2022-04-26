@@ -19,6 +19,10 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="groupName", required=true)
     private String groupName;
 
+    /**
+     * @return The friendly IAM group name to match.
+     * 
+     */
     public String groupName() {
         return this.groupName;
     }
@@ -47,6 +51,12 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupName The friendly IAM group name to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(String groupName) {
             $.groupName = groupName;
             return this;

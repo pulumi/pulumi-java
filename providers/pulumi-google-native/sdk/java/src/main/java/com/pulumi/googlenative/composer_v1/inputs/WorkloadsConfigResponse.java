@@ -25,6 +25,10 @@ public final class WorkloadsConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="scheduler", required=true)
     private SchedulerResourceResponse scheduler;
 
+    /**
+     * @return Optional. Resources used by Airflow schedulers.
+     * 
+     */
     public SchedulerResourceResponse scheduler() {
         return this.scheduler;
     }
@@ -36,6 +40,10 @@ public final class WorkloadsConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="webServer", required=true)
     private WebServerResourceResponse webServer;
 
+    /**
+     * @return Optional. Resources used by Airflow web server.
+     * 
+     */
     public WebServerResourceResponse webServer() {
         return this.webServer;
     }
@@ -47,6 +55,10 @@ public final class WorkloadsConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="worker", required=true)
     private WorkerResourceResponse worker;
 
+    /**
+     * @return Optional. Resources used by Airflow workers.
+     * 
+     */
     public WorkerResourceResponse worker() {
         return this.worker;
     }
@@ -77,16 +89,34 @@ public final class WorkloadsConfigResponse extends com.pulumi.resources.InvokeAr
             $ = new WorkloadsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scheduler Optional. Resources used by Airflow schedulers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduler(SchedulerResourceResponse scheduler) {
             $.scheduler = scheduler;
             return this;
         }
 
+        /**
+         * @param webServer Optional. Resources used by Airflow web server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webServer(WebServerResourceResponse webServer) {
             $.webServer = webServer;
             return this;
         }
 
+        /**
+         * @param worker Optional. Resources used by Airflow workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder worker(WorkerResourceResponse worker) {
             $.worker = worker;
             return this;

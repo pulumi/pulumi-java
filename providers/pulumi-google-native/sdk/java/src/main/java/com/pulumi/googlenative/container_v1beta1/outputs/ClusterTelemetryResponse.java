@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ClusterTelemetryResponse {
     /**
-     * Type of the integration.
+     * @return Type of the integration.
      * 
      */
     private final String type;
@@ -21,9 +21,9 @@ public final class ClusterTelemetryResponse {
     }
 
     /**
-     * Type of the integration.
+     * @return Type of the integration.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

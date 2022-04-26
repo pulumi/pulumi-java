@@ -25,6 +25,10 @@ public final class ConnectionMonitorIcmpConfigurationResponse extends com.pulumi
     @Import(name="disableTraceRoute")
     private @Nullable Boolean disableTraceRoute;
 
+    /**
+     * @return Value indicating whether path evaluation with trace route should be disabled.
+     * 
+     */
     public Optional<Boolean> disableTraceRoute() {
         return Optional.ofNullable(this.disableTraceRoute);
     }
@@ -53,6 +57,12 @@ public final class ConnectionMonitorIcmpConfigurationResponse extends com.pulumi
             $ = new ConnectionMonitorIcmpConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableTraceRoute Value indicating whether path evaluation with trace route should be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
             $.disableTraceRoute = disableTraceRoute;
             return this;

@@ -30,6 +30,10 @@ public final class SsisProjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Metadata description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -41,6 +45,10 @@ public final class SsisProjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="environmentRefs")
     private @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs;
 
+    /**
+     * @return Environment reference in project
+     * 
+     */
     public Optional<List<SsisEnvironmentReferenceResponse>> environmentRefs() {
         return Optional.ofNullable(this.environmentRefs);
     }
@@ -52,6 +60,10 @@ public final class SsisProjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="folderId")
     private @Nullable Double folderId;
 
+    /**
+     * @return Folder id which contains project.
+     * 
+     */
     public Optional<Double> folderId() {
         return Optional.ofNullable(this.folderId);
     }
@@ -63,6 +75,10 @@ public final class SsisProjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable Double id;
 
+    /**
+     * @return Metadata id.
+     * 
+     */
     public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
@@ -74,6 +90,10 @@ public final class SsisProjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Metadata name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -85,6 +105,10 @@ public final class SsisProjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameters")
     private @Nullable List<SsisParameterResponse> parameters;
 
+    /**
+     * @return Parameters in project
+     * 
+     */
     public Optional<List<SsisParameterResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -97,6 +121,11 @@ public final class SsisProjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of SSIS object metadata.
+     * Expected value is &#39;Project&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -108,6 +137,10 @@ public final class SsisProjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version")
     private @Nullable Double version;
 
+    /**
+     * @return Project version.
+     * 
+     */
     public Optional<Double> version() {
         return Optional.ofNullable(this.version);
     }
@@ -143,49 +176,110 @@ public final class SsisProjectResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SsisProjectResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Metadata description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param environmentRefs Environment reference in project
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentRefs(@Nullable List<SsisEnvironmentReferenceResponse> environmentRefs) {
             $.environmentRefs = environmentRefs;
             return this;
         }
 
+        /**
+         * @param environmentRefs Environment reference in project
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentRefs(SsisEnvironmentReferenceResponse... environmentRefs) {
             return environmentRefs(List.of(environmentRefs));
         }
 
+        /**
+         * @param folderId Folder id which contains project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderId(@Nullable Double folderId) {
             $.folderId = folderId;
             return this;
         }
 
+        /**
+         * @param id Metadata id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Double id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Metadata name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameters Parameters in project
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable List<SsisParameterResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters in project
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(SsisParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param type The type of SSIS object metadata.
+         * Expected value is &#39;Project&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param version Project version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Double version) {
             $.version = version;
             return this;

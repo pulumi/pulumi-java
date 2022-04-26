@@ -19,6 +19,10 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="viewName", required=true)
     private String viewName;
 
+    /**
+     * @return View name
+     * 
+     */
     public String viewName() {
         return this.viewName;
     }
@@ -47,6 +51,12 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetViewArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param viewName View name
+         * 
+         * @return builder
+         * 
+         */
         public Builder viewName(String viewName) {
             $.viewName = viewName;
             return this;

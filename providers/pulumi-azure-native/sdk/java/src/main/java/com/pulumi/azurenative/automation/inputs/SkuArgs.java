@@ -29,6 +29,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return Gets or sets the SKU capacity.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -40,6 +44,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="family")
     private @Nullable Output<String> family;
 
+    /**
+     * @return Gets or sets the SKU family.
+     * 
+     */
     public Optional<Output<String>> family() {
         return Optional.ofNullable(this.family);
     }
@@ -51,6 +59,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<Either<String,SkuNameEnum>> name;
 
+    /**
+     * @return Gets or sets the SKU name of the account.
+     * 
+     */
     public Output<Either<String,SkuNameEnum>> name() {
         return this.name;
     }
@@ -81,37 +93,85 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Gets or sets the SKU capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity Gets or sets the SKU capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param family Gets or sets the SKU family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable Output<String> family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param family Gets or sets the SKU family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             return family(Output.of(family));
         }
 
+        /**
+         * @param name Gets or sets the SKU name of the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,SkuNameEnum>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the SKU name of the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,SkuNameEnum> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Gets or sets the SKU name of the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Gets or sets the SKU name of the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SkuNameEnum name) {
             return name(Either.ofRight(name));
         }

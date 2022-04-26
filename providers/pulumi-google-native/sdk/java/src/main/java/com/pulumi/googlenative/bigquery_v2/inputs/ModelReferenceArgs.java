@@ -22,6 +22,10 @@ public final class ModelReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="datasetId")
     private @Nullable Output<String> datasetId;
 
+    /**
+     * @return [Required] The ID of the dataset containing this model.
+     * 
+     */
     public Optional<Output<String>> datasetId() {
         return Optional.ofNullable(this.datasetId);
     }
@@ -33,6 +37,10 @@ public final class ModelReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="modelId")
     private @Nullable Output<String> modelId;
 
+    /**
+     * @return [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+     * 
+     */
     public Optional<Output<String>> modelId() {
         return Optional.ofNullable(this.modelId);
     }
@@ -44,6 +52,10 @@ public final class ModelReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return [Required] The ID of the project containing this model.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -74,29 +86,65 @@ public final class ModelReferenceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ModelReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId [Required] The ID of the dataset containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(@Nullable Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param datasetId [Required] The ID of the dataset containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param modelId [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelId(@Nullable Output<String> modelId) {
             $.modelId = modelId;
             return this;
         }
 
+        /**
+         * @param modelId [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelId(String modelId) {
             return modelId(Output.of(modelId));
         }
 
+        /**
+         * @param project [Required] The ID of the project containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project [Required] The ID of the project containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

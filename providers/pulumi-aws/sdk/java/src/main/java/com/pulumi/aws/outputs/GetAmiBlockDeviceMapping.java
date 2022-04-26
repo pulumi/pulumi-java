@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class GetAmiBlockDeviceMapping {
     /**
-     * The physical name of the device.
+     * @return The physical name of the device.
      * 
      */
     private final String deviceName;
     /**
-     * Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g., `ebs.volume_size` or `ebs[&#34;volume_size&#34;]`) rather than accessed through the first element of a list (e.g., `ebs[0].volume_size`).
+     * @return Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g., `ebs.volume_size` or `ebs[&#34;volume_size&#34;]`) rather than accessed through the first element of a list (e.g., `ebs[0].volume_size`).
      * 
      */
     private final Map<String,String> ebs;
     /**
-     * Suppresses the specified device included in the block device mapping of the AMI.
+     * @return Suppresses the specified device included in the block device mapping of the AMI.
      * 
      */
     private final String noDevice;
     /**
-     * The virtual device name (for instance stores).
+     * @return The virtual device name (for instance stores).
      * 
      */
     private final String virtualName;
@@ -44,30 +44,30 @@ public final class GetAmiBlockDeviceMapping {
     }
 
     /**
-     * The physical name of the device.
+     * @return The physical name of the device.
      * 
-    */
+     */
     public String deviceName() {
         return this.deviceName;
     }
     /**
-     * Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g., `ebs.volume_size` or `ebs[&#34;volume_size&#34;]`) rather than accessed through the first element of a list (e.g., `ebs[0].volume_size`).
+     * @return Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g., `ebs.volume_size` or `ebs[&#34;volume_size&#34;]`) rather than accessed through the first element of a list (e.g., `ebs[0].volume_size`).
      * 
-    */
+     */
     public Map<String,String> ebs() {
         return this.ebs;
     }
     /**
-     * Suppresses the specified device included in the block device mapping of the AMI.
+     * @return Suppresses the specified device included in the block device mapping of the AMI.
      * 
-    */
+     */
     public String noDevice() {
         return this.noDevice;
     }
     /**
-     * The virtual device name (for instance stores).
+     * @return The virtual device name (for instance stores).
      * 
-    */
+     */
     public String virtualName() {
         return this.virtualName;
     }

@@ -24,6 +24,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -35,6 +39,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="customData")
     private @Nullable Output<String> customData;
 
+    /**
+     * @return A custom definition for the USer Definition.
+     * 
+     */
     public Optional<Output<String>> customData() {
         return Optional.ofNullable(this.customData);
     }
@@ -46,6 +54,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return The database name for which access is being granted for this User Definition.
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -57,6 +69,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="mechanisms")
     private @Nullable Output<String> mechanisms;
 
+    /**
+     * @return The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
+     * 
+     */
     public Optional<Output<String>> mechanisms() {
         return Optional.ofNullable(this.mechanisms);
     }
@@ -68,6 +84,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="mongoUserDefinitionId")
     private @Nullable Output<String> mongoUserDefinitionId;
 
+    /**
+     * @return The ID for the User Definition {dbName.userName}.
+     * 
+     */
     public Optional<Output<String>> mongoUserDefinitionId() {
         return Optional.ofNullable(this.mongoUserDefinitionId);
     }
@@ -79,6 +99,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return The password for User Definition. Response does not contain user password.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -90,6 +114,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -101,6 +129,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="roles")
     private @Nullable Output<List<RoleArgs>> roles;
 
+    /**
+     * @return The set of roles inherited by the User Definition.
+     * 
+     */
     public Optional<Output<List<RoleArgs>>> roles() {
         return Optional.ofNullable(this.roles);
     }
@@ -112,6 +144,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="userName")
     private @Nullable Output<String> userName;
 
+    /**
+     * @return The user name for User Definition.
+     * 
+     */
     public Optional<Output<String>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -148,87 +184,201 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
             $ = new MongoDBResourceMongoUserDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param customData A custom definition for the USer Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customData(@Nullable Output<String> customData) {
             $.customData = customData;
             return this;
         }
 
+        /**
+         * @param customData A custom definition for the USer Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customData(String customData) {
             return customData(Output.of(customData));
         }
 
+        /**
+         * @param databaseName The database name for which access is being granted for this User Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The database name for which access is being granted for this User Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param mechanisms The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mechanisms(@Nullable Output<String> mechanisms) {
             $.mechanisms = mechanisms;
             return this;
         }
 
+        /**
+         * @param mechanisms The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mechanisms(String mechanisms) {
             return mechanisms(Output.of(mechanisms));
         }
 
+        /**
+         * @param mongoUserDefinitionId The ID for the User Definition {dbName.userName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mongoUserDefinitionId(@Nullable Output<String> mongoUserDefinitionId) {
             $.mongoUserDefinitionId = mongoUserDefinitionId;
             return this;
         }
 
+        /**
+         * @param mongoUserDefinitionId The ID for the User Definition {dbName.userName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mongoUserDefinitionId(String mongoUserDefinitionId) {
             return mongoUserDefinitionId(Output.of(mongoUserDefinitionId));
         }
 
+        /**
+         * @param password The password for User Definition. Response does not contain user password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password for User Definition. Response does not contain user password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param roles The set of roles inherited by the User Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(@Nullable Output<List<RoleArgs>> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles The set of roles inherited by the User Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(List<RoleArgs> roles) {
             return roles(Output.of(roles));
         }
 
+        /**
+         * @param roles The set of roles inherited by the User Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(RoleArgs... roles) {
             return roles(List.of(roles));
         }
 
+        /**
+         * @param userName The user name for User Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName The user name for User Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

@@ -27,6 +27,10 @@ public final class FlowTriggerConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="triggerProperties")
     private @Nullable Output<FlowScheduledTriggerPropertiesArgs> triggerProperties;
 
+    /**
+     * @return Details required based on the type of trigger
+     * 
+     */
     public Optional<Output<FlowScheduledTriggerPropertiesArgs>> triggerProperties() {
         return Optional.ofNullable(this.triggerProperties);
     }
@@ -38,6 +42,10 @@ public final class FlowTriggerConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="triggerType", required=true)
     private Output<FlowTriggerType> triggerType;
 
+    /**
+     * @return Trigger type of the flow
+     * 
+     */
     public Output<FlowTriggerType> triggerType() {
         return this.triggerType;
     }
@@ -67,20 +75,44 @@ public final class FlowTriggerConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new FlowTriggerConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param triggerProperties Details required based on the type of trigger
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerProperties(@Nullable Output<FlowScheduledTriggerPropertiesArgs> triggerProperties) {
             $.triggerProperties = triggerProperties;
             return this;
         }
 
+        /**
+         * @param triggerProperties Details required based on the type of trigger
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerProperties(FlowScheduledTriggerPropertiesArgs triggerProperties) {
             return triggerProperties(Output.of(triggerProperties));
         }
 
+        /**
+         * @param triggerType Trigger type of the flow
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerType(Output<FlowTriggerType> triggerType) {
             $.triggerType = triggerType;
             return this;
         }
 
+        /**
+         * @param triggerType Trigger type of the flow
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerType(FlowTriggerType triggerType) {
             return triggerType(Output.of(triggerType));
         }

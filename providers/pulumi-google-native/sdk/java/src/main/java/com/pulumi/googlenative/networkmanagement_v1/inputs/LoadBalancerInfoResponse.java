@@ -25,6 +25,10 @@ public final class LoadBalancerInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="backendType", required=true)
     private String backendType;
 
+    /**
+     * @return Type of load balancer&#39;s backend configuration.
+     * 
+     */
     public String backendType() {
         return this.backendType;
     }
@@ -36,6 +40,10 @@ public final class LoadBalancerInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="backendUri", required=true)
     private String backendUri;
 
+    /**
+     * @return Backend configuration URI.
+     * 
+     */
     public String backendUri() {
         return this.backendUri;
     }
@@ -47,6 +55,10 @@ public final class LoadBalancerInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="backends", required=true)
     private List<LoadBalancerBackendResponse> backends;
 
+    /**
+     * @return Information for the loadbalancer backends.
+     * 
+     */
     public List<LoadBalancerBackendResponse> backends() {
         return this.backends;
     }
@@ -58,6 +70,10 @@ public final class LoadBalancerInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="healthCheckUri", required=true)
     private String healthCheckUri;
 
+    /**
+     * @return URI of the health check for the load balancer.
+     * 
+     */
     public String healthCheckUri() {
         return this.healthCheckUri;
     }
@@ -69,6 +85,10 @@ public final class LoadBalancerInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="loadBalancerType", required=true)
     private String loadBalancerType;
 
+    /**
+     * @return Type of the load balancer.
+     * 
+     */
     public String loadBalancerType() {
         return this.loadBalancerType;
     }
@@ -101,30 +121,66 @@ public final class LoadBalancerInfoResponse extends com.pulumi.resources.InvokeA
             $ = new LoadBalancerInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendType Type of load balancer&#39;s backend configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendType(String backendType) {
             $.backendType = backendType;
             return this;
         }
 
+        /**
+         * @param backendUri Backend configuration URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendUri(String backendUri) {
             $.backendUri = backendUri;
             return this;
         }
 
+        /**
+         * @param backends Information for the loadbalancer backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backends(List<LoadBalancerBackendResponse> backends) {
             $.backends = backends;
             return this;
         }
 
+        /**
+         * @param backends Information for the loadbalancer backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backends(LoadBalancerBackendResponse... backends) {
             return backends(List.of(backends));
         }
 
+        /**
+         * @param healthCheckUri URI of the health check for the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckUri(String healthCheckUri) {
             $.healthCheckUri = healthCheckUri;
             return this;
         }
 
+        /**
+         * @param loadBalancerType Type of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerType(String loadBalancerType) {
             $.loadBalancerType = loadBalancerType;
             return this;

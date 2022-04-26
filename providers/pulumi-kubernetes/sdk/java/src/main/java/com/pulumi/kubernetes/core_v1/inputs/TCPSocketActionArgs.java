@@ -28,6 +28,10 @@ public final class TCPSocketActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return Optional: Host name to connect to, defaults to the pod IP.
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -39,6 +43,10 @@ public final class TCPSocketActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="port", required=true)
     private Output<Either<Integer,String>> port;
 
+    /**
+     * @return Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+     * 
+     */
     public Output<Either<Integer,String>> port() {
         return this.port;
     }
@@ -68,28 +76,64 @@ public final class TCPSocketActionArgs extends com.pulumi.resources.ResourceArgs
             $ = new TCPSocketActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host Optional: Host name to connect to, defaults to the pod IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host Optional: Host name to connect to, defaults to the pod IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param port Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Either<Integer,String>> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Either<Integer,String> port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param port Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Either.ofLeft(port));
         }
 
+        /**
+         * @param port Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(String port) {
             return port(Either.ofRight(port));
         }

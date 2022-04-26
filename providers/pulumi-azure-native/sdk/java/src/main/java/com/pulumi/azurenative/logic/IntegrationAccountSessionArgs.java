@@ -24,6 +24,10 @@ public final class IntegrationAccountSessionArgs extends com.pulumi.resources.Re
     @Import(name="content")
     private @Nullable Output<Object> content;
 
+    /**
+     * @return The session content.
+     * 
+     */
     public Optional<Output<Object>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -35,6 +39,10 @@ public final class IntegrationAccountSessionArgs extends com.pulumi.resources.Re
     @Import(name="integrationAccountName", required=true)
     private Output<String> integrationAccountName;
 
+    /**
+     * @return The integration account name.
+     * 
+     */
     public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
@@ -46,6 +54,10 @@ public final class IntegrationAccountSessionArgs extends com.pulumi.resources.Re
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -57,6 +69,10 @@ public final class IntegrationAccountSessionArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class IntegrationAccountSessionArgs extends com.pulumi.resources.Re
     @Import(name="sessionName")
     private @Nullable Output<String> sessionName;
 
+    /**
+     * @return The integration account session name.
+     * 
+     */
     public Optional<Output<String>> sessionName() {
         return Optional.ofNullable(this.sessionName);
     }
@@ -79,6 +99,10 @@ public final class IntegrationAccountSessionArgs extends com.pulumi.resources.Re
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -112,56 +136,128 @@ public final class IntegrationAccountSessionArgs extends com.pulumi.resources.Re
             $ = new IntegrationAccountSessionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The session content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<Object> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The session content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(Object content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(Output<String> integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
             return this;
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(String integrationAccountName) {
             return integrationAccountName(Output.of(integrationAccountName));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sessionName The integration account session name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionName(@Nullable Output<String> sessionName) {
             $.sessionName = sessionName;
             return this;
         }
 
+        /**
+         * @param sessionName The integration account session name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionName(String sessionName) {
             return sessionName(Output.of(sessionName));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

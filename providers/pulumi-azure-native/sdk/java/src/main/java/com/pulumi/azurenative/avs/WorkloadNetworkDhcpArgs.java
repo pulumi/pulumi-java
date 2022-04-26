@@ -25,6 +25,10 @@ public final class WorkloadNetworkDhcpArgs extends com.pulumi.resources.Resource
     @Import(name="dhcpId")
     private @Nullable Output<String> dhcpId;
 
+    /**
+     * @return NSX DHCP identifier. Generally the same as the DHCP display name
+     * 
+     */
     public Optional<Output<String>> dhcpId() {
         return Optional.ofNullable(this.dhcpId);
     }
@@ -36,6 +40,10 @@ public final class WorkloadNetworkDhcpArgs extends com.pulumi.resources.Resource
     @Import(name="dhcpType", required=true)
     private Output<Either<String,DhcpTypeEnum>> dhcpType;
 
+    /**
+     * @return Type of DHCP: SERVER or RELAY.
+     * 
+     */
     public Output<Either<String,DhcpTypeEnum>> dhcpType() {
         return this.dhcpType;
     }
@@ -47,6 +55,10 @@ public final class WorkloadNetworkDhcpArgs extends com.pulumi.resources.Resource
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of the DHCP entity.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -58,6 +70,10 @@ public final class WorkloadNetworkDhcpArgs extends com.pulumi.resources.Resource
     @Import(name="privateCloudName", required=true)
     private Output<String> privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
@@ -69,6 +85,10 @@ public final class WorkloadNetworkDhcpArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -80,6 +100,10 @@ public final class WorkloadNetworkDhcpArgs extends com.pulumi.resources.Resource
     @Import(name="revision")
     private @Nullable Output<Double> revision;
 
+    /**
+     * @return NSX revision number.
+     * 
+     */
     public Optional<Output<Double>> revision() {
         return Optional.ofNullable(this.revision);
     }
@@ -113,64 +137,148 @@ public final class WorkloadNetworkDhcpArgs extends com.pulumi.resources.Resource
             $ = new WorkloadNetworkDhcpArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dhcpId NSX DHCP identifier. Generally the same as the DHCP display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpId(@Nullable Output<String> dhcpId) {
             $.dhcpId = dhcpId;
             return this;
         }
 
+        /**
+         * @param dhcpId NSX DHCP identifier. Generally the same as the DHCP display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpId(String dhcpId) {
             return dhcpId(Output.of(dhcpId));
         }
 
+        /**
+         * @param dhcpType Type of DHCP: SERVER or RELAY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpType(Output<Either<String,DhcpTypeEnum>> dhcpType) {
             $.dhcpType = dhcpType;
             return this;
         }
 
+        /**
+         * @param dhcpType Type of DHCP: SERVER or RELAY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpType(Either<String,DhcpTypeEnum> dhcpType) {
             return dhcpType(Output.of(dhcpType));
         }
 
+        /**
+         * @param dhcpType Type of DHCP: SERVER or RELAY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpType(String dhcpType) {
             return dhcpType(Either.ofLeft(dhcpType));
         }
 
+        /**
+         * @param dhcpType Type of DHCP: SERVER or RELAY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpType(DhcpTypeEnum dhcpType) {
             return dhcpType(Either.ofRight(dhcpType));
         }
 
+        /**
+         * @param displayName Display name of the DHCP entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the DHCP entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param revision NSX revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(@Nullable Output<Double> revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param revision NSX revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(Double revision) {
             return revision(Output.of(revision));
         }

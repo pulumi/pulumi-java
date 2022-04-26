@@ -23,6 +23,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the Batch account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -34,6 +38,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowUpdates")
     private @Nullable Output<Boolean> allowUpdates;
 
+    /**
+     * @return A value indicating whether packages within the application may be overwritten using the same version string.
+     * 
+     */
     public Optional<Output<Boolean>> allowUpdates() {
         return Optional.ofNullable(this.allowUpdates);
     }
@@ -45,6 +53,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationName")
     private @Nullable Output<String> applicationName;
 
+    /**
+     * @return The name of the application. This must be unique within the account.
+     * 
+     */
     public Optional<Output<String>> applicationName() {
         return Optional.ofNullable(this.applicationName);
     }
@@ -56,6 +68,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultVersion")
     private @Nullable Output<String> defaultVersion;
 
+    /**
+     * @return The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
+     * 
+     */
     public Optional<Output<String>> defaultVersion() {
         return Optional.ofNullable(this.defaultVersion);
     }
@@ -67,6 +83,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name for the application.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -78,6 +98,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the Batch account.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -111,56 +135,128 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param allowUpdates A value indicating whether packages within the application may be overwritten using the same version string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowUpdates(@Nullable Output<Boolean> allowUpdates) {
             $.allowUpdates = allowUpdates;
             return this;
         }
 
+        /**
+         * @param allowUpdates A value indicating whether packages within the application may be overwritten using the same version string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowUpdates(Boolean allowUpdates) {
             return allowUpdates(Output.of(allowUpdates));
         }
 
+        /**
+         * @param applicationName The name of the application. This must be unique within the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(@Nullable Output<String> applicationName) {
             $.applicationName = applicationName;
             return this;
         }
 
+        /**
+         * @param applicationName The name of the application. This must be unique within the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(String applicationName) {
             return applicationName(Output.of(applicationName));
         }
 
+        /**
+         * @param defaultVersion The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultVersion(@Nullable Output<String> defaultVersion) {
             $.defaultVersion = defaultVersion;
             return this;
         }
 
+        /**
+         * @param defaultVersion The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultVersion(String defaultVersion) {
             return defaultVersion(Output.of(defaultVersion));
         }
 
+        /**
+         * @param displayName The display name for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

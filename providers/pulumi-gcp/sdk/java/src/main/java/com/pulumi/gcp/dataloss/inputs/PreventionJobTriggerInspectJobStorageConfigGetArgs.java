@@ -26,6 +26,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigGetArgs extends co
     @Import(name="bigQueryOptions")
     private @Nullable Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs> bigQueryOptions;
 
+    /**
+     * @return Options defining BigQuery table and row identifiers.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs>> bigQueryOptions() {
         return Optional.ofNullable(this.bigQueryOptions);
     }
@@ -38,6 +43,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigGetArgs extends co
     @Import(name="cloudStorageOptions")
     private @Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs> cloudStorageOptions;
 
+    /**
+     * @return Options defining a file or a set of files within a Google Cloud Storage bucket.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs>> cloudStorageOptions() {
         return Optional.ofNullable(this.cloudStorageOptions);
     }
@@ -50,6 +60,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigGetArgs extends co
     @Import(name="datastoreOptions")
     private @Nullable Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs> datastoreOptions;
 
+    /**
+     * @return Options defining a data set within Google Cloud Datastore.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs>> datastoreOptions() {
         return Optional.ofNullable(this.datastoreOptions);
     }
@@ -62,6 +77,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigGetArgs extends co
     @Import(name="timespanConfig")
     private @Nullable Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetArgs> timespanConfig;
 
+    /**
+     * @return Information on where to inspect
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetArgs>> timespanConfig() {
         return Optional.ofNullable(this.timespanConfig);
     }
@@ -93,38 +113,94 @@ public final class PreventionJobTriggerInspectJobStorageConfigGetArgs extends co
             $ = new PreventionJobTriggerInspectJobStorageConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigQueryOptions Options defining BigQuery table and row identifiers.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigQueryOptions(@Nullable Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs> bigQueryOptions) {
             $.bigQueryOptions = bigQueryOptions;
             return this;
         }
 
+        /**
+         * @param bigQueryOptions Options defining BigQuery table and row identifiers.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigQueryOptions(PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs bigQueryOptions) {
             return bigQueryOptions(Output.of(bigQueryOptions));
         }
 
+        /**
+         * @param cloudStorageOptions Options defining a file or a set of files within a Google Cloud Storage bucket.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudStorageOptions(@Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs> cloudStorageOptions) {
             $.cloudStorageOptions = cloudStorageOptions;
             return this;
         }
 
+        /**
+         * @param cloudStorageOptions Options defining a file or a set of files within a Google Cloud Storage bucket.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudStorageOptions(PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs cloudStorageOptions) {
             return cloudStorageOptions(Output.of(cloudStorageOptions));
         }
 
+        /**
+         * @param datastoreOptions Options defining a data set within Google Cloud Datastore.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreOptions(@Nullable Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs> datastoreOptions) {
             $.datastoreOptions = datastoreOptions;
             return this;
         }
 
+        /**
+         * @param datastoreOptions Options defining a data set within Google Cloud Datastore.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreOptions(PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs datastoreOptions) {
             return datastoreOptions(Output.of(datastoreOptions));
         }
 
+        /**
+         * @param timespanConfig Information on where to inspect
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timespanConfig(@Nullable Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetArgs> timespanConfig) {
             $.timespanConfig = timespanConfig;
             return this;
         }
 
+        /**
+         * @param timespanConfig Information on where to inspect
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timespanConfig(PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetArgs timespanConfig) {
             return timespanConfig(Output.of(timespanConfig));
         }

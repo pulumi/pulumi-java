@@ -24,6 +24,10 @@ public final class DynamicThresholdFailingPeriodsArgs extends com.pulumi.resourc
     @Import(name="minFailingPeriodsToAlert", required=true)
     private Output<Double> minFailingPeriodsToAlert;
 
+    /**
+     * @return The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.
+     * 
+     */
     public Output<Double> minFailingPeriodsToAlert() {
         return this.minFailingPeriodsToAlert;
     }
@@ -35,6 +39,10 @@ public final class DynamicThresholdFailingPeriodsArgs extends com.pulumi.resourc
     @Import(name="numberOfEvaluationPeriods", required=true)
     private Output<Double> numberOfEvaluationPeriods;
 
+    /**
+     * @return The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.
+     * 
+     */
     public Output<Double> numberOfEvaluationPeriods() {
         return this.numberOfEvaluationPeriods;
     }
@@ -64,20 +72,44 @@ public final class DynamicThresholdFailingPeriodsArgs extends com.pulumi.resourc
             $ = new DynamicThresholdFailingPeriodsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minFailingPeriodsToAlert The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minFailingPeriodsToAlert(Output<Double> minFailingPeriodsToAlert) {
             $.minFailingPeriodsToAlert = minFailingPeriodsToAlert;
             return this;
         }
 
+        /**
+         * @param minFailingPeriodsToAlert The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minFailingPeriodsToAlert(Double minFailingPeriodsToAlert) {
             return minFailingPeriodsToAlert(Output.of(minFailingPeriodsToAlert));
         }
 
+        /**
+         * @param numberOfEvaluationPeriods The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfEvaluationPeriods(Output<Double> numberOfEvaluationPeriods) {
             $.numberOfEvaluationPeriods = numberOfEvaluationPeriods;
             return this;
         }
 
+        /**
+         * @param numberOfEvaluationPeriods The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfEvaluationPeriods(Double numberOfEvaluationPeriods) {
             return numberOfEvaluationPeriods(Output.of(numberOfEvaluationPeriods));
         }

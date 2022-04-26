@@ -25,6 +25,10 @@ public final class VpcEndpointServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="acceptanceRequired", required=true)
     private Output<Boolean> acceptanceRequired;
 
+    /**
+     * @return Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
+     * 
+     */
     public Output<Boolean> acceptanceRequired() {
         return this.acceptanceRequired;
     }
@@ -36,6 +40,10 @@ public final class VpcEndpointServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="allowedPrincipals")
     private @Nullable Output<List<String>> allowedPrincipals;
 
+    /**
+     * @return The ARNs of one or more principals allowed to discover the endpoint service.
+     * 
+     */
     public Optional<Output<List<String>>> allowedPrincipals() {
         return Optional.ofNullable(this.allowedPrincipals);
     }
@@ -47,6 +55,10 @@ public final class VpcEndpointServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="gatewayLoadBalancerArns")
     private @Nullable Output<List<String>> gatewayLoadBalancerArns;
 
+    /**
+     * @return Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
+     * 
+     */
     public Optional<Output<List<String>>> gatewayLoadBalancerArns() {
         return Optional.ofNullable(this.gatewayLoadBalancerArns);
     }
@@ -58,6 +70,10 @@ public final class VpcEndpointServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="networkLoadBalancerArns")
     private @Nullable Output<List<String>> networkLoadBalancerArns;
 
+    /**
+     * @return Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
+     * 
+     */
     public Optional<Output<List<String>>> networkLoadBalancerArns() {
         return Optional.ofNullable(this.networkLoadBalancerArns);
     }
@@ -69,6 +85,10 @@ public final class VpcEndpointServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="privateDnsName")
     private @Nullable Output<String> privateDnsName;
 
+    /**
+     * @return The private DNS name for the service.
+     * 
+     */
     public Optional<Output<String>> privateDnsName() {
         return Optional.ofNullable(this.privateDnsName);
     }
@@ -80,6 +100,10 @@ public final class VpcEndpointServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,68 +137,158 @@ public final class VpcEndpointServiceArgs extends com.pulumi.resources.ResourceA
             $ = new VpcEndpointServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceptanceRequired Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptanceRequired(Output<Boolean> acceptanceRequired) {
             $.acceptanceRequired = acceptanceRequired;
             return this;
         }
 
+        /**
+         * @param acceptanceRequired Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptanceRequired(Boolean acceptanceRequired) {
             return acceptanceRequired(Output.of(acceptanceRequired));
         }
 
+        /**
+         * @param allowedPrincipals The ARNs of one or more principals allowed to discover the endpoint service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPrincipals(@Nullable Output<List<String>> allowedPrincipals) {
             $.allowedPrincipals = allowedPrincipals;
             return this;
         }
 
+        /**
+         * @param allowedPrincipals The ARNs of one or more principals allowed to discover the endpoint service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPrincipals(List<String> allowedPrincipals) {
             return allowedPrincipals(Output.of(allowedPrincipals));
         }
 
+        /**
+         * @param allowedPrincipals The ARNs of one or more principals allowed to discover the endpoint service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPrincipals(String... allowedPrincipals) {
             return allowedPrincipals(List.of(allowedPrincipals));
         }
 
+        /**
+         * @param gatewayLoadBalancerArns Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayLoadBalancerArns(@Nullable Output<List<String>> gatewayLoadBalancerArns) {
             $.gatewayLoadBalancerArns = gatewayLoadBalancerArns;
             return this;
         }
 
+        /**
+         * @param gatewayLoadBalancerArns Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayLoadBalancerArns(List<String> gatewayLoadBalancerArns) {
             return gatewayLoadBalancerArns(Output.of(gatewayLoadBalancerArns));
         }
 
+        /**
+         * @param gatewayLoadBalancerArns Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayLoadBalancerArns(String... gatewayLoadBalancerArns) {
             return gatewayLoadBalancerArns(List.of(gatewayLoadBalancerArns));
         }
 
+        /**
+         * @param networkLoadBalancerArns Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkLoadBalancerArns(@Nullable Output<List<String>> networkLoadBalancerArns) {
             $.networkLoadBalancerArns = networkLoadBalancerArns;
             return this;
         }
 
+        /**
+         * @param networkLoadBalancerArns Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkLoadBalancerArns(List<String> networkLoadBalancerArns) {
             return networkLoadBalancerArns(Output.of(networkLoadBalancerArns));
         }
 
+        /**
+         * @param networkLoadBalancerArns Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkLoadBalancerArns(String... networkLoadBalancerArns) {
             return networkLoadBalancerArns(List.of(networkLoadBalancerArns));
         }
 
+        /**
+         * @param privateDnsName The private DNS name for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateDnsName(@Nullable Output<String> privateDnsName) {
             $.privateDnsName = privateDnsName;
             return this;
         }
 
+        /**
+         * @param privateDnsName The private DNS name for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateDnsName(String privateDnsName) {
             return privateDnsName(Output.of(privateDnsName));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

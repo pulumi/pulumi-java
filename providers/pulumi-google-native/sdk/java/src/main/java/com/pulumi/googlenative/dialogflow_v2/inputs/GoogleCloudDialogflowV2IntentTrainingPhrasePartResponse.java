@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse exten
     @Import(name="alias", required=true)
     private String alias;
 
+    /**
+     * @return Optional. The parameter name for the value extracted from the annotated part of the example. This field is required for annotated parts of the training phrase.
+     * 
+     */
     public String alias() {
         return this.alias;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse exten
     @Import(name="entityType", required=true)
     private String entityType;
 
+    /**
+     * @return Optional. The entity type name prefixed with `@`. This field is required for annotated parts of the training phrase.
+     * 
+     */
     public String entityType() {
         return this.entityType;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse exten
     @Import(name="text", required=true)
     private String text;
 
+    /**
+     * @return The text for this part.
+     * 
+     */
     public String text() {
         return this.text;
     }
@@ -57,6 +69,10 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse exten
     @Import(name="userDefined", required=true)
     private Boolean userDefined;
 
+    /**
+     * @return Optional. Indicates whether the text was manually annotated. This field is set to true when the Dialogflow Console is used to manually annotate the part. When creating an annotated part with the API, you must set this to true.
+     * 
+     */
     public Boolean userDefined() {
         return this.userDefined;
     }
@@ -88,21 +104,45 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse exten
             $ = new GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alias Optional. The parameter name for the value extracted from the annotated part of the example. This field is required for annotated parts of the training phrase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param entityType Optional. The entity type name prefixed with `@`. This field is required for annotated parts of the training phrase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityType(String entityType) {
             $.entityType = entityType;
             return this;
         }
 
+        /**
+         * @param text The text for this part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param userDefined Optional. Indicates whether the text was manually annotated. This field is set to true when the Dialogflow Console is used to manually annotate the part. When creating an annotated part with the API, you must set this to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDefined(Boolean userDefined) {
             $.userDefined = userDefined;
             return this;

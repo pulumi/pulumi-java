@@ -25,6 +25,10 @@ public final class BigtableColumnFamilyArgs extends com.pulumi.resources.Resourc
     @Import(name="columns")
     private @Nullable Output<List<BigtableColumnArgs>> columns;
 
+    /**
+     * @return [Optional] Lists of columns that should be exposed as individual fields as opposed to a list of (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be accessed as .. Other columns can be accessed as a list through .Column field.
+     * 
+     */
     public Optional<Output<List<BigtableColumnArgs>>> columns() {
         return Optional.ofNullable(this.columns);
     }
@@ -36,6 +40,10 @@ public final class BigtableColumnFamilyArgs extends com.pulumi.resources.Resourc
     @Import(name="encoding")
     private @Nullable Output<String> encoding;
 
+    /**
+     * @return [Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific column by listing that column in &#39;columns&#39; and specifying an encoding for it.
+     * 
+     */
     public Optional<Output<String>> encoding() {
         return Optional.ofNullable(this.encoding);
     }
@@ -47,6 +55,10 @@ public final class BigtableColumnFamilyArgs extends com.pulumi.resources.Resourc
     @Import(name="familyId")
     private @Nullable Output<String> familyId;
 
+    /**
+     * @return Identifier of the column family.
+     * 
+     */
     public Optional<Output<String>> familyId() {
         return Optional.ofNullable(this.familyId);
     }
@@ -58,6 +70,10 @@ public final class BigtableColumnFamilyArgs extends com.pulumi.resources.Resourc
     @Import(name="onlyReadLatest")
     private @Nullable Output<Boolean> onlyReadLatest;
 
+    /**
+     * @return [Optional] If this is set only the latest version of value are exposed for all columns in this column family. This can be overridden for a specific column by listing that column in &#39;columns&#39; and specifying a different setting for that column.
+     * 
+     */
     public Optional<Output<Boolean>> onlyReadLatest() {
         return Optional.ofNullable(this.onlyReadLatest);
     }
@@ -69,6 +85,10 @@ public final class BigtableColumnFamilyArgs extends com.pulumi.resources.Resourc
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return [Optional] The type to convert the value in cells of this column family. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. This can be overridden for a specific column by listing that column in &#39;columns&#39; and specifying a type for it.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -101,51 +121,117 @@ public final class BigtableColumnFamilyArgs extends com.pulumi.resources.Resourc
             $ = new BigtableColumnFamilyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns [Optional] Lists of columns that should be exposed as individual fields as opposed to a list of (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be accessed as .. Other columns can be accessed as a list through .Column field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(@Nullable Output<List<BigtableColumnArgs>> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns [Optional] Lists of columns that should be exposed as individual fields as opposed to a list of (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be accessed as .. Other columns can be accessed as a list through .Column field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(List<BigtableColumnArgs> columns) {
             return columns(Output.of(columns));
         }
 
+        /**
+         * @param columns [Optional] Lists of columns that should be exposed as individual fields as opposed to a list of (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be accessed as .. Other columns can be accessed as a list through .Column field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(BigtableColumnArgs... columns) {
             return columns(List.of(columns));
         }
 
+        /**
+         * @param encoding [Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific column by listing that column in &#39;columns&#39; and specifying an encoding for it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(@Nullable Output<String> encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param encoding [Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific column by listing that column in &#39;columns&#39; and specifying an encoding for it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(String encoding) {
             return encoding(Output.of(encoding));
         }
 
+        /**
+         * @param familyId Identifier of the column family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder familyId(@Nullable Output<String> familyId) {
             $.familyId = familyId;
             return this;
         }
 
+        /**
+         * @param familyId Identifier of the column family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder familyId(String familyId) {
             return familyId(Output.of(familyId));
         }
 
+        /**
+         * @param onlyReadLatest [Optional] If this is set only the latest version of value are exposed for all columns in this column family. This can be overridden for a specific column by listing that column in &#39;columns&#39; and specifying a different setting for that column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlyReadLatest(@Nullable Output<Boolean> onlyReadLatest) {
             $.onlyReadLatest = onlyReadLatest;
             return this;
         }
 
+        /**
+         * @param onlyReadLatest [Optional] If this is set only the latest version of value are exposed for all columns in this column family. This can be overridden for a specific column by listing that column in &#39;columns&#39; and specifying a different setting for that column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlyReadLatest(Boolean onlyReadLatest) {
             return onlyReadLatest(Output.of(onlyReadLatest));
         }
 
+        /**
+         * @param type [Optional] The type to convert the value in cells of this column family. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. This can be overridden for a specific column by listing that column in &#39;columns&#39; and specifying a type for it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type [Optional] The type to convert the value in cells of this column family. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. This can be overridden for a specific column by listing that column in &#39;columns&#39; and specifying a type for it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

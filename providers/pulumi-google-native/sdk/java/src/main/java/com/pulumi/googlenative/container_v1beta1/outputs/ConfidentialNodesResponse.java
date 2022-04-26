@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ConfidentialNodesResponse {
     /**
-     * Whether Confidential Nodes feature is enabled.
+     * @return Whether Confidential Nodes feature is enabled.
      * 
      */
     private final Boolean enabled;
@@ -21,9 +21,9 @@ public final class ConfidentialNodesResponse {
     }
 
     /**
-     * Whether Confidential Nodes feature is enabled.
+     * @return Whether Confidential Nodes feature is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

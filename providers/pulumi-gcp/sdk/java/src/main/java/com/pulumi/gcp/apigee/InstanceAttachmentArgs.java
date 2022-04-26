@@ -20,6 +20,10 @@ public final class InstanceAttachmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="environment", required=true)
     private Output<String> environment;
 
+    /**
+     * @return The resource ID of the environment.
+     * 
+     */
     public Output<String> environment() {
         return this.environment;
     }
@@ -32,6 +36,11 @@ public final class InstanceAttachmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="instanceId", required=true)
     private Output<String> instanceId;
 
+    /**
+     * @return The Apigee instance associated with the Apigee environment,
+     * in the format `organisations/{{org_name}}/instances/{{instance_name}}`.
+     * 
+     */
     public Output<String> instanceId() {
         return this.instanceId;
     }
@@ -61,20 +70,46 @@ public final class InstanceAttachmentArgs extends com.pulumi.resources.ResourceA
             $ = new InstanceAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environment The resource ID of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(Output<String> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment The resource ID of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(String environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param instanceId The Apigee instance associated with the Apigee environment,
+         * in the format `organisations/{{org_name}}/instances/{{instance_name}}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId The Apigee instance associated with the Apigee environment,
+         * in the format `organisations/{{org_name}}/instances/{{instance_name}}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }

@@ -22,6 +22,10 @@ public final class RegionDiskResourcePolicyAttachmentArgs extends com.pulumi.res
     @Import(name="disk", required=true)
     private Output<String> disk;
 
+    /**
+     * @return The name of the regional disk in which the resource policies are attached to.
+     * 
+     */
     public Output<String> disk() {
         return this.disk;
     }
@@ -34,6 +38,11 @@ public final class RegionDiskResourcePolicyAttachmentArgs extends com.pulumi.res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource policy to be attached to the disk for scheduling snapshot
+     * creation. Do not specify the self link.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +55,11 @@ public final class RegionDiskResourcePolicyAttachmentArgs extends com.pulumi.res
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -57,6 +71,10 @@ public final class RegionDiskResourcePolicyAttachmentArgs extends com.pulumi.res
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return A reference to the region where the disk resides.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -88,38 +106,90 @@ public final class RegionDiskResourcePolicyAttachmentArgs extends com.pulumi.res
             $ = new RegionDiskResourcePolicyAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disk The name of the regional disk in which the resource policies are attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disk(Output<String> disk) {
             $.disk = disk;
             return this;
         }
 
+        /**
+         * @param disk The name of the regional disk in which the resource policies are attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disk(String disk) {
             return disk(Output.of(disk));
         }
 
+        /**
+         * @param name The resource policy to be attached to the disk for scheduling snapshot
+         * creation. Do not specify the self link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource policy to be attached to the disk for scheduling snapshot
+         * creation. Do not specify the self link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region A reference to the region where the disk resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region A reference to the region where the disk resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }

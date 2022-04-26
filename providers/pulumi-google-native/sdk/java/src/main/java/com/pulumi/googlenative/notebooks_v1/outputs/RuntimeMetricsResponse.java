@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class RuntimeMetricsResponse {
     /**
-     * The system metrics.
+     * @return The system metrics.
      * 
      */
     private final Map<String,String> systemMetrics;
@@ -22,9 +22,9 @@ public final class RuntimeMetricsResponse {
     }
 
     /**
-     * The system metrics.
+     * @return The system metrics.
      * 
-    */
+     */
     public Map<String,String> systemMetrics() {
         return this.systemMetrics;
     }

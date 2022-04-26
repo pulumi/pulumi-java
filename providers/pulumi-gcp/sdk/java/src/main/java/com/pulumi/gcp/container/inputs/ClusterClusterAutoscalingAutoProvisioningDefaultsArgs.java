@@ -24,6 +24,11 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
     @Import(name="imageType")
     private @Nullable Output<String> imageType;
 
+    /**
+     * @return The image type to use for this node. Note that changing the image type
+     * will delete and recreate all nodes in the node pool.
+     * 
+     */
     public Optional<Output<String>> imageType() {
         return Optional.ofNullable(this.imageType);
     }
@@ -39,6 +44,14 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
     @Import(name="minCpuPlatform")
     private @Nullable Output<String> minCpuPlatform;
 
+    /**
+     * @return Minimum CPU platform to be used by this instance.
+     * The instance may be scheduled on the specified or newer CPU platform. Applicable
+     * values are the friendly names of CPU platforms, such as `Intel Haswell`. See the
+     * [official documentation](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+     * for more information.
+     * 
+     */
     public Optional<Output<String>> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
@@ -52,6 +65,12 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
     @Import(name="oauthScopes")
     private @Nullable Output<List<String>> oauthScopes;
 
+    /**
+     * @return The set of Google API scopes to be made available
+     * on all of the node VMs under the &#34;default&#34; service account.
+     * Use the &#34;https://www.googleapis.com/auth/cloud-platform&#34; scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
+     * 
+     */
     public Optional<Output<List<String>>> oauthScopes() {
         return Optional.ofNullable(this.oauthScopes);
     }
@@ -64,6 +83,11 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
     @Import(name="serviceAccount")
     private @Nullable Output<String> serviceAccount;
 
+    /**
+     * @return The service account to be used by the Node VMs.
+     * If not specified, the &#34;default&#34; service account is used.
+     * 
+     */
     public Optional<Output<String>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -95,42 +119,114 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
             $ = new ClusterClusterAutoscalingAutoProvisioningDefaultsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageType The image type to use for this node. Note that changing the image type
+         * will delete and recreate all nodes in the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageType(@Nullable Output<String> imageType) {
             $.imageType = imageType;
             return this;
         }
 
+        /**
+         * @param imageType The image type to use for this node. Note that changing the image type
+         * will delete and recreate all nodes in the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageType(String imageType) {
             return imageType(Output.of(imageType));
         }
 
+        /**
+         * @param minCpuPlatform Minimum CPU platform to be used by this instance.
+         * The instance may be scheduled on the specified or newer CPU platform. Applicable
+         * values are the friendly names of CPU platforms, such as `Intel Haswell`. See the
+         * [official documentation](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+         * for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform Minimum CPU platform to be used by this instance.
+         * The instance may be scheduled on the specified or newer CPU platform. Applicable
+         * values are the friendly names of CPU platforms, such as `Intel Haswell`. See the
+         * [official documentation](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+         * for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             return minCpuPlatform(Output.of(minCpuPlatform));
         }
 
+        /**
+         * @param oauthScopes The set of Google API scopes to be made available
+         * on all of the node VMs under the &#34;default&#34; service account.
+         * Use the &#34;https://www.googleapis.com/auth/cloud-platform&#34; scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
             $.oauthScopes = oauthScopes;
             return this;
         }
 
+        /**
+         * @param oauthScopes The set of Google API scopes to be made available
+         * on all of the node VMs under the &#34;default&#34; service account.
+         * Use the &#34;https://www.googleapis.com/auth/cloud-platform&#34; scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthScopes(List<String> oauthScopes) {
             return oauthScopes(Output.of(oauthScopes));
         }
 
+        /**
+         * @param oauthScopes The set of Google API scopes to be made available
+         * on all of the node VMs under the &#34;default&#34; service account.
+         * Use the &#34;https://www.googleapis.com/auth/cloud-platform&#34; scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthScopes(String... oauthScopes) {
             return oauthScopes(List.of(oauthScopes));
         }
 
+        /**
+         * @param serviceAccount The service account to be used by the Node VMs.
+         * If not specified, the &#34;default&#34; service account is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount The service account to be used by the Node VMs.
+         * If not specified, the &#34;default&#34; service account is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }

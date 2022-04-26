@@ -13,22 +13,22 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse {
     /**
-     * Optional. Indicates whether text to speech is enabled. Even when this field is false, other settings in this proto are still retained.
+     * @return Optional. Indicates whether text to speech is enabled. Even when this field is false, other settings in this proto are still retained.
      * 
      */
     private final Boolean enableTextToSpeech;
     /**
-     * Audio encoding of the synthesized audio content.
+     * @return Audio encoding of the synthesized audio content.
      * 
      */
     private final String outputAudioEncoding;
     /**
-     * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice&#39;s natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
+     * @return Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice&#39;s natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
      * 
      */
     private final Integer sampleRateHertz;
     /**
-     * Optional. Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
+     * @return Optional. Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
      * 
      */
     private final Map<String,String> synthesizeSpeechConfigs;
@@ -46,30 +46,30 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse {
     }
 
     /**
-     * Optional. Indicates whether text to speech is enabled. Even when this field is false, other settings in this proto are still retained.
+     * @return Optional. Indicates whether text to speech is enabled. Even when this field is false, other settings in this proto are still retained.
      * 
-    */
+     */
     public Boolean enableTextToSpeech() {
         return this.enableTextToSpeech;
     }
     /**
-     * Audio encoding of the synthesized audio content.
+     * @return Audio encoding of the synthesized audio content.
      * 
-    */
+     */
     public String outputAudioEncoding() {
         return this.outputAudioEncoding;
     }
     /**
-     * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice&#39;s natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
+     * @return Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice&#39;s natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
      * 
-    */
+     */
     public Integer sampleRateHertz() {
         return this.sampleRateHertz;
     }
     /**
-     * Optional. Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
+     * @return Optional. Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
      * 
-    */
+     */
     public Map<String,String> synthesizeSpeechConfigs() {
         return this.synthesizeSpeechConfigs;
     }

@@ -26,6 +26,10 @@ public final class CompensationEntryResponse extends com.pulumi.resources.Invoke
     @Import(name="amount", required=true)
     private MoneyResponse amount;
 
+    /**
+     * @return Optional. Compensation amount.
+     * 
+     */
     public MoneyResponse amount() {
         return this.amount;
     }
@@ -37,6 +41,10 @@ public final class CompensationEntryResponse extends com.pulumi.resources.Invoke
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Optional. Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -48,6 +56,10 @@ public final class CompensationEntryResponse extends com.pulumi.resources.Invoke
     @Import(name="expectedUnitsPerYear", required=true)
     private Double expectedUnitsPerYear;
 
+    /**
+     * @return Optional. Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
+     * 
+     */
     public Double expectedUnitsPerYear() {
         return this.expectedUnitsPerYear;
     }
@@ -59,6 +71,10 @@ public final class CompensationEntryResponse extends com.pulumi.resources.Invoke
     @Import(name="range", required=true)
     private CompensationRangeResponse range;
 
+    /**
+     * @return Optional. Compensation range.
+     * 
+     */
     public CompensationRangeResponse range() {
         return this.range;
     }
@@ -70,6 +86,10 @@ public final class CompensationEntryResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -81,6 +101,10 @@ public final class CompensationEntryResponse extends com.pulumi.resources.Invoke
     @Import(name="unit", required=true)
     private String unit;
 
+    /**
+     * @return Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
+     * 
+     */
     public String unit() {
         return this.unit;
     }
@@ -114,31 +138,67 @@ public final class CompensationEntryResponse extends com.pulumi.resources.Invoke
             $ = new CompensationEntryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amount Optional. Compensation amount.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(MoneyResponse amount) {
             $.amount = amount;
             return this;
         }
 
+        /**
+         * @param description Optional. Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param expectedUnitsPerYear Optional. Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedUnitsPerYear(Double expectedUnitsPerYear) {
             $.expectedUnitsPerYear = expectedUnitsPerYear;
             return this;
         }
 
+        /**
+         * @param range Optional. Compensation range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(CompensationRangeResponse range) {
             $.range = range;
             return this;
         }
 
+        /**
+         * @param type Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param unit Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(String unit) {
             $.unit = unit;
             return this;

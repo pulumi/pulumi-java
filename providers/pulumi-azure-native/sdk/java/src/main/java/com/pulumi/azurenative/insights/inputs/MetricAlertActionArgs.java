@@ -27,6 +27,10 @@ public final class MetricAlertActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="actionGroupId")
     private @Nullable Output<String> actionGroupId;
 
+    /**
+     * @return the id of the action group to use.
+     * 
+     */
     public Optional<Output<String>> actionGroupId() {
         return Optional.ofNullable(this.actionGroupId);
     }
@@ -38,6 +42,10 @@ public final class MetricAlertActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="webHookProperties")
     private @Nullable Output<Map<String,String>> webHookProperties;
 
+    /**
+     * @return This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.
+     * 
+     */
     public Optional<Output<Map<String,String>>> webHookProperties() {
         return Optional.ofNullable(this.webHookProperties);
     }
@@ -67,20 +75,44 @@ public final class MetricAlertActionArgs extends com.pulumi.resources.ResourceAr
             $ = new MetricAlertActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionGroupId the id of the action group to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroupId(@Nullable Output<String> actionGroupId) {
             $.actionGroupId = actionGroupId;
             return this;
         }
 
+        /**
+         * @param actionGroupId the id of the action group to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroupId(String actionGroupId) {
             return actionGroupId(Output.of(actionGroupId));
         }
 
+        /**
+         * @param webHookProperties This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webHookProperties(@Nullable Output<Map<String,String>> webHookProperties) {
             $.webHookProperties = webHookProperties;
             return this;
         }
 
+        /**
+         * @param webHookProperties This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webHookProperties(Map<String,String> webHookProperties) {
             return webHookProperties(Output.of(webHookProperties));
         }

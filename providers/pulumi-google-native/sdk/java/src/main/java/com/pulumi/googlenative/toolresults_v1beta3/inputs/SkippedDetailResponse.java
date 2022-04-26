@@ -23,6 +23,10 @@ public final class SkippedDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="incompatibleAppVersion", required=true)
     private Boolean incompatibleAppVersion;
 
+    /**
+     * @return If the App doesn&#39;t support the specific API level.
+     * 
+     */
     public Boolean incompatibleAppVersion() {
         return this.incompatibleAppVersion;
     }
@@ -34,6 +38,10 @@ public final class SkippedDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="incompatibleArchitecture", required=true)
     private Boolean incompatibleArchitecture;
 
+    /**
+     * @return If the App doesn&#39;t run on the specific architecture, for example, x86.
+     * 
+     */
     public Boolean incompatibleArchitecture() {
         return this.incompatibleArchitecture;
     }
@@ -45,6 +53,10 @@ public final class SkippedDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="incompatibleDevice", required=true)
     private Boolean incompatibleDevice;
 
+    /**
+     * @return If the requested OS version doesn&#39;t run on the specific device model.
+     * 
+     */
     public Boolean incompatibleDevice() {
         return this.incompatibleDevice;
     }
@@ -75,16 +87,34 @@ public final class SkippedDetailResponse extends com.pulumi.resources.InvokeArgs
             $ = new SkippedDetailResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param incompatibleAppVersion If the App doesn&#39;t support the specific API level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incompatibleAppVersion(Boolean incompatibleAppVersion) {
             $.incompatibleAppVersion = incompatibleAppVersion;
             return this;
         }
 
+        /**
+         * @param incompatibleArchitecture If the App doesn&#39;t run on the specific architecture, for example, x86.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incompatibleArchitecture(Boolean incompatibleArchitecture) {
             $.incompatibleArchitecture = incompatibleArchitecture;
             return this;
         }
 
+        /**
+         * @param incompatibleDevice If the requested OS version doesn&#39;t run on the specific device model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incompatibleDevice(Boolean incompatibleDevice) {
             $.incompatibleDevice = incompatibleDevice;
             return this;

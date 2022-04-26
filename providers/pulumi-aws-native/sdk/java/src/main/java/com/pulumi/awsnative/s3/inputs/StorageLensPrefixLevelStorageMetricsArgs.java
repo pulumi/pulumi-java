@@ -23,6 +23,10 @@ public final class StorageLensPrefixLevelStorageMetricsArgs extends com.pulumi.r
     @Import(name="isEnabled")
     private @Nullable Output<Boolean> isEnabled;
 
+    /**
+     * @return Specifies whether prefix-level storage metrics are enabled or disabled.
+     * 
+     */
     public Optional<Output<Boolean>> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
@@ -59,11 +63,23 @@ public final class StorageLensPrefixLevelStorageMetricsArgs extends com.pulumi.r
             $ = new StorageLensPrefixLevelStorageMetricsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isEnabled Specifies whether prefix-level storage metrics are enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Specifies whether prefix-level storage metrics are enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }

@@ -28,6 +28,10 @@ public final class ApplicationJitAccessPolicyResponse extends com.pulumi.resourc
     @Import(name="jitAccessEnabled", required=true)
     private Boolean jitAccessEnabled;
 
+    /**
+     * @return Whether the JIT access is enabled.
+     * 
+     */
     public Boolean jitAccessEnabled() {
         return this.jitAccessEnabled;
     }
@@ -39,6 +43,10 @@ public final class ApplicationJitAccessPolicyResponse extends com.pulumi.resourc
     @Import(name="jitApprovalMode")
     private @Nullable String jitApprovalMode;
 
+    /**
+     * @return JIT approval mode.
+     * 
+     */
     public Optional<String> jitApprovalMode() {
         return Optional.ofNullable(this.jitApprovalMode);
     }
@@ -50,6 +58,10 @@ public final class ApplicationJitAccessPolicyResponse extends com.pulumi.resourc
     @Import(name="jitApprovers")
     private @Nullable List<JitApproverDefinitionResponse> jitApprovers;
 
+    /**
+     * @return The JIT approvers
+     * 
+     */
     public Optional<List<JitApproverDefinitionResponse>> jitApprovers() {
         return Optional.ofNullable(this.jitApprovers);
     }
@@ -61,6 +73,10 @@ public final class ApplicationJitAccessPolicyResponse extends com.pulumi.resourc
     @Import(name="maximumJitAccessDuration")
     private @Nullable String maximumJitAccessDuration;
 
+    /**
+     * @return The maximum duration JIT access is granted. This is an ISO8601 time period value.
+     * 
+     */
     public Optional<String> maximumJitAccessDuration() {
         return Optional.ofNullable(this.maximumJitAccessDuration);
     }
@@ -92,25 +108,55 @@ public final class ApplicationJitAccessPolicyResponse extends com.pulumi.resourc
             $ = new ApplicationJitAccessPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jitAccessEnabled Whether the JIT access is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitAccessEnabled(Boolean jitAccessEnabled) {
             $.jitAccessEnabled = jitAccessEnabled;
             return this;
         }
 
+        /**
+         * @param jitApprovalMode JIT approval mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitApprovalMode(@Nullable String jitApprovalMode) {
             $.jitApprovalMode = jitApprovalMode;
             return this;
         }
 
+        /**
+         * @param jitApprovers The JIT approvers
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitApprovers(@Nullable List<JitApproverDefinitionResponse> jitApprovers) {
             $.jitApprovers = jitApprovers;
             return this;
         }
 
+        /**
+         * @param jitApprovers The JIT approvers
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitApprovers(JitApproverDefinitionResponse... jitApprovers) {
             return jitApprovers(List.of(jitApprovers));
         }
 
+        /**
+         * @param maximumJitAccessDuration The maximum duration JIT access is granted. This is an ISO8601 time period value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumJitAccessDuration(@Nullable String maximumJitAccessDuration) {
             $.maximumJitAccessDuration = maximumJitAccessDuration;
             return this;

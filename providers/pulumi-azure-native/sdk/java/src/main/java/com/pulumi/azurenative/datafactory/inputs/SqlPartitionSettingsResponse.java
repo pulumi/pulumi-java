@@ -25,6 +25,10 @@ public final class SqlPartitionSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="partitionColumnName")
     private @Nullable Object partitionColumnName;
 
+    /**
+     * @return The name of the column in integer or datetime type that will be used for proceeding partitioning. If not specified, the primary key of the table is auto-detected and used as the partition column. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> partitionColumnName() {
         return Optional.ofNullable(this.partitionColumnName);
     }
@@ -36,6 +40,10 @@ public final class SqlPartitionSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="partitionLowerBound")
     private @Nullable Object partitionLowerBound;
 
+    /**
+     * @return The minimum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> partitionLowerBound() {
         return Optional.ofNullable(this.partitionLowerBound);
     }
@@ -47,6 +55,10 @@ public final class SqlPartitionSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="partitionUpperBound")
     private @Nullable Object partitionUpperBound;
 
+    /**
+     * @return The maximum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> partitionUpperBound() {
         return Optional.ofNullable(this.partitionUpperBound);
     }
@@ -77,16 +89,34 @@ public final class SqlPartitionSettingsResponse extends com.pulumi.resources.Inv
             $ = new SqlPartitionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partitionColumnName The name of the column in integer or datetime type that will be used for proceeding partitioning. If not specified, the primary key of the table is auto-detected and used as the partition column. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             $.partitionColumnName = partitionColumnName;
             return this;
         }
 
+        /**
+         * @param partitionLowerBound The minimum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             $.partitionLowerBound = partitionLowerBound;
             return this;
         }
 
+        /**
+         * @param partitionUpperBound The maximum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             $.partitionUpperBound = partitionUpperBound;
             return this;

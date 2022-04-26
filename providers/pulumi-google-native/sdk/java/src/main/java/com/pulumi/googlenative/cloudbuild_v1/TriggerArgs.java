@@ -35,6 +35,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="approvalConfig")
     private @Nullable Output<ApprovalConfigArgs> approvalConfig;
 
+    /**
+     * @return Configuration for manual approval to start a build invocation of this BuildTrigger.
+     * 
+     */
     public Optional<Output<ApprovalConfigArgs>> approvalConfig() {
         return Optional.ofNullable(this.approvalConfig);
     }
@@ -46,6 +50,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autodetect")
     private @Nullable Output<Boolean> autodetect;
 
+    /**
+     * @return Autodetect build configuration. The following precedence is used (case insensitive): 1. cloudbuild.yaml 2. cloudbuild.yml 3. cloudbuild.json 4. Dockerfile Currently only available for GitHub App Triggers.
+     * 
+     */
     public Optional<Output<Boolean>> autodetect() {
         return Optional.ofNullable(this.autodetect);
     }
@@ -57,6 +65,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bitbucketServerTriggerConfig")
     private @Nullable Output<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig;
 
+    /**
+     * @return BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received.
+     * 
+     */
     public Optional<Output<BitbucketServerTriggerConfigArgs>> bitbucketServerTriggerConfig() {
         return Optional.ofNullable(this.bitbucketServerTriggerConfig);
     }
@@ -68,6 +80,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="build")
     private @Nullable Output<BuildArgs> build;
 
+    /**
+     * @return Contents of the build template.
+     * 
+     */
     public Optional<Output<BuildArgs>> build() {
         return Optional.ofNullable(this.build);
     }
@@ -79,6 +95,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Human-readable description of this trigger.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -90,6 +110,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
+    /**
+     * @return If true, the trigger will never automatically execute a build.
+     * 
+     */
     public Optional<Output<Boolean>> disabled() {
         return Optional.ofNullable(this.disabled);
     }
@@ -101,6 +125,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventType")
     private @Nullable Output<TriggerEventType> eventType;
 
+    /**
+     * @return EventType allows the user to explicitly set the type of event to which this BuildTrigger should respond. This field will be validated against the rest of the configuration if it is set.
+     * 
+     */
     public Optional<Output<TriggerEventType>> eventType() {
         return Optional.ofNullable(this.eventType);
     }
@@ -112,6 +140,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filename")
     private @Nullable Output<String> filename;
 
+    /**
+     * @return Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).
+     * 
+     */
     public Optional<Output<String>> filename() {
         return Optional.ofNullable(this.filename);
     }
@@ -123,6 +155,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter")
     private @Nullable Output<String> filter;
 
+    /**
+     * @return A Common Expression Language string.
+     * 
+     */
     public Optional<Output<String>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -134,6 +170,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gitFileSource")
     private @Nullable Output<GitFileSourceArgs> gitFileSource;
 
+    /**
+     * @return The file source describing the local or remote Build template.
+     * 
+     */
     public Optional<Output<GitFileSourceArgs>> gitFileSource() {
         return Optional.ofNullable(this.gitFileSource);
     }
@@ -145,6 +185,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="github")
     private @Nullable Output<GitHubEventsConfigArgs> github;
 
+    /**
+     * @return GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a GitHub event is received. Mutually exclusive with `trigger_template`.
+     * 
+     */
     public Optional<Output<GitHubEventsConfigArgs>> github() {
         return Optional.ofNullable(this.github);
     }
@@ -156,6 +200,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ignoredFiles")
     private @Nullable Output<List<String>> ignoredFiles;
 
+    /**
+     * @return ignored_files and included_files are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for &#34;**&#34;. If ignored_files and changed files are both empty, then they are not used to determine whether or not to trigger a build. If ignored_files is not empty, then we ignore any files that match any of the ignored_file globs. If the change has no files that are outside of the ignored_files globs, then we do not trigger a build.
+     * 
+     */
     public Optional<Output<List<String>>> ignoredFiles() {
         return Optional.ofNullable(this.ignoredFiles);
     }
@@ -167,6 +215,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="includedFiles")
     private @Nullable Output<List<String>> includedFiles;
 
+    /**
+     * @return If any of the files altered in the commit pass the ignored_files filter and included_files is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignored_files filter and included_files is not empty, then we make sure that at least one of those files matches a included_files glob. If not, then we do not trigger a build.
+     * 
+     */
     public Optional<Output<List<String>>> includedFiles() {
         return Optional.ofNullable(this.includedFiles);
     }
@@ -185,6 +237,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -210,6 +266,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pubsubConfig")
     private @Nullable Output<PubsubConfigArgs> pubsubConfig;
 
+    /**
+     * @return PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.
+     * 
+     */
     public Optional<Output<PubsubConfigArgs>> pubsubConfig() {
         return Optional.ofNullable(this.pubsubConfig);
     }
@@ -221,6 +281,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -232,6 +296,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
     private @Nullable Output<String> serviceAccount;
 
+    /**
+     * @return The service account used for all user-controlled operations including UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
+     * 
+     */
     public Optional<Output<String>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -243,6 +311,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceToBuild")
     private @Nullable Output<GitRepoSourceArgs> sourceToBuild;
 
+    /**
+     * @return The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
+     * 
+     */
     public Optional<Output<GitRepoSourceArgs>> sourceToBuild() {
         return Optional.ofNullable(this.sourceToBuild);
     }
@@ -254,6 +326,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="substitutions")
     private @Nullable Output<Map<String,String>> substitutions;
 
+    /**
+     * @return Substitutions for Build resource. The keys must match the following regular expression: `^_[A-Z0-9_]+$`.
+     * 
+     */
     public Optional<Output<Map<String,String>>> substitutions() {
         return Optional.ofNullable(this.substitutions);
     }
@@ -265,6 +341,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
+    /**
+     * @return Tags for annotation of a `BuildTrigger`
+     * 
+     */
     public Optional<Output<List<String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -276,6 +356,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="triggerTemplate")
     private @Nullable Output<RepoSourceArgs> triggerTemplate;
 
+    /**
+     * @return Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build. Mutually exclusive with `github`.
+     * 
+     */
     public Optional<Output<RepoSourceArgs>> triggerTemplate() {
         return Optional.ofNullable(this.triggerTemplate);
     }
@@ -287,6 +371,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="webhookConfig")
     private @Nullable Output<WebhookConfigArgs> webhookConfig;
 
+    /**
+     * @return WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger&#39;s webhook URL.
+     * 
+     */
     public Optional<Output<WebhookConfigArgs>> webhookConfig() {
         return Optional.ofNullable(this.webhookConfig);
     }
@@ -339,127 +427,295 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param approvalConfig Configuration for manual approval to start a build invocation of this BuildTrigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder approvalConfig(@Nullable Output<ApprovalConfigArgs> approvalConfig) {
             $.approvalConfig = approvalConfig;
             return this;
         }
 
+        /**
+         * @param approvalConfig Configuration for manual approval to start a build invocation of this BuildTrigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder approvalConfig(ApprovalConfigArgs approvalConfig) {
             return approvalConfig(Output.of(approvalConfig));
         }
 
+        /**
+         * @param autodetect Autodetect build configuration. The following precedence is used (case insensitive): 1. cloudbuild.yaml 2. cloudbuild.yml 3. cloudbuild.json 4. Dockerfile Currently only available for GitHub App Triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autodetect(@Nullable Output<Boolean> autodetect) {
             $.autodetect = autodetect;
             return this;
         }
 
+        /**
+         * @param autodetect Autodetect build configuration. The following precedence is used (case insensitive): 1. cloudbuild.yaml 2. cloudbuild.yml 3. cloudbuild.json 4. Dockerfile Currently only available for GitHub App Triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autodetect(Boolean autodetect) {
             return autodetect(Output.of(autodetect));
         }
 
+        /**
+         * @param bitbucketServerTriggerConfig BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitbucketServerTriggerConfig(@Nullable Output<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig) {
             $.bitbucketServerTriggerConfig = bitbucketServerTriggerConfig;
             return this;
         }
 
+        /**
+         * @param bitbucketServerTriggerConfig BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitbucketServerTriggerConfig(BitbucketServerTriggerConfigArgs bitbucketServerTriggerConfig) {
             return bitbucketServerTriggerConfig(Output.of(bitbucketServerTriggerConfig));
         }
 
+        /**
+         * @param build Contents of the build template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder build(@Nullable Output<BuildArgs> build) {
             $.build = build;
             return this;
         }
 
+        /**
+         * @param build Contents of the build template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder build(BuildArgs build) {
             return build(Output.of(build));
         }
 
+        /**
+         * @param description Human-readable description of this trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Human-readable description of this trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param disabled If true, the trigger will never automatically execute a build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled If true, the trigger will never automatically execute a build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }
 
+        /**
+         * @param eventType EventType allows the user to explicitly set the type of event to which this BuildTrigger should respond. This field will be validated against the rest of the configuration if it is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(@Nullable Output<TriggerEventType> eventType) {
             $.eventType = eventType;
             return this;
         }
 
+        /**
+         * @param eventType EventType allows the user to explicitly set the type of event to which this BuildTrigger should respond. This field will be validated against the rest of the configuration if it is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(TriggerEventType eventType) {
             return eventType(Output.of(eventType));
         }
 
+        /**
+         * @param filename Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filename(@Nullable Output<String> filename) {
             $.filename = filename;
             return this;
         }
 
+        /**
+         * @param filename Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filename(String filename) {
             return filename(Output.of(filename));
         }
 
+        /**
+         * @param filter A Common Expression Language string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter A Common Expression Language string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param gitFileSource The file source describing the local or remote Build template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitFileSource(@Nullable Output<GitFileSourceArgs> gitFileSource) {
             $.gitFileSource = gitFileSource;
             return this;
         }
 
+        /**
+         * @param gitFileSource The file source describing the local or remote Build template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitFileSource(GitFileSourceArgs gitFileSource) {
             return gitFileSource(Output.of(gitFileSource));
         }
 
+        /**
+         * @param github GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a GitHub event is received. Mutually exclusive with `trigger_template`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder github(@Nullable Output<GitHubEventsConfigArgs> github) {
             $.github = github;
             return this;
         }
 
+        /**
+         * @param github GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a GitHub event is received. Mutually exclusive with `trigger_template`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder github(GitHubEventsConfigArgs github) {
             return github(Output.of(github));
         }
 
+        /**
+         * @param ignoredFiles ignored_files and included_files are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for &#34;**&#34;. If ignored_files and changed files are both empty, then they are not used to determine whether or not to trigger a build. If ignored_files is not empty, then we ignore any files that match any of the ignored_file globs. If the change has no files that are outside of the ignored_files globs, then we do not trigger a build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoredFiles(@Nullable Output<List<String>> ignoredFiles) {
             $.ignoredFiles = ignoredFiles;
             return this;
         }
 
+        /**
+         * @param ignoredFiles ignored_files and included_files are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for &#34;**&#34;. If ignored_files and changed files are both empty, then they are not used to determine whether or not to trigger a build. If ignored_files is not empty, then we ignore any files that match any of the ignored_file globs. If the change has no files that are outside of the ignored_files globs, then we do not trigger a build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoredFiles(List<String> ignoredFiles) {
             return ignoredFiles(Output.of(ignoredFiles));
         }
 
+        /**
+         * @param ignoredFiles ignored_files and included_files are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for &#34;**&#34;. If ignored_files and changed files are both empty, then they are not used to determine whether or not to trigger a build. If ignored_files is not empty, then we ignore any files that match any of the ignored_file globs. If the change has no files that are outside of the ignored_files globs, then we do not trigger a build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoredFiles(String... ignoredFiles) {
             return ignoredFiles(List.of(ignoredFiles));
         }
 
+        /**
+         * @param includedFiles If any of the files altered in the commit pass the ignored_files filter and included_files is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignored_files filter and included_files is not empty, then we make sure that at least one of those files matches a included_files glob. If not, then we do not trigger a build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedFiles(@Nullable Output<List<String>> includedFiles) {
             $.includedFiles = includedFiles;
             return this;
         }
 
+        /**
+         * @param includedFiles If any of the files altered in the commit pass the ignored_files filter and included_files is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignored_files filter and included_files is not empty, then we make sure that at least one of those files matches a included_files glob. If not, then we do not trigger a build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedFiles(List<String> includedFiles) {
             return includedFiles(Output.of(includedFiles));
         }
 
+        /**
+         * @param includedFiles If any of the files altered in the commit pass the ignored_files filter and included_files is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignored_files filter and included_files is not empty, then we make sure that at least one of those files matches a included_files glob. If not, then we do not trigger a build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedFiles(String... includedFiles) {
             return includedFiles(List.of(includedFiles));
         }
@@ -473,11 +729,23 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -500,78 +768,180 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
             return projectId(Output.of(projectId));
         }
 
+        /**
+         * @param pubsubConfig PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubConfig(@Nullable Output<PubsubConfigArgs> pubsubConfig) {
             $.pubsubConfig = pubsubConfig;
             return this;
         }
 
+        /**
+         * @param pubsubConfig PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubConfig(PubsubConfigArgs pubsubConfig) {
             return pubsubConfig(Output.of(pubsubConfig));
         }
 
+        /**
+         * @param resourceName The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param serviceAccount The service account used for all user-controlled operations including UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount The service account used for all user-controlled operations including UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param sourceToBuild The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceToBuild(@Nullable Output<GitRepoSourceArgs> sourceToBuild) {
             $.sourceToBuild = sourceToBuild;
             return this;
         }
 
+        /**
+         * @param sourceToBuild The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceToBuild(GitRepoSourceArgs sourceToBuild) {
             return sourceToBuild(Output.of(sourceToBuild));
         }
 
+        /**
+         * @param substitutions Substitutions for Build resource. The keys must match the following regular expression: `^_[A-Z0-9_]+$`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder substitutions(@Nullable Output<Map<String,String>> substitutions) {
             $.substitutions = substitutions;
             return this;
         }
 
+        /**
+         * @param substitutions Substitutions for Build resource. The keys must match the following regular expression: `^_[A-Z0-9_]+$`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder substitutions(Map<String,String> substitutions) {
             return substitutions(Output.of(substitutions));
         }
 
+        /**
+         * @param tags Tags for annotation of a `BuildTrigger`
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags for annotation of a `BuildTrigger`
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags for annotation of a `BuildTrigger`
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param triggerTemplate Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build. Mutually exclusive with `github`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerTemplate(@Nullable Output<RepoSourceArgs> triggerTemplate) {
             $.triggerTemplate = triggerTemplate;
             return this;
         }
 
+        /**
+         * @param triggerTemplate Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build. Mutually exclusive with `github`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerTemplate(RepoSourceArgs triggerTemplate) {
             return triggerTemplate(Output.of(triggerTemplate));
         }
 
+        /**
+         * @param webhookConfig WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger&#39;s webhook URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookConfig(@Nullable Output<WebhookConfigArgs> webhookConfig) {
             $.webhookConfig = webhookConfig;
             return this;
         }
 
+        /**
+         * @param webhookConfig WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger&#39;s webhook URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookConfig(WebhookConfigArgs webhookConfig) {
             return webhookConfig(Output.of(webhookConfig));
         }

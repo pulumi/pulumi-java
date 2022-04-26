@@ -26,6 +26,10 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends com.pulumi.r
     @Import(name="keyVaultKeyUri")
     private @Nullable String keyVaultKeyUri;
 
+    /**
+     * @return The URI of the customer-managed key for the backing database.
+     * 
+     */
     public Optional<String> keyVaultKeyUri() {
         return Optional.ofNullable(this.keyVaultKeyUri);
     }
@@ -37,6 +41,10 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends com.pulumi.r
     @Import(name="offerThroughput")
     private @Nullable Double offerThroughput;
 
+    /**
+     * @return The provisioned throughput for the backing database.
+     * 
+     */
     public Optional<Double> offerThroughput() {
         return Optional.ofNullable(this.offerThroughput);
     }
@@ -66,11 +74,23 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends com.pulumi.r
             $ = new ServiceCosmosDbConfigurationInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultKeyUri The URI of the customer-managed key for the backing database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultKeyUri(@Nullable String keyVaultKeyUri) {
             $.keyVaultKeyUri = keyVaultKeyUri;
             return this;
         }
 
+        /**
+         * @param offerThroughput The provisioned throughput for the backing database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offerThroughput(@Nullable Double offerThroughput) {
             $.offerThroughput = offerThroughput;
             return this;

@@ -17,42 +17,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BlobTriggerResponse {
     /**
-     * List of tags that can be used for describing the trigger.
+     * @return List of tags that can be used for describing the trigger.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * Trigger description.
+     * @return Trigger description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The path of the container/folder that will trigger the pipeline.
+     * @return The path of the container/folder that will trigger the pipeline.
      * 
      */
     private final String folderPath;
     /**
-     * The Azure Storage linked service reference.
+     * @return The Azure Storage linked service reference.
      * 
      */
     private final LinkedServiceReferenceResponse linkedService;
     /**
-     * The max number of parallel files to handle when it is triggered.
+     * @return The max number of parallel files to handle when it is triggered.
      * 
      */
     private final Integer maxConcurrency;
     /**
-     * Pipelines that need to be started.
+     * @return Pipelines that need to be started.
      * 
      */
     private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
     /**
-     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     * @return Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
      */
     private final String runtimeState;
     /**
-     * Trigger type.
+     * @return Trigger type.
      * Expected value is &#39;BlobTrigger&#39;.
      * 
      */
@@ -79,59 +79,59 @@ public final class BlobTriggerResponse {
     }
 
     /**
-     * List of tags that can be used for describing the trigger.
+     * @return List of tags that can be used for describing the trigger.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * Trigger description.
+     * @return Trigger description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The path of the container/folder that will trigger the pipeline.
+     * @return The path of the container/folder that will trigger the pipeline.
      * 
-    */
+     */
     public String folderPath() {
         return this.folderPath;
     }
     /**
-     * The Azure Storage linked service reference.
+     * @return The Azure Storage linked service reference.
      * 
-    */
+     */
     public LinkedServiceReferenceResponse linkedService() {
         return this.linkedService;
     }
     /**
-     * The max number of parallel files to handle when it is triggered.
+     * @return The max number of parallel files to handle when it is triggered.
      * 
-    */
+     */
     public Integer maxConcurrency() {
         return this.maxConcurrency;
     }
     /**
-     * Pipelines that need to be started.
+     * @return Pipelines that need to be started.
      * 
-    */
+     */
     public List<TriggerPipelineReferenceResponse> pipelines() {
         return this.pipelines == null ? List.of() : this.pipelines;
     }
     /**
-     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     * @return Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
-    */
+     */
     public String runtimeState() {
         return this.runtimeState;
     }
     /**
-     * Trigger type.
+     * @return Trigger type.
      * Expected value is &#39;BlobTrigger&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

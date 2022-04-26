@@ -25,6 +25,10 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends co
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return Last status code for sync and refresh of secret from key vault.
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -36,6 +40,10 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends co
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return Details of the error else empty.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -47,6 +55,10 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends co
     @Import(name="timeStampUtc")
     private @Nullable String timeStampUtc;
 
+    /**
+     * @return Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * 
+     */
     public Optional<String> timeStampUtc() {
         return Optional.ofNullable(this.timeStampUtc);
     }
@@ -77,16 +89,34 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends co
             $ = new KeyVaultLastAccessStatusContractPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Last status code for sync and refresh of secret from key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param message Details of the error else empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param timeStampUtc Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeStampUtc(@Nullable String timeStampUtc) {
             $.timeStampUtc = timeStampUtc;
             return this;

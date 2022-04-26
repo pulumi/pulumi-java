@@ -31,6 +31,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="action", required=true)
     private Output<Either<AlertingActionArgs,LogToMetricActionArgs>> action;
 
+    /**
+     * @return Action needs to be taken on rule execution.
+     * 
+     */
     public Output<Either<AlertingActionArgs,LogToMetricActionArgs>> action() {
         return this.action;
     }
@@ -42,6 +46,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="autoMitigate")
     private @Nullable Output<Boolean> autoMitigate;
 
+    /**
+     * @return The flag that indicates whether the alert should be automatically resolved or not. The default is false.
+     * 
+     */
     public Optional<Output<Boolean>> autoMitigate() {
         return Optional.ofNullable(this.autoMitigate);
     }
@@ -53,6 +61,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the Log Search rule.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -64,6 +76,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name of the alert rule
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -75,6 +91,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="enabled")
     private @Nullable Output<Either<String,Enabled>> enabled;
 
+    /**
+     * @return The flag which indicates whether the Log Search rule is enabled. Value should be true or false
+     * 
+     */
     public Optional<Output<Either<String,Enabled>>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -86,6 +106,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -97,6 +121,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -108,6 +136,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="ruleName")
     private @Nullable Output<String> ruleName;
 
+    /**
+     * @return The name of the rule.
+     * 
+     */
     public Optional<Output<String>> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
@@ -119,6 +151,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="schedule")
     private @Nullable Output<ScheduleArgs> schedule;
 
+    /**
+     * @return Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction
+     * 
+     */
     public Optional<Output<ScheduleArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -130,6 +166,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="source", required=true)
     private Output<SourceArgs> source;
 
+    /**
+     * @return Data Source against which rule will Query Data
+     * 
+     */
     public Output<SourceArgs> source() {
         return this.source;
     }
@@ -141,6 +181,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -179,117 +223,273 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
             $ = new ScheduledQueryRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Action needs to be taken on rule execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<Either<AlertingActionArgs,LogToMetricActionArgs>> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Action needs to be taken on rule execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Either<AlertingActionArgs,LogToMetricActionArgs> action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param action Action needs to be taken on rule execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(AlertingActionArgs action) {
             return action(Either.ofLeft(action));
         }
 
+        /**
+         * @param action Action needs to be taken on rule execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(LogToMetricActionArgs action) {
             return action(Either.ofRight(action));
         }
 
+        /**
+         * @param autoMitigate The flag that indicates whether the alert should be automatically resolved or not. The default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoMitigate(@Nullable Output<Boolean> autoMitigate) {
             $.autoMitigate = autoMitigate;
             return this;
         }
 
+        /**
+         * @param autoMitigate The flag that indicates whether the alert should be automatically resolved or not. The default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoMitigate(Boolean autoMitigate) {
             return autoMitigate(Output.of(autoMitigate));
         }
 
+        /**
+         * @param description The description of the Log Search rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the Log Search rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The display name of the alert rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the alert rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param enabled The flag which indicates whether the Log Search rule is enabled. Value should be true or false
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Either<String,Enabled>> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled The flag which indicates whether the Log Search rule is enabled. Value should be true or false
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Either<String,Enabled> enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param enabled The flag which indicates whether the Log Search rule is enabled. Value should be true or false
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(String enabled) {
             return enabled(Either.ofLeft(enabled));
         }
 
+        /**
+         * @param enabled The flag which indicates whether the Log Search rule is enabled. Value should be true or false
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Enabled enabled) {
             return enabled(Either.ofRight(enabled));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleName The name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(@Nullable Output<String> ruleName) {
             $.ruleName = ruleName;
             return this;
         }
 
+        /**
+         * @param ruleName The name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             return ruleName(Output.of(ruleName));
         }
 
+        /**
+         * @param schedule Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<ScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(ScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param source Data Source against which rule will Query Data
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<SourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Data Source against which rule will Query Data
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(SourceArgs source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

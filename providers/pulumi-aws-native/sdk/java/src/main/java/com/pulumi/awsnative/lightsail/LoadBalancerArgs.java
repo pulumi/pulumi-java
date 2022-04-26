@@ -26,6 +26,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attachedInstances")
     private @Nullable Output<List<String>> attachedInstances;
 
+    /**
+     * @return The names of the instances attached to the load balancer.
+     * 
+     */
     public Optional<Output<List<String>>> attachedInstances() {
         return Optional.ofNullable(this.attachedInstances);
     }
@@ -37,6 +41,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckPath")
     private @Nullable Output<String> healthCheckPath;
 
+    /**
+     * @return The path you provided to perform the load balancer health check. If you didn&#39;t specify a health check path, Lightsail uses the root path of your website (e.g., &#34;/&#34;).
+     * 
+     */
     public Optional<Output<String>> healthCheckPath() {
         return Optional.ofNullable(this.healthCheckPath);
     }
@@ -48,6 +56,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instancePort", required=true)
     private Output<Integer> instancePort;
 
+    /**
+     * @return The instance port where you&#39;re creating your load balancer.
+     * 
+     */
     public Output<Integer> instancePort() {
         return this.instancePort;
     }
@@ -59,6 +71,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddressType")
     private @Nullable Output<String> ipAddressType;
 
+    /**
+     * @return The IP address type for the load balancer. The possible values are ipv4 for IPv4 only, and dualstack for IPv4 and IPv6. The default value is dualstack.
+     * 
+     */
     public Optional<Output<String>> ipAddressType() {
         return Optional.ofNullable(this.ipAddressType);
     }
@@ -70,6 +86,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerName")
     private @Nullable Output<String> loadBalancerName;
 
+    /**
+     * @return The name of your load balancer.
+     * 
+     */
     public Optional<Output<String>> loadBalancerName() {
         return Optional.ofNullable(this.loadBalancerName);
     }
@@ -81,6 +101,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sessionStickinessEnabled")
     private @Nullable Output<Boolean> sessionStickinessEnabled;
 
+    /**
+     * @return Configuration option to enable session stickiness.
+     * 
+     */
     public Optional<Output<Boolean>> sessionStickinessEnabled() {
         return Optional.ofNullable(this.sessionStickinessEnabled);
     }
@@ -92,6 +116,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sessionStickinessLBCookieDurationSeconds")
     private @Nullable Output<String> sessionStickinessLBCookieDurationSeconds;
 
+    /**
+     * @return Configuration option to adjust session stickiness cookie duration parameter.
+     * 
+     */
     public Optional<Output<String>> sessionStickinessLBCookieDurationSeconds() {
         return Optional.ofNullable(this.sessionStickinessLBCookieDurationSeconds);
     }
@@ -103,6 +131,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<LoadBalancerTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<LoadBalancerTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -138,82 +170,190 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LoadBalancerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachedInstances The names of the instances attached to the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedInstances(@Nullable Output<List<String>> attachedInstances) {
             $.attachedInstances = attachedInstances;
             return this;
         }
 
+        /**
+         * @param attachedInstances The names of the instances attached to the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedInstances(List<String> attachedInstances) {
             return attachedInstances(Output.of(attachedInstances));
         }
 
+        /**
+         * @param attachedInstances The names of the instances attached to the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedInstances(String... attachedInstances) {
             return attachedInstances(List.of(attachedInstances));
         }
 
+        /**
+         * @param healthCheckPath The path you provided to perform the load balancer health check. If you didn&#39;t specify a health check path, Lightsail uses the root path of your website (e.g., &#34;/&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckPath(@Nullable Output<String> healthCheckPath) {
             $.healthCheckPath = healthCheckPath;
             return this;
         }
 
+        /**
+         * @param healthCheckPath The path you provided to perform the load balancer health check. If you didn&#39;t specify a health check path, Lightsail uses the root path of your website (e.g., &#34;/&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckPath(String healthCheckPath) {
             return healthCheckPath(Output.of(healthCheckPath));
         }
 
+        /**
+         * @param instancePort The instance port where you&#39;re creating your load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instancePort(Output<Integer> instancePort) {
             $.instancePort = instancePort;
             return this;
         }
 
+        /**
+         * @param instancePort The instance port where you&#39;re creating your load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instancePort(Integer instancePort) {
             return instancePort(Output.of(instancePort));
         }
 
+        /**
+         * @param ipAddressType The IP address type for the load balancer. The possible values are ipv4 for IPv4 only, and dualstack for IPv4 and IPv6. The default value is dualstack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressType(@Nullable Output<String> ipAddressType) {
             $.ipAddressType = ipAddressType;
             return this;
         }
 
+        /**
+         * @param ipAddressType The IP address type for the load balancer. The possible values are ipv4 for IPv4 only, and dualstack for IPv4 and IPv6. The default value is dualstack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressType(String ipAddressType) {
             return ipAddressType(Output.of(ipAddressType));
         }
 
+        /**
+         * @param loadBalancerName The name of your load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
             $.loadBalancerName = loadBalancerName;
             return this;
         }
 
+        /**
+         * @param loadBalancerName The name of your load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerName(String loadBalancerName) {
             return loadBalancerName(Output.of(loadBalancerName));
         }
 
+        /**
+         * @param sessionStickinessEnabled Configuration option to enable session stickiness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionStickinessEnabled(@Nullable Output<Boolean> sessionStickinessEnabled) {
             $.sessionStickinessEnabled = sessionStickinessEnabled;
             return this;
         }
 
+        /**
+         * @param sessionStickinessEnabled Configuration option to enable session stickiness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionStickinessEnabled(Boolean sessionStickinessEnabled) {
             return sessionStickinessEnabled(Output.of(sessionStickinessEnabled));
         }
 
+        /**
+         * @param sessionStickinessLBCookieDurationSeconds Configuration option to adjust session stickiness cookie duration parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionStickinessLBCookieDurationSeconds(@Nullable Output<String> sessionStickinessLBCookieDurationSeconds) {
             $.sessionStickinessLBCookieDurationSeconds = sessionStickinessLBCookieDurationSeconds;
             return this;
         }
 
+        /**
+         * @param sessionStickinessLBCookieDurationSeconds Configuration option to adjust session stickiness cookie duration parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionStickinessLBCookieDurationSeconds(String sessionStickinessLBCookieDurationSeconds) {
             return sessionStickinessLBCookieDurationSeconds(Output.of(sessionStickinessLBCookieDurationSeconds));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<LoadBalancerTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<LoadBalancerTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(LoadBalancerTagArgs... tags) {
             return tags(List.of(tags));
         }

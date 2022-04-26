@@ -19,6 +19,10 @@ public final class FunctionFileSystemConfig extends com.pulumi.resources.InvokeA
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Amazon EFS access point that provides access to the file system.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -30,6 +34,10 @@ public final class FunctionFileSystemConfig extends com.pulumi.resources.InvokeA
     @Import(name="localMountPath", required=true)
     private String localMountPath;
 
+    /**
+     * @return The path where the function can access the file system, starting with /mnt/.
+     * 
+     */
     public String localMountPath() {
         return this.localMountPath;
     }
@@ -59,11 +67,23 @@ public final class FunctionFileSystemConfig extends com.pulumi.resources.InvokeA
             $ = new FunctionFileSystemConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the Amazon EFS access point that provides access to the file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param localMountPath The path where the function can access the file system, starting with /mnt/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localMountPath(String localMountPath) {
             $.localMountPath = localMountPath;
             return this;

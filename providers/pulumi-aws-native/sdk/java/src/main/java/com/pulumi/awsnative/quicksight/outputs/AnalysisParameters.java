@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AnalysisParameters {
     /**
-     * &lt;p&gt;Date-time parameters.&lt;/p&gt;
+     * @return &lt;p&gt;Date-time parameters.&lt;/p&gt;
      * 
      */
     private final @Nullable List<AnalysisDateTimeParameter> dateTimeParameters;
     /**
-     * &lt;p&gt;Decimal parameters.&lt;/p&gt;
+     * @return &lt;p&gt;Decimal parameters.&lt;/p&gt;
      * 
      */
     private final @Nullable List<AnalysisDecimalParameter> decimalParameters;
     /**
-     * &lt;p&gt;Integer parameters.&lt;/p&gt;
+     * @return &lt;p&gt;Integer parameters.&lt;/p&gt;
      * 
      */
     private final @Nullable List<AnalysisIntegerParameter> integerParameters;
     /**
-     * &lt;p&gt;String parameters.&lt;/p&gt;
+     * @return &lt;p&gt;String parameters.&lt;/p&gt;
      * 
      */
     private final @Nullable List<AnalysisStringParameter> stringParameters;
@@ -48,30 +48,30 @@ public final class AnalysisParameters {
     }
 
     /**
-     * &lt;p&gt;Date-time parameters.&lt;/p&gt;
+     * @return &lt;p&gt;Date-time parameters.&lt;/p&gt;
      * 
-    */
+     */
     public List<AnalysisDateTimeParameter> dateTimeParameters() {
         return this.dateTimeParameters == null ? List.of() : this.dateTimeParameters;
     }
     /**
-     * &lt;p&gt;Decimal parameters.&lt;/p&gt;
+     * @return &lt;p&gt;Decimal parameters.&lt;/p&gt;
      * 
-    */
+     */
     public List<AnalysisDecimalParameter> decimalParameters() {
         return this.decimalParameters == null ? List.of() : this.decimalParameters;
     }
     /**
-     * &lt;p&gt;Integer parameters.&lt;/p&gt;
+     * @return &lt;p&gt;Integer parameters.&lt;/p&gt;
      * 
-    */
+     */
     public List<AnalysisIntegerParameter> integerParameters() {
         return this.integerParameters == null ? List.of() : this.integerParameters;
     }
     /**
-     * &lt;p&gt;String parameters.&lt;/p&gt;
+     * @return &lt;p&gt;String parameters.&lt;/p&gt;
      * 
-    */
+     */
     public List<AnalysisStringParameter> stringParameters() {
         return this.stringParameters == null ? List.of() : this.stringParameters;
     }

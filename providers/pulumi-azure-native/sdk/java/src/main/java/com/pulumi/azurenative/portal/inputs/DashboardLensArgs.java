@@ -31,6 +31,10 @@ public final class DashboardLensArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,Object>> metadata;
 
+    /**
+     * @return The dashboard len&#39;s metadata.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -42,6 +46,10 @@ public final class DashboardLensArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="order", required=true)
     private Output<Integer> order;
 
+    /**
+     * @return The lens order.
+     * 
+     */
     public Output<Integer> order() {
         return this.order;
     }
@@ -53,6 +61,10 @@ public final class DashboardLensArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parts", required=true)
     private Output<List<DashboardPartsArgs>> parts;
 
+    /**
+     * @return The dashboard parts.
+     * 
+     */
     public Output<List<DashboardPartsArgs>> parts() {
         return this.parts;
     }
@@ -83,33 +95,75 @@ public final class DashboardLensArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DashboardLensArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadata The dashboard len&#39;s metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,Object>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The dashboard len&#39;s metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,Object> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param order The lens order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(Output<Integer> order) {
             $.order = order;
             return this;
         }
 
+        /**
+         * @param order The lens order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(Integer order) {
             return order(Output.of(order));
         }
 
+        /**
+         * @param parts The dashboard parts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parts(Output<List<DashboardPartsArgs>> parts) {
             $.parts = parts;
             return this;
         }
 
+        /**
+         * @param parts The dashboard parts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parts(List<DashboardPartsArgs> parts) {
             return parts(Output.of(parts));
         }
 
+        /**
+         * @param parts The dashboard parts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parts(DashboardPartsArgs... parts) {
             return parts(List.of(parts));
         }

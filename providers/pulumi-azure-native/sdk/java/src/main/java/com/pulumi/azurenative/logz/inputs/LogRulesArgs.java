@@ -28,6 +28,10 @@ public final class LogRulesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filteringTags")
     private @Nullable Output<List<FilteringTagArgs>> filteringTags;
 
+    /**
+     * @return List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+     * 
+     */
     public Optional<Output<List<FilteringTagArgs>>> filteringTags() {
         return Optional.ofNullable(this.filteringTags);
     }
@@ -39,6 +43,10 @@ public final class LogRulesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sendAadLogs")
     private @Nullable Output<Boolean> sendAadLogs;
 
+    /**
+     * @return Flag specifying if AAD logs should be sent for the Monitor resource.
+     * 
+     */
     public Optional<Output<Boolean>> sendAadLogs() {
         return Optional.ofNullable(this.sendAadLogs);
     }
@@ -50,6 +58,10 @@ public final class LogRulesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sendActivityLogs")
     private @Nullable Output<Boolean> sendActivityLogs;
 
+    /**
+     * @return Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
+     * 
+     */
     public Optional<Output<Boolean>> sendActivityLogs() {
         return Optional.ofNullable(this.sendActivityLogs);
     }
@@ -61,6 +73,10 @@ public final class LogRulesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sendSubscriptionLogs")
     private @Nullable Output<Boolean> sendSubscriptionLogs;
 
+    /**
+     * @return Flag specifying if subscription logs should be sent for the Monitor resource.
+     * 
+     */
     public Optional<Output<Boolean>> sendSubscriptionLogs() {
         return Optional.ofNullable(this.sendSubscriptionLogs);
     }
@@ -92,42 +108,96 @@ public final class LogRulesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LogRulesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filteringTags List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filteringTags(@Nullable Output<List<FilteringTagArgs>> filteringTags) {
             $.filteringTags = filteringTags;
             return this;
         }
 
+        /**
+         * @param filteringTags List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filteringTags(List<FilteringTagArgs> filteringTags) {
             return filteringTags(Output.of(filteringTags));
         }
 
+        /**
+         * @param filteringTags List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filteringTags(FilteringTagArgs... filteringTags) {
             return filteringTags(List.of(filteringTags));
         }
 
+        /**
+         * @param sendAadLogs Flag specifying if AAD logs should be sent for the Monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendAadLogs(@Nullable Output<Boolean> sendAadLogs) {
             $.sendAadLogs = sendAadLogs;
             return this;
         }
 
+        /**
+         * @param sendAadLogs Flag specifying if AAD logs should be sent for the Monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendAadLogs(Boolean sendAadLogs) {
             return sendAadLogs(Output.of(sendAadLogs));
         }
 
+        /**
+         * @param sendActivityLogs Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendActivityLogs(@Nullable Output<Boolean> sendActivityLogs) {
             $.sendActivityLogs = sendActivityLogs;
             return this;
         }
 
+        /**
+         * @param sendActivityLogs Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendActivityLogs(Boolean sendActivityLogs) {
             return sendActivityLogs(Output.of(sendActivityLogs));
         }
 
+        /**
+         * @param sendSubscriptionLogs Flag specifying if subscription logs should be sent for the Monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendSubscriptionLogs(@Nullable Output<Boolean> sendSubscriptionLogs) {
             $.sendSubscriptionLogs = sendSubscriptionLogs;
             return this;
         }
 
+        /**
+         * @param sendSubscriptionLogs Flag specifying if subscription logs should be sent for the Monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendSubscriptionLogs(Boolean sendSubscriptionLogs) {
             return sendSubscriptionLogs(Output.of(sendSubscriptionLogs));
         }

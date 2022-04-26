@@ -31,6 +31,10 @@ public final class SelectAudioTrackByAttributeArgs extends com.pulumi.resources.
     @Import(name="attribute", required=true)
     private Output<Either<String,TrackAttribute>> attribute;
 
+    /**
+     * @return The TrackAttribute to filter the tracks by.
+     * 
+     */
     public Output<Either<String,TrackAttribute>> attribute() {
         return this.attribute;
     }
@@ -42,6 +46,10 @@ public final class SelectAudioTrackByAttributeArgs extends com.pulumi.resources.
     @Import(name="channelMapping")
     private @Nullable Output<Either<String,ChannelMapping>> channelMapping;
 
+    /**
+     * @return Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+     * 
+     */
     public Optional<Output<Either<String,ChannelMapping>>> channelMapping() {
         return Optional.ofNullable(this.channelMapping);
     }
@@ -53,6 +61,10 @@ public final class SelectAudioTrackByAttributeArgs extends com.pulumi.resources.
     @Import(name="filter", required=true)
     private Output<Either<String,AttributeFilter>> filter;
 
+    /**
+     * @return The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
+     * 
+     */
     public Output<Either<String,AttributeFilter>> filter() {
         return this.filter;
     }
@@ -64,6 +76,10 @@ public final class SelectAudioTrackByAttributeArgs extends com.pulumi.resources.
     @Import(name="filterValue")
     private @Nullable Output<String> filterValue;
 
+    /**
+     * @return The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
+     * 
+     */
     public Optional<Output<String>> filterValue() {
         return Optional.ofNullable(this.filterValue);
     }
@@ -76,6 +92,11 @@ public final class SelectAudioTrackByAttributeArgs extends com.pulumi.resources.
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.SelectAudioTrackByAttribute&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -108,71 +129,169 @@ public final class SelectAudioTrackByAttributeArgs extends com.pulumi.resources.
             $ = new SelectAudioTrackByAttributeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attribute The TrackAttribute to filter the tracks by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribute(Output<Either<String,TrackAttribute>> attribute) {
             $.attribute = attribute;
             return this;
         }
 
+        /**
+         * @param attribute The TrackAttribute to filter the tracks by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribute(Either<String,TrackAttribute> attribute) {
             return attribute(Output.of(attribute));
         }
 
+        /**
+         * @param attribute The TrackAttribute to filter the tracks by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribute(String attribute) {
             return attribute(Either.ofLeft(attribute));
         }
 
+        /**
+         * @param attribute The TrackAttribute to filter the tracks by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribute(TrackAttribute attribute) {
             return attribute(Either.ofRight(attribute));
         }
 
+        /**
+         * @param channelMapping Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelMapping(@Nullable Output<Either<String,ChannelMapping>> channelMapping) {
             $.channelMapping = channelMapping;
             return this;
         }
 
+        /**
+         * @param channelMapping Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelMapping(Either<String,ChannelMapping> channelMapping) {
             return channelMapping(Output.of(channelMapping));
         }
 
+        /**
+         * @param channelMapping Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelMapping(String channelMapping) {
             return channelMapping(Either.ofLeft(channelMapping));
         }
 
+        /**
+         * @param channelMapping Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelMapping(ChannelMapping channelMapping) {
             return channelMapping(Either.ofRight(channelMapping));
         }
 
+        /**
+         * @param filter The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(Output<Either<String,AttributeFilter>> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(Either<String,AttributeFilter> filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param filter The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             return filter(Either.ofLeft(filter));
         }
 
+        /**
+         * @param filter The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(AttributeFilter filter) {
             return filter(Either.ofRight(filter));
         }
 
+        /**
+         * @param filterValue The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterValue(@Nullable Output<String> filterValue) {
             $.filterValue = filterValue;
             return this;
         }
 
+        /**
+         * @param filterValue The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterValue(String filterValue) {
             return filterValue(Output.of(filterValue));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.SelectAudioTrackByAttribute&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.SelectAudioTrackByAttribute&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }

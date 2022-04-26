@@ -24,6 +24,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
     @Import(name="dialogflowSource", required=true)
     private GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource;
 
+    /**
+     * @return The source when the conversation comes from Dialogflow.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource() {
         return this.dialogflowSource;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
     @Import(name="gcsSource", required=true)
     private GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource;
 
+    /**
+     * @return A Cloud Storage location specification for the audio and transcript.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource() {
         return this.gcsSource;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
             $ = new GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dialogflowSource The source when the conversation comes from Dialogflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dialogflowSource(GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource) {
             $.dialogflowSource = dialogflowSource;
             return this;
         }
 
+        /**
+         * @param gcsSource A Cloud Storage location specification for the audio and transcript.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsSource(GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource) {
             $.gcsSource = gcsSource;
             return this;

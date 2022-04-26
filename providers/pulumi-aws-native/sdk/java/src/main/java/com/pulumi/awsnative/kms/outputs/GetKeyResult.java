@@ -19,43 +19,43 @@ import javax.annotation.Nullable;
 public final class GetKeyResult {
     private final @Nullable String arn;
     /**
-     * A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+     * @return A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
      * 
      */
     private final @Nullable String description;
     /**
-     * Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
+     * @return Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
      * 
      */
     private final @Nullable Boolean enableKeyRotation;
     /**
-     * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+     * @return Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
      * 
      */
     private final @Nullable Boolean enabled;
     private final @Nullable String keyId;
     /**
-     * The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+     * @return The key policy that authorizes use of the CMK. The key policy must observe the following rules.
      * 
      */
     private final @Nullable Object keyPolicy;
     /**
-     * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
+     * @return Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
      * 
      */
     private final @Nullable KeySpec keySpec;
     /**
-     * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
+     * @return Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
      * 
      */
     private final @Nullable KeyUsage keyUsage;
     /**
-     * Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
+     * @return Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
      * 
      */
     private final @Nullable Boolean multiRegion;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<KeyTag> tags;
@@ -88,23 +88,23 @@ public final class GetKeyResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+     * @return A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
+     * @return Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
      * 
-    */
+     */
     public Optional<Boolean> enableKeyRotation() {
         return Optional.ofNullable(this.enableKeyRotation);
     }
     /**
-     * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+     * @return Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -112,37 +112,37 @@ public final class GetKeyResult {
         return Optional.ofNullable(this.keyId);
     }
     /**
-     * The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+     * @return The key policy that authorizes use of the CMK. The key policy must observe the following rules.
      * 
-    */
+     */
     public Optional<Object> keyPolicy() {
         return Optional.ofNullable(this.keyPolicy);
     }
     /**
-     * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
+     * @return Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
      * 
-    */
+     */
     public Optional<KeySpec> keySpec() {
         return Optional.ofNullable(this.keySpec);
     }
     /**
-     * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
+     * @return Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
      * 
-    */
+     */
     public Optional<KeyUsage> keyUsage() {
         return Optional.ofNullable(this.keyUsage);
     }
     /**
-     * Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
+     * @return Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
      * 
-    */
+     */
     public Optional<Boolean> multiRegion() {
         return Optional.ofNullable(this.multiRegion);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<KeyTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

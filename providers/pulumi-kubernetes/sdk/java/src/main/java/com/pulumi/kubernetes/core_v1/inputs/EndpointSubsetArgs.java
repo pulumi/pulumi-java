@@ -35,6 +35,10 @@ public final class EndpointSubsetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="addresses")
     private @Nullable Output<List<EndpointAddressArgs>> addresses;
 
+    /**
+     * @return IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
+     * 
+     */
     public Optional<Output<List<EndpointAddressArgs>>> addresses() {
         return Optional.ofNullable(this.addresses);
     }
@@ -46,6 +50,10 @@ public final class EndpointSubsetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="notReadyAddresses")
     private @Nullable Output<List<EndpointAddressArgs>> notReadyAddresses;
 
+    /**
+     * @return IP addresses which offer the related ports but are not currently marked as ready because they have not yet finished starting, have recently failed a readiness check, or have recently failed a liveness check.
+     * 
+     */
     public Optional<Output<List<EndpointAddressArgs>>> notReadyAddresses() {
         return Optional.ofNullable(this.notReadyAddresses);
     }
@@ -57,6 +65,10 @@ public final class EndpointSubsetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ports")
     private @Nullable Output<List<EndpointPortArgs>> ports;
 
+    /**
+     * @return Port numbers available on the related IP addresses.
+     * 
+     */
     public Optional<Output<List<EndpointPortArgs>>> ports() {
         return Optional.ofNullable(this.ports);
     }
@@ -87,41 +99,95 @@ public final class EndpointSubsetArgs extends com.pulumi.resources.ResourceArgs 
             $ = new EndpointSubsetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addresses IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addresses(@Nullable Output<List<EndpointAddressArgs>> addresses) {
             $.addresses = addresses;
             return this;
         }
 
+        /**
+         * @param addresses IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addresses(List<EndpointAddressArgs> addresses) {
             return addresses(Output.of(addresses));
         }
 
+        /**
+         * @param addresses IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addresses(EndpointAddressArgs... addresses) {
             return addresses(List.of(addresses));
         }
 
+        /**
+         * @param notReadyAddresses IP addresses which offer the related ports but are not currently marked as ready because they have not yet finished starting, have recently failed a readiness check, or have recently failed a liveness check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notReadyAddresses(@Nullable Output<List<EndpointAddressArgs>> notReadyAddresses) {
             $.notReadyAddresses = notReadyAddresses;
             return this;
         }
 
+        /**
+         * @param notReadyAddresses IP addresses which offer the related ports but are not currently marked as ready because they have not yet finished starting, have recently failed a readiness check, or have recently failed a liveness check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notReadyAddresses(List<EndpointAddressArgs> notReadyAddresses) {
             return notReadyAddresses(Output.of(notReadyAddresses));
         }
 
+        /**
+         * @param notReadyAddresses IP addresses which offer the related ports but are not currently marked as ready because they have not yet finished starting, have recently failed a readiness check, or have recently failed a liveness check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notReadyAddresses(EndpointAddressArgs... notReadyAddresses) {
             return notReadyAddresses(List.of(notReadyAddresses));
         }
 
+        /**
+         * @param ports Port numbers available on the related IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(@Nullable Output<List<EndpointPortArgs>> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports Port numbers available on the related IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<EndpointPortArgs> ports) {
             return ports(Output.of(ports));
         }
 
+        /**
+         * @param ports Port numbers available on the related IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(EndpointPortArgs... ports) {
             return ports(List.of(ports));
         }

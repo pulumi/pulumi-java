@@ -12,37 +12,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobTargetResponse {
     /**
-     * The target database name.
+     * @return The target database name.
      * 
      */
     private final @Nullable String databaseName;
     /**
-     * The target elastic pool name.
+     * @return The target elastic pool name.
      * 
      */
     private final @Nullable String elasticPoolName;
     /**
-     * Whether the target is included or excluded from the group.
+     * @return Whether the target is included or excluded from the group.
      * 
      */
     private final @Nullable String membershipType;
     /**
-     * The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
+     * @return The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
      * 
      */
     private final @Nullable String refreshCredential;
     /**
-     * The target server name.
+     * @return The target server name.
      * 
      */
     private final @Nullable String serverName;
     /**
-     * The target shard map.
+     * @return The target shard map.
      * 
      */
     private final @Nullable String shardMapName;
     /**
-     * The target type.
+     * @return The target type.
      * 
      */
     private final String type;
@@ -66,51 +66,51 @@ public final class JobTargetResponse {
     }
 
     /**
-     * The target database name.
+     * @return The target database name.
      * 
-    */
+     */
     public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
-     * The target elastic pool name.
+     * @return The target elastic pool name.
      * 
-    */
+     */
     public Optional<String> elasticPoolName() {
         return Optional.ofNullable(this.elasticPoolName);
     }
     /**
-     * Whether the target is included or excluded from the group.
+     * @return Whether the target is included or excluded from the group.
      * 
-    */
+     */
     public Optional<String> membershipType() {
         return Optional.ofNullable(this.membershipType);
     }
     /**
-     * The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
+     * @return The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
      * 
-    */
+     */
     public Optional<String> refreshCredential() {
         return Optional.ofNullable(this.refreshCredential);
     }
     /**
-     * The target server name.
+     * @return The target server name.
      * 
-    */
+     */
     public Optional<String> serverName() {
         return Optional.ofNullable(this.serverName);
     }
     /**
-     * The target shard map.
+     * @return The target shard map.
      * 
-    */
+     */
     public Optional<String> shardMapName() {
         return Optional.ofNullable(this.shardMapName);
     }
     /**
-     * The target type.
+     * @return The target type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

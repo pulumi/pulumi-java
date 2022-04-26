@@ -19,6 +19,10 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="relationalDatabaseName", required=true)
     private String relationalDatabaseName;
 
+    /**
+     * @return The name to use for your new Lightsail database resource.
+     * 
+     */
     public String relationalDatabaseName() {
         return this.relationalDatabaseName;
     }
@@ -47,6 +51,12 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param relationalDatabaseName The name to use for your new Lightsail database resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationalDatabaseName(String relationalDatabaseName) {
             $.relationalDatabaseName = relationalDatabaseName;
             return this;

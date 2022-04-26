@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ComputeInstanceSshSettingsResponse {
     /**
-     * Specifies the SSH rsa public key file as a string. Use &#34;ssh-keygen -t rsa -b 2048&#34; to generate your SSH key pairs.
+     * @return Specifies the SSH rsa public key file as a string. Use &#34;ssh-keygen -t rsa -b 2048&#34; to generate your SSH key pairs.
      * 
      */
     private final @Nullable String adminPublicKey;
     /**
-     * Describes the admin user name.
+     * @return Describes the admin user name.
      * 
      */
     private final String adminUserName;
     /**
-     * Describes the port for connecting through SSH.
+     * @return Describes the port for connecting through SSH.
      * 
      */
     private final Integer sshPort;
     /**
-     * State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
+     * @return State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
      * 
      */
     private final @Nullable String sshPublicAccess;
@@ -46,30 +46,30 @@ public final class ComputeInstanceSshSettingsResponse {
     }
 
     /**
-     * Specifies the SSH rsa public key file as a string. Use &#34;ssh-keygen -t rsa -b 2048&#34; to generate your SSH key pairs.
+     * @return Specifies the SSH rsa public key file as a string. Use &#34;ssh-keygen -t rsa -b 2048&#34; to generate your SSH key pairs.
      * 
-    */
+     */
     public Optional<String> adminPublicKey() {
         return Optional.ofNullable(this.adminPublicKey);
     }
     /**
-     * Describes the admin user name.
+     * @return Describes the admin user name.
      * 
-    */
+     */
     public String adminUserName() {
         return this.adminUserName;
     }
     /**
-     * Describes the port for connecting through SSH.
+     * @return Describes the port for connecting through SSH.
      * 
-    */
+     */
     public Integer sshPort() {
         return this.sshPort;
     }
     /**
-     * State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
+     * @return State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
      * 
-    */
+     */
     public Optional<String> sshPublicAccess() {
         return Optional.ofNullable(this.sshPublicAccess);
     }

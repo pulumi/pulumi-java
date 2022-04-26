@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends com.pulumi.resour
     @Import(name="kmsWrapped", required=true)
     private GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped;
 
+    /**
+     * @return Key wrapped using Cloud KMS
+     * 
+     */
     public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped() {
         return this.kmsWrapped;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends com.pulumi.resour
     @Import(name="transient", required=true)
     private GooglePrivacyDlpV2TransientCryptoKeyResponse transient_;
 
+    /**
+     * @return Transient crypto key
+     * 
+     */
     public GooglePrivacyDlpV2TransientCryptoKeyResponse transient_() {
         return this.transient_;
     }
@@ -47,6 +55,10 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends com.pulumi.resour
     @Import(name="unwrapped", required=true)
     private GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped;
 
+    /**
+     * @return Unwrapped crypto key
+     * 
+     */
     public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped() {
         return this.unwrapped;
     }
@@ -77,16 +89,34 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends com.pulumi.resour
             $ = new GooglePrivacyDlpV2CryptoKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsWrapped Key wrapped using Cloud KMS
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsWrapped(GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped) {
             $.kmsWrapped = kmsWrapped;
             return this;
         }
 
+        /**
+         * @param transient_ Transient crypto key
+         * 
+         * @return builder
+         * 
+         */
         public Builder transient_(GooglePrivacyDlpV2TransientCryptoKeyResponse transient_) {
             $.transient_ = transient_;
             return this;
         }
 
+        /**
+         * @param unwrapped Unwrapped crypto key
+         * 
+         * @return builder
+         * 
+         */
         public Builder unwrapped(GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped) {
             $.unwrapped = unwrapped;
             return this;

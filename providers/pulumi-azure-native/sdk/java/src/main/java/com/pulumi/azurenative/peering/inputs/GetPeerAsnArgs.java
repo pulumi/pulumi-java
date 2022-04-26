@@ -19,6 +19,10 @@ public final class GetPeerAsnArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="peerAsnName", required=true)
     private String peerAsnName;
 
+    /**
+     * @return The peer ASN name.
+     * 
+     */
     public String peerAsnName() {
         return this.peerAsnName;
     }
@@ -47,6 +51,12 @@ public final class GetPeerAsnArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPeerAsnArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param peerAsnName The peer ASN name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsnName(String peerAsnName) {
             $.peerAsnName = peerAsnName;
             return this;

@@ -28,6 +28,10 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="datadogOrganizationProperties")
     private @Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties;
 
+    /**
+     * @return Datadog organization properties
+     * 
+     */
     public Optional<DatadogOrganizationPropertiesResponse> datadogOrganizationProperties() {
         return Optional.ofNullable(this.datadogOrganizationProperties);
     }
@@ -46,6 +50,10 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="liftrResourcePreference", required=true)
     private Integer liftrResourcePreference;
 
+    /**
+     * @return The priority of the resource.
+     * 
+     */
     public Integer liftrResourcePreference() {
         return this.liftrResourcePreference;
     }
@@ -57,6 +65,10 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="marketplaceSubscriptionStatus", required=true)
     private String marketplaceSubscriptionStatus;
 
+    /**
+     * @return Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+     * 
+     */
     public String marketplaceSubscriptionStatus() {
         return this.marketplaceSubscriptionStatus;
     }
@@ -68,6 +80,10 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="monitoringStatus")
     private @Nullable String monitoringStatus;
 
+    /**
+     * @return Flag specifying if the resource monitoring is enabled or disabled.
+     * 
+     */
     public Optional<String> monitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
@@ -86,6 +102,10 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="userInfo")
     private @Nullable UserInfoResponse userInfo;
 
+    /**
+     * @return User info
+     * 
+     */
     public Optional<UserInfoResponse> userInfo() {
         return Optional.ofNullable(this.userInfo);
     }
@@ -120,6 +140,12 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new MonitorPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datadogOrganizationProperties Datadog organization properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder datadogOrganizationProperties(@Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties) {
             $.datadogOrganizationProperties = datadogOrganizationProperties;
             return this;
@@ -130,16 +156,34 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
             return this;
         }
 
+        /**
+         * @param liftrResourcePreference The priority of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder liftrResourcePreference(Integer liftrResourcePreference) {
             $.liftrResourcePreference = liftrResourcePreference;
             return this;
         }
 
+        /**
+         * @param marketplaceSubscriptionStatus Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketplaceSubscriptionStatus(String marketplaceSubscriptionStatus) {
             $.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
             return this;
         }
 
+        /**
+         * @param monitoringStatus Flag specifying if the resource monitoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(@Nullable String monitoringStatus) {
             $.monitoringStatus = monitoringStatus;
             return this;
@@ -150,6 +194,12 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
             return this;
         }
 
+        /**
+         * @param userInfo User info
+         * 
+         * @return builder
+         * 
+         */
         public Builder userInfo(@Nullable UserInfoResponse userInfo) {
             $.userInfo = userInfo;
             return this;

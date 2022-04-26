@@ -30,6 +30,10 @@ public final class FrontendEndpointArgs extends com.pulumi.resources.ResourceArg
     @Import(name="hostName")
     private @Nullable Output<String> hostName;
 
+    /**
+     * @return The host name of the frontendEndpoint. Must be a domain name.
+     * 
+     */
     public Optional<Output<String>> hostName() {
         return Optional.ofNullable(this.hostName);
     }
@@ -41,6 +45,10 @@ public final class FrontendEndpointArgs extends com.pulumi.resources.ResourceArg
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -52,6 +60,10 @@ public final class FrontendEndpointArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -63,6 +75,10 @@ public final class FrontendEndpointArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sessionAffinityEnabledState")
     private @Nullable Output<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState;
 
+    /**
+     * @return Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * 
+     */
     public Optional<Output<Either<String,SessionAffinityEnabledState>>> sessionAffinityEnabledState() {
         return Optional.ofNullable(this.sessionAffinityEnabledState);
     }
@@ -74,6 +90,10 @@ public final class FrontendEndpointArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sessionAffinityTtlSeconds")
     private @Nullable Output<Integer> sessionAffinityTtlSeconds;
 
+    /**
+     * @return UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
+     * 
+     */
     public Optional<Output<Integer>> sessionAffinityTtlSeconds() {
         return Optional.ofNullable(this.sessionAffinityTtlSeconds);
     }
@@ -85,6 +105,10 @@ public final class FrontendEndpointArgs extends com.pulumi.resources.ResourceArg
     @Import(name="webApplicationFirewallPolicyLink")
     private @Nullable Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
+    /**
+     * @return Defines the Web Application Firewall policy for each host (if applicable)
+     * 
+     */
     public Optional<Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs>> webApplicationFirewallPolicyLink() {
         return Optional.ofNullable(this.webApplicationFirewallPolicyLink);
     }
@@ -118,64 +142,148 @@ public final class FrontendEndpointArgs extends com.pulumi.resources.ResourceArg
             $ = new FrontendEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostName The host name of the frontendEndpoint. Must be a domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(@Nullable Output<String> hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param hostName The host name of the frontendEndpoint. Must be a domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             return hostName(Output.of(hostName));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param sessionAffinityEnabledState Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinityEnabledState(@Nullable Output<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState) {
             $.sessionAffinityEnabledState = sessionAffinityEnabledState;
             return this;
         }
 
+        /**
+         * @param sessionAffinityEnabledState Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinityEnabledState(Either<String,SessionAffinityEnabledState> sessionAffinityEnabledState) {
             return sessionAffinityEnabledState(Output.of(sessionAffinityEnabledState));
         }
 
+        /**
+         * @param sessionAffinityEnabledState Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinityEnabledState(String sessionAffinityEnabledState) {
             return sessionAffinityEnabledState(Either.ofLeft(sessionAffinityEnabledState));
         }
 
+        /**
+         * @param sessionAffinityEnabledState Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinityEnabledState(SessionAffinityEnabledState sessionAffinityEnabledState) {
             return sessionAffinityEnabledState(Either.ofRight(sessionAffinityEnabledState));
         }
 
+        /**
+         * @param sessionAffinityTtlSeconds UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinityTtlSeconds(@Nullable Output<Integer> sessionAffinityTtlSeconds) {
             $.sessionAffinityTtlSeconds = sessionAffinityTtlSeconds;
             return this;
         }
 
+        /**
+         * @param sessionAffinityTtlSeconds UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinityTtlSeconds(Integer sessionAffinityTtlSeconds) {
             return sessionAffinityTtlSeconds(Output.of(sessionAffinityTtlSeconds));
         }
 
+        /**
+         * @param webApplicationFirewallPolicyLink Defines the Web Application Firewall policy for each host (if applicable)
+         * 
+         * @return builder
+         * 
+         */
         public Builder webApplicationFirewallPolicyLink(@Nullable Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
             $.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
 
+        /**
+         * @param webApplicationFirewallPolicyLink Defines the Web Application Firewall policy for each host (if applicable)
+         * 
+         * @return builder
+         * 
+         */
         public Builder webApplicationFirewallPolicyLink(FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
             return webApplicationFirewallPolicyLink(Output.of(webApplicationFirewallPolicyLink));
         }

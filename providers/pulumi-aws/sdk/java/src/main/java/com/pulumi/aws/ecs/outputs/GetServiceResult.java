@@ -11,34 +11,34 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceResult {
     /**
-     * The ARN of the ECS Service
+     * @return The ARN of the ECS Service
      * 
      */
     private final String arn;
     private final String clusterArn;
     /**
-     * The number of tasks for the ECS Service
+     * @return The number of tasks for the ECS Service
      * 
      */
     private final Integer desiredCount;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The launch type for the ECS Service
+     * @return The launch type for the ECS Service
      * 
      */
     private final String launchType;
     /**
-     * The scheduling strategy for the ECS Service
+     * @return The scheduling strategy for the ECS Service
      * 
      */
     private final String schedulingStrategy;
     private final String serviceName;
     /**
-     * The family for the latest ACTIVE revision
+     * @return The family for the latest ACTIVE revision
      * 
      */
     private final String taskDefinition;
@@ -64,9 +64,9 @@ public final class GetServiceResult {
     }
 
     /**
-     * The ARN of the ECS Service
+     * @return The ARN of the ECS Service
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
@@ -74,30 +74,30 @@ public final class GetServiceResult {
         return this.clusterArn;
     }
     /**
-     * The number of tasks for the ECS Service
+     * @return The number of tasks for the ECS Service
      * 
-    */
+     */
     public Integer desiredCount() {
         return this.desiredCount;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The launch type for the ECS Service
+     * @return The launch type for the ECS Service
      * 
-    */
+     */
     public String launchType() {
         return this.launchType;
     }
     /**
-     * The scheduling strategy for the ECS Service
+     * @return The scheduling strategy for the ECS Service
      * 
-    */
+     */
     public String schedulingStrategy() {
         return this.schedulingStrategy;
     }
@@ -105,9 +105,9 @@ public final class GetServiceResult {
         return this.serviceName;
     }
     /**
-     * The family for the latest ACTIVE revision
+     * @return The family for the latest ACTIVE revision
      * 
-    */
+     */
     public String taskDefinition() {
         return this.taskDefinition;
     }

@@ -28,6 +28,10 @@ public final class PrimaryStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="individualOutcome")
     private @Nullable Output<List<IndividualOutcomeArgs>> individualOutcome;
 
+    /**
+     * @return Step Id and outcome of each individual step.
+     * 
+     */
     public Optional<Output<List<IndividualOutcomeArgs>>> individualOutcome() {
         return Optional.ofNullable(this.individualOutcome);
     }
@@ -39,6 +43,10 @@ public final class PrimaryStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rollUp")
     private @Nullable Output<PrimaryStepRollUp> rollUp;
 
+    /**
+     * @return Rollup test status of multiple steps that were run with the same configuration as a group.
+     * 
+     */
     public Optional<Output<PrimaryStepRollUp>> rollUp() {
         return Optional.ofNullable(this.rollUp);
     }
@@ -68,24 +76,54 @@ public final class PrimaryStepArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PrimaryStepArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param individualOutcome Step Id and outcome of each individual step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder individualOutcome(@Nullable Output<List<IndividualOutcomeArgs>> individualOutcome) {
             $.individualOutcome = individualOutcome;
             return this;
         }
 
+        /**
+         * @param individualOutcome Step Id and outcome of each individual step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder individualOutcome(List<IndividualOutcomeArgs> individualOutcome) {
             return individualOutcome(Output.of(individualOutcome));
         }
 
+        /**
+         * @param individualOutcome Step Id and outcome of each individual step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder individualOutcome(IndividualOutcomeArgs... individualOutcome) {
             return individualOutcome(List.of(individualOutcome));
         }
 
+        /**
+         * @param rollUp Rollup test status of multiple steps that were run with the same configuration as a group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollUp(@Nullable Output<PrimaryStepRollUp> rollUp) {
             $.rollUp = rollUp;
             return this;
         }
 
+        /**
+         * @param rollUp Rollup test status of multiple steps that were run with the same configuration as a group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollUp(PrimaryStepRollUp rollUp) {
             return rollUp(Output.of(rollUp));
         }

@@ -12,88 +12,88 @@ import java.util.Objects;
 @CustomType
 public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelResponse {
     /**
-     * Number of applied changes
+     * @return Number of applied changes
      * 
      */
     private final Double appliedChanges;
     /**
-     * Number of cdc deletes
+     * @return Number of cdc deletes
      * 
      */
     private final Double cdcDeleteCounter;
     /**
-     * Number of cdc inserts
+     * @return Number of cdc inserts
      * 
      */
     private final Double cdcInsertCounter;
     /**
-     * Number of cdc updates
+     * @return Number of cdc updates
      * 
      */
     private final Double cdcUpdateCounter;
     /**
-     * Name of the database
+     * @return Name of the database
      * 
      */
     private final String databaseName;
     /**
-     * Migration end time
+     * @return Migration end time
      * 
      */
     private final String endedOn;
     /**
-     * Number of tables completed in full load
+     * @return Number of tables completed in full load
      * 
      */
     private final Double fullLoadCompletedTables;
     /**
-     * Number of tables errored in full load
+     * @return Number of tables errored in full load
      * 
      */
     private final Double fullLoadErroredTables;
     /**
-     * Number of tables loading in full load
+     * @return Number of tables loading in full load
      * 
      */
     private final Double fullLoadLoadingTables;
     /**
-     * Number of tables queued in full load
+     * @return Number of tables queued in full load
      * 
      */
     private final Double fullLoadQueuedTables;
     /**
-     * Result identifier
+     * @return Result identifier
      * 
      */
     private final String id;
     /**
-     * Number of incoming changes
+     * @return Number of incoming changes
      * 
      */
     private final Double incomingChanges;
     /**
-     * Indicates if initial load (full load) has been completed
+     * @return Indicates if initial load (full load) has been completed
      * 
      */
     private final Boolean initializationCompleted;
     /**
-     * CDC apply latency
+     * @return CDC apply latency
      * 
      */
     private final Double latency;
     /**
-     * Migration state that this database is in
+     * @return Migration state that this database is in
      * 
      */
     private final String migrationState;
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
      */
     private final String resultType;
     /**
-     * Migration start time
+     * @return Migration start time
      * 
      */
     private final String startedOn;
@@ -137,122 +137,122 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelRespons
     }
 
     /**
-     * Number of applied changes
+     * @return Number of applied changes
      * 
-    */
+     */
     public Double appliedChanges() {
         return this.appliedChanges;
     }
     /**
-     * Number of cdc deletes
+     * @return Number of cdc deletes
      * 
-    */
+     */
     public Double cdcDeleteCounter() {
         return this.cdcDeleteCounter;
     }
     /**
-     * Number of cdc inserts
+     * @return Number of cdc inserts
      * 
-    */
+     */
     public Double cdcInsertCounter() {
         return this.cdcInsertCounter;
     }
     /**
-     * Number of cdc updates
+     * @return Number of cdc updates
      * 
-    */
+     */
     public Double cdcUpdateCounter() {
         return this.cdcUpdateCounter;
     }
     /**
-     * Name of the database
+     * @return Name of the database
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * Migration end time
+     * @return Migration end time
      * 
-    */
+     */
     public String endedOn() {
         return this.endedOn;
     }
     /**
-     * Number of tables completed in full load
+     * @return Number of tables completed in full load
      * 
-    */
+     */
     public Double fullLoadCompletedTables() {
         return this.fullLoadCompletedTables;
     }
     /**
-     * Number of tables errored in full load
+     * @return Number of tables errored in full load
      * 
-    */
+     */
     public Double fullLoadErroredTables() {
         return this.fullLoadErroredTables;
     }
     /**
-     * Number of tables loading in full load
+     * @return Number of tables loading in full load
      * 
-    */
+     */
     public Double fullLoadLoadingTables() {
         return this.fullLoadLoadingTables;
     }
     /**
-     * Number of tables queued in full load
+     * @return Number of tables queued in full load
      * 
-    */
+     */
     public Double fullLoadQueuedTables() {
         return this.fullLoadQueuedTables;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Number of incoming changes
+     * @return Number of incoming changes
      * 
-    */
+     */
     public Double incomingChanges() {
         return this.incomingChanges;
     }
     /**
-     * Indicates if initial load (full load) has been completed
+     * @return Indicates if initial load (full load) has been completed
      * 
-    */
+     */
     public Boolean initializationCompleted() {
         return this.initializationCompleted;
     }
     /**
-     * CDC apply latency
+     * @return CDC apply latency
      * 
-    */
+     */
     public Double latency() {
         return this.latency;
     }
     /**
-     * Migration state that this database is in
+     * @return Migration state that this database is in
      * 
-    */
+     */
     public String migrationState() {
         return this.migrationState;
     }
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }
     /**
-     * Migration start time
+     * @return Migration start time
      * 
-    */
+     */
     public String startedOn() {
         return this.startedOn;
     }

@@ -25,6 +25,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="config")
     private @Nullable Output<Object> config;
 
+    /**
+     * @return Config information.
+     * 
+     */
     public Optional<Output<Object>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -36,6 +40,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="configHref")
     private @Nullable Output<String> configHref;
 
+    /**
+     * @return Config URI.
+     * 
+     */
     public Optional<Output<String>> configHref() {
         return Optional.ofNullable(this.configHref);
     }
@@ -47,6 +55,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="files")
     private @Nullable Output<Map<String,String>> files;
 
+    /**
+     * @return File list.
+     * 
+     */
     public Optional<Output<Map<String,String>>> files() {
         return Optional.ofNullable(this.files);
     }
@@ -58,6 +70,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="functionAppId")
     private @Nullable Output<String> functionAppId;
 
+    /**
+     * @return Function App ID.
+     * 
+     */
     public Optional<Output<String>> functionAppId() {
         return Optional.ofNullable(this.functionAppId);
     }
@@ -69,6 +85,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="functionName")
     private @Nullable Output<String> functionName;
 
+    /**
+     * @return Function name.
+     * 
+     */
     public Optional<Output<String>> functionName() {
         return Optional.ofNullable(this.functionName);
     }
@@ -80,6 +100,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="href")
     private @Nullable Output<String> href;
 
+    /**
+     * @return Function URI.
+     * 
+     */
     public Optional<Output<String>> href() {
         return Optional.ofNullable(this.href);
     }
@@ -91,6 +115,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="invokeUrlTemplate")
     private @Nullable Output<String> invokeUrlTemplate;
 
+    /**
+     * @return The invocation URL
+     * 
+     */
     public Optional<Output<String>> invokeUrlTemplate() {
         return Optional.ofNullable(this.invokeUrlTemplate);
     }
@@ -102,6 +130,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="isDisabled")
     private @Nullable Output<Boolean> isDisabled;
 
+    /**
+     * @return Gets or sets a value indicating whether the function is disabled
+     * 
+     */
     public Optional<Output<Boolean>> isDisabled() {
         return Optional.ofNullable(this.isDisabled);
     }
@@ -113,6 +145,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -124,6 +160,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="language")
     private @Nullable Output<String> language;
 
+    /**
+     * @return The function language
+     * 
+     */
     public Optional<Output<String>> language() {
         return Optional.ofNullable(this.language);
     }
@@ -135,6 +175,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Site name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -146,6 +190,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -157,6 +205,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="scriptHref")
     private @Nullable Output<String> scriptHref;
 
+    /**
+     * @return Script URI.
+     * 
+     */
     public Optional<Output<String>> scriptHref() {
         return Optional.ofNullable(this.scriptHref);
     }
@@ -168,6 +220,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="scriptRootPathHref")
     private @Nullable Output<String> scriptRootPathHref;
 
+    /**
+     * @return Script root path URI.
+     * 
+     */
     public Optional<Output<String>> scriptRootPathHref() {
         return Optional.ofNullable(this.scriptRootPathHref);
     }
@@ -179,6 +235,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="secretsFileHref")
     private @Nullable Output<String> secretsFileHref;
 
+    /**
+     * @return Secrets file URI.
+     * 
+     */
     public Optional<Output<String>> secretsFileHref() {
         return Optional.ofNullable(this.secretsFileHref);
     }
@@ -190,6 +250,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="slot", required=true)
     private Output<String> slot;
 
+    /**
+     * @return Name of the deployment slot.
+     * 
+     */
     public Output<String> slot() {
         return this.slot;
     }
@@ -201,6 +265,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="testData")
     private @Nullable Output<String> testData;
 
+    /**
+     * @return Test data used when testing via the Azure Portal.
+     * 
+     */
     public Optional<Output<String>> testData() {
         return Optional.ofNullable(this.testData);
     }
@@ -212,6 +280,10 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="testDataHref")
     private @Nullable Output<String> testDataHref;
 
+    /**
+     * @return Test data URI.
+     * 
+     */
     public Optional<Output<String>> testDataHref() {
         return Optional.ofNullable(this.testDataHref);
     }
@@ -257,164 +329,380 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
             $ = new WebAppInstanceFunctionSlotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config Config information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<Object> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config Config information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(Object config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param configHref Config URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configHref(@Nullable Output<String> configHref) {
             $.configHref = configHref;
             return this;
         }
 
+        /**
+         * @param configHref Config URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configHref(String configHref) {
             return configHref(Output.of(configHref));
         }
 
+        /**
+         * @param files File list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(@Nullable Output<Map<String,String>> files) {
             $.files = files;
             return this;
         }
 
+        /**
+         * @param files File list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(Map<String,String> files) {
             return files(Output.of(files));
         }
 
+        /**
+         * @param functionAppId Function App ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppId(@Nullable Output<String> functionAppId) {
             $.functionAppId = functionAppId;
             return this;
         }
 
+        /**
+         * @param functionAppId Function App ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppId(String functionAppId) {
             return functionAppId(Output.of(functionAppId));
         }
 
+        /**
+         * @param functionName Function name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(@Nullable Output<String> functionName) {
             $.functionName = functionName;
             return this;
         }
 
+        /**
+         * @param functionName Function name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(String functionName) {
             return functionName(Output.of(functionName));
         }
 
+        /**
+         * @param href Function URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder href(@Nullable Output<String> href) {
             $.href = href;
             return this;
         }
 
+        /**
+         * @param href Function URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder href(String href) {
             return href(Output.of(href));
         }
 
+        /**
+         * @param invokeUrlTemplate The invocation URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder invokeUrlTemplate(@Nullable Output<String> invokeUrlTemplate) {
             $.invokeUrlTemplate = invokeUrlTemplate;
             return this;
         }
 
+        /**
+         * @param invokeUrlTemplate The invocation URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder invokeUrlTemplate(String invokeUrlTemplate) {
             return invokeUrlTemplate(Output.of(invokeUrlTemplate));
         }
 
+        /**
+         * @param isDisabled Gets or sets a value indicating whether the function is disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDisabled(@Nullable Output<Boolean> isDisabled) {
             $.isDisabled = isDisabled;
             return this;
         }
 
+        /**
+         * @param isDisabled Gets or sets a value indicating whether the function is disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDisabled(Boolean isDisabled) {
             return isDisabled(Output.of(isDisabled));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param language The function language
+         * 
+         * @return builder
+         * 
+         */
         public Builder language(@Nullable Output<String> language) {
             $.language = language;
             return this;
         }
 
+        /**
+         * @param language The function language
+         * 
+         * @return builder
+         * 
+         */
         public Builder language(String language) {
             return language(Output.of(language));
         }
 
+        /**
+         * @param name Site name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Site name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scriptHref Script URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptHref(@Nullable Output<String> scriptHref) {
             $.scriptHref = scriptHref;
             return this;
         }
 
+        /**
+         * @param scriptHref Script URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptHref(String scriptHref) {
             return scriptHref(Output.of(scriptHref));
         }
 
+        /**
+         * @param scriptRootPathHref Script root path URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptRootPathHref(@Nullable Output<String> scriptRootPathHref) {
             $.scriptRootPathHref = scriptRootPathHref;
             return this;
         }
 
+        /**
+         * @param scriptRootPathHref Script root path URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptRootPathHref(String scriptRootPathHref) {
             return scriptRootPathHref(Output.of(scriptRootPathHref));
         }
 
+        /**
+         * @param secretsFileHref Secrets file URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretsFileHref(@Nullable Output<String> secretsFileHref) {
             $.secretsFileHref = secretsFileHref;
             return this;
         }
 
+        /**
+         * @param secretsFileHref Secrets file URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretsFileHref(String secretsFileHref) {
             return secretsFileHref(Output.of(secretsFileHref));
         }
 
+        /**
+         * @param slot Name of the deployment slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(Output<String> slot) {
             $.slot = slot;
             return this;
         }
 
+        /**
+         * @param slot Name of the deployment slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(String slot) {
             return slot(Output.of(slot));
         }
 
+        /**
+         * @param testData Test data used when testing via the Azure Portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testData(@Nullable Output<String> testData) {
             $.testData = testData;
             return this;
         }
 
+        /**
+         * @param testData Test data used when testing via the Azure Portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testData(String testData) {
             return testData(Output.of(testData));
         }
 
+        /**
+         * @param testDataHref Test data URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testDataHref(@Nullable Output<String> testDataHref) {
             $.testDataHref = testDataHref;
             return this;
         }
 
+        /**
+         * @param testDataHref Test data URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testDataHref(String testDataHref) {
             return testDataHref(Output.of(testDataHref));
         }

@@ -27,19 +27,19 @@ public final class GetAndroidMAMPolicyByNameResult {
     private final String friendlyName;
     private final String groupStatus;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     private final String lastModifiedTime;
     /**
-     * Resource Location
+     * @return Resource Location
      * 
      */
     private final @Nullable String location;
     private final @Nullable String managedBrowser;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
@@ -49,12 +49,12 @@ public final class GetAndroidMAMPolicyByNameResult {
     private final @Nullable Integer pinNumRetry;
     private final @Nullable String screenCapture;
     /**
-     * Resource Tags
+     * @return Resource Tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -153,9 +153,9 @@ public final class GetAndroidMAMPolicyByNameResult {
         return this.groupStatus;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -163,9 +163,9 @@ public final class GetAndroidMAMPolicyByNameResult {
         return this.lastModifiedTime;
     }
     /**
-     * Resource Location
+     * @return Resource Location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -173,9 +173,9 @@ public final class GetAndroidMAMPolicyByNameResult {
         return Optional.ofNullable(this.managedBrowser);
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -195,16 +195,16 @@ public final class GetAndroidMAMPolicyByNameResult {
         return Optional.ofNullable(this.screenCapture);
     }
     /**
-     * Resource Tags
+     * @return Resource Tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

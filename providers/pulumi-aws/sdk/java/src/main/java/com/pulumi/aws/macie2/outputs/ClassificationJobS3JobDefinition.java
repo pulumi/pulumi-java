@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClassificationJobS3JobDefinition {
     /**
-     * An array of objects, one for each AWS account that owns buckets to analyze. Each object specifies the account ID for an account and one or more buckets to analyze for the account. (documented below)
+     * @return An array of objects, one for each AWS account that owns buckets to analyze. Each object specifies the account ID for an account and one or more buckets to analyze for the account. (documented below)
      * 
      */
     private final @Nullable List<ClassificationJobS3JobDefinitionBucketDefinition> bucketDefinitions;
     /**
-     * The property- and tag-based conditions that determine which objects to include or exclude from the analysis. (documented below)
+     * @return The property- and tag-based conditions that determine which objects to include or exclude from the analysis. (documented below)
      * 
      */
     private final @Nullable ClassificationJobS3JobDefinitionScoping scoping;
@@ -33,16 +33,16 @@ public final class ClassificationJobS3JobDefinition {
     }
 
     /**
-     * An array of objects, one for each AWS account that owns buckets to analyze. Each object specifies the account ID for an account and one or more buckets to analyze for the account. (documented below)
+     * @return An array of objects, one for each AWS account that owns buckets to analyze. Each object specifies the account ID for an account and one or more buckets to analyze for the account. (documented below)
      * 
-    */
+     */
     public List<ClassificationJobS3JobDefinitionBucketDefinition> bucketDefinitions() {
         return this.bucketDefinitions == null ? List.of() : this.bucketDefinitions;
     }
     /**
-     * The property- and tag-based conditions that determine which objects to include or exclude from the analysis. (documented below)
+     * @return The property- and tag-based conditions that determine which objects to include or exclude from the analysis. (documented below)
      * 
-    */
+     */
     public Optional<ClassificationJobS3JobDefinitionScoping> scoping() {
         return Optional.ofNullable(this.scoping);
     }

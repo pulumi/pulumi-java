@@ -22,6 +22,10 @@ public final class GetMeshArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="meshOwner")
     private @Nullable String meshOwner;
 
+    /**
+     * @return The AWS account ID of the service mesh&#39;s owner.
+     * 
+     */
     public Optional<String> meshOwner() {
         return Optional.ofNullable(this.meshOwner);
     }
@@ -33,6 +37,10 @@ public final class GetMeshArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the service mesh.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -44,6 +52,10 @@ public final class GetMeshArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -74,16 +86,34 @@ public final class GetMeshArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetMeshArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param meshOwner The AWS account ID of the service mesh&#39;s owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshOwner(@Nullable String meshOwner) {
             $.meshOwner = meshOwner;
             return this;
         }
 
+        /**
+         * @param name The name of the service mesh.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tags A map of tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

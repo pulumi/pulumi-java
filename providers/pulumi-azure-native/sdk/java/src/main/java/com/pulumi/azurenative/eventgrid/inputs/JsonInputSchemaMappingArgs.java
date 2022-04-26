@@ -29,6 +29,10 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
     @Import(name="dataVersion")
     private @Nullable Output<JsonFieldWithDefaultArgs> dataVersion;
 
+    /**
+     * @return The mapping information for the DataVersion property of the Event Grid Event.
+     * 
+     */
     public Optional<Output<JsonFieldWithDefaultArgs>> dataVersion() {
         return Optional.ofNullable(this.dataVersion);
     }
@@ -40,6 +44,10 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
     @Import(name="eventTime")
     private @Nullable Output<JsonFieldArgs> eventTime;
 
+    /**
+     * @return The mapping information for the EventTime property of the Event Grid Event.
+     * 
+     */
     public Optional<Output<JsonFieldArgs>> eventTime() {
         return Optional.ofNullable(this.eventTime);
     }
@@ -51,6 +59,10 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
     @Import(name="eventType")
     private @Nullable Output<JsonFieldWithDefaultArgs> eventType;
 
+    /**
+     * @return The mapping information for the EventType property of the Event Grid Event.
+     * 
+     */
     public Optional<Output<JsonFieldWithDefaultArgs>> eventType() {
         return Optional.ofNullable(this.eventType);
     }
@@ -62,6 +74,10 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
     @Import(name="id")
     private @Nullable Output<JsonFieldArgs> id;
 
+    /**
+     * @return The mapping information for the Id property of the Event Grid Event.
+     * 
+     */
     public Optional<Output<JsonFieldArgs>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -74,6 +90,11 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
     @Import(name="inputSchemaMappingType", required=true)
     private Output<String> inputSchemaMappingType;
 
+    /**
+     * @return Type of the custom mapping
+     * Expected value is &#39;Json&#39;.
+     * 
+     */
     public Output<String> inputSchemaMappingType() {
         return this.inputSchemaMappingType;
     }
@@ -85,6 +106,10 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
     @Import(name="subject")
     private @Nullable Output<JsonFieldWithDefaultArgs> subject;
 
+    /**
+     * @return The mapping information for the Subject property of the Event Grid Event.
+     * 
+     */
     public Optional<Output<JsonFieldWithDefaultArgs>> subject() {
         return Optional.ofNullable(this.subject);
     }
@@ -96,6 +121,10 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
     @Import(name="topic")
     private @Nullable Output<JsonFieldArgs> topic;
 
+    /**
+     * @return The mapping information for the Topic property of the Event Grid Event.
+     * 
+     */
     public Optional<Output<JsonFieldArgs>> topic() {
         return Optional.ofNullable(this.topic);
     }
@@ -130,65 +159,151 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
             $ = new JsonInputSchemaMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataVersion The mapping information for the DataVersion property of the Event Grid Event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataVersion(@Nullable Output<JsonFieldWithDefaultArgs> dataVersion) {
             $.dataVersion = dataVersion;
             return this;
         }
 
+        /**
+         * @param dataVersion The mapping information for the DataVersion property of the Event Grid Event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataVersion(JsonFieldWithDefaultArgs dataVersion) {
             return dataVersion(Output.of(dataVersion));
         }
 
+        /**
+         * @param eventTime The mapping information for the EventTime property of the Event Grid Event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTime(@Nullable Output<JsonFieldArgs> eventTime) {
             $.eventTime = eventTime;
             return this;
         }
 
+        /**
+         * @param eventTime The mapping information for the EventTime property of the Event Grid Event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTime(JsonFieldArgs eventTime) {
             return eventTime(Output.of(eventTime));
         }
 
+        /**
+         * @param eventType The mapping information for the EventType property of the Event Grid Event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(@Nullable Output<JsonFieldWithDefaultArgs> eventType) {
             $.eventType = eventType;
             return this;
         }
 
+        /**
+         * @param eventType The mapping information for the EventType property of the Event Grid Event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(JsonFieldWithDefaultArgs eventType) {
             return eventType(Output.of(eventType));
         }
 
+        /**
+         * @param id The mapping information for the Id property of the Event Grid Event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<JsonFieldArgs> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The mapping information for the Id property of the Event Grid Event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(JsonFieldArgs id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param inputSchemaMappingType Type of the custom mapping
+         * Expected value is &#39;Json&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchemaMappingType(Output<String> inputSchemaMappingType) {
             $.inputSchemaMappingType = inputSchemaMappingType;
             return this;
         }
 
+        /**
+         * @param inputSchemaMappingType Type of the custom mapping
+         * Expected value is &#39;Json&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchemaMappingType(String inputSchemaMappingType) {
             return inputSchemaMappingType(Output.of(inputSchemaMappingType));
         }
 
+        /**
+         * @param subject The mapping information for the Subject property of the Event Grid Event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(@Nullable Output<JsonFieldWithDefaultArgs> subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param subject The mapping information for the Subject property of the Event Grid Event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(JsonFieldWithDefaultArgs subject) {
             return subject(Output.of(subject));
         }
 
+        /**
+         * @param topic The mapping information for the Topic property of the Event Grid Event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(@Nullable Output<JsonFieldArgs> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic The mapping information for the Topic property of the Event Grid Event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(JsonFieldArgs topic) {
             return topic(Output.of(topic));
         }

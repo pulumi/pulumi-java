@@ -25,6 +25,10 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
     @Import(name="filters")
     private @Nullable Output<RemediationFiltersArgs> filters;
 
+    /**
+     * @return The filters that will be applied to determine which resources to remediate.
+     * 
+     */
     public Optional<Output<RemediationFiltersArgs>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -36,6 +40,10 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
     @Import(name="managementGroupId", required=true)
     private Output<String> managementGroupId;
 
+    /**
+     * @return Management group ID.
+     * 
+     */
     public Output<String> managementGroupId() {
         return this.managementGroupId;
     }
@@ -47,6 +55,10 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
     @Import(name="managementGroupsNamespace", required=true)
     private Output<String> managementGroupsNamespace;
 
+    /**
+     * @return The namespace for Microsoft Management RP; only &#34;Microsoft.Management&#34; is allowed.
+     * 
+     */
     public Output<String> managementGroupsNamespace() {
         return this.managementGroupsNamespace;
     }
@@ -58,6 +70,10 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
     @Import(name="policyAssignmentId")
     private @Nullable Output<String> policyAssignmentId;
 
+    /**
+     * @return The resource ID of the policy assignment that should be remediated.
+     * 
+     */
     public Optional<Output<String>> policyAssignmentId() {
         return Optional.ofNullable(this.policyAssignmentId);
     }
@@ -69,6 +85,10 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
     @Import(name="policyDefinitionReferenceId")
     private @Nullable Output<String> policyDefinitionReferenceId;
 
+    /**
+     * @return The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
+     * 
+     */
     public Optional<Output<String>> policyDefinitionReferenceId() {
         return Optional.ofNullable(this.policyDefinitionReferenceId);
     }
@@ -80,6 +100,10 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
     @Import(name="remediationName")
     private @Nullable Output<String> remediationName;
 
+    /**
+     * @return The name of the remediation.
+     * 
+     */
     public Optional<Output<String>> remediationName() {
         return Optional.ofNullable(this.remediationName);
     }
@@ -91,6 +115,10 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
     @Import(name="resourceDiscoveryMode")
     private @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
 
+    /**
+     * @return The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
+     * 
+     */
     public Optional<Output<Either<String,ResourceDiscoveryMode>>> resourceDiscoveryMode() {
         return Optional.ofNullable(this.resourceDiscoveryMode);
     }
@@ -125,73 +153,169 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
             $ = new RemediationAtManagementGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters The filters that will be applied to determine which resources to remediate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable Output<RemediationFiltersArgs> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters The filters that will be applied to determine which resources to remediate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(RemediationFiltersArgs filters) {
             return filters(Output.of(filters));
         }
 
+        /**
+         * @param managementGroupId Management group ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroupId(Output<String> managementGroupId) {
             $.managementGroupId = managementGroupId;
             return this;
         }
 
+        /**
+         * @param managementGroupId Management group ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroupId(String managementGroupId) {
             return managementGroupId(Output.of(managementGroupId));
         }
 
+        /**
+         * @param managementGroupsNamespace The namespace for Microsoft Management RP; only &#34;Microsoft.Management&#34; is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroupsNamespace(Output<String> managementGroupsNamespace) {
             $.managementGroupsNamespace = managementGroupsNamespace;
             return this;
         }
 
+        /**
+         * @param managementGroupsNamespace The namespace for Microsoft Management RP; only &#34;Microsoft.Management&#34; is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroupsNamespace(String managementGroupsNamespace) {
             return managementGroupsNamespace(Output.of(managementGroupsNamespace));
         }
 
+        /**
+         * @param policyAssignmentId The resource ID of the policy assignment that should be remediated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyAssignmentId(@Nullable Output<String> policyAssignmentId) {
             $.policyAssignmentId = policyAssignmentId;
             return this;
         }
 
+        /**
+         * @param policyAssignmentId The resource ID of the policy assignment that should be remediated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyAssignmentId(String policyAssignmentId) {
             return policyAssignmentId(Output.of(policyAssignmentId));
         }
 
+        /**
+         * @param policyDefinitionReferenceId The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
             $.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
 
+        /**
+         * @param policyDefinitionReferenceId The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionReferenceId(String policyDefinitionReferenceId) {
             return policyDefinitionReferenceId(Output.of(policyDefinitionReferenceId));
         }
 
+        /**
+         * @param remediationName The name of the remediation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediationName(@Nullable Output<String> remediationName) {
             $.remediationName = remediationName;
             return this;
         }
 
+        /**
+         * @param remediationName The name of the remediation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediationName(String remediationName) {
             return remediationName(Output.of(remediationName));
         }
 
+        /**
+         * @param resourceDiscoveryMode The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceDiscoveryMode(@Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode) {
             $.resourceDiscoveryMode = resourceDiscoveryMode;
             return this;
         }
 
+        /**
+         * @param resourceDiscoveryMode The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceDiscoveryMode(Either<String,ResourceDiscoveryMode> resourceDiscoveryMode) {
             return resourceDiscoveryMode(Output.of(resourceDiscoveryMode));
         }
 
+        /**
+         * @param resourceDiscoveryMode The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceDiscoveryMode(String resourceDiscoveryMode) {
             return resourceDiscoveryMode(Either.ofLeft(resourceDiscoveryMode));
         }
 
+        /**
+         * @param resourceDiscoveryMode The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceDiscoveryMode(ResourceDiscoveryMode resourceDiscoveryMode) {
             return resourceDiscoveryMode(Either.ofRight(resourceDiscoveryMode));
         }

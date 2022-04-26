@@ -28,6 +28,10 @@ public final class LinkedRouterApplianceInstancesArgs extends com.pulumi.resourc
     @Import(name="instances")
     private @Nullable Output<List<RouterApplianceInstanceArgs>> instances;
 
+    /**
+     * @return The list of router appliance instances.
+     * 
+     */
     public Optional<Output<List<RouterApplianceInstanceArgs>>> instances() {
         return Optional.ofNullable(this.instances);
     }
@@ -39,6 +43,10 @@ public final class LinkedRouterApplianceInstancesArgs extends com.pulumi.resourc
     @Import(name="siteToSiteDataTransfer")
     private @Nullable Output<Boolean> siteToSiteDataTransfer;
 
+    /**
+     * @return A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
+     * 
+     */
     public Optional<Output<Boolean>> siteToSiteDataTransfer() {
         return Optional.ofNullable(this.siteToSiteDataTransfer);
     }
@@ -68,24 +76,54 @@ public final class LinkedRouterApplianceInstancesArgs extends com.pulumi.resourc
             $ = new LinkedRouterApplianceInstancesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instances The list of router appliance instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(@Nullable Output<List<RouterApplianceInstanceArgs>> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances The list of router appliance instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<RouterApplianceInstanceArgs> instances) {
             return instances(Output.of(instances));
         }
 
+        /**
+         * @param instances The list of router appliance instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(RouterApplianceInstanceArgs... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param siteToSiteDataTransfer A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteToSiteDataTransfer(@Nullable Output<Boolean> siteToSiteDataTransfer) {
             $.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
 
+        /**
+         * @param siteToSiteDataTransfer A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             return siteToSiteDataTransfer(Output.of(siteToSiteDataTransfer));
         }

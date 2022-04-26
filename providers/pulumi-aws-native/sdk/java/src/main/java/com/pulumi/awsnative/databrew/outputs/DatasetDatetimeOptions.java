@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DatasetDatetimeOptions {
     /**
-     * Date/time format of a date parameter
+     * @return Date/time format of a date parameter
      * 
      */
     private final String format;
     /**
-     * Locale code for a date parameter
+     * @return Locale code for a date parameter
      * 
      */
     private final @Nullable String localeCode;
     /**
-     * Timezone offset
+     * @return Timezone offset
      * 
      */
     private final @Nullable String timezoneOffset;
@@ -38,23 +38,23 @@ public final class DatasetDatetimeOptions {
     }
 
     /**
-     * Date/time format of a date parameter
+     * @return Date/time format of a date parameter
      * 
-    */
+     */
     public String format() {
         return this.format;
     }
     /**
-     * Locale code for a date parameter
+     * @return Locale code for a date parameter
      * 
-    */
+     */
     public Optional<String> localeCode() {
         return Optional.ofNullable(this.localeCode);
     }
     /**
-     * Timezone offset
+     * @return Timezone offset
      * 
-    */
+     */
     public Optional<String> timezoneOffset() {
         return Optional.ofNullable(this.timezoneOffset);
     }

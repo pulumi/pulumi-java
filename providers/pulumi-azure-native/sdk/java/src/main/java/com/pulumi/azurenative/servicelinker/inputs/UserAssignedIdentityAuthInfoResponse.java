@@ -25,6 +25,11 @@ public final class UserAssignedIdentityAuthInfoResponse extends com.pulumi.resou
     @Import(name="authType", required=true)
     private String authType;
 
+    /**
+     * @return The authentication type.
+     * Expected value is &#39;userAssignedIdentity&#39;.
+     * 
+     */
     public String authType() {
         return this.authType;
     }
@@ -36,6 +41,10 @@ public final class UserAssignedIdentityAuthInfoResponse extends com.pulumi.resou
     @Import(name="clientId", required=true)
     private String clientId;
 
+    /**
+     * @return Client Id for userAssignedIdentity.
+     * 
+     */
     public String clientId() {
         return this.clientId;
     }
@@ -47,6 +56,10 @@ public final class UserAssignedIdentityAuthInfoResponse extends com.pulumi.resou
     @Import(name="subscriptionId", required=true)
     private String subscriptionId;
 
+    /**
+     * @return Subscription id for userAssignedIdentity.
+     * 
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }
@@ -77,16 +90,35 @@ public final class UserAssignedIdentityAuthInfoResponse extends com.pulumi.resou
             $ = new UserAssignedIdentityAuthInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authType The authentication type.
+         * Expected value is &#39;userAssignedIdentity&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(String authType) {
             $.authType = authType;
             return this;
         }
 
+        /**
+         * @param clientId Client Id for userAssignedIdentity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription id for userAssignedIdentity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;

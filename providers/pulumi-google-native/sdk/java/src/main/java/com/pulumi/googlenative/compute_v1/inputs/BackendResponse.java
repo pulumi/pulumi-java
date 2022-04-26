@@ -26,6 +26,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="balancingMode", required=true)
     private String balancingMode;
 
+    /**
+     * @return Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Supported balancing modes and target capacity settings and Restrictions and guidance for instance groups. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and is ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.
+     * 
+     */
     public String balancingMode() {
         return this.balancingMode;
     }
@@ -37,6 +41,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacityScaler", required=true)
     private Double capacityScaler;
 
+    /**
+     * @return A multiplier applied to the backend&#39;s target capacity of its balancing mode. The default value is 1, which means the group serves up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one backend attached to the backend service.
+     * 
+     */
     public Double capacityScaler() {
         return this.capacityScaler;
     }
@@ -48,6 +56,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -59,6 +71,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="failover", required=true)
     private Boolean failover;
 
+    /**
+     * @return This field designates whether this is a failover backend. More than one failover backend can be configured for a given BackendService.
+     * 
+     */
     public Boolean failover() {
         return this.failover;
     }
@@ -70,6 +86,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="group", required=true)
     private String group;
 
+    /**
+     * @return The fully-qualified URL of an instance group or network endpoint group (NEG) resource. To determine what types of backends a load balancer supports, see the [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-service#backends). You must use the *fully-qualified* URL (starting with https://www.googleapis.com/) to specify the instance group or NEG. Partial URLs are not supported.
+     * 
+     */
     public String group() {
         return this.group;
     }
@@ -81,6 +101,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxConnections", required=true)
     private Integer maxConnections;
 
+    /**
+     * @return Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is RATE.
+     * 
+     */
     public Integer maxConnections() {
         return this.maxConnections;
     }
@@ -92,6 +116,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxConnectionsPerEndpoint", required=true)
     private Integer maxConnectionsPerEndpoint;
 
+    /**
+     * @return Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is RATE.
+     * 
+     */
     public Integer maxConnectionsPerEndpoint() {
         return this.maxConnectionsPerEndpoint;
     }
@@ -103,6 +131,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxConnectionsPerInstance", required=true)
     private Integer maxConnectionsPerInstance;
 
+    /**
+     * @return Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is RATE.
+     * 
+     */
     public Integer maxConnectionsPerInstance() {
         return this.maxConnectionsPerInstance;
     }
@@ -114,6 +146,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxRate", required=true)
     private Integer maxRate;
 
+    /**
+     * @return Defines a maximum number of HTTP requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is CONNECTION.
+     * 
+     */
     public Integer maxRate() {
         return this.maxRate;
     }
@@ -125,6 +161,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxRatePerEndpoint", required=true)
     private Double maxRatePerEndpoint;
 
+    /**
+     * @return Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is CONNECTION.
+     * 
+     */
     public Double maxRatePerEndpoint() {
         return this.maxRatePerEndpoint;
     }
@@ -136,6 +176,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxRatePerInstance", required=true)
     private Double maxRatePerInstance;
 
+    /**
+     * @return Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is CONNECTION.
+     * 
+     */
     public Double maxRatePerInstance() {
         return this.maxRatePerInstance;
     }
@@ -147,6 +191,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxUtilization", required=true)
     private Double maxUtilization;
 
+    /**
+     * @return Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.
+     * 
+     */
     public Double maxUtilization() {
         return this.maxUtilization;
     }
@@ -186,61 +234,133 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BackendResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param balancingMode Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Supported balancing modes and target capacity settings and Restrictions and guidance for instance groups. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and is ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder balancingMode(String balancingMode) {
             $.balancingMode = balancingMode;
             return this;
         }
 
+        /**
+         * @param capacityScaler A multiplier applied to the backend&#39;s target capacity of its balancing mode. The default value is 1, which means the group serves up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one backend attached to the backend service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityScaler(Double capacityScaler) {
             $.capacityScaler = capacityScaler;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param failover This field designates whether this is a failover backend. More than one failover backend can be configured for a given BackendService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failover(Boolean failover) {
             $.failover = failover;
             return this;
         }
 
+        /**
+         * @param group The fully-qualified URL of an instance group or network endpoint group (NEG) resource. To determine what types of backends a load balancer supports, see the [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-service#backends). You must use the *fully-qualified* URL (starting with https://www.googleapis.com/) to specify the instance group or NEG. Partial URLs are not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(String group) {
             $.group = group;
             return this;
         }
 
+        /**
+         * @param maxConnections Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is RATE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConnections(Integer maxConnections) {
             $.maxConnections = maxConnections;
             return this;
         }
 
+        /**
+         * @param maxConnectionsPerEndpoint Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is RATE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConnectionsPerEndpoint(Integer maxConnectionsPerEndpoint) {
             $.maxConnectionsPerEndpoint = maxConnectionsPerEndpoint;
             return this;
         }
 
+        /**
+         * @param maxConnectionsPerInstance Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is RATE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConnectionsPerInstance(Integer maxConnectionsPerInstance) {
             $.maxConnectionsPerInstance = maxConnectionsPerInstance;
             return this;
         }
 
+        /**
+         * @param maxRate Defines a maximum number of HTTP requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is CONNECTION.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRate(Integer maxRate) {
             $.maxRate = maxRate;
             return this;
         }
 
+        /**
+         * @param maxRatePerEndpoint Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is CONNECTION.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRatePerEndpoint(Double maxRatePerEndpoint) {
             $.maxRatePerEndpoint = maxRatePerEndpoint;
             return this;
         }
 
+        /**
+         * @param maxRatePerInstance Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is CONNECTION.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRatePerInstance(Double maxRatePerInstance) {
             $.maxRatePerInstance = maxRatePerInstance;
             return this;
         }
 
+        /**
+         * @param maxUtilization Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUtilization(Double maxUtilization) {
             $.maxUtilization = maxUtilization;
             return this;

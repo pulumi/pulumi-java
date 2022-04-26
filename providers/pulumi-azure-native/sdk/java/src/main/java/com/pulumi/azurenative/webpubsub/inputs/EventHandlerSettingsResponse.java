@@ -28,6 +28,10 @@ public final class EventHandlerSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="items")
     private @Nullable Map<String,List<EventHandlerTemplateResponse>> items;
 
+    /**
+     * @return Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.
+     * 
+     */
     public Optional<Map<String,List<EventHandlerTemplateResponse>>> items() {
         return Optional.ofNullable(this.items);
     }
@@ -56,6 +60,12 @@ public final class EventHandlerSettingsResponse extends com.pulumi.resources.Inv
             $ = new EventHandlerSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param items Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(@Nullable Map<String,List<EventHandlerTemplateResponse>> items) {
             $.items = items;
             return this;

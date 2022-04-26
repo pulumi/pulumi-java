@@ -24,6 +24,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="device")
     private @Nullable Output<com.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device;
 
+    /**
+     * @return The Edge Device you want to register against a device fleet
+     * 
+     */
     public Optional<Output<com.pulumi.awsnative.sagemaker.inputs.DeviceArgs>> device() {
         return Optional.ofNullable(this.device);
     }
@@ -35,6 +39,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceFleetName", required=true)
     private Output<String> deviceFleetName;
 
+    /**
+     * @return The name of the edge device fleet
+     * 
+     */
     public Output<String> deviceFleetName() {
         return this.deviceFleetName;
     }
@@ -46,6 +54,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DeviceTagArgs>> tags;
 
+    /**
+     * @return Associate tags with the resource
+     * 
+     */
     public Optional<Output<List<DeviceTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -76,33 +88,75 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device The Edge Device you want to register against a device fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable Output<com.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param device The Edge Device you want to register against a device fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(com.pulumi.awsnative.sagemaker.inputs.DeviceArgs device) {
             return device(Output.of(device));
         }
 
+        /**
+         * @param deviceFleetName The name of the edge device fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceFleetName(Output<String> deviceFleetName) {
             $.deviceFleetName = deviceFleetName;
             return this;
         }
 
+        /**
+         * @param deviceFleetName The name of the edge device fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceFleetName(String deviceFleetName) {
             return deviceFleetName(Output.of(deviceFleetName));
         }
 
+        /**
+         * @param tags Associate tags with the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DeviceTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Associate tags with the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DeviceTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Associate tags with the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DeviceTagArgs... tags) {
             return tags(List.of(tags));
         }

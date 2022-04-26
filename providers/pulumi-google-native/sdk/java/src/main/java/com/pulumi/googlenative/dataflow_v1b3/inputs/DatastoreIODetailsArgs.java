@@ -26,6 +26,10 @@ public final class DatastoreIODetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="namespace")
     private @Nullable Output<String> namespace;
 
+    /**
+     * @return Namespace used in the connection.
+     * 
+     */
     public Optional<Output<String>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -37,6 +41,10 @@ public final class DatastoreIODetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return ProjectId accessed in the connection.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -66,20 +74,44 @@ public final class DatastoreIODetailsArgs extends com.pulumi.resources.ResourceA
             $ = new DatastoreIODetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespace Namespace used in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Namespace used in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }
 
+        /**
+         * @param project ProjectId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project ProjectId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

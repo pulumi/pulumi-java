@@ -29,6 +29,10 @@ public final class EncoderProcessorResponse extends com.pulumi.resources.InvokeA
     @Import(name="inputs", required=true)
     private List<NodeInputResponse> inputs;
 
+    /**
+     * @return An array of upstream node references within the topology to be used as inputs for this node.
+     * 
+     */
     public List<NodeInputResponse> inputs() {
         return this.inputs;
     }
@@ -40,6 +44,10 @@ public final class EncoderProcessorResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Node name. Must be unique within the topology.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -51,6 +59,10 @@ public final class EncoderProcessorResponse extends com.pulumi.resources.InvokeA
     @Import(name="preset", required=true)
     private Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset;
 
+    /**
+     * @return The encoder preset, which defines the recipe or instructions on how the input content should be processed.
+     * 
+     */
     public Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset() {
         return this.preset;
     }
@@ -63,6 +75,11 @@ public final class EncoderProcessorResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderProcessor&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -94,33 +111,76 @@ public final class EncoderProcessorResponse extends com.pulumi.resources.InvokeA
             $ = new EncoderProcessorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputs An array of upstream node references within the topology to be used as inputs for this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(List<NodeInputResponse> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs An array of upstream node references within the topology to be used as inputs for this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(NodeInputResponse... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param name Node name. Must be unique within the topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param preset The encoder preset, which defines the recipe or instructions on how the input content should be processed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preset(Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset) {
             $.preset = preset;
             return this;
         }
 
+        /**
+         * @param preset The encoder preset, which defines the recipe or instructions on how the input content should be processed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preset(EncoderCustomPresetResponse preset) {
             return preset(Either.ofLeft(preset));
         }
 
+        /**
+         * @param preset The encoder preset, which defines the recipe or instructions on how the input content should be processed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preset(EncoderSystemPresetResponse preset) {
             return preset(Either.ofRight(preset));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderProcessor&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -19,6 +19,10 @@ public final class DistributionPolicyZoneConfigurationResponse extends com.pulum
     @Import(name="zone", required=true)
     private String zone;
 
+    /**
+     * @return The URL of the zone. The zone must exist in the region where the managed instance group is located.
+     * 
+     */
     public String zone() {
         return this.zone;
     }
@@ -47,6 +51,12 @@ public final class DistributionPolicyZoneConfigurationResponse extends com.pulum
             $ = new DistributionPolicyZoneConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param zone The URL of the zone. The zone must exist in the region where the managed instance group is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             $.zone = zone;
             return this;

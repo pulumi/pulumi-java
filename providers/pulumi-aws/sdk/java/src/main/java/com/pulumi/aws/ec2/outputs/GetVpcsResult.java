@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 public final class GetVpcsResult {
     private final @Nullable List<GetVpcsFilter> filters;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * A list of all the VPC Ids found. This data source will fail if none are found.
+     * @return A list of all the VPC Ids found. This data source will fail if none are found.
      * 
      */
     private final List<String> ids;
@@ -42,16 +42,16 @@ public final class GetVpcsResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A list of all the VPC Ids found. This data source will fail if none are found.
+     * @return A list of all the VPC Ids found. This data source will fail if none are found.
      * 
-    */
+     */
     public List<String> ids() {
         return this.ids;
     }

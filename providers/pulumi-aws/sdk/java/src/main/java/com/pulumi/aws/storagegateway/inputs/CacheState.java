@@ -22,6 +22,10 @@ public final class CacheState extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskId")
     private @Nullable Output<String> diskId;
 
+    /**
+     * @return Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
+     * 
+     */
     public Optional<Output<String>> diskId() {
         return Optional.ofNullable(this.diskId);
     }
@@ -33,6 +37,10 @@ public final class CacheState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayArn")
     private @Nullable Output<String> gatewayArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the gateway.
+     * 
+     */
     public Optional<Output<String>> gatewayArn() {
         return Optional.ofNullable(this.gatewayArn);
     }
@@ -62,20 +70,44 @@ public final class CacheState extends com.pulumi.resources.ResourceArgs {
             $ = new CacheState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskId Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskId(@Nullable Output<String> diskId) {
             $.diskId = diskId;
             return this;
         }
 
+        /**
+         * @param diskId Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskId(String diskId) {
             return diskId(Output.of(diskId));
         }
 
+        /**
+         * @param gatewayArn The Amazon Resource Name (ARN) of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayArn(@Nullable Output<String> gatewayArn) {
             $.gatewayArn = gatewayArn;
             return this;
         }
 
+        /**
+         * @param gatewayArn The Amazon Resource Name (ARN) of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayArn(String gatewayArn) {
             return gatewayArn(Output.of(gatewayArn));
         }

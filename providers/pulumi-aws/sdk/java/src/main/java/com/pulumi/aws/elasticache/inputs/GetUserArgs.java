@@ -23,6 +23,10 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessString")
     private @Nullable String accessString;
 
+    /**
+     * @return A string for what access a user possesses within the associated ElastiCache replication groups or clusters.
+     * 
+     */
     public Optional<String> accessString() {
         return Optional.ofNullable(this.accessString);
     }
@@ -55,6 +59,10 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userId", required=true)
     private String userId;
 
+    /**
+     * @return The identifier for the user.
+     * 
+     */
     public String userId() {
         return this.userId;
     }
@@ -66,6 +74,10 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName")
     private @Nullable String userName;
 
+    /**
+     * @return The user name of the user.
+     * 
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -99,6 +111,12 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetUserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessString A string for what access a user possesses within the associated ElastiCache replication groups or clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessString(@Nullable String accessString) {
             $.accessString = accessString;
             return this;
@@ -123,11 +141,23 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
             return passwords(List.of(passwords));
         }
 
+        /**
+         * @param userId The identifier for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             $.userId = userId;
             return this;
         }
 
+        /**
+         * @param userName The user name of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable String userName) {
             $.userName = userName;
             return this;

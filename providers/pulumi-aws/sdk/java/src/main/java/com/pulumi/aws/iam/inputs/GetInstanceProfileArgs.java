@@ -19,6 +19,10 @@ public final class GetInstanceProfileArgs extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The friendly IAM instance profile name to match.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetInstanceProfileArgs extends com.pulumi.resources.InvokeArg
             $ = new GetInstanceProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The friendly IAM instance profile name to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

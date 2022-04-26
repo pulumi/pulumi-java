@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TIDataConnectorDataTypesResponse {
     /**
-     * Data type for indicators connection.
+     * @return Data type for indicators connection.
      * 
      */
     private final @Nullable TIDataConnectorDataTypesResponseIndicators indicators;
@@ -23,9 +23,9 @@ public final class TIDataConnectorDataTypesResponse {
     }
 
     /**
-     * Data type for indicators connection.
+     * @return Data type for indicators connection.
      * 
-    */
+     */
     public Optional<TIDataConnectorDataTypesResponseIndicators> indicators() {
         return Optional.ofNullable(this.indicators);
     }

@@ -25,6 +25,10 @@ public final class UtilizationReportArgs extends com.pulumi.resources.ResourceAr
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The report display name, as assigned by the user.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -64,6 +68,10 @@ public final class UtilizationReportArgs extends com.pulumi.resources.ResourceAr
     @Import(name="timeFrame")
     private @Nullable Output<UtilizationReportTimeFrame> timeFrame;
 
+    /**
+     * @return Time frame of the report.
+     * 
+     */
     public Optional<Output<UtilizationReportTimeFrame>> timeFrame() {
         return Optional.ofNullable(this.timeFrame);
     }
@@ -82,6 +90,10 @@ public final class UtilizationReportArgs extends com.pulumi.resources.ResourceAr
     @Import(name="vms")
     private @Nullable Output<List<VmUtilizationInfoArgs>> vms;
 
+    /**
+     * @return List of utilization information per VM. When sent as part of the request, the &#34;vm_id&#34; field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
+     * 
+     */
     public Optional<Output<List<VmUtilizationInfoArgs>>> vms() {
         return Optional.ofNullable(this.vms);
     }
@@ -117,11 +129,23 @@ public final class UtilizationReportArgs extends com.pulumi.resources.ResourceAr
             $ = new UtilizationReportArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The report display name, as assigned by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The report display name, as assigned by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -162,11 +186,23 @@ public final class UtilizationReportArgs extends com.pulumi.resources.ResourceAr
             return sourceId(Output.of(sourceId));
         }
 
+        /**
+         * @param timeFrame Time frame of the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeFrame(@Nullable Output<UtilizationReportTimeFrame> timeFrame) {
             $.timeFrame = timeFrame;
             return this;
         }
 
+        /**
+         * @param timeFrame Time frame of the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeFrame(UtilizationReportTimeFrame timeFrame) {
             return timeFrame(Output.of(timeFrame));
         }
@@ -180,15 +216,33 @@ public final class UtilizationReportArgs extends com.pulumi.resources.ResourceAr
             return utilizationReportId(Output.of(utilizationReportId));
         }
 
+        /**
+         * @param vms List of utilization information per VM. When sent as part of the request, the &#34;vm_id&#34; field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vms(@Nullable Output<List<VmUtilizationInfoArgs>> vms) {
             $.vms = vms;
             return this;
         }
 
+        /**
+         * @param vms List of utilization information per VM. When sent as part of the request, the &#34;vm_id&#34; field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vms(List<VmUtilizationInfoArgs> vms) {
             return vms(Output.of(vms));
         }
 
+        /**
+         * @param vms List of utilization information per VM. When sent as part of the request, the &#34;vm_id&#34; field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vms(VmUtilizationInfoArgs... vms) {
             return vms(List.of(vms));
         }

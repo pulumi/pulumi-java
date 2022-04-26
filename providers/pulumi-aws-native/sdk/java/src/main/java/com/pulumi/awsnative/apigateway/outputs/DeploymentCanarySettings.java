@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DeploymentCanarySettings {
     /**
-     * The percentage (0-100) of traffic diverted to a canary deployment.
+     * @return The percentage (0-100) of traffic diverted to a canary deployment.
      * 
      */
     private final @Nullable Double percentTraffic;
     /**
-     * Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values. Duplicates are not allowed.
+     * @return Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values. Duplicates are not allowed.
      * 
      */
     private final @Nullable Object stageVariableOverrides;
     /**
-     * Whether the canary deployment uses the stage cache.
+     * @return Whether the canary deployment uses the stage cache.
      * 
      */
     private final @Nullable Boolean useStageCache;
@@ -40,23 +40,23 @@ public final class DeploymentCanarySettings {
     }
 
     /**
-     * The percentage (0-100) of traffic diverted to a canary deployment.
+     * @return The percentage (0-100) of traffic diverted to a canary deployment.
      * 
-    */
+     */
     public Optional<Double> percentTraffic() {
         return Optional.ofNullable(this.percentTraffic);
     }
     /**
-     * Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values. Duplicates are not allowed.
+     * @return Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values. Duplicates are not allowed.
      * 
-    */
+     */
     public Optional<Object> stageVariableOverrides() {
         return Optional.ofNullable(this.stageVariableOverrides);
     }
     /**
-     * Whether the canary deployment uses the stage cache.
+     * @return Whether the canary deployment uses the stage cache.
      * 
-    */
+     */
     public Optional<Boolean> useStageCache() {
         return Optional.ofNullable(this.useStageCache);
     }

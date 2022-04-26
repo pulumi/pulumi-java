@@ -24,6 +24,10 @@ public final class FirewallLogConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="enable", required=true)
     private Boolean enable;
 
+    /**
+     * @return This field denotes whether to enable logging for a particular firewall rule.
+     * 
+     */
     public Boolean enable() {
         return this.enable;
     }
@@ -35,6 +39,10 @@ public final class FirewallLogConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="metadata", required=true)
     private String metadata;
 
+    /**
+     * @return This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
+     * 
+     */
     public String metadata() {
         return this.metadata;
     }
@@ -64,11 +72,23 @@ public final class FirewallLogConfigResponse extends com.pulumi.resources.Invoke
             $ = new FirewallLogConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enable This field denotes whether to enable logging for a particular firewall rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param metadata This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(String metadata) {
             $.metadata = metadata;
             return this;

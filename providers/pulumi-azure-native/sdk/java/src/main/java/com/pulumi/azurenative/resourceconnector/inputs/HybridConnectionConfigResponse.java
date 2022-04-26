@@ -24,6 +24,10 @@ public final class HybridConnectionConfigResponse extends com.pulumi.resources.I
     @Import(name="expirationTime", required=true)
     private Double expirationTime;
 
+    /**
+     * @return Timestamp when this token will be expired.
+     * 
+     */
     public Double expirationTime() {
         return this.expirationTime;
     }
@@ -35,6 +39,10 @@ public final class HybridConnectionConfigResponse extends com.pulumi.resources.I
     @Import(name="hybridConnectionName", required=true)
     private String hybridConnectionName;
 
+    /**
+     * @return Name of the connection
+     * 
+     */
     public String hybridConnectionName() {
         return this.hybridConnectionName;
     }
@@ -46,6 +54,10 @@ public final class HybridConnectionConfigResponse extends com.pulumi.resources.I
     @Import(name="relay", required=true)
     private String relay;
 
+    /**
+     * @return Name of the notification service.
+     * 
+     */
     public String relay() {
         return this.relay;
     }
@@ -57,6 +69,10 @@ public final class HybridConnectionConfigResponse extends com.pulumi.resources.I
     @Import(name="token", required=true)
     private String token;
 
+    /**
+     * @return Listener access token
+     * 
+     */
     public String token() {
         return this.token;
     }
@@ -88,21 +104,45 @@ public final class HybridConnectionConfigResponse extends com.pulumi.resources.I
             $ = new HybridConnectionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationTime Timestamp when this token will be expired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(Double expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param hybridConnectionName Name of the connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridConnectionName(String hybridConnectionName) {
             $.hybridConnectionName = hybridConnectionName;
             return this;
         }
 
+        /**
+         * @param relay Name of the notification service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relay(String relay) {
             $.relay = relay;
             return this;
         }
 
+        /**
+         * @param token Listener access token
+         * 
+         * @return builder
+         * 
+         */
         public Builder token(String token) {
             $.token = token;
             return this;

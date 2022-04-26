@@ -12,37 +12,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWebAppPublicCertificateSlotResult {
     /**
-     * Public Certificate byte array
+     * @return Public Certificate byte array
      * 
      */
     private final @Nullable String blob;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * Public Certificate Location
+     * @return Public Certificate Location
      * 
      */
     private final @Nullable String publicCertificateLocation;
     /**
-     * Certificate Thumbprint
+     * @return Certificate Thumbprint
      * 
      */
     private final String thumbprint;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -66,51 +66,51 @@ public final class GetWebAppPublicCertificateSlotResult {
     }
 
     /**
-     * Public Certificate byte array
+     * @return Public Certificate byte array
      * 
-    */
+     */
     public Optional<String> blob() {
         return Optional.ofNullable(this.blob);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Public Certificate Location
+     * @return Public Certificate Location
      * 
-    */
+     */
     public Optional<String> publicCertificateLocation() {
         return Optional.ofNullable(this.publicCertificateLocation);
     }
     /**
-     * Certificate Thumbprint
+     * @return Certificate Thumbprint
      * 
-    */
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

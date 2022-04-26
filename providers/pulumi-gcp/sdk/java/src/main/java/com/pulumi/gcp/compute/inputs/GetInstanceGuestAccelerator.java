@@ -20,6 +20,10 @@ public final class GetInstanceGuestAccelerator extends com.pulumi.resources.Invo
     @Import(name="count", required=true)
     private Integer count;
 
+    /**
+     * @return The number of the guest accelerator cards exposed to this instance.
+     * 
+     */
     public Integer count() {
         return this.count;
     }
@@ -31,6 +35,10 @@ public final class GetInstanceGuestAccelerator extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -60,11 +68,23 @@ public final class GetInstanceGuestAccelerator extends com.pulumi.resources.Invo
             $ = new GetInstanceGuestAccelerator(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count The number of the guest accelerator cards exposed to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param type The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

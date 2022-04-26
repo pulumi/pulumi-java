@@ -28,6 +28,10 @@ public final class EnvelopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="payload")
     private @Nullable Output<String> payload;
 
+    /**
+     * @return The bytes being signed
+     * 
+     */
     public Optional<Output<String>> payload() {
         return Optional.ofNullable(this.payload);
     }
@@ -39,6 +43,10 @@ public final class EnvelopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="payloadType")
     private @Nullable Output<String> payloadType;
 
+    /**
+     * @return The type of payload being signed
+     * 
+     */
     public Optional<Output<String>> payloadType() {
         return Optional.ofNullable(this.payloadType);
     }
@@ -50,6 +58,10 @@ public final class EnvelopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="signatures")
     private @Nullable Output<List<EnvelopeSignatureArgs>> signatures;
 
+    /**
+     * @return The signatures over the payload
+     * 
+     */
     public Optional<Output<List<EnvelopeSignatureArgs>>> signatures() {
         return Optional.ofNullable(this.signatures);
     }
@@ -80,33 +92,75 @@ public final class EnvelopeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnvelopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param payload The bytes being signed
+         * 
+         * @return builder
+         * 
+         */
         public Builder payload(@Nullable Output<String> payload) {
             $.payload = payload;
             return this;
         }
 
+        /**
+         * @param payload The bytes being signed
+         * 
+         * @return builder
+         * 
+         */
         public Builder payload(String payload) {
             return payload(Output.of(payload));
         }
 
+        /**
+         * @param payloadType The type of payload being signed
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadType(@Nullable Output<String> payloadType) {
             $.payloadType = payloadType;
             return this;
         }
 
+        /**
+         * @param payloadType The type of payload being signed
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadType(String payloadType) {
             return payloadType(Output.of(payloadType));
         }
 
+        /**
+         * @param signatures The signatures over the payload
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatures(@Nullable Output<List<EnvelopeSignatureArgs>> signatures) {
             $.signatures = signatures;
             return this;
         }
 
+        /**
+         * @param signatures The signatures over the payload
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatures(List<EnvelopeSignatureArgs> signatures) {
             return signatures(Output.of(signatures));
         }
 
+        /**
+         * @param signatures The signatures over the payload
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatures(EnvelopeSignatureArgs... signatures) {
             return signatures(List.of(signatures));
         }

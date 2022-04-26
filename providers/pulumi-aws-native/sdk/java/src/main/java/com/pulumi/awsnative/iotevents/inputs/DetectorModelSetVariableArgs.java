@@ -24,6 +24,10 @@ public final class DetectorModelSetVariableArgs extends com.pulumi.resources.Res
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The new value of the variable.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -35,6 +39,10 @@ public final class DetectorModelSetVariableArgs extends com.pulumi.resources.Res
     @Import(name="variableName", required=true)
     private Output<String> variableName;
 
+    /**
+     * @return The name of the variable.
+     * 
+     */
     public Output<String> variableName() {
         return this.variableName;
     }
@@ -64,20 +72,44 @@ public final class DetectorModelSetVariableArgs extends com.pulumi.resources.Res
             $ = new DetectorModelSetVariableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The new value of the variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The new value of the variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }
 
+        /**
+         * @param variableName The name of the variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableName(Output<String> variableName) {
             $.variableName = variableName;
             return this;
         }
 
+        /**
+         * @param variableName The name of the variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableName(String variableName) {
             return variableName(Output.of(variableName));
         }

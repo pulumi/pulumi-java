@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse {
     /**
-     * Cannot contain duplicates or the query term. Can specify up to 100 terms.
+     * @return Cannot contain duplicates or the query term. Can specify up to 100 terms.
      * 
      */
     private final List<String> doNotAssociateTerms;
     /**
-     * Terms from the search query. Will not consider do_not_associate_terms for search if in search query. Can specify up to 100 terms.
+     * @return Terms from the search query. Will not consider do_not_associate_terms for search if in search query. Can specify up to 100 terms.
      * 
      */
     private final List<String> queryTerms;
     /**
-     * Will be [deprecated = true] post migration;
+     * @return Will be [deprecated = true] post migration;
      * 
      */
     private final List<String> terms;
@@ -37,23 +37,23 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse {
     }
 
     /**
-     * Cannot contain duplicates or the query term. Can specify up to 100 terms.
+     * @return Cannot contain duplicates or the query term. Can specify up to 100 terms.
      * 
-    */
+     */
     public List<String> doNotAssociateTerms() {
         return this.doNotAssociateTerms;
     }
     /**
-     * Terms from the search query. Will not consider do_not_associate_terms for search if in search query. Can specify up to 100 terms.
+     * @return Terms from the search query. Will not consider do_not_associate_terms for search if in search query. Can specify up to 100 terms.
      * 
-    */
+     */
     public List<String> queryTerms() {
         return this.queryTerms;
     }
     /**
-     * Will be [deprecated = true] post migration;
+     * @return Will be [deprecated = true] post migration;
      * 
-    */
+     */
     public List<String> terms() {
         return this.terms;
     }

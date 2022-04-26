@@ -21,6 +21,11 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsArgs extends 
     @Import(name="outputConfig", required=true)
     private Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs> outputConfig;
 
+    /**
+     * @return Information on where to store output
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs> outputConfig() {
         return this.outputConfig;
     }
@@ -49,11 +54,25 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsArgs extends 
             $ = new PreventionJobTriggerInspectJobActionSaveFindingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param outputConfig Information on where to store output
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputConfig(Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs> outputConfig) {
             $.outputConfig = outputConfig;
             return this;
         }
 
+        /**
+         * @param outputConfig Information on where to store output
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputConfig(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs outputConfig) {
             return outputConfig(Output.of(outputConfig));
         }

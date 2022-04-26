@@ -20,6 +20,10 @@ public final class DelegatedAdministratorArgs extends com.pulumi.resources.Resou
     @Import(name="accountId", required=true)
     private Output<String> accountId;
 
+    /**
+     * @return The account ID number of the member account in the organization to register as a delegated administrator.
+     * 
+     */
     public Output<String> accountId() {
         return this.accountId;
     }
@@ -31,6 +35,10 @@ public final class DelegatedAdministratorArgs extends com.pulumi.resources.Resou
     @Import(name="servicePrincipal", required=true)
     private Output<String> servicePrincipal;
 
+    /**
+     * @return The service principal of the AWS service for which you want to make the member account a delegated administrator.
+     * 
+     */
     public Output<String> servicePrincipal() {
         return this.servicePrincipal;
     }
@@ -60,20 +68,44 @@ public final class DelegatedAdministratorArgs extends com.pulumi.resources.Resou
             $ = new DelegatedAdministratorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The account ID number of the member account in the organization to register as a delegated administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId The account ID number of the member account in the organization to register as a delegated administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param servicePrincipal The service principal of the AWS service for which you want to make the member account a delegated administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipal(Output<String> servicePrincipal) {
             $.servicePrincipal = servicePrincipal;
             return this;
         }
 
+        /**
+         * @param servicePrincipal The service principal of the AWS service for which you want to make the member account a delegated administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipal(String servicePrincipal) {
             return servicePrincipal(Output.of(servicePrincipal));
         }

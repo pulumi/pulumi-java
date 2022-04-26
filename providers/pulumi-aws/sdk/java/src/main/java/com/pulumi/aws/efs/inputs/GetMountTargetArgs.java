@@ -21,6 +21,10 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessPointId")
     private @Nullable String accessPointId;
 
+    /**
+     * @return ID or ARN of the access point whose mount target that you want to find. It must be included if a `file_system_id` and `mount_target_id` are not included.
+     * 
+     */
     public Optional<String> accessPointId() {
         return Optional.ofNullable(this.accessPointId);
     }
@@ -32,6 +36,10 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="fileSystemId")
     private @Nullable String fileSystemId;
 
+    /**
+     * @return ID or ARN of the file system whose mount target that you want to find. It must be included if an `access_point_id` and `mount_target_id` are not included.
+     * 
+     */
     public Optional<String> fileSystemId() {
         return Optional.ofNullable(this.fileSystemId);
     }
@@ -43,6 +51,10 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="mountTargetId")
     private @Nullable String mountTargetId;
 
+    /**
+     * @return ID or ARN of the mount target that you want to find. It must be included in your request if an `access_point_id` and `file_system_id` are not included.
+     * 
+     */
     public Optional<String> mountTargetId() {
         return Optional.ofNullable(this.mountTargetId);
     }
@@ -73,16 +85,34 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetMountTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPointId ID or ARN of the access point whose mount target that you want to find. It must be included if a `file_system_id` and `mount_target_id` are not included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPointId(@Nullable String accessPointId) {
             $.accessPointId = accessPointId;
             return this;
         }
 
+        /**
+         * @param fileSystemId ID or ARN of the file system whose mount target that you want to find. It must be included if an `access_point_id` and `mount_target_id` are not included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemId(@Nullable String fileSystemId) {
             $.fileSystemId = fileSystemId;
             return this;
         }
 
+        /**
+         * @param mountTargetId ID or ARN of the mount target that you want to find. It must be included in your request if an `access_point_id` and `file_system_id` are not included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountTargetId(@Nullable String mountTargetId) {
             $.mountTargetId = mountTargetId;
             return this;

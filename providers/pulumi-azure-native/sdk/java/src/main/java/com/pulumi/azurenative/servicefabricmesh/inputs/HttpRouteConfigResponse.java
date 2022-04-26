@@ -25,6 +25,10 @@ public final class HttpRouteConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="destination", required=true)
     private GatewayDestinationResponse destination;
 
+    /**
+     * @return Describes destination endpoint for routing traffic.
+     * 
+     */
     public GatewayDestinationResponse destination() {
         return this.destination;
     }
@@ -36,6 +40,10 @@ public final class HttpRouteConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="match", required=true)
     private HttpRouteMatchRuleResponse match;
 
+    /**
+     * @return Describes a rule for http route matching.
+     * 
+     */
     public HttpRouteMatchRuleResponse match() {
         return this.match;
     }
@@ -47,6 +55,10 @@ public final class HttpRouteConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return http route name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -77,16 +89,34 @@ public final class HttpRouteConfigResponse extends com.pulumi.resources.InvokeAr
             $ = new HttpRouteConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Describes destination endpoint for routing traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(GatewayDestinationResponse destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param match Describes a rule for http route matching.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(HttpRouteMatchRuleResponse match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param name http route name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

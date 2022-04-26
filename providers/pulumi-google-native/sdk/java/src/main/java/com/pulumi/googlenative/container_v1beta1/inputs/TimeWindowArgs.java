@@ -27,6 +27,10 @@ public final class TimeWindowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
     private @Nullable Output<String> endTime;
 
+    /**
+     * @return The time that the window ends. The end time should take place after the start time.
+     * 
+     */
     public Optional<Output<String>> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -38,6 +42,10 @@ public final class TimeWindowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceExclusionOptions")
     private @Nullable Output<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions;
 
+    /**
+     * @return MaintenanceExclusionOptions provides maintenance exclusion related options.
+     * 
+     */
     public Optional<Output<MaintenanceExclusionOptionsArgs>> maintenanceExclusionOptions() {
         return Optional.ofNullable(this.maintenanceExclusionOptions);
     }
@@ -49,6 +57,10 @@ public final class TimeWindowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return The time that the window first starts.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -79,29 +91,65 @@ public final class TimeWindowArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TimeWindowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime The time that the window ends. The end time should take place after the start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime The time that the window ends. The end time should take place after the start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param maintenanceExclusionOptions MaintenanceExclusionOptions provides maintenance exclusion related options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceExclusionOptions(@Nullable Output<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions) {
             $.maintenanceExclusionOptions = maintenanceExclusionOptions;
             return this;
         }
 
+        /**
+         * @param maintenanceExclusionOptions MaintenanceExclusionOptions provides maintenance exclusion related options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceExclusionOptions(MaintenanceExclusionOptionsArgs maintenanceExclusionOptions) {
             return maintenanceExclusionOptions(Output.of(maintenanceExclusionOptions));
         }
 
+        /**
+         * @param startTime The time that the window first starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The time that the window first starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }

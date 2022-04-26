@@ -23,6 +23,10 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
     @Import(name="buildCommand")
     private @Nullable Output<String> buildCommand;
 
+    /**
+     * @return The command App Runner runs to build your application.
+     * 
+     */
     public Optional<Output<String>> buildCommand() {
         return Optional.ofNullable(this.buildCommand);
     }
@@ -34,6 +38,10 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
     @Import(name="port")
     private @Nullable Output<String> port;
 
+    /**
+     * @return The port that your application listens to in the container. Defaults to `&#34;8080&#34;`.
+     * 
+     */
     public Optional<Output<String>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -45,6 +53,10 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
     @Import(name="runtime", required=true)
     private Output<String> runtime;
 
+    /**
+     * @return A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `PYTHON_3`, `NODEJS_12`.
+     * 
+     */
     public Output<String> runtime() {
         return this.runtime;
     }
@@ -56,6 +68,10 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
     @Import(name="runtimeEnvironmentVariables")
     private @Nullable Output<Map<String,String>> runtimeEnvironmentVariables;
 
+    /**
+     * @return Environment variables available to your running App Runner service. A map of key/value pairs. Keys with a prefix of `AWSAPPRUNNER` are reserved for system use and aren&#39;t valid.
+     * 
+     */
     public Optional<Output<Map<String,String>>> runtimeEnvironmentVariables() {
         return Optional.ofNullable(this.runtimeEnvironmentVariables);
     }
@@ -67,6 +83,10 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
     @Import(name="startCommand")
     private @Nullable Output<String> startCommand;
 
+    /**
+     * @return The command App Runner runs to start your application.
+     * 
+     */
     public Optional<Output<String>> startCommand() {
         return Optional.ofNullable(this.startCommand);
     }
@@ -99,47 +119,107 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
             $ = new ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buildCommand The command App Runner runs to build your application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildCommand(@Nullable Output<String> buildCommand) {
             $.buildCommand = buildCommand;
             return this;
         }
 
+        /**
+         * @param buildCommand The command App Runner runs to build your application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildCommand(String buildCommand) {
             return buildCommand(Output.of(buildCommand));
         }
 
+        /**
+         * @param port The port that your application listens to in the container. Defaults to `&#34;8080&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<String> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port that your application listens to in the container. Defaults to `&#34;8080&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(String port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param runtime A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `PYTHON_3`, `NODEJS_12`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtime(Output<String> runtime) {
             $.runtime = runtime;
             return this;
         }
 
+        /**
+         * @param runtime A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `PYTHON_3`, `NODEJS_12`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtime(String runtime) {
             return runtime(Output.of(runtime));
         }
 
+        /**
+         * @param runtimeEnvironmentVariables Environment variables available to your running App Runner service. A map of key/value pairs. Keys with a prefix of `AWSAPPRUNNER` are reserved for system use and aren&#39;t valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeEnvironmentVariables(@Nullable Output<Map<String,String>> runtimeEnvironmentVariables) {
             $.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
 
+        /**
+         * @param runtimeEnvironmentVariables Environment variables available to your running App Runner service. A map of key/value pairs. Keys with a prefix of `AWSAPPRUNNER` are reserved for system use and aren&#39;t valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeEnvironmentVariables(Map<String,String> runtimeEnvironmentVariables) {
             return runtimeEnvironmentVariables(Output.of(runtimeEnvironmentVariables));
         }
 
+        /**
+         * @param startCommand The command App Runner runs to start your application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startCommand(@Nullable Output<String> startCommand) {
             $.startCommand = startCommand;
             return this;
         }
 
+        /**
+         * @param startCommand The command App Runner runs to start your application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startCommand(String startCommand) {
             return startCommand(Output.of(startCommand));
         }

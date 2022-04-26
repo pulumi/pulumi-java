@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RemotePrivateEndpointConnectionResponse {
     /**
-     * PrivateEndpoint of a remote private endpoint connection
+     * @return PrivateEndpoint of a remote private endpoint connection
      * 
      */
     private final @Nullable ArmIdWrapperResponse privateEndpoint;
     /**
-     * The state of a private link connection
+     * @return The state of a private link connection
      * 
      */
     private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
@@ -36,16 +36,16 @@ public final class RemotePrivateEndpointConnectionResponse {
     }
 
     /**
-     * PrivateEndpoint of a remote private endpoint connection
+     * @return PrivateEndpoint of a remote private endpoint connection
      * 
-    */
+     */
     public Optional<ArmIdWrapperResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * The state of a private link connection
+     * @return The state of a private link connection
      * 
-    */
+     */
     public Optional<PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }

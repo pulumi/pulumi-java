@@ -31,6 +31,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appInsightsEnabled")
     private @Nullable Output<Boolean> appInsightsEnabled;
 
+    /**
+     * @return Whether or not Application Insights is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> appInsightsEnabled() {
         return Optional.ofNullable(this.appInsightsEnabled);
     }
@@ -42,6 +46,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authEnabled")
     private @Nullable Output<Boolean> authEnabled;
 
+    /**
+     * @return Whether or not authentication is enabled on the service.
+     * 
+     */
     public Optional<Output<Boolean>> authEnabled() {
         return Optional.ofNullable(this.authEnabled);
     }
@@ -53,6 +61,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cname")
     private @Nullable Output<String> cname;
 
+    /**
+     * @return The CName for the service.
+     * 
+     */
     public Optional<Output<String>> cname() {
         return Optional.ofNullable(this.cname);
     }
@@ -65,6 +77,11 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computeType", required=true)
     private Output<String> computeType;
 
+    /**
+     * @return The compute environment type for the service.
+     * Expected value is &#39;ACI&#39;.
+     * 
+     */
     public Output<String> computeType() {
         return this.computeType;
     }
@@ -76,6 +93,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerResourceRequirements")
     private @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements;
 
+    /**
+     * @return The container resource requirements.
+     * 
+     */
     public Optional<Output<ContainerResourceRequirementsArgs>> containerResourceRequirements() {
         return Optional.ofNullable(this.containerResourceRequirements);
     }
@@ -87,6 +108,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataCollection")
     private @Nullable Output<ACIServiceCreateRequestDataCollectionArgs> dataCollection;
 
+    /**
+     * @return Details of the data collection options specified.
+     * 
+     */
     public Optional<Output<ACIServiceCreateRequestDataCollectionArgs>> dataCollection() {
         return Optional.ofNullable(this.dataCollection);
     }
@@ -98,6 +123,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the service.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -109,6 +138,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsNameLabel")
     private @Nullable Output<String> dnsNameLabel;
 
+    /**
+     * @return The Dns label for the service.
+     * 
+     */
     public Optional<Output<String>> dnsNameLabel() {
         return Optional.ofNullable(this.dnsNameLabel);
     }
@@ -120,6 +153,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionProperties")
     private @Nullable Output<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties;
 
+    /**
+     * @return The encryption properties.
+     * 
+     */
     public Optional<Output<ACIServiceCreateRequestEncryptionPropertiesArgs>> encryptionProperties() {
         return Optional.ofNullable(this.encryptionProperties);
     }
@@ -131,6 +168,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentImageRequest")
     private @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
+    /**
+     * @return The Environment, models and assets needed for inferencing.
+     * 
+     */
     public Optional<Output<CreateServiceRequestEnvironmentImageRequestArgs>> environmentImageRequest() {
         return Optional.ofNullable(this.environmentImageRequest);
     }
@@ -142,6 +183,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keys")
     private @Nullable Output<CreateServiceRequestKeysArgs> keys;
 
+    /**
+     * @return The authentication keys.
+     * 
+     */
     public Optional<Output<CreateServiceRequestKeysArgs>> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -153,6 +198,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kvTags")
     private @Nullable Output<Map<String,String>> kvTags;
 
+    /**
+     * @return The service tag dictionary. Tags are mutable.
+     * 
+     */
     public Optional<Output<Map<String,String>>> kvTags() {
         return Optional.ofNullable(this.kvTags);
     }
@@ -164,6 +213,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The name of the Azure location/region.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -175,6 +228,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return The service properties dictionary. Properties are immutable.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -186,6 +243,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group in which workspace is located.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -197,6 +258,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return Name of the Azure Machine Learning service.
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -208,6 +273,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslCertificate")
     private @Nullable Output<String> sslCertificate;
 
+    /**
+     * @return The public SSL certificate in PEM format to use if SSL is enabled.
+     * 
+     */
     public Optional<Output<String>> sslCertificate() {
         return Optional.ofNullable(this.sslCertificate);
     }
@@ -219,6 +288,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslEnabled")
     private @Nullable Output<Boolean> sslEnabled;
 
+    /**
+     * @return Whether or not SSL is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> sslEnabled() {
         return Optional.ofNullable(this.sslEnabled);
     }
@@ -230,6 +303,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslKey")
     private @Nullable Output<String> sslKey;
 
+    /**
+     * @return The public SSL key in PEM format for the certificate.
+     * 
+     */
     public Optional<Output<String>> sslKey() {
         return Optional.ofNullable(this.sslKey);
     }
@@ -241,6 +318,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vnetConfiguration")
     private @Nullable Output<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration;
 
+    /**
+     * @return The virtual network configuration.
+     * 
+     */
     public Optional<Output<ACIServiceCreateRequestVnetConfigurationArgs>> vnetConfiguration() {
         return Optional.ofNullable(this.vnetConfiguration);
     }
@@ -252,6 +333,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -300,191 +385,445 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ACIServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appInsightsEnabled Whether or not Application Insights is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appInsightsEnabled(@Nullable Output<Boolean> appInsightsEnabled) {
             $.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
 
+        /**
+         * @param appInsightsEnabled Whether or not Application Insights is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appInsightsEnabled(Boolean appInsightsEnabled) {
             return appInsightsEnabled(Output.of(appInsightsEnabled));
         }
 
+        /**
+         * @param authEnabled Whether or not authentication is enabled on the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authEnabled(@Nullable Output<Boolean> authEnabled) {
             $.authEnabled = authEnabled;
             return this;
         }
 
+        /**
+         * @param authEnabled Whether or not authentication is enabled on the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authEnabled(Boolean authEnabled) {
             return authEnabled(Output.of(authEnabled));
         }
 
+        /**
+         * @param cname The CName for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cname(@Nullable Output<String> cname) {
             $.cname = cname;
             return this;
         }
 
+        /**
+         * @param cname The CName for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cname(String cname) {
             return cname(Output.of(cname));
         }
 
+        /**
+         * @param computeType The compute environment type for the service.
+         * Expected value is &#39;ACI&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(Output<String> computeType) {
             $.computeType = computeType;
             return this;
         }
 
+        /**
+         * @param computeType The compute environment type for the service.
+         * Expected value is &#39;ACI&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(String computeType) {
             return computeType(Output.of(computeType));
         }
 
+        /**
+         * @param containerResourceRequirements The container resource requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerResourceRequirements(@Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements) {
             $.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
 
+        /**
+         * @param containerResourceRequirements The container resource requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerResourceRequirements(ContainerResourceRequirementsArgs containerResourceRequirements) {
             return containerResourceRequirements(Output.of(containerResourceRequirements));
         }
 
+        /**
+         * @param dataCollection Details of the data collection options specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCollection(@Nullable Output<ACIServiceCreateRequestDataCollectionArgs> dataCollection) {
             $.dataCollection = dataCollection;
             return this;
         }
 
+        /**
+         * @param dataCollection Details of the data collection options specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCollection(ACIServiceCreateRequestDataCollectionArgs dataCollection) {
             return dataCollection(Output.of(dataCollection));
         }
 
+        /**
+         * @param description The description of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param dnsNameLabel The Dns label for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsNameLabel(@Nullable Output<String> dnsNameLabel) {
             $.dnsNameLabel = dnsNameLabel;
             return this;
         }
 
+        /**
+         * @param dnsNameLabel The Dns label for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsNameLabel(String dnsNameLabel) {
             return dnsNameLabel(Output.of(dnsNameLabel));
         }
 
+        /**
+         * @param encryptionProperties The encryption properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionProperties(@Nullable Output<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties) {
             $.encryptionProperties = encryptionProperties;
             return this;
         }
 
+        /**
+         * @param encryptionProperties The encryption properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionProperties(ACIServiceCreateRequestEncryptionPropertiesArgs encryptionProperties) {
             return encryptionProperties(Output.of(encryptionProperties));
         }
 
+        /**
+         * @param environmentImageRequest The Environment, models and assets needed for inferencing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentImageRequest(@Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
             $.environmentImageRequest = environmentImageRequest;
             return this;
         }
 
+        /**
+         * @param environmentImageRequest The Environment, models and assets needed for inferencing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentImageRequest(CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
             return environmentImageRequest(Output.of(environmentImageRequest));
         }
 
+        /**
+         * @param keys The authentication keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable Output<CreateServiceRequestKeysArgs> keys) {
             $.keys = keys;
             return this;
         }
 
+        /**
+         * @param keys The authentication keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(CreateServiceRequestKeysArgs keys) {
             return keys(Output.of(keys));
         }
 
+        /**
+         * @param kvTags The service tag dictionary. Tags are mutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kvTags(@Nullable Output<Map<String,String>> kvTags) {
             $.kvTags = kvTags;
             return this;
         }
 
+        /**
+         * @param kvTags The service tag dictionary. Tags are mutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kvTags(Map<String,String> kvTags) {
             return kvTags(Output.of(kvTags));
         }
 
+        /**
+         * @param location The name of the Azure location/region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The name of the Azure location/region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties The service properties dictionary. Properties are immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The service properties dictionary. Properties are immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName Name of the Azure Machine Learning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName Name of the Azure Machine Learning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param sslCertificate The public SSL certificate in PEM format to use if SSL is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertificate(@Nullable Output<String> sslCertificate) {
             $.sslCertificate = sslCertificate;
             return this;
         }
 
+        /**
+         * @param sslCertificate The public SSL certificate in PEM format to use if SSL is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertificate(String sslCertificate) {
             return sslCertificate(Output.of(sslCertificate));
         }
 
+        /**
+         * @param sslEnabled Whether or not SSL is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslEnabled(@Nullable Output<Boolean> sslEnabled) {
             $.sslEnabled = sslEnabled;
             return this;
         }
 
+        /**
+         * @param sslEnabled Whether or not SSL is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslEnabled(Boolean sslEnabled) {
             return sslEnabled(Output.of(sslEnabled));
         }
 
+        /**
+         * @param sslKey The public SSL key in PEM format for the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslKey(@Nullable Output<String> sslKey) {
             $.sslKey = sslKey;
             return this;
         }
 
+        /**
+         * @param sslKey The public SSL key in PEM format for the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslKey(String sslKey) {
             return sslKey(Output.of(sslKey));
         }
 
+        /**
+         * @param vnetConfiguration The virtual network configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetConfiguration(@Nullable Output<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration) {
             $.vnetConfiguration = vnetConfiguration;
             return this;
         }
 
+        /**
+         * @param vnetConfiguration The virtual network configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetConfiguration(ACIServiceCreateRequestVnetConfigurationArgs vnetConfiguration) {
             return vnetConfiguration(Output.of(vnetConfiguration));
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

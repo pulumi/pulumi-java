@@ -27,6 +27,11 @@ public final class KubernetesConnectionDetailsResponse extends com.pulumi.resour
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the Instance type.
+     * Expected value is &#39;Kubernetes&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -38,6 +43,10 @@ public final class KubernetesConnectionDetailsResponse extends com.pulumi.resour
     @Import(name="kubeConfig")
     private @Nullable String kubeConfig;
 
+    /**
+     * @return Gets the kubeconfig for the cluster.
+     * 
+     */
     public Optional<String> kubeConfig() {
         return Optional.ofNullable(this.kubeConfig);
     }
@@ -67,11 +76,24 @@ public final class KubernetesConnectionDetailsResponse extends com.pulumi.resour
             $ = new KubernetesConnectionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType Gets the Instance type.
+         * Expected value is &#39;Kubernetes&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param kubeConfig Gets the kubeconfig for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeConfig(@Nullable String kubeConfig) {
             $.kubeConfig = kubeConfig;
             return this;

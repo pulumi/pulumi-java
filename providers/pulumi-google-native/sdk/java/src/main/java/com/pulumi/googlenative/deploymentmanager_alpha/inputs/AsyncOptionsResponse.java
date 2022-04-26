@@ -24,6 +24,10 @@ public final class AsyncOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="methodMatch", required=true)
     private String methodMatch;
 
+    /**
+     * @return Method regex where this policy will apply.
+     * 
+     */
     public String methodMatch() {
         return this.methodMatch;
     }
@@ -35,6 +39,10 @@ public final class AsyncOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="pollingOptions", required=true)
     private PollingOptionsResponse pollingOptions;
 
+    /**
+     * @return Deployment manager will poll instances for this API resource setting a RUNNING state, and blocking until polling conditions tell whether the resource is completed or failed.
+     * 
+     */
     public PollingOptionsResponse pollingOptions() {
         return this.pollingOptions;
     }
@@ -64,11 +72,23 @@ public final class AsyncOptionsResponse extends com.pulumi.resources.InvokeArgs 
             $ = new AsyncOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param methodMatch Method regex where this policy will apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodMatch(String methodMatch) {
             $.methodMatch = methodMatch;
             return this;
         }
 
+        /**
+         * @param pollingOptions Deployment manager will poll instances for this API resource setting a RUNNING state, and blocking until polling conditions tell whether the resource is completed or failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pollingOptions(PollingOptionsResponse pollingOptions) {
             $.pollingOptions = pollingOptions;
             return this;

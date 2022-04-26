@@ -24,6 +24,10 @@ public final class WorkflowTemplatePlacementResponse extends com.pulumi.resource
     @Import(name="clusterSelector", required=true)
     private ClusterSelectorResponse clusterSelector;
 
+    /**
+     * @return Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.
+     * 
+     */
     public ClusterSelectorResponse clusterSelector() {
         return this.clusterSelector;
     }
@@ -35,6 +39,10 @@ public final class WorkflowTemplatePlacementResponse extends com.pulumi.resource
     @Import(name="managedCluster", required=true)
     private ManagedClusterResponse managedCluster;
 
+    /**
+     * @return A cluster that is managed by the workflow.
+     * 
+     */
     public ManagedClusterResponse managedCluster() {
         return this.managedCluster;
     }
@@ -64,11 +72,23 @@ public final class WorkflowTemplatePlacementResponse extends com.pulumi.resource
             $ = new WorkflowTemplatePlacementResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterSelector Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSelector(ClusterSelectorResponse clusterSelector) {
             $.clusterSelector = clusterSelector;
             return this;
         }
 
+        /**
+         * @param managedCluster A cluster that is managed by the workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedCluster(ManagedClusterResponse managedCluster) {
             $.managedCluster = managedCluster;
             return this;

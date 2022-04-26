@@ -25,6 +25,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The SKU of the search service. Valid values include: &#39;free&#39;: Shared service. &#39;basic&#39;: Dedicated service with up to 3 replicas. &#39;standard&#39;: Dedicated service with up to 12 partitions and 12 replicas. &#39;standard2&#39;: Similar to standard, but with more capacity per search unit. &#39;standard3&#39;: The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to &#39;highDensity&#39;). &#39;storage_optimized_l1&#39;: Supports 1TB per partition, up to 12 partitions. &#39;storage_optimized_l2&#39;: Supports 2TB per partition, up to 12 partitions.&#39;
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The SKU of the search service. Valid values include: &#39;free&#39;: Shared service. &#39;basic&#39;: Dedicated service with up to 3 replicas. &#39;standard&#39;: Dedicated service with up to 12 partitions and 12 replicas. &#39;standard2&#39;: Similar to standard, but with more capacity per search unit. &#39;standard3&#39;: The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to &#39;highDensity&#39;). &#39;storage_optimized_l1&#39;: Supports 1TB per partition, up to 12 partitions. &#39;storage_optimized_l2&#39;: Supports 2TB per partition, up to 12 partitions.&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

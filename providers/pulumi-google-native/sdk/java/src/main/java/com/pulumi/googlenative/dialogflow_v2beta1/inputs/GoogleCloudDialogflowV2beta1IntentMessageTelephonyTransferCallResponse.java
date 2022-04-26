@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCal
     @Import(name="phoneNumber", required=true)
     private String phoneNumber;
 
+    /**
+     * @return The phone number to transfer the call to in [E.164 format](https://en.wikipedia.org/wiki/E.164). We currently only allow transferring to US numbers (+1xxxyyyzzzz).
+     * 
+     */
     public String phoneNumber() {
         return this.phoneNumber;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCal
             $ = new GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param phoneNumber The phone number to transfer the call to in [E.164 format](https://en.wikipedia.org/wiki/E.164). We currently only allow transferring to US numbers (+1xxxyyyzzzz).
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(String phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;

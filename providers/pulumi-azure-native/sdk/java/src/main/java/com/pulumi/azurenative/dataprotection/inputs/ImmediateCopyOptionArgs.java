@@ -26,6 +26,11 @@ public final class ImmediateCopyOptionArgs extends com.pulumi.resources.Resource
     @Import(name="objectType", required=true)
     private Output<String> objectType;
 
+    /**
+     * @return Type of the specific object - used for deserializing
+     * Expected value is &#39;ImmediateCopyOption&#39;.
+     * 
+     */
     public Output<String> objectType() {
         return this.objectType;
     }
@@ -54,11 +59,25 @@ public final class ImmediateCopyOptionArgs extends com.pulumi.resources.Resource
             $ = new ImmediateCopyOptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;ImmediateCopyOption&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(Output<String> objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;ImmediateCopyOption&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             return objectType(Output.of(objectType));
         }

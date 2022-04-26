@@ -19,6 +19,10 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return Name of the cluster in the private cloud
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -30,6 +34,10 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
     @Import(name="placementPolicyName", required=true)
     private String placementPolicyName;
 
+    /**
+     * @return Name of the VMware vSphere Distributed Resource Scheduler (DRS) placement policy
+     * 
+     */
     public String placementPolicyName() {
         return this.placementPolicyName;
     }
@@ -41,6 +49,10 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
     @Import(name="privateCloudName", required=true)
     private String privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public String privateCloudName() {
         return this.privateCloudName;
     }
@@ -52,6 +64,10 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
             $ = new GetPlacementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName Name of the cluster in the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param placementPolicyName Name of the VMware vSphere Distributed Resource Scheduler (DRS) placement policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementPolicyName(String placementPolicyName) {
             $.placementPolicyName = placementPolicyName;
             return this;
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

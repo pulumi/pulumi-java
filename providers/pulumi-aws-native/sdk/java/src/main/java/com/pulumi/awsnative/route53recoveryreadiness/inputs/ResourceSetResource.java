@@ -27,6 +27,10 @@ public final class ResourceSetResource extends com.pulumi.resources.InvokeArgs {
     @Import(name="componentId")
     private @Nullable String componentId;
 
+    /**
+     * @return The component identifier of the resource, generated when DNS target resource is used.
+     * 
+     */
     public Optional<String> componentId() {
         return Optional.ofNullable(this.componentId);
     }
@@ -45,6 +49,10 @@ public final class ResourceSetResource extends com.pulumi.resources.InvokeArgs {
     @Import(name="readinessScopes")
     private @Nullable List<String> readinessScopes;
 
+    /**
+     * @return A list of recovery group Amazon Resource Names (ARNs) and cell ARNs that this resource is contained within.
+     * 
+     */
     public Optional<List<String>> readinessScopes() {
         return Optional.ofNullable(this.readinessScopes);
     }
@@ -56,6 +64,10 @@ public final class ResourceSetResource extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceArn")
     private @Nullable String resourceArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the AWS resource.
+     * 
+     */
     public Optional<String> resourceArn() {
         return Optional.ofNullable(this.resourceArn);
     }
@@ -87,6 +99,12 @@ public final class ResourceSetResource extends com.pulumi.resources.InvokeArgs {
             $ = new ResourceSetResource(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentId The component identifier of the resource, generated when DNS target resource is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentId(@Nullable String componentId) {
             $.componentId = componentId;
             return this;
@@ -97,15 +115,33 @@ public final class ResourceSetResource extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param readinessScopes A list of recovery group Amazon Resource Names (ARNs) and cell ARNs that this resource is contained within.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessScopes(@Nullable List<String> readinessScopes) {
             $.readinessScopes = readinessScopes;
             return this;
         }
 
+        /**
+         * @param readinessScopes A list of recovery group Amazon Resource Names (ARNs) and cell ARNs that this resource is contained within.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessScopes(String... readinessScopes) {
             return readinessScopes(List.of(readinessScopes));
         }
 
+        /**
+         * @param resourceArn The Amazon Resource Name (ARN) of the AWS resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(@Nullable String resourceArn) {
             $.resourceArn = resourceArn;
             return this;

@@ -19,6 +19,10 @@ public final class GetWebAppPrivateEndpointConnectionSlotArgs extends com.pulumi
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the site.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetWebAppPrivateEndpointConnectionSlotArgs extends com.pulumi
     @Import(name="privateEndpointConnectionName", required=true)
     private String privateEndpointConnectionName;
 
+    /**
+     * @return Name of the private endpoint connection.
+     * 
+     */
     public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
@@ -41,6 +49,10 @@ public final class GetWebAppPrivateEndpointConnectionSlotArgs extends com.pulumi
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetWebAppPrivateEndpointConnectionSlotArgs extends com.pulumi
     @Import(name="slot", required=true)
     private String slot;
 
+    /**
+     * @return Name of the site deployment slot.
+     * 
+     */
     public String slot() {
         return this.slot;
     }
@@ -83,21 +99,45 @@ public final class GetWebAppPrivateEndpointConnectionSlotArgs extends com.pulumi
             $ = new GetWebAppPrivateEndpointConnectionSlotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnectionName Name of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param slot Name of the site deployment slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(String slot) {
             $.slot = slot;
             return this;

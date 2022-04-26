@@ -26,6 +26,10 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -37,6 +41,10 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -48,6 +56,10 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
     @Import(name="sqlImageOffer")
     private @Nullable Output<String> sqlImageOffer;
 
+    /**
+     * @return SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
+     * 
+     */
     public Optional<Output<String>> sqlImageOffer() {
         return Optional.ofNullable(this.sqlImageOffer);
     }
@@ -59,6 +71,10 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
     @Import(name="sqlImageSku")
     private @Nullable Output<Either<String,SqlVmGroupImageSku>> sqlImageSku;
 
+    /**
+     * @return SQL image sku.
+     * 
+     */
     public Optional<Output<Either<String,SqlVmGroupImageSku>>> sqlImageSku() {
         return Optional.ofNullable(this.sqlImageSku);
     }
@@ -70,6 +86,10 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
     @Import(name="sqlVirtualMachineGroupName")
     private @Nullable Output<String> sqlVirtualMachineGroupName;
 
+    /**
+     * @return Name of the SQL virtual machine group.
+     * 
+     */
     public Optional<Output<String>> sqlVirtualMachineGroupName() {
         return Optional.ofNullable(this.sqlVirtualMachineGroupName);
     }
@@ -81,6 +101,10 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -92,6 +116,10 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
     @Import(name="wsfcDomainProfile")
     private @Nullable Output<WsfcDomainProfileArgs> wsfcDomainProfile;
 
+    /**
+     * @return Cluster Active Directory domain profile.
+     * 
+     */
     public Optional<Output<WsfcDomainProfileArgs>> wsfcDomainProfile() {
         return Optional.ofNullable(this.wsfcDomainProfile);
     }
@@ -126,73 +154,169 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
             $ = new SqlVirtualMachineGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sqlImageOffer SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlImageOffer(@Nullable Output<String> sqlImageOffer) {
             $.sqlImageOffer = sqlImageOffer;
             return this;
         }
 
+        /**
+         * @param sqlImageOffer SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlImageOffer(String sqlImageOffer) {
             return sqlImageOffer(Output.of(sqlImageOffer));
         }
 
+        /**
+         * @param sqlImageSku SQL image sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlImageSku(@Nullable Output<Either<String,SqlVmGroupImageSku>> sqlImageSku) {
             $.sqlImageSku = sqlImageSku;
             return this;
         }
 
+        /**
+         * @param sqlImageSku SQL image sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlImageSku(Either<String,SqlVmGroupImageSku> sqlImageSku) {
             return sqlImageSku(Output.of(sqlImageSku));
         }
 
+        /**
+         * @param sqlImageSku SQL image sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlImageSku(String sqlImageSku) {
             return sqlImageSku(Either.ofLeft(sqlImageSku));
         }
 
+        /**
+         * @param sqlImageSku SQL image sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlImageSku(SqlVmGroupImageSku sqlImageSku) {
             return sqlImageSku(Either.ofRight(sqlImageSku));
         }
 
+        /**
+         * @param sqlVirtualMachineGroupName Name of the SQL virtual machine group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlVirtualMachineGroupName(@Nullable Output<String> sqlVirtualMachineGroupName) {
             $.sqlVirtualMachineGroupName = sqlVirtualMachineGroupName;
             return this;
         }
 
+        /**
+         * @param sqlVirtualMachineGroupName Name of the SQL virtual machine group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
             return sqlVirtualMachineGroupName(Output.of(sqlVirtualMachineGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param wsfcDomainProfile Cluster Active Directory domain profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wsfcDomainProfile(@Nullable Output<WsfcDomainProfileArgs> wsfcDomainProfile) {
             $.wsfcDomainProfile = wsfcDomainProfile;
             return this;
         }
 
+        /**
+         * @param wsfcDomainProfile Cluster Active Directory domain profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wsfcDomainProfile(WsfcDomainProfileArgs wsfcDomainProfile) {
             return wsfcDomainProfile(Output.of(wsfcDomainProfile));
         }

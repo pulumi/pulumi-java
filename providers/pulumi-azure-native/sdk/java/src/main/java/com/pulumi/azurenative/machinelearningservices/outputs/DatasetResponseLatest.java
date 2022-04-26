@@ -18,92 +18,92 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DatasetResponseLatest {
     /**
-     * User who created.
+     * @return User who created.
      * 
      */
     private final @Nullable UserInfoResponse createdBy;
     /**
-     * The dataset creation time (UTC).
+     * @return The dataset creation time (UTC).
      * 
      */
     private final String createdTime;
     /**
-     *  Datastore and reference to location of data such as relativePath, Sql Query and etc.
+     * @return  Datastore and reference to location of data such as relativePath, Sql Query and etc.
      * 
      */
     private final @Nullable DatasetResponseDataPath dataPath;
     /**
-     * Dataflow Json
+     * @return Dataflow Json
      * 
      */
     private final String dataflow;
     /**
-     * Dataset state
+     * @return Dataset state
      * 
      */
     private final @Nullable DatasetStateResponse datasetDefinitionState;
     /**
-     * Unique Dataset identifier.
+     * @return Unique Dataset identifier.
      * 
      */
     private final String datasetId;
     /**
-     * Description about the dataset.
+     * @return Description about the dataset.
      * 
      */
     private final String description;
     /**
-     * eTag description
+     * @return eTag description
      * 
      */
     private final String etag;
     /**
-     * Dataset FileType, specified by user.
+     * @return Dataset FileType, specified by user.
      * 
      */
     private final String fileType;
     /**
-     * The dataset last modified time (UTC).
+     * @return The dataset last modified time (UTC).
      * 
      */
     private final String modifiedTime;
     /**
-     * Summary of Definition changes.
+     * @return Summary of Definition changes.
      * 
      */
     private final String notes;
     /**
-     * Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.
+     * @return Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.
      * 
      */
     private final Boolean partitionFormatInPath;
     /**
-     * Properties stores information like name of time series column for time series dataset.
+     * @return Properties stores information like name of time series column for time series dataset.
      * 
      */
     private final @Nullable Map<String,Object> properties;
     /**
-     * Indicates the saved dataset this definition is mapping to, populated on Get.
+     * @return Indicates the saved dataset this definition is mapping to, populated on Get.
      * 
      */
     private final String savedDatasetId;
     /**
-     * Tags associated with the dataset.
+     * @return Tags associated with the dataset.
      * 
      */
     private final Map<String,String> tags;
     /**
-     *  Telemetry information about the dataset including information like which service the dataset was created from.
+     * @return  Telemetry information about the dataset including information like which service the dataset was created from.
      * 
      */
     private final Map<String,String> telemetryInfo;
     /**
-     *  Whether to use description and tags from the definition level as opposed to dataset level (old behavior).
+     * @return  Whether to use description and tags from the definition level as opposed to dataset level (old behavior).
      * 
      */
     private final Boolean useDescriptionTagsFromDefinition;
     /**
-     * An identifier uniquely identifies a definition change.
+     * @return An identifier uniquely identifies a definition change.
      * 
      */
     private final String versionId;
@@ -149,128 +149,128 @@ public final class DatasetResponseLatest {
     }
 
     /**
-     * User who created.
+     * @return User who created.
      * 
-    */
+     */
     public Optional<UserInfoResponse> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
-     * The dataset creation time (UTC).
+     * @return The dataset creation time (UTC).
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     *  Datastore and reference to location of data such as relativePath, Sql Query and etc.
+     * @return  Datastore and reference to location of data such as relativePath, Sql Query and etc.
      * 
-    */
+     */
     public Optional<DatasetResponseDataPath> dataPath() {
         return Optional.ofNullable(this.dataPath);
     }
     /**
-     * Dataflow Json
+     * @return Dataflow Json
      * 
-    */
+     */
     public String dataflow() {
         return this.dataflow;
     }
     /**
-     * Dataset state
+     * @return Dataset state
      * 
-    */
+     */
     public Optional<DatasetStateResponse> datasetDefinitionState() {
         return Optional.ofNullable(this.datasetDefinitionState);
     }
     /**
-     * Unique Dataset identifier.
+     * @return Unique Dataset identifier.
      * 
-    */
+     */
     public String datasetId() {
         return this.datasetId;
     }
     /**
-     * Description about the dataset.
+     * @return Description about the dataset.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * eTag description
+     * @return eTag description
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Dataset FileType, specified by user.
+     * @return Dataset FileType, specified by user.
      * 
-    */
+     */
     public String fileType() {
         return this.fileType;
     }
     /**
-     * The dataset last modified time (UTC).
+     * @return The dataset last modified time (UTC).
      * 
-    */
+     */
     public String modifiedTime() {
         return this.modifiedTime;
     }
     /**
-     * Summary of Definition changes.
+     * @return Summary of Definition changes.
      * 
-    */
+     */
     public String notes() {
         return this.notes;
     }
     /**
-     * Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.
+     * @return Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.
      * 
-    */
+     */
     public Boolean partitionFormatInPath() {
         return this.partitionFormatInPath;
     }
     /**
-     * Properties stores information like name of time series column for time series dataset.
+     * @return Properties stores information like name of time series column for time series dataset.
      * 
-    */
+     */
     public Map<String,Object> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * Indicates the saved dataset this definition is mapping to, populated on Get.
+     * @return Indicates the saved dataset this definition is mapping to, populated on Get.
      * 
-    */
+     */
     public String savedDatasetId() {
         return this.savedDatasetId;
     }
     /**
-     * Tags associated with the dataset.
+     * @return Tags associated with the dataset.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     *  Telemetry information about the dataset including information like which service the dataset was created from.
+     * @return  Telemetry information about the dataset including information like which service the dataset was created from.
      * 
-    */
+     */
     public Map<String,String> telemetryInfo() {
         return this.telemetryInfo;
     }
     /**
-     *  Whether to use description and tags from the definition level as opposed to dataset level (old behavior).
+     * @return  Whether to use description and tags from the definition level as opposed to dataset level (old behavior).
      * 
-    */
+     */
     public Boolean useDescriptionTagsFromDefinition() {
         return this.useDescriptionTagsFromDefinition;
     }
     /**
-     * An identifier uniquely identifies a definition change.
+     * @return An identifier uniquely identifies a definition change.
      * 
-    */
+     */
     public String versionId() {
         return this.versionId;
     }

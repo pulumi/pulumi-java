@@ -28,6 +28,10 @@ public final class SourceLifeCycleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="deleteAfter", required=true)
     private AbsoluteDeleteOptionResponse deleteAfter;
 
+    /**
+     * @return Delete Option
+     * 
+     */
     public AbsoluteDeleteOptionResponse deleteAfter() {
         return this.deleteAfter;
     }
@@ -39,6 +43,10 @@ public final class SourceLifeCycleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sourceDataStore", required=true)
     private DataStoreInfoBaseResponse sourceDataStore;
 
+    /**
+     * @return DataStoreInfo base
+     * 
+     */
     public DataStoreInfoBaseResponse sourceDataStore() {
         return this.sourceDataStore;
     }
@@ -76,11 +84,23 @@ public final class SourceLifeCycleResponse extends com.pulumi.resources.InvokeAr
             $ = new SourceLifeCycleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteAfter Delete Option
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteAfter(AbsoluteDeleteOptionResponse deleteAfter) {
             $.deleteAfter = deleteAfter;
             return this;
         }
 
+        /**
+         * @param sourceDataStore DataStoreInfo base
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDataStore(DataStoreInfoBaseResponse sourceDataStore) {
             $.sourceDataStore = sourceDataStore;
             return this;

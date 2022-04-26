@@ -26,6 +26,12 @@ public final class DataStoreIndexState extends com.pulumi.resources.ResourceArgs
     @Import(name="ancestor")
     private @Nullable Output<String> ancestor;
 
+    /**
+     * @return Policy for including ancestors in the index.
+     * Default value is `NONE`.
+     * Possible values are `NONE` and `ALL_ANCESTORS`.
+     * 
+     */
     public Optional<Output<String>> ancestor() {
         return Optional.ofNullable(this.ancestor);
     }
@@ -37,6 +43,10 @@ public final class DataStoreIndexState extends com.pulumi.resources.ResourceArgs
     @Import(name="indexId")
     private @Nullable Output<String> indexId;
 
+    /**
+     * @return The index id.
+     * 
+     */
     public Optional<Output<String>> indexId() {
         return Optional.ofNullable(this.indexId);
     }
@@ -48,6 +58,10 @@ public final class DataStoreIndexState extends com.pulumi.resources.ResourceArgs
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The entity kind which the index applies to.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -60,6 +74,11 @@ public final class DataStoreIndexState extends com.pulumi.resources.ResourceArgs
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -72,6 +91,11 @@ public final class DataStoreIndexState extends com.pulumi.resources.ResourceArgs
     @Import(name="properties")
     private @Nullable Output<List<DataStoreIndexPropertyGetArgs>> properties;
 
+    /**
+     * @return An ordered list of properties to index on.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<DataStoreIndexPropertyGetArgs>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -104,51 +128,126 @@ public final class DataStoreIndexState extends com.pulumi.resources.ResourceArgs
             $ = new DataStoreIndexState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ancestor Policy for including ancestors in the index.
+         * Default value is `NONE`.
+         * Possible values are `NONE` and `ALL_ANCESTORS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ancestor(@Nullable Output<String> ancestor) {
             $.ancestor = ancestor;
             return this;
         }
 
+        /**
+         * @param ancestor Policy for including ancestors in the index.
+         * Default value is `NONE`.
+         * Possible values are `NONE` and `ALL_ANCESTORS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ancestor(String ancestor) {
             return ancestor(Output.of(ancestor));
         }
 
+        /**
+         * @param indexId The index id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexId(@Nullable Output<String> indexId) {
             $.indexId = indexId;
             return this;
         }
 
+        /**
+         * @param indexId The index id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexId(String indexId) {
             return indexId(Output.of(indexId));
         }
 
+        /**
+         * @param kind The entity kind which the index applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The entity kind which the index applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param properties An ordered list of properties to index on.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<List<DataStoreIndexPropertyGetArgs>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties An ordered list of properties to index on.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(List<DataStoreIndexPropertyGetArgs> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param properties An ordered list of properties to index on.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(DataStoreIndexPropertyGetArgs... properties) {
             return properties(List.of(properties));
         }

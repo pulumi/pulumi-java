@@ -27,6 +27,10 @@ public final class SchemaSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="encoding")
     private @Nullable Output<SchemaSettingsEncoding> encoding;
 
+    /**
+     * @return The encoding of messages validated against `schema`.
+     * 
+     */
     public Optional<Output<SchemaSettingsEncoding>> encoding() {
         return Optional.ofNullable(this.encoding);
     }
@@ -38,6 +42,10 @@ public final class SchemaSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="schema", required=true)
     private Output<String> schema;
 
+    /**
+     * @return The name of the schema that messages published should be validated against. Format is `projects/{project}/schemas/{schema}`. The value of this field will be `_deleted-schema_` if the schema has been deleted.
+     * 
+     */
     public Output<String> schema() {
         return this.schema;
     }
@@ -67,20 +75,44 @@ public final class SchemaSettingsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SchemaSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encoding The encoding of messages validated against `schema`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(@Nullable Output<SchemaSettingsEncoding> encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param encoding The encoding of messages validated against `schema`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(SchemaSettingsEncoding encoding) {
             return encoding(Output.of(encoding));
         }
 
+        /**
+         * @param schema The name of the schema that messages published should be validated against. Format is `projects/{project}/schemas/{schema}`. The value of this field will be `_deleted-schema_` if the schema has been deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(Output<String> schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param schema The name of the schema that messages published should be validated against. Format is `projects/{project}/schemas/{schema}`. The value of this field will be `_deleted-schema_` if the schema has been deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(String schema) {
             return schema(Output.of(schema));
         }

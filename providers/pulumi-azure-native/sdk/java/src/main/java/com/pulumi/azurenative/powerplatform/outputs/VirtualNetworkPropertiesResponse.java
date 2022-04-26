@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualNetworkPropertiesResponse {
     /**
-     * Uri of the virtual network.
+     * @return Uri of the virtual network.
      * 
      */
     private final @Nullable String id;
     /**
-     * Properties of a subnet.
+     * @return Properties of a subnet.
      * 
      */
     private final @Nullable SubnetPropertiesResponse subnet;
@@ -32,16 +32,16 @@ public final class VirtualNetworkPropertiesResponse {
     }
 
     /**
-     * Uri of the virtual network.
+     * @return Uri of the virtual network.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Properties of a subnet.
+     * @return Properties of a subnet.
      * 
-    */
+     */
     public Optional<SubnetPropertiesResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }

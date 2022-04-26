@@ -22,6 +22,11 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
     @Import(name="acceleratorCount", required=true)
     private Output<Integer> acceleratorCount;
 
+    /**
+     * @return The number of the guest accelerator cards exposed to
+     * this instance.
+     * 
+     */
     public Output<Integer> acceleratorCount() {
         return this.acceleratorCount;
     }
@@ -36,6 +41,13 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
     @Import(name="acceleratorType", required=true)
     private Output<String> acceleratorType;
 
+    /**
+     * @return The full or partial URL of the accelerator type to
+     * attach to this instance. For example:
+     * `projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
+     * If you are creating an instance template, specify only the accelerator name.
+     * 
+     */
     public Output<String> acceleratorType() {
         return this.acceleratorType;
     }
@@ -65,20 +77,52 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
             $ = new ReservationSpecificReservationInstancePropertiesGuestAcceleratorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorCount The number of the guest accelerator cards exposed to
+         * this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(Output<Integer> acceleratorCount) {
             $.acceleratorCount = acceleratorCount;
             return this;
         }
 
+        /**
+         * @param acceleratorCount The number of the guest accelerator cards exposed to
+         * this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(Integer acceleratorCount) {
             return acceleratorCount(Output.of(acceleratorCount));
         }
 
+        /**
+         * @param acceleratorType The full or partial URL of the accelerator type to
+         * attach to this instance. For example:
+         * `projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
+         * If you are creating an instance template, specify only the accelerator name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(Output<String> acceleratorType) {
             $.acceleratorType = acceleratorType;
             return this;
         }
 
+        /**
+         * @param acceleratorType The full or partial URL of the accelerator type to
+         * attach to this instance. For example:
+         * `projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
+         * If you are creating an instance template, specify only the accelerator name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(String acceleratorType) {
             return acceleratorType(Output.of(acceleratorType));
         }

@@ -34,6 +34,10 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends com.pulu
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. &#34;us-east1&#34;, &#34;southamerica-east1&#34;, &#34;asia-east1&#34;, etc.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -52,6 +56,10 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends com.pulu
     @Import(name="signatureRrdatas")
     private @Nullable Output<List<String>> signatureRrdatas;
 
+    /**
+     * @return DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
+     * 
+     */
     public Optional<Output<List<String>>> signatureRrdatas() {
         return Optional.ofNullable(this.signatureRrdatas);
     }
@@ -92,11 +100,23 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends com.pulu
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. &#34;us-east1&#34;, &#34;southamerica-east1&#34;, &#34;asia-east1&#34;, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. &#34;us-east1&#34;, &#34;southamerica-east1&#34;, &#34;asia-east1&#34;, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
@@ -114,15 +134,33 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends com.pulu
             return rrdatas(List.of(rrdatas));
         }
 
+        /**
+         * @param signatureRrdatas DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureRrdatas(@Nullable Output<List<String>> signatureRrdatas) {
             $.signatureRrdatas = signatureRrdatas;
             return this;
         }
 
+        /**
+         * @param signatureRrdatas DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureRrdatas(List<String> signatureRrdatas) {
             return signatureRrdatas(Output.of(signatureRrdatas));
         }
 
+        /**
+         * @param signatureRrdatas DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureRrdatas(String... signatureRrdatas) {
             return signatureRrdatas(List.of(signatureRrdatas));
         }

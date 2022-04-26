@@ -28,6 +28,10 @@ public final class AlertRuleLeafConditionArgs extends com.pulumi.resources.Resou
     @Import(name="containsAny")
     private @Nullable Output<List<String>> containsAny;
 
+    /**
+     * @return The value of the event&#39;s field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
+     * 
+     */
     public Optional<Output<List<String>>> containsAny() {
         return Optional.ofNullable(this.containsAny);
     }
@@ -39,6 +43,10 @@ public final class AlertRuleLeafConditionArgs extends com.pulumi.resources.Resou
     @Import(name="equals")
     private @Nullable Output<String> equals;
 
+    /**
+     * @return The value of the event&#39;s field will be compared to this value (case-insensitive) to determine if the condition is met.
+     * 
+     */
     public Optional<Output<String>> equals_() {
         return Optional.ofNullable(this.equals);
     }
@@ -51,6 +59,11 @@ public final class AlertRuleLeafConditionArgs extends com.pulumi.resources.Resou
     @Import(name="field")
     private @Nullable Output<String> field;
 
+    /**
+     * @return The name of the Activity Log event&#39;s field that this condition will examine.
+     * The possible values for this field are (case-insensitive): &#39;resourceId&#39;, &#39;category&#39;, &#39;caller&#39;, &#39;level&#39;, &#39;operationName&#39;, &#39;resourceGroup&#39;, &#39;resourceProvider&#39;, &#39;status&#39;, &#39;subStatus&#39;, &#39;resourceType&#39;, or anything beginning with &#39;properties&#39;.
+     * 
+     */
     public Optional<Output<String>> field() {
         return Optional.ofNullable(this.field);
     }
@@ -81,33 +94,77 @@ public final class AlertRuleLeafConditionArgs extends com.pulumi.resources.Resou
             $ = new AlertRuleLeafConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containsAny The value of the event&#39;s field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containsAny(@Nullable Output<List<String>> containsAny) {
             $.containsAny = containsAny;
             return this;
         }
 
+        /**
+         * @param containsAny The value of the event&#39;s field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containsAny(List<String> containsAny) {
             return containsAny(Output.of(containsAny));
         }
 
+        /**
+         * @param containsAny The value of the event&#39;s field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containsAny(String... containsAny) {
             return containsAny(List.of(containsAny));
         }
 
+        /**
+         * @param equals The value of the event&#39;s field will be compared to this value (case-insensitive) to determine if the condition is met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder equals_(@Nullable Output<String> equals) {
             $.equals = equals;
             return this;
         }
 
+        /**
+         * @param equals The value of the event&#39;s field will be compared to this value (case-insensitive) to determine if the condition is met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder equals_(String equals) {
             return equals_(Output.of(equals));
         }
 
+        /**
+         * @param field The name of the Activity Log event&#39;s field that this condition will examine.
+         * The possible values for this field are (case-insensitive): &#39;resourceId&#39;, &#39;category&#39;, &#39;caller&#39;, &#39;level&#39;, &#39;operationName&#39;, &#39;resourceGroup&#39;, &#39;resourceProvider&#39;, &#39;status&#39;, &#39;subStatus&#39;, &#39;resourceType&#39;, or anything beginning with &#39;properties&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable Output<String> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field The name of the Activity Log event&#39;s field that this condition will examine.
+         * The possible values for this field are (case-insensitive): &#39;resourceId&#39;, &#39;category&#39;, &#39;caller&#39;, &#39;level&#39;, &#39;operationName&#39;, &#39;resourceGroup&#39;, &#39;resourceProvider&#39;, &#39;status&#39;, &#39;subStatus&#39;, &#39;resourceType&#39;, or anything beginning with &#39;properties&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             return field(Output.of(field));
         }

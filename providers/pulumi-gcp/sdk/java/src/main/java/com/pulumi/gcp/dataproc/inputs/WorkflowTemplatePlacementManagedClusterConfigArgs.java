@@ -36,6 +36,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
     @Import(name="autoscalingConfig")
     private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> autoscalingConfig;
 
+    /**
+     * @return Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
+     * 
+     */
     public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs>> autoscalingConfig() {
         return Optional.ofNullable(this.autoscalingConfig);
     }
@@ -47,6 +51,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
     @Import(name="encryptionConfig")
     private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> encryptionConfig;
 
+    /**
+     * @return Optional. Encryption settings for the cluster.
+     * 
+     */
     public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs>> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
@@ -58,6 +66,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
     @Import(name="endpointConfig")
     private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> endpointConfig;
 
+    /**
+     * @return Optional. Port/endpoint configuration for this cluster
+     * 
+     */
     public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs>> endpointConfig() {
         return Optional.ofNullable(this.endpointConfig);
     }
@@ -69,6 +81,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
     @Import(name="gceClusterConfig")
     private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> gceClusterConfig;
 
+    /**
+     * @return Optional. The shared Compute Engine config settings for all instances in a cluster.
+     * 
+     */
     public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs>> gceClusterConfig() {
         return Optional.ofNullable(this.gceClusterConfig);
     }
@@ -80,6 +96,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
     @Import(name="gkeClusterConfig")
     private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> gkeClusterConfig;
 
+    /**
+     * @return Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as `gce_cluster_config`, `master_config`, `worker_config`, `secondary_worker_config`, and `autoscaling_config`.
+     * 
+     */
     public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs>> gkeClusterConfig() {
         return Optional.ofNullable(this.gkeClusterConfig);
     }
@@ -91,6 +111,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
     @Import(name="initializationActions")
     private @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> initializationActions;
 
+    /**
+     * @return Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node&#39;s `role` metadata to run an executable on a master or worker node, as shown below using `curl` (you can also use `wget`): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if ; then ... master specific actions ... else ... worker specific actions ... fi
+     * 
+     */
     public Optional<Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>>> initializationActions() {
         return Optional.ofNullable(this.initializationActions);
     }
@@ -102,6 +126,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
     @Import(name="lifecycleConfig")
     private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> lifecycleConfig;
 
+    /**
+     * @return Optional. Lifecycle setting for the cluster.
+     * 
+     */
     public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs>> lifecycleConfig() {
         return Optional.ofNullable(this.lifecycleConfig);
     }
@@ -113,6 +141,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
     @Import(name="masterConfig")
     private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> masterConfig;
 
+    /**
+     * @return Optional. The Compute Engine config settings for additional worker instances in a cluster.
+     * 
+     */
     public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs>> masterConfig() {
         return Optional.ofNullable(this.masterConfig);
     }
@@ -124,6 +156,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
     @Import(name="metastoreConfig")
     private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> metastoreConfig;
 
+    /**
+     * @return Optional. Metastore configuration.
+     * 
+     */
     public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs>> metastoreConfig() {
         return Optional.ofNullable(this.metastoreConfig);
     }
@@ -135,6 +171,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
     @Import(name="secondaryWorkerConfig")
     private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> secondaryWorkerConfig;
 
+    /**
+     * @return Optional. The Compute Engine config settings for additional worker instances in a cluster.
+     * 
+     */
     public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs>> secondaryWorkerConfig() {
         return Optional.ofNullable(this.secondaryWorkerConfig);
     }
@@ -146,6 +186,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
     @Import(name="securityConfig")
     private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> securityConfig;
 
+    /**
+     * @return Optional. Security settings for the cluster.
+     * 
+     */
     public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs>> securityConfig() {
         return Optional.ofNullable(this.securityConfig);
     }
@@ -157,6 +201,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
     @Import(name="softwareConfig")
     private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> softwareConfig;
 
+    /**
+     * @return Optional. The config settings for software inside the cluster.
+     * 
+     */
     public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs>> softwareConfig() {
         return Optional.ofNullable(this.softwareConfig);
     }
@@ -168,6 +216,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
     @Import(name="stagingBucket")
     private @Nullable Output<String> stagingBucket;
 
+    /**
+     * @return Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)).
+     * 
+     */
     public Optional<Output<String>> stagingBucket() {
         return Optional.ofNullable(this.stagingBucket);
     }
@@ -179,6 +231,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
     @Import(name="tempBucket")
     private @Nullable Output<String> tempBucket;
 
+    /**
+     * @return Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket.
+     * 
+     */
     public Optional<Output<String>> tempBucket() {
         return Optional.ofNullable(this.tempBucket);
     }
@@ -190,6 +246,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
     @Import(name="workerConfig")
     private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> workerConfig;
 
+    /**
+     * @return Optional. The Compute Engine config settings for additional worker instances in a cluster.
+     * 
+     */
     public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs>> workerConfig() {
         return Optional.ofNullable(this.workerConfig);
     }
@@ -232,141 +292,327 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends com
             $ = new WorkflowTemplatePlacementManagedClusterConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscalingConfig Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> autoscalingConfig) {
             $.autoscalingConfig = autoscalingConfig;
             return this;
         }
 
+        /**
+         * @param autoscalingConfig Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingConfig(WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs autoscalingConfig) {
             return autoscalingConfig(Output.of(autoscalingConfig));
         }
 
+        /**
+         * @param encryptionConfig Optional. Encryption settings for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> encryptionConfig) {
             $.encryptionConfig = encryptionConfig;
             return this;
         }
 
+        /**
+         * @param encryptionConfig Optional. Encryption settings for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs encryptionConfig) {
             return encryptionConfig(Output.of(encryptionConfig));
         }
 
+        /**
+         * @param endpointConfig Optional. Port/endpoint configuration for this cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> endpointConfig) {
             $.endpointConfig = endpointConfig;
             return this;
         }
 
+        /**
+         * @param endpointConfig Optional. Port/endpoint configuration for this cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointConfig(WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs endpointConfig) {
             return endpointConfig(Output.of(endpointConfig));
         }
 
+        /**
+         * @param gceClusterConfig Optional. The shared Compute Engine config settings for all instances in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gceClusterConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> gceClusterConfig) {
             $.gceClusterConfig = gceClusterConfig;
             return this;
         }
 
+        /**
+         * @param gceClusterConfig Optional. The shared Compute Engine config settings for all instances in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gceClusterConfig(WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs gceClusterConfig) {
             return gceClusterConfig(Output.of(gceClusterConfig));
         }
 
+        /**
+         * @param gkeClusterConfig Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as `gce_cluster_config`, `master_config`, `worker_config`, `secondary_worker_config`, and `autoscaling_config`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusterConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> gkeClusterConfig) {
             $.gkeClusterConfig = gkeClusterConfig;
             return this;
         }
 
+        /**
+         * @param gkeClusterConfig Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as `gce_cluster_config`, `master_config`, `worker_config`, `secondary_worker_config`, and `autoscaling_config`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusterConfig(WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs gkeClusterConfig) {
             return gkeClusterConfig(Output.of(gkeClusterConfig));
         }
 
+        /**
+         * @param initializationActions Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node&#39;s `role` metadata to run an executable on a master or worker node, as shown below using `curl` (you can also use `wget`): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if ; then ... master specific actions ... else ... worker specific actions ... fi
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializationActions(@Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> initializationActions) {
             $.initializationActions = initializationActions;
             return this;
         }
 
+        /**
+         * @param initializationActions Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node&#39;s `role` metadata to run an executable on a master or worker node, as shown below using `curl` (you can also use `wget`): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if ; then ... master specific actions ... else ... worker specific actions ... fi
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializationActions(List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs> initializationActions) {
             return initializationActions(Output.of(initializationActions));
         }
 
+        /**
+         * @param initializationActions Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node&#39;s `role` metadata to run an executable on a master or worker node, as shown below using `curl` (you can also use `wget`): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if ; then ... master specific actions ... else ... worker specific actions ... fi
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializationActions(WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs... initializationActions) {
             return initializationActions(List.of(initializationActions));
         }
 
+        /**
+         * @param lifecycleConfig Optional. Lifecycle setting for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> lifecycleConfig) {
             $.lifecycleConfig = lifecycleConfig;
             return this;
         }
 
+        /**
+         * @param lifecycleConfig Optional. Lifecycle setting for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleConfig(WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs lifecycleConfig) {
             return lifecycleConfig(Output.of(lifecycleConfig));
         }
 
+        /**
+         * @param masterConfig Optional. The Compute Engine config settings for additional worker instances in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> masterConfig) {
             $.masterConfig = masterConfig;
             return this;
         }
 
+        /**
+         * @param masterConfig Optional. The Compute Engine config settings for additional worker instances in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterConfig(WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs masterConfig) {
             return masterConfig(Output.of(masterConfig));
         }
 
+        /**
+         * @param metastoreConfig Optional. Metastore configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metastoreConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> metastoreConfig) {
             $.metastoreConfig = metastoreConfig;
             return this;
         }
 
+        /**
+         * @param metastoreConfig Optional. Metastore configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metastoreConfig(WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs metastoreConfig) {
             return metastoreConfig(Output.of(metastoreConfig));
         }
 
+        /**
+         * @param secondaryWorkerConfig Optional. The Compute Engine config settings for additional worker instances in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryWorkerConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> secondaryWorkerConfig) {
             $.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
 
+        /**
+         * @param secondaryWorkerConfig Optional. The Compute Engine config settings for additional worker instances in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryWorkerConfig(WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs secondaryWorkerConfig) {
             return secondaryWorkerConfig(Output.of(secondaryWorkerConfig));
         }
 
+        /**
+         * @param securityConfig Optional. Security settings for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> securityConfig) {
             $.securityConfig = securityConfig;
             return this;
         }
 
+        /**
+         * @param securityConfig Optional. Security settings for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityConfig(WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs securityConfig) {
             return securityConfig(Output.of(securityConfig));
         }
 
+        /**
+         * @param softwareConfig Optional. The config settings for software inside the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softwareConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> softwareConfig) {
             $.softwareConfig = softwareConfig;
             return this;
         }
 
+        /**
+         * @param softwareConfig Optional. The config settings for software inside the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softwareConfig(WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs softwareConfig) {
             return softwareConfig(Output.of(softwareConfig));
         }
 
+        /**
+         * @param stagingBucket Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder stagingBucket(@Nullable Output<String> stagingBucket) {
             $.stagingBucket = stagingBucket;
             return this;
         }
 
+        /**
+         * @param stagingBucket Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder stagingBucket(String stagingBucket) {
             return stagingBucket(Output.of(stagingBucket));
         }
 
+        /**
+         * @param tempBucket Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tempBucket(@Nullable Output<String> tempBucket) {
             $.tempBucket = tempBucket;
             return this;
         }
 
+        /**
+         * @param tempBucket Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tempBucket(String tempBucket) {
             return tempBucket(Output.of(tempBucket));
         }
 
+        /**
+         * @param workerConfig Optional. The Compute Engine config settings for additional worker instances in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> workerConfig) {
             $.workerConfig = workerConfig;
             return this;
         }
 
+        /**
+         * @param workerConfig Optional. The Compute Engine config settings for additional worker instances in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs workerConfig) {
             return workerConfig(Output.of(workerConfig));
         }

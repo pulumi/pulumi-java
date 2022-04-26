@@ -24,6 +24,10 @@ public final class BasisResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fingerprint", required=true)
     private FingerprintResponse fingerprint;
 
+    /**
+     * @return Immutable. The fingerprint of the base image.
+     * 
+     */
     public FingerprintResponse fingerprint() {
         return this.fingerprint;
     }
@@ -35,6 +39,10 @@ public final class BasisResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceUrl", required=true)
     private String resourceUrl;
 
+    /**
+     * @return Immutable. The resource_url for the resource representing the basis of associated occurrence images.
+     * 
+     */
     public String resourceUrl() {
         return this.resourceUrl;
     }
@@ -64,11 +72,23 @@ public final class BasisResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BasisResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fingerprint Immutable. The fingerprint of the base image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(FingerprintResponse fingerprint) {
             $.fingerprint = fingerprint;
             return this;
         }
 
+        /**
+         * @param resourceUrl Immutable. The resource_url for the resource representing the basis of associated occurrence images.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUrl(String resourceUrl) {
             $.resourceUrl = resourceUrl;
             return this;

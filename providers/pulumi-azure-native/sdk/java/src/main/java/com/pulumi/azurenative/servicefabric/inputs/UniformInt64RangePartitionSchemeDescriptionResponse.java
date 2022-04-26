@@ -25,6 +25,10 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends c
     @Import(name="count", required=true)
     private Integer count;
 
+    /**
+     * @return The number of partitions.
+     * 
+     */
     public Integer count() {
         return this.count;
     }
@@ -37,6 +41,11 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends c
     @Import(name="highKey", required=true)
     private String highKey;
 
+    /**
+     * @return String indicating the upper bound of the partition key range that
+     * should be split between the partition ‘count’
+     * 
+     */
     public String highKey() {
         return this.highKey;
     }
@@ -49,6 +58,11 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends c
     @Import(name="lowKey", required=true)
     private String lowKey;
 
+    /**
+     * @return String indicating the lower bound of the partition key range that
+     * should be split between the partition ‘count’
+     * 
+     */
     public String lowKey() {
         return this.lowKey;
     }
@@ -61,6 +75,11 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends c
     @Import(name="partitionScheme", required=true)
     private String partitionScheme;
 
+    /**
+     * @return Enumerates the ways that a service can be partitioned.
+     * Expected value is &#39;UniformInt64Range&#39;.
+     * 
+     */
     public String partitionScheme() {
         return this.partitionScheme;
     }
@@ -92,21 +111,48 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends c
             $ = new UniformInt64RangePartitionSchemeDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count The number of partitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param highKey String indicating the upper bound of the partition key range that
+         * should be split between the partition ‘count’
+         * 
+         * @return builder
+         * 
+         */
         public Builder highKey(String highKey) {
             $.highKey = highKey;
             return this;
         }
 
+        /**
+         * @param lowKey String indicating the lower bound of the partition key range that
+         * should be split between the partition ‘count’
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowKey(String lowKey) {
             $.lowKey = lowKey;
             return this;
         }
 
+        /**
+         * @param partitionScheme Enumerates the ways that a service can be partitioned.
+         * Expected value is &#39;UniformInt64Range&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionScheme(String partitionScheme) {
             $.partitionScheme = partitionScheme;
             return this;

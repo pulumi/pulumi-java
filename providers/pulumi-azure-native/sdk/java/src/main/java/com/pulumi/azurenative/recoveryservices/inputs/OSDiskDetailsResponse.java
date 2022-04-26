@@ -25,6 +25,10 @@ public final class OSDiskDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return The type of the OS on the VM.
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -36,6 +40,10 @@ public final class OSDiskDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="osVhdId")
     private @Nullable String osVhdId;
 
+    /**
+     * @return The id of the disk containing the OS.
+     * 
+     */
     public Optional<String> osVhdId() {
         return Optional.ofNullable(this.osVhdId);
     }
@@ -47,6 +55,10 @@ public final class OSDiskDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="vhdName")
     private @Nullable String vhdName;
 
+    /**
+     * @return The OS disk VHD name.
+     * 
+     */
     public Optional<String> vhdName() {
         return Optional.ofNullable(this.vhdName);
     }
@@ -77,16 +89,34 @@ public final class OSDiskDetailsResponse extends com.pulumi.resources.InvokeArgs
             $ = new OSDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param osType The type of the OS on the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osVhdId The id of the disk containing the OS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osVhdId(@Nullable String osVhdId) {
             $.osVhdId = osVhdId;
             return this;
         }
 
+        /**
+         * @param vhdName The OS disk VHD name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhdName(@Nullable String vhdName) {
             $.vhdName = vhdName;
             return this;

@@ -25,6 +25,10 @@ public final class RouteSpecHttp2RouteArgs extends com.pulumi.resources.Resource
     @Import(name="action", required=true)
     private Output<RouteSpecHttp2RouteActionArgs> action;
 
+    /**
+     * @return The action to take if a match is determined.
+     * 
+     */
     public Output<RouteSpecHttp2RouteActionArgs> action() {
         return this.action;
     }
@@ -36,6 +40,10 @@ public final class RouteSpecHttp2RouteArgs extends com.pulumi.resources.Resource
     @Import(name="match", required=true)
     private Output<RouteSpecHttp2RouteMatchArgs> match;
 
+    /**
+     * @return The criteria for determining an gRPC request match.
+     * 
+     */
     public Output<RouteSpecHttp2RouteMatchArgs> match() {
         return this.match;
     }
@@ -47,6 +55,10 @@ public final class RouteSpecHttp2RouteArgs extends com.pulumi.resources.Resource
     @Import(name="retryPolicy")
     private @Nullable Output<RouteSpecHttp2RouteRetryPolicyArgs> retryPolicy;
 
+    /**
+     * @return The retry policy.
+     * 
+     */
     public Optional<Output<RouteSpecHttp2RouteRetryPolicyArgs>> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
@@ -58,6 +70,10 @@ public final class RouteSpecHttp2RouteArgs extends com.pulumi.resources.Resource
     @Import(name="timeout")
     private @Nullable Output<RouteSpecHttp2RouteTimeoutArgs> timeout;
 
+    /**
+     * @return The types of timeouts.
+     * 
+     */
     public Optional<Output<RouteSpecHttp2RouteTimeoutArgs>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -89,38 +105,86 @@ public final class RouteSpecHttp2RouteArgs extends com.pulumi.resources.Resource
             $ = new RouteSpecHttp2RouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action to take if a match is determined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<RouteSpecHttp2RouteActionArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action to take if a match is determined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(RouteSpecHttp2RouteActionArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param match The criteria for determining an gRPC request match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(Output<RouteSpecHttp2RouteMatchArgs> match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param match The criteria for determining an gRPC request match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(RouteSpecHttp2RouteMatchArgs match) {
             return match(Output.of(match));
         }
 
+        /**
+         * @param retryPolicy The retry policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(@Nullable Output<RouteSpecHttp2RouteRetryPolicyArgs> retryPolicy) {
             $.retryPolicy = retryPolicy;
             return this;
         }
 
+        /**
+         * @param retryPolicy The retry policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(RouteSpecHttp2RouteRetryPolicyArgs retryPolicy) {
             return retryPolicy(Output.of(retryPolicy));
         }
 
+        /**
+         * @param timeout The types of timeouts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<RouteSpecHttp2RouteTimeoutArgs> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout The types of timeouts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(RouteSpecHttp2RouteTimeoutArgs timeout) {
             return timeout(Output.of(timeout));
         }

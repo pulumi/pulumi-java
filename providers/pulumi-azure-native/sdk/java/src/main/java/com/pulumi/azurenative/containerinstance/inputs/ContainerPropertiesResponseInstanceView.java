@@ -26,6 +26,10 @@ public final class ContainerPropertiesResponseInstanceView extends com.pulumi.re
     @Import(name="currentState", required=true)
     private ContainerStateResponse currentState;
 
+    /**
+     * @return Current container instance state.
+     * 
+     */
     public ContainerStateResponse currentState() {
         return this.currentState;
     }
@@ -37,6 +41,10 @@ public final class ContainerPropertiesResponseInstanceView extends com.pulumi.re
     @Import(name="events", required=true)
     private List<EventResponse> events;
 
+    /**
+     * @return The events of the container instance.
+     * 
+     */
     public List<EventResponse> events() {
         return this.events;
     }
@@ -48,6 +56,10 @@ public final class ContainerPropertiesResponseInstanceView extends com.pulumi.re
     @Import(name="previousState", required=true)
     private ContainerStateResponse previousState;
 
+    /**
+     * @return Previous container instance state.
+     * 
+     */
     public ContainerStateResponse previousState() {
         return this.previousState;
     }
@@ -59,6 +71,10 @@ public final class ContainerPropertiesResponseInstanceView extends com.pulumi.re
     @Import(name="restartCount", required=true)
     private Integer restartCount;
 
+    /**
+     * @return The number of times that the container instance has been restarted.
+     * 
+     */
     public Integer restartCount() {
         return this.restartCount;
     }
@@ -90,25 +106,55 @@ public final class ContainerPropertiesResponseInstanceView extends com.pulumi.re
             $ = new ContainerPropertiesResponseInstanceView(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentState Current container instance state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentState(ContainerStateResponse currentState) {
             $.currentState = currentState;
             return this;
         }
 
+        /**
+         * @param events The events of the container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(List<EventResponse> events) {
             $.events = events;
             return this;
         }
 
+        /**
+         * @param events The events of the container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(EventResponse... events) {
             return events(List.of(events));
         }
 
+        /**
+         * @param previousState Previous container instance state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder previousState(ContainerStateResponse previousState) {
             $.previousState = previousState;
             return this;
         }
 
+        /**
+         * @param restartCount The number of times that the container instance has been restarted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartCount(Integer restartCount) {
             $.restartCount = restartCount;
             return this;

@@ -13,42 +13,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSqlServerResult {
     /**
-     * Cores of the Sql Server.
+     * @return Cores of the Sql Server.
      * 
      */
     private final @Nullable Integer cores;
     /**
-     * Sql Server Edition.
+     * @return Sql Server Edition.
      * 
      */
     private final @Nullable String edition;
     /**
-     * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Sql Server Json Property Bag.
+     * @return Sql Server Json Property Bag.
      * 
      */
     private final @Nullable String propertyBag;
     /**
-     * ID for Parent Sql Server Registration.
+     * @return ID for Parent Sql Server Registration.
      * 
      */
     private final @Nullable String registrationID;
     /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
     private final String type;
     /**
-     * Version of the Sql Server.
+     * @return Version of the Sql Server.
      * 
      */
     private final @Nullable String version;
@@ -74,58 +74,58 @@ public final class GetSqlServerResult {
     }
 
     /**
-     * Cores of the Sql Server.
+     * @return Cores of the Sql Server.
      * 
-    */
+     */
     public Optional<Integer> cores() {
         return Optional.ofNullable(this.cores);
     }
     /**
-     * Sql Server Edition.
+     * @return Sql Server Edition.
      * 
-    */
+     */
     public Optional<String> edition() {
         return Optional.ofNullable(this.edition);
     }
     /**
-     * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Sql Server Json Property Bag.
+     * @return Sql Server Json Property Bag.
      * 
-    */
+     */
     public Optional<String> propertyBag() {
         return Optional.ofNullable(this.propertyBag);
     }
     /**
-     * ID for Parent Sql Server Registration.
+     * @return ID for Parent Sql Server Registration.
      * 
-    */
+     */
     public Optional<String> registrationID() {
         return Optional.ofNullable(this.registrationID);
     }
     /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Version of the Sql Server.
+     * @return Version of the Sql Server.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

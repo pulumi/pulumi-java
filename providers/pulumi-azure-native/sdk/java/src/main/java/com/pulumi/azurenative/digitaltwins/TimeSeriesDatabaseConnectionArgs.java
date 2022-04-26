@@ -23,6 +23,10 @@ public final class TimeSeriesDatabaseConnectionArgs extends com.pulumi.resources
     @Import(name="properties")
     private @Nullable Output<AzureDataExplorerConnectionPropertiesArgs> properties;
 
+    /**
+     * @return Properties of a specific time series database connection.
+     * 
+     */
     public Optional<Output<AzureDataExplorerConnectionPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -34,6 +38,10 @@ public final class TimeSeriesDatabaseConnectionArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the DigitalTwinsInstance.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -45,6 +53,10 @@ public final class TimeSeriesDatabaseConnectionArgs extends com.pulumi.resources
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the DigitalTwinsInstance.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -56,6 +68,10 @@ public final class TimeSeriesDatabaseConnectionArgs extends com.pulumi.resources
     @Import(name="timeSeriesDatabaseConnectionName")
     private @Nullable Output<String> timeSeriesDatabaseConnectionName;
 
+    /**
+     * @return Name of time series database connection.
+     * 
+     */
     public Optional<Output<String>> timeSeriesDatabaseConnectionName() {
         return Optional.ofNullable(this.timeSeriesDatabaseConnectionName);
     }
@@ -87,38 +103,86 @@ public final class TimeSeriesDatabaseConnectionArgs extends com.pulumi.resources
             $ = new TimeSeriesDatabaseConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties Properties of a specific time series database connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<AzureDataExplorerConnectionPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of a specific time series database connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(AzureDataExplorerConnectionPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param timeSeriesDatabaseConnectionName Name of time series database connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeriesDatabaseConnectionName(@Nullable Output<String> timeSeriesDatabaseConnectionName) {
             $.timeSeriesDatabaseConnectionName = timeSeriesDatabaseConnectionName;
             return this;
         }
 
+        /**
+         * @param timeSeriesDatabaseConnectionName Name of time series database connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeriesDatabaseConnectionName(String timeSeriesDatabaseConnectionName) {
             return timeSeriesDatabaseConnectionName(Output.of(timeSeriesDatabaseConnectionName));
         }

@@ -23,6 +23,10 @@ public final class DetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="attestation", required=true)
     private AttestationResponse attestation;
 
+    /**
+     * @return Attestation for the resource.
+     * 
+     */
     public AttestationResponse attestation() {
         return this.attestation;
     }
@@ -51,6 +55,12 @@ public final class DetailsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attestation Attestation for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestation(AttestationResponse attestation) {
             $.attestation = attestation;
             return this;

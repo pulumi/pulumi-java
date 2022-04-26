@@ -20,6 +20,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="inputLambdaProcessor", required=true)
     private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorGetArgs> inputLambdaProcessor;
 
+    /**
+     * @return Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
+     * 
+     */
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorGetArgs> inputLambdaProcessor() {
         return this.inputLambdaProcessor;
     }
@@ -48,11 +52,23 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputLambdaProcessor Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputLambdaProcessor(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorGetArgs> inputLambdaProcessor) {
             $.inputLambdaProcessor = inputLambdaProcessor;
             return this;
         }
 
+        /**
+         * @param inputLambdaProcessor Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputLambdaProcessor(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorGetArgs inputLambdaProcessor) {
             return inputLambdaProcessor(Output.of(inputLambdaProcessor));
         }

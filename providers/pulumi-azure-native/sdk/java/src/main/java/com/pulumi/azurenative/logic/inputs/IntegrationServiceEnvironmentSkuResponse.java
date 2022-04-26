@@ -26,6 +26,10 @@ public final class IntegrationServiceEnvironmentSkuResponse extends com.pulumi.r
     @Import(name="capacity")
     private @Nullable Integer capacity;
 
+    /**
+     * @return The sku capacity.
+     * 
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class IntegrationServiceEnvironmentSkuResponse extends com.pulumi.r
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The sku name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,11 +74,23 @@ public final class IntegrationServiceEnvironmentSkuResponse extends com.pulumi.r
             $ = new IntegrationServiceEnvironmentSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The sku capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

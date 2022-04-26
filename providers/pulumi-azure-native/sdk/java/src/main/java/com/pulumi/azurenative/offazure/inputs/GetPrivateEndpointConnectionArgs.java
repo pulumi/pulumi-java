@@ -19,6 +19,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="peConnectionName", required=true)
     private String peConnectionName;
 
+    /**
+     * @return Private link resource name.
+     * 
+     */
     public String peConnectionName() {
         return this.peConnectionName;
     }
@@ -30,6 +34,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="siteName", required=true)
     private String siteName;
 
+    /**
+     * @return Site name.
+     * 
+     */
     public String siteName() {
         return this.siteName;
     }
@@ -71,16 +83,34 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
             $ = new GetPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param peConnectionName Private link resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peConnectionName(String peConnectionName) {
             $.peConnectionName = peConnectionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param siteName Site name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(String siteName) {
             $.siteName = siteName;
             return this;

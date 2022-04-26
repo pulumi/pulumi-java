@@ -23,6 +23,12 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return ID of the project to list available node types for.
+     * Should match the project the nodes of this type will be deployed to.
+     * Defaults to the project that the provider is authenticated with.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -35,6 +41,11 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="zone")
     private @Nullable String zone;
 
+    /**
+     * @return The zone to list node types for. Should be in zone of intended node groups and region of referencing node template. If `zone` is not specified, the provider-level zone must be set and is used
+     * instead.
+     * 
+     */
     public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -64,11 +75,26 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetNodeTypesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project ID of the project to list available node types for.
+         * Should match the project the nodes of this type will be deployed to.
+         * Defaults to the project that the provider is authenticated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param zone The zone to list node types for. Should be in zone of intended node groups and region of referencing node template. If `zone` is not specified, the provider-level zone must be set and is used
+         * instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable String zone) {
             $.zone = zone;
             return this;

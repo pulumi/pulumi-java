@@ -27,6 +27,10 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cardinality", required=true)
     private String cardinality;
 
+    /**
+     * @return The field cardinality.
+     * 
+     */
     public String cardinality() {
         return this.cardinality;
     }
@@ -38,6 +42,10 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="defaultValue", required=true)
     private String defaultValue;
 
+    /**
+     * @return The string value of the default value of this field. Proto2 syntax only.
+     * 
+     */
     public String defaultValue() {
         return this.defaultValue;
     }
@@ -49,6 +57,10 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jsonName", required=true)
     private String jsonName;
 
+    /**
+     * @return The field JSON name.
+     * 
+     */
     public String jsonName() {
         return this.jsonName;
     }
@@ -60,6 +72,10 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return The field type.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -71,6 +87,10 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The field name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -82,6 +102,10 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="number", required=true)
     private Integer number;
 
+    /**
+     * @return The field number.
+     * 
+     */
     public Integer number() {
         return this.number;
     }
@@ -93,6 +117,10 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="oneofIndex", required=true)
     private Integer oneofIndex;
 
+    /**
+     * @return The index of the field type in `Type.oneofs`, for message or enumeration types. The first type has index 1; zero means the type is not in the list.
+     * 
+     */
     public Integer oneofIndex() {
         return this.oneofIndex;
     }
@@ -104,6 +132,10 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="options", required=true)
     private List<OptionResponse> options;
 
+    /**
+     * @return The protocol buffer options.
+     * 
+     */
     public List<OptionResponse> options() {
         return this.options;
     }
@@ -115,6 +147,10 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="packed", required=true)
     private Boolean packed;
 
+    /**
+     * @return Whether to use alternative packed wire representation.
+     * 
+     */
     public Boolean packed() {
         return this.packed;
     }
@@ -126,6 +162,10 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="typeUrl", required=true)
     private String typeUrl;
 
+    /**
+     * @return The field type URL, without the scheme, for message or enumeration types. Example: `&#34;type.googleapis.com/google.protobuf.Timestamp&#34;`.
+     * 
+     */
     public String typeUrl() {
         return this.typeUrl;
     }
@@ -163,55 +203,121 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
             $ = new FieldResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cardinality The field cardinality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardinality(String cardinality) {
             $.cardinality = cardinality;
             return this;
         }
 
+        /**
+         * @param defaultValue The string value of the default value of this field. Proto2 syntax only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(String defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param jsonName The field JSON name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonName(String jsonName) {
             $.jsonName = jsonName;
             return this;
         }
 
+        /**
+         * @param kind The field type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name The field name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param number The field number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder number(Integer number) {
             $.number = number;
             return this;
         }
 
+        /**
+         * @param oneofIndex The index of the field type in `Type.oneofs`, for message or enumeration types. The first type has index 1; zero means the type is not in the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oneofIndex(Integer oneofIndex) {
             $.oneofIndex = oneofIndex;
             return this;
         }
 
+        /**
+         * @param options The protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(List<OptionResponse> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options The protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionResponse... options) {
             return options(List.of(options));
         }
 
+        /**
+         * @param packed Whether to use alternative packed wire representation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packed(Boolean packed) {
             $.packed = packed;
             return this;
         }
 
+        /**
+         * @param typeUrl The field type URL, without the scheme, for message or enumeration types. Example: `&#34;type.googleapis.com/google.protobuf.Timestamp&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeUrl(String typeUrl) {
             $.typeUrl = typeUrl;
             return this;

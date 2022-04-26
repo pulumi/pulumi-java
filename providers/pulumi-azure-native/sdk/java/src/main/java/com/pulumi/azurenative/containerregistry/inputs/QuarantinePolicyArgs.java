@@ -29,6 +29,10 @@ public final class QuarantinePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="status")
     private @Nullable Output<Either<String,PolicyStatus>> status;
 
+    /**
+     * @return The value that indicates whether the policy is enabled or not.
+     * 
+     */
     public Optional<Output<Either<String,PolicyStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -57,19 +61,43 @@ public final class QuarantinePolicyArgs extends com.pulumi.resources.ResourceArg
             $ = new QuarantinePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status The value that indicates whether the policy is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,PolicyStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The value that indicates whether the policy is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,PolicyStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The value that indicates whether the policy is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The value that indicates whether the policy is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(PolicyStatus status) {
             return status(Either.ofRight(status));
         }

@@ -26,6 +26,10 @@ public final class DatasetStateResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="deprecatedBy")
     private @Nullable DatasetStateResponseDeprecatedBy deprecatedBy;
 
+    /**
+     * @return Reference to better Dataset or a Definition
+     * 
+     */
     public Optional<DatasetStateResponseDeprecatedBy> deprecatedBy() {
         return Optional.ofNullable(this.deprecatedBy);
     }
@@ -37,6 +41,10 @@ public final class DatasetStateResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return eTag description
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -48,6 +56,10 @@ public final class DatasetStateResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return Dataset state
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -78,16 +90,34 @@ public final class DatasetStateResponse extends com.pulumi.resources.InvokeArgs 
             $ = new DatasetStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deprecatedBy Reference to better Dataset or a Definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecatedBy(@Nullable DatasetStateResponseDeprecatedBy deprecatedBy) {
             $.deprecatedBy = deprecatedBy;
             return this;
         }
 
+        /**
+         * @param etag eTag description
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param state Dataset state
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

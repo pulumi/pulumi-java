@@ -23,6 +23,10 @@ public final class MaxPodsConstraintResponse extends com.pulumi.resources.Invoke
     @Import(name="maxPodsPerNode", required=true)
     private String maxPodsPerNode;
 
+    /**
+     * @return Constraint enforced on the max num of pods per node.
+     * 
+     */
     public String maxPodsPerNode() {
         return this.maxPodsPerNode;
     }
@@ -51,6 +55,12 @@ public final class MaxPodsConstraintResponse extends com.pulumi.resources.Invoke
             $ = new MaxPodsConstraintResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxPodsPerNode Constraint enforced on the max num of pods per node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPodsPerNode(String maxPodsPerNode) {
             $.maxPodsPerNode = maxPodsPerNode;
             return this;

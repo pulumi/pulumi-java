@@ -26,6 +26,10 @@ public final class GroupContractPropertiesResponse extends com.pulumi.resources.
     @Import(name="builtIn", required=true)
     private Boolean builtIn;
 
+    /**
+     * @return true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
+     * 
+     */
     public Boolean builtIn() {
         return this.builtIn;
     }
@@ -37,6 +41,10 @@ public final class GroupContractPropertiesResponse extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Group description. Can contain HTML formatting tags.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class GroupContractPropertiesResponse extends com.pulumi.resources.
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Group name.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -59,6 +71,10 @@ public final class GroupContractPropertiesResponse extends com.pulumi.resources.
     @Import(name="externalId")
     private @Nullable String externalId;
 
+    /**
+     * @return For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://&lt;tenant&gt;.onmicrosoft.com/groups/&lt;group object id&gt;`; otherwise the value is null.
+     * 
+     */
     public Optional<String> externalId() {
         return Optional.ofNullable(this.externalId);
     }
@@ -70,6 +86,10 @@ public final class GroupContractPropertiesResponse extends com.pulumi.resources.
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Group type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -102,26 +122,56 @@ public final class GroupContractPropertiesResponse extends com.pulumi.resources.
             $ = new GroupContractPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param builtIn true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builtIn(Boolean builtIn) {
             $.builtIn = builtIn;
             return this;
         }
 
+        /**
+         * @param description Group description. Can contain HTML formatting tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName Group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param externalId For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://&lt;tenant&gt;.onmicrosoft.com/groups/&lt;group object id&gt;`; otherwise the value is null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(@Nullable String externalId) {
             $.externalId = externalId;
             return this;
         }
 
+        /**
+         * @param type Group type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

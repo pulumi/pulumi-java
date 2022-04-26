@@ -28,6 +28,10 @@ public final class JsonFieldWithDefaultResponse extends com.pulumi.resources.Inv
     @Import(name="defaultValue")
     private @Nullable String defaultValue;
 
+    /**
+     * @return The default value to be used for mapping when a SourceField is not provided or if there&#39;s no property with the specified name in the published JSON event payload.
+     * 
+     */
     public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -39,6 +43,10 @@ public final class JsonFieldWithDefaultResponse extends com.pulumi.resources.Inv
     @Import(name="sourceField")
     private @Nullable String sourceField;
 
+    /**
+     * @return Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
+     * 
+     */
     public Optional<String> sourceField() {
         return Optional.ofNullable(this.sourceField);
     }
@@ -68,11 +76,23 @@ public final class JsonFieldWithDefaultResponse extends com.pulumi.resources.Inv
             $ = new JsonFieldWithDefaultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValue The default value to be used for mapping when a SourceField is not provided or if there&#39;s no property with the specified name in the published JSON event payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable String defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param sourceField Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceField(@Nullable String sourceField) {
             $.sourceField = sourceField;
             return this;

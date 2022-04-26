@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class ListRemediationDeploymentsAtResourceGroupResult {
     /**
-     * The URL to get the next set of results.
+     * @return The URL to get the next set of results.
      * 
      */
     private final String nextLink;
     /**
-     * Array of deployments for the remediation.
+     * @return Array of deployments for the remediation.
      * 
      */
     private final List<RemediationDeploymentResponse> value;
@@ -31,16 +31,16 @@ public final class ListRemediationDeploymentsAtResourceGroupResult {
     }
 
     /**
-     * The URL to get the next set of results.
+     * @return The URL to get the next set of results.
      * 
-    */
+     */
     public String nextLink() {
         return this.nextLink;
     }
     /**
-     * Array of deployments for the remediation.
+     * @return Array of deployments for the remediation.
      * 
-    */
+     */
     public List<RemediationDeploymentResponse> value() {
         return this.value;
     }

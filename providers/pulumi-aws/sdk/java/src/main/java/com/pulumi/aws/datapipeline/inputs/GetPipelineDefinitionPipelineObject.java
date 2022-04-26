@@ -23,6 +23,10 @@ public final class GetPipelineDefinitionPipelineObject extends com.pulumi.resour
     @Import(name="fields")
     private @Nullable List<GetPipelineDefinitionPipelineObjectField> fields;
 
+    /**
+     * @return Key-value pairs that define the properties of the object. See below
+     * 
+     */
     public Optional<List<GetPipelineDefinitionPipelineObjectField>> fields() {
         return Optional.ofNullable(this.fields);
     }
@@ -34,6 +38,10 @@ public final class GetPipelineDefinitionPipelineObject extends com.pulumi.resour
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return ID of the object.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -45,6 +53,10 @@ public final class GetPipelineDefinitionPipelineObject extends com.pulumi.resour
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return ARN of the storage connector.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -75,20 +87,44 @@ public final class GetPipelineDefinitionPipelineObject extends com.pulumi.resour
             $ = new GetPipelineDefinitionPipelineObject(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fields Key-value pairs that define the properties of the object. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(@Nullable List<GetPipelineDefinitionPipelineObjectField> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields Key-value pairs that define the properties of the object. See below
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(GetPipelineDefinitionPipelineObjectField... fields) {
             return fields(List.of(fields));
         }
 
+        /**
+         * @param id ID of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name ARN of the storage connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

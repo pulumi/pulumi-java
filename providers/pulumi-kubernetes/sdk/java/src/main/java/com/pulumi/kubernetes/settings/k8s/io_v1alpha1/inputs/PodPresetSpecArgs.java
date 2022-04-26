@@ -31,6 +31,10 @@ public final class PodPresetSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="env")
     private @Nullable Output<List<EnvVarArgs>> env;
 
+    /**
+     * @return Env defines the collection of EnvVar to inject into containers.
+     * 
+     */
     public Optional<Output<List<EnvVarArgs>>> env() {
         return Optional.ofNullable(this.env);
     }
@@ -42,6 +46,10 @@ public final class PodPresetSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="envFrom")
     private @Nullable Output<List<EnvFromSourceArgs>> envFrom;
 
+    /**
+     * @return EnvFrom defines the collection of EnvFromSource to inject into containers.
+     * 
+     */
     public Optional<Output<List<EnvFromSourceArgs>>> envFrom() {
         return Optional.ofNullable(this.envFrom);
     }
@@ -53,6 +61,10 @@ public final class PodPresetSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="selector")
     private @Nullable Output<LabelSelectorArgs> selector;
 
+    /**
+     * @return Selector is a label query over a set of resources, in this case pods. Required.
+     * 
+     */
     public Optional<Output<LabelSelectorArgs>> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -64,6 +76,10 @@ public final class PodPresetSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumeMounts")
     private @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
+    /**
+     * @return VolumeMounts defines the collection of VolumeMount to inject into containers.
+     * 
+     */
     public Optional<Output<List<VolumeMountArgs>>> volumeMounts() {
         return Optional.ofNullable(this.volumeMounts);
     }
@@ -75,6 +91,10 @@ public final class PodPresetSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumes")
     private @Nullable Output<List<VolumeArgs>> volumes;
 
+    /**
+     * @return Volumes defines the collection of Volume to inject into the pod.
+     * 
+     */
     public Optional<Output<List<VolumeArgs>>> volumes() {
         return Optional.ofNullable(this.volumes);
     }
@@ -107,63 +127,147 @@ public final class PodPresetSpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PodPresetSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param env Env defines the collection of EnvVar to inject into containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(@Nullable Output<List<EnvVarArgs>> env) {
             $.env = env;
             return this;
         }
 
+        /**
+         * @param env Env defines the collection of EnvVar to inject into containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(List<EnvVarArgs> env) {
             return env(Output.of(env));
         }
 
+        /**
+         * @param env Env defines the collection of EnvVar to inject into containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(EnvVarArgs... env) {
             return env(List.of(env));
         }
 
+        /**
+         * @param envFrom EnvFrom defines the collection of EnvFromSource to inject into containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envFrom(@Nullable Output<List<EnvFromSourceArgs>> envFrom) {
             $.envFrom = envFrom;
             return this;
         }
 
+        /**
+         * @param envFrom EnvFrom defines the collection of EnvFromSource to inject into containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envFrom(List<EnvFromSourceArgs> envFrom) {
             return envFrom(Output.of(envFrom));
         }
 
+        /**
+         * @param envFrom EnvFrom defines the collection of EnvFromSource to inject into containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envFrom(EnvFromSourceArgs... envFrom) {
             return envFrom(List.of(envFrom));
         }
 
+        /**
+         * @param selector Selector is a label query over a set of resources, in this case pods. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector Selector is a label query over a set of resources, in this case pods. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(LabelSelectorArgs selector) {
             return selector(Output.of(selector));
         }
 
+        /**
+         * @param volumeMounts VolumeMounts defines the collection of VolumeMount to inject into containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeMounts(@Nullable Output<List<VolumeMountArgs>> volumeMounts) {
             $.volumeMounts = volumeMounts;
             return this;
         }
 
+        /**
+         * @param volumeMounts VolumeMounts defines the collection of VolumeMount to inject into containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeMounts(List<VolumeMountArgs> volumeMounts) {
             return volumeMounts(Output.of(volumeMounts));
         }
 
+        /**
+         * @param volumeMounts VolumeMounts defines the collection of VolumeMount to inject into containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeMounts(VolumeMountArgs... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
         }
 
+        /**
+         * @param volumes Volumes defines the collection of Volume to inject into the pod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             $.volumes = volumes;
             return this;
         }
 
+        /**
+         * @param volumes Volumes defines the collection of Volume to inject into the pod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(List<VolumeArgs> volumes) {
             return volumes(Output.of(volumes));
         }
 
+        /**
+         * @param volumes Volumes defines the collection of Volume to inject into the pod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(VolumeArgs... volumes) {
             return volumes(List.of(volumes));
         }

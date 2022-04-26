@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CodeVersionResponse {
     /**
-     * ARM resource ID of the datastore where the asset is located.
+     * @return ARM resource ID of the datastore where the asset is located.
      * 
      */
     private final @Nullable String datastoreId;
     /**
-     * The asset description text.
+     * @return The asset description text.
      * 
      */
     private final @Nullable String description;
     /**
-     * If the name version are system generated (anonymous registration).
+     * @return If the name version are system generated (anonymous registration).
      * 
      */
     private final @Nullable Boolean isAnonymous;
     /**
-     * The path of the file/directory in the datastore.
+     * @return The path of the file/directory in the datastore.
      * 
      */
     private final String path;
     /**
-     * The asset property dictionary.
+     * @return The asset property dictionary.
      * 
      */
     private final @Nullable Map<String,String> properties;
     /**
-     * Tag dictionary. Tags can be added, removed, and updated.
+     * @return Tag dictionary. Tags can be added, removed, and updated.
      * 
      */
     private final @Nullable Map<String,String> tags;
@@ -61,44 +61,44 @@ public final class CodeVersionResponse {
     }
 
     /**
-     * ARM resource ID of the datastore where the asset is located.
+     * @return ARM resource ID of the datastore where the asset is located.
      * 
-    */
+     */
     public Optional<String> datastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
     /**
-     * The asset description text.
+     * @return The asset description text.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * If the name version are system generated (anonymous registration).
+     * @return If the name version are system generated (anonymous registration).
      * 
-    */
+     */
     public Optional<Boolean> isAnonymous() {
         return Optional.ofNullable(this.isAnonymous);
     }
     /**
-     * The path of the file/directory in the datastore.
+     * @return The path of the file/directory in the datastore.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * The asset property dictionary.
+     * @return The asset property dictionary.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * Tag dictionary. Tags can be added, removed, and updated.
+     * @return Tag dictionary. Tags can be added, removed, and updated.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }

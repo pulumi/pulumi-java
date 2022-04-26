@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PropertyUpdatesInProgressResponse {
     /**
-     * The target performance tier of the disk if a tier change operation is in progress.
+     * @return The target performance tier of the disk if a tier change operation is in progress.
      * 
      */
     private final @Nullable String targetTier;
@@ -23,9 +23,9 @@ public final class PropertyUpdatesInProgressResponse {
     }
 
     /**
-     * The target performance tier of the disk if a tier change operation is in progress.
+     * @return The target performance tier of the disk if a tier change operation is in progress.
      * 
-    */
+     */
     public Optional<String> targetTier() {
         return Optional.ofNullable(this.targetTier);
     }

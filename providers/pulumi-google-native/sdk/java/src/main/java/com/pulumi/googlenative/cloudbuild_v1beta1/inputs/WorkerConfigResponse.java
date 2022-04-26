@@ -24,6 +24,10 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="diskSizeGb", required=true)
     private String diskSizeGb;
 
+    /**
+     * @return Size of the disk attached to the worker, in GB. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If `0` is specified, Cloud Build will use a standard disk size.
+     * 
+     */
     public String diskSizeGb() {
         return this.diskSizeGb;
     }
@@ -35,6 +39,10 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="machineType", required=true)
     private String machineType;
 
+    /**
+     * @return Machine type of a worker, such as `n1-standard-1`. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). If left blank, Cloud Build will use `n1-standard-1`.
+     * 
+     */
     public String machineType() {
         return this.machineType;
     }
@@ -46,6 +54,10 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="noExternalIp", required=true)
     private Boolean noExternalIp;
 
+    /**
+     * @return If true, workers are created without any public address, which prevents network egress to public IPs.
+     * 
+     */
     public Boolean noExternalIp() {
         return this.noExternalIp;
     }
@@ -76,16 +88,34 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new WorkerConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSizeGb Size of the disk attached to the worker, in GB. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If `0` is specified, Cloud Build will use a standard disk size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(String diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param machineType Machine type of a worker, such as `n1-standard-1`. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). If left blank, Cloud Build will use `n1-standard-1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param noExternalIp If true, workers are created without any public address, which prevents network egress to public IPs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noExternalIp(Boolean noExternalIp) {
             $.noExternalIp = noExternalIp;
             return this;

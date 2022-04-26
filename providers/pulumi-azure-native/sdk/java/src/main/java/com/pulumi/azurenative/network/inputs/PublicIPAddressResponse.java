@@ -36,6 +36,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ddosSettings")
     private @Nullable DdosSettingsResponse ddosSettings;
 
+    /**
+     * @return The DDoS protection custom policy associated with the public IP address.
+     * 
+     */
     public Optional<DdosSettingsResponse> ddosSettings() {
         return Optional.ofNullable(this.ddosSettings);
     }
@@ -47,6 +51,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="dnsSettings")
     private @Nullable PublicIPAddressDnsSettingsResponse dnsSettings;
 
+    /**
+     * @return The FQDN of the DNS record associated with the public IP address.
+     * 
+     */
     public Optional<PublicIPAddressDnsSettingsResponse> dnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
@@ -58,6 +66,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -69,6 +81,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="extendedLocation")
     private @Nullable ExtendedLocationResponse extendedLocation;
 
+    /**
+     * @return The extended location of the public ip address.
+     * 
+     */
     public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -80,6 +96,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -91,6 +111,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="idleTimeoutInMinutes")
     private @Nullable Integer idleTimeoutInMinutes;
 
+    /**
+     * @return The idle timeout of the public IP address.
+     * 
+     */
     public Optional<Integer> idleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
@@ -102,6 +126,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ipAddress")
     private @Nullable String ipAddress;
 
+    /**
+     * @return The IP address associated with the public IP address resource.
+     * 
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -113,6 +141,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ipConfiguration", required=true)
     private IPConfigurationResponse ipConfiguration;
 
+    /**
+     * @return The IP configuration associated with the public IP address.
+     * 
+     */
     public IPConfigurationResponse ipConfiguration() {
         return this.ipConfiguration;
     }
@@ -124,6 +156,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ipTags")
     private @Nullable List<IpTagResponse> ipTags;
 
+    /**
+     * @return The list of tags associated with the public IP address.
+     * 
+     */
     public Optional<List<IpTagResponse>> ipTags() {
         return Optional.ofNullable(this.ipTags);
     }
@@ -135,6 +171,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="linkedPublicIPAddress")
     private @Nullable PublicIPAddressResponse linkedPublicIPAddress;
 
+    /**
+     * @return The linked public IP address of the public IP address resource.
+     * 
+     */
     public Optional<PublicIPAddressResponse> linkedPublicIPAddress() {
         return Optional.ofNullable(this.linkedPublicIPAddress);
     }
@@ -146,6 +186,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -157,6 +201,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="migrationPhase")
     private @Nullable String migrationPhase;
 
+    /**
+     * @return Migration phase of Public IP Address.
+     * 
+     */
     public Optional<String> migrationPhase() {
         return Optional.ofNullable(this.migrationPhase);
     }
@@ -168,6 +216,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -179,6 +231,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="natGateway")
     private @Nullable NatGatewayResponse natGateway;
 
+    /**
+     * @return The NatGateway for the Public IP address.
+     * 
+     */
     public Optional<NatGatewayResponse> natGateway() {
         return Optional.ofNullable(this.natGateway);
     }
@@ -190,6 +246,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the public IP address resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -201,6 +261,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="publicIPAddressVersion")
     private @Nullable String publicIPAddressVersion;
 
+    /**
+     * @return The public IP address version.
+     * 
+     */
     public Optional<String> publicIPAddressVersion() {
         return Optional.ofNullable(this.publicIPAddressVersion);
     }
@@ -212,6 +276,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="publicIPAllocationMethod")
     private @Nullable String publicIPAllocationMethod;
 
+    /**
+     * @return The public IP address allocation method.
+     * 
+     */
     public Optional<String> publicIPAllocationMethod() {
         return Optional.ofNullable(this.publicIPAllocationMethod);
     }
@@ -223,6 +291,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="publicIPPrefix")
     private @Nullable SubResourceResponse publicIPPrefix;
 
+    /**
+     * @return The Public IP Prefix this Public IP Address should be allocated from.
+     * 
+     */
     public Optional<SubResourceResponse> publicIPPrefix() {
         return Optional.ofNullable(this.publicIPPrefix);
     }
@@ -234,6 +306,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGuid", required=true)
     private String resourceGuid;
 
+    /**
+     * @return The resource GUID property of the public IP address resource.
+     * 
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
@@ -245,6 +321,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="servicePublicIPAddress")
     private @Nullable PublicIPAddressResponse servicePublicIPAddress;
 
+    /**
+     * @return The service public IP address of the public IP address resource.
+     * 
+     */
     public Optional<PublicIPAddressResponse> servicePublicIPAddress() {
         return Optional.ofNullable(this.servicePublicIPAddress);
     }
@@ -256,6 +336,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sku")
     private @Nullable PublicIPAddressSkuResponse sku;
 
+    /**
+     * @return The public IP address SKU.
+     * 
+     */
     public Optional<PublicIPAddressSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -267,6 +351,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -278,6 +366,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -289,6 +381,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="zones")
     private @Nullable List<String> zones;
 
+    /**
+     * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
+     * 
+     */
     public Optional<List<String>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -340,130 +436,286 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
             $ = new PublicIPAddressResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ddosSettings The DDoS protection custom policy associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddosSettings(@Nullable DdosSettingsResponse ddosSettings) {
             $.ddosSettings = ddosSettings;
             return this;
         }
 
+        /**
+         * @param dnsSettings The FQDN of the DNS record associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSettings(@Nullable PublicIPAddressDnsSettingsResponse dnsSettings) {
             $.dnsSettings = dnsSettings;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param extendedLocation The extended location of the public ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param idleTimeoutInMinutes The idle timeout of the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             $.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
+        /**
+         * @param ipAddress The IP address associated with the public IP address resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipConfiguration The IP configuration associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfiguration(IPConfigurationResponse ipConfiguration) {
             $.ipConfiguration = ipConfiguration;
             return this;
         }
 
+        /**
+         * @param ipTags The list of tags associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipTags(@Nullable List<IpTagResponse> ipTags) {
             $.ipTags = ipTags;
             return this;
         }
 
+        /**
+         * @param ipTags The list of tags associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipTags(IpTagResponse... ipTags) {
             return ipTags(List.of(ipTags));
         }
 
+        /**
+         * @param linkedPublicIPAddress The linked public IP address of the public IP address resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedPublicIPAddress(@Nullable PublicIPAddressResponse linkedPublicIPAddress) {
             $.linkedPublicIPAddress = linkedPublicIPAddress;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param migrationPhase Migration phase of Public IP Address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationPhase(@Nullable String migrationPhase) {
             $.migrationPhase = migrationPhase;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param natGateway The NatGateway for the Public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natGateway(@Nullable NatGatewayResponse natGateway) {
             $.natGateway = natGateway;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the public IP address resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publicIPAddressVersion The public IP address version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddressVersion(@Nullable String publicIPAddressVersion) {
             $.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
 
+        /**
+         * @param publicIPAllocationMethod The public IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAllocationMethod(@Nullable String publicIPAllocationMethod) {
             $.publicIPAllocationMethod = publicIPAllocationMethod;
             return this;
         }
 
+        /**
+         * @param publicIPPrefix The Public IP Prefix this Public IP Address should be allocated from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPPrefix(@Nullable SubResourceResponse publicIPPrefix) {
             $.publicIPPrefix = publicIPPrefix;
             return this;
         }
 
+        /**
+         * @param resourceGuid The resource GUID property of the public IP address resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGuid(String resourceGuid) {
             $.resourceGuid = resourceGuid;
             return this;
         }
 
+        /**
+         * @param servicePublicIPAddress The service public IP address of the public IP address resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePublicIPAddress(@Nullable PublicIPAddressResponse servicePublicIPAddress) {
             $.servicePublicIPAddress = servicePublicIPAddress;
             return this;
         }
 
+        /**
+         * @param sku The public IP address SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable PublicIPAddressSkuResponse sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param zones A list of availability zones denoting the IP allocated for the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable List<String> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones A list of availability zones denoting the IP allocated for the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

@@ -25,6 +25,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return The email of the user.
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -36,6 +40,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the user.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="objectId")
     private @Nullable String objectId;
 
+    /**
+     * @return The object id of the user.
+     * 
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -77,16 +89,34 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new UserInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email The email of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param name The name of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param objectId The object id of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
             $.objectId = objectId;
             return this;

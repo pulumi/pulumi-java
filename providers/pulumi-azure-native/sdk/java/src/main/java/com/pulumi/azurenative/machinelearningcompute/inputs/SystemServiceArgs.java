@@ -26,6 +26,10 @@ public final class SystemServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="systemServiceType", required=true)
     private Output<Either<String,SystemServiceType>> systemServiceType;
 
+    /**
+     * @return The system service type
+     * 
+     */
     public Output<Either<String,SystemServiceType>> systemServiceType() {
         return this.systemServiceType;
     }
@@ -54,19 +58,43 @@ public final class SystemServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SystemServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param systemServiceType The system service type
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemServiceType(Output<Either<String,SystemServiceType>> systemServiceType) {
             $.systemServiceType = systemServiceType;
             return this;
         }
 
+        /**
+         * @param systemServiceType The system service type
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemServiceType(Either<String,SystemServiceType> systemServiceType) {
             return systemServiceType(Output.of(systemServiceType));
         }
 
+        /**
+         * @param systemServiceType The system service type
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemServiceType(String systemServiceType) {
             return systemServiceType(Either.ofLeft(systemServiceType));
         }
 
+        /**
+         * @param systemServiceType The system service type
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemServiceType(SystemServiceType systemServiceType) {
             return systemServiceType(Either.ofRight(systemServiceType));
         }

@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerNetworkInterfaceIpConfigurationResponse {
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * The name of the resource. This name can be used to access the resource.
+     * @return The name of the resource. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * The provisioning state of the container network interface IP configuration resource.
+     * @return The provisioning state of the container network interface IP configuration resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Sub Resource type.
+     * @return Sub Resource type.
      * 
      */
     private final String type;
@@ -45,30 +45,30 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The name of the resource. This name can be used to access the resource.
+     * @return The name of the resource. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the container network interface IP configuration resource.
+     * @return The provisioning state of the container network interface IP configuration resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Sub Resource type.
+     * @return Sub Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -32,6 +32,10 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="agentDetails", required=true)
     private List<AgentDetailsResponse> agentDetails;
 
+    /**
+     * @return The list of agent details.
+     * 
+     */
     public List<AgentDetailsResponse> agentDetails() {
         return this.agentDetails;
     }
@@ -43,6 +47,10 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="controlPlaneUri", required=true)
     private String controlPlaneUri;
 
+    /**
+     * @return The control plane Uri.
+     * 
+     */
     public String controlPlaneUri() {
         return this.controlPlaneUri;
     }
@@ -54,6 +62,10 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="dataPlaneUri", required=true)
     private String dataPlaneUri;
 
+    /**
+     * @return The data plane Uri.
+     * 
+     */
     public String dataPlaneUri() {
         return this.dataPlaneUri;
     }
@@ -65,6 +77,10 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="dras", required=true)
     private List<DraDetailsResponse> dras;
 
+    /**
+     * @return The list of DRAs.
+     * 
+     */
     public List<DraDetailsResponse> dras() {
         return this.dras;
     }
@@ -77,6 +93,11 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the class type. Overridden in derived classes.
+     * Expected value is &#39;InMageRcm&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -88,6 +109,10 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="physicalSiteId", required=true)
     private String physicalSiteId;
 
+    /**
+     * @return The ARM Id of the physical site.
+     * 
+     */
     public String physicalSiteId() {
         return this.physicalSiteId;
     }
@@ -99,6 +124,10 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="processServers", required=true)
     private List<ProcessServerDetailsResponse> processServers;
 
+    /**
+     * @return The list of process servers.
+     * 
+     */
     public List<ProcessServerDetailsResponse> processServers() {
         return this.processServers;
     }
@@ -110,6 +139,10 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="pushInstallers", required=true)
     private List<PushInstallerDetailsResponse> pushInstallers;
 
+    /**
+     * @return The list of push installers.
+     * 
+     */
     public List<PushInstallerDetailsResponse> pushInstallers() {
         return this.pushInstallers;
     }
@@ -121,6 +154,10 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="rcmProxies", required=true)
     private List<RcmProxyDetailsResponse> rcmProxies;
 
+    /**
+     * @return The list of RCM proxies.
+     * 
+     */
     public List<RcmProxyDetailsResponse> rcmProxies() {
         return this.rcmProxies;
     }
@@ -132,6 +169,10 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="replicationAgents", required=true)
     private List<ReplicationAgentDetailsResponse> replicationAgents;
 
+    /**
+     * @return The list of replication agents.
+     * 
+     */
     public List<ReplicationAgentDetailsResponse> replicationAgents() {
         return this.replicationAgents;
     }
@@ -143,6 +184,10 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="reprotectAgents", required=true)
     private List<ReprotectAgentDetailsResponse> reprotectAgents;
 
+    /**
+     * @return The list of reprotect agents.
+     * 
+     */
     public List<ReprotectAgentDetailsResponse> reprotectAgents() {
         return this.reprotectAgents;
     }
@@ -154,6 +199,10 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="serviceContainerId", required=true)
     private String serviceContainerId;
 
+    /**
+     * @return The service container Id.
+     * 
+     */
     public String serviceContainerId() {
         return this.serviceContainerId;
     }
@@ -165,6 +214,10 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="serviceEndpoint", required=true)
     private String serviceEndpoint;
 
+    /**
+     * @return The service endpoint.
+     * 
+     */
     public String serviceEndpoint() {
         return this.serviceEndpoint;
     }
@@ -176,6 +229,10 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="serviceResourceId", required=true)
     private String serviceResourceId;
 
+    /**
+     * @return The service resource Id.
+     * 
+     */
     public String serviceResourceId() {
         return this.serviceResourceId;
     }
@@ -187,6 +244,10 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="vmwareSiteId", required=true)
     private String vmwareSiteId;
 
+    /**
+     * @return The ARM Id of the VMware site.
+     * 
+     */
     public String vmwareSiteId() {
         return this.vmwareSiteId;
     }
@@ -229,104 +290,237 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
             $ = new InMageRcmFabricSpecificDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentDetails The list of agent details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentDetails(List<AgentDetailsResponse> agentDetails) {
             $.agentDetails = agentDetails;
             return this;
         }
 
+        /**
+         * @param agentDetails The list of agent details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentDetails(AgentDetailsResponse... agentDetails) {
             return agentDetails(List.of(agentDetails));
         }
 
+        /**
+         * @param controlPlaneUri The control plane Uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlPlaneUri(String controlPlaneUri) {
             $.controlPlaneUri = controlPlaneUri;
             return this;
         }
 
+        /**
+         * @param dataPlaneUri The data plane Uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPlaneUri(String dataPlaneUri) {
             $.dataPlaneUri = dataPlaneUri;
             return this;
         }
 
+        /**
+         * @param dras The list of DRAs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dras(List<DraDetailsResponse> dras) {
             $.dras = dras;
             return this;
         }
 
+        /**
+         * @param dras The list of DRAs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dras(DraDetailsResponse... dras) {
             return dras(List.of(dras));
         }
 
+        /**
+         * @param instanceType Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;InMageRcm&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param physicalSiteId The ARM Id of the physical site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder physicalSiteId(String physicalSiteId) {
             $.physicalSiteId = physicalSiteId;
             return this;
         }
 
+        /**
+         * @param processServers The list of process servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServers(List<ProcessServerDetailsResponse> processServers) {
             $.processServers = processServers;
             return this;
         }
 
+        /**
+         * @param processServers The list of process servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServers(ProcessServerDetailsResponse... processServers) {
             return processServers(List.of(processServers));
         }
 
+        /**
+         * @param pushInstallers The list of push installers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushInstallers(List<PushInstallerDetailsResponse> pushInstallers) {
             $.pushInstallers = pushInstallers;
             return this;
         }
 
+        /**
+         * @param pushInstallers The list of push installers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushInstallers(PushInstallerDetailsResponse... pushInstallers) {
             return pushInstallers(List.of(pushInstallers));
         }
 
+        /**
+         * @param rcmProxies The list of RCM proxies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rcmProxies(List<RcmProxyDetailsResponse> rcmProxies) {
             $.rcmProxies = rcmProxies;
             return this;
         }
 
+        /**
+         * @param rcmProxies The list of RCM proxies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rcmProxies(RcmProxyDetailsResponse... rcmProxies) {
             return rcmProxies(List.of(rcmProxies));
         }
 
+        /**
+         * @param replicationAgents The list of replication agents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationAgents(List<ReplicationAgentDetailsResponse> replicationAgents) {
             $.replicationAgents = replicationAgents;
             return this;
         }
 
+        /**
+         * @param replicationAgents The list of replication agents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationAgents(ReplicationAgentDetailsResponse... replicationAgents) {
             return replicationAgents(List.of(replicationAgents));
         }
 
+        /**
+         * @param reprotectAgents The list of reprotect agents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reprotectAgents(List<ReprotectAgentDetailsResponse> reprotectAgents) {
             $.reprotectAgents = reprotectAgents;
             return this;
         }
 
+        /**
+         * @param reprotectAgents The list of reprotect agents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reprotectAgents(ReprotectAgentDetailsResponse... reprotectAgents) {
             return reprotectAgents(List.of(reprotectAgents));
         }
 
+        /**
+         * @param serviceContainerId The service container Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceContainerId(String serviceContainerId) {
             $.serviceContainerId = serviceContainerId;
             return this;
         }
 
+        /**
+         * @param serviceEndpoint The service endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpoint(String serviceEndpoint) {
             $.serviceEndpoint = serviceEndpoint;
             return this;
         }
 
+        /**
+         * @param serviceResourceId The service resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceResourceId(String serviceResourceId) {
             $.serviceResourceId = serviceResourceId;
             return this;
         }
 
+        /**
+         * @param vmwareSiteId The ARM Id of the VMware site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmwareSiteId(String vmwareSiteId) {
             $.vmwareSiteId = vmwareSiteId;
             return this;

@@ -15,42 +15,42 @@ import javax.annotation.Nullable;
 public final class GetScheduledQueryResult {
     private final @Nullable String arn;
     /**
-     * Configuration for error reporting. Error reports will be generated when a problem is encountered when writing the query results.
+     * @return Configuration for error reporting. Error reports will be generated when a problem is encountered when writing the query results.
      * 
      */
     private final @Nullable String sQErrorReportConfiguration;
     /**
-     * The Amazon KMS key used to encrypt the scheduled query resource, at-rest. If the Amazon KMS key is not specified, the scheduled query resource will be encrypted with a Timestream owned Amazon KMS key. To specify a KMS key, use the key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix the name with alias/. If ErrorReportConfiguration uses SSE_KMS as encryption type, the same KmsKeyId is used to encrypt the error report at rest.
+     * @return The Amazon KMS key used to encrypt the scheduled query resource, at-rest. If the Amazon KMS key is not specified, the scheduled query resource will be encrypted with a Timestream owned Amazon KMS key. To specify a KMS key, use the key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix the name with alias/. If ErrorReportConfiguration uses SSE_KMS as encryption type, the same KmsKeyId is used to encrypt the error report at rest.
      * 
      */
     private final @Nullable String sQKmsKeyId;
     /**
-     * The name of the scheduled query. Scheduled query names must be unique within each Region.
+     * @return The name of the scheduled query. Scheduled query names must be unique within each Region.
      * 
      */
     private final @Nullable String sQName;
     /**
-     * Notification configuration for the scheduled query. A notification is sent by Timestream when a query run finishes, when the state is updated or when you delete it.
+     * @return Notification configuration for the scheduled query. A notification is sent by Timestream when a query run finishes, when the state is updated or when you delete it.
      * 
      */
     private final @Nullable String sQNotificationConfiguration;
     /**
-     * The query string to run. Parameter names can be specified in the query string @ character followed by an identifier. The named Parameter @scheduled_runtime is reserved and can be used in the query to get the time at which the query is scheduled to run. The timestamp calculated according to the ScheduleConfiguration parameter, will be the value of @scheduled_runtime paramater for each query run. For example, consider an instance of a scheduled query executing on 2021-12-01 00:00:00. For this instance, the @scheduled_runtime parameter is initialized to the timestamp 2021-12-01 00:00:00 when invoking the query.
+     * @return The query string to run. Parameter names can be specified in the query string @ character followed by an identifier. The named Parameter @scheduled_runtime is reserved and can be used in the query to get the time at which the query is scheduled to run. The timestamp calculated according to the ScheduleConfiguration parameter, will be the value of @scheduled_runtime paramater for each query run. For example, consider an instance of a scheduled query executing on 2021-12-01 00:00:00. For this instance, the @scheduled_runtime parameter is initialized to the timestamp 2021-12-01 00:00:00 when invoking the query.
      * 
      */
     private final @Nullable String sQQueryString;
     /**
-     * Configuration for when the scheduled query is executed.
+     * @return Configuration for when the scheduled query is executed.
      * 
      */
     private final @Nullable String sQScheduleConfiguration;
     /**
-     * The ARN for the IAM role that Timestream will assume when running the scheduled query.
+     * @return The ARN for the IAM role that Timestream will assume when running the scheduled query.
      * 
      */
     private final @Nullable String sQScheduledQueryExecutionRoleArn;
     /**
-     * Configuration of target store where scheduled query results are written to.
+     * @return Configuration of target store where scheduled query results are written to.
      * 
      */
     private final @Nullable String sQTargetConfiguration;
@@ -84,58 +84,58 @@ public final class GetScheduledQueryResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Configuration for error reporting. Error reports will be generated when a problem is encountered when writing the query results.
+     * @return Configuration for error reporting. Error reports will be generated when a problem is encountered when writing the query results.
      * 
-    */
+     */
     public Optional<String> sQErrorReportConfiguration() {
         return Optional.ofNullable(this.sQErrorReportConfiguration);
     }
     /**
-     * The Amazon KMS key used to encrypt the scheduled query resource, at-rest. If the Amazon KMS key is not specified, the scheduled query resource will be encrypted with a Timestream owned Amazon KMS key. To specify a KMS key, use the key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix the name with alias/. If ErrorReportConfiguration uses SSE_KMS as encryption type, the same KmsKeyId is used to encrypt the error report at rest.
+     * @return The Amazon KMS key used to encrypt the scheduled query resource, at-rest. If the Amazon KMS key is not specified, the scheduled query resource will be encrypted with a Timestream owned Amazon KMS key. To specify a KMS key, use the key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix the name with alias/. If ErrorReportConfiguration uses SSE_KMS as encryption type, the same KmsKeyId is used to encrypt the error report at rest.
      * 
-    */
+     */
     public Optional<String> sQKmsKeyId() {
         return Optional.ofNullable(this.sQKmsKeyId);
     }
     /**
-     * The name of the scheduled query. Scheduled query names must be unique within each Region.
+     * @return The name of the scheduled query. Scheduled query names must be unique within each Region.
      * 
-    */
+     */
     public Optional<String> sQName() {
         return Optional.ofNullable(this.sQName);
     }
     /**
-     * Notification configuration for the scheduled query. A notification is sent by Timestream when a query run finishes, when the state is updated or when you delete it.
+     * @return Notification configuration for the scheduled query. A notification is sent by Timestream when a query run finishes, when the state is updated or when you delete it.
      * 
-    */
+     */
     public Optional<String> sQNotificationConfiguration() {
         return Optional.ofNullable(this.sQNotificationConfiguration);
     }
     /**
-     * The query string to run. Parameter names can be specified in the query string @ character followed by an identifier. The named Parameter @scheduled_runtime is reserved and can be used in the query to get the time at which the query is scheduled to run. The timestamp calculated according to the ScheduleConfiguration parameter, will be the value of @scheduled_runtime paramater for each query run. For example, consider an instance of a scheduled query executing on 2021-12-01 00:00:00. For this instance, the @scheduled_runtime parameter is initialized to the timestamp 2021-12-01 00:00:00 when invoking the query.
+     * @return The query string to run. Parameter names can be specified in the query string @ character followed by an identifier. The named Parameter @scheduled_runtime is reserved and can be used in the query to get the time at which the query is scheduled to run. The timestamp calculated according to the ScheduleConfiguration parameter, will be the value of @scheduled_runtime paramater for each query run. For example, consider an instance of a scheduled query executing on 2021-12-01 00:00:00. For this instance, the @scheduled_runtime parameter is initialized to the timestamp 2021-12-01 00:00:00 when invoking the query.
      * 
-    */
+     */
     public Optional<String> sQQueryString() {
         return Optional.ofNullable(this.sQQueryString);
     }
     /**
-     * Configuration for when the scheduled query is executed.
+     * @return Configuration for when the scheduled query is executed.
      * 
-    */
+     */
     public Optional<String> sQScheduleConfiguration() {
         return Optional.ofNullable(this.sQScheduleConfiguration);
     }
     /**
-     * The ARN for the IAM role that Timestream will assume when running the scheduled query.
+     * @return The ARN for the IAM role that Timestream will assume when running the scheduled query.
      * 
-    */
+     */
     public Optional<String> sQScheduledQueryExecutionRoleArn() {
         return Optional.ofNullable(this.sQScheduledQueryExecutionRoleArn);
     }
     /**
-     * Configuration of target store where scheduled query results are written to.
+     * @return Configuration of target store where scheduled query results are written to.
      * 
-    */
+     */
     public Optional<String> sQTargetConfiguration() {
         return Optional.ofNullable(this.sQTargetConfiguration);
     }

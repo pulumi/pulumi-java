@@ -24,6 +24,10 @@ public final class ServiceAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return Email address of the service account. If empty, default Compute service account will be used.
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -35,6 +39,10 @@ public final class ServiceAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="scope", required=true)
     private List<String> scope;
 
+    /**
+     * @return The list of scopes to be made available for this service account. If empty, access to all Cloud APIs will be allowed.
+     * 
+     */
     public List<String> scope() {
         return this.scope;
     }
@@ -64,16 +72,34 @@ public final class ServiceAccountResponse extends com.pulumi.resources.InvokeArg
             $ = new ServiceAccountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email Email address of the service account. If empty, default Compute service account will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param scope The list of scopes to be made available for this service account. If empty, access to all Cloud APIs will be allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(List<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The list of scopes to be made available for this service account. If empty, access to all Cloud APIs will be allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String... scope) {
             return scope(List.of(scope));
         }

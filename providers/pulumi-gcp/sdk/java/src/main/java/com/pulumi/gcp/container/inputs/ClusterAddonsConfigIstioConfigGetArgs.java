@@ -23,6 +23,10 @@ public final class ClusterAddonsConfigIstioConfigGetArgs extends com.pulumi.reso
     @Import(name="auth")
     private @Nullable Output<String> auth;
 
+    /**
+     * @return The authentication type between services in Istio. Available options include `AUTH_MUTUAL_TLS`.
+     * 
+     */
     public Optional<Output<String>> auth() {
         return Optional.ofNullable(this.auth);
     }
@@ -35,6 +39,11 @@ public final class ClusterAddonsConfigIstioConfigGetArgs extends com.pulumi.reso
     @Import(name="disabled", required=true)
     private Output<Boolean> disabled;
 
+    /**
+     * @return The status of the Istio addon, which makes it easy to set up Istio for services in a
+     * cluster. It is disabled by default. Set `disabled = false` to enable.
+     * 
+     */
     public Output<Boolean> disabled() {
         return this.disabled;
     }
@@ -64,20 +73,46 @@ public final class ClusterAddonsConfigIstioConfigGetArgs extends com.pulumi.reso
             $ = new ClusterAddonsConfigIstioConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auth The authentication type between services in Istio. Available options include `AUTH_MUTUAL_TLS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(@Nullable Output<String> auth) {
             $.auth = auth;
             return this;
         }
 
+        /**
+         * @param auth The authentication type between services in Istio. Available options include `AUTH_MUTUAL_TLS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(String auth) {
             return auth(Output.of(auth));
         }
 
+        /**
+         * @param disabled The status of the Istio addon, which makes it easy to set up Istio for services in a
+         * cluster. It is disabled by default. Set `disabled = false` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled The status of the Istio addon, which makes it easy to set up Istio for services in a
+         * cluster. It is disabled by default. Set `disabled = false` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }

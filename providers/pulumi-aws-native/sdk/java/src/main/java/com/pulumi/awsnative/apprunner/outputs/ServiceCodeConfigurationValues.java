@@ -15,23 +15,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceCodeConfigurationValues {
     /**
-     * Build Command
+     * @return Build Command
      * 
      */
     private final @Nullable String buildCommand;
     /**
-     * Port
+     * @return Port
      * 
      */
     private final @Nullable String port;
     /**
-     * Runtime
+     * @return Runtime
      * 
      */
     private final ServiceCodeConfigurationValuesRuntime runtime;
     private final @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables;
     /**
-     * Start Command
+     * @return Start Command
      * 
      */
     private final @Nullable String startCommand;
@@ -51,23 +51,23 @@ public final class ServiceCodeConfigurationValues {
     }
 
     /**
-     * Build Command
+     * @return Build Command
      * 
-    */
+     */
     public Optional<String> buildCommand() {
         return Optional.ofNullable(this.buildCommand);
     }
     /**
-     * Port
+     * @return Port
      * 
-    */
+     */
     public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * Runtime
+     * @return Runtime
      * 
-    */
+     */
     public ServiceCodeConfigurationValuesRuntime runtime() {
         return this.runtime;
     }
@@ -75,9 +75,9 @@ public final class ServiceCodeConfigurationValues {
         return this.runtimeEnvironmentVariables == null ? List.of() : this.runtimeEnvironmentVariables;
     }
     /**
-     * Start Command
+     * @return Start Command
      * 
-    */
+     */
     public Optional<String> startCommand() {
         return Optional.ofNullable(this.startCommand);
     }

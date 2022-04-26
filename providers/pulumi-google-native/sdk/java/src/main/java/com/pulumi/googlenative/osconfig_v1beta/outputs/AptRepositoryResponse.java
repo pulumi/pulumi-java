@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class AptRepositoryResponse {
     /**
-     * Type of archive files in this repository. The default behavior is DEB.
+     * @return Type of archive files in this repository. The default behavior is DEB.
      * 
      */
     private final String archiveType;
     /**
-     * List of components for this repository. Must contain at least one item.
+     * @return List of components for this repository. Must contain at least one item.
      * 
      */
     private final List<String> components;
     /**
-     * Distribution of this repository.
+     * @return Distribution of this repository.
      * 
      */
     private final String distribution;
     /**
-     * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg` containing all the keys in any applied guest policy.
+     * @return URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg` containing all the keys in any applied guest policy.
      * 
      */
     private final String gpgKey;
     /**
-     * URI for this repository.
+     * @return URI for this repository.
      * 
      */
     private final String uri;
@@ -51,37 +51,37 @@ public final class AptRepositoryResponse {
     }
 
     /**
-     * Type of archive files in this repository. The default behavior is DEB.
+     * @return Type of archive files in this repository. The default behavior is DEB.
      * 
-    */
+     */
     public String archiveType() {
         return this.archiveType;
     }
     /**
-     * List of components for this repository. Must contain at least one item.
+     * @return List of components for this repository. Must contain at least one item.
      * 
-    */
+     */
     public List<String> components() {
         return this.components;
     }
     /**
-     * Distribution of this repository.
+     * @return Distribution of this repository.
      * 
-    */
+     */
     public String distribution() {
         return this.distribution;
     }
     /**
-     * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg` containing all the keys in any applied guest policy.
+     * @return URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg` containing all the keys in any applied guest policy.
      * 
-    */
+     */
     public String gpgKey() {
         return this.gpgKey;
     }
     /**
-     * URI for this repository.
+     * @return URI for this repository.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

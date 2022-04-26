@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class CatalogTableStorageDescriptorSortColumn {
     /**
-     * Name of the column.
+     * @return Name of the column.
      * 
      */
     private final String column;
     /**
-     * Whether the column is sorted in ascending (`1`) or descending order (`0`).
+     * @return Whether the column is sorted in ascending (`1`) or descending order (`0`).
      * 
      */
     private final Integer sortOrder;
@@ -30,16 +30,16 @@ public final class CatalogTableStorageDescriptorSortColumn {
     }
 
     /**
-     * Name of the column.
+     * @return Name of the column.
      * 
-    */
+     */
     public String column() {
         return this.column;
     }
     /**
-     * Whether the column is sorted in ascending (`1`) or descending order (`0`).
+     * @return Whether the column is sorted in ascending (`1`) or descending order (`0`).
      * 
-    */
+     */
     public Integer sortOrder() {
         return this.sortOrder;
     }

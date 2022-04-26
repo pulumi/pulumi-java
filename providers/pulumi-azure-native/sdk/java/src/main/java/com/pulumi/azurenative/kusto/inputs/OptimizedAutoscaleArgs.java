@@ -25,6 +25,10 @@ public final class OptimizedAutoscaleArgs extends com.pulumi.resources.ResourceA
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return A boolean value that indicate if the optimized autoscale feature is enabled or not.
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -36,6 +40,10 @@ public final class OptimizedAutoscaleArgs extends com.pulumi.resources.ResourceA
     @Import(name="maximum", required=true)
     private Output<Integer> maximum;
 
+    /**
+     * @return Maximum allowed instances count.
+     * 
+     */
     public Output<Integer> maximum() {
         return this.maximum;
     }
@@ -47,6 +55,10 @@ public final class OptimizedAutoscaleArgs extends com.pulumi.resources.ResourceA
     @Import(name="minimum", required=true)
     private Output<Integer> minimum;
 
+    /**
+     * @return Minimum allowed instances count.
+     * 
+     */
     public Output<Integer> minimum() {
         return this.minimum;
     }
@@ -58,6 +70,10 @@ public final class OptimizedAutoscaleArgs extends com.pulumi.resources.ResourceA
     @Import(name="version", required=true)
     private Output<Integer> version;
 
+    /**
+     * @return The version of the template defined, for instance 1.
+     * 
+     */
     public Output<Integer> version() {
         return this.version;
     }
@@ -89,38 +105,86 @@ public final class OptimizedAutoscaleArgs extends com.pulumi.resources.ResourceA
             $ = new OptimizedAutoscaleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isEnabled A boolean value that indicate if the optimized autoscale feature is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled A boolean value that indicate if the optimized autoscale feature is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param maximum Maximum allowed instances count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximum(Output<Integer> maximum) {
             $.maximum = maximum;
             return this;
         }
 
+        /**
+         * @param maximum Maximum allowed instances count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximum(Integer maximum) {
             return maximum(Output.of(maximum));
         }
 
+        /**
+         * @param minimum Minimum allowed instances count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimum(Output<Integer> minimum) {
             $.minimum = minimum;
             return this;
         }
 
+        /**
+         * @param minimum Minimum allowed instances count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimum(Integer minimum) {
             return minimum(Output.of(minimum));
         }
 
+        /**
+         * @param version The version of the template defined, for instance 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Output<Integer> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of the template defined, for instance 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Integer version) {
             return version(Output.of(version));
         }

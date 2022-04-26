@@ -25,6 +25,10 @@ public final class RulesetColumnSelector extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of a column from a dataset
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class RulesetColumnSelector extends com.pulumi.resources.InvokeArgs
     @Import(name="regex")
     private @Nullable String regex;
 
+    /**
+     * @return A regular expression for selecting a column from a dataset
+     * 
+     */
     public Optional<String> regex() {
         return Optional.ofNullable(this.regex);
     }
@@ -65,11 +73,23 @@ public final class RulesetColumnSelector extends com.pulumi.resources.InvokeArgs
             $ = new RulesetColumnSelector(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of a column from a dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param regex A regular expression for selecting a column from a dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(@Nullable String regex) {
             $.regex = regex;
             return this;

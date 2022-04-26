@@ -27,6 +27,10 @@ public final class IngressBackendArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resource")
     private @Nullable Output<TypedLocalObjectReferenceArgs> resource;
 
+    /**
+     * @return Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, a service.Name and service.Port must not be specified. This is a mutually exclusive setting with &#34;Service&#34;.
+     * 
+     */
     public Optional<Output<TypedLocalObjectReferenceArgs>> resource() {
         return Optional.ofNullable(this.resource);
     }
@@ -38,6 +42,10 @@ public final class IngressBackendArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="service")
     private @Nullable Output<IngressServiceBackendArgs> service;
 
+    /**
+     * @return Service references a Service as a Backend. This is a mutually exclusive setting with &#34;Resource&#34;.
+     * 
+     */
     public Optional<Output<IngressServiceBackendArgs>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -67,20 +75,44 @@ public final class IngressBackendArgs extends com.pulumi.resources.ResourceArgs 
             $ = new IngressBackendArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resource Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, a service.Name and service.Port must not be specified. This is a mutually exclusive setting with &#34;Service&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(@Nullable Output<TypedLocalObjectReferenceArgs> resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param resource Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, a service.Name and service.Port must not be specified. This is a mutually exclusive setting with &#34;Service&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(TypedLocalObjectReferenceArgs resource) {
             return resource(Output.of(resource));
         }
 
+        /**
+         * @param service Service references a Service as a Backend. This is a mutually exclusive setting with &#34;Resource&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<IngressServiceBackendArgs> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Service references a Service as a Backend. This is a mutually exclusive setting with &#34;Resource&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(IngressServiceBackendArgs service) {
             return service(Output.of(service));
         }

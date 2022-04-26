@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobCopyDestinationTable {
     /**
-     * The ID of the dataset containing this model.
+     * @return The ID of the dataset containing this model.
      * 
      */
     private final @Nullable String datasetId;
     /**
-     * The ID of the project containing this model.
+     * @return The ID of the project containing this model.
      * 
      */
     private final @Nullable String projectId;
     /**
-     * The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
+     * @return The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
      * or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
      * 
      */
@@ -39,24 +39,24 @@ public final class JobCopyDestinationTable {
     }
 
     /**
-     * The ID of the dataset containing this model.
+     * @return The ID of the dataset containing this model.
      * 
-    */
+     */
     public Optional<String> datasetId() {
         return Optional.ofNullable(this.datasetId);
     }
     /**
-     * The ID of the project containing this model.
+     * @return The ID of the project containing this model.
      * 
-    */
+     */
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
     /**
-     * The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
+     * @return The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
      * or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
      * 
-    */
+     */
     public String tableId() {
         return this.tableId;
     }

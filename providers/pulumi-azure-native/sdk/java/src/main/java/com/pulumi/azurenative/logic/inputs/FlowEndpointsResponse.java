@@ -26,6 +26,10 @@ public final class FlowEndpointsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="accessEndpointIpAddresses")
     private @Nullable List<IpAddressResponse> accessEndpointIpAddresses;
 
+    /**
+     * @return The access endpoint ip address.
+     * 
+     */
     public Optional<List<IpAddressResponse>> accessEndpointIpAddresses() {
         return Optional.ofNullable(this.accessEndpointIpAddresses);
     }
@@ -37,6 +41,10 @@ public final class FlowEndpointsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="outgoingIpAddresses")
     private @Nullable List<IpAddressResponse> outgoingIpAddresses;
 
+    /**
+     * @return The outgoing ip address.
+     * 
+     */
     public Optional<List<IpAddressResponse>> outgoingIpAddresses() {
         return Optional.ofNullable(this.outgoingIpAddresses);
     }
@@ -66,20 +74,44 @@ public final class FlowEndpointsResponse extends com.pulumi.resources.InvokeArgs
             $ = new FlowEndpointsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessEndpointIpAddresses The access endpoint ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessEndpointIpAddresses(@Nullable List<IpAddressResponse> accessEndpointIpAddresses) {
             $.accessEndpointIpAddresses = accessEndpointIpAddresses;
             return this;
         }
 
+        /**
+         * @param accessEndpointIpAddresses The access endpoint ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessEndpointIpAddresses(IpAddressResponse... accessEndpointIpAddresses) {
             return accessEndpointIpAddresses(List.of(accessEndpointIpAddresses));
         }
 
+        /**
+         * @param outgoingIpAddresses The outgoing ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outgoingIpAddresses(@Nullable List<IpAddressResponse> outgoingIpAddresses) {
             $.outgoingIpAddresses = outgoingIpAddresses;
             return this;
         }
 
+        /**
+         * @param outgoingIpAddresses The outgoing ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outgoingIpAddresses(IpAddressResponse... outgoingIpAddresses) {
             return outgoingIpAddresses(List.of(outgoingIpAddresses));
         }

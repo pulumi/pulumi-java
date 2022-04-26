@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAggregationAuthorizationResult {
     /**
-     * The ARN of the AggregationAuthorization.
+     * @return The ARN of the AggregationAuthorization.
      * 
      */
     private final @Nullable String aggregationAuthorizationArn;
     /**
-     * The tags for the AggregationAuthorization.
+     * @return The tags for the AggregationAuthorization.
      * 
      */
     private final @Nullable List<AggregationAuthorizationTag> tags;
@@ -33,16 +33,16 @@ public final class GetAggregationAuthorizationResult {
     }
 
     /**
-     * The ARN of the AggregationAuthorization.
+     * @return The ARN of the AggregationAuthorization.
      * 
-    */
+     */
     public Optional<String> aggregationAuthorizationArn() {
         return Optional.ofNullable(this.aggregationAuthorizationArn);
     }
     /**
-     * The tags for the AggregationAuthorization.
+     * @return The tags for the AggregationAuthorization.
      * 
-    */
+     */
     public List<AggregationAuthorizationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

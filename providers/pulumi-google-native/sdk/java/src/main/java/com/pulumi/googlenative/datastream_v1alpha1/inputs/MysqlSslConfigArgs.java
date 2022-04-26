@@ -26,6 +26,10 @@ public final class MysqlSslConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="caCertificate")
     private @Nullable Output<String> caCertificate;
 
+    /**
+     * @return Input only. PEM-encoded certificate of the CA that signed the source database server&#39;s certificate.
+     * 
+     */
     public Optional<Output<String>> caCertificate() {
         return Optional.ofNullable(this.caCertificate);
     }
@@ -37,6 +41,10 @@ public final class MysqlSslConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="clientCertificate")
     private @Nullable Output<String> clientCertificate;
 
+    /**
+     * @return Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the &#39;client_key&#39; and the &#39;ca_certificate&#39; fields are mandatory.
+     * 
+     */
     public Optional<Output<String>> clientCertificate() {
         return Optional.ofNullable(this.clientCertificate);
     }
@@ -48,6 +56,10 @@ public final class MysqlSslConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="clientKey")
     private @Nullable Output<String> clientKey;
 
+    /**
+     * @return Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the &#39;client_certificate&#39; and the &#39;ca_certificate&#39; fields are mandatory.
+     * 
+     */
     public Optional<Output<String>> clientKey() {
         return Optional.ofNullable(this.clientKey);
     }
@@ -78,29 +90,65 @@ public final class MysqlSslConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MysqlSslConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caCertificate Input only. PEM-encoded certificate of the CA that signed the source database server&#39;s certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificate(@Nullable Output<String> caCertificate) {
             $.caCertificate = caCertificate;
             return this;
         }
 
+        /**
+         * @param caCertificate Input only. PEM-encoded certificate of the CA that signed the source database server&#39;s certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificate(String caCertificate) {
             return caCertificate(Output.of(caCertificate));
         }
 
+        /**
+         * @param clientCertificate Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the &#39;client_key&#39; and the &#39;ca_certificate&#39; fields are mandatory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
             $.clientCertificate = clientCertificate;
             return this;
         }
 
+        /**
+         * @param clientCertificate Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the &#39;client_key&#39; and the &#39;ca_certificate&#39; fields are mandatory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificate(String clientCertificate) {
             return clientCertificate(Output.of(clientCertificate));
         }
 
+        /**
+         * @param clientKey Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the &#39;client_certificate&#39; and the &#39;ca_certificate&#39; fields are mandatory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKey(@Nullable Output<String> clientKey) {
             $.clientKey = clientKey;
             return this;
         }
 
+        /**
+         * @param clientKey Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the &#39;client_certificate&#39; and the &#39;ca_certificate&#39; fields are mandatory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKey(String clientKey) {
             return clientKey(Output.of(clientKey));
         }

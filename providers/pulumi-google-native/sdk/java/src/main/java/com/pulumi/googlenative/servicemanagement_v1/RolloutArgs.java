@@ -25,6 +25,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return Creation time of the rollout. Readonly.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -36,6 +40,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deleteServiceStrategy")
     private @Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy;
 
+    /**
+     * @return The strategy associated with a rollout to delete a `ManagedService`. Readonly.
+     * 
+     */
     public Optional<Output<DeleteServiceStrategyArgs>> deleteServiceStrategy() {
         return Optional.ofNullable(this.deleteServiceStrategy);
     }
@@ -47,6 +55,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rolloutId")
     private @Nullable Output<String> rolloutId;
 
+    /**
+     * @return Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only lower case letters, digits, &#39;.&#39;, &#39;_&#39; and &#39;-&#39; are allowed. If not specified by client, the server will generate one. The generated id will have the form of , where &#34;date&#34; is the create date in ISO 8601 format. &#34;revision number&#34; is a monotonically increasing positive number that is reset every day for each service. An example of the generated rollout_id is &#39;2016-02-16r1&#39;
+     * 
+     */
     public Optional<Output<String>> rolloutId() {
         return Optional.ofNullable(this.rolloutId);
     }
@@ -58,6 +70,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the service associated with this Rollout.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -69,6 +85,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<RolloutStatus> status;
 
+    /**
+     * @return The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
+     * 
+     */
     public Optional<Output<RolloutStatus>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -80,6 +100,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trafficPercentStrategy")
     private @Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy;
 
+    /**
+     * @return Google Service Control selects service configurations based on traffic percentage.
+     * 
+     */
     public Optional<Output<TrafficPercentStrategyArgs>> trafficPercentStrategy() {
         return Optional.ofNullable(this.trafficPercentStrategy);
     }
@@ -113,56 +137,128 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RolloutArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime Creation time of the rollout. Readonly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime Creation time of the rollout. Readonly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param deleteServiceStrategy The strategy associated with a rollout to delete a `ManagedService`. Readonly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteServiceStrategy(@Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy) {
             $.deleteServiceStrategy = deleteServiceStrategy;
             return this;
         }
 
+        /**
+         * @param deleteServiceStrategy The strategy associated with a rollout to delete a `ManagedService`. Readonly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteServiceStrategy(DeleteServiceStrategyArgs deleteServiceStrategy) {
             return deleteServiceStrategy(Output.of(deleteServiceStrategy));
         }
 
+        /**
+         * @param rolloutId Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only lower case letters, digits, &#39;.&#39;, &#39;_&#39; and &#39;-&#39; are allowed. If not specified by client, the server will generate one. The generated id will have the form of , where &#34;date&#34; is the create date in ISO 8601 format. &#34;revision number&#34; is a monotonically increasing positive number that is reset every day for each service. An example of the generated rollout_id is &#39;2016-02-16r1&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutId(@Nullable Output<String> rolloutId) {
             $.rolloutId = rolloutId;
             return this;
         }
 
+        /**
+         * @param rolloutId Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only lower case letters, digits, &#39;.&#39;, &#39;_&#39; and &#39;-&#39; are allowed. If not specified by client, the server will generate one. The generated id will have the form of , where &#34;date&#34; is the create date in ISO 8601 format. &#34;revision number&#34; is a monotonically increasing positive number that is reset every day for each service. An example of the generated rollout_id is &#39;2016-02-16r1&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutId(String rolloutId) {
             return rolloutId(Output.of(rolloutId));
         }
 
+        /**
+         * @param serviceName The name of the service associated with this Rollout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the service associated with this Rollout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param status The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<RolloutStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(RolloutStatus status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param trafficPercentStrategy Google Service Control selects service configurations based on traffic percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficPercentStrategy(@Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy) {
             $.trafficPercentStrategy = trafficPercentStrategy;
             return this;
         }
 
+        /**
+         * @param trafficPercentStrategy Google Service Control selects service configurations based on traffic percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficPercentStrategy(TrafficPercentStrategyArgs trafficPercentStrategy) {
             return trafficPercentStrategy(Output.of(trafficPercentStrategy));
         }

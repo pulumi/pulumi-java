@@ -26,6 +26,10 @@ public final class LocalVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
+    /**
+     * @return Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
+     * 
+     */
     public Optional<Output<String>> fsType() {
         return Optional.ofNullable(this.fsType);
     }
@@ -37,6 +41,10 @@ public final class LocalVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -66,20 +74,44 @@ public final class LocalVolumeSourceArgs extends com.pulumi.resources.ResourceAr
             $ = new LocalVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fsType Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(@Nullable Output<String> fsType) {
             $.fsType = fsType;
             return this;
         }
 
+        /**
+         * @param fsType Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(String fsType) {
             return fsType(Output.of(fsType));
         }
 
+        /**
+         * @param path The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

@@ -24,6 +24,10 @@ public final class RegistrationAssignmentPropertiesArgs extends com.pulumi.resou
     @Import(name="registrationDefinitionId", required=true)
     private Output<String> registrationDefinitionId;
 
+    /**
+     * @return Fully qualified path of the registration definition.
+     * 
+     */
     public Output<String> registrationDefinitionId() {
         return this.registrationDefinitionId;
     }
@@ -52,11 +56,23 @@ public final class RegistrationAssignmentPropertiesArgs extends com.pulumi.resou
             $ = new RegistrationAssignmentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param registrationDefinitionId Fully qualified path of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationDefinitionId(Output<String> registrationDefinitionId) {
             $.registrationDefinitionId = registrationDefinitionId;
             return this;
         }
 
+        /**
+         * @param registrationDefinitionId Fully qualified path of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationDefinitionId(String registrationDefinitionId) {
             return registrationDefinitionId(Output.of(registrationDefinitionId));
         }

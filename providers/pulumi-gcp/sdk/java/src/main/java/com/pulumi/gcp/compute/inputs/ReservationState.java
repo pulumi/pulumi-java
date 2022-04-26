@@ -25,6 +25,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="commitment")
     private @Nullable Output<String> commitment;
 
+    /**
+     * @return Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
+     * 
+     */
     public Optional<Output<String>> commitment() {
         return Optional.ofNullable(this.commitment);
     }
@@ -36,6 +40,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
     private @Nullable Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> creationTimestamp() {
         return Optional.ofNullable(this.creationTimestamp);
     }
@@ -47,6 +55,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -64,6 +76,16 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -76,6 +98,11 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -87,6 +114,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -99,6 +130,11 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareSettings")
     private @Nullable Output<ReservationShareSettingsGetArgs> shareSettings;
 
+    /**
+     * @return The share setting for reservations.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ReservationShareSettingsGetArgs>> shareSettings() {
         return Optional.ofNullable(this.shareSettings);
     }
@@ -111,6 +147,11 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="specificReservation")
     private @Nullable Output<ReservationSpecificReservationGetArgs> specificReservation;
 
+    /**
+     * @return Reservation for instances with specific machine shapes.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ReservationSpecificReservationGetArgs>> specificReservation() {
         return Optional.ofNullable(this.specificReservation);
     }
@@ -124,6 +165,12 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="specificReservationRequired")
     private @Nullable Output<Boolean> specificReservationRequired;
 
+    /**
+     * @return When set to true, only VMs that target this reservation by name can
+     * consume this reservation. Otherwise, it can be consumed by VMs with
+     * affinity for any reservation. Defaults to false.
+     * 
+     */
     public Optional<Output<Boolean>> specificReservationRequired() {
         return Optional.ofNullable(this.specificReservationRequired);
     }
@@ -135,6 +182,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The status of the reservation.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -146,6 +197,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return The zone where the reservation is made.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -184,101 +239,255 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
             $ = new ReservationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commitment Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitment(@Nullable Output<String> commitment) {
             $.commitment = commitment;
             return this;
         }
 
+        /**
+         * @param commitment Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitment(String commitment) {
             return commitment(Output.of(commitment));
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             $.creationTimestamp = creationTimestamp;
             return this;
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(String creationTimestamp) {
             return creationTimestamp(Output.of(creationTimestamp));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param shareSettings The share setting for reservations.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSettings(@Nullable Output<ReservationShareSettingsGetArgs> shareSettings) {
             $.shareSettings = shareSettings;
             return this;
         }
 
+        /**
+         * @param shareSettings The share setting for reservations.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSettings(ReservationShareSettingsGetArgs shareSettings) {
             return shareSettings(Output.of(shareSettings));
         }
 
+        /**
+         * @param specificReservation Reservation for instances with specific machine shapes.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specificReservation(@Nullable Output<ReservationSpecificReservationGetArgs> specificReservation) {
             $.specificReservation = specificReservation;
             return this;
         }
 
+        /**
+         * @param specificReservation Reservation for instances with specific machine shapes.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specificReservation(ReservationSpecificReservationGetArgs specificReservation) {
             return specificReservation(Output.of(specificReservation));
         }
 
+        /**
+         * @param specificReservationRequired When set to true, only VMs that target this reservation by name can
+         * consume this reservation. Otherwise, it can be consumed by VMs with
+         * affinity for any reservation. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specificReservationRequired(@Nullable Output<Boolean> specificReservationRequired) {
             $.specificReservationRequired = specificReservationRequired;
             return this;
         }
 
+        /**
+         * @param specificReservationRequired When set to true, only VMs that target this reservation by name can
+         * consume this reservation. Otherwise, it can be consumed by VMs with
+         * affinity for any reservation. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specificReservationRequired(Boolean specificReservationRequired) {
             return specificReservationRequired(Output.of(specificReservationRequired));
         }
 
+        /**
+         * @param status The status of the reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param zone The zone where the reservation is made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone The zone where the reservation is made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

@@ -14,12 +14,12 @@ import java.util.Objects;
 @CustomType
 public final class GetJobQueueResult {
     /**
-     * The ARN of the job queue.
+     * @return The ARN of the job queue.
      * 
      */
     private final String arn;
     /**
-     * The compute environments that are attached to the job queue and the order in
+     * @return The compute environments that are attached to the job queue and the order in
      * which job placement is preferred. Compute environments are selected for job placement in ascending order.
      * * `compute_environment_order.#.order` - The order of the compute environment.
      * * `compute_environment_order.#.compute_environment` - The ARN of the compute environment.
@@ -27,40 +27,40 @@ public final class GetJobQueueResult {
      */
     private final List<GetJobQueueComputeEnvironmentOrder> computeEnvironmentOrders;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String name;
     /**
-     * The priority of the job queue. Job queues with a higher priority are evaluated first when
+     * @return The priority of the job queue. Job queues with a higher priority are evaluated first when
      * associated with the same compute environment.
      * 
      */
     private final Integer priority;
     /**
-     * The ARN of the fair share scheduling policy. If this attribute has a value, the job queue uses a fair share scheduling policy. If this attribute does not have a value, the job queue uses a first in, first out (FIFO) scheduling policy.
+     * @return The ARN of the fair share scheduling policy. If this attribute has a value, the job queue uses a fair share scheduling policy. If this attribute does not have a value, the job queue uses a first in, first out (FIFO) scheduling policy.
      * 
      */
     private final String schedulingPolicyArn;
     /**
-     * Describes the ability of the queue to accept new jobs (for example, `ENABLED` or `DISABLED`).
+     * @return Describes the ability of the queue to accept new jobs (for example, `ENABLED` or `DISABLED`).
      * 
      */
     private final String state;
     /**
-     * The current status of the job queue (for example, `CREATING` or `VALID`).
+     * @return The current status of the job queue (for example, `CREATING` or `VALID`).
      * 
      */
     private final String status;
     /**
-     * A short, human-readable string to provide additional details about the current status
+     * @return A short, human-readable string to provide additional details about the current status
      * of the job queue.
      * 
      */
     private final String statusReason;
     /**
-     * Key-value map of resource tags
+     * @return Key-value map of resource tags
      * 
      */
     private final Map<String,String> tags;
@@ -90,26 +90,26 @@ public final class GetJobQueueResult {
     }
 
     /**
-     * The ARN of the job queue.
+     * @return The ARN of the job queue.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The compute environments that are attached to the job queue and the order in
+     * @return The compute environments that are attached to the job queue and the order in
      * which job placement is preferred. Compute environments are selected for job placement in ascending order.
      * * `compute_environment_order.#.order` - The order of the compute environment.
      * * `compute_environment_order.#.compute_environment` - The ARN of the compute environment.
      * 
-    */
+     */
     public List<GetJobQueueComputeEnvironmentOrder> computeEnvironmentOrders() {
         return this.computeEnvironmentOrders;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -117,46 +117,46 @@ public final class GetJobQueueResult {
         return this.name;
     }
     /**
-     * The priority of the job queue. Job queues with a higher priority are evaluated first when
+     * @return The priority of the job queue. Job queues with a higher priority are evaluated first when
      * associated with the same compute environment.
      * 
-    */
+     */
     public Integer priority() {
         return this.priority;
     }
     /**
-     * The ARN of the fair share scheduling policy. If this attribute has a value, the job queue uses a fair share scheduling policy. If this attribute does not have a value, the job queue uses a first in, first out (FIFO) scheduling policy.
+     * @return The ARN of the fair share scheduling policy. If this attribute has a value, the job queue uses a fair share scheduling policy. If this attribute does not have a value, the job queue uses a first in, first out (FIFO) scheduling policy.
      * 
-    */
+     */
     public String schedulingPolicyArn() {
         return this.schedulingPolicyArn;
     }
     /**
-     * Describes the ability of the queue to accept new jobs (for example, `ENABLED` or `DISABLED`).
+     * @return Describes the ability of the queue to accept new jobs (for example, `ENABLED` or `DISABLED`).
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The current status of the job queue (for example, `CREATING` or `VALID`).
+     * @return The current status of the job queue (for example, `CREATING` or `VALID`).
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * A short, human-readable string to provide additional details about the current status
+     * @return A short, human-readable string to provide additional details about the current status
      * of the job queue.
      * 
-    */
+     */
     public String statusReason() {
         return this.statusReason;
     }
     /**
-     * Key-value map of resource tags
+     * @return Key-value map of resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

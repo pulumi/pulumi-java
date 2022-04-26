@@ -24,6 +24,10 @@ public final class NetworkProfileResponseOutboundIPs extends com.pulumi.resource
     @Import(name="publicIPs", required=true)
     private List<String> publicIPs;
 
+    /**
+     * @return A list of public IP addresses.
+     * 
+     */
     public List<String> publicIPs() {
         return this.publicIPs;
     }
@@ -52,11 +56,23 @@ public final class NetworkProfileResponseOutboundIPs extends com.pulumi.resource
             $ = new NetworkProfileResponseOutboundIPs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicIPs A list of public IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPs(List<String> publicIPs) {
             $.publicIPs = publicIPs;
             return this;
         }
 
+        /**
+         * @param publicIPs A list of public IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPs(String... publicIPs) {
             return publicIPs(List.of(publicIPs));
         }

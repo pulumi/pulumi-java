@@ -28,6 +28,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="agcAndColorStripeRestriction")
     private @Nullable Integer agcAndColorStripeRestriction;
 
+    /**
+     * @return Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
+     * 
+     */
     public Optional<Integer> agcAndColorStripeRestriction() {
         return Optional.ofNullable(this.agcAndColorStripeRestriction);
     }
@@ -39,6 +43,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="allowPassingVideoContentToUnknownOutput", required=true)
     private String allowPassingVideoContentToUnknownOutput;
 
+    /**
+     * @return Configures Unknown output handling settings of the license.
+     * 
+     */
     public String allowPassingVideoContentToUnknownOutput() {
         return this.allowPassingVideoContentToUnknownOutput;
     }
@@ -50,6 +58,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="analogVideoOpl")
     private @Nullable Integer analogVideoOpl;
 
+    /**
+     * @return Specifies the output protection level for compressed digital audio.
+     * 
+     */
     public Optional<Integer> analogVideoOpl() {
         return Optional.ofNullable(this.analogVideoOpl);
     }
@@ -61,6 +73,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="compressedDigitalAudioOpl")
     private @Nullable Integer compressedDigitalAudioOpl;
 
+    /**
+     * @return Specifies the output protection level for compressed digital audio.
+     * 
+     */
     public Optional<Integer> compressedDigitalAudioOpl() {
         return Optional.ofNullable(this.compressedDigitalAudioOpl);
     }
@@ -72,6 +88,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="compressedDigitalVideoOpl")
     private @Nullable Integer compressedDigitalVideoOpl;
 
+    /**
+     * @return Specifies the output protection level for compressed digital video.
+     * 
+     */
     public Optional<Integer> compressedDigitalVideoOpl() {
         return Optional.ofNullable(this.compressedDigitalVideoOpl);
     }
@@ -83,6 +103,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="digitalVideoOnlyContentRestriction", required=true)
     private Boolean digitalVideoOnlyContentRestriction;
 
+    /**
+     * @return Enables the Image Constraint For Analog Component Video Restriction in the license.
+     * 
+     */
     public Boolean digitalVideoOnlyContentRestriction() {
         return this.digitalVideoOnlyContentRestriction;
     }
@@ -94,6 +118,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="explicitAnalogTelevisionOutputRestriction")
     private @Nullable ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse explicitAnalogTelevisionOutputRestriction;
 
+    /**
+     * @return Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.
+     * 
+     */
     public Optional<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse> explicitAnalogTelevisionOutputRestriction() {
         return Optional.ofNullable(this.explicitAnalogTelevisionOutputRestriction);
     }
@@ -105,6 +133,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="firstPlayExpiration")
     private @Nullable String firstPlayExpiration;
 
+    /**
+     * @return The amount of time that the license is valid after the license is first used to play content.
+     * 
+     */
     public Optional<String> firstPlayExpiration() {
         return Optional.ofNullable(this.firstPlayExpiration);
     }
@@ -116,6 +148,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="imageConstraintForAnalogComponentVideoRestriction", required=true)
     private Boolean imageConstraintForAnalogComponentVideoRestriction;
 
+    /**
+     * @return Enables the Image Constraint For Analog Component Video Restriction in the license.
+     * 
+     */
     public Boolean imageConstraintForAnalogComponentVideoRestriction() {
         return this.imageConstraintForAnalogComponentVideoRestriction;
     }
@@ -127,6 +163,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="imageConstraintForAnalogComputerMonitorRestriction", required=true)
     private Boolean imageConstraintForAnalogComputerMonitorRestriction;
 
+    /**
+     * @return Enables the Image Constraint For Analog Component Video Restriction in the license.
+     * 
+     */
     public Boolean imageConstraintForAnalogComputerMonitorRestriction() {
         return this.imageConstraintForAnalogComputerMonitorRestriction;
     }
@@ -138,6 +178,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="scmsRestriction")
     private @Nullable Integer scmsRestriction;
 
+    /**
+     * @return Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.
+     * 
+     */
     public Optional<Integer> scmsRestriction() {
         return Optional.ofNullable(this.scmsRestriction);
     }
@@ -149,6 +193,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="uncompressedDigitalAudioOpl")
     private @Nullable Integer uncompressedDigitalAudioOpl;
 
+    /**
+     * @return Specifies the output protection level for uncompressed digital audio.
+     * 
+     */
     public Optional<Integer> uncompressedDigitalAudioOpl() {
         return Optional.ofNullable(this.uncompressedDigitalAudioOpl);
     }
@@ -160,6 +208,10 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="uncompressedDigitalVideoOpl")
     private @Nullable Integer uncompressedDigitalVideoOpl;
 
+    /**
+     * @return Specifies the output protection level for uncompressed digital video.
+     * 
+     */
     public Optional<Integer> uncompressedDigitalVideoOpl() {
         return Optional.ofNullable(this.uncompressedDigitalVideoOpl);
     }
@@ -200,66 +252,144 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
             $ = new ContentKeyPolicyPlayReadyPlayRightResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agcAndColorStripeRestriction Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agcAndColorStripeRestriction(@Nullable Integer agcAndColorStripeRestriction) {
             $.agcAndColorStripeRestriction = agcAndColorStripeRestriction;
             return this;
         }
 
+        /**
+         * @param allowPassingVideoContentToUnknownOutput Configures Unknown output handling settings of the license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowPassingVideoContentToUnknownOutput(String allowPassingVideoContentToUnknownOutput) {
             $.allowPassingVideoContentToUnknownOutput = allowPassingVideoContentToUnknownOutput;
             return this;
         }
 
+        /**
+         * @param analogVideoOpl Specifies the output protection level for compressed digital audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analogVideoOpl(@Nullable Integer analogVideoOpl) {
             $.analogVideoOpl = analogVideoOpl;
             return this;
         }
 
+        /**
+         * @param compressedDigitalAudioOpl Specifies the output protection level for compressed digital audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressedDigitalAudioOpl(@Nullable Integer compressedDigitalAudioOpl) {
             $.compressedDigitalAudioOpl = compressedDigitalAudioOpl;
             return this;
         }
 
+        /**
+         * @param compressedDigitalVideoOpl Specifies the output protection level for compressed digital video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressedDigitalVideoOpl(@Nullable Integer compressedDigitalVideoOpl) {
             $.compressedDigitalVideoOpl = compressedDigitalVideoOpl;
             return this;
         }
 
+        /**
+         * @param digitalVideoOnlyContentRestriction Enables the Image Constraint For Analog Component Video Restriction in the license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder digitalVideoOnlyContentRestriction(Boolean digitalVideoOnlyContentRestriction) {
             $.digitalVideoOnlyContentRestriction = digitalVideoOnlyContentRestriction;
             return this;
         }
 
+        /**
+         * @param explicitAnalogTelevisionOutputRestriction Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder explicitAnalogTelevisionOutputRestriction(@Nullable ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse explicitAnalogTelevisionOutputRestriction) {
             $.explicitAnalogTelevisionOutputRestriction = explicitAnalogTelevisionOutputRestriction;
             return this;
         }
 
+        /**
+         * @param firstPlayExpiration The amount of time that the license is valid after the license is first used to play content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstPlayExpiration(@Nullable String firstPlayExpiration) {
             $.firstPlayExpiration = firstPlayExpiration;
             return this;
         }
 
+        /**
+         * @param imageConstraintForAnalogComponentVideoRestriction Enables the Image Constraint For Analog Component Video Restriction in the license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageConstraintForAnalogComponentVideoRestriction(Boolean imageConstraintForAnalogComponentVideoRestriction) {
             $.imageConstraintForAnalogComponentVideoRestriction = imageConstraintForAnalogComponentVideoRestriction;
             return this;
         }
 
+        /**
+         * @param imageConstraintForAnalogComputerMonitorRestriction Enables the Image Constraint For Analog Component Video Restriction in the license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageConstraintForAnalogComputerMonitorRestriction(Boolean imageConstraintForAnalogComputerMonitorRestriction) {
             $.imageConstraintForAnalogComputerMonitorRestriction = imageConstraintForAnalogComputerMonitorRestriction;
             return this;
         }
 
+        /**
+         * @param scmsRestriction Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scmsRestriction(@Nullable Integer scmsRestriction) {
             $.scmsRestriction = scmsRestriction;
             return this;
         }
 
+        /**
+         * @param uncompressedDigitalAudioOpl Specifies the output protection level for uncompressed digital audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uncompressedDigitalAudioOpl(@Nullable Integer uncompressedDigitalAudioOpl) {
             $.uncompressedDigitalAudioOpl = uncompressedDigitalAudioOpl;
             return this;
         }
 
+        /**
+         * @param uncompressedDigitalVideoOpl Specifies the output protection level for uncompressed digital video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uncompressedDigitalVideoOpl(@Nullable Integer uncompressedDigitalVideoOpl) {
             $.uncompressedDigitalVideoOpl = uncompressedDigitalVideoOpl;
             return this;

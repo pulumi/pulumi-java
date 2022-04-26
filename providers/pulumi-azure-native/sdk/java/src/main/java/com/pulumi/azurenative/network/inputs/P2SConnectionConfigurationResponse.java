@@ -28,6 +28,10 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
     @Import(name="enableInternetSecurity")
     private @Nullable Boolean enableInternetSecurity;
 
+    /**
+     * @return Flag indicating whether the enable internet security flag is turned on for the P2S Connections or not.
+     * 
+     */
     public Optional<Boolean> enableInternetSecurity() {
         return Optional.ofNullable(this.enableInternetSecurity);
     }
@@ -39,6 +43,10 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -50,6 +58,10 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -61,6 +73,10 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -72,6 +88,10 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the P2SConnectionConfiguration resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -83,6 +103,10 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
     @Import(name="routingConfiguration")
     private @Nullable RoutingConfigurationResponse routingConfiguration;
 
+    /**
+     * @return The Routing Configuration indicating the associated and propagated route tables on this connection.
+     * 
+     */
     public Optional<RoutingConfigurationResponse> routingConfiguration() {
         return Optional.ofNullable(this.routingConfiguration);
     }
@@ -94,6 +118,10 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
     @Import(name="vpnClientAddressPool")
     private @Nullable AddressSpaceResponse vpnClientAddressPool;
 
+    /**
+     * @return The reference to the address space resource which represents Address space for P2S VpnClient.
+     * 
+     */
     public Optional<AddressSpaceResponse> vpnClientAddressPool() {
         return Optional.ofNullable(this.vpnClientAddressPool);
     }
@@ -128,36 +156,78 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
             $ = new P2SConnectionConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableInternetSecurity Flag indicating whether the enable internet security flag is turned on for the P2S Connections or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
             $.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the P2SConnectionConfiguration resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param routingConfiguration The Routing Configuration indicating the associated and propagated route tables on this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingConfiguration(@Nullable RoutingConfigurationResponse routingConfiguration) {
             $.routingConfiguration = routingConfiguration;
             return this;
         }
 
+        /**
+         * @param vpnClientAddressPool The reference to the address space resource which represents Address space for P2S VpnClient.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientAddressPool(@Nullable AddressSpaceResponse vpnClientAddressPool) {
             $.vpnClientAddressPool = vpnClientAddressPool;
             return this;

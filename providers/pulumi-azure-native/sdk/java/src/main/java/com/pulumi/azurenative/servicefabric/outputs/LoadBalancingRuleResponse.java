@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LoadBalancingRuleResponse {
     /**
-     * The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
+     * @return The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
      * 
      */
     private final Integer backendPort;
     /**
-     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
+     * @return The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
      * 
      */
     private final Integer frontendPort;
     /**
-     * the reference to the load balancer probe used by the load balancing rule.
+     * @return the reference to the load balancer probe used by the load balancing rule.
      * 
      */
     private final String probeProtocol;
     /**
-     * The probe request path. Only supported for HTTP/HTTPS probes.
+     * @return The probe request path. Only supported for HTTP/HTTPS probes.
      * 
      */
     private final @Nullable String probeRequestPath;
     /**
-     * The reference to the transport protocol used by the load balancing rule.
+     * @return The reference to the transport protocol used by the load balancing rule.
      * 
      */
     private final String protocol;
@@ -53,37 +53,37 @@ public final class LoadBalancingRuleResponse {
     }
 
     /**
-     * The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
+     * @return The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
      * 
-    */
+     */
     public Integer backendPort() {
         return this.backendPort;
     }
     /**
-     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
+     * @return The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
      * 
-    */
+     */
     public Integer frontendPort() {
         return this.frontendPort;
     }
     /**
-     * the reference to the load balancer probe used by the load balancing rule.
+     * @return the reference to the load balancer probe used by the load balancing rule.
      * 
-    */
+     */
     public String probeProtocol() {
         return this.probeProtocol;
     }
     /**
-     * The probe request path. Only supported for HTTP/HTTPS probes.
+     * @return The probe request path. Only supported for HTTP/HTTPS probes.
      * 
-    */
+     */
     public Optional<String> probeRequestPath() {
         return Optional.ofNullable(this.probeRequestPath);
     }
     /**
-     * The reference to the transport protocol used by the load balancing rule.
+     * @return The reference to the transport protocol used by the load balancing rule.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }

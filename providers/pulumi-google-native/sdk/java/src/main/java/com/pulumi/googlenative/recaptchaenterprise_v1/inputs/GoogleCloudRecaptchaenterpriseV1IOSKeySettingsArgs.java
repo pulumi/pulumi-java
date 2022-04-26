@@ -28,6 +28,10 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs extends co
     @Import(name="allowAllBundleIds")
     private @Nullable Output<Boolean> allowAllBundleIds;
 
+    /**
+     * @return If set to true, allowed_bundle_ids are not enforced.
+     * 
+     */
     public Optional<Output<Boolean>> allowAllBundleIds() {
         return Optional.ofNullable(this.allowAllBundleIds);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs extends co
     @Import(name="allowedBundleIds")
     private @Nullable Output<List<String>> allowedBundleIds;
 
+    /**
+     * @return iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
+     * 
+     */
     public Optional<Output<List<String>>> allowedBundleIds() {
         return Optional.ofNullable(this.allowedBundleIds);
     }
@@ -68,24 +76,54 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs extends co
             $ = new GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowAllBundleIds If set to true, allowed_bundle_ids are not enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowAllBundleIds(@Nullable Output<Boolean> allowAllBundleIds) {
             $.allowAllBundleIds = allowAllBundleIds;
             return this;
         }
 
+        /**
+         * @param allowAllBundleIds If set to true, allowed_bundle_ids are not enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowAllBundleIds(Boolean allowAllBundleIds) {
             return allowAllBundleIds(Output.of(allowAllBundleIds));
         }
 
+        /**
+         * @param allowedBundleIds iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedBundleIds(@Nullable Output<List<String>> allowedBundleIds) {
             $.allowedBundleIds = allowedBundleIds;
             return this;
         }
 
+        /**
+         * @param allowedBundleIds iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedBundleIds(List<String> allowedBundleIds) {
             return allowedBundleIds(Output.of(allowedBundleIds));
         }
 
+        /**
+         * @param allowedBundleIds iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedBundleIds(String... allowedBundleIds) {
             return allowedBundleIds(List.of(allowedBundleIds));
         }

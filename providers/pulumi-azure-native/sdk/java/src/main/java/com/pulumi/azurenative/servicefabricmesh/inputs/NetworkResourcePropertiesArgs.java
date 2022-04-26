@@ -27,6 +27,10 @@ public final class NetworkResourcePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User readable description of the network.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,11 @@ public final class NetworkResourcePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return The type of a Service Fabric container network.
+     * Expected value is &#39;NetworkResourceProperties&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -68,20 +77,46 @@ public final class NetworkResourcePropertiesArgs extends com.pulumi.resources.Re
             $ = new NetworkResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description User readable description of the network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User readable description of the network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param kind The type of a Service Fabric container network.
+         * Expected value is &#39;NetworkResourceProperties&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The type of a Service Fabric container network.
+         * Expected value is &#39;NetworkResourceProperties&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }

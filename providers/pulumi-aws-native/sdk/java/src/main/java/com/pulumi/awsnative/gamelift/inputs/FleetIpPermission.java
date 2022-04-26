@@ -25,6 +25,10 @@ public final class FleetIpPermission extends com.pulumi.resources.InvokeArgs {
     @Import(name="fromPort", required=true)
     private Integer fromPort;
 
+    /**
+     * @return A starting value for a range of allowed port numbers.
+     * 
+     */
     public Integer fromPort() {
         return this.fromPort;
     }
@@ -36,6 +40,10 @@ public final class FleetIpPermission extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipRange", required=true)
     private String ipRange;
 
+    /**
+     * @return A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: &#34;000.000.000.000/[subnet mask]&#34; or optionally the shortened version &#34;0.0.0.0/[subnet mask]&#34;.
+     * 
+     */
     public String ipRange() {
         return this.ipRange;
     }
@@ -47,6 +55,10 @@ public final class FleetIpPermission extends com.pulumi.resources.InvokeArgs {
     @Import(name="protocol", required=true)
     private FleetIpPermissionProtocol protocol;
 
+    /**
+     * @return The network communication protocol used by the fleet.
+     * 
+     */
     public FleetIpPermissionProtocol protocol() {
         return this.protocol;
     }
@@ -58,6 +70,10 @@ public final class FleetIpPermission extends com.pulumi.resources.InvokeArgs {
     @Import(name="toPort", required=true)
     private Integer toPort;
 
+    /**
+     * @return An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than FromPort.
+     * 
+     */
     public Integer toPort() {
         return this.toPort;
     }
@@ -89,21 +105,45 @@ public final class FleetIpPermission extends com.pulumi.resources.InvokeArgs {
             $ = new FleetIpPermission(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fromPort A starting value for a range of allowed port numbers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromPort(Integer fromPort) {
             $.fromPort = fromPort;
             return this;
         }
 
+        /**
+         * @param ipRange A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: &#34;000.000.000.000/[subnet mask]&#34; or optionally the shortened version &#34;0.0.0.0/[subnet mask]&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRange(String ipRange) {
             $.ipRange = ipRange;
             return this;
         }
 
+        /**
+         * @param protocol The network communication protocol used by the fleet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(FleetIpPermissionProtocol protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param toPort An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than FromPort.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toPort(Integer toPort) {
             $.toPort = toPort;
             return this;

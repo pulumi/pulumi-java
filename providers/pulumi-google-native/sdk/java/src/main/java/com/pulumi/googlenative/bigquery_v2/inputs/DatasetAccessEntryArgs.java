@@ -24,6 +24,10 @@ public final class DatasetAccessEntryArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataset")
     private @Nullable Output<DatasetReferenceArgs> dataset;
 
+    /**
+     * @return [Required] The dataset this entry applies to.
+     * 
+     */
     public Optional<Output<DatasetReferenceArgs>> dataset() {
         return Optional.ofNullable(this.dataset);
     }
@@ -60,11 +64,23 @@ public final class DatasetAccessEntryArgs extends com.pulumi.resources.ResourceA
             $ = new DatasetAccessEntryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset [Required] The dataset this entry applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(@Nullable Output<DatasetReferenceArgs> dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param dataset [Required] The dataset this entry applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(DatasetReferenceArgs dataset) {
             return dataset(Output.of(dataset));
         }

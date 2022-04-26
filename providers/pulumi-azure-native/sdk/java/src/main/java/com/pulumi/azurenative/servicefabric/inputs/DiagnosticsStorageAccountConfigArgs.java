@@ -26,6 +26,10 @@ public final class DiagnosticsStorageAccountConfigArgs extends com.pulumi.resour
     @Import(name="blobEndpoint", required=true)
     private Output<String> blobEndpoint;
 
+    /**
+     * @return The blob endpoint of the azure storage account.
+     * 
+     */
     public Output<String> blobEndpoint() {
         return this.blobEndpoint;
     }
@@ -37,6 +41,10 @@ public final class DiagnosticsStorageAccountConfigArgs extends com.pulumi.resour
     @Import(name="protectedAccountKeyName", required=true)
     private Output<String> protectedAccountKeyName;
 
+    /**
+     * @return The protected diagnostics storage key name.
+     * 
+     */
     public Output<String> protectedAccountKeyName() {
         return this.protectedAccountKeyName;
     }
@@ -48,6 +56,10 @@ public final class DiagnosticsStorageAccountConfigArgs extends com.pulumi.resour
     @Import(name="protectedAccountKeyName2")
     private @Nullable Output<String> protectedAccountKeyName2;
 
+    /**
+     * @return The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.
+     * 
+     */
     public Optional<Output<String>> protectedAccountKeyName2() {
         return Optional.ofNullable(this.protectedAccountKeyName2);
     }
@@ -59,6 +71,10 @@ public final class DiagnosticsStorageAccountConfigArgs extends com.pulumi.resour
     @Import(name="queueEndpoint", required=true)
     private Output<String> queueEndpoint;
 
+    /**
+     * @return The queue endpoint of the azure storage account.
+     * 
+     */
     public Output<String> queueEndpoint() {
         return this.queueEndpoint;
     }
@@ -70,6 +86,10 @@ public final class DiagnosticsStorageAccountConfigArgs extends com.pulumi.resour
     @Import(name="storageAccountName", required=true)
     private Output<String> storageAccountName;
 
+    /**
+     * @return The Azure storage account name.
+     * 
+     */
     public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
@@ -81,6 +101,10 @@ public final class DiagnosticsStorageAccountConfigArgs extends com.pulumi.resour
     @Import(name="tableEndpoint", required=true)
     private Output<String> tableEndpoint;
 
+    /**
+     * @return The table endpoint of the azure storage account.
+     * 
+     */
     public Output<String> tableEndpoint() {
         return this.tableEndpoint;
     }
@@ -114,56 +138,128 @@ public final class DiagnosticsStorageAccountConfigArgs extends com.pulumi.resour
             $ = new DiagnosticsStorageAccountConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobEndpoint The blob endpoint of the azure storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobEndpoint(Output<String> blobEndpoint) {
             $.blobEndpoint = blobEndpoint;
             return this;
         }
 
+        /**
+         * @param blobEndpoint The blob endpoint of the azure storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobEndpoint(String blobEndpoint) {
             return blobEndpoint(Output.of(blobEndpoint));
         }
 
+        /**
+         * @param protectedAccountKeyName The protected diagnostics storage key name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedAccountKeyName(Output<String> protectedAccountKeyName) {
             $.protectedAccountKeyName = protectedAccountKeyName;
             return this;
         }
 
+        /**
+         * @param protectedAccountKeyName The protected diagnostics storage key name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedAccountKeyName(String protectedAccountKeyName) {
             return protectedAccountKeyName(Output.of(protectedAccountKeyName));
         }
 
+        /**
+         * @param protectedAccountKeyName2 The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedAccountKeyName2(@Nullable Output<String> protectedAccountKeyName2) {
             $.protectedAccountKeyName2 = protectedAccountKeyName2;
             return this;
         }
 
+        /**
+         * @param protectedAccountKeyName2 The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedAccountKeyName2(String protectedAccountKeyName2) {
             return protectedAccountKeyName2(Output.of(protectedAccountKeyName2));
         }
 
+        /**
+         * @param queueEndpoint The queue endpoint of the azure storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueEndpoint(Output<String> queueEndpoint) {
             $.queueEndpoint = queueEndpoint;
             return this;
         }
 
+        /**
+         * @param queueEndpoint The queue endpoint of the azure storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueEndpoint(String queueEndpoint) {
             return queueEndpoint(Output.of(queueEndpoint));
         }
 
+        /**
+         * @param storageAccountName The Azure storage account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(Output<String> storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;
         }
 
+        /**
+         * @param storageAccountName The Azure storage account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(String storageAccountName) {
             return storageAccountName(Output.of(storageAccountName));
         }
 
+        /**
+         * @param tableEndpoint The table endpoint of the azure storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableEndpoint(Output<String> tableEndpoint) {
             $.tableEndpoint = tableEndpoint;
             return this;
         }
 
+        /**
+         * @param tableEndpoint The table endpoint of the azure storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableEndpoint(String tableEndpoint) {
             return tableEndpoint(Output.of(tableEndpoint));
         }

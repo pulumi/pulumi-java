@@ -21,6 +21,10 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="hubName", required=true)
     private String hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public String hubName() {
         return this.hubName;
     }
@@ -32,6 +36,10 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="localeCode")
     private @Nullable String localeCode;
 
+    /**
+     * @return Locale of profile to retrieve, default is en-us.
+     * 
+     */
     public Optional<String> localeCode() {
         return Optional.ofNullable(this.localeCode);
     }
@@ -43,6 +51,10 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="profileName", required=true)
     private String profileName;
 
+    /**
+     * @return The name of the profile.
+     * 
+     */
     public String profileName() {
         return this.profileName;
     }
@@ -54,6 +66,10 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -85,21 +101,45 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param localeCode Locale of profile to retrieve, default is en-us.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localeCode(@Nullable String localeCode) {
             $.localeCode = localeCode;
             return this;
         }
 
+        /**
+         * @param profileName The name of the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -28,6 +28,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backfillAll")
     private @Nullable Output<BackfillAllStrategyArgs> backfillAll;
 
+    /**
+     * @return Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
+     * 
+     */
     public Optional<Output<BackfillAllStrategyArgs>> backfillAll() {
         return Optional.ofNullable(this.backfillAll);
     }
@@ -39,6 +43,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backfillNone")
     private @Nullable Output<BackfillNoneStrategyArgs> backfillNone;
 
+    /**
+     * @return Do not automatically backfill any objects.
+     * 
+     */
     public Optional<Output<BackfillNoneStrategyArgs>> backfillNone() {
         return Optional.ofNullable(this.backfillNone);
     }
@@ -50,6 +58,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerManagedEncryptionKey")
     private @Nullable Output<String> customerManagedEncryptionKey;
 
+    /**
+     * @return Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
+     * 
+     */
     public Optional<Output<String>> customerManagedEncryptionKey() {
         return Optional.ofNullable(this.customerManagedEncryptionKey);
     }
@@ -61,6 +73,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationConfig", required=true)
     private Output<DestinationConfigArgs> destinationConfig;
 
+    /**
+     * @return Destination connection profile configuration.
+     * 
+     */
     public Output<DestinationConfigArgs> destinationConfig() {
         return this.destinationConfig;
     }
@@ -72,6 +88,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Display name.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -90,6 +110,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -122,6 +146,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceConfig", required=true)
     private Output<SourceConfigArgs> sourceConfig;
 
+    /**
+     * @return Source connection profile configuration.
+     * 
+     */
     public Output<SourceConfigArgs> sourceConfig() {
         return this.sourceConfig;
     }
@@ -133,6 +161,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<StreamState> state;
 
+    /**
+     * @return The state of the stream.
+     * 
+     */
     public Optional<Output<StreamState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -188,47 +220,107 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StreamArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backfillAll Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backfillAll(@Nullable Output<BackfillAllStrategyArgs> backfillAll) {
             $.backfillAll = backfillAll;
             return this;
         }
 
+        /**
+         * @param backfillAll Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backfillAll(BackfillAllStrategyArgs backfillAll) {
             return backfillAll(Output.of(backfillAll));
         }
 
+        /**
+         * @param backfillNone Do not automatically backfill any objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backfillNone(@Nullable Output<BackfillNoneStrategyArgs> backfillNone) {
             $.backfillNone = backfillNone;
             return this;
         }
 
+        /**
+         * @param backfillNone Do not automatically backfill any objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backfillNone(BackfillNoneStrategyArgs backfillNone) {
             return backfillNone(Output.of(backfillNone));
         }
 
+        /**
+         * @param customerManagedEncryptionKey Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerManagedEncryptionKey(@Nullable Output<String> customerManagedEncryptionKey) {
             $.customerManagedEncryptionKey = customerManagedEncryptionKey;
             return this;
         }
 
+        /**
+         * @param customerManagedEncryptionKey Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerManagedEncryptionKey(String customerManagedEncryptionKey) {
             return customerManagedEncryptionKey(Output.of(customerManagedEncryptionKey));
         }
 
+        /**
+         * @param destinationConfig Destination connection profile configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationConfig(Output<DestinationConfigArgs> destinationConfig) {
             $.destinationConfig = destinationConfig;
             return this;
         }
 
+        /**
+         * @param destinationConfig Destination connection profile configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationConfig(DestinationConfigArgs destinationConfig) {
             return destinationConfig(Output.of(destinationConfig));
         }
 
+        /**
+         * @param displayName Display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -242,11 +334,23 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
             return force(Output.of(force));
         }
 
+        /**
+         * @param labels Labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -278,20 +382,44 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param sourceConfig Source connection profile configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConfig(Output<SourceConfigArgs> sourceConfig) {
             $.sourceConfig = sourceConfig;
             return this;
         }
 
+        /**
+         * @param sourceConfig Source connection profile configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConfig(SourceConfigArgs sourceConfig) {
             return sourceConfig(Output.of(sourceConfig));
         }
 
+        /**
+         * @param state The state of the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<StreamState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(StreamState state) {
             return state(Output.of(state));
         }

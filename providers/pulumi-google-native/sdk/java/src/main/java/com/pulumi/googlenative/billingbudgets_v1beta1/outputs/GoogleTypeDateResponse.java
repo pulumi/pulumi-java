@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleTypeDateResponse {
     /**
-     * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant.
+     * @return Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant.
      * 
      */
     private final Integer day;
     /**
-     * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+     * @return Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
      * 
      */
     private final Integer month;
     /**
-     * Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+     * @return Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
      * 
      */
     private final Integer year;
@@ -36,23 +36,23 @@ public final class GoogleTypeDateResponse {
     }
 
     /**
-     * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant.
+     * @return Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant.
      * 
-    */
+     */
     public Integer day() {
         return this.day;
     }
     /**
-     * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+     * @return Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
      * 
-    */
+     */
     public Integer month() {
         return this.month;
     }
     /**
-     * Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+     * @return Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
      * 
-    */
+     */
     public Integer year() {
         return this.year;
     }

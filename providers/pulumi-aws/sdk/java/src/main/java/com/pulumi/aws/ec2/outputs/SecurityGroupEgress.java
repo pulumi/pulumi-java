@@ -15,47 +15,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityGroupEgress {
     /**
-     * List of CIDR blocks.
+     * @return List of CIDR blocks.
      * 
      */
     private final @Nullable List<String> cidrBlocks;
     /**
-     * Description of this egress rule.
+     * @return Description of this egress rule.
      * 
      */
     private final @Nullable String description;
     /**
-     * Start port (or ICMP type number if protocol is `icmp`)
+     * @return Start port (or ICMP type number if protocol is `icmp`)
      * 
      */
     private final Integer fromPort;
     /**
-     * List of IPv6 CIDR blocks.
+     * @return List of IPv6 CIDR blocks.
      * 
      */
     private final @Nullable List<String> ipv6CidrBlocks;
     /**
-     * List of Prefix List IDs.
+     * @return List of Prefix List IDs.
      * 
      */
     private final @Nullable List<String> prefixListIds;
     /**
-     * Protocol. If you select a protocol of `-1` (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to 0.  The supported values are defined in the `IpProtocol` argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value.
+     * @return Protocol. If you select a protocol of `-1` (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to 0.  The supported values are defined in the `IpProtocol` argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value.
      * 
      */
     private final String protocol;
     /**
-     * List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
+     * @return List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
      * 
      */
     private final @Nullable List<String> securityGroups;
     /**
-     * Whether the security group itself will be added as a source to this egress rule.
+     * @return Whether the security group itself will be added as a source to this egress rule.
      * 
      */
     private final @Nullable Boolean self;
     /**
-     * End range port (or ICMP code if protocol is `icmp`).
+     * @return End range port (or ICMP code if protocol is `icmp`).
      * 
      */
     private final Integer toPort;
@@ -83,65 +83,65 @@ public final class SecurityGroupEgress {
     }
 
     /**
-     * List of CIDR blocks.
+     * @return List of CIDR blocks.
      * 
-    */
+     */
     public List<String> cidrBlocks() {
         return this.cidrBlocks == null ? List.of() : this.cidrBlocks;
     }
     /**
-     * Description of this egress rule.
+     * @return Description of this egress rule.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Start port (or ICMP type number if protocol is `icmp`)
+     * @return Start port (or ICMP type number if protocol is `icmp`)
      * 
-    */
+     */
     public Integer fromPort() {
         return this.fromPort;
     }
     /**
-     * List of IPv6 CIDR blocks.
+     * @return List of IPv6 CIDR blocks.
      * 
-    */
+     */
     public List<String> ipv6CidrBlocks() {
         return this.ipv6CidrBlocks == null ? List.of() : this.ipv6CidrBlocks;
     }
     /**
-     * List of Prefix List IDs.
+     * @return List of Prefix List IDs.
      * 
-    */
+     */
     public List<String> prefixListIds() {
         return this.prefixListIds == null ? List.of() : this.prefixListIds;
     }
     /**
-     * Protocol. If you select a protocol of `-1` (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to 0.  The supported values are defined in the `IpProtocol` argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value.
+     * @return Protocol. If you select a protocol of `-1` (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to 0.  The supported values are defined in the `IpProtocol` argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
+     * @return List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
      * 
-    */
+     */
     public List<String> securityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
     /**
-     * Whether the security group itself will be added as a source to this egress rule.
+     * @return Whether the security group itself will be added as a source to this egress rule.
      * 
-    */
+     */
     public Optional<Boolean> self() {
         return Optional.ofNullable(this.self);
     }
     /**
-     * End range port (or ICMP code if protocol is `icmp`).
+     * @return End range port (or ICMP code if protocol is `icmp`).
      * 
-    */
+     */
     public Integer toPort() {
         return this.toPort;
     }

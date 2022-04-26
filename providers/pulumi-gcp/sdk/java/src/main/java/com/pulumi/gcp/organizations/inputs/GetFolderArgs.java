@@ -22,6 +22,10 @@ public final class GetFolderArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="folder", required=true)
     private String folder;
 
+    /**
+     * @return The name of the Folder in the form `{folder_id}` or `folders/{folder_id}`.
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -33,6 +37,10 @@ public final class GetFolderArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="lookupOrganization")
     private @Nullable Boolean lookupOrganization;
 
+    /**
+     * @return `true` to find the organization that the folder belongs, `false` to avoid the lookup. It searches up the tree. (defaults to `false`)
+     * 
+     */
     public Optional<Boolean> lookupOrganization() {
         return Optional.ofNullable(this.lookupOrganization);
     }
@@ -62,11 +70,23 @@ public final class GetFolderArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFolderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param folder The name of the Folder in the form `{folder_id}` or `folders/{folder_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(String folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param lookupOrganization `true` to find the organization that the folder belongs, `false` to avoid the lookup. It searches up the tree. (defaults to `false`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder lookupOrganization(@Nullable Boolean lookupOrganization) {
             $.lookupOrganization = lookupOrganization;
             return this;

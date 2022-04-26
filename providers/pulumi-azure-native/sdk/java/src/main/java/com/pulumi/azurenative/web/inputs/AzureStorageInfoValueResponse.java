@@ -25,6 +25,10 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
     @Import(name="accessKey")
     private @Nullable String accessKey;
 
+    /**
+     * @return Access key for the storage account.
+     * 
+     */
     public Optional<String> accessKey() {
         return Optional.ofNullable(this.accessKey);
     }
@@ -36,6 +40,10 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
     @Import(name="accountName")
     private @Nullable String accountName;
 
+    /**
+     * @return Name of the storage account.
+     * 
+     */
     public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -47,6 +55,10 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
     @Import(name="mountPath")
     private @Nullable String mountPath;
 
+    /**
+     * @return Path to mount the storage within the site&#39;s runtime environment.
+     * 
+     */
     public Optional<String> mountPath() {
         return Optional.ofNullable(this.mountPath);
     }
@@ -58,6 +70,10 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
     @Import(name="shareName")
     private @Nullable String shareName;
 
+    /**
+     * @return Name of the file share (container name, for Blob storage).
+     * 
+     */
     public Optional<String> shareName() {
         return Optional.ofNullable(this.shareName);
     }
@@ -69,6 +85,10 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return State of the storage account.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -80,6 +100,10 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of storage.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -113,31 +137,67 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
             $ = new AzureStorageInfoValueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKey Access key for the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey(@Nullable String accessKey) {
             $.accessKey = accessKey;
             return this;
         }
 
+        /**
+         * @param accountName Name of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param mountPath Path to mount the storage within the site&#39;s runtime environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(@Nullable String mountPath) {
             $.mountPath = mountPath;
             return this;
         }
 
+        /**
+         * @param shareName Name of the file share (container name, for Blob storage).
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(@Nullable String shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param state State of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param type Type of storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

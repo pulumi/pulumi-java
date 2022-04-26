@@ -20,6 +20,10 @@ public final class TableRangePartitioningRangeGetArgs extends com.pulumi.resourc
     @Import(name="end", required=true)
     private Output<Integer> end;
 
+    /**
+     * @return End of the range partitioning, exclusive.
+     * 
+     */
     public Output<Integer> end() {
         return this.end;
     }
@@ -31,6 +35,10 @@ public final class TableRangePartitioningRangeGetArgs extends com.pulumi.resourc
     @Import(name="interval", required=true)
     private Output<Integer> interval;
 
+    /**
+     * @return The width of each range within the partition.
+     * 
+     */
     public Output<Integer> interval() {
         return this.interval;
     }
@@ -42,6 +50,10 @@ public final class TableRangePartitioningRangeGetArgs extends com.pulumi.resourc
     @Import(name="start", required=true)
     private Output<Integer> start;
 
+    /**
+     * @return Start of the range partitioning, inclusive.
+     * 
+     */
     public Output<Integer> start() {
         return this.start;
     }
@@ -72,29 +84,65 @@ public final class TableRangePartitioningRangeGetArgs extends com.pulumi.resourc
             $ = new TableRangePartitioningRangeGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param end End of the range partitioning, exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(Output<Integer> end) {
             $.end = end;
             return this;
         }
 
+        /**
+         * @param end End of the range partitioning, exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(Integer end) {
             return end(Output.of(end));
         }
 
+        /**
+         * @param interval The width of each range within the partition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Output<Integer> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval The width of each range within the partition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Integer interval) {
             return interval(Output.of(interval));
         }
 
+        /**
+         * @param start Start of the range partitioning, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(Output<Integer> start) {
             $.start = start;
             return this;
         }
 
+        /**
+         * @param start Start of the range partitioning, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(Integer start) {
             return start(Output.of(start));
         }

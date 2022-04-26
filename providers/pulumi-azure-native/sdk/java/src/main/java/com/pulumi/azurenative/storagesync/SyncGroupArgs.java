@@ -22,6 +22,10 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -33,6 +37,10 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageSyncServiceName", required=true)
     private Output<String> storageSyncServiceName;
 
+    /**
+     * @return Name of Storage Sync Service resource.
+     * 
+     */
     public Output<String> storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
@@ -44,6 +52,10 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncGroupName")
     private @Nullable Output<String> syncGroupName;
 
+    /**
+     * @return Name of Sync Group resource.
+     * 
+     */
     public Optional<Output<String>> syncGroupName() {
         return Optional.ofNullable(this.syncGroupName);
     }
@@ -74,29 +86,65 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SyncGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param storageSyncServiceName Name of Storage Sync Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSyncServiceName(Output<String> storageSyncServiceName) {
             $.storageSyncServiceName = storageSyncServiceName;
             return this;
         }
 
+        /**
+         * @param storageSyncServiceName Name of Storage Sync Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSyncServiceName(String storageSyncServiceName) {
             return storageSyncServiceName(Output.of(storageSyncServiceName));
         }
 
+        /**
+         * @param syncGroupName Name of Sync Group resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncGroupName(@Nullable Output<String> syncGroupName) {
             $.syncGroupName = syncGroupName;
             return this;
         }
 
+        /**
+         * @param syncGroupName Name of Sync Group resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncGroupName(String syncGroupName) {
             return syncGroupName(Output.of(syncGroupName));
         }

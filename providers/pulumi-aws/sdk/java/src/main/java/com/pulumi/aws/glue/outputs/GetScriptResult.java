@@ -17,18 +17,18 @@ public final class GetScriptResult {
     private final List<GetScriptDagEdge> dagEdges;
     private final List<GetScriptDagNode> dagNodes;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final @Nullable String language;
     /**
-     * The Python script generated from the DAG when the `language` argument is set to `PYTHON`.
+     * @return The Python script generated from the DAG when the `language` argument is set to `PYTHON`.
      * 
      */
     private final String pythonScript;
     /**
-     * The Scala code generated from the DAG when the `language` argument is set to `SCALA`.
+     * @return The Scala code generated from the DAG when the `language` argument is set to `SCALA`.
      * 
      */
     private final String scalaCode;
@@ -56,9 +56,9 @@ public final class GetScriptResult {
         return this.dagNodes;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -66,16 +66,16 @@ public final class GetScriptResult {
         return Optional.ofNullable(this.language);
     }
     /**
-     * The Python script generated from the DAG when the `language` argument is set to `PYTHON`.
+     * @return The Python script generated from the DAG when the `language` argument is set to `PYTHON`.
      * 
-    */
+     */
     public String pythonScript() {
         return this.pythonScript;
     }
     /**
-     * The Scala code generated from the DAG when the `language` argument is set to `SCALA`.
+     * @return The Scala code generated from the DAG when the `language` argument is set to `SCALA`.
      * 
-    */
+     */
     public String scalaCode() {
         return this.scalaCode;
     }

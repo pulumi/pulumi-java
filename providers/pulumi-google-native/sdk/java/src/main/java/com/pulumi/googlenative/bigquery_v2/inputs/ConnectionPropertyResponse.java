@@ -19,6 +19,10 @@ public final class ConnectionPropertyResponse extends com.pulumi.resources.Invok
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return [Required] Name of the connection property to set.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -30,6 +34,10 @@ public final class ConnectionPropertyResponse extends com.pulumi.resources.Invok
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return [Required] Value of the connection property.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -59,11 +67,23 @@ public final class ConnectionPropertyResponse extends com.pulumi.resources.Invok
             $ = new ConnectionPropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key [Required] Name of the connection property to set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value [Required] Value of the connection property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class PlatformImagePurchasePlanResponse {
     /**
-     * Name of the purchase plan.
+     * @return Name of the purchase plan.
      * 
      */
     private final String planName;
     /**
-     * Product of the purchase plan.
+     * @return Product of the purchase plan.
      * 
      */
     private final String planProduct;
     /**
-     * Publisher of the purchase plan.
+     * @return Publisher of the purchase plan.
      * 
      */
     private final String planPublisher;
@@ -36,23 +36,23 @@ public final class PlatformImagePurchasePlanResponse {
     }
 
     /**
-     * Name of the purchase plan.
+     * @return Name of the purchase plan.
      * 
-    */
+     */
     public String planName() {
         return this.planName;
     }
     /**
-     * Product of the purchase plan.
+     * @return Product of the purchase plan.
      * 
-    */
+     */
     public String planProduct() {
         return this.planProduct;
     }
     /**
-     * Publisher of the purchase plan.
+     * @return Publisher of the purchase plan.
      * 
-    */
+     */
     public String planPublisher() {
         return this.planPublisher;
     }

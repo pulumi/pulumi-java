@@ -29,6 +29,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     @Import(name="chainName")
     private @Nullable Output<String> chainName;
 
+    /**
+     * @return Chain name that the snapshot is created in.
+     * 
+     */
     public Optional<Output<String>> chainName() {
         return Optional.ofNullable(this.chainName);
     }
@@ -40,6 +44,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     @Import(name="guestFlush")
     private @Nullable Output<Boolean> guestFlush;
 
+    /**
+     * @return Indication to perform a &#39;guest aware&#39; snapshot.
+     * 
+     */
     public Optional<Output<Boolean>> guestFlush() {
         return Optional.ofNullable(this.guestFlush);
     }
@@ -51,6 +59,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -62,6 +74,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     @Import(name="storageLocations")
     private @Nullable Output<List<String>> storageLocations;
 
+    /**
+     * @return Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
+     * 
+     */
     public Optional<Output<List<String>>> storageLocations() {
         return Optional.ofNullable(this.storageLocations);
     }
@@ -93,42 +109,96 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
             $ = new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param chainName Chain name that the snapshot is created in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chainName(@Nullable Output<String> chainName) {
             $.chainName = chainName;
             return this;
         }
 
+        /**
+         * @param chainName Chain name that the snapshot is created in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chainName(String chainName) {
             return chainName(Output.of(chainName));
         }
 
+        /**
+         * @param guestFlush Indication to perform a &#39;guest aware&#39; snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestFlush(@Nullable Output<Boolean> guestFlush) {
             $.guestFlush = guestFlush;
             return this;
         }
 
+        /**
+         * @param guestFlush Indication to perform a &#39;guest aware&#39; snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestFlush(Boolean guestFlush) {
             return guestFlush(Output.of(guestFlush));
         }
 
+        /**
+         * @param labels Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param storageLocations Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
             $.storageLocations = storageLocations;
             return this;
         }
 
+        /**
+         * @param storageLocations Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(List<String> storageLocations) {
             return storageLocations(Output.of(storageLocations));
         }
 
+        /**
+         * @param storageLocations Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(String... storageLocations) {
             return storageLocations(List.of(storageLocations));
         }

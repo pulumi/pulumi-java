@@ -24,6 +24,10 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends com.pulumi.resource
     @Import(name="azDistribution")
     private @Nullable Output<String> azDistribution;
 
+    /**
+     * @return The distribution of broker nodes across availability zones ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-model-brokerazdistribution)). Currently the only valid value is `DEFAULT`.
+     * 
+     */
     public Optional<Output<String>> azDistribution() {
         return Optional.ofNullable(this.azDistribution);
     }
@@ -35,6 +39,10 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends com.pulumi.resource
     @Import(name="clientSubnets", required=true)
     private Output<List<String>> clientSubnets;
 
+    /**
+     * @return A list of subnets to connect to in client VPC ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-prop-brokernodegroupinfo-clientsubnets)).
+     * 
+     */
     public Output<List<String>> clientSubnets() {
         return this.clientSubnets;
     }
@@ -46,6 +54,10 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends com.pulumi.resource
     @Import(name="ebsVolumeSize", required=true)
     private Output<Integer> ebsVolumeSize;
 
+    /**
+     * @return The size in GiB of the EBS volume for the data drive on each broker node.
+     * 
+     */
     public Output<Integer> ebsVolumeSize() {
         return this.ebsVolumeSize;
     }
@@ -57,6 +69,10 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends com.pulumi.resource
     @Import(name="instanceType", required=true)
     private Output<String> instanceType;
 
+    /**
+     * @return Specify the instance type to use for the kafka brokersE.g., kafka.m5.large. ([Pricing info](https://aws.amazon.com/msk/pricing/))
+     * 
+     */
     public Output<String> instanceType() {
         return this.instanceType;
     }
@@ -68,6 +84,10 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends com.pulumi.resource
     @Import(name="securityGroups", required=true)
     private Output<List<String>> securityGroups;
 
+    /**
+     * @return A list of the security groups to associate with the elastic network interfaces to control who can communicate with the cluster.
+     * 
+     */
     public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
@@ -100,55 +120,127 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends com.pulumi.resource
             $ = new ClusterBrokerNodeGroupInfoGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azDistribution The distribution of broker nodes across availability zones ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-model-brokerazdistribution)). Currently the only valid value is `DEFAULT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azDistribution(@Nullable Output<String> azDistribution) {
             $.azDistribution = azDistribution;
             return this;
         }
 
+        /**
+         * @param azDistribution The distribution of broker nodes across availability zones ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-model-brokerazdistribution)). Currently the only valid value is `DEFAULT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azDistribution(String azDistribution) {
             return azDistribution(Output.of(azDistribution));
         }
 
+        /**
+         * @param clientSubnets A list of subnets to connect to in client VPC ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-prop-brokernodegroupinfo-clientsubnets)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSubnets(Output<List<String>> clientSubnets) {
             $.clientSubnets = clientSubnets;
             return this;
         }
 
+        /**
+         * @param clientSubnets A list of subnets to connect to in client VPC ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-prop-brokernodegroupinfo-clientsubnets)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSubnets(List<String> clientSubnets) {
             return clientSubnets(Output.of(clientSubnets));
         }
 
+        /**
+         * @param clientSubnets A list of subnets to connect to in client VPC ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-prop-brokernodegroupinfo-clientsubnets)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSubnets(String... clientSubnets) {
             return clientSubnets(List.of(clientSubnets));
         }
 
+        /**
+         * @param ebsVolumeSize The size in GiB of the EBS volume for the data drive on each broker node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsVolumeSize(Output<Integer> ebsVolumeSize) {
             $.ebsVolumeSize = ebsVolumeSize;
             return this;
         }
 
+        /**
+         * @param ebsVolumeSize The size in GiB of the EBS volume for the data drive on each broker node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsVolumeSize(Integer ebsVolumeSize) {
             return ebsVolumeSize(Output.of(ebsVolumeSize));
         }
 
+        /**
+         * @param instanceType Specify the instance type to use for the kafka brokersE.g., kafka.m5.large. ([Pricing info](https://aws.amazon.com/msk/pricing/))
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType Specify the instance type to use for the kafka brokersE.g., kafka.m5.large. ([Pricing info](https://aws.amazon.com/msk/pricing/))
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param securityGroups A list of the security groups to associate with the elastic network interfaces to control who can communicate with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(Output<List<String>> securityGroups) {
             $.securityGroups = securityGroups;
             return this;
         }
 
+        /**
+         * @param securityGroups A list of the security groups to associate with the elastic network interfaces to control who can communicate with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(List<String> securityGroups) {
             return securityGroups(Output.of(securityGroups));
         }
 
+        /**
+         * @param securityGroups A list of the security groups to associate with the elastic network interfaces to control who can communicate with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }

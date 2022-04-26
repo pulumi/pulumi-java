@@ -26,6 +26,10 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="certificateNotAfter", required=true)
     private String certificateNotAfter;
 
+    /**
+     * @return NotAfter DateTime of configure ldaps certificate.
+     * 
+     */
     public String certificateNotAfter() {
         return this.certificateNotAfter;
     }
@@ -37,6 +41,10 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="certificateThumbprint", required=true)
     private String certificateThumbprint;
 
+    /**
+     * @return Thumbprint of configure ldaps certificate.
+     * 
+     */
     public String certificateThumbprint() {
         return this.certificateThumbprint;
     }
@@ -48,6 +56,10 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="externalAccess")
     private @Nullable String externalAccess;
 
+    /**
+     * @return A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.
+     * 
+     */
     public Optional<String> externalAccess() {
         return Optional.ofNullable(this.externalAccess);
     }
@@ -59,6 +71,10 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ldaps")
     private @Nullable String ldaps;
 
+    /**
+     * @return A flag to determine whether or not Secure LDAP is enabled or disabled.
+     * 
+     */
     public Optional<String> ldaps() {
         return Optional.ofNullable(this.ldaps);
     }
@@ -70,6 +86,10 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="pfxCertificate")
     private @Nullable String pfxCertificate;
 
+    /**
+     * @return The certificate required to configure Secure LDAP. The parameter passed here should be a base64encoded representation of the certificate pfx file.
+     * 
+     */
     public Optional<String> pfxCertificate() {
         return Optional.ofNullable(this.pfxCertificate);
     }
@@ -81,6 +101,10 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="pfxCertificatePassword")
     private @Nullable String pfxCertificatePassword;
 
+    /**
+     * @return The password to decrypt the provided Secure LDAP certificate pfx file.
+     * 
+     */
     public Optional<String> pfxCertificatePassword() {
         return Optional.ofNullable(this.pfxCertificatePassword);
     }
@@ -92,6 +116,10 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="publicCertificate", required=true)
     private String publicCertificate;
 
+    /**
+     * @return Public certificate used to configure secure ldap.
+     * 
+     */
     public String publicCertificate() {
         return this.publicCertificate;
     }
@@ -126,36 +154,78 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
             $ = new LdapsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateNotAfter NotAfter DateTime of configure ldaps certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateNotAfter(String certificateNotAfter) {
             $.certificateNotAfter = certificateNotAfter;
             return this;
         }
 
+        /**
+         * @param certificateThumbprint Thumbprint of configure ldaps certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateThumbprint(String certificateThumbprint) {
             $.certificateThumbprint = certificateThumbprint;
             return this;
         }
 
+        /**
+         * @param externalAccess A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalAccess(@Nullable String externalAccess) {
             $.externalAccess = externalAccess;
             return this;
         }
 
+        /**
+         * @param ldaps A flag to determine whether or not Secure LDAP is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ldaps(@Nullable String ldaps) {
             $.ldaps = ldaps;
             return this;
         }
 
+        /**
+         * @param pfxCertificate The certificate required to configure Secure LDAP. The parameter passed here should be a base64encoded representation of the certificate pfx file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfxCertificate(@Nullable String pfxCertificate) {
             $.pfxCertificate = pfxCertificate;
             return this;
         }
 
+        /**
+         * @param pfxCertificatePassword The password to decrypt the provided Secure LDAP certificate pfx file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfxCertificatePassword(@Nullable String pfxCertificatePassword) {
             $.pfxCertificatePassword = pfxCertificatePassword;
             return this;
         }
 
+        /**
+         * @param publicCertificate Public certificate used to configure secure ldap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicCertificate(String publicCertificate) {
             $.publicCertificate = publicCertificate;
             return this;

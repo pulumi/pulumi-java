@@ -26,6 +26,10 @@ public final class ResourceLimitsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="cpu")
     private @Nullable Double cpu;
 
+    /**
+     * @return The CPU limit of this container instance.
+     * 
+     */
     public Optional<Double> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -37,6 +41,10 @@ public final class ResourceLimitsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="gpu")
     private @Nullable GpuResourceResponse gpu;
 
+    /**
+     * @return The GPU limit of this container instance.
+     * 
+     */
     public Optional<GpuResourceResponse> gpu() {
         return Optional.ofNullable(this.gpu);
     }
@@ -48,6 +56,10 @@ public final class ResourceLimitsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="memoryInGB")
     private @Nullable Double memoryInGB;
 
+    /**
+     * @return The memory limit in GB of this container instance.
+     * 
+     */
     public Optional<Double> memoryInGB() {
         return Optional.ofNullable(this.memoryInGB);
     }
@@ -78,16 +90,34 @@ public final class ResourceLimitsResponse extends com.pulumi.resources.InvokeArg
             $ = new ResourceLimitsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu The CPU limit of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Double cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param gpu The GPU limit of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpu(@Nullable GpuResourceResponse gpu) {
             $.gpu = gpu;
             return this;
         }
 
+        /**
+         * @param memoryInGB The memory limit in GB of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(@Nullable Double memoryInGB) {
             $.memoryInGB = memoryInGB;
             return this;

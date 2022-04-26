@@ -24,6 +24,10 @@ public final class CapacityReservationUtilizationResponse extends com.pulumi.res
     @Import(name="virtualMachinesAllocated", required=true)
     private List<SubResourceReadOnlyResponse> virtualMachinesAllocated;
 
+    /**
+     * @return A list of all virtual machines resource ids allocated against the capacity reservation.
+     * 
+     */
     public List<SubResourceReadOnlyResponse> virtualMachinesAllocated() {
         return this.virtualMachinesAllocated;
     }
@@ -52,11 +56,23 @@ public final class CapacityReservationUtilizationResponse extends com.pulumi.res
             $ = new CapacityReservationUtilizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param virtualMachinesAllocated A list of all virtual machines resource ids allocated against the capacity reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachinesAllocated(List<SubResourceReadOnlyResponse> virtualMachinesAllocated) {
             $.virtualMachinesAllocated = virtualMachinesAllocated;
             return this;
         }
 
+        /**
+         * @param virtualMachinesAllocated A list of all virtual machines resource ids allocated against the capacity reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachinesAllocated(SubResourceReadOnlyResponse... virtualMachinesAllocated) {
             return virtualMachinesAllocated(List.of(virtualMachinesAllocated));
         }

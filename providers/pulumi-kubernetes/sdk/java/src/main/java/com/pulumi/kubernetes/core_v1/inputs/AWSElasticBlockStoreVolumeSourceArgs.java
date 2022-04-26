@@ -30,6 +30,10 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
+    /**
+     * @return Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * 
+     */
     public Optional<Output<String>> fsType() {
         return Optional.ofNullable(this.fsType);
     }
@@ -41,6 +45,10 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
     @Import(name="partition")
     private @Nullable Output<Integer> partition;
 
+    /**
+     * @return The partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as &#34;1&#34;. Similarly, the volume partition for /dev/sda is &#34;0&#34; (or you can leave the property empty).
+     * 
+     */
     public Optional<Output<Integer>> partition() {
         return Optional.ofNullable(this.partition);
     }
@@ -52,6 +60,10 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return Specify &#34;true&#34; to force and set the ReadOnly property in VolumeMounts to &#34;true&#34;. If omitted, the default is &#34;false&#34;. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -63,6 +75,10 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
     @Import(name="volumeID", required=true)
     private Output<String> volumeID;
 
+    /**
+     * @return Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * 
+     */
     public Output<String> volumeID() {
         return this.volumeID;
     }
@@ -94,38 +110,86 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
             $ = new AWSElasticBlockStoreVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fsType Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(@Nullable Output<String> fsType) {
             $.fsType = fsType;
             return this;
         }
 
+        /**
+         * @param fsType Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(String fsType) {
             return fsType(Output.of(fsType));
         }
 
+        /**
+         * @param partition The partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as &#34;1&#34;. Similarly, the volume partition for /dev/sda is &#34;0&#34; (or you can leave the property empty).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partition(@Nullable Output<Integer> partition) {
             $.partition = partition;
             return this;
         }
 
+        /**
+         * @param partition The partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as &#34;1&#34;. Similarly, the volume partition for /dev/sda is &#34;0&#34; (or you can leave the property empty).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partition(Integer partition) {
             return partition(Output.of(partition));
         }
 
+        /**
+         * @param readOnly Specify &#34;true&#34; to force and set the ReadOnly property in VolumeMounts to &#34;true&#34;. If omitted, the default is &#34;false&#34;. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly Specify &#34;true&#34; to force and set the ReadOnly property in VolumeMounts to &#34;true&#34;. If omitted, the default is &#34;false&#34;. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }
 
+        /**
+         * @param volumeID Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeID(Output<String> volumeID) {
             $.volumeID = volumeID;
             return this;
         }
 
+        /**
+         * @param volumeID Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeID(String volumeID) {
             return volumeID(Output.of(volumeID));
         }

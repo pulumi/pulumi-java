@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetUserResult {
     /**
-     * The Amazon Resource Name (ARN) of the user account.
+     * @return The Amazon Resource Name (ARN) of the user account.
      * 
      */
     private final @Nullable String arn;
     /**
-     * Indicates the user status. Can be &#34;active&#34;, &#34;modifying&#34; or &#34;deleting&#34;.
+     * @return Indicates the user status. Can be &#34;active&#34;, &#34;modifying&#34; or &#34;deleting&#34;.
      * 
      */
     private final @Nullable String status;
@@ -31,16 +31,16 @@ public final class GetUserResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the user account.
+     * @return The Amazon Resource Name (ARN) of the user account.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Indicates the user status. Can be &#34;active&#34;, &#34;modifying&#34; or &#34;deleting&#34;.
+     * @return Indicates the user status. Can be &#34;active&#34;, &#34;modifying&#34; or &#34;deleting&#34;.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

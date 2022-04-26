@@ -21,87 +21,87 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetServiceResult {
     /**
-     * A list that describes the correlation of the service with other services.
+     * @return A list that describes the correlation of the service with other services.
      * 
      */
     private final @Nullable List<ServiceCorrelationDescriptionResponse> correlationScheme;
     /**
-     * Specifies the move cost for the service.
+     * @return Specifies the move cost for the service.
      * 
      */
     private final @Nullable String defaultMoveCost;
     /**
-     * Azure resource etag.
+     * @return Azure resource etag.
      * 
      */
     private final String etag;
     /**
-     * Azure resource identifier.
+     * @return Azure resource identifier.
      * 
      */
     private final String id;
     /**
-     * It will be deprecated in New API, resource location depends on the parent resource.
+     * @return It will be deprecated in New API, resource location depends on the parent resource.
      * 
      */
     private final @Nullable String location;
     /**
-     * Azure resource name.
+     * @return Azure resource name.
      * 
      */
     private final String name;
     /**
-     * Describes how the service is partitioned.
+     * @return Describes how the service is partitioned.
      * 
      */
     private final @Nullable Object partitionDescription;
     /**
-     * The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: &#34;NodeColor == blue)&#34;.
+     * @return The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: &#34;NodeColor == blue)&#34;.
      * 
      */
     private final @Nullable String placementConstraints;
     /**
-     * The current deployment or provisioning state, which only appears in the response
+     * @return The current deployment or provisioning state, which only appears in the response
      * 
      */
     private final String provisioningState;
     /**
-     * Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.
+     * @return Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.
      * 
      */
     private final @Nullable String serviceDnsName;
     /**
-     * The kind of service (Stateless or Stateful).
+     * @return The kind of service (Stateless or Stateful).
      * 
      */
     private final String serviceKind;
     /**
-     * The service load metrics is given as an array of ServiceLoadMetricDescription objects.
+     * @return The service load metrics is given as an array of ServiceLoadMetricDescription objects.
      * 
      */
     private final @Nullable List<ServiceLoadMetricDescriptionResponse> serviceLoadMetrics;
     /**
-     * The activation Mode of the service package
+     * @return The activation Mode of the service package
      * 
      */
     private final @Nullable String servicePackageActivationMode;
     /**
-     * A list that describes the correlation of the service with other services.
+     * @return A list that describes the correlation of the service with other services.
      * 
      */
     private final @Nullable List<ServicePlacementPolicyDescriptionResponse> servicePlacementPolicies;
     /**
-     * The name of the service type
+     * @return The name of the service type
      * 
      */
     private final @Nullable String serviceTypeName;
     /**
-     * Azure resource tags.
+     * @return Azure resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Azure resource type.
+     * @return Azure resource type.
      * 
      */
     private final String type;
@@ -145,121 +145,121 @@ public final class GetServiceResult {
     }
 
     /**
-     * A list that describes the correlation of the service with other services.
+     * @return A list that describes the correlation of the service with other services.
      * 
-    */
+     */
     public List<ServiceCorrelationDescriptionResponse> correlationScheme() {
         return this.correlationScheme == null ? List.of() : this.correlationScheme;
     }
     /**
-     * Specifies the move cost for the service.
+     * @return Specifies the move cost for the service.
      * 
-    */
+     */
     public Optional<String> defaultMoveCost() {
         return Optional.ofNullable(this.defaultMoveCost);
     }
     /**
-     * Azure resource etag.
+     * @return Azure resource etag.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Azure resource identifier.
+     * @return Azure resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * It will be deprecated in New API, resource location depends on the parent resource.
+     * @return It will be deprecated in New API, resource location depends on the parent resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Azure resource name.
+     * @return Azure resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Describes how the service is partitioned.
+     * @return Describes how the service is partitioned.
      * 
-    */
+     */
     public Optional<Object> partitionDescription() {
         return Optional.ofNullable(this.partitionDescription);
     }
     /**
-     * The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: &#34;NodeColor == blue)&#34;.
+     * @return The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: &#34;NodeColor == blue)&#34;.
      * 
-    */
+     */
     public Optional<String> placementConstraints() {
         return Optional.ofNullable(this.placementConstraints);
     }
     /**
-     * The current deployment or provisioning state, which only appears in the response
+     * @return The current deployment or provisioning state, which only appears in the response
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.
+     * @return Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.
      * 
-    */
+     */
     public Optional<String> serviceDnsName() {
         return Optional.ofNullable(this.serviceDnsName);
     }
     /**
-     * The kind of service (Stateless or Stateful).
+     * @return The kind of service (Stateless or Stateful).
      * 
-    */
+     */
     public String serviceKind() {
         return this.serviceKind;
     }
     /**
-     * The service load metrics is given as an array of ServiceLoadMetricDescription objects.
+     * @return The service load metrics is given as an array of ServiceLoadMetricDescription objects.
      * 
-    */
+     */
     public List<ServiceLoadMetricDescriptionResponse> serviceLoadMetrics() {
         return this.serviceLoadMetrics == null ? List.of() : this.serviceLoadMetrics;
     }
     /**
-     * The activation Mode of the service package
+     * @return The activation Mode of the service package
      * 
-    */
+     */
     public Optional<String> servicePackageActivationMode() {
         return Optional.ofNullable(this.servicePackageActivationMode);
     }
     /**
-     * A list that describes the correlation of the service with other services.
+     * @return A list that describes the correlation of the service with other services.
      * 
-    */
+     */
     public List<ServicePlacementPolicyDescriptionResponse> servicePlacementPolicies() {
         return this.servicePlacementPolicies == null ? List.of() : this.servicePlacementPolicies;
     }
     /**
-     * The name of the service type
+     * @return The name of the service type
      * 
-    */
+     */
     public Optional<String> serviceTypeName() {
         return Optional.ofNullable(this.serviceTypeName);
     }
     /**
-     * Azure resource tags.
+     * @return Azure resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Azure resource type.
+     * @return Azure resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -29,6 +29,10 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="corsPolicy")
     private @Nullable Output<CorsPolicyArgs> corsPolicy;
 
+    /**
+     * @return The specification for allowing client-side cross-origin requests. For more information about the W3C recommendation for cross-origin resource sharing (CORS), see Fetch API Living Standard. Not supported when the URL map is bound to a target gRPC proxy.
+     * 
+     */
     public Optional<Output<CorsPolicyArgs>> corsPolicy() {
         return Optional.ofNullable(this.corsPolicy);
     }
@@ -40,6 +44,10 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="faultInjectionPolicy")
     private @Nullable Output<HttpFaultInjectionArgs> faultInjectionPolicy;
 
+    /**
+     * @return The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by a load balancer on a percentage of requests before sending those requests to the backend service. Similarly requests from clients can be aborted by the load balancer for a percentage of requests. For the requests impacted by fault injection, timeout and retry_policy is ignored by clients that are configured with a fault_injection_policy.
+     * 
+     */
     public Optional<Output<HttpFaultInjectionArgs>> faultInjectionPolicy() {
         return Optional.ofNullable(this.faultInjectionPolicy);
     }
@@ -51,6 +59,10 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="maxStreamDuration")
     private @Nullable Output<DurationArgs> maxStreamDuration;
 
+    /**
+     * @return Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout field where the timeout duration starts from the time the request has been fully processed (known as *end-of-stream*), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. If not specified, this field uses the maximum maxStreamDuration value among all backend services associated with the route. This field is only allowed if the Url map is used with backend services with loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+     * 
+     */
     public Optional<Output<DurationArgs>> maxStreamDuration() {
         return Optional.ofNullable(this.maxStreamDuration);
     }
@@ -62,6 +74,10 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="requestMirrorPolicy")
     private @Nullable Output<RequestMirrorPolicyArgs> requestMirrorPolicy;
 
+    /**
+     * @return Specifies the policy on how requests intended for the route&#39;s backends are shadowed to a separate mirrored backend service. The load balancer does not wait for responses from the shadow service. Before sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
+     * 
+     */
     public Optional<Output<RequestMirrorPolicyArgs>> requestMirrorPolicy() {
         return Optional.ofNullable(this.requestMirrorPolicy);
     }
@@ -73,6 +89,10 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="retryPolicy")
     private @Nullable Output<HttpRetryPolicyArgs> retryPolicy;
 
+    /**
+     * @return Specifies the retry policy associated with this route.
+     * 
+     */
     public Optional<Output<HttpRetryPolicyArgs>> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
@@ -84,6 +104,10 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="timeout")
     private @Nullable Output<DurationArgs> timeout;
 
+    /**
+     * @return Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (known as *end-of-stream*) up until the response has been processed. Timeout includes all retries. If not specified, this field uses the largest timeout among all backend services associated with the route. Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless field set to true.
+     * 
+     */
     public Optional<Output<DurationArgs>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -95,6 +119,10 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="urlRewrite")
     private @Nullable Output<UrlRewriteArgs> urlRewrite;
 
+    /**
+     * @return The spec to modify the URL of the request, before forwarding the request to the matched service. urlRewrite is the only action supported in UrlMaps for external HTTP(S) load balancers. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
+     * 
+     */
     public Optional<Output<UrlRewriteArgs>> urlRewrite() {
         return Optional.ofNullable(this.urlRewrite);
     }
@@ -106,6 +134,10 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="weightedBackendServices")
     private @Nullable Output<List<WeightedBackendServiceArgs>> weightedBackendServices;
 
+    /**
+     * @return A list of weighted backend services to send traffic to when a route match occurs. The weights determine the fraction of traffic that flows to their corresponding backend service. If all traffic needs to go to a single backend service, there must be one weightedBackendService with weight set to a non-zero number. After a backend service is identified and before forwarding the request to the backend service, advanced routing actions such as URL rewrites and header transformations are applied depending on additional settings specified in this HttpRouteAction.
+     * 
+     */
     public Optional<Output<List<WeightedBackendServiceArgs>>> weightedBackendServices() {
         return Optional.ofNullable(this.weightedBackendServices);
     }
@@ -141,78 +173,180 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
             $ = new HttpRouteActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param corsPolicy The specification for allowing client-side cross-origin requests. For more information about the W3C recommendation for cross-origin resource sharing (CORS), see Fetch API Living Standard. Not supported when the URL map is bound to a target gRPC proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsPolicy(@Nullable Output<CorsPolicyArgs> corsPolicy) {
             $.corsPolicy = corsPolicy;
             return this;
         }
 
+        /**
+         * @param corsPolicy The specification for allowing client-side cross-origin requests. For more information about the W3C recommendation for cross-origin resource sharing (CORS), see Fetch API Living Standard. Not supported when the URL map is bound to a target gRPC proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsPolicy(CorsPolicyArgs corsPolicy) {
             return corsPolicy(Output.of(corsPolicy));
         }
 
+        /**
+         * @param faultInjectionPolicy The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by a load balancer on a percentage of requests before sending those requests to the backend service. Similarly requests from clients can be aborted by the load balancer for a percentage of requests. For the requests impacted by fault injection, timeout and retry_policy is ignored by clients that are configured with a fault_injection_policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder faultInjectionPolicy(@Nullable Output<HttpFaultInjectionArgs> faultInjectionPolicy) {
             $.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
 
+        /**
+         * @param faultInjectionPolicy The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by a load balancer on a percentage of requests before sending those requests to the backend service. Similarly requests from clients can be aborted by the load balancer for a percentage of requests. For the requests impacted by fault injection, timeout and retry_policy is ignored by clients that are configured with a fault_injection_policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder faultInjectionPolicy(HttpFaultInjectionArgs faultInjectionPolicy) {
             return faultInjectionPolicy(Output.of(faultInjectionPolicy));
         }
 
+        /**
+         * @param maxStreamDuration Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout field where the timeout duration starts from the time the request has been fully processed (known as *end-of-stream*), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. If not specified, this field uses the maximum maxStreamDuration value among all backend services associated with the route. This field is only allowed if the Url map is used with backend services with loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxStreamDuration(@Nullable Output<DurationArgs> maxStreamDuration) {
             $.maxStreamDuration = maxStreamDuration;
             return this;
         }
 
+        /**
+         * @param maxStreamDuration Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout field where the timeout duration starts from the time the request has been fully processed (known as *end-of-stream*), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. If not specified, this field uses the maximum maxStreamDuration value among all backend services associated with the route. This field is only allowed if the Url map is used with backend services with loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxStreamDuration(DurationArgs maxStreamDuration) {
             return maxStreamDuration(Output.of(maxStreamDuration));
         }
 
+        /**
+         * @param requestMirrorPolicy Specifies the policy on how requests intended for the route&#39;s backends are shadowed to a separate mirrored backend service. The load balancer does not wait for responses from the shadow service. Before sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMirrorPolicy(@Nullable Output<RequestMirrorPolicyArgs> requestMirrorPolicy) {
             $.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
 
+        /**
+         * @param requestMirrorPolicy Specifies the policy on how requests intended for the route&#39;s backends are shadowed to a separate mirrored backend service. The load balancer does not wait for responses from the shadow service. Before sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMirrorPolicy(RequestMirrorPolicyArgs requestMirrorPolicy) {
             return requestMirrorPolicy(Output.of(requestMirrorPolicy));
         }
 
+        /**
+         * @param retryPolicy Specifies the retry policy associated with this route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(@Nullable Output<HttpRetryPolicyArgs> retryPolicy) {
             $.retryPolicy = retryPolicy;
             return this;
         }
 
+        /**
+         * @param retryPolicy Specifies the retry policy associated with this route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(HttpRetryPolicyArgs retryPolicy) {
             return retryPolicy(Output.of(retryPolicy));
         }
 
+        /**
+         * @param timeout Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (known as *end-of-stream*) up until the response has been processed. Timeout includes all retries. If not specified, this field uses the largest timeout among all backend services associated with the route. Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<DurationArgs> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (known as *end-of-stream*) up until the response has been processed. Timeout includes all retries. If not specified, this field uses the largest timeout among all backend services associated with the route. Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(DurationArgs timeout) {
             return timeout(Output.of(timeout));
         }
 
+        /**
+         * @param urlRewrite The spec to modify the URL of the request, before forwarding the request to the matched service. urlRewrite is the only action supported in UrlMaps for external HTTP(S) load balancers. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRewrite(@Nullable Output<UrlRewriteArgs> urlRewrite) {
             $.urlRewrite = urlRewrite;
             return this;
         }
 
+        /**
+         * @param urlRewrite The spec to modify the URL of the request, before forwarding the request to the matched service. urlRewrite is the only action supported in UrlMaps for external HTTP(S) load balancers. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRewrite(UrlRewriteArgs urlRewrite) {
             return urlRewrite(Output.of(urlRewrite));
         }
 
+        /**
+         * @param weightedBackendServices A list of weighted backend services to send traffic to when a route match occurs. The weights determine the fraction of traffic that flows to their corresponding backend service. If all traffic needs to go to a single backend service, there must be one weightedBackendService with weight set to a non-zero number. After a backend service is identified and before forwarding the request to the backend service, advanced routing actions such as URL rewrites and header transformations are applied depending on additional settings specified in this HttpRouteAction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedBackendServices(@Nullable Output<List<WeightedBackendServiceArgs>> weightedBackendServices) {
             $.weightedBackendServices = weightedBackendServices;
             return this;
         }
 
+        /**
+         * @param weightedBackendServices A list of weighted backend services to send traffic to when a route match occurs. The weights determine the fraction of traffic that flows to their corresponding backend service. If all traffic needs to go to a single backend service, there must be one weightedBackendService with weight set to a non-zero number. After a backend service is identified and before forwarding the request to the backend service, advanced routing actions such as URL rewrites and header transformations are applied depending on additional settings specified in this HttpRouteAction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedBackendServices(List<WeightedBackendServiceArgs> weightedBackendServices) {
             return weightedBackendServices(Output.of(weightedBackendServices));
         }
 
+        /**
+         * @param weightedBackendServices A list of weighted backend services to send traffic to when a route match occurs. The weights determine the fraction of traffic that flows to their corresponding backend service. If all traffic needs to go to a single backend service, there must be one weightedBackendService with weight set to a non-zero number. After a backend service is identified and before forwarding the request to the backend service, advanced routing actions such as URL rewrites and header transformations are applied depending on additional settings specified in this HttpRouteAction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedBackendServices(WeightedBackendServiceArgs... weightedBackendServices) {
             return weightedBackendServices(List.of(weightedBackendServices));
         }

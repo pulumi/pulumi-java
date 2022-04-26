@@ -26,6 +26,10 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends com.pulumi.resou
     @Import(name="rulesSourceList")
     private @Nullable Output<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> rulesSourceList;
 
+    /**
+     * @return A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
+     * 
+     */
     public Optional<Output<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs>> rulesSourceList() {
         return Optional.ofNullable(this.rulesSourceList);
     }
@@ -37,6 +41,10 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends com.pulumi.resou
     @Import(name="rulesString")
     private @Nullable Output<String> rulesString;
 
+    /**
+     * @return The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain **stateful** inspection criteria and the action to take for traffic that matches the criteria.
+     * 
+     */
     public Optional<Output<String>> rulesString() {
         return Optional.ofNullable(this.rulesString);
     }
@@ -48,6 +56,10 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends com.pulumi.resou
     @Import(name="statefulRules")
     private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> statefulRules;
 
+    /**
+     * @return Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
+     * 
+     */
     public Optional<Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>>> statefulRules() {
         return Optional.ofNullable(this.statefulRules);
     }
@@ -59,6 +71,10 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends com.pulumi.resou
     @Import(name="statelessRulesAndCustomActions")
     private @Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> statelessRulesAndCustomActions;
 
+    /**
+     * @return A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
+     * 
+     */
     public Optional<Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs>> statelessRulesAndCustomActions() {
         return Optional.ofNullable(this.statelessRulesAndCustomActions);
     }
@@ -90,42 +106,96 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends com.pulumi.resou
             $ = new RuleGroupRuleGroupRulesSourceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rulesSourceList A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesSourceList(@Nullable Output<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> rulesSourceList) {
             $.rulesSourceList = rulesSourceList;
             return this;
         }
 
+        /**
+         * @param rulesSourceList A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesSourceList(RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs rulesSourceList) {
             return rulesSourceList(Output.of(rulesSourceList));
         }
 
+        /**
+         * @param rulesString The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain **stateful** inspection criteria and the action to take for traffic that matches the criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesString(@Nullable Output<String> rulesString) {
             $.rulesString = rulesString;
             return this;
         }
 
+        /**
+         * @param rulesString The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain **stateful** inspection criteria and the action to take for traffic that matches the criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesString(String rulesString) {
             return rulesString(Output.of(rulesString));
         }
 
+        /**
+         * @param statefulRules Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statefulRules(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> statefulRules) {
             $.statefulRules = statefulRules;
             return this;
         }
 
+        /**
+         * @param statefulRules Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statefulRules(List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs> statefulRules) {
             return statefulRules(Output.of(statefulRules));
         }
 
+        /**
+         * @param statefulRules Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statefulRules(RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs... statefulRules) {
             return statefulRules(List.of(statefulRules));
         }
 
+        /**
+         * @param statelessRulesAndCustomActions A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statelessRulesAndCustomActions(@Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> statelessRulesAndCustomActions) {
             $.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
             return this;
         }
 
+        /**
+         * @param statelessRulesAndCustomActions A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statelessRulesAndCustomActions(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs statelessRulesAndCustomActions) {
             return statelessRulesAndCustomActions(Output.of(statelessRulesAndCustomActions));
         }

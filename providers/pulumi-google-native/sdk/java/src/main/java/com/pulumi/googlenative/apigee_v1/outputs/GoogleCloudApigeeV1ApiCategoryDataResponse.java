@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudApigeeV1ApiCategoryDataResponse {
     /**
-     * Name of the category.
+     * @return Name of the category.
      * 
      */
     private final String name;
     /**
-     * Name of the portal.
+     * @return Name of the portal.
      * 
      */
     private final String siteId;
     /**
-     * Time the category was last modified in milliseconds since epoch.
+     * @return Time the category was last modified in milliseconds since epoch.
      * 
      */
     private final String updateTime;
@@ -36,23 +36,23 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse {
     }
 
     /**
-     * Name of the category.
+     * @return Name of the category.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Name of the portal.
+     * @return Name of the portal.
      * 
-    */
+     */
     public String siteId() {
         return this.siteId;
     }
     /**
-     * Time the category was last modified in milliseconds since epoch.
+     * @return Time the category was last modified in milliseconds since epoch.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

@@ -20,6 +20,10 @@ public final class SourceDiskEncryptionKeyResponse extends com.pulumi.resources.
     @Import(name="diskEncryptionKey", required=true)
     private CustomerEncryptionKeyResponse diskEncryptionKey;
 
+    /**
+     * @return The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
+     * 
+     */
     public CustomerEncryptionKeyResponse diskEncryptionKey() {
         return this.diskEncryptionKey;
     }
@@ -31,6 +35,10 @@ public final class SourceDiskEncryptionKeyResponse extends com.pulumi.resources.
     @Import(name="sourceDisk", required=true)
     private String sourceDisk;
 
+    /**
+     * @return URL of the disk attached to the source instance. This can be a full or valid partial URL. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk
+     * 
+     */
     public String sourceDisk() {
         return this.sourceDisk;
     }
@@ -60,11 +68,23 @@ public final class SourceDiskEncryptionKeyResponse extends com.pulumi.resources.
             $ = new SourceDiskEncryptionKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskEncryptionKey The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKey(CustomerEncryptionKeyResponse diskEncryptionKey) {
             $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
+        /**
+         * @param sourceDisk URL of the disk attached to the source instance. This can be a full or valid partial URL. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDisk(String sourceDisk) {
             $.sourceDisk = sourceDisk;
             return this;

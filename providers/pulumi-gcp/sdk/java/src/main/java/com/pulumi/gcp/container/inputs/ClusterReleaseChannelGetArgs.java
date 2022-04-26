@@ -25,6 +25,15 @@ public final class ClusterReleaseChannelGetArgs extends com.pulumi.resources.Res
     @Import(name="channel", required=true)
     private Output<String> channel;
 
+    /**
+     * @return The selected release channel.
+     * Accepted values are:
+     * * UNSPECIFIED: Not set.
+     * * RAPID: Weekly upgrade cadence; Early testers and developers who requires new features.
+     * * REGULAR: Multiple per month upgrade cadence; Production users who need features not yet offered in the Stable channel.
+     * * STABLE: Every few months upgrade cadence; Production users who need stability above all else, and for whom frequent upgrades are too risky.
+     * 
+     */
     public Output<String> channel() {
         return this.channel;
     }
@@ -53,11 +62,33 @@ public final class ClusterReleaseChannelGetArgs extends com.pulumi.resources.Res
             $ = new ClusterReleaseChannelGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channel The selected release channel.
+         * Accepted values are:
+         * * UNSPECIFIED: Not set.
+         * * RAPID: Weekly upgrade cadence; Early testers and developers who requires new features.
+         * * REGULAR: Multiple per month upgrade cadence; Production users who need features not yet offered in the Stable channel.
+         * * STABLE: Every few months upgrade cadence; Production users who need stability above all else, and for whom frequent upgrades are too risky.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channel(Output<String> channel) {
             $.channel = channel;
             return this;
         }
 
+        /**
+         * @param channel The selected release channel.
+         * Accepted values are:
+         * * UNSPECIFIED: Not set.
+         * * RAPID: Weekly upgrade cadence; Early testers and developers who requires new features.
+         * * REGULAR: Multiple per month upgrade cadence; Production users who need features not yet offered in the Stable channel.
+         * * STABLE: Every few months upgrade cadence; Production users who need stability above all else, and for whom frequent upgrades are too risky.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channel(String channel) {
             return channel(Output.of(channel));
         }

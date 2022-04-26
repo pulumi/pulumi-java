@@ -13,17 +13,17 @@ import java.util.Objects;
 @CustomType
 public final class CloudTieringFilesNotTieringResponse {
     /**
-     * Array of tiering errors
+     * @return Array of tiering errors
      * 
      */
     private final List<FilesNotTieringErrorResponse> errors;
     /**
-     * Last updated timestamp
+     * @return Last updated timestamp
      * 
      */
     private final String lastUpdatedTimestamp;
     /**
-     * Last cloud tiering result (HResult)
+     * @return Last cloud tiering result (HResult)
      * 
      */
     private final Double totalFileCount;
@@ -39,23 +39,23 @@ public final class CloudTieringFilesNotTieringResponse {
     }
 
     /**
-     * Array of tiering errors
+     * @return Array of tiering errors
      * 
-    */
+     */
     public List<FilesNotTieringErrorResponse> errors() {
         return this.errors;
     }
     /**
-     * Last updated timestamp
+     * @return Last updated timestamp
      * 
-    */
+     */
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
-     * Last cloud tiering result (HResult)
+     * @return Last cloud tiering result (HResult)
      * 
-    */
+     */
     public Double totalFileCount() {
         return this.totalFileCount;
     }

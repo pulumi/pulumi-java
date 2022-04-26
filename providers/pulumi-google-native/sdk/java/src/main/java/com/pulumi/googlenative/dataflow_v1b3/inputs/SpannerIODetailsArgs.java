@@ -26,6 +26,10 @@ public final class SpannerIODetailsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="databaseId")
     private @Nullable Output<String> databaseId;
 
+    /**
+     * @return DatabaseId accessed in the connection.
+     * 
+     */
     public Optional<Output<String>> databaseId() {
         return Optional.ofNullable(this.databaseId);
     }
@@ -37,6 +41,10 @@ public final class SpannerIODetailsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="instanceId")
     private @Nullable Output<String> instanceId;
 
+    /**
+     * @return InstanceId accessed in the connection.
+     * 
+     */
     public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -48,6 +56,10 @@ public final class SpannerIODetailsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return ProjectId accessed in the connection.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -78,29 +90,65 @@ public final class SpannerIODetailsArgs extends com.pulumi.resources.ResourceArg
             $ = new SpannerIODetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseId DatabaseId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseId(@Nullable Output<String> databaseId) {
             $.databaseId = databaseId;
             return this;
         }
 
+        /**
+         * @param databaseId DatabaseId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseId(String databaseId) {
             return databaseId(Output.of(databaseId));
         }
 
+        /**
+         * @param instanceId InstanceId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId InstanceId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param project ProjectId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project ProjectId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

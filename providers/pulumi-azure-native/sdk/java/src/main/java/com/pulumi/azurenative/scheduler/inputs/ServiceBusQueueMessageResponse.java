@@ -24,6 +24,10 @@ public final class ServiceBusQueueMessageResponse extends com.pulumi.resources.I
     @Import(name="authentication")
     private @Nullable ServiceBusAuthenticationResponse authentication;
 
+    /**
+     * @return Gets or sets the Service Bus authentication.
+     * 
+     */
     public Optional<ServiceBusAuthenticationResponse> authentication() {
         return Optional.ofNullable(this.authentication);
     }
@@ -35,6 +39,10 @@ public final class ServiceBusQueueMessageResponse extends com.pulumi.resources.I
     @Import(name="brokeredMessageProperties")
     private @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties;
 
+    /**
+     * @return Gets or sets the brokered message properties.
+     * 
+     */
     public Optional<ServiceBusBrokeredMessagePropertiesResponse> brokeredMessageProperties() {
         return Optional.ofNullable(this.brokeredMessageProperties);
     }
@@ -46,6 +54,10 @@ public final class ServiceBusQueueMessageResponse extends com.pulumi.resources.I
     @Import(name="customMessageProperties")
     private @Nullable Map<String,String> customMessageProperties;
 
+    /**
+     * @return Gets or sets the custom message properties.
+     * 
+     */
     public Optional<Map<String,String>> customMessageProperties() {
         return Optional.ofNullable(this.customMessageProperties);
     }
@@ -57,6 +69,10 @@ public final class ServiceBusQueueMessageResponse extends com.pulumi.resources.I
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return Gets or sets the message.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -68,6 +84,10 @@ public final class ServiceBusQueueMessageResponse extends com.pulumi.resources.I
     @Import(name="namespace")
     private @Nullable String namespace;
 
+    /**
+     * @return Gets or sets the namespace.
+     * 
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -79,6 +99,10 @@ public final class ServiceBusQueueMessageResponse extends com.pulumi.resources.I
     @Import(name="queueName")
     private @Nullable String queueName;
 
+    /**
+     * @return Gets or sets the queue name.
+     * 
+     */
     public Optional<String> queueName() {
         return Optional.ofNullable(this.queueName);
     }
@@ -90,6 +114,10 @@ public final class ServiceBusQueueMessageResponse extends com.pulumi.resources.I
     @Import(name="transportType")
     private @Nullable String transportType;
 
+    /**
+     * @return Gets or sets the transport type.
+     * 
+     */
     public Optional<String> transportType() {
         return Optional.ofNullable(this.transportType);
     }
@@ -124,36 +152,78 @@ public final class ServiceBusQueueMessageResponse extends com.pulumi.resources.I
             $ = new ServiceBusQueueMessageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authentication Gets or sets the Service Bus authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(@Nullable ServiceBusAuthenticationResponse authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param brokeredMessageProperties Gets or sets the brokered message properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder brokeredMessageProperties(@Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties) {
             $.brokeredMessageProperties = brokeredMessageProperties;
             return this;
         }
 
+        /**
+         * @param customMessageProperties Gets or sets the custom message properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customMessageProperties(@Nullable Map<String,String> customMessageProperties) {
             $.customMessageProperties = customMessageProperties;
             return this;
         }
 
+        /**
+         * @param message Gets or sets the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param namespace Gets or sets the namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable String namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param queueName Gets or sets the queue name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueName(@Nullable String queueName) {
             $.queueName = queueName;
             return this;
         }
 
+        /**
+         * @param transportType Gets or sets the transport type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportType(@Nullable String transportType) {
             $.transportType = transportType;
             return this;

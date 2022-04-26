@@ -26,6 +26,10 @@ public final class MonitoringScheduleNetworkConfig extends com.pulumi.resources.
     @Import(name="enableInterContainerTrafficEncryption")
     private @Nullable Boolean enableInterContainerTrafficEncryption;
 
+    /**
+     * @return Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
+     * 
+     */
     public Optional<Boolean> enableInterContainerTrafficEncryption() {
         return Optional.ofNullable(this.enableInterContainerTrafficEncryption);
     }
@@ -37,6 +41,10 @@ public final class MonitoringScheduleNetworkConfig extends com.pulumi.resources.
     @Import(name="enableNetworkIsolation")
     private @Nullable Boolean enableNetworkIsolation;
 
+    /**
+     * @return Whether to allow inbound and outbound network calls to and from the containers used for the processing job.
+     * 
+     */
     public Optional<Boolean> enableNetworkIsolation() {
         return Optional.ofNullable(this.enableNetworkIsolation);
     }
@@ -74,11 +82,23 @@ public final class MonitoringScheduleNetworkConfig extends com.pulumi.resources.
             $ = new MonitoringScheduleNetworkConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableInterContainerTrafficEncryption Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableInterContainerTrafficEncryption(@Nullable Boolean enableInterContainerTrafficEncryption) {
             $.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
             return this;
         }
 
+        /**
+         * @param enableNetworkIsolation Whether to allow inbound and outbound network calls to and from the containers used for the processing job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
             $.enableNetworkIsolation = enableNetworkIsolation;
             return this;

@@ -26,6 +26,10 @@ public final class AutoScalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="mechanism", required=true)
     private Output<AddRemoveReplicaScalingMechanismArgs> mechanism;
 
+    /**
+     * @return The mechanism that is used to scale when auto scaling operation is invoked.
+     * 
+     */
     public Output<AddRemoveReplicaScalingMechanismArgs> mechanism() {
         return this.mechanism;
     }
@@ -37,6 +41,10 @@ public final class AutoScalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the auto scaling policy.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -48,6 +56,10 @@ public final class AutoScalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="trigger", required=true)
     private Output<AverageLoadScalingTriggerArgs> trigger;
 
+    /**
+     * @return Determines when auto scaling operation will be invoked.
+     * 
+     */
     public Output<AverageLoadScalingTriggerArgs> trigger() {
         return this.trigger;
     }
@@ -78,29 +90,65 @@ public final class AutoScalingPolicyArgs extends com.pulumi.resources.ResourceAr
             $ = new AutoScalingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mechanism The mechanism that is used to scale when auto scaling operation is invoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mechanism(Output<AddRemoveReplicaScalingMechanismArgs> mechanism) {
             $.mechanism = mechanism;
             return this;
         }
 
+        /**
+         * @param mechanism The mechanism that is used to scale when auto scaling operation is invoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mechanism(AddRemoveReplicaScalingMechanismArgs mechanism) {
             return mechanism(Output.of(mechanism));
         }
 
+        /**
+         * @param name The name of the auto scaling policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the auto scaling policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param trigger Determines when auto scaling operation will be invoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(Output<AverageLoadScalingTriggerArgs> trigger) {
             $.trigger = trigger;
             return this;
         }
 
+        /**
+         * @param trigger Determines when auto scaling operation will be invoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(AverageLoadScalingTriggerArgs trigger) {
             return trigger(Output.of(trigger));
         }

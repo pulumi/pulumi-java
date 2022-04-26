@@ -22,6 +22,10 @@ public final class GetApiIssueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="apiId", required=true)
     private String apiId;
 
+    /**
+     * @return API identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public String apiId() {
         return this.apiId;
     }
@@ -33,6 +37,10 @@ public final class GetApiIssueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expandCommentsAttachments")
     private @Nullable Boolean expandCommentsAttachments;
 
+    /**
+     * @return Expand the comment attachments.
+     * 
+     */
     public Optional<Boolean> expandCommentsAttachments() {
         return Optional.ofNullable(this.expandCommentsAttachments);
     }
@@ -44,6 +52,10 @@ public final class GetApiIssueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="issueId", required=true)
     private String issueId;
 
+    /**
+     * @return Issue identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public String issueId() {
         return this.issueId;
     }
@@ -55,6 +67,10 @@ public final class GetApiIssueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -66,6 +82,10 @@ public final class GetApiIssueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -98,26 +118,56 @@ public final class GetApiIssueArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetApiIssueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId API identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param expandCommentsAttachments Expand the comment attachments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expandCommentsAttachments(@Nullable Boolean expandCommentsAttachments) {
             $.expandCommentsAttachments = expandCommentsAttachments;
             return this;
         }
 
+        /**
+         * @param issueId Issue identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issueId(String issueId) {
             $.issueId = issueId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

@@ -19,6 +19,10 @@ public final class GetDataCollectionEndpointArgs extends com.pulumi.resources.In
     @Import(name="dataCollectionEndpointName", required=true)
     private String dataCollectionEndpointName;
 
+    /**
+     * @return The name of the data collection endpoint. The name is case insensitive.
+     * 
+     */
     public String dataCollectionEndpointName() {
         return this.dataCollectionEndpointName;
     }
@@ -30,6 +34,10 @@ public final class GetDataCollectionEndpointArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetDataCollectionEndpointArgs extends com.pulumi.resources.In
             $ = new GetDataCollectionEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataCollectionEndpointName The name of the data collection endpoint. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCollectionEndpointName(String dataCollectionEndpointName) {
             $.dataCollectionEndpointName = dataCollectionEndpointName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

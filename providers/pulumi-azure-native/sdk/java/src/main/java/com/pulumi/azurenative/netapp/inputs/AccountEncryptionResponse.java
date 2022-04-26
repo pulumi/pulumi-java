@@ -25,6 +25,10 @@ public final class AccountEncryptionResponse extends com.pulumi.resources.Invoke
     @Import(name="keySource")
     private @Nullable String keySource;
 
+    /**
+     * @return Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;.
+     * 
+     */
     public Optional<String> keySource() {
         return Optional.ofNullable(this.keySource);
     }
@@ -53,6 +57,12 @@ public final class AccountEncryptionResponse extends com.pulumi.resources.Invoke
             $ = new AccountEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keySource Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(@Nullable String keySource) {
             $.keySource = keySource;
             return this;

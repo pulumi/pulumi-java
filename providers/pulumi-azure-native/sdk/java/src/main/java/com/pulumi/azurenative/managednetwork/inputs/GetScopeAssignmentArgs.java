@@ -19,6 +19,10 @@ public final class GetScopeAssignmentArgs extends com.pulumi.resources.InvokeArg
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return The base resource of the scope assignment.
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -30,6 +34,10 @@ public final class GetScopeAssignmentArgs extends com.pulumi.resources.InvokeArg
     @Import(name="scopeAssignmentName", required=true)
     private String scopeAssignmentName;
 
+    /**
+     * @return The name of the scope assignment to get.
+     * 
+     */
     public String scopeAssignmentName() {
         return this.scopeAssignmentName;
     }
@@ -59,11 +67,23 @@ public final class GetScopeAssignmentArgs extends com.pulumi.resources.InvokeArg
             $ = new GetScopeAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scope The base resource of the scope assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scopeAssignmentName The name of the scope assignment to get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeAssignmentName(String scopeAssignmentName) {
             $.scopeAssignmentName = scopeAssignmentName;
             return this;

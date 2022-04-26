@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PrivateIPAddressResponse {
     /**
-     * Private IP address bound to the availability group listener.
+     * @return Private IP address bound to the availability group listener.
      * 
      */
     private final @Nullable String ipAddress;
     /**
-     * Subnet used to include private IP.
+     * @return Subnet used to include private IP.
      * 
      */
     private final @Nullable String subnetResourceId;
@@ -31,16 +31,16 @@ public final class PrivateIPAddressResponse {
     }
 
     /**
-     * Private IP address bound to the availability group listener.
+     * @return Private IP address bound to the availability group listener.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * Subnet used to include private IP.
+     * @return Subnet used to include private IP.
      * 
-    */
+     */
     public Optional<String> subnetResourceId() {
         return Optional.ofNullable(this.subnetResourceId);
     }

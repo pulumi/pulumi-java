@@ -26,6 +26,10 @@ public final class EdifactMessageFilterArgs extends com.pulumi.resources.Resourc
     @Import(name="messageFilterType", required=true)
     private Output<Either<String,MessageFilterType>> messageFilterType;
 
+    /**
+     * @return The message filter type.
+     * 
+     */
     public Output<Either<String,MessageFilterType>> messageFilterType() {
         return this.messageFilterType;
     }
@@ -54,19 +58,43 @@ public final class EdifactMessageFilterArgs extends com.pulumi.resources.Resourc
             $ = new EdifactMessageFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messageFilterType The message filter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilterType(Output<Either<String,MessageFilterType>> messageFilterType) {
             $.messageFilterType = messageFilterType;
             return this;
         }
 
+        /**
+         * @param messageFilterType The message filter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilterType(Either<String,MessageFilterType> messageFilterType) {
             return messageFilterType(Output.of(messageFilterType));
         }
 
+        /**
+         * @param messageFilterType The message filter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilterType(String messageFilterType) {
             return messageFilterType(Either.ofLeft(messageFilterType));
         }
 
+        /**
+         * @param messageFilterType The message filter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilterType(MessageFilterType messageFilterType) {
             return messageFilterType(Either.ofRight(messageFilterType));
         }

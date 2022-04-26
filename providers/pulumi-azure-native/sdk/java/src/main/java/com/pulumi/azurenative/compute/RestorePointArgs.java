@@ -24,6 +24,10 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="excludeDisks")
     private @Nullable Output<List<ApiEntityReferenceArgs>> excludeDisks;
 
+    /**
+     * @return List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
+     * 
+     */
     public Optional<Output<List<ApiEntityReferenceArgs>>> excludeDisks() {
         return Optional.ofNullable(this.excludeDisks);
     }
@@ -35,6 +39,10 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -46,6 +54,10 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restorePointCollectionName", required=true)
     private Output<String> restorePointCollectionName;
 
+    /**
+     * @return The name of the restore point collection.
+     * 
+     */
     public Output<String> restorePointCollectionName() {
         return this.restorePointCollectionName;
     }
@@ -57,6 +69,10 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restorePointName")
     private @Nullable Output<String> restorePointName;
 
+    /**
+     * @return The name of the restore point.
+     * 
+     */
     public Optional<Output<String>> restorePointName() {
         return Optional.ofNullable(this.restorePointName);
     }
@@ -68,6 +84,10 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeCreated")
     private @Nullable Output<String> timeCreated;
 
+    /**
+     * @return Gets the creation time of the restore point.
+     * 
+     */
     public Optional<Output<String>> timeCreated() {
         return Optional.ofNullable(this.timeCreated);
     }
@@ -100,51 +120,117 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RestorePointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludeDisks List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeDisks(@Nullable Output<List<ApiEntityReferenceArgs>> excludeDisks) {
             $.excludeDisks = excludeDisks;
             return this;
         }
 
+        /**
+         * @param excludeDisks List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeDisks(List<ApiEntityReferenceArgs> excludeDisks) {
             return excludeDisks(Output.of(excludeDisks));
         }
 
+        /**
+         * @param excludeDisks List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeDisks(ApiEntityReferenceArgs... excludeDisks) {
             return excludeDisks(List.of(excludeDisks));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param restorePointCollectionName The name of the restore point collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorePointCollectionName(Output<String> restorePointCollectionName) {
             $.restorePointCollectionName = restorePointCollectionName;
             return this;
         }
 
+        /**
+         * @param restorePointCollectionName The name of the restore point collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorePointCollectionName(String restorePointCollectionName) {
             return restorePointCollectionName(Output.of(restorePointCollectionName));
         }
 
+        /**
+         * @param restorePointName The name of the restore point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorePointName(@Nullable Output<String> restorePointName) {
             $.restorePointName = restorePointName;
             return this;
         }
 
+        /**
+         * @param restorePointName The name of the restore point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorePointName(String restorePointName) {
             return restorePointName(Output.of(restorePointName));
         }
 
+        /**
+         * @param timeCreated Gets the creation time of the restore point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeCreated(@Nullable Output<String> timeCreated) {
             $.timeCreated = timeCreated;
             return this;
         }
 
+        /**
+         * @param timeCreated Gets the creation time of the restore point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeCreated(String timeCreated) {
             return timeCreated(Output.of(timeCreated));
         }

@@ -24,6 +24,10 @@ public final class CloudRunConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="disabled", required=true)
     private Boolean disabled;
 
+    /**
+     * @return Whether Cloud Run addon is enabled for this cluster.
+     * 
+     */
     public Boolean disabled() {
         return this.disabled;
     }
@@ -35,6 +39,10 @@ public final class CloudRunConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="loadBalancerType", required=true)
     private String loadBalancerType;
 
+    /**
+     * @return Which load balancer type is installed for Cloud Run.
+     * 
+     */
     public String loadBalancerType() {
         return this.loadBalancerType;
     }
@@ -64,11 +72,23 @@ public final class CloudRunConfigResponse extends com.pulumi.resources.InvokeArg
             $ = new CloudRunConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disabled Whether Cloud Run addon is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param loadBalancerType Which load balancer type is installed for Cloud Run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerType(String loadBalancerType) {
             $.loadBalancerType = loadBalancerType;
             return this;

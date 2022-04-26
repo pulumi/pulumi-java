@@ -26,6 +26,10 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends com.pulumi.resou
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
+    /**
+     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * 
+     */
     public Optional<Output<String>> fsType() {
         return Optional.ofNullable(this.fsType);
     }
@@ -37,6 +41,10 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends com.pulumi.resou
     @Import(name="pdID", required=true)
     private Output<String> pdID;
 
+    /**
+     * @return ID that identifies Photon Controller persistent disk
+     * 
+     */
     public Output<String> pdID() {
         return this.pdID;
     }
@@ -66,20 +74,44 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends com.pulumi.resou
             $ = new PhotonPersistentDiskVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(@Nullable Output<String> fsType) {
             $.fsType = fsType;
             return this;
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(String fsType) {
             return fsType(Output.of(fsType));
         }
 
+        /**
+         * @param pdID ID that identifies Photon Controller persistent disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder pdID(Output<String> pdID) {
             $.pdID = pdID;
             return this;
         }
 
+        /**
+         * @param pdID ID that identifies Photon Controller persistent disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder pdID(String pdID) {
             return pdID(Output.of(pdID));
         }

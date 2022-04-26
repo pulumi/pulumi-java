@@ -23,6 +23,10 @@ public final class DatabaseAccountConnectionStringResponse extends com.pulumi.re
     @Import(name="connectionString", required=true)
     private String connectionString;
 
+    /**
+     * @return Value of the connection string
+     * 
+     */
     public String connectionString() {
         return this.connectionString;
     }
@@ -34,6 +38,10 @@ public final class DatabaseAccountConnectionStringResponse extends com.pulumi.re
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Description of the connection string
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -63,11 +71,23 @@ public final class DatabaseAccountConnectionStringResponse extends com.pulumi.re
             $ = new DatabaseAccountConnectionStringResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionString Value of the connection string
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(String connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param description Description of the connection string
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;

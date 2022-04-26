@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class StorageLensCloudWatchMetrics {
     /**
-     * Specifies whether CloudWatch metrics are enabled or disabled.
+     * @return Specifies whether CloudWatch metrics are enabled or disabled.
      * 
      */
     private final Boolean isEnabled;
@@ -21,9 +21,9 @@ public final class StorageLensCloudWatchMetrics {
     }
 
     /**
-     * Specifies whether CloudWatch metrics are enabled or disabled.
+     * @return Specifies whether CloudWatch metrics are enabled or disabled.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }

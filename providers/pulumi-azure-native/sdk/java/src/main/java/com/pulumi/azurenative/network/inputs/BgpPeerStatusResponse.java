@@ -24,6 +24,10 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="asn", required=true)
     private Double asn;
 
+    /**
+     * @return The autonomous system number of the remote BGP peer.
+     * 
+     */
     public Double asn() {
         return this.asn;
     }
@@ -35,6 +39,10 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="connectedDuration", required=true)
     private String connectedDuration;
 
+    /**
+     * @return For how long the peering has been up.
+     * 
+     */
     public String connectedDuration() {
         return this.connectedDuration;
     }
@@ -46,6 +54,10 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="localAddress", required=true)
     private String localAddress;
 
+    /**
+     * @return The virtual network gateway&#39;s local address.
+     * 
+     */
     public String localAddress() {
         return this.localAddress;
     }
@@ -57,6 +69,10 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="messagesReceived", required=true)
     private Double messagesReceived;
 
+    /**
+     * @return The number of BGP messages received.
+     * 
+     */
     public Double messagesReceived() {
         return this.messagesReceived;
     }
@@ -68,6 +84,10 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="messagesSent", required=true)
     private Double messagesSent;
 
+    /**
+     * @return The number of BGP messages sent.
+     * 
+     */
     public Double messagesSent() {
         return this.messagesSent;
     }
@@ -79,6 +99,10 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="neighbor", required=true)
     private String neighbor;
 
+    /**
+     * @return The remote BGP peer.
+     * 
+     */
     public String neighbor() {
         return this.neighbor;
     }
@@ -90,6 +114,10 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="routesReceived", required=true)
     private Double routesReceived;
 
+    /**
+     * @return The number of routes learned from this peer.
+     * 
+     */
     public Double routesReceived() {
         return this.routesReceived;
     }
@@ -101,6 +129,10 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The BGP peer state.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -136,41 +168,89 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
             $ = new BgpPeerStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param asn The autonomous system number of the remote BGP peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asn(Double asn) {
             $.asn = asn;
             return this;
         }
 
+        /**
+         * @param connectedDuration For how long the peering has been up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectedDuration(String connectedDuration) {
             $.connectedDuration = connectedDuration;
             return this;
         }
 
+        /**
+         * @param localAddress The virtual network gateway&#39;s local address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localAddress(String localAddress) {
             $.localAddress = localAddress;
             return this;
         }
 
+        /**
+         * @param messagesReceived The number of BGP messages received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messagesReceived(Double messagesReceived) {
             $.messagesReceived = messagesReceived;
             return this;
         }
 
+        /**
+         * @param messagesSent The number of BGP messages sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messagesSent(Double messagesSent) {
             $.messagesSent = messagesSent;
             return this;
         }
 
+        /**
+         * @param neighbor The remote BGP peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder neighbor(String neighbor) {
             $.neighbor = neighbor;
             return this;
         }
 
+        /**
+         * @param routesReceived The number of routes learned from this peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routesReceived(Double routesReceived) {
             $.routesReceived = routesReceived;
             return this;
         }
 
+        /**
+         * @param state The BGP peer state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

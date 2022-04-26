@@ -24,6 +24,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the registry. If description is not provided, there will not be any default value for this.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the registry to be created of max length of 255, and may only contain letters, numbers, hyphen, underscore, dollar sign, or hash mark.  No whitespace.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<RegistryTagArgs>> tags;
 
+    /**
+     * @return List of tags to tag the Registry
+     * 
+     */
     public Optional<Output<List<RegistryTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -76,33 +88,75 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RegistryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of the registry. If description is not provided, there will not be any default value for this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the registry. If description is not provided, there will not be any default value for this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the registry to be created of max length of 255, and may only contain letters, numbers, hyphen, underscore, dollar sign, or hash mark.  No whitespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the registry to be created of max length of 255, and may only contain letters, numbers, hyphen, underscore, dollar sign, or hash mark.  No whitespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags List of tags to tag the Registry
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<RegistryTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags List of tags to tag the Registry
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<RegistryTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags List of tags to tag the Registry
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(RegistryTagArgs... tags) {
             return tags(List.of(tags));
         }

@@ -29,6 +29,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operator")
     private @Nullable Output<Either<String,Operator>> operator;
 
+    /**
+     * @return operator for a given condition
+     * 
+     */
     public Optional<Output<Either<String,Operator>>> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -40,6 +44,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="values")
     private @Nullable Output<List<String>> values;
 
+    /**
+     * @return list of values to match for a given condition.
+     * 
+     */
     public Optional<Output<List<String>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -69,32 +77,74 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operator operator for a given condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable Output<Either<String,Operator>> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator operator for a given condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Either<String,Operator> operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param operator operator for a given condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Either.ofLeft(operator));
         }
 
+        /**
+         * @param operator operator for a given condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Operator operator) {
             return operator(Either.ofRight(operator));
         }
 
+        /**
+         * @param values list of values to match for a given condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values list of values to match for a given condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values list of values to match for a given condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

@@ -33,6 +33,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="accessPolicies")
     private @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies;
 
+    /**
+     * @return The access policies of the service instance.
+     * 
+     */
     public Optional<List<ServiceAccessPolicyEntryResponse>> accessPolicies() {
         return Optional.ofNullable(this.accessPolicies);
     }
@@ -44,6 +48,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="acrConfiguration")
     private @Nullable ServiceAcrConfigurationInfoResponse acrConfiguration;
 
+    /**
+     * @return The azure container registry settings used for convert data operation of the service instance.
+     * 
+     */
     public Optional<ServiceAcrConfigurationInfoResponse> acrConfiguration() {
         return Optional.ofNullable(this.acrConfiguration);
     }
@@ -55,6 +63,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="authenticationConfiguration")
     private @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration;
 
+    /**
+     * @return The authentication configuration for the service instance.
+     * 
+     */
     public Optional<ServiceAuthenticationConfigurationInfoResponse> authenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
@@ -66,6 +78,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="corsConfiguration")
     private @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration;
 
+    /**
+     * @return The settings for the CORS configuration of the service instance.
+     * 
+     */
     public Optional<ServiceCorsConfigurationInfoResponse> corsConfiguration() {
         return Optional.ofNullable(this.corsConfiguration);
     }
@@ -77,6 +93,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="cosmosDbConfiguration")
     private @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration;
 
+    /**
+     * @return The settings for the Cosmos DB database backing the service.
+     * 
+     */
     public Optional<ServiceCosmosDbConfigurationInfoResponse> cosmosDbConfiguration() {
         return Optional.ofNullable(this.cosmosDbConfiguration);
     }
@@ -88,6 +108,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="exportConfiguration")
     private @Nullable ServiceExportConfigurationInfoResponse exportConfiguration;
 
+    /**
+     * @return The settings for the export operation of the service instance.
+     * 
+     */
     public Optional<ServiceExportConfigurationInfoResponse> exportConfiguration() {
         return Optional.ofNullable(this.exportConfiguration);
     }
@@ -99,6 +123,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="privateEndpointConnections")
     private @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
+    /**
+     * @return The list of private endpoint connections that are set up for this resource.
+     * 
+     */
     public Optional<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return Optional.ofNullable(this.privateEndpointConnections);
     }
@@ -110,6 +138,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -121,6 +153,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="publicNetworkAccess")
     private @Nullable String publicNetworkAccess;
 
+    /**
+     * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * 
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -157,54 +193,120 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
             $ = new ServicesPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPolicies The access policies of the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(@Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies) {
             $.accessPolicies = accessPolicies;
             return this;
         }
 
+        /**
+         * @param accessPolicies The access policies of the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(ServiceAccessPolicyEntryResponse... accessPolicies) {
             return accessPolicies(List.of(accessPolicies));
         }
 
+        /**
+         * @param acrConfiguration The azure container registry settings used for convert data operation of the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acrConfiguration(@Nullable ServiceAcrConfigurationInfoResponse acrConfiguration) {
             $.acrConfiguration = acrConfiguration;
             return this;
         }
 
+        /**
+         * @param authenticationConfiguration The authentication configuration for the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationConfiguration(@Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration) {
             $.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
+        /**
+         * @param corsConfiguration The settings for the CORS configuration of the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsConfiguration(@Nullable ServiceCorsConfigurationInfoResponse corsConfiguration) {
             $.corsConfiguration = corsConfiguration;
             return this;
         }
 
+        /**
+         * @param cosmosDbConfiguration The settings for the Cosmos DB database backing the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cosmosDbConfiguration(@Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration) {
             $.cosmosDbConfiguration = cosmosDbConfiguration;
             return this;
         }
 
+        /**
+         * @param exportConfiguration The settings for the export operation of the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportConfiguration(@Nullable ServiceExportConfigurationInfoResponse exportConfiguration) {
             $.exportConfiguration = exportConfiguration;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections The list of private endpoint connections that are set up for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections The list of private endpoint connections that are set up for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
 
+        /**
+         * @param provisioningState The provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;

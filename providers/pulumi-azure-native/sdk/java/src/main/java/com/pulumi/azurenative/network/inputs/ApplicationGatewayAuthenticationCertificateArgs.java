@@ -26,6 +26,10 @@ public final class ApplicationGatewayAuthenticationCertificateArgs extends com.p
     @Import(name="data")
     private @Nullable Output<String> data;
 
+    /**
+     * @return Certificate public data.
+     * 
+     */
     public Optional<Output<String>> data() {
         return Optional.ofNullable(this.data);
     }
@@ -37,6 +41,10 @@ public final class ApplicationGatewayAuthenticationCertificateArgs extends com.p
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -48,6 +56,10 @@ public final class ApplicationGatewayAuthenticationCertificateArgs extends com.p
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the authentication certificate that is unique within an Application Gateway.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -78,29 +90,65 @@ public final class ApplicationGatewayAuthenticationCertificateArgs extends com.p
             $ = new ApplicationGatewayAuthenticationCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param data Certificate public data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(@Nullable Output<String> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data Certificate public data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             return data(Output.of(data));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name of the authentication certificate that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the authentication certificate that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

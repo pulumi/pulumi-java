@@ -23,6 +23,10 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends com.pulumi
     @Import(name="instanceProperties")
     private @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
 
+    /**
+     * @return Properties of the SKU instances being reserved.
+     * 
+     */
     public Optional<Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs>> instanceProperties() {
         return Optional.ofNullable(this.instanceProperties);
     }
@@ -34,6 +38,10 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends com.pulumi
     @Import(name="totalCount")
     private @Nullable Output<String> totalCount;
 
+    /**
+     * @return Total number of instances for which capacity assurance is requested at a future time period.
+     * 
+     */
     public Optional<Output<String>> totalCount() {
         return Optional.ofNullable(this.totalCount);
     }
@@ -63,20 +71,44 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends com.pulumi
             $ = new FutureReservationSpecificSKUPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceProperties Properties of the SKU instances being reserved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceProperties(@Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
             $.instanceProperties = instanceProperties;
             return this;
         }
 
+        /**
+         * @param instanceProperties Properties of the SKU instances being reserved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceProperties(AllocationSpecificSKUAllocationReservedInstancePropertiesArgs instanceProperties) {
             return instanceProperties(Output.of(instanceProperties));
         }
 
+        /**
+         * @param totalCount Total number of instances for which capacity assurance is requested at a future time period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalCount(@Nullable Output<String> totalCount) {
             $.totalCount = totalCount;
             return this;
         }
 
+        /**
+         * @param totalCount Total number of instances for which capacity assurance is requested at a future time period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalCount(String totalCount) {
             return totalCount(Output.of(totalCount));
         }

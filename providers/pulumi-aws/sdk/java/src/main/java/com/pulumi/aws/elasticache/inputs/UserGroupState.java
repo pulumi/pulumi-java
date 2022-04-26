@@ -31,6 +31,10 @@ public final class UserGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="engine")
     private @Nullable Output<String> engine;
 
+    /**
+     * @return The current supported value is `REDIS`.
+     * 
+     */
     public Optional<Output<String>> engine() {
         return Optional.ofNullable(this.engine);
     }
@@ -56,6 +60,10 @@ public final class UserGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userGroupId")
     private @Nullable Output<String> userGroupId;
 
+    /**
+     * @return The ID of the user group.
+     * 
+     */
     public Optional<Output<String>> userGroupId() {
         return Optional.ofNullable(this.userGroupId);
     }
@@ -67,6 +75,10 @@ public final class UserGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userIds")
     private @Nullable Output<List<String>> userIds;
 
+    /**
+     * @return The list of user IDs that belong to the user group.
+     * 
+     */
     public Optional<Output<List<String>>> userIds() {
         return Optional.ofNullable(this.userIds);
     }
@@ -109,11 +121,23 @@ public final class UserGroupState extends com.pulumi.resources.ResourceArgs {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param engine The current supported value is `REDIS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(@Nullable Output<String> engine) {
             $.engine = engine;
             return this;
         }
 
+        /**
+         * @param engine The current supported value is `REDIS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(String engine) {
             return engine(Output.of(engine));
         }
@@ -136,24 +160,54 @@ public final class UserGroupState extends com.pulumi.resources.ResourceArgs {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param userGroupId The ID of the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userGroupId(@Nullable Output<String> userGroupId) {
             $.userGroupId = userGroupId;
             return this;
         }
 
+        /**
+         * @param userGroupId The ID of the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userGroupId(String userGroupId) {
             return userGroupId(Output.of(userGroupId));
         }
 
+        /**
+         * @param userIds The list of user IDs that belong to the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userIds(@Nullable Output<List<String>> userIds) {
             $.userIds = userIds;
             return this;
         }
 
+        /**
+         * @param userIds The list of user IDs that belong to the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userIds(List<String> userIds) {
             return userIds(Output.of(userIds));
         }
 
+        /**
+         * @param userIds The list of user IDs that belong to the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userIds(String... userIds) {
             return userIds(List.of(userIds));
         }

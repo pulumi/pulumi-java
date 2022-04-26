@@ -23,6 +23,10 @@ public final class CloudFunctionEndpointResponse extends com.pulumi.resources.In
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return A [Cloud function](https://cloud.google.com/functions) name.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -51,6 +55,12 @@ public final class CloudFunctionEndpointResponse extends com.pulumi.resources.In
             $ = new CloudFunctionEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param uri A [Cloud function](https://cloud.google.com/functions) name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

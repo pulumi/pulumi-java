@@ -31,6 +31,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions")
     private @Nullable Output<List<MetricAlertActionArgs>> actions;
 
+    /**
+     * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+     * 
+     */
     public Optional<Output<List<MetricAlertActionArgs>>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -42,6 +46,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoMitigate")
     private @Nullable Output<Boolean> autoMitigate;
 
+    /**
+     * @return the flag that indicates whether the alert should be auto resolved or not. The default is true.
+     * 
+     */
     public Optional<Output<Boolean>> autoMitigate() {
         return Optional.ofNullable(this.autoMitigate);
     }
@@ -53,6 +61,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="criteria", required=true)
     private Output<Object> criteria;
 
+    /**
+     * @return defines the specific alert criteria information.
+     * 
+     */
     public Output<Object> criteria() {
         return this.criteria;
     }
@@ -64,6 +76,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return the description of the metric alert that will be included in the alert email.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -75,6 +91,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return the flag that indicates whether the metric alert is enabled.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -86,6 +106,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="evaluationFrequency", required=true)
     private Output<String> evaluationFrequency;
 
+    /**
+     * @return how often the metric alert is evaluated represented in ISO 8601 duration format.
+     * 
+     */
     public Output<String> evaluationFrequency() {
         return this.evaluationFrequency;
     }
@@ -97,6 +121,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -108,6 +136,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -119,6 +151,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
     private @Nullable Output<String> ruleName;
 
+    /**
+     * @return The name of the rule.
+     * 
+     */
     public Optional<Output<String>> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
@@ -130,6 +166,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scopes", required=true)
     private Output<List<String>> scopes;
 
+    /**
+     * @return the list of resource id&#39;s that this metric alert is scoped to.
+     * 
+     */
     public Output<List<String>> scopes() {
         return this.scopes;
     }
@@ -141,6 +181,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="severity", required=true)
     private Output<Integer> severity;
 
+    /**
+     * @return Alert severity {0, 1, 2, 3, 4}
+     * 
+     */
     public Output<Integer> severity() {
         return this.severity;
     }
@@ -152,6 +196,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -163,6 +211,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetResourceRegion")
     private @Nullable Output<String> targetResourceRegion;
 
+    /**
+     * @return the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
+     * 
+     */
     public Optional<Output<String>> targetResourceRegion() {
         return Optional.ofNullable(this.targetResourceRegion);
     }
@@ -174,6 +226,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetResourceType")
     private @Nullable Output<String> targetResourceType;
 
+    /**
+     * @return the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
+     * 
+     */
     public Optional<Output<String>> targetResourceType() {
         return Optional.ofNullable(this.targetResourceType);
     }
@@ -185,6 +241,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="windowSize", required=true)
     private Output<String> windowSize;
 
+    /**
+     * @return the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.
+     * 
+     */
     public Output<String> windowSize() {
         return this.windowSize;
     }
@@ -227,145 +287,337 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MetricAlertArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable Output<List<MetricAlertActionArgs>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<MetricAlertActionArgs> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(MetricAlertActionArgs... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param autoMitigate the flag that indicates whether the alert should be auto resolved or not. The default is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoMitigate(@Nullable Output<Boolean> autoMitigate) {
             $.autoMitigate = autoMitigate;
             return this;
         }
 
+        /**
+         * @param autoMitigate the flag that indicates whether the alert should be auto resolved or not. The default is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoMitigate(Boolean autoMitigate) {
             return autoMitigate(Output.of(autoMitigate));
         }
 
+        /**
+         * @param criteria defines the specific alert criteria information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(Output<Object> criteria) {
             $.criteria = criteria;
             return this;
         }
 
+        /**
+         * @param criteria defines the specific alert criteria information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(Object criteria) {
             return criteria(Output.of(criteria));
         }
 
+        /**
+         * @param description the description of the metric alert that will be included in the alert email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description the description of the metric alert that will be included in the alert email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enabled the flag that indicates whether the metric alert is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled the flag that indicates whether the metric alert is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param evaluationFrequency how often the metric alert is evaluated represented in ISO 8601 duration format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationFrequency(Output<String> evaluationFrequency) {
             $.evaluationFrequency = evaluationFrequency;
             return this;
         }
 
+        /**
+         * @param evaluationFrequency how often the metric alert is evaluated represented in ISO 8601 duration format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationFrequency(String evaluationFrequency) {
             return evaluationFrequency(Output.of(evaluationFrequency));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleName The name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(@Nullable Output<String> ruleName) {
             $.ruleName = ruleName;
             return this;
         }
 
+        /**
+         * @param ruleName The name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             return ruleName(Output.of(ruleName));
         }
 
+        /**
+         * @param scopes the list of resource id&#39;s that this metric alert is scoped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(Output<List<String>> scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param scopes the list of resource id&#39;s that this metric alert is scoped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(List<String> scopes) {
             return scopes(Output.of(scopes));
         }
 
+        /**
+         * @param scopes the list of resource id&#39;s that this metric alert is scoped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }
 
+        /**
+         * @param severity Alert severity {0, 1, 2, 3, 4}
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Output<Integer> severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param severity Alert severity {0, 1, 2, 3, 4}
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Integer severity) {
             return severity(Output.of(severity));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param targetResourceRegion the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceRegion(@Nullable Output<String> targetResourceRegion) {
             $.targetResourceRegion = targetResourceRegion;
             return this;
         }
 
+        /**
+         * @param targetResourceRegion the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceRegion(String targetResourceRegion) {
             return targetResourceRegion(Output.of(targetResourceRegion));
         }
 
+        /**
+         * @param targetResourceType the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceType(@Nullable Output<String> targetResourceType) {
             $.targetResourceType = targetResourceType;
             return this;
         }
 
+        /**
+         * @param targetResourceType the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceType(String targetResourceType) {
             return targetResourceType(Output.of(targetResourceType));
         }
 
+        /**
+         * @param windowSize the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowSize(Output<String> windowSize) {
             $.windowSize = windowSize;
             return this;
         }
 
+        /**
+         * @param windowSize the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowSize(String windowSize) {
             return windowSize(Output.of(windowSize));
         }

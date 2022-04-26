@@ -109,6 +109,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
     @Import(name="environment")
     private @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> environment;
 
+    /**
+     * @return The environment variables to pass to a container
+     * 
+     */
     public Optional<Output<List<TaskDefinitionKeyValuePairArgs>>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -120,6 +124,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
     @Import(name="environmentFiles")
     private @Nullable Output<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles;
 
+    /**
+     * @return The list of one or more files that contain the environment variables to pass to a container
+     * 
+     */
     public Optional<Output<List<TaskDefinitionEnvironmentFileArgs>>> environmentFiles() {
         return Optional.ofNullable(this.environmentFiles);
     }
@@ -166,6 +174,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
     @Import(name="image")
     private @Nullable Output<String> image;
 
+    /**
+     * @return The image used to start a container. This string is passed directly to the Docker daemon.
+     * 
+     */
     public Optional<Output<String>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -205,6 +217,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
     @Import(name="memory")
     private @Nullable Output<Integer> memory;
 
+    /**
+     * @return The amount (in MiB) of memory to present to the container. If your container attempts to exceed the memory specified here, the container is killed.
+     * 
+     */
     public Optional<Output<Integer>> memory() {
         return Optional.ofNullable(this.memory);
     }
@@ -230,6 +246,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of a container. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -241,6 +261,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
     @Import(name="portMappings")
     private @Nullable Output<List<TaskDefinitionPortMappingArgs>> portMappings;
 
+    /**
+     * @return Port mappings allow containers to access ports on the host container instance to send or receive traffic.
+     * 
+     */
     public Optional<Output<List<TaskDefinitionPortMappingArgs>>> portMappings() {
         return Optional.ofNullable(this.portMappings);
     }
@@ -503,28 +527,64 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
             return entryPoint(List.of(entryPoint));
         }
 
+        /**
+         * @param environment The environment variables to pass to a container
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<List<TaskDefinitionKeyValuePairArgs>> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment The environment variables to pass to a container
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(List<TaskDefinitionKeyValuePairArgs> environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param environment The environment variables to pass to a container
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(TaskDefinitionKeyValuePairArgs... environment) {
             return environment(List.of(environment));
         }
 
+        /**
+         * @param environmentFiles The list of one or more files that contain the environment variables to pass to a container
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentFiles(@Nullable Output<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles) {
             $.environmentFiles = environmentFiles;
             return this;
         }
 
+        /**
+         * @param environmentFiles The list of one or more files that contain the environment variables to pass to a container
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentFiles(List<TaskDefinitionEnvironmentFileArgs> environmentFiles) {
             return environmentFiles(Output.of(environmentFiles));
         }
 
+        /**
+         * @param environmentFiles The list of one or more files that contain the environment variables to pass to a container
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentFiles(TaskDefinitionEnvironmentFileArgs... environmentFiles) {
             return environmentFiles(List.of(environmentFiles));
         }
@@ -578,11 +638,23 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param image The image used to start a container. This string is passed directly to the Docker daemon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<String> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image The image used to start a container. This string is passed directly to the Docker daemon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             return image(Output.of(image));
         }
@@ -627,11 +699,23 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
             return logConfiguration(Output.of(logConfiguration));
         }
 
+        /**
+         * @param memory The amount (in MiB) of memory to present to the container. If your container attempts to exceed the memory specified here, the container is killed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(@Nullable Output<Integer> memory) {
             $.memory = memory;
             return this;
         }
 
+        /**
+         * @param memory The amount (in MiB) of memory to present to the container. If your container attempts to exceed the memory specified here, the container is killed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(Integer memory) {
             return memory(Output.of(memory));
         }
@@ -658,24 +742,54 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
             return mountPoints(List.of(mountPoints));
         }
 
+        /**
+         * @param name The name of a container. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of a container. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param portMappings Port mappings allow containers to access ports on the host container instance to send or receive traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portMappings(@Nullable Output<List<TaskDefinitionPortMappingArgs>> portMappings) {
             $.portMappings = portMappings;
             return this;
         }
 
+        /**
+         * @param portMappings Port mappings allow containers to access ports on the host container instance to send or receive traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portMappings(List<TaskDefinitionPortMappingArgs> portMappings) {
             return portMappings(Output.of(portMappings));
         }
 
+        /**
+         * @param portMappings Port mappings allow containers to access ports on the host container instance to send or receive traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portMappings(TaskDefinitionPortMappingArgs... portMappings) {
             return portMappings(List.of(portMappings));
         }

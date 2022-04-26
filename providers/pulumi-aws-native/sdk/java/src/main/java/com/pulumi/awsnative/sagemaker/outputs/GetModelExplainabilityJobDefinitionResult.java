@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetModelExplainabilityJobDefinitionResult {
     /**
-     * The time at which the job definition was created.
+     * @return The time at which the job definition was created.
      * 
      */
     private final @Nullable String creationTime;
     /**
-     * The Amazon Resource Name (ARN) of job definition.
+     * @return The Amazon Resource Name (ARN) of job definition.
      * 
      */
     private final @Nullable String jobDefinitionArn;
@@ -31,16 +31,16 @@ public final class GetModelExplainabilityJobDefinitionResult {
     }
 
     /**
-     * The time at which the job definition was created.
+     * @return The time at which the job definition was created.
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * The Amazon Resource Name (ARN) of job definition.
+     * @return The Amazon Resource Name (ARN) of job definition.
      * 
-    */
+     */
     public Optional<String> jobDefinitionArn() {
         return Optional.ofNullable(this.jobDefinitionArn);
     }

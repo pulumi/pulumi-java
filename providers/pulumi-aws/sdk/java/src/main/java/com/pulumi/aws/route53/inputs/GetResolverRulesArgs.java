@@ -21,6 +21,10 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="ownerId")
     private @Nullable String ownerId;
 
+    /**
+     * @return When the desired resolver rules are shared with another AWS account, the account ID of the account that the rules are shared with.
+     * 
+     */
     public Optional<String> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
@@ -32,6 +36,10 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resolverEndpointId")
     private @Nullable String resolverEndpointId;
 
+    /**
+     * @return The ID of the outbound resolver endpoint for the desired resolver rules.
+     * 
+     */
     public Optional<String> resolverEndpointId() {
         return Optional.ofNullable(this.resolverEndpointId);
     }
@@ -43,6 +51,10 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="ruleType")
     private @Nullable String ruleType;
 
+    /**
+     * @return The rule type of the desired resolver rules. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
+     * 
+     */
     public Optional<String> ruleType() {
         return Optional.ofNullable(this.ruleType);
     }
@@ -54,6 +66,10 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="shareStatus")
     private @Nullable String shareStatus;
 
+    /**
+     * @return Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account. Valid values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
+     * 
+     */
     public Optional<String> shareStatus() {
         return Optional.ofNullable(this.shareStatus);
     }
@@ -85,21 +101,45 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetResolverRulesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ownerId When the desired resolver rules are shared with another AWS account, the account ID of the account that the rules are shared with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(@Nullable String ownerId) {
             $.ownerId = ownerId;
             return this;
         }
 
+        /**
+         * @param resolverEndpointId The ID of the outbound resolver endpoint for the desired resolver rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             $.resolverEndpointId = resolverEndpointId;
             return this;
         }
 
+        /**
+         * @param ruleType The rule type of the desired resolver rules. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(@Nullable String ruleType) {
             $.ruleType = ruleType;
             return this;
         }
 
+        /**
+         * @param shareStatus Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account. Valid values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareStatus(@Nullable String shareStatus) {
             $.shareStatus = shareStatus;
             return this;

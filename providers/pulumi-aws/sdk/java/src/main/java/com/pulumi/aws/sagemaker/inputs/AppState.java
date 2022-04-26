@@ -24,6 +24,10 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="appName")
     private @Nullable Output<String> appName;
 
+    /**
+     * @return The name of the app.
+     * 
+     */
     public Optional<Output<String>> appName() {
         return Optional.ofNullable(this.appName);
     }
@@ -35,6 +39,10 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="appType")
     private @Nullable Output<String> appType;
 
+    /**
+     * @return The type of app. Valid values are `JupyterServer`, `KernelGateway` and `TensorBoard`.
+     * 
+     */
     public Optional<Output<String>> appType() {
         return Optional.ofNullable(this.appType);
     }
@@ -46,6 +54,10 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the app.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -57,6 +69,10 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainId")
     private @Nullable Output<String> domainId;
 
+    /**
+     * @return The domain ID.
+     * 
+     */
     public Optional<Output<String>> domainId() {
         return Optional.ofNullable(this.domainId);
     }
@@ -68,6 +84,10 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceSpec")
     private @Nullable Output<AppResourceSpecGetArgs> resourceSpec;
 
+    /**
+     * @return The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.
+     * 
+     */
     public Optional<Output<AppResourceSpecGetArgs>> resourceSpec() {
         return Optional.ofNullable(this.resourceSpec);
     }
@@ -79,6 +99,10 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -90,6 +114,10 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -101,6 +129,10 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userProfileName")
     private @Nullable Output<String> userProfileName;
 
+    /**
+     * @return The user profile name.
+     * 
+     */
     public Optional<Output<String>> userProfileName() {
         return Optional.ofNullable(this.userProfileName);
     }
@@ -136,74 +168,170 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
             $ = new AppState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appName The name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appName(@Nullable Output<String> appName) {
             $.appName = appName;
             return this;
         }
 
+        /**
+         * @param appName The name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appName(String appName) {
             return appName(Output.of(appName));
         }
 
+        /**
+         * @param appType The type of app. Valid values are `JupyterServer`, `KernelGateway` and `TensorBoard`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appType(@Nullable Output<String> appType) {
             $.appType = appType;
             return this;
         }
 
+        /**
+         * @param appType The type of app. Valid values are `JupyterServer`, `KernelGateway` and `TensorBoard`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appType(String appType) {
             return appType(Output.of(appType));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param domainId The domain ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainId(@Nullable Output<String> domainId) {
             $.domainId = domainId;
             return this;
         }
 
+        /**
+         * @param domainId The domain ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainId(String domainId) {
             return domainId(Output.of(domainId));
         }
 
+        /**
+         * @param resourceSpec The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSpec(@Nullable Output<AppResourceSpecGetArgs> resourceSpec) {
             $.resourceSpec = resourceSpec;
             return this;
         }
 
+        /**
+         * @param resourceSpec The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSpec(AppResourceSpecGetArgs resourceSpec) {
             return resourceSpec(Output.of(resourceSpec));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param userProfileName The user profile name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProfileName(@Nullable Output<String> userProfileName) {
             $.userProfileName = userProfileName;
             return this;
         }
 
+        /**
+         * @param userProfileName The user profile name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProfileName(String userProfileName) {
             return userProfileName(Output.of(userProfileName));
         }

@@ -27,6 +27,10 @@ public final class AutoscaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<AutoscaleCapacityArgs> capacity;
 
+    /**
+     * @return Parameters for load-based autoscale
+     * 
+     */
     public Optional<Output<AutoscaleCapacityArgs>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -38,6 +42,10 @@ public final class AutoscaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recurrence")
     private @Nullable Output<AutoscaleRecurrenceArgs> recurrence;
 
+    /**
+     * @return Parameters for schedule-based autoscale
+     * 
+     */
     public Optional<Output<AutoscaleRecurrenceArgs>> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }
@@ -67,20 +75,44 @@ public final class AutoscaleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AutoscaleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Parameters for load-based autoscale
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<AutoscaleCapacityArgs> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity Parameters for load-based autoscale
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(AutoscaleCapacityArgs capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param recurrence Parameters for schedule-based autoscale
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(@Nullable Output<AutoscaleRecurrenceArgs> recurrence) {
             $.recurrence = recurrence;
             return this;
         }
 
+        /**
+         * @param recurrence Parameters for schedule-based autoscale
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(AutoscaleRecurrenceArgs recurrence) {
             return recurrence(Output.of(recurrence));
         }

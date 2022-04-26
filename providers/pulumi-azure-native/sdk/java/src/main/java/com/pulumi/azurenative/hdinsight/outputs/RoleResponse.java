@@ -21,57 +21,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RoleResponse {
     /**
-     * The autoscale configurations.
+     * @return The autoscale configurations.
      * 
      */
     private final @Nullable AutoscaleResponse autoscaleConfiguration;
     /**
-     * The data disks groups for the role.
+     * @return The data disks groups for the role.
      * 
      */
     private final @Nullable List<DataDisksGroupsResponse> dataDisksGroups;
     /**
-     * Indicates whether encrypt the data disks.
+     * @return Indicates whether encrypt the data disks.
      * 
      */
     private final @Nullable Boolean encryptDataDisks;
     /**
-     * The hardware profile.
+     * @return The hardware profile.
      * 
      */
     private final @Nullable HardwareProfileResponse hardwareProfile;
     /**
-     * The minimum instance count of the cluster.
+     * @return The minimum instance count of the cluster.
      * 
      */
     private final @Nullable Integer minInstanceCount;
     /**
-     * The name of the role.
+     * @return The name of the role.
      * 
      */
     private final @Nullable String name;
     /**
-     * The operating system profile.
+     * @return The operating system profile.
      * 
      */
     private final @Nullable OsProfileResponse osProfile;
     /**
-     * The list of script actions on the role.
+     * @return The list of script actions on the role.
      * 
      */
     private final @Nullable List<ScriptActionResponse> scriptActions;
     /**
-     * The instance count of the cluster.
+     * @return The instance count of the cluster.
      * 
      */
     private final @Nullable Integer targetInstanceCount;
     /**
-     * The name of the virtual machine group.
+     * @return The name of the virtual machine group.
      * 
      */
     private final @Nullable String vMGroupName;
     /**
-     * The virtual network profile.
+     * @return The virtual network profile.
      * 
      */
     private final @Nullable VirtualNetworkProfileResponse virtualNetworkProfile;
@@ -103,79 +103,79 @@ public final class RoleResponse {
     }
 
     /**
-     * The autoscale configurations.
+     * @return The autoscale configurations.
      * 
-    */
+     */
     public Optional<AutoscaleResponse> autoscaleConfiguration() {
         return Optional.ofNullable(this.autoscaleConfiguration);
     }
     /**
-     * The data disks groups for the role.
+     * @return The data disks groups for the role.
      * 
-    */
+     */
     public List<DataDisksGroupsResponse> dataDisksGroups() {
         return this.dataDisksGroups == null ? List.of() : this.dataDisksGroups;
     }
     /**
-     * Indicates whether encrypt the data disks.
+     * @return Indicates whether encrypt the data disks.
      * 
-    */
+     */
     public Optional<Boolean> encryptDataDisks() {
         return Optional.ofNullable(this.encryptDataDisks);
     }
     /**
-     * The hardware profile.
+     * @return The hardware profile.
      * 
-    */
+     */
     public Optional<HardwareProfileResponse> hardwareProfile() {
         return Optional.ofNullable(this.hardwareProfile);
     }
     /**
-     * The minimum instance count of the cluster.
+     * @return The minimum instance count of the cluster.
      * 
-    */
+     */
     public Optional<Integer> minInstanceCount() {
         return Optional.ofNullable(this.minInstanceCount);
     }
     /**
-     * The name of the role.
+     * @return The name of the role.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The operating system profile.
+     * @return The operating system profile.
      * 
-    */
+     */
     public Optional<OsProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
-     * The list of script actions on the role.
+     * @return The list of script actions on the role.
      * 
-    */
+     */
     public List<ScriptActionResponse> scriptActions() {
         return this.scriptActions == null ? List.of() : this.scriptActions;
     }
     /**
-     * The instance count of the cluster.
+     * @return The instance count of the cluster.
      * 
-    */
+     */
     public Optional<Integer> targetInstanceCount() {
         return Optional.ofNullable(this.targetInstanceCount);
     }
     /**
-     * The name of the virtual machine group.
+     * @return The name of the virtual machine group.
      * 
-    */
+     */
     public Optional<String> vMGroupName() {
         return Optional.ofNullable(this.vMGroupName);
     }
     /**
-     * The virtual network profile.
+     * @return The virtual network profile.
      * 
-    */
+     */
     public Optional<VirtualNetworkProfileResponse> virtualNetworkProfile() {
         return Optional.ofNullable(this.virtualNetworkProfile);
     }

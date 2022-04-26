@@ -27,6 +27,10 @@ public final class VirtualHubRouteTableV2Response extends com.pulumi.resources.I
     @Import(name="attachedConnections")
     private @Nullable List<String> attachedConnections;
 
+    /**
+     * @return List of all connections attached to this route table v2.
+     * 
+     */
     public Optional<List<String>> attachedConnections() {
         return Optional.ofNullable(this.attachedConnections);
     }
@@ -38,6 +42,10 @@ public final class VirtualHubRouteTableV2Response extends com.pulumi.resources.I
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -49,6 +57,10 @@ public final class VirtualHubRouteTableV2Response extends com.pulumi.resources.I
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -60,6 +72,10 @@ public final class VirtualHubRouteTableV2Response extends com.pulumi.resources.I
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -71,6 +87,10 @@ public final class VirtualHubRouteTableV2Response extends com.pulumi.resources.I
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the virtual hub route table v2 resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -82,6 +102,10 @@ public final class VirtualHubRouteTableV2Response extends com.pulumi.resources.I
     @Import(name="routes")
     private @Nullable List<VirtualHubRouteV2Response> routes;
 
+    /**
+     * @return List of all routes.
+     * 
+     */
     public Optional<List<VirtualHubRouteV2Response>> routes() {
         return Optional.ofNullable(this.routes);
     }
@@ -115,40 +139,88 @@ public final class VirtualHubRouteTableV2Response extends com.pulumi.resources.I
             $ = new VirtualHubRouteTableV2Response(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachedConnections List of all connections attached to this route table v2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedConnections(@Nullable List<String> attachedConnections) {
             $.attachedConnections = attachedConnections;
             return this;
         }
 
+        /**
+         * @param attachedConnections List of all connections attached to this route table v2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedConnections(String... attachedConnections) {
             return attachedConnections(List.of(attachedConnections));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the virtual hub route table v2 resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param routes List of all routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(@Nullable List<VirtualHubRouteV2Response> routes) {
             $.routes = routes;
             return this;
         }
 
+        /**
+         * @param routes List of all routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(VirtualHubRouteV2Response... routes) {
             return routes(List.of(routes));
         }

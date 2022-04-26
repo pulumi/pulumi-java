@@ -23,6 +23,10 @@ public final class DeviceCredentialGetArgs extends com.pulumi.resources.Resource
     @Import(name="expirationTime")
     private @Nullable Output<String> expirationTime;
 
+    /**
+     * @return The time at which this credential becomes invalid.
+     * 
+     */
     public Optional<Output<String>> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
@@ -35,6 +39,11 @@ public final class DeviceCredentialGetArgs extends com.pulumi.resources.Resource
     @Import(name="publicKey", required=true)
     private Output<DeviceCredentialPublicKeyGetArgs> publicKey;
 
+    /**
+     * @return A public key used to verify the signature of JSON Web Tokens (JWTs).
+     * Structure is documented below.
+     * 
+     */
     public Output<DeviceCredentialPublicKeyGetArgs> publicKey() {
         return this.publicKey;
     }
@@ -64,20 +73,46 @@ public final class DeviceCredentialGetArgs extends com.pulumi.resources.Resource
             $ = new DeviceCredentialGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationTime The time at which this credential becomes invalid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param expirationTime The time at which this credential becomes invalid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(String expirationTime) {
             return expirationTime(Output.of(expirationTime));
         }
 
+        /**
+         * @param publicKey A public key used to verify the signature of JSON Web Tokens (JWTs).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(Output<DeviceCredentialPublicKeyGetArgs> publicKey) {
             $.publicKey = publicKey;
             return this;
         }
 
+        /**
+         * @param publicKey A public key used to verify the signature of JSON Web Tokens (JWTs).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(DeviceCredentialPublicKeyGetArgs publicKey) {
             return publicKey(Output.of(publicKey));
         }

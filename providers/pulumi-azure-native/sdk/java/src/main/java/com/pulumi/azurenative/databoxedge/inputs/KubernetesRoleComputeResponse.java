@@ -25,6 +25,10 @@ public final class KubernetesRoleComputeResponse extends com.pulumi.resources.In
     @Import(name="memoryInBytes", required=true)
     private Double memoryInBytes;
 
+    /**
+     * @return Memory in bytes
+     * 
+     */
     public Double memoryInBytes() {
         return this.memoryInBytes;
     }
@@ -36,6 +40,10 @@ public final class KubernetesRoleComputeResponse extends com.pulumi.resources.In
     @Import(name="processorCount", required=true)
     private Integer processorCount;
 
+    /**
+     * @return Processor count
+     * 
+     */
     public Integer processorCount() {
         return this.processorCount;
     }
@@ -47,6 +55,10 @@ public final class KubernetesRoleComputeResponse extends com.pulumi.resources.In
     @Import(name="vmProfile", required=true)
     private String vmProfile;
 
+    /**
+     * @return VM profile
+     * 
+     */
     public String vmProfile() {
         return this.vmProfile;
     }
@@ -77,16 +89,34 @@ public final class KubernetesRoleComputeResponse extends com.pulumi.resources.In
             $ = new KubernetesRoleComputeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param memoryInBytes Memory in bytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInBytes(Double memoryInBytes) {
             $.memoryInBytes = memoryInBytes;
             return this;
         }
 
+        /**
+         * @param processorCount Processor count
+         * 
+         * @return builder
+         * 
+         */
         public Builder processorCount(Integer processorCount) {
             $.processorCount = processorCount;
             return this;
         }
 
+        /**
+         * @param vmProfile VM profile
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmProfile(String vmProfile) {
             $.vmProfile = vmProfile;
             return this;

@@ -21,6 +21,10 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
     @Import(name="keyAlgorithm", required=true)
     private Output<String> keyAlgorithm;
 
+    /**
+     * @return Type of the public key algorithm and size, in bits, of the key pair that your key pair creates when it issues a certificate. Valid values can be found in the [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CertificateAuthorityConfiguration.html).
+     * 
+     */
     public Output<String> keyAlgorithm() {
         return this.keyAlgorithm;
     }
@@ -32,6 +36,10 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
     @Import(name="signingAlgorithm", required=true)
     private Output<String> signingAlgorithm;
 
+    /**
+     * @return Name of the algorithm your private CA uses to sign certificate requests. Valid values can be found in the [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CertificateAuthorityConfiguration.html).
+     * 
+     */
     public Output<String> signingAlgorithm() {
         return this.signingAlgorithm;
     }
@@ -43,6 +51,10 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
     @Import(name="subject", required=true)
     private Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject;
 
+    /**
+     * @return Nested argument that contains X.500 distinguished name information. At least one nested attribute must be specified.
+     * 
+     */
     public Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject() {
         return this.subject;
     }
@@ -73,29 +85,65 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
             $ = new CertificateAuthorityCertificateAuthorityConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyAlgorithm Type of the public key algorithm and size, in bits, of the key pair that your key pair creates when it issues a certificate. Valid values can be found in the [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CertificateAuthorityConfiguration.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyAlgorithm(Output<String> keyAlgorithm) {
             $.keyAlgorithm = keyAlgorithm;
             return this;
         }
 
+        /**
+         * @param keyAlgorithm Type of the public key algorithm and size, in bits, of the key pair that your key pair creates when it issues a certificate. Valid values can be found in the [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CertificateAuthorityConfiguration.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyAlgorithm(String keyAlgorithm) {
             return keyAlgorithm(Output.of(keyAlgorithm));
         }
 
+        /**
+         * @param signingAlgorithm Name of the algorithm your private CA uses to sign certificate requests. Valid values can be found in the [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CertificateAuthorityConfiguration.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingAlgorithm(Output<String> signingAlgorithm) {
             $.signingAlgorithm = signingAlgorithm;
             return this;
         }
 
+        /**
+         * @param signingAlgorithm Name of the algorithm your private CA uses to sign certificate requests. Valid values can be found in the [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CertificateAuthorityConfiguration.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingAlgorithm(String signingAlgorithm) {
             return signingAlgorithm(Output.of(signingAlgorithm));
         }
 
+        /**
+         * @param subject Nested argument that contains X.500 distinguished name information. At least one nested attribute must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param subject Nested argument that contains X.500 distinguished name information. At least one nested attribute must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs subject) {
             return subject(Output.of(subject));
         }

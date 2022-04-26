@@ -24,6 +24,10 @@ public final class WebAppDeploymentSlotArgs extends com.pulumi.resources.Resourc
     @Import(name="active")
     private @Nullable Output<Boolean> active;
 
+    /**
+     * @return True if deployment is currently active, false if completed and null if not started.
+     * 
+     */
     public Optional<Output<Boolean>> active() {
         return Optional.ofNullable(this.active);
     }
@@ -35,6 +39,10 @@ public final class WebAppDeploymentSlotArgs extends com.pulumi.resources.Resourc
     @Import(name="author")
     private @Nullable Output<String> author;
 
+    /**
+     * @return Who authored the deployment.
+     * 
+     */
     public Optional<Output<String>> author() {
         return Optional.ofNullable(this.author);
     }
@@ -46,6 +54,10 @@ public final class WebAppDeploymentSlotArgs extends com.pulumi.resources.Resourc
     @Import(name="authorEmail")
     private @Nullable Output<String> authorEmail;
 
+    /**
+     * @return Author email.
+     * 
+     */
     public Optional<Output<String>> authorEmail() {
         return Optional.ofNullable(this.authorEmail);
     }
@@ -57,6 +69,10 @@ public final class WebAppDeploymentSlotArgs extends com.pulumi.resources.Resourc
     @Import(name="deployer")
     private @Nullable Output<String> deployer;
 
+    /**
+     * @return Who performed the deployment.
+     * 
+     */
     public Optional<Output<String>> deployer() {
         return Optional.ofNullable(this.deployer);
     }
@@ -68,6 +84,10 @@ public final class WebAppDeploymentSlotArgs extends com.pulumi.resources.Resourc
     @Import(name="details")
     private @Nullable Output<String> details;
 
+    /**
+     * @return Details on deployment.
+     * 
+     */
     public Optional<Output<String>> details() {
         return Optional.ofNullable(this.details);
     }
@@ -79,6 +99,10 @@ public final class WebAppDeploymentSlotArgs extends com.pulumi.resources.Resourc
     @Import(name="endTime")
     private @Nullable Output<String> endTime;
 
+    /**
+     * @return End time.
+     * 
+     */
     public Optional<Output<String>> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -90,6 +114,10 @@ public final class WebAppDeploymentSlotArgs extends com.pulumi.resources.Resourc
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return ID of an existing deployment.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -101,6 +129,10 @@ public final class WebAppDeploymentSlotArgs extends com.pulumi.resources.Resourc
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -112,6 +144,10 @@ public final class WebAppDeploymentSlotArgs extends com.pulumi.resources.Resourc
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return Details about deployment status.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -123,6 +159,10 @@ public final class WebAppDeploymentSlotArgs extends com.pulumi.resources.Resourc
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the app.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -134,6 +174,10 @@ public final class WebAppDeploymentSlotArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -145,6 +189,10 @@ public final class WebAppDeploymentSlotArgs extends com.pulumi.resources.Resourc
     @Import(name="slot", required=true)
     private Output<String> slot;
 
+    /**
+     * @return Name of the deployment slot. If a slot is not specified, the API creates a deployment for the production slot.
+     * 
+     */
     public Output<String> slot() {
         return this.slot;
     }
@@ -156,6 +204,10 @@ public final class WebAppDeploymentSlotArgs extends com.pulumi.resources.Resourc
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return Start time.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -167,6 +219,10 @@ public final class WebAppDeploymentSlotArgs extends com.pulumi.resources.Resourc
     @Import(name="status")
     private @Nullable Output<Integer> status;
 
+    /**
+     * @return Deployment status.
+     * 
+     */
     public Optional<Output<Integer>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -208,128 +264,296 @@ public final class WebAppDeploymentSlotArgs extends com.pulumi.resources.Resourc
             $ = new WebAppDeploymentSlotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param active True if deployment is currently active, false if completed and null if not started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(@Nullable Output<Boolean> active) {
             $.active = active;
             return this;
         }
 
+        /**
+         * @param active True if deployment is currently active, false if completed and null if not started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(Boolean active) {
             return active(Output.of(active));
         }
 
+        /**
+         * @param author Who authored the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder author(@Nullable Output<String> author) {
             $.author = author;
             return this;
         }
 
+        /**
+         * @param author Who authored the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder author(String author) {
             return author(Output.of(author));
         }
 
+        /**
+         * @param authorEmail Author email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorEmail(@Nullable Output<String> authorEmail) {
             $.authorEmail = authorEmail;
             return this;
         }
 
+        /**
+         * @param authorEmail Author email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorEmail(String authorEmail) {
             return authorEmail(Output.of(authorEmail));
         }
 
+        /**
+         * @param deployer Who performed the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deployer(@Nullable Output<String> deployer) {
             $.deployer = deployer;
             return this;
         }
 
+        /**
+         * @param deployer Who performed the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deployer(String deployer) {
             return deployer(Output.of(deployer));
         }
 
+        /**
+         * @param details Details on deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(@Nullable Output<String> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details Details on deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(String details) {
             return details(Output.of(details));
         }
 
+        /**
+         * @param endTime End time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime End time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param id ID of an existing deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id ID of an existing deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param message Details about deployment status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message Details about deployment status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param slot Name of the deployment slot. If a slot is not specified, the API creates a deployment for the production slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(Output<String> slot) {
             $.slot = slot;
             return this;
         }
 
+        /**
+         * @param slot Name of the deployment slot. If a slot is not specified, the API creates a deployment for the production slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(String slot) {
             return slot(Output.of(slot));
         }
 
+        /**
+         * @param startTime Start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param status Deployment status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Integer> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Deployment status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Integer status) {
             return status(Output.of(status));
         }

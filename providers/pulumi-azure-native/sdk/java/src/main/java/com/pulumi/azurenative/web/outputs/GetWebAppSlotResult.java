@@ -21,27 +21,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWebAppSlotResult {
     /**
-     * Management information availability state for the app.
+     * @return Management information availability state for the app.
      * 
      */
     private final String availabilityState;
     /**
-     * &lt;code&gt;true&lt;/code&gt; to enable client affinity; &lt;code&gt;false&lt;/code&gt; to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is &lt;code&gt;true&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; to enable client affinity; &lt;code&gt;false&lt;/code&gt; to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean clientAffinityEnabled;
     /**
-     * &lt;code&gt;true&lt;/code&gt; to enable client certificate authentication (TLS mutual authentication); otherwise, &lt;code&gt;false&lt;/code&gt;. Default is &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; to enable client certificate authentication (TLS mutual authentication); otherwise, &lt;code&gt;false&lt;/code&gt;. Default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean clientCertEnabled;
     /**
-     * client certificate authentication comma-separated exclusion paths
+     * @return client certificate authentication comma-separated exclusion paths
      * 
      */
     private final @Nullable String clientCertExclusionPaths;
     /**
-     * This composes with ClientCertEnabled setting.
+     * @return This composes with ClientCertEnabled setting.
      * - ClientCertEnabled: false means ClientCert is ignored.
      * - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
      * - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
@@ -49,216 +49,216 @@ public final class GetWebAppSlotResult {
      */
     private final @Nullable String clientCertMode;
     /**
-     * Size of the function container.
+     * @return Size of the function container.
      * 
      */
     private final @Nullable Integer containerSize;
     /**
-     * Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
+     * @return Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
      * 
      */
     private final @Nullable String customDomainVerificationId;
     /**
-     * Maximum allowed daily memory-time quota (applicable on dynamic apps only).
+     * @return Maximum allowed daily memory-time quota (applicable on dynamic apps only).
      * 
      */
     private final @Nullable Integer dailyMemoryTimeQuota;
     /**
-     * Default hostname of the app. Read-only.
+     * @return Default hostname of the app. Read-only.
      * 
      */
     private final String defaultHostName;
     /**
-     * &lt;code&gt;true&lt;/code&gt; if the app is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;. Setting this value to false disables the app (takes the app offline).
+     * @return &lt;code&gt;true&lt;/code&gt; if the app is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;. Setting this value to false disables the app (takes the app offline).
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * Enabled hostnames for the app.Hostnames need to be assigned (see HostNames) AND enabled. Otherwise,
+     * @return Enabled hostnames for the app.Hostnames need to be assigned (see HostNames) AND enabled. Otherwise,
      * the app is not served on those hostnames.
      * 
      */
     private final List<String> enabledHostNames;
     /**
-     * Hostname SSL states are used to manage the SSL bindings for app&#39;s hostnames.
+     * @return Hostname SSL states are used to manage the SSL bindings for app&#39;s hostnames.
      * 
      */
     private final @Nullable List<HostNameSslStateResponse> hostNameSslStates;
     /**
-     * Hostnames associated with the app.
+     * @return Hostnames associated with the app.
      * 
      */
     private final List<String> hostNames;
     /**
-     * &lt;code&gt;true&lt;/code&gt; to disable the public hostnames of the app; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; to disable the public hostnames of the app; otherwise, &lt;code&gt;false&lt;/code&gt;.
      *  If &lt;code&gt;true&lt;/code&gt;, the app is only accessible via API management process.
      * 
      */
     private final @Nullable Boolean hostNamesDisabled;
     /**
-     * App Service Environment to use for the app.
+     * @return App Service Environment to use for the app.
      * 
      */
     private final @Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile;
     /**
-     * HttpsOnly: configures a web site to accept only https requests. Issues redirect for
+     * @return HttpsOnly: configures a web site to accept only https requests. Issues redirect for
      * http requests
      * 
      */
     private final @Nullable Boolean httpsOnly;
     /**
-     * Hyper-V sandbox.
+     * @return Hyper-V sandbox.
      * 
      */
     private final @Nullable Boolean hyperV;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Managed service identity.
+     * @return Managed service identity.
      * 
      */
     private final @Nullable ManagedServiceIdentityResponse identity;
     /**
-     * Specifies an operation id if this site has a pending operation.
+     * @return Specifies an operation id if this site has a pending operation.
      * 
      */
     private final String inProgressOperationId;
     /**
-     * &lt;code&gt;true&lt;/code&gt; if the app is a default container; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; if the app is a default container; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final Boolean isDefaultContainer;
     /**
-     * Obsolete: Hyper-V sandbox.
+     * @return Obsolete: Hyper-V sandbox.
      * 
      */
     private final @Nullable Boolean isXenon;
     /**
-     * Identity to use for Key Vault Reference authentication.
+     * @return Identity to use for Key Vault Reference authentication.
      * 
      */
     private final @Nullable String keyVaultReferenceIdentity;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Last time the app was modified, in UTC. Read-only.
+     * @return Last time the app was modified, in UTC. Read-only.
      * 
      */
     private final String lastModifiedTimeUtc;
     /**
-     * Resource Location.
+     * @return Resource Location.
      * 
      */
     private final String location;
     /**
-     * Maximum number of workers.
+     * @return Maximum number of workers.
      * This only applies to Functions container.
      * 
      */
     private final Integer maxNumberOfWorkers;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from tenants that site can be hosted with current settings. Read-only.
+     * @return List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from tenants that site can be hosted with current settings. Read-only.
      * 
      */
     private final String outboundIpAddresses;
     /**
-     * List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from all tenants except dataComponent. Read-only.
+     * @return List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from all tenants except dataComponent. Read-only.
      * 
      */
     private final String possibleOutboundIpAddresses;
     /**
-     * Site redundancy mode
+     * @return Site redundancy mode
      * 
      */
     private final @Nullable String redundancyMode;
     /**
-     * Name of the repository site.
+     * @return Name of the repository site.
      * 
      */
     private final String repositorySiteName;
     /**
-     * &lt;code&gt;true&lt;/code&gt; if reserved; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; if reserved; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean reserved;
     /**
-     * Name of the resource group the app belongs to. Read-only.
+     * @return Name of the resource group the app belongs to. Read-only.
      * 
      */
     private final String resourceGroup;
     /**
-     * &lt;code&gt;true&lt;/code&gt; to stop SCM (KUDU) site when the app is stopped; otherwise, &lt;code&gt;false&lt;/code&gt;. The default is &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; to stop SCM (KUDU) site when the app is stopped; otherwise, &lt;code&gt;false&lt;/code&gt;. The default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean scmSiteAlsoStopped;
     /**
-     * Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
+     * @return Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
      * 
      */
     private final @Nullable String serverFarmId;
     /**
-     * Configuration of the app.
+     * @return Configuration of the app.
      * 
      */
     private final @Nullable SiteConfigResponse siteConfig;
     /**
-     * Status of the last deployment slot swap operation.
+     * @return Status of the last deployment slot swap operation.
      * 
      */
     private final SlotSwapStatusResponse slotSwapStatus;
     /**
-     * Current state of the app.
+     * @return Current state of the app.
      * 
      */
     private final String state;
     /**
-     * Checks if Customer provided storage account is required
+     * @return Checks if Customer provided storage account is required
      * 
      */
     private final @Nullable Boolean storageAccountRequired;
     /**
-     * App suspended till in case memory-time quota is exceeded.
+     * @return App suspended till in case memory-time quota is exceeded.
      * 
      */
     private final String suspendedTill;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Specifies which deployment slot this app will swap into. Read-only.
+     * @return Specifies which deployment slot this app will swap into. Read-only.
      * 
      */
     private final String targetSwapSlot;
     /**
-     * Azure Traffic Manager hostnames associated with the app. Read-only.
+     * @return Azure Traffic Manager hostnames associated with the app. Read-only.
      * 
      */
     private final List<String> trafficManagerHostNames;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * State indicating whether the app has exceeded its quota usage. Read-only.
+     * @return State indicating whether the app has exceeded its quota usage. Read-only.
      * 
      */
     private final String usageState;
     /**
-     * Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration.
+     * @return Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration.
      * This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
      * 
      */
@@ -363,339 +363,339 @@ public final class GetWebAppSlotResult {
     }
 
     /**
-     * Management information availability state for the app.
+     * @return Management information availability state for the app.
      * 
-    */
+     */
     public String availabilityState() {
         return this.availabilityState;
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; to enable client affinity; &lt;code&gt;false&lt;/code&gt; to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is &lt;code&gt;true&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; to enable client affinity; &lt;code&gt;false&lt;/code&gt; to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is &lt;code&gt;true&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> clientAffinityEnabled() {
         return Optional.ofNullable(this.clientAffinityEnabled);
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; to enable client certificate authentication (TLS mutual authentication); otherwise, &lt;code&gt;false&lt;/code&gt;. Default is &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; to enable client certificate authentication (TLS mutual authentication); otherwise, &lt;code&gt;false&lt;/code&gt;. Default is &lt;code&gt;false&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> clientCertEnabled() {
         return Optional.ofNullable(this.clientCertEnabled);
     }
     /**
-     * client certificate authentication comma-separated exclusion paths
+     * @return client certificate authentication comma-separated exclusion paths
      * 
-    */
+     */
     public Optional<String> clientCertExclusionPaths() {
         return Optional.ofNullable(this.clientCertExclusionPaths);
     }
     /**
-     * This composes with ClientCertEnabled setting.
+     * @return This composes with ClientCertEnabled setting.
      * - ClientCertEnabled: false means ClientCert is ignored.
      * - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
      * - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
      * 
-    */
+     */
     public Optional<String> clientCertMode() {
         return Optional.ofNullable(this.clientCertMode);
     }
     /**
-     * Size of the function container.
+     * @return Size of the function container.
      * 
-    */
+     */
     public Optional<Integer> containerSize() {
         return Optional.ofNullable(this.containerSize);
     }
     /**
-     * Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
+     * @return Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
      * 
-    */
+     */
     public Optional<String> customDomainVerificationId() {
         return Optional.ofNullable(this.customDomainVerificationId);
     }
     /**
-     * Maximum allowed daily memory-time quota (applicable on dynamic apps only).
+     * @return Maximum allowed daily memory-time quota (applicable on dynamic apps only).
      * 
-    */
+     */
     public Optional<Integer> dailyMemoryTimeQuota() {
         return Optional.ofNullable(this.dailyMemoryTimeQuota);
     }
     /**
-     * Default hostname of the app. Read-only.
+     * @return Default hostname of the app. Read-only.
      * 
-    */
+     */
     public String defaultHostName() {
         return this.defaultHostName;
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; if the app is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;. Setting this value to false disables the app (takes the app offline).
+     * @return &lt;code&gt;true&lt;/code&gt; if the app is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;. Setting this value to false disables the app (takes the app offline).
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Enabled hostnames for the app.Hostnames need to be assigned (see HostNames) AND enabled. Otherwise,
+     * @return Enabled hostnames for the app.Hostnames need to be assigned (see HostNames) AND enabled. Otherwise,
      * the app is not served on those hostnames.
      * 
-    */
+     */
     public List<String> enabledHostNames() {
         return this.enabledHostNames;
     }
     /**
-     * Hostname SSL states are used to manage the SSL bindings for app&#39;s hostnames.
+     * @return Hostname SSL states are used to manage the SSL bindings for app&#39;s hostnames.
      * 
-    */
+     */
     public List<HostNameSslStateResponse> hostNameSslStates() {
         return this.hostNameSslStates == null ? List.of() : this.hostNameSslStates;
     }
     /**
-     * Hostnames associated with the app.
+     * @return Hostnames associated with the app.
      * 
-    */
+     */
     public List<String> hostNames() {
         return this.hostNames;
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; to disable the public hostnames of the app; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; to disable the public hostnames of the app; otherwise, &lt;code&gt;false&lt;/code&gt;.
      *  If &lt;code&gt;true&lt;/code&gt;, the app is only accessible via API management process.
      * 
-    */
+     */
     public Optional<Boolean> hostNamesDisabled() {
         return Optional.ofNullable(this.hostNamesDisabled);
     }
     /**
-     * App Service Environment to use for the app.
+     * @return App Service Environment to use for the app.
      * 
-    */
+     */
     public Optional<HostingEnvironmentProfileResponse> hostingEnvironmentProfile() {
         return Optional.ofNullable(this.hostingEnvironmentProfile);
     }
     /**
-     * HttpsOnly: configures a web site to accept only https requests. Issues redirect for
+     * @return HttpsOnly: configures a web site to accept only https requests. Issues redirect for
      * http requests
      * 
-    */
+     */
     public Optional<Boolean> httpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
     /**
-     * Hyper-V sandbox.
+     * @return Hyper-V sandbox.
      * 
-    */
+     */
     public Optional<Boolean> hyperV() {
         return Optional.ofNullable(this.hyperV);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Managed service identity.
+     * @return Managed service identity.
      * 
-    */
+     */
     public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Specifies an operation id if this site has a pending operation.
+     * @return Specifies an operation id if this site has a pending operation.
      * 
-    */
+     */
     public String inProgressOperationId() {
         return this.inProgressOperationId;
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; if the app is a default container; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; if the app is a default container; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
-    */
+     */
     public Boolean isDefaultContainer() {
         return this.isDefaultContainer;
     }
     /**
-     * Obsolete: Hyper-V sandbox.
+     * @return Obsolete: Hyper-V sandbox.
      * 
-    */
+     */
     public Optional<Boolean> isXenon() {
         return Optional.ofNullable(this.isXenon);
     }
     /**
-     * Identity to use for Key Vault Reference authentication.
+     * @return Identity to use for Key Vault Reference authentication.
      * 
-    */
+     */
     public Optional<String> keyVaultReferenceIdentity() {
         return Optional.ofNullable(this.keyVaultReferenceIdentity);
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Last time the app was modified, in UTC. Read-only.
+     * @return Last time the app was modified, in UTC. Read-only.
      * 
-    */
+     */
     public String lastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
-     * Resource Location.
+     * @return Resource Location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Maximum number of workers.
+     * @return Maximum number of workers.
      * This only applies to Functions container.
      * 
-    */
+     */
     public Integer maxNumberOfWorkers() {
         return this.maxNumberOfWorkers;
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from tenants that site can be hosted with current settings. Read-only.
+     * @return List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from tenants that site can be hosted with current settings. Read-only.
      * 
-    */
+     */
     public String outboundIpAddresses() {
         return this.outboundIpAddresses;
     }
     /**
-     * List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from all tenants except dataComponent. Read-only.
+     * @return List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from all tenants except dataComponent. Read-only.
      * 
-    */
+     */
     public String possibleOutboundIpAddresses() {
         return this.possibleOutboundIpAddresses;
     }
     /**
-     * Site redundancy mode
+     * @return Site redundancy mode
      * 
-    */
+     */
     public Optional<String> redundancyMode() {
         return Optional.ofNullable(this.redundancyMode);
     }
     /**
-     * Name of the repository site.
+     * @return Name of the repository site.
      * 
-    */
+     */
     public String repositorySiteName() {
         return this.repositorySiteName;
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; if reserved; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; if reserved; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> reserved() {
         return Optional.ofNullable(this.reserved);
     }
     /**
-     * Name of the resource group the app belongs to. Read-only.
+     * @return Name of the resource group the app belongs to. Read-only.
      * 
-    */
+     */
     public String resourceGroup() {
         return this.resourceGroup;
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; to stop SCM (KUDU) site when the app is stopped; otherwise, &lt;code&gt;false&lt;/code&gt;. The default is &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; to stop SCM (KUDU) site when the app is stopped; otherwise, &lt;code&gt;false&lt;/code&gt;. The default is &lt;code&gt;false&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> scmSiteAlsoStopped() {
         return Optional.ofNullable(this.scmSiteAlsoStopped);
     }
     /**
-     * Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
+     * @return Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
      * 
-    */
+     */
     public Optional<String> serverFarmId() {
         return Optional.ofNullable(this.serverFarmId);
     }
     /**
-     * Configuration of the app.
+     * @return Configuration of the app.
      * 
-    */
+     */
     public Optional<SiteConfigResponse> siteConfig() {
         return Optional.ofNullable(this.siteConfig);
     }
     /**
-     * Status of the last deployment slot swap operation.
+     * @return Status of the last deployment slot swap operation.
      * 
-    */
+     */
     public SlotSwapStatusResponse slotSwapStatus() {
         return this.slotSwapStatus;
     }
     /**
-     * Current state of the app.
+     * @return Current state of the app.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Checks if Customer provided storage account is required
+     * @return Checks if Customer provided storage account is required
      * 
-    */
+     */
     public Optional<Boolean> storageAccountRequired() {
         return Optional.ofNullable(this.storageAccountRequired);
     }
     /**
-     * App suspended till in case memory-time quota is exceeded.
+     * @return App suspended till in case memory-time quota is exceeded.
      * 
-    */
+     */
     public String suspendedTill() {
         return this.suspendedTill;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Specifies which deployment slot this app will swap into. Read-only.
+     * @return Specifies which deployment slot this app will swap into. Read-only.
      * 
-    */
+     */
     public String targetSwapSlot() {
         return this.targetSwapSlot;
     }
     /**
-     * Azure Traffic Manager hostnames associated with the app. Read-only.
+     * @return Azure Traffic Manager hostnames associated with the app. Read-only.
      * 
-    */
+     */
     public List<String> trafficManagerHostNames() {
         return this.trafficManagerHostNames;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * State indicating whether the app has exceeded its quota usage. Read-only.
+     * @return State indicating whether the app has exceeded its quota usage. Read-only.
      * 
-    */
+     */
     public String usageState() {
         return this.usageState;
     }
     /**
-     * Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration.
+     * @return Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration.
      * This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
      * 
-    */
+     */
     public Optional<String> virtualNetworkSubnetId() {
         return Optional.ofNullable(this.virtualNetworkSubnetId);
     }

@@ -22,6 +22,10 @@ public final class JobCollectionQuotaResponse extends com.pulumi.resources.Invok
     @Import(name="maxJobCount")
     private @Nullable Integer maxJobCount;
 
+    /**
+     * @return Gets or set the maximum job count.
+     * 
+     */
     public Optional<Integer> maxJobCount() {
         return Optional.ofNullable(this.maxJobCount);
     }
@@ -33,6 +37,10 @@ public final class JobCollectionQuotaResponse extends com.pulumi.resources.Invok
     @Import(name="maxJobOccurrence")
     private @Nullable Integer maxJobOccurrence;
 
+    /**
+     * @return Gets or sets the maximum job occurrence.
+     * 
+     */
     public Optional<Integer> maxJobOccurrence() {
         return Optional.ofNullable(this.maxJobOccurrence);
     }
@@ -44,6 +52,10 @@ public final class JobCollectionQuotaResponse extends com.pulumi.resources.Invok
     @Import(name="maxRecurrence")
     private @Nullable JobMaxRecurrenceResponse maxRecurrence;
 
+    /**
+     * @return Gets or set the maximum recurrence.
+     * 
+     */
     public Optional<JobMaxRecurrenceResponse> maxRecurrence() {
         return Optional.ofNullable(this.maxRecurrence);
     }
@@ -74,16 +86,34 @@ public final class JobCollectionQuotaResponse extends com.pulumi.resources.Invok
             $ = new JobCollectionQuotaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxJobCount Gets or set the maximum job count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxJobCount(@Nullable Integer maxJobCount) {
             $.maxJobCount = maxJobCount;
             return this;
         }
 
+        /**
+         * @param maxJobOccurrence Gets or sets the maximum job occurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxJobOccurrence(@Nullable Integer maxJobOccurrence) {
             $.maxJobOccurrence = maxJobOccurrence;
             return this;
         }
 
+        /**
+         * @param maxRecurrence Gets or set the maximum recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRecurrence(@Nullable JobMaxRecurrenceResponse maxRecurrence) {
             $.maxRecurrence = maxRecurrence;
             return this;

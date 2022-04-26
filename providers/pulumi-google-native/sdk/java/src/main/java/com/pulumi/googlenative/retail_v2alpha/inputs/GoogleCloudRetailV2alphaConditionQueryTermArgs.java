@@ -27,6 +27,10 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends com.pu
     @Import(name="fullMatch")
     private @Nullable Output<Boolean> fullMatch;
 
+    /**
+     * @return Whether this is supposed to be a full or partial match.
+     * 
+     */
     public Optional<Output<Boolean>> fullMatch() {
         return Optional.ofNullable(this.fullMatch);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends com.pu
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if specified as a partial match. Each space separated string is considered as one term. Example) &#34;a b c&#34; is 3 terms and allowed, &#34; a b c d&#34; is 4 terms and not allowed for partial match.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends com.pu
             $ = new GoogleCloudRetailV2alphaConditionQueryTermArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fullMatch Whether this is supposed to be a full or partial match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullMatch(@Nullable Output<Boolean> fullMatch) {
             $.fullMatch = fullMatch;
             return this;
         }
 
+        /**
+         * @param fullMatch Whether this is supposed to be a full or partial match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullMatch(Boolean fullMatch) {
             return fullMatch(Output.of(fullMatch));
         }
 
+        /**
+         * @param value The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if specified as a partial match. Each space separated string is considered as one term. Example) &#34;a b c&#34; is 3 terms and allowed, &#34; a b c d&#34; is 4 terms and not allowed for partial match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if specified as a partial match. Each space separated string is considered as one term. Example) &#34;a b c&#34; is 3 terms and allowed, &#34; a b c d&#34; is 4 terms and not allowed for partial match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

@@ -25,6 +25,10 @@ public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricTrigger", required=true)
     private Output<MetricTriggerArgs> metricTrigger;
 
+    /**
+     * @return the trigger that results in a scaling action.
+     * 
+     */
     public Output<MetricTriggerArgs> metricTrigger() {
         return this.metricTrigger;
     }
@@ -36,6 +40,10 @@ public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scaleAction", required=true)
     private Output<ScaleActionArgs> scaleAction;
 
+    /**
+     * @return the parameters for the scaling action.
+     * 
+     */
     public Output<ScaleActionArgs> scaleAction() {
         return this.scaleAction;
     }
@@ -65,20 +73,44 @@ public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScaleRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metricTrigger the trigger that results in a scaling action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricTrigger(Output<MetricTriggerArgs> metricTrigger) {
             $.metricTrigger = metricTrigger;
             return this;
         }
 
+        /**
+         * @param metricTrigger the trigger that results in a scaling action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricTrigger(MetricTriggerArgs metricTrigger) {
             return metricTrigger(Output.of(metricTrigger));
         }
 
+        /**
+         * @param scaleAction the parameters for the scaling action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleAction(Output<ScaleActionArgs> scaleAction) {
             $.scaleAction = scaleAction;
             return this;
         }
 
+        /**
+         * @param scaleAction the parameters for the scaling action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleAction(ScaleActionArgs scaleAction) {
             return scaleAction(Output.of(scaleAction));
         }

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class BackfillAllStrategyResponse {
     /**
-     * MySQL data source objects to avoid backfilling.
+     * @return MySQL data source objects to avoid backfilling.
      * 
      */
     private final MysqlRdbmsResponse mysqlExcludedObjects;
     /**
-     * Oracle data source objects to avoid backfilling.
+     * @return Oracle data source objects to avoid backfilling.
      * 
      */
     private final OracleRdbmsResponse oracleExcludedObjects;
@@ -30,16 +30,16 @@ public final class BackfillAllStrategyResponse {
     }
 
     /**
-     * MySQL data source objects to avoid backfilling.
+     * @return MySQL data source objects to avoid backfilling.
      * 
-    */
+     */
     public MysqlRdbmsResponse mysqlExcludedObjects() {
         return this.mysqlExcludedObjects;
     }
     /**
-     * Oracle data source objects to avoid backfilling.
+     * @return Oracle data source objects to avoid backfilling.
      * 
-    */
+     */
     public OracleRdbmsResponse oracleExcludedObjects() {
         return this.oracleExcludedObjects;
     }

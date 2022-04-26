@@ -24,6 +24,10 @@ public final class IstioConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="auth", required=true)
     private String auth;
 
+    /**
+     * @return The specified Istio auth mode, either none, or mutual TLS.
+     * 
+     */
     public String auth() {
         return this.auth;
     }
@@ -35,6 +39,10 @@ public final class IstioConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="disabled", required=true)
     private Boolean disabled;
 
+    /**
+     * @return Whether Istio is enabled for this cluster.
+     * 
+     */
     public Boolean disabled() {
         return this.disabled;
     }
@@ -64,11 +72,23 @@ public final class IstioConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IstioConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auth The specified Istio auth mode, either none, or mutual TLS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(String auth) {
             $.auth = auth;
             return this;
         }
 
+        /**
+         * @param disabled Whether Istio is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             $.disabled = disabled;
             return this;

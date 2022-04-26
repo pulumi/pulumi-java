@@ -13,77 +13,77 @@ import java.util.Objects;
 @CustomType
 public final class GetBackupRunResult {
     /**
-     * Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
+     * @return Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
      * 
      */
     private final String backupKind;
     /**
-     * The description of this run, only applicable to on-demand backups.
+     * @return The description of this run, only applicable to on-demand backups.
      * 
      */
     private final String description;
     /**
-     * Encryption configuration specific to a backup.
+     * @return Encryption configuration specific to a backup.
      * 
      */
     private final DiskEncryptionConfigurationResponse diskEncryptionConfiguration;
     /**
-     * Encryption status specific to a backup.
+     * @return Encryption status specific to a backup.
      * 
      */
     private final DiskEncryptionStatusResponse diskEncryptionStatus;
     /**
-     * The time the backup operation completed in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * @return The time the backup operation completed in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
     private final String endTime;
     /**
-     * The time the run was enqueued in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * @return The time the run was enqueued in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
     private final String enqueuedTime;
     /**
-     * Information about why the backup operation failed. This is only present if the run has the FAILED status.
+     * @return Information about why the backup operation failed. This is only present if the run has the FAILED status.
      * 
      */
     private final OperationErrorResponse error;
     /**
-     * Name of the database instance.
+     * @return Name of the database instance.
      * 
      */
     private final String instance;
     /**
-     * This is always `sql#backupRun`.
+     * @return This is always `sql#backupRun`.
      * 
      */
     private final String kind;
     /**
-     * Location of the backups.
+     * @return Location of the backups.
      * 
      */
     private final String location;
     /**
-     * The URI of this resource.
+     * @return The URI of this resource.
      * 
      */
     private final String selfLink;
     /**
-     * The time the backup operation actually started in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * @return The time the backup operation actually started in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
     private final String startTime;
     /**
-     * The status of this run.
+     * @return The status of this run.
      * 
      */
     private final String status;
     /**
-     * The type of this run; can be either &#34;AUTOMATED&#34; or &#34;ON_DEMAND&#34;. This field defaults to &#34;ON_DEMAND&#34; and is ignored, when specified for insert requests.
+     * @return The type of this run; can be either &#34;AUTOMATED&#34; or &#34;ON_DEMAND&#34;. This field defaults to &#34;ON_DEMAND&#34; and is ignored, when specified for insert requests.
      * 
      */
     private final String type;
     /**
-     * The start time of the backup window during which this the backup was attempted in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * @return The start time of the backup window during which this the backup was attempted in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
     private final String windowStartTime;
@@ -123,107 +123,107 @@ public final class GetBackupRunResult {
     }
 
     /**
-     * Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
+     * @return Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
      * 
-    */
+     */
     public String backupKind() {
         return this.backupKind;
     }
     /**
-     * The description of this run, only applicable to on-demand backups.
+     * @return The description of this run, only applicable to on-demand backups.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Encryption configuration specific to a backup.
+     * @return Encryption configuration specific to a backup.
      * 
-    */
+     */
     public DiskEncryptionConfigurationResponse diskEncryptionConfiguration() {
         return this.diskEncryptionConfiguration;
     }
     /**
-     * Encryption status specific to a backup.
+     * @return Encryption status specific to a backup.
      * 
-    */
+     */
     public DiskEncryptionStatusResponse diskEncryptionStatus() {
         return this.diskEncryptionStatus;
     }
     /**
-     * The time the backup operation completed in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * @return The time the backup operation completed in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * The time the run was enqueued in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * @return The time the run was enqueued in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
-    */
+     */
     public String enqueuedTime() {
         return this.enqueuedTime;
     }
     /**
-     * Information about why the backup operation failed. This is only present if the run has the FAILED status.
+     * @return Information about why the backup operation failed. This is only present if the run has the FAILED status.
      * 
-    */
+     */
     public OperationErrorResponse error() {
         return this.error;
     }
     /**
-     * Name of the database instance.
+     * @return Name of the database instance.
      * 
-    */
+     */
     public String instance() {
         return this.instance;
     }
     /**
-     * This is always `sql#backupRun`.
+     * @return This is always `sql#backupRun`.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Location of the backups.
+     * @return Location of the backups.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The URI of this resource.
+     * @return The URI of this resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * The time the backup operation actually started in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * @return The time the backup operation actually started in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The status of this run.
+     * @return The status of this run.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The type of this run; can be either &#34;AUTOMATED&#34; or &#34;ON_DEMAND&#34;. This field defaults to &#34;ON_DEMAND&#34; and is ignored, when specified for insert requests.
+     * @return The type of this run; can be either &#34;AUTOMATED&#34; or &#34;ON_DEMAND&#34;. This field defaults to &#34;ON_DEMAND&#34; and is ignored, when specified for insert requests.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The start time of the backup window during which this the backup was attempted in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * @return The start time of the backup window during which this the backup was attempted in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
-    */
+     */
     public String windowStartTime() {
         return this.windowStartTime;
     }

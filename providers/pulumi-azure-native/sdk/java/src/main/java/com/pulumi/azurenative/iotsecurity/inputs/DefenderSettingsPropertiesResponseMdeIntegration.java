@@ -23,6 +23,10 @@ public final class DefenderSettingsPropertiesResponseMdeIntegration extends com.
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Integration status
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -51,6 +55,12 @@ public final class DefenderSettingsPropertiesResponseMdeIntegration extends com.
             $ = new DefenderSettingsPropertiesResponseMdeIntegration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status Integration status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

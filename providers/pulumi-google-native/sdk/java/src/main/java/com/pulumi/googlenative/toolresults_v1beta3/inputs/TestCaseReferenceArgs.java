@@ -26,6 +26,10 @@ public final class TestCaseReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="className")
     private @Nullable Output<String> className;
 
+    /**
+     * @return The name of the class.
+     * 
+     */
     public Optional<Output<String>> className() {
         return Optional.ofNullable(this.className);
     }
@@ -37,6 +41,10 @@ public final class TestCaseReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the test case. Required.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class TestCaseReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="testSuiteName")
     private @Nullable Output<String> testSuiteName;
 
+    /**
+     * @return The name of the test suite to which this test case belongs.
+     * 
+     */
     public Optional<Output<String>> testSuiteName() {
         return Optional.ofNullable(this.testSuiteName);
     }
@@ -78,29 +90,65 @@ public final class TestCaseReferenceArgs extends com.pulumi.resources.ResourceAr
             $ = new TestCaseReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param className The name of the class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder className(@Nullable Output<String> className) {
             $.className = className;
             return this;
         }
 
+        /**
+         * @param className The name of the class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder className(String className) {
             return className(Output.of(className));
         }
 
+        /**
+         * @param name The name of the test case. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the test case. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param testSuiteName The name of the test suite to which this test case belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSuiteName(@Nullable Output<String> testSuiteName) {
             $.testSuiteName = testSuiteName;
             return this;
         }
 
+        /**
+         * @param testSuiteName The name of the test suite to which this test case belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSuiteName(String testSuiteName) {
             return testSuiteName(Output.of(testSuiteName));
         }

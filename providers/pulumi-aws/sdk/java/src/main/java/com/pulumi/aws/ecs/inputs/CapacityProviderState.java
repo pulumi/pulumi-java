@@ -24,6 +24,10 @@ public final class CapacityProviderState extends com.pulumi.resources.ResourceAr
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN that identifies the capacity provider.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class CapacityProviderState extends com.pulumi.resources.ResourceAr
     @Import(name="autoScalingGroupProvider")
     private @Nullable Output<CapacityProviderAutoScalingGroupProviderGetArgs> autoScalingGroupProvider;
 
+    /**
+     * @return Configuration block for the provider for the ECS auto scaling group. Detailed below.
+     * 
+     */
     public Optional<Output<CapacityProviderAutoScalingGroupProviderGetArgs>> autoScalingGroupProvider() {
         return Optional.ofNullable(this.autoScalingGroupProvider);
     }
@@ -46,6 +54,10 @@ public final class CapacityProviderState extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the capacity provider.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +69,10 @@ public final class CapacityProviderState extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -96,38 +112,86 @@ public final class CapacityProviderState extends com.pulumi.resources.ResourceAr
             $ = new CapacityProviderState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn ARN that identifies the capacity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN that identifies the capacity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param autoScalingGroupProvider Configuration block for the provider for the ECS auto scaling group. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalingGroupProvider(@Nullable Output<CapacityProviderAutoScalingGroupProviderGetArgs> autoScalingGroupProvider) {
             $.autoScalingGroupProvider = autoScalingGroupProvider;
             return this;
         }
 
+        /**
+         * @param autoScalingGroupProvider Configuration block for the provider for the ECS auto scaling group. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalingGroupProvider(CapacityProviderAutoScalingGroupProviderGetArgs autoScalingGroupProvider) {
             return autoScalingGroupProvider(Output.of(autoScalingGroupProvider));
         }
 
+        /**
+         * @param name Name of the capacity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the capacity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

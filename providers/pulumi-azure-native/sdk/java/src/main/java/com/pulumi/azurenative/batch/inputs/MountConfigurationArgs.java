@@ -25,6 +25,10 @@ public final class MountConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="azureBlobFileSystemConfiguration")
     private @Nullable Output<AzureBlobFileSystemConfigurationArgs> azureBlobFileSystemConfiguration;
 
+    /**
+     * @return This property is mutually exclusive with all other properties.
+     * 
+     */
     public Optional<Output<AzureBlobFileSystemConfigurationArgs>> azureBlobFileSystemConfiguration() {
         return Optional.ofNullable(this.azureBlobFileSystemConfiguration);
     }
@@ -36,6 +40,10 @@ public final class MountConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="azureFileShareConfiguration")
     private @Nullable Output<AzureFileShareConfigurationArgs> azureFileShareConfiguration;
 
+    /**
+     * @return This property is mutually exclusive with all other properties.
+     * 
+     */
     public Optional<Output<AzureFileShareConfigurationArgs>> azureFileShareConfiguration() {
         return Optional.ofNullable(this.azureFileShareConfiguration);
     }
@@ -47,6 +55,10 @@ public final class MountConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="cifsMountConfiguration")
     private @Nullable Output<CIFSMountConfigurationArgs> cifsMountConfiguration;
 
+    /**
+     * @return This property is mutually exclusive with all other properties.
+     * 
+     */
     public Optional<Output<CIFSMountConfigurationArgs>> cifsMountConfiguration() {
         return Optional.ofNullable(this.cifsMountConfiguration);
     }
@@ -58,6 +70,10 @@ public final class MountConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="nfsMountConfiguration")
     private @Nullable Output<NFSMountConfigurationArgs> nfsMountConfiguration;
 
+    /**
+     * @return This property is mutually exclusive with all other properties.
+     * 
+     */
     public Optional<Output<NFSMountConfigurationArgs>> nfsMountConfiguration() {
         return Optional.ofNullable(this.nfsMountConfiguration);
     }
@@ -89,38 +105,86 @@ public final class MountConfigurationArgs extends com.pulumi.resources.ResourceA
             $ = new MountConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureBlobFileSystemConfiguration This property is mutually exclusive with all other properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureBlobFileSystemConfiguration(@Nullable Output<AzureBlobFileSystemConfigurationArgs> azureBlobFileSystemConfiguration) {
             $.azureBlobFileSystemConfiguration = azureBlobFileSystemConfiguration;
             return this;
         }
 
+        /**
+         * @param azureBlobFileSystemConfiguration This property is mutually exclusive with all other properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureBlobFileSystemConfiguration(AzureBlobFileSystemConfigurationArgs azureBlobFileSystemConfiguration) {
             return azureBlobFileSystemConfiguration(Output.of(azureBlobFileSystemConfiguration));
         }
 
+        /**
+         * @param azureFileShareConfiguration This property is mutually exclusive with all other properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFileShareConfiguration(@Nullable Output<AzureFileShareConfigurationArgs> azureFileShareConfiguration) {
             $.azureFileShareConfiguration = azureFileShareConfiguration;
             return this;
         }
 
+        /**
+         * @param azureFileShareConfiguration This property is mutually exclusive with all other properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFileShareConfiguration(AzureFileShareConfigurationArgs azureFileShareConfiguration) {
             return azureFileShareConfiguration(Output.of(azureFileShareConfiguration));
         }
 
+        /**
+         * @param cifsMountConfiguration This property is mutually exclusive with all other properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cifsMountConfiguration(@Nullable Output<CIFSMountConfigurationArgs> cifsMountConfiguration) {
             $.cifsMountConfiguration = cifsMountConfiguration;
             return this;
         }
 
+        /**
+         * @param cifsMountConfiguration This property is mutually exclusive with all other properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cifsMountConfiguration(CIFSMountConfigurationArgs cifsMountConfiguration) {
             return cifsMountConfiguration(Output.of(cifsMountConfiguration));
         }
 
+        /**
+         * @param nfsMountConfiguration This property is mutually exclusive with all other properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsMountConfiguration(@Nullable Output<NFSMountConfigurationArgs> nfsMountConfiguration) {
             $.nfsMountConfiguration = nfsMountConfiguration;
             return this;
         }
 
+        /**
+         * @param nfsMountConfiguration This property is mutually exclusive with all other properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsMountConfiguration(NFSMountConfigurationArgs nfsMountConfiguration) {
             return nfsMountConfiguration(Output.of(nfsMountConfiguration));
         }

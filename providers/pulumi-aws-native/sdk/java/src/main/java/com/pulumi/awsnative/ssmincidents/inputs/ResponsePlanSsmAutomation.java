@@ -28,6 +28,10 @@ public final class ResponsePlanSsmAutomation extends com.pulumi.resources.Invoke
     @Import(name="documentName", required=true)
     private String documentName;
 
+    /**
+     * @return The document name to use when starting the SSM automation document.
+     * 
+     */
     public String documentName() {
         return this.documentName;
     }
@@ -39,6 +43,10 @@ public final class ResponsePlanSsmAutomation extends com.pulumi.resources.Invoke
     @Import(name="documentVersion")
     private @Nullable String documentVersion;
 
+    /**
+     * @return The version of the document to use when starting the SSM automation document.
+     * 
+     */
     public Optional<String> documentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
@@ -50,6 +58,10 @@ public final class ResponsePlanSsmAutomation extends com.pulumi.resources.Invoke
     @Import(name="parameters")
     private @Nullable List<ResponsePlanSsmParameter> parameters;
 
+    /**
+     * @return The parameters to set when starting the SSM automation document.
+     * 
+     */
     public Optional<List<ResponsePlanSsmParameter>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -61,6 +73,10 @@ public final class ResponsePlanSsmAutomation extends com.pulumi.resources.Invoke
     @Import(name="roleArn", required=true)
     private String roleArn;
 
+    /**
+     * @return The role ARN to use when starting the SSM automation document.
+     * 
+     */
     public String roleArn() {
         return this.roleArn;
     }
@@ -72,6 +88,10 @@ public final class ResponsePlanSsmAutomation extends com.pulumi.resources.Invoke
     @Import(name="targetAccount")
     private @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount;
 
+    /**
+     * @return The account type to use when starting the SSM automation document.
+     * 
+     */
     public Optional<ResponsePlanSsmAutomationTargetAccount> targetAccount() {
         return Optional.ofNullable(this.targetAccount);
     }
@@ -104,30 +124,66 @@ public final class ResponsePlanSsmAutomation extends com.pulumi.resources.Invoke
             $ = new ResponsePlanSsmAutomation(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param documentName The document name to use when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentName(String documentName) {
             $.documentName = documentName;
             return this;
         }
 
+        /**
+         * @param documentVersion The version of the document to use when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentVersion(@Nullable String documentVersion) {
             $.documentVersion = documentVersion;
             return this;
         }
 
+        /**
+         * @param parameters The parameters to set when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable List<ResponsePlanSsmParameter> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameters to set when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ResponsePlanSsmParameter... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param roleArn The role ARN to use when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param targetAccount The account type to use when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAccount(@Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
             $.targetAccount = targetAccount;
             return this;

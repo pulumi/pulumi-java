@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class InterconnectAttachmentPartnerMetadataResponse {
     /**
-     * Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner&#39;s portal. For instance &#34;Chicago 1&#34;. This value may be validated to match approved Partner values.
+     * @return Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner&#39;s portal. For instance &#34;Chicago 1&#34;. This value may be validated to match approved Partner values.
      * 
      */
     private final String interconnectName;
     /**
-     * Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.
+     * @return Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.
      * 
      */
     private final String partnerName;
     /**
-     * URL of the Partner&#39;s portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
+     * @return URL of the Partner&#39;s portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
      * 
      */
     private final String portalUrl;
@@ -36,23 +36,23 @@ public final class InterconnectAttachmentPartnerMetadataResponse {
     }
 
     /**
-     * Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner&#39;s portal. For instance &#34;Chicago 1&#34;. This value may be validated to match approved Partner values.
+     * @return Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner&#39;s portal. For instance &#34;Chicago 1&#34;. This value may be validated to match approved Partner values.
      * 
-    */
+     */
     public String interconnectName() {
         return this.interconnectName;
     }
     /**
-     * Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.
+     * @return Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.
      * 
-    */
+     */
     public String partnerName() {
         return this.partnerName;
     }
     /**
-     * URL of the Partner&#39;s portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
+     * @return URL of the Partner&#39;s portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
      * 
-    */
+     */
     public String portalUrl() {
         return this.portalUrl;
     }

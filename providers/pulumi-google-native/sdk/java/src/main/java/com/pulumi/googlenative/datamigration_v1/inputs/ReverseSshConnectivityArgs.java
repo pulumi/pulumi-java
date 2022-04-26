@@ -27,6 +27,10 @@ public final class ReverseSshConnectivityArgs extends com.pulumi.resources.Resou
     @Import(name="vm")
     private @Nullable Output<String> vm;
 
+    /**
+     * @return The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+     * 
+     */
     public Optional<Output<String>> vm() {
         return Optional.ofNullable(this.vm);
     }
@@ -38,6 +42,10 @@ public final class ReverseSshConnectivityArgs extends com.pulumi.resources.Resou
     @Import(name="vmIp", required=true)
     private Output<String> vmIp;
 
+    /**
+     * @return The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+     * 
+     */
     public Output<String> vmIp() {
         return this.vmIp;
     }
@@ -49,6 +57,10 @@ public final class ReverseSshConnectivityArgs extends com.pulumi.resources.Resou
     @Import(name="vmPort", required=true)
     private Output<Integer> vmPort;
 
+    /**
+     * @return The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+     * 
+     */
     public Output<Integer> vmPort() {
         return this.vmPort;
     }
@@ -60,6 +72,10 @@ public final class ReverseSshConnectivityArgs extends com.pulumi.resources.Resou
     @Import(name="vpc")
     private @Nullable Output<String> vpc;
 
+    /**
+     * @return The name of the VPC to peer with the Cloud SQL private network.
+     * 
+     */
     public Optional<Output<String>> vpc() {
         return Optional.ofNullable(this.vpc);
     }
@@ -91,38 +107,86 @@ public final class ReverseSshConnectivityArgs extends com.pulumi.resources.Resou
             $ = new ReverseSshConnectivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vm The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vm(@Nullable Output<String> vm) {
             $.vm = vm;
             return this;
         }
 
+        /**
+         * @param vm The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vm(String vm) {
             return vm(Output.of(vm));
         }
 
+        /**
+         * @param vmIp The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmIp(Output<String> vmIp) {
             $.vmIp = vmIp;
             return this;
         }
 
+        /**
+         * @param vmIp The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmIp(String vmIp) {
             return vmIp(Output.of(vmIp));
         }
 
+        /**
+         * @param vmPort The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmPort(Output<Integer> vmPort) {
             $.vmPort = vmPort;
             return this;
         }
 
+        /**
+         * @param vmPort The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmPort(Integer vmPort) {
             return vmPort(Output.of(vmPort));
         }
 
+        /**
+         * @param vpc The name of the VPC to peer with the Cloud SQL private network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpc(@Nullable Output<String> vpc) {
             $.vpc = vpc;
             return this;
         }
 
+        /**
+         * @param vpc The name of the VPC to peer with the Cloud SQL private network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpc(String vpc) {
             return vpc(Output.of(vpc));
         }

@@ -26,6 +26,10 @@ public final class VirtualNetworkPropertiesResponse extends com.pulumi.resources
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Uri of the virtual network.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class VirtualNetworkPropertiesResponse extends com.pulumi.resources
     @Import(name="subnet")
     private @Nullable SubnetPropertiesResponse subnet;
 
+    /**
+     * @return Properties of a subnet.
+     * 
+     */
     public Optional<SubnetPropertiesResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -66,11 +74,23 @@ public final class VirtualNetworkPropertiesResponse extends com.pulumi.resources
             $ = new VirtualNetworkPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Uri of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param subnet Properties of a subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable SubnetPropertiesResponse subnet) {
             $.subnet = subnet;
             return this;

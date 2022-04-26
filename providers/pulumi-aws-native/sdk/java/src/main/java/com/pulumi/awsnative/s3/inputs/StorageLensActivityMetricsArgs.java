@@ -26,6 +26,10 @@ public final class StorageLensActivityMetricsArgs extends com.pulumi.resources.R
     @Import(name="isEnabled")
     private @Nullable Output<Boolean> isEnabled;
 
+    /**
+     * @return Specifies whether activity metrics are enabled or disabled.
+     * 
+     */
     public Optional<Output<Boolean>> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
@@ -54,11 +58,23 @@ public final class StorageLensActivityMetricsArgs extends com.pulumi.resources.R
             $ = new StorageLensActivityMetricsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isEnabled Specifies whether activity metrics are enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Specifies whether activity metrics are enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }

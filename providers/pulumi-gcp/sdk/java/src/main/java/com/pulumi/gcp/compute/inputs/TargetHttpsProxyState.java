@@ -25,6 +25,10 @@ public final class TargetHttpsProxyState extends com.pulumi.resources.ResourceAr
     @Import(name="creationTimestamp")
     private @Nullable Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> creationTimestamp() {
         return Optional.ofNullable(this.creationTimestamp);
     }
@@ -36,6 +40,10 @@ public final class TargetHttpsProxyState extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -53,6 +61,16 @@ public final class TargetHttpsProxyState extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -65,6 +83,11 @@ public final class TargetHttpsProxyState extends com.pulumi.resources.ResourceAr
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -77,6 +100,11 @@ public final class TargetHttpsProxyState extends com.pulumi.resources.ResourceAr
     @Import(name="proxyBind")
     private @Nullable Output<Boolean> proxyBind;
 
+    /**
+     * @return This field only applies when the forwarding rule that references
+     * this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+     * 
+     */
     public Optional<Output<Boolean>> proxyBind() {
         return Optional.ofNullable(this.proxyBind);
     }
@@ -88,6 +116,10 @@ public final class TargetHttpsProxyState extends com.pulumi.resources.ResourceAr
     @Import(name="proxyId")
     private @Nullable Output<Integer> proxyId;
 
+    /**
+     * @return The unique identifier for the resource.
+     * 
+     */
     public Optional<Output<Integer>> proxyId() {
         return Optional.ofNullable(this.proxyId);
     }
@@ -105,6 +137,16 @@ public final class TargetHttpsProxyState extends com.pulumi.resources.ResourceAr
     @Import(name="quicOverride")
     private @Nullable Output<String> quicOverride;
 
+    /**
+     * @return Specifies the QUIC override policy for this resource. This determines
+     * whether the load balancer will attempt to negotiate QUIC with clients
+     * or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
+     * specified, uses the QUIC policy with no user overrides, which is
+     * equivalent to DISABLE.
+     * Default value is `NONE`.
+     * Possible values are `NONE`, `ENABLE`, and `DISABLE`.
+     * 
+     */
     public Optional<Output<String>> quicOverride() {
         return Optional.ofNullable(this.quicOverride);
     }
@@ -116,6 +158,10 @@ public final class TargetHttpsProxyState extends com.pulumi.resources.ResourceAr
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -129,6 +175,12 @@ public final class TargetHttpsProxyState extends com.pulumi.resources.ResourceAr
     @Import(name="sslCertificates")
     private @Nullable Output<List<String>> sslCertificates;
 
+    /**
+     * @return A list of SslCertificate resources that are used to authenticate
+     * connections between users and the load balancer. At least one SSL
+     * certificate must be specified.
+     * 
+     */
     public Optional<Output<List<String>>> sslCertificates() {
         return Optional.ofNullable(this.sslCertificates);
     }
@@ -142,6 +194,12 @@ public final class TargetHttpsProxyState extends com.pulumi.resources.ResourceAr
     @Import(name="sslPolicy")
     private @Nullable Output<String> sslPolicy;
 
+    /**
+     * @return A reference to the SslPolicy resource that will be associated with
+     * the TargetHttpsProxy resource. If not set, the TargetHttpsProxy
+     * resource will not have any SSL policy configured.
+     * 
+     */
     public Optional<Output<String>> sslPolicy() {
         return Optional.ofNullable(this.sslPolicy);
     }
@@ -154,6 +212,11 @@ public final class TargetHttpsProxyState extends com.pulumi.resources.ResourceAr
     @Import(name="urlMap")
     private @Nullable Output<String> urlMap;
 
+    /**
+     * @return A reference to the UrlMap resource that defines the mapping from URL
+     * to the BackendService.
+     * 
+     */
     public Optional<Output<String>> urlMap() {
         return Optional.ofNullable(this.urlMap);
     }
@@ -192,105 +255,283 @@ public final class TargetHttpsProxyState extends com.pulumi.resources.ResourceAr
             $ = new TargetHttpsProxyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             $.creationTimestamp = creationTimestamp;
             return this;
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(String creationTimestamp) {
             return creationTimestamp(Output.of(creationTimestamp));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param proxyBind This field only applies when the forwarding rule that references
+         * this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyBind(@Nullable Output<Boolean> proxyBind) {
             $.proxyBind = proxyBind;
             return this;
         }
 
+        /**
+         * @param proxyBind This field only applies when the forwarding rule that references
+         * this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyBind(Boolean proxyBind) {
             return proxyBind(Output.of(proxyBind));
         }
 
+        /**
+         * @param proxyId The unique identifier for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyId(@Nullable Output<Integer> proxyId) {
             $.proxyId = proxyId;
             return this;
         }
 
+        /**
+         * @param proxyId The unique identifier for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyId(Integer proxyId) {
             return proxyId(Output.of(proxyId));
         }
 
+        /**
+         * @param quicOverride Specifies the QUIC override policy for this resource. This determines
+         * whether the load balancer will attempt to negotiate QUIC with clients
+         * or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
+         * specified, uses the QUIC policy with no user overrides, which is
+         * equivalent to DISABLE.
+         * Default value is `NONE`.
+         * Possible values are `NONE`, `ENABLE`, and `DISABLE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quicOverride(@Nullable Output<String> quicOverride) {
             $.quicOverride = quicOverride;
             return this;
         }
 
+        /**
+         * @param quicOverride Specifies the QUIC override policy for this resource. This determines
+         * whether the load balancer will attempt to negotiate QUIC with clients
+         * or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
+         * specified, uses the QUIC policy with no user overrides, which is
+         * equivalent to DISABLE.
+         * Default value is `NONE`.
+         * Possible values are `NONE`, `ENABLE`, and `DISABLE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quicOverride(String quicOverride) {
             return quicOverride(Output.of(quicOverride));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param sslCertificates A list of SslCertificate resources that are used to authenticate
+         * connections between users and the load balancer. At least one SSL
+         * certificate must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertificates(@Nullable Output<List<String>> sslCertificates) {
             $.sslCertificates = sslCertificates;
             return this;
         }
 
+        /**
+         * @param sslCertificates A list of SslCertificate resources that are used to authenticate
+         * connections between users and the load balancer. At least one SSL
+         * certificate must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertificates(List<String> sslCertificates) {
             return sslCertificates(Output.of(sslCertificates));
         }
 
+        /**
+         * @param sslCertificates A list of SslCertificate resources that are used to authenticate
+         * connections between users and the load balancer. At least one SSL
+         * certificate must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertificates(String... sslCertificates) {
             return sslCertificates(List.of(sslCertificates));
         }
 
+        /**
+         * @param sslPolicy A reference to the SslPolicy resource that will be associated with
+         * the TargetHttpsProxy resource. If not set, the TargetHttpsProxy
+         * resource will not have any SSL policy configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
             $.sslPolicy = sslPolicy;
             return this;
         }
 
+        /**
+         * @param sslPolicy A reference to the SslPolicy resource that will be associated with
+         * the TargetHttpsProxy resource. If not set, the TargetHttpsProxy
+         * resource will not have any SSL policy configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslPolicy(String sslPolicy) {
             return sslPolicy(Output.of(sslPolicy));
         }
 
+        /**
+         * @param urlMap A reference to the UrlMap resource that defines the mapping from URL
+         * to the BackendService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlMap(@Nullable Output<String> urlMap) {
             $.urlMap = urlMap;
             return this;
         }
 
+        /**
+         * @param urlMap A reference to the UrlMap resource that defines the mapping from URL
+         * to the BackendService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlMap(String urlMap) {
             return urlMap(Output.of(urlMap));
         }

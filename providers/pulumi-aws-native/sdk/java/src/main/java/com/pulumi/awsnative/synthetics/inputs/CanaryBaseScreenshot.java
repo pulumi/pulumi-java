@@ -22,6 +22,10 @@ public final class CanaryBaseScreenshot extends com.pulumi.resources.InvokeArgs 
     @Import(name="ignoreCoordinates")
     private @Nullable List<String> ignoreCoordinates;
 
+    /**
+     * @return List of coordinates of rectangles to be ignored during visual testing
+     * 
+     */
     public Optional<List<String>> ignoreCoordinates() {
         return Optional.ofNullable(this.ignoreCoordinates);
     }
@@ -33,6 +37,10 @@ public final class CanaryBaseScreenshot extends com.pulumi.resources.InvokeArgs 
     @Import(name="screenshotName", required=true)
     private String screenshotName;
 
+    /**
+     * @return Name of the screenshot to be used as base reference for visual testing
+     * 
+     */
     public String screenshotName() {
         return this.screenshotName;
     }
@@ -62,15 +70,33 @@ public final class CanaryBaseScreenshot extends com.pulumi.resources.InvokeArgs 
             $ = new CanaryBaseScreenshot(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreCoordinates List of coordinates of rectangles to be ignored during visual testing
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreCoordinates(@Nullable List<String> ignoreCoordinates) {
             $.ignoreCoordinates = ignoreCoordinates;
             return this;
         }
 
+        /**
+         * @param ignoreCoordinates List of coordinates of rectangles to be ignored during visual testing
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreCoordinates(String... ignoreCoordinates) {
             return ignoreCoordinates(List.of(ignoreCoordinates));
         }
 
+        /**
+         * @param screenshotName Name of the screenshot to be used as base reference for visual testing
+         * 
+         * @return builder
+         * 
+         */
         public Builder screenshotName(String screenshotName) {
             $.screenshotName = screenshotName;
             return this;

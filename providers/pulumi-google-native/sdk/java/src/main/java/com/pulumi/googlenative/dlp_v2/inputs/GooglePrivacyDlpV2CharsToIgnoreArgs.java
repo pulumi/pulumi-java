@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2CharsToIgnoreArgs extends com.pulumi.resour
     @Import(name="charactersToSkip")
     private @Nullable Output<String> charactersToSkip;
 
+    /**
+     * @return Characters to not transform when masking.
+     * 
+     */
     public Optional<Output<String>> charactersToSkip() {
         return Optional.ofNullable(this.charactersToSkip);
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2CharsToIgnoreArgs extends com.pulumi.resour
     @Import(name="commonCharactersToIgnore")
     private @Nullable Output<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore> commonCharactersToIgnore;
 
+    /**
+     * @return Common characters to not transform when masking. Useful to avoid removing punctuation.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore>> commonCharactersToIgnore() {
         return Optional.ofNullable(this.commonCharactersToIgnore);
     }
@@ -67,20 +75,44 @@ public final class GooglePrivacyDlpV2CharsToIgnoreArgs extends com.pulumi.resour
             $ = new GooglePrivacyDlpV2CharsToIgnoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param charactersToSkip Characters to not transform when masking.
+         * 
+         * @return builder
+         * 
+         */
         public Builder charactersToSkip(@Nullable Output<String> charactersToSkip) {
             $.charactersToSkip = charactersToSkip;
             return this;
         }
 
+        /**
+         * @param charactersToSkip Characters to not transform when masking.
+         * 
+         * @return builder
+         * 
+         */
         public Builder charactersToSkip(String charactersToSkip) {
             return charactersToSkip(Output.of(charactersToSkip));
         }
 
+        /**
+         * @param commonCharactersToIgnore Common characters to not transform when masking. Useful to avoid removing punctuation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonCharactersToIgnore(@Nullable Output<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore> commonCharactersToIgnore) {
             $.commonCharactersToIgnore = commonCharactersToIgnore;
             return this;
         }
 
+        /**
+         * @param commonCharactersToIgnore Common characters to not transform when masking. Useful to avoid removing punctuation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonCharactersToIgnore(GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore commonCharactersToIgnore) {
             return commonCharactersToIgnore(Output.of(commonCharactersToIgnore));
         }

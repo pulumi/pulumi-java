@@ -25,6 +25,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="applicationName")
     private @Nullable String applicationName;
 
+    /**
+     * @return The provider&#39;s marketplace application display name.
+     * 
+     */
     public Optional<String> applicationName() {
         return Optional.ofNullable(this.applicationName);
     }
@@ -36,6 +40,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceUri")
     private @Nullable String instanceUri;
 
+    /**
+     * @return A Uri identifying the specific instance of this provider.
+     * 
+     */
     public Optional<String> instanceUri() {
         return Optional.ofNullable(this.instanceUri);
     }
@@ -47,6 +55,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="providerId")
     private @Nullable String providerId;
 
+    /**
+     * @return Unique id of this provider.
+     * 
+     */
     public Optional<String> providerId() {
         return Optional.ofNullable(this.providerId);
     }
@@ -58,6 +70,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="providerSku")
     private @Nullable String providerSku;
 
+    /**
+     * @return The sku associated with pricing information for this provider.
+     * 
+     */
     public Optional<String> providerSku() {
         return Optional.ofNullable(this.providerSku);
     }
@@ -69,6 +85,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return Provisioning status field
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -80,6 +100,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceUsageId")
     private @Nullable String resourceUsageId;
 
+    /**
+     * @return Id to track resource usage for the provider.
+     * 
+     */
     public Optional<String> resourceUsageId() {
         return Optional.ofNullable(this.resourceUsageId);
     }
@@ -113,31 +137,67 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ProviderResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationName The provider&#39;s marketplace application display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(@Nullable String applicationName) {
             $.applicationName = applicationName;
             return this;
         }
 
+        /**
+         * @param instanceUri A Uri identifying the specific instance of this provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceUri(@Nullable String instanceUri) {
             $.instanceUri = instanceUri;
             return this;
         }
 
+        /**
+         * @param providerId Unique id of this provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerId(@Nullable String providerId) {
             $.providerId = providerId;
             return this;
         }
 
+        /**
+         * @param providerSku The sku associated with pricing information for this provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSku(@Nullable String providerSku) {
             $.providerSku = providerSku;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning status field
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param resourceUsageId Id to track resource usage for the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUsageId(@Nullable String resourceUsageId) {
             $.resourceUsageId = resourceUsageId;
             return this;

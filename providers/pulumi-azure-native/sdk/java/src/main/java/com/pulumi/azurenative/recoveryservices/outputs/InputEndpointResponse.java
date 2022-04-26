@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InputEndpointResponse {
     /**
-     * The input endpoint name.
+     * @return The input endpoint name.
      * 
      */
     private final @Nullable String endpointName;
     /**
-     * The input endpoint private port.
+     * @return The input endpoint private port.
      * 
      */
     private final @Nullable Integer privatePort;
     /**
-     * The input endpoint protocol.
+     * @return The input endpoint protocol.
      * 
      */
     private final @Nullable String protocol;
     /**
-     * The input endpoint public port.
+     * @return The input endpoint public port.
      * 
      */
     private final @Nullable Integer publicPort;
@@ -46,30 +46,30 @@ public final class InputEndpointResponse {
     }
 
     /**
-     * The input endpoint name.
+     * @return The input endpoint name.
      * 
-    */
+     */
     public Optional<String> endpointName() {
         return Optional.ofNullable(this.endpointName);
     }
     /**
-     * The input endpoint private port.
+     * @return The input endpoint private port.
      * 
-    */
+     */
     public Optional<Integer> privatePort() {
         return Optional.ofNullable(this.privatePort);
     }
     /**
-     * The input endpoint protocol.
+     * @return The input endpoint protocol.
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * The input endpoint public port.
+     * @return The input endpoint public port.
      * 
-    */
+     */
     public Optional<Integer> publicPort() {
         return Optional.ofNullable(this.publicPort);
     }

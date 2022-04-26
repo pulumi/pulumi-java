@@ -21,6 +21,10 @@ public final class GetEventCategoriesArgs extends com.pulumi.resources.InvokeArg
     @Import(name="sourceType")
     private @Nullable String sourceType;
 
+    /**
+     * @return The type of source that will be generating the events. Valid options are db-instance, db-security-group, db-parameter-group, db-snapshot, db-cluster or db-cluster-snapshot.
+     * 
+     */
     public Optional<String> sourceType() {
         return Optional.ofNullable(this.sourceType);
     }
@@ -49,6 +53,12 @@ public final class GetEventCategoriesArgs extends com.pulumi.resources.InvokeArg
             $ = new GetEventCategoriesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceType The type of source that will be generating the events. Valid options are db-instance, db-security-group, db-parameter-group, db-snapshot, db-cluster or db-cluster-snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(@Nullable String sourceType) {
             $.sourceType = sourceType;
             return this;

@@ -24,6 +24,10 @@ public final class DistributionTrustedSignerGetArgs extends com.pulumi.resources
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return A flag that specifies whether Origin Shield is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -35,6 +39,10 @@ public final class DistributionTrustedSignerGetArgs extends com.pulumi.resources
     @Import(name="items")
     private @Nullable Output<List<DistributionTrustedSignerItemGetArgs>> items;
 
+    /**
+     * @return List of nested attributes for each trusted signer
+     * 
+     */
     public Optional<Output<List<DistributionTrustedSignerItemGetArgs>>> items() {
         return Optional.ofNullable(this.items);
     }
@@ -64,24 +72,54 @@ public final class DistributionTrustedSignerGetArgs extends com.pulumi.resources
             $ = new DistributionTrustedSignerGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled A flag that specifies whether Origin Shield is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled A flag that specifies whether Origin Shield is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param items List of nested attributes for each trusted signer
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(@Nullable Output<List<DistributionTrustedSignerItemGetArgs>> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items List of nested attributes for each trusted signer
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<DistributionTrustedSignerItemGetArgs> items) {
             return items(Output.of(items));
         }
 
+        /**
+         * @param items List of nested attributes for each trusted signer
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(DistributionTrustedSignerItemGetArgs... items) {
             return items(List.of(items));
         }

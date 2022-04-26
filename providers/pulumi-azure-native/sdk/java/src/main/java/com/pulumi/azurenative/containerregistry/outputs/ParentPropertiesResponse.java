@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ParentPropertiesResponse {
     /**
-     * The resource ID of the parent to which the connected registry will be associated.
+     * @return The resource ID of the parent to which the connected registry will be associated.
      * 
      */
     private final @Nullable String id;
     /**
-     * The sync properties of the connected registry with its parent.
+     * @return The sync properties of the connected registry with its parent.
      * 
      */
     private final SyncPropertiesResponse syncProperties;
@@ -32,16 +32,16 @@ public final class ParentPropertiesResponse {
     }
 
     /**
-     * The resource ID of the parent to which the connected registry will be associated.
+     * @return The resource ID of the parent to which the connected registry will be associated.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The sync properties of the connected registry with its parent.
+     * @return The sync properties of the connected registry with its parent.
      * 
-    */
+     */
     public SyncPropertiesResponse syncProperties() {
         return this.syncProperties;
     }

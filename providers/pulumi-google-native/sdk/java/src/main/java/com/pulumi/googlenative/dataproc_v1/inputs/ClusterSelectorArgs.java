@@ -27,6 +27,10 @@ public final class ClusterSelectorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterLabels", required=true)
     private Output<Map<String,String>> clusterLabels;
 
+    /**
+     * @return The cluster labels. Cluster must have all labels to match.
+     * 
+     */
     public Output<Map<String,String>> clusterLabels() {
         return this.clusterLabels;
     }
@@ -38,6 +42,10 @@ public final class ClusterSelectorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return Optional. The zone where workflow process executes. This parameter does not affect the selection of the cluster.If unspecified, the zone of the first cluster matching the selector is used.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -67,20 +75,44 @@ public final class ClusterSelectorArgs extends com.pulumi.resources.ResourceArgs
             $ = new ClusterSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterLabels The cluster labels. Cluster must have all labels to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterLabels(Output<Map<String,String>> clusterLabels) {
             $.clusterLabels = clusterLabels;
             return this;
         }
 
+        /**
+         * @param clusterLabels The cluster labels. Cluster must have all labels to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterLabels(Map<String,String> clusterLabels) {
             return clusterLabels(Output.of(clusterLabels));
         }
 
+        /**
+         * @param zone Optional. The zone where workflow process executes. This parameter does not affect the selection of the cluster.If unspecified, the zone of the first cluster matching the selector is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone Optional. The zone where workflow process executes. This parameter does not affect the selection of the cluster.If unspecified, the zone of the first cluster matching the selector is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

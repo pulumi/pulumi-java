@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends com.pulu
     @Import(name="flow")
     private @Nullable Output<String> flow;
 
+    /**
+     * @return Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
+     * 
+     */
     public Optional<Output<String>> flow() {
         return Optional.ofNullable(this.flow);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends com.pulu
     @Import(name="trackingParameters")
     private @Nullable Output<List<String>> trackingParameters;
 
+    /**
+     * @return Session parameters to be compared when calculating differences.
+     * 
+     */
     public Optional<Output<List<String>>> trackingParameters() {
         return Optional.ofNullable(this.trackingParameters);
     }
@@ -67,24 +75,54 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends com.pulu
             $ = new GoogleCloudDialogflowCxV3beta1TestConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param flow Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flow(@Nullable Output<String> flow) {
             $.flow = flow;
             return this;
         }
 
+        /**
+         * @param flow Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flow(String flow) {
             return flow(Output.of(flow));
         }
 
+        /**
+         * @param trackingParameters Session parameters to be compared when calculating differences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingParameters(@Nullable Output<List<String>> trackingParameters) {
             $.trackingParameters = trackingParameters;
             return this;
         }
 
+        /**
+         * @param trackingParameters Session parameters to be compared when calculating differences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingParameters(List<String> trackingParameters) {
             return trackingParameters(Output.of(trackingParameters));
         }
 
+        /**
+         * @param trackingParameters Session parameters to be compared when calculating differences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingParameters(String... trackingParameters) {
             return trackingParameters(List.of(trackingParameters));
         }

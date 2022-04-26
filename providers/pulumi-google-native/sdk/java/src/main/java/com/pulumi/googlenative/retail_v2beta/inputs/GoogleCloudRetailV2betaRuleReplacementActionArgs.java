@@ -27,6 +27,10 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionArgs extends com.
     @Import(name="queryTerms")
     private @Nullable Output<List<String>> queryTerms;
 
+    /**
+     * @return Terms from the search query. Will be replaced by replacement term. Can specify up to 100 terms.
+     * 
+     */
     public Optional<Output<List<String>>> queryTerms() {
         return Optional.ofNullable(this.queryTerms);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionArgs extends com.
     @Import(name="replacementTerm")
     private @Nullable Output<String> replacementTerm;
 
+    /**
+     * @return Term that will be used for replacement.
+     * 
+     */
     public Optional<Output<String>> replacementTerm() {
         return Optional.ofNullable(this.replacementTerm);
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionArgs extends com.
     @Import(name="term")
     private @Nullable Output<String> term;
 
+    /**
+     * @return Will be [deprecated = true] post migration;
+     * 
+     */
     public Optional<Output<String>> term() {
         return Optional.ofNullable(this.term);
     }
@@ -79,33 +91,75 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionArgs extends com.
             $ = new GoogleCloudRetailV2betaRuleReplacementActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queryTerms Terms from the search query. Will be replaced by replacement term. Can specify up to 100 terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTerms(@Nullable Output<List<String>> queryTerms) {
             $.queryTerms = queryTerms;
             return this;
         }
 
+        /**
+         * @param queryTerms Terms from the search query. Will be replaced by replacement term. Can specify up to 100 terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTerms(List<String> queryTerms) {
             return queryTerms(Output.of(queryTerms));
         }
 
+        /**
+         * @param queryTerms Terms from the search query. Will be replaced by replacement term. Can specify up to 100 terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTerms(String... queryTerms) {
             return queryTerms(List.of(queryTerms));
         }
 
+        /**
+         * @param replacementTerm Term that will be used for replacement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replacementTerm(@Nullable Output<String> replacementTerm) {
             $.replacementTerm = replacementTerm;
             return this;
         }
 
+        /**
+         * @param replacementTerm Term that will be used for replacement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replacementTerm(String replacementTerm) {
             return replacementTerm(Output.of(replacementTerm));
         }
 
+        /**
+         * @param term Will be [deprecated = true] post migration;
+         * 
+         * @return builder
+         * 
+         */
         public Builder term(@Nullable Output<String> term) {
             $.term = term;
             return this;
         }
 
+        /**
+         * @param term Will be [deprecated = true] post migration;
+         * 
+         * @return builder
+         * 
+         */
         public Builder term(String term) {
             return term(Output.of(term));
         }

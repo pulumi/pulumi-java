@@ -31,6 +31,10 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends com.pul
     @Import(name="audioEncoding", required=true)
     private Output<GoogleCloudDialogflowCxV3InputAudioConfigAudioEncoding> audioEncoding;
 
+    /**
+     * @return Audio encoding of the audio content to process.
+     * 
+     */
     public Output<GoogleCloudDialogflowCxV3InputAudioConfigAudioEncoding> audioEncoding() {
         return this.audioEncoding;
     }
@@ -42,6 +46,10 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends com.pul
     @Import(name="enableWordInfo")
     private @Nullable Output<Boolean> enableWordInfo;
 
+    /**
+     * @return Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words, e.g. start and end time offsets. If false or unspecified, Speech doesn&#39;t return any word-level information.
+     * 
+     */
     public Optional<Output<Boolean>> enableWordInfo() {
         return Optional.ofNullable(this.enableWordInfo);
     }
@@ -53,6 +61,10 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends com.pul
     @Import(name="model")
     private @Nullable Output<String> model;
 
+    /**
+     * @return Optional. Which Speech model to select for the given request. Select the model best suited to your domain to get best results. If a model is not explicitly specified, then we auto-select a model based on the parameters in the InputAudioConfig. If enhanced speech model is enabled for the agent and an enhanced version of the specified model for the language does not exist, then the speech is recognized using the standard version of the specified model. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more details.
+     * 
+     */
     public Optional<Output<String>> model() {
         return Optional.ofNullable(this.model);
     }
@@ -64,6 +76,10 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends com.pul
     @Import(name="modelVariant")
     private @Nullable Output<GoogleCloudDialogflowCxV3InputAudioConfigModelVariant> modelVariant;
 
+    /**
+     * @return Optional. Which variant of the Speech model to use.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3InputAudioConfigModelVariant>> modelVariant() {
         return Optional.ofNullable(this.modelVariant);
     }
@@ -75,6 +91,10 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends com.pul
     @Import(name="phraseHints")
     private @Nullable Output<List<String>> phraseHints;
 
+    /**
+     * @return Optional. A list of strings containing words and phrases that the speech recognizer should recognize with higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more details.
+     * 
+     */
     public Optional<Output<List<String>>> phraseHints() {
         return Optional.ofNullable(this.phraseHints);
     }
@@ -86,6 +106,10 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends com.pul
     @Import(name="sampleRateHertz")
     private @Nullable Output<Integer> sampleRateHertz;
 
+    /**
+     * @return Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
+     * 
+     */
     public Optional<Output<Integer>> sampleRateHertz() {
         return Optional.ofNullable(this.sampleRateHertz);
     }
@@ -97,6 +121,10 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends com.pul
     @Import(name="singleUtterance")
     private @Nullable Output<Boolean> singleUtterance;
 
+    /**
+     * @return Optional. If `false` (default), recognition does not cease until the client closes the stream. If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it detects the audio&#39;s voice has stopped or paused. In this case, once a detected intent is received, the client should close the stream and start a new request with a new stream as needed. Note: This setting is relevant only for streaming methods.
+     * 
+     */
     public Optional<Output<Boolean>> singleUtterance() {
         return Optional.ofNullable(this.singleUtterance);
     }
@@ -131,69 +159,159 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends com.pul
             $ = new GoogleCloudDialogflowCxV3InputAudioConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audioEncoding Audio encoding of the audio content to process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioEncoding(Output<GoogleCloudDialogflowCxV3InputAudioConfigAudioEncoding> audioEncoding) {
             $.audioEncoding = audioEncoding;
             return this;
         }
 
+        /**
+         * @param audioEncoding Audio encoding of the audio content to process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioEncoding(GoogleCloudDialogflowCxV3InputAudioConfigAudioEncoding audioEncoding) {
             return audioEncoding(Output.of(audioEncoding));
         }
 
+        /**
+         * @param enableWordInfo Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words, e.g. start and end time offsets. If false or unspecified, Speech doesn&#39;t return any word-level information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableWordInfo(@Nullable Output<Boolean> enableWordInfo) {
             $.enableWordInfo = enableWordInfo;
             return this;
         }
 
+        /**
+         * @param enableWordInfo Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words, e.g. start and end time offsets. If false or unspecified, Speech doesn&#39;t return any word-level information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableWordInfo(Boolean enableWordInfo) {
             return enableWordInfo(Output.of(enableWordInfo));
         }
 
+        /**
+         * @param model Optional. Which Speech model to select for the given request. Select the model best suited to your domain to get best results. If a model is not explicitly specified, then we auto-select a model based on the parameters in the InputAudioConfig. If enhanced speech model is enabled for the agent and an enhanced version of the specified model for the language does not exist, then the speech is recognized using the standard version of the specified model. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(@Nullable Output<String> model) {
             $.model = model;
             return this;
         }
 
+        /**
+         * @param model Optional. Which Speech model to select for the given request. Select the model best suited to your domain to get best results. If a model is not explicitly specified, then we auto-select a model based on the parameters in the InputAudioConfig. If enhanced speech model is enabled for the agent and an enhanced version of the specified model for the language does not exist, then the speech is recognized using the standard version of the specified model. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(String model) {
             return model(Output.of(model));
         }
 
+        /**
+         * @param modelVariant Optional. Which variant of the Speech model to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelVariant(@Nullable Output<GoogleCloudDialogflowCxV3InputAudioConfigModelVariant> modelVariant) {
             $.modelVariant = modelVariant;
             return this;
         }
 
+        /**
+         * @param modelVariant Optional. Which variant of the Speech model to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelVariant(GoogleCloudDialogflowCxV3InputAudioConfigModelVariant modelVariant) {
             return modelVariant(Output.of(modelVariant));
         }
 
+        /**
+         * @param phraseHints Optional. A list of strings containing words and phrases that the speech recognizer should recognize with higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseHints(@Nullable Output<List<String>> phraseHints) {
             $.phraseHints = phraseHints;
             return this;
         }
 
+        /**
+         * @param phraseHints Optional. A list of strings containing words and phrases that the speech recognizer should recognize with higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseHints(List<String> phraseHints) {
             return phraseHints(Output.of(phraseHints));
         }
 
+        /**
+         * @param phraseHints Optional. A list of strings containing words and phrases that the speech recognizer should recognize with higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseHints(String... phraseHints) {
             return phraseHints(List.of(phraseHints));
         }
 
+        /**
+         * @param sampleRateHertz Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleRateHertz(@Nullable Output<Integer> sampleRateHertz) {
             $.sampleRateHertz = sampleRateHertz;
             return this;
         }
 
+        /**
+         * @param sampleRateHertz Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleRateHertz(Integer sampleRateHertz) {
             return sampleRateHertz(Output.of(sampleRateHertz));
         }
 
+        /**
+         * @param singleUtterance Optional. If `false` (default), recognition does not cease until the client closes the stream. If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it detects the audio&#39;s voice has stopped or paused. In this case, once a detected intent is received, the client should close the stream and start a new request with a new stream as needed. Note: This setting is relevant only for streaming methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleUtterance(@Nullable Output<Boolean> singleUtterance) {
             $.singleUtterance = singleUtterance;
             return this;
         }
 
+        /**
+         * @param singleUtterance Optional. If `false` (default), recognition does not cease until the client closes the stream. If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it detects the audio&#39;s voice has stopped or paused. In this case, once a detected intent is received, the client should close the stream and start a new request with a new stream as needed. Note: This setting is relevant only for streaming methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleUtterance(Boolean singleUtterance) {
             return singleUtterance(Output.of(singleUtterance));
         }

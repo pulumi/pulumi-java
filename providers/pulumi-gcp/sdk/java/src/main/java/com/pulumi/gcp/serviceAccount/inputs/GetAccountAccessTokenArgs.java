@@ -22,6 +22,10 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
     @Import(name="delegates")
     private @Nullable List<String> delegates;
 
+    /**
+     * @return Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.  (e.g. `[&#34;projects/-/serviceAccounts/delegate-svc-account@project-id.iam.gserviceaccount.com&#34;]`)
+     * 
+     */
     public Optional<List<String>> delegates() {
         return Optional.ofNullable(this.delegates);
     }
@@ -33,6 +37,10 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
     @Import(name="lifetime")
     private @Nullable String lifetime;
 
+    /**
+     * @return Lifetime of the impersonated token (defaults to its max: `3600s`).
+     * 
+     */
     public Optional<String> lifetime() {
         return Optional.ofNullable(this.lifetime);
     }
@@ -44,6 +52,10 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
     @Import(name="scopes", required=true)
     private List<String> scopes;
 
+    /**
+     * @return The scopes the new credential should have (e.g. `[&#34;cloud-platform&#34;]`)
+     * 
+     */
     public List<String> scopes() {
         return this.scopes;
     }
@@ -55,6 +67,10 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
     @Import(name="targetServiceAccount", required=true)
     private String targetServiceAccount;
 
+    /**
+     * @return The service account _to_ impersonate (e.g. `service_B@your-project-id.iam.gserviceaccount.com`)
+     * 
+     */
     public String targetServiceAccount() {
         return this.targetServiceAccount;
     }
@@ -86,29 +102,65 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
             $ = new GetAccountAccessTokenArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delegates Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.  (e.g. `[&#34;projects/-/serviceAccounts/delegate-svc-account@project-id.iam.gserviceaccount.com&#34;]`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegates(@Nullable List<String> delegates) {
             $.delegates = delegates;
             return this;
         }
 
+        /**
+         * @param delegates Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.  (e.g. `[&#34;projects/-/serviceAccounts/delegate-svc-account@project-id.iam.gserviceaccount.com&#34;]`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegates(String... delegates) {
             return delegates(List.of(delegates));
         }
 
+        /**
+         * @param lifetime Lifetime of the impersonated token (defaults to its max: `3600s`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifetime(@Nullable String lifetime) {
             $.lifetime = lifetime;
             return this;
         }
 
+        /**
+         * @param scopes The scopes the new credential should have (e.g. `[&#34;cloud-platform&#34;]`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(List<String> scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param scopes The scopes the new credential should have (e.g. `[&#34;cloud-platform&#34;]`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }
 
+        /**
+         * @param targetServiceAccount The service account _to_ impersonate (e.g. `service_B@your-project-id.iam.gserviceaccount.com`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServiceAccount(String targetServiceAccount) {
             $.targetServiceAccount = targetServiceAccount;
             return this;

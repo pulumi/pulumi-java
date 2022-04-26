@@ -23,6 +23,10 @@ public final class ServiceHealthCheckConfigurationGetArgs extends com.pulumi.res
     @Import(name="healthyThreshold")
     private @Nullable Output<Integer> healthyThreshold;
 
+    /**
+     * @return The number of consecutive checks that must succeed before App Runner decides that the service is healthy. Defaults to 1. Minimum value of 1. Maximum value of 20.
+     * 
+     */
     public Optional<Output<Integer>> healthyThreshold() {
         return Optional.ofNullable(this.healthyThreshold);
     }
@@ -34,6 +38,10 @@ public final class ServiceHealthCheckConfigurationGetArgs extends com.pulumi.res
     @Import(name="interval")
     private @Nullable Output<Integer> interval;
 
+    /**
+     * @return The time interval, in seconds, between health checks. Defaults to 5. Minimum value of 1. Maximum value of 20.
+     * 
+     */
     public Optional<Output<Integer>> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -45,6 +53,10 @@ public final class ServiceHealthCheckConfigurationGetArgs extends com.pulumi.res
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The URL to send requests to for health checks. Defaults to `/`. Minimum length of 0. Maximum length of 51200.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -56,6 +68,10 @@ public final class ServiceHealthCheckConfigurationGetArgs extends com.pulumi.res
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
+    /**
+     * @return The IP protocol that App Runner uses to perform health checks for your service. Valid values: `TCP`, `HTTP`. Defaults to `TCP`. If you set protocol to `HTTP`, App Runner sends health check requests to the HTTP path specified by `path`.
+     * 
+     */
     public Optional<Output<String>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -67,6 +83,10 @@ public final class ServiceHealthCheckConfigurationGetArgs extends com.pulumi.res
     @Import(name="timeout")
     private @Nullable Output<Integer> timeout;
 
+    /**
+     * @return The time, in seconds, to wait for a health check response before deciding it failed. Defaults to 2. Minimum value of  1. Maximum value of 20.
+     * 
+     */
     public Optional<Output<Integer>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -78,6 +98,10 @@ public final class ServiceHealthCheckConfigurationGetArgs extends com.pulumi.res
     @Import(name="unhealthyThreshold")
     private @Nullable Output<Integer> unhealthyThreshold;
 
+    /**
+     * @return The number of consecutive checks that must fail before App Runner decides that the service is unhealthy. Defaults to 5. Minimum value of  1. Maximum value of 20.
+     * 
+     */
     public Optional<Output<Integer>> unhealthyThreshold() {
         return Optional.ofNullable(this.unhealthyThreshold);
     }
@@ -111,56 +135,128 @@ public final class ServiceHealthCheckConfigurationGetArgs extends com.pulumi.res
             $ = new ServiceHealthCheckConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthyThreshold The number of consecutive checks that must succeed before App Runner decides that the service is healthy. Defaults to 1. Minimum value of 1. Maximum value of 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
             $.healthyThreshold = healthyThreshold;
             return this;
         }
 
+        /**
+         * @param healthyThreshold The number of consecutive checks that must succeed before App Runner decides that the service is healthy. Defaults to 1. Minimum value of 1. Maximum value of 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthyThreshold(Integer healthyThreshold) {
             return healthyThreshold(Output.of(healthyThreshold));
         }
 
+        /**
+         * @param interval The time interval, in seconds, between health checks. Defaults to 5. Minimum value of 1. Maximum value of 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Output<Integer> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval The time interval, in seconds, between health checks. Defaults to 5. Minimum value of 1. Maximum value of 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Integer interval) {
             return interval(Output.of(interval));
         }
 
+        /**
+         * @param path The URL to send requests to for health checks. Defaults to `/`. Minimum length of 0. Maximum length of 51200.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The URL to send requests to for health checks. Defaults to `/`. Minimum length of 0. Maximum length of 51200.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param protocol The IP protocol that App Runner uses to perform health checks for your service. Valid values: `TCP`, `HTTP`. Defaults to `TCP`. If you set protocol to `HTTP`, App Runner sends health check requests to the HTTP path specified by `path`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The IP protocol that App Runner uses to perform health checks for your service. Valid values: `TCP`, `HTTP`. Defaults to `TCP`. If you set protocol to `HTTP`, App Runner sends health check requests to the HTTP path specified by `path`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param timeout The time, in seconds, to wait for a health check response before deciding it failed. Defaults to 2. Minimum value of  1. Maximum value of 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<Integer> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout The time, in seconds, to wait for a health check response before deciding it failed. Defaults to 2. Minimum value of  1. Maximum value of 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(Integer timeout) {
             return timeout(Output.of(timeout));
         }
 
+        /**
+         * @param unhealthyThreshold The number of consecutive checks that must fail before App Runner decides that the service is unhealthy. Defaults to 5. Minimum value of  1. Maximum value of 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
             $.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
 
+        /**
+         * @param unhealthyThreshold The number of consecutive checks that must fail before App Runner decides that the service is unhealthy. Defaults to 5. Minimum value of  1. Maximum value of 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             return unhealthyThreshold(Output.of(unhealthyThreshold));
         }

@@ -27,6 +27,10 @@ public final class NotificationReceiverValueResponse extends com.pulumi.resource
     @Import(name="distributionGroupListReceiverValue")
     private @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue;
 
+    /**
+     * @return The user object receiver value.
+     * 
+     */
     public Optional<DistributionGroupListReceiverValueResponse> distributionGroupListReceiverValue() {
         return Optional.ofNullable(this.distributionGroupListReceiverValue);
     }
@@ -38,6 +42,10 @@ public final class NotificationReceiverValueResponse extends com.pulumi.resource
     @Import(name="subscriptionReceiverValue")
     private @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue;
 
+    /**
+     * @return The user object receiver value.
+     * 
+     */
     public Optional<SubscriptionReceiverValueResponse> subscriptionReceiverValue() {
         return Optional.ofNullable(this.subscriptionReceiverValue);
     }
@@ -49,6 +57,10 @@ public final class NotificationReceiverValueResponse extends com.pulumi.resource
     @Import(name="userObjectReceiverValue")
     private @Nullable UserObjectReceiverValueResponse userObjectReceiverValue;
 
+    /**
+     * @return The user object receiver value.
+     * 
+     */
     public Optional<UserObjectReceiverValueResponse> userObjectReceiverValue() {
         return Optional.ofNullable(this.userObjectReceiverValue);
     }
@@ -79,16 +91,34 @@ public final class NotificationReceiverValueResponse extends com.pulumi.resource
             $ = new NotificationReceiverValueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionGroupListReceiverValue The user object receiver value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionGroupListReceiverValue(@Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue) {
             $.distributionGroupListReceiverValue = distributionGroupListReceiverValue;
             return this;
         }
 
+        /**
+         * @param subscriptionReceiverValue The user object receiver value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionReceiverValue(@Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue) {
             $.subscriptionReceiverValue = subscriptionReceiverValue;
             return this;
         }
 
+        /**
+         * @param userObjectReceiverValue The user object receiver value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userObjectReceiverValue(@Nullable UserObjectReceiverValueResponse userObjectReceiverValue) {
             $.userObjectReceiverValue = userObjectReceiverValue;
             return this;

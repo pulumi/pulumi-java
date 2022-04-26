@@ -28,6 +28,10 @@ public final class MetricRulesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filteringTags")
     private @Nullable Output<List<FilteringTagArgs>> filteringTags;
 
+    /**
+     * @return List of filtering tags to be used for capturing metrics. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+     * 
+     */
     public Optional<Output<List<FilteringTagArgs>>> filteringTags() {
         return Optional.ofNullable(this.filteringTags);
     }
@@ -39,6 +43,10 @@ public final class MetricRulesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionId")
     private @Nullable Output<String> subscriptionId;
 
+    /**
+     * @return Subscription Id for which filtering tags are applicable
+     * 
+     */
     public Optional<Output<String>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -68,24 +76,54 @@ public final class MetricRulesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MetricRulesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filteringTags List of filtering tags to be used for capturing metrics. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filteringTags(@Nullable Output<List<FilteringTagArgs>> filteringTags) {
             $.filteringTags = filteringTags;
             return this;
         }
 
+        /**
+         * @param filteringTags List of filtering tags to be used for capturing metrics. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filteringTags(List<FilteringTagArgs> filteringTags) {
             return filteringTags(Output.of(filteringTags));
         }
 
+        /**
+         * @param filteringTags List of filtering tags to be used for capturing metrics. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filteringTags(FilteringTagArgs... filteringTags) {
             return filteringTags(List.of(filteringTags));
         }
 
+        /**
+         * @param subscriptionId Subscription Id for which filtering tags are applicable
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription Id for which filtering tags are applicable
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }

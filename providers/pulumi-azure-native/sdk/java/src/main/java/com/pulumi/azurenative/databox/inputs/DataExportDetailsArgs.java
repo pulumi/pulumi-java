@@ -32,6 +32,10 @@ public final class DataExportDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="accountDetails", required=true)
     private Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
 
+    /**
+     * @return Account details of the data to be transferred
+     * 
+     */
     public Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails() {
         return this.accountDetails;
     }
@@ -43,6 +47,10 @@ public final class DataExportDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="logCollectionLevel")
     private @Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel;
 
+    /**
+     * @return Level of the logs to be collected.
+     * 
+     */
     public Optional<Output<Either<String,LogCollectionLevel>>> logCollectionLevel() {
         return Optional.ofNullable(this.logCollectionLevel);
     }
@@ -54,6 +62,10 @@ public final class DataExportDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="transferConfiguration", required=true)
     private Output<TransferConfigurationArgs> transferConfiguration;
 
+    /**
+     * @return Configuration for the data transfer.
+     * 
+     */
     public Output<TransferConfigurationArgs> transferConfiguration() {
         return this.transferConfiguration;
     }
@@ -84,45 +96,105 @@ public final class DataExportDetailsArgs extends com.pulumi.resources.ResourceAr
             $ = new DataExportDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountDetails Account details of the data to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountDetails(Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails) {
             $.accountDetails = accountDetails;
             return this;
         }
 
+        /**
+         * @param accountDetails Account details of the data to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountDetails(Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs> accountDetails) {
             return accountDetails(Output.of(accountDetails));
         }
 
+        /**
+         * @param accountDetails Account details of the data to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountDetails(ManagedDiskDetailsArgs accountDetails) {
             return accountDetails(Either.ofLeft(accountDetails));
         }
 
+        /**
+         * @param accountDetails Account details of the data to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountDetails(StorageAccountDetailsArgs accountDetails) {
             return accountDetails(Either.ofRight(accountDetails));
         }
 
+        /**
+         * @param logCollectionLevel Level of the logs to be collected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logCollectionLevel(@Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel) {
             $.logCollectionLevel = logCollectionLevel;
             return this;
         }
 
+        /**
+         * @param logCollectionLevel Level of the logs to be collected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logCollectionLevel(Either<String,LogCollectionLevel> logCollectionLevel) {
             return logCollectionLevel(Output.of(logCollectionLevel));
         }
 
+        /**
+         * @param logCollectionLevel Level of the logs to be collected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logCollectionLevel(String logCollectionLevel) {
             return logCollectionLevel(Either.ofLeft(logCollectionLevel));
         }
 
+        /**
+         * @param logCollectionLevel Level of the logs to be collected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logCollectionLevel(LogCollectionLevel logCollectionLevel) {
             return logCollectionLevel(Either.ofRight(logCollectionLevel));
         }
 
+        /**
+         * @param transferConfiguration Configuration for the data transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferConfiguration(Output<TransferConfigurationArgs> transferConfiguration) {
             $.transferConfiguration = transferConfiguration;
             return this;
         }
 
+        /**
+         * @param transferConfiguration Configuration for the data transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferConfiguration(TransferConfigurationArgs transferConfiguration) {
             return transferConfiguration(Output.of(transferConfiguration));
         }

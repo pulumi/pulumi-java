@@ -28,6 +28,10 @@ public final class MongoDbAtlasSourceResponse extends com.pulumi.resources.Invok
     @Import(name="additionalColumns")
     private @Nullable Object additionalColumns;
 
+    /**
+     * @return Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     * 
+     */
     public Optional<Object> additionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
@@ -39,6 +43,10 @@ public final class MongoDbAtlasSourceResponse extends com.pulumi.resources.Invok
     @Import(name="batchSize")
     private @Nullable Object batchSize;
 
+    /**
+     * @return Specifies the number of documents to return in each batch of the response from MongoDB Atlas instance. In most cases, modifying the batch size will not affect the user or the application. This property&#39;s main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> batchSize() {
         return Optional.ofNullable(this.batchSize);
     }
@@ -50,6 +58,10 @@ public final class MongoDbAtlasSourceResponse extends com.pulumi.resources.Invok
     @Import(name="cursorMethods")
     private @Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods;
 
+    /**
+     * @return Cursor methods for Mongodb query
+     * 
+     */
     public Optional<MongoDbCursorMethodsPropertiesResponse> cursorMethods() {
         return Optional.ofNullable(this.cursorMethods);
     }
@@ -61,6 +73,10 @@ public final class MongoDbAtlasSourceResponse extends com.pulumi.resources.Invok
     @Import(name="disableMetricsCollection")
     private @Nullable Object disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -72,6 +88,10 @@ public final class MongoDbAtlasSourceResponse extends com.pulumi.resources.Invok
     @Import(name="filter")
     private @Nullable Object filter;
 
+    /**
+     * @return Specifies selection filter using query operators. To return all documents in a collection, omit this parameter or pass an empty document ({}). Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -83,6 +103,10 @@ public final class MongoDbAtlasSourceResponse extends com.pulumi.resources.Invok
     @Import(name="maxConcurrentConnections")
     private @Nullable Object maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -94,6 +118,10 @@ public final class MongoDbAtlasSourceResponse extends com.pulumi.resources.Invok
     @Import(name="queryTimeout")
     private @Nullable Object queryTimeout;
 
+    /**
+     * @return Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> queryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
@@ -105,6 +133,10 @@ public final class MongoDbAtlasSourceResponse extends com.pulumi.resources.Invok
     @Import(name="sourceRetryCount")
     private @Nullable Object sourceRetryCount;
 
+    /**
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
@@ -116,6 +148,10 @@ public final class MongoDbAtlasSourceResponse extends com.pulumi.resources.Invok
     @Import(name="sourceRetryWait")
     private @Nullable Object sourceRetryWait;
 
+    /**
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -128,6 +164,11 @@ public final class MongoDbAtlasSourceResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Copy source type.
+     * Expected value is &#39;MongoDbAtlasSource&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -165,51 +206,112 @@ public final class MongoDbAtlasSourceResponse extends com.pulumi.resources.Invok
             $ = new MongoDbAtlasSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalColumns Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalColumns(@Nullable Object additionalColumns) {
             $.additionalColumns = additionalColumns;
             return this;
         }
 
+        /**
+         * @param batchSize Specifies the number of documents to return in each batch of the response from MongoDB Atlas instance. In most cases, modifying the batch size will not affect the user or the application. This property&#39;s main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchSize(@Nullable Object batchSize) {
             $.batchSize = batchSize;
             return this;
         }
 
+        /**
+         * @param cursorMethods Cursor methods for Mongodb query
+         * 
+         * @return builder
+         * 
+         */
         public Builder cursorMethods(@Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods) {
             $.cursorMethods = cursorMethods;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param filter Specifies selection filter using query operators. To return all documents in a collection, omit this parameter or pass an empty document ({}). Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Object filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param queryTimeout Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTimeout(@Nullable Object queryTimeout) {
             $.queryTimeout = queryTimeout;
             return this;
         }
 
+        /**
+         * @param sourceRetryCount Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             $.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
+        /**
+         * @param sourceRetryWait Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             $.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
+        /**
+         * @param type Copy source type.
+         * Expected value is &#39;MongoDbAtlasSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

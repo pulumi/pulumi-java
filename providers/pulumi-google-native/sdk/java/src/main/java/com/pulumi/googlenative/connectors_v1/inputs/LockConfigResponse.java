@@ -24,6 +24,10 @@ public final class LockConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="locked", required=true)
     private Boolean locked;
 
+    /**
+     * @return Indicates whether or not the connection is locked.
+     * 
+     */
     public Boolean locked() {
         return this.locked;
     }
@@ -35,6 +39,10 @@ public final class LockConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="reason", required=true)
     private String reason;
 
+    /**
+     * @return Describes why a connection is locked.
+     * 
+     */
     public String reason() {
         return this.reason;
     }
@@ -64,11 +72,23 @@ public final class LockConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LockConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param locked Indicates whether or not the connection is locked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locked(Boolean locked) {
             $.locked = locked;
             return this;
         }
 
+        /**
+         * @param reason Describes why a connection is locked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             $.reason = reason;
             return this;

@@ -32,6 +32,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowMajorVersionUpgrade")
     private @Nullable Output<Boolean> allowMajorVersionUpgrade;
 
+    /**
+     * @return Enable to allow major engine version upgrades when changing engine versions. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> allowMajorVersionUpgrade() {
         return Optional.ofNullable(this.allowMajorVersionUpgrade);
     }
@@ -43,6 +47,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applyImmediately")
     private @Nullable Output<Boolean> applyImmediately;
 
+    /**
+     * @return Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+     * 
+     */
     public Optional<Output<Boolean>> applyImmediately() {
         return Optional.ofNullable(this.applyImmediately);
     }
@@ -54,6 +62,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of cluster
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -65,6 +77,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZones")
     private @Nullable Output<List<String>> availabilityZones;
 
+    /**
+     * @return A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next apply. It is recommended to specify 3 AZs.
+     * 
+     */
     public Optional<Output<List<String>>> availabilityZones() {
         return Optional.ofNullable(this.availabilityZones);
     }
@@ -76,6 +92,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="backtrackWindow")
     private @Nullable Output<Integer> backtrackWindow;
 
+    /**
+     * @return The target backtrack window, in seconds. Only available for `aurora` and `aurora-mysql` engines currently. To disable backtracking, set this value to `0`. Defaults to `0`. Must be between `0` and `259200` (72 hours)
+     * 
+     */
     public Optional<Output<Integer>> backtrackWindow() {
         return Optional.ofNullable(this.backtrackWindow);
     }
@@ -87,6 +107,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="backupRetentionPeriod")
     private @Nullable Output<Integer> backupRetentionPeriod;
 
+    /**
+     * @return The days to retain backups for. Default `1`
+     * 
+     */
     public Optional<Output<Integer>> backupRetentionPeriod() {
         return Optional.ofNullable(this.backupRetentionPeriod);
     }
@@ -98,6 +122,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterIdentifier")
     private @Nullable Output<String> clusterIdentifier;
 
+    /**
+     * @return The cluster identifier. If omitted, this provider will assign a random, unique identifier.
+     * 
+     */
     public Optional<Output<String>> clusterIdentifier() {
         return Optional.ofNullable(this.clusterIdentifier);
     }
@@ -109,6 +137,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterIdentifierPrefix")
     private @Nullable Output<String> clusterIdentifierPrefix;
 
+    /**
+     * @return Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifier`.
+     * 
+     */
     public Optional<Output<String>> clusterIdentifierPrefix() {
         return Optional.ofNullable(this.clusterIdentifierPrefix);
     }
@@ -120,6 +152,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterMembers")
     private @Nullable Output<List<String>> clusterMembers;
 
+    /**
+     * @return List of RDS Instances that are a part of this cluster
+     * 
+     */
     public Optional<Output<List<String>>> clusterMembers() {
         return Optional.ofNullable(this.clusterMembers);
     }
@@ -131,6 +167,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterResourceId")
     private @Nullable Output<String> clusterResourceId;
 
+    /**
+     * @return The RDS Cluster Resource ID
+     * 
+     */
     public Optional<Output<String>> clusterResourceId() {
         return Optional.ofNullable(this.clusterResourceId);
     }
@@ -142,6 +182,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="copyTagsToSnapshot")
     private @Nullable Output<Boolean> copyTagsToSnapshot;
 
+    /**
+     * @return Copy all Cluster `tags` to snapshots. Default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> copyTagsToSnapshot() {
         return Optional.ofNullable(this.copyTagsToSnapshot);
     }
@@ -153,6 +197,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return Name for an automatically created database on cluster creation. There are different naming restrictions per database engine: [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -164,6 +212,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dbClusterParameterGroupName")
     private @Nullable Output<String> dbClusterParameterGroupName;
 
+    /**
+     * @return A cluster parameter group to associate with the cluster.
+     * 
+     */
     public Optional<Output<String>> dbClusterParameterGroupName() {
         return Optional.ofNullable(this.dbClusterParameterGroupName);
     }
@@ -175,6 +227,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dbInstanceParameterGroupName")
     private @Nullable Output<String> dbInstanceParameterGroupName;
 
+    /**
+     * @return Instance parameter group to associate with all instances of the DB cluster. The `db_instance_parameter_group_name` parameter is only valid in combination with the `allow_major_version_upgrade` parameter.
+     * 
+     */
     public Optional<Output<String>> dbInstanceParameterGroupName() {
         return Optional.ofNullable(this.dbInstanceParameterGroupName);
     }
@@ -186,6 +242,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dbSubnetGroupName")
     private @Nullable Output<String> dbSubnetGroupName;
 
+    /**
+     * @return A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` specified on every `aws.rds.ClusterInstance` in the cluster.
+     * 
+     */
     public Optional<Output<String>> dbSubnetGroupName() {
         return Optional.ofNullable(this.dbSubnetGroupName);
     }
@@ -197,6 +257,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deletionProtection")
     private @Nullable Output<Boolean> deletionProtection;
 
+    /**
+     * @return If the DB instance should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> deletionProtection() {
         return Optional.ofNullable(this.deletionProtection);
     }
@@ -208,6 +272,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableGlobalWriteForwarding")
     private @Nullable Output<Boolean> enableGlobalWriteForwarding;
 
+    /**
+     * @return Whether cluster should forward writes to an associated global cluster. Applied to secondary clusters to enable them to forward writes to an `aws.rds.GlobalCluster`&#39;s primary cluster. See the [Aurora Userguide documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-write-forwarding.html) for more information.
+     * 
+     */
     public Optional<Output<Boolean>> enableGlobalWriteForwarding() {
         return Optional.ofNullable(this.enableGlobalWriteForwarding);
     }
@@ -219,6 +287,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableHttpEndpoint")
     private @Nullable Output<Boolean> enableHttpEndpoint;
 
+    /**
+     * @return Enable HTTP endpoint (data API). Only valid when `engine_mode` is set to `serverless`.
+     * 
+     */
     public Optional<Output<Boolean>> enableHttpEndpoint() {
         return Optional.ofNullable(this.enableHttpEndpoint);
     }
@@ -230,6 +302,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledCloudwatchLogsExports")
     private @Nullable Output<List<String>> enabledCloudwatchLogsExports;
 
+    /**
+     * @return Set of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
+     * 
+     */
     public Optional<Output<List<String>>> enabledCloudwatchLogsExports() {
         return Optional.ofNullable(this.enabledCloudwatchLogsExports);
     }
@@ -241,6 +317,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpoint")
     private @Nullable Output<String> endpoint;
 
+    /**
+     * @return The DNS address of the RDS instance
+     * 
+     */
     public Optional<Output<String>> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -252,6 +332,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="engine")
     private @Nullable Output<Either<String,EngineType>> engine;
 
+    /**
+     * @return The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
+     * 
+     */
     public Optional<Output<Either<String,EngineType>>> engine() {
         return Optional.ofNullable(this.engine);
     }
@@ -263,6 +347,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineMode")
     private @Nullable Output<Either<String,EngineMode>> engineMode;
 
+    /**
+     * @return The database engine mode. Valid values: `global` (only valid for Aurora MySQL 1.21 and earlier), `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
+     * 
+     */
     public Optional<Output<Either<String,EngineMode>>> engineMode() {
         return Optional.ofNullable(this.engineMode);
     }
@@ -274,6 +362,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineVersion")
     private @Nullable Output<String> engineVersion;
 
+    /**
+     * @return The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+     * 
+     */
     public Optional<Output<String>> engineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
@@ -285,6 +377,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineVersionActual")
     private @Nullable Output<String> engineVersionActual;
 
+    /**
+     * @return The running version of the database.
+     * 
+     */
     public Optional<Output<String>> engineVersionActual() {
         return Optional.ofNullable(this.engineVersionActual);
     }
@@ -296,6 +392,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="finalSnapshotIdentifier")
     private @Nullable Output<String> finalSnapshotIdentifier;
 
+    /**
+     * @return The name of your final DB snapshot when this DB cluster is deleted. If omitted, no final snapshot will be made.
+     * 
+     */
     public Optional<Output<String>> finalSnapshotIdentifier() {
         return Optional.ofNullable(this.finalSnapshotIdentifier);
     }
@@ -307,6 +407,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="globalClusterIdentifier")
     private @Nullable Output<String> globalClusterIdentifier;
 
+    /**
+     * @return The global cluster identifier specified on `aws.rds.GlobalCluster`.
+     * 
+     */
     public Optional<Output<String>> globalClusterIdentifier() {
         return Optional.ofNullable(this.globalClusterIdentifier);
     }
@@ -318,6 +422,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostedZoneId")
     private @Nullable Output<String> hostedZoneId;
 
+    /**
+     * @return The Route53 Hosted Zone ID of the endpoint
+     * 
+     */
     public Optional<Output<String>> hostedZoneId() {
         return Optional.ofNullable(this.hostedZoneId);
     }
@@ -329,6 +437,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamDatabaseAuthenticationEnabled")
     private @Nullable Output<Boolean> iamDatabaseAuthenticationEnabled;
 
+    /**
+     * @return Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html) for availability and limitations.
+     * 
+     */
     public Optional<Output<Boolean>> iamDatabaseAuthenticationEnabled() {
         return Optional.ofNullable(this.iamDatabaseAuthenticationEnabled);
     }
@@ -340,6 +452,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamRoles")
     private @Nullable Output<List<String>> iamRoles;
 
+    /**
+     * @return A List of ARNs for the IAM roles to associate to the RDS Cluster.
+     * 
+     */
     public Optional<Output<List<String>>> iamRoles() {
         return Optional.ofNullable(this.iamRoles);
     }
@@ -351,6 +467,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -362,6 +482,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterPassword")
     private @Nullable Output<String> masterPassword;
 
+    /**
+     * @return Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
+     * 
+     */
     public Optional<Output<String>> masterPassword() {
         return Optional.ofNullable(this.masterPassword);
     }
@@ -373,6 +497,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterUsername")
     private @Nullable Output<String> masterUsername;
 
+    /**
+     * @return Username for the master DB user. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints). This argument does not support in-place updates and cannot be changed during a restore from snapshot.
+     * 
+     */
     public Optional<Output<String>> masterUsername() {
         return Optional.ofNullable(this.masterUsername);
     }
@@ -384,6 +512,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The port on which the DB accepts connections
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -395,6 +527,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="preferredBackupWindow")
     private @Nullable Output<String> preferredBackupWindow;
 
+    /**
+     * @return The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+     * 
+     */
     public Optional<Output<String>> preferredBackupWindow() {
         return Optional.ofNullable(this.preferredBackupWindow);
     }
@@ -406,6 +542,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="preferredMaintenanceWindow")
     private @Nullable Output<String> preferredMaintenanceWindow;
 
+    /**
+     * @return The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+     * 
+     */
     public Optional<Output<String>> preferredMaintenanceWindow() {
         return Optional.ofNullable(this.preferredMaintenanceWindow);
     }
@@ -418,6 +558,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="readerEndpoint")
     private @Nullable Output<String> readerEndpoint;
 
+    /**
+     * @return A read-only endpoint for the Aurora cluster, automatically
+     * load-balanced across replicas
+     * 
+     */
     public Optional<Output<String>> readerEndpoint() {
         return Optional.ofNullable(this.readerEndpoint);
     }
@@ -429,6 +574,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicationSourceIdentifier")
     private @Nullable Output<String> replicationSourceIdentifier;
 
+    /**
+     * @return ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica. If DB Cluster is part of a Global Cluster, use `ignore_changes`.
+     * 
+     */
     public Optional<Output<String>> replicationSourceIdentifier() {
         return Optional.ofNullable(this.replicationSourceIdentifier);
     }
@@ -440,6 +589,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="restoreToPointInTime")
     private @Nullable Output<ClusterRestoreToPointInTimeGetArgs> restoreToPointInTime;
 
+    /**
+     * @return Nested attribute for [point in time restore](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PIT.html). More details below.
+     * 
+     */
     public Optional<Output<ClusterRestoreToPointInTimeGetArgs>> restoreToPointInTime() {
         return Optional.ofNullable(this.restoreToPointInTime);
     }
@@ -458,6 +611,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scalingConfiguration")
     private @Nullable Output<ClusterScalingConfigurationGetArgs> scalingConfiguration;
 
+    /**
+     * @return Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
+     * 
+     */
     public Optional<Output<ClusterScalingConfigurationGetArgs>> scalingConfiguration() {
         return Optional.ofNullable(this.scalingConfiguration);
     }
@@ -469,6 +626,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="skipFinalSnapshot")
     private @Nullable Output<Boolean> skipFinalSnapshot;
 
+    /**
+     * @return Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> skipFinalSnapshot() {
         return Optional.ofNullable(this.skipFinalSnapshot);
     }
@@ -480,6 +641,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotIdentifier")
     private @Nullable Output<String> snapshotIdentifier;
 
+    /**
+     * @return Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
+     * 
+     */
     public Optional<Output<String>> snapshotIdentifier() {
         return Optional.ofNullable(this.snapshotIdentifier);
     }
@@ -491,6 +656,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRegion")
     private @Nullable Output<String> sourceRegion;
 
+    /**
+     * @return The source region for an encrypted replica DB cluster.
+     * 
+     */
     public Optional<Output<String>> sourceRegion() {
         return Optional.ofNullable(this.sourceRegion);
     }
@@ -502,6 +671,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageEncrypted")
     private @Nullable Output<Boolean> storageEncrypted;
 
+    /**
+     * @return Specifies whether the DB cluster is encrypted. The default is `false` for `provisioned` `engine_mode` and `true` for `serverless` `engine_mode`. When restoring an unencrypted `snapshot_identifier`, the `kms_key_id` argument must be provided to encrypt the restored cluster. The provider will only perform drift detection if a configuration value is provided.
+     * 
+     */
     public Optional<Output<Boolean>> storageEncrypted() {
         return Optional.ofNullable(this.storageEncrypted);
     }
@@ -513,6 +686,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the DB cluster.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -524,6 +701,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -535,6 +716,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcSecurityGroupIds")
     private @Nullable Output<List<String>> vpcSecurityGroupIds;
 
+    /**
+     * @return List of VPC security groups to associate with the Cluster
+     * 
+     */
     public Optional<Output<List<String>>> vpcSecurityGroupIds() {
         return Optional.ofNullable(this.vpcSecurityGroupIds);
     }
@@ -609,376 +794,882 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowMajorVersionUpgrade Enable to allow major engine version upgrades when changing engine versions. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMajorVersionUpgrade(@Nullable Output<Boolean> allowMajorVersionUpgrade) {
             $.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
             return this;
         }
 
+        /**
+         * @param allowMajorVersionUpgrade Enable to allow major engine version upgrades when changing engine versions. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
             return allowMajorVersionUpgrade(Output.of(allowMajorVersionUpgrade));
         }
 
+        /**
+         * @param applyImmediately Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
             $.applyImmediately = applyImmediately;
             return this;
         }
 
+        /**
+         * @param applyImmediately Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyImmediately(Boolean applyImmediately) {
             return applyImmediately(Output.of(applyImmediately));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param availabilityZones A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next apply. It is recommended to specify 3 AZs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             $.availabilityZones = availabilityZones;
             return this;
         }
 
+        /**
+         * @param availabilityZones A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next apply. It is recommended to specify 3 AZs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(List<String> availabilityZones) {
             return availabilityZones(Output.of(availabilityZones));
         }
 
+        /**
+         * @param availabilityZones A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next apply. It is recommended to specify 3 AZs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
 
+        /**
+         * @param backtrackWindow The target backtrack window, in seconds. Only available for `aurora` and `aurora-mysql` engines currently. To disable backtracking, set this value to `0`. Defaults to `0`. Must be between `0` and `259200` (72 hours)
+         * 
+         * @return builder
+         * 
+         */
         public Builder backtrackWindow(@Nullable Output<Integer> backtrackWindow) {
             $.backtrackWindow = backtrackWindow;
             return this;
         }
 
+        /**
+         * @param backtrackWindow The target backtrack window, in seconds. Only available for `aurora` and `aurora-mysql` engines currently. To disable backtracking, set this value to `0`. Defaults to `0`. Must be between `0` and `259200` (72 hours)
+         * 
+         * @return builder
+         * 
+         */
         public Builder backtrackWindow(Integer backtrackWindow) {
             return backtrackWindow(Output.of(backtrackWindow));
         }
 
+        /**
+         * @param backupRetentionPeriod The days to retain backups for. Default `1`
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupRetentionPeriod(@Nullable Output<Integer> backupRetentionPeriod) {
             $.backupRetentionPeriod = backupRetentionPeriod;
             return this;
         }
 
+        /**
+         * @param backupRetentionPeriod The days to retain backups for. Default `1`
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             return backupRetentionPeriod(Output.of(backupRetentionPeriod));
         }
 
+        /**
+         * @param clusterIdentifier The cluster identifier. If omitted, this provider will assign a random, unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
             $.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
+        /**
+         * @param clusterIdentifier The cluster identifier. If omitted, this provider will assign a random, unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(String clusterIdentifier) {
             return clusterIdentifier(Output.of(clusterIdentifier));
         }
 
+        /**
+         * @param clusterIdentifierPrefix Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifier`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifierPrefix(@Nullable Output<String> clusterIdentifierPrefix) {
             $.clusterIdentifierPrefix = clusterIdentifierPrefix;
             return this;
         }
 
+        /**
+         * @param clusterIdentifierPrefix Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifier`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifierPrefix(String clusterIdentifierPrefix) {
             return clusterIdentifierPrefix(Output.of(clusterIdentifierPrefix));
         }
 
+        /**
+         * @param clusterMembers List of RDS Instances that are a part of this cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterMembers(@Nullable Output<List<String>> clusterMembers) {
             $.clusterMembers = clusterMembers;
             return this;
         }
 
+        /**
+         * @param clusterMembers List of RDS Instances that are a part of this cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterMembers(List<String> clusterMembers) {
             return clusterMembers(Output.of(clusterMembers));
         }
 
+        /**
+         * @param clusterMembers List of RDS Instances that are a part of this cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterMembers(String... clusterMembers) {
             return clusterMembers(List.of(clusterMembers));
         }
 
+        /**
+         * @param clusterResourceId The RDS Cluster Resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterResourceId(@Nullable Output<String> clusterResourceId) {
             $.clusterResourceId = clusterResourceId;
             return this;
         }
 
+        /**
+         * @param clusterResourceId The RDS Cluster Resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterResourceId(String clusterResourceId) {
             return clusterResourceId(Output.of(clusterResourceId));
         }
 
+        /**
+         * @param copyTagsToSnapshot Copy all Cluster `tags` to snapshots. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyTagsToSnapshot(@Nullable Output<Boolean> copyTagsToSnapshot) {
             $.copyTagsToSnapshot = copyTagsToSnapshot;
             return this;
         }
 
+        /**
+         * @param copyTagsToSnapshot Copy all Cluster `tags` to snapshots. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyTagsToSnapshot(Boolean copyTagsToSnapshot) {
             return copyTagsToSnapshot(Output.of(copyTagsToSnapshot));
         }
 
+        /**
+         * @param databaseName Name for an automatically created database on cluster creation. There are different naming restrictions per database engine: [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName Name for an automatically created database on cluster creation. There are different naming restrictions per database engine: [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param dbClusterParameterGroupName A cluster parameter group to associate with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbClusterParameterGroupName(@Nullable Output<String> dbClusterParameterGroupName) {
             $.dbClusterParameterGroupName = dbClusterParameterGroupName;
             return this;
         }
 
+        /**
+         * @param dbClusterParameterGroupName A cluster parameter group to associate with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbClusterParameterGroupName(String dbClusterParameterGroupName) {
             return dbClusterParameterGroupName(Output.of(dbClusterParameterGroupName));
         }
 
+        /**
+         * @param dbInstanceParameterGroupName Instance parameter group to associate with all instances of the DB cluster. The `db_instance_parameter_group_name` parameter is only valid in combination with the `allow_major_version_upgrade` parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbInstanceParameterGroupName(@Nullable Output<String> dbInstanceParameterGroupName) {
             $.dbInstanceParameterGroupName = dbInstanceParameterGroupName;
             return this;
         }
 
+        /**
+         * @param dbInstanceParameterGroupName Instance parameter group to associate with all instances of the DB cluster. The `db_instance_parameter_group_name` parameter is only valid in combination with the `allow_major_version_upgrade` parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbInstanceParameterGroupName(String dbInstanceParameterGroupName) {
             return dbInstanceParameterGroupName(Output.of(dbInstanceParameterGroupName));
         }
 
+        /**
+         * @param dbSubnetGroupName A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` specified on every `aws.rds.ClusterInstance` in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbSubnetGroupName(@Nullable Output<String> dbSubnetGroupName) {
             $.dbSubnetGroupName = dbSubnetGroupName;
             return this;
         }
 
+        /**
+         * @param dbSubnetGroupName A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` specified on every `aws.rds.ClusterInstance` in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbSubnetGroupName(String dbSubnetGroupName) {
             return dbSubnetGroupName(Output.of(dbSubnetGroupName));
         }
 
+        /**
+         * @param deletionProtection If the DB instance should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             $.deletionProtection = deletionProtection;
             return this;
         }
 
+        /**
+         * @param deletionProtection If the DB instance should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(Boolean deletionProtection) {
             return deletionProtection(Output.of(deletionProtection));
         }
 
+        /**
+         * @param enableGlobalWriteForwarding Whether cluster should forward writes to an associated global cluster. Applied to secondary clusters to enable them to forward writes to an `aws.rds.GlobalCluster`&#39;s primary cluster. See the [Aurora Userguide documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-write-forwarding.html) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableGlobalWriteForwarding(@Nullable Output<Boolean> enableGlobalWriteForwarding) {
             $.enableGlobalWriteForwarding = enableGlobalWriteForwarding;
             return this;
         }
 
+        /**
+         * @param enableGlobalWriteForwarding Whether cluster should forward writes to an associated global cluster. Applied to secondary clusters to enable them to forward writes to an `aws.rds.GlobalCluster`&#39;s primary cluster. See the [Aurora Userguide documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-write-forwarding.html) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableGlobalWriteForwarding(Boolean enableGlobalWriteForwarding) {
             return enableGlobalWriteForwarding(Output.of(enableGlobalWriteForwarding));
         }
 
+        /**
+         * @param enableHttpEndpoint Enable HTTP endpoint (data API). Only valid when `engine_mode` is set to `serverless`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHttpEndpoint(@Nullable Output<Boolean> enableHttpEndpoint) {
             $.enableHttpEndpoint = enableHttpEndpoint;
             return this;
         }
 
+        /**
+         * @param enableHttpEndpoint Enable HTTP endpoint (data API). Only valid when `engine_mode` is set to `serverless`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHttpEndpoint(Boolean enableHttpEndpoint) {
             return enableHttpEndpoint(Output.of(enableHttpEndpoint));
         }
 
+        /**
+         * @param enabledCloudwatchLogsExports Set of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledCloudwatchLogsExports(@Nullable Output<List<String>> enabledCloudwatchLogsExports) {
             $.enabledCloudwatchLogsExports = enabledCloudwatchLogsExports;
             return this;
         }
 
+        /**
+         * @param enabledCloudwatchLogsExports Set of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledCloudwatchLogsExports(List<String> enabledCloudwatchLogsExports) {
             return enabledCloudwatchLogsExports(Output.of(enabledCloudwatchLogsExports));
         }
 
+        /**
+         * @param enabledCloudwatchLogsExports Set of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledCloudwatchLogsExports(String... enabledCloudwatchLogsExports) {
             return enabledCloudwatchLogsExports(List.of(enabledCloudwatchLogsExports));
         }
 
+        /**
+         * @param endpoint The DNS address of the RDS instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable Output<String> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint The DNS address of the RDS instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             return endpoint(Output.of(endpoint));
         }
 
+        /**
+         * @param engine The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(@Nullable Output<Either<String,EngineType>> engine) {
             $.engine = engine;
             return this;
         }
 
+        /**
+         * @param engine The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(Either<String,EngineType> engine) {
             return engine(Output.of(engine));
         }
 
+        /**
+         * @param engine The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(String engine) {
             return engine(Either.ofLeft(engine));
         }
 
+        /**
+         * @param engine The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(EngineType engine) {
             return engine(Either.ofRight(engine));
         }
 
+        /**
+         * @param engineMode The database engine mode. Valid values: `global` (only valid for Aurora MySQL 1.21 and earlier), `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineMode(@Nullable Output<Either<String,EngineMode>> engineMode) {
             $.engineMode = engineMode;
             return this;
         }
 
+        /**
+         * @param engineMode The database engine mode. Valid values: `global` (only valid for Aurora MySQL 1.21 and earlier), `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineMode(Either<String,EngineMode> engineMode) {
             return engineMode(Output.of(engineMode));
         }
 
+        /**
+         * @param engineMode The database engine mode. Valid values: `global` (only valid for Aurora MySQL 1.21 and earlier), `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineMode(String engineMode) {
             return engineMode(Either.ofLeft(engineMode));
         }
 
+        /**
+         * @param engineMode The database engine mode. Valid values: `global` (only valid for Aurora MySQL 1.21 and earlier), `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineMode(EngineMode engineMode) {
             return engineMode(Either.ofRight(engineMode));
         }
 
+        /**
+         * @param engineVersion The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             $.engineVersion = engineVersion;
             return this;
         }
 
+        /**
+         * @param engineVersion The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(String engineVersion) {
             return engineVersion(Output.of(engineVersion));
         }
 
+        /**
+         * @param engineVersionActual The running version of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersionActual(@Nullable Output<String> engineVersionActual) {
             $.engineVersionActual = engineVersionActual;
             return this;
         }
 
+        /**
+         * @param engineVersionActual The running version of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersionActual(String engineVersionActual) {
             return engineVersionActual(Output.of(engineVersionActual));
         }
 
+        /**
+         * @param finalSnapshotIdentifier The name of your final DB snapshot when this DB cluster is deleted. If omitted, no final snapshot will be made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalSnapshotIdentifier(@Nullable Output<String> finalSnapshotIdentifier) {
             $.finalSnapshotIdentifier = finalSnapshotIdentifier;
             return this;
         }
 
+        /**
+         * @param finalSnapshotIdentifier The name of your final DB snapshot when this DB cluster is deleted. If omitted, no final snapshot will be made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalSnapshotIdentifier(String finalSnapshotIdentifier) {
             return finalSnapshotIdentifier(Output.of(finalSnapshotIdentifier));
         }
 
+        /**
+         * @param globalClusterIdentifier The global cluster identifier specified on `aws.rds.GlobalCluster`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalClusterIdentifier(@Nullable Output<String> globalClusterIdentifier) {
             $.globalClusterIdentifier = globalClusterIdentifier;
             return this;
         }
 
+        /**
+         * @param globalClusterIdentifier The global cluster identifier specified on `aws.rds.GlobalCluster`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalClusterIdentifier(String globalClusterIdentifier) {
             return globalClusterIdentifier(Output.of(globalClusterIdentifier));
         }
 
+        /**
+         * @param hostedZoneId The Route53 Hosted Zone ID of the endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             $.hostedZoneId = hostedZoneId;
             return this;
         }
 
+        /**
+         * @param hostedZoneId The Route53 Hosted Zone ID of the endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneId(String hostedZoneId) {
             return hostedZoneId(Output.of(hostedZoneId));
         }
 
+        /**
+         * @param iamDatabaseAuthenticationEnabled Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html) for availability and limitations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamDatabaseAuthenticationEnabled(@Nullable Output<Boolean> iamDatabaseAuthenticationEnabled) {
             $.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
             return this;
         }
 
+        /**
+         * @param iamDatabaseAuthenticationEnabled Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html) for availability and limitations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamDatabaseAuthenticationEnabled(Boolean iamDatabaseAuthenticationEnabled) {
             return iamDatabaseAuthenticationEnabled(Output.of(iamDatabaseAuthenticationEnabled));
         }
 
+        /**
+         * @param iamRoles A List of ARNs for the IAM roles to associate to the RDS Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoles(@Nullable Output<List<String>> iamRoles) {
             $.iamRoles = iamRoles;
             return this;
         }
 
+        /**
+         * @param iamRoles A List of ARNs for the IAM roles to associate to the RDS Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoles(List<String> iamRoles) {
             return iamRoles(Output.of(iamRoles));
         }
 
+        /**
+         * @param iamRoles A List of ARNs for the IAM roles to associate to the RDS Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoles(String... iamRoles) {
             return iamRoles(List.of(iamRoles));
         }
 
+        /**
+         * @param kmsKeyId The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
 
+        /**
+         * @param masterPassword Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterPassword(@Nullable Output<String> masterPassword) {
             $.masterPassword = masterPassword;
             return this;
         }
 
+        /**
+         * @param masterPassword Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterPassword(String masterPassword) {
             return masterPassword(Output.of(masterPassword));
         }
 
+        /**
+         * @param masterUsername Username for the master DB user. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints). This argument does not support in-place updates and cannot be changed during a restore from snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterUsername(@Nullable Output<String> masterUsername) {
             $.masterUsername = masterUsername;
             return this;
         }
 
+        /**
+         * @param masterUsername Username for the master DB user. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints). This argument does not support in-place updates and cannot be changed during a restore from snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterUsername(String masterUsername) {
             return masterUsername(Output.of(masterUsername));
         }
 
+        /**
+         * @param port The port on which the DB accepts connections
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port on which the DB accepts connections
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param preferredBackupWindow The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredBackupWindow(@Nullable Output<String> preferredBackupWindow) {
             $.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
 
+        /**
+         * @param preferredBackupWindow The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredBackupWindow(String preferredBackupWindow) {
             return preferredBackupWindow(Output.of(preferredBackupWindow));
         }
 
+        /**
+         * @param preferredMaintenanceWindow The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
             $.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
 
+        /**
+         * @param preferredMaintenanceWindow The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredMaintenanceWindow(String preferredMaintenanceWindow) {
             return preferredMaintenanceWindow(Output.of(preferredMaintenanceWindow));
         }
 
+        /**
+         * @param readerEndpoint A read-only endpoint for the Aurora cluster, automatically
+         * load-balanced across replicas
+         * 
+         * @return builder
+         * 
+         */
         public Builder readerEndpoint(@Nullable Output<String> readerEndpoint) {
             $.readerEndpoint = readerEndpoint;
             return this;
         }
 
+        /**
+         * @param readerEndpoint A read-only endpoint for the Aurora cluster, automatically
+         * load-balanced across replicas
+         * 
+         * @return builder
+         * 
+         */
         public Builder readerEndpoint(String readerEndpoint) {
             return readerEndpoint(Output.of(readerEndpoint));
         }
 
+        /**
+         * @param replicationSourceIdentifier ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica. If DB Cluster is part of a Global Cluster, use `ignore_changes`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationSourceIdentifier(@Nullable Output<String> replicationSourceIdentifier) {
             $.replicationSourceIdentifier = replicationSourceIdentifier;
             return this;
         }
 
+        /**
+         * @param replicationSourceIdentifier ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica. If DB Cluster is part of a Global Cluster, use `ignore_changes`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationSourceIdentifier(String replicationSourceIdentifier) {
             return replicationSourceIdentifier(Output.of(replicationSourceIdentifier));
         }
 
+        /**
+         * @param restoreToPointInTime Nested attribute for [point in time restore](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PIT.html). More details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreToPointInTime(@Nullable Output<ClusterRestoreToPointInTimeGetArgs> restoreToPointInTime) {
             $.restoreToPointInTime = restoreToPointInTime;
             return this;
         }
 
+        /**
+         * @param restoreToPointInTime Nested attribute for [point in time restore](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PIT.html). More details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreToPointInTime(ClusterRestoreToPointInTimeGetArgs restoreToPointInTime) {
             return restoreToPointInTime(Output.of(restoreToPointInTime));
         }
@@ -992,78 +1683,180 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
             return s3Import(Output.of(s3Import));
         }
 
+        /**
+         * @param scalingConfiguration Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingConfiguration(@Nullable Output<ClusterScalingConfigurationGetArgs> scalingConfiguration) {
             $.scalingConfiguration = scalingConfiguration;
             return this;
         }
 
+        /**
+         * @param scalingConfiguration Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingConfiguration(ClusterScalingConfigurationGetArgs scalingConfiguration) {
             return scalingConfiguration(Output.of(scalingConfiguration));
         }
 
+        /**
+         * @param skipFinalSnapshot Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipFinalSnapshot(@Nullable Output<Boolean> skipFinalSnapshot) {
             $.skipFinalSnapshot = skipFinalSnapshot;
             return this;
         }
 
+        /**
+         * @param skipFinalSnapshot Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipFinalSnapshot(Boolean skipFinalSnapshot) {
             return skipFinalSnapshot(Output.of(skipFinalSnapshot));
         }
 
+        /**
+         * @param snapshotIdentifier Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotIdentifier(@Nullable Output<String> snapshotIdentifier) {
             $.snapshotIdentifier = snapshotIdentifier;
             return this;
         }
 
+        /**
+         * @param snapshotIdentifier Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotIdentifier(String snapshotIdentifier) {
             return snapshotIdentifier(Output.of(snapshotIdentifier));
         }
 
+        /**
+         * @param sourceRegion The source region for an encrypted replica DB cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRegion(@Nullable Output<String> sourceRegion) {
             $.sourceRegion = sourceRegion;
             return this;
         }
 
+        /**
+         * @param sourceRegion The source region for an encrypted replica DB cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRegion(String sourceRegion) {
             return sourceRegion(Output.of(sourceRegion));
         }
 
+        /**
+         * @param storageEncrypted Specifies whether the DB cluster is encrypted. The default is `false` for `provisioned` `engine_mode` and `true` for `serverless` `engine_mode`. When restoring an unencrypted `snapshot_identifier`, the `kms_key_id` argument must be provided to encrypt the restored cluster. The provider will only perform drift detection if a configuration value is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
             $.storageEncrypted = storageEncrypted;
             return this;
         }
 
+        /**
+         * @param storageEncrypted Specifies whether the DB cluster is encrypted. The default is `false` for `provisioned` `engine_mode` and `true` for `serverless` `engine_mode`. When restoring an unencrypted `snapshot_identifier`, the `kms_key_id` argument must be provided to encrypt the restored cluster. The provider will only perform drift detection if a configuration value is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageEncrypted(Boolean storageEncrypted) {
             return storageEncrypted(Output.of(storageEncrypted));
         }
 
+        /**
+         * @param tags A map of tags to assign to the DB cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the DB cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param vpcSecurityGroupIds List of VPC security groups to associate with the Cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             $.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
+        /**
+         * @param vpcSecurityGroupIds List of VPC security groups to associate with the Cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(Output.of(vpcSecurityGroupIds));
         }
 
+        /**
+         * @param vpcSecurityGroupIds List of VPC security groups to associate with the Cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
         }

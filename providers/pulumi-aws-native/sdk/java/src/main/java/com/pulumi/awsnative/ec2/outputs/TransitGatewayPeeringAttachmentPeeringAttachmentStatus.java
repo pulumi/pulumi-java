@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus {
     /**
-     * The status code.
+     * @return The status code.
      * 
      */
     private final @Nullable String code;
     /**
-     * The status message, if applicable.
+     * @return The status message, if applicable.
      * 
      */
     private final @Nullable String message;
@@ -31,16 +31,16 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus {
     }
 
     /**
-     * The status code.
+     * @return The status code.
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * The status message, if applicable.
+     * @return The status message, if applicable.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }

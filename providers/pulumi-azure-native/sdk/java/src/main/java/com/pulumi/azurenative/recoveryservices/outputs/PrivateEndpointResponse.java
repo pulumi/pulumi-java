@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PrivateEndpointResponse {
     /**
-     * Gets or sets id.
+     * @return Gets or sets id.
      * 
      */
     private final String id;
@@ -21,9 +21,9 @@ public final class PrivateEndpointResponse {
     }
 
     /**
-     * Gets or sets id.
+     * @return Gets or sets id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

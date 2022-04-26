@@ -33,6 +33,10 @@ public final class YearlyRetentionScheduleArgs extends com.pulumi.resources.Reso
     @Import(name="monthsOfYear")
     private @Nullable Output<List<MonthOfYear>> monthsOfYear;
 
+    /**
+     * @return List of months of year of yearly retention policy.
+     * 
+     */
     public Optional<Output<List<MonthOfYear>>> monthsOfYear() {
         return Optional.ofNullable(this.monthsOfYear);
     }
@@ -44,6 +48,10 @@ public final class YearlyRetentionScheduleArgs extends com.pulumi.resources.Reso
     @Import(name="retentionDuration")
     private @Nullable Output<RetentionDurationArgs> retentionDuration;
 
+    /**
+     * @return Retention duration of retention Policy.
+     * 
+     */
     public Optional<Output<RetentionDurationArgs>> retentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
@@ -55,6 +63,10 @@ public final class YearlyRetentionScheduleArgs extends com.pulumi.resources.Reso
     @Import(name="retentionScheduleDaily")
     private @Nullable Output<DailyRetentionFormatArgs> retentionScheduleDaily;
 
+    /**
+     * @return Daily retention format for yearly retention policy.
+     * 
+     */
     public Optional<Output<DailyRetentionFormatArgs>> retentionScheduleDaily() {
         return Optional.ofNullable(this.retentionScheduleDaily);
     }
@@ -66,6 +78,10 @@ public final class YearlyRetentionScheduleArgs extends com.pulumi.resources.Reso
     @Import(name="retentionScheduleFormatType")
     private @Nullable Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType;
 
+    /**
+     * @return Retention schedule format for yearly retention policy.
+     * 
+     */
     public Optional<Output<Either<String,RetentionScheduleFormat>>> retentionScheduleFormatType() {
         return Optional.ofNullable(this.retentionScheduleFormatType);
     }
@@ -77,6 +93,10 @@ public final class YearlyRetentionScheduleArgs extends com.pulumi.resources.Reso
     @Import(name="retentionScheduleWeekly")
     private @Nullable Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly;
 
+    /**
+     * @return Weekly retention format for yearly retention policy.
+     * 
+     */
     public Optional<Output<WeeklyRetentionFormatArgs>> retentionScheduleWeekly() {
         return Optional.ofNullable(this.retentionScheduleWeekly);
     }
@@ -88,6 +108,10 @@ public final class YearlyRetentionScheduleArgs extends com.pulumi.resources.Reso
     @Import(name="retentionTimes")
     private @Nullable Output<List<String>> retentionTimes;
 
+    /**
+     * @return Retention times of retention policy.
+     * 
+     */
     public Optional<Output<List<String>>> retentionTimes() {
         return Optional.ofNullable(this.retentionTimes);
     }
@@ -121,72 +145,168 @@ public final class YearlyRetentionScheduleArgs extends com.pulumi.resources.Reso
             $ = new YearlyRetentionScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param monthsOfYear List of months of year of yearly retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthsOfYear(@Nullable Output<List<MonthOfYear>> monthsOfYear) {
             $.monthsOfYear = monthsOfYear;
             return this;
         }
 
+        /**
+         * @param monthsOfYear List of months of year of yearly retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthsOfYear(List<MonthOfYear> monthsOfYear) {
             return monthsOfYear(Output.of(monthsOfYear));
         }
 
+        /**
+         * @param monthsOfYear List of months of year of yearly retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthsOfYear(MonthOfYear... monthsOfYear) {
             return monthsOfYear(List.of(monthsOfYear));
         }
 
+        /**
+         * @param retentionDuration Retention duration of retention Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDuration(@Nullable Output<RetentionDurationArgs> retentionDuration) {
             $.retentionDuration = retentionDuration;
             return this;
         }
 
+        /**
+         * @param retentionDuration Retention duration of retention Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDuration(RetentionDurationArgs retentionDuration) {
             return retentionDuration(Output.of(retentionDuration));
         }
 
+        /**
+         * @param retentionScheduleDaily Daily retention format for yearly retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionScheduleDaily(@Nullable Output<DailyRetentionFormatArgs> retentionScheduleDaily) {
             $.retentionScheduleDaily = retentionScheduleDaily;
             return this;
         }
 
+        /**
+         * @param retentionScheduleDaily Daily retention format for yearly retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionScheduleDaily(DailyRetentionFormatArgs retentionScheduleDaily) {
             return retentionScheduleDaily(Output.of(retentionScheduleDaily));
         }
 
+        /**
+         * @param retentionScheduleFormatType Retention schedule format for yearly retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionScheduleFormatType(@Nullable Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType) {
             $.retentionScheduleFormatType = retentionScheduleFormatType;
             return this;
         }
 
+        /**
+         * @param retentionScheduleFormatType Retention schedule format for yearly retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionScheduleFormatType(Either<String,RetentionScheduleFormat> retentionScheduleFormatType) {
             return retentionScheduleFormatType(Output.of(retentionScheduleFormatType));
         }
 
+        /**
+         * @param retentionScheduleFormatType Retention schedule format for yearly retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionScheduleFormatType(String retentionScheduleFormatType) {
             return retentionScheduleFormatType(Either.ofLeft(retentionScheduleFormatType));
         }
 
+        /**
+         * @param retentionScheduleFormatType Retention schedule format for yearly retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionScheduleFormatType(RetentionScheduleFormat retentionScheduleFormatType) {
             return retentionScheduleFormatType(Either.ofRight(retentionScheduleFormatType));
         }
 
+        /**
+         * @param retentionScheduleWeekly Weekly retention format for yearly retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionScheduleWeekly(@Nullable Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly) {
             $.retentionScheduleWeekly = retentionScheduleWeekly;
             return this;
         }
 
+        /**
+         * @param retentionScheduleWeekly Weekly retention format for yearly retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionScheduleWeekly(WeeklyRetentionFormatArgs retentionScheduleWeekly) {
             return retentionScheduleWeekly(Output.of(retentionScheduleWeekly));
         }
 
+        /**
+         * @param retentionTimes Retention times of retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionTimes(@Nullable Output<List<String>> retentionTimes) {
             $.retentionTimes = retentionTimes;
             return this;
         }
 
+        /**
+         * @param retentionTimes Retention times of retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionTimes(List<String> retentionTimes) {
             return retentionTimes(Output.of(retentionTimes));
         }
 
+        /**
+         * @param retentionTimes Retention times of retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionTimes(String... retentionTimes) {
             return retentionTimes(List.of(retentionTimes));
         }

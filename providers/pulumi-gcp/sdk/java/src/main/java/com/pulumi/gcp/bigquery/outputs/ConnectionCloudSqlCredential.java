@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class ConnectionCloudSqlCredential {
     /**
-     * Password for database.
+     * @return Password for database.
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
     private final String password;
     /**
-     * Username for database.
+     * @return Username for database.
      * 
      */
     private final String username;
@@ -30,17 +30,17 @@ public final class ConnectionCloudSqlCredential {
     }
 
     /**
-     * Password for database.
+     * @return Password for database.
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * Username for database.
+     * @return Username for database.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

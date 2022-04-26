@@ -30,6 +30,11 @@ public final class IntentFollowupIntentInfoArgs extends com.pulumi.resources.Res
     @Import(name="parentFollowupIntentName")
     private @Nullable Output<String> parentFollowupIntentName;
 
+    /**
+     * @return The unique identifier of the parent intent in the chain of followup intents.
+     * Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.
+     * 
+     */
     public Optional<Output<String>> parentFollowupIntentName() {
         return Optional.ofNullable(this.parentFollowupIntentName);
     }
@@ -68,11 +73,25 @@ public final class IntentFollowupIntentInfoArgs extends com.pulumi.resources.Res
             return followupIntentName(Output.of(followupIntentName));
         }
 
+        /**
+         * @param parentFollowupIntentName The unique identifier of the parent intent in the chain of followup intents.
+         * Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentFollowupIntentName(@Nullable Output<String> parentFollowupIntentName) {
             $.parentFollowupIntentName = parentFollowupIntentName;
             return this;
         }
 
+        /**
+         * @param parentFollowupIntentName The unique identifier of the parent intent in the chain of followup intents.
+         * Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentFollowupIntentName(String parentFollowupIntentName) {
             return parentFollowupIntentName(Output.of(parentFollowupIntentName));
         }

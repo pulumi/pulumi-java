@@ -26,6 +26,10 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
     @Import(name="level", required=true)
     private Output<Either<String,LockLevel>> level;
 
+    /**
+     * @return The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
+     * 
+     */
     public Output<Either<String,LockLevel>> level() {
         return this.level;
     }
@@ -37,6 +41,10 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
     @Import(name="lockName")
     private @Nullable Output<String> lockName;
 
+    /**
+     * @return The lock name. The lock name can be a maximum of 260 characters. It cannot contain &lt;, &gt; %, &amp;, :, \, ?, /, or any control characters.
+     * 
+     */
     public Optional<Output<String>> lockName() {
         return Optional.ofNullable(this.lockName);
     }
@@ -48,6 +56,10 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
     @Import(name="notes")
     private @Nullable Output<String> notes;
 
+    /**
+     * @return Notes about the lock. Maximum of 512 characters.
+     * 
+     */
     public Optional<Output<String>> notes() {
         return Optional.ofNullable(this.notes);
     }
@@ -59,6 +71,10 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
     @Import(name="owners")
     private @Nullable Output<List<ManagementLockOwnerArgs>> owners;
 
+    /**
+     * @return The owners of the lock.
+     * 
+     */
     public Optional<Output<List<ManagementLockOwnerArgs>>> owners() {
         return Optional.ofNullable(this.owners);
     }
@@ -70,6 +86,10 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to lock.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -102,59 +122,137 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
             $ = new ManagementLockAtResourceGroupLevelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param level The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(Output<Either<String,LockLevel>> level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param level The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(Either<String,LockLevel> level) {
             return level(Output.of(level));
         }
 
+        /**
+         * @param level The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(String level) {
             return level(Either.ofLeft(level));
         }
 
+        /**
+         * @param level The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(LockLevel level) {
             return level(Either.ofRight(level));
         }
 
+        /**
+         * @param lockName The lock name. The lock name can be a maximum of 260 characters. It cannot contain &lt;, &gt; %, &amp;, :, \, ?, /, or any control characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockName(@Nullable Output<String> lockName) {
             $.lockName = lockName;
             return this;
         }
 
+        /**
+         * @param lockName The lock name. The lock name can be a maximum of 260 characters. It cannot contain &lt;, &gt; %, &amp;, :, \, ?, /, or any control characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockName(String lockName) {
             return lockName(Output.of(lockName));
         }
 
+        /**
+         * @param notes Notes about the lock. Maximum of 512 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(@Nullable Output<String> notes) {
             $.notes = notes;
             return this;
         }
 
+        /**
+         * @param notes Notes about the lock. Maximum of 512 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(String notes) {
             return notes(Output.of(notes));
         }
 
+        /**
+         * @param owners The owners of the lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(@Nullable Output<List<ManagementLockOwnerArgs>> owners) {
             $.owners = owners;
             return this;
         }
 
+        /**
+         * @param owners The owners of the lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(List<ManagementLockOwnerArgs> owners) {
             return owners(Output.of(owners));
         }
 
+        /**
+         * @param owners The owners of the lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(ManagementLockOwnerArgs... owners) {
             return owners(List.of(owners));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

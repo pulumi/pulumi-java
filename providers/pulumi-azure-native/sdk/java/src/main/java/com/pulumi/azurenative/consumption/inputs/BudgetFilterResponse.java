@@ -27,6 +27,10 @@ public final class BudgetFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="and")
     private @Nullable List<BudgetFilterPropertiesResponse> and;
 
+    /**
+     * @return The logical &#34;AND&#34; expression. Must have at least 2 items.
+     * 
+     */
     public Optional<List<BudgetFilterPropertiesResponse>> and() {
         return Optional.ofNullable(this.and);
     }
@@ -38,6 +42,10 @@ public final class BudgetFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dimensions")
     private @Nullable BudgetComparisonExpressionResponse dimensions;
 
+    /**
+     * @return Has comparison expression for a dimension
+     * 
+     */
     public Optional<BudgetComparisonExpressionResponse> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
@@ -49,6 +57,10 @@ public final class BudgetFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="not")
     private @Nullable BudgetFilterPropertiesResponse not;
 
+    /**
+     * @return The logical &#34;NOT&#34; expression.
+     * 
+     */
     public Optional<BudgetFilterPropertiesResponse> not() {
         return Optional.ofNullable(this.not);
     }
@@ -60,6 +72,10 @@ public final class BudgetFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tags")
     private @Nullable BudgetComparisonExpressionResponse tags;
 
+    /**
+     * @return Has comparison expression for a tag
+     * 
+     */
     public Optional<BudgetComparisonExpressionResponse> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -91,25 +107,55 @@ public final class BudgetFilterResponse extends com.pulumi.resources.InvokeArgs 
             $ = new BudgetFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param and The logical &#34;AND&#34; expression. Must have at least 2 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder and(@Nullable List<BudgetFilterPropertiesResponse> and) {
             $.and = and;
             return this;
         }
 
+        /**
+         * @param and The logical &#34;AND&#34; expression. Must have at least 2 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder and(BudgetFilterPropertiesResponse... and) {
             return and(List.of(and));
         }
 
+        /**
+         * @param dimensions Has comparison expression for a dimension
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(@Nullable BudgetComparisonExpressionResponse dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param not The logical &#34;NOT&#34; expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder not(@Nullable BudgetFilterPropertiesResponse not) {
             $.not = not;
             return this;
         }
 
+        /**
+         * @param tags Has comparison expression for a tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable BudgetComparisonExpressionResponse tags) {
             $.tags = tags;
             return this;

@@ -28,6 +28,10 @@ public final class PolicyDefinitionReferenceResponse extends com.pulumi.resource
     @Import(name="groupNames")
     private @Nullable List<String> groupNames;
 
+    /**
+     * @return The name of the groups that this policy definition reference belongs to.
+     * 
+     */
     public Optional<List<String>> groupNames() {
         return Optional.ofNullable(this.groupNames);
     }
@@ -39,6 +43,10 @@ public final class PolicyDefinitionReferenceResponse extends com.pulumi.resource
     @Import(name="parameters")
     private @Nullable Map<String,ParameterValuesValueResponse> parameters;
 
+    /**
+     * @return The parameter values for the referenced policy rule. The keys are the parameter names.
+     * 
+     */
     public Optional<Map<String,ParameterValuesValueResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -50,6 +58,10 @@ public final class PolicyDefinitionReferenceResponse extends com.pulumi.resource
     @Import(name="policyDefinitionId", required=true)
     private String policyDefinitionId;
 
+    /**
+     * @return The ID of the policy definition or policy set definition.
+     * 
+     */
     public String policyDefinitionId() {
         return this.policyDefinitionId;
     }
@@ -61,6 +73,10 @@ public final class PolicyDefinitionReferenceResponse extends com.pulumi.resource
     @Import(name="policyDefinitionReferenceId")
     private @Nullable String policyDefinitionReferenceId;
 
+    /**
+     * @return A unique id (within the policy set definition) for this policy definition reference.
+     * 
+     */
     public Optional<String> policyDefinitionReferenceId() {
         return Optional.ofNullable(this.policyDefinitionReferenceId);
     }
@@ -92,25 +108,55 @@ public final class PolicyDefinitionReferenceResponse extends com.pulumi.resource
             $ = new PolicyDefinitionReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupNames The name of the groups that this policy definition reference belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupNames(@Nullable List<String> groupNames) {
             $.groupNames = groupNames;
             return this;
         }
 
+        /**
+         * @param groupNames The name of the groups that this policy definition reference belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupNames(String... groupNames) {
             return groupNames(List.of(groupNames));
         }
 
+        /**
+         * @param parameters The parameter values for the referenced policy rule. The keys are the parameter names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterValuesValueResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param policyDefinitionId The ID of the policy definition or policy set definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionId(String policyDefinitionId) {
             $.policyDefinitionId = policyDefinitionId;
             return this;
         }
 
+        /**
+         * @param policyDefinitionReferenceId A unique id (within the policy set definition) for this policy definition reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             $.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;

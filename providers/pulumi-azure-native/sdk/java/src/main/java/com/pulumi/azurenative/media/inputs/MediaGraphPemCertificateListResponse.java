@@ -25,6 +25,10 @@ public final class MediaGraphPemCertificateListResponse extends com.pulumi.resou
     @Import(name="certificates", required=true)
     private List<String> certificates;
 
+    /**
+     * @return PEM formatted public certificates, one per entry.
+     * 
+     */
     public List<String> certificates() {
         return this.certificates;
     }
@@ -37,6 +41,11 @@ public final class MediaGraphPemCertificateListResponse extends com.pulumi.resou
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphPemCertificateList&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -66,15 +75,34 @@ public final class MediaGraphPemCertificateListResponse extends com.pulumi.resou
             $ = new MediaGraphPemCertificateListResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificates PEM formatted public certificates, one per entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(List<String> certificates) {
             $.certificates = certificates;
             return this;
         }
 
+        /**
+         * @param certificates PEM formatted public certificates, one per entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(String... certificates) {
             return certificates(List.of(certificates));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.MediaGraphPemCertificateList&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;

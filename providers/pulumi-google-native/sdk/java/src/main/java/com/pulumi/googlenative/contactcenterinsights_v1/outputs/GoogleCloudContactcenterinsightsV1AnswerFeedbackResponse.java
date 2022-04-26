@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
     /**
-     * Indicates whether an answer or item was clicked by the human agent.
+     * @return Indicates whether an answer or item was clicked by the human agent.
      * 
      */
     private final Boolean clicked;
     /**
-     * The correctness level of an answer.
+     * @return The correctness level of an answer.
      * 
      */
     private final String correctnessLevel;
     /**
-     * Indicates whether an answer or item was displayed to the human agent in the agent desktop UI.
+     * @return Indicates whether an answer or item was displayed to the human agent in the agent desktop UI.
      * 
      */
     private final Boolean displayed;
@@ -37,23 +37,23 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
     }
 
     /**
-     * Indicates whether an answer or item was clicked by the human agent.
+     * @return Indicates whether an answer or item was clicked by the human agent.
      * 
-    */
+     */
     public Boolean clicked() {
         return this.clicked;
     }
     /**
-     * The correctness level of an answer.
+     * @return The correctness level of an answer.
      * 
-    */
+     */
     public String correctnessLevel() {
         return this.correctnessLevel;
     }
     /**
-     * Indicates whether an answer or item was displayed to the human agent in the agent desktop UI.
+     * @return Indicates whether an answer or item was displayed to the human agent in the agent desktop UI.
      * 
-    */
+     */
     public Boolean displayed() {
         return this.displayed;
     }

@@ -19,6 +19,10 @@ public final class GetprivateLinkForAzureAdArgs extends com.pulumi.resources.Inv
     @Import(name="policyName", required=true)
     private String policyName;
 
+    /**
+     * @return The name of the private link policy in Azure AD.
+     * 
+     */
     public String policyName() {
         return this.policyName;
     }
@@ -30,6 +34,10 @@ public final class GetprivateLinkForAzureAdArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of an Azure resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetprivateLinkForAzureAdArgs extends com.pulumi.resources.Inv
             $ = new GetprivateLinkForAzureAdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyName The name of the private link policy in Azure AD.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

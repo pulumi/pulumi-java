@@ -22,6 +22,10 @@ public final class RegionDiskDiskEncryptionKeyGetArgs extends com.pulumi.resourc
     @Import(name="kmsKeyName")
     private @Nullable Output<String> kmsKeyName;
 
+    /**
+     * @return The name of the encryption key that is stored in Google Cloud KMS.
+     * 
+     */
     public Optional<Output<String>> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
@@ -34,6 +38,11 @@ public final class RegionDiskDiskEncryptionKeyGetArgs extends com.pulumi.resourc
     @Import(name="rawKey")
     private @Nullable Output<String> rawKey;
 
+    /**
+     * @return Specifies a 256-bit customer-supplied encryption key, encoded in
+     * RFC 4648 base64 to either encrypt or decrypt this resource.
+     * 
+     */
     public Optional<Output<String>> rawKey() {
         return Optional.ofNullable(this.rawKey);
     }
@@ -47,6 +56,12 @@ public final class RegionDiskDiskEncryptionKeyGetArgs extends com.pulumi.resourc
     @Import(name="sha256")
     private @Nullable Output<String> sha256;
 
+    /**
+     * @return -
+     * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
+     * encryption key that protects this resource.
+     * 
+     */
     public Optional<Output<String>> sha256() {
         return Optional.ofNullable(this.sha256);
     }
@@ -77,29 +92,71 @@ public final class RegionDiskDiskEncryptionKeyGetArgs extends com.pulumi.resourc
             $ = new RegionDiskDiskEncryptionKeyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName The name of the encryption key that is stored in Google Cloud KMS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName The name of the encryption key that is stored in Google Cloud KMS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }
 
+        /**
+         * @param rawKey Specifies a 256-bit customer-supplied encryption key, encoded in
+         * RFC 4648 base64 to either encrypt or decrypt this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawKey(@Nullable Output<String> rawKey) {
             $.rawKey = rawKey;
             return this;
         }
 
+        /**
+         * @param rawKey Specifies a 256-bit customer-supplied encryption key, encoded in
+         * RFC 4648 base64 to either encrypt or decrypt this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawKey(String rawKey) {
             return rawKey(Output.of(rawKey));
         }
 
+        /**
+         * @param sha256 -
+         * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
+         * encryption key that protects this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha256(@Nullable Output<String> sha256) {
             $.sha256 = sha256;
             return this;
         }
 
+        /**
+         * @param sha256 -
+         * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
+         * encryption key that protects this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha256(String sha256) {
             return sha256(Output.of(sha256));
         }

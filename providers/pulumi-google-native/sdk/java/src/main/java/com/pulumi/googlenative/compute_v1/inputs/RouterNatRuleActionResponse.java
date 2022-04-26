@@ -20,6 +20,10 @@ public final class RouterNatRuleActionResponse extends com.pulumi.resources.Invo
     @Import(name="sourceNatActiveIps", required=true)
     private List<String> sourceNatActiveIps;
 
+    /**
+     * @return A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.
+     * 
+     */
     public List<String> sourceNatActiveIps() {
         return this.sourceNatActiveIps;
     }
@@ -31,6 +35,10 @@ public final class RouterNatRuleActionResponse extends com.pulumi.resources.Invo
     @Import(name="sourceNatDrainIps", required=true)
     private List<String> sourceNatDrainIps;
 
+    /**
+     * @return A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.
+     * 
+     */
     public List<String> sourceNatDrainIps() {
         return this.sourceNatDrainIps;
     }
@@ -60,20 +68,44 @@ public final class RouterNatRuleActionResponse extends com.pulumi.resources.Invo
             $ = new RouterNatRuleActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceNatActiveIps A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNatActiveIps(List<String> sourceNatActiveIps) {
             $.sourceNatActiveIps = sourceNatActiveIps;
             return this;
         }
 
+        /**
+         * @param sourceNatActiveIps A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNatActiveIps(String... sourceNatActiveIps) {
             return sourceNatActiveIps(List.of(sourceNatActiveIps));
         }
 
+        /**
+         * @param sourceNatDrainIps A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNatDrainIps(List<String> sourceNatDrainIps) {
             $.sourceNatDrainIps = sourceNatDrainIps;
             return this;
         }
 
+        /**
+         * @param sourceNatDrainIps A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNatDrainIps(String... sourceNatDrainIps) {
             return sourceNatDrainIps(List.of(sourceNatDrainIps));
         }

@@ -13,23 +13,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UserManagedHttpsParametersResponse {
     /**
-     * Defines the source of the SSL certificate.
+     * @return Defines the source of the SSL certificate.
      * Expected value is &#39;AzureKeyVault&#39;.
      * 
      */
     private final String certificateSource;
     /**
-     * Defines the certificate source parameters using user&#39;s keyvault certificate for enabling SSL.
+     * @return Defines the certificate source parameters using user&#39;s keyvault certificate for enabling SSL.
      * 
      */
     private final KeyVaultCertificateSourceParametersResponse certificateSourceParameters;
     /**
-     * TLS protocol version that will be used for Https
+     * @return TLS protocol version that will be used for Https
      * 
      */
     private final @Nullable String minimumTlsVersion;
     /**
-     * Defines the TLS extension protocol that is used for secure delivery.
+     * @return Defines the TLS extension protocol that is used for secure delivery.
      * 
      */
     private final String protocolType;
@@ -47,31 +47,31 @@ public final class UserManagedHttpsParametersResponse {
     }
 
     /**
-     * Defines the source of the SSL certificate.
+     * @return Defines the source of the SSL certificate.
      * Expected value is &#39;AzureKeyVault&#39;.
      * 
-    */
+     */
     public String certificateSource() {
         return this.certificateSource;
     }
     /**
-     * Defines the certificate source parameters using user&#39;s keyvault certificate for enabling SSL.
+     * @return Defines the certificate source parameters using user&#39;s keyvault certificate for enabling SSL.
      * 
-    */
+     */
     public KeyVaultCertificateSourceParametersResponse certificateSourceParameters() {
         return this.certificateSourceParameters;
     }
     /**
-     * TLS protocol version that will be used for Https
+     * @return TLS protocol version that will be used for Https
      * 
-    */
+     */
     public Optional<String> minimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
     /**
-     * Defines the TLS extension protocol that is used for secure delivery.
+     * @return Defines the TLS extension protocol that is used for secure delivery.
      * 
-    */
+     */
     public String protocolType() {
         return this.protocolType;
     }

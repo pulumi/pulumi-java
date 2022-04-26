@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceAdvancedMachineFeatures {
     /**
-     * Defines whether the instance should have nested virtualization  enabled. Defaults to false.
+     * @return Defines whether the instance should have nested virtualization  enabled. Defaults to false.
      * 
      */
     private final @Nullable Boolean enableNestedVirtualization;
     /**
-     * he number of threads per physical core. To disable [simultaneous multithreading (SMT)](https://cloud.google.com/compute/docs/instances/disabling-smt) set this to 1.
+     * @return he number of threads per physical core. To disable [simultaneous multithreading (SMT)](https://cloud.google.com/compute/docs/instances/disabling-smt) set this to 1.
      * 
      */
     private final @Nullable Integer threadsPerCore;
@@ -32,16 +32,16 @@ public final class InstanceAdvancedMachineFeatures {
     }
 
     /**
-     * Defines whether the instance should have nested virtualization  enabled. Defaults to false.
+     * @return Defines whether the instance should have nested virtualization  enabled. Defaults to false.
      * 
-    */
+     */
     public Optional<Boolean> enableNestedVirtualization() {
         return Optional.ofNullable(this.enableNestedVirtualization);
     }
     /**
-     * he number of threads per physical core. To disable [simultaneous multithreading (SMT)](https://cloud.google.com/compute/docs/instances/disabling-smt) set this to 1.
+     * @return he number of threads per physical core. To disable [simultaneous multithreading (SMT)](https://cloud.google.com/compute/docs/instances/disabling-smt) set this to 1.
      * 
-    */
+     */
     public Optional<Integer> threadsPerCore() {
         return Optional.ofNullable(this.threadsPerCore);
     }

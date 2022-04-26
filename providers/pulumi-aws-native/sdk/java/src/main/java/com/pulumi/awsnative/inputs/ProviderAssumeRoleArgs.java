@@ -29,6 +29,10 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="durationSeconds")
     private @Nullable Output<Integer> durationSeconds;
 
+    /**
+     * @return Number of seconds to restrict the assume role session duration.
+     * 
+     */
     public Optional<Output<Integer>> durationSeconds() {
         return Optional.ofNullable(this.durationSeconds);
     }
@@ -40,6 +44,10 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="externalId")
     private @Nullable Output<String> externalId;
 
+    /**
+     * @return External identifier to use when assuming the role.
+     * 
+     */
     public Optional<Output<String>> externalId() {
         return Optional.ofNullable(this.externalId);
     }
@@ -51,6 +59,10 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="policy")
     private @Nullable Output<String> policy;
 
+    /**
+     * @return IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
+     * 
+     */
     public Optional<Output<String>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -62,6 +74,10 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="policyArns")
     private @Nullable Output<List<String>> policyArns;
 
+    /**
+     * @return Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
+     * 
+     */
     public Optional<Output<List<String>>> policyArns() {
         return Optional.ofNullable(this.policyArns);
     }
@@ -73,6 +89,10 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="roleArn")
     private @Nullable Output<String> roleArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the IAM Role to assume.
+     * 
+     */
     public Optional<Output<String>> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -84,6 +104,10 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="sessionName")
     private @Nullable Output<String> sessionName;
 
+    /**
+     * @return Session name to use when assuming the role.
+     * 
+     */
     public Optional<Output<String>> sessionName() {
         return Optional.ofNullable(this.sessionName);
     }
@@ -95,6 +119,10 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of assume role session tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -106,6 +134,10 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="transitiveTagKeys")
     private @Nullable Output<List<String>> transitiveTagKeys;
 
+    /**
+     * @return A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
+     * 
+     */
     public Optional<Output<List<String>>> transitiveTagKeys() {
         return Optional.ofNullable(this.transitiveTagKeys);
     }
@@ -141,82 +173,190 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
             $ = new ProviderAssumeRoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param durationSeconds Number of seconds to restrict the assume role session duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationSeconds(@Nullable Output<Integer> durationSeconds) {
             $.durationSeconds = durationSeconds;
             return this;
         }
 
+        /**
+         * @param durationSeconds Number of seconds to restrict the assume role session duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationSeconds(Integer durationSeconds) {
             return durationSeconds(Output.of(durationSeconds));
         }
 
+        /**
+         * @param externalId External identifier to use when assuming the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(@Nullable Output<String> externalId) {
             $.externalId = externalId;
             return this;
         }
 
+        /**
+         * @param externalId External identifier to use when assuming the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(String externalId) {
             return externalId(Output.of(externalId));
         }
 
+        /**
+         * @param policy IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<String> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(String policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param policyArns Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyArns(@Nullable Output<List<String>> policyArns) {
             $.policyArns = policyArns;
             return this;
         }
 
+        /**
+         * @param policyArns Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyArns(List<String> policyArns) {
             return policyArns(Output.of(policyArns));
         }
 
+        /**
+         * @param policyArns Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyArns(String... policyArns) {
             return policyArns(List.of(policyArns));
         }
 
+        /**
+         * @param roleArn Amazon Resource Name (ARN) of the IAM Role to assume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(@Nullable Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn Amazon Resource Name (ARN) of the IAM Role to assume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param sessionName Session name to use when assuming the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionName(@Nullable Output<String> sessionName) {
             $.sessionName = sessionName;
             return this;
         }
 
+        /**
+         * @param sessionName Session name to use when assuming the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionName(String sessionName) {
             return sessionName(Output.of(sessionName));
         }
 
+        /**
+         * @param tags Map of assume role session tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of assume role session tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param transitiveTagKeys A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitiveTagKeys(@Nullable Output<List<String>> transitiveTagKeys) {
             $.transitiveTagKeys = transitiveTagKeys;
             return this;
         }
 
+        /**
+         * @param transitiveTagKeys A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitiveTagKeys(List<String> transitiveTagKeys) {
             return transitiveTagKeys(Output.of(transitiveTagKeys));
         }
 
+        /**
+         * @param transitiveTagKeys A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitiveTagKeys(String... transitiveTagKeys) {
             return transitiveTagKeys(List.of(transitiveTagKeys));
         }

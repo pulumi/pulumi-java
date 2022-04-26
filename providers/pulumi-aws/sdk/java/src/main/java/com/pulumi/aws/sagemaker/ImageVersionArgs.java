@@ -20,6 +20,10 @@ public final class ImageVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="baseImage", required=true)
     private Output<String> baseImage;
 
+    /**
+     * @return The registry path of the container image on which this image version is based.
+     * 
+     */
     public Output<String> baseImage() {
         return this.baseImage;
     }
@@ -31,6 +35,10 @@ public final class ImageVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageName", required=true)
     private Output<String> imageName;
 
+    /**
+     * @return The name of the image. Must be unique to your account.
+     * 
+     */
     public Output<String> imageName() {
         return this.imageName;
     }
@@ -60,20 +68,44 @@ public final class ImageVersionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ImageVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseImage The registry path of the container image on which this image version is based.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImage(Output<String> baseImage) {
             $.baseImage = baseImage;
             return this;
         }
 
+        /**
+         * @param baseImage The registry path of the container image on which this image version is based.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImage(String baseImage) {
             return baseImage(Output.of(baseImage));
         }
 
+        /**
+         * @param imageName The name of the image. Must be unique to your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(Output<String> imageName) {
             $.imageName = imageName;
             return this;
         }
 
+        /**
+         * @param imageName The name of the image. Must be unique to your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(String imageName) {
             return imageName(Output.of(imageName));
         }

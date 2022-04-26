@@ -27,6 +27,10 @@ public final class PrivatePoolV1ConfigArgs extends com.pulumi.resources.Resource
     @Import(name="networkConfig")
     private @Nullable Output<NetworkConfigArgs> networkConfig;
 
+    /**
+     * @return Network configuration for the pool.
+     * 
+     */
     public Optional<Output<NetworkConfigArgs>> networkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
@@ -38,6 +42,10 @@ public final class PrivatePoolV1ConfigArgs extends com.pulumi.resources.Resource
     @Import(name="workerConfig")
     private @Nullable Output<WorkerConfigArgs> workerConfig;
 
+    /**
+     * @return Machine configuration for the workers in the pool.
+     * 
+     */
     public Optional<Output<WorkerConfigArgs>> workerConfig() {
         return Optional.ofNullable(this.workerConfig);
     }
@@ -67,20 +75,44 @@ public final class PrivatePoolV1ConfigArgs extends com.pulumi.resources.Resource
             $ = new PrivatePoolV1ConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkConfig Network configuration for the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
             $.networkConfig = networkConfig;
             return this;
         }
 
+        /**
+         * @param networkConfig Network configuration for the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(NetworkConfigArgs networkConfig) {
             return networkConfig(Output.of(networkConfig));
         }
 
+        /**
+         * @param workerConfig Machine configuration for the workers in the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(@Nullable Output<WorkerConfigArgs> workerConfig) {
             $.workerConfig = workerConfig;
             return this;
         }
 
+        /**
+         * @param workerConfig Machine configuration for the workers in the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(WorkerConfigArgs workerConfig) {
             return workerConfig(Output.of(workerConfig));
         }

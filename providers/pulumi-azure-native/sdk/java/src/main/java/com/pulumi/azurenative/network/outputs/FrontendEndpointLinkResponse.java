@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FrontendEndpointLinkResponse {
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
@@ -23,9 +23,9 @@ public final class FrontendEndpointLinkResponse {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

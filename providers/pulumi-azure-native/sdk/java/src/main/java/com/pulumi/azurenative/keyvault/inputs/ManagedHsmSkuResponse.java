@@ -23,6 +23,10 @@ public final class ManagedHsmSkuResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="family", required=true)
     private String family;
 
+    /**
+     * @return SKU Family of the managed HSM Pool
+     * 
+     */
     public String family() {
         return this.family;
     }
@@ -34,6 +38,10 @@ public final class ManagedHsmSkuResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return SKU of the managed HSM Pool
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class ManagedHsmSkuResponse extends com.pulumi.resources.InvokeArgs
             $ = new ManagedHsmSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param family SKU Family of the managed HSM Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param name SKU of the managed HSM Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

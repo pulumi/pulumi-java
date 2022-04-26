@@ -24,6 +24,10 @@ public final class ResourceOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="connectVersion", required=true)
     private String connectVersion;
 
+    /**
+     * @return Optional. The Connect agent version to use for connect_resources. Defaults to the latest GKE Connect version. The version must be a currently supported version, obsolete versions will be rejected.
+     * 
+     */
     public String connectVersion() {
         return this.connectVersion;
     }
@@ -35,6 +39,10 @@ public final class ResourceOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="k8sVersion", required=true)
     private String k8sVersion;
 
+    /**
+     * @return Optional. Major version of the Kubernetes cluster. This is only used to determine which version to use for the CustomResourceDefinition resources, `apiextensions/v1beta1` or`apiextensions/v1`.
+     * 
+     */
     public String k8sVersion() {
         return this.k8sVersion;
     }
@@ -46,6 +54,10 @@ public final class ResourceOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="v1beta1Crd", required=true)
     private Boolean v1beta1Crd;
 
+    /**
+     * @return Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions &lt;1.16.
+     * 
+     */
     public Boolean v1beta1Crd() {
         return this.v1beta1Crd;
     }
@@ -76,16 +88,34 @@ public final class ResourceOptionsResponse extends com.pulumi.resources.InvokeAr
             $ = new ResourceOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectVersion Optional. The Connect agent version to use for connect_resources. Defaults to the latest GKE Connect version. The version must be a currently supported version, obsolete versions will be rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVersion(String connectVersion) {
             $.connectVersion = connectVersion;
             return this;
         }
 
+        /**
+         * @param k8sVersion Optional. Major version of the Kubernetes cluster. This is only used to determine which version to use for the CustomResourceDefinition resources, `apiextensions/v1beta1` or`apiextensions/v1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder k8sVersion(String k8sVersion) {
             $.k8sVersion = k8sVersion;
             return this;
         }
 
+        /**
+         * @param v1beta1Crd Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions &lt;1.16.
+         * 
+         * @return builder
+         * 
+         */
         public Builder v1beta1Crd(Boolean v1beta1Crd) {
             $.v1beta1Crd = v1beta1Crd;
             return this;

@@ -29,6 +29,10 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="bgpSettings")
     private @Nullable Output<BgpSettingsArgs> bgpSettings;
 
+    /**
+     * @return Local network gateway&#39;s BGP speaker settings.
+     * 
+     */
     public Optional<Output<BgpSettingsArgs>> bgpSettings() {
         return Optional.ofNullable(this.bgpSettings);
     }
@@ -40,6 +44,10 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="fqdn")
     private @Nullable Output<String> fqdn;
 
+    /**
+     * @return FQDN of local network gateway.
+     * 
+     */
     public Optional<Output<String>> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
@@ -51,6 +59,10 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="gatewayIpAddress")
     private @Nullable Output<String> gatewayIpAddress;
 
+    /**
+     * @return IP address of local network gateway.
+     * 
+     */
     public Optional<Output<String>> gatewayIpAddress() {
         return Optional.ofNullable(this.gatewayIpAddress);
     }
@@ -62,6 +74,10 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -73,6 +89,10 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="localNetworkAddressSpace")
     private @Nullable Output<AddressSpaceArgs> localNetworkAddressSpace;
 
+    /**
+     * @return Local network site address space.
+     * 
+     */
     public Optional<Output<AddressSpaceArgs>> localNetworkAddressSpace() {
         return Optional.ofNullable(this.localNetworkAddressSpace);
     }
@@ -84,6 +104,10 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -95,6 +119,10 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -129,65 +157,149 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
             $ = new LocalNetworkGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bgpSettings Local network gateway&#39;s BGP speaker settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpSettings(@Nullable Output<BgpSettingsArgs> bgpSettings) {
             $.bgpSettings = bgpSettings;
             return this;
         }
 
+        /**
+         * @param bgpSettings Local network gateway&#39;s BGP speaker settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpSettings(BgpSettingsArgs bgpSettings) {
             return bgpSettings(Output.of(bgpSettings));
         }
 
+        /**
+         * @param fqdn FQDN of local network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(@Nullable Output<String> fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param fqdn FQDN of local network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(String fqdn) {
             return fqdn(Output.of(fqdn));
         }
 
+        /**
+         * @param gatewayIpAddress IP address of local network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayIpAddress(@Nullable Output<String> gatewayIpAddress) {
             $.gatewayIpAddress = gatewayIpAddress;
             return this;
         }
 
+        /**
+         * @param gatewayIpAddress IP address of local network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayIpAddress(String gatewayIpAddress) {
             return gatewayIpAddress(Output.of(gatewayIpAddress));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param localNetworkAddressSpace Local network site address space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localNetworkAddressSpace(@Nullable Output<AddressSpaceArgs> localNetworkAddressSpace) {
             $.localNetworkAddressSpace = localNetworkAddressSpace;
             return this;
         }
 
+        /**
+         * @param localNetworkAddressSpace Local network site address space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localNetworkAddressSpace(AddressSpaceArgs localNetworkAddressSpace) {
             return localNetworkAddressSpace(Output.of(localNetworkAddressSpace));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

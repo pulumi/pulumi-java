@@ -20,6 +20,10 @@ public final class SchemaVersionMetadataArgs extends com.pulumi.resources.Resour
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return Metadata key
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -31,6 +35,10 @@ public final class SchemaVersionMetadataArgs extends com.pulumi.resources.Resour
     @Import(name="schemaVersionId", required=true)
     private Output<String> schemaVersionId;
 
+    /**
+     * @return Represents the version ID associated with the schema version.
+     * 
+     */
     public Output<String> schemaVersionId() {
         return this.schemaVersionId;
     }
@@ -42,6 +50,10 @@ public final class SchemaVersionMetadataArgs extends com.pulumi.resources.Resour
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Metadata value
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -72,29 +84,65 @@ public final class SchemaVersionMetadataArgs extends com.pulumi.resources.Resour
             $ = new SchemaVersionMetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Metadata key
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Metadata key
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param schemaVersionId Represents the version ID associated with the schema version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaVersionId(Output<String> schemaVersionId) {
             $.schemaVersionId = schemaVersionId;
             return this;
         }
 
+        /**
+         * @param schemaVersionId Represents the version ID associated with the schema version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaVersionId(String schemaVersionId) {
             return schemaVersionId(Output.of(schemaVersionId));
         }
 
+        /**
+         * @param value Metadata value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Metadata value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

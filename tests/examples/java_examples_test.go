@@ -29,7 +29,7 @@ const previewOnly = true
 
 func TestExamples(t *testing.T) {
 	t.Run("random", func(t *testing.T) {
-		test := getJvmBase(t, "random", integration.ProgramTestOptions{
+		test := getJavaBase(t, "random", integration.ProgramTestOptions{
 			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
 				o := stackInfo.Outputs
 				assert.Greater(t, o["randomInteger"].(float64), -0.1)
@@ -55,7 +55,7 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("azure-java-static-website", func(t *testing.T) {
-		test := getJvmBase(t, "azure-java-static-website", integration.ProgramTestOptions{
+		test := getJavaBase(t, "azure-java-static-website", integration.ProgramTestOptions{
 			Config: map[string]string{
 				"azure-native:location": "westus",
 			},
@@ -71,7 +71,7 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("aws-java-webserver", func(t *testing.T) {
-		test := getJvmBase(t, "aws-java-webserver", integration.ProgramTestOptions{
+		test := getJavaBase(t, "aws-java-webserver", integration.ProgramTestOptions{
 			Config: map[string]string{
 				"aws:region": "us-east-1",
 			},
@@ -87,7 +87,7 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("azure-java-appservice-sql", func(t *testing.T) {
-		test := getJvmBase(t, "azure-java-appservice-sql", integration.ProgramTestOptions{
+		test := getJavaBase(t, "azure-java-appservice-sql", integration.ProgramTestOptions{
 			Config: map[string]string{
 				"azure-native:location":                 "westus",
 				"azure-java-appservice-sql:sqlPassword": "not-a-real-password",
@@ -97,7 +97,7 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("eks-minimal", func(t *testing.T) {
-		test := getJvmBase(t, "eks-minimal", integration.ProgramTestOptions{
+		test := getJavaBase(t, "eks-minimal", integration.ProgramTestOptions{
 			Config: map[string]string{
 				"aws:region": "us-west-1",
 			},
@@ -106,7 +106,7 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("gcp-java-gke-hello-world", func(t *testing.T) {
-		test := getJvmBase(t, "gcp-java-gke-hello-world", integration.ProgramTestOptions{
+		test := getJavaBase(t, "gcp-java-gke-hello-world", integration.ProgramTestOptions{
 			Config: map[string]string{
 				// Try `gcloud projects list`
 				"gcp:project": "pulumi-development",
@@ -118,7 +118,7 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("minimal", func(t *testing.T) {
-		test := getJvmBase(t, "minimal", integration.ProgramTestOptions{
+		test := getJavaBase(t, "minimal", integration.ProgramTestOptions{
 			PrepareProject: func(info *engine.Projinfo) error {
 				cmd := exec.Command(filepath.Join(info.Root, "mvnw"),
 					"--no-transfer-progress", "package")
@@ -150,7 +150,7 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("aws-native-java-s3-folder", func(t *testing.T) {
-		test := getJvmBase(t, "aws-native-java-s3-folder", integration.ProgramTestOptions{
+		test := getJavaBase(t, "aws-native-java-s3-folder", integration.ProgramTestOptions{
 			Config: map[string]string{
 				"aws:region":        "us-west-2",
 				"aws-native:region": "us-west-2",
@@ -165,7 +165,7 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("azure-function-graal-spring", func(t *testing.T) {
-		test := getJvmBase(t, "azure-function-graal-spring", integration.ProgramTestOptions{
+		test := getJavaBase(t, "azure-function-graal-spring", integration.ProgramTestOptions{
 			Config: map[string]string{
 				"azure-native:location": "westus",
 			},
@@ -184,7 +184,7 @@ func TestExamples(t *testing.T) {
 	})
 }
 
-func getJvmBase(t *testing.T, dir string, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {
+func getJavaBase(t *testing.T, dir string, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {
 	repoRoot, err := filepath.Abs(filepath.Join("..", ".."))
 	if err != nil {
 		panic(err)
@@ -193,7 +193,7 @@ func getJvmBase(t *testing.T, dir string, testSpecificOptions integration.Progra
 		Dir: filepath.Join(getCwd(t), dir),
 		Env: []string{fmt.Sprintf("PULUMI_REPO_ROOT=%s", repoRoot)},
 		PrepareProject: func(*engine.Projinfo) error {
-			return nil // needed because defaultPrepareProject does not know about jvm
+			return nil // needed because defaultPrepareProject does not know about java
 		},
 	}
 	opts = opts.With(getBaseOptions()).With(testSpecificOptions)

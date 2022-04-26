@@ -28,6 +28,10 @@ public final class CloudRepoSourceContextArgs extends com.pulumi.resources.Resou
     @Import(name="aliasContext")
     private @Nullable Output<AliasContextArgs> aliasContext;
 
+    /**
+     * @return An alias, which may be a branch or tag.
+     * 
+     */
     public Optional<Output<AliasContextArgs>> aliasContext() {
         return Optional.ofNullable(this.aliasContext);
     }
@@ -39,6 +43,10 @@ public final class CloudRepoSourceContextArgs extends com.pulumi.resources.Resou
     @Import(name="repoId")
     private @Nullable Output<RepoIdArgs> repoId;
 
+    /**
+     * @return The ID of the repo.
+     * 
+     */
     public Optional<Output<RepoIdArgs>> repoId() {
         return Optional.ofNullable(this.repoId);
     }
@@ -50,6 +58,10 @@ public final class CloudRepoSourceContextArgs extends com.pulumi.resources.Resou
     @Import(name="revisionId")
     private @Nullable Output<String> revisionId;
 
+    /**
+     * @return A revision ID.
+     * 
+     */
     public Optional<Output<String>> revisionId() {
         return Optional.ofNullable(this.revisionId);
     }
@@ -80,29 +92,65 @@ public final class CloudRepoSourceContextArgs extends com.pulumi.resources.Resou
             $ = new CloudRepoSourceContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aliasContext An alias, which may be a branch or tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasContext(@Nullable Output<AliasContextArgs> aliasContext) {
             $.aliasContext = aliasContext;
             return this;
         }
 
+        /**
+         * @param aliasContext An alias, which may be a branch or tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasContext(AliasContextArgs aliasContext) {
             return aliasContext(Output.of(aliasContext));
         }
 
+        /**
+         * @param repoId The ID of the repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoId(@Nullable Output<RepoIdArgs> repoId) {
             $.repoId = repoId;
             return this;
         }
 
+        /**
+         * @param repoId The ID of the repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoId(RepoIdArgs repoId) {
             return repoId(Output.of(repoId));
         }
 
+        /**
+         * @param revisionId A revision ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionId(@Nullable Output<String> revisionId) {
             $.revisionId = revisionId;
             return this;
         }
 
+        /**
+         * @param revisionId A revision ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionId(String revisionId) {
             return revisionId(Output.of(revisionId));
         }

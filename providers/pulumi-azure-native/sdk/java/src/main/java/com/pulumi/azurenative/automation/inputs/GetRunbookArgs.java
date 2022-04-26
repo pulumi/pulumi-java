@@ -19,6 +19,10 @@ public final class GetRunbookArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="automationAccountName", required=true)
     private String automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public String automationAccountName() {
         return this.automationAccountName;
     }
@@ -30,6 +34,10 @@ public final class GetRunbookArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetRunbookArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="runbookName", required=true)
     private String runbookName;
 
+    /**
+     * @return The runbook name.
+     * 
+     */
     public String runbookName() {
         return this.runbookName;
     }
@@ -71,16 +83,34 @@ public final class GetRunbookArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRunbookArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param runbookName The runbook name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runbookName(String runbookName) {
             $.runbookName = runbookName;
             return this;

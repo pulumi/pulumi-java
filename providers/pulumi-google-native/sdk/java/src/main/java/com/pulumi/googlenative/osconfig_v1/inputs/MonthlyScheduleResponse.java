@@ -24,6 +24,10 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="monthDay", required=true)
     private Integer monthDay;
 
+    /**
+     * @return One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34; will not run in February, April, June, etc.
+     * 
+     */
     public Integer monthDay() {
         return this.monthDay;
     }
@@ -35,6 +39,10 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="weekDayOfMonth", required=true)
     private WeekDayOfMonthResponse weekDayOfMonth;
 
+    /**
+     * @return Week day in a month.
+     * 
+     */
     public WeekDayOfMonthResponse weekDayOfMonth() {
         return this.weekDayOfMonth;
     }
@@ -64,11 +72,23 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
             $ = new MonthlyScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param monthDay One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34; will not run in February, April, June, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthDay(Integer monthDay) {
             $.monthDay = monthDay;
             return this;
         }
 
+        /**
+         * @param weekDayOfMonth Week day in a month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDayOfMonth(WeekDayOfMonthResponse weekDayOfMonth) {
             $.weekDayOfMonth = weekDayOfMonth;
             return this;

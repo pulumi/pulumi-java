@@ -68,6 +68,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DataSourceTagArgs>> tags;
 
+    /**
+     * @return Tags for labeling the data source
+     * 
+     */
     public Optional<Output<List<DataSourceTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -164,15 +168,33 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param tags Tags for labeling the data source
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DataSourceTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags for labeling the data source
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DataSourceTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags for labeling the data source
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DataSourceTagArgs... tags) {
             return tags(List.of(tags));
         }

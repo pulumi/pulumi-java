@@ -25,6 +25,10 @@ public final class SelectorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return String of the selector ID.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -36,6 +40,10 @@ public final class SelectorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targets", required=true)
     private List<TargetReferenceResponse> targets;
 
+    /**
+     * @return List of Target references.
+     * 
+     */
     public List<TargetReferenceResponse> targets() {
         return this.targets;
     }
@@ -47,6 +55,10 @@ public final class SelectorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Enum of the selector type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -77,20 +89,44 @@ public final class SelectorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SelectorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id String of the selector ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param targets List of Target references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(List<TargetReferenceResponse> targets) {
             $.targets = targets;
             return this;
         }
 
+        /**
+         * @param targets List of Target references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(TargetReferenceResponse... targets) {
             return targets(List.of(targets));
         }
 
+        /**
+         * @param type Enum of the selector type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

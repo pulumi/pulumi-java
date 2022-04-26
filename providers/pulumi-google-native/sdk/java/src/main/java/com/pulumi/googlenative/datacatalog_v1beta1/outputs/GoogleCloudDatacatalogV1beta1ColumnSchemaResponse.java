@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse {
     /**
-     * Name of the column.
+     * @return Name of the column.
      * 
      */
     private final String column;
     /**
-     * Optional. Description of the column. Default value is an empty string.
+     * @return Optional. Description of the column. Default value is an empty string.
      * 
      */
     private final String description;
     /**
-     * Optional. A column&#39;s mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
+     * @return Optional. A column&#39;s mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
      * 
      */
     private final String mode;
     /**
-     * Optional. Schema of sub-columns. A column can have zero or more sub-columns.
+     * @return Optional. Schema of sub-columns. A column can have zero or more sub-columns.
      * 
      */
     private final List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns;
     /**
-     * Type of the column.
+     * @return Type of the column.
      * 
      */
     private final String type;
@@ -51,37 +51,37 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse {
     }
 
     /**
-     * Name of the column.
+     * @return Name of the column.
      * 
-    */
+     */
     public String column() {
         return this.column;
     }
     /**
-     * Optional. Description of the column. Default value is an empty string.
+     * @return Optional. Description of the column. Default value is an empty string.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Optional. A column&#39;s mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
+     * @return Optional. A column&#39;s mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
      * 
-    */
+     */
     public String mode() {
         return this.mode;
     }
     /**
-     * Optional. Schema of sub-columns. A column can have zero or more sub-columns.
+     * @return Optional. Schema of sub-columns. A column can have zero or more sub-columns.
      * 
-    */
+     */
     public List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns() {
         return this.subcolumns;
     }
     /**
-     * Type of the column.
+     * @return Type of the column.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

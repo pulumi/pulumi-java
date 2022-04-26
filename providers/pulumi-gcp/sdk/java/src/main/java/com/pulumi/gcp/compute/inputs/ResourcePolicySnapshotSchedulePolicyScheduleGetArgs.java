@@ -25,6 +25,11 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleGetArgs extends c
     @Import(name="dailySchedule")
     private @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs> dailySchedule;
 
+    /**
+     * @return The policy will execute every nth day at the specified time.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs>> dailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
@@ -37,6 +42,11 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleGetArgs extends c
     @Import(name="hourlySchedule")
     private @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGetArgs> hourlySchedule;
 
+    /**
+     * @return The policy will execute every nth hour starting at the specified time.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGetArgs>> hourlySchedule() {
         return Optional.ofNullable(this.hourlySchedule);
     }
@@ -49,6 +59,11 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleGetArgs extends c
     @Import(name="weeklySchedule")
     private @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs> weeklySchedule;
 
+    /**
+     * @return Allows specifying a snapshot time for each day of the week.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs>> weeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }
@@ -79,29 +94,71 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleGetArgs extends c
             $ = new ResourcePolicySnapshotSchedulePolicyScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dailySchedule The policy will execute every nth day at the specified time.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailySchedule(@Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs> dailySchedule) {
             $.dailySchedule = dailySchedule;
             return this;
         }
 
+        /**
+         * @param dailySchedule The policy will execute every nth day at the specified time.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailySchedule(ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs dailySchedule) {
             return dailySchedule(Output.of(dailySchedule));
         }
 
+        /**
+         * @param hourlySchedule The policy will execute every nth hour starting at the specified time.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourlySchedule(@Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGetArgs> hourlySchedule) {
             $.hourlySchedule = hourlySchedule;
             return this;
         }
 
+        /**
+         * @param hourlySchedule The policy will execute every nth hour starting at the specified time.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourlySchedule(ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGetArgs hourlySchedule) {
             return hourlySchedule(Output.of(hourlySchedule));
         }
 
+        /**
+         * @param weeklySchedule Allows specifying a snapshot time for each day of the week.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklySchedule(@Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs> weeklySchedule) {
             $.weeklySchedule = weeklySchedule;
             return this;
         }
 
+        /**
+         * @param weeklySchedule Allows specifying a snapshot time for each day of the week.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklySchedule(ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs weeklySchedule) {
             return weeklySchedule(Output.of(weeklySchedule));
         }

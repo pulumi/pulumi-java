@@ -13,62 +13,62 @@ import java.util.Objects;
 @CustomType
 public final class GetCustomerResult {
     /**
-     * Secondary contact email. You need to provide an alternate email to create different domains if a primary contact email already exists. Users will receive a notification with credentials when you create an admin.google.com account. Secondary emails are also recovery email addresses. Alternate emails are optional when you create Team customers.
+     * @return Secondary contact email. You need to provide an alternate email to create different domains if a primary contact email already exists. Users will receive a notification with credentials when you create an admin.google.com account. Secondary emails are also recovery email addresses. Alternate emails are optional when you create Team customers.
      * 
      */
     private final String alternateEmail;
     /**
-     * Cloud Identity ID of the customer&#39;s channel partner. Populated only if a channel partner exists for this customer.
+     * @return Cloud Identity ID of the customer&#39;s channel partner. Populated only if a channel partner exists for this customer.
      * 
      */
     private final String channelPartnerId;
     /**
-     * The customer&#39;s Cloud Identity ID if the customer has a Cloud Identity resource.
+     * @return The customer&#39;s Cloud Identity ID if the customer has a Cloud Identity resource.
      * 
      */
     private final String cloudIdentityId;
     /**
-     * Cloud Identity information for the customer. Populated only if a Cloud Identity account exists for this customer.
+     * @return Cloud Identity information for the customer. Populated only if a Cloud Identity account exists for this customer.
      * 
      */
     private final GoogleCloudChannelV1CloudIdentityInfoResponse cloudIdentityInfo;
     /**
-     * Time when the customer was created.
+     * @return Time when the customer was created.
      * 
      */
     private final String createTime;
     /**
-     * The customer&#39;s primary domain. Must match the primary contact email&#39;s domain.
+     * @return The customer&#39;s primary domain. Must match the primary contact email&#39;s domain.
      * 
      */
     private final String domain;
     /**
-     * Optional. The BCP-47 language code, such as &#34;en-US&#34; or &#34;sr-Latn&#34;. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+     * @return Optional. The BCP-47 language code, such as &#34;en-US&#34; or &#34;sr-Latn&#34;. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
      * 
      */
     private final String languageCode;
     /**
-     * Resource name of the customer. Format: accounts/{account_id}/customers/{customer_id}
+     * @return Resource name of the customer. Format: accounts/{account_id}/customers/{customer_id}
      * 
      */
     private final String name;
     /**
-     * Name of the organization that the customer entity represents.
+     * @return Name of the organization that the customer entity represents.
      * 
      */
     private final String orgDisplayName;
     /**
-     * The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer&#39;s language, use the Customer-level language code.
+     * @return The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer&#39;s language, use the Customer-level language code.
      * 
      */
     private final GoogleTypePostalAddressResponse orgPostalAddress;
     /**
-     * Primary contact info.
+     * @return Primary contact info.
      * 
      */
     private final GoogleCloudChannelV1ContactInfoResponse primaryContactInfo;
     /**
-     * Time when the customer was updated.
+     * @return Time when the customer was updated.
      * 
      */
     private final String updateTime;
@@ -102,86 +102,86 @@ public final class GetCustomerResult {
     }
 
     /**
-     * Secondary contact email. You need to provide an alternate email to create different domains if a primary contact email already exists. Users will receive a notification with credentials when you create an admin.google.com account. Secondary emails are also recovery email addresses. Alternate emails are optional when you create Team customers.
+     * @return Secondary contact email. You need to provide an alternate email to create different domains if a primary contact email already exists. Users will receive a notification with credentials when you create an admin.google.com account. Secondary emails are also recovery email addresses. Alternate emails are optional when you create Team customers.
      * 
-    */
+     */
     public String alternateEmail() {
         return this.alternateEmail;
     }
     /**
-     * Cloud Identity ID of the customer&#39;s channel partner. Populated only if a channel partner exists for this customer.
+     * @return Cloud Identity ID of the customer&#39;s channel partner. Populated only if a channel partner exists for this customer.
      * 
-    */
+     */
     public String channelPartnerId() {
         return this.channelPartnerId;
     }
     /**
-     * The customer&#39;s Cloud Identity ID if the customer has a Cloud Identity resource.
+     * @return The customer&#39;s Cloud Identity ID if the customer has a Cloud Identity resource.
      * 
-    */
+     */
     public String cloudIdentityId() {
         return this.cloudIdentityId;
     }
     /**
-     * Cloud Identity information for the customer. Populated only if a Cloud Identity account exists for this customer.
+     * @return Cloud Identity information for the customer. Populated only if a Cloud Identity account exists for this customer.
      * 
-    */
+     */
     public GoogleCloudChannelV1CloudIdentityInfoResponse cloudIdentityInfo() {
         return this.cloudIdentityInfo;
     }
     /**
-     * Time when the customer was created.
+     * @return Time when the customer was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The customer&#39;s primary domain. Must match the primary contact email&#39;s domain.
+     * @return The customer&#39;s primary domain. Must match the primary contact email&#39;s domain.
      * 
-    */
+     */
     public String domain() {
         return this.domain;
     }
     /**
-     * Optional. The BCP-47 language code, such as &#34;en-US&#34; or &#34;sr-Latn&#34;. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+     * @return Optional. The BCP-47 language code, such as &#34;en-US&#34; or &#34;sr-Latn&#34;. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
      * 
-    */
+     */
     public String languageCode() {
         return this.languageCode;
     }
     /**
-     * Resource name of the customer. Format: accounts/{account_id}/customers/{customer_id}
+     * @return Resource name of the customer. Format: accounts/{account_id}/customers/{customer_id}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Name of the organization that the customer entity represents.
+     * @return Name of the organization that the customer entity represents.
      * 
-    */
+     */
     public String orgDisplayName() {
         return this.orgDisplayName;
     }
     /**
-     * The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer&#39;s language, use the Customer-level language code.
+     * @return The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer&#39;s language, use the Customer-level language code.
      * 
-    */
+     */
     public GoogleTypePostalAddressResponse orgPostalAddress() {
         return this.orgPostalAddress;
     }
     /**
-     * Primary contact info.
+     * @return Primary contact info.
      * 
-    */
+     */
     public GoogleCloudChannelV1ContactInfoResponse primaryContactInfo() {
         return this.primaryContactInfo;
     }
     /**
-     * Time when the customer was updated.
+     * @return Time when the customer was updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

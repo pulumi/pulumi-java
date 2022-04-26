@@ -22,6 +22,10 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="auditLogConfigs", required=true)
     private Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
+    /**
+     * @return The configuration for logging of each type of permission. This can be specified multiple times.
+     * 
+     */
     public Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs() {
         return this.auditLogConfigs;
     }
@@ -40,6 +44,10 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="service", required=true)
     private Output<String> service;
 
+    /**
+     * @return Service which will be enabled for audit logging. The special value allServices covers all services.
+     * 
+     */
     public Output<String> service() {
         return this.service;
     }
@@ -70,15 +78,33 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new IamAuditConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auditLogConfigs The configuration for logging of each type of permission. This can be specified multiple times.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogConfigs(Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs) {
             $.auditLogConfigs = auditLogConfigs;
             return this;
         }
 
+        /**
+         * @param auditLogConfigs The configuration for logging of each type of permission. This can be specified multiple times.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogConfigs(List<IamAuditConfigAuditLogConfigArgs> auditLogConfigs) {
             return auditLogConfigs(Output.of(auditLogConfigs));
         }
 
+        /**
+         * @param auditLogConfigs The configuration for logging of each type of permission. This can be specified multiple times.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogConfigs(IamAuditConfigAuditLogConfigArgs... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
@@ -92,11 +118,23 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
             return folder(Output.of(folder));
         }
 
+        /**
+         * @param service Service which will be enabled for audit logging. The special value allServices covers all services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Service which will be enabled for audit logging. The special value allServices covers all services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

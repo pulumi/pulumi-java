@@ -25,6 +25,10 @@ public final class SigningProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="platformId", required=true)
     private Output<SigningProfilePlatformId> platformId;
 
+    /**
+     * @return The ID of the target signing platform.
+     * 
+     */
     public Output<SigningProfilePlatformId> platformId() {
         return this.platformId;
     }
@@ -36,6 +40,10 @@ public final class SigningProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="signatureValidityPeriod")
     private @Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
 
+    /**
+     * @return Signature validity period of the profile.
+     * 
+     */
     public Optional<Output<SigningProfileSignatureValidityPeriodArgs>> signatureValidityPeriod() {
         return Optional.ofNullable(this.signatureValidityPeriod);
     }
@@ -47,6 +55,10 @@ public final class SigningProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<List<SigningProfileTagArgs>> tags;
 
+    /**
+     * @return A list of tags associated with the signing profile.
+     * 
+     */
     public Optional<Output<List<SigningProfileTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -77,33 +89,75 @@ public final class SigningProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SigningProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param platformId The ID of the target signing platform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformId(Output<SigningProfilePlatformId> platformId) {
             $.platformId = platformId;
             return this;
         }
 
+        /**
+         * @param platformId The ID of the target signing platform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformId(SigningProfilePlatformId platformId) {
             return platformId(Output.of(platformId));
         }
 
+        /**
+         * @param signatureValidityPeriod Signature validity period of the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureValidityPeriod(@Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod) {
             $.signatureValidityPeriod = signatureValidityPeriod;
             return this;
         }
 
+        /**
+         * @param signatureValidityPeriod Signature validity period of the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureValidityPeriod(SigningProfileSignatureValidityPeriodArgs signatureValidityPeriod) {
             return signatureValidityPeriod(Output.of(signatureValidityPeriod));
         }
 
+        /**
+         * @param tags A list of tags associated with the signing profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<SigningProfileTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of tags associated with the signing profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<SigningProfileTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of tags associated with the signing profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(SigningProfileTagArgs... tags) {
             return tags(List.of(tags));
         }

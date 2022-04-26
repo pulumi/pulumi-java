@@ -22,6 +22,10 @@ public final class ServerAdministratorArgs extends com.pulumi.resources.Resource
     @Import(name="administratorType", required=true)
     private Output<Either<String,AdministratorType>> administratorType;
 
+    /**
+     * @return The type of administrator.
+     * 
+     */
     public Output<Either<String,AdministratorType>> administratorType() {
         return this.administratorType;
     }
@@ -33,6 +37,10 @@ public final class ServerAdministratorArgs extends com.pulumi.resources.Resource
     @Import(name="login", required=true)
     private Output<String> login;
 
+    /**
+     * @return The server administrator login account name.
+     * 
+     */
     public Output<String> login() {
         return this.login;
     }
@@ -44,6 +52,10 @@ public final class ServerAdministratorArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class ServerAdministratorArgs extends com.pulumi.resources.Resource
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -66,6 +82,10 @@ public final class ServerAdministratorArgs extends com.pulumi.resources.Resource
     @Import(name="sid", required=true)
     private Output<String> sid;
 
+    /**
+     * @return The server administrator Sid (Secure ID).
+     * 
+     */
     public Output<String> sid() {
         return this.sid;
     }
@@ -77,6 +97,10 @@ public final class ServerAdministratorArgs extends com.pulumi.resources.Resource
     @Import(name="tenantId", required=true)
     private Output<String> tenantId;
 
+    /**
+     * @return The server Active Directory Administrator tenant id.
+     * 
+     */
     public Output<String> tenantId() {
         return this.tenantId;
     }
@@ -110,64 +134,148 @@ public final class ServerAdministratorArgs extends com.pulumi.resources.Resource
             $ = new ServerAdministratorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param administratorType The type of administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorType(Output<Either<String,AdministratorType>> administratorType) {
             $.administratorType = administratorType;
             return this;
         }
 
+        /**
+         * @param administratorType The type of administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorType(Either<String,AdministratorType> administratorType) {
             return administratorType(Output.of(administratorType));
         }
 
+        /**
+         * @param administratorType The type of administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorType(String administratorType) {
             return administratorType(Either.ofLeft(administratorType));
         }
 
+        /**
+         * @param administratorType The type of administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorType(AdministratorType administratorType) {
             return administratorType(Either.ofRight(administratorType));
         }
 
+        /**
+         * @param login The server administrator login account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(Output<String> login) {
             $.login = login;
             return this;
         }
 
+        /**
+         * @param login The server administrator login account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(String login) {
             return login(Output.of(login));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param sid The server administrator Sid (Secure ID).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sid(Output<String> sid) {
             $.sid = sid;
             return this;
         }
 
+        /**
+         * @param sid The server administrator Sid (Secure ID).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sid(String sid) {
             return sid(Output.of(sid));
         }
 
+        /**
+         * @param tenantId The server Active Directory Administrator tenant id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId The server Active Directory Administrator tenant id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

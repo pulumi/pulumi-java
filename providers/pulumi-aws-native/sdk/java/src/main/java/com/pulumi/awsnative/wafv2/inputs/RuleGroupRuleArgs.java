@@ -61,6 +61,10 @@ public final class RuleGroupRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleLabels")
     private @Nullable Output<List<RuleGroupLabelArgs>> ruleLabels;
 
+    /**
+     * @return Collection of Rule Labels.
+     * 
+     */
     public Optional<Output<List<RuleGroupLabelArgs>>> ruleLabels() {
         return Optional.ofNullable(this.ruleLabels);
     }
@@ -145,15 +149,33 @@ public final class RuleGroupRuleArgs extends com.pulumi.resources.ResourceArgs {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param ruleLabels Collection of Rule Labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleLabels(@Nullable Output<List<RuleGroupLabelArgs>> ruleLabels) {
             $.ruleLabels = ruleLabels;
             return this;
         }
 
+        /**
+         * @param ruleLabels Collection of Rule Labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleLabels(List<RuleGroupLabelArgs> ruleLabels) {
             return ruleLabels(Output.of(ruleLabels));
         }
 
+        /**
+         * @param ruleLabels Collection of Rule Labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleLabels(RuleGroupLabelArgs... ruleLabels) {
             return ruleLabels(List.of(ruleLabels));
         }

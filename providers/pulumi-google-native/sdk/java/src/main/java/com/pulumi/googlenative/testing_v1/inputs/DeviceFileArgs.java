@@ -27,6 +27,10 @@ public final class DeviceFileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="obbFile")
     private @Nullable Output<ObbFileArgs> obbFile;
 
+    /**
+     * @return A reference to an opaque binary blob file.
+     * 
+     */
     public Optional<Output<ObbFileArgs>> obbFile() {
         return Optional.ofNullable(this.obbFile);
     }
@@ -38,6 +42,10 @@ public final class DeviceFileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="regularFile")
     private @Nullable Output<RegularFileArgs> regularFile;
 
+    /**
+     * @return A reference to a regular file.
+     * 
+     */
     public Optional<Output<RegularFileArgs>> regularFile() {
         return Optional.ofNullable(this.regularFile);
     }
@@ -67,20 +75,44 @@ public final class DeviceFileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeviceFileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param obbFile A reference to an opaque binary blob file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder obbFile(@Nullable Output<ObbFileArgs> obbFile) {
             $.obbFile = obbFile;
             return this;
         }
 
+        /**
+         * @param obbFile A reference to an opaque binary blob file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder obbFile(ObbFileArgs obbFile) {
             return obbFile(Output.of(obbFile));
         }
 
+        /**
+         * @param regularFile A reference to a regular file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regularFile(@Nullable Output<RegularFileArgs> regularFile) {
             $.regularFile = regularFile;
             return this;
         }
 
+        /**
+         * @param regularFile A reference to a regular file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regularFile(RegularFileArgs regularFile) {
             return regularFile(Output.of(regularFile));
         }

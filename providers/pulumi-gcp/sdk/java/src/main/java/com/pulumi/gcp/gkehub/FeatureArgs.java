@@ -24,6 +24,10 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return GCP labels for this Feature.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -35,6 +39,10 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The location for the resource
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -46,6 +54,10 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The full, unique name of this Feature resource
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +69,10 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project for the resource
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -68,6 +84,10 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spec")
     private @Nullable Output<FeatureSpecArgs> spec;
 
+    /**
+     * @return Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+     * 
+     */
     public Optional<Output<FeatureSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
@@ -100,47 +120,107 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FeatureArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels GCP labels for this Feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels GCP labels for this Feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The full, unique name of this Feature resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The full, unique name of this Feature resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param spec Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(@Nullable Output<FeatureSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(FeatureSpecArgs spec) {
             return spec(Output.of(spec));
         }

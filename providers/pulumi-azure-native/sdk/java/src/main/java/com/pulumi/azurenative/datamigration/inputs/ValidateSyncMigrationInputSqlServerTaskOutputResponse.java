@@ -25,6 +25,10 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse extends
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Database identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -36,6 +40,10 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse extends
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of database
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse extends
     @Import(name="validationErrors", required=true)
     private List<ReportableExceptionResponse> validationErrors;
 
+    /**
+     * @return Errors associated with a selected database object
+     * 
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
@@ -77,21 +89,45 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse extends
             $ = new ValidateSyncMigrationInputSqlServerTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Database identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of database
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param validationErrors Errors associated with a selected database object
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             $.validationErrors = validationErrors;
             return this;
         }
 
+        /**
+         * @param validationErrors Errors associated with a selected database object
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
         }

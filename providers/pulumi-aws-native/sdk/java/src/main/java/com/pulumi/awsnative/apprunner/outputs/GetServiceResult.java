@@ -17,23 +17,23 @@ public final class GetServiceResult {
     private final @Nullable ServiceHealthCheckConfiguration healthCheckConfiguration;
     private final @Nullable ServiceInstanceConfiguration instanceConfiguration;
     /**
-     * The Amazon Resource Name (ARN) of the AppRunner Service.
+     * @return The Amazon Resource Name (ARN) of the AppRunner Service.
      * 
      */
     private final @Nullable String serviceArn;
     /**
-     * The AppRunner Service Id
+     * @return The AppRunner Service Id
      * 
      */
     private final @Nullable String serviceId;
     /**
-     * The Service Url of the AppRunner Service.
+     * @return The Service Url of the AppRunner Service.
      * 
      */
     private final @Nullable String serviceUrl;
     private final @Nullable ServiceSourceConfiguration sourceConfiguration;
     /**
-     * AppRunner Service status.
+     * @return AppRunner Service status.
      * 
      */
     private final @Nullable String status;
@@ -63,23 +63,23 @@ public final class GetServiceResult {
         return Optional.ofNullable(this.instanceConfiguration);
     }
     /**
-     * The Amazon Resource Name (ARN) of the AppRunner Service.
+     * @return The Amazon Resource Name (ARN) of the AppRunner Service.
      * 
-    */
+     */
     public Optional<String> serviceArn() {
         return Optional.ofNullable(this.serviceArn);
     }
     /**
-     * The AppRunner Service Id
+     * @return The AppRunner Service Id
      * 
-    */
+     */
     public Optional<String> serviceId() {
         return Optional.ofNullable(this.serviceId);
     }
     /**
-     * The Service Url of the AppRunner Service.
+     * @return The Service Url of the AppRunner Service.
      * 
-    */
+     */
     public Optional<String> serviceUrl() {
         return Optional.ofNullable(this.serviceUrl);
     }
@@ -87,9 +87,9 @@ public final class GetServiceResult {
         return Optional.ofNullable(this.sourceConfiguration);
     }
     /**
-     * AppRunner Service status.
+     * @return AppRunner Service status.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

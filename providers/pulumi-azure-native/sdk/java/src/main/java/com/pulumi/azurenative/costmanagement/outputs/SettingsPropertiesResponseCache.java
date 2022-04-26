@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SettingsPropertiesResponseCache {
     /**
-     * Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
+     * @return Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
      * 
      */
     private final String channel;
     /**
-     * Resource ID used by Resource Manager to uniquely identify the scope.
+     * @return Resource ID used by Resource Manager to uniquely identify the scope.
      * 
      */
     private final String id;
     /**
-     * Display name for the scope.
+     * @return Display name for the scope.
      * 
      */
     private final String name;
     /**
-     * Resource ID of the parent scope. For instance, subscription&#39;s resource ID for a resource group or a management group resource ID for a subscription.
+     * @return Resource ID of the parent scope. For instance, subscription&#39;s resource ID for a resource group or a management group resource ID for a subscription.
      * 
      */
     private final @Nullable String parent;
     /**
-     * Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
+     * @return Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
      * 
      */
     private final @Nullable String status;
     /**
-     * Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
+     * @return Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
      * 
      */
     private final String subchannel;
@@ -59,44 +59,44 @@ public final class SettingsPropertiesResponseCache {
     }
 
     /**
-     * Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
+     * @return Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
      * 
-    */
+     */
     public String channel() {
         return this.channel;
     }
     /**
-     * Resource ID used by Resource Manager to uniquely identify the scope.
+     * @return Resource ID used by Resource Manager to uniquely identify the scope.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Display name for the scope.
+     * @return Display name for the scope.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource ID of the parent scope. For instance, subscription&#39;s resource ID for a resource group or a management group resource ID for a subscription.
+     * @return Resource ID of the parent scope. For instance, subscription&#39;s resource ID for a resource group or a management group resource ID for a subscription.
      * 
-    */
+     */
     public Optional<String> parent() {
         return Optional.ofNullable(this.parent);
     }
     /**
-     * Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
+     * @return Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
+     * @return Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
      * 
-    */
+     */
     public String subchannel() {
         return this.subchannel;
     }

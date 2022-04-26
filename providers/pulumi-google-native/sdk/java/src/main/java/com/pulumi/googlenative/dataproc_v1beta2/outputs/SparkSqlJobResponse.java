@@ -14,32 +14,32 @@ import java.util.Objects;
 @CustomType
 public final class SparkSqlJobResponse {
     /**
-     * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * @return Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
      */
     private final List<String> jarFileUris;
     /**
-     * Optional. The runtime log config for job execution.
+     * @return Optional. The runtime log config for job execution.
      * 
      */
     private final LoggingConfigResponse loggingConfig;
     /**
-     * Optional. A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
+     * @return Optional. A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
      * 
      */
     private final Map<String,String> properties;
     /**
-     * The HCFS URI of the script that contains SQL queries.
+     * @return The HCFS URI of the script that contains SQL queries.
      * 
      */
     private final String queryFileUri;
     /**
-     * A list of queries.
+     * @return A list of queries.
      * 
      */
     private final QueryListResponse queryList;
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
+     * @return Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
      * 
      */
     private final Map<String,String> scriptVariables;
@@ -61,44 +61,44 @@ public final class SparkSqlJobResponse {
     }
 
     /**
-     * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * @return Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
-    */
+     */
     public List<String> jarFileUris() {
         return this.jarFileUris;
     }
     /**
-     * Optional. The runtime log config for job execution.
+     * @return Optional. The runtime log config for job execution.
      * 
-    */
+     */
     public LoggingConfigResponse loggingConfig() {
         return this.loggingConfig;
     }
     /**
-     * Optional. A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
+     * @return Optional. A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties;
     }
     /**
-     * The HCFS URI of the script that contains SQL queries.
+     * @return The HCFS URI of the script that contains SQL queries.
      * 
-    */
+     */
     public String queryFileUri() {
         return this.queryFileUri;
     }
     /**
-     * A list of queries.
+     * @return A list of queries.
      * 
-    */
+     */
     public QueryListResponse queryList() {
         return this.queryList;
     }
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
+     * @return Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
      * 
-    */
+     */
     public Map<String,String> scriptVariables() {
         return this.scriptVariables;
     }

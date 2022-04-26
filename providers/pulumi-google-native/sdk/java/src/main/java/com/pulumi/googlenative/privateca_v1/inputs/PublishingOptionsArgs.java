@@ -26,6 +26,10 @@ public final class PublishingOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="publishCaCert")
     private @Nullable Output<Boolean> publishCaCert;
 
+    /**
+     * @return Optional. When true, publishes each CertificateAuthority&#39;s CA certificate and includes its URL in the &#34;Authority Information Access&#34; X.509 extension in all issued Certificates. If this is false, the CA certificate will not be published and the corresponding X.509 extension will not be written in issued certificates.
+     * 
+     */
     public Optional<Output<Boolean>> publishCaCert() {
         return Optional.ofNullable(this.publishCaCert);
     }
@@ -37,6 +41,10 @@ public final class PublishingOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="publishCrl")
     private @Nullable Output<Boolean> publishCrl;
 
+    /**
+     * @return Optional. When true, publishes each CertificateAuthority&#39;s CRL and includes its URL in the &#34;CRL Distribution Points&#34; X.509 extension in all issued Certificates. If this is false, CRLs will not be published and the corresponding X.509 extension will not be written in issued certificates. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
+     * 
+     */
     public Optional<Output<Boolean>> publishCrl() {
         return Optional.ofNullable(this.publishCrl);
     }
@@ -66,20 +74,44 @@ public final class PublishingOptionsArgs extends com.pulumi.resources.ResourceAr
             $ = new PublishingOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publishCaCert Optional. When true, publishes each CertificateAuthority&#39;s CA certificate and includes its URL in the &#34;Authority Information Access&#34; X.509 extension in all issued Certificates. If this is false, the CA certificate will not be published and the corresponding X.509 extension will not be written in issued certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishCaCert(@Nullable Output<Boolean> publishCaCert) {
             $.publishCaCert = publishCaCert;
             return this;
         }
 
+        /**
+         * @param publishCaCert Optional. When true, publishes each CertificateAuthority&#39;s CA certificate and includes its URL in the &#34;Authority Information Access&#34; X.509 extension in all issued Certificates. If this is false, the CA certificate will not be published and the corresponding X.509 extension will not be written in issued certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishCaCert(Boolean publishCaCert) {
             return publishCaCert(Output.of(publishCaCert));
         }
 
+        /**
+         * @param publishCrl Optional. When true, publishes each CertificateAuthority&#39;s CRL and includes its URL in the &#34;CRL Distribution Points&#34; X.509 extension in all issued Certificates. If this is false, CRLs will not be published and the corresponding X.509 extension will not be written in issued certificates. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishCrl(@Nullable Output<Boolean> publishCrl) {
             $.publishCrl = publishCrl;
             return this;
         }
 
+        /**
+         * @param publishCrl Optional. When true, publishes each CertificateAuthority&#39;s CRL and includes its URL in the &#34;CRL Distribution Points&#34; X.509 extension in all issued Certificates. If this is false, CRLs will not be published and the corresponding X.509 extension will not be written in issued certificates. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishCrl(Boolean publishCrl) {
             return publishCrl(Output.of(publishCrl));
         }

@@ -22,6 +22,10 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesArgs extends com.pul
     @Import(name="capacityRebalance")
     private @Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs> capacityRebalance;
 
+    /**
+     * @return Nested argument containing the capacity rebalance for your fleet request. Defined below.
+     * 
+     */
     public Optional<Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs>> capacityRebalance() {
         return Optional.ofNullable(this.capacityRebalance);
     }
@@ -50,11 +54,23 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesArgs extends com.pul
             $ = new SpotFleetRequestSpotMaintenanceStrategiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityRebalance Nested argument containing the capacity rebalance for your fleet request. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityRebalance(@Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs> capacityRebalance) {
             $.capacityRebalance = capacityRebalance;
             return this;
         }
 
+        /**
+         * @param capacityRebalance Nested argument containing the capacity rebalance for your fleet request. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityRebalance(SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs capacityRebalance) {
             return capacityRebalance(Output.of(capacityRebalance));
         }

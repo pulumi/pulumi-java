@@ -23,6 +23,10 @@ public final class SecretValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -34,6 +38,10 @@ public final class SecretValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Azure resource group name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -45,6 +53,10 @@ public final class SecretValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretResourceName", required=true)
     private Output<String> secretResourceName;
 
+    /**
+     * @return The name of the secret resource.
+     * 
+     */
     public Output<String> secretResourceName() {
         return this.secretResourceName;
     }
@@ -56,6 +68,10 @@ public final class SecretValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretValueResourceName")
     private @Nullable Output<String> secretValueResourceName;
 
+    /**
+     * @return The name of the secret resource value which is typically the version identifier for the value.
+     * 
+     */
     public Optional<Output<String>> secretValueResourceName() {
         return Optional.ofNullable(this.secretValueResourceName);
     }
@@ -67,6 +83,10 @@ public final class SecretValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -78,6 +98,10 @@ public final class SecretValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The actual value of the secret.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -111,56 +135,128 @@ public final class SecretValueArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SecretValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param secretResourceName The name of the secret resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretResourceName(Output<String> secretResourceName) {
             $.secretResourceName = secretResourceName;
             return this;
         }
 
+        /**
+         * @param secretResourceName The name of the secret resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretResourceName(String secretResourceName) {
             return secretResourceName(Output.of(secretResourceName));
         }
 
+        /**
+         * @param secretValueResourceName The name of the secret resource value which is typically the version identifier for the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretValueResourceName(@Nullable Output<String> secretValueResourceName) {
             $.secretValueResourceName = secretValueResourceName;
             return this;
         }
 
+        /**
+         * @param secretValueResourceName The name of the secret resource value which is typically the version identifier for the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretValueResourceName(String secretValueResourceName) {
             return secretValueResourceName(Output.of(secretValueResourceName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param value The actual value of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The actual value of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

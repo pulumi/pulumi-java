@@ -15,34 +15,34 @@ import javax.annotation.Nullable;
 public final class GatewaySmbActiveDirectorySettings {
     private final @Nullable String activeDirectoryStatus;
     /**
-     * List of IPv4 addresses, NetBIOS names, or host names of your domain server.
+     * @return List of IPv4 addresses, NetBIOS names, or host names of your domain server.
      * If you need to specify the port number include it after the colon (“:”). For example, `mydc.mydomain.com:389`.
      * 
      */
     private final @Nullable List<String> domainControllers;
     /**
-     * The name of the domain that you want the gateway to join.
+     * @return The name of the domain that you want the gateway to join.
      * 
      */
     private final String domainName;
     /**
-     * The organizational unit (OU) is a container in an Active Directory that can hold users, groups,
+     * @return The organizational unit (OU) is a container in an Active Directory that can hold users, groups,
      * computers, and other OUs and this parameter specifies the OU that the gateway will join within the AD domain.
      * 
      */
     private final @Nullable String organizationalUnit;
     /**
-     * The password of the user who has permission to add the gateway to the Active Directory domain.
+     * @return The password of the user who has permission to add the gateway to the Active Directory domain.
      * 
      */
     private final String password;
     /**
-     * Specifies the time in seconds, in which the JoinDomain operation must complete. The default is `20` seconds.
+     * @return Specifies the time in seconds, in which the JoinDomain operation must complete. The default is `20` seconds.
      * 
      */
     private final @Nullable Integer timeoutInSeconds;
     /**
-     * The user name of user who has permission to add the gateway to the Active Directory domain.
+     * @return The user name of user who has permission to add the gateway to the Active Directory domain.
      * 
      */
     private final String username;
@@ -69,46 +69,46 @@ public final class GatewaySmbActiveDirectorySettings {
         return Optional.ofNullable(this.activeDirectoryStatus);
     }
     /**
-     * List of IPv4 addresses, NetBIOS names, or host names of your domain server.
+     * @return List of IPv4 addresses, NetBIOS names, or host names of your domain server.
      * If you need to specify the port number include it after the colon (“:”). For example, `mydc.mydomain.com:389`.
      * 
-    */
+     */
     public List<String> domainControllers() {
         return this.domainControllers == null ? List.of() : this.domainControllers;
     }
     /**
-     * The name of the domain that you want the gateway to join.
+     * @return The name of the domain that you want the gateway to join.
      * 
-    */
+     */
     public String domainName() {
         return this.domainName;
     }
     /**
-     * The organizational unit (OU) is a container in an Active Directory that can hold users, groups,
+     * @return The organizational unit (OU) is a container in an Active Directory that can hold users, groups,
      * computers, and other OUs and this parameter specifies the OU that the gateway will join within the AD domain.
      * 
-    */
+     */
     public Optional<String> organizationalUnit() {
         return Optional.ofNullable(this.organizationalUnit);
     }
     /**
-     * The password of the user who has permission to add the gateway to the Active Directory domain.
+     * @return The password of the user who has permission to add the gateway to the Active Directory domain.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * Specifies the time in seconds, in which the JoinDomain operation must complete. The default is `20` seconds.
+     * @return Specifies the time in seconds, in which the JoinDomain operation must complete. The default is `20` seconds.
      * 
-    */
+     */
     public Optional<Integer> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
     /**
-     * The user name of user who has permission to add the gateway to the Active Directory domain.
+     * @return The user name of user who has permission to add the gateway to the Active Directory domain.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

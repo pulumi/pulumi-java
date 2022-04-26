@@ -29,6 +29,10 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the Glue Table.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -40,6 +44,10 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="catalogId")
     private @Nullable Output<String> catalogId;
 
+    /**
+     * @return ID of the Data Catalog in which the table resides.
+     * 
+     */
     public Optional<Output<String>> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
@@ -51,6 +59,10 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return Name of the catalog database that contains the target table.
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -62,6 +74,10 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the table.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -73,6 +89,10 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the target table.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -84,6 +104,10 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="owner")
     private @Nullable Output<String> owner;
 
+    /**
+     * @return Owner of the table.
+     * 
+     */
     public Optional<Output<String>> owner() {
         return Optional.ofNullable(this.owner);
     }
@@ -95,6 +119,10 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<Map<String,String>> parameters;
 
+    /**
+     * @return Map of initialization parameters for the SerDe, in key-value form.
+     * 
+     */
     public Optional<Output<Map<String,String>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -106,6 +134,10 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="partitionIndices")
     private @Nullable Output<List<CatalogTablePartitionIndexGetArgs>> partitionIndices;
 
+    /**
+     * @return Configuration block for a maximum of 3 partition indexes. See `partition_index` below.
+     * 
+     */
     public Optional<Output<List<CatalogTablePartitionIndexGetArgs>>> partitionIndices() {
         return Optional.ofNullable(this.partitionIndices);
     }
@@ -117,6 +149,10 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="partitionKeys")
     private @Nullable Output<List<CatalogTablePartitionKeyGetArgs>> partitionKeys;
 
+    /**
+     * @return Configuration block of columns by which the table is partitioned. Only primitive types are supported as partition keys. See `partition_keys` below.
+     * 
+     */
     public Optional<Output<List<CatalogTablePartitionKeyGetArgs>>> partitionKeys() {
         return Optional.ofNullable(this.partitionKeys);
     }
@@ -128,6 +164,10 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="retention")
     private @Nullable Output<Integer> retention;
 
+    /**
+     * @return Retention time for this table.
+     * 
+     */
     public Optional<Output<Integer>> retention() {
         return Optional.ofNullable(this.retention);
     }
@@ -139,6 +179,10 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageDescriptor")
     private @Nullable Output<CatalogTableStorageDescriptorGetArgs> storageDescriptor;
 
+    /**
+     * @return Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
+     * 
+     */
     public Optional<Output<CatalogTableStorageDescriptorGetArgs>> storageDescriptor() {
         return Optional.ofNullable(this.storageDescriptor);
     }
@@ -150,6 +194,10 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tableType")
     private @Nullable Output<String> tableType;
 
+    /**
+     * @return Type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.). While optional, some Athena DDL queries such as `ALTER TABLE` and `SHOW CREATE TABLE` will fail if this argument is empty.
+     * 
+     */
     public Optional<Output<String>> tableType() {
         return Optional.ofNullable(this.tableType);
     }
@@ -161,6 +209,10 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetTable")
     private @Nullable Output<CatalogTableTargetTableGetArgs> targetTable;
 
+    /**
+     * @return Configuration block of a target table for resource linking. See `target_table` below.
+     * 
+     */
     public Optional<Output<CatalogTableTargetTableGetArgs>> targetTable() {
         return Optional.ofNullable(this.targetTable);
     }
@@ -172,6 +224,10 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="viewExpandedText")
     private @Nullable Output<String> viewExpandedText;
 
+    /**
+     * @return If the table is a view, the expanded text of the view; otherwise null.
+     * 
+     */
     public Optional<Output<String>> viewExpandedText() {
         return Optional.ofNullable(this.viewExpandedText);
     }
@@ -183,6 +239,10 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="viewOriginalText")
     private @Nullable Output<String> viewOriginalText;
 
+    /**
+     * @return If the table is a view, the original text of the view; otherwise null.
+     * 
+     */
     public Optional<Output<String>> viewOriginalText() {
         return Optional.ofNullable(this.viewOriginalText);
     }
@@ -225,145 +285,337 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
             $ = new CatalogTableState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the Glue Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the Glue Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param catalogId ID of the Data Catalog in which the table resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(@Nullable Output<String> catalogId) {
             $.catalogId = catalogId;
             return this;
         }
 
+        /**
+         * @param catalogId ID of the Data Catalog in which the table resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(String catalogId) {
             return catalogId(Output.of(catalogId));
         }
 
+        /**
+         * @param databaseName Name of the catalog database that contains the target table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName Name of the catalog database that contains the target table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param description Description of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the target table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the target table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param owner Owner of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(@Nullable Output<String> owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param owner Owner of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(String owner) {
             return owner(Output.of(owner));
         }
 
+        /**
+         * @param parameters Map of initialization parameters for the SerDe, in key-value form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Map of initialization parameters for the SerDe, in key-value form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,String> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param partitionIndices Configuration block for a maximum of 3 partition indexes. See `partition_index` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionIndices(@Nullable Output<List<CatalogTablePartitionIndexGetArgs>> partitionIndices) {
             $.partitionIndices = partitionIndices;
             return this;
         }
 
+        /**
+         * @param partitionIndices Configuration block for a maximum of 3 partition indexes. See `partition_index` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionIndices(List<CatalogTablePartitionIndexGetArgs> partitionIndices) {
             return partitionIndices(Output.of(partitionIndices));
         }
 
+        /**
+         * @param partitionIndices Configuration block for a maximum of 3 partition indexes. See `partition_index` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionIndices(CatalogTablePartitionIndexGetArgs... partitionIndices) {
             return partitionIndices(List.of(partitionIndices));
         }
 
+        /**
+         * @param partitionKeys Configuration block of columns by which the table is partitioned. Only primitive types are supported as partition keys. See `partition_keys` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeys(@Nullable Output<List<CatalogTablePartitionKeyGetArgs>> partitionKeys) {
             $.partitionKeys = partitionKeys;
             return this;
         }
 
+        /**
+         * @param partitionKeys Configuration block of columns by which the table is partitioned. Only primitive types are supported as partition keys. See `partition_keys` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeys(List<CatalogTablePartitionKeyGetArgs> partitionKeys) {
             return partitionKeys(Output.of(partitionKeys));
         }
 
+        /**
+         * @param partitionKeys Configuration block of columns by which the table is partitioned. Only primitive types are supported as partition keys. See `partition_keys` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeys(CatalogTablePartitionKeyGetArgs... partitionKeys) {
             return partitionKeys(List.of(partitionKeys));
         }
 
+        /**
+         * @param retention Retention time for this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retention(@Nullable Output<Integer> retention) {
             $.retention = retention;
             return this;
         }
 
+        /**
+         * @param retention Retention time for this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retention(Integer retention) {
             return retention(Output.of(retention));
         }
 
+        /**
+         * @param storageDescriptor Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageDescriptor(@Nullable Output<CatalogTableStorageDescriptorGetArgs> storageDescriptor) {
             $.storageDescriptor = storageDescriptor;
             return this;
         }
 
+        /**
+         * @param storageDescriptor Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageDescriptor(CatalogTableStorageDescriptorGetArgs storageDescriptor) {
             return storageDescriptor(Output.of(storageDescriptor));
         }
 
+        /**
+         * @param tableType Type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.). While optional, some Athena DDL queries such as `ALTER TABLE` and `SHOW CREATE TABLE` will fail if this argument is empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableType(@Nullable Output<String> tableType) {
             $.tableType = tableType;
             return this;
         }
 
+        /**
+         * @param tableType Type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.). While optional, some Athena DDL queries such as `ALTER TABLE` and `SHOW CREATE TABLE` will fail if this argument is empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableType(String tableType) {
             return tableType(Output.of(tableType));
         }
 
+        /**
+         * @param targetTable Configuration block of a target table for resource linking. See `target_table` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetTable(@Nullable Output<CatalogTableTargetTableGetArgs> targetTable) {
             $.targetTable = targetTable;
             return this;
         }
 
+        /**
+         * @param targetTable Configuration block of a target table for resource linking. See `target_table` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetTable(CatalogTableTargetTableGetArgs targetTable) {
             return targetTable(Output.of(targetTable));
         }
 
+        /**
+         * @param viewExpandedText If the table is a view, the expanded text of the view; otherwise null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder viewExpandedText(@Nullable Output<String> viewExpandedText) {
             $.viewExpandedText = viewExpandedText;
             return this;
         }
 
+        /**
+         * @param viewExpandedText If the table is a view, the expanded text of the view; otherwise null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder viewExpandedText(String viewExpandedText) {
             return viewExpandedText(Output.of(viewExpandedText));
         }
 
+        /**
+         * @param viewOriginalText If the table is a view, the original text of the view; otherwise null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder viewOriginalText(@Nullable Output<String> viewOriginalText) {
             $.viewOriginalText = viewOriginalText;
             return this;
         }
 
+        /**
+         * @param viewOriginalText If the table is a view, the original text of the view; otherwise null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder viewOriginalText(String viewOriginalText) {
             return viewOriginalText(Output.of(viewOriginalText));
         }

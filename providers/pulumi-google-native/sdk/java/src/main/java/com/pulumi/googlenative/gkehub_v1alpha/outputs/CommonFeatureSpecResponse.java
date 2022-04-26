@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class CommonFeatureSpecResponse {
     /**
-     * Appdevexperience specific spec.
+     * @return Appdevexperience specific spec.
      * 
      */
     private final AppDevExperienceFeatureSpecResponse appdevexperience;
     /**
-     * Cloud Audit Logging-specific spec.
+     * @return Cloud Audit Logging-specific spec.
      * 
      */
     private final CloudAuditLoggingFeatureSpecResponse cloudauditlogging;
     /**
-     * Multicluster Ingress-specific spec.
+     * @return Multicluster Ingress-specific spec.
      * 
      */
     private final MultiClusterIngressFeatureSpecResponse multiclusteringress;
@@ -38,23 +38,23 @@ public final class CommonFeatureSpecResponse {
     }
 
     /**
-     * Appdevexperience specific spec.
+     * @return Appdevexperience specific spec.
      * 
-    */
+     */
     public AppDevExperienceFeatureSpecResponse appdevexperience() {
         return this.appdevexperience;
     }
     /**
-     * Cloud Audit Logging-specific spec.
+     * @return Cloud Audit Logging-specific spec.
      * 
-    */
+     */
     public CloudAuditLoggingFeatureSpecResponse cloudauditlogging() {
         return this.cloudauditlogging;
     }
     /**
-     * Multicluster Ingress-specific spec.
+     * @return Multicluster Ingress-specific spec.
      * 
-    */
+     */
     public MultiClusterIngressFeatureSpecResponse multiclusteringress() {
         return this.multiclusteringress;
     }

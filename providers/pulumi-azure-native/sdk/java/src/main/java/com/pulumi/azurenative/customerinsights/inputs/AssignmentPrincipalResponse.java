@@ -26,6 +26,10 @@ public final class AssignmentPrincipalResponse extends com.pulumi.resources.Invo
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal id being assigned to.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -37,6 +41,10 @@ public final class AssignmentPrincipalResponse extends com.pulumi.resources.Invo
     @Import(name="principalMetadata")
     private @Nullable Map<String,String> principalMetadata;
 
+    /**
+     * @return Other metadata for the principal.
+     * 
+     */
     public Optional<Map<String,String>> principalMetadata() {
         return Optional.ofNullable(this.principalMetadata);
     }
@@ -48,6 +56,10 @@ public final class AssignmentPrincipalResponse extends com.pulumi.resources.Invo
     @Import(name="principalType", required=true)
     private String principalType;
 
+    /**
+     * @return The Type of the principal ID.
+     * 
+     */
     public String principalType() {
         return this.principalType;
     }
@@ -78,16 +90,34 @@ public final class AssignmentPrincipalResponse extends com.pulumi.resources.Invo
             $ = new AssignmentPrincipalResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal id being assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalMetadata Other metadata for the principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalMetadata(@Nullable Map<String,String> principalMetadata) {
             $.principalMetadata = principalMetadata;
             return this;
         }
 
+        /**
+         * @param principalType The Type of the principal ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(String principalType) {
             $.principalType = principalType;
             return this;

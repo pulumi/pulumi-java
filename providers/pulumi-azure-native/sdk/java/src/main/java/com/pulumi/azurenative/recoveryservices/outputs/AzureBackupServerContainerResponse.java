@@ -16,22 +16,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureBackupServerContainerResponse {
     /**
-     * Type of backup management for the container.
+     * @return Type of backup management for the container.
      * 
      */
     private final @Nullable String backupManagementType;
     /**
-     * Specifies whether the container is re-registrable.
+     * @return Specifies whether the container is re-registrable.
      * 
      */
     private final @Nullable Boolean canReRegister;
     /**
-     * ID of container.
+     * @return ID of container.
      * 
      */
     private final @Nullable String containerId;
     /**
-     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * @return Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
      * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
@@ -40,47 +40,47 @@ public final class AzureBackupServerContainerResponse {
      */
     private final String containerType;
     /**
-     * Backup engine Agent version
+     * @return Backup engine Agent version
      * 
      */
     private final @Nullable String dpmAgentVersion;
     /**
-     * List of BackupEngines protecting the container
+     * @return List of BackupEngines protecting the container
      * 
      */
     private final @Nullable List<String> dpmServers;
     /**
-     * Extended Info of the container.
+     * @return Extended Info of the container.
      * 
      */
     private final @Nullable DPMContainerExtendedInfoResponse extendedInfo;
     /**
-     * Friendly name of the container.
+     * @return Friendly name of the container.
      * 
      */
     private final @Nullable String friendlyName;
     /**
-     * Status of health of the container.
+     * @return Status of health of the container.
      * 
      */
     private final @Nullable String healthStatus;
     /**
-     * Number of protected items in the BackupEngine
+     * @return Number of protected items in the BackupEngine
      * 
      */
     private final @Nullable Double protectedItemCount;
     /**
-     * Protection status of the container.
+     * @return Protection status of the container.
      * 
      */
     private final @Nullable String protectionStatus;
     /**
-     * Status of registration of the container with the Recovery Services Vault.
+     * @return Status of registration of the container with the Recovery Services Vault.
      * 
      */
     private final @Nullable String registrationStatus;
     /**
-     * To check if upgrade available
+     * @return To check if upgrade available
      * 
      */
     private final @Nullable Boolean upgradeAvailable;
@@ -116,97 +116,97 @@ public final class AzureBackupServerContainerResponse {
     }
 
     /**
-     * Type of backup management for the container.
+     * @return Type of backup management for the container.
      * 
-    */
+     */
     public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
-     * Specifies whether the container is re-registrable.
+     * @return Specifies whether the container is re-registrable.
      * 
-    */
+     */
     public Optional<Boolean> canReRegister() {
         return Optional.ofNullable(this.canReRegister);
     }
     /**
-     * ID of container.
+     * @return ID of container.
      * 
-    */
+     */
     public Optional<String> containerId() {
         return Optional.ofNullable(this.containerId);
     }
     /**
-     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * @return Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
      * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is &#39;AzureBackupServerContainer&#39;.
      * 
-    */
+     */
     public String containerType() {
         return this.containerType;
     }
     /**
-     * Backup engine Agent version
+     * @return Backup engine Agent version
      * 
-    */
+     */
     public Optional<String> dpmAgentVersion() {
         return Optional.ofNullable(this.dpmAgentVersion);
     }
     /**
-     * List of BackupEngines protecting the container
+     * @return List of BackupEngines protecting the container
      * 
-    */
+     */
     public List<String> dpmServers() {
         return this.dpmServers == null ? List.of() : this.dpmServers;
     }
     /**
-     * Extended Info of the container.
+     * @return Extended Info of the container.
      * 
-    */
+     */
     public Optional<DPMContainerExtendedInfoResponse> extendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
     /**
-     * Friendly name of the container.
+     * @return Friendly name of the container.
      * 
-    */
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
-     * Status of health of the container.
+     * @return Status of health of the container.
      * 
-    */
+     */
     public Optional<String> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
-     * Number of protected items in the BackupEngine
+     * @return Number of protected items in the BackupEngine
      * 
-    */
+     */
     public Optional<Double> protectedItemCount() {
         return Optional.ofNullable(this.protectedItemCount);
     }
     /**
-     * Protection status of the container.
+     * @return Protection status of the container.
      * 
-    */
+     */
     public Optional<String> protectionStatus() {
         return Optional.ofNullable(this.protectionStatus);
     }
     /**
-     * Status of registration of the container with the Recovery Services Vault.
+     * @return Status of registration of the container with the Recovery Services Vault.
      * 
-    */
+     */
     public Optional<String> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
     /**
-     * To check if upgrade available
+     * @return To check if upgrade available
      * 
-    */
+     */
     public Optional<Boolean> upgradeAvailable() {
         return Optional.ofNullable(this.upgradeAvailable);
     }

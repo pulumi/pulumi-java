@@ -29,6 +29,10 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends co
     @Import(name="datasetUri")
     private @Nullable Output<String> datasetUri;
 
+    /**
+     * @return BigQuery URI to an existing dataset, up to 2000 characters long, in the format `bq://projectId.bqDatasetId`.
+     * 
+     */
     public Optional<Output<String>> datasetUri() {
         return Optional.ofNullable(this.datasetUri);
     }
@@ -40,6 +44,10 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends co
     @Import(name="force")
     private @Nullable Output<Boolean> force;
 
+    /**
+     * @return If this flag is `TRUE`, all tables are deleted from the dataset before the new exported tables are written. If the flag is not set and the destination dataset contains tables, the export call returns an error. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
+     * 
+     */
     public Optional<Output<Boolean>> force() {
         return Optional.ofNullable(this.force);
     }
@@ -51,6 +59,10 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends co
     @Import(name="schemaConfig")
     private @Nullable Output<SchemaConfigArgs> schemaConfig;
 
+    /**
+     * @return The configuration for the exported BigQuery schema.
+     * 
+     */
     public Optional<Output<SchemaConfigArgs>> schemaConfig() {
         return Optional.ofNullable(this.schemaConfig);
     }
@@ -62,6 +74,10 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends co
     @Import(name="writeDisposition")
     private @Nullable Output<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition> writeDisposition;
 
+    /**
+     * @return Determines if existing data in the destination dataset is overwritten, appended to, or not written if the tables contain data. If a write_disposition is specified, the `force` parameter is ignored.
+     * 
+     */
     public Optional<Output<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition>> writeDisposition() {
         return Optional.ofNullable(this.writeDisposition);
     }
@@ -93,38 +109,86 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends co
             $ = new GoogleCloudHealthcareV1FhirBigQueryDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetUri BigQuery URI to an existing dataset, up to 2000 characters long, in the format `bq://projectId.bqDatasetId`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetUri(@Nullable Output<String> datasetUri) {
             $.datasetUri = datasetUri;
             return this;
         }
 
+        /**
+         * @param datasetUri BigQuery URI to an existing dataset, up to 2000 characters long, in the format `bq://projectId.bqDatasetId`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetUri(String datasetUri) {
             return datasetUri(Output.of(datasetUri));
         }
 
+        /**
+         * @param force If this flag is `TRUE`, all tables are deleted from the dataset before the new exported tables are written. If the flag is not set and the destination dataset contains tables, the export call returns an error. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder force(@Nullable Output<Boolean> force) {
             $.force = force;
             return this;
         }
 
+        /**
+         * @param force If this flag is `TRUE`, all tables are deleted from the dataset before the new exported tables are written. If the flag is not set and the destination dataset contains tables, the export call returns an error. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder force(Boolean force) {
             return force(Output.of(force));
         }
 
+        /**
+         * @param schemaConfig The configuration for the exported BigQuery schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaConfig(@Nullable Output<SchemaConfigArgs> schemaConfig) {
             $.schemaConfig = schemaConfig;
             return this;
         }
 
+        /**
+         * @param schemaConfig The configuration for the exported BigQuery schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaConfig(SchemaConfigArgs schemaConfig) {
             return schemaConfig(Output.of(schemaConfig));
         }
 
+        /**
+         * @param writeDisposition Determines if existing data in the destination dataset is overwritten, appended to, or not written if the tables contain data. If a write_disposition is specified, the `force` parameter is ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeDisposition(@Nullable Output<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition> writeDisposition) {
             $.writeDisposition = writeDisposition;
             return this;
         }
 
+        /**
+         * @param writeDisposition Determines if existing data in the destination dataset is overwritten, appended to, or not written if the tables contain data. If a write_disposition is specified, the `force` parameter is ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeDisposition(GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition writeDisposition) {
             return writeDisposition(Output.of(writeDisposition));
         }

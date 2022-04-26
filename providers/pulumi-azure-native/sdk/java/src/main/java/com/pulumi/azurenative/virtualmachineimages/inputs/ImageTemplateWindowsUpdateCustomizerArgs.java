@@ -29,6 +29,10 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
     @Import(name="filters")
     private @Nullable Output<List<String>> filters;
 
+    /**
+     * @return Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
+     * 
+     */
     public Optional<Output<List<String>>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -40,6 +44,10 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Friendly Name to provide context on what this customization step does
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -51,6 +59,10 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
     @Import(name="searchCriteria")
     private @Nullable Output<String> searchCriteria;
 
+    /**
+     * @return Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
+     * 
+     */
     public Optional<Output<String>> searchCriteria() {
         return Optional.ofNullable(this.searchCriteria);
     }
@@ -63,6 +75,11 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;WindowsUpdate&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -74,6 +91,10 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
     @Import(name="updateLimit")
     private @Nullable Output<Integer> updateLimit;
 
+    /**
+     * @return Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
+     * 
+     */
     public Optional<Output<Integer>> updateLimit() {
         return Optional.ofNullable(this.updateLimit);
     }
@@ -106,51 +127,119 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
             $ = new ImageTemplateWindowsUpdateCustomizerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable Output<List<String>> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(List<String> filters) {
             return filters(Output.of(filters));
         }
 
+        /**
+         * @param filters Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(String... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param name Friendly Name to provide context on what this customization step does
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Friendly Name to provide context on what this customization step does
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param searchCriteria Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchCriteria(@Nullable Output<String> searchCriteria) {
             $.searchCriteria = searchCriteria;
             return this;
         }
 
+        /**
+         * @param searchCriteria Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchCriteria(String searchCriteria) {
             return searchCriteria(Output.of(searchCriteria));
         }
 
+        /**
+         * @param type The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+         * Expected value is &#39;WindowsUpdate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+         * Expected value is &#39;WindowsUpdate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param updateLimit Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateLimit(@Nullable Output<Integer> updateLimit) {
             $.updateLimit = updateLimit;
             return this;
         }
 
+        /**
+         * @param updateLimit Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateLimit(Integer updateLimit) {
             return updateLimit(Output.of(updateLimit));
         }

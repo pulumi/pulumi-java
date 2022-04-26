@@ -19,6 +19,10 @@ public final class GetSchemaVersionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="versionId", required=true)
     private String versionId;
 
+    /**
+     * @return Represents the version ID associated with the schema version.
+     * 
+     */
     public String versionId() {
         return this.versionId;
     }
@@ -47,6 +51,12 @@ public final class GetSchemaVersionArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetSchemaVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param versionId Represents the version ID associated with the schema version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionId(String versionId) {
             $.versionId = versionId;
             return this;

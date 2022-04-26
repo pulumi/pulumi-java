@@ -29,6 +29,10 @@ public final class MachineLearningDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="datasetName")
     private @Nullable Output<String> datasetName;
 
+    /**
+     * @return The Dataset name.
+     * 
+     */
     public Optional<Output<String>> datasetName() {
         return Optional.ofNullable(this.datasetName);
     }
@@ -40,6 +44,10 @@ public final class MachineLearningDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="datasetType", required=true)
     private Output<Either<String,DatasetType>> datasetType;
 
+    /**
+     * @return Specifies dataset type.
+     * 
+     */
     public Output<Either<String,DatasetType>> datasetType() {
         return this.datasetType;
     }
@@ -65,6 +73,10 @@ public final class MachineLearningDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group in which workspace is located.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -76,6 +88,10 @@ public final class MachineLearningDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="skipValidation")
     private @Nullable Output<Boolean> skipValidation;
 
+    /**
+     * @return Skip validation that ensures data can be loaded from the dataset before registration.
+     * 
+     */
     public Optional<Output<Boolean>> skipValidation() {
         return Optional.ofNullable(this.skipValidation);
     }
@@ -94,6 +110,10 @@ public final class MachineLearningDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -129,28 +149,64 @@ public final class MachineLearningDatasetArgs extends com.pulumi.resources.Resou
             $ = new MachineLearningDatasetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetName The Dataset name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetName(@Nullable Output<String> datasetName) {
             $.datasetName = datasetName;
             return this;
         }
 
+        /**
+         * @param datasetName The Dataset name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetName(String datasetName) {
             return datasetName(Output.of(datasetName));
         }
 
+        /**
+         * @param datasetType Specifies dataset type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetType(Output<Either<String,DatasetType>> datasetType) {
             $.datasetType = datasetType;
             return this;
         }
 
+        /**
+         * @param datasetType Specifies dataset type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetType(Either<String,DatasetType> datasetType) {
             return datasetType(Output.of(datasetType));
         }
 
+        /**
+         * @param datasetType Specifies dataset type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetType(String datasetType) {
             return datasetType(Either.ofLeft(datasetType));
         }
 
+        /**
+         * @param datasetType Specifies dataset type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetType(DatasetType datasetType) {
             return datasetType(Either.ofRight(datasetType));
         }
@@ -173,20 +229,44 @@ public final class MachineLearningDatasetArgs extends com.pulumi.resources.Resou
             return registration(Output.of(registration));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param skipValidation Skip validation that ensures data can be loaded from the dataset before registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipValidation(@Nullable Output<Boolean> skipValidation) {
             $.skipValidation = skipValidation;
             return this;
         }
 
+        /**
+         * @param skipValidation Skip validation that ensures data can be loaded from the dataset before registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipValidation(Boolean skipValidation) {
             return skipValidation(Output.of(skipValidation));
         }
@@ -200,11 +280,23 @@ public final class MachineLearningDatasetArgs extends com.pulumi.resources.Resou
             return timeSeries(Output.of(timeSeries));
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

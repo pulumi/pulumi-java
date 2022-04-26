@@ -19,6 +19,10 @@ public final class GetAdaptiveApplicationControlArgs extends com.pulumi.resource
     @Import(name="ascLocation", required=true)
     private String ascLocation;
 
+    /**
+     * @return The location where ASC stores the data of the subscription. can be retrieved from Get locations
+     * 
+     */
     public String ascLocation() {
         return this.ascLocation;
     }
@@ -30,6 +34,10 @@ public final class GetAdaptiveApplicationControlArgs extends com.pulumi.resource
     @Import(name="groupName", required=true)
     private String groupName;
 
+    /**
+     * @return Name of an application control machine group
+     * 
+     */
     public String groupName() {
         return this.groupName;
     }
@@ -59,11 +67,23 @@ public final class GetAdaptiveApplicationControlArgs extends com.pulumi.resource
             $ = new GetAdaptiveApplicationControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ascLocation The location where ASC stores the data of the subscription. can be retrieved from Get locations
+         * 
+         * @return builder
+         * 
+         */
         public Builder ascLocation(String ascLocation) {
             $.ascLocation = ascLocation;
             return this;
         }
 
+        /**
+         * @param groupName Name of an application control machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(String groupName) {
             $.groupName = groupName;
             return this;

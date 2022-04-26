@@ -28,6 +28,10 @@ public final class JpgLayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="height")
     private @Nullable Output<String> height;
 
+    /**
+     * @return The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
+     * 
+     */
     public Optional<Output<String>> height() {
         return Optional.ofNullable(this.height);
     }
@@ -39,6 +43,10 @@ public final class JpgLayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -51,6 +59,11 @@ public final class JpgLayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.JpgLayer&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -62,6 +75,10 @@ public final class JpgLayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="quality")
     private @Nullable Output<Integer> quality;
 
+    /**
+     * @return The compression quality of the JPEG output. Range is from 0-100 and the default is 70.
+     * 
+     */
     public Optional<Output<Integer>> quality() {
         return Optional.ofNullable(this.quality);
     }
@@ -73,6 +90,10 @@ public final class JpgLayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="width")
     private @Nullable Output<String> width;
 
+    /**
+     * @return The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
+     * 
+     */
     public Optional<Output<String>> width() {
         return Optional.ofNullable(this.width);
     }
@@ -105,47 +126,109 @@ public final class JpgLayerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JpgLayerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param height The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(@Nullable Output<String> height) {
             $.height = height;
             return this;
         }
 
+        /**
+         * @param height The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(String height) {
             return height(Output.of(height));
         }
 
+        /**
+         * @param label The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.JpgLayer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.JpgLayer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param quality The compression quality of the JPEG output. Range is from 0-100 and the default is 70.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quality(@Nullable Output<Integer> quality) {
             $.quality = quality;
             return this;
         }
 
+        /**
+         * @param quality The compression quality of the JPEG output. Range is from 0-100 and the default is 70.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quality(Integer quality) {
             return quality(Output.of(quality));
         }
 
+        /**
+         * @param width The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(@Nullable Output<String> width) {
             $.width = width;
             return this;
         }
 
+        /**
+         * @param width The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(String width) {
             return width(Output.of(width));
         }

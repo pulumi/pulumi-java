@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OSDetailsResponse {
     /**
-     * The OS Major Version.
+     * @return The OS Major Version.
      * 
      */
     private final @Nullable String oSMajorVersion;
     /**
-     * The OS Minor Version.
+     * @return The OS Minor Version.
      * 
      */
     private final @Nullable String oSMinorVersion;
     /**
-     * The OS Version.
+     * @return The OS Version.
      * 
      */
     private final @Nullable String oSVersion;
     /**
-     * The OSEdition.
+     * @return The OSEdition.
      * 
      */
     private final @Nullable String osEdition;
     /**
-     * VM Disk details.
+     * @return VM Disk details.
      * 
      */
     private final @Nullable String osType;
     /**
-     * Product type.
+     * @return Product type.
      * 
      */
     private final @Nullable String productType;
@@ -59,44 +59,44 @@ public final class OSDetailsResponse {
     }
 
     /**
-     * The OS Major Version.
+     * @return The OS Major Version.
      * 
-    */
+     */
     public Optional<String> oSMajorVersion() {
         return Optional.ofNullable(this.oSMajorVersion);
     }
     /**
-     * The OS Minor Version.
+     * @return The OS Minor Version.
      * 
-    */
+     */
     public Optional<String> oSMinorVersion() {
         return Optional.ofNullable(this.oSMinorVersion);
     }
     /**
-     * The OS Version.
+     * @return The OS Version.
      * 
-    */
+     */
     public Optional<String> oSVersion() {
         return Optional.ofNullable(this.oSVersion);
     }
     /**
-     * The OSEdition.
+     * @return The OSEdition.
      * 
-    */
+     */
     public Optional<String> osEdition() {
         return Optional.ofNullable(this.osEdition);
     }
     /**
-     * VM Disk details.
+     * @return VM Disk details.
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
-     * Product type.
+     * @return Product type.
      * 
-    */
+     */
     public Optional<String> productType() {
         return Optional.ofNullable(this.productType);
     }

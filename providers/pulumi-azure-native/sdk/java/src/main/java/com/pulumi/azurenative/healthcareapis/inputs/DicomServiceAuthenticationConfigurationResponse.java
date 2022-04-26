@@ -24,6 +24,10 @@ public final class DicomServiceAuthenticationConfigurationResponse extends com.p
     @Import(name="audiences", required=true)
     private List<String> audiences;
 
+    /**
+     * @return The audiences for the service
+     * 
+     */
     public List<String> audiences() {
         return this.audiences;
     }
@@ -35,6 +39,10 @@ public final class DicomServiceAuthenticationConfigurationResponse extends com.p
     @Import(name="authority", required=true)
     private String authority;
 
+    /**
+     * @return The authority url for the service
+     * 
+     */
     public String authority() {
         return this.authority;
     }
@@ -64,15 +72,33 @@ public final class DicomServiceAuthenticationConfigurationResponse extends com.p
             $ = new DicomServiceAuthenticationConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audiences The audiences for the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(List<String> audiences) {
             $.audiences = audiences;
             return this;
         }
 
+        /**
+         * @param audiences The audiences for the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(String... audiences) {
             return audiences(List.of(audiences));
         }
 
+        /**
+         * @param authority The authority url for the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(String authority) {
             $.authority = authority;
             return this;

@@ -27,6 +27,10 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
     @Import(name="connectIps", required=true)
     private List<String> connectIps;
 
+    /**
+     * @return The IP addresses of the AD Connector servers.
+     * 
+     */
     public List<String> connectIps() {
         return this.connectIps;
     }
@@ -38,6 +42,10 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
     @Import(name="customerDnsIps", required=true)
     private List<String> customerDnsIps;
 
+    /**
+     * @return The DNS IP addresses of the domain to connect to.
+     * 
+     */
     public List<String> customerDnsIps() {
         return this.customerDnsIps;
     }
@@ -49,6 +57,10 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
     @Import(name="customerUsername", required=true)
     private String customerUsername;
 
+    /**
+     * @return The username corresponding to the password provided.
+     * 
+     */
     public String customerUsername() {
         return this.customerUsername;
     }
@@ -60,6 +72,10 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
     @Import(name="subnetIds", required=true)
     private List<String> subnetIds;
 
+    /**
+     * @return The identifiers of the subnets for the connector servers (2 subnets in 2 different AZs).
+     * 
+     */
     public List<String> subnetIds() {
         return this.subnetIds;
     }
@@ -71,6 +87,10 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
     @Import(name="vpcId", required=true)
     private String vpcId;
 
+    /**
+     * @return The ID of the VPC that the connector is in.
+     * 
+     */
     public String vpcId() {
         return this.vpcId;
     }
@@ -113,38 +133,86 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
             return availabilityZones(List.of(availabilityZones));
         }
 
+        /**
+         * @param connectIps The IP addresses of the AD Connector servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectIps(List<String> connectIps) {
             $.connectIps = connectIps;
             return this;
         }
 
+        /**
+         * @param connectIps The IP addresses of the AD Connector servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectIps(String... connectIps) {
             return connectIps(List.of(connectIps));
         }
 
+        /**
+         * @param customerDnsIps The DNS IP addresses of the domain to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerDnsIps(List<String> customerDnsIps) {
             $.customerDnsIps = customerDnsIps;
             return this;
         }
 
+        /**
+         * @param customerDnsIps The DNS IP addresses of the domain to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerDnsIps(String... customerDnsIps) {
             return customerDnsIps(List.of(customerDnsIps));
         }
 
+        /**
+         * @param customerUsername The username corresponding to the password provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerUsername(String customerUsername) {
             $.customerUsername = customerUsername;
             return this;
         }
 
+        /**
+         * @param subnetIds The identifiers of the subnets for the connector servers (2 subnets in 2 different AZs).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds The identifiers of the subnets for the connector servers (2 subnets in 2 different AZs).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param vpcId The ID of the VPC that the connector is in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             $.vpcId = vpcId;
             return this;

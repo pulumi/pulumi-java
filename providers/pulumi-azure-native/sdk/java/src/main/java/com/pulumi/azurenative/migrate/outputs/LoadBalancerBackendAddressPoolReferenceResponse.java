@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LoadBalancerBackendAddressPoolReferenceResponse {
     /**
-     * Gets the name of the proxy resource on the target side.
+     * @return Gets the name of the proxy resource on the target side.
      * 
      */
     private final @Nullable String name;
     /**
-     * Gets the ARM resource ID of the tracked resource being referenced.
+     * @return Gets the ARM resource ID of the tracked resource being referenced.
      * 
      */
     private final String sourceArmResourceId;
@@ -31,16 +31,16 @@ public final class LoadBalancerBackendAddressPoolReferenceResponse {
     }
 
     /**
-     * Gets the name of the proxy resource on the target side.
+     * @return Gets the name of the proxy resource on the target side.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Gets the ARM resource ID of the tracked resource being referenced.
+     * @return Gets the ARM resource ID of the tracked resource being referenced.
      * 
-    */
+     */
     public String sourceArmResourceId() {
         return this.sourceArmResourceId;
     }

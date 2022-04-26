@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse {
     /**
-     * Call-specific metadata created by the analysis.
+     * @return Call-specific metadata created by the analysis.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata;
     /**
-     * The time at which the analysis ended.
+     * @return The time at which the analysis ended.
      * 
      */
     private final String endTime;
@@ -30,16 +30,16 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse {
     }
 
     /**
-     * Call-specific metadata created by the analysis.
+     * @return Call-specific metadata created by the analysis.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata() {
         return this.callAnalysisMetadata;
     }
     /**
-     * The time at which the analysis ended.
+     * @return The time at which the analysis ended.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }

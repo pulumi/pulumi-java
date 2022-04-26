@@ -25,6 +25,10 @@ public final class ImageRegistryCredentialResponse extends com.pulumi.resources.
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return The password for the private registry. The password is required for create or update operations, however it is not returned in the get or list operations.
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -36,6 +40,10 @@ public final class ImageRegistryCredentialResponse extends com.pulumi.resources.
     @Import(name="server", required=true)
     private String server;
 
+    /**
+     * @return Docker image registry server, without protocol such as `http` and `https`.
+     * 
+     */
     public String server() {
         return this.server;
     }
@@ -47,6 +55,10 @@ public final class ImageRegistryCredentialResponse extends com.pulumi.resources.
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return The username for the private registry.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -77,16 +89,34 @@ public final class ImageRegistryCredentialResponse extends com.pulumi.resources.
             $ = new ImageRegistryCredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password The password for the private registry. The password is required for create or update operations, however it is not returned in the get or list operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param server Docker image registry server, without protocol such as `http` and `https`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(String server) {
             $.server = server;
             return this;
         }
 
+        /**
+         * @param username The username for the private registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

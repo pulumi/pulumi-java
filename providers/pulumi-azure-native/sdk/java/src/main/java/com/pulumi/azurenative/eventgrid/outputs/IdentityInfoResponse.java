@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IdentityInfoResponse {
     /**
-     * The principal ID of resource identity.
+     * @return The principal ID of resource identity.
      * 
      */
     private final @Nullable String principalId;
     /**
-     * The tenant ID of resource.
+     * @return The tenant ID of resource.
      * 
      */
     private final @Nullable String tenantId;
     /**
-     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
+     * @return The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
      * 
      */
     private final @Nullable String type;
     /**
-     * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+     * @return The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
      * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * This property is currently not used and reserved for future usage.
      * 
@@ -49,32 +49,32 @@ public final class IdentityInfoResponse {
     }
 
     /**
-     * The principal ID of resource identity.
+     * @return The principal ID of resource identity.
      * 
-    */
+     */
     public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
-     * The tenant ID of resource.
+     * @return The tenant ID of resource.
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
-     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
+     * @return The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+     * @return The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
      * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * This property is currently not used and reserved for future usage.
      * 
-    */
+     */
     public Map<String,UserIdentityPropertiesResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

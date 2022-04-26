@@ -25,6 +25,10 @@ public final class EdgeCacheKeysetState extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A human-readable description of the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class EdgeCacheKeysetState extends com.pulumi.resources.ResourceArg
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Set of label tags associated with the EdgeCache resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -49,6 +57,12 @@ public final class EdgeCacheKeysetState extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource; provided by the client when the resource is created.
+     * The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
+     * and all following characters must be a dash, underscore, letter or digit.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +75,11 @@ public final class EdgeCacheKeysetState extends com.pulumi.resources.ResourceArg
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -76,6 +95,14 @@ public final class EdgeCacheKeysetState extends com.pulumi.resources.ResourceArg
     @Import(name="publicKeys")
     private @Nullable Output<List<EdgeCacheKeysetPublicKeyGetArgs>> publicKeys;
 
+    /**
+     * @return An ordered list of Ed25519 public keys to use for validating signed requests.
+     * You must specify at least one (1) key, and may have up to three (3) keys.
+     * Ed25519 public keys are not secret, and only allow Google to validate a request was signed by your corresponding private key.
+     * You should ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<EdgeCacheKeysetPublicKeyGetArgs>>> publicKeys() {
         return Optional.ofNullable(this.publicKeys);
     }
@@ -108,51 +135,135 @@ public final class EdgeCacheKeysetState extends com.pulumi.resources.ResourceArg
             $ = new EdgeCacheKeysetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A human-readable description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A human-readable description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param labels Set of label tags associated with the EdgeCache resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Set of label tags associated with the EdgeCache resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is created.
+         * The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
+         * and all following characters must be a dash, underscore, letter or digit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is created.
+         * The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
+         * and all following characters must be a dash, underscore, letter or digit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param publicKeys An ordered list of Ed25519 public keys to use for validating signed requests.
+         * You must specify at least one (1) key, and may have up to three (3) keys.
+         * Ed25519 public keys are not secret, and only allow Google to validate a request was signed by your corresponding private key.
+         * You should ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(@Nullable Output<List<EdgeCacheKeysetPublicKeyGetArgs>> publicKeys) {
             $.publicKeys = publicKeys;
             return this;
         }
 
+        /**
+         * @param publicKeys An ordered list of Ed25519 public keys to use for validating signed requests.
+         * You must specify at least one (1) key, and may have up to three (3) keys.
+         * Ed25519 public keys are not secret, and only allow Google to validate a request was signed by your corresponding private key.
+         * You should ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(List<EdgeCacheKeysetPublicKeyGetArgs> publicKeys) {
             return publicKeys(Output.of(publicKeys));
         }
 
+        /**
+         * @param publicKeys An ordered list of Ed25519 public keys to use for validating signed requests.
+         * You must specify at least one (1) key, and may have up to three (3) keys.
+         * Ed25519 public keys are not secret, and only allow Google to validate a request was signed by your corresponding private key.
+         * You should ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(EdgeCacheKeysetPublicKeyGetArgs... publicKeys) {
             return publicKeys(List.of(publicKeys));
         }

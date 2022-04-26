@@ -24,6 +24,10 @@ public final class ComponentCurrentBillingFeatureArgs extends com.pulumi.resourc
     @Import(name="currentBillingFeatures")
     private @Nullable Output<List<String>> currentBillingFeatures;
 
+    /**
+     * @return Current enabled pricing plan. When the component is in the Enterprise plan, this will list both &#39;Basic&#39; and &#39;Application Insights Enterprise&#39;.
+     * 
+     */
     public Optional<Output<List<String>>> currentBillingFeatures() {
         return Optional.ofNullable(this.currentBillingFeatures);
     }
@@ -35,6 +39,10 @@ public final class ComponentCurrentBillingFeatureArgs extends com.pulumi.resourc
     @Import(name="dataVolumeCap")
     private @Nullable Output<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap;
 
+    /**
+     * @return An Application Insights component daily data volume cap
+     * 
+     */
     public Optional<Output<ApplicationInsightsComponentDataVolumeCapArgs>> dataVolumeCap() {
         return Optional.ofNullable(this.dataVolumeCap);
     }
@@ -46,6 +54,10 @@ public final class ComponentCurrentBillingFeatureArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class ComponentCurrentBillingFeatureArgs extends com.pulumi.resourc
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the Application Insights component resource.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -88,42 +104,96 @@ public final class ComponentCurrentBillingFeatureArgs extends com.pulumi.resourc
             $ = new ComponentCurrentBillingFeatureArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentBillingFeatures Current enabled pricing plan. When the component is in the Enterprise plan, this will list both &#39;Basic&#39; and &#39;Application Insights Enterprise&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentBillingFeatures(@Nullable Output<List<String>> currentBillingFeatures) {
             $.currentBillingFeatures = currentBillingFeatures;
             return this;
         }
 
+        /**
+         * @param currentBillingFeatures Current enabled pricing plan. When the component is in the Enterprise plan, this will list both &#39;Basic&#39; and &#39;Application Insights Enterprise&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentBillingFeatures(List<String> currentBillingFeatures) {
             return currentBillingFeatures(Output.of(currentBillingFeatures));
         }
 
+        /**
+         * @param currentBillingFeatures Current enabled pricing plan. When the component is in the Enterprise plan, this will list both &#39;Basic&#39; and &#39;Application Insights Enterprise&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentBillingFeatures(String... currentBillingFeatures) {
             return currentBillingFeatures(List.of(currentBillingFeatures));
         }
 
+        /**
+         * @param dataVolumeCap An Application Insights component daily data volume cap
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataVolumeCap(@Nullable Output<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap) {
             $.dataVolumeCap = dataVolumeCap;
             return this;
         }
 
+        /**
+         * @param dataVolumeCap An Application Insights component daily data volume cap
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataVolumeCap(ApplicationInsightsComponentDataVolumeCapArgs dataVolumeCap) {
             return dataVolumeCap(Output.of(dataVolumeCap));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }

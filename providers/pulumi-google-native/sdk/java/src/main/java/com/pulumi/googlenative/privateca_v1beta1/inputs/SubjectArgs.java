@@ -26,6 +26,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="countryCode")
     private @Nullable Output<String> countryCode;
 
+    /**
+     * @return The country code of the subject.
+     * 
+     */
     public Optional<Output<String>> countryCode() {
         return Optional.ofNullable(this.countryCode);
     }
@@ -37,6 +41,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locality")
     private @Nullable Output<String> locality;
 
+    /**
+     * @return The locality or city of the subject.
+     * 
+     */
     public Optional<Output<String>> locality() {
         return Optional.ofNullable(this.locality);
     }
@@ -48,6 +56,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="organization")
     private @Nullable Output<String> organization;
 
+    /**
+     * @return The organization of the subject.
+     * 
+     */
     public Optional<Output<String>> organization() {
         return Optional.ofNullable(this.organization);
     }
@@ -59,6 +71,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="organizationalUnit")
     private @Nullable Output<String> organizationalUnit;
 
+    /**
+     * @return The organizational_unit of the subject.
+     * 
+     */
     public Optional<Output<String>> organizationalUnit() {
         return Optional.ofNullable(this.organizationalUnit);
     }
@@ -70,6 +86,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="postalCode")
     private @Nullable Output<String> postalCode;
 
+    /**
+     * @return The postal code of the subject.
+     * 
+     */
     public Optional<Output<String>> postalCode() {
         return Optional.ofNullable(this.postalCode);
     }
@@ -81,6 +101,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="province")
     private @Nullable Output<String> province;
 
+    /**
+     * @return The province, territory, or regional state of the subject.
+     * 
+     */
     public Optional<Output<String>> province() {
         return Optional.ofNullable(this.province);
     }
@@ -92,6 +116,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="streetAddress")
     private @Nullable Output<String> streetAddress;
 
+    /**
+     * @return The street address of the subject.
+     * 
+     */
     public Optional<Output<String>> streetAddress() {
         return Optional.ofNullable(this.streetAddress);
     }
@@ -126,65 +154,149 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SubjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param countryCode The country code of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryCode(@Nullable Output<String> countryCode) {
             $.countryCode = countryCode;
             return this;
         }
 
+        /**
+         * @param countryCode The country code of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryCode(String countryCode) {
             return countryCode(Output.of(countryCode));
         }
 
+        /**
+         * @param locality The locality or city of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locality(@Nullable Output<String> locality) {
             $.locality = locality;
             return this;
         }
 
+        /**
+         * @param locality The locality or city of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locality(String locality) {
             return locality(Output.of(locality));
         }
 
+        /**
+         * @param organization The organization of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organization(@Nullable Output<String> organization) {
             $.organization = organization;
             return this;
         }
 
+        /**
+         * @param organization The organization of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organization(String organization) {
             return organization(Output.of(organization));
         }
 
+        /**
+         * @param organizationalUnit The organizational_unit of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
             $.organizationalUnit = organizationalUnit;
             return this;
         }
 
+        /**
+         * @param organizationalUnit The organizational_unit of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnit(String organizationalUnit) {
             return organizationalUnit(Output.of(organizationalUnit));
         }
 
+        /**
+         * @param postalCode The postal code of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalCode(@Nullable Output<String> postalCode) {
             $.postalCode = postalCode;
             return this;
         }
 
+        /**
+         * @param postalCode The postal code of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalCode(String postalCode) {
             return postalCode(Output.of(postalCode));
         }
 
+        /**
+         * @param province The province, territory, or regional state of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder province(@Nullable Output<String> province) {
             $.province = province;
             return this;
         }
 
+        /**
+         * @param province The province, territory, or regional state of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder province(String province) {
             return province(Output.of(province));
         }
 
+        /**
+         * @param streetAddress The street address of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress(@Nullable Output<String> streetAddress) {
             $.streetAddress = streetAddress;
             return this;
         }
 
+        /**
+         * @param streetAddress The street address of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress(String streetAddress) {
             return streetAddress(Output.of(streetAddress));
         }

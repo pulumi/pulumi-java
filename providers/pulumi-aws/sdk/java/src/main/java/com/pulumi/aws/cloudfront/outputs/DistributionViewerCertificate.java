@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DistributionViewerCertificate {
     /**
-     * The ARN of the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)
+     * @return The ARN of the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)
      * certificate that you wish to use with this distribution. Specify this,
      * `cloudfront_default_certificate`, or `iam_certificate_id`.  The ACM
      * certificate must be in  US-EAST-1.
@@ -21,21 +21,21 @@ public final class DistributionViewerCertificate {
      */
     private final @Nullable String acmCertificateArn;
     /**
-     * `true` if you want viewers to use HTTPS
+     * @return `true` if you want viewers to use HTTPS
      * to request your objects and you&#39;re using the CloudFront domain name for your
      * distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
      * 
      */
     private final @Nullable Boolean cloudfrontDefaultCertificate;
     /**
-     * The IAM certificate identifier of the custom viewer
+     * @return The IAM certificate identifier of the custom viewer
      * certificate for this distribution if you are using a custom domain. Specify
      * this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
      * 
      */
     private final @Nullable String iamCertificateId;
     /**
-     * The minimum version of the SSL protocol that
+     * @return The minimum version of the SSL protocol that
      * you want CloudFront to use for HTTPS connections. Can only be set if
      * `cloudfront_default_certificate = false`. See all possible values in
      * [this](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html)
@@ -67,35 +67,35 @@ public final class DistributionViewerCertificate {
     }
 
     /**
-     * The ARN of the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)
+     * @return The ARN of the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)
      * certificate that you wish to use with this distribution. Specify this,
      * `cloudfront_default_certificate`, or `iam_certificate_id`.  The ACM
      * certificate must be in  US-EAST-1.
      * 
-    */
+     */
     public Optional<String> acmCertificateArn() {
         return Optional.ofNullable(this.acmCertificateArn);
     }
     /**
-     * `true` if you want viewers to use HTTPS
+     * @return `true` if you want viewers to use HTTPS
      * to request your objects and you&#39;re using the CloudFront domain name for your
      * distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
      * 
-    */
+     */
     public Optional<Boolean> cloudfrontDefaultCertificate() {
         return Optional.ofNullable(this.cloudfrontDefaultCertificate);
     }
     /**
-     * The IAM certificate identifier of the custom viewer
+     * @return The IAM certificate identifier of the custom viewer
      * certificate for this distribution if you are using a custom domain. Specify
      * this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
      * 
-    */
+     */
     public Optional<String> iamCertificateId() {
         return Optional.ofNullable(this.iamCertificateId);
     }
     /**
-     * The minimum version of the SSL protocol that
+     * @return The minimum version of the SSL protocol that
      * you want CloudFront to use for HTTPS connections. Can only be set if
      * `cloudfront_default_certificate = false`. See all possible values in
      * [this](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html)
@@ -108,7 +108,7 @@ public final class DistributionViewerCertificate {
      * specified. If you have specified `cloudfront_default_certificate`, `TLSv1`
      * must be specified.
      * 
-    */
+     */
     public Optional<String> minimumProtocolVersion() {
         return Optional.ofNullable(this.minimumProtocolVersion);
     }

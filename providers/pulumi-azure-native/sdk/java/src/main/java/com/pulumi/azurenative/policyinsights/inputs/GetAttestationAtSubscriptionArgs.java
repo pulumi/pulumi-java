@@ -19,6 +19,10 @@ public final class GetAttestationAtSubscriptionArgs extends com.pulumi.resources
     @Import(name="attestationName", required=true)
     private String attestationName;
 
+    /**
+     * @return The name of the attestation.
+     * 
+     */
     public String attestationName() {
         return this.attestationName;
     }
@@ -47,6 +51,12 @@ public final class GetAttestationAtSubscriptionArgs extends com.pulumi.resources
             $ = new GetAttestationAtSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attestationName The name of the attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestationName(String attestationName) {
             $.attestationName = attestationName;
             return this;

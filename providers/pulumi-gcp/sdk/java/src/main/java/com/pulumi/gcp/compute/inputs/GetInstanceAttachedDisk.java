@@ -20,6 +20,11 @@ public final class GetInstanceAttachedDisk extends com.pulumi.resources.InvokeAr
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return Name with which the attached disk is accessible
+     * under `/dev/disk/by-id/`
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -52,6 +57,10 @@ public final class GetInstanceAttachedDisk extends com.pulumi.resources.InvokeAr
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return Read/write mode for the disk. One of `&#34;READ_ONLY&#34;` or `&#34;READ_WRITE&#34;`.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -63,6 +72,10 @@ public final class GetInstanceAttachedDisk extends com.pulumi.resources.InvokeAr
     @Import(name="source", required=true)
     private String source;
 
+    /**
+     * @return The name or self_link of the disk attached to this instance.
+     * 
+     */
     public String source() {
         return this.source;
     }
@@ -96,6 +109,13 @@ public final class GetInstanceAttachedDisk extends com.pulumi.resources.InvokeAr
             $ = new GetInstanceAttachedDisk(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName Name with which the attached disk is accessible
+         * under `/dev/disk/by-id/`
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
@@ -116,11 +136,23 @@ public final class GetInstanceAttachedDisk extends com.pulumi.resources.InvokeAr
             return this;
         }
 
+        /**
+         * @param mode Read/write mode for the disk. One of `&#34;READ_ONLY&#34;` or `&#34;READ_WRITE&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param source The name or self_link of the disk attached to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             $.source = source;
             return this;

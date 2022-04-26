@@ -19,6 +19,10 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends com.pulumi.re
     @Import(name="guestConfigurationAssignmentName", required=true)
     private String guestConfigurationAssignmentName;
 
+    /**
+     * @return The guest configuration assignment name.
+     * 
+     */
     public String guestConfigurationAssignmentName() {
         return this.guestConfigurationAssignmentName;
     }
@@ -30,6 +34,10 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends com.pulumi.re
     @Import(name="machineName", required=true)
     private String machineName;
 
+    /**
+     * @return The name of the ARC machine.
+     * 
+     */
     public String machineName() {
         return this.machineName;
     }
@@ -41,6 +49,10 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends com.pulumi.re
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends com.pulumi.re
             $ = new GetGuestConfigurationHCRPAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param guestConfigurationAssignmentName The guest configuration assignment name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestConfigurationAssignmentName(String guestConfigurationAssignmentName) {
             $.guestConfigurationAssignmentName = guestConfigurationAssignmentName;
             return this;
         }
 
+        /**
+         * @param machineName The name of the ARC machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineName(String machineName) {
             $.machineName = machineName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

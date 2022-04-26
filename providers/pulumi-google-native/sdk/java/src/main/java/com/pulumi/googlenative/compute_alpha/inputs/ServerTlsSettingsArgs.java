@@ -29,6 +29,10 @@ public final class ServerTlsSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="proxyTlsContext")
     private @Nullable Output<TlsContextArgs> proxyTlsContext;
 
+    /**
+     * @return Configures the mechanism to obtain security certificates and identity information.
+     * 
+     */
     public Optional<Output<TlsContextArgs>> proxyTlsContext() {
         return Optional.ofNullable(this.proxyTlsContext);
     }
@@ -40,6 +44,10 @@ public final class ServerTlsSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="subjectAltNames")
     private @Nullable Output<List<String>> subjectAltNames;
 
+    /**
+     * @return A list of alternate names to verify the subject identity in the certificate presented by the client.
+     * 
+     */
     public Optional<Output<List<String>>> subjectAltNames() {
         return Optional.ofNullable(this.subjectAltNames);
     }
@@ -51,6 +59,10 @@ public final class ServerTlsSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tlsMode")
     private @Nullable Output<ServerTlsSettingsTlsMode> tlsMode;
 
+    /**
+     * @return Indicates whether connections should be secured using TLS. The value of this field determines how TLS is enforced. This field can be set to one of the following: - SIMPLE Secure connections with standard TLS semantics. - MUTUAL Secure connections to the backends using mutual TLS by presenting client certificates for authentication.
+     * 
+     */
     public Optional<Output<ServerTlsSettingsTlsMode>> tlsMode() {
         return Optional.ofNullable(this.tlsMode);
     }
@@ -81,33 +93,75 @@ public final class ServerTlsSettingsArgs extends com.pulumi.resources.ResourceAr
             $ = new ServerTlsSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param proxyTlsContext Configures the mechanism to obtain security certificates and identity information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyTlsContext(@Nullable Output<TlsContextArgs> proxyTlsContext) {
             $.proxyTlsContext = proxyTlsContext;
             return this;
         }
 
+        /**
+         * @param proxyTlsContext Configures the mechanism to obtain security certificates and identity information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyTlsContext(TlsContextArgs proxyTlsContext) {
             return proxyTlsContext(Output.of(proxyTlsContext));
         }
 
+        /**
+         * @param subjectAltNames A list of alternate names to verify the subject identity in the certificate presented by the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAltNames(@Nullable Output<List<String>> subjectAltNames) {
             $.subjectAltNames = subjectAltNames;
             return this;
         }
 
+        /**
+         * @param subjectAltNames A list of alternate names to verify the subject identity in the certificate presented by the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAltNames(List<String> subjectAltNames) {
             return subjectAltNames(Output.of(subjectAltNames));
         }
 
+        /**
+         * @param subjectAltNames A list of alternate names to verify the subject identity in the certificate presented by the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAltNames(String... subjectAltNames) {
             return subjectAltNames(List.of(subjectAltNames));
         }
 
+        /**
+         * @param tlsMode Indicates whether connections should be secured using TLS. The value of this field determines how TLS is enforced. This field can be set to one of the following: - SIMPLE Secure connections with standard TLS semantics. - MUTUAL Secure connections to the backends using mutual TLS by presenting client certificates for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tlsMode(@Nullable Output<ServerTlsSettingsTlsMode> tlsMode) {
             $.tlsMode = tlsMode;
             return this;
         }
 
+        /**
+         * @param tlsMode Indicates whether connections should be secured using TLS. The value of this field determines how TLS is enforced. This field can be set to one of the following: - SIMPLE Secure connections with standard TLS semantics. - MUTUAL Secure connections to the backends using mutual TLS by presenting client certificates for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tlsMode(ServerTlsSettingsTlsMode tlsMode) {
             return tlsMode(Output.of(tlsMode));
         }

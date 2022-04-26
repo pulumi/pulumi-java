@@ -20,6 +20,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs e
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -48,11 +52,23 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs e
             $ = new PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

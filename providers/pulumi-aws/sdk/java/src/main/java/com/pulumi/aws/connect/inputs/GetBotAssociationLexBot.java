@@ -19,6 +19,10 @@ public final class GetBotAssociationLexBot extends com.pulumi.resources.InvokeAr
     @Import(name="lexRegion", required=true)
     private String lexRegion;
 
+    /**
+     * @return The Region that the Amazon Lex (V1) bot was created in.
+     * 
+     */
     public String lexRegion() {
         return this.lexRegion;
     }
@@ -30,6 +34,10 @@ public final class GetBotAssociationLexBot extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the Amazon Lex (V1) bot.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -59,11 +67,23 @@ public final class GetBotAssociationLexBot extends com.pulumi.resources.InvokeAr
             $ = new GetBotAssociationLexBot(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lexRegion The Region that the Amazon Lex (V1) bot was created in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lexRegion(String lexRegion) {
             $.lexRegion = lexRegion;
             return this;
         }
 
+        /**
+         * @param name The name of the Amazon Lex (V1) bot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DailyRetentionScheduleResponse {
     /**
-     * Retention duration of retention Policy.
+     * @return Retention duration of retention Policy.
      * 
      */
     private final @Nullable RetentionDurationResponse retentionDuration;
     /**
-     * Retention times of retention policy.
+     * @return Retention times of retention policy.
      * 
      */
     private final @Nullable List<String> retentionTimes;
@@ -33,16 +33,16 @@ public final class DailyRetentionScheduleResponse {
     }
 
     /**
-     * Retention duration of retention Policy.
+     * @return Retention duration of retention Policy.
      * 
-    */
+     */
     public Optional<RetentionDurationResponse> retentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
     /**
-     * Retention times of retention policy.
+     * @return Retention times of retention policy.
      * 
-    */
+     */
     public List<String> retentionTimes() {
         return this.retentionTimes == null ? List.of() : this.retentionTimes;
     }

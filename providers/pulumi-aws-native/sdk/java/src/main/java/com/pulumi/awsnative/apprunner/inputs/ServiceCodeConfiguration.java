@@ -33,6 +33,10 @@ public final class ServiceCodeConfiguration extends com.pulumi.resources.InvokeA
     @Import(name="configurationSource", required=true)
     private ServiceCodeConfigurationConfigurationSource configurationSource;
 
+    /**
+     * @return Configuration Source
+     * 
+     */
     public ServiceCodeConfigurationConfigurationSource configurationSource() {
         return this.configurationSource;
     }
@@ -67,6 +71,12 @@ public final class ServiceCodeConfiguration extends com.pulumi.resources.InvokeA
             return this;
         }
 
+        /**
+         * @param configurationSource Configuration Source
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationSource(ServiceCodeConfigurationConfigurationSource configurationSource) {
             $.configurationSource = configurationSource;
             return this;

@@ -27,6 +27,10 @@ public final class HandlerMappingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="arguments")
     private @Nullable Output<String> arguments;
 
+    /**
+     * @return Command-line arguments to be passed to the script processor.
+     * 
+     */
     public Optional<Output<String>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -38,6 +42,10 @@ public final class HandlerMappingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="extension")
     private @Nullable Output<String> extension;
 
+    /**
+     * @return Requests with this extension will be handled using the specified FastCGI application.
+     * 
+     */
     public Optional<Output<String>> extension() {
         return Optional.ofNullable(this.extension);
     }
@@ -49,6 +57,10 @@ public final class HandlerMappingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="scriptProcessor")
     private @Nullable Output<String> scriptProcessor;
 
+    /**
+     * @return The absolute path to the FastCGI application.
+     * 
+     */
     public Optional<Output<String>> scriptProcessor() {
         return Optional.ofNullable(this.scriptProcessor);
     }
@@ -79,29 +91,65 @@ public final class HandlerMappingArgs extends com.pulumi.resources.ResourceArgs 
             $ = new HandlerMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments Command-line arguments to be passed to the script processor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable Output<String> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments Command-line arguments to be passed to the script processor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(String arguments) {
             return arguments(Output.of(arguments));
         }
 
+        /**
+         * @param extension Requests with this extension will be handled using the specified FastCGI application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extension(@Nullable Output<String> extension) {
             $.extension = extension;
             return this;
         }
 
+        /**
+         * @param extension Requests with this extension will be handled using the specified FastCGI application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extension(String extension) {
             return extension(Output.of(extension));
         }
 
+        /**
+         * @param scriptProcessor The absolute path to the FastCGI application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptProcessor(@Nullable Output<String> scriptProcessor) {
             $.scriptProcessor = scriptProcessor;
             return this;
         }
 
+        /**
+         * @param scriptProcessor The absolute path to the FastCGI application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptProcessor(String scriptProcessor) {
             return scriptProcessor(Output.of(scriptProcessor));
         }

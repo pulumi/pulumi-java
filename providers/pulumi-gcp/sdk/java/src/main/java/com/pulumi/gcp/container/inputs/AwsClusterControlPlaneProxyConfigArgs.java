@@ -20,6 +20,10 @@ public final class AwsClusterControlPlaneProxyConfigArgs extends com.pulumi.reso
     @Import(name="secretArn", required=true)
     private Output<String> secretArn;
 
+    /**
+     * @return The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
+     * 
+     */
     public Output<String> secretArn() {
         return this.secretArn;
     }
@@ -31,6 +35,10 @@ public final class AwsClusterControlPlaneProxyConfigArgs extends com.pulumi.reso
     @Import(name="secretVersion", required=true)
     private Output<String> secretVersion;
 
+    /**
+     * @return The version string of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
+     * 
+     */
     public Output<String> secretVersion() {
         return this.secretVersion;
     }
@@ -60,20 +68,44 @@ public final class AwsClusterControlPlaneProxyConfigArgs extends com.pulumi.reso
             $ = new AwsClusterControlPlaneProxyConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secretArn The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretArn(Output<String> secretArn) {
             $.secretArn = secretArn;
             return this;
         }
 
+        /**
+         * @param secretArn The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretArn(String secretArn) {
             return secretArn(Output.of(secretArn));
         }
 
+        /**
+         * @param secretVersion The version string of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(Output<String> secretVersion) {
             $.secretVersion = secretVersion;
             return this;
         }
 
+        /**
+         * @param secretVersion The version string of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(String secretVersion) {
             return secretVersion(Output.of(secretVersion));
         }

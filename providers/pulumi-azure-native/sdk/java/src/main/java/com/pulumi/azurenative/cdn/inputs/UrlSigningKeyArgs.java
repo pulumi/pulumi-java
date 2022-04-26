@@ -25,6 +25,10 @@ public final class UrlSigningKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyId", required=true)
     private Output<String> keyId;
 
+    /**
+     * @return Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
+     * 
+     */
     public Output<String> keyId() {
         return this.keyId;
     }
@@ -36,6 +40,10 @@ public final class UrlSigningKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keySourceParameters", required=true)
     private Output<KeyVaultSigningKeyParametersArgs> keySourceParameters;
 
+    /**
+     * @return Defines the parameters for using customer key vault for Url Signing Key.
+     * 
+     */
     public Output<KeyVaultSigningKeyParametersArgs> keySourceParameters() {
         return this.keySourceParameters;
     }
@@ -65,20 +73,44 @@ public final class UrlSigningKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UrlSigningKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyId Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(Output<String> keyId) {
             $.keyId = keyId;
             return this;
         }
 
+        /**
+         * @param keyId Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             return keyId(Output.of(keyId));
         }
 
+        /**
+         * @param keySourceParameters Defines the parameters for using customer key vault for Url Signing Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySourceParameters(Output<KeyVaultSigningKeyParametersArgs> keySourceParameters) {
             $.keySourceParameters = keySourceParameters;
             return this;
         }
 
+        /**
+         * @param keySourceParameters Defines the parameters for using customer key vault for Url Signing Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySourceParameters(KeyVaultSigningKeyParametersArgs keySourceParameters) {
             return keySourceParameters(Output.of(keySourceParameters));
         }

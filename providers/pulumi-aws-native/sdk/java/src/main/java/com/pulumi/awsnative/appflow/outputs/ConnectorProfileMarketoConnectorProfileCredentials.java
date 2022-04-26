@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConnectorProfileMarketoConnectorProfileCredentials {
     /**
-     * The credentials used to access protected resources.
+     * @return The credentials used to access protected resources.
      * 
      */
     private final @Nullable String accessToken;
     /**
-     * The identiﬁer for the desired client.
+     * @return The identiﬁer for the desired client.
      * 
      */
     private final String clientId;
     /**
-     * The client secret used by the oauth client to authenticate to the authorization server.
+     * @return The client secret used by the oauth client to authenticate to the authorization server.
      * 
      */
     private final String clientSecret;
     /**
-     * The oauth needed to request security tokens from the connector endpoint.
+     * @return The oauth needed to request security tokens from the connector endpoint.
      * 
      */
     private final @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest;
@@ -46,30 +46,30 @@ public final class ConnectorProfileMarketoConnectorProfileCredentials {
     }
 
     /**
-     * The credentials used to access protected resources.
+     * @return The credentials used to access protected resources.
      * 
-    */
+     */
     public Optional<String> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
-     * The identiﬁer for the desired client.
+     * @return The identiﬁer for the desired client.
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * The client secret used by the oauth client to authenticate to the authorization server.
+     * @return The client secret used by the oauth client to authenticate to the authorization server.
      * 
-    */
+     */
     public String clientSecret() {
         return this.clientSecret;
     }
     /**
-     * The oauth needed to request security tokens from the connector endpoint.
+     * @return The oauth needed to request security tokens from the connector endpoint.
      * 
-    */
+     */
     public Optional<ConnectorProfileConnectorOAuthRequest> connectorOAuthRequest() {
         return Optional.ofNullable(this.connectorOAuthRequest);
     }

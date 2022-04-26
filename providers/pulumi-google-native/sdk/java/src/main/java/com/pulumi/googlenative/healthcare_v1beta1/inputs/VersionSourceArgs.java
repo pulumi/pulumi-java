@@ -26,6 +26,10 @@ public final class VersionSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mshField")
     private @Nullable Output<String> mshField;
 
+    /**
+     * @return The field to extract from the MSH segment. For example, &#34;3.1&#34; or &#34;18[1].1&#34;.
+     * 
+     */
     public Optional<Output<String>> mshField() {
         return Optional.ofNullable(this.mshField);
     }
@@ -37,6 +41,10 @@ public final class VersionSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The value to match with the field. For example, &#34;My Application Name&#34; or &#34;2.3&#34;.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -66,20 +74,44 @@ public final class VersionSourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VersionSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mshField The field to extract from the MSH segment. For example, &#34;3.1&#34; or &#34;18[1].1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mshField(@Nullable Output<String> mshField) {
             $.mshField = mshField;
             return this;
         }
 
+        /**
+         * @param mshField The field to extract from the MSH segment. For example, &#34;3.1&#34; or &#34;18[1].1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mshField(String mshField) {
             return mshField(Output.of(mshField));
         }
 
+        /**
+         * @param value The value to match with the field. For example, &#34;My Application Name&#34; or &#34;2.3&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value to match with the field. For example, &#34;My Application Name&#34; or &#34;2.3&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

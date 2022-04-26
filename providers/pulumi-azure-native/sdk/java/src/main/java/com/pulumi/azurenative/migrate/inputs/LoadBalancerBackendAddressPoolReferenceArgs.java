@@ -26,6 +26,10 @@ public final class LoadBalancerBackendAddressPoolReferenceArgs extends com.pulum
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Gets the name of the proxy resource on the target side.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class LoadBalancerBackendAddressPoolReferenceArgs extends com.pulum
     @Import(name="sourceArmResourceId", required=true)
     private Output<String> sourceArmResourceId;
 
+    /**
+     * @return Gets the ARM resource ID of the tracked resource being referenced.
+     * 
+     */
     public Output<String> sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
@@ -66,20 +74,44 @@ public final class LoadBalancerBackendAddressPoolReferenceArgs extends com.pulum
             $ = new LoadBalancerBackendAddressPoolReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Gets the name of the proxy resource on the target side.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets the name of the proxy resource on the target side.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param sourceArmResourceId Gets the ARM resource ID of the tracked resource being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceArmResourceId(Output<String> sourceArmResourceId) {
             $.sourceArmResourceId = sourceArmResourceId;
             return this;
         }
 
+        /**
+         * @param sourceArmResourceId Gets the ARM resource ID of the tracked resource being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceArmResourceId(String sourceArmResourceId) {
             return sourceArmResourceId(Output.of(sourceArmResourceId));
         }

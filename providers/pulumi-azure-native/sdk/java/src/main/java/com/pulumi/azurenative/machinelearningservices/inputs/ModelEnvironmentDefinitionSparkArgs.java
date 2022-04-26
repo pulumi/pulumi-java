@@ -29,6 +29,10 @@ public final class ModelEnvironmentDefinitionSparkArgs extends com.pulumi.resour
     @Import(name="packages")
     private @Nullable Output<List<SparkMavenPackageArgs>> packages;
 
+    /**
+     * @return The Spark packages to use.
+     * 
+     */
     public Optional<Output<List<SparkMavenPackageArgs>>> packages() {
         return Optional.ofNullable(this.packages);
     }
@@ -40,6 +44,10 @@ public final class ModelEnvironmentDefinitionSparkArgs extends com.pulumi.resour
     @Import(name="precachePackages")
     private @Nullable Output<Boolean> precachePackages;
 
+    /**
+     * @return Whether to precache the packages.
+     * 
+     */
     public Optional<Output<Boolean>> precachePackages() {
         return Optional.ofNullable(this.precachePackages);
     }
@@ -51,6 +59,10 @@ public final class ModelEnvironmentDefinitionSparkArgs extends com.pulumi.resour
     @Import(name="repositories")
     private @Nullable Output<List<String>> repositories;
 
+    /**
+     * @return The list of spark repositories.
+     * 
+     */
     public Optional<Output<List<String>>> repositories() {
         return Optional.ofNullable(this.repositories);
     }
@@ -81,37 +93,85 @@ public final class ModelEnvironmentDefinitionSparkArgs extends com.pulumi.resour
             $ = new ModelEnvironmentDefinitionSparkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param packages The Spark packages to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packages(@Nullable Output<List<SparkMavenPackageArgs>> packages) {
             $.packages = packages;
             return this;
         }
 
+        /**
+         * @param packages The Spark packages to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packages(List<SparkMavenPackageArgs> packages) {
             return packages(Output.of(packages));
         }
 
+        /**
+         * @param packages The Spark packages to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packages(SparkMavenPackageArgs... packages) {
             return packages(List.of(packages));
         }
 
+        /**
+         * @param precachePackages Whether to precache the packages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder precachePackages(@Nullable Output<Boolean> precachePackages) {
             $.precachePackages = precachePackages;
             return this;
         }
 
+        /**
+         * @param precachePackages Whether to precache the packages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder precachePackages(Boolean precachePackages) {
             return precachePackages(Output.of(precachePackages));
         }
 
+        /**
+         * @param repositories The list of spark repositories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositories(@Nullable Output<List<String>> repositories) {
             $.repositories = repositories;
             return this;
         }
 
+        /**
+         * @param repositories The list of spark repositories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositories(List<String> repositories) {
             return repositories(Output.of(repositories));
         }
 
+        /**
+         * @param repositories The list of spark repositories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositories(String... repositories) {
             return repositories(List.of(repositories));
         }

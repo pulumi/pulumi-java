@@ -25,6 +25,10 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends com.p
     @Import(name="databases", required=true)
     private List<String> databases;
 
+    /**
+     * @return List of databases on source server
+     * 
+     */
     public List<String> databases() {
         return this.databases;
     }
@@ -36,6 +40,10 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends com.p
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +55,10 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends com.p
     @Import(name="sourceServerBrandVersion", required=true)
     private String sourceServerBrandVersion;
 
+    /**
+     * @return Source server brand version
+     * 
+     */
     public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
@@ -58,6 +70,10 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends com.p
     @Import(name="sourceServerVersion", required=true)
     private String sourceServerVersion;
 
+    /**
+     * @return Version of the source server
+     * 
+     */
     public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
@@ -69,6 +85,10 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends com.p
     @Import(name="validationErrors", required=true)
     private List<ReportableExceptionResponse> validationErrors;
 
+    /**
+     * @return Validation errors associated with the task
+     * 
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
@@ -101,35 +121,77 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends com.p
             $ = new ConnectToSourcePostgreSqlSyncTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databases List of databases on source server
+         * 
+         * @return builder
+         * 
+         */
         public Builder databases(List<String> databases) {
             $.databases = databases;
             return this;
         }
 
+        /**
+         * @param databases List of databases on source server
+         * 
+         * @return builder
+         * 
+         */
         public Builder databases(String... databases) {
             return databases(List.of(databases));
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param sourceServerBrandVersion Source server brand version
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceServerBrandVersion(String sourceServerBrandVersion) {
             $.sourceServerBrandVersion = sourceServerBrandVersion;
             return this;
         }
 
+        /**
+         * @param sourceServerVersion Version of the source server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceServerVersion(String sourceServerVersion) {
             $.sourceServerVersion = sourceServerVersion;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors associated with the task
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             $.validationErrors = validationErrors;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors associated with the task
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
         }

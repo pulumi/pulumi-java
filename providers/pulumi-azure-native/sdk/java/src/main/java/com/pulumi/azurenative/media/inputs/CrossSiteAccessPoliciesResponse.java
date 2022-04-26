@@ -25,6 +25,10 @@ public final class CrossSiteAccessPoliciesResponse extends com.pulumi.resources.
     @Import(name="clientAccessPolicy")
     private @Nullable String clientAccessPolicy;
 
+    /**
+     * @return The content of clientaccesspolicy.xml used by Silverlight.
+     * 
+     */
     public Optional<String> clientAccessPolicy() {
         return Optional.ofNullable(this.clientAccessPolicy);
     }
@@ -36,6 +40,10 @@ public final class CrossSiteAccessPoliciesResponse extends com.pulumi.resources.
     @Import(name="crossDomainPolicy")
     private @Nullable String crossDomainPolicy;
 
+    /**
+     * @return The content of crossdomain.xml used by Silverlight.
+     * 
+     */
     public Optional<String> crossDomainPolicy() {
         return Optional.ofNullable(this.crossDomainPolicy);
     }
@@ -65,11 +73,23 @@ public final class CrossSiteAccessPoliciesResponse extends com.pulumi.resources.
             $ = new CrossSiteAccessPoliciesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientAccessPolicy The content of clientaccesspolicy.xml used by Silverlight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAccessPolicy(@Nullable String clientAccessPolicy) {
             $.clientAccessPolicy = clientAccessPolicy;
             return this;
         }
 
+        /**
+         * @param crossDomainPolicy The content of crossdomain.xml used by Silverlight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crossDomainPolicy(@Nullable String crossDomainPolicy) {
             $.crossDomainPolicy = crossDomainPolicy;
             return this;

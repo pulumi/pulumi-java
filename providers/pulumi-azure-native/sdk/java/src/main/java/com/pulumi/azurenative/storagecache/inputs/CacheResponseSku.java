@@ -25,6 +25,10 @@ public final class CacheResponseSku extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return SKU name for this Cache.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class CacheResponseSku extends com.pulumi.resources.InvokeArgs {
             $ = new CacheResponseSku(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name SKU name for this Cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

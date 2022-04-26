@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
     @Import(name="quickReplies")
     private @Nullable Output<List<String>> quickReplies;
 
+    /**
+     * @return Optional. The collection of quick replies.
+     * 
+     */
     public Optional<Output<List<String>>> quickReplies() {
         return Optional.ofNullable(this.quickReplies);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Optional. The title of the collection of quick replies.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -67,24 +75,54 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
             $ = new GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param quickReplies Optional. The collection of quick replies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quickReplies(@Nullable Output<List<String>> quickReplies) {
             $.quickReplies = quickReplies;
             return this;
         }
 
+        /**
+         * @param quickReplies Optional. The collection of quick replies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quickReplies(List<String> quickReplies) {
             return quickReplies(Output.of(quickReplies));
         }
 
+        /**
+         * @param quickReplies Optional. The collection of quick replies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quickReplies(String... quickReplies) {
             return quickReplies(List.of(quickReplies));
         }
 
+        /**
+         * @param title Optional. The title of the collection of quick replies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Optional. The title of the collection of quick replies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

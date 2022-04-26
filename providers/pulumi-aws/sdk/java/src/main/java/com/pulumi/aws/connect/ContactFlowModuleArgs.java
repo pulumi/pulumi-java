@@ -23,6 +23,10 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return Specifies the content of the Contact Flow Module, provided as a JSON string, written in Amazon Connect Contact Flow Language. If defined, the `filename` argument cannot be used.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -41,6 +45,10 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Specifies the description of the Contact Flow Module.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -52,6 +60,10 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="filename")
     private @Nullable Output<String> filename;
 
+    /**
+     * @return The path to the Contact Flow Module source within the local filesystem. Conflicts with `content`.
+     * 
+     */
     public Optional<Output<String>> filename() {
         return Optional.ofNullable(this.filename);
     }
@@ -63,6 +75,10 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="instanceId", required=true)
     private Output<String> instanceId;
 
+    /**
+     * @return Specifies the identifier of the hosting Amazon Connect Instance.
+     * 
+     */
     public Output<String> instanceId() {
         return this.instanceId;
     }
@@ -74,6 +90,10 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Specifies the name of the Contact Flow Module.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -85,6 +105,10 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags to apply to the Contact Flow Module. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -96,6 +120,10 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -131,11 +159,23 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
             $ = new ContactFlowModuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content Specifies the content of the Contact Flow Module, provided as a JSON string, written in Amazon Connect Contact Flow Language. If defined, the `filename` argument cannot be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content Specifies the content of the Contact Flow Module, provided as a JSON string, written in Amazon Connect Contact Flow Language. If defined, the `filename` argument cannot be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
@@ -149,56 +189,128 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
             return contentHash(Output.of(contentHash));
         }
 
+        /**
+         * @param description Specifies the description of the Contact Flow Module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Specifies the description of the Contact Flow Module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param filename The path to the Contact Flow Module source within the local filesystem. Conflicts with `content`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filename(@Nullable Output<String> filename) {
             $.filename = filename;
             return this;
         }
 
+        /**
+         * @param filename The path to the Contact Flow Module source within the local filesystem. Conflicts with `content`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filename(String filename) {
             return filename(Output.of(filename));
         }
 
+        /**
+         * @param instanceId Specifies the identifier of the hosting Amazon Connect Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId Specifies the identifier of the hosting Amazon Connect Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param name Specifies the name of the Contact Flow Module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Specifies the name of the Contact Flow Module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Tags to apply to the Contact Flow Module. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags to apply to the Contact Flow Module. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

@@ -24,6 +24,10 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends com.pulum
     @Import(name="inputUri", required=true)
     private Output<String> inputUri;
 
+    /**
+     * @return The input URI of source file. This must be a Cloud Storage path (`gs://...`).
+     * 
+     */
     public Output<String> inputUri() {
         return this.inputUri;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends com.pulum
     @Import(name="mimeType", required=true)
     private Output<String> mimeType;
 
+    /**
+     * @return The format of the source file. Only &#34;text/csv&#34; is supported.
+     * 
+     */
     public Output<String> mimeType() {
         return this.mimeType;
     }
@@ -64,20 +72,44 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends com.pulum
             $ = new GoogleCloudDatalabelingV1beta1GcsSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputUri The input URI of source file. This must be a Cloud Storage path (`gs://...`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputUri(Output<String> inputUri) {
             $.inputUri = inputUri;
             return this;
         }
 
+        /**
+         * @param inputUri The input URI of source file. This must be a Cloud Storage path (`gs://...`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputUri(String inputUri) {
             return inputUri(Output.of(inputUri));
         }
 
+        /**
+         * @param mimeType The format of the source file. Only &#34;text/csv&#34; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mimeType(Output<String> mimeType) {
             $.mimeType = mimeType;
             return this;
         }
 
+        /**
+         * @param mimeType The format of the source file. Only &#34;text/csv&#34; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mimeType(String mimeType) {
             return mimeType(Output.of(mimeType));
         }

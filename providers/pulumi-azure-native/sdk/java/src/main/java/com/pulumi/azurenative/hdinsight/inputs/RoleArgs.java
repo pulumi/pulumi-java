@@ -36,6 +36,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoscaleConfiguration")
     private @Nullable Output<AutoscaleArgs> autoscaleConfiguration;
 
+    /**
+     * @return The autoscale configurations.
+     * 
+     */
     public Optional<Output<AutoscaleArgs>> autoscaleConfiguration() {
         return Optional.ofNullable(this.autoscaleConfiguration);
     }
@@ -47,6 +51,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataDisksGroups")
     private @Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups;
 
+    /**
+     * @return The data disks groups for the role.
+     * 
+     */
     public Optional<Output<List<DataDisksGroupsArgs>>> dataDisksGroups() {
         return Optional.ofNullable(this.dataDisksGroups);
     }
@@ -58,6 +66,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptDataDisks")
     private @Nullable Output<Boolean> encryptDataDisks;
 
+    /**
+     * @return Indicates whether encrypt the data disks.
+     * 
+     */
     public Optional<Output<Boolean>> encryptDataDisks() {
         return Optional.ofNullable(this.encryptDataDisks);
     }
@@ -69,6 +81,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hardwareProfile")
     private @Nullable Output<HardwareProfileArgs> hardwareProfile;
 
+    /**
+     * @return The hardware profile.
+     * 
+     */
     public Optional<Output<HardwareProfileArgs>> hardwareProfile() {
         return Optional.ofNullable(this.hardwareProfile);
     }
@@ -80,6 +96,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minInstanceCount")
     private @Nullable Output<Integer> minInstanceCount;
 
+    /**
+     * @return The minimum instance count of the cluster.
+     * 
+     */
     public Optional<Output<Integer>> minInstanceCount() {
         return Optional.ofNullable(this.minInstanceCount);
     }
@@ -91,6 +111,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the role.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -102,6 +126,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="osProfile")
     private @Nullable Output<OsProfileArgs> osProfile;
 
+    /**
+     * @return The operating system profile.
+     * 
+     */
     public Optional<Output<OsProfileArgs>> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
@@ -113,6 +141,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scriptActions")
     private @Nullable Output<List<ScriptActionArgs>> scriptActions;
 
+    /**
+     * @return The list of script actions on the role.
+     * 
+     */
     public Optional<Output<List<ScriptActionArgs>>> scriptActions() {
         return Optional.ofNullable(this.scriptActions);
     }
@@ -124,6 +156,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetInstanceCount")
     private @Nullable Output<Integer> targetInstanceCount;
 
+    /**
+     * @return The instance count of the cluster.
+     * 
+     */
     public Optional<Output<Integer>> targetInstanceCount() {
         return Optional.ofNullable(this.targetInstanceCount);
     }
@@ -135,6 +171,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vMGroupName")
     private @Nullable Output<String> vMGroupName;
 
+    /**
+     * @return The name of the virtual machine group.
+     * 
+     */
     public Optional<Output<String>> vMGroupName() {
         return Optional.ofNullable(this.vMGroupName);
     }
@@ -146,6 +186,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualNetworkProfile")
     private @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile;
 
+    /**
+     * @return The virtual network profile.
+     * 
+     */
     public Optional<Output<VirtualNetworkProfileArgs>> virtualNetworkProfile() {
         return Optional.ofNullable(this.virtualNetworkProfile);
     }
@@ -184,109 +228,253 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscaleConfiguration The autoscale configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaleConfiguration(@Nullable Output<AutoscaleArgs> autoscaleConfiguration) {
             $.autoscaleConfiguration = autoscaleConfiguration;
             return this;
         }
 
+        /**
+         * @param autoscaleConfiguration The autoscale configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaleConfiguration(AutoscaleArgs autoscaleConfiguration) {
             return autoscaleConfiguration(Output.of(autoscaleConfiguration));
         }
 
+        /**
+         * @param dataDisksGroups The data disks groups for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisksGroups(@Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups) {
             $.dataDisksGroups = dataDisksGroups;
             return this;
         }
 
+        /**
+         * @param dataDisksGroups The data disks groups for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisksGroups(List<DataDisksGroupsArgs> dataDisksGroups) {
             return dataDisksGroups(Output.of(dataDisksGroups));
         }
 
+        /**
+         * @param dataDisksGroups The data disks groups for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisksGroups(DataDisksGroupsArgs... dataDisksGroups) {
             return dataDisksGroups(List.of(dataDisksGroups));
         }
 
+        /**
+         * @param encryptDataDisks Indicates whether encrypt the data disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptDataDisks(@Nullable Output<Boolean> encryptDataDisks) {
             $.encryptDataDisks = encryptDataDisks;
             return this;
         }
 
+        /**
+         * @param encryptDataDisks Indicates whether encrypt the data disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptDataDisks(Boolean encryptDataDisks) {
             return encryptDataDisks(Output.of(encryptDataDisks));
         }
 
+        /**
+         * @param hardwareProfile The hardware profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hardwareProfile(@Nullable Output<HardwareProfileArgs> hardwareProfile) {
             $.hardwareProfile = hardwareProfile;
             return this;
         }
 
+        /**
+         * @param hardwareProfile The hardware profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hardwareProfile(HardwareProfileArgs hardwareProfile) {
             return hardwareProfile(Output.of(hardwareProfile));
         }
 
+        /**
+         * @param minInstanceCount The minimum instance count of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstanceCount(@Nullable Output<Integer> minInstanceCount) {
             $.minInstanceCount = minInstanceCount;
             return this;
         }
 
+        /**
+         * @param minInstanceCount The minimum instance count of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstanceCount(Integer minInstanceCount) {
             return minInstanceCount(Output.of(minInstanceCount));
         }
 
+        /**
+         * @param name The name of the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param osProfile The operating system profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osProfile(@Nullable Output<OsProfileArgs> osProfile) {
             $.osProfile = osProfile;
             return this;
         }
 
+        /**
+         * @param osProfile The operating system profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osProfile(OsProfileArgs osProfile) {
             return osProfile(Output.of(osProfile));
         }
 
+        /**
+         * @param scriptActions The list of script actions on the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptActions(@Nullable Output<List<ScriptActionArgs>> scriptActions) {
             $.scriptActions = scriptActions;
             return this;
         }
 
+        /**
+         * @param scriptActions The list of script actions on the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptActions(List<ScriptActionArgs> scriptActions) {
             return scriptActions(Output.of(scriptActions));
         }
 
+        /**
+         * @param scriptActions The list of script actions on the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptActions(ScriptActionArgs... scriptActions) {
             return scriptActions(List.of(scriptActions));
         }
 
+        /**
+         * @param targetInstanceCount The instance count of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetInstanceCount(@Nullable Output<Integer> targetInstanceCount) {
             $.targetInstanceCount = targetInstanceCount;
             return this;
         }
 
+        /**
+         * @param targetInstanceCount The instance count of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetInstanceCount(Integer targetInstanceCount) {
             return targetInstanceCount(Output.of(targetInstanceCount));
         }
 
+        /**
+         * @param vMGroupName The name of the virtual machine group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vMGroupName(@Nullable Output<String> vMGroupName) {
             $.vMGroupName = vMGroupName;
             return this;
         }
 
+        /**
+         * @param vMGroupName The name of the virtual machine group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vMGroupName(String vMGroupName) {
             return vMGroupName(Output.of(vMGroupName));
         }
 
+        /**
+         * @param virtualNetworkProfile The virtual network profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkProfile(@Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile) {
             $.virtualNetworkProfile = virtualNetworkProfile;
             return this;
         }
 
+        /**
+         * @param virtualNetworkProfile The virtual network profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkProfile(VirtualNetworkProfileArgs virtualNetworkProfile) {
             return virtualNetworkProfile(Output.of(virtualNetworkProfile));
         }

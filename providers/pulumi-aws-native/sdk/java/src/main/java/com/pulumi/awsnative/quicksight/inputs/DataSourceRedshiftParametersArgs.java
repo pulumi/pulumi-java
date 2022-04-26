@@ -30,6 +30,11 @@ public final class DataSourceRedshiftParametersArgs extends com.pulumi.resources
     @Import(name="clusterId")
     private @Nullable Output<String> clusterId;
 
+    /**
+     * @return &lt;p&gt;Cluster ID. This field can be blank if the &lt;code&gt;Host&lt;/code&gt; and &lt;code&gt;Port&lt;/code&gt; are
+     *             provided.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
@@ -41,6 +46,10 @@ public final class DataSourceRedshiftParametersArgs extends com.pulumi.resources
     @Import(name="database", required=true)
     private Output<String> database;
 
+    /**
+     * @return &lt;p&gt;Database.&lt;/p&gt;
+     * 
+     */
     public Output<String> database() {
         return this.database;
     }
@@ -52,6 +61,10 @@ public final class DataSourceRedshiftParametersArgs extends com.pulumi.resources
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return &lt;p&gt;Host. This field can be blank if &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -63,6 +76,10 @@ public final class DataSourceRedshiftParametersArgs extends com.pulumi.resources
     @Import(name="port")
     private @Nullable Output<Double> port;
 
+    /**
+     * @return &lt;p&gt;Port. This field can be blank if the &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<Double>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -94,38 +111,88 @@ public final class DataSourceRedshiftParametersArgs extends com.pulumi.resources
             $ = new DataSourceRedshiftParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterId &lt;p&gt;Cluster ID. This field can be blank if the &lt;code&gt;Host&lt;/code&gt; and &lt;code&gt;Port&lt;/code&gt; are
+         *             provided.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(@Nullable Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param clusterId &lt;p&gt;Cluster ID. This field can be blank if the &lt;code&gt;Host&lt;/code&gt; and &lt;code&gt;Port&lt;/code&gt; are
+         *             provided.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(String clusterId) {
             return clusterId(Output.of(clusterId));
         }
 
+        /**
+         * @param database &lt;p&gt;Database.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(Output<String> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database &lt;p&gt;Database.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param host &lt;p&gt;Host. This field can be blank if &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host &lt;p&gt;Host. This field can be blank if &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param port &lt;p&gt;Port. This field can be blank if the &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Double> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port &lt;p&gt;Port. This field can be blank if the &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Double port) {
             return port(Output.of(port));
         }

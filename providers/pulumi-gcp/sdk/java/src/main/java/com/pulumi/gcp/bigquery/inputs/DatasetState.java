@@ -29,6 +29,11 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accesses")
     private @Nullable Output<List<DatasetAccessGetArgs>> accesses;
 
+    /**
+     * @return An array of objects that define dataset access for one or more entities.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<DatasetAccessGetArgs>>> accesses() {
         return Optional.ofNullable(this.accesses);
     }
@@ -40,6 +45,10 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationTime")
     private @Nullable Output<Integer> creationTime;
 
+    /**
+     * @return The time when this dataset was created, in milliseconds since the epoch.
+     * 
+     */
     public Optional<Output<Integer>> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
@@ -51,6 +60,10 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasetId")
     private @Nullable Output<String> datasetId;
 
+    /**
+     * @return The ID of the dataset containing this table.
+     * 
+     */
     public Optional<Output<String>> datasetId() {
         return Optional.ofNullable(this.datasetId);
     }
@@ -65,6 +78,13 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultEncryptionConfiguration")
     private @Nullable Output<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration;
 
+    /**
+     * @return The default encryption key for all tables in the dataset. Once this property is set,
+     * all newly-created partitioned tables in the dataset will have encryption key set to
+     * this value, unless table creation request (or query) overrides the key.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<DatasetDefaultEncryptionConfigurationGetArgs>> defaultEncryptionConfiguration() {
         return Optional.ofNullable(this.defaultEncryptionConfiguration);
     }
@@ -77,6 +97,11 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultPartitionExpirationMs")
     private @Nullable Output<Integer> defaultPartitionExpirationMs;
 
+    /**
+     * @return The default partition expiration for all partitioned tables in
+     * the dataset, in milliseconds.
+     * 
+     */
     public Optional<Output<Integer>> defaultPartitionExpirationMs() {
         return Optional.ofNullable(this.defaultPartitionExpirationMs);
     }
@@ -89,6 +114,11 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultTableExpirationMs")
     private @Nullable Output<Integer> defaultTableExpirationMs;
 
+    /**
+     * @return The default lifetime of all tables in the dataset, in milliseconds.
+     * The minimum value is 3600000 milliseconds (one hour).
+     * 
+     */
     public Optional<Output<Integer>> defaultTableExpirationMs() {
         return Optional.ofNullable(this.defaultTableExpirationMs);
     }
@@ -102,6 +132,12 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deleteContentsOnDestroy")
     private @Nullable Output<Boolean> deleteContentsOnDestroy;
 
+    /**
+     * @return If set to `true`, delete all the tables in the
+     * dataset when destroying the resource; otherwise,
+     * destroying the resource will fail if tables are present.
+     * 
+     */
     public Optional<Output<Boolean>> deleteContentsOnDestroy() {
         return Optional.ofNullable(this.deleteContentsOnDestroy);
     }
@@ -113,6 +149,10 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A user-friendly description of the dataset
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -124,6 +164,10 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return A hash of the resource.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -135,6 +179,10 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return A descriptive name for the dataset
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -147,6 +195,11 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The labels associated with this dataset. You can use these to
+     * organize and group your datasets
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -158,6 +211,10 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedTime")
     private @Nullable Output<Integer> lastModifiedTime;
 
+    /**
+     * @return The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
+     * 
+     */
     public Optional<Output<Integer>> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
@@ -170,6 +227,11 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geographic location where the dataset should reside.
+     * See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -182,6 +244,11 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -193,6 +260,10 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -235,141 +306,350 @@ public final class DatasetState extends com.pulumi.resources.ResourceArgs {
             $ = new DatasetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accesses An array of objects that define dataset access for one or more entities.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accesses(@Nullable Output<List<DatasetAccessGetArgs>> accesses) {
             $.accesses = accesses;
             return this;
         }
 
+        /**
+         * @param accesses An array of objects that define dataset access for one or more entities.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accesses(List<DatasetAccessGetArgs> accesses) {
             return accesses(Output.of(accesses));
         }
 
+        /**
+         * @param accesses An array of objects that define dataset access for one or more entities.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accesses(DatasetAccessGetArgs... accesses) {
             return accesses(List.of(accesses));
         }
 
+        /**
+         * @param creationTime The time when this dataset was created, in milliseconds since the epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(@Nullable Output<Integer> creationTime) {
             $.creationTime = creationTime;
             return this;
         }
 
+        /**
+         * @param creationTime The time when this dataset was created, in milliseconds since the epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(Integer creationTime) {
             return creationTime(Output.of(creationTime));
         }
 
+        /**
+         * @param datasetId The ID of the dataset containing this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(@Nullable Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param datasetId The ID of the dataset containing this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param defaultEncryptionConfiguration The default encryption key for all tables in the dataset. Once this property is set,
+         * all newly-created partitioned tables in the dataset will have encryption key set to
+         * this value, unless table creation request (or query) overrides the key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultEncryptionConfiguration(@Nullable Output<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration) {
             $.defaultEncryptionConfiguration = defaultEncryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param defaultEncryptionConfiguration The default encryption key for all tables in the dataset. Once this property is set,
+         * all newly-created partitioned tables in the dataset will have encryption key set to
+         * this value, unless table creation request (or query) overrides the key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultEncryptionConfiguration(DatasetDefaultEncryptionConfigurationGetArgs defaultEncryptionConfiguration) {
             return defaultEncryptionConfiguration(Output.of(defaultEncryptionConfiguration));
         }
 
+        /**
+         * @param defaultPartitionExpirationMs The default partition expiration for all partitioned tables in
+         * the dataset, in milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPartitionExpirationMs(@Nullable Output<Integer> defaultPartitionExpirationMs) {
             $.defaultPartitionExpirationMs = defaultPartitionExpirationMs;
             return this;
         }
 
+        /**
+         * @param defaultPartitionExpirationMs The default partition expiration for all partitioned tables in
+         * the dataset, in milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPartitionExpirationMs(Integer defaultPartitionExpirationMs) {
             return defaultPartitionExpirationMs(Output.of(defaultPartitionExpirationMs));
         }
 
+        /**
+         * @param defaultTableExpirationMs The default lifetime of all tables in the dataset, in milliseconds.
+         * The minimum value is 3600000 milliseconds (one hour).
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultTableExpirationMs(@Nullable Output<Integer> defaultTableExpirationMs) {
             $.defaultTableExpirationMs = defaultTableExpirationMs;
             return this;
         }
 
+        /**
+         * @param defaultTableExpirationMs The default lifetime of all tables in the dataset, in milliseconds.
+         * The minimum value is 3600000 milliseconds (one hour).
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultTableExpirationMs(Integer defaultTableExpirationMs) {
             return defaultTableExpirationMs(Output.of(defaultTableExpirationMs));
         }
 
+        /**
+         * @param deleteContentsOnDestroy If set to `true`, delete all the tables in the
+         * dataset when destroying the resource; otherwise,
+         * destroying the resource will fail if tables are present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteContentsOnDestroy(@Nullable Output<Boolean> deleteContentsOnDestroy) {
             $.deleteContentsOnDestroy = deleteContentsOnDestroy;
             return this;
         }
 
+        /**
+         * @param deleteContentsOnDestroy If set to `true`, delete all the tables in the
+         * dataset when destroying the resource; otherwise,
+         * destroying the resource will fail if tables are present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteContentsOnDestroy(Boolean deleteContentsOnDestroy) {
             return deleteContentsOnDestroy(Output.of(deleteContentsOnDestroy));
         }
 
+        /**
+         * @param description A user-friendly description of the dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A user-friendly description of the dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param etag A hash of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag A hash of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param friendlyName A descriptive name for the dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName A descriptive name for the dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param labels The labels associated with this dataset. You can use these to
+         * organize and group your datasets
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The labels associated with this dataset. You can use these to
+         * organize and group your datasets
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param lastModifiedTime The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedTime(@Nullable Output<Integer> lastModifiedTime) {
             $.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
+        /**
+         * @param lastModifiedTime The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedTime(Integer lastModifiedTime) {
             return lastModifiedTime(Output.of(lastModifiedTime));
         }
 
+        /**
+         * @param location The geographic location where the dataset should reside.
+         * See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geographic location where the dataset should reside.
+         * See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }

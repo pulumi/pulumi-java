@@ -23,6 +23,10 @@ public final class ReplicaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -51,6 +55,12 @@ public final class ReplicaResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ReplicaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;

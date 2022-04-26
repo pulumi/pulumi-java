@@ -20,6 +20,10 @@ public final class InstanceTemplateConfidentialInstanceConfigGetArgs extends com
     @Import(name="enableConfidentialCompute", required=true)
     private Output<Boolean> enableConfidentialCompute;
 
+    /**
+     * @return Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
+     * 
+     */
     public Output<Boolean> enableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }
@@ -48,11 +52,23 @@ public final class InstanceTemplateConfidentialInstanceConfigGetArgs extends com
             $ = new InstanceTemplateConfidentialInstanceConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableConfidentialCompute Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableConfidentialCompute(Output<Boolean> enableConfidentialCompute) {
             $.enableConfidentialCompute = enableConfidentialCompute;
             return this;
         }
 
+        /**
+         * @param enableConfidentialCompute Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableConfidentialCompute(Boolean enableConfidentialCompute) {
             return enableConfidentialCompute(Output.of(enableConfidentialCompute));
         }

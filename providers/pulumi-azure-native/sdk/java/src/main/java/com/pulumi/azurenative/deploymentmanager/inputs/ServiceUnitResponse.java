@@ -28,6 +28,10 @@ public final class ServiceUnitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="artifacts")
     private @Nullable ServiceUnitArtifactsResponse artifacts;
 
+    /**
+     * @return The artifacts for the service unit.
+     * 
+     */
     public Optional<ServiceUnitArtifactsResponse> artifacts() {
         return Optional.ofNullable(this.artifacts);
     }
@@ -39,6 +43,10 @@ public final class ServiceUnitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deploymentMode", required=true)
     private String deploymentMode;
 
+    /**
+     * @return Describes the type of ARM deployment to be performed on the resource.
+     * 
+     */
     public String deploymentMode() {
         return this.deploymentMode;
     }
@@ -50,6 +58,10 @@ public final class ServiceUnitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the service unit.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +73,10 @@ public final class ServiceUnitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="steps")
     private @Nullable List<RolloutStepResponse> steps;
 
+    /**
+     * @return Detailed step information, if present.
+     * 
+     */
     public Optional<List<RolloutStepResponse>> steps() {
         return Optional.ofNullable(this.steps);
     }
@@ -72,6 +88,10 @@ public final class ServiceUnitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetResourceGroup", required=true)
     private String targetResourceGroup;
 
+    /**
+     * @return The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
+     * 
+     */
     public String targetResourceGroup() {
         return this.targetResourceGroup;
     }
@@ -104,30 +124,66 @@ public final class ServiceUnitResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ServiceUnitResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifacts The artifacts for the service unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(@Nullable ServiceUnitArtifactsResponse artifacts) {
             $.artifacts = artifacts;
             return this;
         }
 
+        /**
+         * @param deploymentMode Describes the type of ARM deployment to be performed on the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMode(String deploymentMode) {
             $.deploymentMode = deploymentMode;
             return this;
         }
 
+        /**
+         * @param name Name of the service unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param steps Detailed step information, if present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(@Nullable List<RolloutStepResponse> steps) {
             $.steps = steps;
             return this;
         }
 
+        /**
+         * @param steps Detailed step information, if present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(RolloutStepResponse... steps) {
             return steps(List.of(steps));
         }
 
+        /**
+         * @param targetResourceGroup The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceGroup(String targetResourceGroup) {
             $.targetResourceGroup = targetResourceGroup;
             return this;

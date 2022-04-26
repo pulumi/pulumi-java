@@ -16,47 +16,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BackendBucketCdnPolicy {
     /**
-     * Specifies the cache setting for all responses from this backend.
+     * @return Specifies the cache setting for all responses from this backend.
      * The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC
      * Possible values are `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `CACHE_ALL_STATIC`.
      * 
      */
     private final @Nullable String cacheMode;
     /**
-     * Specifies the maximum allowed TTL for cached content served by this origin.
+     * @return Specifies the maximum allowed TTL for cached content served by this origin.
      * 
      */
     private final @Nullable Integer clientTtl;
     /**
-     * Specifies the default TTL for cached content served by this origin for responses
+     * @return Specifies the default TTL for cached content served by this origin for responses
      * that do not have an existing valid TTL (max-age or s-max-age).
      * 
      */
     private final @Nullable Integer defaultTtl;
     /**
-     * Specifies the maximum allowed TTL for cached content served by this origin.
+     * @return Specifies the maximum allowed TTL for cached content served by this origin.
      * 
      */
     private final @Nullable Integer maxTtl;
     /**
-     * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
+     * @return Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
      * 
      */
     private final @Nullable Boolean negativeCaching;
     /**
-     * Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
+     * @return Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
      * Omitting the policy and leaving negativeCaching enabled will use Cloud CDN&#39;s default cache TTLs.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<BackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies;
     /**
-     * Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
+     * @return Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
      * 
      */
     private final @Nullable Integer serveWhileStale;
     /**
-     * Maximum number of seconds the response to a signed URL request will
+     * @return Maximum number of seconds the response to a signed URL request will
      * be considered fresh. After this time period,
      * the response will be revalidated before being served.
      * When serving responses to signed URL requests,
@@ -89,61 +89,61 @@ public final class BackendBucketCdnPolicy {
     }
 
     /**
-     * Specifies the cache setting for all responses from this backend.
+     * @return Specifies the cache setting for all responses from this backend.
      * The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC
      * Possible values are `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `CACHE_ALL_STATIC`.
      * 
-    */
+     */
     public Optional<String> cacheMode() {
         return Optional.ofNullable(this.cacheMode);
     }
     /**
-     * Specifies the maximum allowed TTL for cached content served by this origin.
+     * @return Specifies the maximum allowed TTL for cached content served by this origin.
      * 
-    */
+     */
     public Optional<Integer> clientTtl() {
         return Optional.ofNullable(this.clientTtl);
     }
     /**
-     * Specifies the default TTL for cached content served by this origin for responses
+     * @return Specifies the default TTL for cached content served by this origin for responses
      * that do not have an existing valid TTL (max-age or s-max-age).
      * 
-    */
+     */
     public Optional<Integer> defaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
     /**
-     * Specifies the maximum allowed TTL for cached content served by this origin.
+     * @return Specifies the maximum allowed TTL for cached content served by this origin.
      * 
-    */
+     */
     public Optional<Integer> maxTtl() {
         return Optional.ofNullable(this.maxTtl);
     }
     /**
-     * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
+     * @return Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
      * 
-    */
+     */
     public Optional<Boolean> negativeCaching() {
         return Optional.ofNullable(this.negativeCaching);
     }
     /**
-     * Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
+     * @return Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
      * Omitting the policy and leaving negativeCaching enabled will use Cloud CDN&#39;s default cache TTLs.
      * Structure is documented below.
      * 
-    */
+     */
     public List<BackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies() {
         return this.negativeCachingPolicies == null ? List.of() : this.negativeCachingPolicies;
     }
     /**
-     * Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
+     * @return Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
      * 
-    */
+     */
     public Optional<Integer> serveWhileStale() {
         return Optional.ofNullable(this.serveWhileStale);
     }
     /**
-     * Maximum number of seconds the response to a signed URL request will
+     * @return Maximum number of seconds the response to a signed URL request will
      * be considered fresh. After this time period,
      * the response will be revalidated before being served.
      * When serving responses to signed URL requests,
@@ -152,7 +152,7 @@ public final class BackendBucketCdnPolicy {
      * max-age=[TTL]&#34; header, regardless of any existing Cache-Control
      * header. The actual headers served in responses will not be altered.
      * 
-    */
+     */
     public Optional<Integer> signedUrlCacheMaxAgeSec() {
         return Optional.ofNullable(this.signedUrlCacheMaxAgeSec);
     }

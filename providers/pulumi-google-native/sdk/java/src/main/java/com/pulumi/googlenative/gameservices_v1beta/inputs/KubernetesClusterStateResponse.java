@@ -23,6 +23,10 @@ public final class KubernetesClusterStateResponse extends com.pulumi.resources.I
     @Import(name="agonesVersionInstalled", required=true)
     private String agonesVersionInstalled;
 
+    /**
+     * @return The version of Agones currently installed in the registered Kubernetes cluster.
+     * 
+     */
     public String agonesVersionInstalled() {
         return this.agonesVersionInstalled;
     }
@@ -34,6 +38,10 @@ public final class KubernetesClusterStateResponse extends com.pulumi.resources.I
     @Import(name="agonesVersionTargeted", required=true)
     private String agonesVersionTargeted;
 
+    /**
+     * @return The version of Agones that is targeted to be installed in the cluster.
+     * 
+     */
     public String agonesVersionTargeted() {
         return this.agonesVersionTargeted;
     }
@@ -45,6 +53,10 @@ public final class KubernetesClusterStateResponse extends com.pulumi.resources.I
     @Import(name="installationState", required=true)
     private String installationState;
 
+    /**
+     * @return The state for the installed versions of Agones/Kubernetes.
+     * 
+     */
     public String installationState() {
         return this.installationState;
     }
@@ -56,6 +68,10 @@ public final class KubernetesClusterStateResponse extends com.pulumi.resources.I
     @Import(name="kubernetesVersionInstalled", required=true)
     private String kubernetesVersionInstalled;
 
+    /**
+     * @return The version of Kubernetes that is currently used in the registered Kubernetes cluster (as detected by the Cloud Game Servers service).
+     * 
+     */
     public String kubernetesVersionInstalled() {
         return this.kubernetesVersionInstalled;
     }
@@ -67,6 +83,10 @@ public final class KubernetesClusterStateResponse extends com.pulumi.resources.I
     @Import(name="provider", required=true)
     private String provider;
 
+    /**
+     * @return The cloud provider type reported by the first node&#39;s providerID in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.
+     * 
+     */
     public String provider() {
         return this.provider;
     }
@@ -78,6 +98,10 @@ public final class KubernetesClusterStateResponse extends com.pulumi.resources.I
     @Import(name="versionInstalledErrorMessage", required=true)
     private String versionInstalledErrorMessage;
 
+    /**
+     * @return The detailed error message for the installed versions of Agones/Kubernetes.
+     * 
+     */
     public String versionInstalledErrorMessage() {
         return this.versionInstalledErrorMessage;
     }
@@ -111,31 +135,67 @@ public final class KubernetesClusterStateResponse extends com.pulumi.resources.I
             $ = new KubernetesClusterStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agonesVersionInstalled The version of Agones currently installed in the registered Kubernetes cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agonesVersionInstalled(String agonesVersionInstalled) {
             $.agonesVersionInstalled = agonesVersionInstalled;
             return this;
         }
 
+        /**
+         * @param agonesVersionTargeted The version of Agones that is targeted to be installed in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agonesVersionTargeted(String agonesVersionTargeted) {
             $.agonesVersionTargeted = agonesVersionTargeted;
             return this;
         }
 
+        /**
+         * @param installationState The state for the installed versions of Agones/Kubernetes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installationState(String installationState) {
             $.installationState = installationState;
             return this;
         }
 
+        /**
+         * @param kubernetesVersionInstalled The version of Kubernetes that is currently used in the registered Kubernetes cluster (as detected by the Cloud Game Servers service).
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesVersionInstalled(String kubernetesVersionInstalled) {
             $.kubernetesVersionInstalled = kubernetesVersionInstalled;
             return this;
         }
 
+        /**
+         * @param provider The cloud provider type reported by the first node&#39;s providerID in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(String provider) {
             $.provider = provider;
             return this;
         }
 
+        /**
+         * @param versionInstalledErrorMessage The detailed error message for the installed versions of Agones/Kubernetes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionInstalledErrorMessage(String versionInstalledErrorMessage) {
             $.versionInstalledErrorMessage = versionInstalledErrorMessage;
             return this;

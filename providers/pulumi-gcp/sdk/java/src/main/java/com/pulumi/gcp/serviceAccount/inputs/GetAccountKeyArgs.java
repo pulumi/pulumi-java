@@ -23,6 +23,12 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the service account key. This must have format
+     * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{KEYID}`, where `{ACCOUNT}`
+     * is the email address or unique id of the service account.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +41,11 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The ID of the project that the service account will be created in.
+     * Defaults to the provider project configuration.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -46,6 +57,10 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="publicKeyType")
     private @Nullable String publicKeyType;
 
+    /**
+     * @return The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
+     * 
+     */
     public Optional<String> publicKeyType() {
         return Optional.ofNullable(this.publicKeyType);
     }
@@ -76,16 +91,37 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAccountKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the service account key. This must have format
+         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{KEYID}`, where `{ACCOUNT}`
+         * is the email address or unique id of the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param project The ID of the project that the service account will be created in.
+         * Defaults to the provider project configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param publicKeyType The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyType(@Nullable String publicKeyType) {
             $.publicKeyType = publicKeyType;
             return this;

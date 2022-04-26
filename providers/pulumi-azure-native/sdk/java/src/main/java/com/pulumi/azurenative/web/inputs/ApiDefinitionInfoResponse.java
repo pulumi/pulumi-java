@@ -25,6 +25,10 @@ public final class ApiDefinitionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="url")
     private @Nullable String url;
 
+    /**
+     * @return The URL of the API definition.
+     * 
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -53,6 +57,12 @@ public final class ApiDefinitionInfoResponse extends com.pulumi.resources.Invoke
             $ = new ApiDefinitionInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param url The URL of the API definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable String url) {
             $.url = url;
             return this;

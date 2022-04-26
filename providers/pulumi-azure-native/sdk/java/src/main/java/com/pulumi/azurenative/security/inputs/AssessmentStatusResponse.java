@@ -25,6 +25,10 @@ public final class AssessmentStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="cause")
     private @Nullable String cause;
 
+    /**
+     * @return Programmatic code for the cause of the assessment status
+     * 
+     */
     public Optional<String> cause() {
         return Optional.ofNullable(this.cause);
     }
@@ -36,6 +40,10 @@ public final class AssessmentStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return Programmatic code for the status of the assessment
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -47,6 +55,10 @@ public final class AssessmentStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Human readable description of the assessment status
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -77,16 +89,34 @@ public final class AssessmentStatusResponse extends com.pulumi.resources.InvokeA
             $ = new AssessmentStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cause Programmatic code for the cause of the assessment status
+         * 
+         * @return builder
+         * 
+         */
         public Builder cause(@Nullable String cause) {
             $.cause = cause;
             return this;
         }
 
+        /**
+         * @param code Programmatic code for the status of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param description Human readable description of the assessment status
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;

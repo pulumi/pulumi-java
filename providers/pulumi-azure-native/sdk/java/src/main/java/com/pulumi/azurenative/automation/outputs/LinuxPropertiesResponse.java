@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LinuxPropertiesResponse {
     /**
-     * packages excluded from the software update configuration.
+     * @return packages excluded from the software update configuration.
      * 
      */
     private final @Nullable List<String> excludedPackageNameMasks;
     /**
-     * Update classifications included in the software update configuration.
+     * @return Update classifications included in the software update configuration.
      * 
      */
     private final @Nullable String includedPackageClassifications;
     /**
-     * packages included from the software update configuration.
+     * @return packages included from the software update configuration.
      * 
      */
     private final @Nullable List<String> includedPackageNameMasks;
     /**
-     * Reboot setting for the software update configuration.
+     * @return Reboot setting for the software update configuration.
      * 
      */
     private final @Nullable String rebootSetting;
@@ -46,30 +46,30 @@ public final class LinuxPropertiesResponse {
     }
 
     /**
-     * packages excluded from the software update configuration.
+     * @return packages excluded from the software update configuration.
      * 
-    */
+     */
     public List<String> excludedPackageNameMasks() {
         return this.excludedPackageNameMasks == null ? List.of() : this.excludedPackageNameMasks;
     }
     /**
-     * Update classifications included in the software update configuration.
+     * @return Update classifications included in the software update configuration.
      * 
-    */
+     */
     public Optional<String> includedPackageClassifications() {
         return Optional.ofNullable(this.includedPackageClassifications);
     }
     /**
-     * packages included from the software update configuration.
+     * @return packages included from the software update configuration.
      * 
-    */
+     */
     public List<String> includedPackageNameMasks() {
         return this.includedPackageNameMasks == null ? List.of() : this.includedPackageNameMasks;
     }
     /**
-     * Reboot setting for the software update configuration.
+     * @return Reboot setting for the software update configuration.
      * 
-    */
+     */
     public Optional<String> rebootSetting() {
         return Optional.ofNullable(this.rebootSetting);
     }

@@ -25,6 +25,10 @@ public final class CurrentScenarioDetailsResponse extends com.pulumi.resources.I
     @Import(name="jobId")
     private @Nullable String jobId;
 
+    /**
+     * @return ARM Id of the job being executed.
+     * 
+     */
     public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
     }
@@ -36,6 +40,10 @@ public final class CurrentScenarioDetailsResponse extends com.pulumi.resources.I
     @Import(name="scenarioName")
     private @Nullable String scenarioName;
 
+    /**
+     * @return Scenario name.
+     * 
+     */
     public Optional<String> scenarioName() {
         return Optional.ofNullable(this.scenarioName);
     }
@@ -47,6 +55,10 @@ public final class CurrentScenarioDetailsResponse extends com.pulumi.resources.I
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return Start time of the workflow.
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -77,16 +89,34 @@ public final class CurrentScenarioDetailsResponse extends com.pulumi.resources.I
             $ = new CurrentScenarioDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobId ARM Id of the job being executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(@Nullable String jobId) {
             $.jobId = jobId;
             return this;
         }
 
+        /**
+         * @param scenarioName Scenario name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scenarioName(@Nullable String scenarioName) {
             $.scenarioName = scenarioName;
             return this;
         }
 
+        /**
+         * @param startTime Start time of the workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;

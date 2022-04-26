@@ -25,6 +25,10 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The display name for the static site user.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -36,6 +40,10 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource Id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +55,10 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="kind")
     private @Nullable String kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -58,6 +70,10 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource Name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -69,6 +85,10 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="provider", required=true)
     private String provider;
 
+    /**
+     * @return The identity provider for the static site user.
+     * 
+     */
     public String provider() {
         return this.provider;
     }
@@ -80,6 +100,10 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="roles")
     private @Nullable String roles;
 
+    /**
+     * @return The roles for the static site user, in free-form string format
+     * 
+     */
     public Optional<String> roles() {
         return Optional.ofNullable(this.roles);
     }
@@ -91,6 +115,10 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -102,6 +130,10 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="userId", required=true)
     private String userId;
 
+    /**
+     * @return The user id for the static site user.
+     * 
+     */
     public String userId() {
         return this.userId;
     }
@@ -137,41 +169,89 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
             $ = new StaticSiteUserARMResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name for the static site user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param id Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Resource Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provider The identity provider for the static site user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(String provider) {
             $.provider = provider;
             return this;
         }
 
+        /**
+         * @param roles The roles for the static site user, in free-form string format
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(@Nullable String roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userId The user id for the static site user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             $.userId = userId;
             return this;

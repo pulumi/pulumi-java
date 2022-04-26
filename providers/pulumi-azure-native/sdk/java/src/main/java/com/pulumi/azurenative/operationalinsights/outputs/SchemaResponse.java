@@ -16,67 +16,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SchemaResponse {
     /**
-     * Table category.
+     * @return Table category.
      * 
      */
     private final List<String> categories;
     /**
-     * A list of table custom columns.
+     * @return A list of table custom columns.
      * 
      */
     private final @Nullable List<ColumnResponse> columns;
     /**
-     * Table description.
+     * @return Table description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Table display name.
+     * @return Table display name.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * Table labels.
+     * @return Table labels.
      * 
      */
     private final List<String> labels;
     /**
-     * Table name.
+     * @return Table name.
      * 
      */
     private final @Nullable String name;
     /**
-     * Parameters of the restore operation that initiated this table.
+     * @return Parameters of the restore operation that initiated this table.
      * 
      */
     private final RestoredLogsResponse restoredLogs;
     /**
-     * Parameters of the search job that initiated this table.
+     * @return Parameters of the search job that initiated this table.
      * 
      */
     private final SearchResultsResponse searchResults;
     /**
-     * List of solutions the table is affiliated with
+     * @return List of solutions the table is affiliated with
      * 
      */
     private final List<String> solutions;
     /**
-     * Table&#39;s creator.
+     * @return Table&#39;s creator.
      * 
      */
     private final String source;
     /**
-     * A list of table standard columns.
+     * @return A list of table standard columns.
      * 
      */
     private final List<ColumnResponse> standardColumns;
     /**
-     * The subtype describes what APIs can be used to interact with the table, and what features are available against it.
+     * @return The subtype describes what APIs can be used to interact with the table, and what features are available against it.
      * 
      */
     private final String tableSubType;
     /**
-     * Table&#39;s creator.
+     * @return Table&#39;s creator.
      * 
      */
     private final String tableType;
@@ -112,93 +112,93 @@ public final class SchemaResponse {
     }
 
     /**
-     * Table category.
+     * @return Table category.
      * 
-    */
+     */
     public List<String> categories() {
         return this.categories;
     }
     /**
-     * A list of table custom columns.
+     * @return A list of table custom columns.
      * 
-    */
+     */
     public List<ColumnResponse> columns() {
         return this.columns == null ? List.of() : this.columns;
     }
     /**
-     * Table description.
+     * @return Table description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Table display name.
+     * @return Table display name.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Table labels.
+     * @return Table labels.
      * 
-    */
+     */
     public List<String> labels() {
         return this.labels;
     }
     /**
-     * Table name.
+     * @return Table name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Parameters of the restore operation that initiated this table.
+     * @return Parameters of the restore operation that initiated this table.
      * 
-    */
+     */
     public RestoredLogsResponse restoredLogs() {
         return this.restoredLogs;
     }
     /**
-     * Parameters of the search job that initiated this table.
+     * @return Parameters of the search job that initiated this table.
      * 
-    */
+     */
     public SearchResultsResponse searchResults() {
         return this.searchResults;
     }
     /**
-     * List of solutions the table is affiliated with
+     * @return List of solutions the table is affiliated with
      * 
-    */
+     */
     public List<String> solutions() {
         return this.solutions;
     }
     /**
-     * Table&#39;s creator.
+     * @return Table&#39;s creator.
      * 
-    */
+     */
     public String source() {
         return this.source;
     }
     /**
-     * A list of table standard columns.
+     * @return A list of table standard columns.
      * 
-    */
+     */
     public List<ColumnResponse> standardColumns() {
         return this.standardColumns;
     }
     /**
-     * The subtype describes what APIs can be used to interact with the table, and what features are available against it.
+     * @return The subtype describes what APIs can be used to interact with the table, and what features are available against it.
      * 
-    */
+     */
     public String tableSubType() {
         return this.tableSubType;
     }
     /**
-     * Table&#39;s creator.
+     * @return Table&#39;s creator.
      * 
-    */
+     */
     public String tableType() {
         return this.tableType;
     }

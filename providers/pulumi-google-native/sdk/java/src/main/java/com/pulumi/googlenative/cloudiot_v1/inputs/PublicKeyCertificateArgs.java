@@ -27,6 +27,10 @@ public final class PublicKeyCertificateArgs extends com.pulumi.resources.Resourc
     @Import(name="certificate")
     private @Nullable Output<String> certificate;
 
+    /**
+     * @return The certificate data.
+     * 
+     */
     public Optional<Output<String>> certificate() {
         return Optional.ofNullable(this.certificate);
     }
@@ -38,6 +42,10 @@ public final class PublicKeyCertificateArgs extends com.pulumi.resources.Resourc
     @Import(name="format")
     private @Nullable Output<PublicKeyCertificateFormat> format;
 
+    /**
+     * @return The certificate format.
+     * 
+     */
     public Optional<Output<PublicKeyCertificateFormat>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -67,20 +75,44 @@ public final class PublicKeyCertificateArgs extends com.pulumi.resources.Resourc
             $ = new PublicKeyCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificate The certificate data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(@Nullable Output<String> certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param certificate The certificate data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(String certificate) {
             return certificate(Output.of(certificate));
         }
 
+        /**
+         * @param format The certificate format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<PublicKeyCertificateFormat> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format The certificate format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(PublicKeyCertificateFormat format) {
             return format(Output.of(format));
         }

@@ -28,6 +28,11 @@ public final class BuiltInStandardEncoderPresetArgs extends com.pulumi.resources
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.BuiltInStandardEncoderPreset&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -39,6 +44,10 @@ public final class BuiltInStandardEncoderPresetArgs extends com.pulumi.resources
     @Import(name="presetName", required=true)
     private Output<Either<String,EncoderNamedPreset>> presetName;
 
+    /**
+     * @return The built-in preset to be used for encoding videos.
+     * 
+     */
     public Output<Either<String,EncoderNamedPreset>> presetName() {
         return this.presetName;
     }
@@ -68,28 +77,66 @@ public final class BuiltInStandardEncoderPresetArgs extends com.pulumi.resources
             $ = new BuiltInStandardEncoderPresetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.BuiltInStandardEncoderPreset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.BuiltInStandardEncoderPreset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param presetName The built-in preset to be used for encoding videos.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presetName(Output<Either<String,EncoderNamedPreset>> presetName) {
             $.presetName = presetName;
             return this;
         }
 
+        /**
+         * @param presetName The built-in preset to be used for encoding videos.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presetName(Either<String,EncoderNamedPreset> presetName) {
             return presetName(Output.of(presetName));
         }
 
+        /**
+         * @param presetName The built-in preset to be used for encoding videos.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presetName(String presetName) {
             return presetName(Either.ofLeft(presetName));
         }
 
+        /**
+         * @param presetName The built-in preset to be used for encoding videos.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presetName(EncoderNamedPreset presetName) {
             return presetName(Either.ofRight(presetName));
         }

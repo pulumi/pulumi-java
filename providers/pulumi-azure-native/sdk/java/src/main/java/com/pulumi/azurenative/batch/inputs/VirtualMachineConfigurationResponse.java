@@ -29,6 +29,10 @@ public final class VirtualMachineConfigurationResponse extends com.pulumi.resour
     @Import(name="containerConfiguration")
     private @Nullable ContainerConfigurationResponse containerConfiguration;
 
+    /**
+     * @return If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.
+     * 
+     */
     public Optional<ContainerConfigurationResponse> containerConfiguration() {
         return Optional.ofNullable(this.containerConfiguration);
     }
@@ -40,6 +44,10 @@ public final class VirtualMachineConfigurationResponse extends com.pulumi.resour
     @Import(name="dataDisks")
     private @Nullable List<DataDiskResponse> dataDisks;
 
+    /**
+     * @return This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.
+     * 
+     */
     public Optional<List<DataDiskResponse>> dataDisks() {
         return Optional.ofNullable(this.dataDisks);
     }
@@ -51,6 +59,10 @@ public final class VirtualMachineConfigurationResponse extends com.pulumi.resour
     @Import(name="diskEncryptionConfiguration")
     private @Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration;
 
+    /**
+     * @return If specified, encryption is performed on each node in the pool during node provisioning.
+     * 
+     */
     public Optional<DiskEncryptionConfigurationResponse> diskEncryptionConfiguration() {
         return Optional.ofNullable(this.diskEncryptionConfiguration);
     }
@@ -62,6 +74,10 @@ public final class VirtualMachineConfigurationResponse extends com.pulumi.resour
     @Import(name="extensions")
     private @Nullable List<VMExtensionResponse> extensions;
 
+    /**
+     * @return If specified, the extensions mentioned in this configuration will be installed on each node.
+     * 
+     */
     public Optional<List<VMExtensionResponse>> extensions() {
         return Optional.ofNullable(this.extensions);
     }
@@ -83,6 +99,13 @@ public final class VirtualMachineConfigurationResponse extends com.pulumi.resour
     @Import(name="licenseType")
     private @Nullable String licenseType;
 
+    /**
+     * @return This only applies to images that contain the Windows operating system, and should only be used when you hold valid on-premises licenses for the nodes which will be deployed. If omitted, no on-premises licensing discount is applied. Values are:
+     * 
+     *  Windows_Server - The on-premises license is for Windows Server.
+     *  Windows_Client - The on-premises license is for Windows Client.
+     * 
+     */
     public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
@@ -94,6 +117,10 @@ public final class VirtualMachineConfigurationResponse extends com.pulumi.resour
     @Import(name="nodeAgentSkuId", required=true)
     private String nodeAgentSkuId;
 
+    /**
+     * @return The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the &#39;List supported node agent SKUs&#39; operation.
+     * 
+     */
     public String nodeAgentSkuId() {
         return this.nodeAgentSkuId;
     }
@@ -105,6 +132,10 @@ public final class VirtualMachineConfigurationResponse extends com.pulumi.resour
     @Import(name="nodePlacementConfiguration")
     private @Nullable NodePlacementConfigurationResponse nodePlacementConfiguration;
 
+    /**
+     * @return This configuration will specify rules on how nodes in the pool will be physically allocated.
+     * 
+     */
     public Optional<NodePlacementConfigurationResponse> nodePlacementConfiguration() {
         return Optional.ofNullable(this.nodePlacementConfiguration);
     }
@@ -116,6 +147,10 @@ public final class VirtualMachineConfigurationResponse extends com.pulumi.resour
     @Import(name="windowsConfiguration")
     private @Nullable WindowsConfigurationResponse windowsConfiguration;
 
+    /**
+     * @return This property must not be specified if the imageReference specifies a Linux OS image.
+     * 
+     */
     public Optional<WindowsConfigurationResponse> windowsConfiguration() {
         return Optional.ofNullable(this.windowsConfiguration);
     }
@@ -152,30 +187,66 @@ public final class VirtualMachineConfigurationResponse extends com.pulumi.resour
             $ = new VirtualMachineConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerConfiguration If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerConfiguration(@Nullable ContainerConfigurationResponse containerConfiguration) {
             $.containerConfiguration = containerConfiguration;
             return this;
         }
 
+        /**
+         * @param dataDisks This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(@Nullable List<DataDiskResponse> dataDisks) {
             $.dataDisks = dataDisks;
             return this;
         }
 
+        /**
+         * @param dataDisks This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(DataDiskResponse... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
 
+        /**
+         * @param diskEncryptionConfiguration If specified, encryption is performed on each node in the pool during node provisioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration) {
             $.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param extensions If specified, the extensions mentioned in this configuration will be installed on each node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(@Nullable List<VMExtensionResponse> extensions) {
             $.extensions = extensions;
             return this;
         }
 
+        /**
+         * @param extensions If specified, the extensions mentioned in this configuration will be installed on each node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(VMExtensionResponse... extensions) {
             return extensions(List.of(extensions));
         }
@@ -185,21 +256,48 @@ public final class VirtualMachineConfigurationResponse extends com.pulumi.resour
             return this;
         }
 
+        /**
+         * @param licenseType This only applies to images that contain the Windows operating system, and should only be used when you hold valid on-premises licenses for the nodes which will be deployed. If omitted, no on-premises licensing discount is applied. Values are:
+         * 
+         *  Windows_Server - The on-premises license is for Windows Server.
+         *  Windows_Client - The on-premises license is for Windows Client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(@Nullable String licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param nodeAgentSkuId The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the &#39;List supported node agent SKUs&#39; operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAgentSkuId(String nodeAgentSkuId) {
             $.nodeAgentSkuId = nodeAgentSkuId;
             return this;
         }
 
+        /**
+         * @param nodePlacementConfiguration This configuration will specify rules on how nodes in the pool will be physically allocated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePlacementConfiguration(@Nullable NodePlacementConfigurationResponse nodePlacementConfiguration) {
             $.nodePlacementConfiguration = nodePlacementConfiguration;
             return this;
         }
 
+        /**
+         * @param windowsConfiguration This property must not be specified if the imageReference specifies a Linux OS image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsConfiguration(@Nullable WindowsConfigurationResponse windowsConfiguration) {
             $.windowsConfiguration = windowsConfiguration;
             return this;

@@ -22,6 +22,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
     @Import(name="maxValue")
     private @Nullable Output<Double> maxValue;
 
+    /**
+     * @return Must be specified if type is `DOUBLE`. Maximum value of the parameter.
+     * 
+     */
     public Optional<Output<Double>> maxValue() {
         return Optional.ofNullable(this.maxValue);
     }
@@ -33,6 +37,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
     @Import(name="minValue")
     private @Nullable Output<Double> minValue;
 
+    /**
+     * @return Must be specified if type is `DOUBLE`. Minimum value of the parameter.
+     * 
+     */
     public Optional<Output<Double>> minValue() {
         return Optional.ofNullable(this.minValue);
     }
@@ -62,20 +70,44 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
             $ = new GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxValue Must be specified if type is `DOUBLE`. Maximum value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxValue(@Nullable Output<Double> maxValue) {
             $.maxValue = maxValue;
             return this;
         }
 
+        /**
+         * @param maxValue Must be specified if type is `DOUBLE`. Maximum value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxValue(Double maxValue) {
             return maxValue(Output.of(maxValue));
         }
 
+        /**
+         * @param minValue Must be specified if type is `DOUBLE`. Minimum value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minValue(@Nullable Output<Double> minValue) {
             $.minValue = minValue;
             return this;
         }
 
+        /**
+         * @param minValue Must be specified if type is `DOUBLE`. Minimum value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minValue(Double minValue) {
             return minValue(Output.of(minValue));
         }

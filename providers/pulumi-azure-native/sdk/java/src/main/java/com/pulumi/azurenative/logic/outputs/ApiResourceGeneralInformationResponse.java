@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApiResourceGeneralInformationResponse {
     /**
-     * The description.
+     * @return The description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The display name.
+     * @return The display name.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * The icon url.
+     * @return The icon url.
      * 
      */
     private final @Nullable String iconUrl;
     /**
-     * The release tag.
+     * @return The release tag.
      * 
      */
     private final @Nullable String releaseTag;
     /**
-     * The terms of use url.
+     * @return The terms of use url.
      * 
      */
     private final @Nullable String termsOfUseUrl;
     /**
-     * The tier.
+     * @return The tier.
      * 
      */
     private final @Nullable String tier;
@@ -59,44 +59,44 @@ public final class ApiResourceGeneralInformationResponse {
     }
 
     /**
-     * The description.
+     * @return The description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The display name.
+     * @return The display name.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The icon url.
+     * @return The icon url.
      * 
-    */
+     */
     public Optional<String> iconUrl() {
         return Optional.ofNullable(this.iconUrl);
     }
     /**
-     * The release tag.
+     * @return The release tag.
      * 
-    */
+     */
     public Optional<String> releaseTag() {
         return Optional.ofNullable(this.releaseTag);
     }
     /**
-     * The terms of use url.
+     * @return The terms of use url.
      * 
-    */
+     */
     public Optional<String> termsOfUseUrl() {
         return Optional.ofNullable(this.termsOfUseUrl);
     }
     /**
-     * The tier.
+     * @return The tier.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

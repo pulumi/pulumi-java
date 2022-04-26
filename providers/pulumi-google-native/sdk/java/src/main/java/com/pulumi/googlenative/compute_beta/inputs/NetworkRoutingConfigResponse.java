@@ -23,6 +23,10 @@ public final class NetworkRoutingConfigResponse extends com.pulumi.resources.Inv
     @Import(name="routingMode", required=true)
     private String routingMode;
 
+    /**
+     * @return The network-wide routing mode to use. If set to REGIONAL, this network&#39;s Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network&#39;s Cloud Routers will advertise routes with all subnets of this network, across regions.
+     * 
+     */
     public String routingMode() {
         return this.routingMode;
     }
@@ -51,6 +55,12 @@ public final class NetworkRoutingConfigResponse extends com.pulumi.resources.Inv
             $ = new NetworkRoutingConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param routingMode The network-wide routing mode to use. If set to REGIONAL, this network&#39;s Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network&#39;s Cloud Routers will advertise routes with all subnets of this network, across regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingMode(String routingMode) {
             $.routingMode = routingMode;
             return this;

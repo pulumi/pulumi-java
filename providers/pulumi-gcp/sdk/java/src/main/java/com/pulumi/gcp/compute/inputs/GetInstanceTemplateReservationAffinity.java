@@ -28,6 +28,10 @@ public final class GetInstanceTemplateReservationAffinity extends com.pulumi.res
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -66,6 +70,12 @@ public final class GetInstanceTemplateReservationAffinity extends com.pulumi.res
             return specificReservations(List.of(specificReservations));
         }
 
+        /**
+         * @param type The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

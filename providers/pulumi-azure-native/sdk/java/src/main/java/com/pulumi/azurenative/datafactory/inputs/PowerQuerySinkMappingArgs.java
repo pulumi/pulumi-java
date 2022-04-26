@@ -28,6 +28,10 @@ public final class PowerQuerySinkMappingArgs extends com.pulumi.resources.Resour
     @Import(name="dataflowSinks")
     private @Nullable Output<List<PowerQuerySinkArgs>> dataflowSinks;
 
+    /**
+     * @return List of sinks mapped to Power Query mashup query.
+     * 
+     */
     public Optional<Output<List<PowerQuerySinkArgs>>> dataflowSinks() {
         return Optional.ofNullable(this.dataflowSinks);
     }
@@ -39,6 +43,10 @@ public final class PowerQuerySinkMappingArgs extends com.pulumi.resources.Resour
     @Import(name="queryName")
     private @Nullable Output<String> queryName;
 
+    /**
+     * @return Name of the query in Power Query mashup document.
+     * 
+     */
     public Optional<Output<String>> queryName() {
         return Optional.ofNullable(this.queryName);
     }
@@ -68,24 +76,54 @@ public final class PowerQuerySinkMappingArgs extends com.pulumi.resources.Resour
             $ = new PowerQuerySinkMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataflowSinks List of sinks mapped to Power Query mashup query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataflowSinks(@Nullable Output<List<PowerQuerySinkArgs>> dataflowSinks) {
             $.dataflowSinks = dataflowSinks;
             return this;
         }
 
+        /**
+         * @param dataflowSinks List of sinks mapped to Power Query mashup query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataflowSinks(List<PowerQuerySinkArgs> dataflowSinks) {
             return dataflowSinks(Output.of(dataflowSinks));
         }
 
+        /**
+         * @param dataflowSinks List of sinks mapped to Power Query mashup query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataflowSinks(PowerQuerySinkArgs... dataflowSinks) {
             return dataflowSinks(List.of(dataflowSinks));
         }
 
+        /**
+         * @param queryName Name of the query in Power Query mashup document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryName(@Nullable Output<String> queryName) {
             $.queryName = queryName;
             return this;
         }
 
+        /**
+         * @param queryName Name of the query in Power Query mashup document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryName(String queryName) {
             return queryName(Output.of(queryName));
         }

@@ -22,6 +22,10 @@ public final class JobStatusErrorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geographic location of the job. The default value is US.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -66,11 +70,23 @@ public final class JobStatusErrorArgs extends com.pulumi.resources.ResourceArgs 
             $ = new JobStatusErrorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The geographic location of the job. The default value is US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geographic location of the job. The default value is US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }

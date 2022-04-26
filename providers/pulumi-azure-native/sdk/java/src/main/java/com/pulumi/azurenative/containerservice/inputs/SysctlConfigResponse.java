@@ -27,6 +27,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fsAioMaxNr")
     private @Nullable Integer fsAioMaxNr;
 
+    /**
+     * @return Sysctl setting fs.aio-max-nr.
+     * 
+     */
     public Optional<Integer> fsAioMaxNr() {
         return Optional.ofNullable(this.fsAioMaxNr);
     }
@@ -38,6 +42,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fsFileMax")
     private @Nullable Integer fsFileMax;
 
+    /**
+     * @return Sysctl setting fs.file-max.
+     * 
+     */
     public Optional<Integer> fsFileMax() {
         return Optional.ofNullable(this.fsFileMax);
     }
@@ -49,6 +57,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fsInotifyMaxUserWatches")
     private @Nullable Integer fsInotifyMaxUserWatches;
 
+    /**
+     * @return Sysctl setting fs.inotify.max_user_watches.
+     * 
+     */
     public Optional<Integer> fsInotifyMaxUserWatches() {
         return Optional.ofNullable(this.fsInotifyMaxUserWatches);
     }
@@ -60,6 +72,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fsNrOpen")
     private @Nullable Integer fsNrOpen;
 
+    /**
+     * @return Sysctl setting fs.nr_open.
+     * 
+     */
     public Optional<Integer> fsNrOpen() {
         return Optional.ofNullable(this.fsNrOpen);
     }
@@ -71,6 +87,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="kernelThreadsMax")
     private @Nullable Integer kernelThreadsMax;
 
+    /**
+     * @return Sysctl setting kernel.threads-max.
+     * 
+     */
     public Optional<Integer> kernelThreadsMax() {
         return Optional.ofNullable(this.kernelThreadsMax);
     }
@@ -82,6 +102,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netCoreNetdevMaxBacklog")
     private @Nullable Integer netCoreNetdevMaxBacklog;
 
+    /**
+     * @return Sysctl setting net.core.netdev_max_backlog.
+     * 
+     */
     public Optional<Integer> netCoreNetdevMaxBacklog() {
         return Optional.ofNullable(this.netCoreNetdevMaxBacklog);
     }
@@ -93,6 +117,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netCoreOptmemMax")
     private @Nullable Integer netCoreOptmemMax;
 
+    /**
+     * @return Sysctl setting net.core.optmem_max.
+     * 
+     */
     public Optional<Integer> netCoreOptmemMax() {
         return Optional.ofNullable(this.netCoreOptmemMax);
     }
@@ -104,6 +132,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netCoreRmemDefault")
     private @Nullable Integer netCoreRmemDefault;
 
+    /**
+     * @return Sysctl setting net.core.rmem_default.
+     * 
+     */
     public Optional<Integer> netCoreRmemDefault() {
         return Optional.ofNullable(this.netCoreRmemDefault);
     }
@@ -115,6 +147,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netCoreRmemMax")
     private @Nullable Integer netCoreRmemMax;
 
+    /**
+     * @return Sysctl setting net.core.rmem_max.
+     * 
+     */
     public Optional<Integer> netCoreRmemMax() {
         return Optional.ofNullable(this.netCoreRmemMax);
     }
@@ -126,6 +162,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netCoreSomaxconn")
     private @Nullable Integer netCoreSomaxconn;
 
+    /**
+     * @return Sysctl setting net.core.somaxconn.
+     * 
+     */
     public Optional<Integer> netCoreSomaxconn() {
         return Optional.ofNullable(this.netCoreSomaxconn);
     }
@@ -137,6 +177,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netCoreWmemDefault")
     private @Nullable Integer netCoreWmemDefault;
 
+    /**
+     * @return Sysctl setting net.core.wmem_default.
+     * 
+     */
     public Optional<Integer> netCoreWmemDefault() {
         return Optional.ofNullable(this.netCoreWmemDefault);
     }
@@ -148,6 +192,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netCoreWmemMax")
     private @Nullable Integer netCoreWmemMax;
 
+    /**
+     * @return Sysctl setting net.core.wmem_max.
+     * 
+     */
     public Optional<Integer> netCoreWmemMax() {
         return Optional.ofNullable(this.netCoreWmemMax);
     }
@@ -159,6 +207,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4IpLocalPortRange")
     private @Nullable String netIpv4IpLocalPortRange;
 
+    /**
+     * @return Sysctl setting net.ipv4.ip_local_port_range.
+     * 
+     */
     public Optional<String> netIpv4IpLocalPortRange() {
         return Optional.ofNullable(this.netIpv4IpLocalPortRange);
     }
@@ -170,6 +222,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4NeighDefaultGcThresh1")
     private @Nullable Integer netIpv4NeighDefaultGcThresh1;
 
+    /**
+     * @return Sysctl setting net.ipv4.neigh.default.gc_thresh1.
+     * 
+     */
     public Optional<Integer> netIpv4NeighDefaultGcThresh1() {
         return Optional.ofNullable(this.netIpv4NeighDefaultGcThresh1);
     }
@@ -181,6 +237,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4NeighDefaultGcThresh2")
     private @Nullable Integer netIpv4NeighDefaultGcThresh2;
 
+    /**
+     * @return Sysctl setting net.ipv4.neigh.default.gc_thresh2.
+     * 
+     */
     public Optional<Integer> netIpv4NeighDefaultGcThresh2() {
         return Optional.ofNullable(this.netIpv4NeighDefaultGcThresh2);
     }
@@ -192,6 +252,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4NeighDefaultGcThresh3")
     private @Nullable Integer netIpv4NeighDefaultGcThresh3;
 
+    /**
+     * @return Sysctl setting net.ipv4.neigh.default.gc_thresh3.
+     * 
+     */
     public Optional<Integer> netIpv4NeighDefaultGcThresh3() {
         return Optional.ofNullable(this.netIpv4NeighDefaultGcThresh3);
     }
@@ -203,6 +267,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4TcpFinTimeout")
     private @Nullable Integer netIpv4TcpFinTimeout;
 
+    /**
+     * @return Sysctl setting net.ipv4.tcp_fin_timeout.
+     * 
+     */
     public Optional<Integer> netIpv4TcpFinTimeout() {
         return Optional.ofNullable(this.netIpv4TcpFinTimeout);
     }
@@ -214,6 +282,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4TcpKeepaliveProbes")
     private @Nullable Integer netIpv4TcpKeepaliveProbes;
 
+    /**
+     * @return Sysctl setting net.ipv4.tcp_keepalive_probes.
+     * 
+     */
     public Optional<Integer> netIpv4TcpKeepaliveProbes() {
         return Optional.ofNullable(this.netIpv4TcpKeepaliveProbes);
     }
@@ -225,6 +297,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4TcpKeepaliveTime")
     private @Nullable Integer netIpv4TcpKeepaliveTime;
 
+    /**
+     * @return Sysctl setting net.ipv4.tcp_keepalive_time.
+     * 
+     */
     public Optional<Integer> netIpv4TcpKeepaliveTime() {
         return Optional.ofNullable(this.netIpv4TcpKeepaliveTime);
     }
@@ -236,6 +312,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4TcpMaxSynBacklog")
     private @Nullable Integer netIpv4TcpMaxSynBacklog;
 
+    /**
+     * @return Sysctl setting net.ipv4.tcp_max_syn_backlog.
+     * 
+     */
     public Optional<Integer> netIpv4TcpMaxSynBacklog() {
         return Optional.ofNullable(this.netIpv4TcpMaxSynBacklog);
     }
@@ -247,6 +327,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4TcpMaxTwBuckets")
     private @Nullable Integer netIpv4TcpMaxTwBuckets;
 
+    /**
+     * @return Sysctl setting net.ipv4.tcp_max_tw_buckets.
+     * 
+     */
     public Optional<Integer> netIpv4TcpMaxTwBuckets() {
         return Optional.ofNullable(this.netIpv4TcpMaxTwBuckets);
     }
@@ -258,6 +342,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4TcpTwReuse")
     private @Nullable Boolean netIpv4TcpTwReuse;
 
+    /**
+     * @return Sysctl setting net.ipv4.tcp_tw_reuse.
+     * 
+     */
     public Optional<Boolean> netIpv4TcpTwReuse() {
         return Optional.ofNullable(this.netIpv4TcpTwReuse);
     }
@@ -269,6 +357,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4TcpkeepaliveIntvl")
     private @Nullable Integer netIpv4TcpkeepaliveIntvl;
 
+    /**
+     * @return Sysctl setting net.ipv4.tcp_keepalive_intvl.
+     * 
+     */
     public Optional<Integer> netIpv4TcpkeepaliveIntvl() {
         return Optional.ofNullable(this.netIpv4TcpkeepaliveIntvl);
     }
@@ -280,6 +372,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netNetfilterNfConntrackBuckets")
     private @Nullable Integer netNetfilterNfConntrackBuckets;
 
+    /**
+     * @return Sysctl setting net.netfilter.nf_conntrack_buckets.
+     * 
+     */
     public Optional<Integer> netNetfilterNfConntrackBuckets() {
         return Optional.ofNullable(this.netNetfilterNfConntrackBuckets);
     }
@@ -291,6 +387,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netNetfilterNfConntrackMax")
     private @Nullable Integer netNetfilterNfConntrackMax;
 
+    /**
+     * @return Sysctl setting net.netfilter.nf_conntrack_max.
+     * 
+     */
     public Optional<Integer> netNetfilterNfConntrackMax() {
         return Optional.ofNullable(this.netNetfilterNfConntrackMax);
     }
@@ -302,6 +402,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="vmMaxMapCount")
     private @Nullable Integer vmMaxMapCount;
 
+    /**
+     * @return Sysctl setting vm.max_map_count.
+     * 
+     */
     public Optional<Integer> vmMaxMapCount() {
         return Optional.ofNullable(this.vmMaxMapCount);
     }
@@ -313,6 +417,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="vmSwappiness")
     private @Nullable Integer vmSwappiness;
 
+    /**
+     * @return Sysctl setting vm.swappiness.
+     * 
+     */
     public Optional<Integer> vmSwappiness() {
         return Optional.ofNullable(this.vmSwappiness);
     }
@@ -324,6 +432,10 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="vmVfsCachePressure")
     private @Nullable Integer vmVfsCachePressure;
 
+    /**
+     * @return Sysctl setting vm.vfs_cache_pressure.
+     * 
+     */
     public Optional<Integer> vmVfsCachePressure() {
         return Optional.ofNullable(this.vmVfsCachePressure);
     }
@@ -379,141 +491,309 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new SysctlConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fsAioMaxNr Sysctl setting fs.aio-max-nr.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsAioMaxNr(@Nullable Integer fsAioMaxNr) {
             $.fsAioMaxNr = fsAioMaxNr;
             return this;
         }
 
+        /**
+         * @param fsFileMax Sysctl setting fs.file-max.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsFileMax(@Nullable Integer fsFileMax) {
             $.fsFileMax = fsFileMax;
             return this;
         }
 
+        /**
+         * @param fsInotifyMaxUserWatches Sysctl setting fs.inotify.max_user_watches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsInotifyMaxUserWatches(@Nullable Integer fsInotifyMaxUserWatches) {
             $.fsInotifyMaxUserWatches = fsInotifyMaxUserWatches;
             return this;
         }
 
+        /**
+         * @param fsNrOpen Sysctl setting fs.nr_open.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsNrOpen(@Nullable Integer fsNrOpen) {
             $.fsNrOpen = fsNrOpen;
             return this;
         }
 
+        /**
+         * @param kernelThreadsMax Sysctl setting kernel.threads-max.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelThreadsMax(@Nullable Integer kernelThreadsMax) {
             $.kernelThreadsMax = kernelThreadsMax;
             return this;
         }
 
+        /**
+         * @param netCoreNetdevMaxBacklog Sysctl setting net.core.netdev_max_backlog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netCoreNetdevMaxBacklog(@Nullable Integer netCoreNetdevMaxBacklog) {
             $.netCoreNetdevMaxBacklog = netCoreNetdevMaxBacklog;
             return this;
         }
 
+        /**
+         * @param netCoreOptmemMax Sysctl setting net.core.optmem_max.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netCoreOptmemMax(@Nullable Integer netCoreOptmemMax) {
             $.netCoreOptmemMax = netCoreOptmemMax;
             return this;
         }
 
+        /**
+         * @param netCoreRmemDefault Sysctl setting net.core.rmem_default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netCoreRmemDefault(@Nullable Integer netCoreRmemDefault) {
             $.netCoreRmemDefault = netCoreRmemDefault;
             return this;
         }
 
+        /**
+         * @param netCoreRmemMax Sysctl setting net.core.rmem_max.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netCoreRmemMax(@Nullable Integer netCoreRmemMax) {
             $.netCoreRmemMax = netCoreRmemMax;
             return this;
         }
 
+        /**
+         * @param netCoreSomaxconn Sysctl setting net.core.somaxconn.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netCoreSomaxconn(@Nullable Integer netCoreSomaxconn) {
             $.netCoreSomaxconn = netCoreSomaxconn;
             return this;
         }
 
+        /**
+         * @param netCoreWmemDefault Sysctl setting net.core.wmem_default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netCoreWmemDefault(@Nullable Integer netCoreWmemDefault) {
             $.netCoreWmemDefault = netCoreWmemDefault;
             return this;
         }
 
+        /**
+         * @param netCoreWmemMax Sysctl setting net.core.wmem_max.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netCoreWmemMax(@Nullable Integer netCoreWmemMax) {
             $.netCoreWmemMax = netCoreWmemMax;
             return this;
         }
 
+        /**
+         * @param netIpv4IpLocalPortRange Sysctl setting net.ipv4.ip_local_port_range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netIpv4IpLocalPortRange(@Nullable String netIpv4IpLocalPortRange) {
             $.netIpv4IpLocalPortRange = netIpv4IpLocalPortRange;
             return this;
         }
 
+        /**
+         * @param netIpv4NeighDefaultGcThresh1 Sysctl setting net.ipv4.neigh.default.gc_thresh1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netIpv4NeighDefaultGcThresh1(@Nullable Integer netIpv4NeighDefaultGcThresh1) {
             $.netIpv4NeighDefaultGcThresh1 = netIpv4NeighDefaultGcThresh1;
             return this;
         }
 
+        /**
+         * @param netIpv4NeighDefaultGcThresh2 Sysctl setting net.ipv4.neigh.default.gc_thresh2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netIpv4NeighDefaultGcThresh2(@Nullable Integer netIpv4NeighDefaultGcThresh2) {
             $.netIpv4NeighDefaultGcThresh2 = netIpv4NeighDefaultGcThresh2;
             return this;
         }
 
+        /**
+         * @param netIpv4NeighDefaultGcThresh3 Sysctl setting net.ipv4.neigh.default.gc_thresh3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netIpv4NeighDefaultGcThresh3(@Nullable Integer netIpv4NeighDefaultGcThresh3) {
             $.netIpv4NeighDefaultGcThresh3 = netIpv4NeighDefaultGcThresh3;
             return this;
         }
 
+        /**
+         * @param netIpv4TcpFinTimeout Sysctl setting net.ipv4.tcp_fin_timeout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netIpv4TcpFinTimeout(@Nullable Integer netIpv4TcpFinTimeout) {
             $.netIpv4TcpFinTimeout = netIpv4TcpFinTimeout;
             return this;
         }
 
+        /**
+         * @param netIpv4TcpKeepaliveProbes Sysctl setting net.ipv4.tcp_keepalive_probes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netIpv4TcpKeepaliveProbes(@Nullable Integer netIpv4TcpKeepaliveProbes) {
             $.netIpv4TcpKeepaliveProbes = netIpv4TcpKeepaliveProbes;
             return this;
         }
 
+        /**
+         * @param netIpv4TcpKeepaliveTime Sysctl setting net.ipv4.tcp_keepalive_time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netIpv4TcpKeepaliveTime(@Nullable Integer netIpv4TcpKeepaliveTime) {
             $.netIpv4TcpKeepaliveTime = netIpv4TcpKeepaliveTime;
             return this;
         }
 
+        /**
+         * @param netIpv4TcpMaxSynBacklog Sysctl setting net.ipv4.tcp_max_syn_backlog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netIpv4TcpMaxSynBacklog(@Nullable Integer netIpv4TcpMaxSynBacklog) {
             $.netIpv4TcpMaxSynBacklog = netIpv4TcpMaxSynBacklog;
             return this;
         }
 
+        /**
+         * @param netIpv4TcpMaxTwBuckets Sysctl setting net.ipv4.tcp_max_tw_buckets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netIpv4TcpMaxTwBuckets(@Nullable Integer netIpv4TcpMaxTwBuckets) {
             $.netIpv4TcpMaxTwBuckets = netIpv4TcpMaxTwBuckets;
             return this;
         }
 
+        /**
+         * @param netIpv4TcpTwReuse Sysctl setting net.ipv4.tcp_tw_reuse.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netIpv4TcpTwReuse(@Nullable Boolean netIpv4TcpTwReuse) {
             $.netIpv4TcpTwReuse = netIpv4TcpTwReuse;
             return this;
         }
 
+        /**
+         * @param netIpv4TcpkeepaliveIntvl Sysctl setting net.ipv4.tcp_keepalive_intvl.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netIpv4TcpkeepaliveIntvl(@Nullable Integer netIpv4TcpkeepaliveIntvl) {
             $.netIpv4TcpkeepaliveIntvl = netIpv4TcpkeepaliveIntvl;
             return this;
         }
 
+        /**
+         * @param netNetfilterNfConntrackBuckets Sysctl setting net.netfilter.nf_conntrack_buckets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netNetfilterNfConntrackBuckets(@Nullable Integer netNetfilterNfConntrackBuckets) {
             $.netNetfilterNfConntrackBuckets = netNetfilterNfConntrackBuckets;
             return this;
         }
 
+        /**
+         * @param netNetfilterNfConntrackMax Sysctl setting net.netfilter.nf_conntrack_max.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netNetfilterNfConntrackMax(@Nullable Integer netNetfilterNfConntrackMax) {
             $.netNetfilterNfConntrackMax = netNetfilterNfConntrackMax;
             return this;
         }
 
+        /**
+         * @param vmMaxMapCount Sysctl setting vm.max_map_count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmMaxMapCount(@Nullable Integer vmMaxMapCount) {
             $.vmMaxMapCount = vmMaxMapCount;
             return this;
         }
 
+        /**
+         * @param vmSwappiness Sysctl setting vm.swappiness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSwappiness(@Nullable Integer vmSwappiness) {
             $.vmSwappiness = vmSwappiness;
             return this;
         }
 
+        /**
+         * @param vmVfsCachePressure Sysctl setting vm.vfs_cache_pressure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmVfsCachePressure(@Nullable Integer vmVfsCachePressure) {
             $.vmVfsCachePressure = vmVfsCachePressure;
             return this;

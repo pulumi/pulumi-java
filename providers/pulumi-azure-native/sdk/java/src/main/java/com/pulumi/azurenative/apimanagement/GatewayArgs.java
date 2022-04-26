@@ -23,6 +23,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Gateway description
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayId")
     private @Nullable Output<String> gatewayId;
 
+    /**
+     * @return Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
+     * 
+     */
     public Optional<Output<String>> gatewayId() {
         return Optional.ofNullable(this.gatewayId);
     }
@@ -45,6 +53,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locationData")
     private @Nullable Output<ResourceLocationDataContractArgs> locationData;
 
+    /**
+     * @return Gateway location.
+     * 
+     */
     public Optional<Output<ResourceLocationDataContractArgs>> locationData() {
         return Optional.ofNullable(this.locationData);
     }
@@ -56,6 +68,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -99,47 +119,107 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Gateway description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Gateway description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param gatewayId Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
             $.gatewayId = gatewayId;
             return this;
         }
 
+        /**
+         * @param gatewayId Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(String gatewayId) {
             return gatewayId(Output.of(gatewayId));
         }
 
+        /**
+         * @param locationData Gateway location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationData(@Nullable Output<ResourceLocationDataContractArgs> locationData) {
             $.locationData = locationData;
             return this;
         }
 
+        /**
+         * @param locationData Gateway location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationData(ResourceLocationDataContractArgs locationData) {
             return locationData(Output.of(locationData));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

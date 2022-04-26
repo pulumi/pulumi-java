@@ -28,6 +28,10 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Signature id.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -39,6 +43,10 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
     @Import(name="mode")
     private @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
 
+    /**
+     * @return The signature state.
+     * 
+     */
     public Optional<Output<Either<String,FirewallPolicyIntrusionDetectionStateType>>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -68,28 +76,64 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
             $ = new FirewallPolicyIntrusionDetectionSignatureSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Signature id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Signature id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param mode The signature state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode The signature state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Either<String,FirewallPolicyIntrusionDetectionStateType> mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param mode The signature state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Either.ofLeft(mode));
         }
 
+        /**
+         * @param mode The signature state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(FirewallPolicyIntrusionDetectionStateType mode) {
             return mode(Either.ofRight(mode));
         }

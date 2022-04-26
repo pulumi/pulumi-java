@@ -28,6 +28,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="day")
     private @Nullable Output<Integer> day;
 
+    /**
+     * @return day of week (1-7), starting on Monday.
+     * 
+     */
     public Optional<Output<Integer>> day() {
         return Optional.ofNullable(this.day);
     }
@@ -39,6 +43,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="hour")
     private @Nullable Output<Integer> hour;
 
+    /**
+     * @return hour of day - 0 to 23.
+     * 
+     */
     public Optional<Output<Integer>> hour() {
         return Optional.ofNullable(this.hour);
     }
@@ -50,6 +58,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return This is always `sql#maintenanceWindow`.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -61,6 +73,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="updateTrack")
     private @Nullable Output<MaintenanceWindowUpdateTrack> updateTrack;
 
+    /**
+     * @return Maintenance timing setting: `canary` (Earlier) or `stable` (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
+     * 
+     */
     public Optional<Output<MaintenanceWindowUpdateTrack>> updateTrack() {
         return Optional.ofNullable(this.updateTrack);
     }
@@ -92,38 +108,86 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
             $ = new MaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day day of week (1-7), starting on Monday.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(@Nullable Output<Integer> day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param day day of week (1-7), starting on Monday.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(Integer day) {
             return day(Output.of(day));
         }
 
+        /**
+         * @param hour hour of day - 0 to 23.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hour(@Nullable Output<Integer> hour) {
             $.hour = hour;
             return this;
         }
 
+        /**
+         * @param hour hour of day - 0 to 23.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hour(Integer hour) {
             return hour(Output.of(hour));
         }
 
+        /**
+         * @param kind This is always `sql#maintenanceWindow`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#maintenanceWindow`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param updateTrack Maintenance timing setting: `canary` (Earlier) or `stable` (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTrack(@Nullable Output<MaintenanceWindowUpdateTrack> updateTrack) {
             $.updateTrack = updateTrack;
             return this;
         }
 
+        /**
+         * @param updateTrack Maintenance timing setting: `canary` (Earlier) or `stable` (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTrack(MaintenanceWindowUpdateTrack updateTrack) {
             return updateTrack(Output.of(updateTrack));
         }

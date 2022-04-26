@@ -26,6 +26,10 @@ public final class StorageAccountConfigurationArgs extends com.pulumi.resources.
     @Import(name="storageAccountKey")
     private @Nullable Output<String> storageAccountKey;
 
+    /**
+     * @return The storage account access key.
+     * 
+     */
     public Optional<Output<String>> storageAccountKey() {
         return Optional.ofNullable(this.storageAccountKey);
     }
@@ -37,6 +41,10 @@ public final class StorageAccountConfigurationArgs extends com.pulumi.resources.
     @Import(name="storageAccountName")
     private @Nullable Output<String> storageAccountName;
 
+    /**
+     * @return The storage account name.
+     * 
+     */
     public Optional<Output<String>> storageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
@@ -66,20 +74,44 @@ public final class StorageAccountConfigurationArgs extends com.pulumi.resources.
             $ = new StorageAccountConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param storageAccountKey The storage account access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountKey(@Nullable Output<String> storageAccountKey) {
             $.storageAccountKey = storageAccountKey;
             return this;
         }
 
+        /**
+         * @param storageAccountKey The storage account access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountKey(String storageAccountKey) {
             return storageAccountKey(Output.of(storageAccountKey));
         }
 
+        /**
+         * @param storageAccountName The storage account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;
         }
 
+        /**
+         * @param storageAccountName The storage account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(String storageAccountName) {
             return storageAccountName(Output.of(storageAccountName));
         }

@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse extends com
     @Import(name="wordList", required=true)
     private GooglePrivacyDlpV2WordListResponse wordList;
 
+    /**
+     * @return A list of words to select from for random replacement. The [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of dictionaries.
+     * 
+     */
     public GooglePrivacyDlpV2WordListResponse wordList() {
         return this.wordList;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse extends com
             $ = new GooglePrivacyDlpV2ReplaceDictionaryConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param wordList A list of words to select from for random replacement. The [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of dictionaries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wordList(GooglePrivacyDlpV2WordListResponse wordList) {
             $.wordList = wordList;
             return this;

@@ -32,6 +32,10 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends com.pulumi
     @Import(name="systemIds", required=true)
     private Output<List<String>> systemIds;
 
+    /**
+     * @return The system IDs to include in key requests.
+     * 
+     */
     public Output<List<String>> systemIds() {
         return this.systemIds;
     }
@@ -43,6 +47,10 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends com.pulumi
     @Import(name="url", required=true)
     private Output<String> url;
 
+    /**
+     * @return The URL of the external key provider service.
+     * 
+     */
     public Output<String> url() {
         return this.url;
     }
@@ -82,24 +90,54 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends com.pulumi
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param systemIds The system IDs to include in key requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemIds(Output<List<String>> systemIds) {
             $.systemIds = systemIds;
             return this;
         }
 
+        /**
+         * @param systemIds The system IDs to include in key requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemIds(List<String> systemIds) {
             return systemIds(Output.of(systemIds));
         }
 
+        /**
+         * @param systemIds The system IDs to include in key requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemIds(String... systemIds) {
             return systemIds(List.of(systemIds));
         }
 
+        /**
+         * @param url The URL of the external key provider service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The URL of the external key provider service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

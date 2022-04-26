@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobRecipe {
     /**
-     * Recipe name
+     * @return Recipe name
      * 
      */
     private final String name;
     /**
-     * Recipe version
+     * @return Recipe version
      * 
      */
     private final @Nullable String version;
@@ -31,16 +31,16 @@ public final class JobRecipe {
     }
 
     /**
-     * Recipe name
+     * @return Recipe name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Recipe version
+     * @return Recipe version
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="documents", required=true)
     private Output<List<String>> documents;
 
+    /**
+     * @return Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, only one document is supported.
+     * 
+     */
     public Output<List<String>> documents() {
         return this.documents;
     }
@@ -53,15 +57,33 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
             $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param documents Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, only one document is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documents(Output<List<String>> documents) {
             $.documents = documents;
             return this;
         }
 
+        /**
+         * @param documents Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, only one document is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documents(List<String> documents) {
             return documents(Output.of(documents));
         }
 
+        /**
+         * @param documents Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, only one document is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documents(String... documents) {
             return documents(List.of(documents));
         }

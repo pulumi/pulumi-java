@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NetworkProfileResponse {
     /**
-     * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
+     * @return specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
      * 
      */
     private final @Nullable String networkApiVersion;
     /**
-     * Specifies the networking configurations that will be used to create the virtual machine networking resources.
+     * @return Specifies the networking configurations that will be used to create the virtual machine networking resources.
      * 
      */
     private final @Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations;
     /**
-     * Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
+     * @return Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
      * 
      */
     private final @Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces;
@@ -41,23 +41,23 @@ public final class NetworkProfileResponse {
     }
 
     /**
-     * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
+     * @return specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
      * 
-    */
+     */
     public Optional<String> networkApiVersion() {
         return Optional.ofNullable(this.networkApiVersion);
     }
     /**
-     * Specifies the networking configurations that will be used to create the virtual machine networking resources.
+     * @return Specifies the networking configurations that will be used to create the virtual machine networking resources.
      * 
-    */
+     */
     public List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? List.of() : this.networkInterfaceConfigurations;
     }
     /**
-     * Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
+     * @return Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
      * 
-    */
+     */
     public List<NetworkInterfaceReferenceResponse> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }

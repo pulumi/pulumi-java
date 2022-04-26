@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TransformationResponse {
     /**
-     * The current entity tag for the transformation. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+     * @return The current entity tag for the transformation. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
      */
     private final String etag;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final @Nullable String name;
     /**
-     * Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
+     * @return Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
      * 
      */
     private final @Nullable String query;
     /**
-     * Specifies the number of streaming units that the streaming job uses.
+     * @return Specifies the number of streaming units that the streaming job uses.
      * 
      */
     private final @Nullable Integer streamingUnits;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -60,44 +60,44 @@ public final class TransformationResponse {
     }
 
     /**
-     * The current entity tag for the transformation. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+     * @return The current entity tag for the transformation. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
+     * @return Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> query() {
         return Optional.ofNullable(this.query);
     }
     /**
-     * Specifies the number of streaming units that the streaming job uses.
+     * @return Specifies the number of streaming units that the streaming job uses.
      * 
-    */
+     */
     public Optional<Integer> streamingUnits() {
         return Optional.ofNullable(this.streamingUnits);
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

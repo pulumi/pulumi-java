@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class DashboardDecimalParameter {
     /**
-     * &lt;p&gt;A display name for the decimal parameter.&lt;/p&gt;
+     * @return &lt;p&gt;A display name for the decimal parameter.&lt;/p&gt;
      * 
      */
     private final String name;
     /**
-     * &lt;p&gt;The values for the decimal parameter.&lt;/p&gt;
+     * @return &lt;p&gt;The values for the decimal parameter.&lt;/p&gt;
      * 
      */
     private final List<Double> values;
@@ -31,16 +31,16 @@ public final class DashboardDecimalParameter {
     }
 
     /**
-     * &lt;p&gt;A display name for the decimal parameter.&lt;/p&gt;
+     * @return &lt;p&gt;A display name for the decimal parameter.&lt;/p&gt;
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * &lt;p&gt;The values for the decimal parameter.&lt;/p&gt;
+     * @return &lt;p&gt;The values for the decimal parameter.&lt;/p&gt;
      * 
-    */
+     */
     public List<Double> values() {
         return this.values;
     }

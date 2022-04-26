@@ -29,6 +29,10 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="cachePerformance", required=true)
     private CloudTieringCachePerformanceResponse cachePerformance;
 
+    /**
+     * @return Information regarding how well the local cache on the server is performing.
+     * 
+     */
     public CloudTieringCachePerformanceResponse cachePerformance() {
         return this.cachePerformance;
     }
@@ -40,6 +44,10 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="datePolicyStatus", required=true)
     private CloudTieringDatePolicyStatusResponse datePolicyStatus;
 
+    /**
+     * @return Status of the date policy
+     * 
+     */
     public CloudTieringDatePolicyStatusResponse datePolicyStatus() {
         return this.datePolicyStatus;
     }
@@ -51,6 +59,10 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="filesNotTiering", required=true)
     private CloudTieringFilesNotTieringResponse filesNotTiering;
 
+    /**
+     * @return Information regarding files that failed to be tiered
+     * 
+     */
     public CloudTieringFilesNotTieringResponse filesNotTiering() {
         return this.filesNotTiering;
     }
@@ -62,6 +74,10 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="health", required=true)
     private String health;
 
+    /**
+     * @return Cloud tiering health state.
+     * 
+     */
     public String health() {
         return this.health;
     }
@@ -73,6 +89,10 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="healthLastUpdatedTimestamp", required=true)
     private String healthLastUpdatedTimestamp;
 
+    /**
+     * @return The last updated timestamp of health state
+     * 
+     */
     public String healthLastUpdatedTimestamp() {
         return this.healthLastUpdatedTimestamp;
     }
@@ -84,6 +104,10 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="lastCloudTieringResult", required=true)
     private Integer lastCloudTieringResult;
 
+    /**
+     * @return Last cloud tiering result (HResult)
+     * 
+     */
     public Integer lastCloudTieringResult() {
         return this.lastCloudTieringResult;
     }
@@ -95,6 +119,10 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="lastSuccessTimestamp", required=true)
     private String lastSuccessTimestamp;
 
+    /**
+     * @return Last cloud tiering success timestamp
+     * 
+     */
     public String lastSuccessTimestamp() {
         return this.lastSuccessTimestamp;
     }
@@ -106,6 +134,10 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="lastUpdatedTimestamp", required=true)
     private String lastUpdatedTimestamp;
 
+    /**
+     * @return Last updated timestamp
+     * 
+     */
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
@@ -117,6 +149,10 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="spaceSavings", required=true)
     private CloudTieringSpaceSavingsResponse spaceSavings;
 
+    /**
+     * @return Information regarding how much local space cloud tiering is saving.
+     * 
+     */
     public CloudTieringSpaceSavingsResponse spaceSavings() {
         return this.spaceSavings;
     }
@@ -128,6 +164,10 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="volumeFreeSpacePolicyStatus", required=true)
     private CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus;
 
+    /**
+     * @return Status of the volume free space policy
+     * 
+     */
     public CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus() {
         return this.volumeFreeSpacePolicyStatus;
     }
@@ -165,51 +205,111 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
             $ = new ServerEndpointCloudTieringStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cachePerformance Information regarding how well the local cache on the server is performing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cachePerformance(CloudTieringCachePerformanceResponse cachePerformance) {
             $.cachePerformance = cachePerformance;
             return this;
         }
 
+        /**
+         * @param datePolicyStatus Status of the date policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder datePolicyStatus(CloudTieringDatePolicyStatusResponse datePolicyStatus) {
             $.datePolicyStatus = datePolicyStatus;
             return this;
         }
 
+        /**
+         * @param filesNotTiering Information regarding files that failed to be tiered
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesNotTiering(CloudTieringFilesNotTieringResponse filesNotTiering) {
             $.filesNotTiering = filesNotTiering;
             return this;
         }
 
+        /**
+         * @param health Cloud tiering health state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder health(String health) {
             $.health = health;
             return this;
         }
 
+        /**
+         * @param healthLastUpdatedTimestamp The last updated timestamp of health state
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthLastUpdatedTimestamp(String healthLastUpdatedTimestamp) {
             $.healthLastUpdatedTimestamp = healthLastUpdatedTimestamp;
             return this;
         }
 
+        /**
+         * @param lastCloudTieringResult Last cloud tiering result (HResult)
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastCloudTieringResult(Integer lastCloudTieringResult) {
             $.lastCloudTieringResult = lastCloudTieringResult;
             return this;
         }
 
+        /**
+         * @param lastSuccessTimestamp Last cloud tiering success timestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSuccessTimestamp(String lastSuccessTimestamp) {
             $.lastSuccessTimestamp = lastSuccessTimestamp;
             return this;
         }
 
+        /**
+         * @param lastUpdatedTimestamp Last updated timestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;
         }
 
+        /**
+         * @param spaceSavings Information regarding how much local space cloud tiering is saving.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spaceSavings(CloudTieringSpaceSavingsResponse spaceSavings) {
             $.spaceSavings = spaceSavings;
             return this;
         }
 
+        /**
+         * @param volumeFreeSpacePolicyStatus Status of the volume free space policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeFreeSpacePolicyStatus(CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus) {
             $.volumeFreeSpacePolicyStatus = volumeFreeSpacePolicyStatus;
             return this;

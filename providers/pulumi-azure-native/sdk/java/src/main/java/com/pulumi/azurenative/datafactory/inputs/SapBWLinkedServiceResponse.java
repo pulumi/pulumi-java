@@ -34,6 +34,10 @@ public final class SapBWLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -45,6 +49,10 @@ public final class SapBWLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="clientId", required=true)
     private Object clientId;
 
+    /**
+     * @return Client ID of the client on the BW system. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
+     * 
+     */
     public Object clientId() {
         return this.clientId;
     }
@@ -56,6 +64,10 @@ public final class SapBWLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -67,6 +79,10 @@ public final class SapBWLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -78,6 +94,10 @@ public final class SapBWLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -89,6 +109,10 @@ public final class SapBWLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -100,6 +124,10 @@ public final class SapBWLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="password")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
+    /**
+     * @return Password to access the SAP BW server.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -111,6 +139,10 @@ public final class SapBWLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="server", required=true)
     private Object server;
 
+    /**
+     * @return Host name of the SAP BW instance. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object server() {
         return this.server;
     }
@@ -122,6 +154,10 @@ public final class SapBWLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="systemNumber", required=true)
     private Object systemNumber;
 
+    /**
+     * @return System number of the BW system. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
+     * 
+     */
     public Object systemNumber() {
         return this.systemNumber;
     }
@@ -134,6 +170,11 @@ public final class SapBWLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;SapBW&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -145,6 +186,10 @@ public final class SapBWLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="userName")
     private @Nullable Object userName;
 
+    /**
+     * @return Username to access the SAP BW server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -183,68 +228,153 @@ public final class SapBWLinkedServiceResponse extends com.pulumi.resources.Invok
             $ = new SapBWLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param clientId Client ID of the client on the BW system. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Object clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param password Password to access the SAP BW server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password to access the SAP BW server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceResponse password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password to access the SAP BW server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param server Host name of the SAP BW instance. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(Object server) {
             $.server = server;
             return this;
         }
 
+        /**
+         * @param systemNumber System number of the BW system. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemNumber(Object systemNumber) {
             $.systemNumber = systemNumber;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;SapBW&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userName Username to access the SAP BW server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Object userName) {
             $.userName = userName;
             return this;

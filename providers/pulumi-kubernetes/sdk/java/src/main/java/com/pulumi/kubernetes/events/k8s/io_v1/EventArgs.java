@@ -28,6 +28,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action")
     private @Nullable Output<String> action;
 
+    /**
+     * @return action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field cannot be empty for new Events and it can have at most 128 characters.
+     * 
+     */
     public Optional<Output<String>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -39,6 +43,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
     private @Nullable Output<String> apiVersion;
 
+    /**
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     public Optional<Output<String>> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -50,6 +58,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deprecatedCount")
     private @Nullable Output<Integer> deprecatedCount;
 
+    /**
+     * @return deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.
+     * 
+     */
     public Optional<Output<Integer>> deprecatedCount() {
         return Optional.ofNullable(this.deprecatedCount);
     }
@@ -61,6 +73,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deprecatedFirstTimestamp")
     private @Nullable Output<String> deprecatedFirstTimestamp;
 
+    /**
+     * @return deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
+     * 
+     */
     public Optional<Output<String>> deprecatedFirstTimestamp() {
         return Optional.ofNullable(this.deprecatedFirstTimestamp);
     }
@@ -72,6 +88,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deprecatedLastTimestamp")
     private @Nullable Output<String> deprecatedLastTimestamp;
 
+    /**
+     * @return deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
+     * 
+     */
     public Optional<Output<String>> deprecatedLastTimestamp() {
         return Optional.ofNullable(this.deprecatedLastTimestamp);
     }
@@ -83,6 +103,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deprecatedSource")
     private @Nullable Output<EventSourceArgs> deprecatedSource;
 
+    /**
+     * @return deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.
+     * 
+     */
     public Optional<Output<EventSourceArgs>> deprecatedSource() {
         return Optional.ofNullable(this.deprecatedSource);
     }
@@ -94,6 +118,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventTime", required=true)
     private Output<String> eventTime;
 
+    /**
+     * @return eventTime is the time when this Event was first observed. It is required.
+     * 
+     */
     public Output<String> eventTime() {
         return this.eventTime;
     }
@@ -105,6 +133,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -116,6 +148,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<ObjectMetaArgs> metadata;
 
+    /**
+     * @return Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     public Optional<Output<ObjectMetaArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -127,6 +163,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="note")
     private @Nullable Output<String> note;
 
+    /**
+     * @return note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.
+     * 
+     */
     public Optional<Output<String>> note() {
         return Optional.ofNullable(this.note);
     }
@@ -138,6 +178,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reason")
     private @Nullable Output<String> reason;
 
+    /**
+     * @return reason is why the action was taken. It is human-readable. This field cannot be empty for new Events and it can have at most 128 characters.
+     * 
+     */
     public Optional<Output<String>> reason() {
         return Optional.ofNullable(this.reason);
     }
@@ -149,6 +193,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="regarding")
     private @Nullable Output<ObjectReferenceArgs> regarding;
 
+    /**
+     * @return regarding contains the object this Event is about. In most cases it&#39;s an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
+     * 
+     */
     public Optional<Output<ObjectReferenceArgs>> regarding() {
         return Optional.ofNullable(this.regarding);
     }
@@ -160,6 +208,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="related")
     private @Nullable Output<ObjectReferenceArgs> related;
 
+    /**
+     * @return related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.
+     * 
+     */
     public Optional<Output<ObjectReferenceArgs>> related() {
         return Optional.ofNullable(this.related);
     }
@@ -171,6 +223,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reportingController")
     private @Nullable Output<String> reportingController;
 
+    /**
+     * @return reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.
+     * 
+     */
     public Optional<Output<String>> reportingController() {
         return Optional.ofNullable(this.reportingController);
     }
@@ -182,6 +238,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reportingInstance")
     private @Nullable Output<String> reportingInstance;
 
+    /**
+     * @return reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.
+     * 
+     */
     public Optional<Output<String>> reportingInstance() {
         return Optional.ofNullable(this.reportingInstance);
     }
@@ -193,6 +253,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="series")
     private @Nullable Output<EventSeriesArgs> series;
 
+    /**
+     * @return series is data about the Event series this event represents or nil if it&#39;s a singleton Event.
+     * 
+     */
     public Optional<Output<EventSeriesArgs>> series() {
         return Optional.ofNullable(this.series);
     }
@@ -204,6 +268,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable. This field cannot be empty for new Events.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -248,155 +316,359 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EventArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field cannot be empty for new Events and it can have at most 128 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field cannot be empty for new Events and it can have at most 128 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param apiVersion APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param apiVersion APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
 
+        /**
+         * @param deprecatedCount deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecatedCount(@Nullable Output<Integer> deprecatedCount) {
             $.deprecatedCount = deprecatedCount;
             return this;
         }
 
+        /**
+         * @param deprecatedCount deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecatedCount(Integer deprecatedCount) {
             return deprecatedCount(Output.of(deprecatedCount));
         }
 
+        /**
+         * @param deprecatedFirstTimestamp deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecatedFirstTimestamp(@Nullable Output<String> deprecatedFirstTimestamp) {
             $.deprecatedFirstTimestamp = deprecatedFirstTimestamp;
             return this;
         }
 
+        /**
+         * @param deprecatedFirstTimestamp deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecatedFirstTimestamp(String deprecatedFirstTimestamp) {
             return deprecatedFirstTimestamp(Output.of(deprecatedFirstTimestamp));
         }
 
+        /**
+         * @param deprecatedLastTimestamp deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecatedLastTimestamp(@Nullable Output<String> deprecatedLastTimestamp) {
             $.deprecatedLastTimestamp = deprecatedLastTimestamp;
             return this;
         }
 
+        /**
+         * @param deprecatedLastTimestamp deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecatedLastTimestamp(String deprecatedLastTimestamp) {
             return deprecatedLastTimestamp(Output.of(deprecatedLastTimestamp));
         }
 
+        /**
+         * @param deprecatedSource deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecatedSource(@Nullable Output<EventSourceArgs> deprecatedSource) {
             $.deprecatedSource = deprecatedSource;
             return this;
         }
 
+        /**
+         * @param deprecatedSource deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecatedSource(EventSourceArgs deprecatedSource) {
             return deprecatedSource(Output.of(deprecatedSource));
         }
 
+        /**
+         * @param eventTime eventTime is the time when this Event was first observed. It is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTime(Output<String> eventTime) {
             $.eventTime = eventTime;
             return this;
         }
 
+        /**
+         * @param eventTime eventTime is the time when this Event was first observed. It is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTime(String eventTime) {
             return eventTime(Output.of(eventTime));
         }
 
+        /**
+         * @param kind Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param metadata Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(ObjectMetaArgs metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param note note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder note(@Nullable Output<String> note) {
             $.note = note;
             return this;
         }
 
+        /**
+         * @param note note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder note(String note) {
             return note(Output.of(note));
         }
 
+        /**
+         * @param reason reason is why the action was taken. It is human-readable. This field cannot be empty for new Events and it can have at most 128 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(@Nullable Output<String> reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param reason reason is why the action was taken. It is human-readable. This field cannot be empty for new Events and it can have at most 128 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             return reason(Output.of(reason));
         }
 
+        /**
+         * @param regarding regarding contains the object this Event is about. In most cases it&#39;s an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regarding(@Nullable Output<ObjectReferenceArgs> regarding) {
             $.regarding = regarding;
             return this;
         }
 
+        /**
+         * @param regarding regarding contains the object this Event is about. In most cases it&#39;s an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regarding(ObjectReferenceArgs regarding) {
             return regarding(Output.of(regarding));
         }
 
+        /**
+         * @param related related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder related(@Nullable Output<ObjectReferenceArgs> related) {
             $.related = related;
             return this;
         }
 
+        /**
+         * @param related related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder related(ObjectReferenceArgs related) {
             return related(Output.of(related));
         }
 
+        /**
+         * @param reportingController reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportingController(@Nullable Output<String> reportingController) {
             $.reportingController = reportingController;
             return this;
         }
 
+        /**
+         * @param reportingController reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportingController(String reportingController) {
             return reportingController(Output.of(reportingController));
         }
 
+        /**
+         * @param reportingInstance reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportingInstance(@Nullable Output<String> reportingInstance) {
             $.reportingInstance = reportingInstance;
             return this;
         }
 
+        /**
+         * @param reportingInstance reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportingInstance(String reportingInstance) {
             return reportingInstance(Output.of(reportingInstance));
         }
 
+        /**
+         * @param series series is data about the Event series this event represents or nil if it&#39;s a singleton Event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder series(@Nullable Output<EventSeriesArgs> series) {
             $.series = series;
             return this;
         }
 
+        /**
+         * @param series series is data about the Event series this event represents or nil if it&#39;s a singleton Event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder series(EventSeriesArgs series) {
             return series(Output.of(series));
         }
 
+        /**
+         * @param type type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable. This field cannot be empty for new Events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable. This field cannot be empty for new Events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

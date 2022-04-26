@@ -26,6 +26,10 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="azureResourceName")
     private @Nullable String azureResourceName;
 
+    /**
+     * @return Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.
+     * 
+     */
     public Optional<String> azureResourceName() {
         return Optional.ofNullable(this.azureResourceName);
     }
@@ -37,6 +41,10 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="azureResourceType")
     private @Nullable String azureResourceType;
 
+    /**
+     * @return Type of the Azure resource the hostname is assigned to.
+     * 
+     */
     public Optional<String> azureResourceType() {
         return Optional.ofNullable(this.azureResourceType);
     }
@@ -48,6 +56,10 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="customHostNameDnsRecordType")
     private @Nullable String customHostNameDnsRecordType;
 
+    /**
+     * @return Type of the DNS record.
+     * 
+     */
     public Optional<String> customHostNameDnsRecordType() {
         return Optional.ofNullable(this.customHostNameDnsRecordType);
     }
@@ -59,6 +71,10 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hostNameType")
     private @Nullable String hostNameType;
 
+    /**
+     * @return Type of the hostname.
+     * 
+     */
     public Optional<String> hostNameType() {
         return Optional.ofNullable(this.hostNameType);
     }
@@ -70,6 +86,10 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the hostname.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -81,6 +101,10 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="siteNames")
     private @Nullable List<String> siteNames;
 
+    /**
+     * @return List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
+     * 
+     */
     public Optional<List<String>> siteNames() {
         return Optional.ofNullable(this.siteNames);
     }
@@ -114,36 +138,78 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HostNameResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureResourceName Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureResourceName(@Nullable String azureResourceName) {
             $.azureResourceName = azureResourceName;
             return this;
         }
 
+        /**
+         * @param azureResourceType Type of the Azure resource the hostname is assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureResourceType(@Nullable String azureResourceType) {
             $.azureResourceType = azureResourceType;
             return this;
         }
 
+        /**
+         * @param customHostNameDnsRecordType Type of the DNS record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHostNameDnsRecordType(@Nullable String customHostNameDnsRecordType) {
             $.customHostNameDnsRecordType = customHostNameDnsRecordType;
             return this;
         }
 
+        /**
+         * @param hostNameType Type of the hostname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostNameType(@Nullable String hostNameType) {
             $.hostNameType = hostNameType;
             return this;
         }
 
+        /**
+         * @param name Name of the hostname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param siteNames List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteNames(@Nullable List<String> siteNames) {
             $.siteNames = siteNames;
             return this;
         }
 
+        /**
+         * @param siteNames List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteNames(String... siteNames) {
             return siteNames(List.of(siteNames));
         }

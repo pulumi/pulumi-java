@@ -27,6 +27,13 @@ public final class ServiceTrafficGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="latestRevision")
     private @Nullable Output<Boolean> latestRevision;
 
+    /**
+     * @return LatestRevision may be optionally provided to indicate that the latest ready
+     * Revision of the Configuration should be used for this traffic target. When
+     * provided LatestRevision must be true if RevisionName is empty; it must be
+     * false when RevisionName is non-empty.
+     * 
+     */
     public Optional<Output<Boolean>> latestRevision() {
         return Optional.ofNullable(this.latestRevision);
     }
@@ -38,6 +45,10 @@ public final class ServiceTrafficGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="percent", required=true)
     private Output<Integer> percent;
 
+    /**
+     * @return Percent specifies percent of the traffic to this Revision or Configuration.
+     * 
+     */
     public Output<Integer> percent() {
         return this.percent;
     }
@@ -49,6 +60,10 @@ public final class ServiceTrafficGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="revisionName")
     private @Nullable Output<String> revisionName;
 
+    /**
+     * @return RevisionName of a specific revision to which to send this portion of traffic.
+     * 
+     */
     public Optional<Output<String>> revisionName() {
         return Optional.ofNullable(this.revisionName);
     }
@@ -79,29 +94,71 @@ public final class ServiceTrafficGetArgs extends com.pulumi.resources.ResourceAr
             $ = new ServiceTrafficGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param latestRevision LatestRevision may be optionally provided to indicate that the latest ready
+         * Revision of the Configuration should be used for this traffic target. When
+         * provided LatestRevision must be true if RevisionName is empty; it must be
+         * false when RevisionName is non-empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestRevision(@Nullable Output<Boolean> latestRevision) {
             $.latestRevision = latestRevision;
             return this;
         }
 
+        /**
+         * @param latestRevision LatestRevision may be optionally provided to indicate that the latest ready
+         * Revision of the Configuration should be used for this traffic target. When
+         * provided LatestRevision must be true if RevisionName is empty; it must be
+         * false when RevisionName is non-empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestRevision(Boolean latestRevision) {
             return latestRevision(Output.of(latestRevision));
         }
 
+        /**
+         * @param percent Percent specifies percent of the traffic to this Revision or Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(Output<Integer> percent) {
             $.percent = percent;
             return this;
         }
 
+        /**
+         * @param percent Percent specifies percent of the traffic to this Revision or Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(Integer percent) {
             return percent(Output.of(percent));
         }
 
+        /**
+         * @param revisionName RevisionName of a specific revision to which to send this portion of traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionName(@Nullable Output<String> revisionName) {
             $.revisionName = revisionName;
             return this;
         }
 
+        /**
+         * @param revisionName RevisionName of a specific revision to which to send this portion of traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionName(String revisionName) {
             return revisionName(Output.of(revisionName));
         }

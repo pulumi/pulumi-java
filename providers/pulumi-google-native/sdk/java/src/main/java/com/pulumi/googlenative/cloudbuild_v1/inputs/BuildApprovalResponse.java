@@ -25,6 +25,10 @@ public final class BuildApprovalResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="config", required=true)
     private ApprovalConfigResponse config;
 
+    /**
+     * @return Configuration for manual approval of this build.
+     * 
+     */
     public ApprovalConfigResponse config() {
         return this.config;
     }
@@ -36,6 +40,10 @@ public final class BuildApprovalResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="result", required=true)
     private ApprovalResultResponse result;
 
+    /**
+     * @return Result of manual approval for this Build.
+     * 
+     */
     public ApprovalResultResponse result() {
         return this.result;
     }
@@ -47,6 +55,10 @@ public final class BuildApprovalResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The state of this build&#39;s approval.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -77,16 +89,34 @@ public final class BuildApprovalResponse extends com.pulumi.resources.InvokeArgs
             $ = new BuildApprovalResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config Configuration for manual approval of this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(ApprovalConfigResponse config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param result Result of manual approval for this Build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder result(ApprovalResultResponse result) {
             $.result = result;
             return this;
         }
 
+        /**
+         * @param state The state of this build&#39;s approval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

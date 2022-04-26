@@ -28,6 +28,10 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends c
     @Import(name="archiveType", required=true)
     private Output<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> archiveType;
 
+    /**
+     * @return Type of archive files in this repository.
+     * 
+     */
     public Output<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> archiveType() {
         return this.archiveType;
     }
@@ -39,6 +43,10 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends c
     @Import(name="components", required=true)
     private Output<List<String>> components;
 
+    /**
+     * @return List of components for this repository. Must contain at least one item.
+     * 
+     */
     public Output<List<String>> components() {
         return this.components;
     }
@@ -50,6 +58,10 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends c
     @Import(name="distribution", required=true)
     private Output<String> distribution;
 
+    /**
+     * @return Distribution of this repository.
+     * 
+     */
     public Output<String> distribution() {
         return this.distribution;
     }
@@ -61,6 +73,10 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends c
     @Import(name="gpgKey")
     private @Nullable Output<String> gpgKey;
 
+    /**
+     * @return URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+     * 
+     */
     public Optional<Output<String>> gpgKey() {
         return Optional.ofNullable(this.gpgKey);
     }
@@ -72,6 +88,10 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends c
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return URI for this repository.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -104,51 +124,117 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends c
             $ = new OSPolicyResourceRepositoryResourceAptRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param archiveType Type of archive files in this repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveType(Output<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> archiveType) {
             $.archiveType = archiveType;
             return this;
         }
 
+        /**
+         * @param archiveType Type of archive files in this repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveType(OSPolicyResourceRepositoryResourceAptRepositoryArchiveType archiveType) {
             return archiveType(Output.of(archiveType));
         }
 
+        /**
+         * @param components List of components for this repository. Must contain at least one item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(Output<List<String>> components) {
             $.components = components;
             return this;
         }
 
+        /**
+         * @param components List of components for this repository. Must contain at least one item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(List<String> components) {
             return components(Output.of(components));
         }
 
+        /**
+         * @param components List of components for this repository. Must contain at least one item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(String... components) {
             return components(List.of(components));
         }
 
+        /**
+         * @param distribution Distribution of this repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribution(Output<String> distribution) {
             $.distribution = distribution;
             return this;
         }
 
+        /**
+         * @param distribution Distribution of this repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribution(String distribution) {
             return distribution(Output.of(distribution));
         }
 
+        /**
+         * @param gpgKey URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpgKey(@Nullable Output<String> gpgKey) {
             $.gpgKey = gpgKey;
             return this;
         }
 
+        /**
+         * @param gpgKey URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpgKey(String gpgKey) {
             return gpgKey(Output.of(gpgKey));
         }
 
+        /**
+         * @param uri URI for this repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri URI for this repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

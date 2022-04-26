@@ -25,6 +25,10 @@ public final class ConsentLinkDefinitionResponse extends com.pulumi.resources.In
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return Display name of the parameter in the connection provider&#39;s OAuth settings
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -36,6 +40,10 @@ public final class ConsentLinkDefinitionResponse extends com.pulumi.resources.In
     @Import(name="firstPartyLoginUri")
     private @Nullable String firstPartyLoginUri;
 
+    /**
+     * @return URI for first party login
+     * 
+     */
     public Optional<String> firstPartyLoginUri() {
         return Optional.ofNullable(this.firstPartyLoginUri);
     }
@@ -47,6 +55,10 @@ public final class ConsentLinkDefinitionResponse extends com.pulumi.resources.In
     @Import(name="link")
     private @Nullable String link;
 
+    /**
+     * @return URI for the consent link
+     * 
+     */
     public Optional<String> link() {
         return Optional.ofNullable(this.link);
     }
@@ -58,6 +70,10 @@ public final class ConsentLinkDefinitionResponse extends com.pulumi.resources.In
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Status of the link
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -89,21 +105,45 @@ public final class ConsentLinkDefinitionResponse extends com.pulumi.resources.In
             $ = new ConsentLinkDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Display name of the parameter in the connection provider&#39;s OAuth settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param firstPartyLoginUri URI for first party login
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstPartyLoginUri(@Nullable String firstPartyLoginUri) {
             $.firstPartyLoginUri = firstPartyLoginUri;
             return this;
         }
 
+        /**
+         * @param link URI for the consent link
+         * 
+         * @return builder
+         * 
+         */
         public Builder link(@Nullable String link) {
             $.link = link;
             return this;
         }
 
+        /**
+         * @param status Status of the link
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

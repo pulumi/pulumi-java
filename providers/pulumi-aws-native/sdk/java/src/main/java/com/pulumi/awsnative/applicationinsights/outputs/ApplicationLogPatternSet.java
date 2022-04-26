@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class ApplicationLogPatternSet {
     /**
-     * The log patterns of a set.
+     * @return The log patterns of a set.
      * 
      */
     private final List<ApplicationLogPattern> logPatterns;
     /**
-     * The name of the log pattern set.
+     * @return The name of the log pattern set.
      * 
      */
     private final String patternSetName;
@@ -31,16 +31,16 @@ public final class ApplicationLogPatternSet {
     }
 
     /**
-     * The log patterns of a set.
+     * @return The log patterns of a set.
      * 
-    */
+     */
     public List<ApplicationLogPattern> logPatterns() {
         return this.logPatterns;
     }
     /**
-     * The name of the log pattern set.
+     * @return The name of the log pattern set.
      * 
-    */
+     */
     public String patternSetName() {
         return this.patternSetName;
     }

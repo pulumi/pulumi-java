@@ -28,6 +28,10 @@ public final class SitePropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="agentDetails")
     private @Nullable Output<SiteAgentPropertiesArgs> agentDetails;
 
+    /**
+     * @return On-premises agent details.
+     * 
+     */
     public Optional<Output<SiteAgentPropertiesArgs>> agentDetails() {
         return Optional.ofNullable(this.agentDetails);
     }
@@ -39,6 +43,10 @@ public final class SitePropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="applianceName")
     private @Nullable Output<String> applianceName;
 
+    /**
+     * @return Appliance Name.
+     * 
+     */
     public Optional<Output<String>> applianceName() {
         return Optional.ofNullable(this.applianceName);
     }
@@ -50,6 +58,10 @@ public final class SitePropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="discoverySolutionId")
     private @Nullable Output<String> discoverySolutionId;
 
+    /**
+     * @return ARM ID of migration hub solution for SDS.
+     * 
+     */
     public Optional<Output<String>> discoverySolutionId() {
         return Optional.ofNullable(this.discoverySolutionId);
     }
@@ -61,6 +73,10 @@ public final class SitePropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="servicePrincipalIdentityDetails")
     private @Nullable Output<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails;
 
+    /**
+     * @return Service principal identity details used by agent for communication to the service.
+     * 
+     */
     public Optional<Output<SiteSpnPropertiesArgs>> servicePrincipalIdentityDetails() {
         return Optional.ofNullable(this.servicePrincipalIdentityDetails);
     }
@@ -92,38 +108,86 @@ public final class SitePropertiesArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SitePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentDetails On-premises agent details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentDetails(@Nullable Output<SiteAgentPropertiesArgs> agentDetails) {
             $.agentDetails = agentDetails;
             return this;
         }
 
+        /**
+         * @param agentDetails On-premises agent details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentDetails(SiteAgentPropertiesArgs agentDetails) {
             return agentDetails(Output.of(agentDetails));
         }
 
+        /**
+         * @param applianceName Appliance Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applianceName(@Nullable Output<String> applianceName) {
             $.applianceName = applianceName;
             return this;
         }
 
+        /**
+         * @param applianceName Appliance Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applianceName(String applianceName) {
             return applianceName(Output.of(applianceName));
         }
 
+        /**
+         * @param discoverySolutionId ARM ID of migration hub solution for SDS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoverySolutionId(@Nullable Output<String> discoverySolutionId) {
             $.discoverySolutionId = discoverySolutionId;
             return this;
         }
 
+        /**
+         * @param discoverySolutionId ARM ID of migration hub solution for SDS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoverySolutionId(String discoverySolutionId) {
             return discoverySolutionId(Output.of(discoverySolutionId));
         }
 
+        /**
+         * @param servicePrincipalIdentityDetails Service principal identity details used by agent for communication to the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalIdentityDetails(@Nullable Output<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails) {
             $.servicePrincipalIdentityDetails = servicePrincipalIdentityDetails;
             return this;
         }
 
+        /**
+         * @param servicePrincipalIdentityDetails Service principal identity details used by agent for communication to the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalIdentityDetails(SiteSpnPropertiesArgs servicePrincipalIdentityDetails) {
             return servicePrincipalIdentityDetails(Output.of(servicePrincipalIdentityDetails));
         }

@@ -28,6 +28,10 @@ public final class HeaderActionParametersArgs extends com.pulumi.resources.Resou
     @Import(name="headerAction", required=true)
     private Output<Either<String,HeaderAction>> headerAction;
 
+    /**
+     * @return Action to perform
+     * 
+     */
     public Output<Either<String,HeaderAction>> headerAction() {
         return this.headerAction;
     }
@@ -39,6 +43,10 @@ public final class HeaderActionParametersArgs extends com.pulumi.resources.Resou
     @Import(name="headerName", required=true)
     private Output<String> headerName;
 
+    /**
+     * @return Name of the header to modify
+     * 
+     */
     public Output<String> headerName() {
         return this.headerName;
     }
@@ -57,6 +65,10 @@ public final class HeaderActionParametersArgs extends com.pulumi.resources.Resou
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Value for the specified action
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -88,28 +100,64 @@ public final class HeaderActionParametersArgs extends com.pulumi.resources.Resou
             $ = new HeaderActionParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerAction Action to perform
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerAction(Output<Either<String,HeaderAction>> headerAction) {
             $.headerAction = headerAction;
             return this;
         }
 
+        /**
+         * @param headerAction Action to perform
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerAction(Either<String,HeaderAction> headerAction) {
             return headerAction(Output.of(headerAction));
         }
 
+        /**
+         * @param headerAction Action to perform
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerAction(String headerAction) {
             return headerAction(Either.ofLeft(headerAction));
         }
 
+        /**
+         * @param headerAction Action to perform
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerAction(HeaderAction headerAction) {
             return headerAction(Either.ofRight(headerAction));
         }
 
+        /**
+         * @param headerName Name of the header to modify
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(Output<String> headerName) {
             $.headerName = headerName;
             return this;
         }
 
+        /**
+         * @param headerName Name of the header to modify
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             return headerName(Output.of(headerName));
         }
@@ -123,11 +171,23 @@ public final class HeaderActionParametersArgs extends com.pulumi.resources.Resou
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param value Value for the specified action
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value for the specified action
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

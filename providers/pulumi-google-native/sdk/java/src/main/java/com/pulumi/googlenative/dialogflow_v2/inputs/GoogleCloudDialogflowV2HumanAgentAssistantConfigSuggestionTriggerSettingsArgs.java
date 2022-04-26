@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
     @Import(name="noSmalltalk")
     private @Nullable Output<Boolean> noSmalltalk;
 
+    /**
+     * @return Do not trigger if last utterance is small talk.
+     * 
+     */
     public Optional<Output<Boolean>> noSmalltalk() {
         return Optional.ofNullable(this.noSmalltalk);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
     @Import(name="onlyEndUser")
     private @Nullable Output<Boolean> onlyEndUser;
 
+    /**
+     * @return Only trigger suggestion if participant role of last utterance is END_USER.
+     * 
+     */
     public Optional<Output<Boolean>> onlyEndUser() {
         return Optional.ofNullable(this.onlyEndUser);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
             $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param noSmalltalk Do not trigger if last utterance is small talk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noSmalltalk(@Nullable Output<Boolean> noSmalltalk) {
             $.noSmalltalk = noSmalltalk;
             return this;
         }
 
+        /**
+         * @param noSmalltalk Do not trigger if last utterance is small talk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noSmalltalk(Boolean noSmalltalk) {
             return noSmalltalk(Output.of(noSmalltalk));
         }
 
+        /**
+         * @param onlyEndUser Only trigger suggestion if participant role of last utterance is END_USER.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlyEndUser(@Nullable Output<Boolean> onlyEndUser) {
             $.onlyEndUser = onlyEndUser;
             return this;
         }
 
+        /**
+         * @param onlyEndUser Only trigger suggestion if participant role of last utterance is END_USER.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlyEndUser(Boolean onlyEndUser) {
             return onlyEndUser(Output.of(onlyEndUser));
         }

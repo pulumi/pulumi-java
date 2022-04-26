@@ -25,6 +25,10 @@ public final class PrivateAtlasPropertiesResponse extends com.pulumi.resources.I
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -53,6 +57,12 @@ public final class PrivateAtlasPropertiesResponse extends com.pulumi.resources.I
             $ = new PrivateAtlasPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param provisioningState The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

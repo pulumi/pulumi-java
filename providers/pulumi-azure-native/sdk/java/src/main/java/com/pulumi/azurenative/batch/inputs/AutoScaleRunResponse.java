@@ -36,6 +36,10 @@ public final class AutoScaleRunResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="results")
     private @Nullable String results;
 
+    /**
+     * @return Each variable value is returned in the form $variable=value, and variables are separated by semicolons.
+     * 
+     */
     public Optional<String> results() {
         return Optional.ofNullable(this.results);
     }
@@ -76,6 +80,12 @@ public final class AutoScaleRunResponse extends com.pulumi.resources.InvokeArgs 
             return this;
         }
 
+        /**
+         * @param results Each variable value is returned in the form $variable=value, and variables are separated by semicolons.
+         * 
+         * @return builder
+         * 
+         */
         public Builder results(@Nullable String results) {
             $.results = results;
             return this;

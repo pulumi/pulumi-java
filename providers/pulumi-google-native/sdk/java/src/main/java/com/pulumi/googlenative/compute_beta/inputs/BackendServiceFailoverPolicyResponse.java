@@ -24,6 +24,10 @@ public final class BackendServiceFailoverPolicyResponse extends com.pulumi.resou
     @Import(name="disableConnectionDrainOnFailover", required=true)
     private Boolean disableConnectionDrainOnFailover;
 
+    /**
+     * @return This can be set to true only if the protocol is TCP. The default is false.
+     * 
+     */
     public Boolean disableConnectionDrainOnFailover() {
         return this.disableConnectionDrainOnFailover;
     }
@@ -35,6 +39,10 @@ public final class BackendServiceFailoverPolicyResponse extends com.pulumi.resou
     @Import(name="dropTrafficIfUnhealthy", required=true)
     private Boolean dropTrafficIfUnhealthy;
 
+    /**
+     * @return If set to true, connections to the load balancer are dropped when all primary and all backup backend VMs are unhealthy.If set to false, connections are distributed among all primary VMs when all primary and all backup backend VMs are unhealthy. For load balancers that have configurable failover: [Internal TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-failover-overview). The default is false.
+     * 
+     */
     public Boolean dropTrafficIfUnhealthy() {
         return this.dropTrafficIfUnhealthy;
     }
@@ -46,6 +54,10 @@ public final class BackendServiceFailoverPolicyResponse extends com.pulumi.resou
     @Import(name="failoverRatio", required=true)
     private Double failoverRatio;
 
+    /**
+     * @return The value of the field must be in the range [0, 1]. If the value is 0, the load balancer performs a failover when the number of healthy primary VMs equals zero. For all other values, the load balancer performs a failover when the total number of healthy primary VMs is less than this ratio. For load balancers that have configurable failover: [Internal TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-failover-overview).
+     * 
+     */
     public Double failoverRatio() {
         return this.failoverRatio;
     }
@@ -76,16 +88,34 @@ public final class BackendServiceFailoverPolicyResponse extends com.pulumi.resou
             $ = new BackendServiceFailoverPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableConnectionDrainOnFailover This can be set to true only if the protocol is TCP. The default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableConnectionDrainOnFailover(Boolean disableConnectionDrainOnFailover) {
             $.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
             return this;
         }
 
+        /**
+         * @param dropTrafficIfUnhealthy If set to true, connections to the load balancer are dropped when all primary and all backup backend VMs are unhealthy.If set to false, connections are distributed among all primary VMs when all primary and all backup backend VMs are unhealthy. For load balancers that have configurable failover: [Internal TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-failover-overview). The default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dropTrafficIfUnhealthy(Boolean dropTrafficIfUnhealthy) {
             $.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
             return this;
         }
 
+        /**
+         * @param failoverRatio The value of the field must be in the range [0, 1]. If the value is 0, the load balancer performs a failover when the number of healthy primary VMs equals zero. For all other values, the load balancer performs a failover when the total number of healthy primary VMs is less than this ratio. For load balancers that have configurable failover: [Internal TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-failover-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverRatio(Double failoverRatio) {
             $.failoverRatio = failoverRatio;
             return this;

@@ -27,6 +27,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends com.pulumi.re
     @Import(name="operation")
     private @Nullable Output<String> operation;
 
+    /**
+     * @return GraphQL operation name. The name and operation type will be used to apply quotas. If no name is specified, the quota will be applied to all GraphQL operations irrespective of their operation names in the payload.
+     * 
+     */
     public Optional<Output<String>> operation() {
         return Optional.ofNullable(this.operation);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends com.pulumi.re
     @Import(name="operationTypes", required=true)
     private Output<List<String>> operationTypes;
 
+    /**
+     * @return GraphQL operation types. Valid values include `query` or `mutation`. **Note**: Apigee does not currently support `subscription` types.
+     * 
+     */
     public Output<List<String>> operationTypes() {
         return this.operationTypes;
     }
@@ -67,24 +75,54 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends com.pulumi.re
             $ = new GoogleCloudApigeeV1GraphQLOperationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operation GraphQL operation name. The name and operation type will be used to apply quotas. If no name is specified, the quota will be applied to all GraphQL operations irrespective of their operation names in the payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(@Nullable Output<String> operation) {
             $.operation = operation;
             return this;
         }
 
+        /**
+         * @param operation GraphQL operation name. The name and operation type will be used to apply quotas. If no name is specified, the quota will be applied to all GraphQL operations irrespective of their operation names in the payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(String operation) {
             return operation(Output.of(operation));
         }
 
+        /**
+         * @param operationTypes GraphQL operation types. Valid values include `query` or `mutation`. **Note**: Apigee does not currently support `subscription` types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationTypes(Output<List<String>> operationTypes) {
             $.operationTypes = operationTypes;
             return this;
         }
 
+        /**
+         * @param operationTypes GraphQL operation types. Valid values include `query` or `mutation`. **Note**: Apigee does not currently support `subscription` types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationTypes(List<String> operationTypes) {
             return operationTypes(Output.of(operationTypes));
         }
 
+        /**
+         * @param operationTypes GraphQL operation types. Valid values include `query` or `mutation`. **Note**: Apigee does not currently support `subscription` types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationTypes(String... operationTypes) {
             return operationTypes(List.of(operationTypes));
         }

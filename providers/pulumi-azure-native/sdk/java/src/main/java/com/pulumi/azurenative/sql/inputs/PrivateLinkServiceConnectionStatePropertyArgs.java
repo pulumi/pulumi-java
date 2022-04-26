@@ -22,6 +22,10 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends com.pul
     @Import(name="description", required=true)
     private Output<String> description;
 
+    /**
+     * @return The private link service connection description.
+     * 
+     */
     public Output<String> description() {
         return this.description;
     }
@@ -33,6 +37,10 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends com.pul
     @Import(name="status", required=true)
     private Output<Either<String,PrivateLinkServiceConnectionStateStatus>> status;
 
+    /**
+     * @return The private link service connection status.
+     * 
+     */
     public Output<Either<String,PrivateLinkServiceConnectionStateStatus>> status() {
         return this.status;
     }
@@ -62,28 +70,64 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends com.pul
             $ = new PrivateLinkServiceConnectionStatePropertyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The private link service connection description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The private link service connection description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param status The private link service connection status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<Either<String,PrivateLinkServiceConnectionStateStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The private link service connection status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,PrivateLinkServiceConnectionStateStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The private link service connection status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The private link service connection status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(PrivateLinkServiceConnectionStateStatus status) {
             return status(Either.ofRight(status));
         }

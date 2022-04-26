@@ -25,6 +25,10 @@ public final class TextMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="atomKey", required=true)
     private Output<String> atomKey;
 
+    /**
+     * @return The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
+     * 
+     */
     public Output<String> atomKey() {
         return this.atomKey;
     }
@@ -36,6 +40,10 @@ public final class TextMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputKey", required=true)
     private Output<String> inputKey;
 
+    /**
+     * @return The `Input.key` that identifies the input file.
+     * 
+     */
     public Output<String> inputKey() {
         return this.inputKey;
     }
@@ -47,6 +55,10 @@ public final class TextMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputTrack", required=true)
     private Output<Integer> inputTrack;
 
+    /**
+     * @return The zero-based index of the track in the input file.
+     * 
+     */
     public Output<Integer> inputTrack() {
         return this.inputTrack;
     }
@@ -77,29 +89,65 @@ public final class TextMappingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TextMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param atomKey The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder atomKey(Output<String> atomKey) {
             $.atomKey = atomKey;
             return this;
         }
 
+        /**
+         * @param atomKey The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder atomKey(String atomKey) {
             return atomKey(Output.of(atomKey));
         }
 
+        /**
+         * @param inputKey The `Input.key` that identifies the input file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputKey(Output<String> inputKey) {
             $.inputKey = inputKey;
             return this;
         }
 
+        /**
+         * @param inputKey The `Input.key` that identifies the input file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputKey(String inputKey) {
             return inputKey(Output.of(inputKey));
         }
 
+        /**
+         * @param inputTrack The zero-based index of the track in the input file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputTrack(Output<Integer> inputTrack) {
             $.inputTrack = inputTrack;
             return this;
         }
 
+        /**
+         * @param inputTrack The zero-based index of the track in the input file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputTrack(Integer inputTrack) {
             return inputTrack(Output.of(inputTrack));
         }

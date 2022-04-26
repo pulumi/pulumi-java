@@ -20,6 +20,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
     @Import(name="publishMetricAction", required=true)
     private Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionGetArgs> publishMetricAction;
 
+    /**
+     * @return A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
+     * 
+     */
     public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionGetArgs> publishMetricAction() {
         return this.publishMetricAction;
     }
@@ -48,11 +52,23 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
             $ = new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publishMetricAction A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishMetricAction(Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionGetArgs> publishMetricAction) {
             $.publishMetricAction = publishMetricAction;
             return this;
         }
 
+        /**
+         * @param publishMetricAction A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishMetricAction(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionGetArgs publishMetricAction) {
             return publishMetricAction(Output.of(publishMetricAction));
         }

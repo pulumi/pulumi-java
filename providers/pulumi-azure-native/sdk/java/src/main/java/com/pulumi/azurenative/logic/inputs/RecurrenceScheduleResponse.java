@@ -28,6 +28,10 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="hours")
     private @Nullable List<Integer> hours;
 
+    /**
+     * @return The hours.
+     * 
+     */
     public Optional<List<Integer>> hours() {
         return Optional.ofNullable(this.hours);
     }
@@ -39,6 +43,10 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="minutes")
     private @Nullable List<Integer> minutes;
 
+    /**
+     * @return The minutes.
+     * 
+     */
     public Optional<List<Integer>> minutes() {
         return Optional.ofNullable(this.minutes);
     }
@@ -50,6 +58,10 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="monthDays")
     private @Nullable List<Integer> monthDays;
 
+    /**
+     * @return The month days.
+     * 
+     */
     public Optional<List<Integer>> monthDays() {
         return Optional.ofNullable(this.monthDays);
     }
@@ -61,6 +73,10 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="monthlyOccurrences")
     private @Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences;
 
+    /**
+     * @return The monthly occurrences.
+     * 
+     */
     public Optional<List<RecurrenceScheduleOccurrenceResponse>> monthlyOccurrences() {
         return Optional.ofNullable(this.monthlyOccurrences);
     }
@@ -72,6 +88,10 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="weekDays")
     private @Nullable List<String> weekDays;
 
+    /**
+     * @return The days of the week.
+     * 
+     */
     public Optional<List<String>> weekDays() {
         return Optional.ofNullable(this.weekDays);
     }
@@ -104,47 +124,107 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
             $ = new RecurrenceScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hours The hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hours(@Nullable List<Integer> hours) {
             $.hours = hours;
             return this;
         }
 
+        /**
+         * @param hours The hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hours(Integer... hours) {
             return hours(List.of(hours));
         }
 
+        /**
+         * @param minutes The minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minutes(@Nullable List<Integer> minutes) {
             $.minutes = minutes;
             return this;
         }
 
+        /**
+         * @param minutes The minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minutes(Integer... minutes) {
             return minutes(List.of(minutes));
         }
 
+        /**
+         * @param monthDays The month days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthDays(@Nullable List<Integer> monthDays) {
             $.monthDays = monthDays;
             return this;
         }
 
+        /**
+         * @param monthDays The month days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthDays(Integer... monthDays) {
             return monthDays(List.of(monthDays));
         }
 
+        /**
+         * @param monthlyOccurrences The monthly occurrences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyOccurrences(@Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences) {
             $.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
 
+        /**
+         * @param monthlyOccurrences The monthly occurrences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyOccurrences(RecurrenceScheduleOccurrenceResponse... monthlyOccurrences) {
             return monthlyOccurrences(List.of(monthlyOccurrences));
         }
 
+        /**
+         * @param weekDays The days of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDays(@Nullable List<String> weekDays) {
             $.weekDays = weekDays;
             return this;
         }
 
+        /**
+         * @param weekDays The days of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDays(String... weekDays) {
             return weekDays(List.of(weekDays));
         }

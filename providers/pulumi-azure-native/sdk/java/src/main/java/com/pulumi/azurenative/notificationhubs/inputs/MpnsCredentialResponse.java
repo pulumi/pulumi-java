@@ -25,6 +25,10 @@ public final class MpnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="certificateKey")
     private @Nullable String certificateKey;
 
+    /**
+     * @return The certificate key for this credential.
+     * 
+     */
     public Optional<String> certificateKey() {
         return Optional.ofNullable(this.certificateKey);
     }
@@ -36,6 +40,10 @@ public final class MpnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="mpnsCertificate")
     private @Nullable String mpnsCertificate;
 
+    /**
+     * @return The MPNS certificate.
+     * 
+     */
     public Optional<String> mpnsCertificate() {
         return Optional.ofNullable(this.mpnsCertificate);
     }
@@ -47,6 +55,10 @@ public final class MpnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="thumbprint")
     private @Nullable String thumbprint;
 
+    /**
+     * @return The MPNS certificate Thumbprint
+     * 
+     */
     public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -77,16 +89,34 @@ public final class MpnsCredentialResponse extends com.pulumi.resources.InvokeArg
             $ = new MpnsCredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateKey The certificate key for this credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateKey(@Nullable String certificateKey) {
             $.certificateKey = certificateKey;
             return this;
         }
 
+        /**
+         * @param mpnsCertificate The MPNS certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mpnsCertificate(@Nullable String mpnsCertificate) {
             $.mpnsCertificate = mpnsCertificate;
             return this;
         }
 
+        /**
+         * @param thumbprint The MPNS certificate Thumbprint
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable String thumbprint) {
             $.thumbprint = thumbprint;
             return this;

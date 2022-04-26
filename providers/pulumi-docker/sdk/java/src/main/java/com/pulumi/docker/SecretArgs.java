@@ -24,6 +24,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="data", required=true)
     private Output<String> data;
 
+    /**
+     * @return Base64-url-safe-encoded secret data
+     * 
+     */
     public Output<String> data() {
         return this.data;
     }
@@ -35,6 +39,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<List<SecretLabelArgs>> labels;
 
+    /**
+     * @return User-defined key/value metadata
+     * 
+     */
     public Optional<Output<List<SecretLabelArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -46,6 +54,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return User-defined name of the secret
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -76,33 +88,75 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param data Base64-url-safe-encoded secret data
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(Output<String> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data Base64-url-safe-encoded secret data
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             return data(Output.of(data));
         }
 
+        /**
+         * @param labels User-defined key/value metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<List<SecretLabelArgs>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels User-defined key/value metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<SecretLabelArgs> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param labels User-defined key/value metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(SecretLabelArgs... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param name User-defined name of the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name User-defined name of the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

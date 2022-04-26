@@ -26,6 +26,10 @@ public final class NsRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nsdname")
     private @Nullable Output<String> nsdname;
 
+    /**
+     * @return The name server name for this NS record.
+     * 
+     */
     public Optional<Output<String>> nsdname() {
         return Optional.ofNullable(this.nsdname);
     }
@@ -54,11 +58,23 @@ public final class NsRecordArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NsRecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nsdname The name server name for this NS record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nsdname(@Nullable Output<String> nsdname) {
             $.nsdname = nsdname;
             return this;
         }
 
+        /**
+         * @param nsdname The name server name for this NS record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nsdname(String nsdname) {
             return nsdname(Output.of(nsdname));
         }

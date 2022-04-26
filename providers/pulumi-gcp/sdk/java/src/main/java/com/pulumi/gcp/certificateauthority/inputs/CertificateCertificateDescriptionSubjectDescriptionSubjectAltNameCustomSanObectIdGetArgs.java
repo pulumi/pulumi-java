@@ -23,6 +23,10 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     @Import(name="objectIdPaths")
     private @Nullable Output<List<Integer>> objectIdPaths;
 
+    /**
+     * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * 
+     */
     public Optional<Output<List<Integer>>> objectIdPaths() {
         return Optional.ofNullable(this.objectIdPaths);
     }
@@ -51,15 +55,33 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
             $ = new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectIdPaths An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIdPaths(@Nullable Output<List<Integer>> objectIdPaths) {
             $.objectIdPaths = objectIdPaths;
             return this;
         }
 
+        /**
+         * @param objectIdPaths An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIdPaths(List<Integer> objectIdPaths) {
             return objectIdPaths(Output.of(objectIdPaths));
         }
 
+        /**
+         * @param objectIdPaths An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIdPaths(Integer... objectIdPaths) {
             return objectIdPaths(List.of(objectIdPaths));
         }

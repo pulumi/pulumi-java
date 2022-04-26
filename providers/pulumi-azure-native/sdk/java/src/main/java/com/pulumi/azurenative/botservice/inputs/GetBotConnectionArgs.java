@@ -19,6 +19,10 @@ public final class GetBotConnectionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="connectionName", required=true)
     private String connectionName;
 
+    /**
+     * @return The name of the Bot Service Connection Setting resource.
+     * 
+     */
     public String connectionName() {
         return this.connectionName;
     }
@@ -30,6 +34,10 @@ public final class GetBotConnectionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the Bot resource group in the user subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetBotConnectionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the Bot resource.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -71,16 +83,34 @@ public final class GetBotConnectionArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetBotConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionName The name of the Bot Service Connection Setting resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Bot resource group in the user subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the Bot resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

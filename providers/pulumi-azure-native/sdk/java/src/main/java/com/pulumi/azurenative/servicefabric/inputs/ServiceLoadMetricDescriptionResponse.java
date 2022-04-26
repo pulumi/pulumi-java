@@ -26,6 +26,10 @@ public final class ServiceLoadMetricDescriptionResponse extends com.pulumi.resou
     @Import(name="defaultLoad")
     private @Nullable Integer defaultLoad;
 
+    /**
+     * @return Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.
+     * 
+     */
     public Optional<Integer> defaultLoad() {
         return Optional.ofNullable(this.defaultLoad);
     }
@@ -37,6 +41,10 @@ public final class ServiceLoadMetricDescriptionResponse extends com.pulumi.resou
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -48,6 +56,10 @@ public final class ServiceLoadMetricDescriptionResponse extends com.pulumi.resou
     @Import(name="primaryDefaultLoad")
     private @Nullable Integer primaryDefaultLoad;
 
+    /**
+     * @return Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
+     * 
+     */
     public Optional<Integer> primaryDefaultLoad() {
         return Optional.ofNullable(this.primaryDefaultLoad);
     }
@@ -59,6 +71,10 @@ public final class ServiceLoadMetricDescriptionResponse extends com.pulumi.resou
     @Import(name="secondaryDefaultLoad")
     private @Nullable Integer secondaryDefaultLoad;
 
+    /**
+     * @return Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
+     * 
+     */
     public Optional<Integer> secondaryDefaultLoad() {
         return Optional.ofNullable(this.secondaryDefaultLoad);
     }
@@ -70,6 +86,10 @@ public final class ServiceLoadMetricDescriptionResponse extends com.pulumi.resou
     @Import(name="weight")
     private @Nullable String weight;
 
+    /**
+     * @return The service load metric relative weight, compared to other metrics configured for this service, as a number.
+     * 
+     */
     public Optional<String> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -102,26 +122,56 @@ public final class ServiceLoadMetricDescriptionResponse extends com.pulumi.resou
             $ = new ServiceLoadMetricDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultLoad Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultLoad(@Nullable Integer defaultLoad) {
             $.defaultLoad = defaultLoad;
             return this;
         }
 
+        /**
+         * @param name The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param primaryDefaultLoad Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryDefaultLoad(@Nullable Integer primaryDefaultLoad) {
             $.primaryDefaultLoad = primaryDefaultLoad;
             return this;
         }
 
+        /**
+         * @param secondaryDefaultLoad Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryDefaultLoad(@Nullable Integer secondaryDefaultLoad) {
             $.secondaryDefaultLoad = secondaryDefaultLoad;
             return this;
         }
 
+        /**
+         * @param weight The service load metric relative weight, compared to other metrics configured for this service, as a number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable String weight) {
             $.weight = weight;
             return this;

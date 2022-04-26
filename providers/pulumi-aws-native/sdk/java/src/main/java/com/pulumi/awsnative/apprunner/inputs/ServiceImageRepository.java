@@ -34,6 +34,10 @@ public final class ServiceImageRepository extends com.pulumi.resources.InvokeArg
     @Import(name="imageIdentifier", required=true)
     private String imageIdentifier;
 
+    /**
+     * @return Image Identifier
+     * 
+     */
     public String imageIdentifier() {
         return this.imageIdentifier;
     }
@@ -45,6 +49,10 @@ public final class ServiceImageRepository extends com.pulumi.resources.InvokeArg
     @Import(name="imageRepositoryType", required=true)
     private ServiceImageRepositoryImageRepositoryType imageRepositoryType;
 
+    /**
+     * @return Image Repository Type
+     * 
+     */
     public ServiceImageRepositoryImageRepositoryType imageRepositoryType() {
         return this.imageRepositoryType;
     }
@@ -80,11 +88,23 @@ public final class ServiceImageRepository extends com.pulumi.resources.InvokeArg
             return this;
         }
 
+        /**
+         * @param imageIdentifier Image Identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageIdentifier(String imageIdentifier) {
             $.imageIdentifier = imageIdentifier;
             return this;
         }
 
+        /**
+         * @param imageRepositoryType Image Repository Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRepositoryType(ServiceImageRepositoryImageRepositoryType imageRepositoryType) {
             $.imageRepositoryType = imageRepositoryType;
             return this;

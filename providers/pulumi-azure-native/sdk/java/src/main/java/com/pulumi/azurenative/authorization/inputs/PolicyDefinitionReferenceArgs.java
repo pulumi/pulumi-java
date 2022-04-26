@@ -29,6 +29,10 @@ public final class PolicyDefinitionReferenceArgs extends com.pulumi.resources.Re
     @Import(name="groupNames")
     private @Nullable Output<List<String>> groupNames;
 
+    /**
+     * @return The name of the groups that this policy definition reference belongs to.
+     * 
+     */
     public Optional<Output<List<String>>> groupNames() {
         return Optional.ofNullable(this.groupNames);
     }
@@ -40,6 +44,10 @@ public final class PolicyDefinitionReferenceArgs extends com.pulumi.resources.Re
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters;
 
+    /**
+     * @return The parameter values for the referenced policy rule. The keys are the parameter names.
+     * 
+     */
     public Optional<Output<Map<String,ParameterValuesValueArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -51,6 +59,10 @@ public final class PolicyDefinitionReferenceArgs extends com.pulumi.resources.Re
     @Import(name="policyDefinitionId", required=true)
     private Output<String> policyDefinitionId;
 
+    /**
+     * @return The ID of the policy definition or policy set definition.
+     * 
+     */
     public Output<String> policyDefinitionId() {
         return this.policyDefinitionId;
     }
@@ -62,6 +74,10 @@ public final class PolicyDefinitionReferenceArgs extends com.pulumi.resources.Re
     @Import(name="policyDefinitionReferenceId")
     private @Nullable Output<String> policyDefinitionReferenceId;
 
+    /**
+     * @return A unique id (within the policy set definition) for this policy definition reference.
+     * 
+     */
     public Optional<Output<String>> policyDefinitionReferenceId() {
         return Optional.ofNullable(this.policyDefinitionReferenceId);
     }
@@ -93,42 +109,96 @@ public final class PolicyDefinitionReferenceArgs extends com.pulumi.resources.Re
             $ = new PolicyDefinitionReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupNames The name of the groups that this policy definition reference belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupNames(@Nullable Output<List<String>> groupNames) {
             $.groupNames = groupNames;
             return this;
         }
 
+        /**
+         * @param groupNames The name of the groups that this policy definition reference belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupNames(List<String> groupNames) {
             return groupNames(Output.of(groupNames));
         }
 
+        /**
+         * @param groupNames The name of the groups that this policy definition reference belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupNames(String... groupNames) {
             return groupNames(List.of(groupNames));
         }
 
+        /**
+         * @param parameters The parameter values for the referenced policy rule. The keys are the parameter names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterValuesValueArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameter values for the referenced policy rule. The keys are the parameter names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterValuesValueArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param policyDefinitionId The ID of the policy definition or policy set definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionId(Output<String> policyDefinitionId) {
             $.policyDefinitionId = policyDefinitionId;
             return this;
         }
 
+        /**
+         * @param policyDefinitionId The ID of the policy definition or policy set definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionId(String policyDefinitionId) {
             return policyDefinitionId(Output.of(policyDefinitionId));
         }
 
+        /**
+         * @param policyDefinitionReferenceId A unique id (within the policy set definition) for this policy definition reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
             $.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
 
+        /**
+         * @param policyDefinitionReferenceId A unique id (within the policy set definition) for this policy definition reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionReferenceId(String policyDefinitionReferenceId) {
             return policyDefinitionReferenceId(Output.of(policyDefinitionReferenceId));
         }

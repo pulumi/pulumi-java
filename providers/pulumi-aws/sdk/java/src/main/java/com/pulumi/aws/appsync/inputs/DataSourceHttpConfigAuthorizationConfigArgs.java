@@ -23,6 +23,10 @@ public final class DataSourceHttpConfigAuthorizationConfigArgs extends com.pulum
     @Import(name="authorizationType")
     private @Nullable Output<String> authorizationType;
 
+    /**
+     * @return The authorization type that the HTTP endpoint requires. Default values is `AWS_IAM`.
+     * 
+     */
     public Optional<Output<String>> authorizationType() {
         return Optional.ofNullable(this.authorizationType);
     }
@@ -34,6 +38,10 @@ public final class DataSourceHttpConfigAuthorizationConfigArgs extends com.pulum
     @Import(name="awsIamConfig")
     private @Nullable Output<DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs> awsIamConfig;
 
+    /**
+     * @return The Identity and Access Management (IAM) settings. See AWS IAM Config.
+     * 
+     */
     public Optional<Output<DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs>> awsIamConfig() {
         return Optional.ofNullable(this.awsIamConfig);
     }
@@ -63,20 +71,44 @@ public final class DataSourceHttpConfigAuthorizationConfigArgs extends com.pulum
             $ = new DataSourceHttpConfigAuthorizationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationType The authorization type that the HTTP endpoint requires. Default values is `AWS_IAM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationType(@Nullable Output<String> authorizationType) {
             $.authorizationType = authorizationType;
             return this;
         }
 
+        /**
+         * @param authorizationType The authorization type that the HTTP endpoint requires. Default values is `AWS_IAM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationType(String authorizationType) {
             return authorizationType(Output.of(authorizationType));
         }
 
+        /**
+         * @param awsIamConfig The Identity and Access Management (IAM) settings. See AWS IAM Config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsIamConfig(@Nullable Output<DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs> awsIamConfig) {
             $.awsIamConfig = awsIamConfig;
             return this;
         }
 
+        /**
+         * @param awsIamConfig The Identity and Access Management (IAM) settings. See AWS IAM Config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsIamConfig(DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs awsIamConfig) {
             return awsIamConfig(Output.of(awsIamConfig));
         }

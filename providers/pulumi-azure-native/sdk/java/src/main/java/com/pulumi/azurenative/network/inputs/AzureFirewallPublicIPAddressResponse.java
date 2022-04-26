@@ -25,6 +25,10 @@ public final class AzureFirewallPublicIPAddressResponse extends com.pulumi.resou
     @Import(name="address")
     private @Nullable String address;
 
+    /**
+     * @return Public IP Address value.
+     * 
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
@@ -53,6 +57,12 @@ public final class AzureFirewallPublicIPAddressResponse extends com.pulumi.resou
             $ = new AzureFirewallPublicIPAddressResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address Public IP Address value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable String address) {
             $.address = address;
             return this;

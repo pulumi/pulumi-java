@@ -26,6 +26,10 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceSettingId")
     private @Nullable Output<String> resourceSettingId;
 
+    /**
+     * @return resourceSettingId for the environment
+     * 
+     */
     public Optional<Output<String>> resourceSettingId() {
         return Optional.ofNullable(this.resourceSettingId);
     }
@@ -37,6 +41,10 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vmResourceId")
     private @Nullable Output<String> vmResourceId;
 
+    /**
+     * @return VM resource Id for the environment
+     * 
+     */
     public Optional<Output<String>> vmResourceId() {
         return Optional.ofNullable(this.vmResourceId);
     }
@@ -66,20 +74,44 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceSettingId resourceSettingId for the environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSettingId(@Nullable Output<String> resourceSettingId) {
             $.resourceSettingId = resourceSettingId;
             return this;
         }
 
+        /**
+         * @param resourceSettingId resourceSettingId for the environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSettingId(String resourceSettingId) {
             return resourceSettingId(Output.of(resourceSettingId));
         }
 
+        /**
+         * @param vmResourceId VM resource Id for the environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmResourceId(@Nullable Output<String> vmResourceId) {
             $.vmResourceId = vmResourceId;
             return this;
         }
 
+        /**
+         * @param vmResourceId VM resource Id for the environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmResourceId(String vmResourceId) {
             return vmResourceId(Output.of(vmResourceId));
         }

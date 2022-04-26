@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class SourceScoringConfigResponse {
     /**
-     * Importance of the source.
+     * @return Importance of the source.
      * 
      */
     private final String sourceImportance;
@@ -21,9 +21,9 @@ public final class SourceScoringConfigResponse {
     }
 
     /**
-     * Importance of the source.
+     * @return Importance of the source.
      * 
-    */
+     */
     public String sourceImportance() {
         return this.sourceImportance;
     }

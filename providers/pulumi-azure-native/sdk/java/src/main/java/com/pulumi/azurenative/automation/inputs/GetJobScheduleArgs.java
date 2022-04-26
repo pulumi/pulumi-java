@@ -19,6 +19,10 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="automationAccountName", required=true)
     private String automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public String automationAccountName() {
         return this.automationAccountName;
     }
@@ -30,6 +34,10 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="jobScheduleId", required=true)
     private String jobScheduleId;
 
+    /**
+     * @return The job schedule name.
+     * 
+     */
     public String jobScheduleId() {
         return this.jobScheduleId;
     }
@@ -41,6 +49,10 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetJobScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param jobScheduleId The job schedule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobScheduleId(String jobScheduleId) {
             $.jobScheduleId = jobScheduleId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

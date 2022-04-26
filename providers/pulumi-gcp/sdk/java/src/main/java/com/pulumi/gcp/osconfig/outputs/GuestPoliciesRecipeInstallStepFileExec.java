@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GuestPoliciesRecipeInstallStepFileExec {
     /**
-     * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * @return Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
      * 
      */
     private final @Nullable String allowedExitCodes;
     /**
-     * Arguments to be passed to the provided executable.
+     * @return Arguments to be passed to the provided executable.
      * 
      */
     private final @Nullable List<String> args;
     /**
-     * The id of the relevant artifact in the recipe.
+     * @return The id of the relevant artifact in the recipe.
      * 
      */
     private final @Nullable String artifactId;
     /**
-     * The absolute path of the file on the local filesystem.
+     * @return The absolute path of the file on the local filesystem.
      * 
      */
     private final @Nullable String localPath;
@@ -46,30 +46,30 @@ public final class GuestPoliciesRecipeInstallStepFileExec {
     }
 
     /**
-     * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * @return Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
      * 
-    */
+     */
     public Optional<String> allowedExitCodes() {
         return Optional.ofNullable(this.allowedExitCodes);
     }
     /**
-     * Arguments to be passed to the provided executable.
+     * @return Arguments to be passed to the provided executable.
      * 
-    */
+     */
     public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
     /**
-     * The id of the relevant artifact in the recipe.
+     * @return The id of the relevant artifact in the recipe.
      * 
-    */
+     */
     public Optional<String> artifactId() {
         return Optional.ofNullable(this.artifactId);
     }
     /**
-     * The absolute path of the file on the local filesystem.
+     * @return The absolute path of the file on the local filesystem.
      * 
-    */
+     */
     public Optional<String> localPath() {
         return Optional.ofNullable(this.localPath);
     }

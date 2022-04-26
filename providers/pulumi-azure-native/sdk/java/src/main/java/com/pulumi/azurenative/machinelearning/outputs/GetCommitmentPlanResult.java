@@ -15,42 +15,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCommitmentPlanResult {
     /**
-     * An entity tag used to enforce optimistic concurrency.
+     * @return An entity tag used to enforce optimistic concurrency.
      * 
      */
     private final @Nullable String etag;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The commitment plan properties.
+     * @return The commitment plan properties.
      * 
      */
     private final CommitmentPlanPropertiesResponse properties;
     /**
-     * The commitment plan SKU.
+     * @return The commitment plan SKU.
      * 
      */
     private final @Nullable ResourceSkuResponse sku;
     /**
-     * User-defined tags for the resource.
+     * @return User-defined tags for the resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -76,58 +76,58 @@ public final class GetCommitmentPlanResult {
     }
 
     /**
-     * An entity tag used to enforce optimistic concurrency.
+     * @return An entity tag used to enforce optimistic concurrency.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The commitment plan properties.
+     * @return The commitment plan properties.
      * 
-    */
+     */
     public CommitmentPlanPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * The commitment plan SKU.
+     * @return The commitment plan SKU.
      * 
-    */
+     */
     public Optional<ResourceSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * User-defined tags for the resource.
+     * @return User-defined tags for the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

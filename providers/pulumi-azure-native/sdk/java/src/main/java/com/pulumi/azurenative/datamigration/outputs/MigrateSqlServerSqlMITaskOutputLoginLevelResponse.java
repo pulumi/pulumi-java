@@ -12,48 +12,48 @@ import java.util.Objects;
 @CustomType
 public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse {
     /**
-     * Login migration end time
+     * @return Login migration end time
      * 
      */
     private final String endedOn;
     /**
-     * Login migration errors and warnings per login
+     * @return Login migration errors and warnings per login
      * 
      */
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
     /**
-     * Result identifier
+     * @return Result identifier
      * 
      */
     private final String id;
     /**
-     * Login name.
+     * @return Login name.
      * 
      */
     private final String loginName;
     /**
-     * Login migration progress message
+     * @return Login migration progress message
      * 
      */
     private final String message;
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;LoginLevelOutput&#39;.
      * 
      */
     private final String resultType;
     /**
-     * Current stage of login
+     * @return Current stage of login
      * 
      */
     private final String stage;
     /**
-     * Login migration start time
+     * @return Login migration start time
      * 
      */
     private final String startedOn;
     /**
-     * Current state of login
+     * @return Current state of login
      * 
      */
     private final String state;
@@ -81,66 +81,66 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse {
     }
 
     /**
-     * Login migration end time
+     * @return Login migration end time
      * 
-    */
+     */
     public String endedOn() {
         return this.endedOn;
     }
     /**
-     * Login migration errors and warnings per login
+     * @return Login migration errors and warnings per login
      * 
-    */
+     */
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Login name.
+     * @return Login name.
      * 
-    */
+     */
     public String loginName() {
         return this.loginName;
     }
     /**
-     * Login migration progress message
+     * @return Login migration progress message
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;LoginLevelOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }
     /**
-     * Current stage of login
+     * @return Current stage of login
      * 
-    */
+     */
     public String stage() {
         return this.stage;
     }
     /**
-     * Login migration start time
+     * @return Login migration start time
      * 
-    */
+     */
     public String startedOn() {
         return this.startedOn;
     }
     /**
-     * Current state of login
+     * @return Current state of login
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

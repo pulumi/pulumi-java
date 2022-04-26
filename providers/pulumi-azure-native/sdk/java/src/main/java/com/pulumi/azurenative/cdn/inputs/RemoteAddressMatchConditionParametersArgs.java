@@ -31,6 +31,10 @@ public final class RemoteAddressMatchConditionParametersArgs extends com.pulumi.
     @Import(name="matchValues")
     private @Nullable Output<List<String>> matchValues;
 
+    /**
+     * @return Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+     * 
+     */
     public Optional<Output<List<String>>> matchValues() {
         return Optional.ofNullable(this.matchValues);
     }
@@ -42,6 +46,10 @@ public final class RemoteAddressMatchConditionParametersArgs extends com.pulumi.
     @Import(name="negateCondition")
     private @Nullable Output<Boolean> negateCondition;
 
+    /**
+     * @return Describes if this is negate condition or not
+     * 
+     */
     public Optional<Output<Boolean>> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
@@ -60,6 +68,10 @@ public final class RemoteAddressMatchConditionParametersArgs extends com.pulumi.
     @Import(name="operator", required=true)
     private Output<Either<String,RemoteAddressOperator>> operator;
 
+    /**
+     * @return Describes operator to be matched
+     * 
+     */
     public Output<Either<String,RemoteAddressOperator>> operator() {
         return this.operator;
     }
@@ -71,6 +83,10 @@ public final class RemoteAddressMatchConditionParametersArgs extends com.pulumi.
     @Import(name="transforms")
     private @Nullable Output<List<Either<String,Transform>>> transforms;
 
+    /**
+     * @return List of transforms
+     * 
+     */
     public Optional<Output<List<Either<String,Transform>>>> transforms() {
         return Optional.ofNullable(this.transforms);
     }
@@ -103,24 +119,54 @@ public final class RemoteAddressMatchConditionParametersArgs extends com.pulumi.
             $ = new RemoteAddressMatchConditionParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchValues Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(@Nullable Output<List<String>> matchValues) {
             $.matchValues = matchValues;
             return this;
         }
 
+        /**
+         * @param matchValues Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(List<String> matchValues) {
             return matchValues(Output.of(matchValues));
         }
 
+        /**
+         * @param matchValues Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(String... matchValues) {
             return matchValues(List.of(matchValues));
         }
 
+        /**
+         * @param negateCondition Describes if this is negate condition or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder negateCondition(@Nullable Output<Boolean> negateCondition) {
             $.negateCondition = negateCondition;
             return this;
         }
 
+        /**
+         * @param negateCondition Describes if this is negate condition or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder negateCondition(Boolean negateCondition) {
             return negateCondition(Output.of(negateCondition));
         }
@@ -134,32 +180,74 @@ public final class RemoteAddressMatchConditionParametersArgs extends com.pulumi.
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param operator Describes operator to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<Either<String,RemoteAddressOperator>> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator Describes operator to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Either<String,RemoteAddressOperator> operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param operator Describes operator to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Either.ofLeft(operator));
         }
 
+        /**
+         * @param operator Describes operator to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(RemoteAddressOperator operator) {
             return operator(Either.ofRight(operator));
         }
 
+        /**
+         * @param transforms List of transforms
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(@Nullable Output<List<Either<String,Transform>>> transforms) {
             $.transforms = transforms;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(List<Either<String,Transform>> transforms) {
             return transforms(Output.of(transforms));
         }
 
+        /**
+         * @param transforms List of transforms
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(Either<String,Transform>... transforms) {
             return transforms(List.of(transforms));
         }

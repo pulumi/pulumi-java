@@ -27,6 +27,10 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
     @Import(name="objectiveValue")
     private @Nullable Output<Double> objectiveValue;
 
+    /**
+     * @return The objective value at this training step.
+     * 
+     */
     public Optional<Output<Double>> objectiveValue() {
         return Optional.ofNullable(this.objectiveValue);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
     @Import(name="trainingStep")
     private @Nullable Output<String> trainingStep;
 
+    /**
+     * @return The global training step for this metric.
+     * 
+     */
     public Optional<Output<String>> trainingStep() {
         return Optional.ofNullable(this.trainingStep);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
             $ = new GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectiveValue The objective value at this training step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectiveValue(@Nullable Output<Double> objectiveValue) {
             $.objectiveValue = objectiveValue;
             return this;
         }
 
+        /**
+         * @param objectiveValue The objective value at this training step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectiveValue(Double objectiveValue) {
             return objectiveValue(Output.of(objectiveValue));
         }
 
+        /**
+         * @param trainingStep The global training step for this metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingStep(@Nullable Output<String> trainingStep) {
             $.trainingStep = trainingStep;
             return this;
         }
 
+        /**
+         * @param trainingStep The global training step for this metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingStep(String trainingStep) {
             return trainingStep(Output.of(trainingStep));
         }

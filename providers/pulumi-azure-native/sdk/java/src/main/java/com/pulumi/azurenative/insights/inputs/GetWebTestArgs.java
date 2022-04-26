@@ -19,6 +19,10 @@ public final class GetWebTestArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetWebTestArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="webTestName", required=true)
     private String webTestName;
 
+    /**
+     * @return The name of the Application Insights webtest resource.
+     * 
+     */
     public String webTestName() {
         return this.webTestName;
     }
@@ -59,11 +67,23 @@ public final class GetWebTestArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWebTestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param webTestName The name of the Application Insights webtest resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webTestName(String webTestName) {
             $.webTestName = webTestName;
             return this;

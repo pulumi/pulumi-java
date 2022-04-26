@@ -25,6 +25,11 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="maxConcurrentRequests")
     private @Nullable Output<Integer> maxConcurrentRequests;
 
+    /**
+     * @return Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+     * Defaults to a runtime-specific value.
+     * 
+     */
     public Optional<Output<Integer>> maxConcurrentRequests() {
         return Optional.ofNullable(this.maxConcurrentRequests);
     }
@@ -36,6 +41,10 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="maxIdleInstances")
     private @Nullable Output<Integer> maxIdleInstances;
 
+    /**
+     * @return Maximum number of idle instances that should be maintained for this version.
+     * 
+     */
     public Optional<Output<Integer>> maxIdleInstances() {
         return Optional.ofNullable(this.maxIdleInstances);
     }
@@ -48,6 +57,11 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="maxPendingLatency")
     private @Nullable Output<String> maxPendingLatency;
 
+    /**
+     * @return Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
     public Optional<Output<String>> maxPendingLatency() {
         return Optional.ofNullable(this.maxPendingLatency);
     }
@@ -59,6 +73,10 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="minIdleInstances")
     private @Nullable Output<Integer> minIdleInstances;
 
+    /**
+     * @return Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+     * 
+     */
     public Optional<Output<Integer>> minIdleInstances() {
         return Optional.ofNullable(this.minIdleInstances);
     }
@@ -71,6 +89,11 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="minPendingLatency")
     private @Nullable Output<String> minPendingLatency;
 
+    /**
+     * @return Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
     public Optional<Output<String>> minPendingLatency() {
         return Optional.ofNullable(this.minPendingLatency);
     }
@@ -83,6 +106,11 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends com.pulumi.
     @Import(name="standardSchedulerSettings")
     private @Nullable Output<StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs> standardSchedulerSettings;
 
+    /**
+     * @return Scheduler settings for standard environment.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs>> standardSchedulerSettings() {
         return Optional.ofNullable(this.standardSchedulerSettings);
     }
@@ -116,56 +144,136 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends com.pulumi.
             $ = new StandardAppVersionAutomaticScalingGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxConcurrentRequests Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+         * Defaults to a runtime-specific value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentRequests(@Nullable Output<Integer> maxConcurrentRequests) {
             $.maxConcurrentRequests = maxConcurrentRequests;
             return this;
         }
 
+        /**
+         * @param maxConcurrentRequests Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
+         * Defaults to a runtime-specific value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentRequests(Integer maxConcurrentRequests) {
             return maxConcurrentRequests(Output.of(maxConcurrentRequests));
         }
 
+        /**
+         * @param maxIdleInstances Maximum number of idle instances that should be maintained for this version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxIdleInstances(@Nullable Output<Integer> maxIdleInstances) {
             $.maxIdleInstances = maxIdleInstances;
             return this;
         }
 
+        /**
+         * @param maxIdleInstances Maximum number of idle instances that should be maintained for this version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxIdleInstances(Integer maxIdleInstances) {
             return maxIdleInstances(Output.of(maxIdleInstances));
         }
 
+        /**
+         * @param maxPendingLatency Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPendingLatency(@Nullable Output<String> maxPendingLatency) {
             $.maxPendingLatency = maxPendingLatency;
             return this;
         }
 
+        /**
+         * @param maxPendingLatency Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPendingLatency(String maxPendingLatency) {
             return maxPendingLatency(Output.of(maxPendingLatency));
         }
 
+        /**
+         * @param minIdleInstances Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minIdleInstances(@Nullable Output<Integer> minIdleInstances) {
             $.minIdleInstances = minIdleInstances;
             return this;
         }
 
+        /**
+         * @param minIdleInstances Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minIdleInstances(Integer minIdleInstances) {
             return minIdleInstances(Output.of(minIdleInstances));
         }
 
+        /**
+         * @param minPendingLatency Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minPendingLatency(@Nullable Output<String> minPendingLatency) {
             $.minPendingLatency = minPendingLatency;
             return this;
         }
 
+        /**
+         * @param minPendingLatency Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minPendingLatency(String minPendingLatency) {
             return minPendingLatency(Output.of(minPendingLatency));
         }
 
+        /**
+         * @param standardSchedulerSettings Scheduler settings for standard environment.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder standardSchedulerSettings(@Nullable Output<StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs> standardSchedulerSettings) {
             $.standardSchedulerSettings = standardSchedulerSettings;
             return this;
         }
 
+        /**
+         * @param standardSchedulerSettings Scheduler settings for standard environment.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder standardSchedulerSettings(StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs standardSchedulerSettings) {
             return standardSchedulerSettings(Output.of(standardSchedulerSettings));
         }

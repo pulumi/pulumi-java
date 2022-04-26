@@ -26,6 +26,10 @@ public final class VpnLinkBgpSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="asn")
     private @Nullable Double asn;
 
+    /**
+     * @return The BGP speaker&#39;s ASN.
+     * 
+     */
     public Optional<Double> asn() {
         return Optional.ofNullable(this.asn);
     }
@@ -37,6 +41,10 @@ public final class VpnLinkBgpSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="bgpPeeringAddress")
     private @Nullable String bgpPeeringAddress;
 
+    /**
+     * @return The BGP peering address and BGP identifier of this BGP speaker.
+     * 
+     */
     public Optional<String> bgpPeeringAddress() {
         return Optional.ofNullable(this.bgpPeeringAddress);
     }
@@ -66,11 +74,23 @@ public final class VpnLinkBgpSettingsResponse extends com.pulumi.resources.Invok
             $ = new VpnLinkBgpSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param asn The BGP speaker&#39;s ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asn(@Nullable Double asn) {
             $.asn = asn;
             return this;
         }
 
+        /**
+         * @param bgpPeeringAddress The BGP peering address and BGP identifier of this BGP speaker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpPeeringAddress(@Nullable String bgpPeeringAddress) {
             $.bgpPeeringAddress = bgpPeeringAddress;
             return this;

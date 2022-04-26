@@ -23,6 +23,10 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse exten
     @Import(name="env", required=true)
     private String env;
 
+    /**
+     * @return The environment ID associated with the metrics.
+     * 
+     */
     public String env() {
         return this.env;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse exten
     @Import(name="instanceId", required=true)
     private String instanceId;
 
+    /**
+     * @return The instance ID associated with the metrics. In Apigee Hybrid, the value is configured during installation.
+     * 
+     */
     public String instanceId() {
         return this.instanceId;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse exten
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The location associated with the metrics.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse exten
             $ = new GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param env The environment ID associated with the metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(String env) {
             $.env = env;
             return this;
         }
 
+        /**
+         * @param instanceId The instance ID associated with the metrics. In Apigee Hybrid, the value is configured during installation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param location The location associated with the metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;

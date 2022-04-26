@@ -27,6 +27,10 @@ public final class ReplicationConfigurationReplicationRule extends com.pulumi.re
     @Import(name="destinations", required=true)
     private List<ReplicationConfigurationReplicationDestination> destinations;
 
+    /**
+     * @return An array of objects representing the details of a replication destination.
+     * 
+     */
     public List<ReplicationConfigurationReplicationDestination> destinations() {
         return this.destinations;
     }
@@ -38,6 +42,10 @@ public final class ReplicationConfigurationReplicationRule extends com.pulumi.re
     @Import(name="repositoryFilters")
     private @Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters;
 
+    /**
+     * @return An array of objects representing the details of a repository filter.
+     * 
+     */
     public Optional<List<ReplicationConfigurationRepositoryFilter>> repositoryFilters() {
         return Optional.ofNullable(this.repositoryFilters);
     }
@@ -67,20 +75,44 @@ public final class ReplicationConfigurationReplicationRule extends com.pulumi.re
             $ = new ReplicationConfigurationReplicationRule(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinations An array of objects representing the details of a replication destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(List<ReplicationConfigurationReplicationDestination> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations An array of objects representing the details of a replication destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(ReplicationConfigurationReplicationDestination... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param repositoryFilters An array of objects representing the details of a repository filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryFilters(@Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters) {
             $.repositoryFilters = repositoryFilters;
             return this;
         }
 
+        /**
+         * @param repositoryFilters An array of objects representing the details of a repository filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryFilters(ReplicationConfigurationRepositoryFilter... repositoryFilters) {
             return repositoryFilters(List.of(repositoryFilters));
         }

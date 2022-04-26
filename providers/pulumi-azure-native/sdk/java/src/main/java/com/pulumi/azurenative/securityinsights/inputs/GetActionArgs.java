@@ -19,6 +19,10 @@ public final class GetActionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="actionId", required=true)
     private String actionId;
 
+    /**
+     * @return Action ID
+     * 
+     */
     public String actionId() {
         return this.actionId;
     }
@@ -30,6 +34,10 @@ public final class GetActionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetActionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleId", required=true)
     private String ruleId;
 
+    /**
+     * @return Alert rule ID
+     * 
+     */
     public String ruleId() {
         return this.ruleId;
     }
@@ -52,6 +64,10 @@ public final class GetActionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -83,21 +99,45 @@ public final class GetActionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionId Action ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionId(String actionId) {
             $.actionId = actionId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param ruleId Alert rule ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(String ruleId) {
             $.ruleId = ruleId;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

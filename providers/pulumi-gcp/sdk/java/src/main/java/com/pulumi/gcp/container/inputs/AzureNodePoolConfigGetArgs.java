@@ -25,6 +25,10 @@ public final class AzureNodePoolConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="rootVolume")
     private @Nullable Output<AzureNodePoolConfigRootVolumeGetArgs> rootVolume;
 
+    /**
+     * @return Optional. Configuration related to the root volume provisioned for each node pool machine. When unspecified, it defaults to a 32-GiB Azure Disk.
+     * 
+     */
     public Optional<Output<AzureNodePoolConfigRootVolumeGetArgs>> rootVolume() {
         return Optional.ofNullable(this.rootVolume);
     }
@@ -36,6 +40,10 @@ public final class AzureNodePoolConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="sshConfig", required=true)
     private Output<AzureNodePoolConfigSshConfigGetArgs> sshConfig;
 
+    /**
+     * @return Required. SSH configuration for how to access the node pool machines.
+     * 
+     */
     public Output<AzureNodePoolConfigSshConfigGetArgs> sshConfig() {
         return this.sshConfig;
     }
@@ -47,6 +55,10 @@ public final class AzureNodePoolConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Optional. A set of tags to apply to all underlying Azure resources for this node pool. This currently only includes Virtual Machine Scale Sets. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -58,6 +70,10 @@ public final class AzureNodePoolConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="vmSize")
     private @Nullable Output<String> vmSize;
 
+    /**
+     * @return Optional. The Azure VM size name. Example: `Standard_DS2_v2`. See (/anthos/clusters/docs/azure/reference/supported-vms) for options. When unspecified, it defaults to `Standard_DS2_v2`.
+     * 
+     */
     public Optional<Output<String>> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -89,38 +105,86 @@ public final class AzureNodePoolConfigGetArgs extends com.pulumi.resources.Resou
             $ = new AzureNodePoolConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rootVolume Optional. Configuration related to the root volume provisioned for each node pool machine. When unspecified, it defaults to a 32-GiB Azure Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootVolume(@Nullable Output<AzureNodePoolConfigRootVolumeGetArgs> rootVolume) {
             $.rootVolume = rootVolume;
             return this;
         }
 
+        /**
+         * @param rootVolume Optional. Configuration related to the root volume provisioned for each node pool machine. When unspecified, it defaults to a 32-GiB Azure Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootVolume(AzureNodePoolConfigRootVolumeGetArgs rootVolume) {
             return rootVolume(Output.of(rootVolume));
         }
 
+        /**
+         * @param sshConfig Required. SSH configuration for how to access the node pool machines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshConfig(Output<AzureNodePoolConfigSshConfigGetArgs> sshConfig) {
             $.sshConfig = sshConfig;
             return this;
         }
 
+        /**
+         * @param sshConfig Required. SSH configuration for how to access the node pool machines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshConfig(AzureNodePoolConfigSshConfigGetArgs sshConfig) {
             return sshConfig(Output.of(sshConfig));
         }
 
+        /**
+         * @param tags Optional. A set of tags to apply to all underlying Azure resources for this node pool. This currently only includes Virtual Machine Scale Sets. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Optional. A set of tags to apply to all underlying Azure resources for this node pool. This currently only includes Virtual Machine Scale Sets. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vmSize Optional. The Azure VM size name. Example: `Standard_DS2_v2`. See (/anthos/clusters/docs/azure/reference/supported-vms) for options. When unspecified, it defaults to `Standard_DS2_v2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(@Nullable Output<String> vmSize) {
             $.vmSize = vmSize;
             return this;
         }
 
+        /**
+         * @param vmSize Optional. The Azure VM size name. Example: `Standard_DS2_v2`. See (/anthos/clusters/docs/azure/reference/supported-vms) for options. When unspecified, it defaults to `Standard_DS2_v2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(String vmSize) {
             return vmSize(Output.of(vmSize));
         }

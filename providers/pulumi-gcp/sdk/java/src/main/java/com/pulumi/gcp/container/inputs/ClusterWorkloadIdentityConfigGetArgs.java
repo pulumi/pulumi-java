@@ -22,6 +22,10 @@ public final class ClusterWorkloadIdentityConfigGetArgs extends com.pulumi.resou
     @Import(name="workloadPool")
     private @Nullable Output<String> workloadPool;
 
+    /**
+     * @return The workload pool to attach all Kubernetes service accounts to.
+     * 
+     */
     public Optional<Output<String>> workloadPool() {
         return Optional.ofNullable(this.workloadPool);
     }
@@ -50,11 +54,23 @@ public final class ClusterWorkloadIdentityConfigGetArgs extends com.pulumi.resou
             $ = new ClusterWorkloadIdentityConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param workloadPool The workload pool to attach all Kubernetes service accounts to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadPool(@Nullable Output<String> workloadPool) {
             $.workloadPool = workloadPool;
             return this;
         }
 
+        /**
+         * @param workloadPool The workload pool to attach all Kubernetes service accounts to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadPool(String workloadPool) {
             return workloadPool(Output.of(workloadPool));
         }

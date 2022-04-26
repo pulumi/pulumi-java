@@ -28,6 +28,10 @@ public final class BotWaitAndContinueSpecificationArgs extends com.pulumi.resour
     @Import(name="continueResponse", required=true)
     private Output<BotResponseSpecificationArgs> continueResponse;
 
+    /**
+     * @return The response that Amazon Lex sends to indicate that the bot is ready to continue the conversation.
+     * 
+     */
     public Output<BotResponseSpecificationArgs> continueResponse() {
         return this.continueResponse;
     }
@@ -39,6 +43,10 @@ public final class BotWaitAndContinueSpecificationArgs extends com.pulumi.resour
     @Import(name="isActive")
     private @Nullable Output<Boolean> isActive;
 
+    /**
+     * @return Specifies whether the bot will wait for a user to respond.
+     * 
+     */
     public Optional<Output<Boolean>> isActive() {
         return Optional.ofNullable(this.isActive);
     }
@@ -50,6 +58,10 @@ public final class BotWaitAndContinueSpecificationArgs extends com.pulumi.resour
     @Import(name="stillWaitingResponse")
     private @Nullable Output<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse;
 
+    /**
+     * @return The response that Amazon Lex sends periodically to the user to indicate that the bot is still waiting for input from the user.
+     * 
+     */
     public Optional<Output<BotStillWaitingResponseSpecificationArgs>> stillWaitingResponse() {
         return Optional.ofNullable(this.stillWaitingResponse);
     }
@@ -61,6 +73,10 @@ public final class BotWaitAndContinueSpecificationArgs extends com.pulumi.resour
     @Import(name="waitingResponse", required=true)
     private Output<BotResponseSpecificationArgs> waitingResponse;
 
+    /**
+     * @return The response that Amazon Lex sends to indicate that the bot is waiting for the conversation to continue.
+     * 
+     */
     public Output<BotResponseSpecificationArgs> waitingResponse() {
         return this.waitingResponse;
     }
@@ -92,38 +108,86 @@ public final class BotWaitAndContinueSpecificationArgs extends com.pulumi.resour
             $ = new BotWaitAndContinueSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param continueResponse The response that Amazon Lex sends to indicate that the bot is ready to continue the conversation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder continueResponse(Output<BotResponseSpecificationArgs> continueResponse) {
             $.continueResponse = continueResponse;
             return this;
         }
 
+        /**
+         * @param continueResponse The response that Amazon Lex sends to indicate that the bot is ready to continue the conversation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder continueResponse(BotResponseSpecificationArgs continueResponse) {
             return continueResponse(Output.of(continueResponse));
         }
 
+        /**
+         * @param isActive Specifies whether the bot will wait for a user to respond.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isActive(@Nullable Output<Boolean> isActive) {
             $.isActive = isActive;
             return this;
         }
 
+        /**
+         * @param isActive Specifies whether the bot will wait for a user to respond.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isActive(Boolean isActive) {
             return isActive(Output.of(isActive));
         }
 
+        /**
+         * @param stillWaitingResponse The response that Amazon Lex sends periodically to the user to indicate that the bot is still waiting for input from the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stillWaitingResponse(@Nullable Output<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse) {
             $.stillWaitingResponse = stillWaitingResponse;
             return this;
         }
 
+        /**
+         * @param stillWaitingResponse The response that Amazon Lex sends periodically to the user to indicate that the bot is still waiting for input from the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stillWaitingResponse(BotStillWaitingResponseSpecificationArgs stillWaitingResponse) {
             return stillWaitingResponse(Output.of(stillWaitingResponse));
         }
 
+        /**
+         * @param waitingResponse The response that Amazon Lex sends to indicate that the bot is waiting for the conversation to continue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitingResponse(Output<BotResponseSpecificationArgs> waitingResponse) {
             $.waitingResponse = waitingResponse;
             return this;
         }
 
+        /**
+         * @param waitingResponse The response that Amazon Lex sends to indicate that the bot is waiting for the conversation to continue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitingResponse(BotResponseSpecificationArgs waitingResponse) {
             return waitingResponse(Output.of(waitingResponse));
         }

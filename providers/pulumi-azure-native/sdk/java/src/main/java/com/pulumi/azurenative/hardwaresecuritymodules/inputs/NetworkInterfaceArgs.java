@@ -26,6 +26,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="privateIpAddress")
     private @Nullable Output<String> privateIpAddress;
 
+    /**
+     * @return Private Ip address of the interface
+     * 
+     */
     public Optional<Output<String>> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
@@ -54,11 +58,23 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
             $ = new NetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateIpAddress Private Ip address of the interface
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param privateIpAddress Private Ip address of the interface
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(String privateIpAddress) {
             return privateIpAddress(Output.of(privateIpAddress));
         }

@@ -25,6 +25,10 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
     @Import(name="endDateTime")
     private @Nullable String endDateTime;
 
+    /**
+     * @return The DateTime when the review instance is scheduled to end.
+     * 
+     */
     public Optional<String> endDateTime() {
         return Optional.ofNullable(this.endDateTime);
     }
@@ -36,6 +40,10 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The access review instance id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +55,10 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The access review instance name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -58,6 +70,10 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
     @Import(name="startDateTime")
     private @Nullable String startDateTime;
 
+    /**
+     * @return The DateTime when the review instance is scheduled to be start.
+     * 
+     */
     public Optional<String> startDateTime() {
         return Optional.ofNullable(this.startDateTime);
     }
@@ -69,6 +85,10 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return This read-only field specifies the status of an access review instance.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -80,6 +100,10 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -113,31 +137,67 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
             $ = new AccessReviewInstanceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endDateTime The DateTime when the review instance is scheduled to end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDateTime(@Nullable String endDateTime) {
             $.endDateTime = endDateTime;
             return this;
         }
 
+        /**
+         * @param id The access review instance id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The access review instance name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param startDateTime The DateTime when the review instance is scheduled to be start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDateTime(@Nullable String startDateTime) {
             $.startDateTime = startDateTime;
             return this;
         }
 
+        /**
+         * @param status This read-only field specifies the status of an access review instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param type The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

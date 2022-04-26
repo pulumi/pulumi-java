@@ -23,6 +23,10 @@ public final class LoggingConfigurationConditionActionConditionProperties extend
     @Import(name="action", required=true)
     private LoggingConfigurationConditionActionConditionPropertiesAction action;
 
+    /**
+     * @return Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
+     * 
+     */
     public LoggingConfigurationConditionActionConditionPropertiesAction action() {
         return this.action;
     }
@@ -51,6 +55,12 @@ public final class LoggingConfigurationConditionActionConditionProperties extend
             $ = new LoggingConfigurationConditionActionConditionProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(LoggingConfigurationConditionActionConditionPropertiesAction action) {
             $.action = action;
             return this;

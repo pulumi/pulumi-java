@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 public final class GetLocalGatewayVirtualInterfaceGroupsResult {
     private final @Nullable List<GetLocalGatewayVirtualInterfaceGroupsFilter> filters;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * Set of EC2 Local Gateway Virtual Interface Group identifiers.
+     * @return Set of EC2 Local Gateway Virtual Interface Group identifiers.
      * 
      */
     private final List<String> ids;
     /**
-     * Set of EC2 Local Gateway Virtual Interface identifiers.
+     * @return Set of EC2 Local Gateway Virtual Interface identifiers.
      * 
      */
     private final List<String> localGatewayVirtualInterfaceIds;
@@ -49,23 +49,23 @@ public final class GetLocalGatewayVirtualInterfaceGroupsResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Set of EC2 Local Gateway Virtual Interface Group identifiers.
+     * @return Set of EC2 Local Gateway Virtual Interface Group identifiers.
      * 
-    */
+     */
     public List<String> ids() {
         return this.ids;
     }
     /**
-     * Set of EC2 Local Gateway Virtual Interface identifiers.
+     * @return Set of EC2 Local Gateway Virtual Interface identifiers.
      * 
-    */
+     */
     public List<String> localGatewayVirtualInterfaceIds() {
         return this.localGatewayVirtualInterfaceIds;
     }

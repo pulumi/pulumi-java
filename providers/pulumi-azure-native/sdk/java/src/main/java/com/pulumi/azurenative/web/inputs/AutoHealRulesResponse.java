@@ -26,6 +26,10 @@ public final class AutoHealRulesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="actions")
     private @Nullable AutoHealActionsResponse actions;
 
+    /**
+     * @return Actions to be executed when a rule is triggered.
+     * 
+     */
     public Optional<AutoHealActionsResponse> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -37,6 +41,10 @@ public final class AutoHealRulesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="triggers")
     private @Nullable AutoHealTriggersResponse triggers;
 
+    /**
+     * @return Conditions that describe when to execute the auto-heal actions.
+     * 
+     */
     public Optional<AutoHealTriggersResponse> triggers() {
         return Optional.ofNullable(this.triggers);
     }
@@ -66,11 +74,23 @@ public final class AutoHealRulesResponse extends com.pulumi.resources.InvokeArgs
             $ = new AutoHealRulesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions Actions to be executed when a rule is triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable AutoHealActionsResponse actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param triggers Conditions that describe when to execute the auto-heal actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggers(@Nullable AutoHealTriggersResponse triggers) {
             $.triggers = triggers;
             return this;

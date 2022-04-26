@@ -40,6 +40,10 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
     @Import(name="buildTimeoutInMinutes")
     private @Nullable Output<Integer> buildTimeoutInMinutes;
 
+    /**
+     * @return Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
+     * 
+     */
     public Optional<Output<Integer>> buildTimeoutInMinutes() {
         return Optional.ofNullable(this.buildTimeoutInMinutes);
     }
@@ -51,6 +55,10 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
     @Import(name="customize")
     private @Nullable Output<List<Object>> customize;
 
+    /**
+     * @return Specifies the properties used to describe the customization steps of the image, like Image source etc
+     * 
+     */
     public Optional<Output<List<Object>>> customize() {
         return Optional.ofNullable(this.customize);
     }
@@ -62,6 +70,10 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
     @Import(name="distribute", required=true)
     private Output<List<Object>> distribute;
 
+    /**
+     * @return The distribution targets where the image output needs to go to.
+     * 
+     */
     public Output<List<Object>> distribute() {
         return this.distribute;
     }
@@ -73,6 +85,10 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
     @Import(name="identity", required=true)
     private Output<ImageTemplateIdentityArgs> identity;
 
+    /**
+     * @return The identity of the image template, if configured.
+     * 
+     */
     public Output<ImageTemplateIdentityArgs> identity() {
         return this.identity;
     }
@@ -84,6 +100,10 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
     @Import(name="imageTemplateName")
     private @Nullable Output<String> imageTemplateName;
 
+    /**
+     * @return The name of the image Template
+     * 
+     */
     public Optional<Output<String>> imageTemplateName() {
         return Optional.ofNullable(this.imageTemplateName);
     }
@@ -95,6 +115,10 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -106,6 +130,10 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -117,6 +145,10 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
     @Import(name="source", required=true)
     private Output<Object> source;
 
+    /**
+     * @return Specifies the properties used to describe the source image.
+     * 
+     */
     public Output<Object> source() {
         return this.source;
     }
@@ -128,6 +160,10 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -139,6 +175,10 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
     @Import(name="vmProfile")
     private @Nullable Output<ImageTemplateVmProfileArgs> vmProfile;
 
+    /**
+     * @return Describes how virtual machine is set up to build images
+     * 
+     */
     public Optional<Output<ImageTemplateVmProfileArgs>> vmProfile() {
         return Optional.ofNullable(this.vmProfile);
     }
@@ -176,100 +216,232 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
             $ = new VirtualMachineImageTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buildTimeoutInMinutes Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildTimeoutInMinutes(@Nullable Output<Integer> buildTimeoutInMinutes) {
             $.buildTimeoutInMinutes = buildTimeoutInMinutes;
             return this;
         }
 
+        /**
+         * @param buildTimeoutInMinutes Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildTimeoutInMinutes(Integer buildTimeoutInMinutes) {
             return buildTimeoutInMinutes(Output.of(buildTimeoutInMinutes));
         }
 
+        /**
+         * @param customize Specifies the properties used to describe the customization steps of the image, like Image source etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder customize(@Nullable Output<List<Object>> customize) {
             $.customize = customize;
             return this;
         }
 
+        /**
+         * @param customize Specifies the properties used to describe the customization steps of the image, like Image source etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder customize(List<Object> customize) {
             return customize(Output.of(customize));
         }
 
+        /**
+         * @param customize Specifies the properties used to describe the customization steps of the image, like Image source etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder customize(Object... customize) {
             return customize(List.of(customize));
         }
 
+        /**
+         * @param distribute The distribution targets where the image output needs to go to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribute(Output<List<Object>> distribute) {
             $.distribute = distribute;
             return this;
         }
 
+        /**
+         * @param distribute The distribution targets where the image output needs to go to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribute(List<Object> distribute) {
             return distribute(Output.of(distribute));
         }
 
+        /**
+         * @param distribute The distribution targets where the image output needs to go to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribute(Object... distribute) {
             return distribute(List.of(distribute));
         }
 
+        /**
+         * @param identity The identity of the image template, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(Output<ImageTemplateIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the image template, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ImageTemplateIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param imageTemplateName The name of the image Template
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTemplateName(@Nullable Output<String> imageTemplateName) {
             $.imageTemplateName = imageTemplateName;
             return this;
         }
 
+        /**
+         * @param imageTemplateName The name of the image Template
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTemplateName(String imageTemplateName) {
             return imageTemplateName(Output.of(imageTemplateName));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param source Specifies the properties used to describe the source image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<Object> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Specifies the properties used to describe the source image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Object source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vmProfile Describes how virtual machine is set up to build images
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmProfile(@Nullable Output<ImageTemplateVmProfileArgs> vmProfile) {
             $.vmProfile = vmProfile;
             return this;
         }
 
+        /**
+         * @param vmProfile Describes how virtual machine is set up to build images
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmProfile(ImageTemplateVmProfileArgs vmProfile) {
             return vmProfile(Output.of(vmProfile));
         }

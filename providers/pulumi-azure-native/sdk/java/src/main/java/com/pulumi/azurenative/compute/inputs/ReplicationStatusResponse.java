@@ -25,6 +25,10 @@ public final class ReplicationStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="aggregatedState", required=true)
     private String aggregatedState;
 
+    /**
+     * @return This is the aggregated replication status based on all the regional replication status flags.
+     * 
+     */
     public String aggregatedState() {
         return this.aggregatedState;
     }
@@ -36,6 +40,10 @@ public final class ReplicationStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="summary", required=true)
     private List<RegionalReplicationStatusResponse> summary;
 
+    /**
+     * @return This is a summary of replication status for each region.
+     * 
+     */
     public List<RegionalReplicationStatusResponse> summary() {
         return this.summary;
     }
@@ -65,16 +73,34 @@ public final class ReplicationStatusResponse extends com.pulumi.resources.Invoke
             $ = new ReplicationStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregatedState This is the aggregated replication status based on all the regional replication status flags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregatedState(String aggregatedState) {
             $.aggregatedState = aggregatedState;
             return this;
         }
 
+        /**
+         * @param summary This is a summary of replication status for each region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder summary(List<RegionalReplicationStatusResponse> summary) {
             $.summary = summary;
             return this;
         }
 
+        /**
+         * @param summary This is a summary of replication status for each region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder summary(RegionalReplicationStatusResponse... summary) {
             return summary(List.of(summary));
         }

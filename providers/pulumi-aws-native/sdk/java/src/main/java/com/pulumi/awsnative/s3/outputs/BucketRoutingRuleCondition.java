@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BucketRoutingRuleCondition {
     /**
-     * The HTTP error code when the redirect is applied.
+     * @return The HTTP error code when the redirect is applied.
      * 
      */
     private final @Nullable String httpErrorCodeReturnedEquals;
     /**
-     * The object key name prefix when the redirect is applied.
+     * @return The object key name prefix when the redirect is applied.
      * 
      */
     private final @Nullable String keyPrefixEquals;
@@ -31,16 +31,16 @@ public final class BucketRoutingRuleCondition {
     }
 
     /**
-     * The HTTP error code when the redirect is applied.
+     * @return The HTTP error code when the redirect is applied.
      * 
-    */
+     */
     public Optional<String> httpErrorCodeReturnedEquals() {
         return Optional.ofNullable(this.httpErrorCodeReturnedEquals);
     }
     /**
-     * The object key name prefix when the redirect is applied.
+     * @return The object key name prefix when the redirect is applied.
      * 
-    */
+     */
     public Optional<String> keyPrefixEquals() {
         return Optional.ofNullable(this.keyPrefixEquals);
     }

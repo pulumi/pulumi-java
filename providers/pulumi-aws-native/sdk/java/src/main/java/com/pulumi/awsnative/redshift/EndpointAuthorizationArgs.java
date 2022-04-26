@@ -24,6 +24,10 @@ public final class EndpointAuthorizationArgs extends com.pulumi.resources.Resour
     @Import(name="account", required=true)
     private Output<String> account;
 
+    /**
+     * @return The target AWS account ID to grant or revoke access for.
+     * 
+     */
     public Output<String> account() {
         return this.account;
     }
@@ -35,6 +39,10 @@ public final class EndpointAuthorizationArgs extends com.pulumi.resources.Resour
     @Import(name="clusterIdentifier", required=true)
     private Output<String> clusterIdentifier;
 
+    /**
+     * @return The cluster identifier.
+     * 
+     */
     public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
@@ -46,6 +54,10 @@ public final class EndpointAuthorizationArgs extends com.pulumi.resources.Resour
     @Import(name="force")
     private @Nullable Output<Boolean> force;
 
+    /**
+     * @return  Indicates whether to force the revoke action. If true, the Redshift-managed VPC endpoints associated with the endpoint authorization are also deleted.
+     * 
+     */
     public Optional<Output<Boolean>> force() {
         return Optional.ofNullable(this.force);
     }
@@ -57,6 +69,10 @@ public final class EndpointAuthorizationArgs extends com.pulumi.resources.Resour
     @Import(name="vpcIds")
     private @Nullable Output<List<String>> vpcIds;
 
+    /**
+     * @return The virtual private cloud (VPC) identifiers to grant or revoke access to.
+     * 
+     */
     public Optional<Output<List<String>>> vpcIds() {
         return Optional.ofNullable(this.vpcIds);
     }
@@ -88,42 +104,96 @@ public final class EndpointAuthorizationArgs extends com.pulumi.resources.Resour
             $ = new EndpointAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param account The target AWS account ID to grant or revoke access for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder account(Output<String> account) {
             $.account = account;
             return this;
         }
 
+        /**
+         * @param account The target AWS account ID to grant or revoke access for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder account(String account) {
             return account(Output.of(account));
         }
 
+        /**
+         * @param clusterIdentifier The cluster identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(Output<String> clusterIdentifier) {
             $.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
+        /**
+         * @param clusterIdentifier The cluster identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(String clusterIdentifier) {
             return clusterIdentifier(Output.of(clusterIdentifier));
         }
 
+        /**
+         * @param force  Indicates whether to force the revoke action. If true, the Redshift-managed VPC endpoints associated with the endpoint authorization are also deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder force(@Nullable Output<Boolean> force) {
             $.force = force;
             return this;
         }
 
+        /**
+         * @param force  Indicates whether to force the revoke action. If true, the Redshift-managed VPC endpoints associated with the endpoint authorization are also deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder force(Boolean force) {
             return force(Output.of(force));
         }
 
+        /**
+         * @param vpcIds The virtual private cloud (VPC) identifiers to grant or revoke access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcIds(@Nullable Output<List<String>> vpcIds) {
             $.vpcIds = vpcIds;
             return this;
         }
 
+        /**
+         * @param vpcIds The virtual private cloud (VPC) identifiers to grant or revoke access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcIds(List<String> vpcIds) {
             return vpcIds(Output.of(vpcIds));
         }
 
+        /**
+         * @param vpcIds The virtual private cloud (VPC) identifiers to grant or revoke access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcIds(String... vpcIds) {
             return vpcIds(List.of(vpcIds));
         }

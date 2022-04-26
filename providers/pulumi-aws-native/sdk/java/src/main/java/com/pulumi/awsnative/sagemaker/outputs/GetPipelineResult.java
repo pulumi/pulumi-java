@@ -18,17 +18,17 @@ public final class GetPipelineResult {
     private final @Nullable ParallelismConfigurationProperties parallelismConfiguration;
     private final @Nullable Object pipelineDefinition;
     /**
-     * The description of the Pipeline.
+     * @return The description of the Pipeline.
      * 
      */
     private final @Nullable String pipelineDescription;
     /**
-     * The display name of the Pipeline.
+     * @return The display name of the Pipeline.
      * 
      */
     private final @Nullable String pipelineDisplayName;
     /**
-     * Role Arn
+     * @return Role Arn
      * 
      */
     private final @Nullable String roleArn;
@@ -57,23 +57,23 @@ public final class GetPipelineResult {
         return Optional.ofNullable(this.pipelineDefinition);
     }
     /**
-     * The description of the Pipeline.
+     * @return The description of the Pipeline.
      * 
-    */
+     */
     public Optional<String> pipelineDescription() {
         return Optional.ofNullable(this.pipelineDescription);
     }
     /**
-     * The display name of the Pipeline.
+     * @return The display name of the Pipeline.
      * 
-    */
+     */
     public Optional<String> pipelineDisplayName() {
         return Optional.ofNullable(this.pipelineDisplayName);
     }
     /**
-     * Role Arn
+     * @return Role Arn
      * 
-    */
+     */
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }

@@ -16,88 +16,88 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRouteResult {
     /**
-     * compression settings.
+     * @return compression settings.
      * 
      */
     private final @Nullable CompressionSettingsResponse compressionSettings;
     /**
-     * Domains referenced by this endpoint.
+     * @return Domains referenced by this endpoint.
      * 
      */
     private final @Nullable List<ResourceReferenceResponse> customDomains;
     private final String deploymentStatus;
     /**
-     * Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * @return Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     private final @Nullable String enabledState;
     /**
-     * Protocol this rule will use when forwarding traffic to backends.
+     * @return Protocol this rule will use when forwarding traffic to backends.
      * 
      */
     private final @Nullable String forwardingProtocol;
     /**
-     * Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
+     * @return Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
      * 
      */
     private final @Nullable String httpsRedirect;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * whether this route will be linked to the default endpoint domain.
+     * @return whether this route will be linked to the default endpoint domain.
      * 
      */
     private final @Nullable String linkToDefaultDomain;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * A reference to the origin group.
+     * @return A reference to the origin group.
      * 
      */
     private final ResourceReferenceResponse originGroup;
     /**
-     * A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
+     * @return A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
      * 
      */
     private final @Nullable String originPath;
     /**
-     * The route patterns of the rule.
+     * @return The route patterns of the rule.
      * 
      */
     private final @Nullable List<String> patternsToMatch;
     /**
-     * Provisioning status
+     * @return Provisioning status
      * 
      */
     private final String provisioningState;
     /**
-     * Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
+     * @return Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
      * 
      */
     private final @Nullable String queryStringCachingBehavior;
     /**
-     * rule sets referenced by this endpoint.
+     * @return rule sets referenced by this endpoint.
      * 
      */
     private final @Nullable List<ResourceReferenceResponse> ruleSets;
     /**
-     * List of supported protocols for this route.
+     * @return List of supported protocols for this route.
      * 
      */
     private final @Nullable List<String> supportedProtocols;
     /**
-     * Read only system data
+     * @return Read only system data
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -143,16 +143,16 @@ public final class GetRouteResult {
     }
 
     /**
-     * compression settings.
+     * @return compression settings.
      * 
-    */
+     */
     public Optional<CompressionSettingsResponse> compressionSettings() {
         return Optional.ofNullable(this.compressionSettings);
     }
     /**
-     * Domains referenced by this endpoint.
+     * @return Domains referenced by this endpoint.
      * 
-    */
+     */
     public List<ResourceReferenceResponse> customDomains() {
         return this.customDomains == null ? List.of() : this.customDomains;
     }
@@ -160,107 +160,107 @@ public final class GetRouteResult {
         return this.deploymentStatus;
     }
     /**
-     * Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * @return Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
-    */
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
-     * Protocol this rule will use when forwarding traffic to backends.
+     * @return Protocol this rule will use when forwarding traffic to backends.
      * 
-    */
+     */
     public Optional<String> forwardingProtocol() {
         return Optional.ofNullable(this.forwardingProtocol);
     }
     /**
-     * Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
+     * @return Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
      * 
-    */
+     */
     public Optional<String> httpsRedirect() {
         return Optional.ofNullable(this.httpsRedirect);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * whether this route will be linked to the default endpoint domain.
+     * @return whether this route will be linked to the default endpoint domain.
      * 
-    */
+     */
     public Optional<String> linkToDefaultDomain() {
         return Optional.ofNullable(this.linkToDefaultDomain);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A reference to the origin group.
+     * @return A reference to the origin group.
      * 
-    */
+     */
     public ResourceReferenceResponse originGroup() {
         return this.originGroup;
     }
     /**
-     * A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
+     * @return A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
      * 
-    */
+     */
     public Optional<String> originPath() {
         return Optional.ofNullable(this.originPath);
     }
     /**
-     * The route patterns of the rule.
+     * @return The route patterns of the rule.
      * 
-    */
+     */
     public List<String> patternsToMatch() {
         return this.patternsToMatch == null ? List.of() : this.patternsToMatch;
     }
     /**
-     * Provisioning status
+     * @return Provisioning status
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
+     * @return Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
      * 
-    */
+     */
     public Optional<String> queryStringCachingBehavior() {
         return Optional.ofNullable(this.queryStringCachingBehavior);
     }
     /**
-     * rule sets referenced by this endpoint.
+     * @return rule sets referenced by this endpoint.
      * 
-    */
+     */
     public List<ResourceReferenceResponse> ruleSets() {
         return this.ruleSets == null ? List.of() : this.ruleSets;
     }
     /**
-     * List of supported protocols for this route.
+     * @return List of supported protocols for this route.
      * 
-    */
+     */
     public List<String> supportedProtocols() {
         return this.supportedProtocols == null ? List.of() : this.supportedProtocols;
     }
     /**
-     * Read only system data
+     * @return Read only system data
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

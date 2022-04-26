@@ -26,6 +26,10 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
     @Import(name="clientApplication")
     private @Nullable Output<String> clientApplication;
 
+    /**
+     * @return Azure active directory client application id.
+     * 
+     */
     public Optional<Output<String>> clientApplication() {
         return Optional.ofNullable(this.clientApplication);
     }
@@ -37,6 +41,10 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
     @Import(name="clusterApplication")
     private @Nullable Output<String> clusterApplication;
 
+    /**
+     * @return Azure active directory cluster application id.
+     * 
+     */
     public Optional<Output<String>> clusterApplication() {
         return Optional.ofNullable(this.clusterApplication);
     }
@@ -48,6 +56,10 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return Azure active directory tenant id.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -78,29 +90,65 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
             $ = new AzureActiveDirectoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientApplication Azure active directory client application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientApplication(@Nullable Output<String> clientApplication) {
             $.clientApplication = clientApplication;
             return this;
         }
 
+        /**
+         * @param clientApplication Azure active directory client application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientApplication(String clientApplication) {
             return clientApplication(Output.of(clientApplication));
         }
 
+        /**
+         * @param clusterApplication Azure active directory cluster application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterApplication(@Nullable Output<String> clusterApplication) {
             $.clusterApplication = clusterApplication;
             return this;
         }
 
+        /**
+         * @param clusterApplication Azure active directory cluster application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterApplication(String clusterApplication) {
             return clusterApplication(Output.of(clusterApplication));
         }
 
+        /**
+         * @param tenantId Azure active directory tenant id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId Azure active directory tenant id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

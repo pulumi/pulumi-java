@@ -20,6 +20,10 @@ public final class VirtualGatewaySpecListenerTlsCertificateSdsArgs extends com.p
     @Import(name="secretName", required=true)
     private Output<String> secretName;
 
+    /**
+     * @return The name of the secret for a virtual gateway&#39;s Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+     * 
+     */
     public Output<String> secretName() {
         return this.secretName;
     }
@@ -48,11 +52,23 @@ public final class VirtualGatewaySpecListenerTlsCertificateSdsArgs extends com.p
             $ = new VirtualGatewaySpecListenerTlsCertificateSdsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secretName The name of the secret for a virtual gateway&#39;s Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(Output<String> secretName) {
             $.secretName = secretName;
             return this;
         }
 
+        /**
+         * @param secretName The name of the secret for a virtual gateway&#39;s Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(String secretName) {
             return secretName(Output.of(secretName));
         }

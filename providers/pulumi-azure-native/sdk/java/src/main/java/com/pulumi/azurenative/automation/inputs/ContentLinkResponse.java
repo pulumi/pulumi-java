@@ -26,6 +26,10 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="contentHash")
     private @Nullable ContentHashResponse contentHash;
 
+    /**
+     * @return Gets or sets the hash.
+     * 
+     */
     public Optional<ContentHashResponse> contentHash() {
         return Optional.ofNullable(this.contentHash);
     }
@@ -37,6 +41,10 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uri")
     private @Nullable String uri;
 
+    /**
+     * @return Gets or sets the uri of the runbook content.
+     * 
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -48,6 +56,10 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return Gets or sets the version of the content.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -78,16 +90,34 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ContentLinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentHash Gets or sets the hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentHash(@Nullable ContentHashResponse contentHash) {
             $.contentHash = contentHash;
             return this;
         }
 
+        /**
+         * @param uri Gets or sets the uri of the runbook content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable String uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param version Gets or sets the version of the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

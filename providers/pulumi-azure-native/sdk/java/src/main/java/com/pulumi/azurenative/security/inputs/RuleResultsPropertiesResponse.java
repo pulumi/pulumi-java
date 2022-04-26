@@ -26,6 +26,10 @@ public final class RuleResultsPropertiesResponse extends com.pulumi.resources.In
     @Import(name="results")
     private @Nullable List<List<String>> results;
 
+    /**
+     * @return Expected results in the baseline.
+     * 
+     */
     public Optional<List<List<String>>> results() {
         return Optional.ofNullable(this.results);
     }
@@ -54,11 +58,23 @@ public final class RuleResultsPropertiesResponse extends com.pulumi.resources.In
             $ = new RuleResultsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param results Expected results in the baseline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder results(@Nullable List<List<String>> results) {
             $.results = results;
             return this;
         }
 
+        /**
+         * @param results Expected results in the baseline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder results(List<String>... results) {
             return results(List.of(results));
         }

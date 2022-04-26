@@ -27,6 +27,10 @@ public final class GetInsightsResultsMetadataResponse extends com.pulumi.resourc
     @Import(name="errors")
     private @Nullable List<GetInsightsErrorResponse> errors;
 
+    /**
+     * @return information about the failed queries
+     * 
+     */
     public Optional<List<GetInsightsErrorResponse>> errors() {
         return Optional.ofNullable(this.errors);
     }
@@ -38,6 +42,10 @@ public final class GetInsightsResultsMetadataResponse extends com.pulumi.resourc
     @Import(name="totalCount", required=true)
     private Integer totalCount;
 
+    /**
+     * @return the total items found for the insights request
+     * 
+     */
     public Integer totalCount() {
         return this.totalCount;
     }
@@ -67,15 +75,33 @@ public final class GetInsightsResultsMetadataResponse extends com.pulumi.resourc
             $ = new GetInsightsResultsMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errors information about the failed queries
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(@Nullable List<GetInsightsErrorResponse> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors information about the failed queries
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(GetInsightsErrorResponse... errors) {
             return errors(List.of(errors));
         }
 
+        /**
+         * @param totalCount the total items found for the insights request
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalCount(Integer totalCount) {
             $.totalCount = totalCount;
             return this;

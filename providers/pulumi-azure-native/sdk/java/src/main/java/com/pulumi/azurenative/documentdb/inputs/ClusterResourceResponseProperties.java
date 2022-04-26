@@ -30,6 +30,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="authenticationMethod")
     private @Nullable String authenticationMethod;
 
+    /**
+     * @return Which authentication method Cassandra should use to authenticate clients. &#39;None&#39; turns off authentication, so should not be used except in emergencies. &#39;Cassandra&#39; is the default password based authentication. The default is &#39;Cassandra&#39;.
+     * 
+     */
     public Optional<String> authenticationMethod() {
         return Optional.ofNullable(this.authenticationMethod);
     }
@@ -41,6 +45,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="cassandraVersion")
     private @Nullable String cassandraVersion;
 
+    /**
+     * @return Which version of Cassandra should this cluster converge to running (e.g., 3.11). When updated, the cluster may take some time to migrate to the new version.
+     * 
+     */
     public Optional<String> cassandraVersion() {
         return Optional.ofNullable(this.cassandraVersion);
     }
@@ -52,6 +60,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="clientCertificates")
     private @Nullable List<CertificateResponse> clientCertificates;
 
+    /**
+     * @return List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.
+     * 
+     */
     public Optional<List<CertificateResponse>> clientCertificates() {
         return Optional.ofNullable(this.clientCertificates);
     }
@@ -63,6 +75,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="clusterNameOverride")
     private @Nullable String clusterNameOverride;
 
+    /**
+     * @return If you need to set the clusterName property in cassandra.yaml to something besides the resource name of the cluster, set the value to use on this property.
+     * 
+     */
     public Optional<String> clusterNameOverride() {
         return Optional.ofNullable(this.clusterNameOverride);
     }
@@ -74,6 +90,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="delegatedManagementSubnetId")
     private @Nullable String delegatedManagementSubnetId;
 
+    /**
+     * @return Resource id of a subnet that this cluster&#39;s management service should have its network interface attached to. The subnet must be routable to all subnets that will be delegated to data centers. The resource id must be of the form &#39;/subscriptions/&lt;subscription id&gt;/resourceGroups/&lt;resource group&gt;/providers/Microsoft.Network/virtualNetworks/&lt;virtual network&gt;/subnets/&lt;subnet&gt;&#39;
+     * 
+     */
     public Optional<String> delegatedManagementSubnetId() {
         return Optional.ofNullable(this.delegatedManagementSubnetId);
     }
@@ -85,6 +105,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="externalGossipCertificates")
     private @Nullable List<CertificateResponse> externalGossipCertificates;
 
+    /**
+     * @return List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.
+     * 
+     */
     public Optional<List<CertificateResponse>> externalGossipCertificates() {
         return Optional.ofNullable(this.externalGossipCertificates);
     }
@@ -96,6 +120,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="externalSeedNodes")
     private @Nullable List<SeedNodeResponse> externalSeedNodes;
 
+    /**
+     * @return List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.
+     * 
+     */
     public Optional<List<SeedNodeResponse>> externalSeedNodes() {
         return Optional.ofNullable(this.externalSeedNodes);
     }
@@ -107,6 +135,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="gossipCertificates", required=true)
     private List<CertificateResponse> gossipCertificates;
 
+    /**
+     * @return List of TLS certificates that unmanaged nodes must trust for gossip with managed nodes. All managed nodes will present TLS client certificates that are verifiable using one of the certificates provided in this property.
+     * 
+     */
     public List<CertificateResponse> gossipCertificates() {
         return this.gossipCertificates;
     }
@@ -118,6 +150,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="hoursBetweenBackups")
     private @Nullable Integer hoursBetweenBackups;
 
+    /**
+     * @return Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.
+     * 
+     */
     public Optional<Integer> hoursBetweenBackups() {
         return Optional.ofNullable(this.hoursBetweenBackups);
     }
@@ -129,6 +165,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="prometheusEndpoint")
     private @Nullable SeedNodeResponse prometheusEndpoint;
 
+    /**
+     * @return Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.
+     * 
+     */
     public Optional<SeedNodeResponse> prometheusEndpoint() {
         return Optional.ofNullable(this.prometheusEndpoint);
     }
@@ -140,6 +180,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return The status of the resource at the time the operation was called.
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -151,6 +195,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="repairEnabled")
     private @Nullable Boolean repairEnabled;
 
+    /**
+     * @return Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.
+     * 
+     */
     public Optional<Boolean> repairEnabled() {
         return Optional.ofNullable(this.repairEnabled);
     }
@@ -162,6 +210,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="seedNodes", required=true)
     private List<SeedNodeResponse> seedNodes;
 
+    /**
+     * @return List of IP addresses of seed nodes in the managed data centers. These should be added to the seed node lists of all unmanaged nodes.
+     * 
+     */
     public List<SeedNodeResponse> seedNodes() {
         return this.seedNodes;
     }
@@ -202,87 +254,195 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
             $ = new ClusterResourceResponseProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationMethod Which authentication method Cassandra should use to authenticate clients. &#39;None&#39; turns off authentication, so should not be used except in emergencies. &#39;Cassandra&#39; is the default password based authentication. The default is &#39;Cassandra&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationMethod(@Nullable String authenticationMethod) {
             $.authenticationMethod = authenticationMethod;
             return this;
         }
 
+        /**
+         * @param cassandraVersion Which version of Cassandra should this cluster converge to running (e.g., 3.11). When updated, the cluster may take some time to migrate to the new version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cassandraVersion(@Nullable String cassandraVersion) {
             $.cassandraVersion = cassandraVersion;
             return this;
         }
 
+        /**
+         * @param clientCertificates List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificates(@Nullable List<CertificateResponse> clientCertificates) {
             $.clientCertificates = clientCertificates;
             return this;
         }
 
+        /**
+         * @param clientCertificates List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificates(CertificateResponse... clientCertificates) {
             return clientCertificates(List.of(clientCertificates));
         }
 
+        /**
+         * @param clusterNameOverride If you need to set the clusterName property in cassandra.yaml to something besides the resource name of the cluster, set the value to use on this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterNameOverride(@Nullable String clusterNameOverride) {
             $.clusterNameOverride = clusterNameOverride;
             return this;
         }
 
+        /**
+         * @param delegatedManagementSubnetId Resource id of a subnet that this cluster&#39;s management service should have its network interface attached to. The subnet must be routable to all subnets that will be delegated to data centers. The resource id must be of the form &#39;/subscriptions/&lt;subscription id&gt;/resourceGroups/&lt;resource group&gt;/providers/Microsoft.Network/virtualNetworks/&lt;virtual network&gt;/subnets/&lt;subnet&gt;&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegatedManagementSubnetId(@Nullable String delegatedManagementSubnetId) {
             $.delegatedManagementSubnetId = delegatedManagementSubnetId;
             return this;
         }
 
+        /**
+         * @param externalGossipCertificates List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalGossipCertificates(@Nullable List<CertificateResponse> externalGossipCertificates) {
             $.externalGossipCertificates = externalGossipCertificates;
             return this;
         }
 
+        /**
+         * @param externalGossipCertificates List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalGossipCertificates(CertificateResponse... externalGossipCertificates) {
             return externalGossipCertificates(List.of(externalGossipCertificates));
         }
 
+        /**
+         * @param externalSeedNodes List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalSeedNodes(@Nullable List<SeedNodeResponse> externalSeedNodes) {
             $.externalSeedNodes = externalSeedNodes;
             return this;
         }
 
+        /**
+         * @param externalSeedNodes List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalSeedNodes(SeedNodeResponse... externalSeedNodes) {
             return externalSeedNodes(List.of(externalSeedNodes));
         }
 
+        /**
+         * @param gossipCertificates List of TLS certificates that unmanaged nodes must trust for gossip with managed nodes. All managed nodes will present TLS client certificates that are verifiable using one of the certificates provided in this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gossipCertificates(List<CertificateResponse> gossipCertificates) {
             $.gossipCertificates = gossipCertificates;
             return this;
         }
 
+        /**
+         * @param gossipCertificates List of TLS certificates that unmanaged nodes must trust for gossip with managed nodes. All managed nodes will present TLS client certificates that are verifiable using one of the certificates provided in this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gossipCertificates(CertificateResponse... gossipCertificates) {
             return gossipCertificates(List.of(gossipCertificates));
         }
 
+        /**
+         * @param hoursBetweenBackups Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hoursBetweenBackups(@Nullable Integer hoursBetweenBackups) {
             $.hoursBetweenBackups = hoursBetweenBackups;
             return this;
         }
 
+        /**
+         * @param prometheusEndpoint Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prometheusEndpoint(@Nullable SeedNodeResponse prometheusEndpoint) {
             $.prometheusEndpoint = prometheusEndpoint;
             return this;
         }
 
+        /**
+         * @param provisioningState The status of the resource at the time the operation was called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param repairEnabled Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repairEnabled(@Nullable Boolean repairEnabled) {
             $.repairEnabled = repairEnabled;
             return this;
         }
 
+        /**
+         * @param seedNodes List of IP addresses of seed nodes in the managed data centers. These should be added to the seed node lists of all unmanaged nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seedNodes(List<SeedNodeResponse> seedNodes) {
             $.seedNodes = seedNodes;
             return this;
         }
 
+        /**
+         * @param seedNodes List of IP addresses of seed nodes in the managed data centers. These should be added to the seed node lists of all unmanaged nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seedNodes(SeedNodeResponse... seedNodes) {
             return seedNodes(List.of(seedNodes));
         }

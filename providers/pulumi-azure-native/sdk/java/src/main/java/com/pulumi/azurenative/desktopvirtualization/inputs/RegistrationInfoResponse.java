@@ -25,6 +25,10 @@ public final class RegistrationInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="expirationTime")
     private @Nullable String expirationTime;
 
+    /**
+     * @return Expiration time of registration token.
+     * 
+     */
     public Optional<String> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
@@ -36,6 +40,10 @@ public final class RegistrationInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="registrationTokenOperation")
     private @Nullable String registrationTokenOperation;
 
+    /**
+     * @return The type of resetting the token.
+     * 
+     */
     public Optional<String> registrationTokenOperation() {
         return Optional.ofNullable(this.registrationTokenOperation);
     }
@@ -47,6 +55,10 @@ public final class RegistrationInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="token")
     private @Nullable String token;
 
+    /**
+     * @return The registration token base64 encoded string.
+     * 
+     */
     public Optional<String> token() {
         return Optional.ofNullable(this.token);
     }
@@ -77,16 +89,34 @@ public final class RegistrationInfoResponse extends com.pulumi.resources.InvokeA
             $ = new RegistrationInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationTime Expiration time of registration token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(@Nullable String expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param registrationTokenOperation The type of resetting the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationTokenOperation(@Nullable String registrationTokenOperation) {
             $.registrationTokenOperation = registrationTokenOperation;
             return this;
         }
 
+        /**
+         * @param token The registration token base64 encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder token(@Nullable String token) {
             $.token = token;
             return this;

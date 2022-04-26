@@ -24,6 +24,10 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="detailStatus", required=true)
     private String detailStatus;
 
+    /**
+     * @return The human-readable status of the container instance state.
+     * 
+     */
     public String detailStatus() {
         return this.detailStatus;
     }
@@ -35,6 +39,10 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="exitCode", required=true)
     private Integer exitCode;
 
+    /**
+     * @return The container instance exit codes correspond to those from the `docker run` command.
+     * 
+     */
     public Integer exitCode() {
         return this.exitCode;
     }
@@ -46,6 +54,10 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="finishTime", required=true)
     private String finishTime;
 
+    /**
+     * @return The date-time when the container instance state finished.
+     * 
+     */
     public String finishTime() {
         return this.finishTime;
     }
@@ -57,6 +69,10 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The date-time when the container instance state started.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -68,6 +84,10 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The state of the container instance.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -100,26 +120,56 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
             $ = new ContainerStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param detailStatus The human-readable status of the container instance state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailStatus(String detailStatus) {
             $.detailStatus = detailStatus;
             return this;
         }
 
+        /**
+         * @param exitCode The container instance exit codes correspond to those from the `docker run` command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exitCode(Integer exitCode) {
             $.exitCode = exitCode;
             return this;
         }
 
+        /**
+         * @param finishTime The date-time when the container instance state finished.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finishTime(String finishTime) {
             $.finishTime = finishTime;
             return this;
         }
 
+        /**
+         * @param startTime The date-time when the container instance state started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param state The state of the container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

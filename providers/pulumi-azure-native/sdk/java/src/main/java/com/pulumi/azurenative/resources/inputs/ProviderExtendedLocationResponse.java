@@ -26,6 +26,10 @@ public final class ProviderExtendedLocationResponse extends com.pulumi.resources
     @Import(name="extendedLocations")
     private @Nullable List<String> extendedLocations;
 
+    /**
+     * @return The extended locations for the azure location.
+     * 
+     */
     public Optional<List<String>> extendedLocations() {
         return Optional.ofNullable(this.extendedLocations);
     }
@@ -37,6 +41,10 @@ public final class ProviderExtendedLocationResponse extends com.pulumi.resources
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return The azure location.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -48,6 +56,10 @@ public final class ProviderExtendedLocationResponse extends com.pulumi.resources
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The extended location type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -78,20 +90,44 @@ public final class ProviderExtendedLocationResponse extends com.pulumi.resources
             $ = new ProviderExtendedLocationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extendedLocations The extended locations for the azure location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocations(@Nullable List<String> extendedLocations) {
             $.extendedLocations = extendedLocations;
             return this;
         }
 
+        /**
+         * @param extendedLocations The extended locations for the azure location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocations(String... extendedLocations) {
             return extendedLocations(List.of(extendedLocations));
         }
 
+        /**
+         * @param location The azure location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param type The extended location type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

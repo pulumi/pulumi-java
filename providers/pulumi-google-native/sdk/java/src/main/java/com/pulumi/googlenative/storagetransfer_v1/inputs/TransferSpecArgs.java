@@ -34,6 +34,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="awsS3DataSource")
     private @Nullable Output<AwsS3DataArgs> awsS3DataSource;
 
+    /**
+     * @return An AWS S3 data source.
+     * 
+     */
     public Optional<Output<AwsS3DataArgs>> awsS3DataSource() {
         return Optional.ofNullable(this.awsS3DataSource);
     }
@@ -45,6 +49,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureBlobStorageDataSource")
     private @Nullable Output<AzureBlobStorageDataArgs> azureBlobStorageDataSource;
 
+    /**
+     * @return An Azure Blob Storage data source.
+     * 
+     */
     public Optional<Output<AzureBlobStorageDataArgs>> azureBlobStorageDataSource() {
         return Optional.ofNullable(this.azureBlobStorageDataSource);
     }
@@ -56,6 +64,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gcsDataSink")
     private @Nullable Output<GcsDataArgs> gcsDataSink;
 
+    /**
+     * @return A Cloud Storage data sink.
+     * 
+     */
     public Optional<Output<GcsDataArgs>> gcsDataSink() {
         return Optional.ofNullable(this.gcsDataSink);
     }
@@ -67,6 +79,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gcsDataSource")
     private @Nullable Output<GcsDataArgs> gcsDataSource;
 
+    /**
+     * @return A Cloud Storage data source.
+     * 
+     */
     public Optional<Output<GcsDataArgs>> gcsDataSource() {
         return Optional.ofNullable(this.gcsDataSource);
     }
@@ -78,6 +94,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gcsIntermediateDataLocation")
     private @Nullable Output<GcsDataArgs> gcsIntermediateDataLocation;
 
+    /**
+     * @return Cloud Storage intermediate data location.
+     * 
+     */
     public Optional<Output<GcsDataArgs>> gcsIntermediateDataLocation() {
         return Optional.ofNullable(this.gcsIntermediateDataLocation);
     }
@@ -89,6 +109,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpDataSource")
     private @Nullable Output<HttpDataArgs> httpDataSource;
 
+    /**
+     * @return An HTTP URL data source.
+     * 
+     */
     public Optional<Output<HttpDataArgs>> httpDataSource() {
         return Optional.ofNullable(this.httpDataSource);
     }
@@ -100,6 +124,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectConditions")
     private @Nullable Output<ObjectConditionsArgs> objectConditions;
 
+    /**
+     * @return Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects&#39; &#34;last modification time&#34; do not exclude objects in a data sink.
+     * 
+     */
     public Optional<Output<ObjectConditionsArgs>> objectConditions() {
         return Optional.ofNullable(this.objectConditions);
     }
@@ -111,6 +139,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="posixDataSink")
     private @Nullable Output<PosixFilesystemArgs> posixDataSink;
 
+    /**
+     * @return A POSIX Filesystem data sink.
+     * 
+     */
     public Optional<Output<PosixFilesystemArgs>> posixDataSink() {
         return Optional.ofNullable(this.posixDataSink);
     }
@@ -122,6 +154,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="posixDataSource")
     private @Nullable Output<PosixFilesystemArgs> posixDataSource;
 
+    /**
+     * @return A POSIX Filesystem data source.
+     * 
+     */
     public Optional<Output<PosixFilesystemArgs>> posixDataSource() {
         return Optional.ofNullable(this.posixDataSource);
     }
@@ -133,6 +169,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sinkAgentPoolName")
     private @Nullable Output<String> sinkAgentPoolName;
 
+    /**
+     * @return Specifies the agent pool name associated with the posix data sink. When unspecified, the default name is used.
+     * 
+     */
     public Optional<Output<String>> sinkAgentPoolName() {
         return Optional.ofNullable(this.sinkAgentPoolName);
     }
@@ -144,6 +184,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceAgentPoolName")
     private @Nullable Output<String> sourceAgentPoolName;
 
+    /**
+     * @return Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
+     * 
+     */
     public Optional<Output<String>> sourceAgentPoolName() {
         return Optional.ofNullable(this.sourceAgentPoolName);
     }
@@ -155,6 +199,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transferManifest")
     private @Nullable Output<TransferManifestArgs> transferManifest;
 
+    /**
+     * @return A manifest file provides a list of objects to be transferred from the data source. This field points to the location of the manifest file. Otherwise, the entire source bucket is used. ObjectConditions still apply.
+     * 
+     */
     public Optional<Output<TransferManifestArgs>> transferManifest() {
         return Optional.ofNullable(this.transferManifest);
     }
@@ -166,6 +214,10 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transferOptions")
     private @Nullable Output<TransferOptionsArgs> transferOptions;
 
+    /**
+     * @return If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as &#39;last modification time&#39; are specified, the request fails with an INVALID_ARGUMENT error.
+     * 
+     */
     public Optional<Output<TransferOptionsArgs>> transferOptions() {
         return Optional.ofNullable(this.transferOptions);
     }
@@ -206,119 +258,275 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TransferSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsS3DataSource An AWS S3 data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsS3DataSource(@Nullable Output<AwsS3DataArgs> awsS3DataSource) {
             $.awsS3DataSource = awsS3DataSource;
             return this;
         }
 
+        /**
+         * @param awsS3DataSource An AWS S3 data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsS3DataSource(AwsS3DataArgs awsS3DataSource) {
             return awsS3DataSource(Output.of(awsS3DataSource));
         }
 
+        /**
+         * @param azureBlobStorageDataSource An Azure Blob Storage data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureBlobStorageDataSource(@Nullable Output<AzureBlobStorageDataArgs> azureBlobStorageDataSource) {
             $.azureBlobStorageDataSource = azureBlobStorageDataSource;
             return this;
         }
 
+        /**
+         * @param azureBlobStorageDataSource An Azure Blob Storage data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureBlobStorageDataSource(AzureBlobStorageDataArgs azureBlobStorageDataSource) {
             return azureBlobStorageDataSource(Output.of(azureBlobStorageDataSource));
         }
 
+        /**
+         * @param gcsDataSink A Cloud Storage data sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsDataSink(@Nullable Output<GcsDataArgs> gcsDataSink) {
             $.gcsDataSink = gcsDataSink;
             return this;
         }
 
+        /**
+         * @param gcsDataSink A Cloud Storage data sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsDataSink(GcsDataArgs gcsDataSink) {
             return gcsDataSink(Output.of(gcsDataSink));
         }
 
+        /**
+         * @param gcsDataSource A Cloud Storage data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsDataSource(@Nullable Output<GcsDataArgs> gcsDataSource) {
             $.gcsDataSource = gcsDataSource;
             return this;
         }
 
+        /**
+         * @param gcsDataSource A Cloud Storage data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsDataSource(GcsDataArgs gcsDataSource) {
             return gcsDataSource(Output.of(gcsDataSource));
         }
 
+        /**
+         * @param gcsIntermediateDataLocation Cloud Storage intermediate data location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsIntermediateDataLocation(@Nullable Output<GcsDataArgs> gcsIntermediateDataLocation) {
             $.gcsIntermediateDataLocation = gcsIntermediateDataLocation;
             return this;
         }
 
+        /**
+         * @param gcsIntermediateDataLocation Cloud Storage intermediate data location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsIntermediateDataLocation(GcsDataArgs gcsIntermediateDataLocation) {
             return gcsIntermediateDataLocation(Output.of(gcsIntermediateDataLocation));
         }
 
+        /**
+         * @param httpDataSource An HTTP URL data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpDataSource(@Nullable Output<HttpDataArgs> httpDataSource) {
             $.httpDataSource = httpDataSource;
             return this;
         }
 
+        /**
+         * @param httpDataSource An HTTP URL data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpDataSource(HttpDataArgs httpDataSource) {
             return httpDataSource(Output.of(httpDataSource));
         }
 
+        /**
+         * @param objectConditions Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects&#39; &#34;last modification time&#34; do not exclude objects in a data sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectConditions(@Nullable Output<ObjectConditionsArgs> objectConditions) {
             $.objectConditions = objectConditions;
             return this;
         }
 
+        /**
+         * @param objectConditions Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects&#39; &#34;last modification time&#34; do not exclude objects in a data sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectConditions(ObjectConditionsArgs objectConditions) {
             return objectConditions(Output.of(objectConditions));
         }
 
+        /**
+         * @param posixDataSink A POSIX Filesystem data sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixDataSink(@Nullable Output<PosixFilesystemArgs> posixDataSink) {
             $.posixDataSink = posixDataSink;
             return this;
         }
 
+        /**
+         * @param posixDataSink A POSIX Filesystem data sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixDataSink(PosixFilesystemArgs posixDataSink) {
             return posixDataSink(Output.of(posixDataSink));
         }
 
+        /**
+         * @param posixDataSource A POSIX Filesystem data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixDataSource(@Nullable Output<PosixFilesystemArgs> posixDataSource) {
             $.posixDataSource = posixDataSource;
             return this;
         }
 
+        /**
+         * @param posixDataSource A POSIX Filesystem data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixDataSource(PosixFilesystemArgs posixDataSource) {
             return posixDataSource(Output.of(posixDataSource));
         }
 
+        /**
+         * @param sinkAgentPoolName Specifies the agent pool name associated with the posix data sink. When unspecified, the default name is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkAgentPoolName(@Nullable Output<String> sinkAgentPoolName) {
             $.sinkAgentPoolName = sinkAgentPoolName;
             return this;
         }
 
+        /**
+         * @param sinkAgentPoolName Specifies the agent pool name associated with the posix data sink. When unspecified, the default name is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkAgentPoolName(String sinkAgentPoolName) {
             return sinkAgentPoolName(Output.of(sinkAgentPoolName));
         }
 
+        /**
+         * @param sourceAgentPoolName Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAgentPoolName(@Nullable Output<String> sourceAgentPoolName) {
             $.sourceAgentPoolName = sourceAgentPoolName;
             return this;
         }
 
+        /**
+         * @param sourceAgentPoolName Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAgentPoolName(String sourceAgentPoolName) {
             return sourceAgentPoolName(Output.of(sourceAgentPoolName));
         }
 
+        /**
+         * @param transferManifest A manifest file provides a list of objects to be transferred from the data source. This field points to the location of the manifest file. Otherwise, the entire source bucket is used. ObjectConditions still apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferManifest(@Nullable Output<TransferManifestArgs> transferManifest) {
             $.transferManifest = transferManifest;
             return this;
         }
 
+        /**
+         * @param transferManifest A manifest file provides a list of objects to be transferred from the data source. This field points to the location of the manifest file. Otherwise, the entire source bucket is used. ObjectConditions still apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferManifest(TransferManifestArgs transferManifest) {
             return transferManifest(Output.of(transferManifest));
         }
 
+        /**
+         * @param transferOptions If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as &#39;last modification time&#39; are specified, the request fails with an INVALID_ARGUMENT error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferOptions(@Nullable Output<TransferOptionsArgs> transferOptions) {
             $.transferOptions = transferOptions;
             return this;
         }
 
+        /**
+         * @param transferOptions If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as &#39;last modification time&#39; are specified, the request fails with an INVALID_ARGUMENT error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferOptions(TransferOptionsArgs transferOptions) {
             return transferOptions(Output.of(transferOptions));
         }

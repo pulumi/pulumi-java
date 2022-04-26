@@ -23,6 +23,10 @@ public final class StatusConditionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="canonicalCode", required=true)
     private String canonicalCode;
 
+    /**
+     * @return Canonical code of the condition.
+     * 
+     */
     public String canonicalCode() {
         return this.canonicalCode;
     }
@@ -34,6 +38,10 @@ public final class StatusConditionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Human-friendly representation of the condition
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -63,11 +71,23 @@ public final class StatusConditionResponse extends com.pulumi.resources.InvokeAr
             $ = new StatusConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canonicalCode Canonical code of the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalCode(String canonicalCode) {
             $.canonicalCode = canonicalCode;
             return this;
         }
 
+        /**
+         * @param message Human-friendly representation of the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;

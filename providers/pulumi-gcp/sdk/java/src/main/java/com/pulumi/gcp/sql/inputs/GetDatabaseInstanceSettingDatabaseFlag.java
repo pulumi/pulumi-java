@@ -19,6 +19,10 @@ public final class GetDatabaseInstanceSettingDatabaseFlag extends com.pulumi.res
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the instance.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -55,6 +59,12 @@ public final class GetDatabaseInstanceSettingDatabaseFlag extends com.pulumi.res
             $ = new GetDatabaseInstanceSettingDatabaseFlag(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -25,6 +25,10 @@ public final class AccessReviewReviewerResponse extends com.pulumi.resources.Inv
     @Import(name="principalId")
     private @Nullable String principalId;
 
+    /**
+     * @return The id of the reviewer(user/servicePrincipal)
+     * 
+     */
     public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -36,6 +40,10 @@ public final class AccessReviewReviewerResponse extends com.pulumi.resources.Inv
     @Import(name="principalType", required=true)
     private String principalType;
 
+    /**
+     * @return The identity type : user/servicePrincipal
+     * 
+     */
     public String principalType() {
         return this.principalType;
     }
@@ -65,11 +73,23 @@ public final class AccessReviewReviewerResponse extends com.pulumi.resources.Inv
             $ = new AccessReviewReviewerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The id of the reviewer(user/servicePrincipal)
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalType The identity type : user/servicePrincipal
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(String principalType) {
             $.principalType = principalType;
             return this;

@@ -19,6 +19,10 @@ public final class GetManagementPolicyArgs extends com.pulumi.resources.InvokeAr
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetManagementPolicyArgs extends com.pulumi.resources.InvokeAr
     @Import(name="managementPolicyName", required=true)
     private String managementPolicyName;
 
+    /**
+     * @return The name of the Storage Account Management Policy. It should always be &#39;default&#39;
+     * 
+     */
     public String managementPolicyName() {
         return this.managementPolicyName;
     }
@@ -41,6 +49,10 @@ public final class GetManagementPolicyArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetManagementPolicyArgs extends com.pulumi.resources.InvokeAr
             $ = new GetManagementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param managementPolicyName The name of the Storage Account Management Policy. It should always be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementPolicyName(String managementPolicyName) {
             $.managementPolicyName = managementPolicyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

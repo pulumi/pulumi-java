@@ -29,6 +29,10 @@ public final class PeeringPropertiesDirectResponse extends com.pulumi.resources.
     @Import(name="connections")
     private @Nullable List<DirectConnectionResponse> connections;
 
+    /**
+     * @return The set of connections that constitute a direct peering.
+     * 
+     */
     public Optional<List<DirectConnectionResponse>> connections() {
         return Optional.ofNullable(this.connections);
     }
@@ -40,6 +44,10 @@ public final class PeeringPropertiesDirectResponse extends com.pulumi.resources.
     @Import(name="directPeeringType")
     private @Nullable String directPeeringType;
 
+    /**
+     * @return The type of direct peering.
+     * 
+     */
     public Optional<String> directPeeringType() {
         return Optional.ofNullable(this.directPeeringType);
     }
@@ -51,6 +59,10 @@ public final class PeeringPropertiesDirectResponse extends com.pulumi.resources.
     @Import(name="peerAsn")
     private @Nullable SubResourceResponse peerAsn;
 
+    /**
+     * @return The reference of the peer ASN.
+     * 
+     */
     public Optional<SubResourceResponse> peerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
@@ -62,6 +74,10 @@ public final class PeeringPropertiesDirectResponse extends com.pulumi.resources.
     @Import(name="useForPeeringService", required=true)
     private Boolean useForPeeringService;
 
+    /**
+     * @return The flag that indicates whether or not the peering is used for peering service.
+     * 
+     */
     public Boolean useForPeeringService() {
         return this.useForPeeringService;
     }
@@ -93,25 +109,55 @@ public final class PeeringPropertiesDirectResponse extends com.pulumi.resources.
             $ = new PeeringPropertiesDirectResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connections The set of connections that constitute a direct peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(@Nullable List<DirectConnectionResponse> connections) {
             $.connections = connections;
             return this;
         }
 
+        /**
+         * @param connections The set of connections that constitute a direct peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(DirectConnectionResponse... connections) {
             return connections(List.of(connections));
         }
 
+        /**
+         * @param directPeeringType The type of direct peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directPeeringType(@Nullable String directPeeringType) {
             $.directPeeringType = directPeeringType;
             return this;
         }
 
+        /**
+         * @param peerAsn The reference of the peer ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsn(@Nullable SubResourceResponse peerAsn) {
             $.peerAsn = peerAsn;
             return this;
         }
 
+        /**
+         * @param useForPeeringService The flag that indicates whether or not the peering is used for peering service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useForPeeringService(Boolean useForPeeringService) {
             $.useForPeeringService = useForPeeringService;
             return this;

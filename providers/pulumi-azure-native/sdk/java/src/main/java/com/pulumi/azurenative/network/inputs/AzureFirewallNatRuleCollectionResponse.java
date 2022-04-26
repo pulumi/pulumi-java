@@ -29,6 +29,10 @@ public final class AzureFirewallNatRuleCollectionResponse extends com.pulumi.res
     @Import(name="action")
     private @Nullable AzureFirewallNatRCActionResponse action;
 
+    /**
+     * @return The action type of a NAT rule collection.
+     * 
+     */
     public Optional<AzureFirewallNatRCActionResponse> action() {
         return Optional.ofNullable(this.action);
     }
@@ -40,6 +44,10 @@ public final class AzureFirewallNatRuleCollectionResponse extends com.pulumi.res
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -51,6 +59,10 @@ public final class AzureFirewallNatRuleCollectionResponse extends com.pulumi.res
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -62,6 +74,10 @@ public final class AzureFirewallNatRuleCollectionResponse extends com.pulumi.res
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -73,6 +89,10 @@ public final class AzureFirewallNatRuleCollectionResponse extends com.pulumi.res
     @Import(name="priority")
     private @Nullable Integer priority;
 
+    /**
+     * @return Priority of the NAT rule collection resource.
+     * 
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -84,6 +104,10 @@ public final class AzureFirewallNatRuleCollectionResponse extends com.pulumi.res
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the NAT rule collection resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -95,6 +119,10 @@ public final class AzureFirewallNatRuleCollectionResponse extends com.pulumi.res
     @Import(name="rules")
     private @Nullable List<AzureFirewallNatRuleResponse> rules;
 
+    /**
+     * @return Collection of rules used by a NAT rule collection.
+     * 
+     */
     public Optional<List<AzureFirewallNatRuleResponse>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -129,41 +157,89 @@ public final class AzureFirewallNatRuleCollectionResponse extends com.pulumi.res
             $ = new AzureFirewallNatRuleCollectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action type of a NAT rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable AzureFirewallNatRCActionResponse action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param priority Priority of the NAT rule collection resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the NAT rule collection resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param rules Collection of rules used by a NAT rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable List<AzureFirewallNatRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Collection of rules used by a NAT rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(AzureFirewallNatRuleResponse... rules) {
             return rules(List.of(rules));
         }

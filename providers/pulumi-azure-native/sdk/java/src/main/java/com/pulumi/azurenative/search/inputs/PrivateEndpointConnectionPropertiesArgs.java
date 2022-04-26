@@ -27,6 +27,10 @@ public final class PrivateEndpointConnectionPropertiesArgs extends com.pulumi.re
     @Import(name="privateEndpoint")
     private @Nullable Output<PrivateEndpointConnectionPropertiesPrivateEndpointArgs> privateEndpoint;
 
+    /**
+     * @return The private endpoint resource from Microsoft.Network provider.
+     * 
+     */
     public Optional<Output<PrivateEndpointConnectionPropertiesPrivateEndpointArgs>> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -38,6 +42,10 @@ public final class PrivateEndpointConnectionPropertiesArgs extends com.pulumi.re
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable Output<PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
+    /**
+     * @return Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.
+     * 
+     */
     public Optional<Output<PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs>> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -67,20 +75,44 @@ public final class PrivateEndpointConnectionPropertiesArgs extends com.pulumi.re
             $ = new PrivateEndpointConnectionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateEndpoint The private endpoint resource from Microsoft.Network provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable Output<PrivateEndpointConnectionPropertiesPrivateEndpointArgs> privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateEndpoint The private endpoint resource from Microsoft.Network provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(PrivateEndpointConnectionPropertiesPrivateEndpointArgs privateEndpoint) {
             return privateEndpoint(Output.of(privateEndpoint));
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }

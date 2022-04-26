@@ -26,6 +26,10 @@ public final class ClientRegistrationArgs extends com.pulumi.resources.ResourceA
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return The Client ID of the app used for login.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -37,6 +41,10 @@ public final class ClientRegistrationArgs extends com.pulumi.resources.ResourceA
     @Import(name="clientSecretSettingName")
     private @Nullable Output<String> clientSecretSettingName;
 
+    /**
+     * @return The app setting name that contains the client secret.
+     * 
+     */
     public Optional<Output<String>> clientSecretSettingName() {
         return Optional.ofNullable(this.clientSecretSettingName);
     }
@@ -66,20 +74,44 @@ public final class ClientRegistrationArgs extends com.pulumi.resources.ResourceA
             $ = new ClientRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The Client ID of the app used for login.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The Client ID of the app used for login.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecretSettingName The app setting name that contains the client secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecretSettingName(@Nullable Output<String> clientSecretSettingName) {
             $.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
 
+        /**
+         * @param clientSecretSettingName The app setting name that contains the client secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecretSettingName(String clientSecretSettingName) {
             return clientSecretSettingName(Output.of(clientSecretSettingName));
         }

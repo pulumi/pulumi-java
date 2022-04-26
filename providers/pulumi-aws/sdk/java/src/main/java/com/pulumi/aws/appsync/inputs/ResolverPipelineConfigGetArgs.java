@@ -23,6 +23,10 @@ public final class ResolverPipelineConfigGetArgs extends com.pulumi.resources.Re
     @Import(name="functions")
     private @Nullable Output<List<String>> functions;
 
+    /**
+     * @return The list of Function ID.
+     * 
+     */
     public Optional<Output<List<String>>> functions() {
         return Optional.ofNullable(this.functions);
     }
@@ -51,15 +55,33 @@ public final class ResolverPipelineConfigGetArgs extends com.pulumi.resources.Re
             $ = new ResolverPipelineConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functions The list of Function ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functions(@Nullable Output<List<String>> functions) {
             $.functions = functions;
             return this;
         }
 
+        /**
+         * @param functions The list of Function ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functions(List<String> functions) {
             return functions(Output.of(functions));
         }
 
+        /**
+         * @param functions The list of Function ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functions(String... functions) {
             return functions(List.of(functions));
         }

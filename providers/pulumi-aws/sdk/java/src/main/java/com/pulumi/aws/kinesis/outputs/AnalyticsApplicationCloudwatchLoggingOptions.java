@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AnalyticsApplicationCloudwatchLoggingOptions {
     /**
-     * The ARN of the Kinesis Analytics Application.
+     * @return The ARN of the Kinesis Analytics Application.
      * 
      */
     private final @Nullable String id;
     /**
-     * The ARN of the CloudWatch Log Stream.
+     * @return The ARN of the CloudWatch Log Stream.
      * 
      */
     private final String logStreamArn;
     /**
-     * The ARN of the IAM Role used to send application messages.
+     * @return The ARN of the IAM Role used to send application messages.
      * 
      */
     private final String roleArn;
@@ -38,23 +38,23 @@ public final class AnalyticsApplicationCloudwatchLoggingOptions {
     }
 
     /**
-     * The ARN of the Kinesis Analytics Application.
+     * @return The ARN of the Kinesis Analytics Application.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The ARN of the CloudWatch Log Stream.
+     * @return The ARN of the CloudWatch Log Stream.
      * 
-    */
+     */
     public String logStreamArn() {
         return this.logStreamArn;
     }
     /**
-     * The ARN of the IAM Role used to send application messages.
+     * @return The ARN of the IAM Role used to send application messages.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }

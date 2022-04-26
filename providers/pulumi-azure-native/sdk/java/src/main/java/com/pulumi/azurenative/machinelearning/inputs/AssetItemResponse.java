@@ -31,6 +31,10 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Asset&#39;s Id.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -42,6 +46,10 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inputPorts")
     private @Nullable Map<String,InputPortResponse> inputPorts;
 
+    /**
+     * @return Information about the asset&#39;s input ports.
+     * 
+     */
     public Optional<Map<String,InputPortResponse>> inputPorts() {
         return Optional.ofNullable(this.inputPorts);
     }
@@ -53,6 +61,10 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="locationInfo", required=true)
     private BlobLocationResponse locationInfo;
 
+    /**
+     * @return Access information for the asset.
+     * 
+     */
     public BlobLocationResponse locationInfo() {
         return this.locationInfo;
     }
@@ -64,6 +76,10 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="metadata")
     private @Nullable Map<String,String> metadata;
 
+    /**
+     * @return If the asset is a custom module, this holds the module&#39;s metadata.
+     * 
+     */
     public Optional<Map<String,String>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -75,6 +91,10 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Asset&#39;s friendly name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -86,6 +106,10 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="outputPorts")
     private @Nullable Map<String,OutputPortResponse> outputPorts;
 
+    /**
+     * @return Information about the asset&#39;s output ports.
+     * 
+     */
     public Optional<Map<String,OutputPortResponse>> outputPorts() {
         return Optional.ofNullable(this.outputPorts);
     }
@@ -97,6 +121,10 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameters")
     private @Nullable List<ModuleAssetParameterResponse> parameters;
 
+    /**
+     * @return If the asset is a custom module, this holds the module&#39;s parameters.
+     * 
+     */
     public Optional<List<ModuleAssetParameterResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -108,6 +136,10 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Asset&#39;s type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -143,45 +175,99 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AssetItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Asset&#39;s Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param inputPorts Information about the asset&#39;s input ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputPorts(@Nullable Map<String,InputPortResponse> inputPorts) {
             $.inputPorts = inputPorts;
             return this;
         }
 
+        /**
+         * @param locationInfo Access information for the asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationInfo(BlobLocationResponse locationInfo) {
             $.locationInfo = locationInfo;
             return this;
         }
 
+        /**
+         * @param metadata If the asset is a custom module, this holds the module&#39;s metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Map<String,String> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param name Asset&#39;s friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param outputPorts Information about the asset&#39;s output ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputPorts(@Nullable Map<String,OutputPortResponse> outputPorts) {
             $.outputPorts = outputPorts;
             return this;
         }
 
+        /**
+         * @param parameters If the asset is a custom module, this holds the module&#39;s parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable List<ModuleAssetParameterResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters If the asset is a custom module, this holds the module&#39;s parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ModuleAssetParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param type Asset&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

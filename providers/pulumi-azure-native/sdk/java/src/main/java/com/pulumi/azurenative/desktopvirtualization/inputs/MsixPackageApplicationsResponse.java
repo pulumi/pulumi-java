@@ -25,6 +25,10 @@ public final class MsixPackageApplicationsResponse extends com.pulumi.resources.
     @Import(name="appId")
     private @Nullable String appId;
 
+    /**
+     * @return Package Application Id, found in appxmanifest.xml.
+     * 
+     */
     public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
@@ -36,6 +40,10 @@ public final class MsixPackageApplicationsResponse extends com.pulumi.resources.
     @Import(name="appUserModelID")
     private @Nullable String appUserModelID;
 
+    /**
+     * @return Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.
+     * 
+     */
     public Optional<String> appUserModelID() {
         return Optional.ofNullable(this.appUserModelID);
     }
@@ -47,6 +55,10 @@ public final class MsixPackageApplicationsResponse extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of Package Application.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -58,6 +70,10 @@ public final class MsixPackageApplicationsResponse extends com.pulumi.resources.
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return User friendly name.
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -69,6 +85,10 @@ public final class MsixPackageApplicationsResponse extends com.pulumi.resources.
     @Import(name="iconImageName")
     private @Nullable String iconImageName;
 
+    /**
+     * @return User friendly name.
+     * 
+     */
     public Optional<String> iconImageName() {
         return Optional.ofNullable(this.iconImageName);
     }
@@ -80,6 +100,10 @@ public final class MsixPackageApplicationsResponse extends com.pulumi.resources.
     @Import(name="rawIcon")
     private @Nullable String rawIcon;
 
+    /**
+     * @return the icon a 64 bit string as a byte array.
+     * 
+     */
     public Optional<String> rawIcon() {
         return Optional.ofNullable(this.rawIcon);
     }
@@ -91,6 +115,10 @@ public final class MsixPackageApplicationsResponse extends com.pulumi.resources.
     @Import(name="rawPng")
     private @Nullable String rawPng;
 
+    /**
+     * @return the icon a 64 bit string as a byte array.
+     * 
+     */
     public Optional<String> rawPng() {
         return Optional.ofNullable(this.rawPng);
     }
@@ -125,36 +153,78 @@ public final class MsixPackageApplicationsResponse extends com.pulumi.resources.
             $ = new MsixPackageApplicationsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appId Package Application Id, found in appxmanifest.xml.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(@Nullable String appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param appUserModelID Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appUserModelID(@Nullable String appUserModelID) {
             $.appUserModelID = appUserModelID;
             return this;
         }
 
+        /**
+         * @param description Description of Package Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param friendlyName User friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param iconImageName User friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iconImageName(@Nullable String iconImageName) {
             $.iconImageName = iconImageName;
             return this;
         }
 
+        /**
+         * @param rawIcon the icon a 64 bit string as a byte array.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawIcon(@Nullable String rawIcon) {
             $.rawIcon = rawIcon;
             return this;
         }
 
+        /**
+         * @param rawPng the icon a 64 bit string as a byte array.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawPng(@Nullable String rawPng) {
             $.rawPng = rawPng;
             return this;

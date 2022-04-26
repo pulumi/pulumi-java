@@ -24,6 +24,10 @@ public final class FilesNotTieringErrorResponse extends com.pulumi.resources.Inv
     @Import(name="errorCode", required=true)
     private Integer errorCode;
 
+    /**
+     * @return Error code (HResult)
+     * 
+     */
     public Integer errorCode() {
         return this.errorCode;
     }
@@ -35,6 +39,10 @@ public final class FilesNotTieringErrorResponse extends com.pulumi.resources.Inv
     @Import(name="fileCount", required=true)
     private Double fileCount;
 
+    /**
+     * @return Count of files with this error
+     * 
+     */
     public Double fileCount() {
         return this.fileCount;
     }
@@ -64,11 +72,23 @@ public final class FilesNotTieringErrorResponse extends com.pulumi.resources.Inv
             $ = new FilesNotTieringErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorCode Error code (HResult)
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(Integer errorCode) {
             $.errorCode = errorCode;
             return this;
         }
 
+        /**
+         * @param fileCount Count of files with this error
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileCount(Double fileCount) {
             $.fileCount = fileCount;
             return this;

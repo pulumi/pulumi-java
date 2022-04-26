@@ -23,6 +23,10 @@ public final class ComputeInstanceConnectivityEndpointsResponse extends com.pulu
     @Import(name="privateIpAddress", required=true)
     private String privateIpAddress;
 
+    /**
+     * @return Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).
+     * 
+     */
     public String privateIpAddress() {
         return this.privateIpAddress;
     }
@@ -34,6 +38,10 @@ public final class ComputeInstanceConnectivityEndpointsResponse extends com.pulu
     @Import(name="publicIpAddress", required=true)
     private String publicIpAddress;
 
+    /**
+     * @return Public IP Address of this ComputeInstance.
+     * 
+     */
     public String publicIpAddress() {
         return this.publicIpAddress;
     }
@@ -63,11 +71,23 @@ public final class ComputeInstanceConnectivityEndpointsResponse extends com.pulu
             $ = new ComputeInstanceConnectivityEndpointsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateIpAddress Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(String privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param publicIpAddress Public IP Address of this ComputeInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddress(String publicIpAddress) {
             $.publicIpAddress = publicIpAddress;
             return this;

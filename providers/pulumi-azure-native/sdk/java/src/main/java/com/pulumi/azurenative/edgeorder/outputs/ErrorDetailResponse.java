@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class ErrorDetailResponse {
     /**
-     * The error additional info.
+     * @return The error additional info.
      * 
      */
     private final List<ErrorAdditionalInfoResponse> additionalInfo;
     /**
-     * The error code.
+     * @return The error code.
      * 
      */
     private final String code;
     /**
-     * The error details.
+     * @return The error details.
      * 
      */
     private final List<ErrorDetailResponse> details;
     /**
-     * The error message.
+     * @return The error message.
      * 
      */
     private final String message;
     /**
-     * The error target.
+     * @return The error target.
      * 
      */
     private final String target;
@@ -52,37 +52,37 @@ public final class ErrorDetailResponse {
     }
 
     /**
-     * The error additional info.
+     * @return The error additional info.
      * 
-    */
+     */
     public List<ErrorAdditionalInfoResponse> additionalInfo() {
         return this.additionalInfo;
     }
     /**
-     * The error code.
+     * @return The error code.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * The error details.
+     * @return The error details.
      * 
-    */
+     */
     public List<ErrorDetailResponse> details() {
         return this.details;
     }
     /**
-     * The error message.
+     * @return The error message.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * The error target.
+     * @return The error target.
      * 
-    */
+     */
     public String target() {
         return this.target;
     }

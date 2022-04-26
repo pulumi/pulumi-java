@@ -24,6 +24,10 @@ public final class AzureCredentialsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sasToken", required=true)
     private Output<String> sasToken;
 
+    /**
+     * @return Azure shared access signature (SAS). For more information about SAS, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
+     * 
+     */
     public Output<String> sasToken() {
         return this.sasToken;
     }
@@ -52,11 +56,23 @@ public final class AzureCredentialsArgs extends com.pulumi.resources.ResourceArg
             $ = new AzureCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sasToken Azure shared access signature (SAS). For more information about SAS, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasToken(Output<String> sasToken) {
             $.sasToken = sasToken;
             return this;
         }
 
+        /**
+         * @param sasToken Azure shared access signature (SAS). For more information about SAS, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasToken(String sasToken) {
             return sasToken(Output.of(sasToken));
         }

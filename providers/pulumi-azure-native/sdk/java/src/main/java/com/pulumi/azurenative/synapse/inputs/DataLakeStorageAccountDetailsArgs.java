@@ -26,6 +26,10 @@ public final class DataLakeStorageAccountDetailsArgs extends com.pulumi.resource
     @Import(name="accountUrl")
     private @Nullable Output<String> accountUrl;
 
+    /**
+     * @return Account URL
+     * 
+     */
     public Optional<Output<String>> accountUrl() {
         return Optional.ofNullable(this.accountUrl);
     }
@@ -37,6 +41,10 @@ public final class DataLakeStorageAccountDetailsArgs extends com.pulumi.resource
     @Import(name="filesystem")
     private @Nullable Output<String> filesystem;
 
+    /**
+     * @return Filesystem name
+     * 
+     */
     public Optional<Output<String>> filesystem() {
         return Optional.ofNullable(this.filesystem);
     }
@@ -66,20 +74,44 @@ public final class DataLakeStorageAccountDetailsArgs extends com.pulumi.resource
             $ = new DataLakeStorageAccountDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountUrl Account URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountUrl(@Nullable Output<String> accountUrl) {
             $.accountUrl = accountUrl;
             return this;
         }
 
+        /**
+         * @param accountUrl Account URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountUrl(String accountUrl) {
             return accountUrl(Output.of(accountUrl));
         }
 
+        /**
+         * @param filesystem Filesystem name
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesystem(@Nullable Output<String> filesystem) {
             $.filesystem = filesystem;
             return this;
         }
 
+        /**
+         * @param filesystem Filesystem name
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesystem(String filesystem) {
             return filesystem(Output.of(filesystem));
         }

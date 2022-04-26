@@ -23,6 +23,10 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse extends com.pul
     @Import(name="direction", required=true)
     private String direction;
 
+    /**
+     * @return The indexed property&#39;s direction. Must not be DIRECTION_UNSPECIFIED.
+     * 
+     */
     public String direction() {
         return this.direction;
     }
@@ -34,6 +38,10 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse extends com.pul
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The property name to index.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse extends com.pul
             $ = new GoogleDatastoreAdminV1IndexedPropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param direction The indexed property&#39;s direction. Must not be DIRECTION_UNSPECIFIED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param name The property name to index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

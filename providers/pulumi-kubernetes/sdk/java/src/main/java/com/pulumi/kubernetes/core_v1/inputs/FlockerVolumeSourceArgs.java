@@ -26,6 +26,10 @@ public final class FlockerVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="datasetName")
     private @Nullable Output<String> datasetName;
 
+    /**
+     * @return Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated
+     * 
+     */
     public Optional<Output<String>> datasetName() {
         return Optional.ofNullable(this.datasetName);
     }
@@ -37,6 +41,10 @@ public final class FlockerVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="datasetUUID")
     private @Nullable Output<String> datasetUUID;
 
+    /**
+     * @return UUID of the dataset. This is unique identifier of a Flocker dataset
+     * 
+     */
     public Optional<Output<String>> datasetUUID() {
         return Optional.ofNullable(this.datasetUUID);
     }
@@ -66,20 +74,44 @@ public final class FlockerVolumeSourceArgs extends com.pulumi.resources.Resource
             $ = new FlockerVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetName Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetName(@Nullable Output<String> datasetName) {
             $.datasetName = datasetName;
             return this;
         }
 
+        /**
+         * @param datasetName Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetName(String datasetName) {
             return datasetName(Output.of(datasetName));
         }
 
+        /**
+         * @param datasetUUID UUID of the dataset. This is unique identifier of a Flocker dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetUUID(@Nullable Output<String> datasetUUID) {
             $.datasetUUID = datasetUUID;
             return this;
         }
 
+        /**
+         * @param datasetUUID UUID of the dataset. This is unique identifier of a Flocker dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetUUID(String datasetUUID) {
             return datasetUUID(Output.of(datasetUUID));
         }

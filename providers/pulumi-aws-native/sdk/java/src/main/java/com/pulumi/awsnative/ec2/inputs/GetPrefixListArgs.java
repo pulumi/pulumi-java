@@ -19,6 +19,10 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="prefixListId", required=true)
     private String prefixListId;
 
+    /**
+     * @return Id of Prefix List.
+     * 
+     */
     public String prefixListId() {
         return this.prefixListId;
     }
@@ -47,6 +51,12 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPrefixListArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param prefixListId Id of Prefix List.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixListId(String prefixListId) {
             $.prefixListId = prefixListId;
             return this;

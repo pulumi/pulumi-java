@@ -22,6 +22,10 @@ public final class AzureBlobFileSystemConfigurationArgs extends com.pulumi.resou
     @Import(name="accountKey")
     private @Nullable Output<String> accountKey;
 
+    /**
+     * @return This property is mutually exclusive with sasKey and one must be specified.
+     * 
+     */
     public Optional<Output<String>> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
@@ -40,6 +44,10 @@ public final class AzureBlobFileSystemConfigurationArgs extends com.pulumi.resou
     @Import(name="blobfuseOptions")
     private @Nullable Output<String> blobfuseOptions;
 
+    /**
+     * @return These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+     * 
+     */
     public Optional<Output<String>> blobfuseOptions() {
         return Optional.ofNullable(this.blobfuseOptions);
     }
@@ -58,6 +66,10 @@ public final class AzureBlobFileSystemConfigurationArgs extends com.pulumi.resou
     @Import(name="relativeMountPath", required=true)
     private Output<String> relativeMountPath;
 
+    /**
+     * @return All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     * 
+     */
     public Output<String> relativeMountPath() {
         return this.relativeMountPath;
     }
@@ -69,6 +81,10 @@ public final class AzureBlobFileSystemConfigurationArgs extends com.pulumi.resou
     @Import(name="sasKey")
     private @Nullable Output<String> sasKey;
 
+    /**
+     * @return This property is mutually exclusive with accountKey and one must be specified.
+     * 
+     */
     public Optional<Output<String>> sasKey() {
         return Optional.ofNullable(this.sasKey);
     }
@@ -102,11 +118,23 @@ public final class AzureBlobFileSystemConfigurationArgs extends com.pulumi.resou
             $ = new AzureBlobFileSystemConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountKey This property is mutually exclusive with sasKey and one must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(@Nullable Output<String> accountKey) {
             $.accountKey = accountKey;
             return this;
         }
 
+        /**
+         * @param accountKey This property is mutually exclusive with sasKey and one must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(String accountKey) {
             return accountKey(Output.of(accountKey));
         }
@@ -120,11 +148,23 @@ public final class AzureBlobFileSystemConfigurationArgs extends com.pulumi.resou
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param blobfuseOptions These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobfuseOptions(@Nullable Output<String> blobfuseOptions) {
             $.blobfuseOptions = blobfuseOptions;
             return this;
         }
 
+        /**
+         * @param blobfuseOptions These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobfuseOptions(String blobfuseOptions) {
             return blobfuseOptions(Output.of(blobfuseOptions));
         }
@@ -138,20 +178,44 @@ public final class AzureBlobFileSystemConfigurationArgs extends com.pulumi.resou
             return containerName(Output.of(containerName));
         }
 
+        /**
+         * @param relativeMountPath All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeMountPath(Output<String> relativeMountPath) {
             $.relativeMountPath = relativeMountPath;
             return this;
         }
 
+        /**
+         * @param relativeMountPath All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeMountPath(String relativeMountPath) {
             return relativeMountPath(Output.of(relativeMountPath));
         }
 
+        /**
+         * @param sasKey This property is mutually exclusive with accountKey and one must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasKey(@Nullable Output<String> sasKey) {
             $.sasKey = sasKey;
             return this;
         }
 
+        /**
+         * @param sasKey This property is mutually exclusive with accountKey and one must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasKey(String sasKey) {
             return sasKey(Output.of(sasKey));
         }

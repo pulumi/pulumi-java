@@ -32,6 +32,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cacheName")
     private @Nullable Output<String> cacheName;
 
+    /**
+     * @return Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
+     * 
+     */
     public Optional<Output<String>> cacheName() {
         return Optional.ofNullable(this.cacheName);
     }
@@ -43,6 +47,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cacheSizeGB")
     private @Nullable Output<Integer> cacheSizeGB;
 
+    /**
+     * @return The size of this Cache, in GB.
+     * 
+     */
     public Optional<Output<Integer>> cacheSizeGB() {
         return Optional.ofNullable(this.cacheSizeGB);
     }
@@ -54,6 +62,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="directoryServicesSettings")
     private @Nullable Output<CacheDirectorySettingsArgs> directoryServicesSettings;
 
+    /**
+     * @return Specifies Directory Services settings of the cache.
+     * 
+     */
     public Optional<Output<CacheDirectorySettingsArgs>> directoryServicesSettings() {
         return Optional.ofNullable(this.directoryServicesSettings);
     }
@@ -65,6 +77,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionSettings")
     private @Nullable Output<CacheEncryptionSettingsArgs> encryptionSettings;
 
+    /**
+     * @return Specifies encryption settings of the cache.
+     * 
+     */
     public Optional<Output<CacheEncryptionSettingsArgs>> encryptionSettings() {
         return Optional.ofNullable(this.encryptionSettings);
     }
@@ -76,6 +92,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<CacheIdentityArgs> identity;
 
+    /**
+     * @return The identity of the cache, if configured.
+     * 
+     */
     public Optional<Output<CacheIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -87,6 +107,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Region name string.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -98,6 +122,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkSettings")
     private @Nullable Output<CacheNetworkSettingsArgs> networkSettings;
 
+    /**
+     * @return Specifies network settings of the cache.
+     * 
+     */
     public Optional<Output<CacheNetworkSettingsArgs>> networkSettings() {
         return Optional.ofNullable(this.networkSettings);
     }
@@ -109,6 +137,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
     private @Nullable Output<Either<String,ProvisioningStateType>> provisioningState;
 
+    /**
+     * @return ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+     * 
+     */
     public Optional<Output<Either<String,ProvisioningStateType>>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -120,6 +152,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Target resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -131,6 +167,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securitySettings")
     private @Nullable Output<CacheSecuritySettingsArgs> securitySettings;
 
+    /**
+     * @return Specifies security settings of the cache.
+     * 
+     */
     public Optional<Output<CacheSecuritySettingsArgs>> securitySettings() {
         return Optional.ofNullable(this.securitySettings);
     }
@@ -142,6 +182,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<CacheSkuArgs> sku;
 
+    /**
+     * @return SKU for the Cache.
+     * 
+     */
     public Optional<Output<CacheSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -153,6 +197,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnet")
     private @Nullable Output<String> subnet;
 
+    /**
+     * @return Subnet used for the Cache.
+     * 
+     */
     public Optional<Output<String>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -164,6 +212,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -204,127 +256,295 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CacheArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cacheName Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheName(@Nullable Output<String> cacheName) {
             $.cacheName = cacheName;
             return this;
         }
 
+        /**
+         * @param cacheName Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheName(String cacheName) {
             return cacheName(Output.of(cacheName));
         }
 
+        /**
+         * @param cacheSizeGB The size of this Cache, in GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheSizeGB(@Nullable Output<Integer> cacheSizeGB) {
             $.cacheSizeGB = cacheSizeGB;
             return this;
         }
 
+        /**
+         * @param cacheSizeGB The size of this Cache, in GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheSizeGB(Integer cacheSizeGB) {
             return cacheSizeGB(Output.of(cacheSizeGB));
         }
 
+        /**
+         * @param directoryServicesSettings Specifies Directory Services settings of the cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryServicesSettings(@Nullable Output<CacheDirectorySettingsArgs> directoryServicesSettings) {
             $.directoryServicesSettings = directoryServicesSettings;
             return this;
         }
 
+        /**
+         * @param directoryServicesSettings Specifies Directory Services settings of the cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryServicesSettings(CacheDirectorySettingsArgs directoryServicesSettings) {
             return directoryServicesSettings(Output.of(directoryServicesSettings));
         }
 
+        /**
+         * @param encryptionSettings Specifies encryption settings of the cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSettings(@Nullable Output<CacheEncryptionSettingsArgs> encryptionSettings) {
             $.encryptionSettings = encryptionSettings;
             return this;
         }
 
+        /**
+         * @param encryptionSettings Specifies encryption settings of the cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSettings(CacheEncryptionSettingsArgs encryptionSettings) {
             return encryptionSettings(Output.of(encryptionSettings));
         }
 
+        /**
+         * @param identity The identity of the cache, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<CacheIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the cache, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(CacheIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location Region name string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Region name string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param networkSettings Specifies network settings of the cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSettings(@Nullable Output<CacheNetworkSettingsArgs> networkSettings) {
             $.networkSettings = networkSettings;
             return this;
         }
 
+        /**
+         * @param networkSettings Specifies network settings of the cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSettings(CacheNetworkSettingsArgs networkSettings) {
             return networkSettings(Output.of(networkSettings));
         }
 
+        /**
+         * @param provisioningState ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningStateType>> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(Either<String,ProvisioningStateType> provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param provisioningState ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Either.ofLeft(provisioningState));
         }
 
+        /**
+         * @param provisioningState ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(ProvisioningStateType provisioningState) {
             return provisioningState(Either.ofRight(provisioningState));
         }
 
+        /**
+         * @param resourceGroupName Target resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Target resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param securitySettings Specifies security settings of the cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securitySettings(@Nullable Output<CacheSecuritySettingsArgs> securitySettings) {
             $.securitySettings = securitySettings;
             return this;
         }
 
+        /**
+         * @param securitySettings Specifies security settings of the cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securitySettings(CacheSecuritySettingsArgs securitySettings) {
             return securitySettings(Output.of(securitySettings));
         }
 
+        /**
+         * @param sku SKU for the Cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<CacheSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku SKU for the Cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(CacheSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param subnet Subnet used for the Cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<String> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet Subnet used for the Cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(String subnet) {
             return subnet(Output.of(subnet));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

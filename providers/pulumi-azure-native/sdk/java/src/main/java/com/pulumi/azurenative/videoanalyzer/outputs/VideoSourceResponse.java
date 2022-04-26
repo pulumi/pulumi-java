@@ -11,23 +11,23 @@ import java.util.Objects;
 @CustomType
 public final class VideoSourceResponse {
     /**
-     * Node name. Must be unique within the topology.
+     * @return Node name. Must be unique within the topology.
      * 
      */
     private final String name;
     /**
-     * Describes a sequence of datetime ranges. The video source only picks up recorded media within these ranges.
+     * @return Describes a sequence of datetime ranges. The video source only picks up recorded media within these ranges.
      * 
      */
     private final VideoSequenceAbsoluteTimeMarkersResponse timeSequences;
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSource&#39;.
      * 
      */
     private final String type;
     /**
-     * Name of the Video Analyzer video resource to be used as the source.
+     * @return Name of the Video Analyzer video resource to be used as the source.
      * 
      */
     private final String videoName;
@@ -45,31 +45,31 @@ public final class VideoSourceResponse {
     }
 
     /**
-     * Node name. Must be unique within the topology.
+     * @return Node name. Must be unique within the topology.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Describes a sequence of datetime ranges. The video source only picks up recorded media within these ranges.
+     * @return Describes a sequence of datetime ranges. The video source only picks up recorded media within these ranges.
      * 
-    */
+     */
     public VideoSequenceAbsoluteTimeMarkersResponse timeSequences() {
         return this.timeSequences;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSource&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Name of the Video Analyzer video resource to be used as the source.
+     * @return Name of the Video Analyzer video resource to be used as the source.
      * 
-    */
+     */
     public String videoName() {
         return this.videoName;
     }

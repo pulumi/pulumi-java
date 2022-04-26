@@ -30,6 +30,10 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="capabilities")
     private @Nullable Output<List<CapabilityArgs>> capabilities;
 
+    /**
+     * @return Capabilities of the SKU, e.g., is traffic manager enabled?
+     * 
+     */
     public Optional<Output<List<CapabilityArgs>>> capabilities() {
         return Optional.ofNullable(this.capabilities);
     }
@@ -41,6 +45,10 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return Current number of instances assigned to the resource.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -52,6 +60,10 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="family")
     private @Nullable Output<String> family;
 
+    /**
+     * @return Family code of the resource SKU.
+     * 
+     */
     public Optional<Output<String>> family() {
         return Optional.ofNullable(this.family);
     }
@@ -63,6 +75,10 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="locations")
     private @Nullable Output<List<String>> locations;
 
+    /**
+     * @return Locations of the SKU.
+     * 
+     */
     public Optional<Output<List<String>>> locations() {
         return Optional.ofNullable(this.locations);
     }
@@ -74,6 +90,10 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource SKU.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -85,6 +105,10 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="size")
     private @Nullable Output<String> size;
 
+    /**
+     * @return Size specifier of the resource SKU.
+     * 
+     */
     public Optional<Output<String>> size() {
         return Optional.ofNullable(this.size);
     }
@@ -96,6 +120,10 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="skuCapacity")
     private @Nullable Output<SkuCapacityArgs> skuCapacity;
 
+    /**
+     * @return Min, max, and default scale values of the SKU.
+     * 
+     */
     public Optional<Output<SkuCapacityArgs>> skuCapacity() {
         return Optional.ofNullable(this.skuCapacity);
     }
@@ -107,6 +135,10 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tier")
     private @Nullable Output<String> tier;
 
+    /**
+     * @return Service tier of the resource SKU.
+     * 
+     */
     public Optional<Output<String>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -142,82 +174,190 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SkuDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capabilities Capabilities of the SKU, e.g., is traffic manager enabled?
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(@Nullable Output<List<CapabilityArgs>> capabilities) {
             $.capabilities = capabilities;
             return this;
         }
 
+        /**
+         * @param capabilities Capabilities of the SKU, e.g., is traffic manager enabled?
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(List<CapabilityArgs> capabilities) {
             return capabilities(Output.of(capabilities));
         }
 
+        /**
+         * @param capabilities Capabilities of the SKU, e.g., is traffic manager enabled?
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(CapabilityArgs... capabilities) {
             return capabilities(List.of(capabilities));
         }
 
+        /**
+         * @param capacity Current number of instances assigned to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity Current number of instances assigned to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param family Family code of the resource SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable Output<String> family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param family Family code of the resource SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             return family(Output.of(family));
         }
 
+        /**
+         * @param locations Locations of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(@Nullable Output<List<String>> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations Locations of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(List<String> locations) {
             return locations(Output.of(locations));
         }
 
+        /**
+         * @param locations Locations of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param name Name of the resource SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param size Size specifier of the resource SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Output<String> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size Size specifier of the resource SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(String size) {
             return size(Output.of(size));
         }
 
+        /**
+         * @param skuCapacity Min, max, and default scale values of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuCapacity(@Nullable Output<SkuCapacityArgs> skuCapacity) {
             $.skuCapacity = skuCapacity;
             return this;
         }
 
+        /**
+         * @param skuCapacity Min, max, and default scale values of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuCapacity(SkuCapacityArgs skuCapacity) {
             return skuCapacity(Output.of(skuCapacity));
         }
 
+        /**
+         * @param tier Service tier of the resource SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<String> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Service tier of the resource SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Output.of(tier));
         }

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ManagedGroupConfigResponse {
     /**
-     * The name of the Instance Group Manager for this group.
+     * @return The name of the Instance Group Manager for this group.
      * 
      */
     private final String instanceGroupManagerName;
     /**
-     * The name of the Instance Template used for the Managed Instance Group.
+     * @return The name of the Instance Template used for the Managed Instance Group.
      * 
      */
     private final String instanceTemplateName;
@@ -29,16 +29,16 @@ public final class ManagedGroupConfigResponse {
     }
 
     /**
-     * The name of the Instance Group Manager for this group.
+     * @return The name of the Instance Group Manager for this group.
      * 
-    */
+     */
     public String instanceGroupManagerName() {
         return this.instanceGroupManagerName;
     }
     /**
-     * The name of the Instance Template used for the Managed Instance Group.
+     * @return The name of the Instance Template used for the Managed Instance Group.
      * 
-    */
+     */
     public String instanceTemplateName() {
         return this.instanceTemplateName;
     }

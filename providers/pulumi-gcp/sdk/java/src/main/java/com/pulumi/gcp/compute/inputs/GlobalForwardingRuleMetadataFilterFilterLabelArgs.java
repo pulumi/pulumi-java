@@ -21,6 +21,11 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabelArgs extends com
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the metadata label. The length must be between
+     * 1 and 1024 characters, inclusive.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -33,6 +38,11 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabelArgs extends com
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The value that the label must match. The value has a maximum
+     * length of 1024 characters.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -62,20 +72,48 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabelArgs extends com
             $ = new GlobalForwardingRuleMetadataFilterFilterLabelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the metadata label. The length must be between
+         * 1 and 1024 characters, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the metadata label. The length must be between
+         * 1 and 1024 characters, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value The value that the label must match. The value has a maximum
+         * length of 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value that the label must match. The value has a maximum
+         * length of 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

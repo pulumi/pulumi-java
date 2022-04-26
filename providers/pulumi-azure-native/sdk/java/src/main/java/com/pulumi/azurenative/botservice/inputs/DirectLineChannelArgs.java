@@ -29,6 +29,11 @@ public final class DirectLineChannelArgs extends com.pulumi.resources.ResourceAr
     @Import(name="channelName", required=true)
     private Output<String> channelName;
 
+    /**
+     * @return The channel name
+     * Expected value is &#39;DirectLineChannel&#39;.
+     * 
+     */
     public Output<String> channelName() {
         return this.channelName;
     }
@@ -40,6 +45,10 @@ public final class DirectLineChannelArgs extends com.pulumi.resources.ResourceAr
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return Entity Tag of the resource
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -51,6 +60,10 @@ public final class DirectLineChannelArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Specifies the location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -62,6 +75,10 @@ public final class DirectLineChannelArgs extends com.pulumi.resources.ResourceAr
     @Import(name="properties")
     private @Nullable Output<DirectLineChannelPropertiesArgs> properties;
 
+    /**
+     * @return The set of properties specific to Direct Line channel resource
+     * 
+     */
     public Optional<Output<DirectLineChannelPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -93,38 +110,88 @@ public final class DirectLineChannelArgs extends com.pulumi.resources.ResourceAr
             $ = new DirectLineChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channelName The channel name
+         * Expected value is &#39;DirectLineChannel&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelName(Output<String> channelName) {
             $.channelName = channelName;
             return this;
         }
 
+        /**
+         * @param channelName The channel name
+         * Expected value is &#39;DirectLineChannel&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelName(String channelName) {
             return channelName(Output.of(channelName));
         }
 
+        /**
+         * @param etag Entity Tag of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag Entity Tag of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param location Specifies the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Specifies the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties The set of properties specific to Direct Line channel resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<DirectLineChannelPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The set of properties specific to Direct Line channel resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(DirectLineChannelPropertiesArgs properties) {
             return properties(Output.of(properties));
         }

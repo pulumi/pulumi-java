@@ -16,53 +16,53 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetTemplateArtifactResult {
     /**
-     * Artifacts which need to be deployed before the specified artifact.
+     * @return Artifacts which need to be deployed before the specified artifact.
      * 
      */
     private final @Nullable List<String> dependsOn;
     /**
-     * Multi-line explain this resource.
+     * @return Multi-line explain this resource.
      * 
      */
     private final @Nullable String description;
     /**
-     * One-liner string explain this resource.
+     * @return One-liner string explain this resource.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * String Id used to locate any resource on Azure.
+     * @return String Id used to locate any resource on Azure.
      * 
      */
     private final String id;
     /**
-     * Specifies the kind of blueprint artifact.
+     * @return Specifies the kind of blueprint artifact.
      * Expected value is &#39;template&#39;.
      * 
      */
     private final String kind;
     /**
-     * Name of this resource.
+     * @return Name of this resource.
      * 
      */
     private final String name;
     /**
-     * Resource Manager template blueprint artifact parameter values.
+     * @return Resource Manager template blueprint artifact parameter values.
      * 
      */
     private final Map<String,ParameterValueResponse> parameters;
     /**
-     * If applicable, the name of the resource group placeholder to which the Resource Manager template blueprint artifact will be deployed.
+     * @return If applicable, the name of the resource group placeholder to which the Resource Manager template blueprint artifact will be deployed.
      * 
      */
     private final @Nullable String resourceGroup;
     /**
-     * The Resource Manager template blueprint artifact body.
+     * @return The Resource Manager template blueprint artifact body.
      * 
      */
     private final Object template;
     /**
-     * Type of this resource.
+     * @return Type of this resource.
      * 
      */
     private final String type;
@@ -92,73 +92,73 @@ public final class GetTemplateArtifactResult {
     }
 
     /**
-     * Artifacts which need to be deployed before the specified artifact.
+     * @return Artifacts which need to be deployed before the specified artifact.
      * 
-    */
+     */
     public List<String> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Multi-line explain this resource.
+     * @return Multi-line explain this resource.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * One-liner string explain this resource.
+     * @return One-liner string explain this resource.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * String Id used to locate any resource on Azure.
+     * @return String Id used to locate any resource on Azure.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specifies the kind of blueprint artifact.
+     * @return Specifies the kind of blueprint artifact.
      * Expected value is &#39;template&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of this resource.
+     * @return Name of this resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource Manager template blueprint artifact parameter values.
+     * @return Resource Manager template blueprint artifact parameter values.
      * 
-    */
+     */
     public Map<String,ParameterValueResponse> parameters() {
         return this.parameters;
     }
     /**
-     * If applicable, the name of the resource group placeholder to which the Resource Manager template blueprint artifact will be deployed.
+     * @return If applicable, the name of the resource group placeholder to which the Resource Manager template blueprint artifact will be deployed.
      * 
-    */
+     */
     public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
-     * The Resource Manager template blueprint artifact body.
+     * @return The Resource Manager template blueprint artifact body.
      * 
-    */
+     */
     public Object template() {
         return this.template;
     }
     /**
-     * Type of this resource.
+     * @return Type of this resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -24,6 +24,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="billingModel")
     private @Nullable Output<Either<String,ConnectorBillingModel>> billingModel;
 
+    /**
+     * @return Connector billing model
+     * 
+     */
     public Optional<Output<Either<String,ConnectorBillingModel>>> billingModel() {
         return Optional.ofNullable(this.billingModel);
     }
@@ -35,6 +39,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="connectorName")
     private @Nullable Output<String> connectorName;
 
+    /**
+     * @return Connector Name.
+     * 
+     */
     public Optional<Output<String>> connectorName() {
         return Optional.ofNullable(this.connectorName);
     }
@@ -46,6 +54,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="credentialsKey")
     private @Nullable Output<String> credentialsKey;
 
+    /**
+     * @return Credentials authentication key (eg AWS ARN)
+     * 
+     */
     public Optional<Output<String>> credentialsKey() {
         return Optional.ofNullable(this.credentialsKey);
     }
@@ -57,6 +69,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="credentialsSecret")
     private @Nullable Output<String> credentialsSecret;
 
+    /**
+     * @return Credentials secret (eg AWS ExternalId)
+     * 
+     */
     public Optional<Output<String>> credentialsSecret() {
         return Optional.ofNullable(this.credentialsSecret);
     }
@@ -68,6 +84,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="defaultManagementGroupId")
     private @Nullable Output<String> defaultManagementGroupId;
 
+    /**
+     * @return Default ManagementGroupId
+     * 
+     */
     public Optional<Output<String>> defaultManagementGroupId() {
         return Optional.ofNullable(this.defaultManagementGroupId);
     }
@@ -79,6 +99,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Connector DisplayName
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -90,6 +114,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Connector kind (eg aws)
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -101,6 +129,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="reportId")
     private @Nullable Output<String> reportId;
 
+    /**
+     * @return Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
+     * 
+     */
     public Optional<Output<String>> reportId() {
         return Optional.ofNullable(this.reportId);
     }
@@ -112,6 +144,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="subscriptionId")
     private @Nullable Output<String> subscriptionId;
 
+    /**
+     * @return Billing SubscriptionId
+     * 
+     */
     public Optional<Output<String>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -148,91 +184,211 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
             $ = new CloudConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingModel Connector billing model
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingModel(@Nullable Output<Either<String,ConnectorBillingModel>> billingModel) {
             $.billingModel = billingModel;
             return this;
         }
 
+        /**
+         * @param billingModel Connector billing model
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingModel(Either<String,ConnectorBillingModel> billingModel) {
             return billingModel(Output.of(billingModel));
         }
 
+        /**
+         * @param billingModel Connector billing model
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingModel(String billingModel) {
             return billingModel(Either.ofLeft(billingModel));
         }
 
+        /**
+         * @param billingModel Connector billing model
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingModel(ConnectorBillingModel billingModel) {
             return billingModel(Either.ofRight(billingModel));
         }
 
+        /**
+         * @param connectorName Connector Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorName(@Nullable Output<String> connectorName) {
             $.connectorName = connectorName;
             return this;
         }
 
+        /**
+         * @param connectorName Connector Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorName(String connectorName) {
             return connectorName(Output.of(connectorName));
         }
 
+        /**
+         * @param credentialsKey Credentials authentication key (eg AWS ARN)
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentialsKey(@Nullable Output<String> credentialsKey) {
             $.credentialsKey = credentialsKey;
             return this;
         }
 
+        /**
+         * @param credentialsKey Credentials authentication key (eg AWS ARN)
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentialsKey(String credentialsKey) {
             return credentialsKey(Output.of(credentialsKey));
         }
 
+        /**
+         * @param credentialsSecret Credentials secret (eg AWS ExternalId)
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentialsSecret(@Nullable Output<String> credentialsSecret) {
             $.credentialsSecret = credentialsSecret;
             return this;
         }
 
+        /**
+         * @param credentialsSecret Credentials secret (eg AWS ExternalId)
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentialsSecret(String credentialsSecret) {
             return credentialsSecret(Output.of(credentialsSecret));
         }
 
+        /**
+         * @param defaultManagementGroupId Default ManagementGroupId
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultManagementGroupId(@Nullable Output<String> defaultManagementGroupId) {
             $.defaultManagementGroupId = defaultManagementGroupId;
             return this;
         }
 
+        /**
+         * @param defaultManagementGroupId Default ManagementGroupId
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultManagementGroupId(String defaultManagementGroupId) {
             return defaultManagementGroupId(Output.of(defaultManagementGroupId));
         }
 
+        /**
+         * @param displayName Connector DisplayName
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Connector DisplayName
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param kind Connector kind (eg aws)
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Connector kind (eg aws)
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param reportId Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportId(@Nullable Output<String> reportId) {
             $.reportId = reportId;
             return this;
         }
 
+        /**
+         * @param reportId Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportId(String reportId) {
             return reportId(Output.of(reportId));
         }
 
+        /**
+         * @param subscriptionId Billing SubscriptionId
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId Billing SubscriptionId
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }

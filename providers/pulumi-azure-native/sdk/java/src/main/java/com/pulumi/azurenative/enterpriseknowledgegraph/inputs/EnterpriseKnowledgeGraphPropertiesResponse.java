@@ -26,6 +26,10 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends com.pulumi
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description of the EnterpriseKnowledgeGraph
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends com.pulumi
     @Import(name="metadata")
     private @Nullable Object metadata;
 
+    /**
+     * @return Specifies the metadata  of the resource.
+     * 
+     */
     public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -48,6 +56,10 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends com.pulumi
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return The state of EnterpriseKnowledgeGraph provisioning
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -78,16 +90,34 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends com.pulumi
             $ = new EnterpriseKnowledgeGraphPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the EnterpriseKnowledgeGraph
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param metadata Specifies the metadata  of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Object metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param provisioningState The state of EnterpriseKnowledgeGraph provisioning
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

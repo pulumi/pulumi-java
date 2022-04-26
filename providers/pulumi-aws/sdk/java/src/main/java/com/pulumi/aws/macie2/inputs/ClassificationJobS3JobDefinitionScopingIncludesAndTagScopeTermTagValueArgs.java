@@ -22,6 +22,10 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return The object property to use in the condition.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -58,11 +62,23 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
             $ = new ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The object property to use in the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The object property to use in the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }

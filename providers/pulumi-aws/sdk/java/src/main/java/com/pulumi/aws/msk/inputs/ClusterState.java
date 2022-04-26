@@ -30,6 +30,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -41,6 +45,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bootstrapBrokers")
     private @Nullable Output<String> bootstrapBrokers;
 
+    /**
+     * @return Comma separated list of one or more hostname:port pairs of kafka brokers suitable to bootstrap connectivity to the kafka cluster. Contains a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `PLAINTEXT` or `TLS_PLAINTEXT`. The resource sorts values alphabetically. AWS may not always return all endpoints so this value is not guaranteed to be stable across applies.
+     * 
+     */
     public Optional<Output<String>> bootstrapBrokers() {
         return Optional.ofNullable(this.bootstrapBrokers);
     }
@@ -52,6 +60,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bootstrapBrokersSaslIam")
     private @Nullable Output<String> bootstrapBrokersSaslIam;
 
+    /**
+     * @return One or more DNS names (or IP addresses) and SASL IAM port pairs. For example, `b-1.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9098,b-2.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9098,b-3.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9098`. This attribute will have a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication.0.sasl.0.iam` is set to `true`. The resource sorts the list alphabetically. AWS may not always return all endpoints so the values may not be stable across applies.
+     * 
+     */
     public Optional<Output<String>> bootstrapBrokersSaslIam() {
         return Optional.ofNullable(this.bootstrapBrokersSaslIam);
     }
@@ -63,6 +75,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bootstrapBrokersSaslScram")
     private @Nullable Output<String> bootstrapBrokersSaslScram;
 
+    /**
+     * @return One or more DNS names (or IP addresses) and SASL SCRAM port pairs. For example, `b-1.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9096,b-2.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9096,b-3.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9096`. This attribute will have a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication.0.sasl.0.scram` is set to `true`. The resource sorts the list alphabetically. AWS may not always return all endpoints so the values may not be stable across applies.
+     * 
+     */
     public Optional<Output<String>> bootstrapBrokersSaslScram() {
         return Optional.ofNullable(this.bootstrapBrokersSaslScram);
     }
@@ -74,6 +90,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bootstrapBrokersTls")
     private @Nullable Output<String> bootstrapBrokersTls;
 
+    /**
+     * @return One or more DNS names (or IP addresses) and TLS port pairs. For example, `b-1.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9094,b-2.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9094,b-3.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9094`. This attribute will have a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `TLS_PLAINTEXT` or `TLS`. The resource sorts the list alphabetically. AWS may not always return all endpoints so the values may not be stable across applies.
+     * 
+     */
     public Optional<Output<String>> bootstrapBrokersTls() {
         return Optional.ofNullable(this.bootstrapBrokersTls);
     }
@@ -85,6 +105,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="brokerNodeGroupInfo")
     private @Nullable Output<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo;
 
+    /**
+     * @return Configuration block for the broker nodes of the Kafka cluster.
+     * 
+     */
     public Optional<Output<ClusterBrokerNodeGroupInfoGetArgs>> brokerNodeGroupInfo() {
         return Optional.ofNullable(this.brokerNodeGroupInfo);
     }
@@ -96,6 +120,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientAuthentication")
     private @Nullable Output<ClusterClientAuthenticationGetArgs> clientAuthentication;
 
+    /**
+     * @return Configuration block for specifying a client authentication. See below.
+     * 
+     */
     public Optional<Output<ClusterClientAuthenticationGetArgs>> clientAuthentication() {
         return Optional.ofNullable(this.clientAuthentication);
     }
@@ -107,6 +135,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
     private @Nullable Output<String> clusterName;
 
+    /**
+     * @return Name of the MSK cluster.
+     * 
+     */
     public Optional<Output<String>> clusterName() {
         return Optional.ofNullable(this.clusterName);
     }
@@ -118,6 +150,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="configurationInfo")
     private @Nullable Output<ClusterConfigurationInfoGetArgs> configurationInfo;
 
+    /**
+     * @return Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
+     * 
+     */
     public Optional<Output<ClusterConfigurationInfoGetArgs>> configurationInfo() {
         return Optional.ofNullable(this.configurationInfo);
     }
@@ -130,6 +166,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="currentVersion")
     private @Nullable Output<String> currentVersion;
 
+    /**
+     * @return Current version of the MSK Cluster used for updates, e.g., `K13V1IB3VIYZZH`
+     * * `encryption_info.0.encryption_at_rest_kms_key_arn` - The ARN of the KMS key used for encryption at rest of the broker data volumes.
+     * 
+     */
     public Optional<Output<String>> currentVersion() {
         return Optional.ofNullable(this.currentVersion);
     }
@@ -141,6 +182,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionInfo")
     private @Nullable Output<ClusterEncryptionInfoGetArgs> encryptionInfo;
 
+    /**
+     * @return Configuration block for specifying encryption. See below.
+     * 
+     */
     public Optional<Output<ClusterEncryptionInfoGetArgs>> encryptionInfo() {
         return Optional.ofNullable(this.encryptionInfo);
     }
@@ -152,6 +197,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enhancedMonitoring")
     private @Nullable Output<String> enhancedMonitoring;
 
+    /**
+     * @return Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
+     * 
+     */
     public Optional<Output<String>> enhancedMonitoring() {
         return Optional.ofNullable(this.enhancedMonitoring);
     }
@@ -163,6 +212,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kafkaVersion")
     private @Nullable Output<String> kafkaVersion;
 
+    /**
+     * @return Specify the desired Kafka software version.
+     * 
+     */
     public Optional<Output<String>> kafkaVersion() {
         return Optional.ofNullable(this.kafkaVersion);
     }
@@ -174,6 +227,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggingInfo")
     private @Nullable Output<ClusterLoggingInfoGetArgs> loggingInfo;
 
+    /**
+     * @return Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.
+     * 
+     */
     public Optional<Output<ClusterLoggingInfoGetArgs>> loggingInfo() {
         return Optional.ofNullable(this.loggingInfo);
     }
@@ -185,6 +242,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="numberOfBrokerNodes")
     private @Nullable Output<Integer> numberOfBrokerNodes;
 
+    /**
+     * @return The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
+     * 
+     */
     public Optional<Output<Integer>> numberOfBrokerNodes() {
         return Optional.ofNullable(this.numberOfBrokerNodes);
     }
@@ -196,6 +257,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="openMonitoring")
     private @Nullable Output<ClusterOpenMonitoringGetArgs> openMonitoring;
 
+    /**
+     * @return Configuration block for JMX and Node monitoring for the MSK cluster. See below.
+     * 
+     */
     public Optional<Output<ClusterOpenMonitoringGetArgs>> openMonitoring() {
         return Optional.ofNullable(this.openMonitoring);
     }
@@ -207,6 +272,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -218,6 +287,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -229,6 +302,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="zookeeperConnectString")
     private @Nullable Output<String> zookeeperConnectString;
 
+    /**
+     * @return A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+     * 
+     */
     public Optional<Output<String>> zookeeperConnectString() {
         return Optional.ofNullable(this.zookeeperConnectString);
     }
@@ -240,6 +317,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="zookeeperConnectStringTls")
     private @Nullable Output<String> zookeeperConnectStringTls;
 
+    /**
+     * @return A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster via TLS. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+     * 
+     */
     public Optional<Output<String>> zookeeperConnectStringTls() {
         return Optional.ofNullable(this.zookeeperConnectStringTls);
     }
@@ -287,182 +368,424 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param bootstrapBrokers Comma separated list of one or more hostname:port pairs of kafka brokers suitable to bootstrap connectivity to the kafka cluster. Contains a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `PLAINTEXT` or `TLS_PLAINTEXT`. The resource sorts values alphabetically. AWS may not always return all endpoints so this value is not guaranteed to be stable across applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapBrokers(@Nullable Output<String> bootstrapBrokers) {
             $.bootstrapBrokers = bootstrapBrokers;
             return this;
         }
 
+        /**
+         * @param bootstrapBrokers Comma separated list of one or more hostname:port pairs of kafka brokers suitable to bootstrap connectivity to the kafka cluster. Contains a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `PLAINTEXT` or `TLS_PLAINTEXT`. The resource sorts values alphabetically. AWS may not always return all endpoints so this value is not guaranteed to be stable across applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapBrokers(String bootstrapBrokers) {
             return bootstrapBrokers(Output.of(bootstrapBrokers));
         }
 
+        /**
+         * @param bootstrapBrokersSaslIam One or more DNS names (or IP addresses) and SASL IAM port pairs. For example, `b-1.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9098,b-2.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9098,b-3.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9098`. This attribute will have a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication.0.sasl.0.iam` is set to `true`. The resource sorts the list alphabetically. AWS may not always return all endpoints so the values may not be stable across applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapBrokersSaslIam(@Nullable Output<String> bootstrapBrokersSaslIam) {
             $.bootstrapBrokersSaslIam = bootstrapBrokersSaslIam;
             return this;
         }
 
+        /**
+         * @param bootstrapBrokersSaslIam One or more DNS names (or IP addresses) and SASL IAM port pairs. For example, `b-1.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9098,b-2.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9098,b-3.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9098`. This attribute will have a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication.0.sasl.0.iam` is set to `true`. The resource sorts the list alphabetically. AWS may not always return all endpoints so the values may not be stable across applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapBrokersSaslIam(String bootstrapBrokersSaslIam) {
             return bootstrapBrokersSaslIam(Output.of(bootstrapBrokersSaslIam));
         }
 
+        /**
+         * @param bootstrapBrokersSaslScram One or more DNS names (or IP addresses) and SASL SCRAM port pairs. For example, `b-1.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9096,b-2.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9096,b-3.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9096`. This attribute will have a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication.0.sasl.0.scram` is set to `true`. The resource sorts the list alphabetically. AWS may not always return all endpoints so the values may not be stable across applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapBrokersSaslScram(@Nullable Output<String> bootstrapBrokersSaslScram) {
             $.bootstrapBrokersSaslScram = bootstrapBrokersSaslScram;
             return this;
         }
 
+        /**
+         * @param bootstrapBrokersSaslScram One or more DNS names (or IP addresses) and SASL SCRAM port pairs. For example, `b-1.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9096,b-2.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9096,b-3.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9096`. This attribute will have a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication.0.sasl.0.scram` is set to `true`. The resource sorts the list alphabetically. AWS may not always return all endpoints so the values may not be stable across applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapBrokersSaslScram(String bootstrapBrokersSaslScram) {
             return bootstrapBrokersSaslScram(Output.of(bootstrapBrokersSaslScram));
         }
 
+        /**
+         * @param bootstrapBrokersTls One or more DNS names (or IP addresses) and TLS port pairs. For example, `b-1.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9094,b-2.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9094,b-3.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9094`. This attribute will have a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `TLS_PLAINTEXT` or `TLS`. The resource sorts the list alphabetically. AWS may not always return all endpoints so the values may not be stable across applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapBrokersTls(@Nullable Output<String> bootstrapBrokersTls) {
             $.bootstrapBrokersTls = bootstrapBrokersTls;
             return this;
         }
 
+        /**
+         * @param bootstrapBrokersTls One or more DNS names (or IP addresses) and TLS port pairs. For example, `b-1.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9094,b-2.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9094,b-3.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9094`. This attribute will have a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `TLS_PLAINTEXT` or `TLS`. The resource sorts the list alphabetically. AWS may not always return all endpoints so the values may not be stable across applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapBrokersTls(String bootstrapBrokersTls) {
             return bootstrapBrokersTls(Output.of(bootstrapBrokersTls));
         }
 
+        /**
+         * @param brokerNodeGroupInfo Configuration block for the broker nodes of the Kafka cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder brokerNodeGroupInfo(@Nullable Output<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo) {
             $.brokerNodeGroupInfo = brokerNodeGroupInfo;
             return this;
         }
 
+        /**
+         * @param brokerNodeGroupInfo Configuration block for the broker nodes of the Kafka cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder brokerNodeGroupInfo(ClusterBrokerNodeGroupInfoGetArgs brokerNodeGroupInfo) {
             return brokerNodeGroupInfo(Output.of(brokerNodeGroupInfo));
         }
 
+        /**
+         * @param clientAuthentication Configuration block for specifying a client authentication. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAuthentication(@Nullable Output<ClusterClientAuthenticationGetArgs> clientAuthentication) {
             $.clientAuthentication = clientAuthentication;
             return this;
         }
 
+        /**
+         * @param clientAuthentication Configuration block for specifying a client authentication. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAuthentication(ClusterClientAuthenticationGetArgs clientAuthentication) {
             return clientAuthentication(Output.of(clientAuthentication));
         }
 
+        /**
+         * @param clusterName Name of the MSK cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(@Nullable Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName Name of the MSK cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param configurationInfo Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationInfo(@Nullable Output<ClusterConfigurationInfoGetArgs> configurationInfo) {
             $.configurationInfo = configurationInfo;
             return this;
         }
 
+        /**
+         * @param configurationInfo Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationInfo(ClusterConfigurationInfoGetArgs configurationInfo) {
             return configurationInfo(Output.of(configurationInfo));
         }
 
+        /**
+         * @param currentVersion Current version of the MSK Cluster used for updates, e.g., `K13V1IB3VIYZZH`
+         * * `encryption_info.0.encryption_at_rest_kms_key_arn` - The ARN of the KMS key used for encryption at rest of the broker data volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentVersion(@Nullable Output<String> currentVersion) {
             $.currentVersion = currentVersion;
             return this;
         }
 
+        /**
+         * @param currentVersion Current version of the MSK Cluster used for updates, e.g., `K13V1IB3VIYZZH`
+         * * `encryption_info.0.encryption_at_rest_kms_key_arn` - The ARN of the KMS key used for encryption at rest of the broker data volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentVersion(String currentVersion) {
             return currentVersion(Output.of(currentVersion));
         }
 
+        /**
+         * @param encryptionInfo Configuration block for specifying encryption. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionInfo(@Nullable Output<ClusterEncryptionInfoGetArgs> encryptionInfo) {
             $.encryptionInfo = encryptionInfo;
             return this;
         }
 
+        /**
+         * @param encryptionInfo Configuration block for specifying encryption. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionInfo(ClusterEncryptionInfoGetArgs encryptionInfo) {
             return encryptionInfo(Output.of(encryptionInfo));
         }
 
+        /**
+         * @param enhancedMonitoring Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder enhancedMonitoring(@Nullable Output<String> enhancedMonitoring) {
             $.enhancedMonitoring = enhancedMonitoring;
             return this;
         }
 
+        /**
+         * @param enhancedMonitoring Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder enhancedMonitoring(String enhancedMonitoring) {
             return enhancedMonitoring(Output.of(enhancedMonitoring));
         }
 
+        /**
+         * @param kafkaVersion Specify the desired Kafka software version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaVersion(@Nullable Output<String> kafkaVersion) {
             $.kafkaVersion = kafkaVersion;
             return this;
         }
 
+        /**
+         * @param kafkaVersion Specify the desired Kafka software version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaVersion(String kafkaVersion) {
             return kafkaVersion(Output.of(kafkaVersion));
         }
 
+        /**
+         * @param loggingInfo Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingInfo(@Nullable Output<ClusterLoggingInfoGetArgs> loggingInfo) {
             $.loggingInfo = loggingInfo;
             return this;
         }
 
+        /**
+         * @param loggingInfo Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingInfo(ClusterLoggingInfoGetArgs loggingInfo) {
             return loggingInfo(Output.of(loggingInfo));
         }
 
+        /**
+         * @param numberOfBrokerNodes The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfBrokerNodes(@Nullable Output<Integer> numberOfBrokerNodes) {
             $.numberOfBrokerNodes = numberOfBrokerNodes;
             return this;
         }
 
+        /**
+         * @param numberOfBrokerNodes The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfBrokerNodes(Integer numberOfBrokerNodes) {
             return numberOfBrokerNodes(Output.of(numberOfBrokerNodes));
         }
 
+        /**
+         * @param openMonitoring Configuration block for JMX and Node monitoring for the MSK cluster. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openMonitoring(@Nullable Output<ClusterOpenMonitoringGetArgs> openMonitoring) {
             $.openMonitoring = openMonitoring;
             return this;
         }
 
+        /**
+         * @param openMonitoring Configuration block for JMX and Node monitoring for the MSK cluster. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openMonitoring(ClusterOpenMonitoringGetArgs openMonitoring) {
             return openMonitoring(Output.of(openMonitoring));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param zookeeperConnectString A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zookeeperConnectString(@Nullable Output<String> zookeeperConnectString) {
             $.zookeeperConnectString = zookeeperConnectString;
             return this;
         }
 
+        /**
+         * @param zookeeperConnectString A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zookeeperConnectString(String zookeeperConnectString) {
             return zookeeperConnectString(Output.of(zookeeperConnectString));
         }
 
+        /**
+         * @param zookeeperConnectStringTls A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster via TLS. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zookeeperConnectStringTls(@Nullable Output<String> zookeeperConnectStringTls) {
             $.zookeeperConnectStringTls = zookeeperConnectStringTls;
             return this;
         }
 
+        /**
+         * @param zookeeperConnectStringTls A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster via TLS. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zookeeperConnectStringTls(String zookeeperConnectStringTls) {
             return zookeeperConnectStringTls(Output.of(zookeeperConnectStringTls));
         }

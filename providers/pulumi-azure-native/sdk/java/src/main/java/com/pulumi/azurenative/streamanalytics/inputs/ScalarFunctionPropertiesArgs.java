@@ -33,6 +33,10 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="binding")
     private @Nullable Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding;
 
+    /**
+     * @return The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
+     * 
+     */
     public Optional<Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>>> binding() {
         return Optional.ofNullable(this.binding);
     }
@@ -44,6 +48,10 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="inputs")
     private @Nullable Output<List<FunctionInputArgs>> inputs;
 
+    /**
+     * @return A list of inputs describing the parameters of the function.
+     * 
+     */
     public Optional<Output<List<FunctionInputArgs>>> inputs() {
         return Optional.ofNullable(this.inputs);
     }
@@ -55,6 +63,10 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="output")
     private @Nullable Output<FunctionOutputArgs> output;
 
+    /**
+     * @return The output of the function.
+     * 
+     */
     public Optional<Output<FunctionOutputArgs>> output() {
         return Optional.ofNullable(this.output);
     }
@@ -67,6 +79,11 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Indicates the type of function.
+     * Expected value is &#39;Scalar&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -98,50 +115,118 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
             $ = new ScalarFunctionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param binding The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binding(@Nullable Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding) {
             $.binding = binding;
             return this;
         }
 
+        /**
+         * @param binding The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binding(Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs> binding) {
             return binding(Output.of(binding));
         }
 
+        /**
+         * @param binding The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binding(AzureMachineLearningWebServiceFunctionBindingArgs binding) {
             return binding(Either.ofLeft(binding));
         }
 
+        /**
+         * @param binding The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binding(JavaScriptFunctionBindingArgs binding) {
             return binding(Either.ofRight(binding));
         }
 
+        /**
+         * @param inputs A list of inputs describing the parameters of the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(@Nullable Output<List<FunctionInputArgs>> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs A list of inputs describing the parameters of the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(List<FunctionInputArgs> inputs) {
             return inputs(Output.of(inputs));
         }
 
+        /**
+         * @param inputs A list of inputs describing the parameters of the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(FunctionInputArgs... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param output The output of the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(@Nullable Output<FunctionOutputArgs> output) {
             $.output = output;
             return this;
         }
 
+        /**
+         * @param output The output of the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(FunctionOutputArgs output) {
             return output(Output.of(output));
         }
 
+        /**
+         * @param type Indicates the type of function.
+         * Expected value is &#39;Scalar&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Indicates the type of function.
+         * Expected value is &#39;Scalar&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

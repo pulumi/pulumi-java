@@ -21,6 +21,10 @@ public final class BucketOwnershipControlsRule extends com.pulumi.resources.Invo
     @Import(name="objectOwnership")
     private @Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership;
 
+    /**
+     * @return Specifies an object ownership rule.
+     * 
+     */
     public Optional<BucketOwnershipControlsRuleObjectOwnership> objectOwnership() {
         return Optional.ofNullable(this.objectOwnership);
     }
@@ -49,6 +53,12 @@ public final class BucketOwnershipControlsRule extends com.pulumi.resources.Invo
             $ = new BucketOwnershipControlsRule(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectOwnership Specifies an object ownership rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectOwnership(@Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership) {
             $.objectOwnership = objectOwnership;
             return this;

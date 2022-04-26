@@ -22,6 +22,10 @@ public final class GroupInsightsConfigurationArgs extends com.pulumi.resources.R
     @Import(name="insightsEnabled")
     private @Nullable Output<Boolean> insightsEnabled;
 
+    /**
+     * @return Set the InsightsEnabled value to true to enable insights or false to disable insights.
+     * 
+     */
     public Optional<Output<Boolean>> insightsEnabled() {
         return Optional.ofNullable(this.insightsEnabled);
     }
@@ -33,6 +37,10 @@ public final class GroupInsightsConfigurationArgs extends com.pulumi.resources.R
     @Import(name="notificationsEnabled")
     private @Nullable Output<Boolean> notificationsEnabled;
 
+    /**
+     * @return Set the NotificationsEnabled value to true to enable insights notifications. Notifications can only be enabled on a group with InsightsEnabled set to true.
+     * 
+     */
     public Optional<Output<Boolean>> notificationsEnabled() {
         return Optional.ofNullable(this.notificationsEnabled);
     }
@@ -62,20 +70,44 @@ public final class GroupInsightsConfigurationArgs extends com.pulumi.resources.R
             $ = new GroupInsightsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param insightsEnabled Set the InsightsEnabled value to true to enable insights or false to disable insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insightsEnabled(@Nullable Output<Boolean> insightsEnabled) {
             $.insightsEnabled = insightsEnabled;
             return this;
         }
 
+        /**
+         * @param insightsEnabled Set the InsightsEnabled value to true to enable insights or false to disable insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insightsEnabled(Boolean insightsEnabled) {
             return insightsEnabled(Output.of(insightsEnabled));
         }
 
+        /**
+         * @param notificationsEnabled Set the NotificationsEnabled value to true to enable insights notifications. Notifications can only be enabled on a group with InsightsEnabled set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationsEnabled(@Nullable Output<Boolean> notificationsEnabled) {
             $.notificationsEnabled = notificationsEnabled;
             return this;
         }
 
+        /**
+         * @param notificationsEnabled Set the NotificationsEnabled value to true to enable insights notifications. Notifications can only be enabled on a group with InsightsEnabled set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationsEnabled(Boolean notificationsEnabled) {
             return notificationsEnabled(Output.of(notificationsEnabled));
         }

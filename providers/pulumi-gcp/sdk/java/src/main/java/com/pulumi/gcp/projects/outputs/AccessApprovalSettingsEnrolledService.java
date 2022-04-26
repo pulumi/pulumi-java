@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AccessApprovalSettingsEnrolledService {
     /**
-     * The product for which Access Approval will be enrolled. Allowed values are listed (case-sensitive):
+     * @return The product for which Access Approval will be enrolled. Allowed values are listed (case-sensitive):
      * all
      * appengine.googleapis.com
      * bigquery.googleapis.com
@@ -27,7 +27,7 @@ public final class AccessApprovalSettingsEnrolledService {
      */
     private final String cloudProduct;
     /**
-     * The enrollment level of the service.
+     * @return The enrollment level of the service.
      * Default value is `BLOCK_ALL`.
      * Possible values are `BLOCK_ALL`.
      * 
@@ -43,7 +43,7 @@ public final class AccessApprovalSettingsEnrolledService {
     }
 
     /**
-     * The product for which Access Approval will be enrolled. Allowed values are listed (case-sensitive):
+     * @return The product for which Access Approval will be enrolled. Allowed values are listed (case-sensitive):
      * all
      * appengine.googleapis.com
      * bigquery.googleapis.com
@@ -55,16 +55,16 @@ public final class AccessApprovalSettingsEnrolledService {
      * pubsub.googleapis.com
      * storage.googleapis.com
      * 
-    */
+     */
     public String cloudProduct() {
         return this.cloudProduct;
     }
     /**
-     * The enrollment level of the service.
+     * @return The enrollment level of the service.
      * Default value is `BLOCK_ALL`.
      * Possible values are `BLOCK_ALL`.
      * 
-    */
+     */
     public Optional<String> enrollmentLevel() {
         return Optional.ofNullable(this.enrollmentLevel);
     }

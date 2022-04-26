@@ -27,6 +27,10 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerPort")
     private @Nullable Output<Integer> containerPort;
 
+    /**
+     * @return (Optional) Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
+     * 
+     */
     public Optional<Output<Integer>> containerPort() {
         return Optional.ofNullable(this.containerPort);
     }
@@ -38,6 +42,10 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return (Optional) If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
+    /**
+     * @return (Optional) Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
+     * 
+     */
     public Optional<Output<String>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -79,29 +91,65 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContainerPortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerPort (Optional) Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
             $.containerPort = containerPort;
             return this;
         }
 
+        /**
+         * @param containerPort (Optional) Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(Integer containerPort) {
             return containerPort(Output.of(containerPort));
         }
 
+        /**
+         * @param name (Optional) If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name (Optional) If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param protocol (Optional) Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol (Optional) Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }

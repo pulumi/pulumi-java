@@ -28,6 +28,10 @@ public final class DataFlowSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dataset")
     private @Nullable DatasetReferenceResponse dataset;
 
+    /**
+     * @return Dataset reference.
+     * 
+     */
     public Optional<DatasetReferenceResponse> dataset() {
         return Optional.ofNullable(this.dataset);
     }
@@ -39,6 +43,10 @@ public final class DataFlowSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Transformation description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class DataFlowSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="flowlet")
     private @Nullable DataFlowReferenceResponse flowlet;
 
+    /**
+     * @return Flowlet Reference
+     * 
+     */
     public Optional<DataFlowReferenceResponse> flowlet() {
         return Optional.ofNullable(this.flowlet);
     }
@@ -61,6 +73,10 @@ public final class DataFlowSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="linkedService")
     private @Nullable LinkedServiceReferenceResponse linkedService;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedService() {
         return Optional.ofNullable(this.linkedService);
     }
@@ -72,6 +88,10 @@ public final class DataFlowSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Transformation name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -83,6 +103,10 @@ public final class DataFlowSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="schemaLinkedService")
     private @Nullable LinkedServiceReferenceResponse schemaLinkedService;
 
+    /**
+     * @return Schema linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> schemaLinkedService() {
         return Optional.ofNullable(this.schemaLinkedService);
     }
@@ -116,31 +140,67 @@ public final class DataFlowSourceResponse extends com.pulumi.resources.InvokeArg
             $ = new DataFlowSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset Dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(@Nullable DatasetReferenceResponse dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param description Transformation description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param flowlet Flowlet Reference
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowlet(@Nullable DataFlowReferenceResponse flowlet) {
             $.flowlet = flowlet;
             return this;
         }
 
+        /**
+         * @param linkedService Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
             $.linkedService = linkedService;
             return this;
         }
 
+        /**
+         * @param name Transformation name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param schemaLinkedService Schema linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaLinkedService(@Nullable LinkedServiceReferenceResponse schemaLinkedService) {
             $.schemaLinkedService = schemaLinkedService;
             return this;

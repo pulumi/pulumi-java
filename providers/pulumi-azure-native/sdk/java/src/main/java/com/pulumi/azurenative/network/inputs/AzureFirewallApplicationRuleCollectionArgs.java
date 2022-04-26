@@ -30,6 +30,10 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends com.pulumi
     @Import(name="action")
     private @Nullable Output<AzureFirewallRCActionArgs> action;
 
+    /**
+     * @return The action type of a rule collection.
+     * 
+     */
     public Optional<Output<AzureFirewallRCActionArgs>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -41,6 +45,10 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends com.pulumi
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -52,6 +60,10 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends com.pulumi
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -63,6 +75,10 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends com.pulumi
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return Priority of the application rule collection resource.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -74,6 +90,10 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends com.pulumi
     @Import(name="rules")
     private @Nullable Output<List<AzureFirewallApplicationRuleArgs>> rules;
 
+    /**
+     * @return Collection of rules used by a application rule collection.
+     * 
+     */
     public Optional<Output<List<AzureFirewallApplicationRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -106,51 +126,117 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends com.pulumi
             $ = new AzureFirewallApplicationRuleCollectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action type of a rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<AzureFirewallRCActionArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action type of a rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(AzureFirewallRCActionArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param priority Priority of the application rule collection resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Priority of the application rule collection resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param rules Collection of rules used by a application rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<AzureFirewallApplicationRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Collection of rules used by a application rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<AzureFirewallApplicationRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules Collection of rules used by a application rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(AzureFirewallApplicationRuleArgs... rules) {
             return rules(List.of(rules));
         }

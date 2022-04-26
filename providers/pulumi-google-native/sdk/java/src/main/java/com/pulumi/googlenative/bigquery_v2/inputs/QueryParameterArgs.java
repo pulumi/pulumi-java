@@ -24,6 +24,10 @@ public final class QueryParameterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -35,6 +39,10 @@ public final class QueryParameterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="parameterType")
     private @Nullable Output<QueryParameterTypeArgs> parameterType;
 
+    /**
+     * @return [Required] The type of this parameter.
+     * 
+     */
     public Optional<Output<QueryParameterTypeArgs>> parameterType() {
         return Optional.ofNullable(this.parameterType);
     }
@@ -46,6 +54,10 @@ public final class QueryParameterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="parameterValue")
     private @Nullable Output<QueryParameterValueArgs> parameterValue;
 
+    /**
+     * @return [Required] The value of this parameter.
+     * 
+     */
     public Optional<Output<QueryParameterValueArgs>> parameterValue() {
         return Optional.ofNullable(this.parameterValue);
     }
@@ -76,29 +88,65 @@ public final class QueryParameterArgs extends com.pulumi.resources.ResourceArgs 
             $ = new QueryParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameterType [Required] The type of this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterType(@Nullable Output<QueryParameterTypeArgs> parameterType) {
             $.parameterType = parameterType;
             return this;
         }
 
+        /**
+         * @param parameterType [Required] The type of this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterType(QueryParameterTypeArgs parameterType) {
             return parameterType(Output.of(parameterType));
         }
 
+        /**
+         * @param parameterValue [Required] The value of this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterValue(@Nullable Output<QueryParameterValueArgs> parameterValue) {
             $.parameterValue = parameterValue;
             return this;
         }
 
+        /**
+         * @param parameterValue [Required] The value of this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterValue(QueryParameterValueArgs parameterValue) {
             return parameterValue(Output.of(parameterValue));
         }

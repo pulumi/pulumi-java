@@ -29,6 +29,11 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends com.pulu
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is &#39;Microsoft.Network/networkSecurityGroups&#39;.
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -40,6 +45,10 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends com.pulu
     @Import(name="securityRules")
     private @Nullable List<NsgSecurityRuleResponse> securityRules;
 
+    /**
+     * @return Gets or sets Security rules of network security group.
+     * 
+     */
     public Optional<List<NsgSecurityRuleResponse>> securityRules() {
         return Optional.ofNullable(this.securityRules);
     }
@@ -51,6 +60,10 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends com.pulu
     @Import(name="targetResourceName", required=true)
     private String targetResourceName;
 
+    /**
+     * @return Gets or sets the target Resource name.
+     * 
+     */
     public String targetResourceName() {
         return this.targetResourceName;
     }
@@ -81,20 +94,45 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends com.pulu
             $ = new NetworkSecurityGroupResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Network/networkSecurityGroups&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param securityRules Gets or sets Security rules of network security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityRules(@Nullable List<NsgSecurityRuleResponse> securityRules) {
             $.securityRules = securityRules;
             return this;
         }
 
+        /**
+         * @param securityRules Gets or sets Security rules of network security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityRules(NsgSecurityRuleResponse... securityRules) {
             return securityRules(List.of(securityRules));
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(String targetResourceName) {
             $.targetResourceName = targetResourceName;
             return this;

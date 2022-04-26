@@ -24,6 +24,10 @@ public final class PrivateConnectionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Display name.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -35,6 +39,10 @@ public final class PrivateConnectionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -74,6 +82,10 @@ public final class PrivateConnectionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="vpcPeeringConfig")
     private @Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig;
 
+    /**
+     * @return VPC Peering Config.
+     * 
+     */
     public Optional<Output<VpcPeeringConfigArgs>> vpcPeeringConfig() {
         return Optional.ofNullable(this.vpcPeeringConfig);
     }
@@ -108,20 +120,44 @@ public final class PrivateConnectionArgs extends com.pulumi.resources.ResourceAr
             $ = new PrivateConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param labels Labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -162,11 +198,23 @@ public final class PrivateConnectionArgs extends com.pulumi.resources.ResourceAr
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param vpcPeeringConfig VPC Peering Config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcPeeringConfig(@Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig) {
             $.vpcPeeringConfig = vpcPeeringConfig;
             return this;
         }
 
+        /**
+         * @param vpcPeeringConfig VPC Peering Config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcPeeringConfig(VpcPeeringConfigArgs vpcPeeringConfig) {
             return vpcPeeringConfig(Output.of(vpcPeeringConfig));
         }

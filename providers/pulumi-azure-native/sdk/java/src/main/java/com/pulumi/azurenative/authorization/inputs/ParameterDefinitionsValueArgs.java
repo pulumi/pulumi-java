@@ -31,6 +31,10 @@ public final class ParameterDefinitionsValueArgs extends com.pulumi.resources.Re
     @Import(name="allowedValues")
     private @Nullable Output<List<Object>> allowedValues;
 
+    /**
+     * @return The allowed values for the parameter.
+     * 
+     */
     public Optional<Output<List<Object>>> allowedValues() {
         return Optional.ofNullable(this.allowedValues);
     }
@@ -42,6 +46,10 @@ public final class ParameterDefinitionsValueArgs extends com.pulumi.resources.Re
     @Import(name="defaultValue")
     private @Nullable Output<Object> defaultValue;
 
+    /**
+     * @return The default value for the parameter if no value is provided.
+     * 
+     */
     public Optional<Output<Object>> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -53,6 +61,10 @@ public final class ParameterDefinitionsValueArgs extends com.pulumi.resources.Re
     @Import(name="metadata")
     private @Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata;
 
+    /**
+     * @return General metadata for the parameter.
+     * 
+     */
     public Optional<Output<ParameterDefinitionsValueMetadataArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -64,6 +76,10 @@ public final class ParameterDefinitionsValueArgs extends com.pulumi.resources.Re
     @Import(name="type")
     private @Nullable Output<Either<String,ParameterType>> type;
 
+    /**
+     * @return The data type of the parameter.
+     * 
+     */
     public Optional<Output<Either<String,ParameterType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -95,50 +111,116 @@ public final class ParameterDefinitionsValueArgs extends com.pulumi.resources.Re
             $ = new ParameterDefinitionsValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedValues The allowed values for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(@Nullable Output<List<Object>> allowedValues) {
             $.allowedValues = allowedValues;
             return this;
         }
 
+        /**
+         * @param allowedValues The allowed values for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(List<Object> allowedValues) {
             return allowedValues(Output.of(allowedValues));
         }
 
+        /**
+         * @param allowedValues The allowed values for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(Object... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
 
+        /**
+         * @param defaultValue The default value for the parameter if no value is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable Output<Object> defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param defaultValue The default value for the parameter if no value is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(Object defaultValue) {
             return defaultValue(Output.of(defaultValue));
         }
 
+        /**
+         * @param metadata General metadata for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata General metadata for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(ParameterDefinitionsValueMetadataArgs metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param type The data type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ParameterType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The data type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ParameterType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The data type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The data type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ParameterType type) {
             return type(Either.ofRight(type));
         }

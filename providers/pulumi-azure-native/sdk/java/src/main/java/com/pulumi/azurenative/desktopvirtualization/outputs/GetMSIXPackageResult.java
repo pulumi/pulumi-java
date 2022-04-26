@@ -16,72 +16,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMSIXPackageResult {
     /**
-     * User friendly Name to be displayed in the portal.
+     * @return User friendly Name to be displayed in the portal.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * VHD/CIM image path on Network Share.
+     * @return VHD/CIM image path on Network Share.
      * 
      */
     private final @Nullable String imagePath;
     /**
-     * Make this version of the package the active one across the hostpool.
+     * @return Make this version of the package the active one across the hostpool.
      * 
      */
     private final @Nullable Boolean isActive;
     /**
-     * Specifies how to register Package in feed.
+     * @return Specifies how to register Package in feed.
      * 
      */
     private final @Nullable Boolean isRegularRegistration;
     /**
-     * Date Package was last updated, found in the appxmanifest.xml.
+     * @return Date Package was last updated, found in the appxmanifest.xml.
      * 
      */
     private final @Nullable String lastUpdated;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * List of package applications.
+     * @return List of package applications.
      * 
      */
     private final @Nullable List<MsixPackageApplicationsResponse> packageApplications;
     /**
-     * List of package dependencies.
+     * @return List of package dependencies.
      * 
      */
     private final @Nullable List<MsixPackageDependenciesResponse> packageDependencies;
     /**
-     * Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
+     * @return Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
      * 
      */
     private final @Nullable String packageFamilyName;
     /**
-     * Package Name from appxmanifest.xml.
+     * @return Package Name from appxmanifest.xml.
      * 
      */
     private final @Nullable String packageName;
     /**
-     * Relative Path to the package inside the image.
+     * @return Relative Path to the package inside the image.
      * 
      */
     private final @Nullable String packageRelativePath;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
     /**
-     * Package Version found in the appxmanifest.xml.
+     * @return Package Version found in the appxmanifest.xml.
      * 
      */
     private final @Nullable String version;
@@ -119,100 +119,100 @@ public final class GetMSIXPackageResult {
     }
 
     /**
-     * User friendly Name to be displayed in the portal.
+     * @return User friendly Name to be displayed in the portal.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * VHD/CIM image path on Network Share.
+     * @return VHD/CIM image path on Network Share.
      * 
-    */
+     */
     public Optional<String> imagePath() {
         return Optional.ofNullable(this.imagePath);
     }
     /**
-     * Make this version of the package the active one across the hostpool.
+     * @return Make this version of the package the active one across the hostpool.
      * 
-    */
+     */
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
     }
     /**
-     * Specifies how to register Package in feed.
+     * @return Specifies how to register Package in feed.
      * 
-    */
+     */
     public Optional<Boolean> isRegularRegistration() {
         return Optional.ofNullable(this.isRegularRegistration);
     }
     /**
-     * Date Package was last updated, found in the appxmanifest.xml.
+     * @return Date Package was last updated, found in the appxmanifest.xml.
      * 
-    */
+     */
     public Optional<String> lastUpdated() {
         return Optional.ofNullable(this.lastUpdated);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of package applications.
+     * @return List of package applications.
      * 
-    */
+     */
     public List<MsixPackageApplicationsResponse> packageApplications() {
         return this.packageApplications == null ? List.of() : this.packageApplications;
     }
     /**
-     * List of package dependencies.
+     * @return List of package dependencies.
      * 
-    */
+     */
     public List<MsixPackageDependenciesResponse> packageDependencies() {
         return this.packageDependencies == null ? List.of() : this.packageDependencies;
     }
     /**
-     * Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
+     * @return Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
      * 
-    */
+     */
     public Optional<String> packageFamilyName() {
         return Optional.ofNullable(this.packageFamilyName);
     }
     /**
-     * Package Name from appxmanifest.xml.
+     * @return Package Name from appxmanifest.xml.
      * 
-    */
+     */
     public Optional<String> packageName() {
         return Optional.ofNullable(this.packageName);
     }
     /**
-     * Relative Path to the package inside the image.
+     * @return Relative Path to the package inside the image.
      * 
-    */
+     */
     public Optional<String> packageRelativePath() {
         return Optional.ofNullable(this.packageRelativePath);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Package Version found in the appxmanifest.xml.
+     * @return Package Version found in the appxmanifest.xml.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

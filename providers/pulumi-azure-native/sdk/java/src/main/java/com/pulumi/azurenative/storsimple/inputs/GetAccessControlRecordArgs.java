@@ -19,6 +19,10 @@ public final class GetAccessControlRecordArgs extends com.pulumi.resources.Invok
     @Import(name="accessControlRecordName", required=true)
     private String accessControlRecordName;
 
+    /**
+     * @return Name of access control record to be fetched.
+     * 
+     */
     public String accessControlRecordName() {
         return this.accessControlRecordName;
     }
@@ -30,6 +34,10 @@ public final class GetAccessControlRecordArgs extends com.pulumi.resources.Invok
     @Import(name="managerName", required=true)
     private String managerName;
 
+    /**
+     * @return The manager name
+     * 
+     */
     public String managerName() {
         return this.managerName;
     }
@@ -41,6 +49,10 @@ public final class GetAccessControlRecordArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetAccessControlRecordArgs extends com.pulumi.resources.Invok
             $ = new GetAccessControlRecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessControlRecordName Name of access control record to be fetched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlRecordName(String accessControlRecordName) {
             $.accessControlRecordName = accessControlRecordName;
             return this;
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(String managerName) {
             $.managerName = managerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -26,6 +26,10 @@ public final class HierarchyInformationArgs extends com.pulumi.resources.Resourc
     @Import(name="configurationName")
     private @Nullable Output<String> configurationName;
 
+    /**
+     * @return Represents configuration name that uniquely identifies configuration
+     * 
+     */
     public Optional<Output<String>> configurationName() {
         return Optional.ofNullable(this.configurationName);
     }
@@ -37,6 +41,10 @@ public final class HierarchyInformationArgs extends com.pulumi.resources.Resourc
     @Import(name="productFamilyName")
     private @Nullable Output<String> productFamilyName;
 
+    /**
+     * @return Represents product family name that uniquely identifies product family
+     * 
+     */
     public Optional<Output<String>> productFamilyName() {
         return Optional.ofNullable(this.productFamilyName);
     }
@@ -48,6 +56,10 @@ public final class HierarchyInformationArgs extends com.pulumi.resources.Resourc
     @Import(name="productLineName")
     private @Nullable Output<String> productLineName;
 
+    /**
+     * @return Represents product line name that uniquely identifies product line
+     * 
+     */
     public Optional<Output<String>> productLineName() {
         return Optional.ofNullable(this.productLineName);
     }
@@ -59,6 +71,10 @@ public final class HierarchyInformationArgs extends com.pulumi.resources.Resourc
     @Import(name="productName")
     private @Nullable Output<String> productName;
 
+    /**
+     * @return Represents product name that uniquely identifies product
+     * 
+     */
     public Optional<Output<String>> productName() {
         return Optional.ofNullable(this.productName);
     }
@@ -90,38 +106,86 @@ public final class HierarchyInformationArgs extends com.pulumi.resources.Resourc
             $ = new HierarchyInformationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationName Represents configuration name that uniquely identifies configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationName(@Nullable Output<String> configurationName) {
             $.configurationName = configurationName;
             return this;
         }
 
+        /**
+         * @param configurationName Represents configuration name that uniquely identifies configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationName(String configurationName) {
             return configurationName(Output.of(configurationName));
         }
 
+        /**
+         * @param productFamilyName Represents product family name that uniquely identifies product family
+         * 
+         * @return builder
+         * 
+         */
         public Builder productFamilyName(@Nullable Output<String> productFamilyName) {
             $.productFamilyName = productFamilyName;
             return this;
         }
 
+        /**
+         * @param productFamilyName Represents product family name that uniquely identifies product family
+         * 
+         * @return builder
+         * 
+         */
         public Builder productFamilyName(String productFamilyName) {
             return productFamilyName(Output.of(productFamilyName));
         }
 
+        /**
+         * @param productLineName Represents product line name that uniquely identifies product line
+         * 
+         * @return builder
+         * 
+         */
         public Builder productLineName(@Nullable Output<String> productLineName) {
             $.productLineName = productLineName;
             return this;
         }
 
+        /**
+         * @param productLineName Represents product line name that uniquely identifies product line
+         * 
+         * @return builder
+         * 
+         */
         public Builder productLineName(String productLineName) {
             return productLineName(Output.of(productLineName));
         }
 
+        /**
+         * @param productName Represents product name that uniquely identifies product
+         * 
+         * @return builder
+         * 
+         */
         public Builder productName(@Nullable Output<String> productName) {
             $.productName = productName;
             return this;
         }
 
+        /**
+         * @param productName Represents product name that uniquely identifies product
+         * 
+         * @return builder
+         * 
+         */
         public Builder productName(String productName) {
             return productName(Output.of(productName));
         }

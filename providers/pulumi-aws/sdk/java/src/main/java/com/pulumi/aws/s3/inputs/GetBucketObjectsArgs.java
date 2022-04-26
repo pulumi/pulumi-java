@@ -23,6 +23,10 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="bucket", required=true)
     private String bucket;
 
+    /**
+     * @return Lists object keys in this S3 bucket. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
+     * 
+     */
     public String bucket() {
         return this.bucket;
     }
@@ -34,6 +38,10 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="delimiter")
     private @Nullable String delimiter;
 
+    /**
+     * @return A character used to group keys (Default: none)
+     * 
+     */
     public Optional<String> delimiter() {
         return Optional.ofNullable(this.delimiter);
     }
@@ -45,6 +53,10 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="encodingType")
     private @Nullable String encodingType;
 
+    /**
+     * @return Encodes keys using this method (Default: none; besides none, only &#34;url&#34; can be used)
+     * 
+     */
     public Optional<String> encodingType() {
         return Optional.ofNullable(this.encodingType);
     }
@@ -56,6 +68,10 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="fetchOwner")
     private @Nullable Boolean fetchOwner;
 
+    /**
+     * @return Boolean specifying whether to populate the owner list (Default: false)
+     * 
+     */
     public Optional<Boolean> fetchOwner() {
         return Optional.ofNullable(this.fetchOwner);
     }
@@ -67,6 +83,10 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="maxKeys")
     private @Nullable Integer maxKeys;
 
+    /**
+     * @return Maximum object keys to return (Default: 1000)
+     * 
+     */
     public Optional<Integer> maxKeys() {
         return Optional.ofNullable(this.maxKeys);
     }
@@ -78,6 +98,10 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="prefix")
     private @Nullable String prefix;
 
+    /**
+     * @return Limits results to object keys with this prefix (Default: none)
+     * 
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -89,6 +113,10 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="startAfter")
     private @Nullable String startAfter;
 
+    /**
+     * @return Returns key names lexicographically after a specific object key in your bucket (Default: none; S3 lists object keys in UTF-8 character encoding in lexicographical order)
+     * 
+     */
     public Optional<String> startAfter() {
         return Optional.ofNullable(this.startAfter);
     }
@@ -123,36 +151,78 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetBucketObjectsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Lists object keys in this S3 bucket. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param delimiter A character used to group keys (Default: none)
+         * 
+         * @return builder
+         * 
+         */
         public Builder delimiter(@Nullable String delimiter) {
             $.delimiter = delimiter;
             return this;
         }
 
+        /**
+         * @param encodingType Encodes keys using this method (Default: none; besides none, only &#34;url&#34; can be used)
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodingType(@Nullable String encodingType) {
             $.encodingType = encodingType;
             return this;
         }
 
+        /**
+         * @param fetchOwner Boolean specifying whether to populate the owner list (Default: false)
+         * 
+         * @return builder
+         * 
+         */
         public Builder fetchOwner(@Nullable Boolean fetchOwner) {
             $.fetchOwner = fetchOwner;
             return this;
         }
 
+        /**
+         * @param maxKeys Maximum object keys to return (Default: 1000)
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxKeys(@Nullable Integer maxKeys) {
             $.maxKeys = maxKeys;
             return this;
         }
 
+        /**
+         * @param prefix Limits results to object keys with this prefix (Default: none)
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable String prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param startAfter Returns key names lexicographically after a specific object key in your bucket (Default: none; S3 lists object keys in UTF-8 character encoding in lexicographical order)
+         * 
+         * @return builder
+         * 
+         */
         public Builder startAfter(@Nullable String startAfter) {
             $.startAfter = startAfter;
             return this;

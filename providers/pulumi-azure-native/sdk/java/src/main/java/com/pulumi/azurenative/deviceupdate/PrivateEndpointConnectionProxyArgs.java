@@ -23,6 +23,10 @@ public final class PrivateEndpointConnectionProxyArgs extends com.pulumi.resourc
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return Account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -34,6 +38,10 @@ public final class PrivateEndpointConnectionProxyArgs extends com.pulumi.resourc
     @Import(name="privateEndpointConnectionProxyId")
     private @Nullable Output<String> privateEndpointConnectionProxyId;
 
+    /**
+     * @return The ID of the private endpoint connection proxy object.
+     * 
+     */
     public Optional<Output<String>> privateEndpointConnectionProxyId() {
         return Optional.ofNullable(this.privateEndpointConnectionProxyId);
     }
@@ -45,6 +53,10 @@ public final class PrivateEndpointConnectionProxyArgs extends com.pulumi.resourc
     @Import(name="remotePrivateEndpoint")
     private @Nullable Output<RemotePrivateEndpointArgs> remotePrivateEndpoint;
 
+    /**
+     * @return Remote private endpoint details.
+     * 
+     */
     public Optional<Output<RemotePrivateEndpointArgs>> remotePrivateEndpoint() {
         return Optional.ofNullable(this.remotePrivateEndpoint);
     }
@@ -56,6 +68,10 @@ public final class PrivateEndpointConnectionProxyArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class PrivateEndpointConnectionProxyArgs extends com.pulumi.resourc
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Operation status.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -99,47 +119,107 @@ public final class PrivateEndpointConnectionProxyArgs extends com.pulumi.resourc
             $ = new PrivateEndpointConnectionProxyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param privateEndpointConnectionProxyId The ID of the private endpoint connection proxy object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionProxyId(@Nullable Output<String> privateEndpointConnectionProxyId) {
             $.privateEndpointConnectionProxyId = privateEndpointConnectionProxyId;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnectionProxyId The ID of the private endpoint connection proxy object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionProxyId(String privateEndpointConnectionProxyId) {
             return privateEndpointConnectionProxyId(Output.of(privateEndpointConnectionProxyId));
         }
 
+        /**
+         * @param remotePrivateEndpoint Remote private endpoint details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remotePrivateEndpoint(@Nullable Output<RemotePrivateEndpointArgs> remotePrivateEndpoint) {
             $.remotePrivateEndpoint = remotePrivateEndpoint;
             return this;
         }
 
+        /**
+         * @param remotePrivateEndpoint Remote private endpoint details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remotePrivateEndpoint(RemotePrivateEndpointArgs remotePrivateEndpoint) {
             return remotePrivateEndpoint(Output.of(remotePrivateEndpoint));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param status Operation status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Operation status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

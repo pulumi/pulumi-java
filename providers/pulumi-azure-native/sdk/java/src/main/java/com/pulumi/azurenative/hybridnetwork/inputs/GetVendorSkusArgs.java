@@ -19,6 +19,10 @@ public final class GetVendorSkusArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="skuName", required=true)
     private String skuName;
 
+    /**
+     * @return The name of the sku.
+     * 
+     */
     public String skuName() {
         return this.skuName;
     }
@@ -30,6 +34,10 @@ public final class GetVendorSkusArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vendorName", required=true)
     private String vendorName;
 
+    /**
+     * @return The name of the vendor.
+     * 
+     */
     public String vendorName() {
         return this.vendorName;
     }
@@ -59,11 +67,23 @@ public final class GetVendorSkusArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVendorSkusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param skuName The name of the sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuName(String skuName) {
             $.skuName = skuName;
             return this;
         }
 
+        /**
+         * @param vendorName The name of the vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendorName(String vendorName) {
             $.vendorName = vendorName;
             return this;

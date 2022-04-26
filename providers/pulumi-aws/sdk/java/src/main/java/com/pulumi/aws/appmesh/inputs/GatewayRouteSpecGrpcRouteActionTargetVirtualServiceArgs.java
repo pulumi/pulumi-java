@@ -20,6 +20,10 @@ public final class GatewayRouteSpecGrpcRouteActionTargetVirtualServiceArgs exten
     @Import(name="virtualServiceName", required=true)
     private Output<String> virtualServiceName;
 
+    /**
+     * @return The name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Output<String> virtualServiceName() {
         return this.virtualServiceName;
     }
@@ -48,11 +52,23 @@ public final class GatewayRouteSpecGrpcRouteActionTargetVirtualServiceArgs exten
             $ = new GatewayRouteSpecGrpcRouteActionTargetVirtualServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param virtualServiceName The name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualServiceName(Output<String> virtualServiceName) {
             $.virtualServiceName = virtualServiceName;
             return this;
         }
 
+        /**
+         * @param virtualServiceName The name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualServiceName(String virtualServiceName) {
             return virtualServiceName(Output.of(virtualServiceName));
         }

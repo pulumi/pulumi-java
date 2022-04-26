@@ -35,6 +35,10 @@ public final class MonitoringScheduleConfig extends com.pulumi.resources.InvokeA
     @Import(name="monitoringJobDefinitionName")
     private @Nullable String monitoringJobDefinitionName;
 
+    /**
+     * @return Name of the job definition
+     * 
+     */
     public Optional<String> monitoringJobDefinitionName() {
         return Optional.ofNullable(this.monitoringJobDefinitionName);
     }
@@ -85,6 +89,12 @@ public final class MonitoringScheduleConfig extends com.pulumi.resources.InvokeA
             return this;
         }
 
+        /**
+         * @param monitoringJobDefinitionName Name of the job definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringJobDefinitionName(@Nullable String monitoringJobDefinitionName) {
             $.monitoringJobDefinitionName = monitoringJobDefinitionName;
             return this;

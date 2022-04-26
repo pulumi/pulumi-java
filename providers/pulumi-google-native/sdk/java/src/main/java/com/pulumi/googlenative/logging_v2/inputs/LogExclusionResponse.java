@@ -24,6 +24,10 @@ public final class LogExclusionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The creation timestamp of the exclusion.This field may not be present for older exclusions.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -35,6 +39,10 @@ public final class LogExclusionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Optional. A description of this exclusion.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -46,6 +54,10 @@ public final class LogExclusionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="disabled", required=true)
     private Boolean disabled;
 
+    /**
+     * @return Optional. If set to True, then this exclusion is disabled and it does not exclude any log entries. You can update an exclusion to change the value of this field.
+     * 
+     */
     public Boolean disabled() {
         return this.disabled;
     }
@@ -57,6 +69,10 @@ public final class LogExclusionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="filter", required=true)
     private String filter;
 
+    /**
+     * @return An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries) that matches the log entries to be excluded. By using the sample function (https://cloud.google.com/logging/docs/view/advanced-queries#sample), you can exclude less than 100% of the matching log entries.For example, the following query matches 99% of low-severity log entries from Google Cloud Storage buckets:resource.type=gcs_bucket severity&lt;ERROR sample(insertId, 0.99)
+     * 
+     */
     public String filter() {
         return this.filter;
     }
@@ -68,6 +84,10 @@ public final class LogExclusionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return A client-assigned identifier, such as &#34;load-balancer-exclusion&#34;. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -79,6 +99,10 @@ public final class LogExclusionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return The last update timestamp of the exclusion.This field may not be present for older exclusions.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -112,31 +136,67 @@ public final class LogExclusionResponse extends com.pulumi.resources.InvokeArgs 
             $ = new LogExclusionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime The creation timestamp of the exclusion.This field may not be present for older exclusions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param description Optional. A description of this exclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param disabled Optional. If set to True, then this exclusion is disabled and it does not exclude any log entries. You can update an exclusion to change the value of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param filter An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries) that matches the log entries to be excluded. By using the sample function (https://cloud.google.com/logging/docs/view/advanced-queries#sample), you can exclude less than 100% of the matching log entries.For example, the following query matches 99% of low-severity log entries from Google Cloud Storage buckets:resource.type=gcs_bucket severity&lt;ERROR sample(insertId, 0.99)
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param name A client-assigned identifier, such as &#34;load-balancer-exclusion&#34;. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param updateTime The last update timestamp of the exclusion.This field may not be present for older exclusions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

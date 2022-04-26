@@ -28,6 +28,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="decryption")
     private @Nullable FlowEncryption decryption;
 
+    /**
+     * @return The type of decryption that is used on the content ingested from this source.
+     * 
+     */
     public Optional<FlowEncryption> decryption() {
         return Optional.ofNullable(this.decryption);
     }
@@ -39,6 +43,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="entitlementArn")
     private @Nullable String entitlementArn;
 
+    /**
+     * @return The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator&#39;s flow.
+     * 
+     */
     public Optional<String> entitlementArn() {
         return Optional.ofNullable(this.entitlementArn);
     }
@@ -61,6 +73,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="ingestIp")
     private @Nullable String ingestIp;
 
+    /**
+     * @return The IP address that the flow will be listening on for incoming content.
+     * 
+     */
     public Optional<String> ingestIp() {
         return Optional.ofNullable(this.ingestIp);
     }
@@ -72,6 +88,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="ingestPort")
     private @Nullable Integer ingestPort;
 
+    /**
+     * @return The port that the flow will be listening on for incoming content.
+     * 
+     */
     public Optional<Integer> ingestPort() {
         return Optional.ofNullable(this.ingestPort);
     }
@@ -83,6 +103,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxBitrate")
     private @Nullable Integer maxBitrate;
 
+    /**
+     * @return The smoothing max bitrate for RIST, RTP, and RTP-FEC streams.
+     * 
+     */
     public Optional<Integer> maxBitrate() {
         return Optional.ofNullable(this.maxBitrate);
     }
@@ -94,6 +118,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxLatency")
     private @Nullable Integer maxLatency;
 
+    /**
+     * @return The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+     * 
+     */
     public Optional<Integer> maxLatency() {
         return Optional.ofNullable(this.maxLatency);
     }
@@ -105,6 +133,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="minLatency")
     private @Nullable Integer minLatency;
 
+    /**
+     * @return The minimum latency in milliseconds.
+     * 
+     */
     public Optional<Integer> minLatency() {
         return Optional.ofNullable(this.minLatency);
     }
@@ -116,6 +148,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the source.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -127,6 +163,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="protocol")
     private @Nullable FlowSourceProtocol protocol;
 
+    /**
+     * @return The protocol that is used by the source or output.
+     * 
+     */
     public Optional<FlowSourceProtocol> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -138,6 +178,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceArn")
     private @Nullable String sourceArn;
 
+    /**
+     * @return The ARN of the source.
+     * 
+     */
     public Optional<String> sourceArn() {
         return Optional.ofNullable(this.sourceArn);
     }
@@ -149,6 +193,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceIngestPort")
     private @Nullable String sourceIngestPort;
 
+    /**
+     * @return The port that the flow will be listening on for incoming content.(ReadOnly)
+     * 
+     */
     public Optional<String> sourceIngestPort() {
         return Optional.ofNullable(this.sourceIngestPort);
     }
@@ -160,6 +208,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="streamId")
     private @Nullable String streamId;
 
+    /**
+     * @return The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
+     * 
+     */
     public Optional<String> streamId() {
         return Optional.ofNullable(this.streamId);
     }
@@ -171,6 +223,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpcInterfaceName")
     private @Nullable String vpcInterfaceName;
 
+    /**
+     * @return The name of the VPC Interface this Source is configured with.
+     * 
+     */
     public Optional<String> vpcInterfaceName() {
         return Optional.ofNullable(this.vpcInterfaceName);
     }
@@ -182,6 +238,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="whitelistCidr")
     private @Nullable String whitelistCidr;
 
+    /**
+     * @return The range of IP addresses that should be allowed to contribute content to your source. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
+     * 
+     */
     public Optional<String> whitelistCidr() {
         return Optional.ofNullable(this.whitelistCidr);
     }
@@ -224,76 +284,166 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
             $ = new FlowSource(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param decryption The type of decryption that is used on the content ingested from this source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder decryption(@Nullable FlowEncryption decryption) {
             $.decryption = decryption;
             return this;
         }
 
+        /**
+         * @param description A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param entitlementArn The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator&#39;s flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entitlementArn(@Nullable String entitlementArn) {
             $.entitlementArn = entitlementArn;
             return this;
         }
 
+        /**
+         * @param ingestIp The IP address that the flow will be listening on for incoming content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestIp(@Nullable String ingestIp) {
             $.ingestIp = ingestIp;
             return this;
         }
 
+        /**
+         * @param ingestPort The port that the flow will be listening on for incoming content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestPort(@Nullable Integer ingestPort) {
             $.ingestPort = ingestPort;
             return this;
         }
 
+        /**
+         * @param maxBitrate The smoothing max bitrate for RIST, RTP, and RTP-FEC streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBitrate(@Nullable Integer maxBitrate) {
             $.maxBitrate = maxBitrate;
             return this;
         }
 
+        /**
+         * @param maxLatency The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxLatency(@Nullable Integer maxLatency) {
             $.maxLatency = maxLatency;
             return this;
         }
 
+        /**
+         * @param minLatency The minimum latency in milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minLatency(@Nullable Integer minLatency) {
             $.minLatency = minLatency;
             return this;
         }
 
+        /**
+         * @param name The name of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param protocol The protocol that is used by the source or output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable FlowSourceProtocol protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param sourceArn The ARN of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceArn(@Nullable String sourceArn) {
             $.sourceArn = sourceArn;
             return this;
         }
 
+        /**
+         * @param sourceIngestPort The port that the flow will be listening on for incoming content.(ReadOnly)
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIngestPort(@Nullable String sourceIngestPort) {
             $.sourceIngestPort = sourceIngestPort;
             return this;
         }
 
+        /**
+         * @param streamId The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamId(@Nullable String streamId) {
             $.streamId = streamId;
             return this;
         }
 
+        /**
+         * @param vpcInterfaceName The name of the VPC Interface this Source is configured with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcInterfaceName(@Nullable String vpcInterfaceName) {
             $.vpcInterfaceName = vpcInterfaceName;
             return this;
         }
 
+        /**
+         * @param whitelistCidr The range of IP addresses that should be allowed to contribute content to your source. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
+         * 
+         * @return builder
+         * 
+         */
         public Builder whitelistCidr(@Nullable String whitelistCidr) {
             $.whitelistCidr = whitelistCidr;
             return this;

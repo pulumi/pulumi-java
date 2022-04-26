@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class CaPoolIssuancePolicyAllowedIssuanceModes {
     /**
-     * When true, allows callers to create Certificates by specifying a CertificateConfig.
+     * @return When true, allows callers to create Certificates by specifying a CertificateConfig.
      * 
      */
     private final Boolean allowConfigBasedIssuance;
     /**
-     * When true, allows callers to create Certificates by specifying a CSR.
+     * @return When true, allows callers to create Certificates by specifying a CSR.
      * 
      */
     private final Boolean allowCsrBasedIssuance;
@@ -29,16 +29,16 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModes {
     }
 
     /**
-     * When true, allows callers to create Certificates by specifying a CertificateConfig.
+     * @return When true, allows callers to create Certificates by specifying a CertificateConfig.
      * 
-    */
+     */
     public Boolean allowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance;
     }
     /**
-     * When true, allows callers to create Certificates by specifying a CSR.
+     * @return When true, allows callers to create Certificates by specifying a CSR.
      * 
-    */
+     */
     public Boolean allowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance;
     }

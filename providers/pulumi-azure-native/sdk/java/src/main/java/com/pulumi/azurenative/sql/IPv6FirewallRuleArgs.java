@@ -22,6 +22,10 @@ public final class IPv6FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="endIPv6Address")
     private @Nullable Output<String> endIPv6Address;
 
+    /**
+     * @return The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
+     * 
+     */
     public Optional<Output<String>> endIPv6Address() {
         return Optional.ofNullable(this.endIPv6Address);
     }
@@ -33,6 +37,10 @@ public final class IPv6FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="firewallRuleName")
     private @Nullable Output<String> firewallRuleName;
 
+    /**
+     * @return The name of the firewall rule.
+     * 
+     */
     public Optional<Output<String>> firewallRuleName() {
         return Optional.ofNullable(this.firewallRuleName);
     }
@@ -44,6 +52,10 @@ public final class IPv6FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,6 +67,10 @@ public final class IPv6FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -66,6 +82,10 @@ public final class IPv6FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -77,6 +97,10 @@ public final class IPv6FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="startIPv6Address")
     private @Nullable Output<String> startIPv6Address;
 
+    /**
+     * @return The start IP address of the firewall rule. Must be IPv6 format.
+     * 
+     */
     public Optional<Output<String>> startIPv6Address() {
         return Optional.ofNullable(this.startIPv6Address);
     }
@@ -110,56 +134,128 @@ public final class IPv6FirewallRuleArgs extends com.pulumi.resources.ResourceArg
             $ = new IPv6FirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endIPv6Address The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endIPv6Address(@Nullable Output<String> endIPv6Address) {
             $.endIPv6Address = endIPv6Address;
             return this;
         }
 
+        /**
+         * @param endIPv6Address The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endIPv6Address(String endIPv6Address) {
             return endIPv6Address(Output.of(endIPv6Address));
         }
 
+        /**
+         * @param firewallRuleName The name of the firewall rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRuleName(@Nullable Output<String> firewallRuleName) {
             $.firewallRuleName = firewallRuleName;
             return this;
         }
 
+        /**
+         * @param firewallRuleName The name of the firewall rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRuleName(String firewallRuleName) {
             return firewallRuleName(Output.of(firewallRuleName));
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param startIPv6Address The start IP address of the firewall rule. Must be IPv6 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startIPv6Address(@Nullable Output<String> startIPv6Address) {
             $.startIPv6Address = startIPv6Address;
             return this;
         }
 
+        /**
+         * @param startIPv6Address The start IP address of the firewall rule. Must be IPv6 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startIPv6Address(String startIPv6Address) {
             return startIPv6Address(Output.of(startIPv6Address));
         }

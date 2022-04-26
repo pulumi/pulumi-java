@@ -31,6 +31,10 @@ public final class RtspSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpoint", required=true)
     private Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint;
 
+    /**
+     * @return RTSP endpoint information for Video Analyzer to connect to. This contains the required information for Video Analyzer to connect to RTSP cameras and/or generic RTSP servers.
+     * 
+     */
     public Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint() {
         return this.endpoint;
     }
@@ -42,6 +46,10 @@ public final class RtspSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Node name. Must be unique within the topology.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -53,6 +61,10 @@ public final class RtspSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transport")
     private @Nullable Output<Either<String,RtspTransport>> transport;
 
+    /**
+     * @return Network transport utilized by the RTSP and RTP exchange: TCP or HTTP. When using TCP, the RTP packets are interleaved on the TCP RTSP connection. When using HTTP, the RTSP messages are exchanged through long lived HTTP connections, and the RTP packages are interleaved in the HTTP connections alongside the RTSP messages.
+     * 
+     */
     public Optional<Output<Either<String,RtspTransport>>> transport() {
         return Optional.ofNullable(this.transport);
     }
@@ -65,6 +77,11 @@ public final class RtspSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.RtspSource&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -96,54 +113,128 @@ public final class RtspSourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RtspSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoint RTSP endpoint information for Video Analyzer to connect to. This contains the required information for Video Analyzer to connect to RTSP cameras and/or generic RTSP servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint RTSP endpoint information for Video Analyzer to connect to. This contains the required information for Video Analyzer to connect to RTSP cameras and/or generic RTSP servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(Either<TlsEndpointArgs,UnsecuredEndpointArgs> endpoint) {
             return endpoint(Output.of(endpoint));
         }
 
+        /**
+         * @param endpoint RTSP endpoint information for Video Analyzer to connect to. This contains the required information for Video Analyzer to connect to RTSP cameras and/or generic RTSP servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(TlsEndpointArgs endpoint) {
             return endpoint(Either.ofLeft(endpoint));
         }
 
+        /**
+         * @param endpoint RTSP endpoint information for Video Analyzer to connect to. This contains the required information for Video Analyzer to connect to RTSP cameras and/or generic RTSP servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(UnsecuredEndpointArgs endpoint) {
             return endpoint(Either.ofRight(endpoint));
         }
 
+        /**
+         * @param name Node name. Must be unique within the topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Node name. Must be unique within the topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param transport Network transport utilized by the RTSP and RTP exchange: TCP or HTTP. When using TCP, the RTP packets are interleaved on the TCP RTSP connection. When using HTTP, the RTSP messages are exchanged through long lived HTTP connections, and the RTP packages are interleaved in the HTTP connections alongside the RTSP messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transport(@Nullable Output<Either<String,RtspTransport>> transport) {
             $.transport = transport;
             return this;
         }
 
+        /**
+         * @param transport Network transport utilized by the RTSP and RTP exchange: TCP or HTTP. When using TCP, the RTP packets are interleaved on the TCP RTSP connection. When using HTTP, the RTSP messages are exchanged through long lived HTTP connections, and the RTP packages are interleaved in the HTTP connections alongside the RTSP messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transport(Either<String,RtspTransport> transport) {
             return transport(Output.of(transport));
         }
 
+        /**
+         * @param transport Network transport utilized by the RTSP and RTP exchange: TCP or HTTP. When using TCP, the RTP packets are interleaved on the TCP RTSP connection. When using HTTP, the RTSP messages are exchanged through long lived HTTP connections, and the RTP packages are interleaved in the HTTP connections alongside the RTSP messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transport(String transport) {
             return transport(Either.ofLeft(transport));
         }
 
+        /**
+         * @param transport Network transport utilized by the RTSP and RTP exchange: TCP or HTTP. When using TCP, the RTP packets are interleaved on the TCP RTSP connection. When using HTTP, the RTSP messages are exchanged through long lived HTTP connections, and the RTP packages are interleaved in the HTTP connections alongside the RTSP messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transport(RtspTransport transport) {
             return transport(Either.ofRight(transport));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.RtspSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.RtspSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

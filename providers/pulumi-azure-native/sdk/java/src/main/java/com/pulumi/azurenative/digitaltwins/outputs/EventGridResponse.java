@@ -12,48 +12,48 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EventGridResponse {
     /**
-     * EventGrid secondary accesskey. Will be obfuscated during read.
+     * @return EventGrid secondary accesskey. Will be obfuscated during read.
      * 
      */
     private final String accessKey1;
     /**
-     * EventGrid secondary accesskey. Will be obfuscated during read.
+     * @return EventGrid secondary accesskey. Will be obfuscated during read.
      * 
      */
     private final @Nullable String accessKey2;
     /**
-     * Specifies the authentication type being used for connecting to the endpoint.
+     * @return Specifies the authentication type being used for connecting to the endpoint.
      * 
      */
     private final @Nullable String authenticationType;
     /**
-     * Time when the Endpoint was added to DigitalTwinsInstance.
+     * @return Time when the Endpoint was added to DigitalTwinsInstance.
      * 
      */
     private final String createdTime;
     /**
-     * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+     * @return Dead letter storage secret for key-based authentication. Will be obfuscated during read.
      * 
      */
     private final @Nullable String deadLetterSecret;
     /**
-     * Dead letter storage URL for identity-based authentication.
+     * @return Dead letter storage URL for identity-based authentication.
      * 
      */
     private final @Nullable String deadLetterUri;
     /**
-     * The type of Digital Twins endpoint
+     * @return The type of Digital Twins endpoint
      * Expected value is &#39;EventGrid&#39;.
      * 
      */
     private final String endpointType;
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
      */
     private final String provisioningState;
     /**
-     * EventGrid Topic Endpoint
+     * @return EventGrid Topic Endpoint
      * 
      */
     private final String topicEndpoint;
@@ -81,66 +81,66 @@ public final class EventGridResponse {
     }
 
     /**
-     * EventGrid secondary accesskey. Will be obfuscated during read.
+     * @return EventGrid secondary accesskey. Will be obfuscated during read.
      * 
-    */
+     */
     public String accessKey1() {
         return this.accessKey1;
     }
     /**
-     * EventGrid secondary accesskey. Will be obfuscated during read.
+     * @return EventGrid secondary accesskey. Will be obfuscated during read.
      * 
-    */
+     */
     public Optional<String> accessKey2() {
         return Optional.ofNullable(this.accessKey2);
     }
     /**
-     * Specifies the authentication type being used for connecting to the endpoint.
+     * @return Specifies the authentication type being used for connecting to the endpoint.
      * 
-    */
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
-     * Time when the Endpoint was added to DigitalTwinsInstance.
+     * @return Time when the Endpoint was added to DigitalTwinsInstance.
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+     * @return Dead letter storage secret for key-based authentication. Will be obfuscated during read.
      * 
-    */
+     */
     public Optional<String> deadLetterSecret() {
         return Optional.ofNullable(this.deadLetterSecret);
     }
     /**
-     * Dead letter storage URL for identity-based authentication.
+     * @return Dead letter storage URL for identity-based authentication.
      * 
-    */
+     */
     public Optional<String> deadLetterUri() {
         return Optional.ofNullable(this.deadLetterUri);
     }
     /**
-     * The type of Digital Twins endpoint
+     * @return The type of Digital Twins endpoint
      * Expected value is &#39;EventGrid&#39;.
      * 
-    */
+     */
     public String endpointType() {
         return this.endpointType;
     }
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * EventGrid Topic Endpoint
+     * @return EventGrid Topic Endpoint
      * 
-    */
+     */
     public String topicEndpoint() {
         return this.topicEndpoint;
     }

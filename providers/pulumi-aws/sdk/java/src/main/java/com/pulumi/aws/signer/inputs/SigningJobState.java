@@ -28,6 +28,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="completedAt")
     private @Nullable Output<String> completedAt;
 
+    /**
+     * @return Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
+     * 
+     */
     public Optional<Output<String>> completedAt() {
         return Optional.ofNullable(this.completedAt);
     }
@@ -39,6 +43,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
     private @Nullable Output<String> createdAt;
 
+    /**
+     * @return Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
+     * 
+     */
     public Optional<Output<String>> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -50,6 +58,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="destination")
     private @Nullable Output<SigningJobDestinationGetArgs> destination;
 
+    /**
+     * @return The S3 bucket in which to save your signed object. See Destination below for details.
+     * 
+     */
     public Optional<Output<SigningJobDestinationGetArgs>> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -61,6 +73,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ignoreSigningJobFailure")
     private @Nullable Output<Boolean> ignoreSigningJobFailure;
 
+    /**
+     * @return Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
+     * 
+     */
     public Optional<Output<Boolean>> ignoreSigningJobFailure() {
         return Optional.ofNullable(this.ignoreSigningJobFailure);
     }
@@ -72,6 +88,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobId")
     private @Nullable Output<String> jobId;
 
+    /**
+     * @return The ID of the signing job on output.
+     * 
+     */
     public Optional<Output<String>> jobId() {
         return Optional.ofNullable(this.jobId);
     }
@@ -83,6 +103,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobInvoker")
     private @Nullable Output<String> jobInvoker;
 
+    /**
+     * @return The IAM entity that initiated the signing job.
+     * 
+     */
     public Optional<Output<String>> jobInvoker() {
         return Optional.ofNullable(this.jobInvoker);
     }
@@ -94,6 +118,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobOwner")
     private @Nullable Output<String> jobOwner;
 
+    /**
+     * @return The AWS account ID of the job owner.
+     * 
+     */
     public Optional<Output<String>> jobOwner() {
         return Optional.ofNullable(this.jobOwner);
     }
@@ -105,6 +133,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="platformDisplayName")
     private @Nullable Output<String> platformDisplayName;
 
+    /**
+     * @return A human-readable name for the signing platform associated with the signing job.
+     * 
+     */
     public Optional<Output<String>> platformDisplayName() {
         return Optional.ofNullable(this.platformDisplayName);
     }
@@ -116,6 +148,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="platformId")
     private @Nullable Output<String> platformId;
 
+    /**
+     * @return The platform to which your signed code image will be distributed.
+     * 
+     */
     public Optional<Output<String>> platformId() {
         return Optional.ofNullable(this.platformId);
     }
@@ -127,6 +163,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileName")
     private @Nullable Output<String> profileName;
 
+    /**
+     * @return The name of the profile to initiate the signing operation.
+     * 
+     */
     public Optional<Output<String>> profileName() {
         return Optional.ofNullable(this.profileName);
     }
@@ -138,6 +178,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileVersion")
     private @Nullable Output<String> profileVersion;
 
+    /**
+     * @return The version of the signing profile used to initiate the signing job.
+     * 
+     */
     public Optional<Output<String>> profileVersion() {
         return Optional.ofNullable(this.profileVersion);
     }
@@ -149,6 +193,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestedBy")
     private @Nullable Output<String> requestedBy;
 
+    /**
+     * @return The IAM principal that requested the signing job.
+     * 
+     */
     public Optional<Output<String>> requestedBy() {
         return Optional.ofNullable(this.requestedBy);
     }
@@ -160,6 +208,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="revocationRecords")
     private @Nullable Output<List<SigningJobRevocationRecordGetArgs>> revocationRecords;
 
+    /**
+     * @return A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
+     * 
+     */
     public Optional<Output<List<SigningJobRevocationRecordGetArgs>>> revocationRecords() {
         return Optional.ofNullable(this.revocationRecords);
     }
@@ -171,6 +223,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="signatureExpiresAt")
     private @Nullable Output<String> signatureExpiresAt;
 
+    /**
+     * @return The time when the signature of a signing job expires.
+     * 
+     */
     public Optional<Output<String>> signatureExpiresAt() {
         return Optional.ofNullable(this.signatureExpiresAt);
     }
@@ -182,6 +238,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="signedObjects")
     private @Nullable Output<List<SigningJobSignedObjectGetArgs>> signedObjects;
 
+    /**
+     * @return Name of the S3 bucket where the signed code image is saved by code signing.
+     * 
+     */
     public Optional<Output<List<SigningJobSignedObjectGetArgs>>> signedObjects() {
         return Optional.ofNullable(this.signedObjects);
     }
@@ -193,6 +253,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="source")
     private @Nullable Output<SigningJobSourceGetArgs> source;
 
+    /**
+     * @return The S3 bucket that contains the object to sign. See Source below for details.
+     * 
+     */
     public Optional<Output<SigningJobSourceGetArgs>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -204,6 +268,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Status of the signing job.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -215,6 +283,10 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
     @Import(name="statusReason")
     private @Nullable Output<String> statusReason;
 
+    /**
+     * @return String value that contains the status reason.
+     * 
+     */
     public Optional<Output<String>> statusReason() {
         return Optional.ofNullable(this.statusReason);
     }
@@ -260,172 +332,400 @@ public final class SigningJobState extends com.pulumi.resources.ResourceArgs {
             $ = new SigningJobState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param completedAt Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completedAt(@Nullable Output<String> completedAt) {
             $.completedAt = completedAt;
             return this;
         }
 
+        /**
+         * @param completedAt Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completedAt(String completedAt) {
             return completedAt(Output.of(completedAt));
         }
 
+        /**
+         * @param createdAt Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(@Nullable Output<String> createdAt) {
             $.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * @param createdAt Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(String createdAt) {
             return createdAt(Output.of(createdAt));
         }
 
+        /**
+         * @param destination The S3 bucket in which to save your signed object. See Destination below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable Output<SigningJobDestinationGetArgs> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination The S3 bucket in which to save your signed object. See Destination below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(SigningJobDestinationGetArgs destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param ignoreSigningJobFailure Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreSigningJobFailure(@Nullable Output<Boolean> ignoreSigningJobFailure) {
             $.ignoreSigningJobFailure = ignoreSigningJobFailure;
             return this;
         }
 
+        /**
+         * @param ignoreSigningJobFailure Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreSigningJobFailure(Boolean ignoreSigningJobFailure) {
             return ignoreSigningJobFailure(Output.of(ignoreSigningJobFailure));
         }
 
+        /**
+         * @param jobId The ID of the signing job on output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(@Nullable Output<String> jobId) {
             $.jobId = jobId;
             return this;
         }
 
+        /**
+         * @param jobId The ID of the signing job on output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(String jobId) {
             return jobId(Output.of(jobId));
         }
 
+        /**
+         * @param jobInvoker The IAM entity that initiated the signing job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobInvoker(@Nullable Output<String> jobInvoker) {
             $.jobInvoker = jobInvoker;
             return this;
         }
 
+        /**
+         * @param jobInvoker The IAM entity that initiated the signing job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobInvoker(String jobInvoker) {
             return jobInvoker(Output.of(jobInvoker));
         }
 
+        /**
+         * @param jobOwner The AWS account ID of the job owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobOwner(@Nullable Output<String> jobOwner) {
             $.jobOwner = jobOwner;
             return this;
         }
 
+        /**
+         * @param jobOwner The AWS account ID of the job owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobOwner(String jobOwner) {
             return jobOwner(Output.of(jobOwner));
         }
 
+        /**
+         * @param platformDisplayName A human-readable name for the signing platform associated with the signing job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformDisplayName(@Nullable Output<String> platformDisplayName) {
             $.platformDisplayName = platformDisplayName;
             return this;
         }
 
+        /**
+         * @param platformDisplayName A human-readable name for the signing platform associated with the signing job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformDisplayName(String platformDisplayName) {
             return platformDisplayName(Output.of(platformDisplayName));
         }
 
+        /**
+         * @param platformId The platform to which your signed code image will be distributed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformId(@Nullable Output<String> platformId) {
             $.platformId = platformId;
             return this;
         }
 
+        /**
+         * @param platformId The platform to which your signed code image will be distributed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformId(String platformId) {
             return platformId(Output.of(platformId));
         }
 
+        /**
+         * @param profileName The name of the profile to initiate the signing operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(@Nullable Output<String> profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param profileName The name of the profile to initiate the signing operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             return profileName(Output.of(profileName));
         }
 
+        /**
+         * @param profileVersion The version of the signing profile used to initiate the signing job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileVersion(@Nullable Output<String> profileVersion) {
             $.profileVersion = profileVersion;
             return this;
         }
 
+        /**
+         * @param profileVersion The version of the signing profile used to initiate the signing job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileVersion(String profileVersion) {
             return profileVersion(Output.of(profileVersion));
         }
 
+        /**
+         * @param requestedBy The IAM principal that requested the signing job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedBy(@Nullable Output<String> requestedBy) {
             $.requestedBy = requestedBy;
             return this;
         }
 
+        /**
+         * @param requestedBy The IAM principal that requested the signing job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedBy(String requestedBy) {
             return requestedBy(Output.of(requestedBy));
         }
 
+        /**
+         * @param revocationRecords A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revocationRecords(@Nullable Output<List<SigningJobRevocationRecordGetArgs>> revocationRecords) {
             $.revocationRecords = revocationRecords;
             return this;
         }
 
+        /**
+         * @param revocationRecords A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revocationRecords(List<SigningJobRevocationRecordGetArgs> revocationRecords) {
             return revocationRecords(Output.of(revocationRecords));
         }
 
+        /**
+         * @param revocationRecords A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revocationRecords(SigningJobRevocationRecordGetArgs... revocationRecords) {
             return revocationRecords(List.of(revocationRecords));
         }
 
+        /**
+         * @param signatureExpiresAt The time when the signature of a signing job expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureExpiresAt(@Nullable Output<String> signatureExpiresAt) {
             $.signatureExpiresAt = signatureExpiresAt;
             return this;
         }
 
+        /**
+         * @param signatureExpiresAt The time when the signature of a signing job expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureExpiresAt(String signatureExpiresAt) {
             return signatureExpiresAt(Output.of(signatureExpiresAt));
         }
 
+        /**
+         * @param signedObjects Name of the S3 bucket where the signed code image is saved by code signing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signedObjects(@Nullable Output<List<SigningJobSignedObjectGetArgs>> signedObjects) {
             $.signedObjects = signedObjects;
             return this;
         }
 
+        /**
+         * @param signedObjects Name of the S3 bucket where the signed code image is saved by code signing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signedObjects(List<SigningJobSignedObjectGetArgs> signedObjects) {
             return signedObjects(Output.of(signedObjects));
         }
 
+        /**
+         * @param signedObjects Name of the S3 bucket where the signed code image is saved by code signing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signedObjects(SigningJobSignedObjectGetArgs... signedObjects) {
             return signedObjects(List.of(signedObjects));
         }
 
+        /**
+         * @param source The S3 bucket that contains the object to sign. See Source below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<SigningJobSourceGetArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The S3 bucket that contains the object to sign. See Source below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(SigningJobSourceGetArgs source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param status Status of the signing job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the signing job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param statusReason String value that contains the status reason.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusReason(@Nullable Output<String> statusReason) {
             $.statusReason = statusReason;
             return this;
         }
 
+        /**
+         * @param statusReason String value that contains the status reason.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusReason(String statusReason) {
             return statusReason(Output.of(statusReason));
         }

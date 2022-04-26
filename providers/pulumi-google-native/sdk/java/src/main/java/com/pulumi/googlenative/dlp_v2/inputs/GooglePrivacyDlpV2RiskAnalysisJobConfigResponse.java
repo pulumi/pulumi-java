@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse extends com.p
     @Import(name="actions", required=true)
     private List<GooglePrivacyDlpV2ActionResponse> actions;
 
+    /**
+     * @return Actions to execute at the completion of the job. Are executed in the order provided.
+     * 
+     */
     public List<GooglePrivacyDlpV2ActionResponse> actions() {
         return this.actions;
     }
@@ -37,6 +41,10 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse extends com.p
     @Import(name="privacyMetric", required=true)
     private GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric;
 
+    /**
+     * @return Privacy metric to compute.
+     * 
+     */
     public GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric() {
         return this.privacyMetric;
     }
@@ -48,6 +56,10 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse extends com.p
     @Import(name="sourceTable", required=true)
     private GooglePrivacyDlpV2BigQueryTableResponse sourceTable;
 
+    /**
+     * @return Input dataset to compute metrics over.
+     * 
+     */
     public GooglePrivacyDlpV2BigQueryTableResponse sourceTable() {
         return this.sourceTable;
     }
@@ -78,20 +90,44 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse extends com.p
             $ = new GooglePrivacyDlpV2RiskAnalysisJobConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions Actions to execute at the completion of the job. Are executed in the order provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<GooglePrivacyDlpV2ActionResponse> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions Actions to execute at the completion of the job. Are executed in the order provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(GooglePrivacyDlpV2ActionResponse... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param privacyMetric Privacy metric to compute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privacyMetric(GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric) {
             $.privacyMetric = privacyMetric;
             return this;
         }
 
+        /**
+         * @param sourceTable Input dataset to compute metrics over.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTable(GooglePrivacyDlpV2BigQueryTableResponse sourceTable) {
             $.sourceTable = sourceTable;
             return this;

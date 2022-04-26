@@ -27,6 +27,10 @@ public final class StreamingPolicyContentKeyResponse extends com.pulumi.resource
     @Import(name="label")
     private @Nullable String label;
 
+    /**
+     * @return Label can be used to specify Content Key when creating a Streaming Locator
+     * 
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
@@ -38,6 +42,10 @@ public final class StreamingPolicyContentKeyResponse extends com.pulumi.resource
     @Import(name="policyName")
     private @Nullable String policyName;
 
+    /**
+     * @return Policy used by Content Key
+     * 
+     */
     public Optional<String> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -49,6 +57,10 @@ public final class StreamingPolicyContentKeyResponse extends com.pulumi.resource
     @Import(name="tracks")
     private @Nullable List<TrackSelectionResponse> tracks;
 
+    /**
+     * @return Tracks which use this content key
+     * 
+     */
     public Optional<List<TrackSelectionResponse>> tracks() {
         return Optional.ofNullable(this.tracks);
     }
@@ -79,21 +91,45 @@ public final class StreamingPolicyContentKeyResponse extends com.pulumi.resource
             $ = new StreamingPolicyContentKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param label Label can be used to specify Content Key when creating a Streaming Locator
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param policyName Policy used by Content Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(@Nullable String policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param tracks Tracks which use this content key
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracks(@Nullable List<TrackSelectionResponse> tracks) {
             $.tracks = tracks;
             return this;
         }
 
+        /**
+         * @param tracks Tracks which use this content key
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracks(TrackSelectionResponse... tracks) {
             return tracks(List.of(tracks));
         }

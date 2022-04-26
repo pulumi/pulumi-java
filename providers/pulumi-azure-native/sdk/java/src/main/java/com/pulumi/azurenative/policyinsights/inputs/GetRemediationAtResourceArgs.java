@@ -19,6 +19,10 @@ public final class GetRemediationAtResourceArgs extends com.pulumi.resources.Inv
     @Import(name="remediationName", required=true)
     private String remediationName;
 
+    /**
+     * @return The name of the remediation.
+     * 
+     */
     public String remediationName() {
         return this.remediationName;
     }
@@ -30,6 +34,10 @@ public final class GetRemediationAtResourceArgs extends com.pulumi.resources.Inv
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -59,11 +67,23 @@ public final class GetRemediationAtResourceArgs extends com.pulumi.resources.Inv
             $ = new GetRemediationAtResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param remediationName The name of the remediation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediationName(String remediationName) {
             $.remediationName = remediationName;
             return this;
         }
 
+        /**
+         * @param resourceId Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;

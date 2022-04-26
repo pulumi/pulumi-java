@@ -14,42 +14,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetServiceUnitResult {
     /**
-     * The artifacts for the service unit.
+     * @return The artifacts for the service unit.
      * 
      */
     private final @Nullable ServiceUnitArtifactsResponse artifacts;
     /**
-     * Describes the type of ARM deployment to be performed on the resource.
+     * @return Describes the type of ARM deployment to be performed on the resource.
      * 
      */
     private final String deploymentMode;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
+     * @return The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
      * 
      */
     private final String targetResourceGroup;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -75,58 +75,58 @@ public final class GetServiceUnitResult {
     }
 
     /**
-     * The artifacts for the service unit.
+     * @return The artifacts for the service unit.
      * 
-    */
+     */
     public Optional<ServiceUnitArtifactsResponse> artifacts() {
         return Optional.ofNullable(this.artifacts);
     }
     /**
-     * Describes the type of ARM deployment to be performed on the resource.
+     * @return Describes the type of ARM deployment to be performed on the resource.
      * 
-    */
+     */
     public String deploymentMode() {
         return this.deploymentMode;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
+     * @return The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
      * 
-    */
+     */
     public String targetResourceGroup() {
         return this.targetResourceGroup;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

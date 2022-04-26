@@ -36,6 +36,10 @@ public final class AzureFileShareConfigurationArgs extends com.pulumi.resources.
     @Import(name="azureFileUrl", required=true)
     private Output<String> azureFileUrl;
 
+    /**
+     * @return This is of the form &#39;https://{account}.file.core.windows.net/&#39;.
+     * 
+     */
     public Output<String> azureFileUrl() {
         return this.azureFileUrl;
     }
@@ -47,6 +51,10 @@ public final class AzureFileShareConfigurationArgs extends com.pulumi.resources.
     @Import(name="mountOptions")
     private @Nullable Output<String> mountOptions;
 
+    /**
+     * @return These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+     * 
+     */
     public Optional<Output<String>> mountOptions() {
         return Optional.ofNullable(this.mountOptions);
     }
@@ -58,6 +66,10 @@ public final class AzureFileShareConfigurationArgs extends com.pulumi.resources.
     @Import(name="relativeMountPath", required=true)
     private Output<String> relativeMountPath;
 
+    /**
+     * @return All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     * 
+     */
     public Output<String> relativeMountPath() {
         return this.relativeMountPath;
     }
@@ -108,29 +120,65 @@ public final class AzureFileShareConfigurationArgs extends com.pulumi.resources.
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param azureFileUrl This is of the form &#39;https://{account}.file.core.windows.net/&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFileUrl(Output<String> azureFileUrl) {
             $.azureFileUrl = azureFileUrl;
             return this;
         }
 
+        /**
+         * @param azureFileUrl This is of the form &#39;https://{account}.file.core.windows.net/&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFileUrl(String azureFileUrl) {
             return azureFileUrl(Output.of(azureFileUrl));
         }
 
+        /**
+         * @param mountOptions These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountOptions(@Nullable Output<String> mountOptions) {
             $.mountOptions = mountOptions;
             return this;
         }
 
+        /**
+         * @param mountOptions These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountOptions(String mountOptions) {
             return mountOptions(Output.of(mountOptions));
         }
 
+        /**
+         * @param relativeMountPath All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeMountPath(Output<String> relativeMountPath) {
             $.relativeMountPath = relativeMountPath;
             return this;
         }
 
+        /**
+         * @param relativeMountPath All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeMountPath(String relativeMountPath) {
             return relativeMountPath(Output.of(relativeMountPath));
         }

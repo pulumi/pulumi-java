@@ -24,6 +24,10 @@ public final class PredictionMappingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="grade", required=true)
     private Output<String> grade;
 
+    /**
+     * @return The grade of the link mapping.
+     * 
+     */
     public Output<String> grade() {
         return this.grade;
     }
@@ -35,6 +39,10 @@ public final class PredictionMappingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="reason", required=true)
     private Output<String> reason;
 
+    /**
+     * @return The reason of the link mapping.
+     * 
+     */
     public Output<String> reason() {
         return this.reason;
     }
@@ -46,6 +54,10 @@ public final class PredictionMappingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="score", required=true)
     private Output<String> score;
 
+    /**
+     * @return The score of the link mapping.
+     * 
+     */
     public Output<String> score() {
         return this.score;
     }
@@ -76,29 +88,65 @@ public final class PredictionMappingsArgs extends com.pulumi.resources.ResourceA
             $ = new PredictionMappingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param grade The grade of the link mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grade(Output<String> grade) {
             $.grade = grade;
             return this;
         }
 
+        /**
+         * @param grade The grade of the link mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grade(String grade) {
             return grade(Output.of(grade));
         }
 
+        /**
+         * @param reason The reason of the link mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(Output<String> reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param reason The reason of the link mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             return reason(Output.of(reason));
         }
 
+        /**
+         * @param score The score of the link mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder score(Output<String> score) {
             $.score = score;
             return this;
         }
 
+        /**
+         * @param score The score of the link mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder score(String score) {
             return score(Output.of(score));
         }

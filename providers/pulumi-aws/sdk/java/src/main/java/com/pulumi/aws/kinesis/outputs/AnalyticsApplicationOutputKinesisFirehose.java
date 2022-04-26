@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class AnalyticsApplicationOutputKinesisFirehose {
     /**
-     * The ARN of the Kinesis Firehose delivery stream.
+     * @return The ARN of the Kinesis Firehose delivery stream.
      * 
      */
     private final String resourceArn;
     /**
-     * The ARN of the IAM Role used to access the stream.
+     * @return The ARN of the IAM Role used to access the stream.
      * 
      */
     private final String roleArn;
@@ -29,16 +29,16 @@ public final class AnalyticsApplicationOutputKinesisFirehose {
     }
 
     /**
-     * The ARN of the Kinesis Firehose delivery stream.
+     * @return The ARN of the Kinesis Firehose delivery stream.
      * 
-    */
+     */
     public String resourceArn() {
         return this.resourceArn;
     }
     /**
-     * The ARN of the IAM Role used to access the stream.
+     * @return The ARN of the IAM Role used to access the stream.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }

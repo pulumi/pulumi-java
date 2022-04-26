@@ -14,57 +14,57 @@ import java.util.Objects;
 @CustomType
 public final class GetUtilizationReportResult {
     /**
-     * The time the report was created (this refers to the time of the request, not the time the report creation completed).
+     * @return The time the report was created (this refers to the time of the request, not the time the report creation completed).
      * 
      */
     private final String createTime;
     /**
-     * The report display name, as assigned by the user.
+     * @return The report display name, as assigned by the user.
      * 
      */
     private final String displayName;
     /**
-     * Provides details on the state of the report in case of an error.
+     * @return Provides details on the state of the report in case of an error.
      * 
      */
     private final StatusResponse error;
     /**
-     * The point in time when the time frame ends. Notice that the time frame is counted backwards. For instance if the &#34;frame_end_time&#34; value is 2021/01/20 and the time frame is WEEK then the report covers the week between 2021/01/20 and 2021/01/14.
+     * @return The point in time when the time frame ends. Notice that the time frame is counted backwards. For instance if the &#34;frame_end_time&#34; value is 2021/01/20 and the time frame is WEEK then the report covers the week between 2021/01/20 and 2021/01/14.
      * 
      */
     private final String frameEndTime;
     /**
-     * The report unique name.
+     * @return The report unique name.
      * 
      */
     private final String name;
     /**
-     * Current state of the report.
+     * @return Current state of the report.
      * 
      */
     private final String state;
     /**
-     * The time the state was last set.
+     * @return The time the state was last set.
      * 
      */
     private final String stateTime;
     /**
-     * Time frame of the report.
+     * @return Time frame of the report.
      * 
      */
     private final String timeFrame;
     /**
-     * Total number of VMs included in the report.
+     * @return Total number of VMs included in the report.
      * 
      */
     private final Integer vmCount;
     /**
-     * List of utilization information per VM. When sent as part of the request, the &#34;vm_id&#34; field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
+     * @return List of utilization information per VM. When sent as part of the request, the &#34;vm_id&#34; field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
      * 
      */
     private final List<VmUtilizationInfoResponse> vms;
     /**
-     * Total number of VMs included in the report.
+     * @return Total number of VMs included in the report.
      * 
      */
     private final Integer vmsCount;
@@ -96,79 +96,79 @@ public final class GetUtilizationReportResult {
     }
 
     /**
-     * The time the report was created (this refers to the time of the request, not the time the report creation completed).
+     * @return The time the report was created (this refers to the time of the request, not the time the report creation completed).
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The report display name, as assigned by the user.
+     * @return The report display name, as assigned by the user.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Provides details on the state of the report in case of an error.
+     * @return Provides details on the state of the report in case of an error.
      * 
-    */
+     */
     public StatusResponse error() {
         return this.error;
     }
     /**
-     * The point in time when the time frame ends. Notice that the time frame is counted backwards. For instance if the &#34;frame_end_time&#34; value is 2021/01/20 and the time frame is WEEK then the report covers the week between 2021/01/20 and 2021/01/14.
+     * @return The point in time when the time frame ends. Notice that the time frame is counted backwards. For instance if the &#34;frame_end_time&#34; value is 2021/01/20 and the time frame is WEEK then the report covers the week between 2021/01/20 and 2021/01/14.
      * 
-    */
+     */
     public String frameEndTime() {
         return this.frameEndTime;
     }
     /**
-     * The report unique name.
+     * @return The report unique name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Current state of the report.
+     * @return Current state of the report.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The time the state was last set.
+     * @return The time the state was last set.
      * 
-    */
+     */
     public String stateTime() {
         return this.stateTime;
     }
     /**
-     * Time frame of the report.
+     * @return Time frame of the report.
      * 
-    */
+     */
     public String timeFrame() {
         return this.timeFrame;
     }
     /**
-     * Total number of VMs included in the report.
+     * @return Total number of VMs included in the report.
      * 
-    */
+     */
     public Integer vmCount() {
         return this.vmCount;
     }
     /**
-     * List of utilization information per VM. When sent as part of the request, the &#34;vm_id&#34; field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
+     * @return List of utilization information per VM. When sent as part of the request, the &#34;vm_id&#34; field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
      * 
-    */
+     */
     public List<VmUtilizationInfoResponse> vms() {
         return this.vms;
     }
     /**
-     * Total number of VMs included in the report.
+     * @return Total number of VMs included in the report.
      * 
-    */
+     */
     public Integer vmsCount() {
         return this.vmsCount;
     }

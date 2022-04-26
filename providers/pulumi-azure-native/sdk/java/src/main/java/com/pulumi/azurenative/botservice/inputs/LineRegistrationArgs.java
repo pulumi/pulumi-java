@@ -26,6 +26,10 @@ public final class LineRegistrationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="channelAccessToken")
     private @Nullable Output<String> channelAccessToken;
 
+    /**
+     * @return Access token for the line channel registration
+     * 
+     */
     public Optional<Output<String>> channelAccessToken() {
         return Optional.ofNullable(this.channelAccessToken);
     }
@@ -37,6 +41,10 @@ public final class LineRegistrationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="channelSecret")
     private @Nullable Output<String> channelSecret;
 
+    /**
+     * @return Secret for the line channel registration
+     * 
+     */
     public Optional<Output<String>> channelSecret() {
         return Optional.ofNullable(this.channelSecret);
     }
@@ -66,20 +74,44 @@ public final class LineRegistrationArgs extends com.pulumi.resources.ResourceArg
             $ = new LineRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channelAccessToken Access token for the line channel registration
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelAccessToken(@Nullable Output<String> channelAccessToken) {
             $.channelAccessToken = channelAccessToken;
             return this;
         }
 
+        /**
+         * @param channelAccessToken Access token for the line channel registration
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelAccessToken(String channelAccessToken) {
             return channelAccessToken(Output.of(channelAccessToken));
         }
 
+        /**
+         * @param channelSecret Secret for the line channel registration
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelSecret(@Nullable Output<String> channelSecret) {
             $.channelSecret = channelSecret;
             return this;
         }
 
+        /**
+         * @param channelSecret Secret for the line channel registration
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelSecret(String channelSecret) {
             return channelSecret(Output.of(channelSecret));
         }

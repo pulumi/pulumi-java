@@ -31,6 +31,10 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authMode")
     private @Nullable Output<String> authMode;
 
+    /**
+     * @return Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO. Valid values are `SSO` or `IAM`.
+     * 
+     */
     public Optional<Output<String>> authMode() {
         return Optional.ofNullable(this.authMode);
     }
@@ -42,6 +46,10 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultS3Location")
     private @Nullable Output<String> defaultS3Location;
 
+    /**
+     * @return The Amazon S3 location to back up Amazon EMR Studio Workspaces and notebook files.
+     * 
+     */
     public Optional<Output<String>> defaultS3Location() {
         return Optional.ofNullable(this.defaultS3Location);
     }
@@ -53,6 +61,10 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A detailed description of the Amazon EMR Studio.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -64,6 +76,10 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineSecurityGroupId")
     private @Nullable Output<String> engineSecurityGroupId;
 
+    /**
+     * @return The ID of the Amazon EMR Studio Engine security group. The Engine security group allows inbound network traffic from the Workspace security group, and it must be in the same VPC specified by `vpc_id`.
+     * 
+     */
     public Optional<Output<String>> engineSecurityGroupId() {
         return Optional.ofNullable(this.engineSecurityGroupId);
     }
@@ -75,6 +91,10 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
     @Import(name="idpAuthUrl")
     private @Nullable Output<String> idpAuthUrl;
 
+    /**
+     * @return The authentication endpoint of your identity provider (IdP). Specify this value when you use IAM authentication and want to let federated users log in to a Studio with the Studio URL and credentials from your IdP. Amazon EMR Studio redirects users to this endpoint to enter credentials.
+     * 
+     */
     public Optional<Output<String>> idpAuthUrl() {
         return Optional.ofNullable(this.idpAuthUrl);
     }
@@ -86,6 +106,10 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
     @Import(name="idpRelayStateParameterName")
     private @Nullable Output<String> idpRelayStateParameterName;
 
+    /**
+     * @return The name that your identity provider (IdP) uses for its RelayState parameter. For example, RelayState or TargetSource. Specify this value when you use IAM authentication and want to let federated users log in to a Studio using the Studio URL. The RelayState parameter differs by IdP.
+     * 
+     */
     public Optional<Output<String>> idpRelayStateParameterName() {
         return Optional.ofNullable(this.idpRelayStateParameterName);
     }
@@ -97,6 +121,10 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A descriptive name for the Amazon EMR Studio.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -108,6 +136,10 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceRole")
     private @Nullable Output<String> serviceRole;
 
+    /**
+     * @return The IAM role that the Amazon EMR Studio assumes. The service role provides a way for Amazon EMR Studio to interoperate with other Amazon Web Services services.
+     * 
+     */
     public Optional<Output<String>> serviceRole() {
         return Optional.ofNullable(this.serviceRole);
     }
@@ -119,6 +151,10 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
     private @Nullable Output<List<String>> subnetIds;
 
+    /**
+     * @return A list of subnet IDs to associate with the Amazon EMR Studio. A Studio can have a maximum of 5 subnets. The subnets must belong to the VPC specified by `vpc_id`. Studio users can create a Workspace in any of the specified subnets.
+     * 
+     */
     public Optional<Output<List<String>>> subnetIds() {
         return Optional.ofNullable(this.subnetIds);
     }
@@ -130,6 +166,10 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return list of tags to apply to the EMR Cluster. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -148,6 +188,10 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return The unique access URL of the Amazon EMR Studio.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -159,6 +203,10 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userRole")
     private @Nullable Output<String> userRole;
 
+    /**
+     * @return - The IAM user role that users and groups assume when logged in to an Amazon EMR Studio. Only specify a User Role when you use Amazon Web Services SSO authentication. The permissions attached to the User Role can be scoped down for each user or group using session policies.
+     * 
+     */
     public Optional<Output<String>> userRole() {
         return Optional.ofNullable(this.userRole);
     }
@@ -170,6 +218,10 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
+    /**
+     * @return The ID of the Amazon Virtual Private Cloud (Amazon VPC) to associate with the Studio.
+     * 
+     */
     public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -181,6 +233,10 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceSecurityGroupId")
     private @Nullable Output<String> workspaceSecurityGroupId;
 
+    /**
+     * @return The ID of the Amazon EMR Studio Workspace security group. The Workspace security group allows outbound network traffic to resources in the Engine security group, and it must be in the same VPC specified by `vpc_id`.
+     * 
+     */
     public Optional<Output<String>> workspaceSecurityGroupId() {
         return Optional.ofNullable(this.workspaceSecurityGroupId);
     }
@@ -233,96 +289,222 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param authMode Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO. Valid values are `SSO` or `IAM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authMode(@Nullable Output<String> authMode) {
             $.authMode = authMode;
             return this;
         }
 
+        /**
+         * @param authMode Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO. Valid values are `SSO` or `IAM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authMode(String authMode) {
             return authMode(Output.of(authMode));
         }
 
+        /**
+         * @param defaultS3Location The Amazon S3 location to back up Amazon EMR Studio Workspaces and notebook files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultS3Location(@Nullable Output<String> defaultS3Location) {
             $.defaultS3Location = defaultS3Location;
             return this;
         }
 
+        /**
+         * @param defaultS3Location The Amazon S3 location to back up Amazon EMR Studio Workspaces and notebook files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultS3Location(String defaultS3Location) {
             return defaultS3Location(Output.of(defaultS3Location));
         }
 
+        /**
+         * @param description A detailed description of the Amazon EMR Studio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A detailed description of the Amazon EMR Studio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param engineSecurityGroupId The ID of the Amazon EMR Studio Engine security group. The Engine security group allows inbound network traffic from the Workspace security group, and it must be in the same VPC specified by `vpc_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineSecurityGroupId(@Nullable Output<String> engineSecurityGroupId) {
             $.engineSecurityGroupId = engineSecurityGroupId;
             return this;
         }
 
+        /**
+         * @param engineSecurityGroupId The ID of the Amazon EMR Studio Engine security group. The Engine security group allows inbound network traffic from the Workspace security group, and it must be in the same VPC specified by `vpc_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineSecurityGroupId(String engineSecurityGroupId) {
             return engineSecurityGroupId(Output.of(engineSecurityGroupId));
         }
 
+        /**
+         * @param idpAuthUrl The authentication endpoint of your identity provider (IdP). Specify this value when you use IAM authentication and want to let federated users log in to a Studio with the Studio URL and credentials from your IdP. Amazon EMR Studio redirects users to this endpoint to enter credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idpAuthUrl(@Nullable Output<String> idpAuthUrl) {
             $.idpAuthUrl = idpAuthUrl;
             return this;
         }
 
+        /**
+         * @param idpAuthUrl The authentication endpoint of your identity provider (IdP). Specify this value when you use IAM authentication and want to let federated users log in to a Studio with the Studio URL and credentials from your IdP. Amazon EMR Studio redirects users to this endpoint to enter credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idpAuthUrl(String idpAuthUrl) {
             return idpAuthUrl(Output.of(idpAuthUrl));
         }
 
+        /**
+         * @param idpRelayStateParameterName The name that your identity provider (IdP) uses for its RelayState parameter. For example, RelayState or TargetSource. Specify this value when you use IAM authentication and want to let federated users log in to a Studio using the Studio URL. The RelayState parameter differs by IdP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idpRelayStateParameterName(@Nullable Output<String> idpRelayStateParameterName) {
             $.idpRelayStateParameterName = idpRelayStateParameterName;
             return this;
         }
 
+        /**
+         * @param idpRelayStateParameterName The name that your identity provider (IdP) uses for its RelayState parameter. For example, RelayState or TargetSource. Specify this value when you use IAM authentication and want to let federated users log in to a Studio using the Studio URL. The RelayState parameter differs by IdP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idpRelayStateParameterName(String idpRelayStateParameterName) {
             return idpRelayStateParameterName(Output.of(idpRelayStateParameterName));
         }
 
+        /**
+         * @param name A descriptive name for the Amazon EMR Studio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A descriptive name for the Amazon EMR Studio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param serviceRole The IAM role that the Amazon EMR Studio assumes. The service role provides a way for Amazon EMR Studio to interoperate with other Amazon Web Services services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRole(@Nullable Output<String> serviceRole) {
             $.serviceRole = serviceRole;
             return this;
         }
 
+        /**
+         * @param serviceRole The IAM role that the Amazon EMR Studio assumes. The service role provides a way for Amazon EMR Studio to interoperate with other Amazon Web Services services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRole(String serviceRole) {
             return serviceRole(Output.of(serviceRole));
         }
 
+        /**
+         * @param subnetIds A list of subnet IDs to associate with the Amazon EMR Studio. A Studio can have a maximum of 5 subnets. The subnets must belong to the VPC specified by `vpc_id`. Studio users can create a Workspace in any of the specified subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds A list of subnet IDs to associate with the Amazon EMR Studio. A Studio can have a maximum of 5 subnets. The subnets must belong to the VPC specified by `vpc_id`. Studio users can create a Workspace in any of the specified subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds A list of subnet IDs to associate with the Amazon EMR Studio. A Studio can have a maximum of 5 subnets. The subnets must belong to the VPC specified by `vpc_id`. Studio users can create a Workspace in any of the specified subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param tags list of tags to apply to the EMR Cluster. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags list of tags to apply to the EMR Cluster. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
@@ -336,38 +518,86 @@ public final class StudioState extends com.pulumi.resources.ResourceArgs {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param url The unique access URL of the Amazon EMR Studio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The unique access URL of the Amazon EMR Studio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }
 
+        /**
+         * @param userRole - The IAM user role that users and groups assume when logged in to an Amazon EMR Studio. Only specify a User Role when you use Amazon Web Services SSO authentication. The permissions attached to the User Role can be scoped down for each user or group using session policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userRole(@Nullable Output<String> userRole) {
             $.userRole = userRole;
             return this;
         }
 
+        /**
+         * @param userRole - The IAM user role that users and groups assume when logged in to an Amazon EMR Studio. Only specify a User Role when you use Amazon Web Services SSO authentication. The permissions attached to the User Role can be scoped down for each user or group using session policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userRole(String userRole) {
             return userRole(Output.of(userRole));
         }
 
+        /**
+         * @param vpcId The ID of the Amazon Virtual Private Cloud (Amazon VPC) to associate with the Studio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The ID of the Amazon Virtual Private Cloud (Amazon VPC) to associate with the Studio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }
 
+        /**
+         * @param workspaceSecurityGroupId The ID of the Amazon EMR Studio Workspace security group. The Workspace security group allows outbound network traffic to resources in the Engine security group, and it must be in the same VPC specified by `vpc_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceSecurityGroupId(@Nullable Output<String> workspaceSecurityGroupId) {
             $.workspaceSecurityGroupId = workspaceSecurityGroupId;
             return this;
         }
 
+        /**
+         * @param workspaceSecurityGroupId The ID of the Amazon EMR Studio Workspace security group. The Workspace security group allows outbound network traffic to resources in the Engine security group, and it must be in the same VPC specified by `vpc_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceSecurityGroupId(String workspaceSecurityGroupId) {
             return workspaceSecurityGroupId(Output.of(workspaceSecurityGroupId));
         }

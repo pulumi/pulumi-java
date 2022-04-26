@@ -21,6 +21,10 @@ public final class EnvironmentNetworkConfigurationGetArgs extends com.pulumi.res
     @Import(name="securityGroupIds", required=true)
     private Output<List<String>> securityGroupIds;
 
+    /**
+     * @return Security groups IDs for the environment. At least one of the security group needs to allow MWAA resources to talk to each other, otherwise MWAA cannot be provisioned.
+     * 
+     */
     public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
@@ -32,6 +36,10 @@ public final class EnvironmentNetworkConfigurationGetArgs extends com.pulumi.res
     @Import(name="subnetIds", required=true)
     private Output<List<String>> subnetIds;
 
+    /**
+     * @return The private subnet IDs in which the environment should be created. MWAA requires two subnets.
+     * 
+     */
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
@@ -61,28 +69,64 @@ public final class EnvironmentNetworkConfigurationGetArgs extends com.pulumi.res
             $ = new EnvironmentNetworkConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityGroupIds Security groups IDs for the environment. At least one of the security group needs to allow MWAA resources to talk to each other, otherwise MWAA cannot be provisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds Security groups IDs for the environment. At least one of the security group needs to allow MWAA resources to talk to each other, otherwise MWAA cannot be provisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             return securityGroupIds(Output.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupIds Security groups IDs for the environment. At least one of the security group needs to allow MWAA resources to talk to each other, otherwise MWAA cannot be provisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param subnetIds The private subnet IDs in which the environment should be created. MWAA requires two subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds The private subnet IDs in which the environment should be created. MWAA requires two subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds The private subnet IDs in which the environment should be created. MWAA requires two subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }

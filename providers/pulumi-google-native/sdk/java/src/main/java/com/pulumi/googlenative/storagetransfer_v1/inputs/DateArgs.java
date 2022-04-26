@@ -26,6 +26,10 @@ public final class DateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="day")
     private @Nullable Output<Integer> day;
 
+    /**
+     * @return Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant.
+     * 
+     */
     public Optional<Output<Integer>> day() {
         return Optional.ofNullable(this.day);
     }
@@ -37,6 +41,10 @@ public final class DateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="month")
     private @Nullable Output<Integer> month;
 
+    /**
+     * @return Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+     * 
+     */
     public Optional<Output<Integer>> month() {
         return Optional.ofNullable(this.month);
     }
@@ -48,6 +56,10 @@ public final class DateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="year")
     private @Nullable Output<Integer> year;
 
+    /**
+     * @return Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+     * 
+     */
     public Optional<Output<Integer>> year() {
         return Optional.ofNullable(this.year);
     }
@@ -78,29 +90,65 @@ public final class DateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(@Nullable Output<Integer> day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param day Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(Integer day) {
             return day(Output.of(day));
         }
 
+        /**
+         * @param month Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder month(@Nullable Output<Integer> month) {
             $.month = month;
             return this;
         }
 
+        /**
+         * @param month Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder month(Integer month) {
             return month(Output.of(month));
         }
 
+        /**
+         * @param year Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+         * 
+         * @return builder
+         * 
+         */
         public Builder year(@Nullable Output<Integer> year) {
             $.year = year;
             return this;
         }
 
+        /**
+         * @param year Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+         * 
+         * @return builder
+         * 
+         */
         public Builder year(Integer year) {
             return year(Output.of(year));
         }

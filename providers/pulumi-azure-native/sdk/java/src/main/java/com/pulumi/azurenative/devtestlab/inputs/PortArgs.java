@@ -29,6 +29,10 @@ public final class PortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backendPort")
     private @Nullable Output<Integer> backendPort;
 
+    /**
+     * @return Backend port of the target virtual machine.
+     * 
+     */
     public Optional<Output<Integer>> backendPort() {
         return Optional.ofNullable(this.backendPort);
     }
@@ -40,6 +44,10 @@ public final class PortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transportProtocol")
     private @Nullable Output<Either<String,TransportProtocol>> transportProtocol;
 
+    /**
+     * @return Protocol type of the port.
+     * 
+     */
     public Optional<Output<Either<String,TransportProtocol>>> transportProtocol() {
         return Optional.ofNullable(this.transportProtocol);
     }
@@ -69,28 +77,64 @@ public final class PortArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendPort Backend port of the target virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPort(@Nullable Output<Integer> backendPort) {
             $.backendPort = backendPort;
             return this;
         }
 
+        /**
+         * @param backendPort Backend port of the target virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPort(Integer backendPort) {
             return backendPort(Output.of(backendPort));
         }
 
+        /**
+         * @param transportProtocol Protocol type of the port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportProtocol(@Nullable Output<Either<String,TransportProtocol>> transportProtocol) {
             $.transportProtocol = transportProtocol;
             return this;
         }
 
+        /**
+         * @param transportProtocol Protocol type of the port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportProtocol(Either<String,TransportProtocol> transportProtocol) {
             return transportProtocol(Output.of(transportProtocol));
         }
 
+        /**
+         * @param transportProtocol Protocol type of the port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportProtocol(String transportProtocol) {
             return transportProtocol(Either.ofLeft(transportProtocol));
         }
 
+        /**
+         * @param transportProtocol Protocol type of the port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportProtocol(TransportProtocol transportProtocol) {
             return transportProtocol(Either.ofRight(transportProtocol));
         }

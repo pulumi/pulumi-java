@@ -26,6 +26,10 @@ public final class StagingSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="enableCompression")
     private @Nullable Object enableCompression;
 
+    /**
+     * @return Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> enableCompression() {
         return Optional.ofNullable(this.enableCompression);
     }
@@ -37,6 +41,10 @@ public final class StagingSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="linkedServiceName", required=true)
     private LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Staging linked service reference.
+     * 
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -48,6 +56,10 @@ public final class StagingSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="path")
     private @Nullable Object path;
 
+    /**
+     * @return The path to storage for storing the interim data. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> path() {
         return Optional.ofNullable(this.path);
     }
@@ -78,16 +90,34 @@ public final class StagingSettingsResponse extends com.pulumi.resources.InvokeAr
             $ = new StagingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableCompression Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCompression(@Nullable Object enableCompression) {
             $.enableCompression = enableCompression;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Staging linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param path The path to storage for storing the interim data. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Object path) {
             $.path = path;
             return this;

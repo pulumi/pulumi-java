@@ -19,6 +19,10 @@ public final class GetKeySigningKeyArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="hostedZoneId", required=true)
     private String hostedZoneId;
 
+    /**
+     * @return The unique string (ID) used to identify a hosted zone.
+     * 
+     */
     public String hostedZoneId() {
         return this.hostedZoneId;
     }
@@ -30,6 +34,10 @@ public final class GetKeySigningKeyArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -59,11 +67,23 @@ public final class GetKeySigningKeyArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetKeySigningKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostedZoneId The unique string (ID) used to identify a hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneId(String hostedZoneId) {
             $.hostedZoneId = hostedZoneId;
             return this;
         }
 
+        /**
+         * @param name An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

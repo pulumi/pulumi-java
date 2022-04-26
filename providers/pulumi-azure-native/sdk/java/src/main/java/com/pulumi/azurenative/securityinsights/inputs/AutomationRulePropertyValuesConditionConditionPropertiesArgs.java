@@ -30,6 +30,10 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
     @Import(name="operator")
     private @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator;
 
+    /**
+     * @return The operator to use for evaluation the condition
+     * 
+     */
     public Optional<Output<Either<String,AutomationRulePropertyConditionSupportedOperator>>> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -41,6 +45,10 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
     @Import(name="propertyName")
     private @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName;
 
+    /**
+     * @return The property to evaluate
+     * 
+     */
     public Optional<Output<Either<String,AutomationRulePropertyConditionSupportedProperty>>> propertyName() {
         return Optional.ofNullable(this.propertyName);
     }
@@ -52,6 +60,10 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
     @Import(name="propertyValues")
     private @Nullable Output<List<String>> propertyValues;
 
+    /**
+     * @return The values to use for evaluating the condition
+     * 
+     */
     public Optional<Output<List<String>>> propertyValues() {
         return Optional.ofNullable(this.propertyValues);
     }
@@ -82,49 +94,115 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
             $ = new AutomationRulePropertyValuesConditionConditionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operator The operator to use for evaluation the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator The operator to use for evaluation the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Either<String,AutomationRulePropertyConditionSupportedOperator> operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param operator The operator to use for evaluation the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Either.ofLeft(operator));
         }
 
+        /**
+         * @param operator The operator to use for evaluation the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(AutomationRulePropertyConditionSupportedOperator operator) {
             return operator(Either.ofRight(operator));
         }
 
+        /**
+         * @param propertyName The property to evaluate
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyName(@Nullable Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName) {
             $.propertyName = propertyName;
             return this;
         }
 
+        /**
+         * @param propertyName The property to evaluate
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyName(Either<String,AutomationRulePropertyConditionSupportedProperty> propertyName) {
             return propertyName(Output.of(propertyName));
         }
 
+        /**
+         * @param propertyName The property to evaluate
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyName(String propertyName) {
             return propertyName(Either.ofLeft(propertyName));
         }
 
+        /**
+         * @param propertyName The property to evaluate
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyName(AutomationRulePropertyConditionSupportedProperty propertyName) {
             return propertyName(Either.ofRight(propertyName));
         }
 
+        /**
+         * @param propertyValues The values to use for evaluating the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyValues(@Nullable Output<List<String>> propertyValues) {
             $.propertyValues = propertyValues;
             return this;
         }
 
+        /**
+         * @param propertyValues The values to use for evaluating the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyValues(List<String> propertyValues) {
             return propertyValues(Output.of(propertyValues));
         }
 
+        /**
+         * @param propertyValues The values to use for evaluating the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyValues(String... propertyValues) {
             return propertyValues(List.of(propertyValues));
         }

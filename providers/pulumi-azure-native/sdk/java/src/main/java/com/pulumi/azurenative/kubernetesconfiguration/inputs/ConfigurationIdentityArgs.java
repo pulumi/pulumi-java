@@ -26,6 +26,10 @@ public final class ConfigurationIdentityArgs extends com.pulumi.resources.Resour
     @Import(name="type")
     private @Nullable Output<ResourceIdentityType> type;
 
+    /**
+     * @return The type of identity used for the configuration. Type &#39;SystemAssigned&#39; will use an implicitly created identity. Type &#39;None&#39; will not use Managed Identity for the configuration.
+     * 
+     */
     public Optional<Output<ResourceIdentityType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -54,11 +58,23 @@ public final class ConfigurationIdentityArgs extends com.pulumi.resources.Resour
             $ = new ConfigurationIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of identity used for the configuration. Type &#39;SystemAssigned&#39; will use an implicitly created identity. Type &#39;None&#39; will not use Managed Identity for the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<ResourceIdentityType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of identity used for the configuration. Type &#39;SystemAssigned&#39; will use an implicitly created identity. Type &#39;None&#39; will not use Managed Identity for the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ResourceIdentityType type) {
             return type(Output.of(type));
         }

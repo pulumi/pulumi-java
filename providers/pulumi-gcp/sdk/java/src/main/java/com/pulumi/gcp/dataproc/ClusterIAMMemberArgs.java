@@ -23,6 +23,10 @@ public final class ClusterIAMMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="cluster", required=true)
     private Output<String> cluster;
 
+    /**
+     * @return The name or relative resource id of the cluster to manage IAM policies for.
+     * 
+     */
     public Output<String> cluster() {
         return this.cluster;
     }
@@ -49,6 +53,11 @@ public final class ClusterIAMMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project in which the cluster belongs. If it
+     * is not provided, the provider will use a default.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -61,6 +70,11 @@ public final class ClusterIAMMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The region in which the cluster belongs. If it
+     * is not provided, the provider will use a default.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -74,6 +88,12 @@ public final class ClusterIAMMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.dataproc.ClusterIAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -107,11 +127,23 @@ public final class ClusterIAMMemberArgs extends com.pulumi.resources.ResourceArg
             $ = new ClusterIAMMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster The name or relative resource id of the cluster to manage IAM policies for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(Output<String> cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param cluster The name or relative resource id of the cluster to manage IAM policies for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             return cluster(Output.of(cluster));
         }
@@ -134,29 +166,73 @@ public final class ClusterIAMMemberArgs extends com.pulumi.resources.ResourceArg
             return member(Output.of(member));
         }
 
+        /**
+         * @param project The project in which the cluster belongs. If it
+         * is not provided, the provider will use a default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project in which the cluster belongs. If it
+         * is not provided, the provider will use a default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The region in which the cluster belongs. If it
+         * is not provided, the provider will use a default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The region in which the cluster belongs. If it
+         * is not provided, the provider will use a default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.dataproc.ClusterIAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.dataproc.ClusterIAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

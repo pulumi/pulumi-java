@@ -12,7 +12,7 @@ public final class GetListenerDefaultActionRedirect {
     private final String host;
     private final String path;
     /**
-     * Port of the listener. Required if `arn` is not set.
+     * @return Port of the listener. Required if `arn` is not set.
      * 
      */
     private final String port;
@@ -43,9 +43,9 @@ public final class GetListenerDefaultActionRedirect {
         return this.path;
     }
     /**
-     * Port of the listener. Required if `arn` is not set.
+     * @return Port of the listener. Required if `arn` is not set.
      * 
-    */
+     */
     public String port() {
         return this.port;
     }

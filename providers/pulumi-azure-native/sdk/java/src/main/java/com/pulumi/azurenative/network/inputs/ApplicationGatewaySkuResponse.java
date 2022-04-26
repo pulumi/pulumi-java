@@ -26,6 +26,10 @@ public final class ApplicationGatewaySkuResponse extends com.pulumi.resources.In
     @Import(name="capacity")
     private @Nullable Integer capacity;
 
+    /**
+     * @return Capacity (instance count) of an application gateway.
+     * 
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class ApplicationGatewaySkuResponse extends com.pulumi.resources.In
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of an application gateway SKU.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class ApplicationGatewaySkuResponse extends com.pulumi.resources.In
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return Tier of an application gateway.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -78,16 +90,34 @@ public final class ApplicationGatewaySkuResponse extends com.pulumi.resources.In
             $ = new ApplicationGatewaySkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Capacity (instance count) of an application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param name Name of an application gateway SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier Tier of an application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

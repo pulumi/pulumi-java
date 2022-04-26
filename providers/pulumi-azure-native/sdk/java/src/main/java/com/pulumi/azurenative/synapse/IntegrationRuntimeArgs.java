@@ -25,6 +25,10 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
     @Import(name="integrationRuntimeName")
     private @Nullable Output<String> integrationRuntimeName;
 
+    /**
+     * @return Integration runtime name
+     * 
+     */
     public Optional<Output<String>> integrationRuntimeName() {
         return Optional.ofNullable(this.integrationRuntimeName);
     }
@@ -36,6 +40,10 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
     @Import(name="properties", required=true)
     private Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
 
+    /**
+     * @return Integration runtime properties.
+     * 
+     */
     public Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties() {
         return this.properties;
     }
@@ -47,6 +55,10 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -58,6 +70,10 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -89,46 +105,106 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
             $ = new IntegrationRuntimeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param integrationRuntimeName Integration runtime name
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationRuntimeName(@Nullable Output<String> integrationRuntimeName) {
             $.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
 
+        /**
+         * @param integrationRuntimeName Integration runtime name
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationRuntimeName(String integrationRuntimeName) {
             return integrationRuntimeName(Output.of(integrationRuntimeName));
         }
 
+        /**
+         * @param properties Integration runtime properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Integration runtime properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param properties Integration runtime properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ManagedIntegrationRuntimeArgs properties) {
             return properties(Either.ofLeft(properties));
         }
 
+        /**
+         * @param properties Integration runtime properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(SelfHostedIntegrationRuntimeArgs properties) {
             return properties(Either.ofRight(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

@@ -29,6 +29,10 @@ public final class VariableSpecificationArgs extends com.pulumi.resources.Resour
     @Import(name="defaultValue")
     private @Nullable Output<Object> defaultValue;
 
+    /**
+     * @return Default value of variable.
+     * 
+     */
     public Optional<Output<Object>> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -40,6 +44,10 @@ public final class VariableSpecificationArgs extends com.pulumi.resources.Resour
     @Import(name="type", required=true)
     private Output<Either<String,VariableType>> type;
 
+    /**
+     * @return Variable type.
+     * 
+     */
     public Output<Either<String,VariableType>> type() {
         return this.type;
     }
@@ -69,28 +77,64 @@ public final class VariableSpecificationArgs extends com.pulumi.resources.Resour
             $ = new VariableSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValue Default value of variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable Output<Object> defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param defaultValue Default value of variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(Object defaultValue) {
             return defaultValue(Output.of(defaultValue));
         }
 
+        /**
+         * @param type Variable type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,VariableType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Variable type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,VariableType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Variable type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Variable type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(VariableType type) {
             return type(Either.ofRight(type));
         }

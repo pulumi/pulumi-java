@@ -23,6 +23,10 @@ public final class EntrypointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="shell", required=true)
     private String shell;
 
+    /**
+     * @return The format should be a shell command that can be fed to bash -c.
+     * 
+     */
     public String shell() {
         return this.shell;
     }
@@ -51,6 +55,12 @@ public final class EntrypointResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EntrypointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param shell The format should be a shell command that can be fed to bash -c.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shell(String shell) {
             $.shell = shell;
             return this;

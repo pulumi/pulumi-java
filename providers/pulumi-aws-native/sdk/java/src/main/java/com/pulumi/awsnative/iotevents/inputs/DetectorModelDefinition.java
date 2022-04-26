@@ -25,6 +25,10 @@ public final class DetectorModelDefinition extends com.pulumi.resources.InvokeAr
     @Import(name="initialStateName", required=true)
     private String initialStateName;
 
+    /**
+     * @return The state that is entered at the creation of each detector (instance).
+     * 
+     */
     public String initialStateName() {
         return this.initialStateName;
     }
@@ -36,6 +40,10 @@ public final class DetectorModelDefinition extends com.pulumi.resources.InvokeAr
     @Import(name="states", required=true)
     private List<DetectorModelState> states;
 
+    /**
+     * @return Information about the states of the detector.
+     * 
+     */
     public List<DetectorModelState> states() {
         return this.states;
     }
@@ -65,16 +73,34 @@ public final class DetectorModelDefinition extends com.pulumi.resources.InvokeAr
             $ = new DetectorModelDefinition(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param initialStateName The state that is entered at the creation of each detector (instance).
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialStateName(String initialStateName) {
             $.initialStateName = initialStateName;
             return this;
         }
 
+        /**
+         * @param states Information about the states of the detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder states(List<DetectorModelState> states) {
             $.states = states;
             return this;
         }
 
+        /**
+         * @param states Information about the states of the detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder states(DetectorModelState... states) {
             return states(List.of(states));
         }

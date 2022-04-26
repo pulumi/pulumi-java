@@ -26,6 +26,10 @@ public final class ActionGroupsInformationResponse extends com.pulumi.resources.
     @Import(name="customEmailSubject")
     private @Nullable String customEmailSubject;
 
+    /**
+     * @return An optional custom email subject to use in email notifications.
+     * 
+     */
     public Optional<String> customEmailSubject() {
         return Optional.ofNullable(this.customEmailSubject);
     }
@@ -37,6 +41,10 @@ public final class ActionGroupsInformationResponse extends com.pulumi.resources.
     @Import(name="customWebhookPayload")
     private @Nullable String customWebhookPayload;
 
+    /**
+     * @return An optional custom web-hook payload to use in web-hook notifications.
+     * 
+     */
     public Optional<String> customWebhookPayload() {
         return Optional.ofNullable(this.customWebhookPayload);
     }
@@ -48,6 +56,10 @@ public final class ActionGroupsInformationResponse extends com.pulumi.resources.
     @Import(name="groupIds", required=true)
     private List<String> groupIds;
 
+    /**
+     * @return The Action Group resource IDs.
+     * 
+     */
     public List<String> groupIds() {
         return this.groupIds;
     }
@@ -78,21 +90,45 @@ public final class ActionGroupsInformationResponse extends com.pulumi.resources.
             $ = new ActionGroupsInformationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customEmailSubject An optional custom email subject to use in email notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEmailSubject(@Nullable String customEmailSubject) {
             $.customEmailSubject = customEmailSubject;
             return this;
         }
 
+        /**
+         * @param customWebhookPayload An optional custom web-hook payload to use in web-hook notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customWebhookPayload(@Nullable String customWebhookPayload) {
             $.customWebhookPayload = customWebhookPayload;
             return this;
         }
 
+        /**
+         * @param groupIds The Action Group resource IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(List<String> groupIds) {
             $.groupIds = groupIds;
             return this;
         }
 
+        /**
+         * @param groupIds The Action Group resource IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(String... groupIds) {
             return groupIds(List.of(groupIds));
         }

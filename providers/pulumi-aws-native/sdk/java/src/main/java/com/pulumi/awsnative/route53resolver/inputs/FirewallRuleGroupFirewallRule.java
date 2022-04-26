@@ -29,6 +29,10 @@ public final class FirewallRuleGroupFirewallRule extends com.pulumi.resources.In
     @Import(name="action", required=true)
     private FirewallRuleGroupFirewallRuleAction action;
 
+    /**
+     * @return Rule Action
+     * 
+     */
     public FirewallRuleGroupFirewallRuleAction action() {
         return this.action;
     }
@@ -40,6 +44,10 @@ public final class FirewallRuleGroupFirewallRule extends com.pulumi.resources.In
     @Import(name="blockOverrideDnsType")
     private @Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType;
 
+    /**
+     * @return BlockOverrideDnsType
+     * 
+     */
     public Optional<FirewallRuleGroupFirewallRuleBlockOverrideDnsType> blockOverrideDnsType() {
         return Optional.ofNullable(this.blockOverrideDnsType);
     }
@@ -51,6 +59,10 @@ public final class FirewallRuleGroupFirewallRule extends com.pulumi.resources.In
     @Import(name="blockOverrideDomain")
     private @Nullable String blockOverrideDomain;
 
+    /**
+     * @return BlockOverrideDomain
+     * 
+     */
     public Optional<String> blockOverrideDomain() {
         return Optional.ofNullable(this.blockOverrideDomain);
     }
@@ -62,6 +74,10 @@ public final class FirewallRuleGroupFirewallRule extends com.pulumi.resources.In
     @Import(name="blockOverrideTtl")
     private @Nullable Integer blockOverrideTtl;
 
+    /**
+     * @return BlockOverrideTtl
+     * 
+     */
     public Optional<Integer> blockOverrideTtl() {
         return Optional.ofNullable(this.blockOverrideTtl);
     }
@@ -73,6 +89,10 @@ public final class FirewallRuleGroupFirewallRule extends com.pulumi.resources.In
     @Import(name="blockResponse")
     private @Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse;
 
+    /**
+     * @return BlockResponse
+     * 
+     */
     public Optional<FirewallRuleGroupFirewallRuleBlockResponse> blockResponse() {
         return Optional.ofNullable(this.blockResponse);
     }
@@ -84,6 +104,10 @@ public final class FirewallRuleGroupFirewallRule extends com.pulumi.resources.In
     @Import(name="firewallDomainListId", required=true)
     private String firewallDomainListId;
 
+    /**
+     * @return ResourceId
+     * 
+     */
     public String firewallDomainListId() {
         return this.firewallDomainListId;
     }
@@ -95,6 +119,10 @@ public final class FirewallRuleGroupFirewallRule extends com.pulumi.resources.In
     @Import(name="priority", required=true)
     private Integer priority;
 
+    /**
+     * @return Rule Priority
+     * 
+     */
     public Integer priority() {
         return this.priority;
     }
@@ -129,36 +157,78 @@ public final class FirewallRuleGroupFirewallRule extends com.pulumi.resources.In
             $ = new FirewallRuleGroupFirewallRule(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Rule Action
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(FirewallRuleGroupFirewallRuleAction action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param blockOverrideDnsType BlockOverrideDnsType
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockOverrideDnsType(@Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType) {
             $.blockOverrideDnsType = blockOverrideDnsType;
             return this;
         }
 
+        /**
+         * @param blockOverrideDomain BlockOverrideDomain
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockOverrideDomain(@Nullable String blockOverrideDomain) {
             $.blockOverrideDomain = blockOverrideDomain;
             return this;
         }
 
+        /**
+         * @param blockOverrideTtl BlockOverrideTtl
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockOverrideTtl(@Nullable Integer blockOverrideTtl) {
             $.blockOverrideTtl = blockOverrideTtl;
             return this;
         }
 
+        /**
+         * @param blockResponse BlockResponse
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockResponse(@Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse) {
             $.blockResponse = blockResponse;
             return this;
         }
 
+        /**
+         * @param firewallDomainListId ResourceId
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallDomainListId(String firewallDomainListId) {
             $.firewallDomainListId = firewallDomainListId;
             return this;
         }
 
+        /**
+         * @param priority Rule Priority
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             $.priority = priority;
             return this;

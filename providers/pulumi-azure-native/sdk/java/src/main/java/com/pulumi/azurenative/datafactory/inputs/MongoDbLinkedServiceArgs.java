@@ -36,6 +36,10 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="allowSelfSignedServerCert")
     private @Nullable Output<Object> allowSelfSignedServerCert;
 
+    /**
+     * @return Specifies whether to allow self-signed certificates from the server. The default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> allowSelfSignedServerCert() {
         return Optional.ofNullable(this.allowSelfSignedServerCert);
     }
@@ -47,6 +51,10 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -58,6 +66,10 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="authSource")
     private @Nullable Output<Object> authSource;
 
+    /**
+     * @return Database to verify the username and password. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> authSource() {
         return Optional.ofNullable(this.authSource);
     }
@@ -69,6 +81,10 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="authenticationType")
     private @Nullable Output<Either<String,MongoDbAuthenticationType>> authenticationType;
 
+    /**
+     * @return The authentication type to be used to connect to the MongoDB database.
+     * 
+     */
     public Optional<Output<Either<String,MongoDbAuthenticationType>>> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -80,6 +96,10 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -91,6 +111,10 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="databaseName", required=true)
     private Output<Object> databaseName;
 
+    /**
+     * @return The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> databaseName() {
         return this.databaseName;
     }
@@ -102,6 +126,10 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -113,6 +141,10 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="enableSsl")
     private @Nullable Output<Object> enableSsl;
 
+    /**
+     * @return Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> enableSsl() {
         return Optional.ofNullable(this.enableSsl);
     }
@@ -124,6 +156,10 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="encryptedCredential")
     private @Nullable Output<Object> encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -135,6 +171,10 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -146,6 +186,10 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="password")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
+    /**
+     * @return Password for authentication.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -157,6 +201,10 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="port")
     private @Nullable Output<Object> port;
 
+    /**
+     * @return The TCP port number that the MongoDB server uses to listen for client connections. The default value is 27017. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Output<Object>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -168,6 +216,10 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="server", required=true)
     private Output<Object> server;
 
+    /**
+     * @return The IP address or server name of the MongoDB server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> server() {
         return this.server;
     }
@@ -180,6 +232,11 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;MongoDb&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -191,6 +248,10 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="username")
     private @Nullable Output<Object> username;
 
+    /**
+     * @return Username for authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -233,157 +294,369 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
             $ = new MongoDbLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowSelfSignedServerCert Specifies whether to allow self-signed certificates from the server. The default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSelfSignedServerCert(@Nullable Output<Object> allowSelfSignedServerCert) {
             $.allowSelfSignedServerCert = allowSelfSignedServerCert;
             return this;
         }
 
+        /**
+         * @param allowSelfSignedServerCert Specifies whether to allow self-signed certificates from the server. The default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSelfSignedServerCert(Object allowSelfSignedServerCert) {
             return allowSelfSignedServerCert(Output.of(allowSelfSignedServerCert));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param authSource Database to verify the username and password. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authSource(@Nullable Output<Object> authSource) {
             $.authSource = authSource;
             return this;
         }
 
+        /**
+         * @param authSource Database to verify the username and password. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authSource(Object authSource) {
             return authSource(Output.of(authSource));
         }
 
+        /**
+         * @param authenticationType The authentication type to be used to connect to the MongoDB database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable Output<Either<String,MongoDbAuthenticationType>> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType The authentication type to be used to connect to the MongoDB database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Either<String,MongoDbAuthenticationType> authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param authenticationType The authentication type to be used to connect to the MongoDB database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Either.ofLeft(authenticationType));
         }
 
+        /**
+         * @param authenticationType The authentication type to be used to connect to the MongoDB database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(MongoDbAuthenticationType authenticationType) {
             return authenticationType(Either.ofRight(authenticationType));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param databaseName The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Output<Object> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Object databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enableSsl Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSsl(@Nullable Output<Object> enableSsl) {
             $.enableSsl = enableSsl;
             return this;
         }
 
+        /**
+         * @param enableSsl Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSsl(Object enableSsl) {
             return enableSsl(Output.of(enableSsl));
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(Object encryptedCredential) {
             return encryptedCredential(Output.of(encryptedCredential));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param password Password for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param password Password for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceArgs password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringArgs password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param port The TCP port number that the MongoDB server uses to listen for client connections. The default value is 27017. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Object> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The TCP port number that the MongoDB server uses to listen for client connections. The default value is 27017. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Object port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param server The IP address or server name of the MongoDB server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(Output<Object> server) {
             $.server = server;
             return this;
         }
 
+        /**
+         * @param server The IP address or server name of the MongoDB server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(Object server) {
             return server(Output.of(server));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;MongoDb&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;MongoDb&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param username Username for authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<Object> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Username for authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Object username) {
             return username(Output.of(username));
         }

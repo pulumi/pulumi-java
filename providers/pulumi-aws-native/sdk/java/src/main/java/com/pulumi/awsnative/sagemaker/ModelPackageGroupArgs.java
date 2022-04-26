@@ -46,6 +46,10 @@ public final class ModelPackageGroupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<List<ModelPackageGroupTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<ModelPackageGroupTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -104,15 +108,33 @@ public final class ModelPackageGroupArgs extends com.pulumi.resources.ResourceAr
             return modelPackageGroupPolicy(Output.of(modelPackageGroupPolicy));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ModelPackageGroupTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ModelPackageGroupTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ModelPackageGroupTagArgs... tags) {
             return tags(List.of(tags));
         }

@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="noSmallTalk", required=true)
     private Boolean noSmallTalk;
 
+    /**
+     * @return Do not trigger if last utterance is small talk.
+     * 
+     */
     public Boolean noSmallTalk() {
         return this.noSmallTalk;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="onlyEndUser", required=true)
     private Boolean onlyEndUser;
 
+    /**
+     * @return Only trigger suggestion if participant role of last utterance is END_USER.
+     * 
+     */
     public Boolean onlyEndUser() {
         return this.onlyEndUser;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
             $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param noSmallTalk Do not trigger if last utterance is small talk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noSmallTalk(Boolean noSmallTalk) {
             $.noSmallTalk = noSmallTalk;
             return this;
         }
 
+        /**
+         * @param onlyEndUser Only trigger suggestion if participant role of last utterance is END_USER.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlyEndUser(Boolean onlyEndUser) {
             $.onlyEndUser = onlyEndUser;
             return this;

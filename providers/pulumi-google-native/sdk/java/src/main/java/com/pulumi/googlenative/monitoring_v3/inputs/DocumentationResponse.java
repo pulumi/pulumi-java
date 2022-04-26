@@ -23,6 +23,10 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="content", required=true)
     private String content;
 
+    /**
+     * @return The text of the documentation, interpreted according to mime_type. The content may not exceed 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8 format, whichever is smaller.
+     * 
+     */
     public String content() {
         return this.content;
     }
@@ -34,6 +38,10 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="mimeType", required=true)
     private String mimeType;
 
+    /**
+     * @return The format of the content field. Presently, only the value &#34;text/markdown&#34; is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.
+     * 
+     */
     public String mimeType() {
         return this.mimeType;
     }
@@ -63,11 +71,23 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
             $ = new DocumentationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The text of the documentation, interpreted according to mime_type. The content may not exceed 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8 format, whichever is smaller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param mimeType The format of the content field. Presently, only the value &#34;text/markdown&#34; is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mimeType(String mimeType) {
             $.mimeType = mimeType;
             return this;

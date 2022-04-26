@@ -26,6 +26,10 @@ public final class FirewallPolicyIntrusionDetectionResponse extends com.pulumi.r
     @Import(name="configuration")
     private @Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration;
 
+    /**
+     * @return Intrusion detection configuration properties.
+     * 
+     */
     public Optional<FirewallPolicyIntrusionDetectionConfigurationResponse> configuration() {
         return Optional.ofNullable(this.configuration);
     }
@@ -37,6 +41,10 @@ public final class FirewallPolicyIntrusionDetectionResponse extends com.pulumi.r
     @Import(name="mode")
     private @Nullable String mode;
 
+    /**
+     * @return Intrusion detection general state.
+     * 
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -66,11 +74,23 @@ public final class FirewallPolicyIntrusionDetectionResponse extends com.pulumi.r
             $ = new FirewallPolicyIntrusionDetectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configuration Intrusion detection configuration properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(@Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param mode Intrusion detection general state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable String mode) {
             $.mode = mode;
             return this;

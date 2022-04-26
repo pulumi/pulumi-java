@@ -25,6 +25,10 @@ public final class ManualShardingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="testTargetsForShard", required=true)
     private Output<List<TestTargetsForShardArgs>> testTargetsForShard;
 
+    /**
+     * @return Group of packages, classes, and/or test methods to be run for each shard. When any physical devices are selected, the number of test_targets_for_shard must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
+     * 
+     */
     public Output<List<TestTargetsForShardArgs>> testTargetsForShard() {
         return this.testTargetsForShard;
     }
@@ -53,15 +57,33 @@ public final class ManualShardingArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ManualShardingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param testTargetsForShard Group of packages, classes, and/or test methods to be run for each shard. When any physical devices are selected, the number of test_targets_for_shard must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargetsForShard(Output<List<TestTargetsForShardArgs>> testTargetsForShard) {
             $.testTargetsForShard = testTargetsForShard;
             return this;
         }
 
+        /**
+         * @param testTargetsForShard Group of packages, classes, and/or test methods to be run for each shard. When any physical devices are selected, the number of test_targets_for_shard must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargetsForShard(List<TestTargetsForShardArgs> testTargetsForShard) {
             return testTargetsForShard(Output.of(testTargetsForShard));
         }
 
+        /**
+         * @param testTargetsForShard Group of packages, classes, and/or test methods to be run for each shard. When any physical devices are selected, the number of test_targets_for_shard must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargetsForShard(TestTargetsForShardArgs... testTargetsForShard) {
             return testTargetsForShard(List.of(testTargetsForShard));
         }

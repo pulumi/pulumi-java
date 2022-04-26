@@ -19,6 +19,10 @@ public final class GetRegistrationDefinitionArgs extends com.pulumi.resources.In
     @Import(name="registrationDefinitionId", required=true)
     private String registrationDefinitionId;
 
+    /**
+     * @return Guid of the registration definition.
+     * 
+     */
     public String registrationDefinitionId() {
         return this.registrationDefinitionId;
     }
@@ -30,6 +34,10 @@ public final class GetRegistrationDefinitionArgs extends com.pulumi.resources.In
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return Scope of the resource.
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -59,11 +67,23 @@ public final class GetRegistrationDefinitionArgs extends com.pulumi.resources.In
             $ = new GetRegistrationDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param registrationDefinitionId Guid of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationDefinitionId(String registrationDefinitionId) {
             $.registrationDefinitionId = registrationDefinitionId;
             return this;
         }
 
+        /**
+         * @param scope Scope of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;

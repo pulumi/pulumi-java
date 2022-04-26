@@ -23,6 +23,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs e
     @Import(name="destination", required=true)
     private Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination;
 
+    /**
+     * @return Specifies the destination for the exported analytics data (documented below).
+     * 
+     */
     public Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination() {
         return this.destination;
     }
@@ -34,6 +38,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs e
     @Import(name="outputSchemaVersion")
     private @Nullable Output<String> outputSchemaVersion;
 
+    /**
+     * @return The schema version of exported analytics data. Allowed values: `V_1`. Default value: `V_1`.
+     * 
+     */
     public Optional<Output<String>> outputSchemaVersion() {
         return Optional.ofNullable(this.outputSchemaVersion);
     }
@@ -63,20 +71,44 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs e
             $ = new AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Specifies the destination for the exported analytics data (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Specifies the destination for the exported analytics data (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param outputSchemaVersion The schema version of exported analytics data. Allowed values: `V_1`. Default value: `V_1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputSchemaVersion(@Nullable Output<String> outputSchemaVersion) {
             $.outputSchemaVersion = outputSchemaVersion;
             return this;
         }
 
+        /**
+         * @param outputSchemaVersion The schema version of exported analytics data. Allowed values: `V_1`. Default value: `V_1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputSchemaVersion(String outputSchemaVersion) {
             return outputSchemaVersion(Output.of(outputSchemaVersion));
         }

@@ -24,6 +24,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rules", required=true)
     private List<BackendRuleResponse> rules;
 
+    /**
+     * @return A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * 
+     */
     public List<BackendRuleResponse> rules() {
         return this.rules;
     }
@@ -52,11 +56,23 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BackendResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<BackendRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(BackendRuleResponse... rules) {
             return rules(List.of(rules));
         }

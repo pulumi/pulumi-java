@@ -28,6 +28,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="contentType")
     private @Nullable String contentType;
 
+    /**
+     * @return Content type of the message.
+     * 
+     */
     public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -39,6 +43,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="correlationId")
     private @Nullable String correlationId;
 
+    /**
+     * @return Identifier of the correlation.
+     * 
+     */
     public Optional<String> correlationId() {
         return Optional.ofNullable(this.correlationId);
     }
@@ -50,6 +58,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="label")
     private @Nullable String label;
 
+    /**
+     * @return Application specific label.
+     * 
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
@@ -61,6 +73,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="messageId")
     private @Nullable String messageId;
 
+    /**
+     * @return Identifier of the message.
+     * 
+     */
     public Optional<String> messageId() {
         return Optional.ofNullable(this.messageId);
     }
@@ -72,6 +88,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return dictionary object for custom filters
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -83,6 +103,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="replyTo")
     private @Nullable String replyTo;
 
+    /**
+     * @return Address of the queue to reply to.
+     * 
+     */
     public Optional<String> replyTo() {
         return Optional.ofNullable(this.replyTo);
     }
@@ -94,6 +118,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="replyToSessionId")
     private @Nullable String replyToSessionId;
 
+    /**
+     * @return Session identifier to reply to.
+     * 
+     */
     public Optional<String> replyToSessionId() {
         return Optional.ofNullable(this.replyToSessionId);
     }
@@ -105,6 +133,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="requiresPreprocessing")
     private @Nullable Boolean requiresPreprocessing;
 
+    /**
+     * @return Value that indicates whether the rule action requires preprocessing.
+     * 
+     */
     public Optional<Boolean> requiresPreprocessing() {
         return Optional.ofNullable(this.requiresPreprocessing);
     }
@@ -116,6 +148,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="sessionId")
     private @Nullable String sessionId;
 
+    /**
+     * @return Session identifier.
+     * 
+     */
     public Optional<String> sessionId() {
         return Optional.ofNullable(this.sessionId);
     }
@@ -127,6 +163,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="to")
     private @Nullable String to;
 
+    /**
+     * @return Address to send to.
+     * 
+     */
     public Optional<String> to() {
         return Optional.ofNullable(this.to);
     }
@@ -164,51 +204,111 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
             $ = new CorrelationFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentType Content type of the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable String contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param correlationId Identifier of the correlation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder correlationId(@Nullable String correlationId) {
             $.correlationId = correlationId;
             return this;
         }
 
+        /**
+         * @param label Application specific label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param messageId Identifier of the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(@Nullable String messageId) {
             $.messageId = messageId;
             return this;
         }
 
+        /**
+         * @param properties dictionary object for custom filters
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param replyTo Address of the queue to reply to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replyTo(@Nullable String replyTo) {
             $.replyTo = replyTo;
             return this;
         }
 
+        /**
+         * @param replyToSessionId Session identifier to reply to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replyToSessionId(@Nullable String replyToSessionId) {
             $.replyToSessionId = replyToSessionId;
             return this;
         }
 
+        /**
+         * @param requiresPreprocessing Value that indicates whether the rule action requires preprocessing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
             $.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
 
+        /**
+         * @param sessionId Session identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionId(@Nullable String sessionId) {
             $.sessionId = sessionId;
             return this;
         }
 
+        /**
+         * @param to Address to send to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder to(@Nullable String to) {
             $.to = to;
             return this;

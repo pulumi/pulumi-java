@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends com
     @Import(name="leaveUntransformed")
     private @Nullable Output<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed;
 
+    /**
+     * @return Ignore errors
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2LeaveUntransformedArgs>> leaveUntransformed() {
         return Optional.ofNullable(this.leaveUntransformed);
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends com
     @Import(name="throwError")
     private @Nullable Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError;
 
+    /**
+     * @return Throw an error
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ThrowErrorArgs>> throwError() {
         return Optional.ofNullable(this.throwError);
     }
@@ -67,20 +75,44 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends com
             $ = new GooglePrivacyDlpV2TransformationErrorHandlingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param leaveUntransformed Ignore errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder leaveUntransformed(@Nullable Output<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed) {
             $.leaveUntransformed = leaveUntransformed;
             return this;
         }
 
+        /**
+         * @param leaveUntransformed Ignore errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder leaveUntransformed(GooglePrivacyDlpV2LeaveUntransformedArgs leaveUntransformed) {
             return leaveUntransformed(Output.of(leaveUntransformed));
         }
 
+        /**
+         * @param throwError Throw an error
+         * 
+         * @return builder
+         * 
+         */
         public Builder throwError(@Nullable Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError) {
             $.throwError = throwError;
             return this;
         }
 
+        /**
+         * @param throwError Throw an error
+         * 
+         * @return builder
+         * 
+         */
         public Builder throwError(GooglePrivacyDlpV2ThrowErrorArgs throwError) {
             return throwError(Output.of(throwError));
         }

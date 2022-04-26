@@ -25,6 +25,10 @@ public final class BaiduCredentialResponse extends com.pulumi.resources.InvokeAr
     @Import(name="baiduApiKey")
     private @Nullable String baiduApiKey;
 
+    /**
+     * @return Baidu Api Key.
+     * 
+     */
     public Optional<String> baiduApiKey() {
         return Optional.ofNullable(this.baiduApiKey);
     }
@@ -36,6 +40,10 @@ public final class BaiduCredentialResponse extends com.pulumi.resources.InvokeAr
     @Import(name="baiduEndPoint")
     private @Nullable String baiduEndPoint;
 
+    /**
+     * @return Baidu Endpoint.
+     * 
+     */
     public Optional<String> baiduEndPoint() {
         return Optional.ofNullable(this.baiduEndPoint);
     }
@@ -47,6 +55,10 @@ public final class BaiduCredentialResponse extends com.pulumi.resources.InvokeAr
     @Import(name="baiduSecretKey")
     private @Nullable String baiduSecretKey;
 
+    /**
+     * @return Baidu Secret Key
+     * 
+     */
     public Optional<String> baiduSecretKey() {
         return Optional.ofNullable(this.baiduSecretKey);
     }
@@ -77,16 +89,34 @@ public final class BaiduCredentialResponse extends com.pulumi.resources.InvokeAr
             $ = new BaiduCredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baiduApiKey Baidu Api Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baiduApiKey(@Nullable String baiduApiKey) {
             $.baiduApiKey = baiduApiKey;
             return this;
         }
 
+        /**
+         * @param baiduEndPoint Baidu Endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baiduEndPoint(@Nullable String baiduEndPoint) {
             $.baiduEndPoint = baiduEndPoint;
             return this;
         }
 
+        /**
+         * @param baiduSecretKey Baidu Secret Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder baiduSecretKey(@Nullable String baiduSecretKey) {
             $.baiduSecretKey = baiduSecretKey;
             return this;

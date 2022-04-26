@@ -28,6 +28,10 @@ public final class AnimationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="animationEnd")
     private @Nullable Output<AnimationEndArgs> animationEnd;
 
+    /**
+     * @return End previous animation.
+     * 
+     */
     public Optional<Output<AnimationEndArgs>> animationEnd() {
         return Optional.ofNullable(this.animationEnd);
     }
@@ -39,6 +43,10 @@ public final class AnimationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="animationFade")
     private @Nullable Output<AnimationFadeArgs> animationFade;
 
+    /**
+     * @return Display overlay object with fade animation.
+     * 
+     */
     public Optional<Output<AnimationFadeArgs>> animationFade() {
         return Optional.ofNullable(this.animationFade);
     }
@@ -50,6 +58,10 @@ public final class AnimationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="animationStatic")
     private @Nullable Output<AnimationStaticArgs> animationStatic;
 
+    /**
+     * @return Display static overlay object.
+     * 
+     */
     public Optional<Output<AnimationStaticArgs>> animationStatic() {
         return Optional.ofNullable(this.animationStatic);
     }
@@ -80,29 +92,65 @@ public final class AnimationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AnimationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param animationEnd End previous animation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder animationEnd(@Nullable Output<AnimationEndArgs> animationEnd) {
             $.animationEnd = animationEnd;
             return this;
         }
 
+        /**
+         * @param animationEnd End previous animation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder animationEnd(AnimationEndArgs animationEnd) {
             return animationEnd(Output.of(animationEnd));
         }
 
+        /**
+         * @param animationFade Display overlay object with fade animation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder animationFade(@Nullable Output<AnimationFadeArgs> animationFade) {
             $.animationFade = animationFade;
             return this;
         }
 
+        /**
+         * @param animationFade Display overlay object with fade animation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder animationFade(AnimationFadeArgs animationFade) {
             return animationFade(Output.of(animationFade));
         }
 
+        /**
+         * @param animationStatic Display static overlay object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder animationStatic(@Nullable Output<AnimationStaticArgs> animationStatic) {
             $.animationStatic = animationStatic;
             return this;
         }
 
+        /**
+         * @param animationStatic Display static overlay object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder animationStatic(AnimationStaticArgs animationStatic) {
             return animationStatic(Output.of(animationStatic));
         }

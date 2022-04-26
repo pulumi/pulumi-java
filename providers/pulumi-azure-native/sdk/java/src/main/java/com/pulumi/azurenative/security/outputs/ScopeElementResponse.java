@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScopeElementResponse {
     /**
-     * The alert entity type to suppress by.
+     * @return The alert entity type to suppress by.
      * 
      */
     private final @Nullable String field;
@@ -23,9 +23,9 @@ public final class ScopeElementResponse {
     }
 
     /**
-     * The alert entity type to suppress by.
+     * @return The alert entity type to suppress by.
      * 
-    */
+     */
     public Optional<String> field() {
         return Optional.ofNullable(this.field);
     }

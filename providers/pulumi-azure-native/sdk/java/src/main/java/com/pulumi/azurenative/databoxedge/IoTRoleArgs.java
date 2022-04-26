@@ -31,6 +31,10 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computeResource")
     private @Nullable Output<ComputeResourceArgs> computeResource;
 
+    /**
+     * @return Resource allocation
+     * 
+     */
     public Optional<Output<ComputeResourceArgs>> computeResource() {
         return Optional.ofNullable(this.computeResource);
     }
@@ -42,6 +46,10 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -53,6 +61,10 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostPlatform", required=true)
     private Output<Either<String,PlatformType>> hostPlatform;
 
+    /**
+     * @return Host OS supported by the IoT role.
+     * 
+     */
     public Output<Either<String,PlatformType>> hostPlatform() {
         return this.hostPlatform;
     }
@@ -64,6 +76,10 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ioTDeviceDetails", required=true)
     private Output<IoTDeviceInfoArgs> ioTDeviceDetails;
 
+    /**
+     * @return IoT device metadata to which data box edge device needs to be connected.
+     * 
+     */
     public Output<IoTDeviceInfoArgs> ioTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
@@ -75,6 +91,10 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ioTEdgeAgentInfo")
     private @Nullable Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo;
 
+    /**
+     * @return Iot edge agent details to download the agent and bootstrap iot runtime.
+     * 
+     */
     public Optional<Output<IoTEdgeAgentInfoArgs>> ioTEdgeAgentInfo() {
         return Optional.ofNullable(this.ioTEdgeAgentInfo);
     }
@@ -86,6 +106,10 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ioTEdgeDeviceDetails", required=true)
     private Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
+    /**
+     * @return IoT edge device to which the IoT role needs to be configured.
+     * 
+     */
     public Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
@@ -98,6 +122,11 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Role type.
+     * Expected value is &#39;IOT&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -109,6 +138,10 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The role name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -120,6 +153,10 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -131,6 +168,10 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleStatus", required=true)
     private Output<Either<String,RoleStatus>> roleStatus;
 
+    /**
+     * @return Role status.
+     * 
+     */
     public Output<Either<String,RoleStatus>> roleStatus() {
         return this.roleStatus;
     }
@@ -142,6 +183,10 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareMappings")
     private @Nullable Output<List<MountPointMapArgs>> shareMappings;
 
+    /**
+     * @return Mount points of shares in role(s).
+     * 
+     */
     public Optional<Output<List<MountPointMapArgs>>> shareMappings() {
         return Optional.ofNullable(this.shareMappings);
     }
@@ -180,121 +225,285 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IoTRoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeResource Resource allocation
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeResource(@Nullable Output<ComputeResourceArgs> computeResource) {
             $.computeResource = computeResource;
             return this;
         }
 
+        /**
+         * @param computeResource Resource allocation
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeResource(ComputeResourceArgs computeResource) {
             return computeResource(Output.of(computeResource));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param hostPlatform Host OS supported by the IoT role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPlatform(Output<Either<String,PlatformType>> hostPlatform) {
             $.hostPlatform = hostPlatform;
             return this;
         }
 
+        /**
+         * @param hostPlatform Host OS supported by the IoT role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPlatform(Either<String,PlatformType> hostPlatform) {
             return hostPlatform(Output.of(hostPlatform));
         }
 
+        /**
+         * @param hostPlatform Host OS supported by the IoT role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPlatform(String hostPlatform) {
             return hostPlatform(Either.ofLeft(hostPlatform));
         }
 
+        /**
+         * @param hostPlatform Host OS supported by the IoT role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPlatform(PlatformType hostPlatform) {
             return hostPlatform(Either.ofRight(hostPlatform));
         }
 
+        /**
+         * @param ioTDeviceDetails IoT device metadata to which data box edge device needs to be connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTDeviceDetails(Output<IoTDeviceInfoArgs> ioTDeviceDetails) {
             $.ioTDeviceDetails = ioTDeviceDetails;
             return this;
         }
 
+        /**
+         * @param ioTDeviceDetails IoT device metadata to which data box edge device needs to be connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTDeviceDetails(IoTDeviceInfoArgs ioTDeviceDetails) {
             return ioTDeviceDetails(Output.of(ioTDeviceDetails));
         }
 
+        /**
+         * @param ioTEdgeAgentInfo Iot edge agent details to download the agent and bootstrap iot runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTEdgeAgentInfo(@Nullable Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo) {
             $.ioTEdgeAgentInfo = ioTEdgeAgentInfo;
             return this;
         }
 
+        /**
+         * @param ioTEdgeAgentInfo Iot edge agent details to download the agent and bootstrap iot runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTEdgeAgentInfo(IoTEdgeAgentInfoArgs ioTEdgeAgentInfo) {
             return ioTEdgeAgentInfo(Output.of(ioTEdgeAgentInfo));
         }
 
+        /**
+         * @param ioTEdgeDeviceDetails IoT edge device to which the IoT role needs to be configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTEdgeDeviceDetails(Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails) {
             $.ioTEdgeDeviceDetails = ioTEdgeDeviceDetails;
             return this;
         }
 
+        /**
+         * @param ioTEdgeDeviceDetails IoT edge device to which the IoT role needs to be configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTEdgeDeviceDetails(IoTDeviceInfoArgs ioTEdgeDeviceDetails) {
             return ioTEdgeDeviceDetails(Output.of(ioTEdgeDeviceDetails));
         }
 
+        /**
+         * @param kind Role type.
+         * Expected value is &#39;IOT&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Role type.
+         * Expected value is &#39;IOT&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(Output<Either<String,RoleStatus>> roleStatus) {
             $.roleStatus = roleStatus;
             return this;
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
             return roleStatus(Output.of(roleStatus));
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(String roleStatus) {
             return roleStatus(Either.ofLeft(roleStatus));
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(RoleStatus roleStatus) {
             return roleStatus(Either.ofRight(roleStatus));
         }
 
+        /**
+         * @param shareMappings Mount points of shares in role(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareMappings(@Nullable Output<List<MountPointMapArgs>> shareMappings) {
             $.shareMappings = shareMappings;
             return this;
         }
 
+        /**
+         * @param shareMappings Mount points of shares in role(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareMappings(List<MountPointMapArgs> shareMappings) {
             return shareMappings(Output.of(shareMappings));
         }
 
+        /**
+         * @param shareMappings Mount points of shares in role(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareMappings(MountPointMapArgs... shareMappings) {
             return shareMappings(List.of(shareMappings));
         }

@@ -14,52 +14,52 @@ import java.util.Objects;
 @CustomType
 public final class GetTrialResult {
     /**
-     * The identifier of the client that originally requested this trial.
+     * @return The identifier of the client that originally requested this trial.
      * 
      */
     private final String clientId;
     /**
-     * Time at which the trial&#39;s status changed to COMPLETED.
+     * @return Time at which the trial&#39;s status changed to COMPLETED.
      * 
      */
     private final String endTime;
     /**
-     * The final measurement containing the objective value.
+     * @return The final measurement containing the objective value.
      * 
      */
     private final GoogleCloudMlV1__MeasurementResponse finalMeasurement;
     /**
-     * A human readable string describing why the trial is infeasible. This should only be set if trial_infeasible is true.
+     * @return A human readable string describing why the trial is infeasible. This should only be set if trial_infeasible is true.
      * 
      */
     private final String infeasibleReason;
     /**
-     * A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
+     * @return A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
      * 
      */
     private final List<GoogleCloudMlV1__MeasurementResponse> measurements;
     /**
-     * Name of the trial assigned by the service.
+     * @return Name of the trial assigned by the service.
      * 
      */
     private final String name;
     /**
-     * The parameters of the trial.
+     * @return The parameters of the trial.
      * 
      */
     private final List<GoogleCloudMlV1_Trial_ParameterResponse> parameters;
     /**
-     * Time at which the trial was started.
+     * @return Time at which the trial was started.
      * 
      */
     private final String startTime;
     /**
-     * The detailed state of a trial.
+     * @return The detailed state of a trial.
      * 
      */
     private final String state;
     /**
-     * If true, the parameters in this trial are not attempted again.
+     * @return If true, the parameters in this trial are not attempted again.
      * 
      */
     private final Boolean trialInfeasible;
@@ -89,72 +89,72 @@ public final class GetTrialResult {
     }
 
     /**
-     * The identifier of the client that originally requested this trial.
+     * @return The identifier of the client that originally requested this trial.
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * Time at which the trial&#39;s status changed to COMPLETED.
+     * @return Time at which the trial&#39;s status changed to COMPLETED.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * The final measurement containing the objective value.
+     * @return The final measurement containing the objective value.
      * 
-    */
+     */
     public GoogleCloudMlV1__MeasurementResponse finalMeasurement() {
         return this.finalMeasurement;
     }
     /**
-     * A human readable string describing why the trial is infeasible. This should only be set if trial_infeasible is true.
+     * @return A human readable string describing why the trial is infeasible. This should only be set if trial_infeasible is true.
      * 
-    */
+     */
     public String infeasibleReason() {
         return this.infeasibleReason;
     }
     /**
-     * A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
+     * @return A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
      * 
-    */
+     */
     public List<GoogleCloudMlV1__MeasurementResponse> measurements() {
         return this.measurements;
     }
     /**
-     * Name of the trial assigned by the service.
+     * @return Name of the trial assigned by the service.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The parameters of the trial.
+     * @return The parameters of the trial.
      * 
-    */
+     */
     public List<GoogleCloudMlV1_Trial_ParameterResponse> parameters() {
         return this.parameters;
     }
     /**
-     * Time at which the trial was started.
+     * @return Time at which the trial was started.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The detailed state of a trial.
+     * @return The detailed state of a trial.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * If true, the parameters in this trial are not attempted again.
+     * @return If true, the parameters in this trial are not attempted again.
      * 
-    */
+     */
     public Boolean trialInfeasible() {
         return this.trialInfeasible;
     }

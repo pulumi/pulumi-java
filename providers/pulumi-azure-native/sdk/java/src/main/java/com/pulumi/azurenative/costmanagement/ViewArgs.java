@@ -33,6 +33,10 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accumulated")
     private @Nullable Output<Either<String,AccumulatedType>> accumulated;
 
+    /**
+     * @return Show costs accumulated over time.
+     * 
+     */
     public Optional<Output<Either<String,AccumulatedType>>> accumulated() {
         return Optional.ofNullable(this.accumulated);
     }
@@ -44,6 +48,10 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="chart")
     private @Nullable Output<Either<String,ChartType>> chart;
 
+    /**
+     * @return Chart type of the main view in Cost Analysis. Required.
+     * 
+     */
     public Optional<Output<Either<String,ChartType>>> chart() {
         return Optional.ofNullable(this.chart);
     }
@@ -55,6 +63,10 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSet")
     private @Nullable Output<ReportConfigDatasetArgs> dataSet;
 
+    /**
+     * @return Has definition for data in this report config.
+     * 
+     */
     public Optional<Output<ReportConfigDatasetArgs>> dataSet() {
         return Optional.ofNullable(this.dataSet);
     }
@@ -66,6 +78,10 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return User input name of the view. Required.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -77,6 +93,10 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
     private @Nullable Output<String> eTag;
 
+    /**
+     * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+     * 
+     */
     public Optional<Output<String>> eTag() {
         return Optional.ofNullable(this.eTag);
     }
@@ -88,6 +108,10 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kpis")
     private @Nullable Output<List<KpiPropertiesArgs>> kpis;
 
+    /**
+     * @return List of KPIs to show in Cost Analysis UI.
+     * 
+     */
     public Optional<Output<List<KpiPropertiesArgs>>> kpis() {
         return Optional.ofNullable(this.kpis);
     }
@@ -99,6 +123,10 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metric")
     private @Nullable Output<Either<String,MetricType>> metric;
 
+    /**
+     * @return Metric to use when displaying costs.
+     * 
+     */
     public Optional<Output<Either<String,MetricType>>> metric() {
         return Optional.ofNullable(this.metric);
     }
@@ -110,6 +138,10 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pivots")
     private @Nullable Output<List<PivotPropertiesArgs>> pivots;
 
+    /**
+     * @return Configuration of 3 sub-views in the Cost Analysis UI.
+     * 
+     */
     public Optional<Output<List<PivotPropertiesArgs>>> pivots() {
         return Optional.ofNullable(this.pivots);
     }
@@ -121,6 +153,10 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
     private @Nullable Output<String> scope;
 
+    /**
+     * @return Cost Management scope to save the view on. This includes &#39;subscriptions/{subscriptionId}&#39; for subscription scope, &#39;subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for resourceGroup scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}&#39; for Billing Account scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}&#39; for Department scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}&#39; for EnrollmentAccount scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}&#39; for BillingProfile scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}&#39; for InvoiceSection scope, &#39;providers/Microsoft.Management/managementGroups/{managementGroupId}&#39; for Management Group scope, &#39;/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}&#39; for ExternalBillingAccount scope, and &#39;/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}&#39; for ExternalSubscription scope.
+     * 
+     */
     public Optional<Output<String>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -132,6 +168,10 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timePeriod")
     private @Nullable Output<ReportConfigTimePeriodArgs> timePeriod;
 
+    /**
+     * @return Has time period for pulling data for the report.
+     * 
+     */
     public Optional<Output<ReportConfigTimePeriodArgs>> timePeriod() {
         return Optional.ofNullable(this.timePeriod);
     }
@@ -143,6 +183,10 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeframe", required=true)
     private Output<Either<String,ReportTimeframeType>> timeframe;
 
+    /**
+     * @return The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+     * 
+     */
     public Output<Either<String,ReportTimeframeType>> timeframe() {
         return this.timeframe;
     }
@@ -154,6 +198,10 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<Either<String,ReportType>> type;
 
+    /**
+     * @return The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.
+     * 
+     */
     public Output<Either<String,ReportType>> type() {
         return this.type;
     }
@@ -165,6 +213,10 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="viewName")
     private @Nullable Output<String> viewName;
 
+    /**
+     * @return View name
+     * 
+     */
     public Optional<Output<String>> viewName() {
         return Optional.ofNullable(this.viewName);
     }
@@ -205,167 +257,395 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ViewArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accumulated Show costs accumulated over time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accumulated(@Nullable Output<Either<String,AccumulatedType>> accumulated) {
             $.accumulated = accumulated;
             return this;
         }
 
+        /**
+         * @param accumulated Show costs accumulated over time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accumulated(Either<String,AccumulatedType> accumulated) {
             return accumulated(Output.of(accumulated));
         }
 
+        /**
+         * @param accumulated Show costs accumulated over time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accumulated(String accumulated) {
             return accumulated(Either.ofLeft(accumulated));
         }
 
+        /**
+         * @param accumulated Show costs accumulated over time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accumulated(AccumulatedType accumulated) {
             return accumulated(Either.ofRight(accumulated));
         }
 
+        /**
+         * @param chart Chart type of the main view in Cost Analysis. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chart(@Nullable Output<Either<String,ChartType>> chart) {
             $.chart = chart;
             return this;
         }
 
+        /**
+         * @param chart Chart type of the main view in Cost Analysis. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chart(Either<String,ChartType> chart) {
             return chart(Output.of(chart));
         }
 
+        /**
+         * @param chart Chart type of the main view in Cost Analysis. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chart(String chart) {
             return chart(Either.ofLeft(chart));
         }
 
+        /**
+         * @param chart Chart type of the main view in Cost Analysis. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chart(ChartType chart) {
             return chart(Either.ofRight(chart));
         }
 
+        /**
+         * @param dataSet Has definition for data in this report config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSet(@Nullable Output<ReportConfigDatasetArgs> dataSet) {
             $.dataSet = dataSet;
             return this;
         }
 
+        /**
+         * @param dataSet Has definition for data in this report config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSet(ReportConfigDatasetArgs dataSet) {
             return dataSet(Output.of(dataSet));
         }
 
+        /**
+         * @param displayName User input name of the view. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User input name of the view. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param eTag eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(@Nullable Output<String> eTag) {
             $.eTag = eTag;
             return this;
         }
 
+        /**
+         * @param eTag eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(String eTag) {
             return eTag(Output.of(eTag));
         }
 
+        /**
+         * @param kpis List of KPIs to show in Cost Analysis UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kpis(@Nullable Output<List<KpiPropertiesArgs>> kpis) {
             $.kpis = kpis;
             return this;
         }
 
+        /**
+         * @param kpis List of KPIs to show in Cost Analysis UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kpis(List<KpiPropertiesArgs> kpis) {
             return kpis(Output.of(kpis));
         }
 
+        /**
+         * @param kpis List of KPIs to show in Cost Analysis UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kpis(KpiPropertiesArgs... kpis) {
             return kpis(List.of(kpis));
         }
 
+        /**
+         * @param metric Metric to use when displaying costs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(@Nullable Output<Either<String,MetricType>> metric) {
             $.metric = metric;
             return this;
         }
 
+        /**
+         * @param metric Metric to use when displaying costs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(Either<String,MetricType> metric) {
             return metric(Output.of(metric));
         }
 
+        /**
+         * @param metric Metric to use when displaying costs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(String metric) {
             return metric(Either.ofLeft(metric));
         }
 
+        /**
+         * @param metric Metric to use when displaying costs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(MetricType metric) {
             return metric(Either.ofRight(metric));
         }
 
+        /**
+         * @param pivots Configuration of 3 sub-views in the Cost Analysis UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pivots(@Nullable Output<List<PivotPropertiesArgs>> pivots) {
             $.pivots = pivots;
             return this;
         }
 
+        /**
+         * @param pivots Configuration of 3 sub-views in the Cost Analysis UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pivots(List<PivotPropertiesArgs> pivots) {
             return pivots(Output.of(pivots));
         }
 
+        /**
+         * @param pivots Configuration of 3 sub-views in the Cost Analysis UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pivots(PivotPropertiesArgs... pivots) {
             return pivots(List.of(pivots));
         }
 
+        /**
+         * @param scope Cost Management scope to save the view on. This includes &#39;subscriptions/{subscriptionId}&#39; for subscription scope, &#39;subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for resourceGroup scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}&#39; for Billing Account scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}&#39; for Department scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}&#39; for EnrollmentAccount scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}&#39; for BillingProfile scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}&#39; for InvoiceSection scope, &#39;providers/Microsoft.Management/managementGroups/{managementGroupId}&#39; for Management Group scope, &#39;/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}&#39; for ExternalBillingAccount scope, and &#39;/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}&#39; for ExternalSubscription scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Cost Management scope to save the view on. This includes &#39;subscriptions/{subscriptionId}&#39; for subscription scope, &#39;subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for resourceGroup scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}&#39; for Billing Account scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}&#39; for Department scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}&#39; for EnrollmentAccount scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}&#39; for BillingProfile scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}&#39; for InvoiceSection scope, &#39;providers/Microsoft.Management/managementGroups/{managementGroupId}&#39; for Management Group scope, &#39;/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}&#39; for ExternalBillingAccount scope, and &#39;/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}&#39; for ExternalSubscription scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param timePeriod Has time period for pulling data for the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePeriod(@Nullable Output<ReportConfigTimePeriodArgs> timePeriod) {
             $.timePeriod = timePeriod;
             return this;
         }
 
+        /**
+         * @param timePeriod Has time period for pulling data for the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePeriod(ReportConfigTimePeriodArgs timePeriod) {
             return timePeriod(Output.of(timePeriod));
         }
 
+        /**
+         * @param timeframe The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeframe(Output<Either<String,ReportTimeframeType>> timeframe) {
             $.timeframe = timeframe;
             return this;
         }
 
+        /**
+         * @param timeframe The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeframe(Either<String,ReportTimeframeType> timeframe) {
             return timeframe(Output.of(timeframe));
         }
 
+        /**
+         * @param timeframe The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeframe(String timeframe) {
             return timeframe(Either.ofLeft(timeframe));
         }
 
+        /**
+         * @param timeframe The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeframe(ReportTimeframeType timeframe) {
             return timeframe(Either.ofRight(timeframe));
         }
 
+        /**
+         * @param type The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,ReportType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ReportType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ReportType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param viewName View name
+         * 
+         * @return builder
+         * 
+         */
         public Builder viewName(@Nullable Output<String> viewName) {
             $.viewName = viewName;
             return this;
         }
 
+        /**
+         * @param viewName View name
+         * 
+         * @return builder
+         * 
+         */
         public Builder viewName(String viewName) {
             return viewName(Output.of(viewName));
         }

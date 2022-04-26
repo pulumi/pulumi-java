@@ -27,6 +27,10 @@ public final class BucketDestinationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="bucketAccountId")
     private @Nullable Output<String> bucketAccountId;
 
+    /**
+     * @return The account ID that owns the destination S3 bucket.
+     * 
+     */
     public Optional<Output<String>> bucketAccountId() {
         return Optional.ofNullable(this.bucketAccountId);
     }
@@ -38,6 +42,10 @@ public final class BucketDestinationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="bucketArn", required=true)
     private Output<String> bucketArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the bucket to which data is exported.
+     * 
+     */
     public Output<String> bucketArn() {
         return this.bucketArn;
     }
@@ -49,6 +57,10 @@ public final class BucketDestinationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="format", required=true)
     private Output<BucketDestinationFormat> format;
 
+    /**
+     * @return Specifies the file format used when exporting data to Amazon S3.
+     * 
+     */
     public Output<BucketDestinationFormat> format() {
         return this.format;
     }
@@ -60,6 +72,10 @@ public final class BucketDestinationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return The prefix to use when exporting data. The prefix is prepended to all results.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -91,38 +107,86 @@ public final class BucketDestinationArgs extends com.pulumi.resources.ResourceAr
             $ = new BucketDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketAccountId The account ID that owns the destination S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketAccountId(@Nullable Output<String> bucketAccountId) {
             $.bucketAccountId = bucketAccountId;
             return this;
         }
 
+        /**
+         * @param bucketAccountId The account ID that owns the destination S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketAccountId(String bucketAccountId) {
             return bucketAccountId(Output.of(bucketAccountId));
         }
 
+        /**
+         * @param bucketArn The Amazon Resource Name (ARN) of the bucket to which data is exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketArn(Output<String> bucketArn) {
             $.bucketArn = bucketArn;
             return this;
         }
 
+        /**
+         * @param bucketArn The Amazon Resource Name (ARN) of the bucket to which data is exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketArn(String bucketArn) {
             return bucketArn(Output.of(bucketArn));
         }
 
+        /**
+         * @param format Specifies the file format used when exporting data to Amazon S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(Output<BucketDestinationFormat> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format Specifies the file format used when exporting data to Amazon S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(BucketDestinationFormat format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param prefix The prefix to use when exporting data. The prefix is prepended to all results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix The prefix to use when exporting data. The prefix is prepended to all results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }

@@ -23,6 +23,10 @@ public final class ExpressionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Expression type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -34,6 +38,10 @@ public final class ExpressionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Expression value.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class ExpressionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ExpressionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Expression type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value Expression value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

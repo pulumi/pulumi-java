@@ -20,6 +20,10 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends com.p
     @Import(name="azureAvailabilityZone", required=true)
     private Output<String> azureAvailabilityZone;
 
+    /**
+     * @return For a given replica, the Azure availability zone where to provision the control plane VM and the ETCD disk.
+     * 
+     */
     public Output<String> azureAvailabilityZone() {
         return this.azureAvailabilityZone;
     }
@@ -31,6 +35,10 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends com.p
     @Import(name="subnetId", required=true)
     private Output<String> subnetId;
 
+    /**
+     * @return For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+     * 
+     */
     public Output<String> subnetId() {
         return this.subnetId;
     }
@@ -60,20 +68,44 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends com.p
             $ = new AzureClusterControlPlaneReplicaPlacementGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureAvailabilityZone For a given replica, the Azure availability zone where to provision the control plane VM and the ETCD disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureAvailabilityZone(Output<String> azureAvailabilityZone) {
             $.azureAvailabilityZone = azureAvailabilityZone;
             return this;
         }
 
+        /**
+         * @param azureAvailabilityZone For a given replica, the Azure availability zone where to provision the control plane VM and the ETCD disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureAvailabilityZone(String azureAvailabilityZone) {
             return azureAvailabilityZone(Output.of(azureAvailabilityZone));
         }
 
+        /**
+         * @param subnetId For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }

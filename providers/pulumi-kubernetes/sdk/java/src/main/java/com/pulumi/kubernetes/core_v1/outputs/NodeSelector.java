@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class NodeSelector {
     /**
-     * Required. A list of node selector terms. The terms are ORed.
+     * @return Required. A list of node selector terms. The terms are ORed.
      * 
      */
     private final List<NodeSelectorTerm> nodeSelectorTerms;
@@ -22,9 +22,9 @@ public final class NodeSelector {
     }
 
     /**
-     * Required. A list of node selector terms. The terms are ORed.
+     * @return Required. A list of node selector terms. The terms are ORed.
      * 
-    */
+     */
     public List<NodeSelectorTerm> nodeSelectorTerms() {
         return this.nodeSelectorTerms;
     }

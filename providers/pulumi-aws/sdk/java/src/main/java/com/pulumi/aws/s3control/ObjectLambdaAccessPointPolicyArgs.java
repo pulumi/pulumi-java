@@ -29,6 +29,10 @@ public final class ObjectLambdaAccessPointPolicyArgs extends com.pulumi.resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Object Lambda Access Point.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -40,6 +44,10 @@ public final class ObjectLambdaAccessPointPolicyArgs extends com.pulumi.resource
     @Import(name="policy", required=true)
     private Output<String> policy;
 
+    /**
+     * @return The Object Lambda Access Point resource policy document.
+     * 
+     */
     public Output<String> policy() {
         return this.policy;
     }
@@ -79,20 +87,44 @@ public final class ObjectLambdaAccessPointPolicyArgs extends com.pulumi.resource
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param name The name of the Object Lambda Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Object Lambda Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policy The Object Lambda Access Point resource policy document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(Output<String> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy The Object Lambda Access Point resource policy document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(String policy) {
             return policy(Output.of(policy));
         }

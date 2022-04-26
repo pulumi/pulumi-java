@@ -27,6 +27,10 @@ public final class ProviderIgnoreTagsArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyPrefixes")
     private @Nullable Output<List<String>> keyPrefixes;
 
+    /**
+     * @return List of exact resource tag keys to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning the tag in any `tags` attributes and displaying any configuration difference for the tag value. If any resource configuration still has this tag key configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
+     * 
+     */
     public Optional<Output<List<String>>> keyPrefixes() {
         return Optional.ofNullable(this.keyPrefixes);
     }
@@ -38,6 +42,10 @@ public final class ProviderIgnoreTagsArgs extends com.pulumi.resources.ResourceA
     @Import(name="keys")
     private @Nullable Output<List<String>> keys;
 
+    /**
+     * @return List of resource tag key prefixes to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning any tag key matching the prefixes in any `tags` attributes and displaying any configuration difference for those tag values. If any resource configuration still has a tag matching one of the prefixes configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
+     * 
+     */
     public Optional<Output<List<String>>> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -67,28 +75,64 @@ public final class ProviderIgnoreTagsArgs extends com.pulumi.resources.ResourceA
             $ = new ProviderIgnoreTagsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyPrefixes List of exact resource tag keys to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning the tag in any `tags` attributes and displaying any configuration difference for the tag value. If any resource configuration still has this tag key configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPrefixes(@Nullable Output<List<String>> keyPrefixes) {
             $.keyPrefixes = keyPrefixes;
             return this;
         }
 
+        /**
+         * @param keyPrefixes List of exact resource tag keys to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning the tag in any `tags` attributes and displaying any configuration difference for the tag value. If any resource configuration still has this tag key configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPrefixes(List<String> keyPrefixes) {
             return keyPrefixes(Output.of(keyPrefixes));
         }
 
+        /**
+         * @param keyPrefixes List of exact resource tag keys to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning the tag in any `tags` attributes and displaying any configuration difference for the tag value. If any resource configuration still has this tag key configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPrefixes(String... keyPrefixes) {
             return keyPrefixes(List.of(keyPrefixes));
         }
 
+        /**
+         * @param keys List of resource tag key prefixes to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning any tag key matching the prefixes in any `tags` attributes and displaying any configuration difference for those tag values. If any resource configuration still has a tag matching one of the prefixes configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable Output<List<String>> keys) {
             $.keys = keys;
             return this;
         }
 
+        /**
+         * @param keys List of resource tag key prefixes to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning any tag key matching the prefixes in any `tags` attributes and displaying any configuration difference for those tag values. If any resource configuration still has a tag matching one of the prefixes configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(List<String> keys) {
             return keys(Output.of(keys));
         }
 
+        /**
+         * @param keys List of resource tag key prefixes to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning any tag key matching the prefixes in any `tags` attributes and displaying any configuration difference for those tag values. If any resource configuration still has a tag matching one of the prefixes configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(String... keys) {
             return keys(List.of(keys));
         }

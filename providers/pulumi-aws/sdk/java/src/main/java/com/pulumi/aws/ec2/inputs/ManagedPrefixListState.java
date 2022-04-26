@@ -26,6 +26,10 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="addressFamily")
     private @Nullable Output<String> addressFamily;
 
+    /**
+     * @return Address family (`IPv4` or `IPv6`) of this prefix list.
+     * 
+     */
     public Optional<Output<String>> addressFamily() {
         return Optional.ofNullable(this.addressFamily);
     }
@@ -37,6 +41,10 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the prefix list.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -48,6 +56,10 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="entries")
     private @Nullable Output<List<ManagedPrefixListEntryGetArgs>> entries;
 
+    /**
+     * @return Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
+     * 
+     */
     public Optional<Output<List<ManagedPrefixListEntryGetArgs>>> entries() {
         return Optional.ofNullable(this.entries);
     }
@@ -59,6 +71,10 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="maxEntries")
     private @Nullable Output<Integer> maxEntries;
 
+    /**
+     * @return Maximum number of entries that this prefix list can contain.
+     * 
+     */
     public Optional<Output<Integer>> maxEntries() {
         return Optional.ofNullable(this.maxEntries);
     }
@@ -70,6 +86,10 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of this resource. The name must not start with `com.amazonaws`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -81,6 +101,10 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="ownerId")
     private @Nullable Output<String> ownerId;
 
+    /**
+     * @return ID of the AWS account that owns this prefix list.
+     * 
+     */
     public Optional<Output<String>> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
@@ -92,6 +116,10 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -110,6 +138,10 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="version")
     private @Nullable Output<Integer> version;
 
+    /**
+     * @return Latest version of this prefix list.
+     * 
+     */
     public Optional<Output<Integer>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -146,69 +178,159 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
             $ = new ManagedPrefixListState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressFamily Address family (`IPv4` or `IPv6`) of this prefix list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressFamily(@Nullable Output<String> addressFamily) {
             $.addressFamily = addressFamily;
             return this;
         }
 
+        /**
+         * @param addressFamily Address family (`IPv4` or `IPv6`) of this prefix list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressFamily(String addressFamily) {
             return addressFamily(Output.of(addressFamily));
         }
 
+        /**
+         * @param arn ARN of the prefix list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the prefix list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param entries Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entries(@Nullable Output<List<ManagedPrefixListEntryGetArgs>> entries) {
             $.entries = entries;
             return this;
         }
 
+        /**
+         * @param entries Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entries(List<ManagedPrefixListEntryGetArgs> entries) {
             return entries(Output.of(entries));
         }
 
+        /**
+         * @param entries Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entries(ManagedPrefixListEntryGetArgs... entries) {
             return entries(List.of(entries));
         }
 
+        /**
+         * @param maxEntries Maximum number of entries that this prefix list can contain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxEntries(@Nullable Output<Integer> maxEntries) {
             $.maxEntries = maxEntries;
             return this;
         }
 
+        /**
+         * @param maxEntries Maximum number of entries that this prefix list can contain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxEntries(Integer maxEntries) {
             return maxEntries(Output.of(maxEntries));
         }
 
+        /**
+         * @param name Name of this resource. The name must not start with `com.amazonaws`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of this resource. The name must not start with `com.amazonaws`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param ownerId ID of the AWS account that owns this prefix list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(@Nullable Output<String> ownerId) {
             $.ownerId = ownerId;
             return this;
         }
 
+        /**
+         * @param ownerId ID of the AWS account that owns this prefix list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(String ownerId) {
             return ownerId(Output.of(ownerId));
         }
 
+        /**
+         * @param tags Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
@@ -222,11 +344,23 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param version Latest version of this prefix list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<Integer> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Latest version of this prefix list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Integer version) {
             return version(Output.of(version));
         }

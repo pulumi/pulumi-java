@@ -25,6 +25,10 @@ public final class LibraryRequirementsResponse extends com.pulumi.resources.Invo
     @Import(name="content")
     private @Nullable String content;
 
+    /**
+     * @return The library requirements.
+     * 
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
@@ -36,6 +40,10 @@ public final class LibraryRequirementsResponse extends com.pulumi.resources.Invo
     @Import(name="filename")
     private @Nullable String filename;
 
+    /**
+     * @return The filename of the library requirements file.
+     * 
+     */
     public Optional<String> filename() {
         return Optional.ofNullable(this.filename);
     }
@@ -47,6 +55,10 @@ public final class LibraryRequirementsResponse extends com.pulumi.resources.Invo
     @Import(name="time", required=true)
     private String time;
 
+    /**
+     * @return The last update time of the library requirements file.
+     * 
+     */
     public String time() {
         return this.time;
     }
@@ -77,16 +89,34 @@ public final class LibraryRequirementsResponse extends com.pulumi.resources.Invo
             $ = new LibraryRequirementsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The library requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param filename The filename of the library requirements file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filename(@Nullable String filename) {
             $.filename = filename;
             return this;
         }
 
+        /**
+         * @param time The last update time of the library requirements file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(String time) {
             $.time = time;
             return this;

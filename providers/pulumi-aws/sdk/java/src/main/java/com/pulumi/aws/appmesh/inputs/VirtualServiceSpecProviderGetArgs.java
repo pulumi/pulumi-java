@@ -23,6 +23,10 @@ public final class VirtualServiceSpecProviderGetArgs extends com.pulumi.resource
     @Import(name="virtualNode")
     private @Nullable Output<VirtualServiceSpecProviderVirtualNodeGetArgs> virtualNode;
 
+    /**
+     * @return The virtual node associated with a virtual service.
+     * 
+     */
     public Optional<Output<VirtualServiceSpecProviderVirtualNodeGetArgs>> virtualNode() {
         return Optional.ofNullable(this.virtualNode);
     }
@@ -34,6 +38,10 @@ public final class VirtualServiceSpecProviderGetArgs extends com.pulumi.resource
     @Import(name="virtualRouter")
     private @Nullable Output<VirtualServiceSpecProviderVirtualRouterGetArgs> virtualRouter;
 
+    /**
+     * @return The virtual router associated with a virtual service.
+     * 
+     */
     public Optional<Output<VirtualServiceSpecProviderVirtualRouterGetArgs>> virtualRouter() {
         return Optional.ofNullable(this.virtualRouter);
     }
@@ -63,20 +71,44 @@ public final class VirtualServiceSpecProviderGetArgs extends com.pulumi.resource
             $ = new VirtualServiceSpecProviderGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param virtualNode The virtual node associated with a virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNode(@Nullable Output<VirtualServiceSpecProviderVirtualNodeGetArgs> virtualNode) {
             $.virtualNode = virtualNode;
             return this;
         }
 
+        /**
+         * @param virtualNode The virtual node associated with a virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNode(VirtualServiceSpecProviderVirtualNodeGetArgs virtualNode) {
             return virtualNode(Output.of(virtualNode));
         }
 
+        /**
+         * @param virtualRouter The virtual router associated with a virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualRouter(@Nullable Output<VirtualServiceSpecProviderVirtualRouterGetArgs> virtualRouter) {
             $.virtualRouter = virtualRouter;
             return this;
         }
 
+        /**
+         * @param virtualRouter The virtual router associated with a virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualRouter(VirtualServiceSpecProviderVirtualRouterGetArgs virtualRouter) {
             return virtualRouter(Output.of(virtualRouter));
         }

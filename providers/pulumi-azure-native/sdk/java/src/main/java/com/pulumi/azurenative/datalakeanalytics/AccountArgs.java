@@ -33,6 +33,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
     private @Nullable Output<String> accountName;
 
+    /**
+     * @return The name of the Data Lake Analytics account.
+     * 
+     */
     public Optional<Output<String>> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -44,6 +48,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computePolicies")
     private @Nullable Output<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies;
 
+    /**
+     * @return The list of compute policies associated with this account.
+     * 
+     */
     public Optional<Output<List<CreateComputePolicyWithAccountParametersArgs>>> computePolicies() {
         return Optional.ofNullable(this.computePolicies);
     }
@@ -55,6 +63,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataLakeStoreAccounts", required=true)
     private Output<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts;
 
+    /**
+     * @return The list of Data Lake Store accounts associated with this account.
+     * 
+     */
     public Output<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts() {
         return this.dataLakeStoreAccounts;
     }
@@ -66,6 +78,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultDataLakeStoreAccount", required=true)
     private Output<String> defaultDataLakeStoreAccount;
 
+    /**
+     * @return The default Data Lake Store account associated with this account.
+     * 
+     */
     public Output<String> defaultDataLakeStoreAccount() {
         return this.defaultDataLakeStoreAccount;
     }
@@ -77,6 +93,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallAllowAzureIps")
     private @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps;
 
+    /**
+     * @return The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
+     * 
+     */
     public Optional<Output<FirewallAllowAzureIpsState>> firewallAllowAzureIps() {
         return Optional.ofNullable(this.firewallAllowAzureIps);
     }
@@ -88,6 +108,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallRules")
     private @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
 
+    /**
+     * @return The list of firewall rules associated with this account.
+     * 
+     */
     public Optional<Output<List<CreateFirewallRuleWithAccountParametersArgs>>> firewallRules() {
         return Optional.ofNullable(this.firewallRules);
     }
@@ -99,6 +123,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallState")
     private @Nullable Output<FirewallState> firewallState;
 
+    /**
+     * @return The current state of the IP address firewall for this account.
+     * 
+     */
     public Optional<Output<FirewallState>> firewallState() {
         return Optional.ofNullable(this.firewallState);
     }
@@ -110,6 +138,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -121,6 +153,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxDegreeOfParallelism")
     private @Nullable Output<Integer> maxDegreeOfParallelism;
 
+    /**
+     * @return The maximum supported degree of parallelism for this account.
+     * 
+     */
     public Optional<Output<Integer>> maxDegreeOfParallelism() {
         return Optional.ofNullable(this.maxDegreeOfParallelism);
     }
@@ -132,6 +168,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxDegreeOfParallelismPerJob")
     private @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
 
+    /**
+     * @return The maximum supported degree of parallelism per job for this account.
+     * 
+     */
     public Optional<Output<Integer>> maxDegreeOfParallelismPerJob() {
         return Optional.ofNullable(this.maxDegreeOfParallelismPerJob);
     }
@@ -143,6 +183,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxJobCount")
     private @Nullable Output<Integer> maxJobCount;
 
+    /**
+     * @return The maximum supported jobs running under the account at the same time.
+     * 
+     */
     public Optional<Output<Integer>> maxJobCount() {
         return Optional.ofNullable(this.maxJobCount);
     }
@@ -154,6 +198,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minPriorityPerJob")
     private @Nullable Output<Integer> minPriorityPerJob;
 
+    /**
+     * @return The minimum supported priority per job for this account.
+     * 
+     */
     public Optional<Output<Integer>> minPriorityPerJob() {
         return Optional.ofNullable(this.minPriorityPerJob);
     }
@@ -165,6 +213,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="newTier")
     private @Nullable Output<TierType> newTier;
 
+    /**
+     * @return The commitment tier for the next month.
+     * 
+     */
     public Optional<Output<TierType>> newTier() {
         return Optional.ofNullable(this.newTier);
     }
@@ -176,6 +228,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryStoreRetention")
     private @Nullable Output<Integer> queryStoreRetention;
 
+    /**
+     * @return The number of days that job metadata is retained.
+     * 
+     */
     public Optional<Output<Integer>> queryStoreRetention() {
         return Optional.ofNullable(this.queryStoreRetention);
     }
@@ -187,6 +243,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the Azure resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -198,6 +258,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccounts")
     private @Nullable Output<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts;
 
+    /**
+     * @return The list of Azure Blob Storage accounts associated with this account.
+     * 
+     */
     public Optional<Output<List<AddStorageAccountWithAccountParametersArgs>>> storageAccounts() {
         return Optional.ofNullable(this.storageAccounts);
     }
@@ -209,6 +273,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -253,171 +321,399 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Data Lake Analytics account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the Data Lake Analytics account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param computePolicies The list of compute policies associated with this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computePolicies(@Nullable Output<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies) {
             $.computePolicies = computePolicies;
             return this;
         }
 
+        /**
+         * @param computePolicies The list of compute policies associated with this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computePolicies(List<CreateComputePolicyWithAccountParametersArgs> computePolicies) {
             return computePolicies(Output.of(computePolicies));
         }
 
+        /**
+         * @param computePolicies The list of compute policies associated with this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computePolicies(CreateComputePolicyWithAccountParametersArgs... computePolicies) {
             return computePolicies(List.of(computePolicies));
         }
 
+        /**
+         * @param dataLakeStoreAccounts The list of Data Lake Store accounts associated with this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLakeStoreAccounts(Output<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts) {
             $.dataLakeStoreAccounts = dataLakeStoreAccounts;
             return this;
         }
 
+        /**
+         * @param dataLakeStoreAccounts The list of Data Lake Store accounts associated with this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLakeStoreAccounts(List<AddDataLakeStoreWithAccountParametersArgs> dataLakeStoreAccounts) {
             return dataLakeStoreAccounts(Output.of(dataLakeStoreAccounts));
         }
 
+        /**
+         * @param dataLakeStoreAccounts The list of Data Lake Store accounts associated with this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLakeStoreAccounts(AddDataLakeStoreWithAccountParametersArgs... dataLakeStoreAccounts) {
             return dataLakeStoreAccounts(List.of(dataLakeStoreAccounts));
         }
 
+        /**
+         * @param defaultDataLakeStoreAccount The default Data Lake Store account associated with this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultDataLakeStoreAccount(Output<String> defaultDataLakeStoreAccount) {
             $.defaultDataLakeStoreAccount = defaultDataLakeStoreAccount;
             return this;
         }
 
+        /**
+         * @param defaultDataLakeStoreAccount The default Data Lake Store account associated with this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultDataLakeStoreAccount(String defaultDataLakeStoreAccount) {
             return defaultDataLakeStoreAccount(Output.of(defaultDataLakeStoreAccount));
         }
 
+        /**
+         * @param firewallAllowAzureIps The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallAllowAzureIps(@Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps) {
             $.firewallAllowAzureIps = firewallAllowAzureIps;
             return this;
         }
 
+        /**
+         * @param firewallAllowAzureIps The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallAllowAzureIps(FirewallAllowAzureIpsState firewallAllowAzureIps) {
             return firewallAllowAzureIps(Output.of(firewallAllowAzureIps));
         }
 
+        /**
+         * @param firewallRules The list of firewall rules associated with this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(@Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules) {
             $.firewallRules = firewallRules;
             return this;
         }
 
+        /**
+         * @param firewallRules The list of firewall rules associated with this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(List<CreateFirewallRuleWithAccountParametersArgs> firewallRules) {
             return firewallRules(Output.of(firewallRules));
         }
 
+        /**
+         * @param firewallRules The list of firewall rules associated with this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(CreateFirewallRuleWithAccountParametersArgs... firewallRules) {
             return firewallRules(List.of(firewallRules));
         }
 
+        /**
+         * @param firewallState The current state of the IP address firewall for this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallState(@Nullable Output<FirewallState> firewallState) {
             $.firewallState = firewallState;
             return this;
         }
 
+        /**
+         * @param firewallState The current state of the IP address firewall for this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallState(FirewallState firewallState) {
             return firewallState(Output.of(firewallState));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param maxDegreeOfParallelism The maximum supported degree of parallelism for this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDegreeOfParallelism(@Nullable Output<Integer> maxDegreeOfParallelism) {
             $.maxDegreeOfParallelism = maxDegreeOfParallelism;
             return this;
         }
 
+        /**
+         * @param maxDegreeOfParallelism The maximum supported degree of parallelism for this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDegreeOfParallelism(Integer maxDegreeOfParallelism) {
             return maxDegreeOfParallelism(Output.of(maxDegreeOfParallelism));
         }
 
+        /**
+         * @param maxDegreeOfParallelismPerJob The maximum supported degree of parallelism per job for this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDegreeOfParallelismPerJob(@Nullable Output<Integer> maxDegreeOfParallelismPerJob) {
             $.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
             return this;
         }
 
+        /**
+         * @param maxDegreeOfParallelismPerJob The maximum supported degree of parallelism per job for this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDegreeOfParallelismPerJob(Integer maxDegreeOfParallelismPerJob) {
             return maxDegreeOfParallelismPerJob(Output.of(maxDegreeOfParallelismPerJob));
         }
 
+        /**
+         * @param maxJobCount The maximum supported jobs running under the account at the same time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxJobCount(@Nullable Output<Integer> maxJobCount) {
             $.maxJobCount = maxJobCount;
             return this;
         }
 
+        /**
+         * @param maxJobCount The maximum supported jobs running under the account at the same time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxJobCount(Integer maxJobCount) {
             return maxJobCount(Output.of(maxJobCount));
         }
 
+        /**
+         * @param minPriorityPerJob The minimum supported priority per job for this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minPriorityPerJob(@Nullable Output<Integer> minPriorityPerJob) {
             $.minPriorityPerJob = minPriorityPerJob;
             return this;
         }
 
+        /**
+         * @param minPriorityPerJob The minimum supported priority per job for this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minPriorityPerJob(Integer minPriorityPerJob) {
             return minPriorityPerJob(Output.of(minPriorityPerJob));
         }
 
+        /**
+         * @param newTier The commitment tier for the next month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newTier(@Nullable Output<TierType> newTier) {
             $.newTier = newTier;
             return this;
         }
 
+        /**
+         * @param newTier The commitment tier for the next month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newTier(TierType newTier) {
             return newTier(Output.of(newTier));
         }
 
+        /**
+         * @param queryStoreRetention The number of days that job metadata is retained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStoreRetention(@Nullable Output<Integer> queryStoreRetention) {
             $.queryStoreRetention = queryStoreRetention;
             return this;
         }
 
+        /**
+         * @param queryStoreRetention The number of days that job metadata is retained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStoreRetention(Integer queryStoreRetention) {
             return queryStoreRetention(Output.of(queryStoreRetention));
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param storageAccounts The list of Azure Blob Storage accounts associated with this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccounts(@Nullable Output<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts) {
             $.storageAccounts = storageAccounts;
             return this;
         }
 
+        /**
+         * @param storageAccounts The list of Azure Blob Storage accounts associated with this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccounts(List<AddStorageAccountWithAccountParametersArgs> storageAccounts) {
             return storageAccounts(Output.of(storageAccounts));
         }
 
+        /**
+         * @param storageAccounts The list of Azure Blob Storage accounts associated with this account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccounts(AddStorageAccountWithAccountParametersArgs... storageAccounts) {
             return storageAccounts(List.of(storageAccounts));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

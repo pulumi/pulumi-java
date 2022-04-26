@@ -34,182 +34,182 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetManagedClusterResult {
     /**
-     * Profile of Azure Active Directory configuration.
+     * @return Profile of Azure Active Directory configuration.
      * 
      */
     private final @Nullable ManagedClusterAADProfileResponse aadProfile;
     /**
-     * Profile of managed cluster add-on.
+     * @return Profile of managed cluster add-on.
      * 
      */
     private final @Nullable Map<String,ManagedClusterAddonProfileResponse> addonProfiles;
     /**
-     * Properties of the agent pool.
+     * @return Properties of the agent pool.
      * 
      */
     private final @Nullable List<ManagedClusterAgentPoolProfileResponse> agentPoolProfiles;
     /**
-     * Access profile for managed cluster API server.
+     * @return Access profile for managed cluster API server.
      * 
      */
     private final @Nullable ManagedClusterAPIServerAccessProfileResponse apiServerAccessProfile;
     /**
-     * Parameters to be applied to the cluster-autoscaler when enabled
+     * @return Parameters to be applied to the cluster-autoscaler when enabled
      * 
      */
     private final @Nullable ManagedClusterPropertiesResponseAutoScalerProfile autoScalerProfile;
     /**
-     * Profile of auto upgrade configuration.
+     * @return Profile of auto upgrade configuration.
      * 
      */
     private final @Nullable ManagedClusterAutoUpgradeProfileResponse autoUpgradeProfile;
     /**
-     * FQDN for the master pool which used by proxy config.
+     * @return FQDN for the master pool which used by proxy config.
      * 
      */
     private final String azurePortalFQDN;
     /**
-     * If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.
+     * @return If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.
      * 
      */
     private final @Nullable Boolean disableLocalAccounts;
     /**
-     * ResourceId of the disk encryption set to use for enabling encryption at rest.
+     * @return ResourceId of the disk encryption set to use for enabling encryption at rest.
      * 
      */
     private final @Nullable String diskEncryptionSetID;
     /**
-     * DNS prefix specified when creating the managed cluster.
+     * @return DNS prefix specified when creating the managed cluster.
      * 
      */
     private final @Nullable String dnsPrefix;
     /**
-     * (DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.
+     * @return (DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.
      * 
      */
     private final @Nullable Boolean enablePodSecurityPolicy;
     /**
-     * Whether to enable Kubernetes Role-Based Access Control.
+     * @return Whether to enable Kubernetes Role-Based Access Control.
      * 
      */
     private final @Nullable Boolean enableRBAC;
     /**
-     * The extended location of the Virtual Machine.
+     * @return The extended location of the Virtual Machine.
      * 
      */
     private final @Nullable ExtendedLocationResponse extendedLocation;
     /**
-     * FQDN for the master pool.
+     * @return FQDN for the master pool.
      * 
      */
     private final String fqdn;
     /**
-     * FQDN subdomain specified when creating private cluster with custom private dns zone.
+     * @return FQDN subdomain specified when creating private cluster with custom private dns zone.
      * 
      */
     private final @Nullable String fqdnSubdomain;
     /**
-     * Configurations for provisioning the cluster with HTTP proxy servers.
+     * @return Configurations for provisioning the cluster with HTTP proxy servers.
      * 
      */
     private final @Nullable ManagedClusterHTTPProxyConfigResponse httpProxyConfig;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * The identity of the managed cluster, if configured.
+     * @return The identity of the managed cluster, if configured.
      * 
      */
     private final @Nullable ManagedClusterIdentityResponse identity;
     /**
-     * Identities associated with the cluster.
+     * @return Identities associated with the cluster.
      * 
      */
     private final @Nullable Map<String,ManagedClusterPropertiesResponseIdentityProfile> identityProfile;
     /**
-     * Version of Kubernetes specified when creating the managed cluster.
+     * @return Version of Kubernetes specified when creating the managed cluster.
      * 
      */
     private final @Nullable String kubernetesVersion;
     /**
-     * Profile for Linux VMs in the container service cluster.
+     * @return Profile for Linux VMs in the container service cluster.
      * 
      */
     private final @Nullable ContainerServiceLinuxProfileResponse linuxProfile;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * The max number of agent pools for the managed cluster.
+     * @return The max number of agent pools for the managed cluster.
      * 
      */
     private final Integer maxAgentPools;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * Profile of network configuration.
+     * @return Profile of network configuration.
      * 
      */
     private final @Nullable ContainerServiceNetworkProfileResponse networkProfile;
     /**
-     * Name of the resource group containing agent pool nodes.
+     * @return Name of the resource group containing agent pool nodes.
      * 
      */
     private final @Nullable String nodeResourceGroup;
     /**
-     * Profile of managed cluster pod identity.
+     * @return Profile of managed cluster pod identity.
      * 
      */
     private final @Nullable ManagedClusterPodIdentityProfileResponse podIdentityProfile;
     /**
-     * Represents the Power State of the cluster
+     * @return Represents the Power State of the cluster
      * 
      */
     private final PowerStateResponse powerState;
     /**
-     * FQDN of private cluster.
+     * @return FQDN of private cluster.
      * 
      */
     private final String privateFQDN;
     /**
-     * Private link resources associated with the cluster.
+     * @return Private link resources associated with the cluster.
      * 
      */
     private final @Nullable List<PrivateLinkResourceResponse> privateLinkResources;
     /**
-     * The current deployment or provisioning state, which only appears in the response.
+     * @return The current deployment or provisioning state, which only appears in the response.
      * 
      */
     private final String provisioningState;
     /**
-     * Information about a service principal identity for the cluster to use for manipulating Azure APIs.
+     * @return Information about a service principal identity for the cluster to use for manipulating Azure APIs.
      * 
      */
     private final @Nullable ManagedClusterServicePrincipalProfileResponse servicePrincipalProfile;
     /**
-     * The managed cluster SKU.
+     * @return The managed cluster SKU.
      * 
      */
     private final @Nullable ManagedClusterSKUResponse sku;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
     /**
-     * Profile for Windows VMs in the container service cluster.
+     * @return Profile for Windows VMs in the container service cluster.
      * 
      */
     private final @Nullable ManagedClusterWindowsProfileResponse windowsProfile;
@@ -291,254 +291,254 @@ public final class GetManagedClusterResult {
     }
 
     /**
-     * Profile of Azure Active Directory configuration.
+     * @return Profile of Azure Active Directory configuration.
      * 
-    */
+     */
     public Optional<ManagedClusterAADProfileResponse> aadProfile() {
         return Optional.ofNullable(this.aadProfile);
     }
     /**
-     * Profile of managed cluster add-on.
+     * @return Profile of managed cluster add-on.
      * 
-    */
+     */
     public Map<String,ManagedClusterAddonProfileResponse> addonProfiles() {
         return this.addonProfiles == null ? Map.of() : this.addonProfiles;
     }
     /**
-     * Properties of the agent pool.
+     * @return Properties of the agent pool.
      * 
-    */
+     */
     public List<ManagedClusterAgentPoolProfileResponse> agentPoolProfiles() {
         return this.agentPoolProfiles == null ? List.of() : this.agentPoolProfiles;
     }
     /**
-     * Access profile for managed cluster API server.
+     * @return Access profile for managed cluster API server.
      * 
-    */
+     */
     public Optional<ManagedClusterAPIServerAccessProfileResponse> apiServerAccessProfile() {
         return Optional.ofNullable(this.apiServerAccessProfile);
     }
     /**
-     * Parameters to be applied to the cluster-autoscaler when enabled
+     * @return Parameters to be applied to the cluster-autoscaler when enabled
      * 
-    */
+     */
     public Optional<ManagedClusterPropertiesResponseAutoScalerProfile> autoScalerProfile() {
         return Optional.ofNullable(this.autoScalerProfile);
     }
     /**
-     * Profile of auto upgrade configuration.
+     * @return Profile of auto upgrade configuration.
      * 
-    */
+     */
     public Optional<ManagedClusterAutoUpgradeProfileResponse> autoUpgradeProfile() {
         return Optional.ofNullable(this.autoUpgradeProfile);
     }
     /**
-     * FQDN for the master pool which used by proxy config.
+     * @return FQDN for the master pool which used by proxy config.
      * 
-    */
+     */
     public String azurePortalFQDN() {
         return this.azurePortalFQDN;
     }
     /**
-     * If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.
+     * @return If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.
      * 
-    */
+     */
     public Optional<Boolean> disableLocalAccounts() {
         return Optional.ofNullable(this.disableLocalAccounts);
     }
     /**
-     * ResourceId of the disk encryption set to use for enabling encryption at rest.
+     * @return ResourceId of the disk encryption set to use for enabling encryption at rest.
      * 
-    */
+     */
     public Optional<String> diskEncryptionSetID() {
         return Optional.ofNullable(this.diskEncryptionSetID);
     }
     /**
-     * DNS prefix specified when creating the managed cluster.
+     * @return DNS prefix specified when creating the managed cluster.
      * 
-    */
+     */
     public Optional<String> dnsPrefix() {
         return Optional.ofNullable(this.dnsPrefix);
     }
     /**
-     * (DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.
+     * @return (DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.
      * 
-    */
+     */
     public Optional<Boolean> enablePodSecurityPolicy() {
         return Optional.ofNullable(this.enablePodSecurityPolicy);
     }
     /**
-     * Whether to enable Kubernetes Role-Based Access Control.
+     * @return Whether to enable Kubernetes Role-Based Access Control.
      * 
-    */
+     */
     public Optional<Boolean> enableRBAC() {
         return Optional.ofNullable(this.enableRBAC);
     }
     /**
-     * The extended location of the Virtual Machine.
+     * @return The extended location of the Virtual Machine.
      * 
-    */
+     */
     public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
-     * FQDN for the master pool.
+     * @return FQDN for the master pool.
      * 
-    */
+     */
     public String fqdn() {
         return this.fqdn;
     }
     /**
-     * FQDN subdomain specified when creating private cluster with custom private dns zone.
+     * @return FQDN subdomain specified when creating private cluster with custom private dns zone.
      * 
-    */
+     */
     public Optional<String> fqdnSubdomain() {
         return Optional.ofNullable(this.fqdnSubdomain);
     }
     /**
-     * Configurations for provisioning the cluster with HTTP proxy servers.
+     * @return Configurations for provisioning the cluster with HTTP proxy servers.
      * 
-    */
+     */
     public Optional<ManagedClusterHTTPProxyConfigResponse> httpProxyConfig() {
         return Optional.ofNullable(this.httpProxyConfig);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the managed cluster, if configured.
+     * @return The identity of the managed cluster, if configured.
      * 
-    */
+     */
     public Optional<ManagedClusterIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Identities associated with the cluster.
+     * @return Identities associated with the cluster.
      * 
-    */
+     */
     public Map<String,ManagedClusterPropertiesResponseIdentityProfile> identityProfile() {
         return this.identityProfile == null ? Map.of() : this.identityProfile;
     }
     /**
-     * Version of Kubernetes specified when creating the managed cluster.
+     * @return Version of Kubernetes specified when creating the managed cluster.
      * 
-    */
+     */
     public Optional<String> kubernetesVersion() {
         return Optional.ofNullable(this.kubernetesVersion);
     }
     /**
-     * Profile for Linux VMs in the container service cluster.
+     * @return Profile for Linux VMs in the container service cluster.
      * 
-    */
+     */
     public Optional<ContainerServiceLinuxProfileResponse> linuxProfile() {
         return Optional.ofNullable(this.linuxProfile);
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The max number of agent pools for the managed cluster.
+     * @return The max number of agent pools for the managed cluster.
      * 
-    */
+     */
     public Integer maxAgentPools() {
         return this.maxAgentPools;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Profile of network configuration.
+     * @return Profile of network configuration.
      * 
-    */
+     */
     public Optional<ContainerServiceNetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
-     * Name of the resource group containing agent pool nodes.
+     * @return Name of the resource group containing agent pool nodes.
      * 
-    */
+     */
     public Optional<String> nodeResourceGroup() {
         return Optional.ofNullable(this.nodeResourceGroup);
     }
     /**
-     * Profile of managed cluster pod identity.
+     * @return Profile of managed cluster pod identity.
      * 
-    */
+     */
     public Optional<ManagedClusterPodIdentityProfileResponse> podIdentityProfile() {
         return Optional.ofNullable(this.podIdentityProfile);
     }
     /**
-     * Represents the Power State of the cluster
+     * @return Represents the Power State of the cluster
      * 
-    */
+     */
     public PowerStateResponse powerState() {
         return this.powerState;
     }
     /**
-     * FQDN of private cluster.
+     * @return FQDN of private cluster.
      * 
-    */
+     */
     public String privateFQDN() {
         return this.privateFQDN;
     }
     /**
-     * Private link resources associated with the cluster.
+     * @return Private link resources associated with the cluster.
      * 
-    */
+     */
     public List<PrivateLinkResourceResponse> privateLinkResources() {
         return this.privateLinkResources == null ? List.of() : this.privateLinkResources;
     }
     /**
-     * The current deployment or provisioning state, which only appears in the response.
+     * @return The current deployment or provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Information about a service principal identity for the cluster to use for manipulating Azure APIs.
+     * @return Information about a service principal identity for the cluster to use for manipulating Azure APIs.
      * 
-    */
+     */
     public Optional<ManagedClusterServicePrincipalProfileResponse> servicePrincipalProfile() {
         return Optional.ofNullable(this.servicePrincipalProfile);
     }
     /**
-     * The managed cluster SKU.
+     * @return The managed cluster SKU.
      * 
-    */
+     */
     public Optional<ManagedClusterSKUResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Profile for Windows VMs in the container service cluster.
+     * @return Profile for Windows VMs in the container service cluster.
      * 
-    */
+     */
     public Optional<ManagedClusterWindowsProfileResponse> windowsProfile() {
         return Optional.ofNullable(this.windowsProfile);
     }

@@ -25,6 +25,10 @@ public final class RosettaNetPipActivitySettingsResponse extends com.pulumi.reso
     @Import(name="acknowledgmentOfReceiptSettings", required=true)
     private RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings;
 
+    /**
+     * @return The RosettaNet ProcessConfiguration acknowledgement settings.
+     * 
+     */
     public RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings() {
         return this.acknowledgmentOfReceiptSettings;
     }
@@ -36,6 +40,10 @@ public final class RosettaNetPipActivitySettingsResponse extends com.pulumi.reso
     @Import(name="activityBehavior", required=true)
     private RosettaNetPipActivityBehaviorResponse activityBehavior;
 
+    /**
+     * @return The RosettaNet ProcessConfiguration activity behavior.
+     * 
+     */
     public RosettaNetPipActivityBehaviorResponse activityBehavior() {
         return this.activityBehavior;
     }
@@ -47,6 +55,10 @@ public final class RosettaNetPipActivitySettingsResponse extends com.pulumi.reso
     @Import(name="activityType", required=true)
     private String activityType;
 
+    /**
+     * @return The RosettaNet ProcessConfiguration activity type.
+     * 
+     */
     public String activityType() {
         return this.activityType;
     }
@@ -77,16 +89,34 @@ public final class RosettaNetPipActivitySettingsResponse extends com.pulumi.reso
             $ = new RosettaNetPipActivitySettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acknowledgmentOfReceiptSettings The RosettaNet ProcessConfiguration acknowledgement settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acknowledgmentOfReceiptSettings(RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings) {
             $.acknowledgmentOfReceiptSettings = acknowledgmentOfReceiptSettings;
             return this;
         }
 
+        /**
+         * @param activityBehavior The RosettaNet ProcessConfiguration activity behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activityBehavior(RosettaNetPipActivityBehaviorResponse activityBehavior) {
             $.activityBehavior = activityBehavior;
             return this;
         }
 
+        /**
+         * @param activityType The RosettaNet ProcessConfiguration activity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activityType(String activityType) {
             $.activityType = activityType;
             return this;

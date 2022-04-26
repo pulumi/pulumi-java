@@ -26,6 +26,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends co
     @Import(name="boundingBoxEvaluationOptions")
     private @Nullable Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
 
+    /**
+     * @return Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.
+     * 
+     */
     public Optional<Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs>> boundingBoxEvaluationOptions() {
         return Optional.ofNullable(this.boundingBoxEvaluationOptions);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends co
             $ = new GoogleCloudDatalabelingV1beta1EvaluationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param boundingBoxEvaluationOptions Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boundingBoxEvaluationOptions(@Nullable Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions) {
             $.boundingBoxEvaluationOptions = boundingBoxEvaluationOptions;
             return this;
         }
 
+        /**
+         * @param boundingBoxEvaluationOptions Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boundingBoxEvaluationOptions(GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs boundingBoxEvaluationOptions) {
             return boundingBoxEvaluationOptions(Output.of(boundingBoxEvaluationOptions));
         }

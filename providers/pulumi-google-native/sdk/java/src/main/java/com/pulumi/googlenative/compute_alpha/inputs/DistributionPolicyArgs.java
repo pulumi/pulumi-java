@@ -24,6 +24,10 @@ public final class DistributionPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetShape")
     private @Nullable Output<DistributionPolicyTargetShape> targetShape;
 
+    /**
+     * @return The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
+     * 
+     */
     public Optional<Output<DistributionPolicyTargetShape>> targetShape() {
         return Optional.ofNullable(this.targetShape);
     }
@@ -35,6 +39,10 @@ public final class DistributionPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="zones")
     private @Nullable Output<List<DistributionPolicyZoneConfigurationArgs>> zones;
 
+    /**
+     * @return Zones where the regional managed instance group will create and manage its instances.
+     * 
+     */
     public Optional<Output<List<DistributionPolicyZoneConfigurationArgs>>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -64,24 +72,54 @@ public final class DistributionPolicyArgs extends com.pulumi.resources.ResourceA
             $ = new DistributionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetShape The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetShape(@Nullable Output<DistributionPolicyTargetShape> targetShape) {
             $.targetShape = targetShape;
             return this;
         }
 
+        /**
+         * @param targetShape The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetShape(DistributionPolicyTargetShape targetShape) {
             return targetShape(Output.of(targetShape));
         }
 
+        /**
+         * @param zones Zones where the regional managed instance group will create and manage its instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable Output<List<DistributionPolicyZoneConfigurationArgs>> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones Zones where the regional managed instance group will create and manage its instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(List<DistributionPolicyZoneConfigurationArgs> zones) {
             return zones(Output.of(zones));
         }
 
+        /**
+         * @param zones Zones where the regional managed instance group will create and manage its instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(DistributionPolicyZoneConfigurationArgs... zones) {
             return zones(List.of(zones));
         }

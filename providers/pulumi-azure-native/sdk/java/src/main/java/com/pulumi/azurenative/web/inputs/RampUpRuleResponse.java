@@ -27,6 +27,10 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="actionHostName")
     private @Nullable String actionHostName;
 
+    /**
+     * @return Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.
+     * 
+     */
     public Optional<String> actionHostName() {
         return Optional.ofNullable(this.actionHostName);
     }
@@ -39,6 +43,11 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="changeDecisionCallbackUrl")
     private @Nullable String changeDecisionCallbackUrl;
 
+    /**
+     * @return Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts.
+     * https://www.siteextensions.net/packages/TiPCallback/
+     * 
+     */
     public Optional<String> changeDecisionCallbackUrl() {
         return Optional.ofNullable(this.changeDecisionCallbackUrl);
     }
@@ -50,6 +59,10 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="changeIntervalInMinutes")
     private @Nullable Integer changeIntervalInMinutes;
 
+    /**
+     * @return Specifies interval in minutes to reevaluate ReroutePercentage.
+     * 
+     */
     public Optional<Integer> changeIntervalInMinutes() {
         return Optional.ofNullable(this.changeIntervalInMinutes);
     }
@@ -63,6 +76,12 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="changeStep")
     private @Nullable Double changeStep;
 
+    /**
+     * @return In auto ramp up scenario this is the step to add/remove from &lt;code&gt;ReroutePercentage&lt;/code&gt; until it reaches \n&lt;code&gt;MinReroutePercentage&lt;/code&gt; or
+     * &lt;code&gt;MaxReroutePercentage&lt;/code&gt;. Site metrics are checked every N minutes specified in &lt;code&gt;ChangeIntervalInMinutes&lt;/code&gt;.\nCustom decision algorithm
+     * can be provided in TiPCallback site extension which URL can be specified in &lt;code&gt;ChangeDecisionCallbackUrl&lt;/code&gt;.
+     * 
+     */
     public Optional<Double> changeStep() {
         return Optional.ofNullable(this.changeStep);
     }
@@ -74,6 +93,10 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxReroutePercentage")
     private @Nullable Double maxReroutePercentage;
 
+    /**
+     * @return Specifies upper boundary below which ReroutePercentage will stay.
+     * 
+     */
     public Optional<Double> maxReroutePercentage() {
         return Optional.ofNullable(this.maxReroutePercentage);
     }
@@ -85,6 +108,10 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minReroutePercentage")
     private @Nullable Double minReroutePercentage;
 
+    /**
+     * @return Specifies lower boundary above which ReroutePercentage will stay.
+     * 
+     */
     public Optional<Double> minReroutePercentage() {
         return Optional.ofNullable(this.minReroutePercentage);
     }
@@ -96,6 +123,10 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -107,6 +138,10 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="reroutePercentage")
     private @Nullable Double reroutePercentage;
 
+    /**
+     * @return Percentage of the traffic which will be redirected to &lt;code&gt;ActionHostName&lt;/code&gt;.
+     * 
+     */
     public Optional<Double> reroutePercentage() {
         return Optional.ofNullable(this.reroutePercentage);
     }
@@ -142,41 +177,92 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RampUpRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionHostName Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionHostName(@Nullable String actionHostName) {
             $.actionHostName = actionHostName;
             return this;
         }
 
+        /**
+         * @param changeDecisionCallbackUrl Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts.
+         * https://www.siteextensions.net/packages/TiPCallback/
+         * 
+         * @return builder
+         * 
+         */
         public Builder changeDecisionCallbackUrl(@Nullable String changeDecisionCallbackUrl) {
             $.changeDecisionCallbackUrl = changeDecisionCallbackUrl;
             return this;
         }
 
+        /**
+         * @param changeIntervalInMinutes Specifies interval in minutes to reevaluate ReroutePercentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder changeIntervalInMinutes(@Nullable Integer changeIntervalInMinutes) {
             $.changeIntervalInMinutes = changeIntervalInMinutes;
             return this;
         }
 
+        /**
+         * @param changeStep In auto ramp up scenario this is the step to add/remove from &lt;code&gt;ReroutePercentage&lt;/code&gt; until it reaches \n&lt;code&gt;MinReroutePercentage&lt;/code&gt; or
+         * &lt;code&gt;MaxReroutePercentage&lt;/code&gt;. Site metrics are checked every N minutes specified in &lt;code&gt;ChangeIntervalInMinutes&lt;/code&gt;.\nCustom decision algorithm
+         * can be provided in TiPCallback site extension which URL can be specified in &lt;code&gt;ChangeDecisionCallbackUrl&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder changeStep(@Nullable Double changeStep) {
             $.changeStep = changeStep;
             return this;
         }
 
+        /**
+         * @param maxReroutePercentage Specifies upper boundary below which ReroutePercentage will stay.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxReroutePercentage(@Nullable Double maxReroutePercentage) {
             $.maxReroutePercentage = maxReroutePercentage;
             return this;
         }
 
+        /**
+         * @param minReroutePercentage Specifies lower boundary above which ReroutePercentage will stay.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReroutePercentage(@Nullable Double minReroutePercentage) {
             $.minReroutePercentage = minReroutePercentage;
             return this;
         }
 
+        /**
+         * @param name Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param reroutePercentage Percentage of the traffic which will be redirected to &lt;code&gt;ActionHostName&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reroutePercentage(@Nullable Double reroutePercentage) {
             $.reroutePercentage = reroutePercentage;
             return this;

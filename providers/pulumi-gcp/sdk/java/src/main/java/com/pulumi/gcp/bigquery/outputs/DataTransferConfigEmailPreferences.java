@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class DataTransferConfigEmailPreferences {
     /**
-     * If true, email notifications will be sent on transfer run failures.
+     * @return If true, email notifications will be sent on transfer run failures.
      * 
      */
     private final Boolean enableFailureEmail;
@@ -21,9 +21,9 @@ public final class DataTransferConfigEmailPreferences {
     }
 
     /**
-     * If true, email notifications will be sent on transfer run failures.
+     * @return If true, email notifications will be sent on transfer run failures.
      * 
-    */
+     */
     public Boolean enableFailureEmail() {
         return this.enableFailureEmail;
     }

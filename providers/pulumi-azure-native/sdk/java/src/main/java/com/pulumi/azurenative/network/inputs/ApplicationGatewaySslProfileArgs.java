@@ -30,6 +30,10 @@ public final class ApplicationGatewaySslProfileArgs extends com.pulumi.resources
     @Import(name="clientAuthConfiguration")
     private @Nullable Output<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration;
 
+    /**
+     * @return Client authentication configuration of the application gateway resource.
+     * 
+     */
     public Optional<Output<ApplicationGatewayClientAuthConfigurationArgs>> clientAuthConfiguration() {
         return Optional.ofNullable(this.clientAuthConfiguration);
     }
@@ -41,6 +45,10 @@ public final class ApplicationGatewaySslProfileArgs extends com.pulumi.resources
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -52,6 +60,10 @@ public final class ApplicationGatewaySslProfileArgs extends com.pulumi.resources
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the SSL profile that is unique within an Application Gateway.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -63,6 +75,10 @@ public final class ApplicationGatewaySslProfileArgs extends com.pulumi.resources
     @Import(name="sslPolicy")
     private @Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy;
 
+    /**
+     * @return SSL policy of the application gateway resource.
+     * 
+     */
     public Optional<Output<ApplicationGatewaySslPolicyArgs>> sslPolicy() {
         return Optional.ofNullable(this.sslPolicy);
     }
@@ -74,6 +90,10 @@ public final class ApplicationGatewaySslProfileArgs extends com.pulumi.resources
     @Import(name="trustedClientCertificates")
     private @Nullable Output<List<SubResourceArgs>> trustedClientCertificates;
 
+    /**
+     * @return Array of references to application gateway trusted client certificates.
+     * 
+     */
     public Optional<Output<List<SubResourceArgs>>> trustedClientCertificates() {
         return Optional.ofNullable(this.trustedClientCertificates);
     }
@@ -106,51 +126,117 @@ public final class ApplicationGatewaySslProfileArgs extends com.pulumi.resources
             $ = new ApplicationGatewaySslProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientAuthConfiguration Client authentication configuration of the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAuthConfiguration(@Nullable Output<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration) {
             $.clientAuthConfiguration = clientAuthConfiguration;
             return this;
         }
 
+        /**
+         * @param clientAuthConfiguration Client authentication configuration of the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAuthConfiguration(ApplicationGatewayClientAuthConfigurationArgs clientAuthConfiguration) {
             return clientAuthConfiguration(Output.of(clientAuthConfiguration));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name of the SSL profile that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the SSL profile that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param sslPolicy SSL policy of the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslPolicy(@Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy) {
             $.sslPolicy = sslPolicy;
             return this;
         }
 
+        /**
+         * @param sslPolicy SSL policy of the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslPolicy(ApplicationGatewaySslPolicyArgs sslPolicy) {
             return sslPolicy(Output.of(sslPolicy));
         }
 
+        /**
+         * @param trustedClientCertificates Array of references to application gateway trusted client certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedClientCertificates(@Nullable Output<List<SubResourceArgs>> trustedClientCertificates) {
             $.trustedClientCertificates = trustedClientCertificates;
             return this;
         }
 
+        /**
+         * @param trustedClientCertificates Array of references to application gateway trusted client certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedClientCertificates(List<SubResourceArgs> trustedClientCertificates) {
             return trustedClientCertificates(Output.of(trustedClientCertificates));
         }
 
+        /**
+         * @param trustedClientCertificates Array of references to application gateway trusted client certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedClientCertificates(SubResourceArgs... trustedClientCertificates) {
             return trustedClientCertificates(List.of(trustedClientCertificates));
         }

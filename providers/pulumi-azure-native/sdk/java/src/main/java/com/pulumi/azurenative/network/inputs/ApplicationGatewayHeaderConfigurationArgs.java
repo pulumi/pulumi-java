@@ -26,6 +26,10 @@ public final class ApplicationGatewayHeaderConfigurationArgs extends com.pulumi.
     @Import(name="headerName")
     private @Nullable Output<String> headerName;
 
+    /**
+     * @return Header name of the header configuration.
+     * 
+     */
     public Optional<Output<String>> headerName() {
         return Optional.ofNullable(this.headerName);
     }
@@ -37,6 +41,10 @@ public final class ApplicationGatewayHeaderConfigurationArgs extends com.pulumi.
     @Import(name="headerValue")
     private @Nullable Output<String> headerValue;
 
+    /**
+     * @return Header value of the header configuration.
+     * 
+     */
     public Optional<Output<String>> headerValue() {
         return Optional.ofNullable(this.headerValue);
     }
@@ -66,20 +74,44 @@ public final class ApplicationGatewayHeaderConfigurationArgs extends com.pulumi.
             $ = new ApplicationGatewayHeaderConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerName Header name of the header configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(@Nullable Output<String> headerName) {
             $.headerName = headerName;
             return this;
         }
 
+        /**
+         * @param headerName Header name of the header configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             return headerName(Output.of(headerName));
         }
 
+        /**
+         * @param headerValue Header value of the header configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerValue(@Nullable Output<String> headerValue) {
             $.headerValue = headerValue;
             return this;
         }
 
+        /**
+         * @param headerValue Header value of the header configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerValue(String headerValue) {
             return headerValue(Output.of(headerValue));
         }

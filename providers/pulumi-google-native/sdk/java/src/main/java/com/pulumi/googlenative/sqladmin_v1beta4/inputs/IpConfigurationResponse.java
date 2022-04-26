@@ -26,6 +26,10 @@ public final class IpConfigurationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="allocatedIpRange", required=true)
     private String allocatedIpRange;
 
+    /**
+     * @return The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?.`
+     * 
+     */
     public String allocatedIpRange() {
         return this.allocatedIpRange;
     }
@@ -37,6 +41,10 @@ public final class IpConfigurationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="authorizedNetworks", required=true)
     private List<AclEntryResponse> authorizedNetworks;
 
+    /**
+     * @return The list of external networks that are allowed to connect to the instance using the IP. In &#39;CIDR&#39; notation, also known as &#39;slash&#39; notation (for example: `157.197.200.0/24`).
+     * 
+     */
     public List<AclEntryResponse> authorizedNetworks() {
         return this.authorizedNetworks;
     }
@@ -48,6 +56,10 @@ public final class IpConfigurationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ipv4Enabled", required=true)
     private Boolean ipv4Enabled;
 
+    /**
+     * @return Whether the instance is assigned a public IP address or not.
+     * 
+     */
     public Boolean ipv4Enabled() {
         return this.ipv4Enabled;
     }
@@ -59,6 +71,10 @@ public final class IpConfigurationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="privateNetwork", required=true)
     private String privateNetwork;
 
+    /**
+     * @return The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `/projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.
+     * 
+     */
     public String privateNetwork() {
         return this.privateNetwork;
     }
@@ -70,6 +86,10 @@ public final class IpConfigurationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="requireSsl", required=true)
     private Boolean requireSsl;
 
+    /**
+     * @return Whether SSL connections over IP are enforced or not.
+     * 
+     */
     public Boolean requireSsl() {
         return this.requireSsl;
     }
@@ -102,30 +122,66 @@ public final class IpConfigurationResponse extends com.pulumi.resources.InvokeAr
             $ = new IpConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocatedIpRange The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?.`
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocatedIpRange(String allocatedIpRange) {
             $.allocatedIpRange = allocatedIpRange;
             return this;
         }
 
+        /**
+         * @param authorizedNetworks The list of external networks that are allowed to connect to the instance using the IP. In &#39;CIDR&#39; notation, also known as &#39;slash&#39; notation (for example: `157.197.200.0/24`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedNetworks(List<AclEntryResponse> authorizedNetworks) {
             $.authorizedNetworks = authorizedNetworks;
             return this;
         }
 
+        /**
+         * @param authorizedNetworks The list of external networks that are allowed to connect to the instance using the IP. In &#39;CIDR&#39; notation, also known as &#39;slash&#39; notation (for example: `157.197.200.0/24`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedNetworks(AclEntryResponse... authorizedNetworks) {
             return authorizedNetworks(List.of(authorizedNetworks));
         }
 
+        /**
+         * @param ipv4Enabled Whether the instance is assigned a public IP address or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Enabled(Boolean ipv4Enabled) {
             $.ipv4Enabled = ipv4Enabled;
             return this;
         }
 
+        /**
+         * @param privateNetwork The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `/projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateNetwork(String privateNetwork) {
             $.privateNetwork = privateNetwork;
             return this;
         }
 
+        /**
+         * @param requireSsl Whether SSL connections over IP are enforced or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireSsl(Boolean requireSsl) {
             $.requireSsl = requireSsl;
             return this;

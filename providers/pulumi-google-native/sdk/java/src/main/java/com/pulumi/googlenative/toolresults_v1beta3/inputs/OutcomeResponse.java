@@ -27,6 +27,10 @@ public final class OutcomeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="failureDetail", required=true)
     private FailureDetailResponse failureDetail;
 
+    /**
+     * @return More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional
+     * 
+     */
     public FailureDetailResponse failureDetail() {
         return this.failureDetail;
     }
@@ -38,6 +42,10 @@ public final class OutcomeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inconclusiveDetail", required=true)
     private InconclusiveDetailResponse inconclusiveDetail;
 
+    /**
+     * @return More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional
+     * 
+     */
     public InconclusiveDetailResponse inconclusiveDetail() {
         return this.inconclusiveDetail;
     }
@@ -49,6 +57,10 @@ public final class OutcomeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="skippedDetail", required=true)
     private SkippedDetailResponse skippedDetail;
 
+    /**
+     * @return More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional
+     * 
+     */
     public SkippedDetailResponse skippedDetail() {
         return this.skippedDetail;
     }
@@ -60,6 +72,10 @@ public final class OutcomeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="successDetail", required=true)
     private SuccessDetailResponse successDetail;
 
+    /**
+     * @return More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional
+     * 
+     */
     public SuccessDetailResponse successDetail() {
         return this.successDetail;
     }
@@ -71,6 +87,10 @@ public final class OutcomeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="summary", required=true)
     private String summary;
 
+    /**
+     * @return The simplest way to interpret a result. Required
+     * 
+     */
     public String summary() {
         return this.summary;
     }
@@ -103,26 +123,56 @@ public final class OutcomeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OutcomeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failureDetail More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureDetail(FailureDetailResponse failureDetail) {
             $.failureDetail = failureDetail;
             return this;
         }
 
+        /**
+         * @param inconclusiveDetail More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder inconclusiveDetail(InconclusiveDetailResponse inconclusiveDetail) {
             $.inconclusiveDetail = inconclusiveDetail;
             return this;
         }
 
+        /**
+         * @param skippedDetail More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder skippedDetail(SkippedDetailResponse skippedDetail) {
             $.skippedDetail = skippedDetail;
             return this;
         }
 
+        /**
+         * @param successDetail More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder successDetail(SuccessDetailResponse successDetail) {
             $.successDetail = successDetail;
             return this;
         }
 
+        /**
+         * @param summary The simplest way to interpret a result. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder summary(String summary) {
             $.summary = summary;
             return this;

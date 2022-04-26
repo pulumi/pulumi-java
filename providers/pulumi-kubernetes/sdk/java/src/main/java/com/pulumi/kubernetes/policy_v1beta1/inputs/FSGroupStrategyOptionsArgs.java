@@ -28,6 +28,10 @@ public final class FSGroupStrategyOptionsArgs extends com.pulumi.resources.Resou
     @Import(name="ranges")
     private @Nullable Output<List<IDRangeArgs>> ranges;
 
+    /**
+     * @return ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.
+     * 
+     */
     public Optional<Output<List<IDRangeArgs>>> ranges() {
         return Optional.ofNullable(this.ranges);
     }
@@ -39,6 +43,10 @@ public final class FSGroupStrategyOptionsArgs extends com.pulumi.resources.Resou
     @Import(name="rule")
     private @Nullable Output<String> rule;
 
+    /**
+     * @return rule is the strategy that will dictate what FSGroup is used in the SecurityContext.
+     * 
+     */
     public Optional<Output<String>> rule() {
         return Optional.ofNullable(this.rule);
     }
@@ -68,24 +76,54 @@ public final class FSGroupStrategyOptionsArgs extends com.pulumi.resources.Resou
             $ = new FSGroupStrategyOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ranges ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ranges(@Nullable Output<List<IDRangeArgs>> ranges) {
             $.ranges = ranges;
             return this;
         }
 
+        /**
+         * @param ranges ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ranges(List<IDRangeArgs> ranges) {
             return ranges(Output.of(ranges));
         }
 
+        /**
+         * @param ranges ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ranges(IDRangeArgs... ranges) {
             return ranges(List.of(ranges));
         }
 
+        /**
+         * @param rule rule is the strategy that will dictate what FSGroup is used in the SecurityContext.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(@Nullable Output<String> rule) {
             $.rule = rule;
             return this;
         }
 
+        /**
+         * @param rule rule is the strategy that will dictate what FSGroup is used in the SecurityContext.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(String rule) {
             return rule(Output.of(rule));
         }

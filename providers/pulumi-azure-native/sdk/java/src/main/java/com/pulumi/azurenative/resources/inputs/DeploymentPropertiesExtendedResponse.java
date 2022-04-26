@@ -33,6 +33,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="correlationId", required=true)
     private String correlationId;
 
+    /**
+     * @return The correlation ID of the deployment.
+     * 
+     */
     public String correlationId() {
         return this.correlationId;
     }
@@ -44,6 +48,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="debugSetting", required=true)
     private DebugSettingResponse debugSetting;
 
+    /**
+     * @return The debug setting of the deployment.
+     * 
+     */
     public DebugSettingResponse debugSetting() {
         return this.debugSetting;
     }
@@ -55,6 +63,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="dependencies", required=true)
     private List<DependencyResponse> dependencies;
 
+    /**
+     * @return The list of deployment dependencies.
+     * 
+     */
     public List<DependencyResponse> dependencies() {
         return this.dependencies;
     }
@@ -66,6 +78,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="duration", required=true)
     private String duration;
 
+    /**
+     * @return The duration of the template deployment.
+     * 
+     */
     public String duration() {
         return this.duration;
     }
@@ -77,6 +93,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="error", required=true)
     private ErrorResponseResponse error;
 
+    /**
+     * @return The deployment error.
+     * 
+     */
     public ErrorResponseResponse error() {
         return this.error;
     }
@@ -88,6 +108,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return The deployment mode. Possible values are Incremental and Complete.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -99,6 +123,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="onErrorDeployment", required=true)
     private OnErrorDeploymentExtendedResponse onErrorDeployment;
 
+    /**
+     * @return The deployment on error behavior.
+     * 
+     */
     public OnErrorDeploymentExtendedResponse onErrorDeployment() {
         return this.onErrorDeployment;
     }
@@ -110,6 +138,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="outputResources", required=true)
     private List<ResourceReferenceResponse> outputResources;
 
+    /**
+     * @return Array of provisioned resources.
+     * 
+     */
     public List<ResourceReferenceResponse> outputResources() {
         return this.outputResources;
     }
@@ -121,6 +153,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="outputs", required=true)
     private Object outputs;
 
+    /**
+     * @return Key/value pairs that represent deployment output.
+     * 
+     */
     public Object outputs() {
         return this.outputs;
     }
@@ -132,6 +168,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="parameters", required=true)
     private Object parameters;
 
+    /**
+     * @return Deployment parameters.
+     * 
+     */
     public Object parameters() {
         return this.parameters;
     }
@@ -143,6 +183,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="parametersLink", required=true)
     private ParametersLinkResponse parametersLink;
 
+    /**
+     * @return The URI referencing the parameters.
+     * 
+     */
     public ParametersLinkResponse parametersLink() {
         return this.parametersLink;
     }
@@ -154,6 +198,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="providers", required=true)
     private List<ProviderResponse> providers;
 
+    /**
+     * @return The list of resource providers needed for the deployment.
+     * 
+     */
     public List<ProviderResponse> providers() {
         return this.providers;
     }
@@ -165,6 +213,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Denotes the state of provisioning.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -176,6 +228,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="templateHash", required=true)
     private String templateHash;
 
+    /**
+     * @return The hash produced for the template.
+     * 
+     */
     public String templateHash() {
         return this.templateHash;
     }
@@ -187,6 +243,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="templateLink", required=true)
     private TemplateLinkResponse templateLink;
 
+    /**
+     * @return The URI referencing the template.
+     * 
+     */
     public TemplateLinkResponse templateLink() {
         return this.templateLink;
     }
@@ -198,6 +258,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="timestamp", required=true)
     private String timestamp;
 
+    /**
+     * @return The timestamp of the template deployment.
+     * 
+     */
     public String timestamp() {
         return this.timestamp;
     }
@@ -209,6 +273,10 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
     @Import(name="validatedResources", required=true)
     private List<ResourceReferenceResponse> validatedResources;
 
+    /**
+     * @return Array of validated resources.
+     * 
+     */
     public List<ResourceReferenceResponse> validatedResources() {
         return this.validatedResources;
     }
@@ -253,103 +321,229 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
             $ = new DeploymentPropertiesExtendedResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param correlationId The correlation ID of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder correlationId(String correlationId) {
             $.correlationId = correlationId;
             return this;
         }
 
+        /**
+         * @param debugSetting The debug setting of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder debugSetting(DebugSettingResponse debugSetting) {
             $.debugSetting = debugSetting;
             return this;
         }
 
+        /**
+         * @param dependencies The list of deployment dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependencies(List<DependencyResponse> dependencies) {
             $.dependencies = dependencies;
             return this;
         }
 
+        /**
+         * @param dependencies The list of deployment dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependencies(DependencyResponse... dependencies) {
             return dependencies(List.of(dependencies));
         }
 
+        /**
+         * @param duration The duration of the template deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param error The deployment error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(ErrorResponseResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param mode The deployment mode. Possible values are Incremental and Complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param onErrorDeployment The deployment on error behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onErrorDeployment(OnErrorDeploymentExtendedResponse onErrorDeployment) {
             $.onErrorDeployment = onErrorDeployment;
             return this;
         }
 
+        /**
+         * @param outputResources Array of provisioned resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputResources(List<ResourceReferenceResponse> outputResources) {
             $.outputResources = outputResources;
             return this;
         }
 
+        /**
+         * @param outputResources Array of provisioned resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputResources(ResourceReferenceResponse... outputResources) {
             return outputResources(List.of(outputResources));
         }
 
+        /**
+         * @param outputs Key/value pairs that represent deployment output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(Object outputs) {
             $.outputs = outputs;
             return this;
         }
 
+        /**
+         * @param parameters Deployment parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Object parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parametersLink The URI referencing the parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parametersLink(ParametersLinkResponse parametersLink) {
             $.parametersLink = parametersLink;
             return this;
         }
 
+        /**
+         * @param providers The list of resource providers needed for the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(List<ProviderResponse> providers) {
             $.providers = providers;
             return this;
         }
 
+        /**
+         * @param providers The list of resource providers needed for the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(ProviderResponse... providers) {
             return providers(List.of(providers));
         }
 
+        /**
+         * @param provisioningState Denotes the state of provisioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param templateHash The hash produced for the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateHash(String templateHash) {
             $.templateHash = templateHash;
             return this;
         }
 
+        /**
+         * @param templateLink The URI referencing the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateLink(TemplateLinkResponse templateLink) {
             $.templateLink = templateLink;
             return this;
         }
 
+        /**
+         * @param timestamp The timestamp of the template deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestamp(String timestamp) {
             $.timestamp = timestamp;
             return this;
         }
 
+        /**
+         * @param validatedResources Array of validated resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validatedResources(List<ResourceReferenceResponse> validatedResources) {
             $.validatedResources = validatedResources;
             return this;
         }
 
+        /**
+         * @param validatedResources Array of validated resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validatedResources(ResourceReferenceResponse... validatedResources) {
             return validatedResources(List.of(validatedResources));
         }

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class LoggingConfigurationFieldToMatchSingleHeaderProperties {
     /**
-     * The name of the query header to inspect.
+     * @return The name of the query header to inspect.
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderProperties {
     }
 
     /**
-     * The name of the query header to inspect.
+     * @return The name of the query header to inspect.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

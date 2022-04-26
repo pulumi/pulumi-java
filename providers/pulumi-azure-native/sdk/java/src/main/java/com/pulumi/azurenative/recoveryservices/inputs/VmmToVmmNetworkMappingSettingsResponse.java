@@ -25,6 +25,11 @@ public final class VmmToVmmNetworkMappingSettingsResponse extends com.pulumi.res
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the Instance type.
+     * Expected value is &#39;VmmToVmm&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -53,6 +58,13 @@ public final class VmmToVmmNetworkMappingSettingsResponse extends com.pulumi.res
             $ = new VmmToVmmNetworkMappingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType Gets the Instance type.
+         * Expected value is &#39;VmmToVmm&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;

@@ -20,6 +20,10 @@ public final class VPCDHCPOptionsAssociationArgs extends com.pulumi.resources.Re
     @Import(name="dhcpOptionsId", required=true)
     private Output<String> dhcpOptionsId;
 
+    /**
+     * @return The ID of the DHCP options set, or default to associate no DHCP options with the VPC.
+     * 
+     */
     public Output<String> dhcpOptionsId() {
         return this.dhcpOptionsId;
     }
@@ -31,6 +35,10 @@ public final class VPCDHCPOptionsAssociationArgs extends com.pulumi.resources.Re
     @Import(name="vpcId", required=true)
     private Output<String> vpcId;
 
+    /**
+     * @return The ID of the VPC.
+     * 
+     */
     public Output<String> vpcId() {
         return this.vpcId;
     }
@@ -60,20 +68,44 @@ public final class VPCDHCPOptionsAssociationArgs extends com.pulumi.resources.Re
             $ = new VPCDHCPOptionsAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dhcpOptionsId The ID of the DHCP options set, or default to associate no DHCP options with the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpOptionsId(Output<String> dhcpOptionsId) {
             $.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
 
+        /**
+         * @param dhcpOptionsId The ID of the DHCP options set, or default to associate no DHCP options with the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpOptionsId(String dhcpOptionsId) {
             return dhcpOptionsId(Output.of(dhcpOptionsId));
         }
 
+        /**
+         * @param vpcId The ID of the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The ID of the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

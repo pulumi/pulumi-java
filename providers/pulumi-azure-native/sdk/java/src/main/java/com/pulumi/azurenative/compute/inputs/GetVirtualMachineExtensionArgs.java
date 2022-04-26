@@ -21,6 +21,10 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The expand expression to apply on the operation.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
     @Import(name="vmExtensionName", required=true)
     private String vmExtensionName;
 
+    /**
+     * @return The name of the virtual machine extension.
+     * 
+     */
     public String vmExtensionName() {
         return this.vmExtensionName;
     }
@@ -54,6 +66,10 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
     @Import(name="vmName", required=true)
     private String vmName;
 
+    /**
+     * @return The name of the virtual machine containing the extension.
+     * 
+     */
     public String vmName() {
         return this.vmName;
     }
@@ -85,21 +101,45 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
             $ = new GetVirtualMachineExtensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand The expand expression to apply on the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vmExtensionName The name of the virtual machine extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmExtensionName(String vmExtensionName) {
             $.vmExtensionName = vmExtensionName;
             return this;
         }
 
+        /**
+         * @param vmName The name of the virtual machine containing the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmName(String vmName) {
             $.vmName = vmName;
             return this;

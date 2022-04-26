@@ -20,6 +20,10 @@ public final class MonitoringSubscriptionMonitoringSubscriptionGetArgs extends c
     @Import(name="realtimeMetricsSubscriptionConfig", required=true)
     private Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig;
 
+    /**
+     * @return A subscription configuration for additional CloudWatch metrics. See below.
+     * 
+     */
     public Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig() {
         return this.realtimeMetricsSubscriptionConfig;
     }
@@ -48,11 +52,23 @@ public final class MonitoringSubscriptionMonitoringSubscriptionGetArgs extends c
             $ = new MonitoringSubscriptionMonitoringSubscriptionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param realtimeMetricsSubscriptionConfig A subscription configuration for additional CloudWatch metrics. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder realtimeMetricsSubscriptionConfig(Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig) {
             $.realtimeMetricsSubscriptionConfig = realtimeMetricsSubscriptionConfig;
             return this;
         }
 
+        /**
+         * @param realtimeMetricsSubscriptionConfig A subscription configuration for additional CloudWatch metrics. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder realtimeMetricsSubscriptionConfig(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs realtimeMetricsSubscriptionConfig) {
             return realtimeMetricsSubscriptionConfig(Output.of(realtimeMetricsSubscriptionConfig));
         }

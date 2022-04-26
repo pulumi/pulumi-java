@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class AutoScalingPolicyResponse {
     /**
-     * The mechanism that is used to scale when auto scaling operation is invoked.
+     * @return The mechanism that is used to scale when auto scaling operation is invoked.
      * 
      */
     private final AddRemoveReplicaScalingMechanismResponse mechanism;
     /**
-     * The name of the auto scaling policy.
+     * @return The name of the auto scaling policy.
      * 
      */
     private final String name;
     /**
-     * Determines when auto scaling operation will be invoked.
+     * @return Determines when auto scaling operation will be invoked.
      * 
      */
     private final AverageLoadScalingTriggerResponse trigger;
@@ -38,23 +38,23 @@ public final class AutoScalingPolicyResponse {
     }
 
     /**
-     * The mechanism that is used to scale when auto scaling operation is invoked.
+     * @return The mechanism that is used to scale when auto scaling operation is invoked.
      * 
-    */
+     */
     public AddRemoveReplicaScalingMechanismResponse mechanism() {
         return this.mechanism;
     }
     /**
-     * The name of the auto scaling policy.
+     * @return The name of the auto scaling policy.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Determines when auto scaling operation will be invoked.
+     * @return Determines when auto scaling operation will be invoked.
      * 
-    */
+     */
     public AverageLoadScalingTriggerResponse trigger() {
         return this.trigger;
     }

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RuleGroupRuleActionAllow {
     /**
-     * Defines custom handling for the web request. See Custom Request Handling below for details.
+     * @return Defines custom handling for the web request. See Custom Request Handling below for details.
      * 
      */
     private final @Nullable RuleGroupRuleActionAllowCustomRequestHandling customRequestHandling;
@@ -23,9 +23,9 @@ public final class RuleGroupRuleActionAllow {
     }
 
     /**
-     * Defines custom handling for the web request. See Custom Request Handling below for details.
+     * @return Defines custom handling for the web request. See Custom Request Handling below for details.
      * 
-    */
+     */
     public Optional<RuleGroupRuleActionAllowCustomRequestHandling> customRequestHandling() {
         return Optional.ofNullable(this.customRequestHandling);
     }

@@ -29,6 +29,10 @@ public final class TableSpecificationArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Swagger schema description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -40,6 +44,10 @@ public final class TableSpecificationArgs extends com.pulumi.resources.ResourceA
     @Import(name="format")
     private @Nullable Output<String> format;
 
+    /**
+     * @return The format, if &#39;type&#39; is not &#39;object&#39;
+     * 
+     */
     public Optional<Output<String>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -51,6 +59,10 @@ public final class TableSpecificationArgs extends com.pulumi.resources.ResourceA
     @Import(name="properties")
     private @Nullable Output<Map<String,ColumnSpecificationArgs>> properties;
 
+    /**
+     * @return The set of columns within the data table.
+     * 
+     */
     public Optional<Output<Map<String,ColumnSpecificationArgs>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -62,6 +74,10 @@ public final class TableSpecificationArgs extends com.pulumi.resources.ResourceA
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Swagger schema title.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -73,6 +89,10 @@ public final class TableSpecificationArgs extends com.pulumi.resources.ResourceA
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of the entity described in swagger.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -105,47 +125,107 @@ public final class TableSpecificationArgs extends com.pulumi.resources.ResourceA
             $ = new TableSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Swagger schema description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Swagger schema description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param format The format, if &#39;type&#39; is not &#39;object&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<String> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format The format, if &#39;type&#39; is not &#39;object&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param properties The set of columns within the data table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,ColumnSpecificationArgs>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The set of columns within the data table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,ColumnSpecificationArgs> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param title Swagger schema title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Swagger schema title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }
 
+        /**
+         * @param type The type of the entity described in swagger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the entity described in swagger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

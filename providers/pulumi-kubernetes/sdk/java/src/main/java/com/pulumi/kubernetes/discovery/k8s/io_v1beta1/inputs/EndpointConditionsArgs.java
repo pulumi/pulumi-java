@@ -26,6 +26,10 @@ public final class EndpointConditionsArgs extends com.pulumi.resources.ResourceA
     @Import(name="ready")
     private @Nullable Output<Boolean> ready;
 
+    /**
+     * @return ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready. For compatibility reasons, ready should never be &#34;true&#34; for terminating endpoints.
+     * 
+     */
     public Optional<Output<Boolean>> ready() {
         return Optional.ofNullable(this.ready);
     }
@@ -37,6 +41,10 @@ public final class EndpointConditionsArgs extends com.pulumi.resources.ResourceA
     @Import(name="serving")
     private @Nullable Output<Boolean> serving;
 
+    /**
+     * @return serving is identical to ready except that it is set regardless of the terminating state of endpoints. This condition should be set to true for a ready endpoint that is terminating. If nil, consumers should defer to the ready condition. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.
+     * 
+     */
     public Optional<Output<Boolean>> serving() {
         return Optional.ofNullable(this.serving);
     }
@@ -48,6 +56,10 @@ public final class EndpointConditionsArgs extends com.pulumi.resources.ResourceA
     @Import(name="terminating")
     private @Nullable Output<Boolean> terminating;
 
+    /**
+     * @return terminating indicates that this endpoint is terminating. A nil value indicates an unknown state. Consumers should interpret this unknown state to mean that the endpoint is not terminating. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.
+     * 
+     */
     public Optional<Output<Boolean>> terminating() {
         return Optional.ofNullable(this.terminating);
     }
@@ -78,29 +90,65 @@ public final class EndpointConditionsArgs extends com.pulumi.resources.ResourceA
             $ = new EndpointConditionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ready ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready. For compatibility reasons, ready should never be &#34;true&#34; for terminating endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ready(@Nullable Output<Boolean> ready) {
             $.ready = ready;
             return this;
         }
 
+        /**
+         * @param ready ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready. For compatibility reasons, ready should never be &#34;true&#34; for terminating endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ready(Boolean ready) {
             return ready(Output.of(ready));
         }
 
+        /**
+         * @param serving serving is identical to ready except that it is set regardless of the terminating state of endpoints. This condition should be set to true for a ready endpoint that is terminating. If nil, consumers should defer to the ready condition. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serving(@Nullable Output<Boolean> serving) {
             $.serving = serving;
             return this;
         }
 
+        /**
+         * @param serving serving is identical to ready except that it is set regardless of the terminating state of endpoints. This condition should be set to true for a ready endpoint that is terminating. If nil, consumers should defer to the ready condition. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serving(Boolean serving) {
             return serving(Output.of(serving));
         }
 
+        /**
+         * @param terminating terminating indicates that this endpoint is terminating. A nil value indicates an unknown state. Consumers should interpret this unknown state to mean that the endpoint is not terminating. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminating(@Nullable Output<Boolean> terminating) {
             $.terminating = terminating;
             return this;
         }
 
+        /**
+         * @param terminating terminating indicates that this endpoint is terminating. A nil value indicates an unknown state. Consumers should interpret this unknown state to mean that the endpoint is not terminating. This field can be enabled with the EndpointSliceTerminatingCondition feature gate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminating(Boolean terminating) {
             return terminating(Output.of(terminating));
         }

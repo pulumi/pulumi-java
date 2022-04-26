@@ -25,6 +25,10 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends com.pulumi.resources.
     @Import(name="exponent", required=true)
     private Output<String> exponent;
 
+    /**
+     * @return The RSA Parameter exponent
+     * 
+     */
     public Output<String> exponent() {
         return this.exponent;
     }
@@ -36,6 +40,10 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends com.pulumi.resources.
     @Import(name="modulus", required=true)
     private Output<String> modulus;
 
+    /**
+     * @return The RSA Parameter modulus
+     * 
+     */
     public Output<String> modulus() {
         return this.modulus;
     }
@@ -48,6 +56,11 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends com.pulumi.resources.
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyRsaTokenKey&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -78,29 +91,67 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends com.pulumi.resources.
             $ = new ContentKeyPolicyRsaTokenKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exponent The RSA Parameter exponent
+         * 
+         * @return builder
+         * 
+         */
         public Builder exponent(Output<String> exponent) {
             $.exponent = exponent;
             return this;
         }
 
+        /**
+         * @param exponent The RSA Parameter exponent
+         * 
+         * @return builder
+         * 
+         */
         public Builder exponent(String exponent) {
             return exponent(Output.of(exponent));
         }
 
+        /**
+         * @param modulus The RSA Parameter modulus
+         * 
+         * @return builder
+         * 
+         */
         public Builder modulus(Output<String> modulus) {
             $.modulus = modulus;
             return this;
         }
 
+        /**
+         * @param modulus The RSA Parameter modulus
+         * 
+         * @return builder
+         * 
+         */
         public Builder modulus(String modulus) {
             return modulus(Output.of(modulus));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyRsaTokenKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyRsaTokenKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }

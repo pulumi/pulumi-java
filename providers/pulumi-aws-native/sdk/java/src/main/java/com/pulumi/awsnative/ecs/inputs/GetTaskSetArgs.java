@@ -19,6 +19,10 @@ public final class GetTaskSetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="cluster", required=true)
     private String cluster;
 
+    /**
+     * @return The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
+     * 
+     */
     public String cluster() {
         return this.cluster;
     }
@@ -30,6 +34,10 @@ public final class GetTaskSetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The ID of the task set.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -41,6 +49,10 @@ public final class GetTaskSetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="service", required=true)
     private String service;
 
+    /**
+     * @return The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
+     * 
+     */
     public String service() {
         return this.service;
     }
@@ -71,16 +83,34 @@ public final class GetTaskSetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTaskSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param id The ID of the task set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param service The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             $.service = service;
             return this;

@@ -27,6 +27,10 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Is arc auto provisioning enabled
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
     @Import(name="servicePrincipalSecretMetadata")
     private @Nullable Output<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata;
 
+    /**
+     * @return Metadata of Service Principal secret for autoprovisioning
+     * 
+     */
     public Optional<Output<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs>> servicePrincipalSecretMetadata() {
         return Optional.ofNullable(this.servicePrincipalSecretMetadata);
     }
@@ -67,20 +75,44 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
             $ = new DefenderForServersAwsOfferingArcAutoProvisioningArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Is arc auto provisioning enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Is arc auto provisioning enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param servicePrincipalSecretMetadata Metadata of Service Principal secret for autoprovisioning
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalSecretMetadata(@Nullable Output<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata) {
             $.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
             return this;
         }
 
+        /**
+         * @param servicePrincipalSecretMetadata Metadata of Service Principal secret for autoprovisioning
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalSecretMetadata(DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs servicePrincipalSecretMetadata) {
             return servicePrincipalSecretMetadata(Output.of(servicePrincipalSecretMetadata));
         }

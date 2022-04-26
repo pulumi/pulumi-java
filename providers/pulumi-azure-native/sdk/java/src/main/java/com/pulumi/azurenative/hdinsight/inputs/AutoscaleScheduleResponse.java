@@ -27,6 +27,10 @@ public final class AutoscaleScheduleResponse extends com.pulumi.resources.Invoke
     @Import(name="days")
     private @Nullable List<String> days;
 
+    /**
+     * @return Days of the week for a schedule-based autoscale rule
+     * 
+     */
     public Optional<List<String>> days() {
         return Optional.ofNullable(this.days);
     }
@@ -38,6 +42,10 @@ public final class AutoscaleScheduleResponse extends com.pulumi.resources.Invoke
     @Import(name="timeAndCapacity")
     private @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity;
 
+    /**
+     * @return Time and capacity for a schedule-based autoscale rule
+     * 
+     */
     public Optional<AutoscaleTimeAndCapacityResponse> timeAndCapacity() {
         return Optional.ofNullable(this.timeAndCapacity);
     }
@@ -67,15 +75,33 @@ public final class AutoscaleScheduleResponse extends com.pulumi.resources.Invoke
             $ = new AutoscaleScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param days Days of the week for a schedule-based autoscale rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(@Nullable List<String> days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param days Days of the week for a schedule-based autoscale rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(String... days) {
             return days(List.of(days));
         }
 
+        /**
+         * @param timeAndCapacity Time and capacity for a schedule-based autoscale rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAndCapacity(@Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity) {
             $.timeAndCapacity = timeAndCapacity;
             return this;

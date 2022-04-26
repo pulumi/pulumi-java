@@ -29,6 +29,10 @@ public final class BranchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
     private Output<List<Object>> actions;
 
+    /**
+     * @return List of actions.
+     * 
+     */
     public Output<List<Object>> actions() {
         return this.actions;
     }
@@ -40,6 +44,10 @@ public final class BranchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return String of the branch name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -69,24 +77,54 @@ public final class BranchArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BranchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions List of actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Output<List<Object>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions List of actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<Object> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions List of actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Object... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param name String of the branch name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name String of the branch name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

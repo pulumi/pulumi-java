@@ -23,6 +23,10 @@ public final class TriggerTransportGetArgs extends com.pulumi.resources.Resource
     @Import(name="pubsubs")
     private @Nullable Output<List<TriggerTransportPubsubGetArgs>> pubsubs;
 
+    /**
+     * @return The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
+     * 
+     */
     public Optional<Output<List<TriggerTransportPubsubGetArgs>>> pubsubs() {
         return Optional.ofNullable(this.pubsubs);
     }
@@ -51,15 +55,33 @@ public final class TriggerTransportGetArgs extends com.pulumi.resources.Resource
             $ = new TriggerTransportGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsubs The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubs(@Nullable Output<List<TriggerTransportPubsubGetArgs>> pubsubs) {
             $.pubsubs = pubsubs;
             return this;
         }
 
+        /**
+         * @param pubsubs The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubs(List<TriggerTransportPubsubGetArgs> pubsubs) {
             return pubsubs(Output.of(pubsubs));
         }
 
+        /**
+         * @param pubsubs The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubs(TriggerTransportPubsubGetArgs... pubsubs) {
             return pubsubs(List.of(pubsubs));
         }

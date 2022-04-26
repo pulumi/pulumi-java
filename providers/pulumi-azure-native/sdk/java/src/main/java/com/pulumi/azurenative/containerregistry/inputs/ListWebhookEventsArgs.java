@@ -19,6 +19,10 @@ public final class ListWebhookEventsArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="registryName", required=true)
     private String registryName;
 
+    /**
+     * @return The name of the container registry.
+     * 
+     */
     public String registryName() {
         return this.registryName;
     }
@@ -30,6 +34,10 @@ public final class ListWebhookEventsArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class ListWebhookEventsArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="webhookName", required=true)
     private String webhookName;
 
+    /**
+     * @return The name of the webhook.
+     * 
+     */
     public String webhookName() {
         return this.webhookName;
     }
@@ -71,16 +83,34 @@ public final class ListWebhookEventsArgs extends com.pulumi.resources.InvokeArgs
             $ = new ListWebhookEventsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(String registryName) {
             $.registryName = registryName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param webhookName The name of the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookName(String webhookName) {
             $.webhookName = webhookName;
             return this;

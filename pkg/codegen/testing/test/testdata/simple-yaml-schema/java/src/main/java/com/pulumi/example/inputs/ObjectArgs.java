@@ -48,6 +48,10 @@ public final class ObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="others")
     private @Nullable Output<List<List<SomeOtherObjectArgs>>> others;
 
+    /**
+     * @return List of lists of other objects
+     * 
+     */
     public Optional<Output<List<List<SomeOtherObjectArgs>>>> others() {
         return Optional.ofNullable(this.others);
     }
@@ -59,6 +63,10 @@ public final class ObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stillOthers")
     private @Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers;
 
+    /**
+     * @return Mapping from string to list of some other object
+     * 
+     */
     public Optional<Output<Map<String,List<SomeOtherObjectArgs>>>> stillOthers() {
         return Optional.ofNullable(this.stillOthers);
     }
@@ -122,24 +130,54 @@ public final class ObjectArgs extends com.pulumi.resources.ResourceArgs {
             return foo(Output.of(foo));
         }
 
+        /**
+         * @param others List of lists of other objects
+         * 
+         * @return builder
+         * 
+         */
         public Builder others(@Nullable Output<List<List<SomeOtherObjectArgs>>> others) {
             $.others = others;
             return this;
         }
 
+        /**
+         * @param others List of lists of other objects
+         * 
+         * @return builder
+         * 
+         */
         public Builder others(List<List<SomeOtherObjectArgs>> others) {
             return others(Output.of(others));
         }
 
+        /**
+         * @param others List of lists of other objects
+         * 
+         * @return builder
+         * 
+         */
         public Builder others(List<SomeOtherObjectArgs>... others) {
             return others(List.of(others));
         }
 
+        /**
+         * @param stillOthers Mapping from string to list of some other object
+         * 
+         * @return builder
+         * 
+         */
         public Builder stillOthers(@Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers) {
             $.stillOthers = stillOthers;
             return this;
         }
 
+        /**
+         * @param stillOthers Mapping from string to list of some other object
+         * 
+         * @return builder
+         * 
+         */
         public Builder stillOthers(Map<String,List<SomeOtherObjectArgs>> stillOthers) {
             return stillOthers(Output.of(stillOthers));
         }

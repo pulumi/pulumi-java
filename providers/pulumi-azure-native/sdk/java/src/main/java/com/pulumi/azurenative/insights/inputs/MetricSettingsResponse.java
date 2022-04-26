@@ -27,6 +27,10 @@ public final class MetricSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="category")
     private @Nullable String category;
 
+    /**
+     * @return Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
+     * 
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
@@ -38,6 +42,10 @@ public final class MetricSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return a value indicating whether this category is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -49,6 +57,10 @@ public final class MetricSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="retentionPolicy")
     private @Nullable RetentionPolicyResponse retentionPolicy;
 
+    /**
+     * @return the retention policy for this category.
+     * 
+     */
     public Optional<RetentionPolicyResponse> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -60,6 +72,10 @@ public final class MetricSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="timeGrain")
     private @Nullable String timeGrain;
 
+    /**
+     * @return the timegrain of the metric in ISO8601 format.
+     * 
+     */
     public Optional<String> timeGrain() {
         return Optional.ofNullable(this.timeGrain);
     }
@@ -91,21 +107,45 @@ public final class MetricSettingsResponse extends com.pulumi.resources.InvokeArg
             $ = new MetricSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(@Nullable String category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param enabled a value indicating whether this category is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param retentionPolicy the retention policy for this category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param timeGrain the timegrain of the metric in ISO8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeGrain(@Nullable String timeGrain) {
             $.timeGrain = timeGrain;
             return this;

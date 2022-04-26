@@ -23,6 +23,10 @@ public final class LabelingJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labelingJobId")
     private @Nullable Output<String> labelingJobId;
 
+    /**
+     * @return Name and identifier for LabelingJob.
+     * 
+     */
     public Optional<Output<String>> labelingJobId() {
         return Optional.ofNullable(this.labelingJobId);
     }
@@ -34,6 +38,10 @@ public final class LabelingJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<LabelingJobPropertiesArgs> properties;
 
+    /**
+     * @return Definition of a labeling job.
+     * 
+     */
     public Optional<Output<LabelingJobPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -45,6 +53,10 @@ public final class LabelingJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group in which workspace is located.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class LabelingJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -87,38 +103,86 @@ public final class LabelingJobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LabelingJobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labelingJobId Name and identifier for LabelingJob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelingJobId(@Nullable Output<String> labelingJobId) {
             $.labelingJobId = labelingJobId;
             return this;
         }
 
+        /**
+         * @param labelingJobId Name and identifier for LabelingJob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelingJobId(String labelingJobId) {
             return labelingJobId(Output.of(labelingJobId));
         }
 
+        /**
+         * @param properties Definition of a labeling job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<LabelingJobPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Definition of a labeling job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(LabelingJobPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

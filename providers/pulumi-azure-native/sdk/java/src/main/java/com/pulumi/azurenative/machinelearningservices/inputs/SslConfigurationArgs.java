@@ -26,6 +26,10 @@ public final class SslConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="cert")
     private @Nullable Output<String> cert;
 
+    /**
+     * @return Cert data
+     * 
+     */
     public Optional<Output<String>> cert() {
         return Optional.ofNullable(this.cert);
     }
@@ -37,6 +41,10 @@ public final class SslConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="cname")
     private @Nullable Output<String> cname;
 
+    /**
+     * @return CNAME of the cert
+     * 
+     */
     public Optional<Output<String>> cname() {
         return Optional.ofNullable(this.cname);
     }
@@ -48,6 +56,10 @@ public final class SslConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return Key data
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -59,6 +71,10 @@ public final class SslConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Enable or disable ssl for scoring
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -90,38 +106,86 @@ public final class SslConfigurationArgs extends com.pulumi.resources.ResourceArg
             $ = new SslConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cert Cert data
+         * 
+         * @return builder
+         * 
+         */
         public Builder cert(@Nullable Output<String> cert) {
             $.cert = cert;
             return this;
         }
 
+        /**
+         * @param cert Cert data
+         * 
+         * @return builder
+         * 
+         */
         public Builder cert(String cert) {
             return cert(Output.of(cert));
         }
 
+        /**
+         * @param cname CNAME of the cert
+         * 
+         * @return builder
+         * 
+         */
         public Builder cname(@Nullable Output<String> cname) {
             $.cname = cname;
             return this;
         }
 
+        /**
+         * @param cname CNAME of the cert
+         * 
+         * @return builder
+         * 
+         */
         public Builder cname(String cname) {
             return cname(Output.of(cname));
         }
 
+        /**
+         * @param key Key data
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Key data
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param status Enable or disable ssl for scoring
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Enable or disable ssl for scoring
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

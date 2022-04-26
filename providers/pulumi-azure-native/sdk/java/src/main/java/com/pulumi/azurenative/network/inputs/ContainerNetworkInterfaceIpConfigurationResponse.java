@@ -25,6 +25,10 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends com.
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -36,6 +40,10 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends com.
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends com.
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the container network interface IP configuration resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -58,6 +70,10 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends com.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Sub Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -89,21 +105,45 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends com.
             $ = new ContainerNetworkInterfaceIpConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param name The name of the resource. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the container network interface IP configuration resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type Sub Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

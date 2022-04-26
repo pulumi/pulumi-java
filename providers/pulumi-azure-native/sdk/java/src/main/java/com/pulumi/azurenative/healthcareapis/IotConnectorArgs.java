@@ -26,6 +26,10 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceMapping")
     private @Nullable Output<IotMappingPropertiesArgs> deviceMapping;
 
+    /**
+     * @return Device Mappings.
+     * 
+     */
     public Optional<Output<IotMappingPropertiesArgs>> deviceMapping() {
         return Optional.ofNullable(this.deviceMapping);
     }
@@ -37,6 +41,10 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
 
+    /**
+     * @return Setting indicating whether the service has a managed identity associated with it.
+     * 
+     */
     public Optional<Output<ServiceManagedIdentityIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -48,6 +56,10 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ingestionEndpointConfiguration")
     private @Nullable Output<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration;
 
+    /**
+     * @return Source configuration.
+     * 
+     */
     public Optional<Output<IotEventHubIngestionEndpointConfigurationArgs>> ingestionEndpointConfiguration() {
         return Optional.ofNullable(this.ingestionEndpointConfiguration);
     }
@@ -59,6 +71,10 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iotConnectorName")
     private @Nullable Output<String> iotConnectorName;
 
+    /**
+     * @return The name of IoT Connector resource.
+     * 
+     */
     public Optional<Output<String>> iotConnectorName() {
         return Optional.ofNullable(this.iotConnectorName);
     }
@@ -70,6 +86,10 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -81,6 +101,10 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the service instance.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -92,6 +116,10 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -103,6 +131,10 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of workspace resource.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -138,74 +170,170 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IotConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceMapping Device Mappings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceMapping(@Nullable Output<IotMappingPropertiesArgs> deviceMapping) {
             $.deviceMapping = deviceMapping;
             return this;
         }
 
+        /**
+         * @param deviceMapping Device Mappings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceMapping(IotMappingPropertiesArgs deviceMapping) {
             return deviceMapping(Output.of(deviceMapping));
         }
 
+        /**
+         * @param identity Setting indicating whether the service has a managed identity associated with it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ServiceManagedIdentityIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Setting indicating whether the service has a managed identity associated with it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ServiceManagedIdentityIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param ingestionEndpointConfiguration Source configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestionEndpointConfiguration(@Nullable Output<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration) {
             $.ingestionEndpointConfiguration = ingestionEndpointConfiguration;
             return this;
         }
 
+        /**
+         * @param ingestionEndpointConfiguration Source configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestionEndpointConfiguration(IotEventHubIngestionEndpointConfigurationArgs ingestionEndpointConfiguration) {
             return ingestionEndpointConfiguration(Output.of(ingestionEndpointConfiguration));
         }
 
+        /**
+         * @param iotConnectorName The name of IoT Connector resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotConnectorName(@Nullable Output<String> iotConnectorName) {
             $.iotConnectorName = iotConnectorName;
             return this;
         }
 
+        /**
+         * @param iotConnectorName The name of IoT Connector resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotConnectorName(String iotConnectorName) {
             return iotConnectorName(Output.of(iotConnectorName));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param workspaceName The name of workspace resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of workspace resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

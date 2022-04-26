@@ -26,6 +26,10 @@ public final class TransferConfigurationTransferAllDetailsArgs extends com.pulum
     @Import(name="include")
     private @Nullable Output<TransferAllDetailsArgs> include;
 
+    /**
+     * @return Details to transfer all data.
+     * 
+     */
     public Optional<Output<TransferAllDetailsArgs>> include() {
         return Optional.ofNullable(this.include);
     }
@@ -54,11 +58,23 @@ public final class TransferConfigurationTransferAllDetailsArgs extends com.pulum
             $ = new TransferConfigurationTransferAllDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param include Details to transfer all data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder include(@Nullable Output<TransferAllDetailsArgs> include) {
             $.include = include;
             return this;
         }
 
+        /**
+         * @param include Details to transfer all data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder include(TransferAllDetailsArgs include) {
             return include(Output.of(include));
         }

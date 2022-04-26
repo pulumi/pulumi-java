@@ -19,6 +19,10 @@ public final class GetReportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="reportName", required=true)
     private String reportName;
 
+    /**
+     * @return Report Name.
+     * 
+     */
     public String reportName() {
         return this.reportName;
     }
@@ -47,6 +51,12 @@ public final class GetReportArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetReportArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param reportName Report Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportName(String reportName) {
             $.reportName = reportName;
             return this;

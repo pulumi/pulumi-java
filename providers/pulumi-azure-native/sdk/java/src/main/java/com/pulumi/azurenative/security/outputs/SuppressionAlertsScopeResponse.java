@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class SuppressionAlertsScopeResponse {
     /**
-     * All the conditions inside need to be true in order to suppress the alert
+     * @return All the conditions inside need to be true in order to suppress the alert
      * 
      */
     private final List<ScopeElementResponse> allOf;
@@ -22,9 +22,9 @@ public final class SuppressionAlertsScopeResponse {
     }
 
     /**
-     * All the conditions inside need to be true in order to suppress the alert
+     * @return All the conditions inside need to be true in order to suppress the alert
      * 
-    */
+     */
     public List<ScopeElementResponse> allOf() {
         return this.allOf;
     }

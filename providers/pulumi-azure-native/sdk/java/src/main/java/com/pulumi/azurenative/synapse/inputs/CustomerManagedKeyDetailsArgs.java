@@ -26,6 +26,10 @@ public final class CustomerManagedKeyDetailsArgs extends com.pulumi.resources.Re
     @Import(name="key")
     private @Nullable Output<WorkspaceKeyDetailsArgs> key;
 
+    /**
+     * @return The key object of the workspace
+     * 
+     */
     public Optional<Output<WorkspaceKeyDetailsArgs>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -54,11 +58,23 @@ public final class CustomerManagedKeyDetailsArgs extends com.pulumi.resources.Re
             $ = new CustomerManagedKeyDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key object of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<WorkspaceKeyDetailsArgs> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The key object of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(WorkspaceKeyDetailsArgs key) {
             return key(Output.of(key));
         }

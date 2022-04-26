@@ -25,6 +25,10 @@ public final class DiskSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The sku name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class DiskSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tier", required=true)
     private String tier;
 
+    /**
+     * @return The sku tier.
+     * 
+     */
     public String tier() {
         return this.tier;
     }
@@ -65,11 +73,23 @@ public final class DiskSkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DiskSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier The sku tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             $.tier = tier;
             return this;

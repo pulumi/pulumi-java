@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ArmTemplateParameterResponse {
     /**
-     * name of the parameter.
+     * @return name of the parameter.
      * 
      */
     private final @Nullable String name;
     /**
-     * value for the parameter. In Jtoken
+     * @return value for the parameter. In Jtoken
      * 
      */
     private final @Nullable String value;
@@ -31,16 +31,16 @@ public final class ArmTemplateParameterResponse {
     }
 
     /**
-     * name of the parameter.
+     * @return name of the parameter.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * value for the parameter. In Jtoken
+     * @return value for the parameter. In Jtoken
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

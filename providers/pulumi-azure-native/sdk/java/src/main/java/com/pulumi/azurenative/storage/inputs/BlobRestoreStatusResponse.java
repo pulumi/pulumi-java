@@ -24,6 +24,10 @@ public final class BlobRestoreStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="failureReason", required=true)
     private String failureReason;
 
+    /**
+     * @return Failure reason when blob restore is failed.
+     * 
+     */
     public String failureReason() {
         return this.failureReason;
     }
@@ -35,6 +39,10 @@ public final class BlobRestoreStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="parameters", required=true)
     private BlobRestoreParametersResponse parameters;
 
+    /**
+     * @return Blob restore request parameters.
+     * 
+     */
     public BlobRestoreParametersResponse parameters() {
         return this.parameters;
     }
@@ -46,6 +54,10 @@ public final class BlobRestoreStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="restoreId", required=true)
     private String restoreId;
 
+    /**
+     * @return Id for tracking blob restore request.
+     * 
+     */
     public String restoreId() {
         return this.restoreId;
     }
@@ -57,6 +69,10 @@ public final class BlobRestoreStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -88,21 +104,45 @@ public final class BlobRestoreStatusResponse extends com.pulumi.resources.Invoke
             $ = new BlobRestoreStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failureReason Failure reason when blob restore is failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureReason(String failureReason) {
             $.failureReason = failureReason;
             return this;
         }
 
+        /**
+         * @param parameters Blob restore request parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(BlobRestoreParametersResponse parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param restoreId Id for tracking blob restore request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreId(String restoreId) {
             $.restoreId = restoreId;
             return this;
         }
 
+        /**
+         * @param status The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

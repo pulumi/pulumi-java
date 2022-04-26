@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class CapacityReservationPropertiesResponse {
     /**
-     * The last time Sku was updated.
+     * @return The last time Sku was updated.
      * 
      */
     private final String lastSkuUpdate;
     /**
-     * Minimum CapacityReservation value in GB.
+     * @return Minimum CapacityReservation value in GB.
      * 
      */
     private final Double minCapacity;
@@ -30,16 +30,16 @@ public final class CapacityReservationPropertiesResponse {
     }
 
     /**
-     * The last time Sku was updated.
+     * @return The last time Sku was updated.
      * 
-    */
+     */
     public String lastSkuUpdate() {
         return this.lastSkuUpdate;
     }
     /**
-     * Minimum CapacityReservation value in GB.
+     * @return Minimum CapacityReservation value in GB.
      * 
-    */
+     */
     public Double minCapacity() {
         return this.minCapacity;
     }

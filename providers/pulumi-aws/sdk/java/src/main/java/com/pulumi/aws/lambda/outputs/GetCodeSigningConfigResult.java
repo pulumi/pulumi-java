@@ -13,33 +13,33 @@ import java.util.Objects;
 @CustomType
 public final class GetCodeSigningConfigResult {
     /**
-     * List of allowed publishers as signing profiles for this code signing configuration.
+     * @return List of allowed publishers as signing profiles for this code signing configuration.
      * 
      */
     private final List<GetCodeSigningConfigAllowedPublisher> allowedPublishers;
     private final String arn;
     /**
-     * Unique identifier for the code signing configuration.
+     * @return Unique identifier for the code signing configuration.
      * 
      */
     private final String configId;
     /**
-     * Code signing configuration description.
+     * @return Code signing configuration description.
      * 
      */
     private final String description;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The date and time that the code signing configuration was last modified.
+     * @return The date and time that the code signing configuration was last modified.
      * 
      */
     private final String lastModified;
     /**
-     * List of code signing policies that control the validation failure action for signature mismatch or expiry.
+     * @return List of code signing policies that control the validation failure action for signature mismatch or expiry.
      * 
      */
     private final List<GetCodeSigningConfigPolicy> policies;
@@ -63,9 +63,9 @@ public final class GetCodeSigningConfigResult {
     }
 
     /**
-     * List of allowed publishers as signing profiles for this code signing configuration.
+     * @return List of allowed publishers as signing profiles for this code signing configuration.
      * 
-    */
+     */
     public List<GetCodeSigningConfigAllowedPublisher> allowedPublishers() {
         return this.allowedPublishers;
     }
@@ -73,37 +73,37 @@ public final class GetCodeSigningConfigResult {
         return this.arn;
     }
     /**
-     * Unique identifier for the code signing configuration.
+     * @return Unique identifier for the code signing configuration.
      * 
-    */
+     */
     public String configId() {
         return this.configId;
     }
     /**
-     * Code signing configuration description.
+     * @return Code signing configuration description.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The date and time that the code signing configuration was last modified.
+     * @return The date and time that the code signing configuration was last modified.
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * List of code signing policies that control the validation failure action for signature mismatch or expiry.
+     * @return List of code signing policies that control the validation failure action for signature mismatch or expiry.
      * 
-    */
+     */
     public List<GetCodeSigningConfigPolicy> policies() {
         return this.policies;
     }

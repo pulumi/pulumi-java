@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2InfoTypeStatsResponse {
     /**
-     * Number of findings for this infoType.
+     * @return Number of findings for this infoType.
      * 
      */
     private final String count;
     /**
-     * The type of finding this stat is for.
+     * @return The type of finding this stat is for.
      * 
      */
     private final GooglePrivacyDlpV2InfoTypeResponse infoType;
@@ -30,16 +30,16 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse {
     }
 
     /**
-     * Number of findings for this infoType.
+     * @return Number of findings for this infoType.
      * 
-    */
+     */
     public String count() {
         return this.count;
     }
     /**
-     * The type of finding this stat is for.
+     * @return The type of finding this stat is for.
      * 
-    */
+     */
     public GooglePrivacyDlpV2InfoTypeResponse infoType() {
         return this.infoType;
     }

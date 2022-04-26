@@ -26,6 +26,10 @@ public final class GoogleCloudApigeeV1QuotaArgs extends com.pulumi.resources.Res
     @Import(name="interval", required=true)
     private Output<String> interval;
 
+    /**
+     * @return Time interval over which the number of request messages is calculated.
+     * 
+     */
     public Output<String> interval() {
         return this.interval;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudApigeeV1QuotaArgs extends com.pulumi.resources.Res
     @Import(name="limit", required=true)
     private Output<String> limit;
 
+    /**
+     * @return Upper limit allowed for the time interval and time unit specified. Requests exceeding this limit will be rejected.
+     * 
+     */
     public Output<String> limit() {
         return this.limit;
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudApigeeV1QuotaArgs extends com.pulumi.resources.Res
     @Import(name="timeUnit")
     private @Nullable Output<String> timeUnit;
 
+    /**
+     * @return Time unit defined for the `interval`. Valid values include `minute`, `hour`, `day`, or `month`. If `limit` and `interval` are valid, the default value is `hour`; otherwise, the default is null.
+     * 
+     */
     public Optional<Output<String>> timeUnit() {
         return Optional.ofNullable(this.timeUnit);
     }
@@ -78,29 +90,65 @@ public final class GoogleCloudApigeeV1QuotaArgs extends com.pulumi.resources.Res
             $ = new GoogleCloudApigeeV1QuotaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interval Time interval over which the number of request messages is calculated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Output<String> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval Time interval over which the number of request messages is calculated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(String interval) {
             return interval(Output.of(interval));
         }
 
+        /**
+         * @param limit Upper limit allowed for the time interval and time unit specified. Requests exceeding this limit will be rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limit(Output<String> limit) {
             $.limit = limit;
             return this;
         }
 
+        /**
+         * @param limit Upper limit allowed for the time interval and time unit specified. Requests exceeding this limit will be rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limit(String limit) {
             return limit(Output.of(limit));
         }
 
+        /**
+         * @param timeUnit Time unit defined for the `interval`. Valid values include `minute`, `hour`, `day`, or `month`. If `limit` and `interval` are valid, the default value is `hour`; otherwise, the default is null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeUnit(@Nullable Output<String> timeUnit) {
             $.timeUnit = timeUnit;
             return this;
         }
 
+        /**
+         * @param timeUnit Time unit defined for the `interval`. Valid values include `minute`, `hour`, `day`, or `month`. If `limit` and `interval` are valid, the default value is `hour`; otherwise, the default is null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeUnit(String timeUnit) {
             return timeUnit(Output.of(timeUnit));
         }

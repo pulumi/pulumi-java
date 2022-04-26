@@ -27,6 +27,10 @@ public final class DestinationConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="destinationConnectionProfile", required=true)
     private Output<String> destinationConnectionProfile;
 
+    /**
+     * @return Destination connection profile resource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
+     * 
+     */
     public Output<String> destinationConnectionProfile() {
         return this.destinationConnectionProfile;
     }
@@ -38,6 +42,10 @@ public final class DestinationConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="gcsDestinationConfig")
     private @Nullable Output<GcsDestinationConfigArgs> gcsDestinationConfig;
 
+    /**
+     * @return A configuration for how data should be loaded to Cloud Storage.
+     * 
+     */
     public Optional<Output<GcsDestinationConfigArgs>> gcsDestinationConfig() {
         return Optional.ofNullable(this.gcsDestinationConfig);
     }
@@ -67,20 +75,44 @@ public final class DestinationConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new DestinationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationConnectionProfile Destination connection profile resource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationConnectionProfile(Output<String> destinationConnectionProfile) {
             $.destinationConnectionProfile = destinationConnectionProfile;
             return this;
         }
 
+        /**
+         * @param destinationConnectionProfile Destination connection profile resource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationConnectionProfile(String destinationConnectionProfile) {
             return destinationConnectionProfile(Output.of(destinationConnectionProfile));
         }
 
+        /**
+         * @param gcsDestinationConfig A configuration for how data should be loaded to Cloud Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsDestinationConfig(@Nullable Output<GcsDestinationConfigArgs> gcsDestinationConfig) {
             $.gcsDestinationConfig = gcsDestinationConfig;
             return this;
         }
 
+        /**
+         * @param gcsDestinationConfig A configuration for how data should be loaded to Cloud Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsDestinationConfig(GcsDestinationConfigArgs gcsDestinationConfig) {
             return gcsDestinationConfig(Output.of(gcsDestinationConfig));
         }

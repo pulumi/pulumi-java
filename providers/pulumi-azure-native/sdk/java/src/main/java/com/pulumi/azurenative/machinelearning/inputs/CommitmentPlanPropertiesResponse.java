@@ -27,6 +27,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="chargeForOverage", required=true)
     private Boolean chargeForOverage;
 
+    /**
+     * @return Indicates whether usage beyond the commitment plan&#39;s included quantities will be charged.
+     * 
+     */
     public Boolean chargeForOverage() {
         return this.chargeForOverage;
     }
@@ -38,6 +42,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="chargeForPlan", required=true)
     private Boolean chargeForPlan;
 
+    /**
+     * @return Indicates whether the commitment plan will incur a charge.
+     * 
+     */
     public Boolean chargeForPlan() {
         return this.chargeForPlan;
     }
@@ -49,6 +57,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="creationDate", required=true)
     private String creationDate;
 
+    /**
+     * @return The date at which this commitment plan was created, in ISO 8601 format.
+     * 
+     */
     public String creationDate() {
         return this.creationDate;
     }
@@ -60,6 +72,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="includedQuantities", required=true)
     private Map<String,PlanQuantityResponse> includedQuantities;
 
+    /**
+     * @return The included resource quantities this plan gives you.
+     * 
+     */
     public Map<String,PlanQuantityResponse> includedQuantities() {
         return this.includedQuantities;
     }
@@ -71,6 +87,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="maxAssociationLimit", required=true)
     private Integer maxAssociationLimit;
 
+    /**
+     * @return The maximum number of commitment associations that can be children of this commitment plan.
+     * 
+     */
     public Integer maxAssociationLimit() {
         return this.maxAssociationLimit;
     }
@@ -82,6 +102,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="maxCapacityLimit", required=true)
     private Integer maxCapacityLimit;
 
+    /**
+     * @return The maximum scale-out capacity for this commitment plan.
+     * 
+     */
     public Integer maxCapacityLimit() {
         return this.maxCapacityLimit;
     }
@@ -93,6 +117,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="minCapacityLimit", required=true)
     private Integer minCapacityLimit;
 
+    /**
+     * @return The minimum scale-out capacity for this commitment plan.
+     * 
+     */
     public Integer minCapacityLimit() {
         return this.minCapacityLimit;
     }
@@ -104,6 +132,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="planMeter", required=true)
     private String planMeter;
 
+    /**
+     * @return The Azure meter which will be used to charge for this commitment plan.
+     * 
+     */
     public String planMeter() {
         return this.planMeter;
     }
@@ -115,6 +147,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="refillFrequencyInDays", required=true)
     private Integer refillFrequencyInDays;
 
+    /**
+     * @return The frequency at which this commitment plan&#39;s included quantities are refilled.
+     * 
+     */
     public Integer refillFrequencyInDays() {
         return this.refillFrequencyInDays;
     }
@@ -126,6 +162,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="suspendPlanOnOverage", required=true)
     private Boolean suspendPlanOnOverage;
 
+    /**
+     * @return Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan&#39;s included quantities.
+     * 
+     */
     public Boolean suspendPlanOnOverage() {
         return this.suspendPlanOnOverage;
     }
@@ -163,51 +203,111 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
             $ = new CommitmentPlanPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param chargeForOverage Indicates whether usage beyond the commitment plan&#39;s included quantities will be charged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chargeForOverage(Boolean chargeForOverage) {
             $.chargeForOverage = chargeForOverage;
             return this;
         }
 
+        /**
+         * @param chargeForPlan Indicates whether the commitment plan will incur a charge.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chargeForPlan(Boolean chargeForPlan) {
             $.chargeForPlan = chargeForPlan;
             return this;
         }
 
+        /**
+         * @param creationDate The date at which this commitment plan was created, in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationDate(String creationDate) {
             $.creationDate = creationDate;
             return this;
         }
 
+        /**
+         * @param includedQuantities The included resource quantities this plan gives you.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedQuantities(Map<String,PlanQuantityResponse> includedQuantities) {
             $.includedQuantities = includedQuantities;
             return this;
         }
 
+        /**
+         * @param maxAssociationLimit The maximum number of commitment associations that can be children of this commitment plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAssociationLimit(Integer maxAssociationLimit) {
             $.maxAssociationLimit = maxAssociationLimit;
             return this;
         }
 
+        /**
+         * @param maxCapacityLimit The maximum scale-out capacity for this commitment plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCapacityLimit(Integer maxCapacityLimit) {
             $.maxCapacityLimit = maxCapacityLimit;
             return this;
         }
 
+        /**
+         * @param minCapacityLimit The minimum scale-out capacity for this commitment plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCapacityLimit(Integer minCapacityLimit) {
             $.minCapacityLimit = minCapacityLimit;
             return this;
         }
 
+        /**
+         * @param planMeter The Azure meter which will be used to charge for this commitment plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planMeter(String planMeter) {
             $.planMeter = planMeter;
             return this;
         }
 
+        /**
+         * @param refillFrequencyInDays The frequency at which this commitment plan&#39;s included quantities are refilled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refillFrequencyInDays(Integer refillFrequencyInDays) {
             $.refillFrequencyInDays = refillFrequencyInDays;
             return this;
         }
 
+        /**
+         * @param suspendPlanOnOverage Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan&#39;s included quantities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspendPlanOnOverage(Boolean suspendPlanOnOverage) {
             $.suspendPlanOnOverage = suspendPlanOnOverage;
             return this;

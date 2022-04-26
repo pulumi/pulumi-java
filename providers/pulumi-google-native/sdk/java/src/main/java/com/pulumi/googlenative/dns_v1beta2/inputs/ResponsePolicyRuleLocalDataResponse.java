@@ -20,6 +20,10 @@ public final class ResponsePolicyRuleLocalDataResponse extends com.pulumi.resour
     @Import(name="localDatas", required=true)
     private List<ResourceRecordSetResponse> localDatas;
 
+    /**
+     * @return All resource record sets for this selector, one per resource record type. The name must match the dns_name.
+     * 
+     */
     public List<ResourceRecordSetResponse> localDatas() {
         return this.localDatas;
     }
@@ -48,11 +52,23 @@ public final class ResponsePolicyRuleLocalDataResponse extends com.pulumi.resour
             $ = new ResponsePolicyRuleLocalDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param localDatas All resource record sets for this selector, one per resource record type. The name must match the dns_name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localDatas(List<ResourceRecordSetResponse> localDatas) {
             $.localDatas = localDatas;
             return this;
         }
 
+        /**
+         * @param localDatas All resource record sets for this selector, one per resource record type. The name must match the dns_name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localDatas(ResourceRecordSetResponse... localDatas) {
             return localDatas(List.of(localDatas));
         }

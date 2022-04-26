@@ -20,6 +20,10 @@ public final class InstanceNodeConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="cpuCount", required=true)
     private Output<Integer> cpuCount;
 
+    /**
+     * @return Number of CPUs per node.
+     * 
+     */
     public Output<Integer> cpuCount() {
         return this.cpuCount;
     }
@@ -31,6 +35,10 @@ public final class InstanceNodeConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="memorySizeMb", required=true)
     private Output<Integer> memorySizeMb;
 
+    /**
+     * @return Memory size in Mebibytes for each memcache node.
+     * 
+     */
     public Output<Integer> memorySizeMb() {
         return this.memorySizeMb;
     }
@@ -60,20 +68,44 @@ public final class InstanceNodeConfigArgs extends com.pulumi.resources.ResourceA
             $ = new InstanceNodeConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuCount Number of CPUs per node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCount(Output<Integer> cpuCount) {
             $.cpuCount = cpuCount;
             return this;
         }
 
+        /**
+         * @param cpuCount Number of CPUs per node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCount(Integer cpuCount) {
             return cpuCount(Output.of(cpuCount));
         }
 
+        /**
+         * @param memorySizeMb Memory size in Mebibytes for each memcache node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memorySizeMb(Output<Integer> memorySizeMb) {
             $.memorySizeMb = memorySizeMb;
             return this;
         }
 
+        /**
+         * @param memorySizeMb Memory size in Mebibytes for each memcache node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memorySizeMb(Integer memorySizeMb) {
             return memorySizeMb(Output.of(memorySizeMb));
         }

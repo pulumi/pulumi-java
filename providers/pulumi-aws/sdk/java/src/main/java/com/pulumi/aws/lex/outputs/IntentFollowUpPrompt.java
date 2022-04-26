@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class IntentFollowUpPrompt {
     /**
-     * Prompts for information from the user. Attributes are documented under prompt.
+     * @return Prompts for information from the user. Attributes are documented under prompt.
      * 
      */
     private final IntentFollowUpPromptPrompt prompt;
     /**
-     * If the user answers &#34;no&#34; to the question defined in the prompt field,
+     * @return If the user answers &#34;no&#34; to the question defined in the prompt field,
      * Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
      * documented below under statement.
      * 
@@ -32,18 +32,18 @@ public final class IntentFollowUpPrompt {
     }
 
     /**
-     * Prompts for information from the user. Attributes are documented under prompt.
+     * @return Prompts for information from the user. Attributes are documented under prompt.
      * 
-    */
+     */
     public IntentFollowUpPromptPrompt prompt() {
         return this.prompt;
     }
     /**
-     * If the user answers &#34;no&#34; to the question defined in the prompt field,
+     * @return If the user answers &#34;no&#34; to the question defined in the prompt field,
      * Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
      * documented below under statement.
      * 
-    */
+     */
     public IntentFollowUpPromptRejectionStatement rejectionStatement() {
         return this.rejectionStatement;
     }

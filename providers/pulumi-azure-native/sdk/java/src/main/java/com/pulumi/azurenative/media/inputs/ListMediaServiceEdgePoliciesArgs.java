@@ -21,6 +21,10 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -32,6 +36,10 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
     @Import(name="deviceId")
     private @Nullable String deviceId;
 
+    /**
+     * @return Unique identifier of the edge device.
+     * 
+     */
     public Optional<String> deviceId() {
         return Optional.ofNullable(this.deviceId);
     }
@@ -43,6 +51,10 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
             $ = new ListMediaServiceEdgePoliciesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param deviceId Unique identifier of the edge device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceId(@Nullable String deviceId) {
             $.deviceId = deviceId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -26,6 +26,10 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="action", required=true)
     private Output<AuthorizationPolicyAction> action;
 
+    /**
+     * @return The action to take when a rule match is found. Possible values are &#34;ALLOW&#34; or &#34;DENY&#34;.
+     * 
+     */
     public Output<AuthorizationPolicyAction> action() {
         return this.action;
     }
@@ -44,6 +48,10 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. Free-text description of the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -55,6 +63,10 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Set of label tags associated with the AuthorizationPolicy resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -73,6 +85,10 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the AuthorizationPolicy resource. It matches pattern `projects/{project}/locations/{location}/authorizationPolicies/`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -91,6 +107,10 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="rules")
     private @Nullable Output<List<RuleArgs>> rules;
 
+    /**
+     * @return Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the &#39;action&#39; field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
+     * 
+     */
     public Optional<Output<List<RuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -126,11 +146,23 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
             $ = new AuthorizationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action to take when a rule match is found. Possible values are &#34;ALLOW&#34; or &#34;DENY&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<AuthorizationPolicyAction> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action to take when a rule match is found. Possible values are &#34;ALLOW&#34; or &#34;DENY&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(AuthorizationPolicyAction action) {
             return action(Output.of(action));
         }
@@ -144,20 +176,44 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
             return authorizationPolicyId(Output.of(authorizationPolicyId));
         }
 
+        /**
+         * @param description Optional. Free-text description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. Free-text description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param labels Optional. Set of label tags associated with the AuthorizationPolicy resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. Set of label tags associated with the AuthorizationPolicy resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -171,11 +227,23 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Name of the AuthorizationPolicy resource. It matches pattern `projects/{project}/locations/{location}/authorizationPolicies/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the AuthorizationPolicy resource. It matches pattern `projects/{project}/locations/{location}/authorizationPolicies/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -189,15 +257,33 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
             return project(Output.of(project));
         }
 
+        /**
+         * @param rules Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the &#39;action&#39; field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<RuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the &#39;action&#39; field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<RuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the &#39;action&#39; field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(RuleArgs... rules) {
             return rules(List.of(rules));
         }

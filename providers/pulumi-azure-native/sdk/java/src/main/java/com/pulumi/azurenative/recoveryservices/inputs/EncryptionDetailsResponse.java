@@ -25,6 +25,10 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="kekCertExpiryDate")
     private @Nullable String kekCertExpiryDate;
 
+    /**
+     * @return The key encryption key certificate expiry date.
+     * 
+     */
     public Optional<String> kekCertExpiryDate() {
         return Optional.ofNullable(this.kekCertExpiryDate);
     }
@@ -36,6 +40,10 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="kekCertThumbprint")
     private @Nullable String kekCertThumbprint;
 
+    /**
+     * @return The key encryption key certificate thumbprint.
+     * 
+     */
     public Optional<String> kekCertThumbprint() {
         return Optional.ofNullable(this.kekCertThumbprint);
     }
@@ -47,6 +55,10 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="kekState")
     private @Nullable String kekState;
 
+    /**
+     * @return The key encryption key state for the Vmm.
+     * 
+     */
     public Optional<String> kekState() {
         return Optional.ofNullable(this.kekState);
     }
@@ -77,16 +89,34 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
             $ = new EncryptionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kekCertExpiryDate The key encryption key certificate expiry date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekCertExpiryDate(@Nullable String kekCertExpiryDate) {
             $.kekCertExpiryDate = kekCertExpiryDate;
             return this;
         }
 
+        /**
+         * @param kekCertThumbprint The key encryption key certificate thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekCertThumbprint(@Nullable String kekCertThumbprint) {
             $.kekCertThumbprint = kekCertThumbprint;
             return this;
         }
 
+        /**
+         * @param kekState The key encryption key state for the Vmm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekState(@Nullable String kekState) {
             $.kekState = kekState;
             return this;

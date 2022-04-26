@@ -23,6 +23,10 @@ public final class BucketWebsiteResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="mainPageSuffix", required=true)
     private String mainPageSuffix;
 
+    /**
+     * @return If the requested object path is missing, the service will ensure the path has a trailing &#39;/&#39;, append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
+     * 
+     */
     public String mainPageSuffix() {
         return this.mainPageSuffix;
     }
@@ -34,6 +38,10 @@ public final class BucketWebsiteResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="notFoundPage", required=true)
     private String notFoundPage;
 
+    /**
+     * @return If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.
+     * 
+     */
     public String notFoundPage() {
         return this.notFoundPage;
     }
@@ -63,11 +71,23 @@ public final class BucketWebsiteResponse extends com.pulumi.resources.InvokeArgs
             $ = new BucketWebsiteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mainPageSuffix If the requested object path is missing, the service will ensure the path has a trailing &#39;/&#39;, append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainPageSuffix(String mainPageSuffix) {
             $.mainPageSuffix = mainPageSuffix;
             return this;
         }
 
+        /**
+         * @param notFoundPage If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notFoundPage(String notFoundPage) {
             $.notFoundPage = notFoundPage;
             return this;

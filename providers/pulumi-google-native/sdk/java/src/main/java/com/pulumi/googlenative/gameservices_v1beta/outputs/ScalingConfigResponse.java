@@ -13,22 +13,22 @@ import java.util.Objects;
 @CustomType
 public final class ScalingConfigResponse {
     /**
-     * Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
+     * @return Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
      * 
      */
     private final String fleetAutoscalerSpec;
     /**
-     * The name of the Scaling Config
+     * @return The name of the Scaling Config
      * 
      */
     private final String name;
     /**
-     * The schedules to which this Scaling Config applies.
+     * @return The schedules to which this Scaling Config applies.
      * 
      */
     private final List<ScheduleResponse> schedules;
     /**
-     * Labels used to identify the game server clusters to which this Agones scaling config applies. A game server cluster is subject to this Agones scaling config if its labels match any of the selector entries.
+     * @return Labels used to identify the game server clusters to which this Agones scaling config applies. A game server cluster is subject to this Agones scaling config if its labels match any of the selector entries.
      * 
      */
     private final List<LabelSelectorResponse> selectors;
@@ -46,30 +46,30 @@ public final class ScalingConfigResponse {
     }
 
     /**
-     * Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
+     * @return Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
      * 
-    */
+     */
     public String fleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
     }
     /**
-     * The name of the Scaling Config
+     * @return The name of the Scaling Config
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The schedules to which this Scaling Config applies.
+     * @return The schedules to which this Scaling Config applies.
      * 
-    */
+     */
     public List<ScheduleResponse> schedules() {
         return this.schedules;
     }
     /**
-     * Labels used to identify the game server clusters to which this Agones scaling config applies. A game server cluster is subject to this Agones scaling config if its labels match any of the selector entries.
+     * @return Labels used to identify the game server clusters to which this Agones scaling config applies. A game server cluster is subject to this Agones scaling config if its labels match any of the selector entries.
      * 
-    */
+     */
     public List<LabelSelectorResponse> selectors() {
         return this.selectors;
     }

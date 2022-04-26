@@ -15,57 +15,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSystemTopicResult {
     /**
-     * Fully qualified identifier of the resource.
+     * @return Fully qualified identifier of the resource.
      * 
      */
     private final String id;
     /**
-     * Identity information for the resource.
+     * @return Identity information for the resource.
      * 
      */
     private final @Nullable IdentityInfoResponse identity;
     /**
-     * Location of the resource.
+     * @return Location of the resource.
      * 
      */
     private final String location;
     /**
-     * Metric resource id for the system topic.
+     * @return Metric resource id for the system topic.
      * 
      */
     private final String metricResourceId;
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
      */
     private final String name;
     /**
-     * Provisioning state of the system topic.
+     * @return Provisioning state of the system topic.
      * 
      */
     private final String provisioningState;
     /**
-     * Source for the system topic.
+     * @return Source for the system topic.
      * 
      */
     private final @Nullable String source;
     /**
-     * The system metadata relating to System Topic resource.
+     * @return The system metadata relating to System Topic resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Tags of the resource.
+     * @return Tags of the resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * TopicType for the system topic.
+     * @return TopicType for the system topic.
      * 
      */
     private final @Nullable String topicType;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -97,79 +97,79 @@ public final class GetSystemTopicResult {
     }
 
     /**
-     * Fully qualified identifier of the resource.
+     * @return Fully qualified identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Identity information for the resource.
+     * @return Identity information for the resource.
      * 
-    */
+     */
     public Optional<IdentityInfoResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Location of the resource.
+     * @return Location of the resource.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Metric resource id for the system topic.
+     * @return Metric resource id for the system topic.
      * 
-    */
+     */
     public String metricResourceId() {
         return this.metricResourceId;
     }
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the system topic.
+     * @return Provisioning state of the system topic.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Source for the system topic.
+     * @return Source for the system topic.
      * 
-    */
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * The system metadata relating to System Topic resource.
+     * @return The system metadata relating to System Topic resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Tags of the resource.
+     * @return Tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * TopicType for the system topic.
+     * @return TopicType for the system topic.
      * 
-    */
+     */
     public Optional<String> topicType() {
         return Optional.ofNullable(this.topicType);
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

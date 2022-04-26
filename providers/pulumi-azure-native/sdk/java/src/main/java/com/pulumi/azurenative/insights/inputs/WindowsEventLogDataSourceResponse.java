@@ -28,6 +28,11 @@ public final class WindowsEventLogDataSourceResponse extends com.pulumi.resource
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return A friendly name for the data source.
+     * This name should be unique across all data sources (regardless of type) within the data collection rule.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -40,6 +45,11 @@ public final class WindowsEventLogDataSourceResponse extends com.pulumi.resource
     @Import(name="streams")
     private @Nullable List<String> streams;
 
+    /**
+     * @return List of streams that this data source will be sent to.
+     * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+     * 
+     */
     public Optional<List<String>> streams() {
         return Optional.ofNullable(this.streams);
     }
@@ -51,6 +61,10 @@ public final class WindowsEventLogDataSourceResponse extends com.pulumi.resource
     @Import(name="xPathQueries")
     private @Nullable List<String> xPathQueries;
 
+    /**
+     * @return A list of Windows Event Log queries in XPATH format.
+     * 
+     */
     public Optional<List<String>> xPathQueries() {
         return Optional.ofNullable(this.xPathQueries);
     }
@@ -81,25 +95,58 @@ public final class WindowsEventLogDataSourceResponse extends com.pulumi.resource
             $ = new WindowsEventLogDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A friendly name for the data source.
+         * This name should be unique across all data sources (regardless of type) within the data collection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param streams List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(@Nullable List<String> streams) {
             $.streams = streams;
             return this;
         }
 
+        /**
+         * @param streams List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(String... streams) {
             return streams(List.of(streams));
         }
 
+        /**
+         * @param xPathQueries A list of Windows Event Log queries in XPATH format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xPathQueries(@Nullable List<String> xPathQueries) {
             $.xPathQueries = xPathQueries;
             return this;
         }
 
+        /**
+         * @param xPathQueries A list of Windows Event Log queries in XPATH format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xPathQueries(String... xPathQueries) {
             return xPathQueries(List.of(xPathQueries));
         }

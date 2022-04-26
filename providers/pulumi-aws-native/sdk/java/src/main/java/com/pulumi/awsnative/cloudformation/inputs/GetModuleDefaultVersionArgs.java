@@ -19,6 +19,10 @@ public final class GetModuleDefaultVersionArgs extends com.pulumi.resources.Invo
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the module version to set as the default version.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetModuleDefaultVersionArgs extends com.pulumi.resources.Invo
             $ = new GetModuleDefaultVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the module version to set as the default version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

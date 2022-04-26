@@ -30,6 +30,10 @@ public final class EnvelopeEncryptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="clearTracks")
     private @Nullable Output<List<TrackSelectionArgs>> clearTracks;
 
+    /**
+     * @return Representing which tracks should not be encrypted
+     * 
+     */
     public Optional<Output<List<TrackSelectionArgs>>> clearTracks() {
         return Optional.ofNullable(this.clearTracks);
     }
@@ -41,6 +45,10 @@ public final class EnvelopeEncryptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="contentKeys")
     private @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys;
 
+    /**
+     * @return Representing default content key for each encryption scheme and separate content keys for specific tracks
+     * 
+     */
     public Optional<Output<StreamingPolicyContentKeysArgs>> contentKeys() {
         return Optional.ofNullable(this.contentKeys);
     }
@@ -52,6 +60,10 @@ public final class EnvelopeEncryptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="customKeyAcquisitionUrlTemplate")
     private @Nullable Output<String> customKeyAcquisitionUrlTemplate;
 
+    /**
+     * @return Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
+     * 
+     */
     public Optional<Output<String>> customKeyAcquisitionUrlTemplate() {
         return Optional.ofNullable(this.customKeyAcquisitionUrlTemplate);
     }
@@ -63,6 +75,10 @@ public final class EnvelopeEncryptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="enabledProtocols")
     private @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
+    /**
+     * @return Representing supported protocols
+     * 
+     */
     public Optional<Output<EnabledProtocolsArgs>> enabledProtocols() {
         return Optional.ofNullable(this.enabledProtocols);
     }
@@ -94,42 +110,96 @@ public final class EnvelopeEncryptionArgs extends com.pulumi.resources.ResourceA
             $ = new EnvelopeEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clearTracks Representing which tracks should not be encrypted
+         * 
+         * @return builder
+         * 
+         */
         public Builder clearTracks(@Nullable Output<List<TrackSelectionArgs>> clearTracks) {
             $.clearTracks = clearTracks;
             return this;
         }
 
+        /**
+         * @param clearTracks Representing which tracks should not be encrypted
+         * 
+         * @return builder
+         * 
+         */
         public Builder clearTracks(List<TrackSelectionArgs> clearTracks) {
             return clearTracks(Output.of(clearTracks));
         }
 
+        /**
+         * @param clearTracks Representing which tracks should not be encrypted
+         * 
+         * @return builder
+         * 
+         */
         public Builder clearTracks(TrackSelectionArgs... clearTracks) {
             return clearTracks(List.of(clearTracks));
         }
 
+        /**
+         * @param contentKeys Representing default content key for each encryption scheme and separate content keys for specific tracks
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeys(@Nullable Output<StreamingPolicyContentKeysArgs> contentKeys) {
             $.contentKeys = contentKeys;
             return this;
         }
 
+        /**
+         * @param contentKeys Representing default content key for each encryption scheme and separate content keys for specific tracks
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeys(StreamingPolicyContentKeysArgs contentKeys) {
             return contentKeys(Output.of(contentKeys));
         }
 
+        /**
+         * @param customKeyAcquisitionUrlTemplate Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customKeyAcquisitionUrlTemplate(@Nullable Output<String> customKeyAcquisitionUrlTemplate) {
             $.customKeyAcquisitionUrlTemplate = customKeyAcquisitionUrlTemplate;
             return this;
         }
 
+        /**
+         * @param customKeyAcquisitionUrlTemplate Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customKeyAcquisitionUrlTemplate(String customKeyAcquisitionUrlTemplate) {
             return customKeyAcquisitionUrlTemplate(Output.of(customKeyAcquisitionUrlTemplate));
         }
 
+        /**
+         * @param enabledProtocols Representing supported protocols
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledProtocols(@Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
             $.enabledProtocols = enabledProtocols;
             return this;
         }
 
+        /**
+         * @param enabledProtocols Representing supported protocols
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledProtocols(EnabledProtocolsArgs enabledProtocols) {
             return enabledProtocols(Output.of(enabledProtocols));
         }

@@ -26,6 +26,10 @@ public final class GoogleCloudApigeeV1AdvancedApiOpsConfigArgs extends com.pulum
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Flag that specifies whether the Advanced API Ops add-on is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudApigeeV1AdvancedApiOpsConfigArgs extends com.pulum
             $ = new GoogleCloudApigeeV1AdvancedApiOpsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Flag that specifies whether the Advanced API Ops add-on is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Flag that specifies whether the Advanced API Ops add-on is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

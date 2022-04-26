@@ -27,6 +27,10 @@ public final class V2BrowserKeyRestrictionsArgs extends com.pulumi.resources.Res
     @Import(name="allowedReferrers")
     private @Nullable Output<List<String>> allowedReferrers;
 
+    /**
+     * @return A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
+     * 
+     */
     public Optional<Output<List<String>>> allowedReferrers() {
         return Optional.ofNullable(this.allowedReferrers);
     }
@@ -55,15 +59,33 @@ public final class V2BrowserKeyRestrictionsArgs extends com.pulumi.resources.Res
             $ = new V2BrowserKeyRestrictionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedReferrers A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedReferrers(@Nullable Output<List<String>> allowedReferrers) {
             $.allowedReferrers = allowedReferrers;
             return this;
         }
 
+        /**
+         * @param allowedReferrers A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedReferrers(List<String> allowedReferrers) {
             return allowedReferrers(Output.of(allowedReferrers));
         }
 
+        /**
+         * @param allowedReferrers A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedReferrers(String... allowedReferrers) {
             return allowedReferrers(List.of(allowedReferrers));
         }

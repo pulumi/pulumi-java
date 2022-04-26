@@ -28,6 +28,10 @@ public final class OsConstraintArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minimumVersion")
     private @Nullable Output<String> minimumVersion;
 
+    /**
+     * @return The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `&#34;major.minor.patch&#34;`. Examples: `&#34;10.5.301&#34;`, `&#34;9.2.1&#34;`.
+     * 
+     */
     public Optional<Output<String>> minimumVersion() {
         return Optional.ofNullable(this.minimumVersion);
     }
@@ -39,6 +43,10 @@ public final class OsConstraintArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="osType", required=true)
     private Output<OsConstraintOsType> osType;
 
+    /**
+     * @return The allowed OS type.
+     * 
+     */
     public Output<OsConstraintOsType> osType() {
         return this.osType;
     }
@@ -50,6 +58,10 @@ public final class OsConstraintArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requireVerifiedChromeOs")
     private @Nullable Output<Boolean> requireVerifiedChromeOs;
 
+    /**
+     * @return Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.
+     * 
+     */
     public Optional<Output<Boolean>> requireVerifiedChromeOs() {
         return Optional.ofNullable(this.requireVerifiedChromeOs);
     }
@@ -80,29 +92,65 @@ public final class OsConstraintArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OsConstraintArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minimumVersion The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `&#34;major.minor.patch&#34;`. Examples: `&#34;10.5.301&#34;`, `&#34;9.2.1&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumVersion(@Nullable Output<String> minimumVersion) {
             $.minimumVersion = minimumVersion;
             return this;
         }
 
+        /**
+         * @param minimumVersion The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `&#34;major.minor.patch&#34;`. Examples: `&#34;10.5.301&#34;`, `&#34;9.2.1&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumVersion(String minimumVersion) {
             return minimumVersion(Output.of(minimumVersion));
         }
 
+        /**
+         * @param osType The allowed OS type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(Output<OsConstraintOsType> osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osType The allowed OS type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(OsConstraintOsType osType) {
             return osType(Output.of(osType));
         }
 
+        /**
+         * @param requireVerifiedChromeOs Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireVerifiedChromeOs(@Nullable Output<Boolean> requireVerifiedChromeOs) {
             $.requireVerifiedChromeOs = requireVerifiedChromeOs;
             return this;
         }
 
+        /**
+         * @param requireVerifiedChromeOs Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireVerifiedChromeOs(Boolean requireVerifiedChromeOs) {
             return requireVerifiedChromeOs(Output.of(requireVerifiedChromeOs));
         }

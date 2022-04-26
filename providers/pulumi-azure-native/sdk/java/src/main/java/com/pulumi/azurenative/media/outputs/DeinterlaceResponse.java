@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DeinterlaceResponse {
     /**
-     * The deinterlacing mode. Defaults to AutoPixelAdaptive.
+     * @return The deinterlacing mode. Defaults to AutoPixelAdaptive.
      * 
      */
     private final @Nullable String mode;
     /**
-     * The field parity for de-interlacing, defaults to Auto.
+     * @return The field parity for de-interlacing, defaults to Auto.
      * 
      */
     private final @Nullable String parity;
@@ -31,16 +31,16 @@ public final class DeinterlaceResponse {
     }
 
     /**
-     * The deinterlacing mode. Defaults to AutoPixelAdaptive.
+     * @return The deinterlacing mode. Defaults to AutoPixelAdaptive.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * The field parity for de-interlacing, defaults to Auto.
+     * @return The field parity for de-interlacing, defaults to Auto.
      * 
-    */
+     */
     public Optional<String> parity() {
         return Optional.ofNullable(this.parity);
     }

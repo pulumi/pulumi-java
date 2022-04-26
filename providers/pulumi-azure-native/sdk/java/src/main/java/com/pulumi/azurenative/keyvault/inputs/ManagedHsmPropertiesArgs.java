@@ -34,6 +34,10 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="createMode")
     private @Nullable Output<CreateMode> createMode;
 
+    /**
+     * @return The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.
+     * 
+     */
     public Optional<Output<CreateMode>> createMode() {
         return Optional.ofNullable(this.createMode);
     }
@@ -45,6 +49,10 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="enablePurgeProtection")
     private @Nullable Output<Boolean> enablePurgeProtection;
 
+    /**
+     * @return Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.
+     * 
+     */
     public Optional<Output<Boolean>> enablePurgeProtection() {
         return Optional.ofNullable(this.enablePurgeProtection);
     }
@@ -56,6 +64,10 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="enableSoftDelete")
     private @Nullable Output<Boolean> enableSoftDelete;
 
+    /**
+     * @return Property to specify whether the &#39;soft delete&#39; functionality is enabled for this managed HSM pool. If it&#39;s not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.
+     * 
+     */
     public Optional<Output<Boolean>> enableSoftDelete() {
         return Optional.ofNullable(this.enableSoftDelete);
     }
@@ -67,6 +79,10 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="initialAdminObjectIds")
     private @Nullable Output<List<String>> initialAdminObjectIds;
 
+    /**
+     * @return Array of initial administrators object ids for this managed hsm pool.
+     * 
+     */
     public Optional<Output<List<String>>> initialAdminObjectIds() {
         return Optional.ofNullable(this.initialAdminObjectIds);
     }
@@ -78,6 +94,10 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="networkAcls")
     private @Nullable Output<MHSMNetworkRuleSetArgs> networkAcls;
 
+    /**
+     * @return Rules governing the accessibility of the key vault from specific network locations.
+     * 
+     */
     public Optional<Output<MHSMNetworkRuleSetArgs>> networkAcls() {
         return Optional.ofNullable(this.networkAcls);
     }
@@ -89,6 +109,10 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="publicNetworkAccess")
     private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
+    /**
+     * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * 
+     */
     public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -100,6 +124,10 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="softDeleteRetentionInDays")
     private @Nullable Output<Integer> softDeleteRetentionInDays;
 
+    /**
+     * @return softDelete data retention days. It accepts &gt;=7 and &lt;=90.
+     * 
+     */
     public Optional<Output<Integer>> softDeleteRetentionInDays() {
         return Optional.ofNullable(this.softDeleteRetentionInDays);
     }
@@ -111,6 +139,10 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -146,86 +178,200 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new ManagedHsmPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createMode The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createMode(@Nullable Output<CreateMode> createMode) {
             $.createMode = createMode;
             return this;
         }
 
+        /**
+         * @param createMode The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createMode(CreateMode createMode) {
             return createMode(Output.of(createMode));
         }
 
+        /**
+         * @param enablePurgeProtection Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePurgeProtection(@Nullable Output<Boolean> enablePurgeProtection) {
             $.enablePurgeProtection = enablePurgeProtection;
             return this;
         }
 
+        /**
+         * @param enablePurgeProtection Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePurgeProtection(Boolean enablePurgeProtection) {
             return enablePurgeProtection(Output.of(enablePurgeProtection));
         }
 
+        /**
+         * @param enableSoftDelete Property to specify whether the &#39;soft delete&#39; functionality is enabled for this managed HSM pool. If it&#39;s not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSoftDelete(@Nullable Output<Boolean> enableSoftDelete) {
             $.enableSoftDelete = enableSoftDelete;
             return this;
         }
 
+        /**
+         * @param enableSoftDelete Property to specify whether the &#39;soft delete&#39; functionality is enabled for this managed HSM pool. If it&#39;s not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSoftDelete(Boolean enableSoftDelete) {
             return enableSoftDelete(Output.of(enableSoftDelete));
         }
 
+        /**
+         * @param initialAdminObjectIds Array of initial administrators object ids for this managed hsm pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialAdminObjectIds(@Nullable Output<List<String>> initialAdminObjectIds) {
             $.initialAdminObjectIds = initialAdminObjectIds;
             return this;
         }
 
+        /**
+         * @param initialAdminObjectIds Array of initial administrators object ids for this managed hsm pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialAdminObjectIds(List<String> initialAdminObjectIds) {
             return initialAdminObjectIds(Output.of(initialAdminObjectIds));
         }
 
+        /**
+         * @param initialAdminObjectIds Array of initial administrators object ids for this managed hsm pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialAdminObjectIds(String... initialAdminObjectIds) {
             return initialAdminObjectIds(List.of(initialAdminObjectIds));
         }
 
+        /**
+         * @param networkAcls Rules governing the accessibility of the key vault from specific network locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAcls(@Nullable Output<MHSMNetworkRuleSetArgs> networkAcls) {
             $.networkAcls = networkAcls;
             return this;
         }
 
+        /**
+         * @param networkAcls Rules governing the accessibility of the key vault from specific network locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAcls(MHSMNetworkRuleSetArgs networkAcls) {
             return networkAcls(Output.of(networkAcls));
         }
 
+        /**
+         * @param publicNetworkAccess Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(String publicNetworkAccess) {
             return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
             return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }
 
+        /**
+         * @param softDeleteRetentionInDays softDelete data retention days. It accepts &gt;=7 and &lt;=90.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softDeleteRetentionInDays(@Nullable Output<Integer> softDeleteRetentionInDays) {
             $.softDeleteRetentionInDays = softDeleteRetentionInDays;
             return this;
         }
 
+        /**
+         * @param softDeleteRetentionInDays softDelete data retention days. It accepts &gt;=7 and &lt;=90.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softDeleteRetentionInDays(Integer softDeleteRetentionInDays) {
             return softDeleteRetentionInDays(Output.of(softDeleteRetentionInDays));
         }
 
+        /**
+         * @param tenantId The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

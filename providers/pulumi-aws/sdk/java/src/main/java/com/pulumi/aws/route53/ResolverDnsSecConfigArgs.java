@@ -20,6 +20,10 @@ public final class ResolverDnsSecConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return The ID of the virtual private cloud (VPC) that you&#39;re updating the DNSSEC validation status for.
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -48,11 +52,23 @@ public final class ResolverDnsSecConfigArgs extends com.pulumi.resources.Resourc
             $ = new ResolverDnsSecConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId The ID of the virtual private cloud (VPC) that you&#39;re updating the DNSSEC validation status for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The ID of the virtual private cloud (VPC) that you&#39;re updating the DNSSEC validation status for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

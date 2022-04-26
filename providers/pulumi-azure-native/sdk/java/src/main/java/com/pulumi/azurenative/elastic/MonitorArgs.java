@@ -26,6 +26,10 @@ public final class MonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<IdentityPropertiesArgs> identity;
 
+    /**
+     * @return Identity properties of the monitor resource.
+     * 
+     */
     public Optional<Output<IdentityPropertiesArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -37,6 +41,10 @@ public final class MonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the monitor resource
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -48,6 +56,10 @@ public final class MonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitorName")
     private @Nullable Output<String> monitorName;
 
+    /**
+     * @return Monitor resource name
+     * 
+     */
     public Optional<Output<String>> monitorName() {
         return Optional.ofNullable(this.monitorName);
     }
@@ -59,6 +71,10 @@ public final class MonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<MonitorPropertiesArgs> properties;
 
+    /**
+     * @return Properties of the monitor resource.
+     * 
+     */
     public Optional<Output<MonitorPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -70,6 +86,10 @@ public final class MonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the Elastic resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -81,6 +101,10 @@ public final class MonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<ResourceSkuArgs> sku;
 
+    /**
+     * @return SKU of the monitor resource.
+     * 
+     */
     public Optional<Output<ResourceSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -92,6 +116,10 @@ public final class MonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the monitor resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -126,65 +154,149 @@ public final class MonitorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MonitorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity Identity properties of the monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Identity properties of the monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityPropertiesArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The location of the monitor resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the monitor resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorName(@Nullable Output<String> monitorName) {
             $.monitorName = monitorName;
             return this;
         }
 
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorName(String monitorName) {
             return monitorName(Output.of(monitorName));
         }
 
+        /**
+         * @param properties Properties of the monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<MonitorPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(MonitorPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the Elastic resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the Elastic resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku SKU of the monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<ResourceSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku SKU of the monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(ResourceSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags The tags of the monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Subject {
     /**
-     * APIVersion holds the API group and version of the referenced subject. Defaults to &#34;v1&#34; for ServiceAccount subjects. Defaults to &#34;rbac.authorization.k8s.io/v1alpha1&#34; for User and Group subjects.
+     * @return APIVersion holds the API group and version of the referenced subject. Defaults to &#34;v1&#34; for ServiceAccount subjects. Defaults to &#34;rbac.authorization.k8s.io/v1alpha1&#34; for User and Group subjects.
      * 
      */
     private final @Nullable String apiVersion;
     /**
-     * Kind of object being referenced. Values defined by this API group are &#34;User&#34;, &#34;Group&#34;, and &#34;ServiceAccount&#34;. If the Authorizer does not recognized the kind value, the Authorizer should report an error.
+     * @return Kind of object being referenced. Values defined by this API group are &#34;User&#34;, &#34;Group&#34;, and &#34;ServiceAccount&#34;. If the Authorizer does not recognized the kind value, the Authorizer should report an error.
      * 
      */
     private final String kind;
     /**
-     * Name of the object being referenced.
+     * @return Name of the object being referenced.
      * 
      */
     private final String name;
     /**
-     * Namespace of the referenced object.  If the object kind is non-namespace, such as &#34;User&#34; or &#34;Group&#34;, and this value is not empty the Authorizer should report an error.
+     * @return Namespace of the referenced object.  If the object kind is non-namespace, such as &#34;User&#34; or &#34;Group&#34;, and this value is not empty the Authorizer should report an error.
      * 
      */
     private final @Nullable String namespace;
@@ -45,30 +45,30 @@ public final class Subject {
     }
 
     /**
-     * APIVersion holds the API group and version of the referenced subject. Defaults to &#34;v1&#34; for ServiceAccount subjects. Defaults to &#34;rbac.authorization.k8s.io/v1alpha1&#34; for User and Group subjects.
+     * @return APIVersion holds the API group and version of the referenced subject. Defaults to &#34;v1&#34; for ServiceAccount subjects. Defaults to &#34;rbac.authorization.k8s.io/v1alpha1&#34; for User and Group subjects.
      * 
-    */
+     */
     public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
-     * Kind of object being referenced. Values defined by this API group are &#34;User&#34;, &#34;Group&#34;, and &#34;ServiceAccount&#34;. If the Authorizer does not recognized the kind value, the Authorizer should report an error.
+     * @return Kind of object being referenced. Values defined by this API group are &#34;User&#34;, &#34;Group&#34;, and &#34;ServiceAccount&#34;. If the Authorizer does not recognized the kind value, the Authorizer should report an error.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of the object being referenced.
+     * @return Name of the object being referenced.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Namespace of the referenced object.  If the object kind is non-namespace, such as &#34;User&#34; or &#34;Group&#34;, and this value is not empty the Authorizer should report an error.
+     * @return Namespace of the referenced object.  If the object kind is non-namespace, such as &#34;User&#34; or &#34;Group&#34;, and this value is not empty the Authorizer should report an error.
      * 
-    */
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }

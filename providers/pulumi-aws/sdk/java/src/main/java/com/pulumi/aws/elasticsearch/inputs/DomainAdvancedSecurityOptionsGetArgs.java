@@ -23,6 +23,10 @@ public final class DomainAdvancedSecurityOptionsGetArgs extends com.pulumi.resou
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -34,6 +38,10 @@ public final class DomainAdvancedSecurityOptionsGetArgs extends com.pulumi.resou
     @Import(name="internalUserDatabaseEnabled")
     private @Nullable Output<Boolean> internalUserDatabaseEnabled;
 
+    /**
+     * @return Whether the internal user database is enabled. If not set, defaults to `false` by the AWS API.
+     * 
+     */
     public Optional<Output<Boolean>> internalUserDatabaseEnabled() {
         return Optional.ofNullable(this.internalUserDatabaseEnabled);
     }
@@ -45,6 +53,10 @@ public final class DomainAdvancedSecurityOptionsGetArgs extends com.pulumi.resou
     @Import(name="masterUserOptions")
     private @Nullable Output<DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs> masterUserOptions;
 
+    /**
+     * @return Configuration block for the main user. Detailed below.
+     * 
+     */
     public Optional<Output<DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs>> masterUserOptions() {
         return Optional.ofNullable(this.masterUserOptions);
     }
@@ -75,29 +87,65 @@ public final class DomainAdvancedSecurityOptionsGetArgs extends com.pulumi.resou
             $ = new DomainAdvancedSecurityOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param internalUserDatabaseEnabled Whether the internal user database is enabled. If not set, defaults to `false` by the AWS API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalUserDatabaseEnabled(@Nullable Output<Boolean> internalUserDatabaseEnabled) {
             $.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
             return this;
         }
 
+        /**
+         * @param internalUserDatabaseEnabled Whether the internal user database is enabled. If not set, defaults to `false` by the AWS API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalUserDatabaseEnabled(Boolean internalUserDatabaseEnabled) {
             return internalUserDatabaseEnabled(Output.of(internalUserDatabaseEnabled));
         }
 
+        /**
+         * @param masterUserOptions Configuration block for the main user. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterUserOptions(@Nullable Output<DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs> masterUserOptions) {
             $.masterUserOptions = masterUserOptions;
             return this;
         }
 
+        /**
+         * @param masterUserOptions Configuration block for the main user. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterUserOptions(DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs masterUserOptions) {
             return masterUserOptions(Output.of(masterUserOptions));
         }

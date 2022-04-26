@@ -29,6 +29,10 @@ public final class EnumValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Enum value name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -40,6 +44,10 @@ public final class EnumValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="number")
     private @Nullable Output<Integer> number;
 
+    /**
+     * @return Enum value number.
+     * 
+     */
     public Optional<Output<Integer>> number() {
         return Optional.ofNullable(this.number);
     }
@@ -51,6 +59,10 @@ public final class EnumValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
     private @Nullable Output<List<OptionArgs>> options;
 
+    /**
+     * @return Protocol buffer options.
+     * 
+     */
     public Optional<Output<List<OptionArgs>>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -81,33 +93,75 @@ public final class EnumValueArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnumValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Enum value name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Enum value name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param number Enum value number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder number(@Nullable Output<Integer> number) {
             $.number = number;
             return this;
         }
 
+        /**
+         * @param number Enum value number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder number(Integer number) {
             return number(Output.of(number));
         }
 
+        /**
+         * @param options Protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(List<OptionArgs> options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param options Protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionArgs... options) {
             return options(List.of(options));
         }

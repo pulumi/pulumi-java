@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListLabVhdsResult {
     /**
-     * Link for next set of results.
+     * @return Link for next set of results.
      * 
      */
     private final @Nullable String nextLink;
     /**
-     * Results of the list operation.
+     * @return Results of the list operation.
      * 
      */
     private final @Nullable List<LabVhdResponse> value;
@@ -33,16 +33,16 @@ public final class ListLabVhdsResult {
     }
 
     /**
-     * Link for next set of results.
+     * @return Link for next set of results.
      * 
-    */
+     */
     public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
-     * Results of the list operation.
+     * @return Results of the list operation.
      * 
-    */
+     */
     public List<LabVhdResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

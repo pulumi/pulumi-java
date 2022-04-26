@@ -30,6 +30,12 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowJaggedRows")
     private @Nullable Output<Boolean> allowJaggedRows;
 
+    /**
+     * @return Accept rows that are missing trailing optional columns. The missing values are treated as nulls.
+     * If false, records with missing trailing columns are treated as bad records, and if there are too many bad records,
+     * an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.
+     * 
+     */
     public Optional<Output<Boolean>> allowJaggedRows() {
         return Optional.ofNullable(this.allowJaggedRows);
     }
@@ -42,6 +48,11 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowQuotedNewlines")
     private @Nullable Output<Boolean> allowQuotedNewlines;
 
+    /**
+     * @return Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
+     * The default value is false.
+     * 
+     */
     public Optional<Output<Boolean>> allowQuotedNewlines() {
         return Optional.ofNullable(this.allowQuotedNewlines);
     }
@@ -53,6 +64,10 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autodetect")
     private @Nullable Output<Boolean> autodetect;
 
+    /**
+     * @return Indicates if we should automatically infer the options and schema for CSV and JSON sources.
+     * 
+     */
     public Optional<Output<Boolean>> autodetect() {
         return Optional.ofNullable(this.autodetect);
     }
@@ -69,6 +84,15 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createDisposition")
     private @Nullable Output<String> createDisposition;
 
+    /**
+     * @return Specifies whether the job is allowed to create new tables. The following values are supported:
+     * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+     * CREATE_NEVER: The table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result.
+     * Creation, truncation and append actions occur as one atomic update upon job completion
+     * Default value is `CREATE_IF_NEEDED`.
+     * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
+     * 
+     */
     public Optional<Output<String>> createDisposition() {
         return Optional.ofNullable(this.createDisposition);
     }
@@ -81,6 +105,11 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationEncryptionConfiguration")
     private @Nullable Output<JobLoadDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration;
 
+    /**
+     * @return Custom encryption configuration (e.g., Cloud KMS keys)
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<JobLoadDestinationEncryptionConfigurationGetArgs>> destinationEncryptionConfiguration() {
         return Optional.ofNullable(this.destinationEncryptionConfiguration);
     }
@@ -93,6 +122,11 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationTable", required=true)
     private Output<JobLoadDestinationTableGetArgs> destinationTable;
 
+    /**
+     * @return The destination table.
+     * Structure is documented below.
+     * 
+     */
     public Output<JobLoadDestinationTableGetArgs> destinationTable() {
         return this.destinationTable;
     }
@@ -106,6 +140,12 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encoding")
     private @Nullable Output<String> encoding;
 
+    /**
+     * @return The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
+     * The default value is UTF-8. BigQuery decodes the data after the raw, binary data
+     * has been split using the values of the quote and fieldDelimiter properties.
+     * 
+     */
     public Optional<Output<String>> encoding() {
         return Optional.ofNullable(this.encoding);
     }
@@ -118,6 +158,11 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fieldDelimiter")
     private @Nullable Output<String> fieldDelimiter;
 
+    /**
+     * @return When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
+     * Default is &#39;,&#39;
+     * 
+     */
     public Optional<Output<String>> fieldDelimiter() {
         return Optional.ofNullable(this.fieldDelimiter);
     }
@@ -134,6 +179,15 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ignoreUnknownValues")
     private @Nullable Output<Boolean> ignoreUnknownValues;
 
+    /**
+     * @return Indicates if BigQuery should allow extra values that are not represented in the table schema.
+     * If true, the extra values are ignored. If false, records with extra columns are treated as bad records,
+     * and if there are too many bad records, an invalid error is returned in the job result.
+     * The default value is false. The sourceFormat property determines what BigQuery treats as an extra value:
+     * CSV: Trailing columns
+     * JSON: Named values that don&#39;t match any column names
+     * 
+     */
     public Optional<Output<Boolean>> ignoreUnknownValues() {
         return Optional.ofNullable(this.ignoreUnknownValues);
     }
@@ -146,6 +200,11 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxBadRecords")
     private @Nullable Output<Integer> maxBadRecords;
 
+    /**
+     * @return The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
+     * an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.
+     * 
+     */
     public Optional<Output<Integer>> maxBadRecords() {
         return Optional.ofNullable(this.maxBadRecords);
     }
@@ -160,6 +219,13 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nullMarker")
     private @Nullable Output<String> nullMarker;
 
+    /**
+     * @return Specifies a string that represents a null value in a CSV file. The default value is the empty string. If you set this
+     * property to a custom value, BigQuery throws an error if an
+     * empty string is present for all data types except for STRING and BYTE. For STRING and BYTE columns, BigQuery interprets the empty string as
+     * an empty value.
+     * 
+     */
     public Optional<Output<String>> nullMarker() {
         return Optional.ofNullable(this.nullMarker);
     }
@@ -173,6 +239,12 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectionFields")
     private @Nullable Output<List<String>> projectionFields;
 
+    /**
+     * @return If sourceFormat is set to &#34;DATASTORE_BACKUP&#34;, indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
+     * Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
+     * If any named property isn&#39;t found in the Cloud Datastore backup, an invalid error is returned in the job result.
+     * 
+     */
     public Optional<Output<List<String>>> projectionFields() {
         return Optional.ofNullable(this.projectionFields);
     }
@@ -187,6 +259,13 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="quote")
     private @Nullable Output<String> quote;
 
+    /**
+     * @return The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding,
+     * and then uses the first byte of the encoded string to split the data in its raw, binary state.
+     * The default value is a double-quote (&#39;&#34;&#39;). If your data does not contain quoted sections, set the property value to an empty string.
+     * If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
+     * 
+     */
     public Optional<Output<String>> quote() {
         return Optional.ofNullable(this.quote);
     }
@@ -203,6 +282,15 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaUpdateOptions")
     private @Nullable Output<List<String>> schemaUpdateOptions;
 
+    /**
+     * @return Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
+     * supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
+     * when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators.
+     * For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified:
+     * ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
+     * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
+     * 
+     */
     public Optional<Output<List<String>>> schemaUpdateOptions() {
         return Optional.ofNullable(this.schemaUpdateOptions);
     }
@@ -221,6 +309,17 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="skipLeadingRows")
     private @Nullable Output<Integer> skipLeadingRows;
 
+    /**
+     * @return The number of rows at the top of a CSV file that BigQuery will skip when loading the data.
+     * The default value is 0. This property is useful if you have header rows in the file that should be skipped.
+     * When autodetect is on, the behavior is the following:
+     * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected,
+     * the row is read as data. Otherwise data is read starting from the second row.
+     * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row.
+     * skipLeadingRows = N &gt; 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected,
+     * row N is just skipped. Otherwise row N is used to extract column names for the detected schema.
+     * 
+     */
     public Optional<Output<Integer>> skipLeadingRows() {
         return Optional.ofNullable(this.skipLeadingRows);
     }
@@ -235,6 +334,13 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceFormat")
     private @Nullable Output<String> sourceFormat;
 
+    /**
+     * @return The format of the data files. For CSV files, specify &#34;CSV&#34;. For datastore backups, specify &#34;DATASTORE_BACKUP&#34;.
+     * For newline-delimited JSON, specify &#34;NEWLINE_DELIMITED_JSON&#34;. For Avro, specify &#34;AVRO&#34;. For parquet, specify &#34;PARQUET&#34;.
+     * For orc, specify &#34;ORC&#34;. [Beta] For Bigtable, specify &#34;BIGTABLE&#34;.
+     * The default value is CSV.
+     * 
+     */
     public Optional<Output<String>> sourceFormat() {
         return Optional.ofNullable(this.sourceFormat);
     }
@@ -251,6 +357,15 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceUris", required=true)
     private Output<List<String>> sourceUris;
 
+    /**
+     * @return The fully-qualified URIs that point to your data in Google Cloud.
+     * For Google Cloud Storage URIs: Each URI can contain one &#39;*&#39; wildcard character
+     * and it must come after the &#39;bucket&#39; name. Size limits related to load jobs apply
+     * to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be
+     * specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table.
+     * For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the &#39;*&#39; wildcard character is not allowed.
+     * 
+     */
     public Output<List<String>> sourceUris() {
         return this.sourceUris;
     }
@@ -263,6 +378,11 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timePartitioning")
     private @Nullable Output<JobLoadTimePartitioningGetArgs> timePartitioning;
 
+    /**
+     * @return Time-based partitioning specification for the destination table.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<JobLoadTimePartitioningGetArgs>> timePartitioning() {
         return Optional.ofNullable(this.timePartitioning);
     }
@@ -281,6 +401,17 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="writeDisposition")
     private @Nullable Output<String> writeDisposition;
 
+    /**
+     * @return Specifies the action that occurs if the destination table already exists. The following values are supported:
+     * WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+     * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+     * WRITE_EMPTY: If the table already exists and contains data, a &#39;duplicate&#39; error is returned in the job result.
+     * Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+     * Creation, truncation and append actions occur as one atomic update upon job completion.
+     * Default value is `WRITE_EMPTY`.
+     * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
+     * 
+     */
     public Optional<Output<String>> writeDisposition() {
         return Optional.ofNullable(this.writeDisposition);
     }
@@ -327,185 +458,553 @@ public final class JobLoadGetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobLoadGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowJaggedRows Accept rows that are missing trailing optional columns. The missing values are treated as nulls.
+         * If false, records with missing trailing columns are treated as bad records, and if there are too many bad records,
+         * an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowJaggedRows(@Nullable Output<Boolean> allowJaggedRows) {
             $.allowJaggedRows = allowJaggedRows;
             return this;
         }
 
+        /**
+         * @param allowJaggedRows Accept rows that are missing trailing optional columns. The missing values are treated as nulls.
+         * If false, records with missing trailing columns are treated as bad records, and if there are too many bad records,
+         * an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowJaggedRows(Boolean allowJaggedRows) {
             return allowJaggedRows(Output.of(allowJaggedRows));
         }
 
+        /**
+         * @param allowQuotedNewlines Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
+         * The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowQuotedNewlines(@Nullable Output<Boolean> allowQuotedNewlines) {
             $.allowQuotedNewlines = allowQuotedNewlines;
             return this;
         }
 
+        /**
+         * @param allowQuotedNewlines Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
+         * The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowQuotedNewlines(Boolean allowQuotedNewlines) {
             return allowQuotedNewlines(Output.of(allowQuotedNewlines));
         }
 
+        /**
+         * @param autodetect Indicates if we should automatically infer the options and schema for CSV and JSON sources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autodetect(@Nullable Output<Boolean> autodetect) {
             $.autodetect = autodetect;
             return this;
         }
 
+        /**
+         * @param autodetect Indicates if we should automatically infer the options and schema for CSV and JSON sources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autodetect(Boolean autodetect) {
             return autodetect(Output.of(autodetect));
         }
 
+        /**
+         * @param createDisposition Specifies whether the job is allowed to create new tables. The following values are supported:
+         * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+         * CREATE_NEVER: The table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result.
+         * Creation, truncation and append actions occur as one atomic update upon job completion
+         * Default value is `CREATE_IF_NEEDED`.
+         * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createDisposition(@Nullable Output<String> createDisposition) {
             $.createDisposition = createDisposition;
             return this;
         }
 
+        /**
+         * @param createDisposition Specifies whether the job is allowed to create new tables. The following values are supported:
+         * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+         * CREATE_NEVER: The table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result.
+         * Creation, truncation and append actions occur as one atomic update upon job completion
+         * Default value is `CREATE_IF_NEEDED`.
+         * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createDisposition(String createDisposition) {
             return createDisposition(Output.of(createDisposition));
         }
 
+        /**
+         * @param destinationEncryptionConfiguration Custom encryption configuration (e.g., Cloud KMS keys)
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationEncryptionConfiguration(@Nullable Output<JobLoadDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration) {
             $.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param destinationEncryptionConfiguration Custom encryption configuration (e.g., Cloud KMS keys)
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationEncryptionConfiguration(JobLoadDestinationEncryptionConfigurationGetArgs destinationEncryptionConfiguration) {
             return destinationEncryptionConfiguration(Output.of(destinationEncryptionConfiguration));
         }
 
+        /**
+         * @param destinationTable The destination table.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationTable(Output<JobLoadDestinationTableGetArgs> destinationTable) {
             $.destinationTable = destinationTable;
             return this;
         }
 
+        /**
+         * @param destinationTable The destination table.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationTable(JobLoadDestinationTableGetArgs destinationTable) {
             return destinationTable(Output.of(destinationTable));
         }
 
+        /**
+         * @param encoding The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
+         * The default value is UTF-8. BigQuery decodes the data after the raw, binary data
+         * has been split using the values of the quote and fieldDelimiter properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(@Nullable Output<String> encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param encoding The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
+         * The default value is UTF-8. BigQuery decodes the data after the raw, binary data
+         * has been split using the values of the quote and fieldDelimiter properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(String encoding) {
             return encoding(Output.of(encoding));
         }
 
+        /**
+         * @param fieldDelimiter When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
+         * Default is &#39;,&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
             $.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
+        /**
+         * @param fieldDelimiter When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
+         * Default is &#39;,&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldDelimiter(String fieldDelimiter) {
             return fieldDelimiter(Output.of(fieldDelimiter));
         }
 
+        /**
+         * @param ignoreUnknownValues Indicates if BigQuery should allow extra values that are not represented in the table schema.
+         * If true, the extra values are ignored. If false, records with extra columns are treated as bad records,
+         * and if there are too many bad records, an invalid error is returned in the job result.
+         * The default value is false. The sourceFormat property determines what BigQuery treats as an extra value:
+         * CSV: Trailing columns
+         * JSON: Named values that don&#39;t match any column names
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreUnknownValues(@Nullable Output<Boolean> ignoreUnknownValues) {
             $.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
 
+        /**
+         * @param ignoreUnknownValues Indicates if BigQuery should allow extra values that are not represented in the table schema.
+         * If true, the extra values are ignored. If false, records with extra columns are treated as bad records,
+         * and if there are too many bad records, an invalid error is returned in the job result.
+         * The default value is false. The sourceFormat property determines what BigQuery treats as an extra value:
+         * CSV: Trailing columns
+         * JSON: Named values that don&#39;t match any column names
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreUnknownValues(Boolean ignoreUnknownValues) {
             return ignoreUnknownValues(Output.of(ignoreUnknownValues));
         }
 
+        /**
+         * @param maxBadRecords The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
+         * an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBadRecords(@Nullable Output<Integer> maxBadRecords) {
             $.maxBadRecords = maxBadRecords;
             return this;
         }
 
+        /**
+         * @param maxBadRecords The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
+         * an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBadRecords(Integer maxBadRecords) {
             return maxBadRecords(Output.of(maxBadRecords));
         }
 
+        /**
+         * @param nullMarker Specifies a string that represents a null value in a CSV file. The default value is the empty string. If you set this
+         * property to a custom value, BigQuery throws an error if an
+         * empty string is present for all data types except for STRING and BYTE. For STRING and BYTE columns, BigQuery interprets the empty string as
+         * an empty value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nullMarker(@Nullable Output<String> nullMarker) {
             $.nullMarker = nullMarker;
             return this;
         }
 
+        /**
+         * @param nullMarker Specifies a string that represents a null value in a CSV file. The default value is the empty string. If you set this
+         * property to a custom value, BigQuery throws an error if an
+         * empty string is present for all data types except for STRING and BYTE. For STRING and BYTE columns, BigQuery interprets the empty string as
+         * an empty value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nullMarker(String nullMarker) {
             return nullMarker(Output.of(nullMarker));
         }
 
+        /**
+         * @param projectionFields If sourceFormat is set to &#34;DATASTORE_BACKUP&#34;, indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
+         * Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
+         * If any named property isn&#39;t found in the Cloud Datastore backup, an invalid error is returned in the job result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectionFields(@Nullable Output<List<String>> projectionFields) {
             $.projectionFields = projectionFields;
             return this;
         }
 
+        /**
+         * @param projectionFields If sourceFormat is set to &#34;DATASTORE_BACKUP&#34;, indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
+         * Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
+         * If any named property isn&#39;t found in the Cloud Datastore backup, an invalid error is returned in the job result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectionFields(List<String> projectionFields) {
             return projectionFields(Output.of(projectionFields));
         }
 
+        /**
+         * @param projectionFields If sourceFormat is set to &#34;DATASTORE_BACKUP&#34;, indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
+         * Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
+         * If any named property isn&#39;t found in the Cloud Datastore backup, an invalid error is returned in the job result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectionFields(String... projectionFields) {
             return projectionFields(List.of(projectionFields));
         }
 
+        /**
+         * @param quote The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding,
+         * and then uses the first byte of the encoded string to split the data in its raw, binary state.
+         * The default value is a double-quote (&#39;&#34;&#39;). If your data does not contain quoted sections, set the property value to an empty string.
+         * If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quote(@Nullable Output<String> quote) {
             $.quote = quote;
             return this;
         }
 
+        /**
+         * @param quote The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding,
+         * and then uses the first byte of the encoded string to split the data in its raw, binary state.
+         * The default value is a double-quote (&#39;&#34;&#39;). If your data does not contain quoted sections, set the property value to an empty string.
+         * If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quote(String quote) {
             return quote(Output.of(quote));
         }
 
+        /**
+         * @param schemaUpdateOptions Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
+         * supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
+         * when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators.
+         * For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified:
+         * ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
+         * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaUpdateOptions(@Nullable Output<List<String>> schemaUpdateOptions) {
             $.schemaUpdateOptions = schemaUpdateOptions;
             return this;
         }
 
+        /**
+         * @param schemaUpdateOptions Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
+         * supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
+         * when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators.
+         * For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified:
+         * ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
+         * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaUpdateOptions(List<String> schemaUpdateOptions) {
             return schemaUpdateOptions(Output.of(schemaUpdateOptions));
         }
 
+        /**
+         * @param schemaUpdateOptions Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
+         * supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
+         * when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators.
+         * For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified:
+         * ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
+         * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaUpdateOptions(String... schemaUpdateOptions) {
             return schemaUpdateOptions(List.of(schemaUpdateOptions));
         }
 
+        /**
+         * @param skipLeadingRows The number of rows at the top of a CSV file that BigQuery will skip when loading the data.
+         * The default value is 0. This property is useful if you have header rows in the file that should be skipped.
+         * When autodetect is on, the behavior is the following:
+         * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected,
+         * the row is read as data. Otherwise data is read starting from the second row.
+         * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row.
+         * skipLeadingRows = N &gt; 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected,
+         * row N is just skipped. Otherwise row N is used to extract column names for the detected schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipLeadingRows(@Nullable Output<Integer> skipLeadingRows) {
             $.skipLeadingRows = skipLeadingRows;
             return this;
         }
 
+        /**
+         * @param skipLeadingRows The number of rows at the top of a CSV file that BigQuery will skip when loading the data.
+         * The default value is 0. This property is useful if you have header rows in the file that should be skipped.
+         * When autodetect is on, the behavior is the following:
+         * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected,
+         * the row is read as data. Otherwise data is read starting from the second row.
+         * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row.
+         * skipLeadingRows = N &gt; 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected,
+         * row N is just skipped. Otherwise row N is used to extract column names for the detected schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipLeadingRows(Integer skipLeadingRows) {
             return skipLeadingRows(Output.of(skipLeadingRows));
         }
 
+        /**
+         * @param sourceFormat The format of the data files. For CSV files, specify &#34;CSV&#34;. For datastore backups, specify &#34;DATASTORE_BACKUP&#34;.
+         * For newline-delimited JSON, specify &#34;NEWLINE_DELIMITED_JSON&#34;. For Avro, specify &#34;AVRO&#34;. For parquet, specify &#34;PARQUET&#34;.
+         * For orc, specify &#34;ORC&#34;. [Beta] For Bigtable, specify &#34;BIGTABLE&#34;.
+         * The default value is CSV.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFormat(@Nullable Output<String> sourceFormat) {
             $.sourceFormat = sourceFormat;
             return this;
         }
 
+        /**
+         * @param sourceFormat The format of the data files. For CSV files, specify &#34;CSV&#34;. For datastore backups, specify &#34;DATASTORE_BACKUP&#34;.
+         * For newline-delimited JSON, specify &#34;NEWLINE_DELIMITED_JSON&#34;. For Avro, specify &#34;AVRO&#34;. For parquet, specify &#34;PARQUET&#34;.
+         * For orc, specify &#34;ORC&#34;. [Beta] For Bigtable, specify &#34;BIGTABLE&#34;.
+         * The default value is CSV.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFormat(String sourceFormat) {
             return sourceFormat(Output.of(sourceFormat));
         }
 
+        /**
+         * @param sourceUris The fully-qualified URIs that point to your data in Google Cloud.
+         * For Google Cloud Storage URIs: Each URI can contain one &#39;*&#39; wildcard character
+         * and it must come after the &#39;bucket&#39; name. Size limits related to load jobs apply
+         * to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be
+         * specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table.
+         * For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the &#39;*&#39; wildcard character is not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUris(Output<List<String>> sourceUris) {
             $.sourceUris = sourceUris;
             return this;
         }
 
+        /**
+         * @param sourceUris The fully-qualified URIs that point to your data in Google Cloud.
+         * For Google Cloud Storage URIs: Each URI can contain one &#39;*&#39; wildcard character
+         * and it must come after the &#39;bucket&#39; name. Size limits related to load jobs apply
+         * to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be
+         * specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table.
+         * For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the &#39;*&#39; wildcard character is not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUris(List<String> sourceUris) {
             return sourceUris(Output.of(sourceUris));
         }
 
+        /**
+         * @param sourceUris The fully-qualified URIs that point to your data in Google Cloud.
+         * For Google Cloud Storage URIs: Each URI can contain one &#39;*&#39; wildcard character
+         * and it must come after the &#39;bucket&#39; name. Size limits related to load jobs apply
+         * to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be
+         * specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table.
+         * For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the &#39;*&#39; wildcard character is not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUris(String... sourceUris) {
             return sourceUris(List.of(sourceUris));
         }
 
+        /**
+         * @param timePartitioning Time-based partitioning specification for the destination table.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePartitioning(@Nullable Output<JobLoadTimePartitioningGetArgs> timePartitioning) {
             $.timePartitioning = timePartitioning;
             return this;
         }
 
+        /**
+         * @param timePartitioning Time-based partitioning specification for the destination table.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePartitioning(JobLoadTimePartitioningGetArgs timePartitioning) {
             return timePartitioning(Output.of(timePartitioning));
         }
 
+        /**
+         * @param writeDisposition Specifies the action that occurs if the destination table already exists. The following values are supported:
+         * WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+         * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+         * WRITE_EMPTY: If the table already exists and contains data, a &#39;duplicate&#39; error is returned in the job result.
+         * Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+         * Creation, truncation and append actions occur as one atomic update upon job completion.
+         * Default value is `WRITE_EMPTY`.
+         * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeDisposition(@Nullable Output<String> writeDisposition) {
             $.writeDisposition = writeDisposition;
             return this;
         }
 
+        /**
+         * @param writeDisposition Specifies the action that occurs if the destination table already exists. The following values are supported:
+         * WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+         * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+         * WRITE_EMPTY: If the table already exists and contains data, a &#39;duplicate&#39; error is returned in the job result.
+         * Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+         * Creation, truncation and append actions occur as one atomic update upon job completion.
+         * Default value is `WRITE_EMPTY`.
+         * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeDisposition(String writeDisposition) {
             return writeDisposition(Output.of(writeDisposition));
         }

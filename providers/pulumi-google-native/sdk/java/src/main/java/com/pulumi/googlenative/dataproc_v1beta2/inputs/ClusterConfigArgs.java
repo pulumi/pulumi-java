@@ -38,6 +38,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingConfig")
     private @Nullable Output<AutoscalingConfigArgs> autoscalingConfig;
 
+    /**
+     * @return Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
+     * 
+     */
     public Optional<Output<AutoscalingConfigArgs>> autoscalingConfig() {
         return Optional.ofNullable(this.autoscalingConfig);
     }
@@ -49,6 +53,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configBucket")
     private @Nullable Output<String> configBucket;
 
+    /**
+     * @return Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
+     * 
+     */
     public Optional<Output<String>> configBucket() {
         return Optional.ofNullable(this.configBucket);
     }
@@ -60,6 +68,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
     private @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
+    /**
+     * @return Optional. Encryption settings for the cluster.
+     * 
+     */
     public Optional<Output<EncryptionConfigArgs>> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
@@ -71,6 +83,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointConfig")
     private @Nullable Output<EndpointConfigArgs> endpointConfig;
 
+    /**
+     * @return Optional. Port/endpoint configuration for this cluster
+     * 
+     */
     public Optional<Output<EndpointConfigArgs>> endpointConfig() {
         return Optional.ofNullable(this.endpointConfig);
     }
@@ -82,6 +98,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gceClusterConfig")
     private @Nullable Output<GceClusterConfigArgs> gceClusterConfig;
 
+    /**
+     * @return Optional. The shared Compute Engine config settings for all instances in a cluster.
+     * 
+     */
     public Optional<Output<GceClusterConfigArgs>> gceClusterConfig() {
         return Optional.ofNullable(this.gceClusterConfig);
     }
@@ -93,6 +113,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gkeClusterConfig")
     private @Nullable Output<GkeClusterConfigArgs> gkeClusterConfig;
 
+    /**
+     * @return Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
+     * 
+     */
     public Optional<Output<GkeClusterConfigArgs>> gkeClusterConfig() {
         return Optional.ofNullable(this.gkeClusterConfig);
     }
@@ -104,6 +128,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="initializationActions")
     private @Nullable Output<List<NodeInitializationActionArgs>> initializationActions;
 
+    /**
+     * @return Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node&#39;s role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1beta2/instance/attributes/dataproc-role) if [[ &#34;${ROLE}&#34; == &#39;Master&#39; ]]; then ... master specific actions ... else ... worker specific actions ... fi
+     * 
+     */
     public Optional<Output<List<NodeInitializationActionArgs>>> initializationActions() {
         return Optional.ofNullable(this.initializationActions);
     }
@@ -115,6 +143,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lifecycleConfig")
     private @Nullable Output<LifecycleConfigArgs> lifecycleConfig;
 
+    /**
+     * @return Optional. The config setting for auto delete cluster schedule.
+     * 
+     */
     public Optional<Output<LifecycleConfigArgs>> lifecycleConfig() {
         return Optional.ofNullable(this.lifecycleConfig);
     }
@@ -126,6 +158,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterConfig")
     private @Nullable Output<InstanceGroupConfigArgs> masterConfig;
 
+    /**
+     * @return Optional. The Compute Engine config settings for the master instance in a cluster.
+     * 
+     */
     public Optional<Output<InstanceGroupConfigArgs>> masterConfig() {
         return Optional.ofNullable(this.masterConfig);
     }
@@ -137,6 +173,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metastoreConfig")
     private @Nullable Output<MetastoreConfigArgs> metastoreConfig;
 
+    /**
+     * @return Optional. Metastore configuration.
+     * 
+     */
     public Optional<Output<MetastoreConfigArgs>> metastoreConfig() {
         return Optional.ofNullable(this.metastoreConfig);
     }
@@ -148,6 +188,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secondaryWorkerConfig")
     private @Nullable Output<InstanceGroupConfigArgs> secondaryWorkerConfig;
 
+    /**
+     * @return Optional. The Compute Engine config settings for additional worker instances in a cluster.
+     * 
+     */
     public Optional<Output<InstanceGroupConfigArgs>> secondaryWorkerConfig() {
         return Optional.ofNullable(this.secondaryWorkerConfig);
     }
@@ -159,6 +203,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityConfig")
     private @Nullable Output<SecurityConfigArgs> securityConfig;
 
+    /**
+     * @return Optional. Security related configuration.
+     * 
+     */
     public Optional<Output<SecurityConfigArgs>> securityConfig() {
         return Optional.ofNullable(this.securityConfig);
     }
@@ -170,6 +218,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="softwareConfig")
     private @Nullable Output<SoftwareConfigArgs> softwareConfig;
 
+    /**
+     * @return Optional. The config settings for software inside the cluster.
+     * 
+     */
     public Optional<Output<SoftwareConfigArgs>> softwareConfig() {
         return Optional.ofNullable(this.softwareConfig);
     }
@@ -181,6 +233,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tempBucket")
     private @Nullable Output<String> tempBucket;
 
+    /**
+     * @return Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
+     * 
+     */
     public Optional<Output<String>> tempBucket() {
         return Optional.ofNullable(this.tempBucket);
     }
@@ -192,6 +248,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workerConfig")
     private @Nullable Output<InstanceGroupConfigArgs> workerConfig;
 
+    /**
+     * @return Optional. The Compute Engine config settings for worker instances in a cluster.
+     * 
+     */
     public Optional<Output<InstanceGroupConfigArgs>> workerConfig() {
         return Optional.ofNullable(this.workerConfig);
     }
@@ -234,141 +294,327 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscalingConfig Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingConfig(@Nullable Output<AutoscalingConfigArgs> autoscalingConfig) {
             $.autoscalingConfig = autoscalingConfig;
             return this;
         }
 
+        /**
+         * @param autoscalingConfig Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingConfig(AutoscalingConfigArgs autoscalingConfig) {
             return autoscalingConfig(Output.of(autoscalingConfig));
         }
 
+        /**
+         * @param configBucket Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configBucket(@Nullable Output<String> configBucket) {
             $.configBucket = configBucket;
             return this;
         }
 
+        /**
+         * @param configBucket Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configBucket(String configBucket) {
             return configBucket(Output.of(configBucket));
         }
 
+        /**
+         * @param encryptionConfig Optional. Encryption settings for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
             $.encryptionConfig = encryptionConfig;
             return this;
         }
 
+        /**
+         * @param encryptionConfig Optional. Encryption settings for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(EncryptionConfigArgs encryptionConfig) {
             return encryptionConfig(Output.of(encryptionConfig));
         }
 
+        /**
+         * @param endpointConfig Optional. Port/endpoint configuration for this cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointConfig(@Nullable Output<EndpointConfigArgs> endpointConfig) {
             $.endpointConfig = endpointConfig;
             return this;
         }
 
+        /**
+         * @param endpointConfig Optional. Port/endpoint configuration for this cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointConfig(EndpointConfigArgs endpointConfig) {
             return endpointConfig(Output.of(endpointConfig));
         }
 
+        /**
+         * @param gceClusterConfig Optional. The shared Compute Engine config settings for all instances in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gceClusterConfig(@Nullable Output<GceClusterConfigArgs> gceClusterConfig) {
             $.gceClusterConfig = gceClusterConfig;
             return this;
         }
 
+        /**
+         * @param gceClusterConfig Optional. The shared Compute Engine config settings for all instances in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gceClusterConfig(GceClusterConfigArgs gceClusterConfig) {
             return gceClusterConfig(Output.of(gceClusterConfig));
         }
 
+        /**
+         * @param gkeClusterConfig Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusterConfig(@Nullable Output<GkeClusterConfigArgs> gkeClusterConfig) {
             $.gkeClusterConfig = gkeClusterConfig;
             return this;
         }
 
+        /**
+         * @param gkeClusterConfig Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusterConfig(GkeClusterConfigArgs gkeClusterConfig) {
             return gkeClusterConfig(Output.of(gkeClusterConfig));
         }
 
+        /**
+         * @param initializationActions Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node&#39;s role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1beta2/instance/attributes/dataproc-role) if [[ &#34;${ROLE}&#34; == &#39;Master&#39; ]]; then ... master specific actions ... else ... worker specific actions ... fi
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializationActions(@Nullable Output<List<NodeInitializationActionArgs>> initializationActions) {
             $.initializationActions = initializationActions;
             return this;
         }
 
+        /**
+         * @param initializationActions Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node&#39;s role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1beta2/instance/attributes/dataproc-role) if [[ &#34;${ROLE}&#34; == &#39;Master&#39; ]]; then ... master specific actions ... else ... worker specific actions ... fi
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializationActions(List<NodeInitializationActionArgs> initializationActions) {
             return initializationActions(Output.of(initializationActions));
         }
 
+        /**
+         * @param initializationActions Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node&#39;s role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1beta2/instance/attributes/dataproc-role) if [[ &#34;${ROLE}&#34; == &#39;Master&#39; ]]; then ... master specific actions ... else ... worker specific actions ... fi
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializationActions(NodeInitializationActionArgs... initializationActions) {
             return initializationActions(List.of(initializationActions));
         }
 
+        /**
+         * @param lifecycleConfig Optional. The config setting for auto delete cluster schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleConfig(@Nullable Output<LifecycleConfigArgs> lifecycleConfig) {
             $.lifecycleConfig = lifecycleConfig;
             return this;
         }
 
+        /**
+         * @param lifecycleConfig Optional. The config setting for auto delete cluster schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleConfig(LifecycleConfigArgs lifecycleConfig) {
             return lifecycleConfig(Output.of(lifecycleConfig));
         }
 
+        /**
+         * @param masterConfig Optional. The Compute Engine config settings for the master instance in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterConfig(@Nullable Output<InstanceGroupConfigArgs> masterConfig) {
             $.masterConfig = masterConfig;
             return this;
         }
 
+        /**
+         * @param masterConfig Optional. The Compute Engine config settings for the master instance in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterConfig(InstanceGroupConfigArgs masterConfig) {
             return masterConfig(Output.of(masterConfig));
         }
 
+        /**
+         * @param metastoreConfig Optional. Metastore configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metastoreConfig(@Nullable Output<MetastoreConfigArgs> metastoreConfig) {
             $.metastoreConfig = metastoreConfig;
             return this;
         }
 
+        /**
+         * @param metastoreConfig Optional. Metastore configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metastoreConfig(MetastoreConfigArgs metastoreConfig) {
             return metastoreConfig(Output.of(metastoreConfig));
         }
 
+        /**
+         * @param secondaryWorkerConfig Optional. The Compute Engine config settings for additional worker instances in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryWorkerConfig(@Nullable Output<InstanceGroupConfigArgs> secondaryWorkerConfig) {
             $.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
 
+        /**
+         * @param secondaryWorkerConfig Optional. The Compute Engine config settings for additional worker instances in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryWorkerConfig(InstanceGroupConfigArgs secondaryWorkerConfig) {
             return secondaryWorkerConfig(Output.of(secondaryWorkerConfig));
         }
 
+        /**
+         * @param securityConfig Optional. Security related configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityConfig(@Nullable Output<SecurityConfigArgs> securityConfig) {
             $.securityConfig = securityConfig;
             return this;
         }
 
+        /**
+         * @param securityConfig Optional. Security related configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityConfig(SecurityConfigArgs securityConfig) {
             return securityConfig(Output.of(securityConfig));
         }
 
+        /**
+         * @param softwareConfig Optional. The config settings for software inside the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softwareConfig(@Nullable Output<SoftwareConfigArgs> softwareConfig) {
             $.softwareConfig = softwareConfig;
             return this;
         }
 
+        /**
+         * @param softwareConfig Optional. The config settings for software inside the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softwareConfig(SoftwareConfigArgs softwareConfig) {
             return softwareConfig(Output.of(softwareConfig));
         }
 
+        /**
+         * @param tempBucket Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tempBucket(@Nullable Output<String> tempBucket) {
             $.tempBucket = tempBucket;
             return this;
         }
 
+        /**
+         * @param tempBucket Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tempBucket(String tempBucket) {
             return tempBucket(Output.of(tempBucket));
         }
 
+        /**
+         * @param workerConfig Optional. The Compute Engine config settings for worker instances in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(@Nullable Output<InstanceGroupConfigArgs> workerConfig) {
             $.workerConfig = workerConfig;
             return this;
         }
 
+        /**
+         * @param workerConfig Optional. The Compute Engine config settings for worker instances in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(InstanceGroupConfigArgs workerConfig) {
             return workerConfig(Output.of(workerConfig));
         }

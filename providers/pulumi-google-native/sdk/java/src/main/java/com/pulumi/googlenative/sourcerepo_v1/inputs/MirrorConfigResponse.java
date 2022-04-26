@@ -23,6 +23,10 @@ public final class MirrorConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="deployKeyId", required=true)
     private String deployKeyId;
 
+    /**
+     * @return ID of the SSH deploy key at the other hosting service. Removing this key from the other service would deauthorize Google Cloud Source Repositories from mirroring.
+     * 
+     */
     public String deployKeyId() {
         return this.deployKeyId;
     }
@@ -34,6 +38,10 @@ public final class MirrorConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return URL of the main repository at the other hosting service.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -45,6 +53,10 @@ public final class MirrorConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="webhookId", required=true)
     private String webhookId;
 
+    /**
+     * @return ID of the webhook listening to updates to trigger mirroring. Removing this webhook from the other hosting service will stop Google Cloud Source Repositories from receiving notifications, and thereby disabling mirroring.
+     * 
+     */
     public String webhookId() {
         return this.webhookId;
     }
@@ -75,16 +87,34 @@ public final class MirrorConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new MirrorConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deployKeyId ID of the SSH deploy key at the other hosting service. Removing this key from the other service would deauthorize Google Cloud Source Repositories from mirroring.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deployKeyId(String deployKeyId) {
             $.deployKeyId = deployKeyId;
             return this;
         }
 
+        /**
+         * @param url URL of the main repository at the other hosting service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param webhookId ID of the webhook listening to updates to trigger mirroring. Removing this webhook from the other hosting service will stop Google Cloud Source Repositories from receiving notifications, and thereby disabling mirroring.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookId(String webhookId) {
             $.webhookId = webhookId;
             return this;

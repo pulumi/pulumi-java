@@ -24,6 +24,10 @@ public final class AzureActiveDirectoryAppArgs extends com.pulumi.resources.Reso
     @Import(name="appKey", required=true)
     private Output<String> appKey;
 
+    /**
+     * @return Key used to authenticate to the Azure Active Directory Application
+     * 
+     */
     public Output<String> appKey() {
         return this.appKey;
     }
@@ -35,6 +39,10 @@ public final class AzureActiveDirectoryAppArgs extends com.pulumi.resources.Reso
     @Import(name="applicationId", required=true)
     private Output<String> applicationId;
 
+    /**
+     * @return Application ID of the Azure Active Directory Application
+     * 
+     */
     public Output<String> applicationId() {
         return this.applicationId;
     }
@@ -46,6 +54,10 @@ public final class AzureActiveDirectoryAppArgs extends com.pulumi.resources.Reso
     @Import(name="tenantId", required=true)
     private Output<String> tenantId;
 
+    /**
+     * @return Tenant id of the customer
+     * 
+     */
     public Output<String> tenantId() {
         return this.tenantId;
     }
@@ -76,29 +88,65 @@ public final class AzureActiveDirectoryAppArgs extends com.pulumi.resources.Reso
             $ = new AzureActiveDirectoryAppArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appKey Key used to authenticate to the Azure Active Directory Application
+         * 
+         * @return builder
+         * 
+         */
         public Builder appKey(Output<String> appKey) {
             $.appKey = appKey;
             return this;
         }
 
+        /**
+         * @param appKey Key used to authenticate to the Azure Active Directory Application
+         * 
+         * @return builder
+         * 
+         */
         public Builder appKey(String appKey) {
             return appKey(Output.of(appKey));
         }
 
+        /**
+         * @param applicationId Application ID of the Azure Active Directory Application
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId Application ID of the Azure Active Directory Application
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }
 
+        /**
+         * @param tenantId Tenant id of the customer
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant id of the customer
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

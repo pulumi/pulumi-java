@@ -27,6 +27,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity", required=true)
     private Output<Integer> capacity;
 
+    /**
+     * @return The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
+     * 
+     */
     public Output<Integer> capacity() {
         return this.capacity;
     }
@@ -38,6 +42,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<Either<String,SkuName>> name;
 
+    /**
+     * @return The name of this SKU.
+     * 
+     */
     public Output<Either<String,SkuName>> name() {
         return this.name;
     }
@@ -67,28 +75,64 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name The name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,SkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,SkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name The name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name The name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SkuName name) {
             return name(Either.ofRight(name));
         }

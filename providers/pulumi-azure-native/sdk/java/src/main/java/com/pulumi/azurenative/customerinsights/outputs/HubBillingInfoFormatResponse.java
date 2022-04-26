@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HubBillingInfoFormatResponse {
     /**
-     * The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
+     * @return The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
      * 
      */
     private final @Nullable Integer maxUnits;
     /**
-     * The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
+     * @return The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
      * 
      */
     private final @Nullable Integer minUnits;
     /**
-     * The sku name.
+     * @return The sku name.
      * 
      */
     private final @Nullable String skuName;
@@ -39,23 +39,23 @@ public final class HubBillingInfoFormatResponse {
     }
 
     /**
-     * The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
+     * @return The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
      * 
-    */
+     */
     public Optional<Integer> maxUnits() {
         return Optional.ofNullable(this.maxUnits);
     }
     /**
-     * The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
+     * @return The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
      * 
-    */
+     */
     public Optional<Integer> minUnits() {
         return Optional.ofNullable(this.minUnits);
     }
     /**
-     * The sku name.
+     * @return The sku name.
      * 
-    */
+     */
     public Optional<String> skuName() {
         return Optional.ofNullable(this.skuName);
     }

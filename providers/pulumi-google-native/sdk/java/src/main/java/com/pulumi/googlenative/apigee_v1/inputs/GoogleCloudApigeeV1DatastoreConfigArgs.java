@@ -26,6 +26,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends com.pulumi.res
     @Import(name="bucketName")
     private @Nullable Output<String> bucketName;
 
+    /**
+     * @return Name of the Cloud Storage bucket. Required for `gcs` target_type.
+     * 
+     */
     public Optional<Output<String>> bucketName() {
         return Optional.ofNullable(this.bucketName);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends com.pulumi.res
     @Import(name="datasetName")
     private @Nullable Output<String> datasetName;
 
+    /**
+     * @return BigQuery dataset name Required for `bigquery` target_type.
+     * 
+     */
     public Optional<Output<String>> datasetName() {
         return Optional.ofNullable(this.datasetName);
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends com.pulumi.res
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Path of Cloud Storage bucket Required for `gcs` target_type.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends com.pulumi.res
     @Import(name="project", required=true)
     private Output<String> project;
 
+    /**
+     * @return GCP project in which the datastore exists
+     * 
+     */
     public Output<String> project() {
         return this.project;
     }
@@ -70,6 +86,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends com.pulumi.res
     @Import(name="tablePrefix")
     private @Nullable Output<String> tablePrefix;
 
+    /**
+     * @return Prefix of BigQuery table Required for `bigquery` target_type.
+     * 
+     */
     public Optional<Output<String>> tablePrefix() {
         return Optional.ofNullable(this.tablePrefix);
     }
@@ -102,47 +122,107 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends com.pulumi.res
             $ = new GoogleCloudApigeeV1DatastoreConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName Name of the Cloud Storage bucket. Required for `gcs` target_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(@Nullable Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName Name of the Cloud Storage bucket. Required for `gcs` target_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param datasetName BigQuery dataset name Required for `bigquery` target_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetName(@Nullable Output<String> datasetName) {
             $.datasetName = datasetName;
             return this;
         }
 
+        /**
+         * @param datasetName BigQuery dataset name Required for `bigquery` target_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetName(String datasetName) {
             return datasetName(Output.of(datasetName));
         }
 
+        /**
+         * @param path Path of Cloud Storage bucket Required for `gcs` target_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Path of Cloud Storage bucket Required for `gcs` target_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param project GCP project in which the datastore exists
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project GCP project in which the datastore exists
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param tablePrefix Prefix of BigQuery table Required for `bigquery` target_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tablePrefix(@Nullable Output<String> tablePrefix) {
             $.tablePrefix = tablePrefix;
             return this;
         }
 
+        /**
+         * @param tablePrefix Prefix of BigQuery table Required for `bigquery` target_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tablePrefix(String tablePrefix) {
             return tablePrefix(Output.of(tablePrefix));
         }

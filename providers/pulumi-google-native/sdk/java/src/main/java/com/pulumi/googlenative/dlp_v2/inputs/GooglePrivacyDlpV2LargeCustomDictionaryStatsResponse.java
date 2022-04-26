@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse extends 
     @Import(name="approxNumPhrases", required=true)
     private String approxNumPhrases;
 
+    /**
+     * @return Approximate number of distinct phrases in the dictionary.
+     * 
+     */
     public String approxNumPhrases() {
         return this.approxNumPhrases;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse extends 
             $ = new GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param approxNumPhrases Approximate number of distinct phrases in the dictionary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder approxNumPhrases(String approxNumPhrases) {
             $.approxNumPhrases = approxNumPhrases;
             return this;

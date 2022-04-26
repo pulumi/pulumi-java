@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse {
     /**
-     * A list of words to select from for random replacement. The [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of dictionaries.
+     * @return A list of words to select from for random replacement. The [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of dictionaries.
      * 
      */
     private final GooglePrivacyDlpV2WordListResponse wordList;
@@ -21,9 +21,9 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse {
     }
 
     /**
-     * A list of words to select from for random replacement. The [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of dictionaries.
+     * @return A list of words to select from for random replacement. The [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of dictionaries.
      * 
-    */
+     */
     public GooglePrivacyDlpV2WordListResponse wordList() {
         return this.wordList;
     }

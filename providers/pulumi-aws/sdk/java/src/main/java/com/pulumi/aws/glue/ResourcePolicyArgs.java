@@ -29,6 +29,10 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="policy", required=true)
     private Output<String> policy;
 
+    /**
+     * @return The policy to be applied to the aws glue data catalog.
+     * 
+     */
     public Output<String> policy() {
         return this.policy;
     }
@@ -67,11 +71,23 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
             return enableHybrid(Output.of(enableHybrid));
         }
 
+        /**
+         * @param policy The policy to be applied to the aws glue data catalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(Output<String> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy The policy to be applied to the aws glue data catalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(String policy) {
             return policy(Output.of(policy));
         }

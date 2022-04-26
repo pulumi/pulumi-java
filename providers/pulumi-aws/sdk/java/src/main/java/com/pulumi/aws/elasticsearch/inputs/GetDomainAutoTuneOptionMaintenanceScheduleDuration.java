@@ -20,6 +20,10 @@ public final class GetDomainAutoTuneOptionMaintenanceScheduleDuration extends co
     @Import(name="unit", required=true)
     private String unit;
 
+    /**
+     * @return The unit of time specifying the duration of an Auto-Tune maintenance window.
+     * 
+     */
     public String unit() {
         return this.unit;
     }
@@ -31,6 +35,10 @@ public final class GetDomainAutoTuneOptionMaintenanceScheduleDuration extends co
     @Import(name="value", required=true)
     private Integer value;
 
+    /**
+     * @return An integer specifying the value of the duration of an Auto-Tune maintenance window.
+     * 
+     */
     public Integer value() {
         return this.value;
     }
@@ -60,11 +68,23 @@ public final class GetDomainAutoTuneOptionMaintenanceScheduleDuration extends co
             $ = new GetDomainAutoTuneOptionMaintenanceScheduleDuration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param unit The unit of time specifying the duration of an Auto-Tune maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(String unit) {
             $.unit = unit;
             return this;
         }
 
+        /**
+         * @param value An integer specifying the value of the duration of an Auto-Tune maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Integer value) {
             $.value = value;
             return this;

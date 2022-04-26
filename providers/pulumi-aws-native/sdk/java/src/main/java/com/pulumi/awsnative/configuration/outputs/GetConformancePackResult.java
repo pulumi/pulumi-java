@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetConformancePackResult {
     /**
-     * A list of ConformancePackInputParameter objects.
+     * @return A list of ConformancePackInputParameter objects.
      * 
      */
     private final @Nullable List<ConformancePackInputParameter> conformancePackInputParameters;
     /**
-     * AWS Config stores intermediate files while processing conformance pack template.
+     * @return AWS Config stores intermediate files while processing conformance pack template.
      * 
      */
     private final @Nullable String deliveryS3Bucket;
     /**
-     * The prefix for delivery S3 bucket.
+     * @return The prefix for delivery S3 bucket.
      * 
      */
     private final @Nullable String deliveryS3KeyPrefix;
@@ -40,23 +40,23 @@ public final class GetConformancePackResult {
     }
 
     /**
-     * A list of ConformancePackInputParameter objects.
+     * @return A list of ConformancePackInputParameter objects.
      * 
-    */
+     */
     public List<ConformancePackInputParameter> conformancePackInputParameters() {
         return this.conformancePackInputParameters == null ? List.of() : this.conformancePackInputParameters;
     }
     /**
-     * AWS Config stores intermediate files while processing conformance pack template.
+     * @return AWS Config stores intermediate files while processing conformance pack template.
      * 
-    */
+     */
     public Optional<String> deliveryS3Bucket() {
         return Optional.ofNullable(this.deliveryS3Bucket);
     }
     /**
-     * The prefix for delivery S3 bucket.
+     * @return The prefix for delivery S3 bucket.
      * 
-    */
+     */
     public Optional<String> deliveryS3KeyPrefix() {
         return Optional.ofNullable(this.deliveryS3KeyPrefix);
     }

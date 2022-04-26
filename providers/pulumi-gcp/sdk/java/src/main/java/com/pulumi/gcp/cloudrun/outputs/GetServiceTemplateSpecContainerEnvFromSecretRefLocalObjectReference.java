@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference {
     /**
-     * The name of the Cloud Run Service.
+     * @return The name of the Cloud Run Service.
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectRef
     }
 
     /**
-     * The name of the Cloud Run Service.
+     * @return The name of the Cloud Run Service.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

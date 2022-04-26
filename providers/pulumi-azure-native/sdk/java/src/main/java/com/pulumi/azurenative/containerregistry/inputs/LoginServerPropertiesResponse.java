@@ -24,6 +24,10 @@ public final class LoginServerPropertiesResponse extends com.pulumi.resources.In
     @Import(name="host", required=true)
     private String host;
 
+    /**
+     * @return The host of the connected registry. Can be FQDN or IP.
+     * 
+     */
     public String host() {
         return this.host;
     }
@@ -35,6 +39,10 @@ public final class LoginServerPropertiesResponse extends com.pulumi.resources.In
     @Import(name="tls", required=true)
     private TlsPropertiesResponse tls;
 
+    /**
+     * @return The TLS properties of the connected registry login server.
+     * 
+     */
     public TlsPropertiesResponse tls() {
         return this.tls;
     }
@@ -64,11 +72,23 @@ public final class LoginServerPropertiesResponse extends com.pulumi.resources.In
             $ = new LoginServerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host The host of the connected registry. Can be FQDN or IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param tls The TLS properties of the connected registry login server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(TlsPropertiesResponse tls) {
             $.tls = tls;
             return this;

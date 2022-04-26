@@ -23,6 +23,10 @@ public final class ExternalProtectionLevelOptionsResponse extends com.pulumi.res
     @Import(name="ekmConnectionKeyPath", required=true)
     private String ekmConnectionKeyPath;
 
+    /**
+     * @return The path to the external key material on the EKM when using EkmConnection e.g., &#34;v0/my/key&#34;. Set this field instead of external_key_uri when using an EkmConnection.
+     * 
+     */
     public String ekmConnectionKeyPath() {
         return this.ekmConnectionKeyPath;
     }
@@ -34,6 +38,10 @@ public final class ExternalProtectionLevelOptionsResponse extends com.pulumi.res
     @Import(name="externalKeyUri", required=true)
     private String externalKeyUri;
 
+    /**
+     * @return The URI for an external resource that this CryptoKeyVersion represents.
+     * 
+     */
     public String externalKeyUri() {
         return this.externalKeyUri;
     }
@@ -63,11 +71,23 @@ public final class ExternalProtectionLevelOptionsResponse extends com.pulumi.res
             $ = new ExternalProtectionLevelOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ekmConnectionKeyPath The path to the external key material on the EKM when using EkmConnection e.g., &#34;v0/my/key&#34;. Set this field instead of external_key_uri when using an EkmConnection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ekmConnectionKeyPath(String ekmConnectionKeyPath) {
             $.ekmConnectionKeyPath = ekmConnectionKeyPath;
             return this;
         }
 
+        /**
+         * @param externalKeyUri The URI for an external resource that this CryptoKeyVersion represents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalKeyUri(String externalKeyUri) {
             $.externalKeyUri = externalKeyUri;
             return this;

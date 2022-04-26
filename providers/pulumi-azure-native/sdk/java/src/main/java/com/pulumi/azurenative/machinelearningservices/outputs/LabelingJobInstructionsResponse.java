@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LabelingJobInstructionsResponse {
     /**
-     * The link to a page with detailed labeling instructions for labelers.
+     * @return The link to a page with detailed labeling instructions for labelers.
      * 
      */
     private final @Nullable String uri;
@@ -23,9 +23,9 @@ public final class LabelingJobInstructionsResponse {
     }
 
     /**
-     * The link to a page with detailed labeling instructions for labelers.
+     * @return The link to a page with detailed labeling instructions for labelers.
      * 
-    */
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }

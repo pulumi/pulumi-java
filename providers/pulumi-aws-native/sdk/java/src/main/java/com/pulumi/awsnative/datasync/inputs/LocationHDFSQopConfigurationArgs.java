@@ -27,6 +27,10 @@ public final class LocationHDFSQopConfigurationArgs extends com.pulumi.resources
     @Import(name="dataTransferProtection")
     private @Nullable Output<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection;
 
+    /**
+     * @return Configuration for Data Transfer Protection.
+     * 
+     */
     public Optional<Output<LocationHDFSQopConfigurationDataTransferProtection>> dataTransferProtection() {
         return Optional.ofNullable(this.dataTransferProtection);
     }
@@ -38,6 +42,10 @@ public final class LocationHDFSQopConfigurationArgs extends com.pulumi.resources
     @Import(name="rpcProtection")
     private @Nullable Output<LocationHDFSQopConfigurationRpcProtection> rpcProtection;
 
+    /**
+     * @return Configuration for RPC Protection.
+     * 
+     */
     public Optional<Output<LocationHDFSQopConfigurationRpcProtection>> rpcProtection() {
         return Optional.ofNullable(this.rpcProtection);
     }
@@ -67,20 +75,44 @@ public final class LocationHDFSQopConfigurationArgs extends com.pulumi.resources
             $ = new LocationHDFSQopConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataTransferProtection Configuration for Data Transfer Protection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTransferProtection(@Nullable Output<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection) {
             $.dataTransferProtection = dataTransferProtection;
             return this;
         }
 
+        /**
+         * @param dataTransferProtection Configuration for Data Transfer Protection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTransferProtection(LocationHDFSQopConfigurationDataTransferProtection dataTransferProtection) {
             return dataTransferProtection(Output.of(dataTransferProtection));
         }
 
+        /**
+         * @param rpcProtection Configuration for RPC Protection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpcProtection(@Nullable Output<LocationHDFSQopConfigurationRpcProtection> rpcProtection) {
             $.rpcProtection = rpcProtection;
             return this;
         }
 
+        /**
+         * @param rpcProtection Configuration for RPC Protection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpcProtection(LocationHDFSQopConfigurationRpcProtection rpcProtection) {
             return rpcProtection(Output.of(rpcProtection));
         }

@@ -26,6 +26,10 @@ public final class GetClusterKubernetesNetworkConfig extends com.pulumi.resource
     @Import(name="serviceIpv4Cidr", required=true)
     private String serviceIpv4Cidr;
 
+    /**
+     * @return The CIDR block to assign Kubernetes service IP addresses from.
+     * 
+     */
     public String serviceIpv4Cidr() {
         return this.serviceIpv4Cidr;
     }
@@ -60,6 +64,12 @@ public final class GetClusterKubernetesNetworkConfig extends com.pulumi.resource
             return this;
         }
 
+        /**
+         * @param serviceIpv4Cidr The CIDR block to assign Kubernetes service IP addresses from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceIpv4Cidr(String serviceIpv4Cidr) {
             $.serviceIpv4Cidr = serviceIpv4Cidr;
             return this;

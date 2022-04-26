@@ -26,6 +26,10 @@ public final class SizeConfigurationPropertiesResponse extends com.pulumi.resour
     @Import(name="environmentSizes")
     private @Nullable List<EnvironmentSizeResponse> environmentSizes;
 
+    /**
+     * @return Represents a list of size categories supported by this Lab Account (Small, Medium, Large)
+     * 
+     */
     public Optional<List<EnvironmentSizeResponse>> environmentSizes() {
         return Optional.ofNullable(this.environmentSizes);
     }
@@ -54,11 +58,23 @@ public final class SizeConfigurationPropertiesResponse extends com.pulumi.resour
             $ = new SizeConfigurationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environmentSizes Represents a list of size categories supported by this Lab Account (Small, Medium, Large)
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentSizes(@Nullable List<EnvironmentSizeResponse> environmentSizes) {
             $.environmentSizes = environmentSizes;
             return this;
         }
 
+        /**
+         * @param environmentSizes Represents a list of size categories supported by this Lab Account (Small, Medium, Large)
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentSizes(EnvironmentSizeResponse... environmentSizes) {
             return environmentSizes(List.of(environmentSizes));
         }

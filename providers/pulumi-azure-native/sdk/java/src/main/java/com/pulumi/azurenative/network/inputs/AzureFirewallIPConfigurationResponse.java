@@ -26,6 +26,10 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -37,6 +41,10 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -48,6 +56,10 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
     @Import(name="privateIPAddress", required=true)
     private String privateIPAddress;
 
+    /**
+     * @return The Firewall Internal Load Balancer IP to be used as the next hop in User Defined Routes.
+     * 
+     */
     public String privateIPAddress() {
         return this.privateIPAddress;
     }
@@ -70,6 +86,10 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the Azure firewall IP configuration resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -81,6 +101,10 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
     @Import(name="publicIPAddress")
     private @Nullable SubResourceResponse publicIPAddress;
 
+    /**
+     * @return Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.
+     * 
+     */
     public Optional<SubResourceResponse> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
@@ -92,6 +116,10 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
     @Import(name="subnet")
     private @Nullable SubResourceResponse subnet;
 
+    /**
+     * @return Reference to the subnet resource. This resource must be named &#39;AzureFirewallSubnet&#39; or &#39;AzureFirewallManagementSubnet&#39;.
+     * 
+     */
     public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -103,6 +131,10 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -138,41 +170,89 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
             $ = new AzureFirewallIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateIPAddress The Firewall Internal Load Balancer IP to be used as the next hop in User Defined Routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(String privateIPAddress) {
             $.privateIPAddress = privateIPAddress;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the Azure firewall IP configuration resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publicIPAddress Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(@Nullable SubResourceResponse publicIPAddress) {
             $.publicIPAddress = publicIPAddress;
             return this;
         }
 
+        /**
+         * @param subnet Reference to the subnet resource. This resource must be named &#39;AzureFirewallSubnet&#39; or &#39;AzureFirewallManagementSubnet&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable SubResourceResponse subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -21,19 +21,19 @@ public final class BucketReplicationRule {
     private final BucketReplicationDestination destination;
     private final @Nullable BucketReplicationRuleFilter filter;
     /**
-     * A unique identifier for the rule.
+     * @return A unique identifier for the rule.
      * 
      */
     private final @Nullable String id;
     /**
-     * An object key name prefix that identifies the object or objects to which the rule applies.
+     * @return An object key name prefix that identifies the object or objects to which the rule applies.
      * 
      */
     private final @Nullable String prefix;
     private final @Nullable Integer priority;
     private final @Nullable BucketSourceSelectionCriteria sourceSelectionCriteria;
     /**
-     * Specifies whether the rule is enabled.
+     * @return Specifies whether the rule is enabled.
      * 
      */
     private final BucketReplicationRuleStatus status;
@@ -68,16 +68,16 @@ public final class BucketReplicationRule {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * A unique identifier for the rule.
+     * @return A unique identifier for the rule.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * An object key name prefix that identifies the object or objects to which the rule applies.
+     * @return An object key name prefix that identifies the object or objects to which the rule applies.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -88,9 +88,9 @@ public final class BucketReplicationRule {
         return Optional.ofNullable(this.sourceSelectionCriteria);
     }
     /**
-     * Specifies whether the rule is enabled.
+     * @return Specifies whether the rule is enabled.
      * 
-    */
+     */
     public BucketReplicationRuleStatus status() {
         return this.status;
     }

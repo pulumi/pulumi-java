@@ -25,6 +25,10 @@ public final class InnerErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errordetail")
     private @Nullable String errordetail;
 
+    /**
+     * @return The internal error message or exception dump.
+     * 
+     */
     public Optional<String> errordetail() {
         return Optional.ofNullable(this.errordetail);
     }
@@ -36,6 +40,10 @@ public final class InnerErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="exceptiontype")
     private @Nullable String exceptiontype;
 
+    /**
+     * @return The exception type.
+     * 
+     */
     public Optional<String> exceptiontype() {
         return Optional.ofNullable(this.exceptiontype);
     }
@@ -65,11 +73,23 @@ public final class InnerErrorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new InnerErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errordetail The internal error message or exception dump.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errordetail(@Nullable String errordetail) {
             $.errordetail = errordetail;
             return this;
         }
 
+        /**
+         * @param exceptiontype The exception type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptiontype(@Nullable String exceptiontype) {
             $.exceptiontype = exceptiontype;
             return this;

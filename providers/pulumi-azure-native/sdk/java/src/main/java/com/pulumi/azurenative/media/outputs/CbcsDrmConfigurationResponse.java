@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CbcsDrmConfigurationResponse {
     /**
-     * FairPlay configurations
+     * @return FairPlay configurations
      * 
      */
     private final @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay;
     /**
-     * PlayReady configurations
+     * @return PlayReady configurations
      * 
      */
     private final @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
     /**
-     * Widevine configurations
+     * @return Widevine configurations
      * 
      */
     private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
@@ -40,23 +40,23 @@ public final class CbcsDrmConfigurationResponse {
     }
 
     /**
-     * FairPlay configurations
+     * @return FairPlay configurations
      * 
-    */
+     */
     public Optional<StreamingPolicyFairPlayConfigurationResponse> fairPlay() {
         return Optional.ofNullable(this.fairPlay);
     }
     /**
-     * PlayReady configurations
+     * @return PlayReady configurations
      * 
-    */
+     */
     public Optional<StreamingPolicyPlayReadyConfigurationResponse> playReady() {
         return Optional.ofNullable(this.playReady);
     }
     /**
-     * Widevine configurations
+     * @return Widevine configurations
      * 
-    */
+     */
     public Optional<StreamingPolicyWidevineConfigurationResponse> widevine() {
         return Optional.ofNullable(this.widevine);
     }

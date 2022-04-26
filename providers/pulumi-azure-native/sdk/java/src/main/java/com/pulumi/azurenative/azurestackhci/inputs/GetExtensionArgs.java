@@ -19,6 +19,10 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arcSettingName", required=true)
     private String arcSettingName;
 
+    /**
+     * @return The name of the proxy resource holding details of HCI ArcSetting information.
+     * 
+     */
     public String arcSettingName() {
         return this.arcSettingName;
     }
@@ -30,6 +34,10 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return The name of the cluster.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -41,6 +49,10 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="extensionName", required=true)
     private String extensionName;
 
+    /**
+     * @return The name of the machine extension.
+     * 
+     */
     public String extensionName() {
         return this.extensionName;
     }
@@ -52,6 +64,10 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetExtensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arcSettingName The name of the proxy resource holding details of HCI ArcSetting information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arcSettingName(String arcSettingName) {
             $.arcSettingName = arcSettingName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param extensionName The name of the machine extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionName(String extensionName) {
             $.extensionName = extensionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

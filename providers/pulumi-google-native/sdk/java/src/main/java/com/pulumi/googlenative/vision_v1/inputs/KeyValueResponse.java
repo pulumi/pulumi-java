@@ -23,6 +23,10 @@ public final class KeyValueResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -34,6 +38,10 @@ public final class KeyValueResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class KeyValueResponse extends com.pulumi.resources.InvokeArgs {
             $ = new KeyValueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

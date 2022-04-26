@@ -22,6 +22,10 @@ public final class RoleManagementPolicyAssignmentArgs extends com.pulumi.resourc
     @Import(name="policyId")
     private @Nullable Output<String> policyId;
 
+    /**
+     * @return The policy id role management policy assignment.
+     * 
+     */
     public Optional<Output<String>> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -33,6 +37,10 @@ public final class RoleManagementPolicyAssignmentArgs extends com.pulumi.resourc
     @Import(name="roleDefinitionId")
     private @Nullable Output<String> roleDefinitionId;
 
+    /**
+     * @return The role definition of management policy assignment.
+     * 
+     */
     public Optional<Output<String>> roleDefinitionId() {
         return Optional.ofNullable(this.roleDefinitionId);
     }
@@ -44,6 +52,10 @@ public final class RoleManagementPolicyAssignmentArgs extends com.pulumi.resourc
     @Import(name="roleManagementPolicyAssignmentName")
     private @Nullable Output<String> roleManagementPolicyAssignmentName;
 
+    /**
+     * @return The name of format {guid_guid} the role management policy assignment to upsert.
+     * 
+     */
     public Optional<Output<String>> roleManagementPolicyAssignmentName() {
         return Optional.ofNullable(this.roleManagementPolicyAssignmentName);
     }
@@ -55,6 +67,10 @@ public final class RoleManagementPolicyAssignmentArgs extends com.pulumi.resourc
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return The role management policy scope.
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -86,38 +102,86 @@ public final class RoleManagementPolicyAssignmentArgs extends com.pulumi.resourc
             $ = new RoleManagementPolicyAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyId The policy id role management policy assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable Output<String> policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param policyId The policy id role management policy assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(String policyId) {
             return policyId(Output.of(policyId));
         }
 
+        /**
+         * @param roleDefinitionId The role definition of management policy assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             $.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
+        /**
+         * @param roleDefinitionId The role definition of management policy assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(String roleDefinitionId) {
             return roleDefinitionId(Output.of(roleDefinitionId));
         }
 
+        /**
+         * @param roleManagementPolicyAssignmentName The name of format {guid_guid} the role management policy assignment to upsert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleManagementPolicyAssignmentName(@Nullable Output<String> roleManagementPolicyAssignmentName) {
             $.roleManagementPolicyAssignmentName = roleManagementPolicyAssignmentName;
             return this;
         }
 
+        /**
+         * @param roleManagementPolicyAssignmentName The name of format {guid_guid} the role management policy assignment to upsert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleManagementPolicyAssignmentName(String roleManagementPolicyAssignmentName) {
             return roleManagementPolicyAssignmentName(Output.of(roleManagementPolicyAssignmentName));
         }
 
+        /**
+         * @param scope The role management policy scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The role management policy scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }

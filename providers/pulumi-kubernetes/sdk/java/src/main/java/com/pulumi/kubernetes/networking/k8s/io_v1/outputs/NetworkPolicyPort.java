@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NetworkPolicyPort {
     /**
-     * If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Beta state and is enabled by default. It can be disabled using the Feature Gate &#34;NetworkPolicyEndPort&#34;.
+     * @return If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Beta state and is enabled by default. It can be disabled using the Feature Gate &#34;NetworkPolicyEndPort&#34;.
      * 
      */
     private final @Nullable Integer endPort;
     /**
-     * The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
+     * @return The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
      * 
      */
     private final @Nullable Either<Integer,String> port;
     /**
-     * The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
+     * @return The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
      * 
      */
     private final @Nullable String protocol;
@@ -40,23 +40,23 @@ public final class NetworkPolicyPort {
     }
 
     /**
-     * If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Beta state and is enabled by default. It can be disabled using the Feature Gate &#34;NetworkPolicyEndPort&#34;.
+     * @return If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Beta state and is enabled by default. It can be disabled using the Feature Gate &#34;NetworkPolicyEndPort&#34;.
      * 
-    */
+     */
     public Optional<Integer> endPort() {
         return Optional.ofNullable(this.endPort);
     }
     /**
-     * The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
+     * @return The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
      * 
-    */
+     */
     public Optional<Either<Integer,String>> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
+     * @return The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }

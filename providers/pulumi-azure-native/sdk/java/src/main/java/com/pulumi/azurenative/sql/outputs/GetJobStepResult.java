@@ -16,47 +16,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetJobStepResult {
     /**
-     * The action payload of the job step.
+     * @return The action payload of the job step.
      * 
      */
     private final JobStepActionResponse action;
     /**
-     * The resource ID of the job credential that will be used to connect to the targets.
+     * @return The resource ID of the job credential that will be used to connect to the targets.
      * 
      */
     private final String credential;
     /**
-     * Execution options for the job step.
+     * @return Execution options for the job step.
      * 
      */
     private final @Nullable JobStepExecutionOptionsResponse executionOptions;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Output destination properties of the job step.
+     * @return Output destination properties of the job step.
      * 
      */
     private final @Nullable JobStepOutputResponse output;
     /**
-     * The job step&#39;s index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
+     * @return The job step&#39;s index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
      * 
      */
     private final @Nullable Integer stepId;
     /**
-     * The resource ID of the target group that the job step will be executed on.
+     * @return The resource ID of the target group that the job step will be executed on.
      * 
      */
     private final String targetGroup;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -84,65 +84,65 @@ public final class GetJobStepResult {
     }
 
     /**
-     * The action payload of the job step.
+     * @return The action payload of the job step.
      * 
-    */
+     */
     public JobStepActionResponse action() {
         return this.action;
     }
     /**
-     * The resource ID of the job credential that will be used to connect to the targets.
+     * @return The resource ID of the job credential that will be used to connect to the targets.
      * 
-    */
+     */
     public String credential() {
         return this.credential;
     }
     /**
-     * Execution options for the job step.
+     * @return Execution options for the job step.
      * 
-    */
+     */
     public Optional<JobStepExecutionOptionsResponse> executionOptions() {
         return Optional.ofNullable(this.executionOptions);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Output destination properties of the job step.
+     * @return Output destination properties of the job step.
      * 
-    */
+     */
     public Optional<JobStepOutputResponse> output() {
         return Optional.ofNullable(this.output);
     }
     /**
-     * The job step&#39;s index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
+     * @return The job step&#39;s index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
      * 
-    */
+     */
     public Optional<Integer> stepId() {
         return Optional.ofNullable(this.stepId);
     }
     /**
-     * The resource ID of the target group that the job step will be executed on.
+     * @return The resource ID of the target group that the job step will be executed on.
      * 
-    */
+     */
     public String targetGroup() {
         return this.targetGroup;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

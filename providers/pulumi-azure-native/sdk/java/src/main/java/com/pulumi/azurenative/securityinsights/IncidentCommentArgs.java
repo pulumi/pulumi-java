@@ -22,6 +22,10 @@ public final class IncidentCommentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="incidentCommentId")
     private @Nullable Output<String> incidentCommentId;
 
+    /**
+     * @return Incident comment ID
+     * 
+     */
     public Optional<Output<String>> incidentCommentId() {
         return Optional.ofNullable(this.incidentCommentId);
     }
@@ -33,6 +37,10 @@ public final class IncidentCommentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="incidentId", required=true)
     private Output<String> incidentId;
 
+    /**
+     * @return Incident ID
+     * 
+     */
     public Output<String> incidentId() {
         return this.incidentId;
     }
@@ -44,6 +52,10 @@ public final class IncidentCommentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="message", required=true)
     private Output<String> message;
 
+    /**
+     * @return The comment message
+     * 
+     */
     public Output<String> message() {
         return this.message;
     }
@@ -55,6 +67,10 @@ public final class IncidentCommentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="operationalInsightsResourceProvider", required=true)
     private Output<String> operationalInsightsResourceProvider;
 
+    /**
+     * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
@@ -66,6 +82,10 @@ public final class IncidentCommentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -77,6 +97,10 @@ public final class IncidentCommentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -110,56 +134,128 @@ public final class IncidentCommentArgs extends com.pulumi.resources.ResourceArgs
             $ = new IncidentCommentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param incidentCommentId Incident comment ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder incidentCommentId(@Nullable Output<String> incidentCommentId) {
             $.incidentCommentId = incidentCommentId;
             return this;
         }
 
+        /**
+         * @param incidentCommentId Incident comment ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder incidentCommentId(String incidentCommentId) {
             return incidentCommentId(Output.of(incidentCommentId));
         }
 
+        /**
+         * @param incidentId Incident ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder incidentId(Output<String> incidentId) {
             $.incidentId = incidentId;
             return this;
         }
 
+        /**
+         * @param incidentId Incident ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder incidentId(String incidentId) {
             return incidentId(Output.of(incidentId));
         }
 
+        /**
+         * @param message The comment message
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message The comment message
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

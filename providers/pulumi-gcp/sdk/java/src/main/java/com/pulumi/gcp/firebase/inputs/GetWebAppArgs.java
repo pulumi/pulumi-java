@@ -19,6 +19,10 @@ public final class GetWebAppArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="appId", required=true)
     private String appId;
 
+    /**
+     * @return The app_ip of name of the Firebase webApp.
+     * 
+     */
     public String appId() {
         return this.appId;
     }
@@ -47,6 +51,12 @@ public final class GetWebAppArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWebAppArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appId The app_ip of name of the Firebase webApp.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(String appId) {
             $.appId = appId;
             return this;

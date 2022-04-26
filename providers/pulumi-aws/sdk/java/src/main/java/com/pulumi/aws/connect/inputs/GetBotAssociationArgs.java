@@ -20,6 +20,10 @@ public final class GetBotAssociationArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="instanceId", required=true)
     private String instanceId;
 
+    /**
+     * @return The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.
+     * 
+     */
     public String instanceId() {
         return this.instanceId;
     }
@@ -31,6 +35,10 @@ public final class GetBotAssociationArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="lexBot", required=true)
     private GetBotAssociationLexBot lexBot;
 
+    /**
+     * @return Configuration information of an Amazon Lex (V1) bot. Detailed below.
+     * 
+     */
     public GetBotAssociationLexBot lexBot() {
         return this.lexBot;
     }
@@ -60,11 +68,23 @@ public final class GetBotAssociationArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetBotAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceId The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param lexBot Configuration information of an Amazon Lex (V1) bot. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lexBot(GetBotAssociationLexBot lexBot) {
             $.lexBot = lexBot;
             return this;

@@ -23,6 +23,10 @@ public final class ToolExecutionStepResponse extends com.pulumi.resources.Invoke
     @Import(name="toolExecution", required=true)
     private ToolExecutionResponse toolExecution;
 
+    /**
+     * @return A Tool execution. - In response: present if set by create/update request - In create/update request: optional
+     * 
+     */
     public ToolExecutionResponse toolExecution() {
         return this.toolExecution;
     }
@@ -51,6 +55,12 @@ public final class ToolExecutionStepResponse extends com.pulumi.resources.Invoke
             $ = new ToolExecutionStepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param toolExecution A Tool execution. - In response: present if set by create/update request - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolExecution(ToolExecutionResponse toolExecution) {
             $.toolExecution = toolExecution;
             return this;

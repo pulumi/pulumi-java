@@ -26,6 +26,10 @@ public final class IntegrationAccountSchemaArgs extends com.pulumi.resources.Res
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return The content.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -37,6 +41,10 @@ public final class IntegrationAccountSchemaArgs extends com.pulumi.resources.Res
     @Import(name="contentType")
     private @Nullable Output<String> contentType;
 
+    /**
+     * @return The content type.
+     * 
+     */
     public Optional<Output<String>> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -48,6 +56,10 @@ public final class IntegrationAccountSchemaArgs extends com.pulumi.resources.Res
     @Import(name="documentName")
     private @Nullable Output<String> documentName;
 
+    /**
+     * @return The document name.
+     * 
+     */
     public Optional<Output<String>> documentName() {
         return Optional.ofNullable(this.documentName);
     }
@@ -59,6 +71,10 @@ public final class IntegrationAccountSchemaArgs extends com.pulumi.resources.Res
     @Import(name="fileName")
     private @Nullable Output<String> fileName;
 
+    /**
+     * @return The file name.
+     * 
+     */
     public Optional<Output<String>> fileName() {
         return Optional.ofNullable(this.fileName);
     }
@@ -70,6 +86,10 @@ public final class IntegrationAccountSchemaArgs extends com.pulumi.resources.Res
     @Import(name="integrationAccountName", required=true)
     private Output<String> integrationAccountName;
 
+    /**
+     * @return The integration account name.
+     * 
+     */
     public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
@@ -81,6 +101,10 @@ public final class IntegrationAccountSchemaArgs extends com.pulumi.resources.Res
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -92,6 +116,10 @@ public final class IntegrationAccountSchemaArgs extends com.pulumi.resources.Res
     @Import(name="metadata")
     private @Nullable Output<Object> metadata;
 
+    /**
+     * @return The metadata.
+     * 
+     */
     public Optional<Output<Object>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -103,6 +131,10 @@ public final class IntegrationAccountSchemaArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -114,6 +146,10 @@ public final class IntegrationAccountSchemaArgs extends com.pulumi.resources.Res
     @Import(name="schemaName")
     private @Nullable Output<String> schemaName;
 
+    /**
+     * @return The integration account schema name.
+     * 
+     */
     public Optional<Output<String>> schemaName() {
         return Optional.ofNullable(this.schemaName);
     }
@@ -125,6 +161,10 @@ public final class IntegrationAccountSchemaArgs extends com.pulumi.resources.Res
     @Import(name="schemaType", required=true)
     private Output<Either<String,SchemaType>> schemaType;
 
+    /**
+     * @return The schema type.
+     * 
+     */
     public Output<Either<String,SchemaType>> schemaType() {
         return this.schemaType;
     }
@@ -136,6 +176,10 @@ public final class IntegrationAccountSchemaArgs extends com.pulumi.resources.Res
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -147,6 +191,10 @@ public final class IntegrationAccountSchemaArgs extends com.pulumi.resources.Res
     @Import(name="targetNamespace")
     private @Nullable Output<String> targetNamespace;
 
+    /**
+     * @return The target namespace of the schema.
+     * 
+     */
     public Optional<Output<String>> targetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }
@@ -186,118 +234,274 @@ public final class IntegrationAccountSchemaArgs extends com.pulumi.resources.Res
             $ = new IntegrationAccountSchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param contentType The content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType The content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param documentName The document name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentName(@Nullable Output<String> documentName) {
             $.documentName = documentName;
             return this;
         }
 
+        /**
+         * @param documentName The document name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentName(String documentName) {
             return documentName(Output.of(documentName));
         }
 
+        /**
+         * @param fileName The file name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(@Nullable Output<String> fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param fileName The file name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(String fileName) {
             return fileName(Output.of(fileName));
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(Output<String> integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
             return this;
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(String integrationAccountName) {
             return integrationAccountName(Output.of(integrationAccountName));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param metadata The metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Object> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Object metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param schemaName The integration account schema name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(@Nullable Output<String> schemaName) {
             $.schemaName = schemaName;
             return this;
         }
 
+        /**
+         * @param schemaName The integration account schema name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(String schemaName) {
             return schemaName(Output.of(schemaName));
         }
 
+        /**
+         * @param schemaType The schema type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaType(Output<Either<String,SchemaType>> schemaType) {
             $.schemaType = schemaType;
             return this;
         }
 
+        /**
+         * @param schemaType The schema type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaType(Either<String,SchemaType> schemaType) {
             return schemaType(Output.of(schemaType));
         }
 
+        /**
+         * @param schemaType The schema type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaType(String schemaType) {
             return schemaType(Either.ofLeft(schemaType));
         }
 
+        /**
+         * @param schemaType The schema type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaType(SchemaType schemaType) {
             return schemaType(Either.ofRight(schemaType));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param targetNamespace The target namespace of the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNamespace(@Nullable Output<String> targetNamespace) {
             $.targetNamespace = targetNamespace;
             return this;
         }
 
+        /**
+         * @param targetNamespace The target namespace of the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNamespace(String targetNamespace) {
             return targetNamespace(Output.of(targetNamespace));
         }

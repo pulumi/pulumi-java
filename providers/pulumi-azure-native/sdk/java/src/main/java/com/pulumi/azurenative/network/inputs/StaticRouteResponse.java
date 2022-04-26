@@ -26,6 +26,10 @@ public final class StaticRouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="addressPrefixes")
     private @Nullable List<String> addressPrefixes;
 
+    /**
+     * @return List of all address prefixes.
+     * 
+     */
     public Optional<List<String>> addressPrefixes() {
         return Optional.ofNullable(this.addressPrefixes);
     }
@@ -37,6 +41,10 @@ public final class StaticRouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the StaticRoute that is unique within a VnetRoute.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class StaticRouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nextHopIpAddress")
     private @Nullable String nextHopIpAddress;
 
+    /**
+     * @return The ip address of the next hop.
+     * 
+     */
     public Optional<String> nextHopIpAddress() {
         return Optional.ofNullable(this.nextHopIpAddress);
     }
@@ -78,20 +90,44 @@ public final class StaticRouteResponse extends com.pulumi.resources.InvokeArgs {
             $ = new StaticRouteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressPrefixes List of all address prefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             $.addressPrefixes = addressPrefixes;
             return this;
         }
 
+        /**
+         * @param addressPrefixes List of all address prefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefixes(String... addressPrefixes) {
             return addressPrefixes(List.of(addressPrefixes));
         }
 
+        /**
+         * @param name The name of the StaticRoute that is unique within a VnetRoute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param nextHopIpAddress The ip address of the next hop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
             $.nextHopIpAddress = nextHopIpAddress;
             return this;

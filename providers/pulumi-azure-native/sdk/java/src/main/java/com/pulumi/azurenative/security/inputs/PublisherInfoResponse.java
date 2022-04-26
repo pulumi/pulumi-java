@@ -25,6 +25,10 @@ public final class PublisherInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="binaryName")
     private @Nullable String binaryName;
 
+    /**
+     * @return The &#34;OriginalName&#34; field taken from the file&#39;s version resource
+     * 
+     */
     public Optional<String> binaryName() {
         return Optional.ofNullable(this.binaryName);
     }
@@ -36,6 +40,10 @@ public final class PublisherInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="productName")
     private @Nullable String productName;
 
+    /**
+     * @return The product name taken from the file&#39;s version resource
+     * 
+     */
     public Optional<String> productName() {
         return Optional.ofNullable(this.productName);
     }
@@ -47,6 +55,10 @@ public final class PublisherInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="publisherName")
     private @Nullable String publisherName;
 
+    /**
+     * @return The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
+     * 
+     */
     public Optional<String> publisherName() {
         return Optional.ofNullable(this.publisherName);
     }
@@ -58,6 +70,10 @@ public final class PublisherInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return The binary file version taken from the file&#39;s version resource
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -89,21 +105,45 @@ public final class PublisherInfoResponse extends com.pulumi.resources.InvokeArgs
             $ = new PublisherInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param binaryName The &#34;OriginalName&#34; field taken from the file&#39;s version resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder binaryName(@Nullable String binaryName) {
             $.binaryName = binaryName;
             return this;
         }
 
+        /**
+         * @param productName The product name taken from the file&#39;s version resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder productName(@Nullable String productName) {
             $.productName = productName;
             return this;
         }
 
+        /**
+         * @param publisherName The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherName(@Nullable String publisherName) {
             $.publisherName = publisherName;
             return this;
         }
 
+        /**
+         * @param version The binary file version taken from the file&#39;s version resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

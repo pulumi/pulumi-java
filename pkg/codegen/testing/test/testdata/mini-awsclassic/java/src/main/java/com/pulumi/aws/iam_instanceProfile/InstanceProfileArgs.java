@@ -22,6 +22,10 @@ public final class InstanceProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return Name of the role to add to the profile.
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -50,11 +54,23 @@ public final class InstanceProfileArgs extends com.pulumi.resources.ResourceArgs
             $ = new InstanceProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param role Name of the role to add to the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role Name of the role to add to the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

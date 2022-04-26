@@ -28,6 +28,10 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends com.pulumi.re
     @Import(name="enableRenewal")
     private @Nullable Output<Boolean> enableRenewal;
 
+    /**
+     * @return If false, the plan will be completed at the end date.
+     * 
+     */
     public Optional<Output<Boolean>> enableRenewal() {
         return Optional.ofNullable(this.enableRenewal);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends com.pulumi.re
     @Import(name="paymentCycle")
     private @Nullable Output<GoogleCloudChannelV1PeriodArgs> paymentCycle;
 
+    /**
+     * @return Describes how frequently the reseller will be billed, such as once per month.
+     * 
+     */
     public Optional<Output<GoogleCloudChannelV1PeriodArgs>> paymentCycle() {
         return Optional.ofNullable(this.paymentCycle);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends com.pulumi.re
     @Import(name="paymentPlan")
     private @Nullable Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan;
 
+    /**
+     * @return Describes how a reseller will be billed.
+     * 
+     */
     public Optional<Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan>> paymentPlan() {
         return Optional.ofNullable(this.paymentPlan);
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends com.pulumi.re
     @Import(name="resizeUnitCount")
     private @Nullable Output<Boolean> resizeUnitCount;
 
+    /**
+     * @return If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.
+     * 
+     */
     public Optional<Output<Boolean>> resizeUnitCount() {
         return Optional.ofNullable(this.resizeUnitCount);
     }
@@ -92,38 +108,86 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends com.pulumi.re
             $ = new GoogleCloudChannelV1RenewalSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableRenewal If false, the plan will be completed at the end date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRenewal(@Nullable Output<Boolean> enableRenewal) {
             $.enableRenewal = enableRenewal;
             return this;
         }
 
+        /**
+         * @param enableRenewal If false, the plan will be completed at the end date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRenewal(Boolean enableRenewal) {
             return enableRenewal(Output.of(enableRenewal));
         }
 
+        /**
+         * @param paymentCycle Describes how frequently the reseller will be billed, such as once per month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paymentCycle(@Nullable Output<GoogleCloudChannelV1PeriodArgs> paymentCycle) {
             $.paymentCycle = paymentCycle;
             return this;
         }
 
+        /**
+         * @param paymentCycle Describes how frequently the reseller will be billed, such as once per month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paymentCycle(GoogleCloudChannelV1PeriodArgs paymentCycle) {
             return paymentCycle(Output.of(paymentCycle));
         }
 
+        /**
+         * @param paymentPlan Describes how a reseller will be billed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paymentPlan(@Nullable Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan) {
             $.paymentPlan = paymentPlan;
             return this;
         }
 
+        /**
+         * @param paymentPlan Describes how a reseller will be billed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paymentPlan(GoogleCloudChannelV1RenewalSettingsPaymentPlan paymentPlan) {
             return paymentPlan(Output.of(paymentPlan));
         }
 
+        /**
+         * @param resizeUnitCount If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resizeUnitCount(@Nullable Output<Boolean> resizeUnitCount) {
             $.resizeUnitCount = resizeUnitCount;
             return this;
         }
 
+        /**
+         * @param resizeUnitCount If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resizeUnitCount(Boolean resizeUnitCount) {
             return resizeUnitCount(Output.of(resizeUnitCount));
         }

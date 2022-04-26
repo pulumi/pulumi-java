@@ -24,6 +24,10 @@ public final class ServerEndpointSyncActivityStatusResponse extends com.pulumi.r
     @Import(name="appliedBytes", required=true)
     private Double appliedBytes;
 
+    /**
+     * @return Applied bytes
+     * 
+     */
     public Double appliedBytes() {
         return this.appliedBytes;
     }
@@ -35,6 +39,10 @@ public final class ServerEndpointSyncActivityStatusResponse extends com.pulumi.r
     @Import(name="appliedItemCount", required=true)
     private Double appliedItemCount;
 
+    /**
+     * @return Applied item count.
+     * 
+     */
     public Double appliedItemCount() {
         return this.appliedItemCount;
     }
@@ -46,6 +54,10 @@ public final class ServerEndpointSyncActivityStatusResponse extends com.pulumi.r
     @Import(name="perItemErrorCount", required=true)
     private Double perItemErrorCount;
 
+    /**
+     * @return Per item error count
+     * 
+     */
     public Double perItemErrorCount() {
         return this.perItemErrorCount;
     }
@@ -57,6 +69,10 @@ public final class ServerEndpointSyncActivityStatusResponse extends com.pulumi.r
     @Import(name="syncMode", required=true)
     private String syncMode;
 
+    /**
+     * @return Sync mode
+     * 
+     */
     public String syncMode() {
         return this.syncMode;
     }
@@ -68,6 +84,10 @@ public final class ServerEndpointSyncActivityStatusResponse extends com.pulumi.r
     @Import(name="timestamp", required=true)
     private String timestamp;
 
+    /**
+     * @return Timestamp when properties were updated
+     * 
+     */
     public String timestamp() {
         return this.timestamp;
     }
@@ -79,6 +99,10 @@ public final class ServerEndpointSyncActivityStatusResponse extends com.pulumi.r
     @Import(name="totalBytes", required=true)
     private Double totalBytes;
 
+    /**
+     * @return Total bytes (if available)
+     * 
+     */
     public Double totalBytes() {
         return this.totalBytes;
     }
@@ -90,6 +114,10 @@ public final class ServerEndpointSyncActivityStatusResponse extends com.pulumi.r
     @Import(name="totalItemCount", required=true)
     private Double totalItemCount;
 
+    /**
+     * @return Total item count (if available)
+     * 
+     */
     public Double totalItemCount() {
         return this.totalItemCount;
     }
@@ -124,36 +152,78 @@ public final class ServerEndpointSyncActivityStatusResponse extends com.pulumi.r
             $ = new ServerEndpointSyncActivityStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appliedBytes Applied bytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder appliedBytes(Double appliedBytes) {
             $.appliedBytes = appliedBytes;
             return this;
         }
 
+        /**
+         * @param appliedItemCount Applied item count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appliedItemCount(Double appliedItemCount) {
             $.appliedItemCount = appliedItemCount;
             return this;
         }
 
+        /**
+         * @param perItemErrorCount Per item error count
+         * 
+         * @return builder
+         * 
+         */
         public Builder perItemErrorCount(Double perItemErrorCount) {
             $.perItemErrorCount = perItemErrorCount;
             return this;
         }
 
+        /**
+         * @param syncMode Sync mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncMode(String syncMode) {
             $.syncMode = syncMode;
             return this;
         }
 
+        /**
+         * @param timestamp Timestamp when properties were updated
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestamp(String timestamp) {
             $.timestamp = timestamp;
             return this;
         }
 
+        /**
+         * @param totalBytes Total bytes (if available)
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalBytes(Double totalBytes) {
             $.totalBytes = totalBytes;
             return this;
         }
 
+        /**
+         * @param totalItemCount Total item count (if available)
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalItemCount(Double totalItemCount) {
             $.totalItemCount = totalItemCount;
             return this;

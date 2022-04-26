@@ -26,6 +26,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
     @Import(name="exec")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec;
 
+    /**
+     * @return Exec resource
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs>> exec() {
         return Optional.ofNullable(this.exec);
     }
@@ -37,6 +41,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
     @Import(name="file")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file;
 
+    /**
+     * @return A remote or local source.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs>> file() {
         return Optional.ofNullable(this.file);
     }
@@ -48,6 +56,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -59,6 +71,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
     @Import(name="pkg")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg;
 
+    /**
+     * @return Package resource
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs>> pkg() {
         return Optional.ofNullable(this.pkg);
     }
@@ -70,6 +86,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
     @Import(name="repository")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository;
 
+    /**
+     * @return Package repository resource
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs>> repository() {
         return Optional.ofNullable(this.repository);
     }
@@ -102,47 +122,107 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
             $ = new OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exec Exec resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder exec(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec) {
             $.exec = exec;
             return this;
         }
 
+        /**
+         * @param exec Exec resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder exec(OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs exec) {
             return exec(Output.of(exec));
         }
 
+        /**
+         * @param file A remote or local source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param file A remote or local source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs file) {
             return file(Output.of(file));
         }
 
+        /**
+         * @param id Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param pkg Package resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder pkg(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg) {
             $.pkg = pkg;
             return this;
         }
 
+        /**
+         * @param pkg Package resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder pkg(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs pkg) {
             return pkg(Output.of(pkg));
         }
 
+        /**
+         * @param repository Package repository resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository) {
             $.repository = repository;
             return this;
         }
 
+        /**
+         * @param repository Package repository resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs repository) {
             return repository(Output.of(repository));
         }

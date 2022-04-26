@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CanaryRunConfig {
     /**
-     * Enable active tracing if set to true
+     * @return Enable active tracing if set to true
      * 
      */
     private final @Nullable Boolean activeTracing;
     /**
-     * Environment variable key-value pairs.
+     * @return Environment variable key-value pairs.
      * 
      */
     private final @Nullable Object environmentVariables;
     /**
-     * Provide maximum memory available for canary in MB
+     * @return Provide maximum memory available for canary in MB
      * 
      */
     private final @Nullable Integer memoryInMB;
     /**
-     * Provide maximum canary timeout per run in seconds
+     * @return Provide maximum canary timeout per run in seconds
      * 
      */
     private final @Nullable Integer timeoutInSeconds;
@@ -47,30 +47,30 @@ public final class CanaryRunConfig {
     }
 
     /**
-     * Enable active tracing if set to true
+     * @return Enable active tracing if set to true
      * 
-    */
+     */
     public Optional<Boolean> activeTracing() {
         return Optional.ofNullable(this.activeTracing);
     }
     /**
-     * Environment variable key-value pairs.
+     * @return Environment variable key-value pairs.
      * 
-    */
+     */
     public Optional<Object> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
     /**
-     * Provide maximum memory available for canary in MB
+     * @return Provide maximum memory available for canary in MB
      * 
-    */
+     */
     public Optional<Integer> memoryInMB() {
         return Optional.ofNullable(this.memoryInMB);
     }
     /**
-     * Provide maximum canary timeout per run in seconds
+     * @return Provide maximum canary timeout per run in seconds
      * 
-    */
+     */
     public Optional<Integer> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }

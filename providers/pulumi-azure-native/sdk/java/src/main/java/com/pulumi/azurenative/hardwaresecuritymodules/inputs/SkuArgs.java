@@ -28,6 +28,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<Either<String,SkuName>> name;
 
+    /**
+     * @return SKU of the dedicated HSM
+     * 
+     */
     public Optional<Output<Either<String,SkuName>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,19 +60,43 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name SKU of the dedicated HSM
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,SkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name SKU of the dedicated HSM
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,SkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name SKU of the dedicated HSM
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name SKU of the dedicated HSM
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SkuName name) {
             return name(Either.ofRight(name));
         }

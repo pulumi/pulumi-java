@@ -31,6 +31,10 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends com.pulumi.reso
     @Import(name="checkPermissionsGroup")
     private @Nullable Output<Either<String,ServerLevelPermissionsGroup>> checkPermissionsGroup;
 
+    /**
+     * @return Permission group for validations
+     * 
+     */
     public Optional<Output<Either<String,ServerLevelPermissionsGroup>>> checkPermissionsGroup() {
         return Optional.ofNullable(this.checkPermissionsGroup);
     }
@@ -42,6 +46,10 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends com.pulumi.reso
     @Import(name="collectAgentJobs")
     private @Nullable Output<Boolean> collectAgentJobs;
 
+    /**
+     * @return Flag for whether to collect agent jobs from source server.
+     * 
+     */
     public Optional<Output<Boolean>> collectAgentJobs() {
         return Optional.ofNullable(this.collectAgentJobs);
     }
@@ -53,6 +61,10 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends com.pulumi.reso
     @Import(name="collectLogins")
     private @Nullable Output<Boolean> collectLogins;
 
+    /**
+     * @return Flag for whether to collect logins from source server.
+     * 
+     */
     public Optional<Output<Boolean>> collectLogins() {
         return Optional.ofNullable(this.collectLogins);
     }
@@ -64,6 +76,10 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends com.pulumi.reso
     @Import(name="sourceConnectionInfo", required=true)
     private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
+    /**
+     * @return Connection information for Source SQL Server
+     * 
+     */
     public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -95,46 +111,106 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends com.pulumi.reso
             $ = new ConnectToSourceSqlServerTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checkPermissionsGroup Permission group for validations
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkPermissionsGroup(@Nullable Output<Either<String,ServerLevelPermissionsGroup>> checkPermissionsGroup) {
             $.checkPermissionsGroup = checkPermissionsGroup;
             return this;
         }
 
+        /**
+         * @param checkPermissionsGroup Permission group for validations
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkPermissionsGroup(Either<String,ServerLevelPermissionsGroup> checkPermissionsGroup) {
             return checkPermissionsGroup(Output.of(checkPermissionsGroup));
         }
 
+        /**
+         * @param checkPermissionsGroup Permission group for validations
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkPermissionsGroup(String checkPermissionsGroup) {
             return checkPermissionsGroup(Either.ofLeft(checkPermissionsGroup));
         }
 
+        /**
+         * @param checkPermissionsGroup Permission group for validations
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkPermissionsGroup(ServerLevelPermissionsGroup checkPermissionsGroup) {
             return checkPermissionsGroup(Either.ofRight(checkPermissionsGroup));
         }
 
+        /**
+         * @param collectAgentJobs Flag for whether to collect agent jobs from source server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectAgentJobs(@Nullable Output<Boolean> collectAgentJobs) {
             $.collectAgentJobs = collectAgentJobs;
             return this;
         }
 
+        /**
+         * @param collectAgentJobs Flag for whether to collect agent jobs from source server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectAgentJobs(Boolean collectAgentJobs) {
             return collectAgentJobs(Output.of(collectAgentJobs));
         }
 
+        /**
+         * @param collectLogins Flag for whether to collect logins from source server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectLogins(@Nullable Output<Boolean> collectLogins) {
             $.collectLogins = collectLogins;
             return this;
         }
 
+        /**
+         * @param collectLogins Flag for whether to collect logins from source server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectLogins(Boolean collectLogins) {
             return collectLogins(Output.of(collectLogins));
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for Source SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for Source SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }

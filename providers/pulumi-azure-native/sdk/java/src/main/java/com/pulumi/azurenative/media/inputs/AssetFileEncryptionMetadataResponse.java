@@ -25,6 +25,10 @@ public final class AssetFileEncryptionMetadataResponse extends com.pulumi.resour
     @Import(name="assetFileId", required=true)
     private String assetFileId;
 
+    /**
+     * @return The Asset File Id.
+     * 
+     */
     public String assetFileId() {
         return this.assetFileId;
     }
@@ -36,6 +40,10 @@ public final class AssetFileEncryptionMetadataResponse extends com.pulumi.resour
     @Import(name="assetFileName")
     private @Nullable String assetFileName;
 
+    /**
+     * @return The Asset File name.
+     * 
+     */
     public Optional<String> assetFileName() {
         return Optional.ofNullable(this.assetFileName);
     }
@@ -47,6 +55,10 @@ public final class AssetFileEncryptionMetadataResponse extends com.pulumi.resour
     @Import(name="initializationVector")
     private @Nullable String initializationVector;
 
+    /**
+     * @return The Asset File initialization vector.
+     * 
+     */
     public Optional<String> initializationVector() {
         return Optional.ofNullable(this.initializationVector);
     }
@@ -77,16 +89,34 @@ public final class AssetFileEncryptionMetadataResponse extends com.pulumi.resour
             $ = new AssetFileEncryptionMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetFileId The Asset File Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetFileId(String assetFileId) {
             $.assetFileId = assetFileId;
             return this;
         }
 
+        /**
+         * @param assetFileName The Asset File name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetFileName(@Nullable String assetFileName) {
             $.assetFileName = assetFileName;
             return this;
         }
 
+        /**
+         * @param initializationVector The Asset File initialization vector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializationVector(@Nullable String initializationVector) {
             $.initializationVector = initializationVector;
             return this;

@@ -18,87 +18,87 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPython2PackageResult {
     /**
-     * Gets or sets the activity count of the module.
+     * @return Gets or sets the activity count of the module.
      * 
      */
     private final @Nullable Integer activityCount;
     /**
-     * Gets or sets the contentLink of the module.
+     * @return Gets or sets the contentLink of the module.
      * 
      */
     private final @Nullable ContentLinkResponse contentLink;
     /**
-     * Gets or sets the creation time.
+     * @return Gets or sets the creation time.
      * 
      */
     private final @Nullable String creationTime;
     /**
-     * Gets or sets the description.
+     * @return Gets or sets the description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Gets or sets the error info of the module.
+     * @return Gets or sets the error info of the module.
      * 
      */
     private final @Nullable ModuleErrorInfoResponse error;
     /**
-     * Gets or sets the etag of the resource.
+     * @return Gets or sets the etag of the resource.
      * 
      */
     private final @Nullable String etag;
     /**
-     * Fully qualified resource Id for the resource
+     * @return Fully qualified resource Id for the resource
      * 
      */
     private final String id;
     /**
-     * Gets or sets type of module, if its composite or not.
+     * @return Gets or sets type of module, if its composite or not.
      * 
      */
     private final @Nullable Boolean isComposite;
     /**
-     * Gets or sets the isGlobal flag of the module.
+     * @return Gets or sets the isGlobal flag of the module.
      * 
      */
     private final @Nullable Boolean isGlobal;
     /**
-     * Gets or sets the last modified time.
+     * @return Gets or sets the last modified time.
      * 
      */
     private final @Nullable String lastModifiedTime;
     /**
-     * The Azure Region where the resource lives
+     * @return The Azure Region where the resource lives
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Gets or sets the provisioning state of the module.
+     * @return Gets or sets the provisioning state of the module.
      * 
      */
     private final @Nullable String provisioningState;
     /**
-     * Gets or sets the size in bytes of the module.
+     * @return Gets or sets the size in bytes of the module.
      * 
      */
     private final @Nullable Double sizeInBytes;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
     /**
-     * Gets or sets the version of the module.
+     * @return Gets or sets the version of the module.
      * 
      */
     private final @Nullable String version;
@@ -142,121 +142,121 @@ public final class GetPython2PackageResult {
     }
 
     /**
-     * Gets or sets the activity count of the module.
+     * @return Gets or sets the activity count of the module.
      * 
-    */
+     */
     public Optional<Integer> activityCount() {
         return Optional.ofNullable(this.activityCount);
     }
     /**
-     * Gets or sets the contentLink of the module.
+     * @return Gets or sets the contentLink of the module.
      * 
-    */
+     */
     public Optional<ContentLinkResponse> contentLink() {
         return Optional.ofNullable(this.contentLink);
     }
     /**
-     * Gets or sets the creation time.
+     * @return Gets or sets the creation time.
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * Gets or sets the description.
+     * @return Gets or sets the description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Gets or sets the error info of the module.
+     * @return Gets or sets the error info of the module.
      * 
-    */
+     */
     public Optional<ModuleErrorInfoResponse> error() {
         return Optional.ofNullable(this.error);
     }
     /**
-     * Gets or sets the etag of the resource.
+     * @return Gets or sets the etag of the resource.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Fully qualified resource Id for the resource
+     * @return Fully qualified resource Id for the resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets or sets type of module, if its composite or not.
+     * @return Gets or sets type of module, if its composite or not.
      * 
-    */
+     */
     public Optional<Boolean> isComposite() {
         return Optional.ofNullable(this.isComposite);
     }
     /**
-     * Gets or sets the isGlobal flag of the module.
+     * @return Gets or sets the isGlobal flag of the module.
      * 
-    */
+     */
     public Optional<Boolean> isGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
     /**
-     * Gets or sets the last modified time.
+     * @return Gets or sets the last modified time.
      * 
-    */
+     */
     public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
-     * The Azure Region where the resource lives
+     * @return The Azure Region where the resource lives
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets or sets the provisioning state of the module.
+     * @return Gets or sets the provisioning state of the module.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * Gets or sets the size in bytes of the module.
+     * @return Gets or sets the size in bytes of the module.
      * 
-    */
+     */
     public Optional<Double> sizeInBytes() {
         return Optional.ofNullable(this.sizeInBytes);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Gets or sets the version of the module.
+     * @return Gets or sets the version of the module.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

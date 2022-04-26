@@ -22,6 +22,10 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
     @Import(name="connectionName", required=true)
     private String connectionName;
 
+    /**
+     * @return The connection name.
+     * 
+     */
     public String connectionName() {
         return this.connectionName;
     }
@@ -33,6 +37,10 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource Id
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -44,6 +52,10 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
     @Import(name="kind")
     private @Nullable String kind;
 
+    /**
+     * @return Kind of resource
+     * 
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -55,6 +67,10 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Resource Location
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -66,6 +82,10 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Resource Name
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -77,6 +97,10 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -88,6 +112,10 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -99,6 +127,10 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -110,6 +142,10 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
     @Import(name="validityTimeSpan")
     private @Nullable String validityTimeSpan;
 
+    /**
+     * @return time span for how long the keys will be valid
+     * 
+     */
     public Optional<String> validityTimeSpan() {
         return Optional.ofNullable(this.validityTimeSpan);
     }
@@ -146,46 +182,100 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
             $ = new ListConnectionKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionName The connection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param id Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param location Resource Location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name Resource Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param type Resource type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param validityTimeSpan time span for how long the keys will be valid
+         * 
+         * @return builder
+         * 
+         */
         public Builder validityTimeSpan(@Nullable String validityTimeSpan) {
             $.validityTimeSpan = validityTimeSpan;
             return this;

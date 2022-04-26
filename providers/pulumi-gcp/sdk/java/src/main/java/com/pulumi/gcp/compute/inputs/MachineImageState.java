@@ -25,6 +25,10 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A text description of the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,11 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="guestFlush")
     private @Nullable Output<Boolean> guestFlush;
 
+    /**
+     * @return Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
+     * Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * 
+     */
     public Optional<Output<Boolean>> guestFlush() {
         return Optional.ofNullable(this.guestFlush);
     }
@@ -52,6 +61,14 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="machineImageEncryptionKey")
     private @Nullable Output<MachineImageMachineImageEncryptionKeyGetArgs> machineImageEncryptionKey;
 
+    /**
+     * @return Encrypts the machine image using a customer-supplied encryption key.
+     * After you encrypt a machine image with a customer-supplied key, you must
+     * provide the same key if you use the machine image later (e.g. to create a
+     * instance from the image)
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<MachineImageMachineImageEncryptionKeyGetArgs>> machineImageEncryptionKey() {
         return Optional.ofNullable(this.machineImageEncryptionKey);
     }
@@ -63,6 +80,10 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -75,6 +96,11 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -86,6 +112,10 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -97,6 +127,10 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceInstance")
     private @Nullable Output<String> sourceInstance;
 
+    /**
+     * @return The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
+     * 
+     */
     public Optional<Output<String>> sourceInstance() {
         return Optional.ofNullable(this.sourceInstance);
     }
@@ -108,6 +142,10 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageLocations")
     private @Nullable Output<List<String>> storageLocations;
 
+    /**
+     * @return The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
+     * 
+     */
     public Optional<Output<List<String>>> storageLocations() {
         return Optional.ofNullable(this.storageLocations);
     }
@@ -143,78 +181,192 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
             $ = new MachineImageState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A text description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A text description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param guestFlush Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
+         * Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestFlush(@Nullable Output<Boolean> guestFlush) {
             $.guestFlush = guestFlush;
             return this;
         }
 
+        /**
+         * @param guestFlush Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
+         * Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestFlush(Boolean guestFlush) {
             return guestFlush(Output.of(guestFlush));
         }
 
+        /**
+         * @param machineImageEncryptionKey Encrypts the machine image using a customer-supplied encryption key.
+         * After you encrypt a machine image with a customer-supplied key, you must
+         * provide the same key if you use the machine image later (e.g. to create a
+         * instance from the image)
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineImageEncryptionKey(@Nullable Output<MachineImageMachineImageEncryptionKeyGetArgs> machineImageEncryptionKey) {
             $.machineImageEncryptionKey = machineImageEncryptionKey;
             return this;
         }
 
+        /**
+         * @param machineImageEncryptionKey Encrypts the machine image using a customer-supplied encryption key.
+         * After you encrypt a machine image with a customer-supplied key, you must
+         * provide the same key if you use the machine image later (e.g. to create a
+         * instance from the image)
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineImageEncryptionKey(MachineImageMachineImageEncryptionKeyGetArgs machineImageEncryptionKey) {
             return machineImageEncryptionKey(Output.of(machineImageEncryptionKey));
         }
 
+        /**
+         * @param name Name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param sourceInstance The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstance(@Nullable Output<String> sourceInstance) {
             $.sourceInstance = sourceInstance;
             return this;
         }
 
+        /**
+         * @param sourceInstance The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstance(String sourceInstance) {
             return sourceInstance(Output.of(sourceInstance));
         }
 
+        /**
+         * @param storageLocations The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
             $.storageLocations = storageLocations;
             return this;
         }
 
+        /**
+         * @param storageLocations The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(List<String> storageLocations) {
             return storageLocations(Output.of(storageLocations));
         }
 
+        /**
+         * @param storageLocations The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(String... storageLocations) {
             return storageLocations(List.of(storageLocations));
         }

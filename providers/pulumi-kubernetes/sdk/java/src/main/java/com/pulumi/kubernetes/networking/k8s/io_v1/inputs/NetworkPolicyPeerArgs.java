@@ -27,6 +27,10 @@ public final class NetworkPolicyPeerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="ipBlock")
     private @Nullable Output<IPBlockArgs> ipBlock;
 
+    /**
+     * @return IPBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be.
+     * 
+     */
     public Optional<Output<IPBlockArgs>> ipBlock() {
         return Optional.ofNullable(this.ipBlock);
     }
@@ -40,6 +44,12 @@ public final class NetworkPolicyPeerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="namespaceSelector")
     private @Nullable Output<LabelSelectorArgs> namespaceSelector;
 
+    /**
+     * @return Selects Namespaces using cluster-scoped labels. This field follows standard label selector semantics; if present but empty, it selects all namespaces.
+     * 
+     * If PodSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects all Pods in the Namespaces selected by NamespaceSelector.
+     * 
+     */
     public Optional<Output<LabelSelectorArgs>> namespaceSelector() {
         return Optional.ofNullable(this.namespaceSelector);
     }
@@ -53,6 +63,12 @@ public final class NetworkPolicyPeerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="podSelector")
     private @Nullable Output<LabelSelectorArgs> podSelector;
 
+    /**
+     * @return This is a label selector which selects Pods. This field follows standard label selector semantics; if present but empty, it selects all pods.
+     * 
+     * If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects the Pods matching PodSelector in the policy&#39;s own Namespace.
+     * 
+     */
     public Optional<Output<LabelSelectorArgs>> podSelector() {
         return Optional.ofNullable(this.podSelector);
     }
@@ -83,29 +99,73 @@ public final class NetworkPolicyPeerArgs extends com.pulumi.resources.ResourceAr
             $ = new NetworkPolicyPeerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipBlock IPBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipBlock(@Nullable Output<IPBlockArgs> ipBlock) {
             $.ipBlock = ipBlock;
             return this;
         }
 
+        /**
+         * @param ipBlock IPBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipBlock(IPBlockArgs ipBlock) {
             return ipBlock(Output.of(ipBlock));
         }
 
+        /**
+         * @param namespaceSelector Selects Namespaces using cluster-scoped labels. This field follows standard label selector semantics; if present but empty, it selects all namespaces.
+         * 
+         * If PodSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects all Pods in the Namespaces selected by NamespaceSelector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceSelector(@Nullable Output<LabelSelectorArgs> namespaceSelector) {
             $.namespaceSelector = namespaceSelector;
             return this;
         }
 
+        /**
+         * @param namespaceSelector Selects Namespaces using cluster-scoped labels. This field follows standard label selector semantics; if present but empty, it selects all namespaces.
+         * 
+         * If PodSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects all Pods in the Namespaces selected by NamespaceSelector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceSelector(LabelSelectorArgs namespaceSelector) {
             return namespaceSelector(Output.of(namespaceSelector));
         }
 
+        /**
+         * @param podSelector This is a label selector which selects Pods. This field follows standard label selector semantics; if present but empty, it selects all pods.
+         * 
+         * If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects the Pods matching PodSelector in the policy&#39;s own Namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podSelector(@Nullable Output<LabelSelectorArgs> podSelector) {
             $.podSelector = podSelector;
             return this;
         }
 
+        /**
+         * @param podSelector This is a label selector which selects Pods. This field follows standard label selector semantics; if present but empty, it selects all pods.
+         * 
+         * If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects the Pods matching PodSelector in the policy&#39;s own Namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podSelector(LabelSelectorArgs podSelector) {
             return podSelector(Output.of(podSelector));
         }

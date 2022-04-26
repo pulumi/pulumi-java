@@ -29,6 +29,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return The entity query content to display in timeline
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -40,6 +44,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The entity query description
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -51,6 +59,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Determines whether this activity is enabled or disabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -62,6 +74,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
     @Import(name="entitiesFilter")
     private @Nullable Output<Map<String,List<String>>> entitiesFilter;
 
+    /**
+     * @return The query applied only to entities matching to all filters
+     * 
+     */
     public Optional<Output<Map<String,List<String>>>> entitiesFilter() {
         return Optional.ofNullable(this.entitiesFilter);
     }
@@ -73,6 +89,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
     @Import(name="entityQueryId")
     private @Nullable Output<String> entityQueryId;
 
+    /**
+     * @return entity query ID
+     * 
+     */
     public Optional<Output<String>> entityQueryId() {
         return Optional.ofNullable(this.entityQueryId);
     }
@@ -84,6 +104,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
     @Import(name="inputEntityType")
     private @Nullable Output<Either<String,EntityType>> inputEntityType;
 
+    /**
+     * @return The type of the query&#39;s source entity
+     * 
+     */
     public Optional<Output<Either<String,EntityType>>> inputEntityType() {
         return Optional.ofNullable(this.inputEntityType);
     }
@@ -96,6 +120,11 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return The kind of the entity query that supports put request.
+     * Expected value is &#39;Activity&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -107,6 +136,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
     @Import(name="operationalInsightsResourceProvider", required=true)
     private Output<String> operationalInsightsResourceProvider;
 
+    /**
+     * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
@@ -118,6 +151,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
     @Import(name="queryDefinitions")
     private @Nullable Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions;
 
+    /**
+     * @return The Activity query definitions
+     * 
+     */
     public Optional<Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs>> queryDefinitions() {
         return Optional.ofNullable(this.queryDefinitions);
     }
@@ -129,6 +166,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
     @Import(name="requiredInputFieldsSets")
     private @Nullable Output<List<List<String>>> requiredInputFieldsSets;
 
+    /**
+     * @return List of the fields of the source entity that are required to run the query
+     * 
+     */
     public Optional<Output<List<List<String>>>> requiredInputFieldsSets() {
         return Optional.ofNullable(this.requiredInputFieldsSets);
     }
@@ -140,6 +181,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -151,6 +196,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
     @Import(name="templateName")
     private @Nullable Output<String> templateName;
 
+    /**
+     * @return The template id this activity was created from
+     * 
+     */
     public Optional<Output<String>> templateName() {
         return Optional.ofNullable(this.templateName);
     }
@@ -162,6 +211,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return The entity query title
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -173,6 +226,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -214,140 +271,328 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
             $ = new ActivityCustomEntityQueryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The entity query content to display in timeline
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The entity query content to display in timeline
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param description The entity query description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The entity query description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enabled Determines whether this activity is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Determines whether this activity is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param entitiesFilter The query applied only to entities matching to all filters
+         * 
+         * @return builder
+         * 
+         */
         public Builder entitiesFilter(@Nullable Output<Map<String,List<String>>> entitiesFilter) {
             $.entitiesFilter = entitiesFilter;
             return this;
         }
 
+        /**
+         * @param entitiesFilter The query applied only to entities matching to all filters
+         * 
+         * @return builder
+         * 
+         */
         public Builder entitiesFilter(Map<String,List<String>> entitiesFilter) {
             return entitiesFilter(Output.of(entitiesFilter));
         }
 
+        /**
+         * @param entityQueryId entity query ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityQueryId(@Nullable Output<String> entityQueryId) {
             $.entityQueryId = entityQueryId;
             return this;
         }
 
+        /**
+         * @param entityQueryId entity query ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityQueryId(String entityQueryId) {
             return entityQueryId(Output.of(entityQueryId));
         }
 
+        /**
+         * @param inputEntityType The type of the query&#39;s source entity
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputEntityType(@Nullable Output<Either<String,EntityType>> inputEntityType) {
             $.inputEntityType = inputEntityType;
             return this;
         }
 
+        /**
+         * @param inputEntityType The type of the query&#39;s source entity
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputEntityType(Either<String,EntityType> inputEntityType) {
             return inputEntityType(Output.of(inputEntityType));
         }
 
+        /**
+         * @param inputEntityType The type of the query&#39;s source entity
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputEntityType(String inputEntityType) {
             return inputEntityType(Either.ofLeft(inputEntityType));
         }
 
+        /**
+         * @param inputEntityType The type of the query&#39;s source entity
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputEntityType(EntityType inputEntityType) {
             return inputEntityType(Either.ofRight(inputEntityType));
         }
 
+        /**
+         * @param kind The kind of the entity query that supports put request.
+         * Expected value is &#39;Activity&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the entity query that supports put request.
+         * Expected value is &#39;Activity&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
 
+        /**
+         * @param queryDefinitions The Activity query definitions
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryDefinitions(@Nullable Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions) {
             $.queryDefinitions = queryDefinitions;
             return this;
         }
 
+        /**
+         * @param queryDefinitions The Activity query definitions
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryDefinitions(ActivityEntityQueriesPropertiesQueryDefinitionsArgs queryDefinitions) {
             return queryDefinitions(Output.of(queryDefinitions));
         }
 
+        /**
+         * @param requiredInputFieldsSets List of the fields of the source entity that are required to run the query
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredInputFieldsSets(@Nullable Output<List<List<String>>> requiredInputFieldsSets) {
             $.requiredInputFieldsSets = requiredInputFieldsSets;
             return this;
         }
 
+        /**
+         * @param requiredInputFieldsSets List of the fields of the source entity that are required to run the query
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredInputFieldsSets(List<List<String>> requiredInputFieldsSets) {
             return requiredInputFieldsSets(Output.of(requiredInputFieldsSets));
         }
 
+        /**
+         * @param requiredInputFieldsSets List of the fields of the source entity that are required to run the query
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredInputFieldsSets(List<String>... requiredInputFieldsSets) {
             return requiredInputFieldsSets(List.of(requiredInputFieldsSets));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param templateName The template id this activity was created from
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateName(@Nullable Output<String> templateName) {
             $.templateName = templateName;
             return this;
         }
 
+        /**
+         * @param templateName The template id this activity was created from
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateName(String templateName) {
             return templateName(Output.of(templateName));
         }
 
+        /**
+         * @param title The entity query title
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title The entity query title
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }
