@@ -25,7 +25,10 @@ public class App {
 
     public static Exports stack(Context ctx) {
         final var ami = Ec2Functions.getAmi(GetAmiArgs.builder()
-                .filters(new GetAmiFilter("name", List.of("amzn-ami-hvm-*-x86_64-ebs")))
+                .filters(GetAmiFilter.builder()
+                        .name("name")
+                        .values("amzn-ami-hvm-*-x86_64-ebs")
+                        .build())
                 .owners("137112412989")
                 .mostRecent(true)
                 .build()
