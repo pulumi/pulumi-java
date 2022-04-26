@@ -81,58 +81,21 @@ func (d DocLanguageHelper) GetDocLinkForPulumiType(pkg *schema.Package, typeName
 	return result
 }
 
-// GetDocLinkForResourceType returns the Java API doc for a type belonging to a resource provider.
 func (d DocLanguageHelper) GetDocLinkForResourceType(pkg *schema.Package, modName, typeName string) string {
-
-	var path string
-	switch {
-	case pkg.Name != "" && modName != "":
-		path = fmt.Sprintf("%s/%s", pkg.Name, modName)
-	case pkg.Name == "" && modName != "":
-		path = modName
-	case pkg.Name != "" && modName == "":
-		path = pkg.Name
-	}
-	typeName = strings.ReplaceAll(typeName, "?", "")
-	result := fmt.Sprintf("/docs/reference/pkg/java/pulumi/%s/#%s", path, typeName)
-	return result
+	panic("Not implemented")
 }
 
-// GetDocLinkForResourceInputOrOutputType returns the doc link for an input or output type of a Resource.
 func (d DocLanguageHelper) GetDocLinkForResourceInputOrOutputType(
 	pkg *schema.Package, modName, typeName string, input bool) string {
-	typeName = strings.TrimSuffix(typeName, "?")
-	parts := strings.Split(typeName, ".")
-	typeName = parts[len(parts)-1]
-	var result string
-	if input {
-		result = fmt.Sprintf("/docs/reference/pkg/java/pulumi/%s/types/input/#%s", pkg.Name, typeName)
-	}
-	result = fmt.Sprintf("/docs/reference/pkg/java/pulumi/%s/types/output/#%s", pkg.Name, typeName)
-	return result
+	panic("Not implemented")
 }
 
-// GetDocLinkForFunctionInputOrOutputType returns the doc link for an
-// input or output type of a Function.
 func (d DocLanguageHelper) GetDocLinkForFunctionInputOrOutputType(
 	pkg *schema.Package, modName, typeName string, input bool) string {
 
-	res := d.GetDocLinkForResourceInputOrOutputType(pkg, modName, typeName, input)
-	return res
+	panic("Not implemented")
 }
 
-// GetModuleDocLink returns the display name and the link for a
-// module.
 func (d DocLanguageHelper) GetModuleDocLink(pkg *schema.Package, modName string) (string, string) {
-
-	var displayName string
-	var link string
-	if modName == "" {
-		displayName = fmt.Sprintf("@pulumi/%s", pkg.Name)
-	} else {
-		displayName = fmt.Sprintf("@pulumi/%s/%s", pkg.Name, strings.ToLower(modName))
-	}
-	link = d.GetDocLinkForResourceType(pkg, modName, "")
-
-	return displayName, link
+	panic("Not implemented")
 }
