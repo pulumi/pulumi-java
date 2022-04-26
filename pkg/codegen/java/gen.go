@@ -1744,14 +1744,13 @@ func (mod *modContext) genType(
 ) error {
 	pt := &plainType{
 		mod:                   mod,
-		name:                  mod.typeName(obj, obj.IsInputShape()),
+		name:                  ctx.className.String(),
 		comment:               obj.Comment,
 		propertyTypeQualifier: propertyTypeQualifier,
 		properties:            obj.Properties,
 		args:                  obj.IsInputShape(),
 	}
 
-	contract.Assertf(pt.name == ctx.className.String(), "This is required by the java compiler")
 	if input {
 		pt.baseClass = "com.pulumi.resources.ResourceArgs"
 		if !obj.IsInputShape() {
