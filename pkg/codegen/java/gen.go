@@ -105,11 +105,8 @@ func (mod *modContext) tokenToPackage(tok string, qualifier qualifier) string {
 	return qualifier.append(pkg)
 }
 
-func (mod *modContext) typeName(t *schema.ObjectType, state, args bool) string {
+func (mod *modContext) typeName(t *schema.ObjectType, args bool) string {
 	name := tokenToName(t.Token)
-	if state {
-		return name + "GetArgs"
-	}
 	if args {
 		return name + "Args"
 	}
@@ -121,7 +118,6 @@ func (mod *modContext) typeString(
 	t schema.Type,
 	qualifier qualifier,
 	input bool,
-	state bool,
 	// Influences how Map and Array types are generated.
 	requireInitializers bool,
 	// Allow returning `Optional<T>` directly. Otherwise `@Nullable T` will be returned at the outer scope.
@@ -130,7 +126,7 @@ func (mod *modContext) typeString(
 	// should act like we are inside an Output<T>.
 	inputlessOverload bool,
 ) TypeShape {
-	inner := mod.typeStringRecHelper(ctx, t, qualifier, input, state, requireInitializers, inputlessOverload)
+	inner := mod.typeStringRecHelper(ctx, t, qualifier, input, requireInitializers, inputlessOverload)
 	if inner.Type.Equal(names.Optional) && !outerOptional {
 		contract.Assert(len(inner.Parameters) == 1)
 		contract.Assert(len(inner.Annotations) == 0)
@@ -146,7 +142,6 @@ func (mod *modContext) typeStringRecHelper(
 	t schema.Type,
 	qualifier qualifier,
 	input bool,
-	state bool,
 	requireInitializers bool,
 	insideInput bool,
 ) TypeShape {
@@ -158,7 +153,7 @@ func (mod *modContext) typeStringRecHelper(
 		case *schema.ArrayType, *schema.MapType:
 			elem = codegen.PlainType(t.ElementType)
 		}
-		inner := mod.typeStringRecHelper(ctx, elem, qualifier, true, state, requireInitializers, true)
+		inner := mod.typeStringRecHelper(ctx, elem, qualifier, true, requireInitializers, true)
 
 		// Simplify Output<Output<T>> to Output<T> here. This is
 		// safe to do since:
@@ -173,7 +168,7 @@ func (mod *modContext) typeStringRecHelper(
 		}
 
 	case *schema.OptionalType:
-		inner := mod.typeStringRecHelper(ctx, t.ElementType, qualifier, input, state, requireInitializers, insideInput)
+		inner := mod.typeStringRecHelper(ctx, t.ElementType, qualifier, input, requireInitializers, insideInput)
 		if ignoreOptional(t, requireInitializers) {
 			inner.Annotations = append(inner.Annotations, fmt.Sprintf("@%s", ctx.ref(names.Nullable)))
 			return inner
@@ -196,7 +191,7 @@ func (mod *modContext) typeStringRecHelper(
 			Type: listType,
 			Parameters: []TypeShape{
 				mod.typeStringRecHelper(ctx,
-					codegen.PlainType(t.ElementType), qualifier, input, state, false, insideInput,
+					codegen.PlainType(t.ElementType), qualifier, input, false, insideInput,
 				),
 			},
 		}
@@ -212,7 +207,7 @@ func (mod *modContext) typeStringRecHelper(
 			Parameters: []TypeShape{
 				{Type: names.String},
 				mod.typeStringRecHelper(ctx,
-					codegen.PlainType(t.ElementType), qualifier, input, state, false, insideInput,
+					codegen.PlainType(t.ElementType), qualifier, input, false, insideInput,
 				),
 			},
 		}
@@ -238,7 +233,7 @@ func (mod *modContext) typeStringRecHelper(
 		if err != nil {
 			panic(err)
 		}
-		typ := pkg.Dot(names.Ident(mod.typeName(t, state, insideInput)))
+		typ := pkg.Dot(names.Ident(mod.typeName(t, insideInput)))
 		return TypeShape{Type: typ}
 	case *schema.ResourceType:
 		var resourceType names.FQN
@@ -277,7 +272,7 @@ func (mod *modContext) typeStringRecHelper(
 	case *schema.TokenType:
 		// Use the underlying type for now.
 		if t.UnderlyingType != nil {
-			return mod.typeStringRecHelper(ctx, t.UnderlyingType, qualifier, input, state, requireInitializers, insideInput)
+			return mod.typeStringRecHelper(ctx, t.UnderlyingType, qualifier, input, requireInitializers, insideInput)
 		}
 
 		pkg, err := parsePackageName(mod.tokenToPackage(t.Token, qualifier))
@@ -294,10 +289,10 @@ func (mod *modContext) typeStringRecHelper(
 			// If this is an output and a "relaxed" enum, emit the type as the underlying primitive type rather than the union.
 			// Eg. Output<String> rather than Output<Either<EnumType, String>>
 			if typ, ok := e.(*schema.EnumType); ok && !input {
-				return mod.typeStringRecHelper(ctx, typ.ElementType, qualifier, input, state, requireInitializers, insideInput)
+				return mod.typeStringRecHelper(ctx, typ.ElementType, qualifier, input, requireInitializers, insideInput)
 			}
 
-			et := mod.typeStringRecHelper(ctx, e, qualifier, input, state, false, insideInput)
+			et := mod.typeStringRecHelper(ctx, e, qualifier, input, false, insideInput)
 			etc := et.ToCode(ctx.imports)
 			if !elementTypeSet.Has(etc) {
 				elementTypeSet.Add(etc)
@@ -307,7 +302,7 @@ func (mod *modContext) typeStringRecHelper(
 
 		switch len(elementTypes) {
 		case 1:
-			return mod.typeStringRecHelper(ctx, t.ElementTypes[0], qualifier, input, state, requireInitializers, insideInput)
+			return mod.typeStringRecHelper(ctx, t.ElementTypes[0], qualifier, input, requireInitializers, insideInput)
 		case 2:
 			return TypeShape{
 				Type:       names.Either,
@@ -384,7 +379,6 @@ type plainType struct {
 	propertyTypeQualifier qualifier
 	properties            []*schema.Property
 	args                  bool
-	state                 bool
 }
 
 type propJavadocOptions struct {
@@ -503,7 +497,6 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 			prop.Type,
 			pt.propertyTypeQualifier,
 			true,                // is input
-			pt.state,            // is state
 			requireInitializers, // requires initializers
 			false,               // outer optional
 			false,               // inputless overload
@@ -724,7 +717,6 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			pt.propertyTypeQualifier,
 			false,
 			false,
-			false,
 			false, // outer optional
 			false, // inputless overload
 		)
@@ -775,7 +767,6 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			pt.propertyTypeQualifier,
 			false,
 			false,
-			false,
 			true,  // outer optional
 			false, // inputless overload
 		)
@@ -783,7 +774,6 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			ctx,
 			codegen.UnwrapType(prop.Type),
 			pt.propertyTypeQualifier,
-			false,
 			false,
 			false,
 			false, // outer optional (irrelevant)
@@ -836,7 +826,6 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			prop.Type,
 			pt.propertyTypeQualifier,
 			false, // is input
-			false, // is state
 			false, // requires initializers
 			false, // outer optional
 			false, // inputless overload
@@ -905,7 +894,6 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			pt.propertyTypeQualifier,
 			false,
 			false,
-			false,
 			false, // outer optional
 			false, // inputless overload
 		)
@@ -931,7 +919,6 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			ctx,
 			prop.Type,
 			pt.propertyTypeQualifier,
-			false,
 			false,
 			false,
 			false, // outer optional
@@ -983,7 +970,6 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			pt.propertyTypeQualifier,
 			false,
 			false,
-			false,
 			true,  // outer optional
 			false, // inputless overload
 		)
@@ -991,7 +977,6 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			ctx,
 			codegen.UnwrapType(prop.Type),
 			pt.propertyTypeQualifier,
-			false,
 			false,
 			false,
 			false, // outer optional (irrelevant)
@@ -1044,7 +1029,6 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			prop.Type,
 			pt.propertyTypeQualifier,
 			false, // is input
-			false, // is state
 			false, // requires initializers
 			false, // outer optional
 			false, // inputless overload
@@ -1184,7 +1168,6 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 			ctx,
 			prop.Type,
 			outputsQualifier,
-			false,
 			false,
 			false,
 			false, // outer optional
@@ -1634,7 +1617,6 @@ func (mod *modContext) genEnum(ctx *classFileContext, enum *schema.EnumType) err
 		enumsQualifier,
 		false,
 		false,
-		false,
 		false, // outer optional
 		false, // inputless overload
 	)
@@ -1762,11 +1744,10 @@ func (mod *modContext) genType(
 ) error {
 	pt := &plainType{
 		mod:                   mod,
-		name:                  mod.typeName(obj, state, obj.IsInputShape()),
+		name:                  mod.typeName(obj, obj.IsInputShape()),
 		comment:               obj.Comment,
 		propertyTypeQualifier: propertyTypeQualifier,
 		properties:            obj.Properties,
-		state:                 state,
 		args:                  obj.IsInputShape(),
 	}
 
@@ -1811,7 +1792,6 @@ func (mod *modContext) getConfigProperty(ctx *classFileContext, prop *schema.Pro
 		ctx,
 		schemaType,
 		inputsQualifier,
-		false,
 		false,
 		true,  // requireInitializers - set to true so we preserve Optional
 		true,  // outer optional
@@ -2023,7 +2003,6 @@ func (mod *modContext) gen(fs fs) error {
 					propertyTypeQualifier: inputsQualifier,
 					properties:            r.StateInputs.Properties,
 					args:                  true,
-					state:                 true,
 				}
 				return state.genInputType(ctx)
 			}); err != nil {
@@ -2058,7 +2037,7 @@ func (mod *modContext) gen(fs fs) error {
 			if t.IsInputShape() {
 				t = t.PlainShape
 			}
-			plainTypeClassName = names.Ident(mod.typeName(t, false, t.IsInputShape()))
+			plainTypeClassName = names.Ident(mod.typeName(t, t.IsInputShape()))
 			if err := addClass(inputsPkg, plainTypeClassName, func(ctx *classFileContext) error {
 				return mod.genType(ctx, t, inputsQualifier, true, false)
 			}); err != nil {
@@ -2066,7 +2045,7 @@ func (mod *modContext) gen(fs fs) error {
 			}
 		}
 		if mod.details(t).inputType {
-			className := names.Ident(mod.typeName(t, false, t.IsInputShape()))
+			className := names.Ident(mod.typeName(t, t.IsInputShape()))
 			// Avoid name collision with `plainType` by
 			// avoiding the `inputType` generation. The
 			// naming scheme might need revisiting so both
@@ -2080,7 +2059,7 @@ func (mod *modContext) gen(fs fs) error {
 			}
 		}
 		if mod.details(t).stateType {
-			className := names.Ident(mod.typeName(t, true, t.IsInputShape()))
+			className := names.Ident(mod.typeName(t, t.IsInputShape()))
 			if err := addClass(javaPkg.Dot(names.Ident("inputs")), className, func(ctx *classFileContext) error {
 				return mod.genType(ctx, t, inputsQualifier, true, true)
 			}); err != nil {
@@ -2088,7 +2067,7 @@ func (mod *modContext) gen(fs fs) error {
 			}
 		}
 		if mod.details(t).outputType {
-			className := names.Ident(mod.typeName(t, false, t.IsInputShape()))
+			className := names.Ident(mod.typeName(t, t.IsInputShape()))
 			if err := addClass(javaPkg.Dot(names.Ident("outputs")), className, func(ctx *classFileContext) error {
 				return mod.genType(ctx, t, outputsQualifier, false, false)
 			}); err != nil {
