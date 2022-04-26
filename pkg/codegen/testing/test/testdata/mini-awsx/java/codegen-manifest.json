@@ -1,0 +1,16 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/awsx/Provider.java",
+    "src/main/java/com/pulumi/awsx/ProviderArgs.java",
+    "src/main/java/com/pulumi/awsx/Utilities.java",
+    "src/main/java/com/pulumi/awsx/awsx/inputs/DefaultRoleWithPolicy.java",
+    "src/main/java/com/pulumi/awsx/awsx/inputs/DefaultRoleWithPolicyArgs.java",
+    "src/main/java/com/pulumi/awsx/awsx/inputs/RoleWithPolicy.java",
+    "src/main/java/com/pulumi/awsx/awsx/inputs/RoleWithPolicyArgs.java",
+    "src/main/java/com/pulumi/awsx/ecs/EC2TaskDefinition.java",
+    "src/main/java/com/pulumi/awsx/ecs/EC2TaskDefinitionArgs.java"
+  ]
+}
