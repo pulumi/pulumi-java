@@ -4,7 +4,6 @@ package java
 
 import (
 	"fmt"
-	"strings"
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
@@ -74,11 +73,22 @@ func (d DocLanguageHelper) GetEnumName(e *schema.Enum, typeName string) (string,
 	return names.MakeSafeEnumName(name, typeName)
 }
 
-// GetDocLinkForPulumiType returns the Java API doc link for a Pulumi type.
+// TODO revisit once javadocs are published.
+//
+// Not every language currently supports this. For Python docsgen the
+// implementation returns "" also.
+//
+// For an example of a language that supports this, check out Go.
+//
+// When visiting https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/ see:
+//
+//     func NewBucket(ctx *Context, name string, args *BucketArgs, opts ...ResourceOption)
+//
+// Context, BucketARgs and ResourceOption get linked to Go API docs.
+//
+// For Java we could link to JavaDoc when appropriate.
 func (d DocLanguageHelper) GetDocLinkForPulumiType(pkg *schema.Package, typeName string) string {
-	typeName = strings.ReplaceAll(typeName, "?", "")
-	result := fmt.Sprintf("/docs/reference/pkg/java/pulumi/pulumi/#%s", typeName)
-	return result
+	return ""
 }
 
 func (d DocLanguageHelper) GetDocLinkForResourceType(pkg *schema.Package, modName, typeName string) string {
