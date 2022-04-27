@@ -1148,20 +1148,20 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	// Open the class.
 	className := name
 	var baseType string
-	optionsType := "com.pulumi.resources.CustomResourceOptions"
+	optionsType := ctx.ref(names.CustomResourceOptions)
 	switch {
 	case r.IsProvider:
-		baseType = "com.pulumi.resources.ProviderResource"
+		baseType = ctx.ref(names.ProviderResource)
 	case r.IsComponent:
-		baseType = "com.pulumi.resources.ComponentResource"
-		optionsType = "com.pulumi.resources.ComponentResourceOptions"
+		baseType = ctx.ref(names.ComponentResource)
+		optionsType = ctx.ref(names.ComponentResourceOptions)
 	default:
-		baseType = "com.pulumi.resources.CustomResource"
+		baseType = ctx.ref(names.CustomResource)
 	}
 
 	printObsoleteAttribute(ctx, r.DeprecationMessage, "")
 	fprintf(w, "@%s(type=\"%s\")\n",
-		ctx.imports.Ref(names.ResourceType),
+		ctx.ref(names.ResourceType),
 		r.Token)
 	fprintf(w, "public class %s extends %s {\n", className, baseType)
 
@@ -1554,7 +1554,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 				args := &plainType{
 					mod:                   mod,
 					name:                  ctx.className.String(),
-					baseClass:             "com.pulumi.resources.InvokeArgs",
+					baseClass:             ctx.ref(names.InvokeArgs),
 					propertyTypeQualifier: inputsQualifier,
 					properties:            fun.Inputs.Properties,
 				}
@@ -1755,9 +1755,9 @@ func (mod *modContext) genType(
 	}
 
 	if input {
-		pt.baseClass = "com.pulumi.resources.ResourceArgs"
+		pt.baseClass = ctx.ref(names.ResourceArgs)
 		if !obj.IsInputShape() {
-			pt.baseClass = "com.pulumi.resources.InvokeArgs"
+			pt.baseClass = ctx.ref(names.InvokeArgs)
 		}
 		return pt.genInputType(ctx)
 	}
@@ -1811,12 +1811,14 @@ func (mod *modContext) getConfigProperty(ctx *classFileContext, prop *schema.Pro
 
 func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Property) error {
 	w := ctx.writer
-
+	pulumiConfig := ctx.ref(names.Config)
 	// Open the config class.
-	fprintf(w, "public final class Config {\n")
+	fprintf(w, "public final class %s {\n", ctx.className)
 	fprintf(w, "\n")
 	// Create a config bag for the variables to pull from.
-	fprintf(w, "    private static final com.pulumi.Config config = com.pulumi.Config.of(%q);", mod.pkg.Name)
+	fprintf(w, "    private static final %s config = %s.of(%q);",
+		pulumiConfig, pulumiConfig, mod.pkg.Name,
+	)
 	fprintf(w, "\n")
 
 	// Emit an entry for all config variables.
@@ -1984,7 +1986,7 @@ func (mod *modContext) gen(fs fs) error {
 				mod:                   mod,
 				res:                   r,
 				name:                  string(ctx.className),
-				baseClass:             "com.pulumi.resources.ResourceArgs",
+				baseClass:             ctx.ref(names.ResourceArgs),
 				propertyTypeQualifier: inputsQualifier,
 				properties:            r.InputProperties,
 				args:                  true,
@@ -2001,7 +2003,7 @@ func (mod *modContext) gen(fs fs) error {
 					mod:                   mod,
 					res:                   r,
 					name:                  string(ctx.className),
-					baseClass:             "com.pulumi.resources.ResourceArgs",
+					baseClass:             ctx.ref(names.ResourceArgs),
 					propertyTypeQualifier: inputsQualifier,
 					properties:            r.StateInputs.Properties,
 					args:                  true,

@@ -62,6 +62,18 @@ var PulumiDeployment = Pulumi.Dot("deployment")
 
 var InvokeArgs = Pulumi.Dot("resources").Dot("InvokeArgs")
 
+var ResourceArgs = Pulumi.Dot("resources").Dot("ResourceArgs")
+
+var CustomResourceOptions = Pulumi.Dot("resources").Dot("CustomResourceOptions")
+
+var ProviderResource = Pulumi.Dot("resources").Dot("ProviderResource")
+
+var ComponentResource = Pulumi.Dot("resources").Dot("ComponentResource")
+
+var ComponentResourceOptions = Pulumi.Dot("resources").Dot("ComponentResourceOptions")
+
+var CustomResource = Pulumi.Dot("resources").Dot("CustomResource")
+
 var Deployment = PulumiDeployment.Dot("Deployment")
 
 var InvokeOptions = PulumiDeployment.Dot("InvokeOptions")
@@ -77,3 +89,5 @@ var Optionals = PulumiInternal.Dot("Optionals")
 var Void = JavaLang.Dot("Void")
 
 var Codegen = PulumiInternal.Dot("Codegen")
+
+var Config = Pulumi.Dot("Config")

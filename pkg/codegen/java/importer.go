@@ -6,10 +6,9 @@ import (
 	"encoding/json"
 	"strings"
 
+	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
-
-const defaultBasePackage = "com.pulumi."
 
 // PropertyInfo represents a Java language-specific info for a property.
 type PropertyInfo struct {
@@ -31,7 +30,7 @@ func (i PackageInfo) BasePackageOrDefault() string {
 	if len(i.BasePackage) > 0 {
 		return ensureEndsWithDot(i.BasePackage)
 	}
-	return ensureEndsWithDot(defaultBasePackage)
+	return ensureEndsWithDot(names.Pulumi.String())
 }
 
 func ensureEndsWithDot(s string) string {
