@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.appstream.inputs;
 
-import com.pulumi.aws.appstream.inputs.FleetComputeCapacityGetArgs;
-import com.pulumi.aws.appstream.inputs.FleetDomainJoinInfoGetArgs;
-import com.pulumi.aws.appstream.inputs.FleetVpcConfigGetArgs;
+import com.pulumi.aws.appstream.inputs.FleetComputeCapacityArgs;
+import com.pulumi.aws.appstream.inputs.FleetDomainJoinInfoArgs;
+import com.pulumi.aws.appstream.inputs.FleetVpcConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -41,13 +41,13 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="computeCapacity")
-    private @Nullable Output<FleetComputeCapacityGetArgs> computeCapacity;
+    private @Nullable Output<FleetComputeCapacityArgs> computeCapacity;
 
     /**
      * @return Configuration block for the desired capacity of the fleet. See below.
      * 
      */
-    public Optional<Output<FleetComputeCapacityGetArgs>> computeCapacity() {
+    public Optional<Output<FleetComputeCapacityArgs>> computeCapacity() {
         return Optional.ofNullable(this.computeCapacity);
     }
 
@@ -116,13 +116,13 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainJoinInfo")
-    private @Nullable Output<FleetDomainJoinInfoGetArgs> domainJoinInfo;
+    private @Nullable Output<FleetDomainJoinInfoArgs> domainJoinInfo;
 
     /**
      * @return Configuration block for the name of the directory and organizational unit (OU) to use to join the fleet to a Microsoft Active Directory domain. See below.
      * 
      */
-    public Optional<Output<FleetDomainJoinInfoGetArgs>> domainJoinInfo() {
+    public Optional<Output<FleetDomainJoinInfoArgs>> domainJoinInfo() {
         return Optional.ofNullable(this.domainJoinInfo);
     }
 
@@ -318,13 +318,13 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfig")
-    private @Nullable Output<FleetVpcConfigGetArgs> vpcConfig;
+    private @Nullable Output<FleetVpcConfigArgs> vpcConfig;
 
     /**
      * @return Configuration block for the VPC configuration for the image builder. See below.
      * 
      */
-    public Optional<Output<FleetVpcConfigGetArgs>> vpcConfig() {
+    public Optional<Output<FleetVpcConfigArgs>> vpcConfig() {
         return Optional.ofNullable(this.vpcConfig);
     }
 
@@ -399,7 +399,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder computeCapacity(@Nullable Output<FleetComputeCapacityGetArgs> computeCapacity) {
+        public Builder computeCapacity(@Nullable Output<FleetComputeCapacityArgs> computeCapacity) {
             $.computeCapacity = computeCapacity;
             return this;
         }
@@ -410,7 +410,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder computeCapacity(FleetComputeCapacityGetArgs computeCapacity) {
+        public Builder computeCapacity(FleetComputeCapacityArgs computeCapacity) {
             return computeCapacity(Output.of(computeCapacity));
         }
 
@@ -504,7 +504,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder domainJoinInfo(@Nullable Output<FleetDomainJoinInfoGetArgs> domainJoinInfo) {
+        public Builder domainJoinInfo(@Nullable Output<FleetDomainJoinInfoArgs> domainJoinInfo) {
             $.domainJoinInfo = domainJoinInfo;
             return this;
         }
@@ -515,7 +515,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder domainJoinInfo(FleetDomainJoinInfoGetArgs domainJoinInfo) {
+        public Builder domainJoinInfo(FleetDomainJoinInfoArgs domainJoinInfo) {
             return domainJoinInfo(Output.of(domainJoinInfo));
         }
 
@@ -786,7 +786,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfig(@Nullable Output<FleetVpcConfigGetArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<FleetVpcConfigArgs> vpcConfig) {
             $.vpcConfig = vpcConfig;
             return this;
         }
@@ -797,7 +797,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfig(FleetVpcConfigGetArgs vpcConfig) {
+        public Builder vpcConfig(FleetVpcConfigArgs vpcConfig) {
             return vpcConfig(Output.of(vpcConfig));
         }
 

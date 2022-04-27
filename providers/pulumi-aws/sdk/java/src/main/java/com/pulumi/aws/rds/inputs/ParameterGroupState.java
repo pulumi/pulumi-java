@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.rds.inputs;
 
-import com.pulumi.aws.rds.inputs.ParameterGroupParameterGetArgs;
+import com.pulumi.aws.rds.inputs.ParameterGroupParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
@@ -99,13 +99,13 @@ public final class ParameterGroupState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="parameters")
-    private @Nullable Output<List<ParameterGroupParameterGetArgs>> parameters;
+    private @Nullable Output<List<ParameterGroupParameterArgs>> parameters;
 
     /**
      * @return A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html) after initial creation of the group.
      * 
      */
-    public Optional<Output<List<ParameterGroupParameterGetArgs>>> parameters() {
+    public Optional<Output<List<ParameterGroupParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
 
@@ -281,7 +281,7 @@ public final class ParameterGroupState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder parameters(@Nullable Output<List<ParameterGroupParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<ParameterGroupParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
@@ -292,7 +292,7 @@ public final class ParameterGroupState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder parameters(List<ParameterGroupParameterGetArgs> parameters) {
+        public Builder parameters(List<ParameterGroupParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
@@ -302,7 +302,7 @@ public final class ParameterGroupState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder parameters(ParameterGroupParameterGetArgs... parameters) {
+        public Builder parameters(ParameterGroupParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.chime.inputs;
 
-import com.pulumi.aws.chime.inputs.VoiceConnectorTerminationCredentialsCredentialGetArgs;
+import com.pulumi.aws.chime.inputs.VoiceConnectorTerminationCredentialsCredentialArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -22,13 +22,13 @@ public final class VoiceConnectorTerminationCredentialsState extends com.pulumi.
      * 
      */
     @Import(name="credentials")
-    private @Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials;
+    private @Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialArgs>> credentials;
 
     /**
      * @return List of termination SIP credentials.
      * 
      */
-    public Optional<Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>>> credentials() {
+    public Optional<Output<List<VoiceConnectorTerminationCredentialsCredentialArgs>>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
 
@@ -78,7 +78,7 @@ public final class VoiceConnectorTerminationCredentialsState extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder credentials(@Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials) {
+        public Builder credentials(@Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialArgs>> credentials) {
             $.credentials = credentials;
             return this;
         }
@@ -89,7 +89,7 @@ public final class VoiceConnectorTerminationCredentialsState extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder credentials(List<VoiceConnectorTerminationCredentialsCredentialGetArgs> credentials) {
+        public Builder credentials(List<VoiceConnectorTerminationCredentialsCredentialArgs> credentials) {
             return credentials(Output.of(credentials));
         }
 
@@ -99,7 +99,7 @@ public final class VoiceConnectorTerminationCredentialsState extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder credentials(VoiceConnectorTerminationCredentialsCredentialGetArgs... credentials) {
+        public Builder credentials(VoiceConnectorTerminationCredentialsCredentialArgs... credentials) {
             return credentials(List.of(credentials));
         }
 

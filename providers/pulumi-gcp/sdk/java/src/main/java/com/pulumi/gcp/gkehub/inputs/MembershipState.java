@@ -5,8 +5,8 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.gkehub.inputs.MembershipAuthorityGetArgs;
-import com.pulumi.gcp.gkehub.inputs.MembershipEndpointGetArgs;
+import com.pulumi.gcp.gkehub.inputs.MembershipAuthorityArgs;
+import com.pulumi.gcp.gkehub.inputs.MembershipEndpointArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authority")
-    private @Nullable Output<MembershipAuthorityGetArgs> authority;
+    private @Nullable Output<MembershipAuthorityArgs> authority;
 
     /**
      * @return Authority encodes how Google will recognize identities from this Membership.
@@ -35,7 +35,7 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<MembershipAuthorityGetArgs>> authority() {
+    public Optional<Output<MembershipAuthorityArgs>> authority() {
         return Optional.ofNullable(this.authority);
     }
 
@@ -68,14 +68,14 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpoint")
-    private @Nullable Output<MembershipEndpointGetArgs> endpoint;
+    private @Nullable Output<MembershipEndpointArgs> endpoint;
 
     /**
      * @return If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<MembershipEndpointGetArgs>> endpoint() {
+    public Optional<Output<MembershipEndpointArgs>> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
 
@@ -180,7 +180,7 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder authority(@Nullable Output<MembershipAuthorityGetArgs> authority) {
+        public Builder authority(@Nullable Output<MembershipAuthorityArgs> authority) {
             $.authority = authority;
             return this;
         }
@@ -194,7 +194,7 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder authority(MembershipAuthorityGetArgs authority) {
+        public Builder authority(MembershipAuthorityArgs authority) {
             return authority(Output.of(authority));
         }
 
@@ -234,7 +234,7 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder endpoint(@Nullable Output<MembershipEndpointGetArgs> endpoint) {
+        public Builder endpoint(@Nullable Output<MembershipEndpointArgs> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
@@ -246,7 +246,7 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder endpoint(MembershipEndpointGetArgs endpoint) {
+        public Builder endpoint(MembershipEndpointArgs endpoint) {
             return endpoint(Output.of(endpoint));
         }
 

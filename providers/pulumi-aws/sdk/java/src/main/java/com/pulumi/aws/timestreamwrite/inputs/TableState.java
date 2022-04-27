@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.timestreamwrite.inputs;
 
-import com.pulumi.aws.timestreamwrite.inputs.TableMagneticStoreWritePropertiesGetArgs;
-import com.pulumi.aws.timestreamwrite.inputs.TableRetentionPropertiesGetArgs;
+import com.pulumi.aws.timestreamwrite.inputs.TableMagneticStoreWritePropertiesArgs;
+import com.pulumi.aws.timestreamwrite.inputs.TableRetentionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -53,13 +53,13 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="magneticStoreWriteProperties")
-    private @Nullable Output<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties;
+    private @Nullable Output<TableMagneticStoreWritePropertiesArgs> magneticStoreWriteProperties;
 
     /**
      * @return Contains properties to set on the table when enabling magnetic store writes. See Magnetic Store Write Properties below for more details.
      * 
      */
-    public Optional<Output<TableMagneticStoreWritePropertiesGetArgs>> magneticStoreWriteProperties() {
+    public Optional<Output<TableMagneticStoreWritePropertiesArgs>> magneticStoreWriteProperties() {
         return Optional.ofNullable(this.magneticStoreWriteProperties);
     }
 
@@ -68,13 +68,13 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionProperties")
-    private @Nullable Output<TableRetentionPropertiesGetArgs> retentionProperties;
+    private @Nullable Output<TableRetentionPropertiesArgs> retentionProperties;
 
     /**
      * @return The retention duration for the memory store and magnetic store. See Retention Properties below for more details. If not provided, `magnetic_store_retention_period_in_days` default to 73000 and `memory_store_retention_period_in_hours` defaults to 6.
      * 
      */
-    public Optional<Output<TableRetentionPropertiesGetArgs>> retentionProperties() {
+    public Optional<Output<TableRetentionPropertiesArgs>> retentionProperties() {
         return Optional.ofNullable(this.retentionProperties);
     }
 
@@ -201,7 +201,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder magneticStoreWriteProperties(@Nullable Output<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties) {
+        public Builder magneticStoreWriteProperties(@Nullable Output<TableMagneticStoreWritePropertiesArgs> magneticStoreWriteProperties) {
             $.magneticStoreWriteProperties = magneticStoreWriteProperties;
             return this;
         }
@@ -212,7 +212,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder magneticStoreWriteProperties(TableMagneticStoreWritePropertiesGetArgs magneticStoreWriteProperties) {
+        public Builder magneticStoreWriteProperties(TableMagneticStoreWritePropertiesArgs magneticStoreWriteProperties) {
             return magneticStoreWriteProperties(Output.of(magneticStoreWriteProperties));
         }
 
@@ -222,7 +222,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retentionProperties(@Nullable Output<TableRetentionPropertiesGetArgs> retentionProperties) {
+        public Builder retentionProperties(@Nullable Output<TableRetentionPropertiesArgs> retentionProperties) {
             $.retentionProperties = retentionProperties;
             return this;
         }
@@ -233,7 +233,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retentionProperties(TableRetentionPropertiesGetArgs retentionProperties) {
+        public Builder retentionProperties(TableRetentionPropertiesArgs retentionProperties) {
             return retentionProperties(Output.of(retentionProperties));
         }
 

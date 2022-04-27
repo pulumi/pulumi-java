@@ -5,8 +5,8 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.monitoring.inputs.MetricDescriptorLabelGetArgs;
-import com.pulumi.gcp.monitoring.inputs.MetricDescriptorMetadataGetArgs;
+import com.pulumi.gcp.monitoring.inputs.MetricDescriptorLabelArgs;
+import com.pulumi.gcp.monitoring.inputs.MetricDescriptorMetadataArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -54,14 +54,14 @@ public final class MetricDescriptorState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="labels")
-    private @Nullable Output<List<MetricDescriptorLabelGetArgs>> labels;
+    private @Nullable Output<List<MetricDescriptorLabelArgs>> labels;
 
     /**
      * @return The set of labels that can be used to describe a specific instance of this metric type. In order to delete a label, the entire resource must be deleted, then created with the desired labels.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<MetricDescriptorLabelGetArgs>>> labels() {
+    public Optional<Output<List<MetricDescriptorLabelArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
 
@@ -88,14 +88,14 @@ public final class MetricDescriptorState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="metadata")
-    private @Nullable Output<MetricDescriptorMetadataGetArgs> metadata;
+    private @Nullable Output<MetricDescriptorMetadataArgs> metadata;
 
     /**
      * @return Metadata which can be used to guide usage of the metric.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<MetricDescriptorMetadataGetArgs>> metadata() {
+    public Optional<Output<MetricDescriptorMetadataArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
 
@@ -334,7 +334,7 @@ public final class MetricDescriptorState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder labels(@Nullable Output<List<MetricDescriptorLabelGetArgs>> labels) {
+        public Builder labels(@Nullable Output<List<MetricDescriptorLabelArgs>> labels) {
             $.labels = labels;
             return this;
         }
@@ -346,7 +346,7 @@ public final class MetricDescriptorState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder labels(List<MetricDescriptorLabelGetArgs> labels) {
+        public Builder labels(List<MetricDescriptorLabelArgs> labels) {
             return labels(Output.of(labels));
         }
 
@@ -357,7 +357,7 @@ public final class MetricDescriptorState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder labels(MetricDescriptorLabelGetArgs... labels) {
+        public Builder labels(MetricDescriptorLabelArgs... labels) {
             return labels(List.of(labels));
         }
 
@@ -391,7 +391,7 @@ public final class MetricDescriptorState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder metadata(@Nullable Output<MetricDescriptorMetadataGetArgs> metadata) {
+        public Builder metadata(@Nullable Output<MetricDescriptorMetadataArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
@@ -403,7 +403,7 @@ public final class MetricDescriptorState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder metadata(MetricDescriptorMetadataGetArgs metadata) {
+        public Builder metadata(MetricDescriptorMetadataArgs metadata) {
             return metadata(Output.of(metadata));
         }
 

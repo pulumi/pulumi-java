@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.ecs.inputs;
 
-import com.pulumi.aws.ecs.inputs.ClusterConfigurationGetArgs;
-import com.pulumi.aws.ecs.inputs.ClusterDefaultCapacityProviderStrategyGetArgs;
-import com.pulumi.aws.ecs.inputs.ClusterSettingGetArgs;
+import com.pulumi.aws.ecs.inputs.ClusterConfigurationArgs;
+import com.pulumi.aws.ecs.inputs.ClusterDefaultCapacityProviderStrategyArgs;
+import com.pulumi.aws.ecs.inputs.ClusterSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -55,13 +55,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configuration")
-    private @Nullable Output<ClusterConfigurationGetArgs> configuration;
+    private @Nullable Output<ClusterConfigurationArgs> configuration;
 
     /**
      * @return The execute command configuration for the cluster. Detailed below.
      * 
      */
-    public Optional<Output<ClusterConfigurationGetArgs>> configuration() {
+    public Optional<Output<ClusterConfigurationArgs>> configuration() {
         return Optional.ofNullable(this.configuration);
     }
 
@@ -70,13 +70,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultCapacityProviderStrategies")
-    private @Nullable Output<List<ClusterDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies;
+    private @Nullable Output<List<ClusterDefaultCapacityProviderStrategyArgs>> defaultCapacityProviderStrategies;
 
     /**
      * @return Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
      * 
      */
-    public Optional<Output<List<ClusterDefaultCapacityProviderStrategyGetArgs>>> defaultCapacityProviderStrategies() {
+    public Optional<Output<List<ClusterDefaultCapacityProviderStrategyArgs>>> defaultCapacityProviderStrategies() {
         return Optional.ofNullable(this.defaultCapacityProviderStrategies);
     }
 
@@ -100,13 +100,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="settings")
-    private @Nullable Output<List<ClusterSettingGetArgs>> settings;
+    private @Nullable Output<List<ClusterSettingArgs>> settings;
 
     /**
      * @return Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
      * 
      */
-    public Optional<Output<List<ClusterSettingGetArgs>>> settings() {
+    public Optional<Output<List<ClusterSettingArgs>>> settings() {
         return Optional.ofNullable(this.settings);
     }
 
@@ -221,7 +221,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder configuration(@Nullable Output<ClusterConfigurationGetArgs> configuration) {
+        public Builder configuration(@Nullable Output<ClusterConfigurationArgs> configuration) {
             $.configuration = configuration;
             return this;
         }
@@ -232,7 +232,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder configuration(ClusterConfigurationGetArgs configuration) {
+        public Builder configuration(ClusterConfigurationArgs configuration) {
             return configuration(Output.of(configuration));
         }
 
@@ -242,7 +242,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultCapacityProviderStrategies(@Nullable Output<List<ClusterDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies) {
+        public Builder defaultCapacityProviderStrategies(@Nullable Output<List<ClusterDefaultCapacityProviderStrategyArgs>> defaultCapacityProviderStrategies) {
             $.defaultCapacityProviderStrategies = defaultCapacityProviderStrategies;
             return this;
         }
@@ -253,7 +253,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultCapacityProviderStrategies(List<ClusterDefaultCapacityProviderStrategyGetArgs> defaultCapacityProviderStrategies) {
+        public Builder defaultCapacityProviderStrategies(List<ClusterDefaultCapacityProviderStrategyArgs> defaultCapacityProviderStrategies) {
             return defaultCapacityProviderStrategies(Output.of(defaultCapacityProviderStrategies));
         }
 
@@ -263,7 +263,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultCapacityProviderStrategies(ClusterDefaultCapacityProviderStrategyGetArgs... defaultCapacityProviderStrategies) {
+        public Builder defaultCapacityProviderStrategies(ClusterDefaultCapacityProviderStrategyArgs... defaultCapacityProviderStrategies) {
             return defaultCapacityProviderStrategies(List.of(defaultCapacityProviderStrategies));
         }
 
@@ -294,7 +294,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder settings(@Nullable Output<List<ClusterSettingGetArgs>> settings) {
+        public Builder settings(@Nullable Output<List<ClusterSettingArgs>> settings) {
             $.settings = settings;
             return this;
         }
@@ -305,7 +305,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder settings(List<ClusterSettingGetArgs> settings) {
+        public Builder settings(List<ClusterSettingArgs> settings) {
             return settings(Output.of(settings));
         }
 
@@ -315,7 +315,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder settings(ClusterSettingGetArgs... settings) {
+        public Builder settings(ClusterSettingArgs... settings) {
             return settings(List.of(settings));
         }
 

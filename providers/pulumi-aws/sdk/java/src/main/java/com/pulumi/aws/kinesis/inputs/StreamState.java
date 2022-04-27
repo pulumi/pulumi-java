@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.kinesis.inputs;
 
-import com.pulumi.aws.kinesis.inputs.StreamStreamModeDetailsGetArgs;
+import com.pulumi.aws.kinesis.inputs.StreamStreamModeDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -147,13 +147,13 @@ public final class StreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streamModeDetails")
-    private @Nullable Output<StreamStreamModeDetailsGetArgs> streamModeDetails;
+    private @Nullable Output<StreamStreamModeDetailsArgs> streamModeDetails;
 
     /**
      * @return Indicates the [capacity mode](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-size-a-stream.html) of the data stream. Detailed below.
      * 
      */
-    public Optional<Output<StreamStreamModeDetailsGetArgs>> streamModeDetails() {
+    public Optional<Output<StreamStreamModeDetailsArgs>> streamModeDetails() {
         return Optional.ofNullable(this.streamModeDetails);
     }
 
@@ -407,7 +407,7 @@ public final class StreamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder streamModeDetails(@Nullable Output<StreamStreamModeDetailsGetArgs> streamModeDetails) {
+        public Builder streamModeDetails(@Nullable Output<StreamStreamModeDetailsArgs> streamModeDetails) {
             $.streamModeDetails = streamModeDetails;
             return this;
         }
@@ -418,7 +418,7 @@ public final class StreamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder streamModeDetails(StreamStreamModeDetailsGetArgs streamModeDetails) {
+        public Builder streamModeDetails(StreamStreamModeDetailsArgs streamModeDetails) {
             return streamModeDetails(Output.of(streamModeDetails));
         }
 

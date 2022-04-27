@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.transfer.inputs;
 
-import com.pulumi.aws.transfer.inputs.ServerEndpointDetailsGetArgs;
+import com.pulumi.aws.transfer.inputs.ServerEndpointDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -99,13 +99,13 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointDetails")
-    private @Nullable Output<ServerEndpointDetailsGetArgs> endpointDetails;
+    private @Nullable Output<ServerEndpointDetailsArgs> endpointDetails;
 
     /**
      * @return The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
      * 
      */
-    public Optional<Output<ServerEndpointDetailsGetArgs>> endpointDetails() {
+    public Optional<Output<ServerEndpointDetailsArgs>> endpointDetails() {
         return Optional.ofNullable(this.endpointDetails);
     }
 
@@ -463,7 +463,7 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder endpointDetails(@Nullable Output<ServerEndpointDetailsGetArgs> endpointDetails) {
+        public Builder endpointDetails(@Nullable Output<ServerEndpointDetailsArgs> endpointDetails) {
             $.endpointDetails = endpointDetails;
             return this;
         }
@@ -474,7 +474,7 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder endpointDetails(ServerEndpointDetailsGetArgs endpointDetails) {
+        public Builder endpointDetails(ServerEndpointDetailsArgs endpointDetails) {
             return endpointDetails(Output.of(endpointDetails));
         }
 

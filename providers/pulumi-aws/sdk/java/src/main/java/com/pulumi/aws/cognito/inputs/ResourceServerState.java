@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cognito.inputs;
 
-import com.pulumi.aws.cognito.inputs.ResourceServerScopeGetArgs;
+import com.pulumi.aws.cognito.inputs.ResourceServerScopeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -67,13 +67,13 @@ public final class ResourceServerState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scopes")
-    private @Nullable Output<List<ResourceServerScopeGetArgs>> scopes;
+    private @Nullable Output<List<ResourceServerScopeArgs>> scopes;
 
     /**
      * @return A list of Authorization Scope.
      * 
      */
-    public Optional<Output<List<ResourceServerScopeGetArgs>>> scopes() {
+    public Optional<Output<List<ResourceServerScopeArgs>>> scopes() {
         return Optional.ofNullable(this.scopes);
     }
 
@@ -191,7 +191,7 @@ public final class ResourceServerState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder scopes(@Nullable Output<List<ResourceServerScopeGetArgs>> scopes) {
+        public Builder scopes(@Nullable Output<List<ResourceServerScopeArgs>> scopes) {
             $.scopes = scopes;
             return this;
         }
@@ -202,7 +202,7 @@ public final class ResourceServerState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder scopes(List<ResourceServerScopeGetArgs> scopes) {
+        public Builder scopes(List<ResourceServerScopeArgs> scopes) {
             return scopes(Output.of(scopes));
         }
 
@@ -212,7 +212,7 @@ public final class ResourceServerState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder scopes(ResourceServerScopeGetArgs... scopes) {
+        public Builder scopes(ResourceServerScopeArgs... scopes) {
             return scopes(List.of(scopes));
         }
 

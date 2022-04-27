@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.s3.inputs;
 
-import com.pulumi.aws.s3.inputs.ObjectCopyGrantGetArgs;
+import com.pulumi.aws.s3.inputs.ObjectCopyGrantArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -331,13 +331,13 @@ public final class ObjectCopyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="grants")
-    private @Nullable Output<List<ObjectCopyGrantGetArgs>> grants;
+    private @Nullable Output<List<ObjectCopyGrantArgs>> grants;
 
     /**
      * @return Configuration block for header grants. Documented below. Conflicts with `acl`.
      * 
      */
-    public Optional<Output<List<ObjectCopyGrantGetArgs>>> grants() {
+    public Optional<Output<List<ObjectCopyGrantArgs>>> grants() {
         return Optional.ofNullable(this.grants);
     }
 
@@ -1189,7 +1189,7 @@ public final class ObjectCopyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder grants(@Nullable Output<List<ObjectCopyGrantGetArgs>> grants) {
+        public Builder grants(@Nullable Output<List<ObjectCopyGrantArgs>> grants) {
             $.grants = grants;
             return this;
         }
@@ -1200,7 +1200,7 @@ public final class ObjectCopyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder grants(List<ObjectCopyGrantGetArgs> grants) {
+        public Builder grants(List<ObjectCopyGrantArgs> grants) {
             return grants(Output.of(grants));
         }
 
@@ -1210,7 +1210,7 @@ public final class ObjectCopyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder grants(ObjectCopyGrantGetArgs... grants) {
+        public Builder grants(ObjectCopyGrantArgs... grants) {
             return grants(List.of(grants));
         }
 

@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.appsync.inputs;
 
-import com.pulumi.aws.appsync.inputs.ResolverCachingConfigGetArgs;
-import com.pulumi.aws.appsync.inputs.ResolverPipelineConfigGetArgs;
-import com.pulumi.aws.appsync.inputs.ResolverSyncConfigGetArgs;
+import com.pulumi.aws.appsync.inputs.ResolverCachingConfigArgs;
+import com.pulumi.aws.appsync.inputs.ResolverPipelineConfigArgs;
+import com.pulumi.aws.appsync.inputs.ResolverSyncConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -54,13 +54,13 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cachingConfig")
-    private @Nullable Output<ResolverCachingConfigGetArgs> cachingConfig;
+    private @Nullable Output<ResolverCachingConfigArgs> cachingConfig;
 
     /**
      * @return The CachingConfig.
      * 
      */
-    public Optional<Output<ResolverCachingConfigGetArgs>> cachingConfig() {
+    public Optional<Output<ResolverCachingConfigArgs>> cachingConfig() {
         return Optional.ofNullable(this.cachingConfig);
     }
 
@@ -129,13 +129,13 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pipelineConfig")
-    private @Nullable Output<ResolverPipelineConfigGetArgs> pipelineConfig;
+    private @Nullable Output<ResolverPipelineConfigArgs> pipelineConfig;
 
     /**
      * @return The PipelineConfig.
      * 
      */
-    public Optional<Output<ResolverPipelineConfigGetArgs>> pipelineConfig() {
+    public Optional<Output<ResolverPipelineConfigArgs>> pipelineConfig() {
         return Optional.ofNullable(this.pipelineConfig);
     }
 
@@ -174,13 +174,13 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncConfig")
-    private @Nullable Output<ResolverSyncConfigGetArgs> syncConfig;
+    private @Nullable Output<ResolverSyncConfigArgs> syncConfig;
 
     /**
      * @return Describes a Sync configuration for a resolver. See Sync Config.
      * 
      */
-    public Optional<Output<ResolverSyncConfigGetArgs>> syncConfig() {
+    public Optional<Output<ResolverSyncConfigArgs>> syncConfig() {
         return Optional.ofNullable(this.syncConfig);
     }
 
@@ -282,7 +282,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cachingConfig(@Nullable Output<ResolverCachingConfigGetArgs> cachingConfig) {
+        public Builder cachingConfig(@Nullable Output<ResolverCachingConfigArgs> cachingConfig) {
             $.cachingConfig = cachingConfig;
             return this;
         }
@@ -293,7 +293,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cachingConfig(ResolverCachingConfigGetArgs cachingConfig) {
+        public Builder cachingConfig(ResolverCachingConfigArgs cachingConfig) {
             return cachingConfig(Output.of(cachingConfig));
         }
 
@@ -387,7 +387,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pipelineConfig(@Nullable Output<ResolverPipelineConfigGetArgs> pipelineConfig) {
+        public Builder pipelineConfig(@Nullable Output<ResolverPipelineConfigArgs> pipelineConfig) {
             $.pipelineConfig = pipelineConfig;
             return this;
         }
@@ -398,7 +398,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pipelineConfig(ResolverPipelineConfigGetArgs pipelineConfig) {
+        public Builder pipelineConfig(ResolverPipelineConfigArgs pipelineConfig) {
             return pipelineConfig(Output.of(pipelineConfig));
         }
 
@@ -450,7 +450,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder syncConfig(@Nullable Output<ResolverSyncConfigGetArgs> syncConfig) {
+        public Builder syncConfig(@Nullable Output<ResolverSyncConfigArgs> syncConfig) {
             $.syncConfig = syncConfig;
             return this;
         }
@@ -461,7 +461,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder syncConfig(ResolverSyncConfigGetArgs syncConfig) {
+        public Builder syncConfig(ResolverSyncConfigArgs syncConfig) {
             return syncConfig(Output.of(syncConfig));
         }
 

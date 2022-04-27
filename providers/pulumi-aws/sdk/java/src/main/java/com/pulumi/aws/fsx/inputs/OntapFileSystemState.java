@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.fsx.inputs;
 
-import com.pulumi.aws.fsx.inputs.OntapFileSystemDiskIopsConfigurationGetArgs;
-import com.pulumi.aws.fsx.inputs.OntapFileSystemEndpointGetArgs;
+import com.pulumi.aws.fsx.inputs.OntapFileSystemDiskIopsConfigurationArgs;
+import com.pulumi.aws.fsx.inputs.OntapFileSystemEndpointArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -85,13 +85,13 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="diskIopsConfiguration")
-    private @Nullable Output<OntapFileSystemDiskIopsConfigurationGetArgs> diskIopsConfiguration;
+    private @Nullable Output<OntapFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration;
 
     /**
      * @return The SSD IOPS configuration for the Amazon FSx for NetApp ONTAP file system. See Disk Iops Configuration Below.
      * 
      */
-    public Optional<Output<OntapFileSystemDiskIopsConfigurationGetArgs>> diskIopsConfiguration() {
+    public Optional<Output<OntapFileSystemDiskIopsConfigurationArgs>> diskIopsConfiguration() {
         return Optional.ofNullable(this.diskIopsConfiguration);
     }
 
@@ -130,13 +130,13 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="endpoints")
-    private @Nullable Output<List<OntapFileSystemEndpointGetArgs>> endpoints;
+    private @Nullable Output<List<OntapFileSystemEndpointArgs>> endpoints;
 
     /**
      * @return The endpoints that are used to access data or to manage the file system using the NetApp ONTAP CLI, REST API, or NetApp SnapMirror. See Endpoints below.
      * 
      */
-    public Optional<Output<List<OntapFileSystemEndpointGetArgs>>> endpoints() {
+    public Optional<Output<List<OntapFileSystemEndpointArgs>>> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
 
@@ -493,7 +493,7 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder diskIopsConfiguration(@Nullable Output<OntapFileSystemDiskIopsConfigurationGetArgs> diskIopsConfiguration) {
+        public Builder diskIopsConfiguration(@Nullable Output<OntapFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration) {
             $.diskIopsConfiguration = diskIopsConfiguration;
             return this;
         }
@@ -504,7 +504,7 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder diskIopsConfiguration(OntapFileSystemDiskIopsConfigurationGetArgs diskIopsConfiguration) {
+        public Builder diskIopsConfiguration(OntapFileSystemDiskIopsConfigurationArgs diskIopsConfiguration) {
             return diskIopsConfiguration(Output.of(diskIopsConfiguration));
         }
 
@@ -556,7 +556,7 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder endpoints(@Nullable Output<List<OntapFileSystemEndpointGetArgs>> endpoints) {
+        public Builder endpoints(@Nullable Output<List<OntapFileSystemEndpointArgs>> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
@@ -567,7 +567,7 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder endpoints(List<OntapFileSystemEndpointGetArgs> endpoints) {
+        public Builder endpoints(List<OntapFileSystemEndpointArgs> endpoints) {
             return endpoints(Output.of(endpoints));
         }
 
@@ -577,7 +577,7 @@ public final class OntapFileSystemState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder endpoints(OntapFileSystemEndpointGetArgs... endpoints) {
+        public Builder endpoints(OntapFileSystemEndpointArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }
 

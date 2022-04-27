@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.opsworks.inputs;
 
-import com.pulumi.aws.opsworks.inputs.PhpAppLayerCloudwatchConfigurationGetArgs;
-import com.pulumi.aws.opsworks.inputs.PhpAppLayerEbsVolumeGetArgs;
+import com.pulumi.aws.opsworks.inputs.PhpAppLayerCloudwatchConfigurationArgs;
+import com.pulumi.aws.opsworks.inputs.PhpAppLayerEbsVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -82,9 +82,9 @@ public final class PhpAppLayerState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="cloudwatchConfiguration")
-    private @Nullable Output<PhpAppLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration;
+    private @Nullable Output<PhpAppLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
-    public Optional<Output<PhpAppLayerCloudwatchConfigurationGetArgs>> cloudwatchConfiguration() {
+    public Optional<Output<PhpAppLayerCloudwatchConfigurationArgs>> cloudwatchConfiguration() {
         return Optional.ofNullable(this.cloudwatchConfiguration);
     }
 
@@ -188,13 +188,13 @@ public final class PhpAppLayerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsVolumes")
-    private @Nullable Output<List<PhpAppLayerEbsVolumeGetArgs>> ebsVolumes;
+    private @Nullable Output<List<PhpAppLayerEbsVolumeArgs>> ebsVolumes;
 
     /**
      * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
-    public Optional<Output<List<PhpAppLayerEbsVolumeGetArgs>>> ebsVolumes() {
+    public Optional<Output<List<PhpAppLayerEbsVolumeArgs>>> ebsVolumes() {
         return Optional.ofNullable(this.ebsVolumes);
     }
 
@@ -464,12 +464,12 @@ public final class PhpAppLayerState extends com.pulumi.resources.ResourceArgs {
             return autoHealing(Output.of(autoHealing));
         }
 
-        public Builder cloudwatchConfiguration(@Nullable Output<PhpAppLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(@Nullable Output<PhpAppLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
             $.cloudwatchConfiguration = cloudwatchConfiguration;
             return this;
         }
 
-        public Builder cloudwatchConfiguration(PhpAppLayerCloudwatchConfigurationGetArgs cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(PhpAppLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
             return cloudwatchConfiguration(Output.of(cloudwatchConfiguration));
         }
 
@@ -638,7 +638,7 @@ public final class PhpAppLayerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsVolumes(@Nullable Output<List<PhpAppLayerEbsVolumeGetArgs>> ebsVolumes) {
+        public Builder ebsVolumes(@Nullable Output<List<PhpAppLayerEbsVolumeArgs>> ebsVolumes) {
             $.ebsVolumes = ebsVolumes;
             return this;
         }
@@ -649,7 +649,7 @@ public final class PhpAppLayerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsVolumes(List<PhpAppLayerEbsVolumeGetArgs> ebsVolumes) {
+        public Builder ebsVolumes(List<PhpAppLayerEbsVolumeArgs> ebsVolumes) {
             return ebsVolumes(Output.of(ebsVolumes));
         }
 
@@ -659,7 +659,7 @@ public final class PhpAppLayerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsVolumes(PhpAppLayerEbsVolumeGetArgs... ebsVolumes) {
+        public Builder ebsVolumes(PhpAppLayerEbsVolumeArgs... ebsVolumes) {
             return ebsVolumes(List.of(ebsVolumes));
         }
 

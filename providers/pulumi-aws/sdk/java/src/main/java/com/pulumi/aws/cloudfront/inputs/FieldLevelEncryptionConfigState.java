@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.cloudfront.inputs;
 
-import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs;
-import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs;
+import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigArgs;
+import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -52,13 +52,13 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
      * 
      */
     @Import(name="contentTypeProfileConfig")
-    private @Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig;
+    private @Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig;
 
     /**
      * @return Content Type Profile Config specifies when to forward content if a content type isn&#39;t recognized and profiles to use as by default in a request if a query argument doesn&#39;t specify a profile to use.
      * 
      */
-    public Optional<Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs>> contentTypeProfileConfig() {
+    public Optional<Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs>> contentTypeProfileConfig() {
         return Optional.ofNullable(this.contentTypeProfileConfig);
     }
 
@@ -82,13 +82,13 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
      * 
      */
     @Import(name="queryArgProfileConfig")
-    private @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig;
+    private @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig;
 
     /**
      * @return Query Arg Profile Config that specifies when to forward content if a profile isn&#39;t found and the profile that can be provided as a query argument in a request.
      * 
      */
-    public Optional<Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs>> queryArgProfileConfig() {
+    public Optional<Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs>> queryArgProfileConfig() {
         return Optional.ofNullable(this.queryArgProfileConfig);
     }
 
@@ -168,7 +168,7 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder contentTypeProfileConfig(@Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig) {
+        public Builder contentTypeProfileConfig(@Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig) {
             $.contentTypeProfileConfig = contentTypeProfileConfig;
             return this;
         }
@@ -179,7 +179,7 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder contentTypeProfileConfig(FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs contentTypeProfileConfig) {
+        public Builder contentTypeProfileConfig(FieldLevelEncryptionConfigContentTypeProfileConfigArgs contentTypeProfileConfig) {
             return contentTypeProfileConfig(Output.of(contentTypeProfileConfig));
         }
 
@@ -210,7 +210,7 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder queryArgProfileConfig(@Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig) {
+        public Builder queryArgProfileConfig(@Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig) {
             $.queryArgProfileConfig = queryArgProfileConfig;
             return this;
         }
@@ -221,7 +221,7 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder queryArgProfileConfig(FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs queryArgProfileConfig) {
+        public Builder queryArgProfileConfig(FieldLevelEncryptionConfigQueryArgProfileConfigArgs queryArgProfileConfig) {
             return queryArgProfileConfig(Output.of(queryArgProfileConfig));
         }
 

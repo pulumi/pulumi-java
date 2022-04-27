@@ -5,8 +5,8 @@ package com.pulumi.gcp.dns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.dns.inputs.PolicyAlternativeNameServerConfigGetArgs;
-import com.pulumi.gcp.dns.inputs.PolicyNetworkGetArgs;
+import com.pulumi.gcp.dns.inputs.PolicyAlternativeNameServerConfigArgs;
+import com.pulumi.gcp.dns.inputs.PolicyNetworkArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alternativeNameServerConfig")
-    private @Nullable Output<PolicyAlternativeNameServerConfigGetArgs> alternativeNameServerConfig;
+    private @Nullable Output<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig;
 
     /**
      * @return Sets an alternative name server for the associated networks.
@@ -36,7 +36,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PolicyAlternativeNameServerConfigGetArgs>> alternativeNameServerConfig() {
+    public Optional<Output<PolicyAlternativeNameServerConfigArgs>> alternativeNameServerConfig() {
         return Optional.ofNullable(this.alternativeNameServerConfig);
     }
 
@@ -114,14 +114,14 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networks")
-    private @Nullable Output<List<PolicyNetworkGetArgs>> networks;
+    private @Nullable Output<List<PolicyNetworkArgs>> networks;
 
     /**
      * @return List of network names specifying networks to which this policy is applied.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<PolicyNetworkGetArgs>>> networks() {
+    public Optional<Output<List<PolicyNetworkArgs>>> networks() {
         return Optional.ofNullable(this.networks);
     }
 
@@ -181,7 +181,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder alternativeNameServerConfig(@Nullable Output<PolicyAlternativeNameServerConfigGetArgs> alternativeNameServerConfig) {
+        public Builder alternativeNameServerConfig(@Nullable Output<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig) {
             $.alternativeNameServerConfig = alternativeNameServerConfig;
             return this;
         }
@@ -195,7 +195,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder alternativeNameServerConfig(PolicyAlternativeNameServerConfigGetArgs alternativeNameServerConfig) {
+        public Builder alternativeNameServerConfig(PolicyAlternativeNameServerConfigArgs alternativeNameServerConfig) {
             return alternativeNameServerConfig(Output.of(alternativeNameServerConfig));
         }
 
@@ -298,7 +298,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networks(@Nullable Output<List<PolicyNetworkGetArgs>> networks) {
+        public Builder networks(@Nullable Output<List<PolicyNetworkArgs>> networks) {
             $.networks = networks;
             return this;
         }
@@ -310,7 +310,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networks(List<PolicyNetworkGetArgs> networks) {
+        public Builder networks(List<PolicyNetworkArgs> networks) {
             return networks(Output.of(networks));
         }
 
@@ -321,7 +321,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networks(PolicyNetworkGetArgs... networks) {
+        public Builder networks(PolicyNetworkArgs... networks) {
             return networks(List.of(networks));
         }
 

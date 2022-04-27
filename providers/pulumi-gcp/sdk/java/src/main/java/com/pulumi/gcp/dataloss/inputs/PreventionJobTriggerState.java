@@ -5,8 +5,8 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobGetArgs;
-import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerTriggerGetArgs;
+import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobArgs;
+import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerTriggerArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -54,14 +54,14 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="inspectJob")
-    private @Nullable Output<PreventionJobTriggerInspectJobGetArgs> inspectJob;
+    private @Nullable Output<PreventionJobTriggerInspectJobArgs> inspectJob;
 
     /**
      * @return Controls what and how to inspect for findings.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PreventionJobTriggerInspectJobGetArgs>> inspectJob() {
+    public Optional<Output<PreventionJobTriggerInspectJobArgs>> inspectJob() {
         return Optional.ofNullable(this.inspectJob);
     }
 
@@ -137,14 +137,14 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="triggers")
-    private @Nullable Output<List<PreventionJobTriggerTriggerGetArgs>> triggers;
+    private @Nullable Output<List<PreventionJobTriggerTriggerArgs>> triggers;
 
     /**
      * @return What event needs to occur for a new job to be started.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<PreventionJobTriggerTriggerGetArgs>>> triggers() {
+    public Optional<Output<List<PreventionJobTriggerTriggerArgs>>> triggers() {
         return Optional.ofNullable(this.triggers);
     }
 
@@ -228,7 +228,7 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder inspectJob(@Nullable Output<PreventionJobTriggerInspectJobGetArgs> inspectJob) {
+        public Builder inspectJob(@Nullable Output<PreventionJobTriggerInspectJobArgs> inspectJob) {
             $.inspectJob = inspectJob;
             return this;
         }
@@ -240,7 +240,7 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder inspectJob(PreventionJobTriggerInspectJobGetArgs inspectJob) {
+        public Builder inspectJob(PreventionJobTriggerInspectJobArgs inspectJob) {
             return inspectJob(Output.of(inspectJob));
         }
 
@@ -341,7 +341,7 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder triggers(@Nullable Output<List<PreventionJobTriggerTriggerGetArgs>> triggers) {
+        public Builder triggers(@Nullable Output<List<PreventionJobTriggerTriggerArgs>> triggers) {
             $.triggers = triggers;
             return this;
         }
@@ -353,7 +353,7 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder triggers(List<PreventionJobTriggerTriggerGetArgs> triggers) {
+        public Builder triggers(List<PreventionJobTriggerTriggerArgs> triggers) {
             return triggers(Output.of(triggers));
         }
 
@@ -364,7 +364,7 @@ public final class PreventionJobTriggerState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder triggers(PreventionJobTriggerTriggerGetArgs... triggers) {
+        public Builder triggers(PreventionJobTriggerTriggerArgs... triggers) {
             return triggers(List.of(triggers));
         }
 

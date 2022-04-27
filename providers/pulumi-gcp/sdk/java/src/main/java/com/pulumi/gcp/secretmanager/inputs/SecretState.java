@@ -5,9 +5,9 @@ package com.pulumi.gcp.secretmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.secretmanager.inputs.SecretReplicationGetArgs;
-import com.pulumi.gcp.secretmanager.inputs.SecretRotationGetArgs;
-import com.pulumi.gcp.secretmanager.inputs.SecretTopicGetArgs;
+import com.pulumi.gcp.secretmanager.inputs.SecretReplicationArgs;
+import com.pulumi.gcp.secretmanager.inputs.SecretRotationArgs;
+import com.pulumi.gcp.secretmanager.inputs.SecretTopicArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -122,7 +122,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replication")
-    private @Nullable Output<SecretReplicationGetArgs> replication;
+    private @Nullable Output<SecretReplicationArgs> replication;
 
     /**
      * @return The replication policy of the secret data attached to the Secret. It cannot be changed
@@ -130,7 +130,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<SecretReplicationGetArgs>> replication() {
+    public Optional<Output<SecretReplicationArgs>> replication() {
         return Optional.ofNullable(this.replication);
     }
 
@@ -140,14 +140,14 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rotation")
-    private @Nullable Output<SecretRotationGetArgs> rotation;
+    private @Nullable Output<SecretRotationArgs> rotation;
 
     /**
      * @return The rotation time and period for a Secret. At `next_rotation_time`, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. `topics` must be set to configure rotation.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<SecretRotationGetArgs>> rotation() {
+    public Optional<Output<SecretRotationArgs>> rotation() {
         return Optional.ofNullable(this.rotation);
     }
 
@@ -172,14 +172,14 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topics")
-    private @Nullable Output<List<SecretTopicGetArgs>> topics;
+    private @Nullable Output<List<SecretTopicArgs>> topics;
 
     /**
      * @return A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<SecretTopicGetArgs>>> topics() {
+    public Optional<Output<List<SecretTopicArgs>>> topics() {
         return Optional.ofNullable(this.topics);
     }
 
@@ -366,7 +366,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder replication(@Nullable Output<SecretReplicationGetArgs> replication) {
+        public Builder replication(@Nullable Output<SecretReplicationArgs> replication) {
             $.replication = replication;
             return this;
         }
@@ -379,7 +379,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder replication(SecretReplicationGetArgs replication) {
+        public Builder replication(SecretReplicationArgs replication) {
             return replication(Output.of(replication));
         }
 
@@ -390,7 +390,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rotation(@Nullable Output<SecretRotationGetArgs> rotation) {
+        public Builder rotation(@Nullable Output<SecretRotationArgs> rotation) {
             $.rotation = rotation;
             return this;
         }
@@ -402,7 +402,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rotation(SecretRotationGetArgs rotation) {
+        public Builder rotation(SecretRotationArgs rotation) {
             return rotation(Output.of(rotation));
         }
 
@@ -434,7 +434,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder topics(@Nullable Output<List<SecretTopicGetArgs>> topics) {
+        public Builder topics(@Nullable Output<List<SecretTopicArgs>> topics) {
             $.topics = topics;
             return this;
         }
@@ -446,7 +446,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder topics(List<SecretTopicGetArgs> topics) {
+        public Builder topics(List<SecretTopicArgs> topics) {
             return topics(Output.of(topics));
         }
 
@@ -457,7 +457,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder topics(SecretTopicGetArgs... topics) {
+        public Builder topics(SecretTopicArgs... topics) {
             return topics(List.of(topics));
         }
 

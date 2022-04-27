@@ -3,109 +3,99 @@
 
 package com.pulumi.docker.config.inputs;
 
-import com.pulumi.core.annotations.Import;
+import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+@CustomType
+public final class RegistryAuth {
+    private final String address;
+    private final @Nullable String configFile;
+    private final @Nullable String configFileContent;
+    private final @Nullable String password;
+    private final @Nullable String username;
 
-public final class RegistryAuth extends com.pulumi.resources.InvokeArgs {
-
-    public static final RegistryAuth Empty = new RegistryAuth();
-
-    @Import(name="address", required=true)
-    private String address;
+    @CustomType.Constructor
+    private RegistryAuth(
+        @CustomType.Parameter("address") String address,
+        @CustomType.Parameter("configFile") @Nullable String configFile,
+        @CustomType.Parameter("configFileContent") @Nullable String configFileContent,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("username") @Nullable String username) {
+        this.address = address;
+        this.configFile = configFile;
+        this.configFileContent = configFileContent;
+        this.password = password;
+        this.username = username;
+    }
 
     public String address() {
         return this.address;
     }
-
-    @Import(name="configFile")
-    private @Nullable String configFile;
-
     public Optional<String> configFile() {
         return Optional.ofNullable(this.configFile);
     }
-
-    @Import(name="configFileContent")
-    private @Nullable String configFileContent;
-
     public Optional<String> configFileContent() {
         return Optional.ofNullable(this.configFileContent);
     }
-
-    @Import(name="password")
-    private @Nullable String password;
-
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
-
-    @Import(name="username")
-    private @Nullable String username;
-
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
-    }
-
-    private RegistryAuth() {}
-
-    private RegistryAuth(RegistryAuth $) {
-        this.address = $.address;
-        this.configFile = $.configFile;
-        this.configFileContent = $.configFileContent;
-        this.password = $.password;
-        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
+
     public static Builder builder(RegistryAuth defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RegistryAuth $;
+        private String address;
+        private @Nullable String configFile;
+        private @Nullable String configFileContent;
+        private @Nullable String password;
+        private @Nullable String username;
 
         public Builder() {
-            $ = new RegistryAuth();
+    	      // Empty
         }
 
         public Builder(RegistryAuth defaults) {
-            $ = new RegistryAuth(Objects.requireNonNull(defaults));
+    	      Objects.requireNonNull(defaults);
+    	      this.address = defaults.address;
+    	      this.configFile = defaults.configFile;
+    	      this.configFileContent = defaults.configFileContent;
+    	      this.password = defaults.password;
+    	      this.username = defaults.username;
         }
 
         public Builder address(String address) {
-            $.address = address;
+            this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder configFile(@Nullable String configFile) {
-            $.configFile = configFile;
+            this.configFile = configFile;
             return this;
         }
-
         public Builder configFileContent(@Nullable String configFileContent) {
-            $.configFileContent = configFileContent;
+            this.configFileContent = configFileContent;
             return this;
         }
-
         public Builder password(@Nullable String password) {
-            $.password = password;
+            this.password = password;
             return this;
         }
-
         public Builder username(@Nullable String username) {
-            $.username = username;
+            this.username = username;
             return this;
-        }
-
-        public RegistryAuth build() {
-            $.address = Objects.requireNonNull($.address, "expected parameter 'address' to be non-null");
-            return $;
+        }        public RegistryAuth build() {
+            return new RegistryAuth(address, configFile, configFileContent, password, username);
         }
     }
-
 }

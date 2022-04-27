@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.appmesh.inputs;
 
-import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecGetArgs;
+import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -127,13 +127,13 @@ public final class VirtualNodeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spec")
-    private @Nullable Output<VirtualNodeSpecGetArgs> spec;
+    private @Nullable Output<VirtualNodeSpecArgs> spec;
 
     /**
      * @return The virtual node specification to apply.
      * 
      */
-    public Optional<Output<VirtualNodeSpecGetArgs>> spec() {
+    public Optional<Output<VirtualNodeSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
 
@@ -353,7 +353,7 @@ public final class VirtualNodeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder spec(@Nullable Output<VirtualNodeSpecGetArgs> spec) {
+        public Builder spec(@Nullable Output<VirtualNodeSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
@@ -364,7 +364,7 @@ public final class VirtualNodeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder spec(VirtualNodeSpecGetArgs spec) {
+        public Builder spec(VirtualNodeSpecArgs spec) {
             return spec(Output.of(spec));
         }
 

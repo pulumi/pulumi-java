@@ -5,7 +5,7 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.datacatalog.inputs.TagTemplateIamBindingConditionGetArgs;
+import com.pulumi.gcp.datacatalog.inputs.TagTemplateIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class TagTemplateIamBindingState extends com.pulumi.resources.Resou
     public static final TagTemplateIamBindingState Empty = new TagTemplateIamBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<TagTemplateIamBindingConditionGetArgs> condition;
+    private @Nullable Output<TagTemplateIamBindingConditionArgs> condition;
 
-    public Optional<Output<TagTemplateIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<TagTemplateIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -96,12 +96,12 @@ public final class TagTemplateIamBindingState extends com.pulumi.resources.Resou
             $ = new TagTemplateIamBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<TagTemplateIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<TagTemplateIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(TagTemplateIamBindingConditionGetArgs condition) {
+        public Builder condition(TagTemplateIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

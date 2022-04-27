@@ -5,7 +5,7 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.pubsub.inputs.SubscriptionIAMMemberConditionGetArgs;
+import com.pulumi.gcp.pubsub.inputs.SubscriptionIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class SubscriptionIAMMemberState extends com.pulumi.resources.Resou
     public static final SubscriptionIAMMemberState Empty = new SubscriptionIAMMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<SubscriptionIAMMemberConditionGetArgs> condition;
+    private @Nullable Output<SubscriptionIAMMemberConditionArgs> condition;
 
-    public Optional<Output<SubscriptionIAMMemberConditionGetArgs>> condition() {
+    public Optional<Output<SubscriptionIAMMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -125,12 +125,12 @@ public final class SubscriptionIAMMemberState extends com.pulumi.resources.Resou
             $ = new SubscriptionIAMMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<SubscriptionIAMMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<SubscriptionIAMMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(SubscriptionIAMMemberConditionGetArgs condition) {
+        public Builder condition(SubscriptionIAMMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

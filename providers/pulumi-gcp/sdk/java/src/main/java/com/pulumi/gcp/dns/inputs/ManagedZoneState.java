@@ -6,11 +6,11 @@ package com.pulumi.gcp.dns.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
-import com.pulumi.gcp.dns.inputs.ManagedZoneDnssecConfigGetArgs;
-import com.pulumi.gcp.dns.inputs.ManagedZoneForwardingConfigGetArgs;
-import com.pulumi.gcp.dns.inputs.ManagedZonePeeringConfigGetArgs;
-import com.pulumi.gcp.dns.inputs.ManagedZonePrivateVisibilityConfigGetArgs;
-import com.pulumi.gcp.dns.inputs.ManagedZoneServiceDirectoryConfigGetArgs;
+import com.pulumi.gcp.dns.inputs.ManagedZoneDnssecConfigArgs;
+import com.pulumi.gcp.dns.inputs.ManagedZoneForwardingConfigArgs;
+import com.pulumi.gcp.dns.inputs.ManagedZonePeeringConfigArgs;
+import com.pulumi.gcp.dns.inputs.ManagedZonePrivateVisibilityConfigArgs;
+import com.pulumi.gcp.dns.inputs.ManagedZoneServiceDirectoryConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -60,14 +60,14 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnssecConfig")
-    private @Nullable Output<ManagedZoneDnssecConfigGetArgs> dnssecConfig;
+    private @Nullable Output<ManagedZoneDnssecConfigArgs> dnssecConfig;
 
     /**
      * @return DNSSEC configuration
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ManagedZoneDnssecConfigGetArgs>> dnssecConfig() {
+    public Optional<Output<ManagedZoneDnssecConfigArgs>> dnssecConfig() {
         return Optional.ofNullable(this.dnssecConfig);
     }
 
@@ -94,7 +94,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forwardingConfig")
-    private @Nullable Output<ManagedZoneForwardingConfigGetArgs> forwardingConfig;
+    private @Nullable Output<ManagedZoneForwardingConfigArgs> forwardingConfig;
 
     /**
      * @return The presence for this field indicates that outbound forwarding is enabled
@@ -103,7 +103,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ManagedZoneForwardingConfigGetArgs>> forwardingConfig() {
+    public Optional<Output<ManagedZoneForwardingConfigArgs>> forwardingConfig() {
         return Optional.ofNullable(this.forwardingConfig);
     }
 
@@ -161,7 +161,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peeringConfig")
-    private @Nullable Output<ManagedZonePeeringConfigGetArgs> peeringConfig;
+    private @Nullable Output<ManagedZonePeeringConfigArgs> peeringConfig;
 
     /**
      * @return The presence of this field indicates that DNS Peering is enabled for this
@@ -169,7 +169,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ManagedZonePeeringConfigGetArgs>> peeringConfig() {
+    public Optional<Output<ManagedZonePeeringConfigArgs>> peeringConfig() {
         return Optional.ofNullable(this.peeringConfig);
     }
 
@@ -180,7 +180,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateVisibilityConfig")
-    private @Nullable Output<ManagedZonePrivateVisibilityConfigGetArgs> privateVisibilityConfig;
+    private @Nullable Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig;
 
     /**
      * @return For privately visible zones, the set of Virtual Private Cloud
@@ -188,7 +188,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ManagedZonePrivateVisibilityConfigGetArgs>> privateVisibilityConfig() {
+    public Optional<Output<ManagedZonePrivateVisibilityConfigArgs>> privateVisibilityConfig() {
         return Optional.ofNullable(this.privateVisibilityConfig);
     }
 
@@ -234,14 +234,14 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceDirectoryConfig")
-    private @Nullable Output<ManagedZoneServiceDirectoryConfigGetArgs> serviceDirectoryConfig;
+    private @Nullable Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig;
 
     /**
      * @return The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ManagedZoneServiceDirectoryConfigGetArgs>> serviceDirectoryConfig() {
+    public Optional<Output<ManagedZoneServiceDirectoryConfigArgs>> serviceDirectoryConfig() {
         return Optional.ofNullable(this.serviceDirectoryConfig);
     }
 
@@ -352,7 +352,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dnssecConfig(@Nullable Output<ManagedZoneDnssecConfigGetArgs> dnssecConfig) {
+        public Builder dnssecConfig(@Nullable Output<ManagedZoneDnssecConfigArgs> dnssecConfig) {
             $.dnssecConfig = dnssecConfig;
             return this;
         }
@@ -364,7 +364,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dnssecConfig(ManagedZoneDnssecConfigGetArgs dnssecConfig) {
+        public Builder dnssecConfig(ManagedZoneDnssecConfigArgs dnssecConfig) {
             return dnssecConfig(Output.of(dnssecConfig));
         }
 
@@ -398,7 +398,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder forwardingConfig(@Nullable Output<ManagedZoneForwardingConfigGetArgs> forwardingConfig) {
+        public Builder forwardingConfig(@Nullable Output<ManagedZoneForwardingConfigArgs> forwardingConfig) {
             $.forwardingConfig = forwardingConfig;
             return this;
         }
@@ -412,7 +412,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder forwardingConfig(ManagedZoneForwardingConfigGetArgs forwardingConfig) {
+        public Builder forwardingConfig(ManagedZoneForwardingConfigArgs forwardingConfig) {
             return forwardingConfig(Output.of(forwardingConfig));
         }
 
@@ -499,7 +499,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder peeringConfig(@Nullable Output<ManagedZonePeeringConfigGetArgs> peeringConfig) {
+        public Builder peeringConfig(@Nullable Output<ManagedZonePeeringConfigArgs> peeringConfig) {
             $.peeringConfig = peeringConfig;
             return this;
         }
@@ -512,7 +512,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder peeringConfig(ManagedZonePeeringConfigGetArgs peeringConfig) {
+        public Builder peeringConfig(ManagedZonePeeringConfigArgs peeringConfig) {
             return peeringConfig(Output.of(peeringConfig));
         }
 
@@ -524,7 +524,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder privateVisibilityConfig(@Nullable Output<ManagedZonePrivateVisibilityConfigGetArgs> privateVisibilityConfig) {
+        public Builder privateVisibilityConfig(@Nullable Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig) {
             $.privateVisibilityConfig = privateVisibilityConfig;
             return this;
         }
@@ -537,7 +537,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder privateVisibilityConfig(ManagedZonePrivateVisibilityConfigGetArgs privateVisibilityConfig) {
+        public Builder privateVisibilityConfig(ManagedZonePrivateVisibilityConfigArgs privateVisibilityConfig) {
             return privateVisibilityConfig(Output.of(privateVisibilityConfig));
         }
 
@@ -596,7 +596,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serviceDirectoryConfig(@Nullable Output<ManagedZoneServiceDirectoryConfigGetArgs> serviceDirectoryConfig) {
+        public Builder serviceDirectoryConfig(@Nullable Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig) {
             $.serviceDirectoryConfig = serviceDirectoryConfig;
             return this;
         }
@@ -608,7 +608,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serviceDirectoryConfig(ManagedZoneServiceDirectoryConfigGetArgs serviceDirectoryConfig) {
+        public Builder serviceDirectoryConfig(ManagedZoneServiceDirectoryConfigArgs serviceDirectoryConfig) {
             return serviceDirectoryConfig(Output.of(serviceDirectoryConfig));
         }
 

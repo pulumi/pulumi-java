@@ -5,8 +5,8 @@ package com.pulumi.gcp.cloudasset.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.cloudasset.inputs.FolderFeedConditionGetArgs;
-import com.pulumi.gcp.cloudasset.inputs.FolderFeedFeedOutputConfigGetArgs;
+import com.pulumi.gcp.cloudasset.inputs.FolderFeedConditionArgs;
+import com.pulumi.gcp.cloudasset.inputs.FolderFeedFeedOutputConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -91,7 +91,7 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<FolderFeedConditionGetArgs> condition;
+    private @Nullable Output<FolderFeedConditionArgs> condition;
 
     /**
      * @return A condition which determines whether an asset update should be published. If specified, an asset
@@ -102,7 +102,7 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FolderFeedConditionGetArgs>> condition() {
+    public Optional<Output<FolderFeedConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -144,14 +144,14 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="feedOutputConfig")
-    private @Nullable Output<FolderFeedFeedOutputConfigGetArgs> feedOutputConfig;
+    private @Nullable Output<FolderFeedFeedOutputConfigArgs> feedOutputConfig;
 
     /**
      * @return Output configuration for asset feed destination.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FolderFeedFeedOutputConfigGetArgs>> feedOutputConfig() {
+    public Optional<Output<FolderFeedFeedOutputConfigArgs>> feedOutputConfig() {
         return Optional.ofNullable(this.feedOutputConfig);
     }
 
@@ -352,7 +352,7 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<FolderFeedConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<FolderFeedConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -368,7 +368,7 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder condition(FolderFeedConditionGetArgs condition) {
+        public Builder condition(FolderFeedConditionArgs condition) {
             return condition(Output.of(condition));
         }
 
@@ -423,7 +423,7 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder feedOutputConfig(@Nullable Output<FolderFeedFeedOutputConfigGetArgs> feedOutputConfig) {
+        public Builder feedOutputConfig(@Nullable Output<FolderFeedFeedOutputConfigArgs> feedOutputConfig) {
             $.feedOutputConfig = feedOutputConfig;
             return this;
         }
@@ -435,7 +435,7 @@ public final class FolderFeedState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder feedOutputConfig(FolderFeedFeedOutputConfigGetArgs feedOutputConfig) {
+        public Builder feedOutputConfig(FolderFeedFeedOutputConfigArgs feedOutputConfig) {
             return feedOutputConfig(Output.of(feedOutputConfig));
         }
 

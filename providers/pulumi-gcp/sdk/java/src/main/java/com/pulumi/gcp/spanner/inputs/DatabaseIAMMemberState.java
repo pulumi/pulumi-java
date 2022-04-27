@@ -5,7 +5,7 @@ package com.pulumi.gcp.spanner.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.spanner.inputs.DatabaseIAMMemberConditionGetArgs;
+import com.pulumi.gcp.spanner.inputs.DatabaseIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class DatabaseIAMMemberState extends com.pulumi.resources.ResourceA
     public static final DatabaseIAMMemberState Empty = new DatabaseIAMMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<DatabaseIAMMemberConditionGetArgs> condition;
+    private @Nullable Output<DatabaseIAMMemberConditionArgs> condition;
 
-    public Optional<Output<DatabaseIAMMemberConditionGetArgs>> condition() {
+    public Optional<Output<DatabaseIAMMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -141,12 +141,12 @@ public final class DatabaseIAMMemberState extends com.pulumi.resources.ResourceA
             $ = new DatabaseIAMMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<DatabaseIAMMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<DatabaseIAMMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(DatabaseIAMMemberConditionGetArgs condition) {
+        public Builder condition(DatabaseIAMMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

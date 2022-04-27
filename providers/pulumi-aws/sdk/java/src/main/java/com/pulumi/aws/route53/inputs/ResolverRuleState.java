@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.route53.inputs;
 
-import com.pulumi.aws.route53.inputs.ResolverRuleTargetIpGetArgs;
+import com.pulumi.aws.route53.inputs.ResolverRuleTargetIpArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -163,14 +163,14 @@ public final class ResolverRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetIps")
-    private @Nullable Output<List<ResolverRuleTargetIpGetArgs>> targetIps;
+    private @Nullable Output<List<ResolverRuleTargetIpArgs>> targetIps;
 
     /**
      * @return Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below).
      * This argument should only be specified for `FORWARD` type rules.
      * 
      */
-    public Optional<Output<List<ResolverRuleTargetIpGetArgs>>> targetIps() {
+    public Optional<Output<List<ResolverRuleTargetIpArgs>>> targetIps() {
         return Optional.ofNullable(this.targetIps);
     }
 
@@ -407,7 +407,7 @@ public final class ResolverRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder targetIps(@Nullable Output<List<ResolverRuleTargetIpGetArgs>> targetIps) {
+        public Builder targetIps(@Nullable Output<List<ResolverRuleTargetIpArgs>> targetIps) {
             $.targetIps = targetIps;
             return this;
         }
@@ -419,7 +419,7 @@ public final class ResolverRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder targetIps(List<ResolverRuleTargetIpGetArgs> targetIps) {
+        public Builder targetIps(List<ResolverRuleTargetIpArgs> targetIps) {
             return targetIps(Output.of(targetIps));
         }
 
@@ -430,7 +430,7 @@ public final class ResolverRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder targetIps(ResolverRuleTargetIpGetArgs... targetIps) {
+        public Builder targetIps(ResolverRuleTargetIpArgs... targetIps) {
             return targetIps(List.of(targetIps));
         }
 

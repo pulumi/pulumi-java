@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.networkfirewall.inputs;
 
-import com.pulumi.aws.networkfirewall.inputs.FirewallFirewallStatusGetArgs;
-import com.pulumi.aws.networkfirewall.inputs.FirewallSubnetMappingGetArgs;
+import com.pulumi.aws.networkfirewall.inputs.FirewallFirewallStatusArgs;
+import com.pulumi.aws.networkfirewall.inputs.FirewallSubnetMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -100,13 +100,13 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="firewallStatuses")
-    private @Nullable Output<List<FirewallFirewallStatusGetArgs>> firewallStatuses;
+    private @Nullable Output<List<FirewallFirewallStatusArgs>> firewallStatuses;
 
     /**
      * @return Nested list of information about the current status of the firewall.
      * 
      */
-    public Optional<Output<List<FirewallFirewallStatusGetArgs>>> firewallStatuses() {
+    public Optional<Output<List<FirewallFirewallStatusArgs>>> firewallStatuses() {
         return Optional.ofNullable(this.firewallStatuses);
     }
 
@@ -145,13 +145,13 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetMappings")
-    private @Nullable Output<List<FirewallSubnetMappingGetArgs>> subnetMappings;
+    private @Nullable Output<List<FirewallSubnetMappingArgs>> subnetMappings;
 
     /**
      * @return Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
      * 
      */
-    public Optional<Output<List<FirewallSubnetMappingGetArgs>>> subnetMappings() {
+    public Optional<Output<List<FirewallSubnetMappingArgs>>> subnetMappings() {
         return Optional.ofNullable(this.subnetMappings);
     }
 
@@ -362,7 +362,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder firewallStatuses(@Nullable Output<List<FirewallFirewallStatusGetArgs>> firewallStatuses) {
+        public Builder firewallStatuses(@Nullable Output<List<FirewallFirewallStatusArgs>> firewallStatuses) {
             $.firewallStatuses = firewallStatuses;
             return this;
         }
@@ -373,7 +373,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder firewallStatuses(List<FirewallFirewallStatusGetArgs> firewallStatuses) {
+        public Builder firewallStatuses(List<FirewallFirewallStatusArgs> firewallStatuses) {
             return firewallStatuses(Output.of(firewallStatuses));
         }
 
@@ -383,7 +383,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder firewallStatuses(FirewallFirewallStatusGetArgs... firewallStatuses) {
+        public Builder firewallStatuses(FirewallFirewallStatusArgs... firewallStatuses) {
             return firewallStatuses(List.of(firewallStatuses));
         }
 
@@ -435,7 +435,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder subnetMappings(@Nullable Output<List<FirewallSubnetMappingGetArgs>> subnetMappings) {
+        public Builder subnetMappings(@Nullable Output<List<FirewallSubnetMappingArgs>> subnetMappings) {
             $.subnetMappings = subnetMappings;
             return this;
         }
@@ -446,7 +446,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder subnetMappings(List<FirewallSubnetMappingGetArgs> subnetMappings) {
+        public Builder subnetMappings(List<FirewallSubnetMappingArgs> subnetMappings) {
             return subnetMappings(Output.of(subnetMappings));
         }
 
@@ -456,7 +456,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder subnetMappings(FirewallSubnetMappingGetArgs... subnetMappings) {
+        public Builder subnetMappings(FirewallSubnetMappingArgs... subnetMappings) {
             return subnetMappings(List.of(subnetMappings));
         }
 

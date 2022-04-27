@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
-import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationGetArgs;
-import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationCloudwatchLoggingOptionsGetArgs;
+import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationArgs;
+import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationCloudwatchLoggingOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -25,13 +25,13 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationConfiguration")
-    private @Nullable Output<ApplicationApplicationConfigurationGetArgs> applicationConfiguration;
+    private @Nullable Output<ApplicationApplicationConfigurationArgs> applicationConfiguration;
 
     /**
      * @return The application&#39;s configuration
      * 
      */
-    public Optional<Output<ApplicationApplicationConfigurationGetArgs>> applicationConfiguration() {
+    public Optional<Output<ApplicationApplicationConfigurationArgs>> applicationConfiguration() {
         return Optional.ofNullable(this.applicationConfiguration);
     }
 
@@ -55,13 +55,13 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudwatchLoggingOptions")
-    private @Nullable Output<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
+    private @Nullable Output<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
     /**
      * @return A CloudWatch log stream to monitor application configuration errors.
      * 
      */
-    public Optional<Output<ApplicationCloudwatchLoggingOptionsGetArgs>> cloudwatchLoggingOptions() {
+    public Optional<Output<ApplicationCloudwatchLoggingOptionsArgs>> cloudwatchLoggingOptions() {
         return Optional.ofNullable(this.cloudwatchLoggingOptions);
     }
 
@@ -289,7 +289,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder applicationConfiguration(@Nullable Output<ApplicationApplicationConfigurationGetArgs> applicationConfiguration) {
+        public Builder applicationConfiguration(@Nullable Output<ApplicationApplicationConfigurationArgs> applicationConfiguration) {
             $.applicationConfiguration = applicationConfiguration;
             return this;
         }
@@ -300,7 +300,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder applicationConfiguration(ApplicationApplicationConfigurationGetArgs applicationConfiguration) {
+        public Builder applicationConfiguration(ApplicationApplicationConfigurationArgs applicationConfiguration) {
             return applicationConfiguration(Output.of(applicationConfiguration));
         }
 
@@ -331,7 +331,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cloudwatchLoggingOptions(@Nullable Output<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable Output<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
             $.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
@@ -342,7 +342,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cloudwatchLoggingOptions(ApplicationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(ApplicationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
             return cloudwatchLoggingOptions(Output.of(cloudwatchLoggingOptions));
         }
 

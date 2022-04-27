@@ -5,7 +5,7 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.storage.inputs.DefaultObjectAccessControlProjectTeamGetArgs;
+import com.pulumi.gcp.storage.inputs.DefaultObjectAccessControlProjectTeamArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -144,13 +144,13 @@ public final class DefaultObjectAccessControlState extends com.pulumi.resources.
      * 
      */
     @Import(name="projectTeams")
-    private @Nullable Output<List<DefaultObjectAccessControlProjectTeamGetArgs>> projectTeams;
+    private @Nullable Output<List<DefaultObjectAccessControlProjectTeamArgs>> projectTeams;
 
     /**
      * @return The project team associated with the entity
      * 
      */
-    public Optional<Output<List<DefaultObjectAccessControlProjectTeamGetArgs>>> projectTeams() {
+    public Optional<Output<List<DefaultObjectAccessControlProjectTeamArgs>>> projectTeams() {
         return Optional.ofNullable(this.projectTeams);
     }
 
@@ -372,7 +372,7 @@ public final class DefaultObjectAccessControlState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder projectTeams(@Nullable Output<List<DefaultObjectAccessControlProjectTeamGetArgs>> projectTeams) {
+        public Builder projectTeams(@Nullable Output<List<DefaultObjectAccessControlProjectTeamArgs>> projectTeams) {
             $.projectTeams = projectTeams;
             return this;
         }
@@ -383,7 +383,7 @@ public final class DefaultObjectAccessControlState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder projectTeams(List<DefaultObjectAccessControlProjectTeamGetArgs> projectTeams) {
+        public Builder projectTeams(List<DefaultObjectAccessControlProjectTeamArgs> projectTeams) {
             return projectTeams(Output.of(projectTeams));
         }
 
@@ -393,7 +393,7 @@ public final class DefaultObjectAccessControlState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder projectTeams(DefaultObjectAccessControlProjectTeamGetArgs... projectTeams) {
+        public Builder projectTeams(DefaultObjectAccessControlProjectTeamArgs... projectTeams) {
             return projectTeams(List.of(projectTeams));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementGetArgs;
+import com.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,13 +21,13 @@ public final class FeatureMembershipState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="configmanagement")
-    private @Nullable Output<FeatureMembershipConfigmanagementGetArgs> configmanagement;
+    private @Nullable Output<FeatureMembershipConfigmanagementArgs> configmanagement;
 
     /**
      * @return Config Management-specific spec. Structure is documented below.
      * 
      */
-    public Optional<Output<FeatureMembershipConfigmanagementGetArgs>> configmanagement() {
+    public Optional<Output<FeatureMembershipConfigmanagementArgs>> configmanagement() {
         return Optional.ofNullable(this.configmanagement);
     }
 
@@ -125,7 +125,7 @@ public final class FeatureMembershipState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder configmanagement(@Nullable Output<FeatureMembershipConfigmanagementGetArgs> configmanagement) {
+        public Builder configmanagement(@Nullable Output<FeatureMembershipConfigmanagementArgs> configmanagement) {
             $.configmanagement = configmanagement;
             return this;
         }
@@ -136,7 +136,7 @@ public final class FeatureMembershipState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder configmanagement(FeatureMembershipConfigmanagementGetArgs configmanagement) {
+        public Builder configmanagement(FeatureMembershipConfigmanagementArgs configmanagement) {
             return configmanagement(Output.of(configmanagement));
         }
 

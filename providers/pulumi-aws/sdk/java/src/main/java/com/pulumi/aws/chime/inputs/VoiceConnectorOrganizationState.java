@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.chime.inputs;
 
-import com.pulumi.aws.chime.inputs.VoiceConnectorOrganizationRouteGetArgs;
+import com.pulumi.aws.chime.inputs.VoiceConnectorOrganizationRouteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -38,13 +38,13 @@ public final class VoiceConnectorOrganizationState extends com.pulumi.resources.
      * 
      */
     @Import(name="routes")
-    private @Nullable Output<List<VoiceConnectorOrganizationRouteGetArgs>> routes;
+    private @Nullable Output<List<VoiceConnectorOrganizationRouteArgs>> routes;
 
     /**
      * @return Set of call distribution properties defined for your SIP hosts. See route below for more details. Minimum of 1. Maximum of 20.
      * 
      */
-    public Optional<Output<List<VoiceConnectorOrganizationRouteGetArgs>>> routes() {
+    public Optional<Output<List<VoiceConnectorOrganizationRouteArgs>>> routes() {
         return Optional.ofNullable(this.routes);
     }
 
@@ -116,7 +116,7 @@ public final class VoiceConnectorOrganizationState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder routes(@Nullable Output<List<VoiceConnectorOrganizationRouteGetArgs>> routes) {
+        public Builder routes(@Nullable Output<List<VoiceConnectorOrganizationRouteArgs>> routes) {
             $.routes = routes;
             return this;
         }
@@ -127,7 +127,7 @@ public final class VoiceConnectorOrganizationState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder routes(List<VoiceConnectorOrganizationRouteGetArgs> routes) {
+        public Builder routes(List<VoiceConnectorOrganizationRouteArgs> routes) {
             return routes(Output.of(routes));
         }
 
@@ -137,7 +137,7 @@ public final class VoiceConnectorOrganizationState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder routes(VoiceConnectorOrganizationRouteGetArgs... routes) {
+        public Builder routes(VoiceConnectorOrganizationRouteArgs... routes) {
             return routes(List.of(routes));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ecrpublic.inputs;
 
-import com.pulumi.aws.ecrpublic.inputs.RepositoryCatalogDataGetArgs;
+import com.pulumi.aws.ecrpublic.inputs.RepositoryCatalogDataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -37,13 +37,13 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="catalogData")
-    private @Nullable Output<RepositoryCatalogDataGetArgs> catalogData;
+    private @Nullable Output<RepositoryCatalogDataArgs> catalogData;
 
     /**
      * @return Catalog data configuration for the repository. See below for schema.
      * 
      */
-    public Optional<Output<RepositoryCatalogDataGetArgs>> catalogData() {
+    public Optional<Output<RepositoryCatalogDataArgs>> catalogData() {
         return Optional.ofNullable(this.catalogData);
     }
 
@@ -155,7 +155,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder catalogData(@Nullable Output<RepositoryCatalogDataGetArgs> catalogData) {
+        public Builder catalogData(@Nullable Output<RepositoryCatalogDataArgs> catalogData) {
             $.catalogData = catalogData;
             return this;
         }
@@ -166,7 +166,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder catalogData(RepositoryCatalogDataGetArgs catalogData) {
+        public Builder catalogData(RepositoryCatalogDataArgs catalogData) {
             return catalogData(Output.of(catalogData));
         }
 

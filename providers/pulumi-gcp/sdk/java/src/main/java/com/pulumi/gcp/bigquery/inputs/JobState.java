@@ -5,11 +5,11 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.bigquery.inputs.JobCopyGetArgs;
-import com.pulumi.gcp.bigquery.inputs.JobExtractGetArgs;
-import com.pulumi.gcp.bigquery.inputs.JobLoadGetArgs;
-import com.pulumi.gcp.bigquery.inputs.JobQueryGetArgs;
-import com.pulumi.gcp.bigquery.inputs.JobStatusGetArgs;
+import com.pulumi.gcp.bigquery.inputs.JobCopyArgs;
+import com.pulumi.gcp.bigquery.inputs.JobExtractArgs;
+import com.pulumi.gcp.bigquery.inputs.JobLoadArgs;
+import com.pulumi.gcp.bigquery.inputs.JobQueryArgs;
+import com.pulumi.gcp.bigquery.inputs.JobStatusArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,14 +28,14 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="copy")
-    private @Nullable Output<JobCopyGetArgs> copy;
+    private @Nullable Output<JobCopyArgs> copy;
 
     /**
      * @return Copies a table.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<JobCopyGetArgs>> copy() {
+    public Optional<Output<JobCopyArgs>> copy() {
         return Optional.ofNullable(this.copy);
     }
 
@@ -45,14 +45,14 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extract")
-    private @Nullable Output<JobExtractGetArgs> extract;
+    private @Nullable Output<JobExtractArgs> extract;
 
     /**
      * @return Configures an extract job.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<JobExtractGetArgs>> extract() {
+    public Optional<Output<JobExtractArgs>> extract() {
         return Optional.ofNullable(this.extract);
     }
 
@@ -122,14 +122,14 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="load")
-    private @Nullable Output<JobLoadGetArgs> load;
+    private @Nullable Output<JobLoadArgs> load;
 
     /**
      * @return Configures a load job.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<JobLoadGetArgs>> load() {
+    public Optional<Output<JobLoadArgs>> load() {
         return Optional.ofNullable(this.load);
     }
 
@@ -171,14 +171,14 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="query")
-    private @Nullable Output<JobQueryGetArgs> query;
+    private @Nullable Output<JobQueryArgs> query;
 
     /**
      * @return Configures a query job.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<JobQueryGetArgs>> query() {
+    public Optional<Output<JobQueryArgs>> query() {
         return Optional.ofNullable(this.query);
     }
 
@@ -187,13 +187,13 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="statuses")
-    private @Nullable Output<List<JobStatusGetArgs>> statuses;
+    private @Nullable Output<List<JobStatusArgs>> statuses;
 
     /**
      * @return The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
      * 
      */
-    public Optional<Output<List<JobStatusGetArgs>>> statuses() {
+    public Optional<Output<List<JobStatusArgs>>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
 
@@ -254,7 +254,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder copy(@Nullable Output<JobCopyGetArgs> copy) {
+        public Builder copy(@Nullable Output<JobCopyArgs> copy) {
             $.copy = copy;
             return this;
         }
@@ -266,7 +266,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder copy(JobCopyGetArgs copy) {
+        public Builder copy(JobCopyArgs copy) {
             return copy(Output.of(copy));
         }
 
@@ -277,7 +277,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder extract(@Nullable Output<JobExtractGetArgs> extract) {
+        public Builder extract(@Nullable Output<JobExtractArgs> extract) {
             $.extract = extract;
             return this;
         }
@@ -289,7 +289,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder extract(JobExtractGetArgs extract) {
+        public Builder extract(JobExtractArgs extract) {
             return extract(Output.of(extract));
         }
 
@@ -384,7 +384,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder load(@Nullable Output<JobLoadGetArgs> load) {
+        public Builder load(@Nullable Output<JobLoadArgs> load) {
             $.load = load;
             return this;
         }
@@ -396,7 +396,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder load(JobLoadGetArgs load) {
+        public Builder load(JobLoadArgs load) {
             return load(Output.of(load));
         }
 
@@ -451,7 +451,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder query(@Nullable Output<JobQueryGetArgs> query) {
+        public Builder query(@Nullable Output<JobQueryArgs> query) {
             $.query = query;
             return this;
         }
@@ -463,7 +463,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder query(JobQueryGetArgs query) {
+        public Builder query(JobQueryArgs query) {
             return query(Output.of(query));
         }
 
@@ -473,7 +473,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder statuses(@Nullable Output<List<JobStatusGetArgs>> statuses) {
+        public Builder statuses(@Nullable Output<List<JobStatusArgs>> statuses) {
             $.statuses = statuses;
             return this;
         }
@@ -484,7 +484,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder statuses(List<JobStatusGetArgs> statuses) {
+        public Builder statuses(List<JobStatusArgs> statuses) {
             return statuses(Output.of(statuses));
         }
 
@@ -494,7 +494,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder statuses(JobStatusGetArgs... statuses) {
+        public Builder statuses(JobStatusArgs... statuses) {
             return statuses(List.of(statuses));
         }
 

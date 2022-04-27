@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.appautoscaling.inputs;
 
-import com.pulumi.aws.appautoscaling.inputs.PolicyStepScalingPolicyConfigurationGetArgs;
-import com.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyConfigurationGetArgs;
+import com.pulumi.aws.appautoscaling.inputs.PolicyStepScalingPolicyConfigurationArgs;
+import com.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -112,13 +112,13 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stepScalingPolicyConfiguration")
-    private @Nullable Output<PolicyStepScalingPolicyConfigurationGetArgs> stepScalingPolicyConfiguration;
+    private @Nullable Output<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration;
 
     /**
      * @return Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
      * 
      */
-    public Optional<Output<PolicyStepScalingPolicyConfigurationGetArgs>> stepScalingPolicyConfiguration() {
+    public Optional<Output<PolicyStepScalingPolicyConfigurationArgs>> stepScalingPolicyConfiguration() {
         return Optional.ofNullable(this.stepScalingPolicyConfiguration);
     }
 
@@ -127,13 +127,13 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetTrackingScalingPolicyConfiguration")
-    private @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationGetArgs> targetTrackingScalingPolicyConfiguration;
+    private @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
 
     /**
      * @return A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
      * 
      */
-    public Optional<Output<PolicyTargetTrackingScalingPolicyConfigurationGetArgs>> targetTrackingScalingPolicyConfiguration() {
+    public Optional<Output<PolicyTargetTrackingScalingPolicyConfigurationArgs>> targetTrackingScalingPolicyConfiguration() {
         return Optional.ofNullable(this.targetTrackingScalingPolicyConfiguration);
     }
 
@@ -300,7 +300,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder stepScalingPolicyConfiguration(@Nullable Output<PolicyStepScalingPolicyConfigurationGetArgs> stepScalingPolicyConfiguration) {
+        public Builder stepScalingPolicyConfiguration(@Nullable Output<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration) {
             $.stepScalingPolicyConfiguration = stepScalingPolicyConfiguration;
             return this;
         }
@@ -311,7 +311,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder stepScalingPolicyConfiguration(PolicyStepScalingPolicyConfigurationGetArgs stepScalingPolicyConfiguration) {
+        public Builder stepScalingPolicyConfiguration(PolicyStepScalingPolicyConfigurationArgs stepScalingPolicyConfiguration) {
             return stepScalingPolicyConfiguration(Output.of(stepScalingPolicyConfiguration));
         }
 
@@ -321,7 +321,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder targetTrackingScalingPolicyConfiguration(@Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationGetArgs> targetTrackingScalingPolicyConfiguration) {
+        public Builder targetTrackingScalingPolicyConfiguration(@Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration) {
             $.targetTrackingScalingPolicyConfiguration = targetTrackingScalingPolicyConfiguration;
             return this;
         }
@@ -332,7 +332,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder targetTrackingScalingPolicyConfiguration(PolicyTargetTrackingScalingPolicyConfigurationGetArgs targetTrackingScalingPolicyConfiguration) {
+        public Builder targetTrackingScalingPolicyConfiguration(PolicyTargetTrackingScalingPolicyConfigurationArgs targetTrackingScalingPolicyConfiguration) {
             return targetTrackingScalingPolicyConfiguration(Output.of(targetTrackingScalingPolicyConfiguration));
         }
 

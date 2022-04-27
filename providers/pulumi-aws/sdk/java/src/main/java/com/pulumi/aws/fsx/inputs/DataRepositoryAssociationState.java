@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.fsx.inputs;
 
-import com.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3GetArgs;
+import com.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3Args;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -137,14 +137,14 @@ public final class DataRepositoryAssociationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="s3")
-    private @Nullable Output<DataRepositoryAssociationS3GetArgs> s3;
+    private @Nullable Output<DataRepositoryAssociationS3Args> s3;
 
     /**
      * @return See the `s3` configuration block. Max of 1.
      * The configuration for an Amazon S3 data repository linked to an Amazon FSx Lustre file system with a data repository association. The configuration defines which file events (new, changed, or deleted files or directories) are automatically imported from the linked data repository to the file system or automatically exported from the file system to the data repository.
      * 
      */
-    public Optional<Output<DataRepositoryAssociationS3GetArgs>> s3() {
+    public Optional<Output<DataRepositoryAssociationS3Args>> s3() {
         return Optional.ofNullable(this.s3);
     }
 
@@ -375,7 +375,7 @@ public final class DataRepositoryAssociationState extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder s3(@Nullable Output<DataRepositoryAssociationS3GetArgs> s3) {
+        public Builder s3(@Nullable Output<DataRepositoryAssociationS3Args> s3) {
             $.s3 = s3;
             return this;
         }
@@ -387,7 +387,7 @@ public final class DataRepositoryAssociationState extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder s3(DataRepositoryAssociationS3GetArgs s3) {
+        public Builder s3(DataRepositoryAssociationS3Args s3) {
             return s3(Output.of(s3));
         }
 

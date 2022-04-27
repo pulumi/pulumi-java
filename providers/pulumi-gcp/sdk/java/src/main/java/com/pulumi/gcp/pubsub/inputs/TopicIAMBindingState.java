@@ -5,7 +5,7 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.pubsub.inputs.TopicIAMBindingConditionGetArgs;
+import com.pulumi.gcp.pubsub.inputs.TopicIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class TopicIAMBindingState extends com.pulumi.resources.ResourceArg
     public static final TopicIAMBindingState Empty = new TopicIAMBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<TopicIAMBindingConditionGetArgs> condition;
+    private @Nullable Output<TopicIAMBindingConditionArgs> condition;
 
-    public Optional<Output<TopicIAMBindingConditionGetArgs>> condition() {
+    public Optional<Output<TopicIAMBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -126,12 +126,12 @@ public final class TopicIAMBindingState extends com.pulumi.resources.ResourceArg
             $ = new TopicIAMBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<TopicIAMBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<TopicIAMBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(TopicIAMBindingConditionGetArgs condition) {
+        public Builder condition(TopicIAMBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

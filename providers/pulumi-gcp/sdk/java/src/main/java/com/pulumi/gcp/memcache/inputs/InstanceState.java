@@ -5,9 +5,9 @@ package com.pulumi.gcp.memcache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.memcache.inputs.InstanceMemcacheNodeGetArgs;
-import com.pulumi.gcp.memcache.inputs.InstanceMemcacheParametersGetArgs;
-import com.pulumi.gcp.memcache.inputs.InstanceNodeConfigGetArgs;
+import com.pulumi.gcp.memcache.inputs.InstanceMemcacheNodeArgs;
+import com.pulumi.gcp.memcache.inputs.InstanceMemcacheParametersArgs;
+import com.pulumi.gcp.memcache.inputs.InstanceNodeConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -118,13 +118,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="memcacheNodes")
-    private @Nullable Output<List<InstanceMemcacheNodeGetArgs>> memcacheNodes;
+    private @Nullable Output<List<InstanceMemcacheNodeArgs>> memcacheNodes;
 
     /**
      * @return Additional information about the instance state, if available.
      * 
      */
-    public Optional<Output<List<InstanceMemcacheNodeGetArgs>>> memcacheNodes() {
+    public Optional<Output<List<InstanceMemcacheNodeArgs>>> memcacheNodes() {
         return Optional.ofNullable(this.memcacheNodes);
     }
 
@@ -134,14 +134,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="memcacheParameters")
-    private @Nullable Output<InstanceMemcacheParametersGetArgs> memcacheParameters;
+    private @Nullable Output<InstanceMemcacheParametersArgs> memcacheParameters;
 
     /**
      * @return User-specified parameters for this memcache instance.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InstanceMemcacheParametersGetArgs>> memcacheParameters() {
+    public Optional<Output<InstanceMemcacheParametersArgs>> memcacheParameters() {
         return Optional.ofNullable(this.memcacheParameters);
     }
 
@@ -189,14 +189,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeConfig")
-    private @Nullable Output<InstanceNodeConfigGetArgs> nodeConfig;
+    private @Nullable Output<InstanceNodeConfigArgs> nodeConfig;
 
     /**
      * @return Configuration for memcache nodes.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InstanceNodeConfigGetArgs>> nodeConfig() {
+    public Optional<Output<InstanceNodeConfigArgs>> nodeConfig() {
         return Optional.ofNullable(this.nodeConfig);
     }
 
@@ -436,7 +436,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder memcacheNodes(@Nullable Output<List<InstanceMemcacheNodeGetArgs>> memcacheNodes) {
+        public Builder memcacheNodes(@Nullable Output<List<InstanceMemcacheNodeArgs>> memcacheNodes) {
             $.memcacheNodes = memcacheNodes;
             return this;
         }
@@ -447,7 +447,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder memcacheNodes(List<InstanceMemcacheNodeGetArgs> memcacheNodes) {
+        public Builder memcacheNodes(List<InstanceMemcacheNodeArgs> memcacheNodes) {
             return memcacheNodes(Output.of(memcacheNodes));
         }
 
@@ -457,7 +457,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder memcacheNodes(InstanceMemcacheNodeGetArgs... memcacheNodes) {
+        public Builder memcacheNodes(InstanceMemcacheNodeArgs... memcacheNodes) {
             return memcacheNodes(List.of(memcacheNodes));
         }
 
@@ -468,7 +468,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder memcacheParameters(@Nullable Output<InstanceMemcacheParametersGetArgs> memcacheParameters) {
+        public Builder memcacheParameters(@Nullable Output<InstanceMemcacheParametersArgs> memcacheParameters) {
             $.memcacheParameters = memcacheParameters;
             return this;
         }
@@ -480,7 +480,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder memcacheParameters(InstanceMemcacheParametersGetArgs memcacheParameters) {
+        public Builder memcacheParameters(InstanceMemcacheParametersArgs memcacheParameters) {
             return memcacheParameters(Output.of(memcacheParameters));
         }
 
@@ -541,7 +541,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodeConfig(@Nullable Output<InstanceNodeConfigGetArgs> nodeConfig) {
+        public Builder nodeConfig(@Nullable Output<InstanceNodeConfigArgs> nodeConfig) {
             $.nodeConfig = nodeConfig;
             return this;
         }
@@ -553,7 +553,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodeConfig(InstanceNodeConfigGetArgs nodeConfig) {
+        public Builder nodeConfig(InstanceNodeConfigArgs nodeConfig) {
             return nodeConfig(Output.of(nodeConfig));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.storagegateway.inputs;
 
-import com.pulumi.aws.storagegateway.inputs.SmbFileShareCacheAttributesGetArgs;
+import com.pulumi.aws.storagegateway.inputs.SmbFileShareCacheAttributesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -114,13 +114,13 @@ public final class SmbFileShareState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheAttributes")
-    private @Nullable Output<SmbFileShareCacheAttributesGetArgs> cacheAttributes;
+    private @Nullable Output<SmbFileShareCacheAttributesArgs> cacheAttributes;
 
     /**
      * @return Refresh cache information. see Cache Attributes for more details.
      * 
      */
-    public Optional<Output<SmbFileShareCacheAttributesGetArgs>> cacheAttributes() {
+    public Optional<Output<SmbFileShareCacheAttributesArgs>> cacheAttributes() {
         return Optional.ofNullable(this.cacheAttributes);
     }
 
@@ -648,7 +648,7 @@ public final class SmbFileShareState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cacheAttributes(@Nullable Output<SmbFileShareCacheAttributesGetArgs> cacheAttributes) {
+        public Builder cacheAttributes(@Nullable Output<SmbFileShareCacheAttributesArgs> cacheAttributes) {
             $.cacheAttributes = cacheAttributes;
             return this;
         }
@@ -659,7 +659,7 @@ public final class SmbFileShareState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cacheAttributes(SmbFileShareCacheAttributesGetArgs cacheAttributes) {
+        public Builder cacheAttributes(SmbFileShareCacheAttributesArgs cacheAttributes) {
             return cacheAttributes(Output.of(cacheAttributes));
         }
 

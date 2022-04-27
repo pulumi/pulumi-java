@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.codestarconnections.inputs;
 
-import com.pulumi.aws.codestarconnections.inputs.HostVpcConfigurationGetArgs;
+import com.pulumi.aws.codestarconnections.inputs.HostVpcConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -96,13 +96,13 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfiguration")
-    private @Nullable Output<HostVpcConfigurationGetArgs> vpcConfiguration;
+    private @Nullable Output<HostVpcConfigurationArgs> vpcConfiguration;
 
     /**
      * @return The VPC configuration to be provisioned for the host. A VPC must be configured, and the infrastructure to be represented by the host must already be connected to the VPC.
      * 
      */
-    public Optional<Output<HostVpcConfigurationGetArgs>> vpcConfiguration() {
+    public Optional<Output<HostVpcConfigurationArgs>> vpcConfiguration() {
         return Optional.ofNullable(this.vpcConfiguration);
     }
 
@@ -246,7 +246,7 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfiguration(@Nullable Output<HostVpcConfigurationGetArgs> vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable Output<HostVpcConfigurationArgs> vpcConfiguration) {
             $.vpcConfiguration = vpcConfiguration;
             return this;
         }
@@ -257,7 +257,7 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfiguration(HostVpcConfigurationGetArgs vpcConfiguration) {
+        public Builder vpcConfiguration(HostVpcConfigurationArgs vpcConfiguration) {
             return vpcConfiguration(Output.of(vpcConfiguration));
         }
 

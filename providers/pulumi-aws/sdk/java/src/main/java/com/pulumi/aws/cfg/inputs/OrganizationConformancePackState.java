@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cfg.inputs;
 
-import com.pulumi.aws.cfg.inputs.OrganizationConformancePackInputParameterGetArgs;
+import com.pulumi.aws.cfg.inputs.OrganizationConformancePackInputParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -82,13 +82,13 @@ public final class OrganizationConformancePackState extends com.pulumi.resources
      * 
      */
     @Import(name="inputParameters")
-    private @Nullable Output<List<OrganizationConformancePackInputParameterGetArgs>> inputParameters;
+    private @Nullable Output<List<OrganizationConformancePackInputParameterArgs>> inputParameters;
 
     /**
      * @return Set of configuration blocks describing input parameters passed to the conformance pack template. Documented below. When configured, the parameters must also be included in the `template_body` or in the template stored in Amazon S3 if using `template_s3_uri`.
      * 
      */
-    public Optional<Output<List<OrganizationConformancePackInputParameterGetArgs>>> inputParameters() {
+    public Optional<Output<List<OrganizationConformancePackInputParameterArgs>>> inputParameters() {
         return Optional.ofNullable(this.inputParameters);
     }
 
@@ -268,7 +268,7 @@ public final class OrganizationConformancePackState extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder inputParameters(@Nullable Output<List<OrganizationConformancePackInputParameterGetArgs>> inputParameters) {
+        public Builder inputParameters(@Nullable Output<List<OrganizationConformancePackInputParameterArgs>> inputParameters) {
             $.inputParameters = inputParameters;
             return this;
         }
@@ -279,7 +279,7 @@ public final class OrganizationConformancePackState extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder inputParameters(List<OrganizationConformancePackInputParameterGetArgs> inputParameters) {
+        public Builder inputParameters(List<OrganizationConformancePackInputParameterArgs> inputParameters) {
             return inputParameters(Output.of(inputParameters));
         }
 
@@ -289,7 +289,7 @@ public final class OrganizationConformancePackState extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder inputParameters(OrganizationConformancePackInputParameterGetArgs... inputParameters) {
+        public Builder inputParameters(OrganizationConformancePackInputParameterArgs... inputParameters) {
             return inputParameters(List.of(inputParameters));
         }
 

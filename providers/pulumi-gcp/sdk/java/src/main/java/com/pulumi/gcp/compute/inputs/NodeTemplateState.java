@@ -5,8 +5,8 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.NodeTemplateNodeTypeFlexibilityGetArgs;
-import com.pulumi.gcp.compute.inputs.NodeTemplateServerBindingGetArgs;
+import com.pulumi.gcp.compute.inputs.NodeTemplateNodeTypeFlexibilityArgs;
+import com.pulumi.gcp.compute.inputs.NodeTemplateServerBindingArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -125,7 +125,7 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeTypeFlexibility")
-    private @Nullable Output<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility;
+    private @Nullable Output<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility;
 
     /**
      * @return Flexible properties for the desired node type. Node groups that
@@ -135,7 +135,7 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<NodeTemplateNodeTypeFlexibilityGetArgs>> nodeTypeFlexibility() {
+    public Optional<Output<NodeTemplateNodeTypeFlexibilityArgs>> nodeTypeFlexibility() {
         return Optional.ofNullable(this.nodeTypeFlexibility);
     }
 
@@ -195,7 +195,7 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverBinding")
-    private @Nullable Output<NodeTemplateServerBindingGetArgs> serverBinding;
+    private @Nullable Output<NodeTemplateServerBindingArgs> serverBinding;
 
     /**
      * @return The server binding policy for nodes using this template. Determines
@@ -203,7 +203,7 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<NodeTemplateServerBindingGetArgs>> serverBinding() {
+    public Optional<Output<NodeTemplateServerBindingArgs>> serverBinding() {
         return Optional.ofNullable(this.serverBinding);
     }
 
@@ -385,7 +385,7 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodeTypeFlexibility(@Nullable Output<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility) {
+        public Builder nodeTypeFlexibility(@Nullable Output<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility) {
             $.nodeTypeFlexibility = nodeTypeFlexibility;
             return this;
         }
@@ -400,7 +400,7 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodeTypeFlexibility(NodeTemplateNodeTypeFlexibilityGetArgs nodeTypeFlexibility) {
+        public Builder nodeTypeFlexibility(NodeTemplateNodeTypeFlexibilityArgs nodeTypeFlexibility) {
             return nodeTypeFlexibility(Output.of(nodeTypeFlexibility));
         }
 
@@ -479,7 +479,7 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serverBinding(@Nullable Output<NodeTemplateServerBindingGetArgs> serverBinding) {
+        public Builder serverBinding(@Nullable Output<NodeTemplateServerBindingArgs> serverBinding) {
             $.serverBinding = serverBinding;
             return this;
         }
@@ -492,7 +492,7 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serverBinding(NodeTemplateServerBindingGetArgs serverBinding) {
+        public Builder serverBinding(NodeTemplateServerBindingArgs serverBinding) {
             return serverBinding(Output.of(serverBinding));
         }
 

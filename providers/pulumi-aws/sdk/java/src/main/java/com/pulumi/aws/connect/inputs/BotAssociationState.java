@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.connect.inputs;
 
-import com.pulumi.aws.connect.inputs.BotAssociationLexBotGetArgs;
+import com.pulumi.aws.connect.inputs.BotAssociationLexBotArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class BotAssociationState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="lexBot")
-    private @Nullable Output<BotAssociationLexBotGetArgs> lexBot;
+    private @Nullable Output<BotAssociationLexBotArgs> lexBot;
 
     /**
      * @return Configuration information of an Amazon Lex (V1) bot. Detailed below.
      * 
      */
-    public Optional<Output<BotAssociationLexBotGetArgs>> lexBot() {
+    public Optional<Output<BotAssociationLexBotArgs>> lexBot() {
         return Optional.ofNullable(this.lexBot);
     }
 
@@ -98,7 +98,7 @@ public final class BotAssociationState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder lexBot(@Nullable Output<BotAssociationLexBotGetArgs> lexBot) {
+        public Builder lexBot(@Nullable Output<BotAssociationLexBotArgs> lexBot) {
             $.lexBot = lexBot;
             return this;
         }
@@ -109,7 +109,7 @@ public final class BotAssociationState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder lexBot(BotAssociationLexBotGetArgs lexBot) {
+        public Builder lexBot(BotAssociationLexBotArgs lexBot) {
             return lexBot(Output.of(lexBot));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.rds.inputs;
 
-import com.pulumi.aws.rds.inputs.ProxyAuthGetArgs;
+import com.pulumi.aws.rds.inputs.ProxyAuthArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -40,13 +40,13 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="auths")
-    private @Nullable Output<List<ProxyAuthGetArgs>> auths;
+    private @Nullable Output<List<ProxyAuthArgs>> auths;
 
     /**
      * @return Configuration block(s) with authorization mechanisms to connect to the associated instances or clusters. Described below.
      * 
      */
-    public Optional<Output<List<ProxyAuthGetArgs>>> auths() {
+    public Optional<Output<List<ProxyAuthArgs>>> auths() {
         return Optional.ofNullable(this.auths);
     }
 
@@ -278,7 +278,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder auths(@Nullable Output<List<ProxyAuthGetArgs>> auths) {
+        public Builder auths(@Nullable Output<List<ProxyAuthArgs>> auths) {
             $.auths = auths;
             return this;
         }
@@ -289,7 +289,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder auths(List<ProxyAuthGetArgs> auths) {
+        public Builder auths(List<ProxyAuthArgs> auths) {
             return auths(Output.of(auths));
         }
 
@@ -299,7 +299,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder auths(ProxyAuthGetArgs... auths) {
+        public Builder auths(ProxyAuthArgs... auths) {
             return auths(List.of(auths));
         }
 

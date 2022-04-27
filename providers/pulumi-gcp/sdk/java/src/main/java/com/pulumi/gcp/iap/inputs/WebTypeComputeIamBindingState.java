@@ -5,7 +5,7 @@ package com.pulumi.gcp.iap.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.iap.inputs.WebTypeComputeIamBindingConditionGetArgs;
+import com.pulumi.gcp.iap.inputs.WebTypeComputeIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class WebTypeComputeIamBindingState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<WebTypeComputeIamBindingConditionGetArgs> condition;
+    private @Nullable Output<WebTypeComputeIamBindingConditionArgs> condition;
 
     /**
      * @return ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<WebTypeComputeIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<WebTypeComputeIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -127,7 +127,7 @@ public final class WebTypeComputeIamBindingState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<WebTypeComputeIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<WebTypeComputeIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -139,7 +139,7 @@ public final class WebTypeComputeIamBindingState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder condition(WebTypeComputeIamBindingConditionGetArgs condition) {
+        public Builder condition(WebTypeComputeIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

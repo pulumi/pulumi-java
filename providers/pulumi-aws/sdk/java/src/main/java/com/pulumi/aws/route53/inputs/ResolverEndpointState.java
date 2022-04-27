@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.route53.inputs;
 
-import com.pulumi.aws.route53.inputs.ResolverEndpointIpAddressGetArgs;
+import com.pulumi.aws.route53.inputs.ResolverEndpointIpAddressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -73,14 +73,14 @@ public final class ResolverEndpointState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="ipAddresses")
-    private @Nullable Output<List<ResolverEndpointIpAddressGetArgs>> ipAddresses;
+    private @Nullable Output<List<ResolverEndpointIpAddressArgs>> ipAddresses;
 
     /**
      * @return The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
      * to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
      * 
      */
-    public Optional<Output<List<ResolverEndpointIpAddressGetArgs>>> ipAddresses() {
+    public Optional<Output<List<ResolverEndpointIpAddressArgs>>> ipAddresses() {
         return Optional.ofNullable(this.ipAddresses);
     }
 
@@ -249,7 +249,7 @@ public final class ResolverEndpointState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder ipAddresses(@Nullable Output<List<ResolverEndpointIpAddressGetArgs>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Output<List<ResolverEndpointIpAddressArgs>> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
@@ -261,7 +261,7 @@ public final class ResolverEndpointState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder ipAddresses(List<ResolverEndpointIpAddressGetArgs> ipAddresses) {
+        public Builder ipAddresses(List<ResolverEndpointIpAddressArgs> ipAddresses) {
             return ipAddresses(Output.of(ipAddresses));
         }
 
@@ -272,7 +272,7 @@ public final class ResolverEndpointState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder ipAddresses(ResolverEndpointIpAddressGetArgs... ipAddresses) {
+        public Builder ipAddresses(ResolverEndpointIpAddressArgs... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
 

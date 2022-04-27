@@ -8,10 +8,7 @@
     "src/main/java/com/pulumi/azurenative/ProviderArgs.java",
     "src/main/java/com/pulumi/azurenative/Utilities.java",
     "src/main/java/com/pulumi/azurenative/alertsmanagement/AlertsmanagementFunctions.java",
-    "src/main/java/com/pulumi/azurenative/alertsmanagement/inputs/ActionGroupResponse.java",
-    "src/main/java/com/pulumi/azurenative/alertsmanagement/inputs/DiagnosticsResponse.java",
     "src/main/java/com/pulumi/azurenative/alertsmanagement/inputs/GetActionRuleByNameArgs.java",
-    "src/main/java/com/pulumi/azurenative/alertsmanagement/inputs/SuppressionResponse.java",
     "src/main/java/com/pulumi/azurenative/alertsmanagement/outputs/ActionGroupResponse.java",
     "src/main/java/com/pulumi/azurenative/alertsmanagement/outputs/DiagnosticsResponse.java",
     "src/main/java/com/pulumi/azurenative/alertsmanagement/outputs/GetActionRuleByNameResult.java",
@@ -32,7 +29,6 @@
     "src/main/java/com/pulumi/azurenative/web/WebAppRelayServiceConnectionArgs.java",
     "src/main/java/com/pulumi/azurenative/web/WebFunctions.java",
     "src/main/java/com/pulumi/azurenative/web/inputs/GetWebAppSlotArgs.java",
-    "src/main/java/com/pulumi/azurenative/web/inputs/SiteConfigResponse.java",
     "src/main/java/com/pulumi/azurenative/web/outputs/GetWebAppSlotResult.java",
     "src/main/java/com/pulumi/azurenative/web/outputs/SiteConfigResponse.java"
   ]

@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.budgets.inputs;
 
-import com.pulumi.aws.budgets.inputs.BudgetCostTypesGetArgs;
-import com.pulumi.aws.budgets.inputs.BudgetNotificationGetArgs;
+import com.pulumi.aws.budgets.inputs.BudgetCostTypesArgs;
+import com.pulumi.aws.budgets.inputs.BudgetNotificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -84,13 +84,13 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="costTypes")
-    private @Nullable Output<BudgetCostTypesGetArgs> costTypes;
+    private @Nullable Output<BudgetCostTypesArgs> costTypes;
 
     /**
      * @return Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.
      * 
      */
-    public Optional<Output<BudgetCostTypesGetArgs>> costTypes() {
+    public Optional<Output<BudgetCostTypesArgs>> costTypes() {
         return Optional.ofNullable(this.costTypes);
     }
 
@@ -159,13 +159,13 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notifications")
-    private @Nullable Output<List<BudgetNotificationGetArgs>> notifications;
+    private @Nullable Output<List<BudgetNotificationArgs>> notifications;
 
     /**
      * @return Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
      * 
      */
-    public Optional<Output<List<BudgetNotificationGetArgs>>> notifications() {
+    public Optional<Output<List<BudgetNotificationArgs>>> notifications() {
         return Optional.ofNullable(this.notifications);
     }
 
@@ -340,7 +340,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder costTypes(@Nullable Output<BudgetCostTypesGetArgs> costTypes) {
+        public Builder costTypes(@Nullable Output<BudgetCostTypesArgs> costTypes) {
             $.costTypes = costTypes;
             return this;
         }
@@ -351,7 +351,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder costTypes(BudgetCostTypesGetArgs costTypes) {
+        public Builder costTypes(BudgetCostTypesArgs costTypes) {
             return costTypes(Output.of(costTypes));
         }
 
@@ -445,7 +445,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notifications(@Nullable Output<List<BudgetNotificationGetArgs>> notifications) {
+        public Builder notifications(@Nullable Output<List<BudgetNotificationArgs>> notifications) {
             $.notifications = notifications;
             return this;
         }
@@ -456,7 +456,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notifications(List<BudgetNotificationGetArgs> notifications) {
+        public Builder notifications(List<BudgetNotificationArgs> notifications) {
             return notifications(Output.of(notifications));
         }
 
@@ -466,7 +466,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notifications(BudgetNotificationGetArgs... notifications) {
+        public Builder notifications(BudgetNotificationArgs... notifications) {
             return notifications(List.of(notifications));
         }
 

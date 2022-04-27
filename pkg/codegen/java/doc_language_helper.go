@@ -28,7 +28,6 @@ func (d DocLanguageHelper) GetLanguageTypeString(
 		t,
 		noQualifier,
 		input,
-		false, // state
 		false, // requireInitializers
 		false, // outerOptional
 		false, // inputlessOverload bool

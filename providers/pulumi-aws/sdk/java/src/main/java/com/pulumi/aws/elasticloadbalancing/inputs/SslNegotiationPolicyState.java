@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.elasticloadbalancing.inputs;
 
-import com.pulumi.aws.elasticloadbalancing.inputs.SslNegotiationPolicyAttributeGetArgs;
+import com.pulumi.aws.elasticloadbalancing.inputs.SslNegotiationPolicyAttributeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -23,13 +23,13 @@ public final class SslNegotiationPolicyState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="attributes")
-    private @Nullable Output<List<SslNegotiationPolicyAttributeGetArgs>> attributes;
+    private @Nullable Output<List<SslNegotiationPolicyAttributeArgs>> attributes;
 
     /**
      * @return An SSL Negotiation policy attribute. Each has two properties:
      * 
      */
-    public Optional<Output<List<SslNegotiationPolicyAttributeGetArgs>>> attributes() {
+    public Optional<Output<List<SslNegotiationPolicyAttributeArgs>>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
 
@@ -117,7 +117,7 @@ public final class SslNegotiationPolicyState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder attributes(@Nullable Output<List<SslNegotiationPolicyAttributeGetArgs>> attributes) {
+        public Builder attributes(@Nullable Output<List<SslNegotiationPolicyAttributeArgs>> attributes) {
             $.attributes = attributes;
             return this;
         }
@@ -128,7 +128,7 @@ public final class SslNegotiationPolicyState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder attributes(List<SslNegotiationPolicyAttributeGetArgs> attributes) {
+        public Builder attributes(List<SslNegotiationPolicyAttributeArgs> attributes) {
             return attributes(Output.of(attributes));
         }
 
@@ -138,7 +138,7 @@ public final class SslNegotiationPolicyState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder attributes(SslNegotiationPolicyAttributeGetArgs... attributes) {
+        public Builder attributes(SslNegotiationPolicyAttributeArgs... attributes) {
             return attributes(List.of(attributes));
         }
 

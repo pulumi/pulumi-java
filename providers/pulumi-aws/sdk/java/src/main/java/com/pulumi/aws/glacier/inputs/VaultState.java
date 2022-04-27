@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.glacier.inputs;
 
-import com.pulumi.aws.glacier.inputs.VaultNotificationGetArgs;
+import com.pulumi.aws.glacier.inputs.VaultNotificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -84,13 +84,13 @@ public final class VaultState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notification")
-    private @Nullable Output<VaultNotificationGetArgs> notification;
+    private @Nullable Output<VaultNotificationArgs> notification;
 
     /**
      * @return The notifications for the Vault. Fields documented below.
      * 
      */
-    public Optional<Output<VaultNotificationGetArgs>> notification() {
+    public Optional<Output<VaultNotificationArgs>> notification() {
         return Optional.ofNullable(this.notification);
     }
 
@@ -246,7 +246,7 @@ public final class VaultState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notification(@Nullable Output<VaultNotificationGetArgs> notification) {
+        public Builder notification(@Nullable Output<VaultNotificationArgs> notification) {
             $.notification = notification;
             return this;
         }
@@ -257,7 +257,7 @@ public final class VaultState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notification(VaultNotificationGetArgs notification) {
+        public Builder notification(VaultNotificationArgs notification) {
             return notification(Output.of(notification));
         }
 

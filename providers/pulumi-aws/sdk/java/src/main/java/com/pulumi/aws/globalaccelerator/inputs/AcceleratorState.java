@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.globalaccelerator.inputs;
 
-import com.pulumi.aws.globalaccelerator.inputs.AcceleratorAttributesGetArgs;
-import com.pulumi.aws.globalaccelerator.inputs.AcceleratorIpSetGetArgs;
+import com.pulumi.aws.globalaccelerator.inputs.AcceleratorAttributesArgs;
+import com.pulumi.aws.globalaccelerator.inputs.AcceleratorIpSetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -25,13 +25,13 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-    private @Nullable Output<AcceleratorAttributesGetArgs> attributes;
+    private @Nullable Output<AcceleratorAttributesArgs> attributes;
 
     /**
      * @return The attributes of the accelerator. Fields documented below.
      * 
      */
-    public Optional<Output<AcceleratorAttributesGetArgs>> attributes() {
+    public Optional<Output<AcceleratorAttributesArgs>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
 
@@ -98,13 +98,13 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipSets")
-    private @Nullable Output<List<AcceleratorIpSetGetArgs>> ipSets;
+    private @Nullable Output<List<AcceleratorIpSetArgs>> ipSets;
 
     /**
      * @return IP address set associated with the accelerator.
      * 
      */
-    public Optional<Output<List<AcceleratorIpSetGetArgs>>> ipSets() {
+    public Optional<Output<List<AcceleratorIpSetArgs>>> ipSets() {
         return Optional.ofNullable(this.ipSets);
     }
 
@@ -191,7 +191,7 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attributes(@Nullable Output<AcceleratorAttributesGetArgs> attributes) {
+        public Builder attributes(@Nullable Output<AcceleratorAttributesArgs> attributes) {
             $.attributes = attributes;
             return this;
         }
@@ -202,7 +202,7 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attributes(AcceleratorAttributesGetArgs attributes) {
+        public Builder attributes(AcceleratorAttributesArgs attributes) {
             return attributes(Output.of(attributes));
         }
 
@@ -290,7 +290,7 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ipSets(@Nullable Output<List<AcceleratorIpSetGetArgs>> ipSets) {
+        public Builder ipSets(@Nullable Output<List<AcceleratorIpSetArgs>> ipSets) {
             $.ipSets = ipSets;
             return this;
         }
@@ -301,7 +301,7 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ipSets(List<AcceleratorIpSetGetArgs> ipSets) {
+        public Builder ipSets(List<AcceleratorIpSetArgs> ipSets) {
             return ipSets(Output.of(ipSets));
         }
 
@@ -311,7 +311,7 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ipSets(AcceleratorIpSetGetArgs... ipSets) {
+        public Builder ipSets(AcceleratorIpSetArgs... ipSets) {
             return ipSets(List.of(ipSets));
         }
 

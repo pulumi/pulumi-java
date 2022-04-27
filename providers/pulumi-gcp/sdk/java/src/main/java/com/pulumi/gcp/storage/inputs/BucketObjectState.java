@@ -6,7 +6,7 @@ package com.pulumi.gcp.storage.inputs;
 import com.pulumi.asset.AssetOrArchive;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.storage.inputs.BucketObjectCustomerEncryptionGetArgs;
+import com.pulumi.gcp.storage.inputs.BucketObjectCustomerEncryptionArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -147,14 +147,14 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customerEncryption")
-    private @Nullable Output<BucketObjectCustomerEncryptionGetArgs> customerEncryption;
+    private @Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption;
 
     /**
      * @return Enables object encryption with Customer-Supplied Encryption Key (CSEK). Google [documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
      * Structure is documented below.
      * 
      */
-    public Optional<Output<BucketObjectCustomerEncryptionGetArgs>> customerEncryption() {
+    public Optional<Output<BucketObjectCustomerEncryptionArgs>> customerEncryption() {
         return Optional.ofNullable(this.customerEncryption);
     }
 
@@ -565,7 +565,7 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customerEncryption(@Nullable Output<BucketObjectCustomerEncryptionGetArgs> customerEncryption) {
+        public Builder customerEncryption(@Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption) {
             $.customerEncryption = customerEncryption;
             return this;
         }
@@ -577,7 +577,7 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customerEncryption(BucketObjectCustomerEncryptionGetArgs customerEncryption) {
+        public Builder customerEncryption(BucketObjectCustomerEncryptionArgs customerEncryption) {
             return customerEncryption(Output.of(customerEncryption));
         }
 

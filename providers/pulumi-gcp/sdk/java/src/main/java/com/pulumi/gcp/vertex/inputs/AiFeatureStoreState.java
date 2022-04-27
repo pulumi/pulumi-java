@@ -5,7 +5,7 @@ package com.pulumi.gcp.vertex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.vertex.inputs.AiFeatureStoreOnlineServingConfigGetArgs;
+import com.pulumi.gcp.vertex.inputs.AiFeatureStoreOnlineServingConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -101,14 +101,14 @@ public final class AiFeatureStoreState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="onlineServingConfig")
-    private @Nullable Output<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig;
+    private @Nullable Output<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig;
 
     /**
      * @return Config for online serving resources.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AiFeatureStoreOnlineServingConfigGetArgs>> onlineServingConfig() {
+    public Optional<Output<AiFeatureStoreOnlineServingConfigArgs>> onlineServingConfig() {
         return Optional.ofNullable(this.onlineServingConfig);
     }
 
@@ -307,7 +307,7 @@ public final class AiFeatureStoreState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder onlineServingConfig(@Nullable Output<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig) {
+        public Builder onlineServingConfig(@Nullable Output<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig) {
             $.onlineServingConfig = onlineServingConfig;
             return this;
         }
@@ -319,7 +319,7 @@ public final class AiFeatureStoreState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder onlineServingConfig(AiFeatureStoreOnlineServingConfigGetArgs onlineServingConfig) {
+        public Builder onlineServingConfig(AiFeatureStoreOnlineServingConfigArgs onlineServingConfig) {
             return onlineServingConfig(Output.of(onlineServingConfig));
         }
 

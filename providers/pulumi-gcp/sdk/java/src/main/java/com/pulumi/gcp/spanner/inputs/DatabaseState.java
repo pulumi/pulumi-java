@@ -5,7 +5,7 @@ package com.pulumi.gcp.spanner.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.spanner.inputs.DatabaseEncryptionConfigGetArgs;
+import com.pulumi.gcp.spanner.inputs.DatabaseEncryptionConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -62,14 +62,14 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionConfig")
-    private @Nullable Output<DatabaseEncryptionConfigGetArgs> encryptionConfig;
+    private @Nullable Output<DatabaseEncryptionConfigArgs> encryptionConfig;
 
     /**
      * @return Encryption configuration for the database
      * Structure is documented below.
      * 
      */
-    public Optional<Output<DatabaseEncryptionConfigGetArgs>> encryptionConfig() {
+    public Optional<Output<DatabaseEncryptionConfigArgs>> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
 
@@ -237,7 +237,7 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionConfig(@Nullable Output<DatabaseEncryptionConfigGetArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Output<DatabaseEncryptionConfigArgs> encryptionConfig) {
             $.encryptionConfig = encryptionConfig;
             return this;
         }
@@ -249,7 +249,7 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionConfig(DatabaseEncryptionConfigGetArgs encryptionConfig) {
+        public Builder encryptionConfig(DatabaseEncryptionConfigArgs encryptionConfig) {
             return encryptionConfig(Output.of(encryptionConfig));
         }
 

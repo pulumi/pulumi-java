@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.gamelift.inputs;
 
-import com.pulumi.aws.gamelift.inputs.BuildStorageLocationGetArgs;
+import com.pulumi.aws.gamelift.inputs.BuildStorageLocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -67,13 +67,13 @@ public final class BuildState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageLocation")
-    private @Nullable Output<BuildStorageLocationGetArgs> storageLocation;
+    private @Nullable Output<BuildStorageLocationArgs> storageLocation;
 
     /**
      * @return Information indicating where your game build files are stored. See below.
      * 
      */
-    public Optional<Output<BuildStorageLocationGetArgs>> storageLocation() {
+    public Optional<Output<BuildStorageLocationArgs>> storageLocation() {
         return Optional.ofNullable(this.storageLocation);
     }
 
@@ -221,7 +221,7 @@ public final class BuildState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder storageLocation(@Nullable Output<BuildStorageLocationGetArgs> storageLocation) {
+        public Builder storageLocation(@Nullable Output<BuildStorageLocationArgs> storageLocation) {
             $.storageLocation = storageLocation;
             return this;
         }
@@ -232,7 +232,7 @@ public final class BuildState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder storageLocation(BuildStorageLocationGetArgs storageLocation) {
+        public Builder storageLocation(BuildStorageLocationArgs storageLocation) {
             return storageLocation(Output.of(storageLocation));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cloudformation.inputs;
 
-import com.pulumi.aws.cloudformation.inputs.StackSetInstanceDeploymentTargetsGetArgs;
+import com.pulumi.aws.cloudformation.inputs.StackSetInstanceDeploymentTargetsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -38,13 +38,13 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="deploymentTargets")
-    private @Nullable Output<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets;
+    private @Nullable Output<StackSetInstanceDeploymentTargetsArgs> deploymentTargets;
 
     /**
      * @return The AWS Organizations accounts to which StackSets deploys. StackSets doesn&#39;t deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
      * 
      */
-    public Optional<Output<StackSetInstanceDeploymentTargetsGetArgs>> deploymentTargets() {
+    public Optional<Output<StackSetInstanceDeploymentTargetsArgs>> deploymentTargets() {
         return Optional.ofNullable(this.deploymentTargets);
     }
 
@@ -196,7 +196,7 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder deploymentTargets(@Nullable Output<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets) {
+        public Builder deploymentTargets(@Nullable Output<StackSetInstanceDeploymentTargetsArgs> deploymentTargets) {
             $.deploymentTargets = deploymentTargets;
             return this;
         }
@@ -207,7 +207,7 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder deploymentTargets(StackSetInstanceDeploymentTargetsGetArgs deploymentTargets) {
+        public Builder deploymentTargets(StackSetInstanceDeploymentTargetsArgs deploymentTargets) {
             return deploymentTargets(Output.of(deploymentTargets));
         }
 

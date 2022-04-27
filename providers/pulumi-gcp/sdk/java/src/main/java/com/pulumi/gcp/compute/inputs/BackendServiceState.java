@@ -5,14 +5,14 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.BackendServiceBackendGetArgs;
-import com.pulumi.gcp.compute.inputs.BackendServiceCdnPolicyGetArgs;
-import com.pulumi.gcp.compute.inputs.BackendServiceCircuitBreakersGetArgs;
-import com.pulumi.gcp.compute.inputs.BackendServiceConsistentHashGetArgs;
-import com.pulumi.gcp.compute.inputs.BackendServiceIapGetArgs;
-import com.pulumi.gcp.compute.inputs.BackendServiceLogConfigGetArgs;
-import com.pulumi.gcp.compute.inputs.BackendServiceOutlierDetectionGetArgs;
-import com.pulumi.gcp.compute.inputs.BackendServiceSecuritySettingsGetArgs;
+import com.pulumi.gcp.compute.inputs.BackendServiceBackendArgs;
+import com.pulumi.gcp.compute.inputs.BackendServiceCdnPolicyArgs;
+import com.pulumi.gcp.compute.inputs.BackendServiceCircuitBreakersArgs;
+import com.pulumi.gcp.compute.inputs.BackendServiceConsistentHashArgs;
+import com.pulumi.gcp.compute.inputs.BackendServiceIapArgs;
+import com.pulumi.gcp.compute.inputs.BackendServiceLogConfigArgs;
+import com.pulumi.gcp.compute.inputs.BackendServiceOutlierDetectionArgs;
+import com.pulumi.gcp.compute.inputs.BackendServiceSecuritySettingsArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -55,14 +55,14 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="backends")
-    private @Nullable Output<List<BackendServiceBackendGetArgs>> backends;
+    private @Nullable Output<List<BackendServiceBackendArgs>> backends;
 
     /**
      * @return The set of backends that serve this BackendService.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<BackendServiceBackendGetArgs>>> backends() {
+    public Optional<Output<List<BackendServiceBackendArgs>>> backends() {
         return Optional.ofNullable(this.backends);
     }
 
@@ -72,14 +72,14 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="cdnPolicy")
-    private @Nullable Output<BackendServiceCdnPolicyGetArgs> cdnPolicy;
+    private @Nullable Output<BackendServiceCdnPolicyArgs> cdnPolicy;
 
     /**
      * @return Cloud CDN configuration for this BackendService.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<BackendServiceCdnPolicyGetArgs>> cdnPolicy() {
+    public Optional<Output<BackendServiceCdnPolicyArgs>> cdnPolicy() {
         return Optional.ofNullable(this.cdnPolicy);
     }
 
@@ -90,7 +90,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="circuitBreakers")
-    private @Nullable Output<BackendServiceCircuitBreakersGetArgs> circuitBreakers;
+    private @Nullable Output<BackendServiceCircuitBreakersArgs> circuitBreakers;
 
     /**
      * @return Settings controlling the volume of connections to a backend service. This field
@@ -98,7 +98,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    public Optional<Output<BackendServiceCircuitBreakersGetArgs>> circuitBreakers() {
+    public Optional<Output<BackendServiceCircuitBreakersArgs>> circuitBreakers() {
         return Optional.ofNullable(this.circuitBreakers);
     }
 
@@ -132,7 +132,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="consistentHash")
-    private @Nullable Output<BackendServiceConsistentHashGetArgs> consistentHash;
+    private @Nullable Output<BackendServiceConsistentHashArgs> consistentHash;
 
     /**
      * @return Consistent Hash-based load balancing can be used to provide soft session
@@ -146,7 +146,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    public Optional<Output<BackendServiceConsistentHashGetArgs>> consistentHash() {
+    public Optional<Output<BackendServiceConsistentHashArgs>> consistentHash() {
         return Optional.ofNullable(this.consistentHash);
     }
 
@@ -277,14 +277,14 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="iap")
-    private @Nullable Output<BackendServiceIapGetArgs> iap;
+    private @Nullable Output<BackendServiceIapArgs> iap;
 
     /**
      * @return Settings for enabling Cloud Identity Aware Proxy
      * Structure is documented below.
      * 
      */
-    public Optional<Output<BackendServiceIapGetArgs>> iap() {
+    public Optional<Output<BackendServiceIapArgs>> iap() {
         return Optional.ofNullable(this.iap);
     }
 
@@ -373,7 +373,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="logConfig")
-    private @Nullable Output<BackendServiceLogConfigGetArgs> logConfig;
+    private @Nullable Output<BackendServiceLogConfigArgs> logConfig;
 
     /**
      * @return This field denotes the logging options for the load balancer traffic served by this backend service.
@@ -381,7 +381,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    public Optional<Output<BackendServiceLogConfigGetArgs>> logConfig() {
+    public Optional<Output<BackendServiceLogConfigArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
 
@@ -408,7 +408,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="outlierDetection")
-    private @Nullable Output<BackendServiceOutlierDetectionGetArgs> outlierDetection;
+    private @Nullable Output<BackendServiceOutlierDetectionArgs> outlierDetection;
 
     /**
      * @return Settings controlling eviction of unhealthy hosts from the load balancing pool.
@@ -417,7 +417,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    public Optional<Output<BackendServiceOutlierDetectionGetArgs>> outlierDetection() {
+    public Optional<Output<BackendServiceOutlierDetectionArgs>> outlierDetection() {
         return Optional.ofNullable(this.outlierDetection);
     }
 
@@ -502,7 +502,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="securitySettings")
-    private @Nullable Output<BackendServiceSecuritySettingsGetArgs> securitySettings;
+    private @Nullable Output<BackendServiceSecuritySettingsArgs> securitySettings;
 
     /**
      * @return The security settings that apply to this backend service. This field is applicable to either
@@ -512,7 +512,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    public Optional<Output<BackendServiceSecuritySettingsGetArgs>> securitySettings() {
+    public Optional<Output<BackendServiceSecuritySettingsArgs>> securitySettings() {
         return Optional.ofNullable(this.securitySettings);
     }
 
@@ -653,7 +653,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder backends(@Nullable Output<List<BackendServiceBackendGetArgs>> backends) {
+        public Builder backends(@Nullable Output<List<BackendServiceBackendArgs>> backends) {
             $.backends = backends;
             return this;
         }
@@ -665,7 +665,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder backends(List<BackendServiceBackendGetArgs> backends) {
+        public Builder backends(List<BackendServiceBackendArgs> backends) {
             return backends(Output.of(backends));
         }
 
@@ -676,7 +676,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder backends(BackendServiceBackendGetArgs... backends) {
+        public Builder backends(BackendServiceBackendArgs... backends) {
             return backends(List.of(backends));
         }
 
@@ -687,7 +687,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder cdnPolicy(@Nullable Output<BackendServiceCdnPolicyGetArgs> cdnPolicy) {
+        public Builder cdnPolicy(@Nullable Output<BackendServiceCdnPolicyArgs> cdnPolicy) {
             $.cdnPolicy = cdnPolicy;
             return this;
         }
@@ -699,7 +699,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder cdnPolicy(BackendServiceCdnPolicyGetArgs cdnPolicy) {
+        public Builder cdnPolicy(BackendServiceCdnPolicyArgs cdnPolicy) {
             return cdnPolicy(Output.of(cdnPolicy));
         }
 
@@ -711,7 +711,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder circuitBreakers(@Nullable Output<BackendServiceCircuitBreakersGetArgs> circuitBreakers) {
+        public Builder circuitBreakers(@Nullable Output<BackendServiceCircuitBreakersArgs> circuitBreakers) {
             $.circuitBreakers = circuitBreakers;
             return this;
         }
@@ -724,7 +724,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder circuitBreakers(BackendServiceCircuitBreakersGetArgs circuitBreakers) {
+        public Builder circuitBreakers(BackendServiceCircuitBreakersArgs circuitBreakers) {
             return circuitBreakers(Output.of(circuitBreakers));
         }
 
@@ -765,7 +765,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder consistentHash(@Nullable Output<BackendServiceConsistentHashGetArgs> consistentHash) {
+        public Builder consistentHash(@Nullable Output<BackendServiceConsistentHashArgs> consistentHash) {
             $.consistentHash = consistentHash;
             return this;
         }
@@ -784,7 +784,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder consistentHash(BackendServiceConsistentHashGetArgs consistentHash) {
+        public Builder consistentHash(BackendServiceConsistentHashArgs consistentHash) {
             return consistentHash(Output.of(consistentHash));
         }
 
@@ -980,7 +980,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder iap(@Nullable Output<BackendServiceIapGetArgs> iap) {
+        public Builder iap(@Nullable Output<BackendServiceIapArgs> iap) {
             $.iap = iap;
             return this;
         }
@@ -992,7 +992,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder iap(BackendServiceIapGetArgs iap) {
+        public Builder iap(BackendServiceIapArgs iap) {
             return iap(Output.of(iap));
         }
 
@@ -1094,7 +1094,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder logConfig(@Nullable Output<BackendServiceLogConfigGetArgs> logConfig) {
+        public Builder logConfig(@Nullable Output<BackendServiceLogConfigArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
@@ -1107,7 +1107,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder logConfig(BackendServiceLogConfigGetArgs logConfig) {
+        public Builder logConfig(BackendServiceLogConfigArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 
@@ -1141,7 +1141,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder outlierDetection(@Nullable Output<BackendServiceOutlierDetectionGetArgs> outlierDetection) {
+        public Builder outlierDetection(@Nullable Output<BackendServiceOutlierDetectionArgs> outlierDetection) {
             $.outlierDetection = outlierDetection;
             return this;
         }
@@ -1155,7 +1155,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder outlierDetection(BackendServiceOutlierDetectionGetArgs outlierDetection) {
+        public Builder outlierDetection(BackendServiceOutlierDetectionArgs outlierDetection) {
             return outlierDetection(Output.of(outlierDetection));
         }
 
@@ -1265,7 +1265,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder securitySettings(@Nullable Output<BackendServiceSecuritySettingsGetArgs> securitySettings) {
+        public Builder securitySettings(@Nullable Output<BackendServiceSecuritySettingsArgs> securitySettings) {
             $.securitySettings = securitySettings;
             return this;
         }
@@ -1280,7 +1280,7 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder securitySettings(BackendServiceSecuritySettingsGetArgs securitySettings) {
+        public Builder securitySettings(BackendServiceSecuritySettingsArgs securitySettings) {
             return securitySettings(Output.of(securitySettings));
         }
 

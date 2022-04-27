@@ -5,8 +5,8 @@ package com.pulumi.gcp.identityplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.identityplatform.inputs.InboundSamlConfigIdpConfigGetArgs;
-import com.pulumi.gcp.identityplatform.inputs.InboundSamlConfigSpConfigGetArgs;
+import com.pulumi.gcp.identityplatform.inputs.InboundSamlConfigIdpConfigArgs;
+import com.pulumi.gcp.identityplatform.inputs.InboundSamlConfigSpConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -54,14 +54,14 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="idpConfig")
-    private @Nullable Output<InboundSamlConfigIdpConfigGetArgs> idpConfig;
+    private @Nullable Output<InboundSamlConfigIdpConfigArgs> idpConfig;
 
     /**
      * @return SAML IdP configuration when the project acts as the relying party
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InboundSamlConfigIdpConfigGetArgs>> idpConfig() {
+    public Optional<Output<InboundSamlConfigIdpConfigArgs>> idpConfig() {
         return Optional.ofNullable(this.idpConfig);
     }
 
@@ -108,7 +108,7 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="spConfig")
-    private @Nullable Output<InboundSamlConfigSpConfigGetArgs> spConfig;
+    private @Nullable Output<InboundSamlConfigSpConfigArgs> spConfig;
 
     /**
      * @return SAML SP (Service Provider) configuration when the project acts as the relying party to receive
@@ -116,7 +116,7 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InboundSamlConfigSpConfigGetArgs>> spConfig() {
+    public Optional<Output<InboundSamlConfigSpConfigArgs>> spConfig() {
         return Optional.ofNullable(this.spConfig);
     }
 
@@ -198,7 +198,7 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder idpConfig(@Nullable Output<InboundSamlConfigIdpConfigGetArgs> idpConfig) {
+        public Builder idpConfig(@Nullable Output<InboundSamlConfigIdpConfigArgs> idpConfig) {
             $.idpConfig = idpConfig;
             return this;
         }
@@ -210,7 +210,7 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder idpConfig(InboundSamlConfigIdpConfigGetArgs idpConfig) {
+        public Builder idpConfig(InboundSamlConfigIdpConfigArgs idpConfig) {
             return idpConfig(Output.of(idpConfig));
         }
 
@@ -270,7 +270,7 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder spConfig(@Nullable Output<InboundSamlConfigSpConfigGetArgs> spConfig) {
+        public Builder spConfig(@Nullable Output<InboundSamlConfigSpConfigArgs> spConfig) {
             $.spConfig = spConfig;
             return this;
         }
@@ -283,7 +283,7 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder spConfig(InboundSamlConfigSpConfigGetArgs spConfig) {
+        public Builder spConfig(InboundSamlConfigSpConfigArgs spConfig) {
             return spConfig(Output.of(spConfig));
         }
 

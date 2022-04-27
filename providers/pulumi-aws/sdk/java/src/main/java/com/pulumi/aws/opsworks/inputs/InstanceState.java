@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.opsworks.inputs;
 
-import com.pulumi.aws.opsworks.inputs.InstanceEbsBlockDeviceGetArgs;
-import com.pulumi.aws.opsworks.inputs.InstanceEphemeralBlockDeviceGetArgs;
-import com.pulumi.aws.opsworks.inputs.InstanceRootBlockDeviceGetArgs;
+import com.pulumi.aws.opsworks.inputs.InstanceEbsBlockDeviceArgs;
+import com.pulumi.aws.opsworks.inputs.InstanceEphemeralBlockDeviceArgs;
+import com.pulumi.aws.opsworks.inputs.InstanceRootBlockDeviceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -124,14 +124,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsBlockDevices")
-    private @Nullable Output<List<InstanceEbsBlockDeviceGetArgs>> ebsBlockDevices;
+    private @Nullable Output<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices;
 
     /**
      * @return Additional EBS block devices to attach to the
      * instance.  See Block Devices below for details.
      * 
      */
-    public Optional<Output<List<InstanceEbsBlockDeviceGetArgs>>> ebsBlockDevices() {
+    public Optional<Output<List<InstanceEbsBlockDeviceArgs>>> ebsBlockDevices() {
         return Optional.ofNullable(this.ebsBlockDevices);
     }
 
@@ -185,14 +185,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ephemeralBlockDevices")
-    private @Nullable Output<List<InstanceEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
+    private @Nullable Output<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
     /**
      * @return Customize Ephemeral (also known as
      * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
      * 
      */
-    public Optional<Output<List<InstanceEphemeralBlockDeviceGetArgs>>> ephemeralBlockDevices() {
+    public Optional<Output<List<InstanceEphemeralBlockDeviceArgs>>> ephemeralBlockDevices() {
         return Optional.ofNullable(this.ephemeralBlockDevices);
     }
 
@@ -406,14 +406,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rootBlockDevices")
-    private @Nullable Output<List<InstanceRootBlockDeviceGetArgs>> rootBlockDevices;
+    private @Nullable Output<List<InstanceRootBlockDeviceArgs>> rootBlockDevices;
 
     /**
      * @return Customize details about the root block
      * device of the instance. See Block Devices below for details.
      * 
      */
-    public Optional<Output<List<InstanceRootBlockDeviceGetArgs>>> rootBlockDevices() {
+    public Optional<Output<List<InstanceRootBlockDeviceArgs>>> rootBlockDevices() {
         return Optional.ofNullable(this.rootBlockDevices);
     }
 
@@ -776,7 +776,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsBlockDevices(@Nullable Output<List<InstanceEbsBlockDeviceGetArgs>> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable Output<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices) {
             $.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
@@ -788,7 +788,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsBlockDevices(List<InstanceEbsBlockDeviceGetArgs> ebsBlockDevices) {
+        public Builder ebsBlockDevices(List<InstanceEbsBlockDeviceArgs> ebsBlockDevices) {
             return ebsBlockDevices(Output.of(ebsBlockDevices));
         }
 
@@ -799,7 +799,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsBlockDevices(InstanceEbsBlockDeviceGetArgs... ebsBlockDevices) {
+        public Builder ebsBlockDevices(InstanceEbsBlockDeviceArgs... ebsBlockDevices) {
             return ebsBlockDevices(List.of(ebsBlockDevices));
         }
 
@@ -870,7 +870,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ephemeralBlockDevices(@Nullable Output<List<InstanceEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable Output<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
             $.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
@@ -882,7 +882,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ephemeralBlockDevices(List<InstanceEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(List<InstanceEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
             return ephemeralBlockDevices(Output.of(ephemeralBlockDevices));
         }
 
@@ -893,7 +893,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ephemeralBlockDevices(InstanceEphemeralBlockDeviceGetArgs... ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(InstanceEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
             return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
         }
 
@@ -1190,7 +1190,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rootBlockDevices(@Nullable Output<List<InstanceRootBlockDeviceGetArgs>> rootBlockDevices) {
+        public Builder rootBlockDevices(@Nullable Output<List<InstanceRootBlockDeviceArgs>> rootBlockDevices) {
             $.rootBlockDevices = rootBlockDevices;
             return this;
         }
@@ -1202,7 +1202,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rootBlockDevices(List<InstanceRootBlockDeviceGetArgs> rootBlockDevices) {
+        public Builder rootBlockDevices(List<InstanceRootBlockDeviceArgs> rootBlockDevices) {
             return rootBlockDevices(Output.of(rootBlockDevices));
         }
 
@@ -1213,7 +1213,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rootBlockDevices(InstanceRootBlockDeviceGetArgs... rootBlockDevices) {
+        public Builder rootBlockDevices(InstanceRootBlockDeviceArgs... rootBlockDevices) {
             return rootBlockDevices(List.of(rootBlockDevices));
         }
 

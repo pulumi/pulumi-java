@@ -5,12 +5,12 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.bigquery.inputs.TableEncryptionConfigurationGetArgs;
-import com.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationGetArgs;
-import com.pulumi.gcp.bigquery.inputs.TableMaterializedViewGetArgs;
-import com.pulumi.gcp.bigquery.inputs.TableRangePartitioningGetArgs;
-import com.pulumi.gcp.bigquery.inputs.TableTimePartitioningGetArgs;
-import com.pulumi.gcp.bigquery.inputs.TableViewGetArgs;
+import com.pulumi.gcp.bigquery.inputs.TableEncryptionConfigurationArgs;
+import com.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationArgs;
+import com.pulumi.gcp.bigquery.inputs.TableMaterializedViewArgs;
+import com.pulumi.gcp.bigquery.inputs.TableRangePartitioningArgs;
+import com.pulumi.gcp.bigquery.inputs.TableTimePartitioningArgs;
+import com.pulumi.gcp.bigquery.inputs.TableViewArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -115,7 +115,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionConfiguration")
-    private @Nullable Output<TableEncryptionConfigurationGetArgs> encryptionConfiguration;
+    private @Nullable Output<TableEncryptionConfigurationArgs> encryptionConfiguration;
 
     /**
      * @return Specifies how the table should be encrypted.
@@ -123,7 +123,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * is transparent to the user.  Structure is documented below.
      * 
      */
-    public Optional<Output<TableEncryptionConfigurationGetArgs>> encryptionConfiguration() {
+    public Optional<Output<TableEncryptionConfigurationArgs>> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
 
@@ -171,7 +171,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalDataConfiguration")
-    private @Nullable Output<TableExternalDataConfigurationGetArgs> externalDataConfiguration;
+    private @Nullable Output<TableExternalDataConfigurationArgs> externalDataConfiguration;
 
     /**
      * @return Describes the data format,
@@ -180,7 +180,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * if it were a standard BigQuery table. Structure is documented below.
      * 
      */
-    public Optional<Output<TableExternalDataConfigurationGetArgs>> externalDataConfiguration() {
+    public Optional<Output<TableExternalDataConfigurationArgs>> externalDataConfiguration() {
         return Optional.ofNullable(this.externalDataConfiguration);
     }
 
@@ -250,14 +250,14 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="materializedView")
-    private @Nullable Output<TableMaterializedViewGetArgs> materializedView;
+    private @Nullable Output<TableMaterializedViewArgs> materializedView;
 
     /**
      * @return If specified, configures this table as a materialized view.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<TableMaterializedViewGetArgs>> materializedView() {
+    public Optional<Output<TableMaterializedViewArgs>> materializedView() {
         return Optional.ofNullable(this.materializedView);
     }
 
@@ -329,14 +329,14 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rangePartitioning")
-    private @Nullable Output<TableRangePartitioningGetArgs> rangePartitioning;
+    private @Nullable Output<TableRangePartitioningArgs> rangePartitioning;
 
     /**
      * @return If specified, configures range-based
      * partitioning for this table. Structure is documented below.
      * 
      */
-    public Optional<Output<TableRangePartitioningGetArgs>> rangePartitioning() {
+    public Optional<Output<TableRangePartitioningArgs>> rangePartitioning() {
         return Optional.ofNullable(this.rangePartitioning);
     }
 
@@ -413,14 +413,14 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timePartitioning")
-    private @Nullable Output<TableTimePartitioningGetArgs> timePartitioning;
+    private @Nullable Output<TableTimePartitioningArgs> timePartitioning;
 
     /**
      * @return If specified, configures time-based
      * partitioning for this table. Structure is documented below.
      * 
      */
-    public Optional<Output<TableTimePartitioningGetArgs>> timePartitioning() {
+    public Optional<Output<TableTimePartitioningArgs>> timePartitioning() {
         return Optional.ofNullable(this.timePartitioning);
     }
 
@@ -447,14 +447,14 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="view")
-    private @Nullable Output<TableViewGetArgs> view;
+    private @Nullable Output<TableViewArgs> view;
 
     /**
      * @return If specified, configures this table as a view.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<TableViewGetArgs>> view() {
+    public Optional<Output<TableViewArgs>> view() {
         return Optional.ofNullable(this.view);
     }
 
@@ -639,7 +639,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionConfiguration(@Nullable Output<TableEncryptionConfigurationGetArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Output<TableEncryptionConfigurationArgs> encryptionConfiguration) {
             $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
@@ -652,7 +652,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionConfiguration(TableEncryptionConfigurationGetArgs encryptionConfiguration) {
+        public Builder encryptionConfiguration(TableEncryptionConfigurationArgs encryptionConfiguration) {
             return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
 
@@ -713,7 +713,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder externalDataConfiguration(@Nullable Output<TableExternalDataConfigurationGetArgs> externalDataConfiguration) {
+        public Builder externalDataConfiguration(@Nullable Output<TableExternalDataConfigurationArgs> externalDataConfiguration) {
             $.externalDataConfiguration = externalDataConfiguration;
             return this;
         }
@@ -727,7 +727,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder externalDataConfiguration(TableExternalDataConfigurationGetArgs externalDataConfiguration) {
+        public Builder externalDataConfiguration(TableExternalDataConfigurationArgs externalDataConfiguration) {
             return externalDataConfiguration(Output.of(externalDataConfiguration));
         }
 
@@ -822,7 +822,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder materializedView(@Nullable Output<TableMaterializedViewGetArgs> materializedView) {
+        public Builder materializedView(@Nullable Output<TableMaterializedViewArgs> materializedView) {
             $.materializedView = materializedView;
             return this;
         }
@@ -834,7 +834,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder materializedView(TableMaterializedViewGetArgs materializedView) {
+        public Builder materializedView(TableMaterializedViewArgs materializedView) {
             return materializedView(Output.of(materializedView));
         }
 
@@ -931,7 +931,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rangePartitioning(@Nullable Output<TableRangePartitioningGetArgs> rangePartitioning) {
+        public Builder rangePartitioning(@Nullable Output<TableRangePartitioningArgs> rangePartitioning) {
             $.rangePartitioning = rangePartitioning;
             return this;
         }
@@ -943,7 +943,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rangePartitioning(TableRangePartitioningGetArgs rangePartitioning) {
+        public Builder rangePartitioning(TableRangePartitioningArgs rangePartitioning) {
             return rangePartitioning(Output.of(rangePartitioning));
         }
 
@@ -1039,7 +1039,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder timePartitioning(@Nullable Output<TableTimePartitioningGetArgs> timePartitioning) {
+        public Builder timePartitioning(@Nullable Output<TableTimePartitioningArgs> timePartitioning) {
             $.timePartitioning = timePartitioning;
             return this;
         }
@@ -1051,7 +1051,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder timePartitioning(TableTimePartitioningGetArgs timePartitioning) {
+        public Builder timePartitioning(TableTimePartitioningArgs timePartitioning) {
             return timePartitioning(Output.of(timePartitioning));
         }
 
@@ -1085,7 +1085,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder view(@Nullable Output<TableViewGetArgs> view) {
+        public Builder view(@Nullable Output<TableViewArgs> view) {
             $.view = view;
             return this;
         }
@@ -1097,7 +1097,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder view(TableViewGetArgs view) {
+        public Builder view(TableViewArgs view) {
             return view(Output.of(view));
         }
 

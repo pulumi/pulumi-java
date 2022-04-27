@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.codestarnotifications.inputs;
 
-import com.pulumi.aws.codestarnotifications.inputs.NotificationRuleTargetGetArgs;
+import com.pulumi.aws.codestarnotifications.inputs.NotificationRuleTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -145,13 +145,13 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="targets")
-    private @Nullable Output<List<NotificationRuleTargetGetArgs>> targets;
+    private @Nullable Output<List<NotificationRuleTargetArgs>> targets;
 
     /**
      * @return Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
      * 
      */
-    public Optional<Output<List<NotificationRuleTargetGetArgs>>> targets() {
+    public Optional<Output<List<NotificationRuleTargetArgs>>> targets() {
         return Optional.ofNullable(this.targets);
     }
 
@@ -374,7 +374,7 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder targets(@Nullable Output<List<NotificationRuleTargetGetArgs>> targets) {
+        public Builder targets(@Nullable Output<List<NotificationRuleTargetArgs>> targets) {
             $.targets = targets;
             return this;
         }
@@ -385,7 +385,7 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder targets(List<NotificationRuleTargetGetArgs> targets) {
+        public Builder targets(List<NotificationRuleTargetArgs> targets) {
             return targets(Output.of(targets));
         }
 
@@ -395,7 +395,7 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder targets(NotificationRuleTargetGetArgs... targets) {
+        public Builder targets(NotificationRuleTargetArgs... targets) {
             return targets(List.of(targets));
         }
 

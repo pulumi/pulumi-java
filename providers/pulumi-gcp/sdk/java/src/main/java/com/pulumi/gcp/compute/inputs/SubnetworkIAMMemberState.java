@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.SubnetworkIAMMemberConditionGetArgs;
+import com.pulumi.gcp.compute.inputs.SubnetworkIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,14 +22,14 @@ public final class SubnetworkIAMMemberState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<SubnetworkIAMMemberConditionGetArgs> condition;
+    private @Nullable Output<SubnetworkIAMMemberConditionArgs> condition;
 
     /**
      * @return ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<SubnetworkIAMMemberConditionGetArgs>> condition() {
+    public Optional<Output<SubnetworkIAMMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -164,7 +164,7 @@ public final class SubnetworkIAMMemberState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<SubnetworkIAMMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<SubnetworkIAMMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -176,7 +176,7 @@ public final class SubnetworkIAMMemberState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder condition(SubnetworkIAMMemberConditionGetArgs condition) {
+        public Builder condition(SubnetworkIAMMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

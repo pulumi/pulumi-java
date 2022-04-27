@@ -5,7 +5,7 @@ package com.pulumi.gcp.endpoints.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.endpoints.inputs.ServiceIamMemberConditionGetArgs;
+import com.pulumi.gcp.endpoints.inputs.ServiceIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class ServiceIamMemberState extends com.pulumi.resources.ResourceAr
     public static final ServiceIamMemberState Empty = new ServiceIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<ServiceIamMemberConditionGetArgs> condition;
+    private @Nullable Output<ServiceIamMemberConditionArgs> condition;
 
-    public Optional<Output<ServiceIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<ServiceIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -99,12 +99,12 @@ public final class ServiceIamMemberState extends com.pulumi.resources.ResourceAr
             $ = new ServiceIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<ServiceIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<ServiceIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(ServiceIamMemberConditionGetArgs condition) {
+        public Builder condition(ServiceIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

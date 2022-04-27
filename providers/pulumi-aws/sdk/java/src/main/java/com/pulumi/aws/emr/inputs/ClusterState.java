@@ -3,15 +3,15 @@
 
 package com.pulumi.aws.emr.inputs;
 
-import com.pulumi.aws.emr.inputs.ClusterAutoTerminationPolicyGetArgs;
-import com.pulumi.aws.emr.inputs.ClusterBootstrapActionGetArgs;
-import com.pulumi.aws.emr.inputs.ClusterCoreInstanceFleetGetArgs;
-import com.pulumi.aws.emr.inputs.ClusterCoreInstanceGroupGetArgs;
-import com.pulumi.aws.emr.inputs.ClusterEc2AttributesGetArgs;
-import com.pulumi.aws.emr.inputs.ClusterKerberosAttributesGetArgs;
-import com.pulumi.aws.emr.inputs.ClusterMasterInstanceFleetGetArgs;
-import com.pulumi.aws.emr.inputs.ClusterMasterInstanceGroupGetArgs;
-import com.pulumi.aws.emr.inputs.ClusterStepGetArgs;
+import com.pulumi.aws.emr.inputs.ClusterAutoTerminationPolicyArgs;
+import com.pulumi.aws.emr.inputs.ClusterBootstrapActionArgs;
+import com.pulumi.aws.emr.inputs.ClusterCoreInstanceFleetArgs;
+import com.pulumi.aws.emr.inputs.ClusterCoreInstanceGroupArgs;
+import com.pulumi.aws.emr.inputs.ClusterEc2AttributesArgs;
+import com.pulumi.aws.emr.inputs.ClusterKerberosAttributesArgs;
+import com.pulumi.aws.emr.inputs.ClusterMasterInstanceFleetArgs;
+import com.pulumi.aws.emr.inputs.ClusterMasterInstanceGroupArgs;
+import com.pulumi.aws.emr.inputs.ClusterStepArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -70,13 +70,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoTerminationPolicy")
-    private @Nullable Output<ClusterAutoTerminationPolicyGetArgs> autoTerminationPolicy;
+    private @Nullable Output<ClusterAutoTerminationPolicyArgs> autoTerminationPolicy;
 
     /**
      * @return An auto-termination policy for an Amazon EMR cluster. An auto-termination policy defines the amount of idle time in seconds after which a cluster automatically terminates. See Auto Termination Policy Below.
      * 
      */
-    public Optional<Output<ClusterAutoTerminationPolicyGetArgs>> autoTerminationPolicy() {
+    public Optional<Output<ClusterAutoTerminationPolicyArgs>> autoTerminationPolicy() {
         return Optional.ofNullable(this.autoTerminationPolicy);
     }
 
@@ -100,13 +100,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bootstrapActions")
-    private @Nullable Output<List<ClusterBootstrapActionGetArgs>> bootstrapActions;
+    private @Nullable Output<List<ClusterBootstrapActionArgs>> bootstrapActions;
 
     /**
      * @return Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. See below.
      * 
      */
-    public Optional<Output<List<ClusterBootstrapActionGetArgs>>> bootstrapActions() {
+    public Optional<Output<List<ClusterBootstrapActionArgs>>> bootstrapActions() {
         return Optional.ofNullable(this.bootstrapActions);
     }
 
@@ -152,13 +152,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="coreInstanceFleet")
-    private @Nullable Output<ClusterCoreInstanceFleetGetArgs> coreInstanceFleet;
+    private @Nullable Output<ClusterCoreInstanceFleetArgs> coreInstanceFleet;
 
     /**
      * @return Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
      * 
      */
-    public Optional<Output<ClusterCoreInstanceFleetGetArgs>> coreInstanceFleet() {
+    public Optional<Output<ClusterCoreInstanceFleetArgs>> coreInstanceFleet() {
         return Optional.ofNullable(this.coreInstanceFleet);
     }
 
@@ -167,13 +167,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="coreInstanceGroup")
-    private @Nullable Output<ClusterCoreInstanceGroupGetArgs> coreInstanceGroup;
+    private @Nullable Output<ClusterCoreInstanceGroupArgs> coreInstanceGroup;
 
     /**
      * @return Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
      * 
      */
-    public Optional<Output<ClusterCoreInstanceGroupGetArgs>> coreInstanceGroup() {
+    public Optional<Output<ClusterCoreInstanceGroupArgs>> coreInstanceGroup() {
         return Optional.ofNullable(this.coreInstanceGroup);
     }
 
@@ -212,13 +212,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ec2Attributes")
-    private @Nullable Output<ClusterEc2AttributesGetArgs> ec2Attributes;
+    private @Nullable Output<ClusterEc2AttributesArgs> ec2Attributes;
 
     /**
      * @return Attributes for the EC2 instances running the job flow. See below.
      * 
      */
-    public Optional<Output<ClusterEc2AttributesGetArgs>> ec2Attributes() {
+    public Optional<Output<ClusterEc2AttributesArgs>> ec2Attributes() {
         return Optional.ofNullable(this.ec2Attributes);
     }
 
@@ -242,13 +242,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kerberosAttributes")
-    private @Nullable Output<ClusterKerberosAttributesGetArgs> kerberosAttributes;
+    private @Nullable Output<ClusterKerberosAttributesArgs> kerberosAttributes;
 
     /**
      * @return Kerberos configuration for the cluster. See below.
      * 
      */
-    public Optional<Output<ClusterKerberosAttributesGetArgs>> kerberosAttributes() {
+    public Optional<Output<ClusterKerberosAttributesArgs>> kerberosAttributes() {
         return Optional.ofNullable(this.kerberosAttributes);
     }
 
@@ -287,13 +287,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="masterInstanceFleet")
-    private @Nullable Output<ClusterMasterInstanceFleetGetArgs> masterInstanceFleet;
+    private @Nullable Output<ClusterMasterInstanceFleetArgs> masterInstanceFleet;
 
     /**
      * @return Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
      * 
      */
-    public Optional<Output<ClusterMasterInstanceFleetGetArgs>> masterInstanceFleet() {
+    public Optional<Output<ClusterMasterInstanceFleetArgs>> masterInstanceFleet() {
         return Optional.ofNullable(this.masterInstanceFleet);
     }
 
@@ -302,13 +302,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="masterInstanceGroup")
-    private @Nullable Output<ClusterMasterInstanceGroupGetArgs> masterInstanceGroup;
+    private @Nullable Output<ClusterMasterInstanceGroupArgs> masterInstanceGroup;
 
     /**
      * @return Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
      * 
      */
-    public Optional<Output<ClusterMasterInstanceGroupGetArgs>> masterInstanceGroup() {
+    public Optional<Output<ClusterMasterInstanceGroupArgs>> masterInstanceGroup() {
         return Optional.ofNullable(this.masterInstanceGroup);
     }
 
@@ -422,13 +422,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="steps")
-    private @Nullable Output<List<ClusterStepGetArgs>> steps;
+    private @Nullable Output<List<ClusterStepArgs>> steps;
 
     /**
      * @return List of steps to run when creating the cluster. See below. It is highly recommended to utilize the lifecycle resource options block with `ignoreChanges` if other steps are being managed outside of this provider.
      * 
      */
-    public Optional<Output<List<ClusterStepGetArgs>>> steps() {
+    public Optional<Output<List<ClusterStepArgs>>> steps() {
         return Optional.ofNullable(this.steps);
     }
 
@@ -614,7 +614,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoTerminationPolicy(@Nullable Output<ClusterAutoTerminationPolicyGetArgs> autoTerminationPolicy) {
+        public Builder autoTerminationPolicy(@Nullable Output<ClusterAutoTerminationPolicyArgs> autoTerminationPolicy) {
             $.autoTerminationPolicy = autoTerminationPolicy;
             return this;
         }
@@ -625,7 +625,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoTerminationPolicy(ClusterAutoTerminationPolicyGetArgs autoTerminationPolicy) {
+        public Builder autoTerminationPolicy(ClusterAutoTerminationPolicyArgs autoTerminationPolicy) {
             return autoTerminationPolicy(Output.of(autoTerminationPolicy));
         }
 
@@ -656,7 +656,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bootstrapActions(@Nullable Output<List<ClusterBootstrapActionGetArgs>> bootstrapActions) {
+        public Builder bootstrapActions(@Nullable Output<List<ClusterBootstrapActionArgs>> bootstrapActions) {
             $.bootstrapActions = bootstrapActions;
             return this;
         }
@@ -667,7 +667,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bootstrapActions(List<ClusterBootstrapActionGetArgs> bootstrapActions) {
+        public Builder bootstrapActions(List<ClusterBootstrapActionArgs> bootstrapActions) {
             return bootstrapActions(Output.of(bootstrapActions));
         }
 
@@ -677,7 +677,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bootstrapActions(ClusterBootstrapActionGetArgs... bootstrapActions) {
+        public Builder bootstrapActions(ClusterBootstrapActionArgs... bootstrapActions) {
             return bootstrapActions(List.of(bootstrapActions));
         }
 
@@ -738,7 +738,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder coreInstanceFleet(@Nullable Output<ClusterCoreInstanceFleetGetArgs> coreInstanceFleet) {
+        public Builder coreInstanceFleet(@Nullable Output<ClusterCoreInstanceFleetArgs> coreInstanceFleet) {
             $.coreInstanceFleet = coreInstanceFleet;
             return this;
         }
@@ -749,7 +749,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder coreInstanceFleet(ClusterCoreInstanceFleetGetArgs coreInstanceFleet) {
+        public Builder coreInstanceFleet(ClusterCoreInstanceFleetArgs coreInstanceFleet) {
             return coreInstanceFleet(Output.of(coreInstanceFleet));
         }
 
@@ -759,7 +759,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder coreInstanceGroup(@Nullable Output<ClusterCoreInstanceGroupGetArgs> coreInstanceGroup) {
+        public Builder coreInstanceGroup(@Nullable Output<ClusterCoreInstanceGroupArgs> coreInstanceGroup) {
             $.coreInstanceGroup = coreInstanceGroup;
             return this;
         }
@@ -770,7 +770,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder coreInstanceGroup(ClusterCoreInstanceGroupGetArgs coreInstanceGroup) {
+        public Builder coreInstanceGroup(ClusterCoreInstanceGroupArgs coreInstanceGroup) {
             return coreInstanceGroup(Output.of(coreInstanceGroup));
         }
 
@@ -822,7 +822,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ec2Attributes(@Nullable Output<ClusterEc2AttributesGetArgs> ec2Attributes) {
+        public Builder ec2Attributes(@Nullable Output<ClusterEc2AttributesArgs> ec2Attributes) {
             $.ec2Attributes = ec2Attributes;
             return this;
         }
@@ -833,7 +833,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ec2Attributes(ClusterEc2AttributesGetArgs ec2Attributes) {
+        public Builder ec2Attributes(ClusterEc2AttributesArgs ec2Attributes) {
             return ec2Attributes(Output.of(ec2Attributes));
         }
 
@@ -864,7 +864,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder kerberosAttributes(@Nullable Output<ClusterKerberosAttributesGetArgs> kerberosAttributes) {
+        public Builder kerberosAttributes(@Nullable Output<ClusterKerberosAttributesArgs> kerberosAttributes) {
             $.kerberosAttributes = kerberosAttributes;
             return this;
         }
@@ -875,7 +875,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder kerberosAttributes(ClusterKerberosAttributesGetArgs kerberosAttributes) {
+        public Builder kerberosAttributes(ClusterKerberosAttributesArgs kerberosAttributes) {
             return kerberosAttributes(Output.of(kerberosAttributes));
         }
 
@@ -927,7 +927,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder masterInstanceFleet(@Nullable Output<ClusterMasterInstanceFleetGetArgs> masterInstanceFleet) {
+        public Builder masterInstanceFleet(@Nullable Output<ClusterMasterInstanceFleetArgs> masterInstanceFleet) {
             $.masterInstanceFleet = masterInstanceFleet;
             return this;
         }
@@ -938,7 +938,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder masterInstanceFleet(ClusterMasterInstanceFleetGetArgs masterInstanceFleet) {
+        public Builder masterInstanceFleet(ClusterMasterInstanceFleetArgs masterInstanceFleet) {
             return masterInstanceFleet(Output.of(masterInstanceFleet));
         }
 
@@ -948,7 +948,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder masterInstanceGroup(@Nullable Output<ClusterMasterInstanceGroupGetArgs> masterInstanceGroup) {
+        public Builder masterInstanceGroup(@Nullable Output<ClusterMasterInstanceGroupArgs> masterInstanceGroup) {
             $.masterInstanceGroup = masterInstanceGroup;
             return this;
         }
@@ -959,7 +959,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder masterInstanceGroup(ClusterMasterInstanceGroupGetArgs masterInstanceGroup) {
+        public Builder masterInstanceGroup(ClusterMasterInstanceGroupArgs masterInstanceGroup) {
             return masterInstanceGroup(Output.of(masterInstanceGroup));
         }
 
@@ -1116,7 +1116,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder steps(@Nullable Output<List<ClusterStepGetArgs>> steps) {
+        public Builder steps(@Nullable Output<List<ClusterStepArgs>> steps) {
             $.steps = steps;
             return this;
         }
@@ -1127,7 +1127,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder steps(List<ClusterStepGetArgs> steps) {
+        public Builder steps(List<ClusterStepArgs> steps) {
             return steps(Output.of(steps));
         }
 
@@ -1137,7 +1137,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder steps(ClusterStepGetArgs... steps) {
+        public Builder steps(ClusterStepArgs... steps) {
             return steps(List.of(steps));
         }
 

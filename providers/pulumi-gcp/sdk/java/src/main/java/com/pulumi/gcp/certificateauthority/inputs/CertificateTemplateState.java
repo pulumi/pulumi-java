@@ -5,9 +5,9 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplateIdentityConstraintsGetArgs;
-import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePassthroughExtensionsGetArgs;
-import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesGetArgs;
+import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplateIdentityConstraintsArgs;
+import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePassthroughExtensionsArgs;
+import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -54,13 +54,13 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="identityConstraints")
-    private @Nullable Output<CertificateTemplateIdentityConstraintsGetArgs> identityConstraints;
+    private @Nullable Output<CertificateTemplateIdentityConstraintsArgs> identityConstraints;
 
     /**
      * @return Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate&#39;s identity.
      * 
      */
-    public Optional<Output<CertificateTemplateIdentityConstraintsGetArgs>> identityConstraints() {
+    public Optional<Output<CertificateTemplateIdentityConstraintsArgs>> identityConstraints() {
         return Optional.ofNullable(this.identityConstraints);
     }
 
@@ -114,13 +114,13 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="passthroughExtensions")
-    private @Nullable Output<CertificateTemplatePassthroughExtensionsGetArgs> passthroughExtensions;
+    private @Nullable Output<CertificateTemplatePassthroughExtensionsArgs> passthroughExtensions;
 
     /**
      * @return Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don&#39;t appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool&#39;s IssuancePolicy defines baseline_values that don&#39;t appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate&#39;s X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate&#39;s predefined_values.
      * 
      */
-    public Optional<Output<CertificateTemplatePassthroughExtensionsGetArgs>> passthroughExtensions() {
+    public Optional<Output<CertificateTemplatePassthroughExtensionsArgs>> passthroughExtensions() {
         return Optional.ofNullable(this.passthroughExtensions);
     }
 
@@ -129,13 +129,13 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="predefinedValues")
-    private @Nullable Output<CertificateTemplatePredefinedValuesGetArgs> predefinedValues;
+    private @Nullable Output<CertificateTemplatePredefinedValuesArgs> predefinedValues;
 
     /**
      * @return Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool&#39;s IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
      * 
      */
-    public Optional<Output<CertificateTemplatePredefinedValuesGetArgs>> predefinedValues() {
+    public Optional<Output<CertificateTemplatePredefinedValuesArgs>> predefinedValues() {
         return Optional.ofNullable(this.predefinedValues);
     }
 
@@ -250,7 +250,7 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder identityConstraints(@Nullable Output<CertificateTemplateIdentityConstraintsGetArgs> identityConstraints) {
+        public Builder identityConstraints(@Nullable Output<CertificateTemplateIdentityConstraintsArgs> identityConstraints) {
             $.identityConstraints = identityConstraints;
             return this;
         }
@@ -261,7 +261,7 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder identityConstraints(CertificateTemplateIdentityConstraintsGetArgs identityConstraints) {
+        public Builder identityConstraints(CertificateTemplateIdentityConstraintsArgs identityConstraints) {
             return identityConstraints(Output.of(identityConstraints));
         }
 
@@ -334,7 +334,7 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder passthroughExtensions(@Nullable Output<CertificateTemplatePassthroughExtensionsGetArgs> passthroughExtensions) {
+        public Builder passthroughExtensions(@Nullable Output<CertificateTemplatePassthroughExtensionsArgs> passthroughExtensions) {
             $.passthroughExtensions = passthroughExtensions;
             return this;
         }
@@ -345,7 +345,7 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder passthroughExtensions(CertificateTemplatePassthroughExtensionsGetArgs passthroughExtensions) {
+        public Builder passthroughExtensions(CertificateTemplatePassthroughExtensionsArgs passthroughExtensions) {
             return passthroughExtensions(Output.of(passthroughExtensions));
         }
 
@@ -355,7 +355,7 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder predefinedValues(@Nullable Output<CertificateTemplatePredefinedValuesGetArgs> predefinedValues) {
+        public Builder predefinedValues(@Nullable Output<CertificateTemplatePredefinedValuesArgs> predefinedValues) {
             $.predefinedValues = predefinedValues;
             return this;
         }
@@ -366,7 +366,7 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder predefinedValues(CertificateTemplatePredefinedValuesGetArgs predefinedValues) {
+        public Builder predefinedValues(CertificateTemplatePredefinedValuesArgs predefinedValues) {
             return predefinedValues(Output.of(predefinedValues));
         }
 

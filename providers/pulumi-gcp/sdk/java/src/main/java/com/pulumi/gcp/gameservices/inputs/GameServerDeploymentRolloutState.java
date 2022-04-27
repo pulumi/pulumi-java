@@ -5,7 +5,7 @@ package com.pulumi.gcp.gameservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.gameservices.inputs.GameServerDeploymentRolloutGameServerConfigOverrideGetArgs;
+import com.pulumi.gcp.gameservices.inputs.GameServerDeploymentRolloutGameServerConfigOverrideArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -60,7 +60,7 @@ public final class GameServerDeploymentRolloutState extends com.pulumi.resources
      * 
      */
     @Import(name="gameServerConfigOverrides")
-    private @Nullable Output<List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs>> gameServerConfigOverrides;
+    private @Nullable Output<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides;
 
     /**
      * @return The game_server_config_overrides contains the per game server config
@@ -70,7 +70,7 @@ public final class GameServerDeploymentRolloutState extends com.pulumi.resources
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs>>> gameServerConfigOverrides() {
+    public Optional<Output<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>>> gameServerConfigOverrides() {
         return Optional.ofNullable(this.gameServerConfigOverrides);
     }
 
@@ -192,7 +192,7 @@ public final class GameServerDeploymentRolloutState extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder gameServerConfigOverrides(@Nullable Output<List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs>> gameServerConfigOverrides) {
+        public Builder gameServerConfigOverrides(@Nullable Output<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides) {
             $.gameServerConfigOverrides = gameServerConfigOverrides;
             return this;
         }
@@ -207,7 +207,7 @@ public final class GameServerDeploymentRolloutState extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder gameServerConfigOverrides(List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs> gameServerConfigOverrides) {
+        public Builder gameServerConfigOverrides(List<GameServerDeploymentRolloutGameServerConfigOverrideArgs> gameServerConfigOverrides) {
             return gameServerConfigOverrides(Output.of(gameServerConfigOverrides));
         }
 
@@ -221,7 +221,7 @@ public final class GameServerDeploymentRolloutState extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder gameServerConfigOverrides(GameServerDeploymentRolloutGameServerConfigOverrideGetArgs... gameServerConfigOverrides) {
+        public Builder gameServerConfigOverrides(GameServerDeploymentRolloutGameServerConfigOverrideArgs... gameServerConfigOverrides) {
             return gameServerConfigOverrides(List.of(gameServerConfigOverrides));
         }
 

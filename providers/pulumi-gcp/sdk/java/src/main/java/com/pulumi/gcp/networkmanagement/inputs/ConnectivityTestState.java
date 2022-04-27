@@ -5,8 +5,8 @@ package com.pulumi.gcp.networkmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.networkmanagement.inputs.ConnectivityTestDestinationGetArgs;
-import com.pulumi.gcp.networkmanagement.inputs.ConnectivityTestSourceGetArgs;
+import com.pulumi.gcp.networkmanagement.inputs.ConnectivityTestDestinationArgs;
+import com.pulumi.gcp.networkmanagement.inputs.ConnectivityTestSourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -55,7 +55,7 @@ public final class ConnectivityTestState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="destination")
-    private @Nullable Output<ConnectivityTestDestinationGetArgs> destination;
+    private @Nullable Output<ConnectivityTestDestinationArgs> destination;
 
     /**
      * @return Required. Destination specification of the Connectivity Test.
@@ -75,7 +75,7 @@ public final class ConnectivityTestState extends com.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ConnectivityTestDestinationGetArgs>> destination() {
+    public Optional<Output<ConnectivityTestDestinationArgs>> destination() {
         return Optional.ofNullable(this.destination);
     }
 
@@ -183,7 +183,7 @@ public final class ConnectivityTestState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="source")
-    private @Nullable Output<ConnectivityTestSourceGetArgs> source;
+    private @Nullable Output<ConnectivityTestSourceArgs> source;
 
     /**
      * @return Required. Source specification of the Connectivity Test.
@@ -207,7 +207,7 @@ public final class ConnectivityTestState extends com.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ConnectivityTestSourceGetArgs>> source() {
+    public Optional<Output<ConnectivityTestSourceArgs>> source() {
         return Optional.ofNullable(this.source);
     }
 
@@ -285,7 +285,7 @@ public final class ConnectivityTestState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder destination(@Nullable Output<ConnectivityTestDestinationGetArgs> destination) {
+        public Builder destination(@Nullable Output<ConnectivityTestDestinationArgs> destination) {
             $.destination = destination;
             return this;
         }
@@ -310,7 +310,7 @@ public final class ConnectivityTestState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder destination(ConnectivityTestDestinationGetArgs destination) {
+        public Builder destination(ConnectivityTestDestinationArgs destination) {
             return destination(Output.of(destination));
         }
 
@@ -461,7 +461,7 @@ public final class ConnectivityTestState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder source(@Nullable Output<ConnectivityTestSourceGetArgs> source) {
+        public Builder source(@Nullable Output<ConnectivityTestSourceArgs> source) {
             $.source = source;
             return this;
         }
@@ -490,7 +490,7 @@ public final class ConnectivityTestState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder source(ConnectivityTestSourceGetArgs source) {
+        public Builder source(ConnectivityTestSourceArgs source) {
             return source(Output.of(source));
         }
 

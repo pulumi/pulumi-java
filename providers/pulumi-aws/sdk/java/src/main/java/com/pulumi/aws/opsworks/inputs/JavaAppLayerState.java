@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.opsworks.inputs;
 
-import com.pulumi.aws.opsworks.inputs.JavaAppLayerCloudwatchConfigurationGetArgs;
-import com.pulumi.aws.opsworks.inputs.JavaAppLayerEbsVolumeGetArgs;
+import com.pulumi.aws.opsworks.inputs.JavaAppLayerCloudwatchConfigurationArgs;
+import com.pulumi.aws.opsworks.inputs.JavaAppLayerEbsVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -112,9 +112,9 @@ public final class JavaAppLayerState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="cloudwatchConfiguration")
-    private @Nullable Output<JavaAppLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration;
+    private @Nullable Output<JavaAppLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
-    public Optional<Output<JavaAppLayerCloudwatchConfigurationGetArgs>> cloudwatchConfiguration() {
+    public Optional<Output<JavaAppLayerCloudwatchConfigurationArgs>> cloudwatchConfiguration() {
         return Optional.ofNullable(this.cloudwatchConfiguration);
     }
 
@@ -218,13 +218,13 @@ public final class JavaAppLayerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsVolumes")
-    private @Nullable Output<List<JavaAppLayerEbsVolumeGetArgs>> ebsVolumes;
+    private @Nullable Output<List<JavaAppLayerEbsVolumeArgs>> ebsVolumes;
 
     /**
      * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
-    public Optional<Output<List<JavaAppLayerEbsVolumeGetArgs>>> ebsVolumes() {
+    public Optional<Output<List<JavaAppLayerEbsVolumeArgs>>> ebsVolumes() {
         return Optional.ofNullable(this.ebsVolumes);
     }
 
@@ -586,12 +586,12 @@ public final class JavaAppLayerState extends com.pulumi.resources.ResourceArgs {
             return autoHealing(Output.of(autoHealing));
         }
 
-        public Builder cloudwatchConfiguration(@Nullable Output<JavaAppLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(@Nullable Output<JavaAppLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
             $.cloudwatchConfiguration = cloudwatchConfiguration;
             return this;
         }
 
-        public Builder cloudwatchConfiguration(JavaAppLayerCloudwatchConfigurationGetArgs cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(JavaAppLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
             return cloudwatchConfiguration(Output.of(cloudwatchConfiguration));
         }
 
@@ -760,7 +760,7 @@ public final class JavaAppLayerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsVolumes(@Nullable Output<List<JavaAppLayerEbsVolumeGetArgs>> ebsVolumes) {
+        public Builder ebsVolumes(@Nullable Output<List<JavaAppLayerEbsVolumeArgs>> ebsVolumes) {
             $.ebsVolumes = ebsVolumes;
             return this;
         }
@@ -771,7 +771,7 @@ public final class JavaAppLayerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsVolumes(List<JavaAppLayerEbsVolumeGetArgs> ebsVolumes) {
+        public Builder ebsVolumes(List<JavaAppLayerEbsVolumeArgs> ebsVolumes) {
             return ebsVolumes(Output.of(ebsVolumes));
         }
 
@@ -781,7 +781,7 @@ public final class JavaAppLayerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsVolumes(JavaAppLayerEbsVolumeGetArgs... ebsVolumes) {
+        public Builder ebsVolumes(JavaAppLayerEbsVolumeArgs... ebsVolumes) {
             return ebsVolumes(List.of(ebsVolumes));
         }
 

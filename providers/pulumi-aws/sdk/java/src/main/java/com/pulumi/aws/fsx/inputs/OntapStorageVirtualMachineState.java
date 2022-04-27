@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.fsx.inputs;
 
-import com.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs;
-import com.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointGetArgs;
+import com.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineActiveDirectoryConfigurationArgs;
+import com.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -24,13 +24,13 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
      * 
      */
     @Import(name="activeDirectoryConfiguration")
-    private @Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration;
+    private @Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
 
     /**
      * @return Configuration block that Amazon FSx uses to join the FSx ONTAP Storage Virtual Machine(SVM) to your Microsoft Active Directory (AD) directory. Detailed below.
      * 
      */
-    public Optional<Output<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs>> activeDirectoryConfiguration() {
+    public Optional<Output<OntapStorageVirtualMachineActiveDirectoryConfigurationArgs>> activeDirectoryConfiguration() {
         return Optional.ofNullable(this.activeDirectoryConfiguration);
     }
 
@@ -54,13 +54,13 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
      * 
      */
     @Import(name="endpoints")
-    private @Nullable Output<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints;
+    private @Nullable Output<List<OntapStorageVirtualMachineEndpointArgs>> endpoints;
 
     /**
      * @return The endpoints that are used to access data or to manage the storage virtual machine using the NetApp ONTAP CLI, REST API, or NetApp SnapMirror. See Endpoints below.
      * 
      */
-    public Optional<Output<List<OntapStorageVirtualMachineEndpointGetArgs>>> endpoints() {
+    public Optional<Output<List<OntapStorageVirtualMachineEndpointArgs>>> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
 
@@ -216,7 +216,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder activeDirectoryConfiguration(@Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration) {
+        public Builder activeDirectoryConfiguration(@Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationArgs> activeDirectoryConfiguration) {
             $.activeDirectoryConfiguration = activeDirectoryConfiguration;
             return this;
         }
@@ -227,7 +227,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder activeDirectoryConfiguration(OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs activeDirectoryConfiguration) {
+        public Builder activeDirectoryConfiguration(OntapStorageVirtualMachineActiveDirectoryConfigurationArgs activeDirectoryConfiguration) {
             return activeDirectoryConfiguration(Output.of(activeDirectoryConfiguration));
         }
 
@@ -258,7 +258,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder endpoints(@Nullable Output<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints) {
+        public Builder endpoints(@Nullable Output<List<OntapStorageVirtualMachineEndpointArgs>> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
@@ -269,7 +269,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder endpoints(List<OntapStorageVirtualMachineEndpointGetArgs> endpoints) {
+        public Builder endpoints(List<OntapStorageVirtualMachineEndpointArgs> endpoints) {
             return endpoints(Output.of(endpoints));
         }
 
@@ -279,7 +279,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder endpoints(OntapStorageVirtualMachineEndpointGetArgs... endpoints) {
+        public Builder endpoints(OntapStorageVirtualMachineEndpointArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }
 

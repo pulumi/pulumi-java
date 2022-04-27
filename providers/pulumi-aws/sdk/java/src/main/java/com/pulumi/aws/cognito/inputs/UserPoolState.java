@@ -3,18 +3,18 @@
 
 package com.pulumi.aws.cognito.inputs;
 
-import com.pulumi.aws.cognito.inputs.UserPoolAccountRecoverySettingGetArgs;
-import com.pulumi.aws.cognito.inputs.UserPoolAdminCreateUserConfigGetArgs;
-import com.pulumi.aws.cognito.inputs.UserPoolDeviceConfigurationGetArgs;
-import com.pulumi.aws.cognito.inputs.UserPoolEmailConfigurationGetArgs;
-import com.pulumi.aws.cognito.inputs.UserPoolLambdaConfigGetArgs;
-import com.pulumi.aws.cognito.inputs.UserPoolPasswordPolicyGetArgs;
-import com.pulumi.aws.cognito.inputs.UserPoolSchemaGetArgs;
-import com.pulumi.aws.cognito.inputs.UserPoolSmsConfigurationGetArgs;
-import com.pulumi.aws.cognito.inputs.UserPoolSoftwareTokenMfaConfigurationGetArgs;
-import com.pulumi.aws.cognito.inputs.UserPoolUserPoolAddOnsGetArgs;
-import com.pulumi.aws.cognito.inputs.UserPoolUsernameConfigurationGetArgs;
-import com.pulumi.aws.cognito.inputs.UserPoolVerificationMessageTemplateGetArgs;
+import com.pulumi.aws.cognito.inputs.UserPoolAccountRecoverySettingArgs;
+import com.pulumi.aws.cognito.inputs.UserPoolAdminCreateUserConfigArgs;
+import com.pulumi.aws.cognito.inputs.UserPoolDeviceConfigurationArgs;
+import com.pulumi.aws.cognito.inputs.UserPoolEmailConfigurationArgs;
+import com.pulumi.aws.cognito.inputs.UserPoolLambdaConfigArgs;
+import com.pulumi.aws.cognito.inputs.UserPoolPasswordPolicyArgs;
+import com.pulumi.aws.cognito.inputs.UserPoolSchemaArgs;
+import com.pulumi.aws.cognito.inputs.UserPoolSmsConfigurationArgs;
+import com.pulumi.aws.cognito.inputs.UserPoolSoftwareTokenMfaConfigurationArgs;
+import com.pulumi.aws.cognito.inputs.UserPoolUserPoolAddOnsArgs;
+import com.pulumi.aws.cognito.inputs.UserPoolUsernameConfigurationArgs;
+import com.pulumi.aws.cognito.inputs.UserPoolVerificationMessageTemplateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -35,13 +35,13 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountRecoverySetting")
-    private @Nullable Output<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting;
+    private @Nullable Output<UserPoolAccountRecoverySettingArgs> accountRecoverySetting;
 
     /**
      * @return Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.
      * 
      */
-    public Optional<Output<UserPoolAccountRecoverySettingGetArgs>> accountRecoverySetting() {
+    public Optional<Output<UserPoolAccountRecoverySettingArgs>> accountRecoverySetting() {
         return Optional.ofNullable(this.accountRecoverySetting);
     }
 
@@ -50,13 +50,13 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="adminCreateUserConfig")
-    private @Nullable Output<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig;
+    private @Nullable Output<UserPoolAdminCreateUserConfigArgs> adminCreateUserConfig;
 
     /**
      * @return Configuration block for creating a new user profile. Detailed below.
      * 
      */
-    public Optional<Output<UserPoolAdminCreateUserConfigGetArgs>> adminCreateUserConfig() {
+    public Optional<Output<UserPoolAdminCreateUserConfigArgs>> adminCreateUserConfig() {
         return Optional.ofNullable(this.adminCreateUserConfig);
     }
 
@@ -140,13 +140,13 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceConfiguration")
-    private @Nullable Output<UserPoolDeviceConfigurationGetArgs> deviceConfiguration;
+    private @Nullable Output<UserPoolDeviceConfigurationArgs> deviceConfiguration;
 
     /**
      * @return Configuration block for the user pool&#39;s device tracking. Detailed below.
      * 
      */
-    public Optional<Output<UserPoolDeviceConfigurationGetArgs>> deviceConfiguration() {
+    public Optional<Output<UserPoolDeviceConfigurationArgs>> deviceConfiguration() {
         return Optional.ofNullable(this.deviceConfiguration);
     }
 
@@ -170,13 +170,13 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="emailConfiguration")
-    private @Nullable Output<UserPoolEmailConfigurationGetArgs> emailConfiguration;
+    private @Nullable Output<UserPoolEmailConfigurationArgs> emailConfiguration;
 
     /**
      * @return Configuration block for configuring email. Detailed below.
      * 
      */
-    public Optional<Output<UserPoolEmailConfigurationGetArgs>> emailConfiguration() {
+    public Optional<Output<UserPoolEmailConfigurationArgs>> emailConfiguration() {
         return Optional.ofNullable(this.emailConfiguration);
     }
 
@@ -245,13 +245,13 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lambdaConfig")
-    private @Nullable Output<UserPoolLambdaConfigGetArgs> lambdaConfig;
+    private @Nullable Output<UserPoolLambdaConfigArgs> lambdaConfig;
 
     /**
      * @return Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.
      * 
      */
-    public Optional<Output<UserPoolLambdaConfigGetArgs>> lambdaConfig() {
+    public Optional<Output<UserPoolLambdaConfigArgs>> lambdaConfig() {
         return Optional.ofNullable(this.lambdaConfig);
     }
 
@@ -305,13 +305,13 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="passwordPolicy")
-    private @Nullable Output<UserPoolPasswordPolicyGetArgs> passwordPolicy;
+    private @Nullable Output<UserPoolPasswordPolicyArgs> passwordPolicy;
 
     /**
      * @return Configuration blocked for information about the user pool password policy. Detailed below.
      * 
      */
-    public Optional<Output<UserPoolPasswordPolicyGetArgs>> passwordPolicy() {
+    public Optional<Output<UserPoolPasswordPolicyArgs>> passwordPolicy() {
         return Optional.ofNullable(this.passwordPolicy);
     }
 
@@ -320,13 +320,13 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemas")
-    private @Nullable Output<List<UserPoolSchemaGetArgs>> schemas;
+    private @Nullable Output<List<UserPoolSchemaArgs>> schemas;
 
     /**
      * @return Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
      * 
      */
-    public Optional<Output<List<UserPoolSchemaGetArgs>>> schemas() {
+    public Optional<Output<List<UserPoolSchemaArgs>>> schemas() {
         return Optional.ofNullable(this.schemas);
     }
 
@@ -350,13 +350,13 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="smsConfiguration")
-    private @Nullable Output<UserPoolSmsConfigurationGetArgs> smsConfiguration;
+    private @Nullable Output<UserPoolSmsConfigurationArgs> smsConfiguration;
 
     /**
      * @return Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection.
      * 
      */
-    public Optional<Output<UserPoolSmsConfigurationGetArgs>> smsConfiguration() {
+    public Optional<Output<UserPoolSmsConfigurationArgs>> smsConfiguration() {
         return Optional.ofNullable(this.smsConfiguration);
     }
 
@@ -380,13 +380,13 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="softwareTokenMfaConfiguration")
-    private @Nullable Output<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration;
+    private @Nullable Output<UserPoolSoftwareTokenMfaConfigurationArgs> softwareTokenMfaConfiguration;
 
     /**
      * @return Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
      * 
      */
-    public Optional<Output<UserPoolSoftwareTokenMfaConfigurationGetArgs>> softwareTokenMfaConfiguration() {
+    public Optional<Output<UserPoolSoftwareTokenMfaConfigurationArgs>> softwareTokenMfaConfiguration() {
         return Optional.ofNullable(this.softwareTokenMfaConfiguration);
     }
 
@@ -425,13 +425,13 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userPoolAddOns")
-    private @Nullable Output<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns;
+    private @Nullable Output<UserPoolUserPoolAddOnsArgs> userPoolAddOns;
 
     /**
      * @return Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
      * 
      */
-    public Optional<Output<UserPoolUserPoolAddOnsGetArgs>> userPoolAddOns() {
+    public Optional<Output<UserPoolUserPoolAddOnsArgs>> userPoolAddOns() {
         return Optional.ofNullable(this.userPoolAddOns);
     }
 
@@ -455,13 +455,13 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="usernameConfiguration")
-    private @Nullable Output<UserPoolUsernameConfigurationGetArgs> usernameConfiguration;
+    private @Nullable Output<UserPoolUsernameConfigurationArgs> usernameConfiguration;
 
     /**
      * @return Configuration block for username configuration. Detailed below.
      * 
      */
-    public Optional<Output<UserPoolUsernameConfigurationGetArgs>> usernameConfiguration() {
+    public Optional<Output<UserPoolUsernameConfigurationArgs>> usernameConfiguration() {
         return Optional.ofNullable(this.usernameConfiguration);
     }
 
@@ -470,13 +470,13 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="verificationMessageTemplate")
-    private @Nullable Output<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate;
+    private @Nullable Output<UserPoolVerificationMessageTemplateArgs> verificationMessageTemplate;
 
     /**
      * @return Configuration block for verification message templates. Detailed below.
      * 
      */
-    public Optional<Output<UserPoolVerificationMessageTemplateGetArgs>> verificationMessageTemplate() {
+    public Optional<Output<UserPoolVerificationMessageTemplateArgs>> verificationMessageTemplate() {
         return Optional.ofNullable(this.verificationMessageTemplate);
     }
 
@@ -539,7 +539,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accountRecoverySetting(@Nullable Output<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting) {
+        public Builder accountRecoverySetting(@Nullable Output<UserPoolAccountRecoverySettingArgs> accountRecoverySetting) {
             $.accountRecoverySetting = accountRecoverySetting;
             return this;
         }
@@ -550,7 +550,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accountRecoverySetting(UserPoolAccountRecoverySettingGetArgs accountRecoverySetting) {
+        public Builder accountRecoverySetting(UserPoolAccountRecoverySettingArgs accountRecoverySetting) {
             return accountRecoverySetting(Output.of(accountRecoverySetting));
         }
 
@@ -560,7 +560,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder adminCreateUserConfig(@Nullable Output<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig) {
+        public Builder adminCreateUserConfig(@Nullable Output<UserPoolAdminCreateUserConfigArgs> adminCreateUserConfig) {
             $.adminCreateUserConfig = adminCreateUserConfig;
             return this;
         }
@@ -571,7 +571,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder adminCreateUserConfig(UserPoolAdminCreateUserConfigGetArgs adminCreateUserConfig) {
+        public Builder adminCreateUserConfig(UserPoolAdminCreateUserConfigArgs adminCreateUserConfig) {
             return adminCreateUserConfig(Output.of(adminCreateUserConfig));
         }
 
@@ -706,7 +706,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder deviceConfiguration(@Nullable Output<UserPoolDeviceConfigurationGetArgs> deviceConfiguration) {
+        public Builder deviceConfiguration(@Nullable Output<UserPoolDeviceConfigurationArgs> deviceConfiguration) {
             $.deviceConfiguration = deviceConfiguration;
             return this;
         }
@@ -717,7 +717,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder deviceConfiguration(UserPoolDeviceConfigurationGetArgs deviceConfiguration) {
+        public Builder deviceConfiguration(UserPoolDeviceConfigurationArgs deviceConfiguration) {
             return deviceConfiguration(Output.of(deviceConfiguration));
         }
 
@@ -748,7 +748,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder emailConfiguration(@Nullable Output<UserPoolEmailConfigurationGetArgs> emailConfiguration) {
+        public Builder emailConfiguration(@Nullable Output<UserPoolEmailConfigurationArgs> emailConfiguration) {
             $.emailConfiguration = emailConfiguration;
             return this;
         }
@@ -759,7 +759,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder emailConfiguration(UserPoolEmailConfigurationGetArgs emailConfiguration) {
+        public Builder emailConfiguration(UserPoolEmailConfigurationArgs emailConfiguration) {
             return emailConfiguration(Output.of(emailConfiguration));
         }
 
@@ -853,7 +853,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lambdaConfig(@Nullable Output<UserPoolLambdaConfigGetArgs> lambdaConfig) {
+        public Builder lambdaConfig(@Nullable Output<UserPoolLambdaConfigArgs> lambdaConfig) {
             $.lambdaConfig = lambdaConfig;
             return this;
         }
@@ -864,7 +864,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lambdaConfig(UserPoolLambdaConfigGetArgs lambdaConfig) {
+        public Builder lambdaConfig(UserPoolLambdaConfigArgs lambdaConfig) {
             return lambdaConfig(Output.of(lambdaConfig));
         }
 
@@ -937,7 +937,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder passwordPolicy(@Nullable Output<UserPoolPasswordPolicyGetArgs> passwordPolicy) {
+        public Builder passwordPolicy(@Nullable Output<UserPoolPasswordPolicyArgs> passwordPolicy) {
             $.passwordPolicy = passwordPolicy;
             return this;
         }
@@ -948,7 +948,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder passwordPolicy(UserPoolPasswordPolicyGetArgs passwordPolicy) {
+        public Builder passwordPolicy(UserPoolPasswordPolicyArgs passwordPolicy) {
             return passwordPolicy(Output.of(passwordPolicy));
         }
 
@@ -958,7 +958,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schemas(@Nullable Output<List<UserPoolSchemaGetArgs>> schemas) {
+        public Builder schemas(@Nullable Output<List<UserPoolSchemaArgs>> schemas) {
             $.schemas = schemas;
             return this;
         }
@@ -969,7 +969,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schemas(List<UserPoolSchemaGetArgs> schemas) {
+        public Builder schemas(List<UserPoolSchemaArgs> schemas) {
             return schemas(Output.of(schemas));
         }
 
@@ -979,7 +979,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schemas(UserPoolSchemaGetArgs... schemas) {
+        public Builder schemas(UserPoolSchemaArgs... schemas) {
             return schemas(List.of(schemas));
         }
 
@@ -1010,7 +1010,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder smsConfiguration(@Nullable Output<UserPoolSmsConfigurationGetArgs> smsConfiguration) {
+        public Builder smsConfiguration(@Nullable Output<UserPoolSmsConfigurationArgs> smsConfiguration) {
             $.smsConfiguration = smsConfiguration;
             return this;
         }
@@ -1021,7 +1021,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder smsConfiguration(UserPoolSmsConfigurationGetArgs smsConfiguration) {
+        public Builder smsConfiguration(UserPoolSmsConfigurationArgs smsConfiguration) {
             return smsConfiguration(Output.of(smsConfiguration));
         }
 
@@ -1052,7 +1052,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder softwareTokenMfaConfiguration(@Nullable Output<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration) {
+        public Builder softwareTokenMfaConfiguration(@Nullable Output<UserPoolSoftwareTokenMfaConfigurationArgs> softwareTokenMfaConfiguration) {
             $.softwareTokenMfaConfiguration = softwareTokenMfaConfiguration;
             return this;
         }
@@ -1063,7 +1063,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder softwareTokenMfaConfiguration(UserPoolSoftwareTokenMfaConfigurationGetArgs softwareTokenMfaConfiguration) {
+        public Builder softwareTokenMfaConfiguration(UserPoolSoftwareTokenMfaConfigurationArgs softwareTokenMfaConfiguration) {
             return softwareTokenMfaConfiguration(Output.of(softwareTokenMfaConfiguration));
         }
 
@@ -1115,7 +1115,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder userPoolAddOns(@Nullable Output<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns) {
+        public Builder userPoolAddOns(@Nullable Output<UserPoolUserPoolAddOnsArgs> userPoolAddOns) {
             $.userPoolAddOns = userPoolAddOns;
             return this;
         }
@@ -1126,7 +1126,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder userPoolAddOns(UserPoolUserPoolAddOnsGetArgs userPoolAddOns) {
+        public Builder userPoolAddOns(UserPoolUserPoolAddOnsArgs userPoolAddOns) {
             return userPoolAddOns(Output.of(userPoolAddOns));
         }
 
@@ -1167,7 +1167,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder usernameConfiguration(@Nullable Output<UserPoolUsernameConfigurationGetArgs> usernameConfiguration) {
+        public Builder usernameConfiguration(@Nullable Output<UserPoolUsernameConfigurationArgs> usernameConfiguration) {
             $.usernameConfiguration = usernameConfiguration;
             return this;
         }
@@ -1178,7 +1178,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder usernameConfiguration(UserPoolUsernameConfigurationGetArgs usernameConfiguration) {
+        public Builder usernameConfiguration(UserPoolUsernameConfigurationArgs usernameConfiguration) {
             return usernameConfiguration(Output.of(usernameConfiguration));
         }
 
@@ -1188,7 +1188,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder verificationMessageTemplate(@Nullable Output<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate) {
+        public Builder verificationMessageTemplate(@Nullable Output<UserPoolVerificationMessageTemplateArgs> verificationMessageTemplate) {
             $.verificationMessageTemplate = verificationMessageTemplate;
             return this;
         }
@@ -1199,7 +1199,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder verificationMessageTemplate(UserPoolVerificationMessageTemplateGetArgs verificationMessageTemplate) {
+        public Builder verificationMessageTemplate(UserPoolVerificationMessageTemplateArgs verificationMessageTemplate) {
             return verificationMessageTemplate(Output.of(verificationMessageTemplate));
         }
 

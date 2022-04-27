@@ -5,11 +5,11 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigContentMatcherGetArgs;
-import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigHttpCheckGetArgs;
-import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigMonitoredResourceGetArgs;
-import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigResourceGroupGetArgs;
-import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigTcpCheckGetArgs;
+import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigContentMatcherArgs;
+import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigHttpCheckArgs;
+import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigMonitoredResourceArgs;
+import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigResourceGroupArgs;
+import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigTcpCheckArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,14 +27,14 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="contentMatchers")
-    private @Nullable Output<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers;
+    private @Nullable Output<List<UptimeCheckConfigContentMatcherArgs>> contentMatchers;
 
     /**
      * @return The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response&#39;s content. This field is optional and should only be specified if a content match is required.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<UptimeCheckConfigContentMatcherGetArgs>>> contentMatchers() {
+    public Optional<Output<List<UptimeCheckConfigContentMatcherArgs>>> contentMatchers() {
         return Optional.ofNullable(this.contentMatchers);
     }
 
@@ -59,14 +59,14 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="httpCheck")
-    private @Nullable Output<UptimeCheckConfigHttpCheckGetArgs> httpCheck;
+    private @Nullable Output<UptimeCheckConfigHttpCheckArgs> httpCheck;
 
     /**
      * @return Contains information needed to make an HTTP or HTTPS check.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<UptimeCheckConfigHttpCheckGetArgs>> httpCheck() {
+    public Optional<Output<UptimeCheckConfigHttpCheckArgs>> httpCheck() {
         return Optional.ofNullable(this.httpCheck);
     }
 
@@ -76,14 +76,14 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="monitoredResource")
-    private @Nullable Output<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource;
+    private @Nullable Output<UptimeCheckConfigMonitoredResourceArgs> monitoredResource;
 
     /**
      * @return The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
      * Structure is documented below.
      * 
      */
-    public Optional<Output<UptimeCheckConfigMonitoredResourceGetArgs>> monitoredResource() {
+    public Optional<Output<UptimeCheckConfigMonitoredResourceArgs>> monitoredResource() {
         return Optional.ofNullable(this.monitoredResource);
     }
 
@@ -142,14 +142,14 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroup")
-    private @Nullable Output<UptimeCheckConfigResourceGroupGetArgs> resourceGroup;
+    private @Nullable Output<UptimeCheckConfigResourceGroupArgs> resourceGroup;
 
     /**
      * @return The group resource associated with the configuration.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<UptimeCheckConfigResourceGroupGetArgs>> resourceGroup() {
+    public Optional<Output<UptimeCheckConfigResourceGroupArgs>> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
 
@@ -174,14 +174,14 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tcpCheck")
-    private @Nullable Output<UptimeCheckConfigTcpCheckGetArgs> tcpCheck;
+    private @Nullable Output<UptimeCheckConfigTcpCheckArgs> tcpCheck;
 
     /**
      * @return Contains information needed to make a TCP check.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<UptimeCheckConfigTcpCheckGetArgs>> tcpCheck() {
+    public Optional<Output<UptimeCheckConfigTcpCheckArgs>> tcpCheck() {
         return Optional.ofNullable(this.tcpCheck);
     }
 
@@ -257,7 +257,7 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder contentMatchers(@Nullable Output<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers) {
+        public Builder contentMatchers(@Nullable Output<List<UptimeCheckConfigContentMatcherArgs>> contentMatchers) {
             $.contentMatchers = contentMatchers;
             return this;
         }
@@ -269,7 +269,7 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder contentMatchers(List<UptimeCheckConfigContentMatcherGetArgs> contentMatchers) {
+        public Builder contentMatchers(List<UptimeCheckConfigContentMatcherArgs> contentMatchers) {
             return contentMatchers(Output.of(contentMatchers));
         }
 
@@ -280,7 +280,7 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder contentMatchers(UptimeCheckConfigContentMatcherGetArgs... contentMatchers) {
+        public Builder contentMatchers(UptimeCheckConfigContentMatcherArgs... contentMatchers) {
             return contentMatchers(List.of(contentMatchers));
         }
 
@@ -312,7 +312,7 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder httpCheck(@Nullable Output<UptimeCheckConfigHttpCheckGetArgs> httpCheck) {
+        public Builder httpCheck(@Nullable Output<UptimeCheckConfigHttpCheckArgs> httpCheck) {
             $.httpCheck = httpCheck;
             return this;
         }
@@ -324,7 +324,7 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder httpCheck(UptimeCheckConfigHttpCheckGetArgs httpCheck) {
+        public Builder httpCheck(UptimeCheckConfigHttpCheckArgs httpCheck) {
             return httpCheck(Output.of(httpCheck));
         }
 
@@ -335,7 +335,7 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder monitoredResource(@Nullable Output<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource) {
+        public Builder monitoredResource(@Nullable Output<UptimeCheckConfigMonitoredResourceArgs> monitoredResource) {
             $.monitoredResource = monitoredResource;
             return this;
         }
@@ -347,7 +347,7 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder monitoredResource(UptimeCheckConfigMonitoredResourceGetArgs monitoredResource) {
+        public Builder monitoredResource(UptimeCheckConfigMonitoredResourceArgs monitoredResource) {
             return monitoredResource(Output.of(monitoredResource));
         }
 
@@ -425,7 +425,7 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder resourceGroup(@Nullable Output<UptimeCheckConfigResourceGroupGetArgs> resourceGroup) {
+        public Builder resourceGroup(@Nullable Output<UptimeCheckConfigResourceGroupArgs> resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
@@ -437,7 +437,7 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder resourceGroup(UptimeCheckConfigResourceGroupGetArgs resourceGroup) {
+        public Builder resourceGroup(UptimeCheckConfigResourceGroupArgs resourceGroup) {
             return resourceGroup(Output.of(resourceGroup));
         }
 
@@ -479,7 +479,7 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder tcpCheck(@Nullable Output<UptimeCheckConfigTcpCheckGetArgs> tcpCheck) {
+        public Builder tcpCheck(@Nullable Output<UptimeCheckConfigTcpCheckArgs> tcpCheck) {
             $.tcpCheck = tcpCheck;
             return this;
         }
@@ -491,7 +491,7 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder tcpCheck(UptimeCheckConfigTcpCheckGetArgs tcpCheck) {
+        public Builder tcpCheck(UptimeCheckConfigTcpCheckArgs tcpCheck) {
             return tcpCheck(Output.of(tcpCheck));
         }
 

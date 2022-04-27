@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.glue.inputs;
 
-import com.pulumi.aws.glue.inputs.CatalogDatabaseTargetDatabaseGetArgs;
+import com.pulumi.aws.glue.inputs.CatalogDatabaseTargetDatabaseArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -112,13 +112,13 @@ public final class CatalogDatabaseState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="targetDatabase")
-    private @Nullable Output<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase;
+    private @Nullable Output<CatalogDatabaseTargetDatabaseArgs> targetDatabase;
 
     /**
      * @return Configuration block for a target database for resource linking. See `target_database` below.
      * 
      */
-    public Optional<Output<CatalogDatabaseTargetDatabaseGetArgs>> targetDatabase() {
+    public Optional<Output<CatalogDatabaseTargetDatabaseArgs>> targetDatabase() {
         return Optional.ofNullable(this.targetDatabase);
     }
 
@@ -284,7 +284,7 @@ public final class CatalogDatabaseState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder targetDatabase(@Nullable Output<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase) {
+        public Builder targetDatabase(@Nullable Output<CatalogDatabaseTargetDatabaseArgs> targetDatabase) {
             $.targetDatabase = targetDatabase;
             return this;
         }
@@ -295,7 +295,7 @@ public final class CatalogDatabaseState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder targetDatabase(CatalogDatabaseTargetDatabaseGetArgs targetDatabase) {
+        public Builder targetDatabase(CatalogDatabaseTargetDatabaseArgs targetDatabase) {
             return targetDatabase(Output.of(targetDatabase));
         }
 

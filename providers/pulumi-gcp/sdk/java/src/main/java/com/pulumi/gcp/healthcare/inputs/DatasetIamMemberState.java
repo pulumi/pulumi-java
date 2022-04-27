@@ -5,7 +5,7 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.healthcare.inputs.DatasetIamMemberConditionGetArgs;
+import com.pulumi.gcp.healthcare.inputs.DatasetIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class DatasetIamMemberState extends com.pulumi.resources.ResourceAr
     public static final DatasetIamMemberState Empty = new DatasetIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<DatasetIamMemberConditionGetArgs> condition;
+    private @Nullable Output<DatasetIamMemberConditionArgs> condition;
 
-    public Optional<Output<DatasetIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<DatasetIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -113,12 +113,12 @@ public final class DatasetIamMemberState extends com.pulumi.resources.ResourceAr
             $ = new DatasetIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<DatasetIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<DatasetIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(DatasetIamMemberConditionGetArgs condition) {
+        public Builder condition(DatasetIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

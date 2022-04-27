@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.appautoscaling.inputs;
 
-import com.pulumi.aws.appautoscaling.inputs.ScheduledActionScalableTargetActionGetArgs;
+import com.pulumi.aws.appautoscaling.inputs.ScheduledActionScalableTargetActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -96,13 +96,13 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="scalableTargetAction")
-    private @Nullable Output<ScheduledActionScalableTargetActionGetArgs> scalableTargetAction;
+    private @Nullable Output<ScheduledActionScalableTargetActionArgs> scalableTargetAction;
 
     /**
      * @return The new minimum and maximum capacity. You can set both values or just one. See below
      * 
      */
-    public Optional<Output<ScheduledActionScalableTargetActionGetArgs>> scalableTargetAction() {
+    public Optional<Output<ScheduledActionScalableTargetActionArgs>> scalableTargetAction() {
         return Optional.ofNullable(this.scalableTargetAction);
     }
 
@@ -310,7 +310,7 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder scalableTargetAction(@Nullable Output<ScheduledActionScalableTargetActionGetArgs> scalableTargetAction) {
+        public Builder scalableTargetAction(@Nullable Output<ScheduledActionScalableTargetActionArgs> scalableTargetAction) {
             $.scalableTargetAction = scalableTargetAction;
             return this;
         }
@@ -321,7 +321,7 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder scalableTargetAction(ScheduledActionScalableTargetActionGetArgs scalableTargetAction) {
+        public Builder scalableTargetAction(ScheduledActionScalableTargetActionArgs scalableTargetAction) {
             return scalableTargetAction(Output.of(scalableTargetAction));
         }
 

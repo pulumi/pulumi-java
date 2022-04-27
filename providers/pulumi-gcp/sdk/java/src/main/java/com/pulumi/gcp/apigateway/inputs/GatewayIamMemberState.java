@@ -5,7 +5,7 @@ package com.pulumi.gcp.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.apigateway.inputs.GatewayIamMemberConditionGetArgs;
+import com.pulumi.gcp.apigateway.inputs.GatewayIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class GatewayIamMemberState extends com.pulumi.resources.ResourceAr
     public static final GatewayIamMemberState Empty = new GatewayIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<GatewayIamMemberConditionGetArgs> condition;
+    private @Nullable Output<GatewayIamMemberConditionArgs> condition;
 
-    public Optional<Output<GatewayIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<GatewayIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -139,12 +139,12 @@ public final class GatewayIamMemberState extends com.pulumi.resources.ResourceAr
             $ = new GatewayIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<GatewayIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<GatewayIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(GatewayIamMemberConditionGetArgs condition) {
+        public Builder condition(GatewayIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

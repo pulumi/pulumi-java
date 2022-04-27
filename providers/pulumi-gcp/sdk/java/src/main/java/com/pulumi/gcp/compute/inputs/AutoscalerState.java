@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.AutoscalerAutoscalingPolicyGetArgs;
+import com.pulumi.gcp.compute.inputs.AutoscalerAutoscalingPolicyArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscalingPolicy")
-    private @Nullable Output<AutoscalerAutoscalingPolicyGetArgs> autoscalingPolicy;
+    private @Nullable Output<AutoscalerAutoscalingPolicyArgs> autoscalingPolicy;
 
     /**
      * @return The configuration parameters for the autoscaling algorithm. You can
@@ -37,7 +37,7 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AutoscalerAutoscalingPolicyGetArgs>> autoscalingPolicy() {
+    public Optional<Output<AutoscalerAutoscalingPolicyArgs>> autoscalingPolicy() {
         return Optional.ofNullable(this.autoscalingPolicy);
     }
 
@@ -194,7 +194,7 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoscalingPolicy(@Nullable Output<AutoscalerAutoscalingPolicyGetArgs> autoscalingPolicy) {
+        public Builder autoscalingPolicy(@Nullable Output<AutoscalerAutoscalingPolicyArgs> autoscalingPolicy) {
             $.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
@@ -210,7 +210,7 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoscalingPolicy(AutoscalerAutoscalingPolicyGetArgs autoscalingPolicy) {
+        public Builder autoscalingPolicy(AutoscalerAutoscalingPolicyArgs autoscalingPolicy) {
             return autoscalingPolicy(Output.of(autoscalingPolicy));
         }
 

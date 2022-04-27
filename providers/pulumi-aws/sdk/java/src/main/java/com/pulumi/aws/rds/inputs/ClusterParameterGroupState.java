@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.rds.inputs;
 
-import com.pulumi.aws.rds.inputs.ClusterParameterGroupParameterGetArgs;
+import com.pulumi.aws.rds.inputs.ClusterParameterGroupParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
@@ -99,13 +99,13 @@ public final class ClusterParameterGroupState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="parameters")
-    private @Nullable Output<List<ClusterParameterGroupParameterGetArgs>> parameters;
+    private @Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters;
 
     /**
      * @return A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-cluster-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html) after initial creation of the group.
      * 
      */
-    public Optional<Output<List<ClusterParameterGroupParameterGetArgs>>> parameters() {
+    public Optional<Output<List<ClusterParameterGroupParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
 
@@ -281,7 +281,7 @@ public final class ClusterParameterGroupState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder parameters(@Nullable Output<List<ClusterParameterGroupParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
@@ -292,7 +292,7 @@ public final class ClusterParameterGroupState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder parameters(List<ClusterParameterGroupParameterGetArgs> parameters) {
+        public Builder parameters(List<ClusterParameterGroupParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
@@ -302,7 +302,7 @@ public final class ClusterParameterGroupState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder parameters(ClusterParameterGroupParameterGetArgs... parameters) {
+        public Builder parameters(ClusterParameterGroupParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 

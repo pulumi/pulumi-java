@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.backup.inputs;
 
-import com.pulumi.aws.backup.inputs.SelectionConditionGetArgs;
-import com.pulumi.aws.backup.inputs.SelectionSelectionTagGetArgs;
+import com.pulumi.aws.backup.inputs.SelectionConditionArgs;
+import com.pulumi.aws.backup.inputs.SelectionSelectionTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -23,13 +23,13 @@ public final class SelectionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-    private @Nullable Output<List<SelectionConditionGetArgs>> conditions;
+    private @Nullable Output<List<SelectionConditionArgs>> conditions;
 
     /**
      * @return A list of conditions that you define to assign resources to your backup plans using tags.
      * 
      */
-    public Optional<Output<List<SelectionConditionGetArgs>>> conditions() {
+    public Optional<Output<List<SelectionConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
 
@@ -113,13 +113,13 @@ public final class SelectionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selectionTags")
-    private @Nullable Output<List<SelectionSelectionTagGetArgs>> selectionTags;
+    private @Nullable Output<List<SelectionSelectionTagArgs>> selectionTags;
 
     /**
      * @return Tag-based conditions used to specify a set of resources to assign to a backup plan.
      * 
      */
-    public Optional<Output<List<SelectionSelectionTagGetArgs>>> selectionTags() {
+    public Optional<Output<List<SelectionSelectionTagArgs>>> selectionTags() {
         return Optional.ofNullable(this.selectionTags);
     }
 
@@ -159,7 +159,7 @@ public final class SelectionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder conditions(@Nullable Output<List<SelectionConditionGetArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<SelectionConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
@@ -170,7 +170,7 @@ public final class SelectionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder conditions(List<SelectionConditionGetArgs> conditions) {
+        public Builder conditions(List<SelectionConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
@@ -180,7 +180,7 @@ public final class SelectionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder conditions(SelectionConditionGetArgs... conditions) {
+        public Builder conditions(SelectionConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
@@ -315,7 +315,7 @@ public final class SelectionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder selectionTags(@Nullable Output<List<SelectionSelectionTagGetArgs>> selectionTags) {
+        public Builder selectionTags(@Nullable Output<List<SelectionSelectionTagArgs>> selectionTags) {
             $.selectionTags = selectionTags;
             return this;
         }
@@ -326,7 +326,7 @@ public final class SelectionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder selectionTags(List<SelectionSelectionTagGetArgs> selectionTags) {
+        public Builder selectionTags(List<SelectionSelectionTagArgs> selectionTags) {
             return selectionTags(Output.of(selectionTags));
         }
 
@@ -336,7 +336,7 @@ public final class SelectionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder selectionTags(SelectionSelectionTagGetArgs... selectionTags) {
+        public Builder selectionTags(SelectionSelectionTagArgs... selectionTags) {
             return selectionTags(List.of(selectionTags));
         }
 

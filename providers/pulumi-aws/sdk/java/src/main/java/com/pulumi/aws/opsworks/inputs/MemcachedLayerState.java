@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.opsworks.inputs;
 
-import com.pulumi.aws.opsworks.inputs.MemcachedLayerCloudwatchConfigurationGetArgs;
-import com.pulumi.aws.opsworks.inputs.MemcachedLayerEbsVolumeGetArgs;
+import com.pulumi.aws.opsworks.inputs.MemcachedLayerCloudwatchConfigurationArgs;
+import com.pulumi.aws.opsworks.inputs.MemcachedLayerEbsVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -97,9 +97,9 @@ public final class MemcachedLayerState extends com.pulumi.resources.ResourceArgs
     }
 
     @Import(name="cloudwatchConfiguration")
-    private @Nullable Output<MemcachedLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration;
+    private @Nullable Output<MemcachedLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
-    public Optional<Output<MemcachedLayerCloudwatchConfigurationGetArgs>> cloudwatchConfiguration() {
+    public Optional<Output<MemcachedLayerCloudwatchConfigurationArgs>> cloudwatchConfiguration() {
         return Optional.ofNullable(this.cloudwatchConfiguration);
     }
 
@@ -203,13 +203,13 @@ public final class MemcachedLayerState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ebsVolumes")
-    private @Nullable Output<List<MemcachedLayerEbsVolumeGetArgs>> ebsVolumes;
+    private @Nullable Output<List<MemcachedLayerEbsVolumeArgs>> ebsVolumes;
 
     /**
      * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
-    public Optional<Output<List<MemcachedLayerEbsVolumeGetArgs>>> ebsVolumes() {
+    public Optional<Output<List<MemcachedLayerEbsVolumeArgs>>> ebsVolumes() {
         return Optional.ofNullable(this.ebsVolumes);
     }
 
@@ -501,12 +501,12 @@ public final class MemcachedLayerState extends com.pulumi.resources.ResourceArgs
             return autoHealing(Output.of(autoHealing));
         }
 
-        public Builder cloudwatchConfiguration(@Nullable Output<MemcachedLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(@Nullable Output<MemcachedLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
             $.cloudwatchConfiguration = cloudwatchConfiguration;
             return this;
         }
 
-        public Builder cloudwatchConfiguration(MemcachedLayerCloudwatchConfigurationGetArgs cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(MemcachedLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
             return cloudwatchConfiguration(Output.of(cloudwatchConfiguration));
         }
 
@@ -675,7 +675,7 @@ public final class MemcachedLayerState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder ebsVolumes(@Nullable Output<List<MemcachedLayerEbsVolumeGetArgs>> ebsVolumes) {
+        public Builder ebsVolumes(@Nullable Output<List<MemcachedLayerEbsVolumeArgs>> ebsVolumes) {
             $.ebsVolumes = ebsVolumes;
             return this;
         }
@@ -686,7 +686,7 @@ public final class MemcachedLayerState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder ebsVolumes(List<MemcachedLayerEbsVolumeGetArgs> ebsVolumes) {
+        public Builder ebsVolumes(List<MemcachedLayerEbsVolumeArgs> ebsVolumes) {
             return ebsVolumes(Output.of(ebsVolumes));
         }
 
@@ -696,7 +696,7 @@ public final class MemcachedLayerState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder ebsVolumes(MemcachedLayerEbsVolumeGetArgs... ebsVolumes) {
+        public Builder ebsVolumes(MemcachedLayerEbsVolumeArgs... ebsVolumes) {
             return ebsVolumes(List.of(ebsVolumes));
         }
 

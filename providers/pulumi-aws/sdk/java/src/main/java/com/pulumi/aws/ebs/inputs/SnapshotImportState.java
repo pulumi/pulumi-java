@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.ebs.inputs;
 
-import com.pulumi.aws.ebs.inputs.SnapshotImportClientDataGetArgs;
-import com.pulumi.aws.ebs.inputs.SnapshotImportDiskContainerGetArgs;
+import com.pulumi.aws.ebs.inputs.SnapshotImportClientDataArgs;
+import com.pulumi.aws.ebs.inputs.SnapshotImportDiskContainerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -40,13 +40,13 @@ public final class SnapshotImportState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="clientData")
-    private @Nullable Output<SnapshotImportClientDataGetArgs> clientData;
+    private @Nullable Output<SnapshotImportClientDataArgs> clientData;
 
     /**
      * @return The client-specific data. Detailed below.
      * 
      */
-    public Optional<Output<SnapshotImportClientDataGetArgs>> clientData() {
+    public Optional<Output<SnapshotImportClientDataArgs>> clientData() {
         return Optional.ofNullable(this.clientData);
     }
 
@@ -85,13 +85,13 @@ public final class SnapshotImportState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="diskContainer")
-    private @Nullable Output<SnapshotImportDiskContainerGetArgs> diskContainer;
+    private @Nullable Output<SnapshotImportDiskContainerArgs> diskContainer;
 
     /**
      * @return Information about the disk container. Detailed below.
      * 
      */
-    public Optional<Output<SnapshotImportDiskContainerGetArgs>> diskContainer() {
+    public Optional<Output<SnapshotImportDiskContainerArgs>> diskContainer() {
         return Optional.ofNullable(this.diskContainer);
     }
 
@@ -334,7 +334,7 @@ public final class SnapshotImportState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder clientData(@Nullable Output<SnapshotImportClientDataGetArgs> clientData) {
+        public Builder clientData(@Nullable Output<SnapshotImportClientDataArgs> clientData) {
             $.clientData = clientData;
             return this;
         }
@@ -345,7 +345,7 @@ public final class SnapshotImportState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder clientData(SnapshotImportClientDataGetArgs clientData) {
+        public Builder clientData(SnapshotImportClientDataArgs clientData) {
             return clientData(Output.of(clientData));
         }
 
@@ -397,7 +397,7 @@ public final class SnapshotImportState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder diskContainer(@Nullable Output<SnapshotImportDiskContainerGetArgs> diskContainer) {
+        public Builder diskContainer(@Nullable Output<SnapshotImportDiskContainerArgs> diskContainer) {
             $.diskContainer = diskContainer;
             return this;
         }
@@ -408,7 +408,7 @@ public final class SnapshotImportState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder diskContainer(SnapshotImportDiskContainerGetArgs diskContainer) {
+        public Builder diskContainer(SnapshotImportDiskContainerArgs diskContainer) {
             return diskContainer(Output.of(diskContainer));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.certificateauthority.inputs.CaPoolIamBindingConditionGetArgs;
+import com.pulumi.gcp.certificateauthority.inputs.CaPoolIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,9 +33,9 @@ public final class CaPoolIamBindingState extends com.pulumi.resources.ResourceAr
     }
 
     @Import(name="condition")
-    private @Nullable Output<CaPoolIamBindingConditionGetArgs> condition;
+    private @Nullable Output<CaPoolIamBindingConditionArgs> condition;
 
-    public Optional<Output<CaPoolIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<CaPoolIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -167,12 +167,12 @@ public final class CaPoolIamBindingState extends com.pulumi.resources.ResourceAr
             return caPool(Output.of(caPool));
         }
 
-        public Builder condition(@Nullable Output<CaPoolIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<CaPoolIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(CaPoolIamBindingConditionGetArgs condition) {
+        public Builder condition(CaPoolIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

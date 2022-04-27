@@ -5,9 +5,9 @@ package com.pulumi.gcp.networkconnectivity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedInterconnectAttachmentsGetArgs;
-import com.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedRouterApplianceInstancesGetArgs;
-import com.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedVpnTunnelsGetArgs;
+import com.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedInterconnectAttachmentsArgs;
+import com.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedRouterApplianceInstancesArgs;
+import com.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedVpnTunnelsArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -84,13 +84,13 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedInterconnectAttachments")
-    private @Nullable Output<SpokeLinkedInterconnectAttachmentsGetArgs> linkedInterconnectAttachments;
+    private @Nullable Output<SpokeLinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments;
 
     /**
      * @return A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.
      * 
      */
-    public Optional<Output<SpokeLinkedInterconnectAttachmentsGetArgs>> linkedInterconnectAttachments() {
+    public Optional<Output<SpokeLinkedInterconnectAttachmentsArgs>> linkedInterconnectAttachments() {
         return Optional.ofNullable(this.linkedInterconnectAttachments);
     }
 
@@ -99,13 +99,13 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedRouterApplianceInstances")
-    private @Nullable Output<SpokeLinkedRouterApplianceInstancesGetArgs> linkedRouterApplianceInstances;
+    private @Nullable Output<SpokeLinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances;
 
     /**
      * @return The URIs of linked Router appliance resources
      * 
      */
-    public Optional<Output<SpokeLinkedRouterApplianceInstancesGetArgs>> linkedRouterApplianceInstances() {
+    public Optional<Output<SpokeLinkedRouterApplianceInstancesArgs>> linkedRouterApplianceInstances() {
         return Optional.ofNullable(this.linkedRouterApplianceInstances);
     }
 
@@ -114,13 +114,13 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedVpnTunnels")
-    private @Nullable Output<SpokeLinkedVpnTunnelsGetArgs> linkedVpnTunnels;
+    private @Nullable Output<SpokeLinkedVpnTunnelsArgs> linkedVpnTunnels;
 
     /**
      * @return The URIs of linked VPN tunnel resources
      * 
      */
-    public Optional<Output<SpokeLinkedVpnTunnelsGetArgs>> linkedVpnTunnels() {
+    public Optional<Output<SpokeLinkedVpnTunnelsArgs>> linkedVpnTunnels() {
         return Optional.ofNullable(this.linkedVpnTunnels);
     }
 
@@ -342,7 +342,7 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder linkedInterconnectAttachments(@Nullable Output<SpokeLinkedInterconnectAttachmentsGetArgs> linkedInterconnectAttachments) {
+        public Builder linkedInterconnectAttachments(@Nullable Output<SpokeLinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments) {
             $.linkedInterconnectAttachments = linkedInterconnectAttachments;
             return this;
         }
@@ -353,7 +353,7 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder linkedInterconnectAttachments(SpokeLinkedInterconnectAttachmentsGetArgs linkedInterconnectAttachments) {
+        public Builder linkedInterconnectAttachments(SpokeLinkedInterconnectAttachmentsArgs linkedInterconnectAttachments) {
             return linkedInterconnectAttachments(Output.of(linkedInterconnectAttachments));
         }
 
@@ -363,7 +363,7 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder linkedRouterApplianceInstances(@Nullable Output<SpokeLinkedRouterApplianceInstancesGetArgs> linkedRouterApplianceInstances) {
+        public Builder linkedRouterApplianceInstances(@Nullable Output<SpokeLinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances) {
             $.linkedRouterApplianceInstances = linkedRouterApplianceInstances;
             return this;
         }
@@ -374,7 +374,7 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder linkedRouterApplianceInstances(SpokeLinkedRouterApplianceInstancesGetArgs linkedRouterApplianceInstances) {
+        public Builder linkedRouterApplianceInstances(SpokeLinkedRouterApplianceInstancesArgs linkedRouterApplianceInstances) {
             return linkedRouterApplianceInstances(Output.of(linkedRouterApplianceInstances));
         }
 
@@ -384,7 +384,7 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder linkedVpnTunnels(@Nullable Output<SpokeLinkedVpnTunnelsGetArgs> linkedVpnTunnels) {
+        public Builder linkedVpnTunnels(@Nullable Output<SpokeLinkedVpnTunnelsArgs> linkedVpnTunnels) {
             $.linkedVpnTunnels = linkedVpnTunnels;
             return this;
         }
@@ -395,7 +395,7 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder linkedVpnTunnels(SpokeLinkedVpnTunnelsGetArgs linkedVpnTunnels) {
+        public Builder linkedVpnTunnels(SpokeLinkedVpnTunnelsArgs linkedVpnTunnels) {
             return linkedVpnTunnels(Output.of(linkedVpnTunnels));
         }
 

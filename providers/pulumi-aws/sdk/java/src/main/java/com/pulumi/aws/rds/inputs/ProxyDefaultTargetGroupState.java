@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.rds.inputs;
 
-import com.pulumi.aws.rds.inputs.ProxyDefaultTargetGroupConnectionPoolConfigGetArgs;
+import com.pulumi.aws.rds.inputs.ProxyDefaultTargetGroupConnectionPoolConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="connectionPoolConfig")
-    private @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig;
+    private @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig;
 
     /**
      * @return The settings that determine the size and behavior of the connection pool for the target group.
      * 
      */
-    public Optional<Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs>> connectionPoolConfig() {
+    public Optional<Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs>> connectionPoolConfig() {
         return Optional.ofNullable(this.connectionPoolConfig);
     }
 
@@ -130,7 +130,7 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder connectionPoolConfig(@Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig) {
+        public Builder connectionPoolConfig(@Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig) {
             $.connectionPoolConfig = connectionPoolConfig;
             return this;
         }
@@ -141,7 +141,7 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder connectionPoolConfig(ProxyDefaultTargetGroupConnectionPoolConfigGetArgs connectionPoolConfig) {
+        public Builder connectionPoolConfig(ProxyDefaultTargetGroupConnectionPoolConfigArgs connectionPoolConfig) {
             return connectionPoolConfig(Output.of(connectionPoolConfig));
         }
 

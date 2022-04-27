@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.rds.inputs;
 
-import com.pulumi.aws.rds.inputs.OptionGroupOptionGetArgs;
+import com.pulumi.aws.rds.inputs.OptionGroupOptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
@@ -114,13 +114,13 @@ public final class OptionGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-    private @Nullable Output<List<OptionGroupOptionGetArgs>> options;
+    private @Nullable Output<List<OptionGroupOptionArgs>> options;
 
     /**
      * @return A list of Options to apply.
      * 
      */
-    public Optional<Output<List<OptionGroupOptionGetArgs>>> options() {
+    public Optional<Output<List<OptionGroupOptionArgs>>> options() {
         return Optional.ofNullable(this.options);
     }
 
@@ -318,7 +318,7 @@ public final class OptionGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder options(@Nullable Output<List<OptionGroupOptionGetArgs>> options) {
+        public Builder options(@Nullable Output<List<OptionGroupOptionArgs>> options) {
             $.options = options;
             return this;
         }
@@ -329,7 +329,7 @@ public final class OptionGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder options(List<OptionGroupOptionGetArgs> options) {
+        public Builder options(List<OptionGroupOptionArgs> options) {
             return options(Output.of(options));
         }
 
@@ -339,7 +339,7 @@ public final class OptionGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder options(OptionGroupOptionGetArgs... options) {
+        public Builder options(OptionGroupOptionArgs... options) {
             return options(List.of(options));
         }
 

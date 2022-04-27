@@ -5,11 +5,11 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.container.inputs.AzureClusterAuthorizationGetArgs;
-import com.pulumi.gcp.container.inputs.AzureClusterControlPlaneGetArgs;
-import com.pulumi.gcp.container.inputs.AzureClusterFleetGetArgs;
-import com.pulumi.gcp.container.inputs.AzureClusterNetworkingGetArgs;
-import com.pulumi.gcp.container.inputs.AzureClusterWorkloadIdentityConfigGetArgs;
+import com.pulumi.gcp.container.inputs.AzureClusterAuthorizationArgs;
+import com.pulumi.gcp.container.inputs.AzureClusterControlPlaneArgs;
+import com.pulumi.gcp.container.inputs.AzureClusterFleetArgs;
+import com.pulumi.gcp.container.inputs.AzureClusterNetworkingArgs;
+import com.pulumi.gcp.container.inputs.AzureClusterWorkloadIdentityConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -43,13 +43,13 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorization")
-    private @Nullable Output<AzureClusterAuthorizationGetArgs> authorization;
+    private @Nullable Output<AzureClusterAuthorizationArgs> authorization;
 
     /**
      * @return Required. Configuration related to the cluster RBAC settings.
      * 
      */
-    public Optional<Output<AzureClusterAuthorizationGetArgs>> authorization() {
+    public Optional<Output<AzureClusterAuthorizationArgs>> authorization() {
         return Optional.ofNullable(this.authorization);
     }
 
@@ -88,13 +88,13 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="controlPlane")
-    private @Nullable Output<AzureClusterControlPlaneGetArgs> controlPlane;
+    private @Nullable Output<AzureClusterControlPlaneArgs> controlPlane;
 
     /**
      * @return Required. Configuration related to the cluster control plane.
      * 
      */
-    public Optional<Output<AzureClusterControlPlaneGetArgs>> controlPlane() {
+    public Optional<Output<AzureClusterControlPlaneArgs>> controlPlane() {
         return Optional.ofNullable(this.controlPlane);
     }
 
@@ -165,13 +165,13 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fleet")
-    private @Nullable Output<AzureClusterFleetGetArgs> fleet;
+    private @Nullable Output<AzureClusterFleetArgs> fleet;
 
     /**
      * @return Fleet configuration.
      * 
      */
-    public Optional<Output<AzureClusterFleetGetArgs>> fleet() {
+    public Optional<Output<AzureClusterFleetArgs>> fleet() {
         return Optional.ofNullable(this.fleet);
     }
 
@@ -210,13 +210,13 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networking")
-    private @Nullable Output<AzureClusterNetworkingGetArgs> networking;
+    private @Nullable Output<AzureClusterNetworkingArgs> networking;
 
     /**
      * @return Required. Cluster-wide networking configuration.
      * 
      */
-    public Optional<Output<AzureClusterNetworkingGetArgs>> networking() {
+    public Optional<Output<AzureClusterNetworkingArgs>> networking() {
         return Optional.ofNullable(this.networking);
     }
 
@@ -317,13 +317,13 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workloadIdentityConfigs")
-    private @Nullable Output<List<AzureClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs;
+    private @Nullable Output<List<AzureClusterWorkloadIdentityConfigArgs>> workloadIdentityConfigs;
 
     /**
      * @return Output only. Workload Identity settings.
      * 
      */
-    public Optional<Output<List<AzureClusterWorkloadIdentityConfigGetArgs>>> workloadIdentityConfigs() {
+    public Optional<Output<List<AzureClusterWorkloadIdentityConfigArgs>>> workloadIdentityConfigs() {
         return Optional.ofNullable(this.workloadIdentityConfigs);
     }
 
@@ -397,7 +397,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder authorization(@Nullable Output<AzureClusterAuthorizationGetArgs> authorization) {
+        public Builder authorization(@Nullable Output<AzureClusterAuthorizationArgs> authorization) {
             $.authorization = authorization;
             return this;
         }
@@ -408,7 +408,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder authorization(AzureClusterAuthorizationGetArgs authorization) {
+        public Builder authorization(AzureClusterAuthorizationArgs authorization) {
             return authorization(Output.of(authorization));
         }
 
@@ -460,7 +460,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder controlPlane(@Nullable Output<AzureClusterControlPlaneGetArgs> controlPlane) {
+        public Builder controlPlane(@Nullable Output<AzureClusterControlPlaneArgs> controlPlane) {
             $.controlPlane = controlPlane;
             return this;
         }
@@ -471,7 +471,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder controlPlane(AzureClusterControlPlaneGetArgs controlPlane) {
+        public Builder controlPlane(AzureClusterControlPlaneArgs controlPlane) {
             return controlPlane(Output.of(controlPlane));
         }
 
@@ -567,7 +567,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fleet(@Nullable Output<AzureClusterFleetGetArgs> fleet) {
+        public Builder fleet(@Nullable Output<AzureClusterFleetArgs> fleet) {
             $.fleet = fleet;
             return this;
         }
@@ -578,7 +578,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fleet(AzureClusterFleetGetArgs fleet) {
+        public Builder fleet(AzureClusterFleetArgs fleet) {
             return fleet(Output.of(fleet));
         }
 
@@ -630,7 +630,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networking(@Nullable Output<AzureClusterNetworkingGetArgs> networking) {
+        public Builder networking(@Nullable Output<AzureClusterNetworkingArgs> networking) {
             $.networking = networking;
             return this;
         }
@@ -641,7 +641,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networking(AzureClusterNetworkingGetArgs networking) {
+        public Builder networking(AzureClusterNetworkingArgs networking) {
             return networking(Output.of(networking));
         }
 
@@ -779,7 +779,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workloadIdentityConfigs(@Nullable Output<List<AzureClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs) {
+        public Builder workloadIdentityConfigs(@Nullable Output<List<AzureClusterWorkloadIdentityConfigArgs>> workloadIdentityConfigs) {
             $.workloadIdentityConfigs = workloadIdentityConfigs;
             return this;
         }
@@ -790,7 +790,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workloadIdentityConfigs(List<AzureClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfigs) {
+        public Builder workloadIdentityConfigs(List<AzureClusterWorkloadIdentityConfigArgs> workloadIdentityConfigs) {
             return workloadIdentityConfigs(Output.of(workloadIdentityConfigs));
         }
 
@@ -800,7 +800,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workloadIdentityConfigs(AzureClusterWorkloadIdentityConfigGetArgs... workloadIdentityConfigs) {
+        public Builder workloadIdentityConfigs(AzureClusterWorkloadIdentityConfigArgs... workloadIdentityConfigs) {
             return workloadIdentityConfigs(List.of(workloadIdentityConfigs));
         }
 

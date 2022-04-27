@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.dynamodb.inputs;
 
-import com.pulumi.aws.dynamodb.inputs.GlobalTableReplicaGetArgs;
+import com.pulumi.aws.dynamodb.inputs.GlobalTableReplicaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -52,13 +52,13 @@ public final class GlobalTableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicas")
-    private @Nullable Output<List<GlobalTableReplicaGetArgs>> replicas;
+    private @Nullable Output<List<GlobalTableReplicaArgs>> replicas;
 
     /**
      * @return Underlying DynamoDB Table. At least 1 replica must be defined. See below.
      * 
      */
-    public Optional<Output<List<GlobalTableReplicaGetArgs>>> replicas() {
+    public Optional<Output<List<GlobalTableReplicaArgs>>> replicas() {
         return Optional.ofNullable(this.replicas);
     }
 
@@ -136,7 +136,7 @@ public final class GlobalTableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder replicas(@Nullable Output<List<GlobalTableReplicaGetArgs>> replicas) {
+        public Builder replicas(@Nullable Output<List<GlobalTableReplicaArgs>> replicas) {
             $.replicas = replicas;
             return this;
         }
@@ -147,7 +147,7 @@ public final class GlobalTableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder replicas(List<GlobalTableReplicaGetArgs> replicas) {
+        public Builder replicas(List<GlobalTableReplicaArgs> replicas) {
             return replicas(Output.of(replicas));
         }
 
@@ -157,7 +157,7 @@ public final class GlobalTableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder replicas(GlobalTableReplicaGetArgs... replicas) {
+        public Builder replicas(GlobalTableReplicaArgs... replicas) {
             return replicas(List.of(replicas));
         }
 

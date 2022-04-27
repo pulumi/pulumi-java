@@ -5,10 +5,10 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.monitoring.inputs.AlertPolicyAlertStrategyGetArgs;
-import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionGetArgs;
-import com.pulumi.gcp.monitoring.inputs.AlertPolicyCreationRecordGetArgs;
-import com.pulumi.gcp.monitoring.inputs.AlertPolicyDocumentationGetArgs;
+import com.pulumi.gcp.monitoring.inputs.AlertPolicyAlertStrategyArgs;
+import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionArgs;
+import com.pulumi.gcp.monitoring.inputs.AlertPolicyCreationRecordArgs;
+import com.pulumi.gcp.monitoring.inputs.AlertPolicyDocumentationArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,14 +28,14 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alertStrategy")
-    private @Nullable Output<AlertPolicyAlertStrategyGetArgs> alertStrategy;
+    private @Nullable Output<AlertPolicyAlertStrategyArgs> alertStrategy;
 
     /**
      * @return Control over how this alert policy&#39;s notification channels are notified.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AlertPolicyAlertStrategyGetArgs>> alertStrategy() {
+    public Optional<Output<AlertPolicyAlertStrategyArgs>> alertStrategy() {
         return Optional.ofNullable(this.alertStrategy);
     }
 
@@ -67,7 +67,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-    private @Nullable Output<List<AlertPolicyConditionGetArgs>> conditions;
+    private @Nullable Output<List<AlertPolicyConditionArgs>> conditions;
 
     /**
      * @return A list of conditions for the policy. The conditions are combined by
@@ -77,7 +77,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<AlertPolicyConditionGetArgs>>> conditions() {
+    public Optional<Output<List<AlertPolicyConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
 
@@ -87,14 +87,14 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationRecords")
-    private @Nullable Output<List<AlertPolicyCreationRecordGetArgs>> creationRecords;
+    private @Nullable Output<List<AlertPolicyCreationRecordArgs>> creationRecords;
 
     /**
      * @return A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
      * ignored.
      * 
      */
-    public Optional<Output<List<AlertPolicyCreationRecordGetArgs>>> creationRecords() {
+    public Optional<Output<List<AlertPolicyCreationRecordArgs>>> creationRecords() {
         return Optional.ofNullable(this.creationRecords);
     }
 
@@ -131,7 +131,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentation")
-    private @Nullable Output<AlertPolicyDocumentationGetArgs> documentation;
+    private @Nullable Output<AlertPolicyDocumentationArgs> documentation;
 
     /**
      * @return Documentation that is included with notifications and incidents related
@@ -142,7 +142,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AlertPolicyDocumentationGetArgs>> documentation() {
+    public Optional<Output<AlertPolicyDocumentationArgs>> documentation() {
         return Optional.ofNullable(this.documentation);
     }
 
@@ -296,7 +296,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder alertStrategy(@Nullable Output<AlertPolicyAlertStrategyGetArgs> alertStrategy) {
+        public Builder alertStrategy(@Nullable Output<AlertPolicyAlertStrategyArgs> alertStrategy) {
             $.alertStrategy = alertStrategy;
             return this;
         }
@@ -308,7 +308,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder alertStrategy(AlertPolicyAlertStrategyGetArgs alertStrategy) {
+        public Builder alertStrategy(AlertPolicyAlertStrategyArgs alertStrategy) {
             return alertStrategy(Output.of(alertStrategy));
         }
 
@@ -347,7 +347,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder conditions(@Nullable Output<List<AlertPolicyConditionGetArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<AlertPolicyConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
@@ -362,7 +362,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder conditions(List<AlertPolicyConditionGetArgs> conditions) {
+        public Builder conditions(List<AlertPolicyConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
@@ -376,7 +376,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder conditions(AlertPolicyConditionGetArgs... conditions) {
+        public Builder conditions(AlertPolicyConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
@@ -387,7 +387,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder creationRecords(@Nullable Output<List<AlertPolicyCreationRecordGetArgs>> creationRecords) {
+        public Builder creationRecords(@Nullable Output<List<AlertPolicyCreationRecordArgs>> creationRecords) {
             $.creationRecords = creationRecords;
             return this;
         }
@@ -399,7 +399,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder creationRecords(List<AlertPolicyCreationRecordGetArgs> creationRecords) {
+        public Builder creationRecords(List<AlertPolicyCreationRecordArgs> creationRecords) {
             return creationRecords(Output.of(creationRecords));
         }
 
@@ -410,7 +410,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder creationRecords(AlertPolicyCreationRecordGetArgs... creationRecords) {
+        public Builder creationRecords(AlertPolicyCreationRecordArgs... creationRecords) {
             return creationRecords(List.of(creationRecords));
         }
 
@@ -454,7 +454,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder documentation(@Nullable Output<AlertPolicyDocumentationGetArgs> documentation) {
+        public Builder documentation(@Nullable Output<AlertPolicyDocumentationArgs> documentation) {
             $.documentation = documentation;
             return this;
         }
@@ -470,7 +470,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder documentation(AlertPolicyDocumentationGetArgs documentation) {
+        public Builder documentation(AlertPolicyDocumentationArgs documentation) {
             return documentation(Output.of(documentation));
         }
 

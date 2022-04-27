@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.ResourcePolicyGroupPlacementPolicyGetArgs;
-import com.pulumi.gcp.compute.inputs.ResourcePolicyInstanceSchedulePolicyGetArgs;
-import com.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyGetArgs;
+import com.pulumi.gcp.compute.inputs.ResourcePolicyGroupPlacementPolicyArgs;
+import com.pulumi.gcp.compute.inputs.ResourcePolicyInstanceSchedulePolicyArgs;
+import com.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -39,14 +39,14 @@ public final class ResourcePolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="groupPlacementPolicy")
-    private @Nullable Output<ResourcePolicyGroupPlacementPolicyGetArgs> groupPlacementPolicy;
+    private @Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy;
 
     /**
      * @return Resource policy for instances used for placement configuration.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ResourcePolicyGroupPlacementPolicyGetArgs>> groupPlacementPolicy() {
+    public Optional<Output<ResourcePolicyGroupPlacementPolicyArgs>> groupPlacementPolicy() {
         return Optional.ofNullable(this.groupPlacementPolicy);
     }
 
@@ -56,14 +56,14 @@ public final class ResourcePolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="instanceSchedulePolicy")
-    private @Nullable Output<ResourcePolicyInstanceSchedulePolicyGetArgs> instanceSchedulePolicy;
+    private @Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy;
 
     /**
      * @return Resource policy for scheduling instance operations.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ResourcePolicyInstanceSchedulePolicyGetArgs>> instanceSchedulePolicy() {
+    public Optional<Output<ResourcePolicyInstanceSchedulePolicyArgs>> instanceSchedulePolicy() {
         return Optional.ofNullable(this.instanceSchedulePolicy);
     }
 
@@ -147,14 +147,14 @@ public final class ResourcePolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="snapshotSchedulePolicy")
-    private @Nullable Output<ResourcePolicySnapshotSchedulePolicyGetArgs> snapshotSchedulePolicy;
+    private @Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy;
 
     /**
      * @return Policy for creating snapshots of persistent disks.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ResourcePolicySnapshotSchedulePolicyGetArgs>> snapshotSchedulePolicy() {
+    public Optional<Output<ResourcePolicySnapshotSchedulePolicyArgs>> snapshotSchedulePolicy() {
         return Optional.ofNullable(this.snapshotSchedulePolicy);
     }
 
@@ -217,7 +217,7 @@ public final class ResourcePolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder groupPlacementPolicy(@Nullable Output<ResourcePolicyGroupPlacementPolicyGetArgs> groupPlacementPolicy) {
+        public Builder groupPlacementPolicy(@Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy) {
             $.groupPlacementPolicy = groupPlacementPolicy;
             return this;
         }
@@ -229,7 +229,7 @@ public final class ResourcePolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder groupPlacementPolicy(ResourcePolicyGroupPlacementPolicyGetArgs groupPlacementPolicy) {
+        public Builder groupPlacementPolicy(ResourcePolicyGroupPlacementPolicyArgs groupPlacementPolicy) {
             return groupPlacementPolicy(Output.of(groupPlacementPolicy));
         }
 
@@ -240,7 +240,7 @@ public final class ResourcePolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder instanceSchedulePolicy(@Nullable Output<ResourcePolicyInstanceSchedulePolicyGetArgs> instanceSchedulePolicy) {
+        public Builder instanceSchedulePolicy(@Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy) {
             $.instanceSchedulePolicy = instanceSchedulePolicy;
             return this;
         }
@@ -252,7 +252,7 @@ public final class ResourcePolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder instanceSchedulePolicy(ResourcePolicyInstanceSchedulePolicyGetArgs instanceSchedulePolicy) {
+        public Builder instanceSchedulePolicy(ResourcePolicyInstanceSchedulePolicyArgs instanceSchedulePolicy) {
             return instanceSchedulePolicy(Output.of(instanceSchedulePolicy));
         }
 
@@ -361,7 +361,7 @@ public final class ResourcePolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder snapshotSchedulePolicy(@Nullable Output<ResourcePolicySnapshotSchedulePolicyGetArgs> snapshotSchedulePolicy) {
+        public Builder snapshotSchedulePolicy(@Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy) {
             $.snapshotSchedulePolicy = snapshotSchedulePolicy;
             return this;
         }
@@ -373,7 +373,7 @@ public final class ResourcePolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder snapshotSchedulePolicy(ResourcePolicySnapshotSchedulePolicyGetArgs snapshotSchedulePolicy) {
+        public Builder snapshotSchedulePolicy(ResourcePolicySnapshotSchedulePolicyArgs snapshotSchedulePolicy) {
             return snapshotSchedulePolicy(Output.of(snapshotSchedulePolicy));
         }
 

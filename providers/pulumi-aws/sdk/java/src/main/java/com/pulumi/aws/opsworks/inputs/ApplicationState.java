@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.opsworks.inputs;
 
-import com.pulumi.aws.opsworks.inputs.ApplicationAppSourceGetArgs;
-import com.pulumi.aws.opsworks.inputs.ApplicationEnvironmentGetArgs;
-import com.pulumi.aws.opsworks.inputs.ApplicationSslConfigurationGetArgs;
+import com.pulumi.aws.opsworks.inputs.ApplicationAppSourceArgs;
+import com.pulumi.aws.opsworks.inputs.ApplicationEnvironmentArgs;
+import com.pulumi.aws.opsworks.inputs.ApplicationSslConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -25,13 +25,13 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appSources")
-    private @Nullable Output<List<ApplicationAppSourceGetArgs>> appSources;
+    private @Nullable Output<List<ApplicationAppSourceArgs>> appSources;
 
     /**
      * @return SCM configuration of the app as described below.
      * 
      */
-    public Optional<Output<List<ApplicationAppSourceGetArgs>>> appSources() {
+    public Optional<Output<List<ApplicationAppSourceArgs>>> appSources() {
         return Optional.ofNullable(this.appSources);
     }
 
@@ -175,13 +175,13 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environments")
-    private @Nullable Output<List<ApplicationEnvironmentGetArgs>> environments;
+    private @Nullable Output<List<ApplicationEnvironmentArgs>> environments;
 
     /**
      * @return Object to define environment variables.  Object is described below.
      * 
      */
-    public Optional<Output<List<ApplicationEnvironmentGetArgs>>> environments() {
+    public Optional<Output<List<ApplicationEnvironmentArgs>>> environments() {
         return Optional.ofNullable(this.environments);
     }
 
@@ -235,13 +235,13 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sslConfigurations")
-    private @Nullable Output<List<ApplicationSslConfigurationGetArgs>> sslConfigurations;
+    private @Nullable Output<List<ApplicationSslConfigurationArgs>> sslConfigurations;
 
     /**
      * @return The SSL configuration of the app. Object is described below.
      * 
      */
-    public Optional<Output<List<ApplicationSslConfigurationGetArgs>>> sslConfigurations() {
+    public Optional<Output<List<ApplicationSslConfigurationArgs>>> sslConfigurations() {
         return Optional.ofNullable(this.sslConfigurations);
     }
 
@@ -321,7 +321,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder appSources(@Nullable Output<List<ApplicationAppSourceGetArgs>> appSources) {
+        public Builder appSources(@Nullable Output<List<ApplicationAppSourceArgs>> appSources) {
             $.appSources = appSources;
             return this;
         }
@@ -332,7 +332,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder appSources(List<ApplicationAppSourceGetArgs> appSources) {
+        public Builder appSources(List<ApplicationAppSourceArgs> appSources) {
             return appSources(Output.of(appSources));
         }
 
@@ -342,7 +342,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder appSources(ApplicationAppSourceGetArgs... appSources) {
+        public Builder appSources(ApplicationAppSourceArgs... appSources) {
             return appSources(List.of(appSources));
         }
 
@@ -551,7 +551,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder environments(@Nullable Output<List<ApplicationEnvironmentGetArgs>> environments) {
+        public Builder environments(@Nullable Output<List<ApplicationEnvironmentArgs>> environments) {
             $.environments = environments;
             return this;
         }
@@ -562,7 +562,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder environments(List<ApplicationEnvironmentGetArgs> environments) {
+        public Builder environments(List<ApplicationEnvironmentArgs> environments) {
             return environments(Output.of(environments));
         }
 
@@ -572,7 +572,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder environments(ApplicationEnvironmentGetArgs... environments) {
+        public Builder environments(ApplicationEnvironmentArgs... environments) {
             return environments(List.of(environments));
         }
 
@@ -645,7 +645,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sslConfigurations(@Nullable Output<List<ApplicationSslConfigurationGetArgs>> sslConfigurations) {
+        public Builder sslConfigurations(@Nullable Output<List<ApplicationSslConfigurationArgs>> sslConfigurations) {
             $.sslConfigurations = sslConfigurations;
             return this;
         }
@@ -656,7 +656,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sslConfigurations(List<ApplicationSslConfigurationGetArgs> sslConfigurations) {
+        public Builder sslConfigurations(List<ApplicationSslConfigurationArgs> sslConfigurations) {
             return sslConfigurations(Output.of(sslConfigurations));
         }
 
@@ -666,7 +666,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sslConfigurations(ApplicationSslConfigurationGetArgs... sslConfigurations) {
+        public Builder sslConfigurations(ApplicationSslConfigurationArgs... sslConfigurations) {
             return sslConfigurations(List.of(sslConfigurations));
         }
 

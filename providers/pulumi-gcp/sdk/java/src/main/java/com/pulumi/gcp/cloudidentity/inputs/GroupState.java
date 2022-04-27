@@ -5,7 +5,7 @@ package com.pulumi.gcp.cloudidentity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.cloudidentity.inputs.GroupGroupKeyGetArgs;
+import com.pulumi.gcp.cloudidentity.inputs.GroupGroupKeyArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -70,14 +70,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupKey")
-    private @Nullable Output<GroupGroupKeyGetArgs> groupKey;
+    private @Nullable Output<GroupGroupKeyArgs> groupKey;
 
     /**
      * @return EntityKey of the Group.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<GroupGroupKeyGetArgs>> groupKey() {
+    public Optional<Output<GroupGroupKeyArgs>> groupKey() {
         return Optional.ofNullable(this.groupKey);
     }
 
@@ -282,7 +282,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder groupKey(@Nullable Output<GroupGroupKeyGetArgs> groupKey) {
+        public Builder groupKey(@Nullable Output<GroupGroupKeyArgs> groupKey) {
             $.groupKey = groupKey;
             return this;
         }
@@ -294,7 +294,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder groupKey(GroupGroupKeyGetArgs groupKey) {
+        public Builder groupKey(GroupGroupKeyArgs groupKey) {
             return groupKey(Output.of(groupKey));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.route53recoverycontrol.inputs;
 
-import com.pulumi.aws.route53recoverycontrol.inputs.ClusterClusterEndpointGetArgs;
+import com.pulumi.aws.route53recoverycontrol.inputs.ClusterClusterEndpointArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +37,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterEndpoints")
-    private @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
+    private @Nullable Output<List<ClusterClusterEndpointArgs>> clusterEndpoints;
 
     /**
      * @return List of 5 endpoints in 5 regions that can be used to talk to the cluster. See below.
      * 
      */
-    public Optional<Output<List<ClusterClusterEndpointGetArgs>>> clusterEndpoints() {
+    public Optional<Output<List<ClusterClusterEndpointArgs>>> clusterEndpoints() {
         return Optional.ofNullable(this.clusterEndpoints);
     }
 
@@ -131,7 +131,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterEndpoints(@Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints) {
+        public Builder clusterEndpoints(@Nullable Output<List<ClusterClusterEndpointArgs>> clusterEndpoints) {
             $.clusterEndpoints = clusterEndpoints;
             return this;
         }
@@ -142,7 +142,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterEndpoints(List<ClusterClusterEndpointGetArgs> clusterEndpoints) {
+        public Builder clusterEndpoints(List<ClusterClusterEndpointArgs> clusterEndpoints) {
             return clusterEndpoints(Output.of(clusterEndpoints));
         }
 
@@ -152,7 +152,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterEndpoints(ClusterClusterEndpointGetArgs... clusterEndpoints) {
+        public Builder clusterEndpoints(ClusterClusterEndpointArgs... clusterEndpoints) {
             return clusterEndpoints(List.of(clusterEndpoints));
         }
 

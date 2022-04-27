@@ -5,7 +5,7 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelGetArgs;
+import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class AccessLevelsState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessLevels")
-    private @Nullable Output<List<AccessLevelsAccessLevelGetArgs>> accessLevels;
+    private @Nullable Output<List<AccessLevelsAccessLevelArgs>> accessLevels;
 
     /**
      * @return The desired Access Levels that should replace all existing Access Levels in the Access Policy.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<AccessLevelsAccessLevelGetArgs>>> accessLevels() {
+    public Optional<Output<List<AccessLevelsAccessLevelArgs>>> accessLevels() {
         return Optional.ofNullable(this.accessLevels);
     }
 
@@ -83,7 +83,7 @@ public final class AccessLevelsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessLevels(@Nullable Output<List<AccessLevelsAccessLevelGetArgs>> accessLevels) {
+        public Builder accessLevels(@Nullable Output<List<AccessLevelsAccessLevelArgs>> accessLevels) {
             $.accessLevels = accessLevels;
             return this;
         }
@@ -95,7 +95,7 @@ public final class AccessLevelsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessLevels(List<AccessLevelsAccessLevelGetArgs> accessLevels) {
+        public Builder accessLevels(List<AccessLevelsAccessLevelArgs> accessLevels) {
             return accessLevels(Output.of(accessLevels));
         }
 
@@ -106,7 +106,7 @@ public final class AccessLevelsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessLevels(AccessLevelsAccessLevelGetArgs... accessLevels) {
+        public Builder accessLevels(AccessLevelsAccessLevelArgs... accessLevels) {
             return accessLevels(List.of(accessLevels));
         }
 

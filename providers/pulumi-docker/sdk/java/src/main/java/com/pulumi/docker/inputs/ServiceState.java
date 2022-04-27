@@ -5,14 +5,14 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.docker.inputs.ServiceAuthGetArgs;
-import com.pulumi.docker.inputs.ServiceConvergeConfigGetArgs;
-import com.pulumi.docker.inputs.ServiceEndpointSpecGetArgs;
-import com.pulumi.docker.inputs.ServiceLabelGetArgs;
-import com.pulumi.docker.inputs.ServiceModeGetArgs;
-import com.pulumi.docker.inputs.ServiceRollbackConfigGetArgs;
-import com.pulumi.docker.inputs.ServiceTaskSpecGetArgs;
-import com.pulumi.docker.inputs.ServiceUpdateConfigGetArgs;
+import com.pulumi.docker.inputs.ServiceAuthArgs;
+import com.pulumi.docker.inputs.ServiceConvergeConfigArgs;
+import com.pulumi.docker.inputs.ServiceEndpointSpecArgs;
+import com.pulumi.docker.inputs.ServiceLabelArgs;
+import com.pulumi.docker.inputs.ServiceModeArgs;
+import com.pulumi.docker.inputs.ServiceRollbackConfigArgs;
+import com.pulumi.docker.inputs.ServiceTaskSpecArgs;
+import com.pulumi.docker.inputs.ServiceUpdateConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,13 +29,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="auth")
-    private @Nullable Output<ServiceAuthGetArgs> auth;
+    private @Nullable Output<ServiceAuthArgs> auth;
 
     /**
      * @return Configuration for the authentication for pulling the images of the service
      * 
      */
-    public Optional<Output<ServiceAuthGetArgs>> auth() {
+    public Optional<Output<ServiceAuthArgs>> auth() {
         return Optional.ofNullable(this.auth);
     }
 
@@ -44,13 +44,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="convergeConfig")
-    private @Nullable Output<ServiceConvergeConfigGetArgs> convergeConfig;
+    private @Nullable Output<ServiceConvergeConfigArgs> convergeConfig;
 
     /**
      * @return A configuration to ensure that a service converges aka reaches the desired that of all task up and running
      * 
      */
-    public Optional<Output<ServiceConvergeConfigGetArgs>> convergeConfig() {
+    public Optional<Output<ServiceConvergeConfigArgs>> convergeConfig() {
         return Optional.ofNullable(this.convergeConfig);
     }
 
@@ -59,13 +59,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointSpec")
-    private @Nullable Output<ServiceEndpointSpecGetArgs> endpointSpec;
+    private @Nullable Output<ServiceEndpointSpecArgs> endpointSpec;
 
     /**
      * @return Properties that can be configured to access and load balance a service
      * 
      */
-    public Optional<Output<ServiceEndpointSpecGetArgs>> endpointSpec() {
+    public Optional<Output<ServiceEndpointSpecArgs>> endpointSpec() {
         return Optional.ofNullable(this.endpointSpec);
     }
 
@@ -74,13 +74,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-    private @Nullable Output<List<ServiceLabelGetArgs>> labels;
+    private @Nullable Output<List<ServiceLabelArgs>> labels;
 
     /**
      * @return User-defined key/value metadata
      * 
      */
-    public Optional<Output<List<ServiceLabelGetArgs>>> labels() {
+    public Optional<Output<List<ServiceLabelArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
 
@@ -89,13 +89,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mode")
-    private @Nullable Output<ServiceModeGetArgs> mode;
+    private @Nullable Output<ServiceModeArgs> mode;
 
     /**
      * @return Scheduling mode for the service
      * 
      */
-    public Optional<Output<ServiceModeGetArgs>> mode() {
+    public Optional<Output<ServiceModeArgs>> mode() {
         return Optional.ofNullable(this.mode);
     }
 
@@ -119,13 +119,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rollbackConfig")
-    private @Nullable Output<ServiceRollbackConfigGetArgs> rollbackConfig;
+    private @Nullable Output<ServiceRollbackConfigArgs> rollbackConfig;
 
     /**
      * @return Specification for the rollback strategy of the service
      * 
      */
-    public Optional<Output<ServiceRollbackConfigGetArgs>> rollbackConfig() {
+    public Optional<Output<ServiceRollbackConfigArgs>> rollbackConfig() {
         return Optional.ofNullable(this.rollbackConfig);
     }
 
@@ -134,13 +134,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taskSpec")
-    private @Nullable Output<ServiceTaskSpecGetArgs> taskSpec;
+    private @Nullable Output<ServiceTaskSpecArgs> taskSpec;
 
     /**
      * @return User modifiable task configuration
      * 
      */
-    public Optional<Output<ServiceTaskSpecGetArgs>> taskSpec() {
+    public Optional<Output<ServiceTaskSpecArgs>> taskSpec() {
         return Optional.ofNullable(this.taskSpec);
     }
 
@@ -149,13 +149,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateConfig")
-    private @Nullable Output<ServiceUpdateConfigGetArgs> updateConfig;
+    private @Nullable Output<ServiceUpdateConfigArgs> updateConfig;
 
     /**
      * @return Specification for the update strategy of the service
      * 
      */
-    public Optional<Output<ServiceUpdateConfigGetArgs>> updateConfig() {
+    public Optional<Output<ServiceUpdateConfigArgs>> updateConfig() {
         return Optional.ofNullable(this.updateConfig);
     }
 
@@ -197,7 +197,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder auth(@Nullable Output<ServiceAuthGetArgs> auth) {
+        public Builder auth(@Nullable Output<ServiceAuthArgs> auth) {
             $.auth = auth;
             return this;
         }
@@ -208,7 +208,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder auth(ServiceAuthGetArgs auth) {
+        public Builder auth(ServiceAuthArgs auth) {
             return auth(Output.of(auth));
         }
 
@@ -218,7 +218,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder convergeConfig(@Nullable Output<ServiceConvergeConfigGetArgs> convergeConfig) {
+        public Builder convergeConfig(@Nullable Output<ServiceConvergeConfigArgs> convergeConfig) {
             $.convergeConfig = convergeConfig;
             return this;
         }
@@ -229,7 +229,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder convergeConfig(ServiceConvergeConfigGetArgs convergeConfig) {
+        public Builder convergeConfig(ServiceConvergeConfigArgs convergeConfig) {
             return convergeConfig(Output.of(convergeConfig));
         }
 
@@ -239,7 +239,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder endpointSpec(@Nullable Output<ServiceEndpointSpecGetArgs> endpointSpec) {
+        public Builder endpointSpec(@Nullable Output<ServiceEndpointSpecArgs> endpointSpec) {
             $.endpointSpec = endpointSpec;
             return this;
         }
@@ -250,7 +250,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder endpointSpec(ServiceEndpointSpecGetArgs endpointSpec) {
+        public Builder endpointSpec(ServiceEndpointSpecArgs endpointSpec) {
             return endpointSpec(Output.of(endpointSpec));
         }
 
@@ -260,7 +260,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(@Nullable Output<List<ServiceLabelGetArgs>> labels) {
+        public Builder labels(@Nullable Output<List<ServiceLabelArgs>> labels) {
             $.labels = labels;
             return this;
         }
@@ -271,7 +271,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(List<ServiceLabelGetArgs> labels) {
+        public Builder labels(List<ServiceLabelArgs> labels) {
             return labels(Output.of(labels));
         }
 
@@ -281,7 +281,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(ServiceLabelGetArgs... labels) {
+        public Builder labels(ServiceLabelArgs... labels) {
             return labels(List.of(labels));
         }
 
@@ -291,7 +291,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mode(@Nullable Output<ServiceModeGetArgs> mode) {
+        public Builder mode(@Nullable Output<ServiceModeArgs> mode) {
             $.mode = mode;
             return this;
         }
@@ -302,7 +302,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mode(ServiceModeGetArgs mode) {
+        public Builder mode(ServiceModeArgs mode) {
             return mode(Output.of(mode));
         }
 
@@ -333,7 +333,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rollbackConfig(@Nullable Output<ServiceRollbackConfigGetArgs> rollbackConfig) {
+        public Builder rollbackConfig(@Nullable Output<ServiceRollbackConfigArgs> rollbackConfig) {
             $.rollbackConfig = rollbackConfig;
             return this;
         }
@@ -344,7 +344,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rollbackConfig(ServiceRollbackConfigGetArgs rollbackConfig) {
+        public Builder rollbackConfig(ServiceRollbackConfigArgs rollbackConfig) {
             return rollbackConfig(Output.of(rollbackConfig));
         }
 
@@ -354,7 +354,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder taskSpec(@Nullable Output<ServiceTaskSpecGetArgs> taskSpec) {
+        public Builder taskSpec(@Nullable Output<ServiceTaskSpecArgs> taskSpec) {
             $.taskSpec = taskSpec;
             return this;
         }
@@ -365,7 +365,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder taskSpec(ServiceTaskSpecGetArgs taskSpec) {
+        public Builder taskSpec(ServiceTaskSpecArgs taskSpec) {
             return taskSpec(Output.of(taskSpec));
         }
 
@@ -375,7 +375,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder updateConfig(@Nullable Output<ServiceUpdateConfigGetArgs> updateConfig) {
+        public Builder updateConfig(@Nullable Output<ServiceUpdateConfigArgs> updateConfig) {
             $.updateConfig = updateConfig;
             return this;
         }
@@ -386,7 +386,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder updateConfig(ServiceUpdateConfigGetArgs updateConfig) {
+        public Builder updateConfig(ServiceUpdateConfigArgs updateConfig) {
             return updateConfig(Output.of(updateConfig));
         }
 

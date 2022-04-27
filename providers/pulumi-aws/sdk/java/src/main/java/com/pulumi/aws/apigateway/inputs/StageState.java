@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.apigateway.inputs;
 
-import com.pulumi.aws.apigateway.inputs.StageAccessLogSettingsGetArgs;
+import com.pulumi.aws.apigateway.inputs.StageAccessLogSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -23,13 +23,13 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessLogSettings")
-    private @Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings;
+    private @Nullable Output<StageAccessLogSettingsArgs> accessLogSettings;
 
     /**
      * @return Enables access logs for the API stage. Detailed below.
      * 
      */
-    public Optional<Output<StageAccessLogSettingsGetArgs>> accessLogSettings() {
+    public Optional<Output<StageAccessLogSettingsArgs>> accessLogSettings() {
         return Optional.ofNullable(this.accessLogSettings);
     }
 
@@ -325,7 +325,7 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessLogSettings(@Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings) {
+        public Builder accessLogSettings(@Nullable Output<StageAccessLogSettingsArgs> accessLogSettings) {
             $.accessLogSettings = accessLogSettings;
             return this;
         }
@@ -336,7 +336,7 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessLogSettings(StageAccessLogSettingsGetArgs accessLogSettings) {
+        public Builder accessLogSettings(StageAccessLogSettingsArgs accessLogSettings) {
             return accessLogSettings(Output.of(accessLogSettings));
         }
 

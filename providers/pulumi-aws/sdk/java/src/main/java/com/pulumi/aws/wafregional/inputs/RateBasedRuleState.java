@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.wafregional.inputs;
 
-import com.pulumi.aws.wafregional.inputs.RateBasedRulePredicateGetArgs;
+import com.pulumi.aws.wafregional.inputs.RateBasedRulePredicateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -69,13 +69,13 @@ public final class RateBasedRuleState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="predicates")
-    private @Nullable Output<List<RateBasedRulePredicateGetArgs>> predicates;
+    private @Nullable Output<List<RateBasedRulePredicateArgs>> predicates;
 
     /**
      * @return The objects to include in a rule (documented below).
      * 
      */
-    public Optional<Output<List<RateBasedRulePredicateGetArgs>>> predicates() {
+    public Optional<Output<List<RateBasedRulePredicateArgs>>> predicates() {
         return Optional.ofNullable(this.predicates);
     }
 
@@ -239,7 +239,7 @@ public final class RateBasedRuleState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder predicates(@Nullable Output<List<RateBasedRulePredicateGetArgs>> predicates) {
+        public Builder predicates(@Nullable Output<List<RateBasedRulePredicateArgs>> predicates) {
             $.predicates = predicates;
             return this;
         }
@@ -250,7 +250,7 @@ public final class RateBasedRuleState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder predicates(List<RateBasedRulePredicateGetArgs> predicates) {
+        public Builder predicates(List<RateBasedRulePredicateArgs> predicates) {
             return predicates(Output.of(predicates));
         }
 
@@ -260,7 +260,7 @@ public final class RateBasedRuleState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder predicates(RateBasedRulePredicateGetArgs... predicates) {
+        public Builder predicates(RateBasedRulePredicateArgs... predicates) {
             return predicates(List.of(predicates));
         }
 

@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.elasticloadbalancingv2.inputs;
 
-import com.pulumi.aws.elasticloadbalancingv2.inputs.LoadBalancerAccessLogsGetArgs;
-import com.pulumi.aws.elasticloadbalancingv2.inputs.LoadBalancerSubnetMappingGetArgs;
+import com.pulumi.aws.elasticloadbalancingv2.inputs.LoadBalancerAccessLogsArgs;
+import com.pulumi.aws.elasticloadbalancingv2.inputs.LoadBalancerSubnetMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -26,13 +26,13 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessLogs")
-    private @Nullable Output<LoadBalancerAccessLogsGetArgs> accessLogs;
+    private @Nullable Output<LoadBalancerAccessLogsArgs> accessLogs;
 
     /**
      * @return An Access Logs block. Access Logs documented below.
      * 
      */
-    public Optional<Output<LoadBalancerAccessLogsGetArgs>> accessLogs() {
+    public Optional<Output<LoadBalancerAccessLogsArgs>> accessLogs() {
         return Optional.ofNullable(this.accessLogs);
     }
 
@@ -304,13 +304,13 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetMappings")
-    private @Nullable Output<List<LoadBalancerSubnetMappingGetArgs>> subnetMappings;
+    private @Nullable Output<List<LoadBalancerSubnetMappingArgs>> subnetMappings;
 
     /**
      * @return A subnet mapping block as documented below.
      * 
      */
-    public Optional<Output<List<LoadBalancerSubnetMappingGetArgs>>> subnetMappings() {
+    public Optional<Output<List<LoadBalancerSubnetMappingArgs>>> subnetMappings() {
         return Optional.ofNullable(this.subnetMappings);
     }
 
@@ -440,7 +440,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessLogs(@Nullable Output<LoadBalancerAccessLogsGetArgs> accessLogs) {
+        public Builder accessLogs(@Nullable Output<LoadBalancerAccessLogsArgs> accessLogs) {
             $.accessLogs = accessLogs;
             return this;
         }
@@ -451,7 +451,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accessLogs(LoadBalancerAccessLogsGetArgs accessLogs) {
+        public Builder accessLogs(LoadBalancerAccessLogsArgs accessLogs) {
             return accessLogs(Output.of(accessLogs));
         }
 
@@ -836,7 +836,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder subnetMappings(@Nullable Output<List<LoadBalancerSubnetMappingGetArgs>> subnetMappings) {
+        public Builder subnetMappings(@Nullable Output<List<LoadBalancerSubnetMappingArgs>> subnetMappings) {
             $.subnetMappings = subnetMappings;
             return this;
         }
@@ -847,7 +847,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder subnetMappings(List<LoadBalancerSubnetMappingGetArgs> subnetMappings) {
+        public Builder subnetMappings(List<LoadBalancerSubnetMappingArgs> subnetMappings) {
             return subnetMappings(Output.of(subnetMappings));
         }
 
@@ -857,7 +857,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder subnetMappings(LoadBalancerSubnetMappingGetArgs... subnetMappings) {
+        public Builder subnetMappings(LoadBalancerSubnetMappingArgs... subnetMappings) {
             return subnetMappings(List.of(subnetMappings));
         }
 

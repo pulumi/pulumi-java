@@ -5,8 +5,8 @@ package com.pulumi.gcp.vertex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.vertex.inputs.AiMetadataStoreEncryptionSpecGetArgs;
-import com.pulumi.gcp.vertex.inputs.AiMetadataStoreStateGetArgs;
+import com.pulumi.gcp.vertex.inputs.AiMetadataStoreEncryptionSpecArgs;
+import com.pulumi.gcp.vertex.inputs.AiMetadataStoreStateArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -56,14 +56,14 @@ public final class AiMetadataStoreState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="encryptionSpec")
-    private @Nullable Output<AiMetadataStoreEncryptionSpecGetArgs> encryptionSpec;
+    private @Nullable Output<AiMetadataStoreEncryptionSpecArgs> encryptionSpec;
 
     /**
      * @return Customer-managed encryption key spec for a MetadataStore. If set, this MetadataStore and all sub-resources of this MetadataStore will be secured by this key.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AiMetadataStoreEncryptionSpecGetArgs>> encryptionSpec() {
+    public Optional<Output<AiMetadataStoreEncryptionSpecArgs>> encryptionSpec() {
         return Optional.ofNullable(this.encryptionSpec);
     }
 
@@ -119,13 +119,13 @@ public final class AiMetadataStoreState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="states")
-    private @Nullable Output<List<AiMetadataStoreStateGetArgs>> states;
+    private @Nullable Output<List<AiMetadataStoreStateArgs>> states;
 
     /**
      * @return State information of the MetadataStore.
      * 
      */
-    public Optional<Output<List<AiMetadataStoreStateGetArgs>>> states() {
+    public Optional<Output<List<AiMetadataStoreStateArgs>>> states() {
         return Optional.ofNullable(this.states);
     }
 
@@ -228,7 +228,7 @@ public final class AiMetadataStoreState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder encryptionSpec(@Nullable Output<AiMetadataStoreEncryptionSpecGetArgs> encryptionSpec) {
+        public Builder encryptionSpec(@Nullable Output<AiMetadataStoreEncryptionSpecArgs> encryptionSpec) {
             $.encryptionSpec = encryptionSpec;
             return this;
         }
@@ -240,7 +240,7 @@ public final class AiMetadataStoreState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder encryptionSpec(AiMetadataStoreEncryptionSpecGetArgs encryptionSpec) {
+        public Builder encryptionSpec(AiMetadataStoreEncryptionSpecArgs encryptionSpec) {
             return encryptionSpec(Output.of(encryptionSpec));
         }
 
@@ -315,7 +315,7 @@ public final class AiMetadataStoreState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder states(@Nullable Output<List<AiMetadataStoreStateGetArgs>> states) {
+        public Builder states(@Nullable Output<List<AiMetadataStoreStateArgs>> states) {
             $.states = states;
             return this;
         }
@@ -326,7 +326,7 @@ public final class AiMetadataStoreState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder states(List<AiMetadataStoreStateGetArgs> states) {
+        public Builder states(List<AiMetadataStoreStateArgs> states) {
             return states(Output.of(states));
         }
 
@@ -336,7 +336,7 @@ public final class AiMetadataStoreState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder states(AiMetadataStoreStateGetArgs... states) {
+        public Builder states(AiMetadataStoreStateArgs... states) {
             return states(List.of(states));
         }
 

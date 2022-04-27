@@ -5,7 +5,7 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.bigquery.inputs.ConnectionCloudSqlGetArgs;
+import com.pulumi.gcp.bigquery.inputs.ConnectionCloudSqlArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudSql")
-    private @Nullable Output<ConnectionCloudSqlGetArgs> cloudSql;
+    private @Nullable Output<ConnectionCloudSqlArgs> cloudSql;
 
     /**
      * @return Cloud SQL properties.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ConnectionCloudSqlGetArgs>> cloudSql() {
+    public Optional<Output<ConnectionCloudSqlArgs>> cloudSql() {
         return Optional.ofNullable(this.cloudSql);
     }
 
@@ -187,7 +187,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cloudSql(@Nullable Output<ConnectionCloudSqlGetArgs> cloudSql) {
+        public Builder cloudSql(@Nullable Output<ConnectionCloudSqlArgs> cloudSql) {
             $.cloudSql = cloudSql;
             return this;
         }
@@ -199,7 +199,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cloudSql(ConnectionCloudSqlGetArgs cloudSql) {
+        public Builder cloudSql(ConnectionCloudSqlArgs cloudSql) {
             return cloudSql(Output.of(cloudSql));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.healthcare.inputs.FhirStoreIamBindingConditionGetArgs;
+import com.pulumi.gcp.healthcare.inputs.FhirStoreIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class FhirStoreIamBindingState extends com.pulumi.resources.Resourc
     public static final FhirStoreIamBindingState Empty = new FhirStoreIamBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<FhirStoreIamBindingConditionGetArgs> condition;
+    private @Nullable Output<FhirStoreIamBindingConditionArgs> condition;
 
-    public Optional<Output<FhirStoreIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<FhirStoreIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -114,12 +114,12 @@ public final class FhirStoreIamBindingState extends com.pulumi.resources.Resourc
             $ = new FhirStoreIamBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<FhirStoreIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<FhirStoreIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(FhirStoreIamBindingConditionGetArgs condition) {
+        public Builder condition(FhirStoreIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.docker.inputs.SecretLabelGetArgs;
+import com.pulumi.docker.inputs.SecretLabelArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -37,13 +37,13 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-    private @Nullable Output<List<SecretLabelGetArgs>> labels;
+    private @Nullable Output<List<SecretLabelArgs>> labels;
 
     /**
      * @return User-defined key/value metadata
      * 
      */
-    public Optional<Output<List<SecretLabelGetArgs>>> labels() {
+    public Optional<Output<List<SecretLabelArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
 
@@ -115,7 +115,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(@Nullable Output<List<SecretLabelGetArgs>> labels) {
+        public Builder labels(@Nullable Output<List<SecretLabelArgs>> labels) {
             $.labels = labels;
             return this;
         }
@@ -126,7 +126,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(List<SecretLabelGetArgs> labels) {
+        public Builder labels(List<SecretLabelArgs> labels) {
             return labels(Output.of(labels));
         }
 
@@ -136,7 +136,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(SecretLabelGetArgs... labels) {
+        public Builder labels(SecretLabelArgs... labels) {
             return labels(List.of(labels));
         }
 

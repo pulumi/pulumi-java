@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.acmpca.inputs;
 
-import com.pulumi.aws.acmpca.inputs.CertificateAuthorityCertificateAuthorityConfigurationGetArgs;
-import com.pulumi.aws.acmpca.inputs.CertificateAuthorityRevocationConfigurationGetArgs;
+import com.pulumi.aws.acmpca.inputs.CertificateAuthorityCertificateAuthorityConfigurationArgs;
+import com.pulumi.aws.acmpca.inputs.CertificateAuthorityRevocationConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -55,13 +55,13 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="certificateAuthorityConfiguration")
-    private @Nullable Output<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration;
+    private @Nullable Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration;
 
     /**
      * @return Nested argument containing algorithms and certificate subject information. Defined below.
      * 
      */
-    public Optional<Output<CertificateAuthorityCertificateAuthorityConfigurationGetArgs>> certificateAuthorityConfiguration() {
+    public Optional<Output<CertificateAuthorityCertificateAuthorityConfigurationArgs>> certificateAuthorityConfiguration() {
         return Optional.ofNullable(this.certificateAuthorityConfiguration);
     }
 
@@ -160,13 +160,13 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="revocationConfiguration")
-    private @Nullable Output<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration;
+    private @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
 
     /**
      * @return Nested argument containing revocation configuration. Defined below.
      * 
      */
-    public Optional<Output<CertificateAuthorityRevocationConfigurationGetArgs>> revocationConfiguration() {
+    public Optional<Output<CertificateAuthorityRevocationConfigurationArgs>> revocationConfiguration() {
         return Optional.ofNullable(this.revocationConfiguration);
     }
 
@@ -331,7 +331,7 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder certificateAuthorityConfiguration(@Nullable Output<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration) {
+        public Builder certificateAuthorityConfiguration(@Nullable Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration) {
             $.certificateAuthorityConfiguration = certificateAuthorityConfiguration;
             return this;
         }
@@ -342,7 +342,7 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder certificateAuthorityConfiguration(CertificateAuthorityCertificateAuthorityConfigurationGetArgs certificateAuthorityConfiguration) {
+        public Builder certificateAuthorityConfiguration(CertificateAuthorityCertificateAuthorityConfigurationArgs certificateAuthorityConfiguration) {
             return certificateAuthorityConfiguration(Output.of(certificateAuthorityConfiguration));
         }
 
@@ -478,7 +478,7 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder revocationConfiguration(@Nullable Output<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration) {
+        public Builder revocationConfiguration(@Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration) {
             $.revocationConfiguration = revocationConfiguration;
             return this;
         }
@@ -489,7 +489,7 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder revocationConfiguration(CertificateAuthorityRevocationConfigurationGetArgs revocationConfiguration) {
+        public Builder revocationConfiguration(CertificateAuthorityRevocationConfigurationArgs revocationConfiguration) {
             return revocationConfiguration(Output.of(revocationConfiguration));
         }
 

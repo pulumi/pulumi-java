@@ -5,9 +5,9 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.bigquery.inputs.DataTransferConfigEmailPreferencesGetArgs;
-import com.pulumi.gcp.bigquery.inputs.DataTransferConfigScheduleOptionsGetArgs;
-import com.pulumi.gcp.bigquery.inputs.DataTransferConfigSensitiveParamsGetArgs;
+import com.pulumi.gcp.bigquery.inputs.DataTransferConfigEmailPreferencesArgs;
+import com.pulumi.gcp.bigquery.inputs.DataTransferConfigScheduleOptionsArgs;
+import com.pulumi.gcp.bigquery.inputs.DataTransferConfigSensitiveParamsArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -111,7 +111,7 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="emailPreferences")
-    private @Nullable Output<DataTransferConfigEmailPreferencesGetArgs> emailPreferences;
+    private @Nullable Output<DataTransferConfigEmailPreferencesArgs> emailPreferences;
 
     /**
      * @return Email notifications will be sent according to these preferences to the
@@ -119,7 +119,7 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    public Optional<Output<DataTransferConfigEmailPreferencesGetArgs>> emailPreferences() {
+    public Optional<Output<DataTransferConfigEmailPreferencesArgs>> emailPreferences() {
         return Optional.ofNullable(this.emailPreferences);
     }
 
@@ -247,14 +247,14 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="scheduleOptions")
-    private @Nullable Output<DataTransferConfigScheduleOptionsGetArgs> scheduleOptions;
+    private @Nullable Output<DataTransferConfigScheduleOptionsArgs> scheduleOptions;
 
     /**
      * @return Options customizing the data transfer schedule.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<DataTransferConfigScheduleOptionsGetArgs>> scheduleOptions() {
+    public Optional<Output<DataTransferConfigScheduleOptionsArgs>> scheduleOptions() {
         return Optional.ofNullable(this.scheduleOptions);
     }
 
@@ -269,7 +269,7 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sensitiveParams")
-    private @Nullable Output<DataTransferConfigSensitiveParamsGetArgs> sensitiveParams;
+    private @Nullable Output<DataTransferConfigSensitiveParamsArgs> sensitiveParams;
 
     /**
      * @return Different parameters are configured primarily using the the `params` field on this
@@ -281,7 +281,7 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    public Optional<Output<DataTransferConfigSensitiveParamsGetArgs>> sensitiveParams() {
+    public Optional<Output<DataTransferConfigSensitiveParamsArgs>> sensitiveParams() {
         return Optional.ofNullable(this.sensitiveParams);
     }
 
@@ -463,7 +463,7 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder emailPreferences(@Nullable Output<DataTransferConfigEmailPreferencesGetArgs> emailPreferences) {
+        public Builder emailPreferences(@Nullable Output<DataTransferConfigEmailPreferencesArgs> emailPreferences) {
             $.emailPreferences = emailPreferences;
             return this;
         }
@@ -476,7 +476,7 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder emailPreferences(DataTransferConfigEmailPreferencesGetArgs emailPreferences) {
+        public Builder emailPreferences(DataTransferConfigEmailPreferencesArgs emailPreferences) {
             return emailPreferences(Output.of(emailPreferences));
         }
 
@@ -641,7 +641,7 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder scheduleOptions(@Nullable Output<DataTransferConfigScheduleOptionsGetArgs> scheduleOptions) {
+        public Builder scheduleOptions(@Nullable Output<DataTransferConfigScheduleOptionsArgs> scheduleOptions) {
             $.scheduleOptions = scheduleOptions;
             return this;
         }
@@ -653,7 +653,7 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder scheduleOptions(DataTransferConfigScheduleOptionsGetArgs scheduleOptions) {
+        public Builder scheduleOptions(DataTransferConfigScheduleOptionsArgs scheduleOptions) {
             return scheduleOptions(Output.of(scheduleOptions));
         }
 
@@ -669,7 +669,7 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder sensitiveParams(@Nullable Output<DataTransferConfigSensitiveParamsGetArgs> sensitiveParams) {
+        public Builder sensitiveParams(@Nullable Output<DataTransferConfigSensitiveParamsArgs> sensitiveParams) {
             $.sensitiveParams = sensitiveParams;
             return this;
         }
@@ -686,7 +686,7 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder sensitiveParams(DataTransferConfigSensitiveParamsGetArgs sensitiveParams) {
+        public Builder sensitiveParams(DataTransferConfigSensitiveParamsArgs sensitiveParams) {
             return sensitiveParams(Output.of(sensitiveParams));
         }
 

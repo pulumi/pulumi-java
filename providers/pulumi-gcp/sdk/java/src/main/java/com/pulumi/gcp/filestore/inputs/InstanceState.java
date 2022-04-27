@@ -5,8 +5,8 @@ package com.pulumi.gcp.filestore.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.filestore.inputs.InstanceFileSharesGetArgs;
-import com.pulumi.gcp.filestore.inputs.InstanceNetworkGetArgs;
+import com.pulumi.gcp.filestore.inputs.InstanceFileSharesArgs;
+import com.pulumi.gcp.filestore.inputs.InstanceNetworkArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -71,7 +71,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileShares")
-    private @Nullable Output<InstanceFileSharesGetArgs> fileShares;
+    private @Nullable Output<InstanceFileSharesArgs> fileShares;
 
     /**
      * @return File system shares on the instance. For this version, only a
@@ -79,7 +79,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InstanceFileSharesGetArgs>> fileShares() {
+    public Optional<Output<InstanceFileSharesArgs>> fileShares() {
         return Optional.ofNullable(this.fileShares);
     }
 
@@ -135,7 +135,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networks")
-    private @Nullable Output<List<InstanceNetworkGetArgs>> networks;
+    private @Nullable Output<List<InstanceNetworkArgs>> networks;
 
     /**
      * @return VPC networks to which the instance is connected. For this version,
@@ -143,7 +143,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<InstanceNetworkGetArgs>>> networks() {
+    public Optional<Output<List<InstanceNetworkArgs>>> networks() {
         return Optional.ofNullable(this.networks);
     }
 
@@ -313,7 +313,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fileShares(@Nullable Output<InstanceFileSharesGetArgs> fileShares) {
+        public Builder fileShares(@Nullable Output<InstanceFileSharesArgs> fileShares) {
             $.fileShares = fileShares;
             return this;
         }
@@ -326,7 +326,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fileShares(InstanceFileSharesGetArgs fileShares) {
+        public Builder fileShares(InstanceFileSharesArgs fileShares) {
             return fileShares(Output.of(fileShares));
         }
 
@@ -401,7 +401,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networks(@Nullable Output<List<InstanceNetworkGetArgs>> networks) {
+        public Builder networks(@Nullable Output<List<InstanceNetworkArgs>> networks) {
             $.networks = networks;
             return this;
         }
@@ -414,7 +414,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networks(List<InstanceNetworkGetArgs> networks) {
+        public Builder networks(List<InstanceNetworkArgs> networks) {
             return networks(Output.of(networks));
         }
 
@@ -426,7 +426,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networks(InstanceNetworkGetArgs... networks) {
+        public Builder networks(InstanceNetworkArgs... networks) {
             return networks(List.of(networks));
         }
 

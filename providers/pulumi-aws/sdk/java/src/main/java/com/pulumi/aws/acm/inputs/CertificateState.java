@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.acm.inputs;
 
-import com.pulumi.aws.acm.inputs.CertificateDomainValidationOptionGetArgs;
-import com.pulumi.aws.acm.inputs.CertificateOptionsGetArgs;
+import com.pulumi.aws.acm.inputs.CertificateDomainValidationOptionArgs;
+import com.pulumi.aws.acm.inputs.CertificateOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -101,13 +101,13 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainValidationOptions")
-    private @Nullable Output<List<CertificateDomainValidationOptionGetArgs>> domainValidationOptions;
+    private @Nullable Output<List<CertificateDomainValidationOptionArgs>> domainValidationOptions;
 
     /**
      * @return Set of domain validation objects which can be used to complete certificate validation. Can have more than one element, e.g., if SANs are defined. Only set if `DNS`-validation was used.
      * 
      */
-    public Optional<Output<List<CertificateDomainValidationOptionGetArgs>>> domainValidationOptions() {
+    public Optional<Output<List<CertificateDomainValidationOptionArgs>>> domainValidationOptions() {
         return Optional.ofNullable(this.domainValidationOptions);
     }
 
@@ -117,14 +117,14 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-    private @Nullable Output<CertificateOptionsGetArgs> options;
+    private @Nullable Output<CertificateOptionsArgs> options;
 
     /**
      * @return Configuration block used to set certificate options. Detailed below.
      * * Importing an existing certificate
      * 
      */
-    public Optional<Output<CertificateOptionsGetArgs>> options() {
+    public Optional<Output<CertificateOptionsArgs>> options() {
         return Optional.ofNullable(this.options);
     }
 
@@ -383,7 +383,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder domainValidationOptions(@Nullable Output<List<CertificateDomainValidationOptionGetArgs>> domainValidationOptions) {
+        public Builder domainValidationOptions(@Nullable Output<List<CertificateDomainValidationOptionArgs>> domainValidationOptions) {
             $.domainValidationOptions = domainValidationOptions;
             return this;
         }
@@ -394,7 +394,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder domainValidationOptions(List<CertificateDomainValidationOptionGetArgs> domainValidationOptions) {
+        public Builder domainValidationOptions(List<CertificateDomainValidationOptionArgs> domainValidationOptions) {
             return domainValidationOptions(Output.of(domainValidationOptions));
         }
 
@@ -404,7 +404,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder domainValidationOptions(CertificateDomainValidationOptionGetArgs... domainValidationOptions) {
+        public Builder domainValidationOptions(CertificateDomainValidationOptionArgs... domainValidationOptions) {
             return domainValidationOptions(List.of(domainValidationOptions));
         }
 
@@ -415,7 +415,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder options(@Nullable Output<CertificateOptionsGetArgs> options) {
+        public Builder options(@Nullable Output<CertificateOptionsArgs> options) {
             $.options = options;
             return this;
         }
@@ -427,7 +427,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder options(CertificateOptionsGetArgs options) {
+        public Builder options(CertificateOptionsArgs options) {
             return options(Output.of(options));
         }
 

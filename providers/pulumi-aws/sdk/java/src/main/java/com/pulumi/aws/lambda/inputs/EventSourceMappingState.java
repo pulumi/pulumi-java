@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.lambda.inputs;
 
-import com.pulumi.aws.lambda.inputs.EventSourceMappingDestinationConfigGetArgs;
-import com.pulumi.aws.lambda.inputs.EventSourceMappingFilterCriteriaGetArgs;
-import com.pulumi.aws.lambda.inputs.EventSourceMappingSelfManagedEventSourceGetArgs;
-import com.pulumi.aws.lambda.inputs.EventSourceMappingSourceAccessConfigurationGetArgs;
+import com.pulumi.aws.lambda.inputs.EventSourceMappingDestinationConfigArgs;
+import com.pulumi.aws.lambda.inputs.EventSourceMappingFilterCriteriaArgs;
+import com.pulumi.aws.lambda.inputs.EventSourceMappingSelfManagedEventSourceArgs;
+import com.pulumi.aws.lambda.inputs.EventSourceMappingSourceAccessConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -49,9 +49,9 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     }
 
     @Import(name="destinationConfig")
-    private @Nullable Output<EventSourceMappingDestinationConfigGetArgs> destinationConfig;
+    private @Nullable Output<EventSourceMappingDestinationConfigArgs> destinationConfig;
 
-    public Optional<Output<EventSourceMappingDestinationConfigGetArgs>> destinationConfig() {
+    public Optional<Output<EventSourceMappingDestinationConfigArgs>> destinationConfig() {
         return Optional.ofNullable(this.destinationConfig);
     }
 
@@ -90,13 +90,13 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="filterCriteria")
-    private @Nullable Output<EventSourceMappingFilterCriteriaGetArgs> filterCriteria;
+    private @Nullable Output<EventSourceMappingFilterCriteriaArgs> filterCriteria;
 
     /**
      * @return The criteria to use for [event filtering](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html) Kinesis stream, DynamoDB stream, SQS queue event sources. Detailed below.
      * 
      */
-    public Optional<Output<EventSourceMappingFilterCriteriaGetArgs>> filterCriteria() {
+    public Optional<Output<EventSourceMappingFilterCriteriaArgs>> filterCriteria() {
         return Optional.ofNullable(this.filterCriteria);
     }
 
@@ -237,16 +237,16 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     }
 
     @Import(name="selfManagedEventSource")
-    private @Nullable Output<EventSourceMappingSelfManagedEventSourceGetArgs> selfManagedEventSource;
+    private @Nullable Output<EventSourceMappingSelfManagedEventSourceArgs> selfManagedEventSource;
 
-    public Optional<Output<EventSourceMappingSelfManagedEventSourceGetArgs>> selfManagedEventSource() {
+    public Optional<Output<EventSourceMappingSelfManagedEventSourceArgs>> selfManagedEventSource() {
         return Optional.ofNullable(this.selfManagedEventSource);
     }
 
     @Import(name="sourceAccessConfigurations")
-    private @Nullable Output<List<EventSourceMappingSourceAccessConfigurationGetArgs>> sourceAccessConfigurations;
+    private @Nullable Output<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations;
 
-    public Optional<Output<List<EventSourceMappingSourceAccessConfigurationGetArgs>>> sourceAccessConfigurations() {
+    public Optional<Output<List<EventSourceMappingSourceAccessConfigurationArgs>>> sourceAccessConfigurations() {
         return Optional.ofNullable(this.sourceAccessConfigurations);
     }
 
@@ -437,12 +437,12 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
             return bisectBatchOnFunctionError(Output.of(bisectBatchOnFunctionError));
         }
 
-        public Builder destinationConfig(@Nullable Output<EventSourceMappingDestinationConfigGetArgs> destinationConfig) {
+        public Builder destinationConfig(@Nullable Output<EventSourceMappingDestinationConfigArgs> destinationConfig) {
             $.destinationConfig = destinationConfig;
             return this;
         }
 
-        public Builder destinationConfig(EventSourceMappingDestinationConfigGetArgs destinationConfig) {
+        public Builder destinationConfig(EventSourceMappingDestinationConfigArgs destinationConfig) {
             return destinationConfig(Output.of(destinationConfig));
         }
 
@@ -494,7 +494,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder filterCriteria(@Nullable Output<EventSourceMappingFilterCriteriaGetArgs> filterCriteria) {
+        public Builder filterCriteria(@Nullable Output<EventSourceMappingFilterCriteriaArgs> filterCriteria) {
             $.filterCriteria = filterCriteria;
             return this;
         }
@@ -505,7 +505,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder filterCriteria(EventSourceMappingFilterCriteriaGetArgs filterCriteria) {
+        public Builder filterCriteria(EventSourceMappingFilterCriteriaArgs filterCriteria) {
             return filterCriteria(Output.of(filterCriteria));
         }
 
@@ -715,25 +715,25 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
             return queues(List.of(queues));
         }
 
-        public Builder selfManagedEventSource(@Nullable Output<EventSourceMappingSelfManagedEventSourceGetArgs> selfManagedEventSource) {
+        public Builder selfManagedEventSource(@Nullable Output<EventSourceMappingSelfManagedEventSourceArgs> selfManagedEventSource) {
             $.selfManagedEventSource = selfManagedEventSource;
             return this;
         }
 
-        public Builder selfManagedEventSource(EventSourceMappingSelfManagedEventSourceGetArgs selfManagedEventSource) {
+        public Builder selfManagedEventSource(EventSourceMappingSelfManagedEventSourceArgs selfManagedEventSource) {
             return selfManagedEventSource(Output.of(selfManagedEventSource));
         }
 
-        public Builder sourceAccessConfigurations(@Nullable Output<List<EventSourceMappingSourceAccessConfigurationGetArgs>> sourceAccessConfigurations) {
+        public Builder sourceAccessConfigurations(@Nullable Output<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations) {
             $.sourceAccessConfigurations = sourceAccessConfigurations;
             return this;
         }
 
-        public Builder sourceAccessConfigurations(List<EventSourceMappingSourceAccessConfigurationGetArgs> sourceAccessConfigurations) {
+        public Builder sourceAccessConfigurations(List<EventSourceMappingSourceAccessConfigurationArgs> sourceAccessConfigurations) {
             return sourceAccessConfigurations(Output.of(sourceAccessConfigurations));
         }
 
-        public Builder sourceAccessConfigurations(EventSourceMappingSourceAccessConfigurationGetArgs... sourceAccessConfigurations) {
+        public Builder sourceAccessConfigurations(EventSourceMappingSourceAccessConfigurationArgs... sourceAccessConfigurations) {
             return sourceAccessConfigurations(List.of(sourceAccessConfigurations));
         }
 

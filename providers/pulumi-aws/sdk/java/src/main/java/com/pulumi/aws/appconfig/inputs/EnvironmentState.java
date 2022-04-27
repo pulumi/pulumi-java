@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.appconfig.inputs;
 
-import com.pulumi.aws.appconfig.inputs.EnvironmentMonitorGetArgs;
+import com.pulumi.aws.appconfig.inputs.EnvironmentMonitorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -83,13 +83,13 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="monitors")
-    private @Nullable Output<List<EnvironmentMonitorGetArgs>> monitors;
+    private @Nullable Output<List<EnvironmentMonitorArgs>> monitors;
 
     /**
      * @return Set of Amazon CloudWatch alarms to monitor during the deployment process. Maximum of 5. See Monitor below for more details.
      * 
      */
-    public Optional<Output<List<EnvironmentMonitorGetArgs>>> monitors() {
+    public Optional<Output<List<EnvironmentMonitorArgs>>> monitors() {
         return Optional.ofNullable(this.monitors);
     }
 
@@ -267,7 +267,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder monitors(@Nullable Output<List<EnvironmentMonitorGetArgs>> monitors) {
+        public Builder monitors(@Nullable Output<List<EnvironmentMonitorArgs>> monitors) {
             $.monitors = monitors;
             return this;
         }
@@ -278,7 +278,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder monitors(List<EnvironmentMonitorGetArgs> monitors) {
+        public Builder monitors(List<EnvironmentMonitorArgs> monitors) {
             return monitors(Output.of(monitors));
         }
 
@@ -288,7 +288,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder monitors(EnvironmentMonitorGetArgs... monitors) {
+        public Builder monitors(EnvironmentMonitorArgs... monitors) {
             return monitors(List.of(monitors));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.healthcare.inputs.ConsentStoreIamMemberConditionGetArgs;
+import com.pulumi.gcp.healthcare.inputs.ConsentStoreIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class ConsentStoreIamMemberState extends com.pulumi.resources.Resou
     public static final ConsentStoreIamMemberState Empty = new ConsentStoreIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<ConsentStoreIamMemberConditionGetArgs> condition;
+    private @Nullable Output<ConsentStoreIamMemberConditionArgs> condition;
 
-    public Optional<Output<ConsentStoreIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<ConsentStoreIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -127,12 +127,12 @@ public final class ConsentStoreIamMemberState extends com.pulumi.resources.Resou
             $ = new ConsentStoreIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<ConsentStoreIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<ConsentStoreIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(ConsentStoreIamMemberConditionGetArgs condition) {
+        public Builder condition(ConsentStoreIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

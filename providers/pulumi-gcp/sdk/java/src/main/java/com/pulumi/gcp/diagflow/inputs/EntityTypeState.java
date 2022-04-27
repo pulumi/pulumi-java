@@ -5,7 +5,7 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.diagflow.inputs.EntityTypeEntityGetArgs;
+import com.pulumi.gcp.diagflow.inputs.EntityTypeEntityArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -54,14 +54,14 @@ public final class EntityTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entities")
-    private @Nullable Output<List<EntityTypeEntityGetArgs>> entities;
+    private @Nullable Output<List<EntityTypeEntityArgs>> entities;
 
     /**
      * @return The collection of entity entries associated with the entity type.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<EntityTypeEntityGetArgs>>> entities() {
+    public Optional<Output<List<EntityTypeEntityArgs>>> entities() {
         return Optional.ofNullable(this.entities);
     }
 
@@ -200,7 +200,7 @@ public final class EntityTypeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder entities(@Nullable Output<List<EntityTypeEntityGetArgs>> entities) {
+        public Builder entities(@Nullable Output<List<EntityTypeEntityArgs>> entities) {
             $.entities = entities;
             return this;
         }
@@ -212,7 +212,7 @@ public final class EntityTypeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder entities(List<EntityTypeEntityGetArgs> entities) {
+        public Builder entities(List<EntityTypeEntityArgs> entities) {
             return entities(Output.of(entities));
         }
 
@@ -223,7 +223,7 @@ public final class EntityTypeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder entities(EntityTypeEntityGetArgs... entities) {
+        public Builder entities(EntityTypeEntityArgs... entities) {
             return entities(List.of(entities));
         }
 

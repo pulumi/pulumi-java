@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.servicecatalog.inputs;
 
-import com.pulumi.aws.servicecatalog.inputs.ProvisionedProductProvisioningParameterGetArgs;
-import com.pulumi.aws.servicecatalog.inputs.ProvisionedProductStackSetProvisioningPreferencesGetArgs;
+import com.pulumi.aws.servicecatalog.inputs.ProvisionedProductProvisioningParameterArgs;
+import com.pulumi.aws.servicecatalog.inputs.ProvisionedProductStackSetProvisioningPreferencesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -280,13 +280,13 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="provisioningParameters")
-    private @Nullable Output<List<ProvisionedProductProvisioningParameterGetArgs>> provisioningParameters;
+    private @Nullable Output<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters;
 
     /**
      * @return Configuration block with parameters specified by the administrator that are required for provisioning the product. See details below.
      * 
      */
-    public Optional<Output<List<ProvisionedProductProvisioningParameterGetArgs>>> provisioningParameters() {
+    public Optional<Output<List<ProvisionedProductProvisioningParameterArgs>>> provisioningParameters() {
         return Optional.ofNullable(this.provisioningParameters);
     }
 
@@ -310,13 +310,13 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="stackSetProvisioningPreferences")
-    private @Nullable Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs> stackSetProvisioningPreferences;
+    private @Nullable Output<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences;
 
     /**
      * @return Configuration block with information about the provisioning preferences for a stack set. See details below.
      * 
      */
-    public Optional<Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs>> stackSetProvisioningPreferences() {
+    public Optional<Output<ProvisionedProductStackSetProvisioningPreferencesArgs>> stackSetProvisioningPreferences() {
         return Optional.ofNullable(this.stackSetProvisioningPreferences);
     }
 
@@ -826,7 +826,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder provisioningParameters(@Nullable Output<List<ProvisionedProductProvisioningParameterGetArgs>> provisioningParameters) {
+        public Builder provisioningParameters(@Nullable Output<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters) {
             $.provisioningParameters = provisioningParameters;
             return this;
         }
@@ -837,7 +837,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder provisioningParameters(List<ProvisionedProductProvisioningParameterGetArgs> provisioningParameters) {
+        public Builder provisioningParameters(List<ProvisionedProductProvisioningParameterArgs> provisioningParameters) {
             return provisioningParameters(Output.of(provisioningParameters));
         }
 
@@ -847,7 +847,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder provisioningParameters(ProvisionedProductProvisioningParameterGetArgs... provisioningParameters) {
+        public Builder provisioningParameters(ProvisionedProductProvisioningParameterArgs... provisioningParameters) {
             return provisioningParameters(List.of(provisioningParameters));
         }
 
@@ -878,7 +878,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder stackSetProvisioningPreferences(@Nullable Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs> stackSetProvisioningPreferences) {
+        public Builder stackSetProvisioningPreferences(@Nullable Output<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences) {
             $.stackSetProvisioningPreferences = stackSetProvisioningPreferences;
             return this;
         }
@@ -889,7 +889,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder stackSetProvisioningPreferences(ProvisionedProductStackSetProvisioningPreferencesGetArgs stackSetProvisioningPreferences) {
+        public Builder stackSetProvisioningPreferences(ProvisionedProductStackSetProvisioningPreferencesArgs stackSetProvisioningPreferences) {
             return stackSetProvisioningPreferences(Output.of(stackSetProvisioningPreferences));
         }
 

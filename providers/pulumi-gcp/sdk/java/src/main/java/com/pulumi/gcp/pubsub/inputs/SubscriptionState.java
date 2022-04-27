@@ -5,10 +5,10 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.pubsub.inputs.SubscriptionDeadLetterPolicyGetArgs;
-import com.pulumi.gcp.pubsub.inputs.SubscriptionExpirationPolicyGetArgs;
-import com.pulumi.gcp.pubsub.inputs.SubscriptionPushConfigGetArgs;
-import com.pulumi.gcp.pubsub.inputs.SubscriptionRetryPolicyGetArgs;
+import com.pulumi.gcp.pubsub.inputs.SubscriptionDeadLetterPolicyArgs;
+import com.pulumi.gcp.pubsub.inputs.SubscriptionExpirationPolicyArgs;
+import com.pulumi.gcp.pubsub.inputs.SubscriptionPushConfigArgs;
+import com.pulumi.gcp.pubsub.inputs.SubscriptionRetryPolicyArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -77,7 +77,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deadLetterPolicy")
-    private @Nullable Output<SubscriptionDeadLetterPolicyGetArgs> deadLetterPolicy;
+    private @Nullable Output<SubscriptionDeadLetterPolicyArgs> deadLetterPolicy;
 
     /**
      * @return A policy that specifies the conditions for dead lettering messages in
@@ -90,7 +90,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<SubscriptionDeadLetterPolicyGetArgs>> deadLetterPolicy() {
+    public Optional<Output<SubscriptionDeadLetterPolicyArgs>> deadLetterPolicy() {
         return Optional.ofNullable(this.deadLetterPolicy);
     }
 
@@ -125,7 +125,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationPolicy")
-    private @Nullable Output<SubscriptionExpirationPolicyGetArgs> expirationPolicy;
+    private @Nullable Output<SubscriptionExpirationPolicyArgs> expirationPolicy;
 
     /**
      * @return A policy that specifies the conditions for this subscription&#39;s expiration.
@@ -138,7 +138,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<SubscriptionExpirationPolicyGetArgs>> expirationPolicy() {
+    public Optional<Output<SubscriptionExpirationPolicyArgs>> expirationPolicy() {
         return Optional.ofNullable(this.expirationPolicy);
     }
 
@@ -247,7 +247,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pushConfig")
-    private @Nullable Output<SubscriptionPushConfigGetArgs> pushConfig;
+    private @Nullable Output<SubscriptionPushConfigArgs> pushConfig;
 
     /**
      * @return If push delivery is used with this subscription, this field is used to
@@ -256,7 +256,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<SubscriptionPushConfigGetArgs>> pushConfig() {
+    public Optional<Output<SubscriptionPushConfigArgs>> pushConfig() {
         return Optional.ofNullable(this.pushConfig);
     }
 
@@ -289,7 +289,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retryPolicy")
-    private @Nullable Output<SubscriptionRetryPolicyGetArgs> retryPolicy;
+    private @Nullable Output<SubscriptionRetryPolicyArgs> retryPolicy;
 
     /**
      * @return A policy that specifies how Pub/Sub retries message delivery for this subscription.
@@ -298,7 +298,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<SubscriptionRetryPolicyGetArgs>> retryPolicy() {
+    public Optional<Output<SubscriptionRetryPolicyArgs>> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
 
@@ -415,7 +415,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder deadLetterPolicy(@Nullable Output<SubscriptionDeadLetterPolicyGetArgs> deadLetterPolicy) {
+        public Builder deadLetterPolicy(@Nullable Output<SubscriptionDeadLetterPolicyArgs> deadLetterPolicy) {
             $.deadLetterPolicy = deadLetterPolicy;
             return this;
         }
@@ -433,7 +433,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder deadLetterPolicy(SubscriptionDeadLetterPolicyGetArgs deadLetterPolicy) {
+        public Builder deadLetterPolicy(SubscriptionDeadLetterPolicyArgs deadLetterPolicy) {
             return deadLetterPolicy(Output.of(deadLetterPolicy));
         }
 
@@ -475,7 +475,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder expirationPolicy(@Nullable Output<SubscriptionExpirationPolicyGetArgs> expirationPolicy) {
+        public Builder expirationPolicy(@Nullable Output<SubscriptionExpirationPolicyArgs> expirationPolicy) {
             $.expirationPolicy = expirationPolicy;
             return this;
         }
@@ -493,7 +493,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder expirationPolicy(SubscriptionExpirationPolicyGetArgs expirationPolicy) {
+        public Builder expirationPolicy(SubscriptionExpirationPolicyArgs expirationPolicy) {
             return expirationPolicy(Output.of(expirationPolicy));
         }
 
@@ -633,7 +633,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pushConfig(@Nullable Output<SubscriptionPushConfigGetArgs> pushConfig) {
+        public Builder pushConfig(@Nullable Output<SubscriptionPushConfigArgs> pushConfig) {
             $.pushConfig = pushConfig;
             return this;
         }
@@ -647,7 +647,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pushConfig(SubscriptionPushConfigGetArgs pushConfig) {
+        public Builder pushConfig(SubscriptionPushConfigArgs pushConfig) {
             return pushConfig(Output.of(pushConfig));
         }
 
@@ -687,7 +687,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retryPolicy(@Nullable Output<SubscriptionRetryPolicyGetArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Output<SubscriptionRetryPolicyArgs> retryPolicy) {
             $.retryPolicy = retryPolicy;
             return this;
         }
@@ -701,7 +701,7 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder retryPolicy(SubscriptionRetryPolicyGetArgs retryPolicy) {
+        public Builder retryPolicy(SubscriptionRetryPolicyArgs retryPolicy) {
             return retryPolicy(Output.of(retryPolicy));
         }
 

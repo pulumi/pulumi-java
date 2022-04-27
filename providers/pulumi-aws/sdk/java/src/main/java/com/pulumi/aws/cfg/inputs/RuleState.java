@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.cfg.inputs;
 
-import com.pulumi.aws.cfg.inputs.RuleScopeGetArgs;
-import com.pulumi.aws.cfg.inputs.RuleSourceGetArgs;
+import com.pulumi.aws.cfg.inputs.RuleScopeArgs;
+import com.pulumi.aws.cfg.inputs.RuleSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -113,13 +113,13 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope")
-    private @Nullable Output<RuleScopeGetArgs> scope;
+    private @Nullable Output<RuleScopeArgs> scope;
 
     /**
      * @return Scope defines which resources can trigger an evaluation for the rule as documented below.
      * 
      */
-    public Optional<Output<RuleScopeGetArgs>> scope() {
+    public Optional<Output<RuleScopeArgs>> scope() {
         return Optional.ofNullable(this.scope);
     }
 
@@ -128,13 +128,13 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-    private @Nullable Output<RuleSourceGetArgs> source;
+    private @Nullable Output<RuleSourceArgs> source;
 
     /**
      * @return Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
      * 
      */
-    public Optional<Output<RuleSourceGetArgs>> source() {
+    public Optional<Output<RuleSourceArgs>> source() {
         return Optional.ofNullable(this.source);
     }
 
@@ -333,7 +333,7 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scope(@Nullable Output<RuleScopeGetArgs> scope) {
+        public Builder scope(@Nullable Output<RuleScopeArgs> scope) {
             $.scope = scope;
             return this;
         }
@@ -344,7 +344,7 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scope(RuleScopeGetArgs scope) {
+        public Builder scope(RuleScopeArgs scope) {
             return scope(Output.of(scope));
         }
 
@@ -354,7 +354,7 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder source(@Nullable Output<RuleSourceGetArgs> source) {
+        public Builder source(@Nullable Output<RuleSourceArgs> source) {
             $.source = source;
             return this;
         }
@@ -365,7 +365,7 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder source(RuleSourceGetArgs source) {
+        public Builder source(RuleSourceArgs source) {
             return source(Output.of(source));
         }
 

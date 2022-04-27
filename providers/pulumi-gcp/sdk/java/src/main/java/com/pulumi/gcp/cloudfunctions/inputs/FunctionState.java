@@ -5,8 +5,8 @@ package com.pulumi.gcp.cloudfunctions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.cloudfunctions.inputs.FunctionEventTriggerGetArgs;
-import com.pulumi.gcp.cloudfunctions.inputs.FunctionSourceRepositoryGetArgs;
+import com.pulumi.gcp.cloudfunctions.inputs.FunctionEventTriggerArgs;
+import com.pulumi.gcp.cloudfunctions.inputs.FunctionSourceRepositoryArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -101,13 +101,13 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventTrigger")
-    private @Nullable Output<FunctionEventTriggerGetArgs> eventTrigger;
+    private @Nullable Output<FunctionEventTriggerArgs> eventTrigger;
 
     /**
      * @return A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
      * 
      */
-    public Optional<Output<FunctionEventTriggerGetArgs>> eventTrigger() {
+    public Optional<Output<FunctionEventTriggerArgs>> eventTrigger() {
         return Optional.ofNullable(this.eventTrigger);
     }
 
@@ -299,14 +299,14 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRepository")
-    private @Nullable Output<FunctionSourceRepositoryGetArgs> sourceRepository;
+    private @Nullable Output<FunctionSourceRepositoryArgs> sourceRepository;
 
     /**
      * @return Represents parameters related to source repository where a function is hosted.
      * Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
      * 
      */
-    public Optional<Output<FunctionSourceRepositoryGetArgs>> sourceRepository() {
+    public Optional<Output<FunctionSourceRepositoryArgs>> sourceRepository() {
         return Optional.ofNullable(this.sourceRepository);
     }
 
@@ -527,7 +527,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder eventTrigger(@Nullable Output<FunctionEventTriggerGetArgs> eventTrigger) {
+        public Builder eventTrigger(@Nullable Output<FunctionEventTriggerArgs> eventTrigger) {
             $.eventTrigger = eventTrigger;
             return this;
         }
@@ -538,7 +538,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder eventTrigger(FunctionEventTriggerGetArgs eventTrigger) {
+        public Builder eventTrigger(FunctionEventTriggerArgs eventTrigger) {
             return eventTrigger(Output.of(eventTrigger));
         }
 
@@ -803,7 +803,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sourceRepository(@Nullable Output<FunctionSourceRepositoryGetArgs> sourceRepository) {
+        public Builder sourceRepository(@Nullable Output<FunctionSourceRepositoryArgs> sourceRepository) {
             $.sourceRepository = sourceRepository;
             return this;
         }
@@ -815,7 +815,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sourceRepository(FunctionSourceRepositoryGetArgs sourceRepository) {
+        public Builder sourceRepository(FunctionSourceRepositoryArgs sourceRepository) {
             return sourceRepository(Output.of(sourceRepository));
         }
 

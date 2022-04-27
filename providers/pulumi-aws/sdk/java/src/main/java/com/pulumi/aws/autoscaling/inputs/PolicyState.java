@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.autoscaling.inputs;
 
-import com.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationGetArgs;
-import com.pulumi.aws.autoscaling.inputs.PolicyStepAdjustmentGetArgs;
-import com.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationGetArgs;
+import com.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationArgs;
+import com.pulumi.aws.autoscaling.inputs.PolicyStepAdjustmentArgs;
+import com.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -160,13 +160,13 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="predictiveScalingConfiguration")
-    private @Nullable Output<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration;
+    private @Nullable Output<PolicyPredictiveScalingConfigurationArgs> predictiveScalingConfiguration;
 
     /**
      * @return The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
      * 
      */
-    public Optional<Output<PolicyPredictiveScalingConfigurationGetArgs>> predictiveScalingConfiguration() {
+    public Optional<Output<PolicyPredictiveScalingConfigurationArgs>> predictiveScalingConfiguration() {
         return Optional.ofNullable(this.predictiveScalingConfiguration);
     }
 
@@ -195,14 +195,14 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stepAdjustments")
-    private @Nullable Output<List<PolicyStepAdjustmentGetArgs>> stepAdjustments;
+    private @Nullable Output<List<PolicyStepAdjustmentArgs>> stepAdjustments;
 
     /**
      * @return A set of adjustments that manage
      * group scaling. These have the following structure:
      * 
      */
-    public Optional<Output<List<PolicyStepAdjustmentGetArgs>>> stepAdjustments() {
+    public Optional<Output<List<PolicyStepAdjustmentArgs>>> stepAdjustments() {
         return Optional.ofNullable(this.stepAdjustments);
     }
 
@@ -211,13 +211,13 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetTrackingConfiguration")
-    private @Nullable Output<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration;
+    private @Nullable Output<PolicyTargetTrackingConfigurationArgs> targetTrackingConfiguration;
 
     /**
      * @return A target tracking policy. These have the following structure:
      * 
      */
-    public Optional<Output<PolicyTargetTrackingConfigurationGetArgs>> targetTrackingConfiguration() {
+    public Optional<Output<PolicyTargetTrackingConfigurationArgs>> targetTrackingConfiguration() {
         return Optional.ofNullable(this.targetTrackingConfiguration);
     }
 
@@ -452,7 +452,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder predictiveScalingConfiguration(@Nullable Output<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration) {
+        public Builder predictiveScalingConfiguration(@Nullable Output<PolicyPredictiveScalingConfigurationArgs> predictiveScalingConfiguration) {
             $.predictiveScalingConfiguration = predictiveScalingConfiguration;
             return this;
         }
@@ -463,7 +463,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder predictiveScalingConfiguration(PolicyPredictiveScalingConfigurationGetArgs predictiveScalingConfiguration) {
+        public Builder predictiveScalingConfiguration(PolicyPredictiveScalingConfigurationArgs predictiveScalingConfiguration) {
             return predictiveScalingConfiguration(Output.of(predictiveScalingConfiguration));
         }
 
@@ -499,7 +499,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder stepAdjustments(@Nullable Output<List<PolicyStepAdjustmentGetArgs>> stepAdjustments) {
+        public Builder stepAdjustments(@Nullable Output<List<PolicyStepAdjustmentArgs>> stepAdjustments) {
             $.stepAdjustments = stepAdjustments;
             return this;
         }
@@ -511,7 +511,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder stepAdjustments(List<PolicyStepAdjustmentGetArgs> stepAdjustments) {
+        public Builder stepAdjustments(List<PolicyStepAdjustmentArgs> stepAdjustments) {
             return stepAdjustments(Output.of(stepAdjustments));
         }
 
@@ -522,7 +522,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder stepAdjustments(PolicyStepAdjustmentGetArgs... stepAdjustments) {
+        public Builder stepAdjustments(PolicyStepAdjustmentArgs... stepAdjustments) {
             return stepAdjustments(List.of(stepAdjustments));
         }
 
@@ -532,7 +532,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder targetTrackingConfiguration(@Nullable Output<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration) {
+        public Builder targetTrackingConfiguration(@Nullable Output<PolicyTargetTrackingConfigurationArgs> targetTrackingConfiguration) {
             $.targetTrackingConfiguration = targetTrackingConfiguration;
             return this;
         }
@@ -543,7 +543,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder targetTrackingConfiguration(PolicyTargetTrackingConfigurationGetArgs targetTrackingConfiguration) {
+        public Builder targetTrackingConfiguration(PolicyTargetTrackingConfigurationArgs targetTrackingConfiguration) {
             return targetTrackingConfiguration(Output.of(targetTrackingConfiguration));
         }
 

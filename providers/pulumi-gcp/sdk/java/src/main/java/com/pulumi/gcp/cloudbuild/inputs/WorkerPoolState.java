@@ -5,8 +5,8 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.cloudbuild.inputs.WorkerPoolNetworkConfigGetArgs;
-import com.pulumi.gcp.cloudbuild.inputs.WorkerPoolWorkerConfigGetArgs;
+import com.pulumi.gcp.cloudbuild.inputs.WorkerPoolNetworkConfigArgs;
+import com.pulumi.gcp.cloudbuild.inputs.WorkerPoolWorkerConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -115,13 +115,13 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfig")
-    private @Nullable Output<WorkerPoolNetworkConfigGetArgs> networkConfig;
+    private @Nullable Output<WorkerPoolNetworkConfigArgs> networkConfig;
 
     /**
      * @return Network configuration for the `WorkerPool`. Structure is documented below.
      * 
      */
-    public Optional<Output<WorkerPoolNetworkConfigGetArgs>> networkConfig() {
+    public Optional<Output<WorkerPoolNetworkConfigArgs>> networkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
 
@@ -190,13 +190,13 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workerConfig")
-    private @Nullable Output<WorkerPoolWorkerConfigGetArgs> workerConfig;
+    private @Nullable Output<WorkerPoolWorkerConfigArgs> workerConfig;
 
     /**
      * @return Configuration to be used for a creating workers in the `WorkerPool`. Structure is documented below.
      * 
      */
-    public Optional<Output<WorkerPoolWorkerConfigGetArgs>> workerConfig() {
+    public Optional<Output<WorkerPoolWorkerConfigArgs>> workerConfig() {
         return Optional.ofNullable(this.workerConfig);
     }
 
@@ -369,7 +369,7 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkConfig(@Nullable Output<WorkerPoolNetworkConfigGetArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Output<WorkerPoolNetworkConfigArgs> networkConfig) {
             $.networkConfig = networkConfig;
             return this;
         }
@@ -380,7 +380,7 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkConfig(WorkerPoolNetworkConfigGetArgs networkConfig) {
+        public Builder networkConfig(WorkerPoolNetworkConfigArgs networkConfig) {
             return networkConfig(Output.of(networkConfig));
         }
 
@@ -474,7 +474,7 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workerConfig(@Nullable Output<WorkerPoolWorkerConfigGetArgs> workerConfig) {
+        public Builder workerConfig(@Nullable Output<WorkerPoolWorkerConfigArgs> workerConfig) {
             $.workerConfig = workerConfig;
             return this;
         }
@@ -485,7 +485,7 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workerConfig(WorkerPoolWorkerConfigGetArgs workerConfig) {
+        public Builder workerConfig(WorkerPoolWorkerConfigArgs workerConfig) {
             return workerConfig(Output.of(workerConfig));
         }
 

@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchSpecificationGetArgs;
-import com.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchTemplateConfigGetArgs;
-import com.pulumi.aws.ec2.inputs.SpotFleetRequestSpotMaintenanceStrategiesGetArgs;
+import com.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchSpecificationArgs;
+import com.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchTemplateConfigArgs;
+import com.pulumi.aws.ec2.inputs.SpotFleetRequestSpotMaintenanceStrategiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -152,7 +152,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="launchSpecifications")
-    private @Nullable Output<List<SpotFleetRequestLaunchSpecificationGetArgs>> launchSpecifications;
+    private @Nullable Output<List<SpotFleetRequestLaunchSpecificationArgs>> launchSpecifications;
 
     /**
      * @return Used to define the launch configuration of the
@@ -160,7 +160,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
      * across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
      * 
      */
-    public Optional<Output<List<SpotFleetRequestLaunchSpecificationGetArgs>>> launchSpecifications() {
+    public Optional<Output<List<SpotFleetRequestLaunchSpecificationArgs>>> launchSpecifications() {
         return Optional.ofNullable(this.launchSpecifications);
     }
 
@@ -169,13 +169,13 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="launchTemplateConfigs")
-    private @Nullable Output<List<SpotFleetRequestLaunchTemplateConfigGetArgs>> launchTemplateConfigs;
+    private @Nullable Output<List<SpotFleetRequestLaunchTemplateConfigArgs>> launchTemplateConfigs;
 
     /**
      * @return Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
      * 
      */
-    public Optional<Output<List<SpotFleetRequestLaunchTemplateConfigGetArgs>>> launchTemplateConfigs() {
+    public Optional<Output<List<SpotFleetRequestLaunchTemplateConfigArgs>>> launchTemplateConfigs() {
         return Optional.ofNullable(this.launchTemplateConfigs);
     }
 
@@ -259,13 +259,13 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="spotMaintenanceStrategies")
-    private @Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesGetArgs> spotMaintenanceStrategies;
+    private @Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesArgs> spotMaintenanceStrategies;
 
     /**
      * @return Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
      * 
      */
-    public Optional<Output<SpotFleetRequestSpotMaintenanceStrategiesGetArgs>> spotMaintenanceStrategies() {
+    public Optional<Output<SpotFleetRequestSpotMaintenanceStrategiesArgs>> spotMaintenanceStrategies() {
         return Optional.ofNullable(this.spotMaintenanceStrategies);
     }
 
@@ -646,7 +646,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder launchSpecifications(@Nullable Output<List<SpotFleetRequestLaunchSpecificationGetArgs>> launchSpecifications) {
+        public Builder launchSpecifications(@Nullable Output<List<SpotFleetRequestLaunchSpecificationArgs>> launchSpecifications) {
             $.launchSpecifications = launchSpecifications;
             return this;
         }
@@ -659,7 +659,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder launchSpecifications(List<SpotFleetRequestLaunchSpecificationGetArgs> launchSpecifications) {
+        public Builder launchSpecifications(List<SpotFleetRequestLaunchSpecificationArgs> launchSpecifications) {
             return launchSpecifications(Output.of(launchSpecifications));
         }
 
@@ -671,7 +671,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder launchSpecifications(SpotFleetRequestLaunchSpecificationGetArgs... launchSpecifications) {
+        public Builder launchSpecifications(SpotFleetRequestLaunchSpecificationArgs... launchSpecifications) {
             return launchSpecifications(List.of(launchSpecifications));
         }
 
@@ -681,7 +681,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder launchTemplateConfigs(@Nullable Output<List<SpotFleetRequestLaunchTemplateConfigGetArgs>> launchTemplateConfigs) {
+        public Builder launchTemplateConfigs(@Nullable Output<List<SpotFleetRequestLaunchTemplateConfigArgs>> launchTemplateConfigs) {
             $.launchTemplateConfigs = launchTemplateConfigs;
             return this;
         }
@@ -692,7 +692,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder launchTemplateConfigs(List<SpotFleetRequestLaunchTemplateConfigGetArgs> launchTemplateConfigs) {
+        public Builder launchTemplateConfigs(List<SpotFleetRequestLaunchTemplateConfigArgs> launchTemplateConfigs) {
             return launchTemplateConfigs(Output.of(launchTemplateConfigs));
         }
 
@@ -702,7 +702,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder launchTemplateConfigs(SpotFleetRequestLaunchTemplateConfigGetArgs... launchTemplateConfigs) {
+        public Builder launchTemplateConfigs(SpotFleetRequestLaunchTemplateConfigArgs... launchTemplateConfigs) {
             return launchTemplateConfigs(List.of(launchTemplateConfigs));
         }
 
@@ -827,7 +827,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder spotMaintenanceStrategies(@Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesGetArgs> spotMaintenanceStrategies) {
+        public Builder spotMaintenanceStrategies(@Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesArgs> spotMaintenanceStrategies) {
             $.spotMaintenanceStrategies = spotMaintenanceStrategies;
             return this;
         }
@@ -838,7 +838,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder spotMaintenanceStrategies(SpotFleetRequestSpotMaintenanceStrategiesGetArgs spotMaintenanceStrategies) {
+        public Builder spotMaintenanceStrategies(SpotFleetRequestSpotMaintenanceStrategiesArgs spotMaintenanceStrategies) {
             return spotMaintenanceStrategies(Output.of(spotMaintenanceStrategies));
         }
 

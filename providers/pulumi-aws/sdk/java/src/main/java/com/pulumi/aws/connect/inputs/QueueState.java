@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.connect.inputs;
 
-import com.pulumi.aws.connect.inputs.QueueOutboundCallerConfigGetArgs;
+import com.pulumi.aws.connect.inputs.QueueOutboundCallerConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -114,13 +114,13 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outboundCallerConfig")
-    private @Nullable Output<QueueOutboundCallerConfigGetArgs> outboundCallerConfig;
+    private @Nullable Output<QueueOutboundCallerConfigArgs> outboundCallerConfig;
 
     /**
      * @return A block that defines the outbound caller ID name, number, and outbound whisper flow. The Outbound Caller Config block is documented below.
      * 
      */
-    public Optional<Output<QueueOutboundCallerConfigGetArgs>> outboundCallerConfig() {
+    public Optional<Output<QueueOutboundCallerConfigArgs>> outboundCallerConfig() {
         return Optional.ofNullable(this.outboundCallerConfig);
     }
 
@@ -366,7 +366,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder outboundCallerConfig(@Nullable Output<QueueOutboundCallerConfigGetArgs> outboundCallerConfig) {
+        public Builder outboundCallerConfig(@Nullable Output<QueueOutboundCallerConfigArgs> outboundCallerConfig) {
             $.outboundCallerConfig = outboundCallerConfig;
             return this;
         }
@@ -377,7 +377,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder outboundCallerConfig(QueueOutboundCallerConfigGetArgs outboundCallerConfig) {
+        public Builder outboundCallerConfig(QueueOutboundCallerConfigArgs outboundCallerConfig) {
             return outboundCallerConfig(Output.of(outboundCallerConfig));
         }
 

@@ -5,8 +5,8 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.logging.inputs.OrganizationSinkBigqueryOptionsGetArgs;
-import com.pulumi.gcp.logging.inputs.OrganizationSinkExclusionGetArgs;
+import com.pulumi.gcp.logging.inputs.OrganizationSinkBigqueryOptionsArgs;
+import com.pulumi.gcp.logging.inputs.OrganizationSinkExclusionArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,13 +24,13 @@ public final class OrganizationSinkState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="bigqueryOptions")
-    private @Nullable Output<OrganizationSinkBigqueryOptionsGetArgs> bigqueryOptions;
+    private @Nullable Output<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions;
 
     /**
      * @return Options that affect sinks exporting data to BigQuery. Structure documented below.
      * 
      */
-    public Optional<Output<OrganizationSinkBigqueryOptionsGetArgs>> bigqueryOptions() {
+    public Optional<Output<OrganizationSinkBigqueryOptionsArgs>> bigqueryOptions() {
         return Optional.ofNullable(this.bigqueryOptions);
     }
 
@@ -90,13 +90,13 @@ public final class OrganizationSinkState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="exclusions")
-    private @Nullable Output<List<OrganizationSinkExclusionGetArgs>> exclusions;
+    private @Nullable Output<List<OrganizationSinkExclusionArgs>> exclusions;
 
     /**
      * @return Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
      * 
      */
-    public Optional<Output<List<OrganizationSinkExclusionGetArgs>>> exclusions() {
+    public Optional<Output<List<OrganizationSinkExclusionArgs>>> exclusions() {
         return Optional.ofNullable(this.exclusions);
     }
 
@@ -220,7 +220,7 @@ public final class OrganizationSinkState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder bigqueryOptions(@Nullable Output<OrganizationSinkBigqueryOptionsGetArgs> bigqueryOptions) {
+        public Builder bigqueryOptions(@Nullable Output<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions) {
             $.bigqueryOptions = bigqueryOptions;
             return this;
         }
@@ -231,7 +231,7 @@ public final class OrganizationSinkState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder bigqueryOptions(OrganizationSinkBigqueryOptionsGetArgs bigqueryOptions) {
+        public Builder bigqueryOptions(OrganizationSinkBigqueryOptionsArgs bigqueryOptions) {
             return bigqueryOptions(Output.of(bigqueryOptions));
         }
 
@@ -310,7 +310,7 @@ public final class OrganizationSinkState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder exclusions(@Nullable Output<List<OrganizationSinkExclusionGetArgs>> exclusions) {
+        public Builder exclusions(@Nullable Output<List<OrganizationSinkExclusionArgs>> exclusions) {
             $.exclusions = exclusions;
             return this;
         }
@@ -321,7 +321,7 @@ public final class OrganizationSinkState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder exclusions(List<OrganizationSinkExclusionGetArgs> exclusions) {
+        public Builder exclusions(List<OrganizationSinkExclusionArgs> exclusions) {
             return exclusions(Output.of(exclusions));
         }
 
@@ -331,7 +331,7 @@ public final class OrganizationSinkState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder exclusions(OrganizationSinkExclusionGetArgs... exclusions) {
+        public Builder exclusions(OrganizationSinkExclusionArgs... exclusions) {
             return exclusions(List.of(exclusions));
         }
 

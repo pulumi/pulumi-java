@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.ProjectServiceCatalogProvisioningDetailsGetArgs;
+import com.pulumi.aws.sagemaker.inputs.ProjectServiceCatalogProvisioningDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -82,13 +82,13 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceCatalogProvisioningDetails")
-    private @Nullable Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails;
+    private @Nullable Output<ProjectServiceCatalogProvisioningDetailsArgs> serviceCatalogProvisioningDetails;
 
     /**
      * @return The product ID and provisioning artifact ID to provision a service catalog. See Service Catalog Provisioning Details below.
      * 
      */
-    public Optional<Output<ProjectServiceCatalogProvisioningDetailsGetArgs>> serviceCatalogProvisioningDetails() {
+    public Optional<Output<ProjectServiceCatalogProvisioningDetailsArgs>> serviceCatalogProvisioningDetails() {
         return Optional.ofNullable(this.serviceCatalogProvisioningDetails);
     }
 
@@ -242,7 +242,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serviceCatalogProvisioningDetails(@Nullable Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails) {
+        public Builder serviceCatalogProvisioningDetails(@Nullable Output<ProjectServiceCatalogProvisioningDetailsArgs> serviceCatalogProvisioningDetails) {
             $.serviceCatalogProvisioningDetails = serviceCatalogProvisioningDetails;
             return this;
         }
@@ -253,7 +253,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serviceCatalogProvisioningDetails(ProjectServiceCatalogProvisioningDetailsGetArgs serviceCatalogProvisioningDetails) {
+        public Builder serviceCatalogProvisioningDetails(ProjectServiceCatalogProvisioningDetailsArgs serviceCatalogProvisioningDetails) {
             return serviceCatalogProvisioningDetails(Output.of(serviceCatalogProvisioningDetails));
         }
 

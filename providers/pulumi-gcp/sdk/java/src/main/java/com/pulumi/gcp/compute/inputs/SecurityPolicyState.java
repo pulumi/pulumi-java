@@ -5,8 +5,8 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.SecurityPolicyAdaptiveProtectionConfigGetArgs;
-import com.pulumi.gcp.compute.inputs.SecurityPolicyRuleGetArgs;
+import com.pulumi.gcp.compute.inputs.SecurityPolicyAdaptiveProtectionConfigArgs;
+import com.pulumi.gcp.compute.inputs.SecurityPolicyRuleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,13 +23,13 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="adaptiveProtectionConfig")
-    private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig;
+    private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
 
     /**
      * @return Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
      * 
      */
-    public Optional<Output<SecurityPolicyAdaptiveProtectionConfigGetArgs>> adaptiveProtectionConfig() {
+    public Optional<Output<SecurityPolicyAdaptiveProtectionConfigArgs>> adaptiveProtectionConfig() {
         return Optional.ofNullable(this.adaptiveProtectionConfig);
     }
 
@@ -102,7 +102,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rules")
-    private @Nullable Output<List<SecurityPolicyRuleGetArgs>> rules;
+    private @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
 
     /**
      * @return The set of rules that belong to this policy. There must always be a default
@@ -110,7 +110,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      * security policy, a default rule with action &#34;allow&#34; will be added. Structure is documented below.
      * 
      */
-    public Optional<Output<List<SecurityPolicyRuleGetArgs>>> rules() {
+    public Optional<Output<List<SecurityPolicyRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
 
@@ -165,7 +165,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder adaptiveProtectionConfig(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig) {
+        public Builder adaptiveProtectionConfig(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig) {
             $.adaptiveProtectionConfig = adaptiveProtectionConfig;
             return this;
         }
@@ -176,7 +176,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder adaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfigGetArgs adaptiveProtectionConfig) {
+        public Builder adaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfigArgs adaptiveProtectionConfig) {
             return adaptiveProtectionConfig(Output.of(adaptiveProtectionConfig));
         }
 
@@ -274,7 +274,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder rules(@Nullable Output<List<SecurityPolicyRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<SecurityPolicyRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
@@ -287,7 +287,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder rules(List<SecurityPolicyRuleGetArgs> rules) {
+        public Builder rules(List<SecurityPolicyRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
@@ -299,7 +299,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder rules(SecurityPolicyRuleGetArgs... rules) {
+        public Builder rules(SecurityPolicyRuleArgs... rules) {
             return rules(List.of(rules));
         }
 

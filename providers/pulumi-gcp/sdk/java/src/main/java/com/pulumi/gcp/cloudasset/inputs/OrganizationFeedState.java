@@ -5,8 +5,8 @@ package com.pulumi.gcp.cloudasset.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.cloudasset.inputs.OrganizationFeedConditionGetArgs;
-import com.pulumi.gcp.cloudasset.inputs.OrganizationFeedFeedOutputConfigGetArgs;
+import com.pulumi.gcp.cloudasset.inputs.OrganizationFeedConditionArgs;
+import com.pulumi.gcp.cloudasset.inputs.OrganizationFeedFeedOutputConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -91,7 +91,7 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<OrganizationFeedConditionGetArgs> condition;
+    private @Nullable Output<OrganizationFeedConditionArgs> condition;
 
     /**
      * @return A condition which determines whether an asset update should be published. If specified, an asset
@@ -102,7 +102,7 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    public Optional<Output<OrganizationFeedConditionGetArgs>> condition() {
+    public Optional<Output<OrganizationFeedConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -144,14 +144,14 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="feedOutputConfig")
-    private @Nullable Output<OrganizationFeedFeedOutputConfigGetArgs> feedOutputConfig;
+    private @Nullable Output<OrganizationFeedFeedOutputConfigArgs> feedOutputConfig;
 
     /**
      * @return Output configuration for asset feed destination.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<OrganizationFeedFeedOutputConfigGetArgs>> feedOutputConfig() {
+    public Optional<Output<OrganizationFeedFeedOutputConfigArgs>> feedOutputConfig() {
         return Optional.ofNullable(this.feedOutputConfig);
     }
 
@@ -336,7 +336,7 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<OrganizationFeedConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<OrganizationFeedConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -352,7 +352,7 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder condition(OrganizationFeedConditionGetArgs condition) {
+        public Builder condition(OrganizationFeedConditionArgs condition) {
             return condition(Output.of(condition));
         }
 
@@ -407,7 +407,7 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder feedOutputConfig(@Nullable Output<OrganizationFeedFeedOutputConfigGetArgs> feedOutputConfig) {
+        public Builder feedOutputConfig(@Nullable Output<OrganizationFeedFeedOutputConfigArgs> feedOutputConfig) {
             $.feedOutputConfig = feedOutputConfig;
             return this;
         }
@@ -419,7 +419,7 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder feedOutputConfig(OrganizationFeedFeedOutputConfigGetArgs feedOutputConfig) {
+        public Builder feedOutputConfig(OrganizationFeedFeedOutputConfigArgs feedOutputConfig) {
             return feedOutputConfig(Output.of(feedOutputConfig));
         }
 

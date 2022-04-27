@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.appmesh.inputs;
 
-import com.pulumi.aws.appmesh.inputs.MeshSpecGetArgs;
+import com.pulumi.aws.appmesh.inputs.MeshSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -112,13 +112,13 @@ public final class MeshState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spec")
-    private @Nullable Output<MeshSpecGetArgs> spec;
+    private @Nullable Output<MeshSpecArgs> spec;
 
     /**
      * @return The service mesh specification to apply.
      * 
      */
-    public Optional<Output<MeshSpecGetArgs>> spec() {
+    public Optional<Output<MeshSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
 
@@ -316,7 +316,7 @@ public final class MeshState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder spec(@Nullable Output<MeshSpecGetArgs> spec) {
+        public Builder spec(@Nullable Output<MeshSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
@@ -327,7 +327,7 @@ public final class MeshState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder spec(MeshSpecGetArgs spec) {
+        public Builder spec(MeshSpecArgs spec) {
             return spec(Output.of(spec));
         }
 

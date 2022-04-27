@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.ssm.inputs;
 
-import com.pulumi.aws.ssm.inputs.PatchBaselineApprovalRuleGetArgs;
-import com.pulumi.aws.ssm.inputs.PatchBaselineGlobalFilterGetArgs;
-import com.pulumi.aws.ssm.inputs.PatchBaselineSourceGetArgs;
+import com.pulumi.aws.ssm.inputs.PatchBaselineApprovalRuleArgs;
+import com.pulumi.aws.ssm.inputs.PatchBaselineGlobalFilterArgs;
+import com.pulumi.aws.ssm.inputs.PatchBaselineSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -26,13 +26,13 @@ public final class PatchBaselineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="approvalRules")
-    private @Nullable Output<List<PatchBaselineApprovalRuleGetArgs>> approvalRules;
+    private @Nullable Output<List<PatchBaselineApprovalRuleArgs>> approvalRules;
 
     /**
      * @return A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
      * 
      */
-    public Optional<Output<List<PatchBaselineApprovalRuleGetArgs>>> approvalRules() {
+    public Optional<Output<List<PatchBaselineApprovalRuleArgs>>> approvalRules() {
         return Optional.ofNullable(this.approvalRules);
     }
 
@@ -116,13 +116,13 @@ public final class PatchBaselineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="globalFilters")
-    private @Nullable Output<List<PatchBaselineGlobalFilterGetArgs>> globalFilters;
+    private @Nullable Output<List<PatchBaselineGlobalFilterArgs>> globalFilters;
 
     /**
      * @return A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
      * 
      */
-    public Optional<Output<List<PatchBaselineGlobalFilterGetArgs>>> globalFilters() {
+    public Optional<Output<List<PatchBaselineGlobalFilterArgs>>> globalFilters() {
         return Optional.ofNullable(this.globalFilters);
     }
 
@@ -191,13 +191,13 @@ public final class PatchBaselineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sources")
-    private @Nullable Output<List<PatchBaselineSourceGetArgs>> sources;
+    private @Nullable Output<List<PatchBaselineSourceArgs>> sources;
 
     /**
      * @return Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
      * 
      */
-    public Optional<Output<List<PatchBaselineSourceGetArgs>>> sources() {
+    public Optional<Output<List<PatchBaselineSourceArgs>>> sources() {
         return Optional.ofNullable(this.sources);
     }
 
@@ -274,7 +274,7 @@ public final class PatchBaselineState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder approvalRules(@Nullable Output<List<PatchBaselineApprovalRuleGetArgs>> approvalRules) {
+        public Builder approvalRules(@Nullable Output<List<PatchBaselineApprovalRuleArgs>> approvalRules) {
             $.approvalRules = approvalRules;
             return this;
         }
@@ -285,7 +285,7 @@ public final class PatchBaselineState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder approvalRules(List<PatchBaselineApprovalRuleGetArgs> approvalRules) {
+        public Builder approvalRules(List<PatchBaselineApprovalRuleArgs> approvalRules) {
             return approvalRules(Output.of(approvalRules));
         }
 
@@ -295,7 +295,7 @@ public final class PatchBaselineState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder approvalRules(PatchBaselineApprovalRuleGetArgs... approvalRules) {
+        public Builder approvalRules(PatchBaselineApprovalRuleArgs... approvalRules) {
             return approvalRules(List.of(approvalRules));
         }
 
@@ -420,7 +420,7 @@ public final class PatchBaselineState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder globalFilters(@Nullable Output<List<PatchBaselineGlobalFilterGetArgs>> globalFilters) {
+        public Builder globalFilters(@Nullable Output<List<PatchBaselineGlobalFilterArgs>> globalFilters) {
             $.globalFilters = globalFilters;
             return this;
         }
@@ -431,7 +431,7 @@ public final class PatchBaselineState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder globalFilters(List<PatchBaselineGlobalFilterGetArgs> globalFilters) {
+        public Builder globalFilters(List<PatchBaselineGlobalFilterArgs> globalFilters) {
             return globalFilters(Output.of(globalFilters));
         }
 
@@ -441,7 +441,7 @@ public final class PatchBaselineState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder globalFilters(PatchBaselineGlobalFilterGetArgs... globalFilters) {
+        public Builder globalFilters(PatchBaselineGlobalFilterArgs... globalFilters) {
             return globalFilters(List.of(globalFilters));
         }
 
@@ -545,7 +545,7 @@ public final class PatchBaselineState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder sources(@Nullable Output<List<PatchBaselineSourceGetArgs>> sources) {
+        public Builder sources(@Nullable Output<List<PatchBaselineSourceArgs>> sources) {
             $.sources = sources;
             return this;
         }
@@ -556,7 +556,7 @@ public final class PatchBaselineState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder sources(List<PatchBaselineSourceGetArgs> sources) {
+        public Builder sources(List<PatchBaselineSourceArgs> sources) {
             return sources(Output.of(sources));
         }
 
@@ -566,7 +566,7 @@ public final class PatchBaselineState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder sources(PatchBaselineSourceGetArgs... sources) {
+        public Builder sources(PatchBaselineSourceArgs... sources) {
             return sources(List.of(sources));
         }
 

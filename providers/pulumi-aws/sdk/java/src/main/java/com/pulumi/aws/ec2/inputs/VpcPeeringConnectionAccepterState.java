@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.VpcPeeringConnectionAccepterAccepterGetArgs;
-import com.pulumi.aws.ec2.inputs.VpcPeeringConnectionAccepterRequesterGetArgs;
+import com.pulumi.aws.ec2.inputs.VpcPeeringConnectionAccepterAccepterArgs;
+import com.pulumi.aws.ec2.inputs.VpcPeeringConnectionAccepterRequesterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -40,14 +40,14 @@ public final class VpcPeeringConnectionAccepterState extends com.pulumi.resource
      * 
      */
     @Import(name="accepter")
-    private @Nullable Output<VpcPeeringConnectionAccepterAccepterGetArgs> accepter;
+    private @Nullable Output<VpcPeeringConnectionAccepterAccepterArgs> accepter;
 
     /**
      * @return A configuration block that describes [VPC Peering Connection]
      * (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.
      * 
      */
-    public Optional<Output<VpcPeeringConnectionAccepterAccepterGetArgs>> accepter() {
+    public Optional<Output<VpcPeeringConnectionAccepterAccepterArgs>> accepter() {
         return Optional.ofNullable(this.accepter);
     }
 
@@ -117,14 +117,14 @@ public final class VpcPeeringConnectionAccepterState extends com.pulumi.resource
      * 
      */
     @Import(name="requester")
-    private @Nullable Output<VpcPeeringConnectionAccepterRequesterGetArgs> requester;
+    private @Nullable Output<VpcPeeringConnectionAccepterRequesterArgs> requester;
 
     /**
      * @return A configuration block that describes [VPC Peering Connection]
      * (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.
      * 
      */
-    public Optional<Output<VpcPeeringConnectionAccepterRequesterGetArgs>> requester() {
+    public Optional<Output<VpcPeeringConnectionAccepterRequesterArgs>> requester() {
         return Optional.ofNullable(this.requester);
     }
 
@@ -250,7 +250,7 @@ public final class VpcPeeringConnectionAccepterState extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder accepter(@Nullable Output<VpcPeeringConnectionAccepterAccepterGetArgs> accepter) {
+        public Builder accepter(@Nullable Output<VpcPeeringConnectionAccepterAccepterArgs> accepter) {
             $.accepter = accepter;
             return this;
         }
@@ -262,7 +262,7 @@ public final class VpcPeeringConnectionAccepterState extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder accepter(VpcPeeringConnectionAccepterAccepterGetArgs accepter) {
+        public Builder accepter(VpcPeeringConnectionAccepterAccepterArgs accepter) {
             return accepter(Output.of(accepter));
         }
 
@@ -357,7 +357,7 @@ public final class VpcPeeringConnectionAccepterState extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder requester(@Nullable Output<VpcPeeringConnectionAccepterRequesterGetArgs> requester) {
+        public Builder requester(@Nullable Output<VpcPeeringConnectionAccepterRequesterArgs> requester) {
             $.requester = requester;
             return this;
         }
@@ -369,7 +369,7 @@ public final class VpcPeeringConnectionAccepterState extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder requester(VpcPeeringConnectionAccepterRequesterGetArgs requester) {
+        public Builder requester(VpcPeeringConnectionAccepterRequesterArgs requester) {
             return requester(Output.of(requester));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.servicecatalog.inputs;
 
-import com.pulumi.aws.servicecatalog.inputs.ServiceActionDefinitionGetArgs;
+import com.pulumi.aws.servicecatalog.inputs.ServiceActionDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class ServiceActionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="definition")
-    private @Nullable Output<ServiceActionDefinitionGetArgs> definition;
+    private @Nullable Output<ServiceActionDefinitionArgs> definition;
 
     /**
      * @return Self-service action definition configuration block. Detailed below.
      * 
      */
-    public Optional<Output<ServiceActionDefinitionGetArgs>> definition() {
+    public Optional<Output<ServiceActionDefinitionArgs>> definition() {
         return Optional.ofNullable(this.definition);
     }
 
@@ -130,7 +130,7 @@ public final class ServiceActionState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder definition(@Nullable Output<ServiceActionDefinitionGetArgs> definition) {
+        public Builder definition(@Nullable Output<ServiceActionDefinitionArgs> definition) {
             $.definition = definition;
             return this;
         }
@@ -141,7 +141,7 @@ public final class ServiceActionState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder definition(ServiceActionDefinitionGetArgs definition) {
+        public Builder definition(ServiceActionDefinitionArgs definition) {
             return definition(Output.of(definition));
         }
 

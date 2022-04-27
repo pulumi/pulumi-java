@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.sfn.inputs;
 
-import com.pulumi.aws.sfn.inputs.StateMachineLoggingConfigurationGetArgs;
-import com.pulumi.aws.sfn.inputs.StateMachineTracingConfigurationGetArgs;
+import com.pulumi.aws.sfn.inputs.StateMachineLoggingConfigurationArgs;
+import com.pulumi.aws.sfn.inputs.StateMachineTracingConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -68,13 +68,13 @@ public final class StateMachineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggingConfiguration")
-    private @Nullable Output<StateMachineLoggingConfigurationGetArgs> loggingConfiguration;
+    private @Nullable Output<StateMachineLoggingConfigurationArgs> loggingConfiguration;
 
     /**
      * @return Defines what execution history events are logged and where they are logged. The `logging_configuration` parameter is only valid when `type` is set to `EXPRESS`. Defaults to `OFF`. For more information see [Logging Express Workflows](https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html) and [Log Levels](https://docs.aws.amazon.com/step-functions/latest/dg/cloudwatch-log-level.html) in the AWS Step Functions User Guide.
      * 
      */
-    public Optional<Output<StateMachineLoggingConfigurationGetArgs>> loggingConfiguration() {
+    public Optional<Output<StateMachineLoggingConfigurationArgs>> loggingConfiguration() {
         return Optional.ofNullable(this.loggingConfiguration);
     }
 
@@ -158,13 +158,13 @@ public final class StateMachineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tracingConfiguration")
-    private @Nullable Output<StateMachineTracingConfigurationGetArgs> tracingConfiguration;
+    private @Nullable Output<StateMachineTracingConfigurationArgs> tracingConfiguration;
 
     /**
      * @return Selects whether AWS X-Ray tracing is enabled.
      * 
      */
-    public Optional<Output<StateMachineTracingConfigurationGetArgs>> tracingConfiguration() {
+    public Optional<Output<StateMachineTracingConfigurationArgs>> tracingConfiguration() {
         return Optional.ofNullable(this.tracingConfiguration);
     }
 
@@ -286,7 +286,7 @@ public final class StateMachineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loggingConfiguration(@Nullable Output<StateMachineLoggingConfigurationGetArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable Output<StateMachineLoggingConfigurationArgs> loggingConfiguration) {
             $.loggingConfiguration = loggingConfiguration;
             return this;
         }
@@ -297,7 +297,7 @@ public final class StateMachineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loggingConfiguration(StateMachineLoggingConfigurationGetArgs loggingConfiguration) {
+        public Builder loggingConfiguration(StateMachineLoggingConfigurationArgs loggingConfiguration) {
             return loggingConfiguration(Output.of(loggingConfiguration));
         }
 
@@ -412,7 +412,7 @@ public final class StateMachineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tracingConfiguration(@Nullable Output<StateMachineTracingConfigurationGetArgs> tracingConfiguration) {
+        public Builder tracingConfiguration(@Nullable Output<StateMachineTracingConfigurationArgs> tracingConfiguration) {
             $.tracingConfiguration = tracingConfiguration;
             return this;
         }
@@ -423,7 +423,7 @@ public final class StateMachineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tracingConfiguration(StateMachineTracingConfigurationGetArgs tracingConfiguration) {
+        public Builder tracingConfiguration(StateMachineTracingConfigurationArgs tracingConfiguration) {
             return tracingConfiguration(Output.of(tracingConfiguration));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.guardduty.inputs;
 
-import com.pulumi.aws.guardduty.inputs.DetectorDatasourcesGetArgs;
+import com.pulumi.aws.guardduty.inputs.DetectorDatasourcesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -53,13 +53,13 @@ public final class DetectorState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasources")
-    private @Nullable Output<DetectorDatasourcesGetArgs> datasources;
+    private @Nullable Output<DetectorDatasourcesArgs> datasources;
 
     /**
      * @return Describes which data sources will be enabled for the detector. See Data Sources below for more details.
      * 
      */
-    public Optional<Output<DetectorDatasourcesGetArgs>> datasources() {
+    public Optional<Output<DetectorDatasourcesArgs>> datasources() {
         return Optional.ofNullable(this.datasources);
     }
 
@@ -201,7 +201,7 @@ public final class DetectorState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder datasources(@Nullable Output<DetectorDatasourcesGetArgs> datasources) {
+        public Builder datasources(@Nullable Output<DetectorDatasourcesArgs> datasources) {
             $.datasources = datasources;
             return this;
         }
@@ -212,7 +212,7 @@ public final class DetectorState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder datasources(DetectorDatasourcesGetArgs datasources) {
+        public Builder datasources(DetectorDatasourcesArgs datasources) {
             return datasources(Output.of(datasources));
         }
 

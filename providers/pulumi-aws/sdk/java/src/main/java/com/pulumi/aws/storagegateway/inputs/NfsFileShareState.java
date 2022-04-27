@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.storagegateway.inputs;
 
-import com.pulumi.aws.storagegateway.inputs.NfsFileShareCacheAttributesGetArgs;
-import com.pulumi.aws.storagegateway.inputs.NfsFileShareNfsFileShareDefaultsGetArgs;
+import com.pulumi.aws.storagegateway.inputs.NfsFileShareCacheAttributesArgs;
+import com.pulumi.aws.storagegateway.inputs.NfsFileShareNfsFileShareDefaultsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -55,13 +55,13 @@ public final class NfsFileShareState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheAttributes")
-    private @Nullable Output<NfsFileShareCacheAttributesGetArgs> cacheAttributes;
+    private @Nullable Output<NfsFileShareCacheAttributesArgs> cacheAttributes;
 
     /**
      * @return Refresh cache information. see Cache Attributes for more details.
      * 
      */
-    public Optional<Output<NfsFileShareCacheAttributesGetArgs>> cacheAttributes() {
+    public Optional<Output<NfsFileShareCacheAttributesArgs>> cacheAttributes() {
         return Optional.ofNullable(this.cacheAttributes);
     }
 
@@ -205,13 +205,13 @@ public final class NfsFileShareState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nfsFileShareDefaults")
-    private @Nullable Output<NfsFileShareNfsFileShareDefaultsGetArgs> nfsFileShareDefaults;
+    private @Nullable Output<NfsFileShareNfsFileShareDefaultsArgs> nfsFileShareDefaults;
 
     /**
      * @return Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
      * 
      */
-    public Optional<Output<NfsFileShareNfsFileShareDefaultsGetArgs>> nfsFileShareDefaults() {
+    public Optional<Output<NfsFileShareNfsFileShareDefaultsArgs>> nfsFileShareDefaults() {
         return Optional.ofNullable(this.nfsFileShareDefaults);
     }
 
@@ -443,7 +443,7 @@ public final class NfsFileShareState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cacheAttributes(@Nullable Output<NfsFileShareCacheAttributesGetArgs> cacheAttributes) {
+        public Builder cacheAttributes(@Nullable Output<NfsFileShareCacheAttributesArgs> cacheAttributes) {
             $.cacheAttributes = cacheAttributes;
             return this;
         }
@@ -454,7 +454,7 @@ public final class NfsFileShareState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cacheAttributes(NfsFileShareCacheAttributesGetArgs cacheAttributes) {
+        public Builder cacheAttributes(NfsFileShareCacheAttributesArgs cacheAttributes) {
             return cacheAttributes(Output.of(cacheAttributes));
         }
 
@@ -663,7 +663,7 @@ public final class NfsFileShareState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nfsFileShareDefaults(@Nullable Output<NfsFileShareNfsFileShareDefaultsGetArgs> nfsFileShareDefaults) {
+        public Builder nfsFileShareDefaults(@Nullable Output<NfsFileShareNfsFileShareDefaultsArgs> nfsFileShareDefaults) {
             $.nfsFileShareDefaults = nfsFileShareDefaults;
             return this;
         }
@@ -674,7 +674,7 @@ public final class NfsFileShareState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nfsFileShareDefaults(NfsFileShareNfsFileShareDefaultsGetArgs nfsFileShareDefaults) {
+        public Builder nfsFileShareDefaults(NfsFileShareNfsFileShareDefaultsArgs nfsFileShareDefaults) {
             return nfsFileShareDefaults(Output.of(nfsFileShareDefaults));
         }
 

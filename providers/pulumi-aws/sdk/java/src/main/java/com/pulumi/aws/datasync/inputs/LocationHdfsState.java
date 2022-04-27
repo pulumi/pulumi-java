@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.datasync.inputs;
 
-import com.pulumi.aws.datasync.inputs.LocationHdfsNameNodeGetArgs;
-import com.pulumi.aws.datasync.inputs.LocationHdfsQopConfigurationGetArgs;
+import com.pulumi.aws.datasync.inputs.LocationHdfsNameNodeArgs;
+import com.pulumi.aws.datasync.inputs.LocationHdfsQopConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -145,13 +145,13 @@ public final class LocationHdfsState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nameNodes")
-    private @Nullable Output<List<LocationHdfsNameNodeGetArgs>> nameNodes;
+    private @Nullable Output<List<LocationHdfsNameNodeArgs>> nameNodes;
 
     /**
      * @return The NameNode that manages the HDFS namespace. The NameNode performs operations such as opening, closing, and renaming files and directories. The NameNode contains the information to map blocks of data to the DataNodes. You can use only one NameNode. See configuration below.
      * 
      */
-    public Optional<Output<List<LocationHdfsNameNodeGetArgs>>> nameNodes() {
+    public Optional<Output<List<LocationHdfsNameNodeArgs>>> nameNodes() {
         return Optional.ofNullable(this.nameNodes);
     }
 
@@ -160,13 +160,13 @@ public final class LocationHdfsState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="qopConfiguration")
-    private @Nullable Output<LocationHdfsQopConfigurationGetArgs> qopConfiguration;
+    private @Nullable Output<LocationHdfsQopConfigurationArgs> qopConfiguration;
 
     /**
      * @return The Quality of Protection (QOP) configuration specifies the Remote Procedure Call (RPC) and data transfer protection settings configured on the Hadoop Distributed File System (HDFS) cluster. If QopConfiguration isn&#39;t specified, RpcProtection and DataTransferProtection default to `PRIVACY`. If you set RpcProtection or DataTransferProtection, the other parameter assumes the same value.  See configuration below.
      * 
      */
-    public Optional<Output<LocationHdfsQopConfigurationGetArgs>> qopConfiguration() {
+    public Optional<Output<LocationHdfsQopConfigurationArgs>> qopConfiguration() {
         return Optional.ofNullable(this.qopConfiguration);
     }
 
@@ -475,7 +475,7 @@ public final class LocationHdfsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nameNodes(@Nullable Output<List<LocationHdfsNameNodeGetArgs>> nameNodes) {
+        public Builder nameNodes(@Nullable Output<List<LocationHdfsNameNodeArgs>> nameNodes) {
             $.nameNodes = nameNodes;
             return this;
         }
@@ -486,7 +486,7 @@ public final class LocationHdfsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nameNodes(List<LocationHdfsNameNodeGetArgs> nameNodes) {
+        public Builder nameNodes(List<LocationHdfsNameNodeArgs> nameNodes) {
             return nameNodes(Output.of(nameNodes));
         }
 
@@ -496,7 +496,7 @@ public final class LocationHdfsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nameNodes(LocationHdfsNameNodeGetArgs... nameNodes) {
+        public Builder nameNodes(LocationHdfsNameNodeArgs... nameNodes) {
             return nameNodes(List.of(nameNodes));
         }
 
@@ -506,7 +506,7 @@ public final class LocationHdfsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder qopConfiguration(@Nullable Output<LocationHdfsQopConfigurationGetArgs> qopConfiguration) {
+        public Builder qopConfiguration(@Nullable Output<LocationHdfsQopConfigurationArgs> qopConfiguration) {
             $.qopConfiguration = qopConfiguration;
             return this;
         }
@@ -517,7 +517,7 @@ public final class LocationHdfsState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder qopConfiguration(LocationHdfsQopConfigurationGetArgs qopConfiguration) {
+        public Builder qopConfiguration(LocationHdfsQopConfigurationArgs qopConfiguration) {
             return qopConfiguration(Output.of(qopConfiguration));
         }
 

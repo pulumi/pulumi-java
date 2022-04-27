@@ -5,8 +5,8 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.SubnetworkLogConfigGetArgs;
-import com.pulumi.gcp.compute.inputs.SubnetworkSecondaryIpRangeGetArgs;
+import com.pulumi.gcp.compute.inputs.SubnetworkLogConfigArgs;
+import com.pulumi.gcp.compute.inputs.SubnetworkSecondaryIpRangeArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -171,7 +171,7 @@ public final class SubnetworkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logConfig")
-    private @Nullable Output<SubnetworkLogConfigGetArgs> logConfig;
+    private @Nullable Output<SubnetworkLogConfigArgs> logConfig;
 
     /**
      * @return Denotes the logging options for the subnetwork flow logs. If logging is enabled
@@ -180,7 +180,7 @@ public final class SubnetworkState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<SubnetworkLogConfigGetArgs>> logConfig() {
+    public Optional<Output<SubnetworkLogConfigArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
 
@@ -347,7 +347,7 @@ public final class SubnetworkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secondaryIpRanges")
-    private @Nullable Output<List<SubnetworkSecondaryIpRangeGetArgs>> secondaryIpRanges;
+    private @Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges;
 
     /**
      * @return An array of configurations for secondary IP ranges for VM instances
@@ -357,7 +357,7 @@ public final class SubnetworkState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<SubnetworkSecondaryIpRangeGetArgs>>> secondaryIpRanges() {
+    public Optional<Output<List<SubnetworkSecondaryIpRangeArgs>>> secondaryIpRanges() {
         return Optional.ofNullable(this.secondaryIpRanges);
     }
 
@@ -639,7 +639,7 @@ public final class SubnetworkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logConfig(@Nullable Output<SubnetworkLogConfigGetArgs> logConfig) {
+        public Builder logConfig(@Nullable Output<SubnetworkLogConfigArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
@@ -653,7 +653,7 @@ public final class SubnetworkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logConfig(SubnetworkLogConfigGetArgs logConfig) {
+        public Builder logConfig(SubnetworkLogConfigArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 
@@ -869,7 +869,7 @@ public final class SubnetworkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder secondaryIpRanges(@Nullable Output<List<SubnetworkSecondaryIpRangeGetArgs>> secondaryIpRanges) {
+        public Builder secondaryIpRanges(@Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges) {
             $.secondaryIpRanges = secondaryIpRanges;
             return this;
         }
@@ -884,7 +884,7 @@ public final class SubnetworkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder secondaryIpRanges(List<SubnetworkSecondaryIpRangeGetArgs> secondaryIpRanges) {
+        public Builder secondaryIpRanges(List<SubnetworkSecondaryIpRangeArgs> secondaryIpRanges) {
             return secondaryIpRanges(Output.of(secondaryIpRanges));
         }
 
@@ -898,7 +898,7 @@ public final class SubnetworkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder secondaryIpRanges(SubnetworkSecondaryIpRangeGetArgs... secondaryIpRanges) {
+        public Builder secondaryIpRanges(SubnetworkSecondaryIpRangeArgs... secondaryIpRanges) {
             return secondaryIpRanges(List.of(secondaryIpRanges));
         }
 

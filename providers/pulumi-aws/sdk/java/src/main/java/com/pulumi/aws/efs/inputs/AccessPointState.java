@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.efs.inputs;
 
-import com.pulumi.aws.efs.inputs.AccessPointPosixUserGetArgs;
-import com.pulumi.aws.efs.inputs.AccessPointRootDirectoryGetArgs;
+import com.pulumi.aws.efs.inputs.AccessPointPosixUserArgs;
+import com.pulumi.aws.efs.inputs.AccessPointRootDirectoryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -75,13 +75,13 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="posixUser")
-    private @Nullable Output<AccessPointPosixUserGetArgs> posixUser;
+    private @Nullable Output<AccessPointPosixUserArgs> posixUser;
 
     /**
      * @return Operating system user and group applied to all file system requests made using the access point. Detailed below.
      * 
      */
-    public Optional<Output<AccessPointPosixUserGetArgs>> posixUser() {
+    public Optional<Output<AccessPointPosixUserArgs>> posixUser() {
         return Optional.ofNullable(this.posixUser);
     }
 
@@ -90,13 +90,13 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rootDirectory")
-    private @Nullable Output<AccessPointRootDirectoryGetArgs> rootDirectory;
+    private @Nullable Output<AccessPointRootDirectoryArgs> rootDirectory;
 
     /**
      * @return Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
      * 
      */
-    public Optional<Output<AccessPointRootDirectoryGetArgs>> rootDirectory() {
+    public Optional<Output<AccessPointRootDirectoryArgs>> rootDirectory() {
         return Optional.ofNullable(this.rootDirectory);
     }
 
@@ -231,7 +231,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder posixUser(@Nullable Output<AccessPointPosixUserGetArgs> posixUser) {
+        public Builder posixUser(@Nullable Output<AccessPointPosixUserArgs> posixUser) {
             $.posixUser = posixUser;
             return this;
         }
@@ -242,7 +242,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder posixUser(AccessPointPosixUserGetArgs posixUser) {
+        public Builder posixUser(AccessPointPosixUserArgs posixUser) {
             return posixUser(Output.of(posixUser));
         }
 
@@ -252,7 +252,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rootDirectory(@Nullable Output<AccessPointRootDirectoryGetArgs> rootDirectory) {
+        public Builder rootDirectory(@Nullable Output<AccessPointRootDirectoryArgs> rootDirectory) {
             $.rootDirectory = rootDirectory;
             return this;
         }
@@ -263,7 +263,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rootDirectory(AccessPointRootDirectoryGetArgs rootDirectory) {
+        public Builder rootDirectory(AccessPointRootDirectoryArgs rootDirectory) {
             return rootDirectory(Output.of(rootDirectory));
         }
 

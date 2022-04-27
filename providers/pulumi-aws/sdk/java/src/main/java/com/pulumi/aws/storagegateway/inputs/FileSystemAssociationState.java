@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.storagegateway.inputs;
 
-import com.pulumi.aws.storagegateway.inputs.FileSystemAssociationCacheAttributesGetArgs;
+import com.pulumi.aws.storagegateway.inputs.FileSystemAssociationCacheAttributesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -52,13 +52,13 @@ public final class FileSystemAssociationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cacheAttributes")
-    private @Nullable Output<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes;
+    private @Nullable Output<FileSystemAssociationCacheAttributesArgs> cacheAttributes;
 
     /**
      * @return Refresh cache information. see Cache Attributes for more details.
      * 
      */
-    public Optional<Output<FileSystemAssociationCacheAttributesGetArgs>> cacheAttributes() {
+    public Optional<Output<FileSystemAssociationCacheAttributesArgs>> cacheAttributes() {
         return Optional.ofNullable(this.cacheAttributes);
     }
 
@@ -232,7 +232,7 @@ public final class FileSystemAssociationState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder cacheAttributes(@Nullable Output<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes) {
+        public Builder cacheAttributes(@Nullable Output<FileSystemAssociationCacheAttributesArgs> cacheAttributes) {
             $.cacheAttributes = cacheAttributes;
             return this;
         }
@@ -243,7 +243,7 @@ public final class FileSystemAssociationState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder cacheAttributes(FileSystemAssociationCacheAttributesGetArgs cacheAttributes) {
+        public Builder cacheAttributes(FileSystemAssociationCacheAttributesArgs cacheAttributes) {
             return cacheAttributes(Output.of(cacheAttributes));
         }
 

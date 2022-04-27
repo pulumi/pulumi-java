@@ -5,8 +5,8 @@ package com.pulumi.gcp.networkservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.networkservices.inputs.EdgeCacheServiceLogConfigGetArgs;
-import com.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingGetArgs;
+import com.pulumi.gcp.networkservices.inputs.EdgeCacheServiceLogConfigArgs;
+import com.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -133,14 +133,14 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="logConfig")
-    private @Nullable Output<EdgeCacheServiceLogConfigGetArgs> logConfig;
+    private @Nullable Output<EdgeCacheServiceLogConfigArgs> logConfig;
 
     /**
      * @return Specifies the logging options for the traffic served by this service. If logging is enabled, logs will be exported to Cloud Logging.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<EdgeCacheServiceLogConfigGetArgs>> logConfig() {
+    public Optional<Output<EdgeCacheServiceLogConfigArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
 
@@ -201,14 +201,14 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="routing")
-    private @Nullable Output<EdgeCacheServiceRoutingGetArgs> routing;
+    private @Nullable Output<EdgeCacheServiceRoutingArgs> routing;
 
     /**
      * @return Defines how requests are routed, modified, cached and/or which origin content is filled from.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<EdgeCacheServiceRoutingGetArgs>> routing() {
+    public Optional<Output<EdgeCacheServiceRoutingArgs>> routing() {
         return Optional.ofNullable(this.routing);
     }
 
@@ -452,7 +452,7 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder logConfig(@Nullable Output<EdgeCacheServiceLogConfigGetArgs> logConfig) {
+        public Builder logConfig(@Nullable Output<EdgeCacheServiceLogConfigArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
@@ -464,7 +464,7 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder logConfig(EdgeCacheServiceLogConfigGetArgs logConfig) {
+        public Builder logConfig(EdgeCacheServiceLogConfigArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 
@@ -544,7 +544,7 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder routing(@Nullable Output<EdgeCacheServiceRoutingGetArgs> routing) {
+        public Builder routing(@Nullable Output<EdgeCacheServiceRoutingArgs> routing) {
             $.routing = routing;
             return this;
         }
@@ -556,7 +556,7 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder routing(EdgeCacheServiceRoutingGetArgs routing) {
+        public Builder routing(EdgeCacheServiceRoutingArgs routing) {
             return routing(Output.of(routing));
         }
 

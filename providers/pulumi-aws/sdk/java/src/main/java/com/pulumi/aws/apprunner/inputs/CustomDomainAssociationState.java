@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.apprunner.inputs;
 
-import com.pulumi.aws.apprunner.inputs.CustomDomainAssociationCertificateValidationRecordGetArgs;
+import com.pulumi.aws.apprunner.inputs.CustomDomainAssociationCertificateValidationRecordArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -23,13 +23,13 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="certificateValidationRecords")
-    private @Nullable Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords;
+    private @Nullable Output<List<CustomDomainAssociationCertificateValidationRecordArgs>> certificateValidationRecords;
 
     /**
      * @return A set of certificate CNAME records used for this domain name. See Certificate Validation Records below for more details.
      * 
      */
-    public Optional<Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>>> certificateValidationRecords() {
+    public Optional<Output<List<CustomDomainAssociationCertificateValidationRecordArgs>>> certificateValidationRecords() {
         return Optional.ofNullable(this.certificateValidationRecords);
     }
 
@@ -143,7 +143,7 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder certificateValidationRecords(@Nullable Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords) {
+        public Builder certificateValidationRecords(@Nullable Output<List<CustomDomainAssociationCertificateValidationRecordArgs>> certificateValidationRecords) {
             $.certificateValidationRecords = certificateValidationRecords;
             return this;
         }
@@ -154,7 +154,7 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder certificateValidationRecords(List<CustomDomainAssociationCertificateValidationRecordGetArgs> certificateValidationRecords) {
+        public Builder certificateValidationRecords(List<CustomDomainAssociationCertificateValidationRecordArgs> certificateValidationRecords) {
             return certificateValidationRecords(Output.of(certificateValidationRecords));
         }
 
@@ -164,7 +164,7 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder certificateValidationRecords(CustomDomainAssociationCertificateValidationRecordGetArgs... certificateValidationRecords) {
+        public Builder certificateValidationRecords(CustomDomainAssociationCertificateValidationRecordArgs... certificateValidationRecords) {
             return certificateValidationRecords(List.of(certificateValidationRecords));
         }
 

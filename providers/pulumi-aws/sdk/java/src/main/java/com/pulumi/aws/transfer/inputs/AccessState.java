@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.transfer.inputs;
 
-import com.pulumi.aws.transfer.inputs.AccessHomeDirectoryMappingGetArgs;
-import com.pulumi.aws.transfer.inputs.AccessPosixProfileGetArgs;
+import com.pulumi.aws.transfer.inputs.AccessHomeDirectoryMappingArgs;
+import com.pulumi.aws.transfer.inputs.AccessPosixProfileArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -53,13 +53,13 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="homeDirectoryMappings")
-    private @Nullable Output<List<AccessHomeDirectoryMappingGetArgs>> homeDirectoryMappings;
+    private @Nullable Output<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings;
 
     /**
      * @return Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
      * 
      */
-    public Optional<Output<List<AccessHomeDirectoryMappingGetArgs>>> homeDirectoryMappings() {
+    public Optional<Output<List<AccessHomeDirectoryMappingArgs>>> homeDirectoryMappings() {
         return Optional.ofNullable(this.homeDirectoryMappings);
     }
 
@@ -90,13 +90,13 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="posixProfile")
-    private @Nullable Output<AccessPosixProfileGetArgs> posixProfile;
+    private @Nullable Output<AccessPosixProfileArgs> posixProfile;
 
     /**
      * @return Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users&#39; access to your Amazon EFS file systems. See Posix Profile below.
      * 
      */
-    public Optional<Output<AccessPosixProfileGetArgs>> posixProfile() {
+    public Optional<Output<AccessPosixProfileArgs>> posixProfile() {
         return Optional.ofNullable(this.posixProfile);
     }
 
@@ -209,7 +209,7 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder homeDirectoryMappings(@Nullable Output<List<AccessHomeDirectoryMappingGetArgs>> homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(@Nullable Output<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings) {
             $.homeDirectoryMappings = homeDirectoryMappings;
             return this;
         }
@@ -220,7 +220,7 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder homeDirectoryMappings(List<AccessHomeDirectoryMappingGetArgs> homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(List<AccessHomeDirectoryMappingArgs> homeDirectoryMappings) {
             return homeDirectoryMappings(Output.of(homeDirectoryMappings));
         }
 
@@ -230,7 +230,7 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder homeDirectoryMappings(AccessHomeDirectoryMappingGetArgs... homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(AccessHomeDirectoryMappingArgs... homeDirectoryMappings) {
             return homeDirectoryMappings(List.of(homeDirectoryMappings));
         }
 
@@ -270,7 +270,7 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder posixProfile(@Nullable Output<AccessPosixProfileGetArgs> posixProfile) {
+        public Builder posixProfile(@Nullable Output<AccessPosixProfileArgs> posixProfile) {
             $.posixProfile = posixProfile;
             return this;
         }
@@ -281,7 +281,7 @@ public final class AccessState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder posixProfile(AccessPosixProfileGetArgs posixProfile) {
+        public Builder posixProfile(AccessPosixProfileArgs posixProfile) {
             return posixProfile(Output.of(posixProfile));
         }
 

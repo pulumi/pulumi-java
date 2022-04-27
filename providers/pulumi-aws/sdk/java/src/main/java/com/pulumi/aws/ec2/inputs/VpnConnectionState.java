@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.VpnConnectionRouteGetArgs;
-import com.pulumi.aws.ec2.inputs.VpnConnectionVgwTelemetryGetArgs;
+import com.pulumi.aws.ec2.inputs.VpnConnectionRouteArgs;
+import com.pulumi.aws.ec2.inputs.VpnConnectionVgwTelemetryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -146,13 +146,13 @@ public final class VpnConnectionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="routes")
-    private @Nullable Output<List<VpnConnectionRouteGetArgs>> routes;
+    private @Nullable Output<List<VpnConnectionRouteArgs>> routes;
 
     /**
      * @return The static routes associated with the VPN connection. Detailed below.
      * 
      */
-    public Optional<Output<List<VpnConnectionRouteGetArgs>>> routes() {
+    public Optional<Output<List<VpnConnectionRouteArgs>>> routes() {
         return Optional.ofNullable(this.routes);
     }
 
@@ -956,13 +956,13 @@ public final class VpnConnectionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="vgwTelemetries")
-    private @Nullable Output<List<VpnConnectionVgwTelemetryGetArgs>> vgwTelemetries;
+    private @Nullable Output<List<VpnConnectionVgwTelemetryArgs>> vgwTelemetries;
 
     /**
      * @return Telemetry for the VPN tunnels. Detailed below.
      * 
      */
-    public Optional<Output<List<VpnConnectionVgwTelemetryGetArgs>>> vgwTelemetries() {
+    public Optional<Output<List<VpnConnectionVgwTelemetryArgs>>> vgwTelemetries() {
         return Optional.ofNullable(this.vgwTelemetries);
     }
 
@@ -1242,7 +1242,7 @@ public final class VpnConnectionState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder routes(@Nullable Output<List<VpnConnectionRouteGetArgs>> routes) {
+        public Builder routes(@Nullable Output<List<VpnConnectionRouteArgs>> routes) {
             $.routes = routes;
             return this;
         }
@@ -1253,7 +1253,7 @@ public final class VpnConnectionState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder routes(List<VpnConnectionRouteGetArgs> routes) {
+        public Builder routes(List<VpnConnectionRouteArgs> routes) {
             return routes(Output.of(routes));
         }
 
@@ -1263,7 +1263,7 @@ public final class VpnConnectionState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder routes(VpnConnectionRouteGetArgs... routes) {
+        public Builder routes(VpnConnectionRouteArgs... routes) {
             return routes(List.of(routes));
         }
 
@@ -2526,7 +2526,7 @@ public final class VpnConnectionState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder vgwTelemetries(@Nullable Output<List<VpnConnectionVgwTelemetryGetArgs>> vgwTelemetries) {
+        public Builder vgwTelemetries(@Nullable Output<List<VpnConnectionVgwTelemetryArgs>> vgwTelemetries) {
             $.vgwTelemetries = vgwTelemetries;
             return this;
         }
@@ -2537,7 +2537,7 @@ public final class VpnConnectionState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder vgwTelemetries(List<VpnConnectionVgwTelemetryGetArgs> vgwTelemetries) {
+        public Builder vgwTelemetries(List<VpnConnectionVgwTelemetryArgs> vgwTelemetries) {
             return vgwTelemetries(Output.of(vgwTelemetries));
         }
 
@@ -2547,7 +2547,7 @@ public final class VpnConnectionState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder vgwTelemetries(VpnConnectionVgwTelemetryGetArgs... vgwTelemetries) {
+        public Builder vgwTelemetries(VpnConnectionVgwTelemetryArgs... vgwTelemetries) {
             return vgwTelemetries(List.of(vgwTelemetries));
         }
 

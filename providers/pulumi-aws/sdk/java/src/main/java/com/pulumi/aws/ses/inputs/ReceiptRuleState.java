@@ -3,13 +3,13 @@
 
 package com.pulumi.aws.ses.inputs;
 
-import com.pulumi.aws.ses.inputs.ReceiptRuleAddHeaderActionGetArgs;
-import com.pulumi.aws.ses.inputs.ReceiptRuleBounceActionGetArgs;
-import com.pulumi.aws.ses.inputs.ReceiptRuleLambdaActionGetArgs;
-import com.pulumi.aws.ses.inputs.ReceiptRuleS3ActionGetArgs;
-import com.pulumi.aws.ses.inputs.ReceiptRuleSnsActionGetArgs;
-import com.pulumi.aws.ses.inputs.ReceiptRuleStopActionGetArgs;
-import com.pulumi.aws.ses.inputs.ReceiptRuleWorkmailActionGetArgs;
+import com.pulumi.aws.ses.inputs.ReceiptRuleAddHeaderActionArgs;
+import com.pulumi.aws.ses.inputs.ReceiptRuleBounceActionArgs;
+import com.pulumi.aws.ses.inputs.ReceiptRuleLambdaActionArgs;
+import com.pulumi.aws.ses.inputs.ReceiptRuleS3ActionArgs;
+import com.pulumi.aws.ses.inputs.ReceiptRuleSnsActionArgs;
+import com.pulumi.aws.ses.inputs.ReceiptRuleStopActionArgs;
+import com.pulumi.aws.ses.inputs.ReceiptRuleWorkmailActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -29,13 +29,13 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addHeaderActions")
-    private @Nullable Output<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions;
+    private @Nullable Output<List<ReceiptRuleAddHeaderActionArgs>> addHeaderActions;
 
     /**
      * @return A list of Add Header Action blocks. Documented below.
      * 
      */
-    public Optional<Output<List<ReceiptRuleAddHeaderActionGetArgs>>> addHeaderActions() {
+    public Optional<Output<List<ReceiptRuleAddHeaderActionArgs>>> addHeaderActions() {
         return Optional.ofNullable(this.addHeaderActions);
     }
 
@@ -74,13 +74,13 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bounceActions")
-    private @Nullable Output<List<ReceiptRuleBounceActionGetArgs>> bounceActions;
+    private @Nullable Output<List<ReceiptRuleBounceActionArgs>> bounceActions;
 
     /**
      * @return A list of Bounce Action blocks. Documented below.
      * 
      */
-    public Optional<Output<List<ReceiptRuleBounceActionGetArgs>>> bounceActions() {
+    public Optional<Output<List<ReceiptRuleBounceActionArgs>>> bounceActions() {
         return Optional.ofNullable(this.bounceActions);
     }
 
@@ -104,13 +104,13 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lambdaActions")
-    private @Nullable Output<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions;
+    private @Nullable Output<List<ReceiptRuleLambdaActionArgs>> lambdaActions;
 
     /**
      * @return A list of Lambda Action blocks. Documented below.
      * 
      */
-    public Optional<Output<List<ReceiptRuleLambdaActionGetArgs>>> lambdaActions() {
+    public Optional<Output<List<ReceiptRuleLambdaActionArgs>>> lambdaActions() {
         return Optional.ofNullable(this.lambdaActions);
     }
 
@@ -164,13 +164,13 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3Actions")
-    private @Nullable Output<List<ReceiptRuleS3ActionGetArgs>> s3Actions;
+    private @Nullable Output<List<ReceiptRuleS3ActionArgs>> s3Actions;
 
     /**
      * @return A list of S3 Action blocks. Documented below.
      * 
      */
-    public Optional<Output<List<ReceiptRuleS3ActionGetArgs>>> s3Actions() {
+    public Optional<Output<List<ReceiptRuleS3ActionArgs>>> s3Actions() {
         return Optional.ofNullable(this.s3Actions);
     }
 
@@ -194,13 +194,13 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snsActions")
-    private @Nullable Output<List<ReceiptRuleSnsActionGetArgs>> snsActions;
+    private @Nullable Output<List<ReceiptRuleSnsActionArgs>> snsActions;
 
     /**
      * @return A list of SNS Action blocks. Documented below.
      * 
      */
-    public Optional<Output<List<ReceiptRuleSnsActionGetArgs>>> snsActions() {
+    public Optional<Output<List<ReceiptRuleSnsActionArgs>>> snsActions() {
         return Optional.ofNullable(this.snsActions);
     }
 
@@ -209,13 +209,13 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stopActions")
-    private @Nullable Output<List<ReceiptRuleStopActionGetArgs>> stopActions;
+    private @Nullable Output<List<ReceiptRuleStopActionArgs>> stopActions;
 
     /**
      * @return A list of Stop Action blocks. Documented below.
      * 
      */
-    public Optional<Output<List<ReceiptRuleStopActionGetArgs>>> stopActions() {
+    public Optional<Output<List<ReceiptRuleStopActionArgs>>> stopActions() {
         return Optional.ofNullable(this.stopActions);
     }
 
@@ -239,13 +239,13 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workmailActions")
-    private @Nullable Output<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions;
+    private @Nullable Output<List<ReceiptRuleWorkmailActionArgs>> workmailActions;
 
     /**
      * @return A list of WorkMail Action blocks. Documented below.
      * 
      */
-    public Optional<Output<List<ReceiptRuleWorkmailActionGetArgs>>> workmailActions() {
+    public Optional<Output<List<ReceiptRuleWorkmailActionArgs>>> workmailActions() {
         return Optional.ofNullable(this.workmailActions);
     }
 
@@ -293,7 +293,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder addHeaderActions(@Nullable Output<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions) {
+        public Builder addHeaderActions(@Nullable Output<List<ReceiptRuleAddHeaderActionArgs>> addHeaderActions) {
             $.addHeaderActions = addHeaderActions;
             return this;
         }
@@ -304,7 +304,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder addHeaderActions(List<ReceiptRuleAddHeaderActionGetArgs> addHeaderActions) {
+        public Builder addHeaderActions(List<ReceiptRuleAddHeaderActionArgs> addHeaderActions) {
             return addHeaderActions(Output.of(addHeaderActions));
         }
 
@@ -314,7 +314,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder addHeaderActions(ReceiptRuleAddHeaderActionGetArgs... addHeaderActions) {
+        public Builder addHeaderActions(ReceiptRuleAddHeaderActionArgs... addHeaderActions) {
             return addHeaderActions(List.of(addHeaderActions));
         }
 
@@ -366,7 +366,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bounceActions(@Nullable Output<List<ReceiptRuleBounceActionGetArgs>> bounceActions) {
+        public Builder bounceActions(@Nullable Output<List<ReceiptRuleBounceActionArgs>> bounceActions) {
             $.bounceActions = bounceActions;
             return this;
         }
@@ -377,7 +377,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bounceActions(List<ReceiptRuleBounceActionGetArgs> bounceActions) {
+        public Builder bounceActions(List<ReceiptRuleBounceActionArgs> bounceActions) {
             return bounceActions(Output.of(bounceActions));
         }
 
@@ -387,7 +387,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bounceActions(ReceiptRuleBounceActionGetArgs... bounceActions) {
+        public Builder bounceActions(ReceiptRuleBounceActionArgs... bounceActions) {
             return bounceActions(List.of(bounceActions));
         }
 
@@ -418,7 +418,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lambdaActions(@Nullable Output<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions) {
+        public Builder lambdaActions(@Nullable Output<List<ReceiptRuleLambdaActionArgs>> lambdaActions) {
             $.lambdaActions = lambdaActions;
             return this;
         }
@@ -429,7 +429,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lambdaActions(List<ReceiptRuleLambdaActionGetArgs> lambdaActions) {
+        public Builder lambdaActions(List<ReceiptRuleLambdaActionArgs> lambdaActions) {
             return lambdaActions(Output.of(lambdaActions));
         }
 
@@ -439,7 +439,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lambdaActions(ReceiptRuleLambdaActionGetArgs... lambdaActions) {
+        public Builder lambdaActions(ReceiptRuleLambdaActionArgs... lambdaActions) {
             return lambdaActions(List.of(lambdaActions));
         }
 
@@ -522,7 +522,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder s3Actions(@Nullable Output<List<ReceiptRuleS3ActionGetArgs>> s3Actions) {
+        public Builder s3Actions(@Nullable Output<List<ReceiptRuleS3ActionArgs>> s3Actions) {
             $.s3Actions = s3Actions;
             return this;
         }
@@ -533,7 +533,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder s3Actions(List<ReceiptRuleS3ActionGetArgs> s3Actions) {
+        public Builder s3Actions(List<ReceiptRuleS3ActionArgs> s3Actions) {
             return s3Actions(Output.of(s3Actions));
         }
 
@@ -543,7 +543,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder s3Actions(ReceiptRuleS3ActionGetArgs... s3Actions) {
+        public Builder s3Actions(ReceiptRuleS3ActionArgs... s3Actions) {
             return s3Actions(List.of(s3Actions));
         }
 
@@ -574,7 +574,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder snsActions(@Nullable Output<List<ReceiptRuleSnsActionGetArgs>> snsActions) {
+        public Builder snsActions(@Nullable Output<List<ReceiptRuleSnsActionArgs>> snsActions) {
             $.snsActions = snsActions;
             return this;
         }
@@ -585,7 +585,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder snsActions(List<ReceiptRuleSnsActionGetArgs> snsActions) {
+        public Builder snsActions(List<ReceiptRuleSnsActionArgs> snsActions) {
             return snsActions(Output.of(snsActions));
         }
 
@@ -595,7 +595,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder snsActions(ReceiptRuleSnsActionGetArgs... snsActions) {
+        public Builder snsActions(ReceiptRuleSnsActionArgs... snsActions) {
             return snsActions(List.of(snsActions));
         }
 
@@ -605,7 +605,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder stopActions(@Nullable Output<List<ReceiptRuleStopActionGetArgs>> stopActions) {
+        public Builder stopActions(@Nullable Output<List<ReceiptRuleStopActionArgs>> stopActions) {
             $.stopActions = stopActions;
             return this;
         }
@@ -616,7 +616,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder stopActions(List<ReceiptRuleStopActionGetArgs> stopActions) {
+        public Builder stopActions(List<ReceiptRuleStopActionArgs> stopActions) {
             return stopActions(Output.of(stopActions));
         }
 
@@ -626,7 +626,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder stopActions(ReceiptRuleStopActionGetArgs... stopActions) {
+        public Builder stopActions(ReceiptRuleStopActionArgs... stopActions) {
             return stopActions(List.of(stopActions));
         }
 
@@ -657,7 +657,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workmailActions(@Nullable Output<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions) {
+        public Builder workmailActions(@Nullable Output<List<ReceiptRuleWorkmailActionArgs>> workmailActions) {
             $.workmailActions = workmailActions;
             return this;
         }
@@ -668,7 +668,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workmailActions(List<ReceiptRuleWorkmailActionGetArgs> workmailActions) {
+        public Builder workmailActions(List<ReceiptRuleWorkmailActionArgs> workmailActions) {
             return workmailActions(Output.of(workmailActions));
         }
 
@@ -678,7 +678,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workmailActions(ReceiptRuleWorkmailActionGetArgs... workmailActions) {
+        public Builder workmailActions(ReceiptRuleWorkmailActionArgs... workmailActions) {
             return workmailActions(List.of(workmailActions));
         }
 

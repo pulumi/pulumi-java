@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.workspaces.inputs;
 
-import com.pulumi.aws.workspaces.inputs.WorkspaceWorkspacePropertiesGetArgs;
+import com.pulumi.aws.workspaces.inputs.WorkspaceWorkspacePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -188,13 +188,13 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceProperties")
-    private @Nullable Output<WorkspaceWorkspacePropertiesGetArgs> workspaceProperties;
+    private @Nullable Output<WorkspaceWorkspacePropertiesArgs> workspaceProperties;
 
     /**
      * @return The WorkSpace properties.
      * 
      */
-    public Optional<Output<WorkspaceWorkspacePropertiesGetArgs>> workspaceProperties() {
+    public Optional<Output<WorkspaceWorkspacePropertiesArgs>> workspaceProperties() {
         return Optional.ofNullable(this.workspaceProperties);
     }
 
@@ -470,7 +470,7 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workspaceProperties(@Nullable Output<WorkspaceWorkspacePropertiesGetArgs> workspaceProperties) {
+        public Builder workspaceProperties(@Nullable Output<WorkspaceWorkspacePropertiesArgs> workspaceProperties) {
             $.workspaceProperties = workspaceProperties;
             return this;
         }
@@ -481,7 +481,7 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workspaceProperties(WorkspaceWorkspacePropertiesGetArgs workspaceProperties) {
+        public Builder workspaceProperties(WorkspaceWorkspacePropertiesArgs workspaceProperties) {
             return workspaceProperties(Output.of(workspaceProperties));
         }
 

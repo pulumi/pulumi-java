@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.datasync.inputs;
 
-import com.pulumi.aws.datasync.inputs.LocationSmbMountOptionsGetArgs;
+import com.pulumi.aws.datasync.inputs.LocationSmbMountOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -68,13 +68,13 @@ public final class LocationSmbState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mountOptions")
-    private @Nullable Output<LocationSmbMountOptionsGetArgs> mountOptions;
+    private @Nullable Output<LocationSmbMountOptionsArgs> mountOptions;
 
     /**
      * @return Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
      * 
      */
-    public Optional<Output<LocationSmbMountOptionsGetArgs>> mountOptions() {
+    public Optional<Output<LocationSmbMountOptionsArgs>> mountOptions() {
         return Optional.ofNullable(this.mountOptions);
     }
 
@@ -288,7 +288,7 @@ public final class LocationSmbState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mountOptions(@Nullable Output<LocationSmbMountOptionsGetArgs> mountOptions) {
+        public Builder mountOptions(@Nullable Output<LocationSmbMountOptionsArgs> mountOptions) {
             $.mountOptions = mountOptions;
             return this;
         }
@@ -299,7 +299,7 @@ public final class LocationSmbState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mountOptions(LocationSmbMountOptionsGetArgs mountOptions) {
+        public Builder mountOptions(LocationSmbMountOptionsArgs mountOptions) {
             return mountOptions(Output.of(mountOptions));
         }
 

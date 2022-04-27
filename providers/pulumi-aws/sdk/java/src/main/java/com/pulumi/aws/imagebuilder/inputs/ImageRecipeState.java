@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.imagebuilder.inputs;
 
-import com.pulumi.aws.imagebuilder.inputs.ImageRecipeBlockDeviceMappingGetArgs;
-import com.pulumi.aws.imagebuilder.inputs.ImageRecipeComponentGetArgs;
+import com.pulumi.aws.imagebuilder.inputs.ImageRecipeBlockDeviceMappingArgs;
+import com.pulumi.aws.imagebuilder.inputs.ImageRecipeComponentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -39,13 +39,13 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blockDeviceMappings")
-    private @Nullable Output<List<ImageRecipeBlockDeviceMappingGetArgs>> blockDeviceMappings;
+    private @Nullable Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings;
 
     /**
      * @return Configuration block(s) with block device mappings for the the image recipe. Detailed below.
      * 
      */
-    public Optional<Output<List<ImageRecipeBlockDeviceMappingGetArgs>>> blockDeviceMappings() {
+    public Optional<Output<List<ImageRecipeBlockDeviceMappingArgs>>> blockDeviceMappings() {
         return Optional.ofNullable(this.blockDeviceMappings);
     }
 
@@ -54,13 +54,13 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="components")
-    private @Nullable Output<List<ImageRecipeComponentGetArgs>> components;
+    private @Nullable Output<List<ImageRecipeComponentArgs>> components;
 
     /**
      * @return Ordered configuration block(s) with components for the image recipe. Detailed below.
      * 
      */
-    public Optional<Output<List<ImageRecipeComponentGetArgs>>> components() {
+    public Optional<Output<List<ImageRecipeComponentArgs>>> components() {
         return Optional.ofNullable(this.components);
     }
 
@@ -293,7 +293,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder blockDeviceMappings(@Nullable Output<List<ImageRecipeBlockDeviceMappingGetArgs>> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings) {
             $.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
@@ -304,7 +304,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder blockDeviceMappings(List<ImageRecipeBlockDeviceMappingGetArgs> blockDeviceMappings) {
+        public Builder blockDeviceMappings(List<ImageRecipeBlockDeviceMappingArgs> blockDeviceMappings) {
             return blockDeviceMappings(Output.of(blockDeviceMappings));
         }
 
@@ -314,7 +314,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder blockDeviceMappings(ImageRecipeBlockDeviceMappingGetArgs... blockDeviceMappings) {
+        public Builder blockDeviceMappings(ImageRecipeBlockDeviceMappingArgs... blockDeviceMappings) {
             return blockDeviceMappings(List.of(blockDeviceMappings));
         }
 
@@ -324,7 +324,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder components(@Nullable Output<List<ImageRecipeComponentGetArgs>> components) {
+        public Builder components(@Nullable Output<List<ImageRecipeComponentArgs>> components) {
             $.components = components;
             return this;
         }
@@ -335,7 +335,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder components(List<ImageRecipeComponentGetArgs> components) {
+        public Builder components(List<ImageRecipeComponentArgs> components) {
             return components(Output.of(components));
         }
 
@@ -345,7 +345,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder components(ImageRecipeComponentGetArgs... components) {
+        public Builder components(ImageRecipeComponentArgs... components) {
             return components(List.of(components));
         }
 

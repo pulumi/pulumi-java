@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.DefaultNetworkAclEgressGetArgs;
-import com.pulumi.aws.ec2.inputs.DefaultNetworkAclIngressGetArgs;
+import com.pulumi.aws.ec2.inputs.DefaultNetworkAclEgressArgs;
+import com.pulumi.aws.ec2.inputs.DefaultNetworkAclIngressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -54,13 +54,13 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="egress")
-    private @Nullable Output<List<DefaultNetworkAclEgressGetArgs>> egress;
+    private @Nullable Output<List<DefaultNetworkAclEgressArgs>> egress;
 
     /**
      * @return Configuration block for an egress rule. Detailed below.
      * 
      */
-    public Optional<Output<List<DefaultNetworkAclEgressGetArgs>>> egress() {
+    public Optional<Output<List<DefaultNetworkAclEgressArgs>>> egress() {
         return Optional.ofNullable(this.egress);
     }
 
@@ -69,13 +69,13 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ingress")
-    private @Nullable Output<List<DefaultNetworkAclIngressGetArgs>> ingress;
+    private @Nullable Output<List<DefaultNetworkAclIngressArgs>> ingress;
 
     /**
      * @return Configuration block for an ingress rule. Detailed below.
      * 
      */
-    public Optional<Output<List<DefaultNetworkAclIngressGetArgs>>> ingress() {
+    public Optional<Output<List<DefaultNetworkAclIngressArgs>>> ingress() {
         return Optional.ofNullable(this.ingress);
     }
 
@@ -234,7 +234,7 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder egress(@Nullable Output<List<DefaultNetworkAclEgressGetArgs>> egress) {
+        public Builder egress(@Nullable Output<List<DefaultNetworkAclEgressArgs>> egress) {
             $.egress = egress;
             return this;
         }
@@ -245,7 +245,7 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder egress(List<DefaultNetworkAclEgressGetArgs> egress) {
+        public Builder egress(List<DefaultNetworkAclEgressArgs> egress) {
             return egress(Output.of(egress));
         }
 
@@ -255,7 +255,7 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder egress(DefaultNetworkAclEgressGetArgs... egress) {
+        public Builder egress(DefaultNetworkAclEgressArgs... egress) {
             return egress(List.of(egress));
         }
 
@@ -265,7 +265,7 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder ingress(@Nullable Output<List<DefaultNetworkAclIngressGetArgs>> ingress) {
+        public Builder ingress(@Nullable Output<List<DefaultNetworkAclIngressArgs>> ingress) {
             $.ingress = ingress;
             return this;
         }
@@ -276,7 +276,7 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder ingress(List<DefaultNetworkAclIngressGetArgs> ingress) {
+        public Builder ingress(List<DefaultNetworkAclIngressArgs> ingress) {
             return ingress(Output.of(ingress));
         }
 
@@ -286,7 +286,7 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder ingress(DefaultNetworkAclIngressGetArgs... ingress) {
+        public Builder ingress(DefaultNetworkAclIngressArgs... ingress) {
             return ingress(List.of(ingress));
         }
 

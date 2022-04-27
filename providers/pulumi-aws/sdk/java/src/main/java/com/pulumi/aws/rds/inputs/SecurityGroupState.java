@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.rds.inputs;
 
-import com.pulumi.aws.rds.inputs.SecurityGroupIngressGetArgs;
+import com.pulumi.aws.rds.inputs.SecurityGroupIngressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
@@ -54,13 +54,13 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ingress")
-    private @Nullable Output<List<SecurityGroupIngressGetArgs>> ingress;
+    private @Nullable Output<List<SecurityGroupIngressArgs>> ingress;
 
     /**
      * @return A list of ingress rules.
      * 
      */
-    public Optional<Output<List<SecurityGroupIngressGetArgs>>> ingress() {
+    public Optional<Output<List<SecurityGroupIngressArgs>>> ingress() {
         return Optional.ofNullable(this.ingress);
     }
 
@@ -186,7 +186,7 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder ingress(@Nullable Output<List<SecurityGroupIngressGetArgs>> ingress) {
+        public Builder ingress(@Nullable Output<List<SecurityGroupIngressArgs>> ingress) {
             $.ingress = ingress;
             return this;
         }
@@ -197,7 +197,7 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder ingress(List<SecurityGroupIngressGetArgs> ingress) {
+        public Builder ingress(List<SecurityGroupIngressArgs> ingress) {
             return ingress(Output.of(ingress));
         }
 
@@ -207,7 +207,7 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder ingress(SecurityGroupIngressGetArgs... ingress) {
+        public Builder ingress(SecurityGroupIngressArgs... ingress) {
             return ingress(List.of(ingress));
         }
 

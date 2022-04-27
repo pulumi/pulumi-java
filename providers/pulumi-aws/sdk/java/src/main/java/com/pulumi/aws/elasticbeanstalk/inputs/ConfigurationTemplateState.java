@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.elasticbeanstalk.inputs;
 
-import com.pulumi.aws.elasticbeanstalk.inputs.ConfigurationTemplateSettingGetArgs;
+import com.pulumi.aws.elasticbeanstalk.inputs.ConfigurationTemplateSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -84,7 +84,7 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="settings")
-    private @Nullable Output<List<ConfigurationTemplateSettingGetArgs>> settings;
+    private @Nullable Output<List<ConfigurationTemplateSettingArgs>> settings;
 
     /**
      * @return Option settings to configure the new Environment. These
@@ -92,7 +92,7 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
      * below in Option Settings
      * 
      */
-    public Optional<Output<List<ConfigurationTemplateSettingGetArgs>>> settings() {
+    public Optional<Output<List<ConfigurationTemplateSettingArgs>>> settings() {
         return Optional.ofNullable(this.settings);
     }
 
@@ -234,7 +234,7 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder settings(@Nullable Output<List<ConfigurationTemplateSettingGetArgs>> settings) {
+        public Builder settings(@Nullable Output<List<ConfigurationTemplateSettingArgs>> settings) {
             $.settings = settings;
             return this;
         }
@@ -247,7 +247,7 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder settings(List<ConfigurationTemplateSettingGetArgs> settings) {
+        public Builder settings(List<ConfigurationTemplateSettingArgs> settings) {
             return settings(Output.of(settings));
         }
 
@@ -259,7 +259,7 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder settings(ConfigurationTemplateSettingGetArgs... settings) {
+        public Builder settings(ConfigurationTemplateSettingArgs... settings) {
             return settings(List.of(settings));
         }
 

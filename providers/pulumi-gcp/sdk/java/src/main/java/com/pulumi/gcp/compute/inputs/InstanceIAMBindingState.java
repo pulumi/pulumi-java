@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.InstanceIAMBindingConditionGetArgs;
+import com.pulumi.gcp.compute.inputs.InstanceIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class InstanceIAMBindingState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<InstanceIAMBindingConditionGetArgs> condition;
+    private @Nullable Output<InstanceIAMBindingConditionArgs> condition;
 
     /**
      * @return ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InstanceIAMBindingConditionGetArgs>> condition() {
+    public Optional<Output<InstanceIAMBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -163,7 +163,7 @@ public final class InstanceIAMBindingState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<InstanceIAMBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<InstanceIAMBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -175,7 +175,7 @@ public final class InstanceIAMBindingState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder condition(InstanceIAMBindingConditionGetArgs condition) {
+        public Builder condition(InstanceIAMBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

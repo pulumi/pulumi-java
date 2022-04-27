@@ -3,14 +3,14 @@
 
 package com.pulumi.aws.ecs.inputs;
 
-import com.pulumi.aws.ecs.inputs.ServiceCapacityProviderStrategyGetArgs;
-import com.pulumi.aws.ecs.inputs.ServiceDeploymentCircuitBreakerGetArgs;
-import com.pulumi.aws.ecs.inputs.ServiceDeploymentControllerGetArgs;
-import com.pulumi.aws.ecs.inputs.ServiceLoadBalancerGetArgs;
-import com.pulumi.aws.ecs.inputs.ServiceNetworkConfigurationGetArgs;
-import com.pulumi.aws.ecs.inputs.ServiceOrderedPlacementStrategyGetArgs;
-import com.pulumi.aws.ecs.inputs.ServicePlacementConstraintGetArgs;
-import com.pulumi.aws.ecs.inputs.ServiceServiceRegistriesGetArgs;
+import com.pulumi.aws.ecs.inputs.ServiceCapacityProviderStrategyArgs;
+import com.pulumi.aws.ecs.inputs.ServiceDeploymentCircuitBreakerArgs;
+import com.pulumi.aws.ecs.inputs.ServiceDeploymentControllerArgs;
+import com.pulumi.aws.ecs.inputs.ServiceLoadBalancerArgs;
+import com.pulumi.aws.ecs.inputs.ServiceNetworkConfigurationArgs;
+import com.pulumi.aws.ecs.inputs.ServiceOrderedPlacementStrategyArgs;
+import com.pulumi.aws.ecs.inputs.ServicePlacementConstraintArgs;
+import com.pulumi.aws.ecs.inputs.ServiceServiceRegistriesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -32,13 +32,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacityProviderStrategies")
-    private @Nullable Output<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
+    private @Nullable Output<List<ServiceCapacityProviderStrategyArgs>> capacityProviderStrategies;
 
     /**
      * @return Capacity provider strategies to use for the service. Can be one or more. These can be updated without destroying and recreating the service only if `force_new_deployment = true` and not changing from 0 `capacity_provider_strategy` blocks to greater than 0, or vice versa. See below.
      * 
      */
-    public Optional<Output<List<ServiceCapacityProviderStrategyGetArgs>>> capacityProviderStrategies() {
+    public Optional<Output<List<ServiceCapacityProviderStrategyArgs>>> capacityProviderStrategies() {
         return Optional.ofNullable(this.capacityProviderStrategies);
     }
 
@@ -62,13 +62,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deploymentCircuitBreaker")
-    private @Nullable Output<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker;
+    private @Nullable Output<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker;
 
     /**
      * @return Configuration block for deployment circuit breaker. See below.
      * 
      */
-    public Optional<Output<ServiceDeploymentCircuitBreakerGetArgs>> deploymentCircuitBreaker() {
+    public Optional<Output<ServiceDeploymentCircuitBreakerArgs>> deploymentCircuitBreaker() {
         return Optional.ofNullable(this.deploymentCircuitBreaker);
     }
 
@@ -77,13 +77,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deploymentController")
-    private @Nullable Output<ServiceDeploymentControllerGetArgs> deploymentController;
+    private @Nullable Output<ServiceDeploymentControllerArgs> deploymentController;
 
     /**
      * @return Configuration block for deployment controller configuration. See below.
      * 
      */
-    public Optional<Output<ServiceDeploymentControllerGetArgs>> deploymentController() {
+    public Optional<Output<ServiceDeploymentControllerArgs>> deploymentController() {
         return Optional.ofNullable(this.deploymentController);
     }
 
@@ -227,13 +227,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancers")
-    private @Nullable Output<List<ServiceLoadBalancerGetArgs>> loadBalancers;
+    private @Nullable Output<List<ServiceLoadBalancerArgs>> loadBalancers;
 
     /**
      * @return Configuration block for load balancers. See below.
      * 
      */
-    public Optional<Output<List<ServiceLoadBalancerGetArgs>>> loadBalancers() {
+    public Optional<Output<List<ServiceLoadBalancerArgs>>> loadBalancers() {
         return Optional.ofNullable(this.loadBalancers);
     }
 
@@ -257,13 +257,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfiguration")
-    private @Nullable Output<ServiceNetworkConfigurationGetArgs> networkConfiguration;
+    private @Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration;
 
     /**
      * @return Network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. See below.
      * 
      */
-    public Optional<Output<ServiceNetworkConfigurationGetArgs>> networkConfiguration() {
+    public Optional<Output<ServiceNetworkConfigurationArgs>> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
 
@@ -272,13 +272,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orderedPlacementStrategies")
-    private @Nullable Output<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies;
+    private @Nullable Output<List<ServiceOrderedPlacementStrategyArgs>> orderedPlacementStrategies;
 
     /**
      * @return Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. See below.
      * 
      */
-    public Optional<Output<List<ServiceOrderedPlacementStrategyGetArgs>>> orderedPlacementStrategies() {
+    public Optional<Output<List<ServiceOrderedPlacementStrategyArgs>>> orderedPlacementStrategies() {
         return Optional.ofNullable(this.orderedPlacementStrategies);
     }
 
@@ -287,13 +287,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="placementConstraints")
-    private @Nullable Output<List<ServicePlacementConstraintGetArgs>> placementConstraints;
+    private @Nullable Output<List<ServicePlacementConstraintArgs>> placementConstraints;
 
     /**
      * @return Rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. See below.
      * 
      */
-    public Optional<Output<List<ServicePlacementConstraintGetArgs>>> placementConstraints() {
+    public Optional<Output<List<ServicePlacementConstraintArgs>>> placementConstraints() {
         return Optional.ofNullable(this.placementConstraints);
     }
 
@@ -347,13 +347,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceRegistries")
-    private @Nullable Output<ServiceServiceRegistriesGetArgs> serviceRegistries;
+    private @Nullable Output<ServiceServiceRegistriesArgs> serviceRegistries;
 
     /**
      * @return Service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. See below.
      * 
      */
-    public Optional<Output<ServiceServiceRegistriesGetArgs>> serviceRegistries() {
+    public Optional<Output<ServiceServiceRegistriesArgs>> serviceRegistries() {
         return Optional.ofNullable(this.serviceRegistries);
     }
 
@@ -472,7 +472,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder capacityProviderStrategies(@Nullable Output<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies) {
+        public Builder capacityProviderStrategies(@Nullable Output<List<ServiceCapacityProviderStrategyArgs>> capacityProviderStrategies) {
             $.capacityProviderStrategies = capacityProviderStrategies;
             return this;
         }
@@ -483,7 +483,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder capacityProviderStrategies(List<ServiceCapacityProviderStrategyGetArgs> capacityProviderStrategies) {
+        public Builder capacityProviderStrategies(List<ServiceCapacityProviderStrategyArgs> capacityProviderStrategies) {
             return capacityProviderStrategies(Output.of(capacityProviderStrategies));
         }
 
@@ -493,7 +493,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder capacityProviderStrategies(ServiceCapacityProviderStrategyGetArgs... capacityProviderStrategies) {
+        public Builder capacityProviderStrategies(ServiceCapacityProviderStrategyArgs... capacityProviderStrategies) {
             return capacityProviderStrategies(List.of(capacityProviderStrategies));
         }
 
@@ -524,7 +524,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder deploymentCircuitBreaker(@Nullable Output<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker) {
+        public Builder deploymentCircuitBreaker(@Nullable Output<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker) {
             $.deploymentCircuitBreaker = deploymentCircuitBreaker;
             return this;
         }
@@ -535,7 +535,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder deploymentCircuitBreaker(ServiceDeploymentCircuitBreakerGetArgs deploymentCircuitBreaker) {
+        public Builder deploymentCircuitBreaker(ServiceDeploymentCircuitBreakerArgs deploymentCircuitBreaker) {
             return deploymentCircuitBreaker(Output.of(deploymentCircuitBreaker));
         }
 
@@ -545,7 +545,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder deploymentController(@Nullable Output<ServiceDeploymentControllerGetArgs> deploymentController) {
+        public Builder deploymentController(@Nullable Output<ServiceDeploymentControllerArgs> deploymentController) {
             $.deploymentController = deploymentController;
             return this;
         }
@@ -556,7 +556,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder deploymentController(ServiceDeploymentControllerGetArgs deploymentController) {
+        public Builder deploymentController(ServiceDeploymentControllerArgs deploymentController) {
             return deploymentController(Output.of(deploymentController));
         }
 
@@ -755,7 +755,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loadBalancers(@Nullable Output<List<ServiceLoadBalancerGetArgs>> loadBalancers) {
+        public Builder loadBalancers(@Nullable Output<List<ServiceLoadBalancerArgs>> loadBalancers) {
             $.loadBalancers = loadBalancers;
             return this;
         }
@@ -766,7 +766,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loadBalancers(List<ServiceLoadBalancerGetArgs> loadBalancers) {
+        public Builder loadBalancers(List<ServiceLoadBalancerArgs> loadBalancers) {
             return loadBalancers(Output.of(loadBalancers));
         }
 
@@ -776,7 +776,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder loadBalancers(ServiceLoadBalancerGetArgs... loadBalancers) {
+        public Builder loadBalancers(ServiceLoadBalancerArgs... loadBalancers) {
             return loadBalancers(List.of(loadBalancers));
         }
 
@@ -807,7 +807,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkConfiguration(@Nullable Output<ServiceNetworkConfigurationGetArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration) {
             $.networkConfiguration = networkConfiguration;
             return this;
         }
@@ -818,7 +818,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkConfiguration(ServiceNetworkConfigurationGetArgs networkConfiguration) {
+        public Builder networkConfiguration(ServiceNetworkConfigurationArgs networkConfiguration) {
             return networkConfiguration(Output.of(networkConfiguration));
         }
 
@@ -828,7 +828,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder orderedPlacementStrategies(@Nullable Output<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies) {
+        public Builder orderedPlacementStrategies(@Nullable Output<List<ServiceOrderedPlacementStrategyArgs>> orderedPlacementStrategies) {
             $.orderedPlacementStrategies = orderedPlacementStrategies;
             return this;
         }
@@ -839,7 +839,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder orderedPlacementStrategies(List<ServiceOrderedPlacementStrategyGetArgs> orderedPlacementStrategies) {
+        public Builder orderedPlacementStrategies(List<ServiceOrderedPlacementStrategyArgs> orderedPlacementStrategies) {
             return orderedPlacementStrategies(Output.of(orderedPlacementStrategies));
         }
 
@@ -849,7 +849,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder orderedPlacementStrategies(ServiceOrderedPlacementStrategyGetArgs... orderedPlacementStrategies) {
+        public Builder orderedPlacementStrategies(ServiceOrderedPlacementStrategyArgs... orderedPlacementStrategies) {
             return orderedPlacementStrategies(List.of(orderedPlacementStrategies));
         }
 
@@ -859,7 +859,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder placementConstraints(@Nullable Output<List<ServicePlacementConstraintGetArgs>> placementConstraints) {
+        public Builder placementConstraints(@Nullable Output<List<ServicePlacementConstraintArgs>> placementConstraints) {
             $.placementConstraints = placementConstraints;
             return this;
         }
@@ -870,7 +870,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder placementConstraints(List<ServicePlacementConstraintGetArgs> placementConstraints) {
+        public Builder placementConstraints(List<ServicePlacementConstraintArgs> placementConstraints) {
             return placementConstraints(Output.of(placementConstraints));
         }
 
@@ -880,7 +880,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder placementConstraints(ServicePlacementConstraintGetArgs... placementConstraints) {
+        public Builder placementConstraints(ServicePlacementConstraintArgs... placementConstraints) {
             return placementConstraints(List.of(placementConstraints));
         }
 
@@ -953,7 +953,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serviceRegistries(@Nullable Output<ServiceServiceRegistriesGetArgs> serviceRegistries) {
+        public Builder serviceRegistries(@Nullable Output<ServiceServiceRegistriesArgs> serviceRegistries) {
             $.serviceRegistries = serviceRegistries;
             return this;
         }
@@ -964,7 +964,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serviceRegistries(ServiceServiceRegistriesGetArgs serviceRegistries) {
+        public Builder serviceRegistries(ServiceServiceRegistriesArgs serviceRegistries) {
             return serviceRegistries(Output.of(serviceRegistries));
         }
 

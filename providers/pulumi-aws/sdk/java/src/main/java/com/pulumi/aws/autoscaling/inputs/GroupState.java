@@ -4,12 +4,12 @@
 package com.pulumi.aws.autoscaling.inputs;
 
 import com.pulumi.aws.autoscaling.enums.MetricsGranularity;
-import com.pulumi.aws.autoscaling.inputs.GroupInitialLifecycleHookGetArgs;
-import com.pulumi.aws.autoscaling.inputs.GroupInstanceRefreshGetArgs;
-import com.pulumi.aws.autoscaling.inputs.GroupLaunchTemplateGetArgs;
-import com.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyGetArgs;
-import com.pulumi.aws.autoscaling.inputs.GroupTagGetArgs;
-import com.pulumi.aws.autoscaling.inputs.GroupWarmPoolGetArgs;
+import com.pulumi.aws.autoscaling.inputs.GroupInitialLifecycleHookArgs;
+import com.pulumi.aws.autoscaling.inputs.GroupInstanceRefreshArgs;
+import com.pulumi.aws.autoscaling.inputs.GroupLaunchTemplateArgs;
+import com.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyArgs;
+import com.pulumi.aws.autoscaling.inputs.GroupTagArgs;
+import com.pulumi.aws.autoscaling.inputs.GroupWarmPoolArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -192,7 +192,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="initialLifecycleHooks")
-    private @Nullable Output<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks;
+    private @Nullable Output<List<GroupInitialLifecycleHookArgs>> initialLifecycleHooks;
 
     /**
      * @return One or more
@@ -204,7 +204,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
      * 
      */
-    public Optional<Output<List<GroupInitialLifecycleHookGetArgs>>> initialLifecycleHooks() {
+    public Optional<Output<List<GroupInitialLifecycleHookArgs>>> initialLifecycleHooks() {
         return Optional.ofNullable(this.initialLifecycleHooks);
     }
 
@@ -215,7 +215,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceRefresh")
-    private @Nullable Output<GroupInstanceRefreshGetArgs> instanceRefresh;
+    private @Nullable Output<GroupInstanceRefreshArgs> instanceRefresh;
 
     /**
      * @return If this block is configured, start an
@@ -223,7 +223,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * when this Auto Scaling Group is updated. Defined below.
      * 
      */
-    public Optional<Output<GroupInstanceRefreshGetArgs>> instanceRefresh() {
+    public Optional<Output<GroupInstanceRefreshArgs>> instanceRefresh() {
         return Optional.ofNullable(this.instanceRefresh);
     }
 
@@ -247,13 +247,13 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="launchTemplate")
-    private @Nullable Output<GroupLaunchTemplateGetArgs> launchTemplate;
+    private @Nullable Output<GroupLaunchTemplateArgs> launchTemplate;
 
     /**
      * @return Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
      * 
      */
-    public Optional<Output<GroupLaunchTemplateGetArgs>> launchTemplate() {
+    public Optional<Output<GroupLaunchTemplateArgs>> launchTemplate() {
         return Optional.ofNullable(this.launchTemplate);
     }
 
@@ -360,13 +360,13 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mixedInstancesPolicy")
-    private @Nullable Output<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy;
+    private @Nullable Output<GroupMixedInstancesPolicyArgs> mixedInstancesPolicy;
 
     /**
      * @return Configuration block containing settings to define launch targets for Auto Scaling groups. See Mixed Instances Policy below for more details.
      * 
      */
-    public Optional<Output<GroupMixedInstancesPolicyGetArgs>> mixedInstancesPolicy() {
+    public Optional<Output<GroupMixedInstancesPolicyArgs>> mixedInstancesPolicy() {
         return Optional.ofNullable(this.mixedInstancesPolicy);
     }
 
@@ -473,13 +473,13 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Output<List<GroupTagGetArgs>> tags;
+    private @Nullable Output<List<GroupTagArgs>> tags;
 
     /**
      * @return Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
      * 
      */
-    public Optional<Output<List<GroupTagGetArgs>>> tags() {
+    public Optional<Output<List<GroupTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -595,14 +595,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="warmPool")
-    private @Nullable Output<GroupWarmPoolGetArgs> warmPool;
+    private @Nullable Output<GroupWarmPoolArgs> warmPool;
 
     /**
      * @return If this block is configured, add a [Warm Pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
      * to the specified Auto Scaling group. Defined below
      * 
      */
-    public Optional<Output<GroupWarmPoolGetArgs>> warmPool() {
+    public Optional<Output<GroupWarmPoolArgs>> warmPool() {
         return Optional.ofNullable(this.warmPool);
     }
 
@@ -906,7 +906,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder initialLifecycleHooks(@Nullable Output<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks) {
+        public Builder initialLifecycleHooks(@Nullable Output<List<GroupInitialLifecycleHookArgs>> initialLifecycleHooks) {
             $.initialLifecycleHooks = initialLifecycleHooks;
             return this;
         }
@@ -923,7 +923,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder initialLifecycleHooks(List<GroupInitialLifecycleHookGetArgs> initialLifecycleHooks) {
+        public Builder initialLifecycleHooks(List<GroupInitialLifecycleHookArgs> initialLifecycleHooks) {
             return initialLifecycleHooks(Output.of(initialLifecycleHooks));
         }
 
@@ -939,7 +939,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder initialLifecycleHooks(GroupInitialLifecycleHookGetArgs... initialLifecycleHooks) {
+        public Builder initialLifecycleHooks(GroupInitialLifecycleHookArgs... initialLifecycleHooks) {
             return initialLifecycleHooks(List.of(initialLifecycleHooks));
         }
 
@@ -951,7 +951,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder instanceRefresh(@Nullable Output<GroupInstanceRefreshGetArgs> instanceRefresh) {
+        public Builder instanceRefresh(@Nullable Output<GroupInstanceRefreshArgs> instanceRefresh) {
             $.instanceRefresh = instanceRefresh;
             return this;
         }
@@ -964,7 +964,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder instanceRefresh(GroupInstanceRefreshGetArgs instanceRefresh) {
+        public Builder instanceRefresh(GroupInstanceRefreshArgs instanceRefresh) {
             return instanceRefresh(Output.of(instanceRefresh));
         }
 
@@ -995,7 +995,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder launchTemplate(@Nullable Output<GroupLaunchTemplateGetArgs> launchTemplate) {
+        public Builder launchTemplate(@Nullable Output<GroupLaunchTemplateArgs> launchTemplate) {
             $.launchTemplate = launchTemplate;
             return this;
         }
@@ -1006,7 +1006,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder launchTemplate(GroupLaunchTemplateGetArgs launchTemplate) {
+        public Builder launchTemplate(GroupLaunchTemplateArgs launchTemplate) {
             return launchTemplate(Output.of(launchTemplate));
         }
 
@@ -1181,7 +1181,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mixedInstancesPolicy(@Nullable Output<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy) {
+        public Builder mixedInstancesPolicy(@Nullable Output<GroupMixedInstancesPolicyArgs> mixedInstancesPolicy) {
             $.mixedInstancesPolicy = mixedInstancesPolicy;
             return this;
         }
@@ -1192,7 +1192,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mixedInstancesPolicy(GroupMixedInstancesPolicyGetArgs mixedInstancesPolicy) {
+        public Builder mixedInstancesPolicy(GroupMixedInstancesPolicyArgs mixedInstancesPolicy) {
             return mixedInstancesPolicy(Output.of(mixedInstancesPolicy));
         }
 
@@ -1347,7 +1347,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Output<List<GroupTagGetArgs>> tags) {
+        public Builder tags(@Nullable Output<List<GroupTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
@@ -1358,7 +1358,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tags(List<GroupTagGetArgs> tags) {
+        public Builder tags(List<GroupTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
@@ -1368,7 +1368,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder tags(GroupTagGetArgs... tags) {
+        public Builder tags(GroupTagArgs... tags) {
             return tags(List.of(tags));
         }
 
@@ -1561,7 +1561,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder warmPool(@Nullable Output<GroupWarmPoolGetArgs> warmPool) {
+        public Builder warmPool(@Nullable Output<GroupWarmPoolArgs> warmPool) {
             $.warmPool = warmPool;
             return this;
         }
@@ -1573,7 +1573,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder warmPool(GroupWarmPoolGetArgs warmPool) {
+        public Builder warmPool(GroupWarmPoolArgs warmPool) {
             return warmPool(Output.of(warmPool));
         }
 

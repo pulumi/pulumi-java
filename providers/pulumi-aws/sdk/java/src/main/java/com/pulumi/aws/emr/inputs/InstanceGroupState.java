@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.emr.inputs;
 
-import com.pulumi.aws.emr.inputs.InstanceGroupEbsConfigGetArgs;
+import com.pulumi.aws.emr.inputs.InstanceGroupEbsConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -84,13 +84,13 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ebsConfigs")
-    private @Nullable Output<List<InstanceGroupEbsConfigGetArgs>> ebsConfigs;
+    private @Nullable Output<List<InstanceGroupEbsConfigArgs>> ebsConfigs;
 
     /**
      * @return One or more `ebs_config` blocks as defined below. Changing this forces a new resource to be created.
      * 
      */
-    public Optional<Output<List<InstanceGroupEbsConfigGetArgs>>> ebsConfigs() {
+    public Optional<Output<List<InstanceGroupEbsConfigArgs>>> ebsConfigs() {
         return Optional.ofNullable(this.ebsConfigs);
     }
 
@@ -292,7 +292,7 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder ebsConfigs(@Nullable Output<List<InstanceGroupEbsConfigGetArgs>> ebsConfigs) {
+        public Builder ebsConfigs(@Nullable Output<List<InstanceGroupEbsConfigArgs>> ebsConfigs) {
             $.ebsConfigs = ebsConfigs;
             return this;
         }
@@ -303,7 +303,7 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder ebsConfigs(List<InstanceGroupEbsConfigGetArgs> ebsConfigs) {
+        public Builder ebsConfigs(List<InstanceGroupEbsConfigArgs> ebsConfigs) {
             return ebsConfigs(Output.of(ebsConfigs));
         }
 
@@ -313,7 +313,7 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder ebsConfigs(InstanceGroupEbsConfigGetArgs... ebsConfigs) {
+        public Builder ebsConfigs(InstanceGroupEbsConfigArgs... ebsConfigs) {
             return ebsConfigs(List.of(ebsConfigs));
         }
 

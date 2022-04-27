@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import com.pulumi.aws.wafv2.inputs.RegexPatternSetRegularExpressionGetArgs;
+import com.pulumi.aws.wafv2.inputs.RegexPatternSetRegularExpressionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -75,13 +75,13 @@ public final class RegexPatternSetState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="regularExpressions")
-    private @Nullable Output<List<RegexPatternSetRegularExpressionGetArgs>> regularExpressions;
+    private @Nullable Output<List<RegexPatternSetRegularExpressionArgs>> regularExpressions;
 
     /**
      * @return One or more blocks of regular expression patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`. See Regular Expression below for details.
      * 
      */
-    public Optional<Output<List<RegexPatternSetRegularExpressionGetArgs>>> regularExpressions() {
+    public Optional<Output<List<RegexPatternSetRegularExpressionArgs>>> regularExpressions() {
         return Optional.ofNullable(this.regularExpressions);
     }
 
@@ -239,7 +239,7 @@ public final class RegexPatternSetState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder regularExpressions(@Nullable Output<List<RegexPatternSetRegularExpressionGetArgs>> regularExpressions) {
+        public Builder regularExpressions(@Nullable Output<List<RegexPatternSetRegularExpressionArgs>> regularExpressions) {
             $.regularExpressions = regularExpressions;
             return this;
         }
@@ -250,7 +250,7 @@ public final class RegexPatternSetState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder regularExpressions(List<RegexPatternSetRegularExpressionGetArgs> regularExpressions) {
+        public Builder regularExpressions(List<RegexPatternSetRegularExpressionArgs> regularExpressions) {
             return regularExpressions(Output.of(regularExpressions));
         }
 
@@ -260,7 +260,7 @@ public final class RegexPatternSetState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder regularExpressions(RegexPatternSetRegularExpressionGetArgs... regularExpressions) {
+        public Builder regularExpressions(RegexPatternSetRegularExpressionArgs... regularExpressions) {
             return regularExpressions(List.of(regularExpressions));
         }
 

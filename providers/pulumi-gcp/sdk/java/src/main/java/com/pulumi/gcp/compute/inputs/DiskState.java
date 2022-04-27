@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.DiskDiskEncryptionKeyGetArgs;
-import com.pulumi.gcp.compute.inputs.DiskSourceImageEncryptionKeyGetArgs;
-import com.pulumi.gcp.compute.inputs.DiskSourceSnapshotEncryptionKeyGetArgs;
+import com.pulumi.gcp.compute.inputs.DiskDiskEncryptionKeyArgs;
+import com.pulumi.gcp.compute.inputs.DiskSourceImageEncryptionKeyArgs;
+import com.pulumi.gcp.compute.inputs.DiskSourceSnapshotEncryptionKeyArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -68,7 +68,7 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskEncryptionKey")
-    private @Nullable Output<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
+    private @Nullable Output<DiskDiskEncryptionKeyArgs> diskEncryptionKey;
 
     /**
      * @return Encrypts the disk using a customer-supplied encryption key.
@@ -83,7 +83,7 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<DiskDiskEncryptionKeyGetArgs>> diskEncryptionKey() {
+    public Optional<Output<DiskDiskEncryptionKeyArgs>> diskEncryptionKey() {
         return Optional.ofNullable(this.diskEncryptionKey);
     }
 
@@ -409,7 +409,7 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceImageEncryptionKey")
-    private @Nullable Output<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey;
+    private @Nullable Output<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey;
 
     /**
      * @return The customer-supplied encryption key of the source image. Required if
@@ -417,7 +417,7 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<DiskSourceImageEncryptionKeyGetArgs>> sourceImageEncryptionKey() {
+    public Optional<Output<DiskSourceImageEncryptionKeyArgs>> sourceImageEncryptionKey() {
         return Optional.ofNullable(this.sourceImageEncryptionKey);
     }
 
@@ -448,7 +448,7 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceSnapshotEncryptionKey")
-    private @Nullable Output<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey;
+    private @Nullable Output<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
     /**
      * @return The customer-supplied encryption key of the source snapshot. Required
@@ -457,7 +457,7 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<DiskSourceSnapshotEncryptionKeyGetArgs>> sourceSnapshotEncryptionKey() {
+    public Optional<Output<DiskSourceSnapshotEncryptionKeyArgs>> sourceSnapshotEncryptionKey() {
         return Optional.ofNullable(this.sourceSnapshotEncryptionKey);
     }
 
@@ -634,7 +634,7 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder diskEncryptionKey(@Nullable Output<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Output<DiskDiskEncryptionKeyArgs> diskEncryptionKey) {
             $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
@@ -654,7 +654,7 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder diskEncryptionKey(DiskDiskEncryptionKeyGetArgs diskEncryptionKey) {
+        public Builder diskEncryptionKey(DiskDiskEncryptionKeyArgs diskEncryptionKey) {
             return diskEncryptionKey(Output.of(diskEncryptionKey));
         }
 
@@ -1086,7 +1086,7 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sourceImageEncryptionKey(@Nullable Output<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey) {
+        public Builder sourceImageEncryptionKey(@Nullable Output<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey) {
             $.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
@@ -1099,7 +1099,7 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sourceImageEncryptionKey(DiskSourceImageEncryptionKeyGetArgs sourceImageEncryptionKey) {
+        public Builder sourceImageEncryptionKey(DiskSourceImageEncryptionKeyArgs sourceImageEncryptionKey) {
             return sourceImageEncryptionKey(Output.of(sourceImageEncryptionKey));
         }
 
@@ -1137,7 +1137,7 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sourceSnapshotEncryptionKey(@Nullable Output<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(@Nullable Output<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
             $.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
@@ -1151,7 +1151,7 @@ public final class DiskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sourceSnapshotEncryptionKey(DiskSourceSnapshotEncryptionKeyGetArgs sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(DiskSourceSnapshotEncryptionKeyArgs sourceSnapshotEncryptionKey) {
             return sourceSnapshotEncryptionKey(Output.of(sourceSnapshotEncryptionKey));
         }
 

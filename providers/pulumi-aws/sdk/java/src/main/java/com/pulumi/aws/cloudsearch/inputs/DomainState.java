@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.cloudsearch.inputs;
 
-import com.pulumi.aws.cloudsearch.inputs.DomainEndpointOptionsGetArgs;
-import com.pulumi.aws.cloudsearch.inputs.DomainIndexFieldGetArgs;
-import com.pulumi.aws.cloudsearch.inputs.DomainScalingParametersGetArgs;
+import com.pulumi.aws.cloudsearch.inputs.DomainEndpointOptionsArgs;
+import com.pulumi.aws.cloudsearch.inputs.DomainIndexFieldArgs;
+import com.pulumi.aws.cloudsearch.inputs.DomainScalingParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -70,13 +70,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointOptions")
-    private @Nullable Output<DomainEndpointOptionsGetArgs> endpointOptions;
+    private @Nullable Output<DomainEndpointOptionsArgs> endpointOptions;
 
     /**
      * @return Domain endpoint options. Documented below.
      * 
      */
-    public Optional<Output<DomainEndpointOptionsGetArgs>> endpointOptions() {
+    public Optional<Output<DomainEndpointOptionsArgs>> endpointOptions() {
         return Optional.ofNullable(this.endpointOptions);
     }
 
@@ -85,13 +85,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="indexFields")
-    private @Nullable Output<List<DomainIndexFieldGetArgs>> indexFields;
+    private @Nullable Output<List<DomainIndexFieldArgs>> indexFields;
 
     /**
      * @return The index fields for documents added to the domain. Documented below.
      * 
      */
-    public Optional<Output<List<DomainIndexFieldGetArgs>>> indexFields() {
+    public Optional<Output<List<DomainIndexFieldArgs>>> indexFields() {
         return Optional.ofNullable(this.indexFields);
     }
 
@@ -130,13 +130,13 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scalingParameters")
-    private @Nullable Output<DomainScalingParametersGetArgs> scalingParameters;
+    private @Nullable Output<DomainScalingParametersArgs> scalingParameters;
 
     /**
      * @return Domain scaling parameters. Documented below.
      * 
      */
-    public Optional<Output<DomainScalingParametersGetArgs>> scalingParameters() {
+    public Optional<Output<DomainScalingParametersArgs>> scalingParameters() {
         return Optional.ofNullable(this.scalingParameters);
     }
 
@@ -256,7 +256,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder endpointOptions(@Nullable Output<DomainEndpointOptionsGetArgs> endpointOptions) {
+        public Builder endpointOptions(@Nullable Output<DomainEndpointOptionsArgs> endpointOptions) {
             $.endpointOptions = endpointOptions;
             return this;
         }
@@ -267,7 +267,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder endpointOptions(DomainEndpointOptionsGetArgs endpointOptions) {
+        public Builder endpointOptions(DomainEndpointOptionsArgs endpointOptions) {
             return endpointOptions(Output.of(endpointOptions));
         }
 
@@ -277,7 +277,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder indexFields(@Nullable Output<List<DomainIndexFieldGetArgs>> indexFields) {
+        public Builder indexFields(@Nullable Output<List<DomainIndexFieldArgs>> indexFields) {
             $.indexFields = indexFields;
             return this;
         }
@@ -288,7 +288,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder indexFields(List<DomainIndexFieldGetArgs> indexFields) {
+        public Builder indexFields(List<DomainIndexFieldArgs> indexFields) {
             return indexFields(Output.of(indexFields));
         }
 
@@ -298,7 +298,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder indexFields(DomainIndexFieldGetArgs... indexFields) {
+        public Builder indexFields(DomainIndexFieldArgs... indexFields) {
             return indexFields(List.of(indexFields));
         }
 
@@ -350,7 +350,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scalingParameters(@Nullable Output<DomainScalingParametersGetArgs> scalingParameters) {
+        public Builder scalingParameters(@Nullable Output<DomainScalingParametersArgs> scalingParameters) {
             $.scalingParameters = scalingParameters;
             return this;
         }
@@ -361,7 +361,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scalingParameters(DomainScalingParametersGetArgs scalingParameters) {
+        public Builder scalingParameters(DomainScalingParametersArgs scalingParameters) {
             return scalingParameters(Output.of(scalingParameters));
         }
 

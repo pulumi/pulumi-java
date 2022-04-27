@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.lambda.inputs;
 
-import com.pulumi.aws.lambda.inputs.AliasRoutingConfigGetArgs;
+import com.pulumi.aws.lambda.inputs.AliasRoutingConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -111,13 +111,13 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routingConfig")
-    private @Nullable Output<AliasRoutingConfigGetArgs> routingConfig;
+    private @Nullable Output<AliasRoutingConfigArgs> routingConfig;
 
     /**
      * @return The Lambda alias&#39; route configuration settings. Fields documented below
      * 
      */
-    public Optional<Output<AliasRoutingConfigGetArgs>> routingConfig() {
+    public Optional<Output<AliasRoutingConfigArgs>> routingConfig() {
         return Optional.ofNullable(this.routingConfig);
     }
 
@@ -283,7 +283,7 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder routingConfig(@Nullable Output<AliasRoutingConfigGetArgs> routingConfig) {
+        public Builder routingConfig(@Nullable Output<AliasRoutingConfigArgs> routingConfig) {
             $.routingConfig = routingConfig;
             return this;
         }
@@ -294,7 +294,7 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder routingConfig(AliasRoutingConfigGetArgs routingConfig) {
+        public Builder routingConfig(AliasRoutingConfigArgs routingConfig) {
             return routingConfig(Output.of(routingConfig));
         }
 

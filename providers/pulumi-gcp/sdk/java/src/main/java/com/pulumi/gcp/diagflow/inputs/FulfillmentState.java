@@ -5,8 +5,8 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.diagflow.inputs.FulfillmentFeatureGetArgs;
-import com.pulumi.gcp.diagflow.inputs.FulfillmentGenericWebServiceGetArgs;
+import com.pulumi.gcp.diagflow.inputs.FulfillmentFeatureArgs;
+import com.pulumi.gcp.diagflow.inputs.FulfillmentGenericWebServiceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -55,14 +55,14 @@ public final class FulfillmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="features")
-    private @Nullable Output<List<FulfillmentFeatureGetArgs>> features;
+    private @Nullable Output<List<FulfillmentFeatureArgs>> features;
 
     /**
      * @return The field defines whether the fulfillment is enabled for certain features.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<FulfillmentFeatureGetArgs>>> features() {
+    public Optional<Output<List<FulfillmentFeatureArgs>>> features() {
         return Optional.ofNullable(this.features);
     }
 
@@ -72,14 +72,14 @@ public final class FulfillmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="genericWebService")
-    private @Nullable Output<FulfillmentGenericWebServiceGetArgs> genericWebService;
+    private @Nullable Output<FulfillmentGenericWebServiceArgs> genericWebService;
 
     /**
      * @return Represents configuration for a generic web service. Dialogflow supports two mechanisms for authentications: - Basic authentication with username and password. - Authentication with additional authentication headers.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FulfillmentGenericWebServiceGetArgs>> genericWebService() {
+    public Optional<Output<FulfillmentGenericWebServiceArgs>> genericWebService() {
         return Optional.ofNullable(this.genericWebService);
     }
 
@@ -195,7 +195,7 @@ public final class FulfillmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder features(@Nullable Output<List<FulfillmentFeatureGetArgs>> features) {
+        public Builder features(@Nullable Output<List<FulfillmentFeatureArgs>> features) {
             $.features = features;
             return this;
         }
@@ -207,7 +207,7 @@ public final class FulfillmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder features(List<FulfillmentFeatureGetArgs> features) {
+        public Builder features(List<FulfillmentFeatureArgs> features) {
             return features(Output.of(features));
         }
 
@@ -218,7 +218,7 @@ public final class FulfillmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder features(FulfillmentFeatureGetArgs... features) {
+        public Builder features(FulfillmentFeatureArgs... features) {
             return features(List.of(features));
         }
 
@@ -229,7 +229,7 @@ public final class FulfillmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder genericWebService(@Nullable Output<FulfillmentGenericWebServiceGetArgs> genericWebService) {
+        public Builder genericWebService(@Nullable Output<FulfillmentGenericWebServiceArgs> genericWebService) {
             $.genericWebService = genericWebService;
             return this;
         }
@@ -241,7 +241,7 @@ public final class FulfillmentState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder genericWebService(FulfillmentGenericWebServiceGetArgs genericWebService) {
+        public Builder genericWebService(FulfillmentGenericWebServiceArgs genericWebService) {
             return genericWebService(Output.of(genericWebService));
         }
 

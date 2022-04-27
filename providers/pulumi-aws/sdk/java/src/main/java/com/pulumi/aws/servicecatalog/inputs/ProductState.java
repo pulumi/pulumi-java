@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.servicecatalog.inputs;
 
-import com.pulumi.aws.servicecatalog.inputs.ProductProvisioningArtifactParametersGetArgs;
+import com.pulumi.aws.servicecatalog.inputs.ProductProvisioningArtifactParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -143,13 +143,13 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioningArtifactParameters")
-    private @Nullable Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters;
+    private @Nullable Output<ProductProvisioningArtifactParametersArgs> provisioningArtifactParameters;
 
     /**
      * @return Configuration block for provisioning artifact (i.e., version) parameters. Detailed below.
      * 
      */
-    public Optional<Output<ProductProvisioningArtifactParametersGetArgs>> provisioningArtifactParameters() {
+    public Optional<Output<ProductProvisioningArtifactParametersArgs>> provisioningArtifactParameters() {
         return Optional.ofNullable(this.provisioningArtifactParameters);
     }
 
@@ -471,7 +471,7 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder provisioningArtifactParameters(@Nullable Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters) {
+        public Builder provisioningArtifactParameters(@Nullable Output<ProductProvisioningArtifactParametersArgs> provisioningArtifactParameters) {
             $.provisioningArtifactParameters = provisioningArtifactParameters;
             return this;
         }
@@ -482,7 +482,7 @@ public final class ProductState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder provisioningArtifactParameters(ProductProvisioningArtifactParametersGetArgs provisioningArtifactParameters) {
+        public Builder provisioningArtifactParameters(ProductProvisioningArtifactParametersArgs provisioningArtifactParameters) {
             return provisioningArtifactParameters(Output.of(provisioningArtifactParameters));
         }
 

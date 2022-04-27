@@ -5,7 +5,7 @@ package com.pulumi.gcp.bigtable.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.bigtable.inputs.TableColumnFamilyGetArgs;
+import com.pulumi.gcp.bigtable.inputs.TableColumnFamilyArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,13 +22,13 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="columnFamilies")
-    private @Nullable Output<List<TableColumnFamilyGetArgs>> columnFamilies;
+    private @Nullable Output<List<TableColumnFamilyArgs>> columnFamilies;
 
     /**
      * @return A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
      * 
      */
-    public Optional<Output<List<TableColumnFamilyGetArgs>>> columnFamilies() {
+    public Optional<Output<List<TableColumnFamilyArgs>>> columnFamilies() {
         return Optional.ofNullable(this.columnFamilies);
     }
 
@@ -132,7 +132,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder columnFamilies(@Nullable Output<List<TableColumnFamilyGetArgs>> columnFamilies) {
+        public Builder columnFamilies(@Nullable Output<List<TableColumnFamilyArgs>> columnFamilies) {
             $.columnFamilies = columnFamilies;
             return this;
         }
@@ -143,7 +143,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder columnFamilies(List<TableColumnFamilyGetArgs> columnFamilies) {
+        public Builder columnFamilies(List<TableColumnFamilyArgs> columnFamilies) {
             return columnFamilies(Output.of(columnFamilies));
         }
 
@@ -153,7 +153,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder columnFamilies(TableColumnFamilyGetArgs... columnFamilies) {
+        public Builder columnFamilies(TableColumnFamilyArgs... columnFamilies) {
             return columnFamilies(List.of(columnFamilies));
         }
 

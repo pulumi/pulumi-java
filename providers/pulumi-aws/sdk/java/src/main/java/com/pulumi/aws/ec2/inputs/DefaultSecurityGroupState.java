@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.DefaultSecurityGroupEgressGetArgs;
-import com.pulumi.aws.ec2.inputs.DefaultSecurityGroupIngressGetArgs;
+import com.pulumi.aws.ec2.inputs.DefaultSecurityGroupEgressArgs;
+import com.pulumi.aws.ec2.inputs.DefaultSecurityGroupIngressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -55,13 +55,13 @@ public final class DefaultSecurityGroupState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="egress")
-    private @Nullable Output<List<DefaultSecurityGroupEgressGetArgs>> egress;
+    private @Nullable Output<List<DefaultSecurityGroupEgressArgs>> egress;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<List<DefaultSecurityGroupEgressGetArgs>>> egress() {
+    public Optional<Output<List<DefaultSecurityGroupEgressArgs>>> egress() {
         return Optional.ofNullable(this.egress);
     }
 
@@ -70,13 +70,13 @@ public final class DefaultSecurityGroupState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ingress")
-    private @Nullable Output<List<DefaultSecurityGroupIngressGetArgs>> ingress;
+    private @Nullable Output<List<DefaultSecurityGroupIngressArgs>> ingress;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<List<DefaultSecurityGroupIngressGetArgs>>> ingress() {
+    public Optional<Output<List<DefaultSecurityGroupIngressArgs>>> ingress() {
         return Optional.ofNullable(this.ingress);
     }
 
@@ -243,7 +243,7 @@ public final class DefaultSecurityGroupState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder egress(@Nullable Output<List<DefaultSecurityGroupEgressGetArgs>> egress) {
+        public Builder egress(@Nullable Output<List<DefaultSecurityGroupEgressArgs>> egress) {
             $.egress = egress;
             return this;
         }
@@ -254,7 +254,7 @@ public final class DefaultSecurityGroupState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder egress(List<DefaultSecurityGroupEgressGetArgs> egress) {
+        public Builder egress(List<DefaultSecurityGroupEgressArgs> egress) {
             return egress(Output.of(egress));
         }
 
@@ -264,7 +264,7 @@ public final class DefaultSecurityGroupState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder egress(DefaultSecurityGroupEgressGetArgs... egress) {
+        public Builder egress(DefaultSecurityGroupEgressArgs... egress) {
             return egress(List.of(egress));
         }
 
@@ -274,7 +274,7 @@ public final class DefaultSecurityGroupState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder ingress(@Nullable Output<List<DefaultSecurityGroupIngressGetArgs>> ingress) {
+        public Builder ingress(@Nullable Output<List<DefaultSecurityGroupIngressArgs>> ingress) {
             $.ingress = ingress;
             return this;
         }
@@ -285,7 +285,7 @@ public final class DefaultSecurityGroupState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder ingress(List<DefaultSecurityGroupIngressGetArgs> ingress) {
+        public Builder ingress(List<DefaultSecurityGroupIngressArgs> ingress) {
             return ingress(Output.of(ingress));
         }
 
@@ -295,7 +295,7 @@ public final class DefaultSecurityGroupState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder ingress(DefaultSecurityGroupIngressGetArgs... ingress) {
+        public Builder ingress(DefaultSecurityGroupIngressArgs... ingress) {
             return ingress(List.of(ingress));
         }
 

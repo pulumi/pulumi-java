@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.elasticache.inputs;
 
-import com.pulumi.aws.elasticache.inputs.ReplicationGroupClusterModeGetArgs;
+import com.pulumi.aws.elasticache.inputs.ReplicationGroupClusterModeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -145,13 +145,13 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="clusterMode")
-    private @Nullable Output<ReplicationGroupClusterModeGetArgs> clusterMode;
+    private @Nullable Output<ReplicationGroupClusterModeArgs> clusterMode;
 
     /**
      * @return Create a native Redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed. Note that configuring this block does not enable cluster mode, i.e., data sharding, this requires using a parameter group that has the parameter `cluster-enabled` set to true.
      * 
      */
-    public Optional<Output<ReplicationGroupClusterModeGetArgs>> clusterMode() {
+    public Optional<Output<ReplicationGroupClusterModeArgs>> clusterMode() {
         return Optional.ofNullable(this.clusterMode);
     }
 
@@ -851,7 +851,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder clusterMode(@Nullable Output<ReplicationGroupClusterModeGetArgs> clusterMode) {
+        public Builder clusterMode(@Nullable Output<ReplicationGroupClusterModeArgs> clusterMode) {
             $.clusterMode = clusterMode;
             return this;
         }
@@ -862,7 +862,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder clusterMode(ReplicationGroupClusterModeGetArgs clusterMode) {
+        public Builder clusterMode(ReplicationGroupClusterModeArgs clusterMode) {
             return clusterMode(Output.of(clusterMode));
         }
 

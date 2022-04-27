@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.FirewallAllowGetArgs;
-import com.pulumi.gcp.compute.inputs.FirewallDenyGetArgs;
-import com.pulumi.gcp.compute.inputs.FirewallLogConfigGetArgs;
+import com.pulumi.gcp.compute.inputs.FirewallAllowArgs;
+import com.pulumi.gcp.compute.inputs.FirewallDenyArgs;
+import com.pulumi.gcp.compute.inputs.FirewallLogConfigArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allows")
-    private @Nullable Output<List<FirewallAllowGetArgs>> allows;
+    private @Nullable Output<List<FirewallAllowArgs>> allows;
 
     /**
      * @return The list of ALLOW rules specified by this firewall. Each rule
@@ -38,7 +38,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<FirewallAllowGetArgs>>> allows() {
+    public Optional<Output<List<FirewallAllowArgs>>> allows() {
         return Optional.ofNullable(this.allows);
     }
 
@@ -64,7 +64,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="denies")
-    private @Nullable Output<List<FirewallDenyGetArgs>> denies;
+    private @Nullable Output<List<FirewallDenyArgs>> denies;
 
     /**
      * @return The list of DENY rules specified by this firewall. Each rule specifies
@@ -72,7 +72,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<FirewallDenyGetArgs>>> denies() {
+    public Optional<Output<List<FirewallDenyArgs>>> denies() {
         return Optional.ofNullable(this.denies);
     }
 
@@ -190,7 +190,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logConfig")
-    private @Nullable Output<FirewallLogConfigGetArgs> logConfig;
+    private @Nullable Output<FirewallLogConfigArgs> logConfig;
 
     /**
      * @return This field denotes the logging options for a particular firewall rule.
@@ -198,7 +198,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<FirewallLogConfigGetArgs>> logConfig() {
+    public Optional<Output<FirewallLogConfigArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
 
@@ -499,7 +499,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder allows(@Nullable Output<List<FirewallAllowGetArgs>> allows) {
+        public Builder allows(@Nullable Output<List<FirewallAllowArgs>> allows) {
             $.allows = allows;
             return this;
         }
@@ -513,7 +513,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder allows(List<FirewallAllowGetArgs> allows) {
+        public Builder allows(List<FirewallAllowArgs> allows) {
             return allows(Output.of(allows));
         }
 
@@ -526,7 +526,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder allows(FirewallAllowGetArgs... allows) {
+        public Builder allows(FirewallAllowArgs... allows) {
             return allows(List.of(allows));
         }
 
@@ -559,7 +559,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder denies(@Nullable Output<List<FirewallDenyGetArgs>> denies) {
+        public Builder denies(@Nullable Output<List<FirewallDenyArgs>> denies) {
             $.denies = denies;
             return this;
         }
@@ -572,7 +572,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder denies(List<FirewallDenyGetArgs> denies) {
+        public Builder denies(List<FirewallDenyArgs> denies) {
             return denies(Output.of(denies));
         }
 
@@ -584,7 +584,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder denies(FirewallDenyGetArgs... denies) {
+        public Builder denies(FirewallDenyArgs... denies) {
             return denies(List.of(denies));
         }
 
@@ -745,7 +745,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logConfig(@Nullable Output<FirewallLogConfigGetArgs> logConfig) {
+        public Builder logConfig(@Nullable Output<FirewallLogConfigArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
@@ -758,7 +758,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder logConfig(FirewallLogConfigGetArgs logConfig) {
+        public Builder logConfig(FirewallLogConfigArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 

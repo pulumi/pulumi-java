@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.elasticbeanstalk.inputs;
 
-import com.pulumi.aws.elasticbeanstalk.inputs.ApplicationAppversionLifecycleGetArgs;
+import com.pulumi.aws.elasticbeanstalk.inputs.ApplicationAppversionLifecycleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -18,9 +18,9 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     public static final ApplicationState Empty = new ApplicationState();
 
     @Import(name="appversionLifecycle")
-    private @Nullable Output<ApplicationAppversionLifecycleGetArgs> appversionLifecycle;
+    private @Nullable Output<ApplicationAppversionLifecycleArgs> appversionLifecycle;
 
-    public Optional<Output<ApplicationAppversionLifecycleGetArgs>> appversionLifecycle() {
+    public Optional<Output<ApplicationAppversionLifecycleArgs>> appversionLifecycle() {
         return Optional.ofNullable(this.appversionLifecycle);
     }
 
@@ -128,12 +128,12 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
             $ = new ApplicationState(Objects.requireNonNull(defaults));
         }
 
-        public Builder appversionLifecycle(@Nullable Output<ApplicationAppversionLifecycleGetArgs> appversionLifecycle) {
+        public Builder appversionLifecycle(@Nullable Output<ApplicationAppversionLifecycleArgs> appversionLifecycle) {
             $.appversionLifecycle = appversionLifecycle;
             return this;
         }
 
-        public Builder appversionLifecycle(ApplicationAppversionLifecycleGetArgs appversionLifecycle) {
+        public Builder appversionLifecycle(ApplicationAppversionLifecycleArgs appversionLifecycle) {
             return appversionLifecycle(Output.of(appversionLifecycle));
         }
 

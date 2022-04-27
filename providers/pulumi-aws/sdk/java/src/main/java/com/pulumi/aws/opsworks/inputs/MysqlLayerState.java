@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.opsworks.inputs;
 
-import com.pulumi.aws.opsworks.inputs.MysqlLayerCloudwatchConfigurationGetArgs;
-import com.pulumi.aws.opsworks.inputs.MysqlLayerEbsVolumeGetArgs;
+import com.pulumi.aws.opsworks.inputs.MysqlLayerCloudwatchConfigurationArgs;
+import com.pulumi.aws.opsworks.inputs.MysqlLayerEbsVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -82,9 +82,9 @@ public final class MysqlLayerState extends com.pulumi.resources.ResourceArgs {
     }
 
     @Import(name="cloudwatchConfiguration")
-    private @Nullable Output<MysqlLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration;
+    private @Nullable Output<MysqlLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
-    public Optional<Output<MysqlLayerCloudwatchConfigurationGetArgs>> cloudwatchConfiguration() {
+    public Optional<Output<MysqlLayerCloudwatchConfigurationArgs>> cloudwatchConfiguration() {
         return Optional.ofNullable(this.cloudwatchConfiguration);
     }
 
@@ -188,13 +188,13 @@ public final class MysqlLayerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsVolumes")
-    private @Nullable Output<List<MysqlLayerEbsVolumeGetArgs>> ebsVolumes;
+    private @Nullable Output<List<MysqlLayerEbsVolumeArgs>> ebsVolumes;
 
     /**
      * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
-    public Optional<Output<List<MysqlLayerEbsVolumeGetArgs>>> ebsVolumes() {
+    public Optional<Output<List<MysqlLayerEbsVolumeArgs>>> ebsVolumes() {
         return Optional.ofNullable(this.ebsVolumes);
     }
 
@@ -496,12 +496,12 @@ public final class MysqlLayerState extends com.pulumi.resources.ResourceArgs {
             return autoHealing(Output.of(autoHealing));
         }
 
-        public Builder cloudwatchConfiguration(@Nullable Output<MysqlLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(@Nullable Output<MysqlLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
             $.cloudwatchConfiguration = cloudwatchConfiguration;
             return this;
         }
 
-        public Builder cloudwatchConfiguration(MysqlLayerCloudwatchConfigurationGetArgs cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(MysqlLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
             return cloudwatchConfiguration(Output.of(cloudwatchConfiguration));
         }
 
@@ -670,7 +670,7 @@ public final class MysqlLayerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsVolumes(@Nullable Output<List<MysqlLayerEbsVolumeGetArgs>> ebsVolumes) {
+        public Builder ebsVolumes(@Nullable Output<List<MysqlLayerEbsVolumeArgs>> ebsVolumes) {
             $.ebsVolumes = ebsVolumes;
             return this;
         }
@@ -681,7 +681,7 @@ public final class MysqlLayerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsVolumes(List<MysqlLayerEbsVolumeGetArgs> ebsVolumes) {
+        public Builder ebsVolumes(List<MysqlLayerEbsVolumeArgs> ebsVolumes) {
             return ebsVolumes(Output.of(ebsVolumes));
         }
 
@@ -691,7 +691,7 @@ public final class MysqlLayerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsVolumes(MysqlLayerEbsVolumeGetArgs... ebsVolumes) {
+        public Builder ebsVolumes(MysqlLayerEbsVolumeArgs... ebsVolumes) {
             return ebsVolumes(List.of(ebsVolumes));
         }
 

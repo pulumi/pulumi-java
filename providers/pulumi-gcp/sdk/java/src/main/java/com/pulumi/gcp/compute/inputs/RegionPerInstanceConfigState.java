@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.RegionPerInstanceConfigPreservedStateGetArgs;
+import com.pulumi.gcp.compute.inputs.RegionPerInstanceConfigPreservedStateArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -88,14 +88,14 @@ public final class RegionPerInstanceConfigState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="preservedState")
-    private @Nullable Output<RegionPerInstanceConfigPreservedStateGetArgs> preservedState;
+    private @Nullable Output<RegionPerInstanceConfigPreservedStateArgs> preservedState;
 
     /**
      * @return The preserved state for this instance.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionPerInstanceConfigPreservedStateGetArgs>> preservedState() {
+    public Optional<Output<RegionPerInstanceConfigPreservedStateArgs>> preservedState() {
         return Optional.ofNullable(this.preservedState);
     }
 
@@ -286,7 +286,7 @@ public final class RegionPerInstanceConfigState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder preservedState(@Nullable Output<RegionPerInstanceConfigPreservedStateGetArgs> preservedState) {
+        public Builder preservedState(@Nullable Output<RegionPerInstanceConfigPreservedStateArgs> preservedState) {
             $.preservedState = preservedState;
             return this;
         }
@@ -298,7 +298,7 @@ public final class RegionPerInstanceConfigState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder preservedState(RegionPerInstanceConfigPreservedStateGetArgs preservedState) {
+        public Builder preservedState(RegionPerInstanceConfigPreservedStateArgs preservedState) {
             return preservedState(Output.of(preservedState));
         }
 
