@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.ManagedSslCertificateManagedGetArgs;
+import com.pulumi.gcp.compute.inputs.ManagedSslCertificateManagedArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -85,7 +85,7 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="managed")
-    private @Nullable Output<ManagedSslCertificateManagedGetArgs> managed;
+    private @Nullable Output<ManagedSslCertificateManagedArgs> managed;
 
     /**
      * @return Properties relevant to a managed certificate.  These will be used if the
@@ -93,7 +93,7 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ManagedSslCertificateManagedGetArgs>> managed() {
+    public Optional<Output<ManagedSslCertificateManagedArgs>> managed() {
         return Optional.ofNullable(this.managed);
     }
 
@@ -317,7 +317,7 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder managed(@Nullable Output<ManagedSslCertificateManagedGetArgs> managed) {
+        public Builder managed(@Nullable Output<ManagedSslCertificateManagedArgs> managed) {
             $.managed = managed;
             return this;
         }
@@ -330,7 +330,7 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder managed(ManagedSslCertificateManagedGetArgs managed) {
+        public Builder managed(ManagedSslCertificateManagedArgs managed) {
             return managed(Output.of(managed));
         }
 

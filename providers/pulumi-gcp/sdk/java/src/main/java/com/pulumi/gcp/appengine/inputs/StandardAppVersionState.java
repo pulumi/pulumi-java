@@ -5,14 +5,14 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.appengine.inputs.StandardAppVersionAutomaticScalingGetArgs;
-import com.pulumi.gcp.appengine.inputs.StandardAppVersionBasicScalingGetArgs;
-import com.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentGetArgs;
-import com.pulumi.gcp.appengine.inputs.StandardAppVersionEntrypointGetArgs;
-import com.pulumi.gcp.appengine.inputs.StandardAppVersionHandlerGetArgs;
-import com.pulumi.gcp.appengine.inputs.StandardAppVersionLibraryGetArgs;
-import com.pulumi.gcp.appengine.inputs.StandardAppVersionManualScalingGetArgs;
-import com.pulumi.gcp.appengine.inputs.StandardAppVersionVpcAccessConnectorGetArgs;
+import com.pulumi.gcp.appengine.inputs.StandardAppVersionAutomaticScalingArgs;
+import com.pulumi.gcp.appengine.inputs.StandardAppVersionBasicScalingArgs;
+import com.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentArgs;
+import com.pulumi.gcp.appengine.inputs.StandardAppVersionEntrypointArgs;
+import com.pulumi.gcp.appengine.inputs.StandardAppVersionHandlerArgs;
+import com.pulumi.gcp.appengine.inputs.StandardAppVersionLibraryArgs;
+import com.pulumi.gcp.appengine.inputs.StandardAppVersionManualScalingArgs;
+import com.pulumi.gcp.appengine.inputs.StandardAppVersionVpcAccessConnectorArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,14 +32,14 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="automaticScaling")
-    private @Nullable Output<StandardAppVersionAutomaticScalingGetArgs> automaticScaling;
+    private @Nullable Output<StandardAppVersionAutomaticScalingArgs> automaticScaling;
 
     /**
      * @return Automatic scaling is based on request rate, response latencies, and other application metrics.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<StandardAppVersionAutomaticScalingGetArgs>> automaticScaling() {
+    public Optional<Output<StandardAppVersionAutomaticScalingArgs>> automaticScaling() {
         return Optional.ofNullable(this.automaticScaling);
     }
 
@@ -49,14 +49,14 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="basicScaling")
-    private @Nullable Output<StandardAppVersionBasicScalingGetArgs> basicScaling;
+    private @Nullable Output<StandardAppVersionBasicScalingArgs> basicScaling;
 
     /**
      * @return Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<StandardAppVersionBasicScalingGetArgs>> basicScaling() {
+    public Optional<Output<StandardAppVersionBasicScalingArgs>> basicScaling() {
         return Optional.ofNullable(this.basicScaling);
     }
 
@@ -81,14 +81,14 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="deployment")
-    private @Nullable Output<StandardAppVersionDeploymentGetArgs> deployment;
+    private @Nullable Output<StandardAppVersionDeploymentArgs> deployment;
 
     /**
      * @return Code and application artifacts that make up this version.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<StandardAppVersionDeploymentGetArgs>> deployment() {
+    public Optional<Output<StandardAppVersionDeploymentArgs>> deployment() {
         return Optional.ofNullable(this.deployment);
     }
 
@@ -98,14 +98,14 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="entrypoint")
-    private @Nullable Output<StandardAppVersionEntrypointGetArgs> entrypoint;
+    private @Nullable Output<StandardAppVersionEntrypointArgs> entrypoint;
 
     /**
      * @return The entrypoint for the application.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<StandardAppVersionEntrypointGetArgs>> entrypoint() {
+    public Optional<Output<StandardAppVersionEntrypointArgs>> entrypoint() {
         return Optional.ofNullable(this.entrypoint);
     }
 
@@ -131,7 +131,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="handlers")
-    private @Nullable Output<List<StandardAppVersionHandlerGetArgs>> handlers;
+    private @Nullable Output<List<StandardAppVersionHandlerArgs>> handlers;
 
     /**
      * @return An ordered list of URL-matching patterns that should be applied to incoming requests.
@@ -139,7 +139,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<StandardAppVersionHandlerGetArgs>>> handlers() {
+    public Optional<Output<List<StandardAppVersionHandlerArgs>>> handlers() {
         return Optional.ofNullable(this.handlers);
     }
 
@@ -187,14 +187,14 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="libraries")
-    private @Nullable Output<List<StandardAppVersionLibraryGetArgs>> libraries;
+    private @Nullable Output<List<StandardAppVersionLibraryArgs>> libraries;
 
     /**
      * @return Configuration for third-party Python runtime libraries that are required by the application.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<StandardAppVersionLibraryGetArgs>>> libraries() {
+    public Optional<Output<List<StandardAppVersionLibraryArgs>>> libraries() {
         return Optional.ofNullable(this.libraries);
     }
 
@@ -204,14 +204,14 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="manualScaling")
-    private @Nullable Output<StandardAppVersionManualScalingGetArgs> manualScaling;
+    private @Nullable Output<StandardAppVersionManualScalingArgs> manualScaling;
 
     /**
      * @return A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<StandardAppVersionManualScalingGetArgs>> manualScaling() {
+    public Optional<Output<StandardAppVersionManualScalingArgs>> manualScaling() {
         return Optional.ofNullable(this.manualScaling);
     }
 
@@ -347,14 +347,14 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="vpcAccessConnector")
-    private @Nullable Output<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector;
+    private @Nullable Output<StandardAppVersionVpcAccessConnectorArgs> vpcAccessConnector;
 
     /**
      * @return Enables VPC connectivity for standard apps.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<StandardAppVersionVpcAccessConnectorGetArgs>> vpcAccessConnector() {
+    public Optional<Output<StandardAppVersionVpcAccessConnectorArgs>> vpcAccessConnector() {
         return Optional.ofNullable(this.vpcAccessConnector);
     }
 
@@ -408,7 +408,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder automaticScaling(@Nullable Output<StandardAppVersionAutomaticScalingGetArgs> automaticScaling) {
+        public Builder automaticScaling(@Nullable Output<StandardAppVersionAutomaticScalingArgs> automaticScaling) {
             $.automaticScaling = automaticScaling;
             return this;
         }
@@ -420,7 +420,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder automaticScaling(StandardAppVersionAutomaticScalingGetArgs automaticScaling) {
+        public Builder automaticScaling(StandardAppVersionAutomaticScalingArgs automaticScaling) {
             return automaticScaling(Output.of(automaticScaling));
         }
 
@@ -431,7 +431,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder basicScaling(@Nullable Output<StandardAppVersionBasicScalingGetArgs> basicScaling) {
+        public Builder basicScaling(@Nullable Output<StandardAppVersionBasicScalingArgs> basicScaling) {
             $.basicScaling = basicScaling;
             return this;
         }
@@ -443,7 +443,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder basicScaling(StandardAppVersionBasicScalingGetArgs basicScaling) {
+        public Builder basicScaling(StandardAppVersionBasicScalingArgs basicScaling) {
             return basicScaling(Output.of(basicScaling));
         }
 
@@ -475,7 +475,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder deployment(@Nullable Output<StandardAppVersionDeploymentGetArgs> deployment) {
+        public Builder deployment(@Nullable Output<StandardAppVersionDeploymentArgs> deployment) {
             $.deployment = deployment;
             return this;
         }
@@ -487,7 +487,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder deployment(StandardAppVersionDeploymentGetArgs deployment) {
+        public Builder deployment(StandardAppVersionDeploymentArgs deployment) {
             return deployment(Output.of(deployment));
         }
 
@@ -498,7 +498,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder entrypoint(@Nullable Output<StandardAppVersionEntrypointGetArgs> entrypoint) {
+        public Builder entrypoint(@Nullable Output<StandardAppVersionEntrypointArgs> entrypoint) {
             $.entrypoint = entrypoint;
             return this;
         }
@@ -510,7 +510,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder entrypoint(StandardAppVersionEntrypointGetArgs entrypoint) {
+        public Builder entrypoint(StandardAppVersionEntrypointArgs entrypoint) {
             return entrypoint(Output.of(entrypoint));
         }
 
@@ -543,7 +543,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder handlers(@Nullable Output<List<StandardAppVersionHandlerGetArgs>> handlers) {
+        public Builder handlers(@Nullable Output<List<StandardAppVersionHandlerArgs>> handlers) {
             $.handlers = handlers;
             return this;
         }
@@ -556,7 +556,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder handlers(List<StandardAppVersionHandlerGetArgs> handlers) {
+        public Builder handlers(List<StandardAppVersionHandlerArgs> handlers) {
             return handlers(Output.of(handlers));
         }
 
@@ -568,7 +568,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder handlers(StandardAppVersionHandlerGetArgs... handlers) {
+        public Builder handlers(StandardAppVersionHandlerArgs... handlers) {
             return handlers(List.of(handlers));
         }
 
@@ -640,7 +640,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder libraries(@Nullable Output<List<StandardAppVersionLibraryGetArgs>> libraries) {
+        public Builder libraries(@Nullable Output<List<StandardAppVersionLibraryArgs>> libraries) {
             $.libraries = libraries;
             return this;
         }
@@ -652,7 +652,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder libraries(List<StandardAppVersionLibraryGetArgs> libraries) {
+        public Builder libraries(List<StandardAppVersionLibraryArgs> libraries) {
             return libraries(Output.of(libraries));
         }
 
@@ -663,7 +663,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder libraries(StandardAppVersionLibraryGetArgs... libraries) {
+        public Builder libraries(StandardAppVersionLibraryArgs... libraries) {
             return libraries(List.of(libraries));
         }
 
@@ -674,7 +674,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder manualScaling(@Nullable Output<StandardAppVersionManualScalingGetArgs> manualScaling) {
+        public Builder manualScaling(@Nullable Output<StandardAppVersionManualScalingArgs> manualScaling) {
             $.manualScaling = manualScaling;
             return this;
         }
@@ -686,7 +686,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder manualScaling(StandardAppVersionManualScalingGetArgs manualScaling) {
+        public Builder manualScaling(StandardAppVersionManualScalingArgs manualScaling) {
             return manualScaling(Output.of(manualScaling));
         }
 
@@ -871,7 +871,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder vpcAccessConnector(@Nullable Output<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector) {
+        public Builder vpcAccessConnector(@Nullable Output<StandardAppVersionVpcAccessConnectorArgs> vpcAccessConnector) {
             $.vpcAccessConnector = vpcAccessConnector;
             return this;
         }
@@ -883,7 +883,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder vpcAccessConnector(StandardAppVersionVpcAccessConnectorGetArgs vpcAccessConnector) {
+        public Builder vpcAccessConnector(StandardAppVersionVpcAccessConnectorArgs vpcAccessConnector) {
             return vpcAccessConnector(Output.of(vpcAccessConnector));
         }
 

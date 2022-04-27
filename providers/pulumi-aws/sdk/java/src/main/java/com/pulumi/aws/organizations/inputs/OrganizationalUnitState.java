@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.organizations.inputs;
 
-import com.pulumi.aws.organizations.inputs.OrganizationalUnitAccountGetArgs;
+import com.pulumi.aws.organizations.inputs.OrganizationalUnitAccountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -23,13 +23,13 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="accounts")
-    private @Nullable Output<List<OrganizationalUnitAccountGetArgs>> accounts;
+    private @Nullable Output<List<OrganizationalUnitAccountArgs>> accounts;
 
     /**
      * @return List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
      * 
      */
-    public Optional<Output<List<OrganizationalUnitAccountGetArgs>>> accounts() {
+    public Optional<Output<List<OrganizationalUnitAccountArgs>>> accounts() {
         return Optional.ofNullable(this.accounts);
     }
 
@@ -143,7 +143,7 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder accounts(@Nullable Output<List<OrganizationalUnitAccountGetArgs>> accounts) {
+        public Builder accounts(@Nullable Output<List<OrganizationalUnitAccountArgs>> accounts) {
             $.accounts = accounts;
             return this;
         }
@@ -154,7 +154,7 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder accounts(List<OrganizationalUnitAccountGetArgs> accounts) {
+        public Builder accounts(List<OrganizationalUnitAccountArgs> accounts) {
             return accounts(Output.of(accounts));
         }
 
@@ -164,7 +164,7 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder accounts(OrganizationalUnitAccountGetArgs... accounts) {
+        public Builder accounts(OrganizationalUnitAccountArgs... accounts) {
             return accounts(List.of(accounts));
         }
 

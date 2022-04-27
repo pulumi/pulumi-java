@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.PerInstanceConfigPreservedStateGetArgs;
+import com.pulumi.gcp.compute.inputs.PerInstanceConfigPreservedStateArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -103,14 +103,14 @@ public final class PerInstanceConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="preservedState")
-    private @Nullable Output<PerInstanceConfigPreservedStateGetArgs> preservedState;
+    private @Nullable Output<PerInstanceConfigPreservedStateArgs> preservedState;
 
     /**
      * @return The preserved state for this instance.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PerInstanceConfigPreservedStateGetArgs>> preservedState() {
+    public Optional<Output<PerInstanceConfigPreservedStateArgs>> preservedState() {
         return Optional.ofNullable(this.preservedState);
     }
 
@@ -307,7 +307,7 @@ public final class PerInstanceConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder preservedState(@Nullable Output<PerInstanceConfigPreservedStateGetArgs> preservedState) {
+        public Builder preservedState(@Nullable Output<PerInstanceConfigPreservedStateArgs> preservedState) {
             $.preservedState = preservedState;
             return this;
         }
@@ -319,7 +319,7 @@ public final class PerInstanceConfigState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder preservedState(PerInstanceConfigPreservedStateGetArgs preservedState) {
+        public Builder preservedState(PerInstanceConfigPreservedStateArgs preservedState) {
             return preservedState(Output.of(preservedState));
         }
 

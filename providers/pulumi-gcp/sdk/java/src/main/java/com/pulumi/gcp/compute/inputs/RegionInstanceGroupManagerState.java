@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerAutoHealingPoliciesGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerNamedPortGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatefulDiskGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerUpdatePolicyGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerVersionGetArgs;
+import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerAutoHealingPoliciesArgs;
+import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerNamedPortArgs;
+import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatefulDiskArgs;
+import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusArgs;
+import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerUpdatePolicyArgs;
+import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerVersionArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,14 +30,14 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
      * 
      */
     @Import(name="autoHealingPolicies")
-    private @Nullable Output<RegionInstanceGroupManagerAutoHealingPoliciesGetArgs> autoHealingPolicies;
+    private @Nullable Output<RegionInstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies;
 
     /**
      * @return The autohealing policies for this managed instance
      * group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
      * 
      */
-    public Optional<Output<RegionInstanceGroupManagerAutoHealingPoliciesGetArgs>> autoHealingPolicies() {
+    public Optional<Output<RegionInstanceGroupManagerAutoHealingPoliciesArgs>> autoHealingPolicies() {
         return Optional.ofNullable(this.autoHealingPolicies);
     }
 
@@ -166,14 +166,14 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
      * 
      */
     @Import(name="namedPorts")
-    private @Nullable Output<List<RegionInstanceGroupManagerNamedPortGetArgs>> namedPorts;
+    private @Nullable Output<List<RegionInstanceGroupManagerNamedPortArgs>> namedPorts;
 
     /**
      * @return The named port configuration. See the section below
      * for details on configuration.
      * 
      */
-    public Optional<Output<List<RegionInstanceGroupManagerNamedPortGetArgs>>> namedPorts() {
+    public Optional<Output<List<RegionInstanceGroupManagerNamedPortArgs>>> namedPorts() {
         return Optional.ofNullable(this.namedPorts);
     }
 
@@ -229,13 +229,13 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
      * 
      */
     @Import(name="statefulDisks")
-    private @Nullable Output<List<RegionInstanceGroupManagerStatefulDiskGetArgs>> statefulDisks;
+    private @Nullable Output<List<RegionInstanceGroupManagerStatefulDiskArgs>> statefulDisks;
 
     /**
      * @return Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
      * 
      */
-    public Optional<Output<List<RegionInstanceGroupManagerStatefulDiskGetArgs>>> statefulDisks() {
+    public Optional<Output<List<RegionInstanceGroupManagerStatefulDiskArgs>>> statefulDisks() {
         return Optional.ofNullable(this.statefulDisks);
     }
 
@@ -244,13 +244,13 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
      * 
      */
     @Import(name="statuses")
-    private @Nullable Output<List<RegionInstanceGroupManagerStatusGetArgs>> statuses;
+    private @Nullable Output<List<RegionInstanceGroupManagerStatusArgs>> statuses;
 
     /**
      * @return The status of this managed instance group.
      * 
      */
-    public Optional<Output<List<RegionInstanceGroupManagerStatusGetArgs>>> statuses() {
+    public Optional<Output<List<RegionInstanceGroupManagerStatusArgs>>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
 
@@ -293,13 +293,13 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
      * 
      */
     @Import(name="updatePolicy")
-    private @Nullable Output<RegionInstanceGroupManagerUpdatePolicyGetArgs> updatePolicy;
+    private @Nullable Output<RegionInstanceGroupManagerUpdatePolicyArgs> updatePolicy;
 
     /**
      * @return The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch)
      * 
      */
-    public Optional<Output<RegionInstanceGroupManagerUpdatePolicyGetArgs>> updatePolicy() {
+    public Optional<Output<RegionInstanceGroupManagerUpdatePolicyArgs>> updatePolicy() {
         return Optional.ofNullable(this.updatePolicy);
     }
 
@@ -310,7 +310,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
      * 
      */
     @Import(name="versions")
-    private @Nullable Output<List<RegionInstanceGroupManagerVersionGetArgs>> versions;
+    private @Nullable Output<List<RegionInstanceGroupManagerVersionArgs>> versions;
 
     /**
      * @return Application versions managed by this instance group. Each
@@ -318,7 +318,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<RegionInstanceGroupManagerVersionGetArgs>>> versions() {
+    public Optional<Output<List<RegionInstanceGroupManagerVersionArgs>>> versions() {
         return Optional.ofNullable(this.versions);
     }
 
@@ -412,7 +412,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder autoHealingPolicies(@Nullable Output<RegionInstanceGroupManagerAutoHealingPoliciesGetArgs> autoHealingPolicies) {
+        public Builder autoHealingPolicies(@Nullable Output<RegionInstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies) {
             $.autoHealingPolicies = autoHealingPolicies;
             return this;
         }
@@ -424,7 +424,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder autoHealingPolicies(RegionInstanceGroupManagerAutoHealingPoliciesGetArgs autoHealingPolicies) {
+        public Builder autoHealingPolicies(RegionInstanceGroupManagerAutoHealingPoliciesArgs autoHealingPolicies) {
             return autoHealingPolicies(Output.of(autoHealingPolicies));
         }
 
@@ -607,7 +607,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder namedPorts(@Nullable Output<List<RegionInstanceGroupManagerNamedPortGetArgs>> namedPorts) {
+        public Builder namedPorts(@Nullable Output<List<RegionInstanceGroupManagerNamedPortArgs>> namedPorts) {
             $.namedPorts = namedPorts;
             return this;
         }
@@ -619,7 +619,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder namedPorts(List<RegionInstanceGroupManagerNamedPortGetArgs> namedPorts) {
+        public Builder namedPorts(List<RegionInstanceGroupManagerNamedPortArgs> namedPorts) {
             return namedPorts(Output.of(namedPorts));
         }
 
@@ -630,7 +630,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder namedPorts(RegionInstanceGroupManagerNamedPortGetArgs... namedPorts) {
+        public Builder namedPorts(RegionInstanceGroupManagerNamedPortArgs... namedPorts) {
             return namedPorts(List.of(namedPorts));
         }
 
@@ -705,7 +705,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder statefulDisks(@Nullable Output<List<RegionInstanceGroupManagerStatefulDiskGetArgs>> statefulDisks) {
+        public Builder statefulDisks(@Nullable Output<List<RegionInstanceGroupManagerStatefulDiskArgs>> statefulDisks) {
             $.statefulDisks = statefulDisks;
             return this;
         }
@@ -716,7 +716,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder statefulDisks(List<RegionInstanceGroupManagerStatefulDiskGetArgs> statefulDisks) {
+        public Builder statefulDisks(List<RegionInstanceGroupManagerStatefulDiskArgs> statefulDisks) {
             return statefulDisks(Output.of(statefulDisks));
         }
 
@@ -726,7 +726,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder statefulDisks(RegionInstanceGroupManagerStatefulDiskGetArgs... statefulDisks) {
+        public Builder statefulDisks(RegionInstanceGroupManagerStatefulDiskArgs... statefulDisks) {
             return statefulDisks(List.of(statefulDisks));
         }
 
@@ -736,7 +736,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder statuses(@Nullable Output<List<RegionInstanceGroupManagerStatusGetArgs>> statuses) {
+        public Builder statuses(@Nullable Output<List<RegionInstanceGroupManagerStatusArgs>> statuses) {
             $.statuses = statuses;
             return this;
         }
@@ -747,7 +747,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder statuses(List<RegionInstanceGroupManagerStatusGetArgs> statuses) {
+        public Builder statuses(List<RegionInstanceGroupManagerStatusArgs> statuses) {
             return statuses(Output.of(statuses));
         }
 
@@ -757,7 +757,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder statuses(RegionInstanceGroupManagerStatusGetArgs... statuses) {
+        public Builder statuses(RegionInstanceGroupManagerStatusArgs... statuses) {
             return statuses(List.of(statuses));
         }
 
@@ -825,7 +825,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder updatePolicy(@Nullable Output<RegionInstanceGroupManagerUpdatePolicyGetArgs> updatePolicy) {
+        public Builder updatePolicy(@Nullable Output<RegionInstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
             $.updatePolicy = updatePolicy;
             return this;
         }
@@ -836,7 +836,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder updatePolicy(RegionInstanceGroupManagerUpdatePolicyGetArgs updatePolicy) {
+        public Builder updatePolicy(RegionInstanceGroupManagerUpdatePolicyArgs updatePolicy) {
             return updatePolicy(Output.of(updatePolicy));
         }
 
@@ -848,7 +848,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder versions(@Nullable Output<List<RegionInstanceGroupManagerVersionGetArgs>> versions) {
+        public Builder versions(@Nullable Output<List<RegionInstanceGroupManagerVersionArgs>> versions) {
             $.versions = versions;
             return this;
         }
@@ -861,7 +861,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder versions(List<RegionInstanceGroupManagerVersionGetArgs> versions) {
+        public Builder versions(List<RegionInstanceGroupManagerVersionArgs> versions) {
             return versions(Output.of(versions));
         }
 
@@ -873,7 +873,7 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder versions(RegionInstanceGroupManagerVersionGetArgs... versions) {
+        public Builder versions(RegionInstanceGroupManagerVersionArgs... versions) {
             return versions(List.of(versions));
         }
 

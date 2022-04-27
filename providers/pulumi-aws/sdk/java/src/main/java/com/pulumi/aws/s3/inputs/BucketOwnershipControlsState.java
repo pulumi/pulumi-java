@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.s3.inputs;
 
-import com.pulumi.aws.s3.inputs.BucketOwnershipControlsRuleGetArgs;
+import com.pulumi.aws.s3.inputs.BucketOwnershipControlsRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class BucketOwnershipControlsState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="rule")
-    private @Nullable Output<BucketOwnershipControlsRuleGetArgs> rule;
+    private @Nullable Output<BucketOwnershipControlsRuleArgs> rule;
 
     /**
      * @return Configuration block(s) with Ownership Controls rules. Detailed below.
      * 
      */
-    public Optional<Output<BucketOwnershipControlsRuleGetArgs>> rule() {
+    public Optional<Output<BucketOwnershipControlsRuleArgs>> rule() {
         return Optional.ofNullable(this.rule);
     }
 
@@ -98,7 +98,7 @@ public final class BucketOwnershipControlsState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder rule(@Nullable Output<BucketOwnershipControlsRuleGetArgs> rule) {
+        public Builder rule(@Nullable Output<BucketOwnershipControlsRuleArgs> rule) {
             $.rule = rule;
             return this;
         }
@@ -109,7 +109,7 @@ public final class BucketOwnershipControlsState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder rule(BucketOwnershipControlsRuleGetArgs rule) {
+        public Builder rule(BucketOwnershipControlsRuleArgs rule) {
             return rule(Output.of(rule));
         }
 

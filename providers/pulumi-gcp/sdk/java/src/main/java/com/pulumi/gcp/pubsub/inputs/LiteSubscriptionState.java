@@ -5,7 +5,7 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.pubsub.inputs.LiteSubscriptionDeliveryConfigGetArgs;
+import com.pulumi.gcp.pubsub.inputs.LiteSubscriptionDeliveryConfigArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,14 +22,14 @@ public final class LiteSubscriptionState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="deliveryConfig")
-    private @Nullable Output<LiteSubscriptionDeliveryConfigGetArgs> deliveryConfig;
+    private @Nullable Output<LiteSubscriptionDeliveryConfigArgs> deliveryConfig;
 
     /**
      * @return The settings for this subscription&#39;s message delivery.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<LiteSubscriptionDeliveryConfigGetArgs>> deliveryConfig() {
+    public Optional<Output<LiteSubscriptionDeliveryConfigArgs>> deliveryConfig() {
         return Optional.ofNullable(this.deliveryConfig);
     }
 
@@ -146,7 +146,7 @@ public final class LiteSubscriptionState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder deliveryConfig(@Nullable Output<LiteSubscriptionDeliveryConfigGetArgs> deliveryConfig) {
+        public Builder deliveryConfig(@Nullable Output<LiteSubscriptionDeliveryConfigArgs> deliveryConfig) {
             $.deliveryConfig = deliveryConfig;
             return this;
         }
@@ -158,7 +158,7 @@ public final class LiteSubscriptionState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder deliveryConfig(LiteSubscriptionDeliveryConfigGetArgs deliveryConfig) {
+        public Builder deliveryConfig(LiteSubscriptionDeliveryConfigArgs deliveryConfig) {
             return deliveryConfig(Output.of(deliveryConfig));
         }
 

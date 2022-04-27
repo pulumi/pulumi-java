@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsGetArgs;
+import com.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -142,13 +142,13 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userSettings")
-    private @Nullable Output<UserProfileUserSettingsGetArgs> userSettings;
+    private @Nullable Output<UserProfileUserSettingsArgs> userSettings;
 
     /**
      * @return The user settings. See User Settings below.
      * 
      */
-    public Optional<Output<UserProfileUserSettingsGetArgs>> userSettings() {
+    public Optional<Output<UserProfileUserSettingsArgs>> userSettings() {
         return Optional.ofNullable(this.userSettings);
     }
 
@@ -358,7 +358,7 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder userSettings(@Nullable Output<UserProfileUserSettingsGetArgs> userSettings) {
+        public Builder userSettings(@Nullable Output<UserProfileUserSettingsArgs> userSettings) {
             $.userSettings = userSettings;
             return this;
         }
@@ -369,7 +369,7 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder userSettings(UserProfileUserSettingsGetArgs userSettings) {
+        public Builder userSettings(UserProfileUserSettingsArgs userSettings) {
             return userSettings(Output.of(userSettings));
         }
 

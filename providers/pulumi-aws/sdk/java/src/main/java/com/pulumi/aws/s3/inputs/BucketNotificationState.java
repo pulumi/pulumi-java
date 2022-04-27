@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.s3.inputs;
 
-import com.pulumi.aws.s3.inputs.BucketNotificationLambdaFunctionGetArgs;
-import com.pulumi.aws.s3.inputs.BucketNotificationQueueGetArgs;
-import com.pulumi.aws.s3.inputs.BucketNotificationTopicGetArgs;
+import com.pulumi.aws.s3.inputs.BucketNotificationLambdaFunctionArgs;
+import com.pulumi.aws.s3.inputs.BucketNotificationQueueArgs;
+import com.pulumi.aws.s3.inputs.BucketNotificationTopicArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -55,13 +55,13 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="lambdaFunctions")
-    private @Nullable Output<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions;
+    private @Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions;
 
     /**
      * @return Used to configure notifications to a Lambda Function. See below.
      * 
      */
-    public Optional<Output<List<BucketNotificationLambdaFunctionGetArgs>>> lambdaFunctions() {
+    public Optional<Output<List<BucketNotificationLambdaFunctionArgs>>> lambdaFunctions() {
         return Optional.ofNullable(this.lambdaFunctions);
     }
 
@@ -70,13 +70,13 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="queues")
-    private @Nullable Output<List<BucketNotificationQueueGetArgs>> queues;
+    private @Nullable Output<List<BucketNotificationQueueArgs>> queues;
 
     /**
      * @return Notification configuration to SQS Queue. See below.
      * 
      */
-    public Optional<Output<List<BucketNotificationQueueGetArgs>>> queues() {
+    public Optional<Output<List<BucketNotificationQueueArgs>>> queues() {
         return Optional.ofNullable(this.queues);
     }
 
@@ -85,13 +85,13 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="topics")
-    private @Nullable Output<List<BucketNotificationTopicGetArgs>> topics;
+    private @Nullable Output<List<BucketNotificationTopicArgs>> topics;
 
     /**
      * @return Notification configuration to SNS Topic. See below.
      * 
      */
-    public Optional<Output<List<BucketNotificationTopicGetArgs>>> topics() {
+    public Optional<Output<List<BucketNotificationTopicArgs>>> topics() {
         return Optional.ofNullable(this.topics);
     }
 
@@ -171,7 +171,7 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder lambdaFunctions(@Nullable Output<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions) {
+        public Builder lambdaFunctions(@Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions) {
             $.lambdaFunctions = lambdaFunctions;
             return this;
         }
@@ -182,7 +182,7 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder lambdaFunctions(List<BucketNotificationLambdaFunctionGetArgs> lambdaFunctions) {
+        public Builder lambdaFunctions(List<BucketNotificationLambdaFunctionArgs> lambdaFunctions) {
             return lambdaFunctions(Output.of(lambdaFunctions));
         }
 
@@ -192,7 +192,7 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder lambdaFunctions(BucketNotificationLambdaFunctionGetArgs... lambdaFunctions) {
+        public Builder lambdaFunctions(BucketNotificationLambdaFunctionArgs... lambdaFunctions) {
             return lambdaFunctions(List.of(lambdaFunctions));
         }
 
@@ -202,7 +202,7 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder queues(@Nullable Output<List<BucketNotificationQueueGetArgs>> queues) {
+        public Builder queues(@Nullable Output<List<BucketNotificationQueueArgs>> queues) {
             $.queues = queues;
             return this;
         }
@@ -213,7 +213,7 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder queues(List<BucketNotificationQueueGetArgs> queues) {
+        public Builder queues(List<BucketNotificationQueueArgs> queues) {
             return queues(Output.of(queues));
         }
 
@@ -223,7 +223,7 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder queues(BucketNotificationQueueGetArgs... queues) {
+        public Builder queues(BucketNotificationQueueArgs... queues) {
             return queues(List.of(queues));
         }
 
@@ -233,7 +233,7 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder topics(@Nullable Output<List<BucketNotificationTopicGetArgs>> topics) {
+        public Builder topics(@Nullable Output<List<BucketNotificationTopicArgs>> topics) {
             $.topics = topics;
             return this;
         }
@@ -244,7 +244,7 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder topics(List<BucketNotificationTopicGetArgs> topics) {
+        public Builder topics(List<BucketNotificationTopicArgs> topics) {
             return topics(Output.of(topics));
         }
 
@@ -254,7 +254,7 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder topics(BucketNotificationTopicGetArgs... topics) {
+        public Builder topics(BucketNotificationTopicArgs... topics) {
             return topics(List.of(topics));
         }
 

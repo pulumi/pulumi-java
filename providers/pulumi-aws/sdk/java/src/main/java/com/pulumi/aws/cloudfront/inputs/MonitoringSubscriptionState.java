@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cloudfront.inputs;
 
-import com.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionGetArgs;
+import com.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class MonitoringSubscriptionState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="monitoringSubscription")
-    private @Nullable Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription;
+    private @Nullable Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription;
 
     /**
      * @return A monitoring subscription. This structure contains information about whether additional CloudWatch metrics are enabled for a given CloudFront distribution.
      * 
      */
-    public Optional<Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs>> monitoringSubscription() {
+    public Optional<Output<MonitoringSubscriptionMonitoringSubscriptionArgs>> monitoringSubscription() {
         return Optional.ofNullable(this.monitoringSubscription);
     }
 
@@ -98,7 +98,7 @@ public final class MonitoringSubscriptionState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder monitoringSubscription(@Nullable Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription) {
+        public Builder monitoringSubscription(@Nullable Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription) {
             $.monitoringSubscription = monitoringSubscription;
             return this;
         }
@@ -109,7 +109,7 @@ public final class MonitoringSubscriptionState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder monitoringSubscription(MonitoringSubscriptionMonitoringSubscriptionGetArgs monitoringSubscription) {
+        public Builder monitoringSubscription(MonitoringSubscriptionMonitoringSubscriptionArgs monitoringSubscription) {
             return monitoringSubscription(Output.of(monitoringSubscription));
         }
 

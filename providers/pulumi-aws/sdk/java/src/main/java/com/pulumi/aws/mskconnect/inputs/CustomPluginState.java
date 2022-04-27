@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.mskconnect.inputs;
 
-import com.pulumi.aws.mskconnect.inputs.CustomPluginLocationGetArgs;
+import com.pulumi.aws.mskconnect.inputs.CustomPluginLocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -82,13 +82,13 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-    private @Nullable Output<CustomPluginLocationGetArgs> location;
+    private @Nullable Output<CustomPluginLocationArgs> location;
 
     /**
      * @return Information about the location of a custom plugin. See below.
      * 
      */
-    public Optional<Output<CustomPluginLocationGetArgs>> location() {
+    public Optional<Output<CustomPluginLocationArgs>> location() {
         return Optional.ofNullable(this.location);
     }
 
@@ -242,7 +242,7 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder location(@Nullable Output<CustomPluginLocationGetArgs> location) {
+        public Builder location(@Nullable Output<CustomPluginLocationArgs> location) {
             $.location = location;
             return this;
         }
@@ -253,7 +253,7 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder location(CustomPluginLocationGetArgs location) {
+        public Builder location(CustomPluginLocationArgs location) {
             return location(Output.of(location));
         }
 

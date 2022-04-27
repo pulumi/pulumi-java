@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.gamelift.inputs;
 
-import com.pulumi.aws.gamelift.inputs.GameSessionQueuePlayerLatencyPolicyGetArgs;
+import com.pulumi.aws.gamelift.inputs.GameSessionQueuePlayerLatencyPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -69,13 +69,13 @@ public final class GameSessionQueueState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="playerLatencyPolicies")
-    private @Nullable Output<List<GameSessionQueuePlayerLatencyPolicyGetArgs>> playerLatencyPolicies;
+    private @Nullable Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies;
 
     /**
      * @return One or more policies used to choose fleet based on player latency. See below.
      * 
      */
-    public Optional<Output<List<GameSessionQueuePlayerLatencyPolicyGetArgs>>> playerLatencyPolicies() {
+    public Optional<Output<List<GameSessionQueuePlayerLatencyPolicyArgs>>> playerLatencyPolicies() {
         return Optional.ofNullable(this.playerLatencyPolicies);
     }
 
@@ -233,7 +233,7 @@ public final class GameSessionQueueState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder playerLatencyPolicies(@Nullable Output<List<GameSessionQueuePlayerLatencyPolicyGetArgs>> playerLatencyPolicies) {
+        public Builder playerLatencyPolicies(@Nullable Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies) {
             $.playerLatencyPolicies = playerLatencyPolicies;
             return this;
         }
@@ -244,7 +244,7 @@ public final class GameSessionQueueState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder playerLatencyPolicies(List<GameSessionQueuePlayerLatencyPolicyGetArgs> playerLatencyPolicies) {
+        public Builder playerLatencyPolicies(List<GameSessionQueuePlayerLatencyPolicyArgs> playerLatencyPolicies) {
             return playerLatencyPolicies(Output.of(playerLatencyPolicies));
         }
 
@@ -254,7 +254,7 @@ public final class GameSessionQueueState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder playerLatencyPolicies(GameSessionQueuePlayerLatencyPolicyGetArgs... playerLatencyPolicies) {
+        public Builder playerLatencyPolicies(GameSessionQueuePlayerLatencyPolicyArgs... playerLatencyPolicies) {
             return playerLatencyPolicies(List.of(playerLatencyPolicies));
         }
 

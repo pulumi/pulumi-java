@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.AmiEbsBlockDeviceGetArgs;
-import com.pulumi.aws.ec2.inputs.AmiEphemeralBlockDeviceGetArgs;
+import com.pulumi.aws.ec2.inputs.AmiEbsBlockDeviceArgs;
+import com.pulumi.aws.ec2.inputs.AmiEphemeralBlockDeviceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -71,14 +71,14 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsBlockDevices")
-    private @Nullable Output<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices;
+    private @Nullable Output<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices;
 
     /**
      * @return Nested block describing an EBS block device that should be
      * attached to created instances. The structure of this block is described below.
      * 
      */
-    public Optional<Output<List<AmiEbsBlockDeviceGetArgs>>> ebsBlockDevices() {
+    public Optional<Output<List<AmiEbsBlockDeviceArgs>>> ebsBlockDevices() {
         return Optional.ofNullable(this.ebsBlockDevices);
     }
 
@@ -103,14 +103,14 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ephemeralBlockDevices")
-    private @Nullable Output<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
+    private @Nullable Output<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
     /**
      * @return Nested block describing an ephemeral block device that
      * should be attached to created instances. The structure of this block is described below.
      * 
      */
-    public Optional<Output<List<AmiEphemeralBlockDeviceGetArgs>>> ephemeralBlockDevices() {
+    public Optional<Output<List<AmiEphemeralBlockDeviceArgs>>> ephemeralBlockDevices() {
         return Optional.ofNullable(this.ephemeralBlockDevices);
     }
 
@@ -521,7 +521,7 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsBlockDevices(@Nullable Output<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable Output<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices) {
             $.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
@@ -533,7 +533,7 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsBlockDevices(List<AmiEbsBlockDeviceGetArgs> ebsBlockDevices) {
+        public Builder ebsBlockDevices(List<AmiEbsBlockDeviceArgs> ebsBlockDevices) {
             return ebsBlockDevices(Output.of(ebsBlockDevices));
         }
 
@@ -544,7 +544,7 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ebsBlockDevices(AmiEbsBlockDeviceGetArgs... ebsBlockDevices) {
+        public Builder ebsBlockDevices(AmiEbsBlockDeviceArgs... ebsBlockDevices) {
             return ebsBlockDevices(List.of(ebsBlockDevices));
         }
 
@@ -576,7 +576,7 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ephemeralBlockDevices(@Nullable Output<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable Output<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
             $.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
@@ -588,7 +588,7 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ephemeralBlockDevices(List<AmiEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(List<AmiEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
             return ephemeralBlockDevices(Output.of(ephemeralBlockDevices));
         }
 
@@ -599,7 +599,7 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ephemeralBlockDevices(AmiEphemeralBlockDeviceGetArgs... ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(AmiEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
             return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
         }
 

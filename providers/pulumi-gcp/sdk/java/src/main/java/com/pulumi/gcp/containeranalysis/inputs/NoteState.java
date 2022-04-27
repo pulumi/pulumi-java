@@ -5,8 +5,8 @@ package com.pulumi.gcp.containeranalysis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.containeranalysis.inputs.NoteAttestationAuthorityGetArgs;
-import com.pulumi.gcp.containeranalysis.inputs.NoteRelatedUrlGetArgs;
+import com.pulumi.gcp.containeranalysis.inputs.NoteAttestationAuthorityArgs;
+import com.pulumi.gcp.containeranalysis.inputs.NoteRelatedUrlArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,7 +32,7 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attestationAuthority")
-    private @Nullable Output<NoteAttestationAuthorityGetArgs> attestationAuthority;
+    private @Nullable Output<NoteAttestationAuthorityArgs> attestationAuthority;
 
     /**
      * @return Note kind that represents a logical attestation &#34;role&#34; or &#34;authority&#34;.
@@ -47,7 +47,7 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<NoteAttestationAuthorityGetArgs>> attestationAuthority() {
+    public Optional<Output<NoteAttestationAuthorityArgs>> attestationAuthority() {
         return Optional.ofNullable(this.attestationAuthority);
     }
 
@@ -164,14 +164,14 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relatedUrls")
-    private @Nullable Output<List<NoteRelatedUrlGetArgs>> relatedUrls;
+    private @Nullable Output<List<NoteRelatedUrlArgs>> relatedUrls;
 
     /**
      * @return URLs associated with this note and related metadata.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<NoteRelatedUrlGetArgs>>> relatedUrls() {
+    public Optional<Output<List<NoteRelatedUrlArgs>>> relatedUrls() {
         return Optional.ofNullable(this.relatedUrls);
     }
 
@@ -254,7 +254,7 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attestationAuthority(@Nullable Output<NoteAttestationAuthorityGetArgs> attestationAuthority) {
+        public Builder attestationAuthority(@Nullable Output<NoteAttestationAuthorityArgs> attestationAuthority) {
             $.attestationAuthority = attestationAuthority;
             return this;
         }
@@ -274,7 +274,7 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attestationAuthority(NoteAttestationAuthorityGetArgs attestationAuthority) {
+        public Builder attestationAuthority(NoteAttestationAuthorityArgs attestationAuthority) {
             return attestationAuthority(Output.of(attestationAuthority));
         }
 
@@ -444,7 +444,7 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder relatedUrls(@Nullable Output<List<NoteRelatedUrlGetArgs>> relatedUrls) {
+        public Builder relatedUrls(@Nullable Output<List<NoteRelatedUrlArgs>> relatedUrls) {
             $.relatedUrls = relatedUrls;
             return this;
         }
@@ -456,7 +456,7 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder relatedUrls(List<NoteRelatedUrlGetArgs> relatedUrls) {
+        public Builder relatedUrls(List<NoteRelatedUrlArgs> relatedUrls) {
             return relatedUrls(Output.of(relatedUrls));
         }
 
@@ -467,7 +467,7 @@ public final class NoteState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder relatedUrls(NoteRelatedUrlGetArgs... relatedUrls) {
+        public Builder relatedUrls(NoteRelatedUrlArgs... relatedUrls) {
             return relatedUrls(List.of(relatedUrls));
         }
 

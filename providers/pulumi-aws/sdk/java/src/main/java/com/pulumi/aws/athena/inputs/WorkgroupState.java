@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.athena.inputs;
 
-import com.pulumi.aws.athena.inputs.WorkgroupConfigurationGetArgs;
+import com.pulumi.aws.athena.inputs.WorkgroupConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -38,13 +38,13 @@ public final class WorkgroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configuration")
-    private @Nullable Output<WorkgroupConfigurationGetArgs> configuration;
+    private @Nullable Output<WorkgroupConfigurationArgs> configuration;
 
     /**
      * @return Configuration block with various settings for the workgroup. Documented below.
      * 
      */
-    public Optional<Output<WorkgroupConfigurationGetArgs>> configuration() {
+    public Optional<Output<WorkgroupConfigurationArgs>> configuration() {
         return Optional.ofNullable(this.configuration);
     }
 
@@ -196,7 +196,7 @@ public final class WorkgroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder configuration(@Nullable Output<WorkgroupConfigurationGetArgs> configuration) {
+        public Builder configuration(@Nullable Output<WorkgroupConfigurationArgs> configuration) {
             $.configuration = configuration;
             return this;
         }
@@ -207,7 +207,7 @@ public final class WorkgroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder configuration(WorkgroupConfigurationGetArgs configuration) {
+        public Builder configuration(WorkgroupConfigurationArgs configuration) {
             return configuration(Output.of(configuration));
         }
 

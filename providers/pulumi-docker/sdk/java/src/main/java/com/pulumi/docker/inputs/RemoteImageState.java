@@ -5,7 +5,7 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.docker.inputs.RemoteImageBuildGetArgs;
+import com.pulumi.docker.inputs.RemoteImageBuildArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,14 +24,14 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="build")
-    private @Nullable Output<RemoteImageBuildGetArgs> build;
+    private @Nullable Output<RemoteImageBuildArgs> build;
 
     /**
      * @return Configuration to build an image. Please see [docker build command
      * reference](https://docs.docker.com/engine/reference/commandline/build/#options) too.
      * 
      */
-    public Optional<Output<RemoteImageBuildGetArgs>> build() {
+    public Optional<Output<RemoteImageBuildArgs>> build() {
         return Optional.ofNullable(this.build);
     }
 
@@ -218,7 +218,7 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder build(@Nullable Output<RemoteImageBuildGetArgs> build) {
+        public Builder build(@Nullable Output<RemoteImageBuildArgs> build) {
             $.build = build;
             return this;
         }
@@ -230,7 +230,7 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder build(RemoteImageBuildGetArgs build) {
+        public Builder build(RemoteImageBuildArgs build) {
             return build(Output.of(build));
         }
 

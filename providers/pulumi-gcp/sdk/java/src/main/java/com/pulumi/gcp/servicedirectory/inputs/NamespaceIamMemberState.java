@@ -5,7 +5,7 @@ package com.pulumi.gcp.servicedirectory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.servicedirectory.inputs.NamespaceIamMemberConditionGetArgs;
+import com.pulumi.gcp.servicedirectory.inputs.NamespaceIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class NamespaceIamMemberState extends com.pulumi.resources.Resource
     public static final NamespaceIamMemberState Empty = new NamespaceIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<NamespaceIamMemberConditionGetArgs> condition;
+    private @Nullable Output<NamespaceIamMemberConditionArgs> condition;
 
-    public Optional<Output<NamespaceIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<NamespaceIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -107,12 +107,12 @@ public final class NamespaceIamMemberState extends com.pulumi.resources.Resource
             $ = new NamespaceIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<NamespaceIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<NamespaceIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(NamespaceIamMemberConditionGetArgs condition) {
+        public Builder condition(NamespaceIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

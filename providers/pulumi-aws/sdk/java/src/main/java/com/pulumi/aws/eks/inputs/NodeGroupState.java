@@ -3,12 +3,12 @@
 
 package com.pulumi.aws.eks.inputs;
 
-import com.pulumi.aws.eks.inputs.NodeGroupLaunchTemplateGetArgs;
-import com.pulumi.aws.eks.inputs.NodeGroupRemoteAccessGetArgs;
-import com.pulumi.aws.eks.inputs.NodeGroupResourceGetArgs;
-import com.pulumi.aws.eks.inputs.NodeGroupScalingConfigGetArgs;
-import com.pulumi.aws.eks.inputs.NodeGroupTaintGetArgs;
-import com.pulumi.aws.eks.inputs.NodeGroupUpdateConfigGetArgs;
+import com.pulumi.aws.eks.inputs.NodeGroupLaunchTemplateArgs;
+import com.pulumi.aws.eks.inputs.NodeGroupRemoteAccessArgs;
+import com.pulumi.aws.eks.inputs.NodeGroupResourceArgs;
+import com.pulumi.aws.eks.inputs.NodeGroupScalingConfigArgs;
+import com.pulumi.aws.eks.inputs.NodeGroupTaintArgs;
+import com.pulumi.aws.eks.inputs.NodeGroupUpdateConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -150,13 +150,13 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="launchTemplate")
-    private @Nullable Output<NodeGroupLaunchTemplateGetArgs> launchTemplate;
+    private @Nullable Output<NodeGroupLaunchTemplateArgs> launchTemplate;
 
     /**
      * @return Configuration block with Launch Template settings. Detailed below.
      * 
      */
-    public Optional<Output<NodeGroupLaunchTemplateGetArgs>> launchTemplate() {
+    public Optional<Output<NodeGroupLaunchTemplateArgs>> launchTemplate() {
         return Optional.ofNullable(this.launchTemplate);
     }
 
@@ -225,13 +225,13 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="remoteAccess")
-    private @Nullable Output<NodeGroupRemoteAccessGetArgs> remoteAccess;
+    private @Nullable Output<NodeGroupRemoteAccessArgs> remoteAccess;
 
     /**
      * @return Configuration block with remote access settings. Detailed below.
      * 
      */
-    public Optional<Output<NodeGroupRemoteAccessGetArgs>> remoteAccess() {
+    public Optional<Output<NodeGroupRemoteAccessArgs>> remoteAccess() {
         return Optional.ofNullable(this.remoteAccess);
     }
 
@@ -240,13 +240,13 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resources")
-    private @Nullable Output<List<NodeGroupResourceGetArgs>> resources;
+    private @Nullable Output<List<NodeGroupResourceArgs>> resources;
 
     /**
      * @return List of objects containing information about underlying resources.
      * 
      */
-    public Optional<Output<List<NodeGroupResourceGetArgs>>> resources() {
+    public Optional<Output<List<NodeGroupResourceArgs>>> resources() {
         return Optional.ofNullable(this.resources);
     }
 
@@ -255,13 +255,13 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scalingConfig")
-    private @Nullable Output<NodeGroupScalingConfigGetArgs> scalingConfig;
+    private @Nullable Output<NodeGroupScalingConfigArgs> scalingConfig;
 
     /**
      * @return Configuration block with scaling settings. Detailed below.
      * 
      */
-    public Optional<Output<NodeGroupScalingConfigGetArgs>> scalingConfig() {
+    public Optional<Output<NodeGroupScalingConfigArgs>> scalingConfig() {
         return Optional.ofNullable(this.scalingConfig);
     }
 
@@ -330,20 +330,20 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taints")
-    private @Nullable Output<List<NodeGroupTaintGetArgs>> taints;
+    private @Nullable Output<List<NodeGroupTaintArgs>> taints;
 
     /**
      * @return The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
      * 
      */
-    public Optional<Output<List<NodeGroupTaintGetArgs>>> taints() {
+    public Optional<Output<List<NodeGroupTaintArgs>>> taints() {
         return Optional.ofNullable(this.taints);
     }
 
     @Import(name="updateConfig")
-    private @Nullable Output<NodeGroupUpdateConfigGetArgs> updateConfig;
+    private @Nullable Output<NodeGroupUpdateConfigArgs> updateConfig;
 
-    public Optional<Output<NodeGroupUpdateConfigGetArgs>> updateConfig() {
+    public Optional<Output<NodeGroupUpdateConfigArgs>> updateConfig() {
         return Optional.ofNullable(this.updateConfig);
     }
 
@@ -592,7 +592,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder launchTemplate(@Nullable Output<NodeGroupLaunchTemplateGetArgs> launchTemplate) {
+        public Builder launchTemplate(@Nullable Output<NodeGroupLaunchTemplateArgs> launchTemplate) {
             $.launchTemplate = launchTemplate;
             return this;
         }
@@ -603,7 +603,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder launchTemplate(NodeGroupLaunchTemplateGetArgs launchTemplate) {
+        public Builder launchTemplate(NodeGroupLaunchTemplateArgs launchTemplate) {
             return launchTemplate(Output.of(launchTemplate));
         }
 
@@ -697,7 +697,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder remoteAccess(@Nullable Output<NodeGroupRemoteAccessGetArgs> remoteAccess) {
+        public Builder remoteAccess(@Nullable Output<NodeGroupRemoteAccessArgs> remoteAccess) {
             $.remoteAccess = remoteAccess;
             return this;
         }
@@ -708,7 +708,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder remoteAccess(NodeGroupRemoteAccessGetArgs remoteAccess) {
+        public Builder remoteAccess(NodeGroupRemoteAccessArgs remoteAccess) {
             return remoteAccess(Output.of(remoteAccess));
         }
 
@@ -718,7 +718,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resources(@Nullable Output<List<NodeGroupResourceGetArgs>> resources) {
+        public Builder resources(@Nullable Output<List<NodeGroupResourceArgs>> resources) {
             $.resources = resources;
             return this;
         }
@@ -729,7 +729,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resources(List<NodeGroupResourceGetArgs> resources) {
+        public Builder resources(List<NodeGroupResourceArgs> resources) {
             return resources(Output.of(resources));
         }
 
@@ -739,7 +739,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resources(NodeGroupResourceGetArgs... resources) {
+        public Builder resources(NodeGroupResourceArgs... resources) {
             return resources(List.of(resources));
         }
 
@@ -749,7 +749,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scalingConfig(@Nullable Output<NodeGroupScalingConfigGetArgs> scalingConfig) {
+        public Builder scalingConfig(@Nullable Output<NodeGroupScalingConfigArgs> scalingConfig) {
             $.scalingConfig = scalingConfig;
             return this;
         }
@@ -760,7 +760,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scalingConfig(NodeGroupScalingConfigGetArgs scalingConfig) {
+        public Builder scalingConfig(NodeGroupScalingConfigArgs scalingConfig) {
             return scalingConfig(Output.of(scalingConfig));
         }
 
@@ -864,7 +864,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder taints(@Nullable Output<List<NodeGroupTaintGetArgs>> taints) {
+        public Builder taints(@Nullable Output<List<NodeGroupTaintArgs>> taints) {
             $.taints = taints;
             return this;
         }
@@ -875,7 +875,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder taints(List<NodeGroupTaintGetArgs> taints) {
+        public Builder taints(List<NodeGroupTaintArgs> taints) {
             return taints(Output.of(taints));
         }
 
@@ -885,16 +885,16 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder taints(NodeGroupTaintGetArgs... taints) {
+        public Builder taints(NodeGroupTaintArgs... taints) {
             return taints(List.of(taints));
         }
 
-        public Builder updateConfig(@Nullable Output<NodeGroupUpdateConfigGetArgs> updateConfig) {
+        public Builder updateConfig(@Nullable Output<NodeGroupUpdateConfigArgs> updateConfig) {
             $.updateConfig = updateConfig;
             return this;
         }
 
-        public Builder updateConfig(NodeGroupUpdateConfigGetArgs updateConfig) {
+        public Builder updateConfig(NodeGroupUpdateConfigArgs updateConfig) {
             return updateConfig(Output.of(updateConfig));
         }
 

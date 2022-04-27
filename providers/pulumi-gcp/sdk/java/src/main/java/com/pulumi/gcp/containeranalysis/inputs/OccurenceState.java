@@ -5,7 +5,7 @@ package com.pulumi.gcp.containeranalysis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationGetArgs;
+import com.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -29,7 +29,7 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attestation")
-    private @Nullable Output<OccurenceAttestationGetArgs> attestation;
+    private @Nullable Output<OccurenceAttestationArgs> attestation;
 
     /**
      * @return Occurrence that represents a single &#34;attestation&#34;. The authenticity
@@ -43,7 +43,7 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<OccurenceAttestationGetArgs>> attestation() {
+    public Optional<Output<OccurenceAttestationArgs>> attestation() {
         return Optional.ofNullable(this.attestation);
     }
 
@@ -225,7 +225,7 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attestation(@Nullable Output<OccurenceAttestationGetArgs> attestation) {
+        public Builder attestation(@Nullable Output<OccurenceAttestationArgs> attestation) {
             $.attestation = attestation;
             return this;
         }
@@ -244,7 +244,7 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attestation(OccurenceAttestationGetArgs attestation) {
+        public Builder attestation(OccurenceAttestationArgs attestation) {
             return attestation(Output.of(attestation));
         }
 

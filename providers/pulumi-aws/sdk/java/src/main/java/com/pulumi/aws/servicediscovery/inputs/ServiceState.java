@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.servicediscovery.inputs;
 
-import com.pulumi.aws.servicediscovery.inputs.ServiceDnsConfigGetArgs;
-import com.pulumi.aws.servicediscovery.inputs.ServiceHealthCheckConfigGetArgs;
-import com.pulumi.aws.servicediscovery.inputs.ServiceHealthCheckCustomConfigGetArgs;
+import com.pulumi.aws.servicediscovery.inputs.ServiceDnsConfigArgs;
+import com.pulumi.aws.servicediscovery.inputs.ServiceHealthCheckConfigArgs;
+import com.pulumi.aws.servicediscovery.inputs.ServiceHealthCheckCustomConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -55,13 +55,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsConfig")
-    private @Nullable Output<ServiceDnsConfigGetArgs> dnsConfig;
+    private @Nullable Output<ServiceDnsConfigArgs> dnsConfig;
 
     /**
      * @return A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
      * 
      */
-    public Optional<Output<ServiceDnsConfigGetArgs>> dnsConfig() {
+    public Optional<Output<ServiceDnsConfigArgs>> dnsConfig() {
         return Optional.ofNullable(this.dnsConfig);
     }
 
@@ -85,13 +85,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckConfig")
-    private @Nullable Output<ServiceHealthCheckConfigGetArgs> healthCheckConfig;
+    private @Nullable Output<ServiceHealthCheckConfigArgs> healthCheckConfig;
 
     /**
      * @return A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
      * 
      */
-    public Optional<Output<ServiceHealthCheckConfigGetArgs>> healthCheckConfig() {
+    public Optional<Output<ServiceHealthCheckConfigArgs>> healthCheckConfig() {
         return Optional.ofNullable(this.healthCheckConfig);
     }
 
@@ -100,13 +100,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckCustomConfig")
-    private @Nullable Output<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig;
+    private @Nullable Output<ServiceHealthCheckCustomConfigArgs> healthCheckCustomConfig;
 
     /**
      * @return A complex type that contains settings for ECS managed health checks.
      * 
      */
-    public Optional<Output<ServiceHealthCheckCustomConfigGetArgs>> healthCheckCustomConfig() {
+    public Optional<Output<ServiceHealthCheckCustomConfigArgs>> healthCheckCustomConfig() {
         return Optional.ofNullable(this.healthCheckCustomConfig);
     }
 
@@ -251,7 +251,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dnsConfig(@Nullable Output<ServiceDnsConfigGetArgs> dnsConfig) {
+        public Builder dnsConfig(@Nullable Output<ServiceDnsConfigArgs> dnsConfig) {
             $.dnsConfig = dnsConfig;
             return this;
         }
@@ -262,7 +262,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dnsConfig(ServiceDnsConfigGetArgs dnsConfig) {
+        public Builder dnsConfig(ServiceDnsConfigArgs dnsConfig) {
             return dnsConfig(Output.of(dnsConfig));
         }
 
@@ -293,7 +293,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder healthCheckConfig(@Nullable Output<ServiceHealthCheckConfigGetArgs> healthCheckConfig) {
+        public Builder healthCheckConfig(@Nullable Output<ServiceHealthCheckConfigArgs> healthCheckConfig) {
             $.healthCheckConfig = healthCheckConfig;
             return this;
         }
@@ -304,7 +304,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder healthCheckConfig(ServiceHealthCheckConfigGetArgs healthCheckConfig) {
+        public Builder healthCheckConfig(ServiceHealthCheckConfigArgs healthCheckConfig) {
             return healthCheckConfig(Output.of(healthCheckConfig));
         }
 
@@ -314,7 +314,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder healthCheckCustomConfig(@Nullable Output<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig) {
+        public Builder healthCheckCustomConfig(@Nullable Output<ServiceHealthCheckCustomConfigArgs> healthCheckCustomConfig) {
             $.healthCheckCustomConfig = healthCheckCustomConfig;
             return this;
         }
@@ -325,7 +325,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder healthCheckCustomConfig(ServiceHealthCheckCustomConfigGetArgs healthCheckCustomConfig) {
+        public Builder healthCheckCustomConfig(ServiceHealthCheckCustomConfigArgs healthCheckCustomConfig) {
             return healthCheckCustomConfig(Output.of(healthCheckCustomConfig));
         }
 

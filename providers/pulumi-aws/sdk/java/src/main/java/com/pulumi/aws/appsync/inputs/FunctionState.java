@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.appsync.inputs;
 
-import com.pulumi.aws.appsync.inputs.FunctionSyncConfigGetArgs;
+import com.pulumi.aws.appsync.inputs.FunctionSyncConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -172,13 +172,13 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncConfig")
-    private @Nullable Output<FunctionSyncConfigGetArgs> syncConfig;
+    private @Nullable Output<FunctionSyncConfigArgs> syncConfig;
 
     /**
      * @return Describes a Sync configuration for a resolver. See Sync Config.
      * 
      */
-    public Optional<Output<FunctionSyncConfigGetArgs>> syncConfig() {
+    public Optional<Output<FunctionSyncConfigArgs>> syncConfig() {
         return Optional.ofNullable(this.syncConfig);
     }
 
@@ -432,7 +432,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder syncConfig(@Nullable Output<FunctionSyncConfigGetArgs> syncConfig) {
+        public Builder syncConfig(@Nullable Output<FunctionSyncConfigArgs> syncConfig) {
             $.syncConfig = syncConfig;
             return this;
         }
@@ -443,7 +443,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder syncConfig(FunctionSyncConfigGetArgs syncConfig) {
+        public Builder syncConfig(FunctionSyncConfigArgs syncConfig) {
             return syncConfig(Output.of(syncConfig));
         }
 

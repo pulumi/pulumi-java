@@ -18,13 +18,6 @@ import (
 	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
 
-type typeDetails struct {
-	outputType bool
-	inputType  bool
-	stateType  bool
-	plainType  bool
-}
-
 func packageName(packages map[string]string, name string) string {
 	if pkg, ok := packages[name]; ok {
 		return pkg
@@ -41,7 +34,6 @@ type modContext struct {
 	enums                  []*schema.EnumType
 	resources              []*schema.Resource
 	functions              []*schema.Function
-	typeDetails            map[*schema.ObjectType]*typeDetails
 	children               []*modContext
 	tool                   string
 	packageName            string
@@ -50,6 +42,7 @@ type modContext struct {
 	packages               map[string]string
 	dictionaryConstructors bool
 	configClassPackageName string
+	classQueue             *classQueue
 }
 
 func (mod *modContext) propertyName(p *schema.Property) string {
@@ -57,15 +50,6 @@ func (mod *modContext) propertyName(p *schema.Property) string {
 		return n
 	}
 	return p.Name
-}
-
-func (mod *modContext) details(t *schema.ObjectType) *typeDetails {
-	details, ok := mod.typeDetails[t]
-	if !ok {
-		details = &typeDetails{}
-		mod.typeDetails[t] = details
-	}
-	return details
 }
 
 func tokenToName(tok string) string {
@@ -105,23 +89,28 @@ func (mod *modContext) tokenToPackage(tok string, qualifier qualifier) string {
 	return qualifier.append(pkg)
 }
 
-func (mod *modContext) typeName(t *schema.ObjectType, state, args bool) string {
+func (mod *modContext) typeName(t *schema.ObjectType) string {
 	name := tokenToName(t.Token)
-	if state {
-		return name + "GetArgs"
-	}
-	if args {
+	if t.IsInputShape() {
 		return name + "Args"
 	}
 	return name
 }
 
+// Computes the TypeShape (Java type representation, possibly
+// generic), corresponding to the given type.
+//
+// Side effects: calls mod.classQueue.ensureGenerated so that it would
+// never generate dangling references. The queue is polled later in
+// the codegen to make sure every referenced type has a corresponding
+// class generated. This method generates the minimal viable set of
+// classes closed over referencees, without having to know exactly
+// what to visit.
 func (mod *modContext) typeString(
 	ctx *classFileContext,
 	t schema.Type,
 	qualifier qualifier,
 	input bool,
-	state bool,
 	// Influences how Map and Array types are generated.
 	requireInitializers bool,
 	// Allow returning `Optional<T>` directly. Otherwise `@Nullable T` will be returned at the outer scope.
@@ -130,7 +119,7 @@ func (mod *modContext) typeString(
 	// should act like we are inside an Output<T>.
 	inputlessOverload bool,
 ) TypeShape {
-	inner := mod.typeStringRecHelper(ctx, t, qualifier, input, state, requireInitializers, inputlessOverload)
+	inner := mod.typeStringRecHelper(ctx, t, qualifier, input, requireInitializers, inputlessOverload)
 	if inner.Type.Equal(names.Optional) && !outerOptional {
 		contract.Assert(len(inner.Parameters) == 1)
 		contract.Assert(len(inner.Annotations) == 0)
@@ -146,7 +135,6 @@ func (mod *modContext) typeStringRecHelper(
 	t schema.Type,
 	qualifier qualifier,
 	input bool,
-	state bool,
 	requireInitializers bool,
 	insideInput bool,
 ) TypeShape {
@@ -158,7 +146,7 @@ func (mod *modContext) typeStringRecHelper(
 		case *schema.ArrayType, *schema.MapType:
 			elem = codegen.PlainType(t.ElementType)
 		}
-		inner := mod.typeStringRecHelper(ctx, elem, qualifier, true, state, requireInitializers, true)
+		inner := mod.typeStringRecHelper(ctx, elem, qualifier, true, requireInitializers, true)
 
 		// Simplify Output<Output<T>> to Output<T> here. This is
 		// safe to do since:
@@ -173,7 +161,7 @@ func (mod *modContext) typeStringRecHelper(
 		}
 
 	case *schema.OptionalType:
-		inner := mod.typeStringRecHelper(ctx, t.ElementType, qualifier, input, state, requireInitializers, insideInput)
+		inner := mod.typeStringRecHelper(ctx, t.ElementType, qualifier, input, requireInitializers, insideInput)
 		if ignoreOptional(t, requireInitializers) {
 			inner.Annotations = append(inner.Annotations, fmt.Sprintf("@%s", ctx.ref(names.Nullable)))
 			return inner
@@ -196,7 +184,7 @@ func (mod *modContext) typeStringRecHelper(
 			Type: listType,
 			Parameters: []TypeShape{
 				mod.typeStringRecHelper(ctx,
-					codegen.PlainType(t.ElementType), qualifier, input, state, false, insideInput,
+					codegen.PlainType(t.ElementType), qualifier, input, false, insideInput,
 				),
 			},
 		}
@@ -212,34 +200,13 @@ func (mod *modContext) typeStringRecHelper(
 			Parameters: []TypeShape{
 				{Type: names.String},
 				mod.typeStringRecHelper(ctx,
-					codegen.PlainType(t.ElementType), qualifier, input, state, false, insideInput,
+					codegen.PlainType(t.ElementType), qualifier, input, false, insideInput,
 				),
 			},
 		}
 
 	case *schema.ObjectType:
-		namingCtx := mod
-		if t.Package != mod.pkg {
-			// If object type belongs to another package, we apply naming conventions from that package,
-			// including package naming and compatibility mode.
-			extPkg := t.Package
-			var info PackageInfo
-			contract.AssertNoError(extPkg.ImportLanguages(map[string]schema.Language{"java": Importer}))
-			if v, ok := t.Package.Language["java"].(PackageInfo); ok {
-				info = v
-			}
-			namingCtx = &modContext{
-				pkg:             extPkg,
-				packages:        info.Packages,
-				basePackageName: info.BasePackageOrDefault(),
-			}
-		}
-		pkg, err := parsePackageName(namingCtx.tokenToPackage(t.Token, qualifier))
-		if err != nil {
-			panic(err)
-		}
-		typ := pkg.Dot(names.Ident(mod.typeName(t, state, insideInput)))
-		return TypeShape{Type: typ}
+		return mod.typeStringForObjectType(t, qualifier, input)
 	case *schema.ResourceType:
 		var resourceType names.FQN
 		if strings.HasPrefix(t.Token, "pulumi:providers:") {
@@ -277,7 +244,7 @@ func (mod *modContext) typeStringRecHelper(
 	case *schema.TokenType:
 		// Use the underlying type for now.
 		if t.UnderlyingType != nil {
-			return mod.typeStringRecHelper(ctx, t.UnderlyingType, qualifier, input, state, requireInitializers, insideInput)
+			return mod.typeStringRecHelper(ctx, t.UnderlyingType, qualifier, input, requireInitializers, insideInput)
 		}
 
 		pkg, err := parsePackageName(mod.tokenToPackage(t.Token, qualifier))
@@ -294,10 +261,10 @@ func (mod *modContext) typeStringRecHelper(
 			// If this is an output and a "relaxed" enum, emit the type as the underlying primitive type rather than the union.
 			// Eg. Output<String> rather than Output<Either<EnumType, String>>
 			if typ, ok := e.(*schema.EnumType); ok && !input {
-				return mod.typeStringRecHelper(ctx, typ.ElementType, qualifier, input, state, requireInitializers, insideInput)
+				return mod.typeStringRecHelper(ctx, typ.ElementType, qualifier, input, requireInitializers, insideInput)
 			}
 
-			et := mod.typeStringRecHelper(ctx, e, qualifier, input, state, false, insideInput)
+			et := mod.typeStringRecHelper(ctx, e, qualifier, input, false, insideInput)
 			etc := et.ToCode(ctx.imports)
 			if !elementTypeSet.Has(etc) {
 				elementTypeSet.Add(etc)
@@ -307,14 +274,13 @@ func (mod *modContext) typeStringRecHelper(
 
 		switch len(elementTypes) {
 		case 1:
-			return mod.typeStringRecHelper(ctx, t.ElementTypes[0], qualifier, input, state, requireInitializers, insideInput)
+			return mod.typeStringRecHelper(ctx, t.ElementTypes[0], qualifier, input, requireInitializers, insideInput)
 		case 2:
 			return TypeShape{
 				Type:       names.Either,
 				Parameters: elementTypes,
 			}
 		default:
-			//return TypeShape{Type: names.Object, Annotations: elementTypeSet.SortedValues()}
 			return TypeShape{Type: names.Object}
 		}
 	default:
@@ -339,6 +305,42 @@ func (mod *modContext) typeStringRecHelper(
 			panic(fmt.Sprintf("Unknown primitive: %#v", t))
 		}
 	}
+}
+
+func (mod *modContext) typeStringForObjectType(t *schema.ObjectType, qualifier qualifier, input bool) TypeShape {
+	foreign := t.Package != mod.pkg
+	namingCtx := mod
+
+	if foreign {
+		// If object type belongs to another package, we apply naming conventions from that package,
+		// including package naming and compatibility mode.
+		extPkg := t.Package
+		var info PackageInfo
+		contract.AssertNoError(extPkg.ImportLanguages(map[string]schema.Language{"java": Importer}))
+		if v, ok := t.Package.Language["java"].(PackageInfo); ok {
+			info = v
+		}
+		namingCtx = &modContext{
+			pkg:             extPkg,
+			packages:        info.Packages,
+			basePackageName: info.BasePackageOrDefault(),
+		}
+	}
+	packageName, err := parsePackageName(namingCtx.tokenToPackage(t.Token, qualifier))
+	if err != nil {
+		panic(err)
+	}
+	className := names.Ident(mod.typeName(t))
+	if !foreign {
+		mod.classQueue.ensureGenerated(classQueueEntry{
+			packageName: packageName,
+			className:   className,
+			schemaType:  t,
+			input:       input,
+		})
+	}
+	fqn := packageName.Dot(className)
+	return TypeShape{Type: fqn}
 }
 
 func (mod *modContext) typeStringForEnumType(enumType *schema.EnumType) TypeShape {
@@ -384,7 +386,6 @@ type plainType struct {
 	propertyTypeQualifier qualifier
 	properties            []*schema.Property
 	args                  bool
-	state                 bool
 }
 
 type propJavadocOptions struct {
@@ -503,7 +504,6 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 			prop.Type,
 			pt.propertyTypeQualifier,
 			true,                // is input
-			pt.state,            // is state
 			requireInitializers, // requires initializers
 			false,               // outer optional
 			false,               // inputless overload
@@ -724,7 +724,6 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			pt.propertyTypeQualifier,
 			false,
 			false,
-			false,
 			false, // outer optional
 			false, // inputless overload
 		)
@@ -775,7 +774,6 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			pt.propertyTypeQualifier,
 			false,
 			false,
-			false,
 			true,  // outer optional
 			false, // inputless overload
 		)
@@ -783,7 +781,6 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			ctx,
 			codegen.UnwrapType(prop.Type),
 			pt.propertyTypeQualifier,
-			false,
 			false,
 			false,
 			false, // outer optional (irrelevant)
@@ -836,7 +833,6 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			prop.Type,
 			pt.propertyTypeQualifier,
 			false, // is input
-			false, // is state
 			false, // requires initializers
 			false, // outer optional
 			false, // inputless overload
@@ -905,7 +901,6 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			pt.propertyTypeQualifier,
 			false,
 			false,
-			false,
 			false, // outer optional
 			false, // inputless overload
 		)
@@ -931,7 +926,6 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			ctx,
 			prop.Type,
 			pt.propertyTypeQualifier,
-			false,
 			false,
 			false,
 			false, // outer optional
@@ -983,7 +977,6 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			pt.propertyTypeQualifier,
 			false,
 			false,
-			false,
 			true,  // outer optional
 			false, // inputless overload
 		)
@@ -991,7 +984,6 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			ctx,
 			codegen.UnwrapType(prop.Type),
 			pt.propertyTypeQualifier,
-			false,
 			false,
 			false,
 			false, // outer optional (irrelevant)
@@ -1044,7 +1036,6 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			prop.Type,
 			pt.propertyTypeQualifier,
 			false, // is input
-			false, // is state
 			false, // requires initializers
 			false, // outer optional
 			false, // inputless overload
@@ -1184,7 +1175,6 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 			ctx,
 			prop.Type,
 			outputsQualifier,
-			false,
 			false,
 			false,
 			false, // outer optional
@@ -1634,7 +1624,6 @@ func (mod *modContext) genEnum(ctx *classFileContext, enum *schema.EnumType) err
 		enumsQualifier,
 		false,
 		false,
-		false,
 		false, // outer optional
 		false, // inputless overload
 	)
@@ -1714,14 +1703,6 @@ func (mod *modContext) genEnum(ctx *classFileContext, enum *schema.EnumType) err
 	return nil
 }
 
-func visitObjectTypes(properties []*schema.Property, visitor func(*schema.ObjectType)) {
-	codegen.VisitTypeClosure(properties, func(t schema.Type) {
-		if o, ok := t.(*schema.ObjectType); ok {
-			visitor(o)
-		}
-	})
-}
-
 type qualifier int
 
 const (
@@ -1757,20 +1738,22 @@ func (q qualifier) String() string {
 func (mod *modContext) genType(
 	ctx *classFileContext,
 	obj *schema.ObjectType,
-	propertyTypeQualifier qualifier,
-	input, state bool,
+	input bool,
 ) error {
+	propertyTypeQualifier := outputsQualifier
+	if input {
+		propertyTypeQualifier = inputsQualifier
+	}
+
 	pt := &plainType{
 		mod:                   mod,
-		name:                  mod.typeName(obj, state, obj.IsInputShape()),
+		name:                  ctx.className.String(),
 		comment:               obj.Comment,
 		propertyTypeQualifier: propertyTypeQualifier,
 		properties:            obj.Properties,
-		state:                 state,
 		args:                  obj.IsInputShape(),
 	}
 
-	contract.Assertf(pt.name == ctx.className.String(), "This is required by the java compiler")
 	if input {
 		pt.baseClass = "com.pulumi.resources.ResourceArgs"
 		if !obj.IsInputShape() {
@@ -1811,7 +1794,6 @@ func (mod *modContext) getConfigProperty(ctx *classFileContext, prop *schema.Pro
 		ctx,
 		schemaType,
 		inputsQualifier,
-		false,
 		false,
 		true,  // requireInitializers - set to true so we preserve Optional
 		true,  // outer optional
@@ -2023,7 +2005,6 @@ func (mod *modContext) gen(fs fs) error {
 					propertyTypeQualifier: inputsQualifier,
 					properties:            r.StateInputs.Properties,
 					args:                  true,
-					state:                 true,
 				}
 				return state.genInputType(ctx)
 			}); err != nil {
@@ -2045,58 +2026,6 @@ func (mod *modContext) gen(fs fs) error {
 		}
 	}
 
-	// Input/Output types
-	inputsPkg := javaPkg.Dot(names.Ident("inputs"))
-	for _, t := range mod.types {
-		if t.IsOverlay {
-			// This type is generated by the provider, so no further action is required.
-			continue
-		}
-		var plainTypeClassName names.Ident
-		if mod.details(t).plainType {
-			t := t
-			if t.IsInputShape() {
-				t = t.PlainShape
-			}
-			plainTypeClassName = names.Ident(mod.typeName(t, false, t.IsInputShape()))
-			if err := addClass(inputsPkg, plainTypeClassName, func(ctx *classFileContext) error {
-				return mod.genType(ctx, t, inputsQualifier, true, false)
-			}); err != nil {
-				return err
-			}
-		}
-		if mod.details(t).inputType {
-			className := names.Ident(mod.typeName(t, false, t.IsInputShape()))
-			// Avoid name collision with `plainType` by
-			// avoiding the `inputType` generation. The
-			// naming scheme might need revisiting so both
-			// can be accommodated.
-			if !inputsPkg.Dot(plainTypeClassName).Equal(inputsPkg.Dot(className)) {
-				if err := addClass(inputsPkg, className, func(ctx *classFileContext) error {
-					return mod.genType(ctx, t, inputsQualifier, true, false)
-				}); err != nil {
-					return err
-				}
-			}
-		}
-		if mod.details(t).stateType {
-			className := names.Ident(mod.typeName(t, true, t.IsInputShape()))
-			if err := addClass(javaPkg.Dot(names.Ident("inputs")), className, func(ctx *classFileContext) error {
-				return mod.genType(ctx, t, inputsQualifier, true, true)
-			}); err != nil {
-				return err
-			}
-		}
-		if mod.details(t).outputType {
-			className := names.Ident(mod.typeName(t, false, t.IsInputShape()))
-			if err := addClass(javaPkg.Dot(names.Ident("outputs")), className, func(ctx *classFileContext) error {
-				return mod.genType(ctx, t, outputsQualifier, false, false)
-			}); err != nil {
-				return err
-			}
-		}
-	}
-
 	// Enums
 	if len(mod.enums) > 0 {
 		for _, enum := range mod.enums {
@@ -2108,6 +2037,16 @@ func (mod *modContext) gen(fs fs) error {
 			}
 		}
 	}
+
+	for !mod.classQueue.isEmpty() {
+		entry := mod.classQueue.dequeue()
+		if err := addClass(entry.packageName, entry.className, func(ctx *classFileContext) error {
+			return mod.genType(ctx, entry.schemaType, entry.input)
+		}); err != nil {
+			return err
+		}
+	}
+
 	return nil
 }
 
@@ -2181,7 +2120,6 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 
 	// group resources, types, and functions into Java packages
 	modules := map[string]*modContext{}
-	details := map[*schema.ObjectType]*typeDetails{}
 
 	var getMod func(modName string, p *schema.Package) *modContext
 	getMod = func(modName string, p *schema.Package) *modContext {
@@ -2202,9 +2140,9 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 				rootPackageName:        rootPackage,
 				basePackageName:        basePackage,
 				packages:               info.Packages,
-				typeDetails:            details,
 				propertyNames:          propertyNames,
 				dictionaryConstructors: info.DictionaryConstructors,
+				classQueue:             newClassQueue(),
 			}
 
 			if modName != "" {
@@ -2235,36 +2173,10 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 		cfg.configClassPackageName = cfg.basePackageName + packageName(infos[pkg].Packages, pkg.Name)
 	}
 
-	visitObjectTypes(pkg.Config, func(t *schema.ObjectType) {
-		getModFromToken(t.Token, pkg).details(t).plainType = true
-	})
-
 	// Find input and output types referenced by resources.
 	scanResource := func(r *schema.Resource) {
 		mod := getModFromToken(r.Token, pkg)
 		mod.resources = append(mod.resources, r)
-		visitObjectTypes(r.Properties, func(t *schema.ObjectType) {
-			getModFromToken(t.Token, t.Package).details(t).outputType = true
-		})
-		visitObjectTypes(r.InputProperties, func(t *schema.ObjectType) {
-			if r.IsProvider {
-				getModFromToken(t.Token, t.Package).details(t).outputType = true
-			}
-			getModFromToken(t.Token, t.Package).details(t).inputType = true
-		})
-
-		// We don't generate plain input types unless we use them. To always
-		// generate them, we can move the following line to the above function.
-		// It looks like the C# codegen always generates them.
-		visitPlainObjectTypes(r.InputProperties, func(t *schema.ObjectType) {
-			getModFromToken(t.Token, t.Package).details(t).plainType = true
-		})
-		if r.StateInputs != nil {
-			visitObjectTypes(r.StateInputs.Properties, func(t *schema.ObjectType) {
-				getModFromToken(t.Token, t.Package).details(t).inputType = true
-				getModFromToken(t.Token, t.Package).details(t).stateType = true
-			})
-		}
 	}
 
 	scanResource(pkg.Provider)
@@ -2276,20 +2188,6 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 	for _, f := range pkg.Functions {
 		mod := getModFromToken(f.Token, pkg)
 		mod.functions = append(mod.functions, f)
-		if f.Inputs != nil {
-			visitObjectTypes(f.Inputs.Properties, func(t *schema.ObjectType) {
-				details := getModFromToken(t.Token, t.Package).details(t)
-				details.inputType = true
-				details.plainType = true
-			})
-		}
-		if f.Outputs != nil {
-			visitObjectTypes(f.Outputs.Properties, func(t *schema.ObjectType) {
-				details := getModFromToken(t.Token, t.Package).details(t)
-				details.outputType = true
-				details.plainType = true
-			})
-		}
 	}
 
 	// Find nested types.
@@ -2465,4 +2363,61 @@ func parsePackageName(packageName string) (names.FQN, error) {
 		result = result.Dot(names.Ident(p))
 	}
 	return result, nil
+}
+
+type classQueue struct {
+	inputTypes      map[*schema.ObjectType]classQueueEntry
+	outputTypes     map[*schema.ObjectType]classQueueEntry
+	seenInputTypes  map[*schema.ObjectType]bool
+	seenOutputTypes map[*schema.ObjectType]bool
+}
+
+type classQueueEntry struct {
+	packageName names.FQN
+	className   names.Ident
+	schemaType  *schema.ObjectType
+	input       bool
+}
+
+func newClassQueue() *classQueue {
+	return &classQueue{
+		inputTypes:      map[*schema.ObjectType]classQueueEntry{},
+		outputTypes:     map[*schema.ObjectType]classQueueEntry{},
+		seenInputTypes:  map[*schema.ObjectType]bool{},
+		seenOutputTypes: map[*schema.ObjectType]bool{},
+	}
+}
+
+func (q *classQueue) isEmpty() bool {
+	return len(q.inputTypes) == 0 && len(q.outputTypes) == 0
+}
+
+func (q *classQueue) ensureGenerated(entry classQueueEntry) {
+	t := entry.schemaType
+	typeMap, seenMap := q.outputTypes, q.seenOutputTypes
+	if entry.input {
+		typeMap, seenMap = q.inputTypes, q.seenInputTypes
+	}
+
+	if _, seen := seenMap[t]; !seen {
+		seenMap[t] = true
+		typeMap[t] = entry
+	}
+}
+
+func (q *classQueue) dequeue() classQueueEntry {
+	queue := q.inputTypes
+	if len(q.inputTypes) == 0 {
+		queue = q.outputTypes
+		if len(q.outputTypes) == 0 {
+			panic("deque() on an empty queue")
+		}
+	}
+	var firstEntry classQueueEntry
+	for _, entry := range queue {
+		firstEntry = entry
+		break
+	}
+	delete(queue, firstEntry.schemaType)
+	return firstEntry
 }

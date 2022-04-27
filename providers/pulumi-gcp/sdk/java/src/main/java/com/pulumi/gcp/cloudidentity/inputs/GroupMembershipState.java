@@ -5,9 +5,9 @@ package com.pulumi.gcp.cloudidentity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.cloudidentity.inputs.GroupMembershipMemberKeyGetArgs;
-import com.pulumi.gcp.cloudidentity.inputs.GroupMembershipPreferredMemberKeyGetArgs;
-import com.pulumi.gcp.cloudidentity.inputs.GroupMembershipRoleGetArgs;
+import com.pulumi.gcp.cloudidentity.inputs.GroupMembershipMemberKeyArgs;
+import com.pulumi.gcp.cloudidentity.inputs.GroupMembershipPreferredMemberKeyArgs;
+import com.pulumi.gcp.cloudidentity.inputs.GroupMembershipRoleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -55,14 +55,14 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="memberKey")
-    private @Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey;
+    private @Nullable Output<GroupMembershipMemberKeyArgs> memberKey;
 
     /**
      * @return EntityKey of the member.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<GroupMembershipMemberKeyGetArgs>> memberKey() {
+    public Optional<Output<GroupMembershipMemberKeyArgs>> memberKey() {
         return Optional.ofNullable(this.memberKey);
     }
 
@@ -89,14 +89,14 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="preferredMemberKey")
-    private @Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey;
+    private @Nullable Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey;
 
     /**
      * @return EntityKey of the member.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<GroupMembershipPreferredMemberKeyGetArgs>> preferredMemberKey() {
+    public Optional<Output<GroupMembershipPreferredMemberKeyArgs>> preferredMemberKey() {
         return Optional.ofNullable(this.preferredMemberKey);
     }
 
@@ -107,7 +107,7 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="roles")
-    private @Nullable Output<List<GroupMembershipRoleGetArgs>> roles;
+    private @Nullable Output<List<GroupMembershipRoleArgs>> roles;
 
     /**
      * @return The MembershipRoles that apply to the Membership.
@@ -115,7 +115,7 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<GroupMembershipRoleGetArgs>>> roles() {
+    public Optional<Output<List<GroupMembershipRoleArgs>>> roles() {
         return Optional.ofNullable(this.roles);
     }
 
@@ -229,7 +229,7 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder memberKey(@Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey) {
+        public Builder memberKey(@Nullable Output<GroupMembershipMemberKeyArgs> memberKey) {
             $.memberKey = memberKey;
             return this;
         }
@@ -241,7 +241,7 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder memberKey(GroupMembershipMemberKeyGetArgs memberKey) {
+        public Builder memberKey(GroupMembershipMemberKeyArgs memberKey) {
             return memberKey(Output.of(memberKey));
         }
 
@@ -275,7 +275,7 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder preferredMemberKey(@Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey) {
+        public Builder preferredMemberKey(@Nullable Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey) {
             $.preferredMemberKey = preferredMemberKey;
             return this;
         }
@@ -287,7 +287,7 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder preferredMemberKey(GroupMembershipPreferredMemberKeyGetArgs preferredMemberKey) {
+        public Builder preferredMemberKey(GroupMembershipPreferredMemberKeyArgs preferredMemberKey) {
             return preferredMemberKey(Output.of(preferredMemberKey));
         }
 
@@ -299,7 +299,7 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder roles(@Nullable Output<List<GroupMembershipRoleGetArgs>> roles) {
+        public Builder roles(@Nullable Output<List<GroupMembershipRoleArgs>> roles) {
             $.roles = roles;
             return this;
         }
@@ -312,7 +312,7 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder roles(List<GroupMembershipRoleGetArgs> roles) {
+        public Builder roles(List<GroupMembershipRoleArgs> roles) {
             return roles(Output.of(roles));
         }
 
@@ -324,7 +324,7 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder roles(GroupMembershipRoleGetArgs... roles) {
+        public Builder roles(GroupMembershipRoleArgs... roles) {
             return roles(List.of(roles));
         }
 

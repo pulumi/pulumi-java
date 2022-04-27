@@ -5,18 +5,18 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.docker.inputs.ContainerCapabilitiesGetArgs;
-import com.pulumi.docker.inputs.ContainerDeviceGetArgs;
-import com.pulumi.docker.inputs.ContainerHealthcheckGetArgs;
-import com.pulumi.docker.inputs.ContainerHostGetArgs;
-import com.pulumi.docker.inputs.ContainerLabelGetArgs;
-import com.pulumi.docker.inputs.ContainerMountGetArgs;
-import com.pulumi.docker.inputs.ContainerNetworkDataGetArgs;
-import com.pulumi.docker.inputs.ContainerNetworksAdvancedGetArgs;
-import com.pulumi.docker.inputs.ContainerPortGetArgs;
-import com.pulumi.docker.inputs.ContainerUlimitGetArgs;
-import com.pulumi.docker.inputs.ContainerUploadGetArgs;
-import com.pulumi.docker.inputs.ContainerVolumeGetArgs;
+import com.pulumi.docker.inputs.ContainerCapabilitiesArgs;
+import com.pulumi.docker.inputs.ContainerDeviceArgs;
+import com.pulumi.docker.inputs.ContainerHealthcheckArgs;
+import com.pulumi.docker.inputs.ContainerHostArgs;
+import com.pulumi.docker.inputs.ContainerLabelArgs;
+import com.pulumi.docker.inputs.ContainerMountArgs;
+import com.pulumi.docker.inputs.ContainerNetworkDataArgs;
+import com.pulumi.docker.inputs.ContainerNetworksAdvancedArgs;
+import com.pulumi.docker.inputs.ContainerPortArgs;
+import com.pulumi.docker.inputs.ContainerUlimitArgs;
+import com.pulumi.docker.inputs.ContainerUploadArgs;
+import com.pulumi.docker.inputs.ContainerVolumeArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -67,13 +67,13 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capabilities")
-    private @Nullable Output<ContainerCapabilitiesGetArgs> capabilities;
+    private @Nullable Output<ContainerCapabilitiesArgs> capabilities;
 
     /**
      * @return Add or drop certrain linux capabilities.
      * 
      */
-    public Optional<Output<ContainerCapabilitiesGetArgs>> capabilities() {
+    public Optional<Output<ContainerCapabilitiesArgs>> capabilities() {
         return Optional.ofNullable(this.capabilities);
     }
 
@@ -161,13 +161,13 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="devices")
-    private @Nullable Output<List<ContainerDeviceGetArgs>> devices;
+    private @Nullable Output<List<ContainerDeviceArgs>> devices;
 
     /**
      * @return Bind devices to the container.
      * 
      */
-    public Optional<Output<List<ContainerDeviceGetArgs>>> devices() {
+    public Optional<Output<List<ContainerDeviceArgs>>> devices() {
         return Optional.ofNullable(this.devices);
     }
 
@@ -323,13 +323,13 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthcheck")
-    private @Nullable Output<ContainerHealthcheckGetArgs> healthcheck;
+    private @Nullable Output<ContainerHealthcheckArgs> healthcheck;
 
     /**
      * @return A test to perform to check that the container is healthy
      * 
      */
-    public Optional<Output<ContainerHealthcheckGetArgs>> healthcheck() {
+    public Optional<Output<ContainerHealthcheckArgs>> healthcheck() {
         return Optional.ofNullable(this.healthcheck);
     }
 
@@ -353,13 +353,13 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hosts")
-    private @Nullable Output<List<ContainerHostGetArgs>> hosts;
+    private @Nullable Output<List<ContainerHostArgs>> hosts;
 
     /**
      * @return Additional hosts to add to the container.
      * 
      */
-    public Optional<Output<List<ContainerHostGetArgs>>> hosts() {
+    public Optional<Output<List<ContainerHostArgs>>> hosts() {
         return Optional.ofNullable(this.hosts);
     }
 
@@ -465,13 +465,13 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-    private @Nullable Output<List<ContainerLabelGetArgs>> labels;
+    private @Nullable Output<List<ContainerLabelArgs>> labels;
 
     /**
      * @return User-defined key/value metadata
      * 
      */
-    public Optional<Output<List<ContainerLabelGetArgs>>> labels() {
+    public Optional<Output<List<ContainerLabelArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
 
@@ -595,13 +595,13 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mounts")
-    private @Nullable Output<List<ContainerMountGetArgs>> mounts;
+    private @Nullable Output<List<ContainerMountArgs>> mounts;
 
     /**
      * @return Specification for mounts to be added to containers created as part of the service.
      * 
      */
-    public Optional<Output<List<ContainerMountGetArgs>>> mounts() {
+    public Optional<Output<List<ContainerMountArgs>>> mounts() {
         return Optional.ofNullable(this.mounts);
     }
 
@@ -665,13 +665,13 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkDatas")
-    private @Nullable Output<List<ContainerNetworkDataGetArgs>> networkDatas;
+    private @Nullable Output<List<ContainerNetworkDataArgs>> networkDatas;
 
     /**
      * @return The data of the networks the container is connected to.
      * 
      */
-    public Optional<Output<List<ContainerNetworkDataGetArgs>>> networkDatas() {
+    public Optional<Output<List<ContainerNetworkDataArgs>>> networkDatas() {
         return Optional.ofNullable(this.networkDatas);
     }
 
@@ -718,13 +718,13 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networksAdvanced")
-    private @Nullable Output<List<ContainerNetworksAdvancedGetArgs>> networksAdvanced;
+    private @Nullable Output<List<ContainerNetworksAdvancedArgs>> networksAdvanced;
 
     /**
      * @return The networks the container is attached to
      * 
      */
-    public Optional<Output<List<ContainerNetworksAdvancedGetArgs>>> networksAdvanced() {
+    public Optional<Output<List<ContainerNetworksAdvancedArgs>>> networksAdvanced() {
         return Optional.ofNullable(this.networksAdvanced);
     }
 
@@ -748,13 +748,13 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ports")
-    private @Nullable Output<List<ContainerPortGetArgs>> ports;
+    private @Nullable Output<List<ContainerPortArgs>> ports;
 
     /**
      * @return Publish a container&#39;s port(s) to the host.
      * 
      */
-    public Optional<Output<List<ContainerPortGetArgs>>> ports() {
+    public Optional<Output<List<ContainerPortArgs>>> ports() {
         return Optional.ofNullable(this.ports);
     }
 
@@ -979,13 +979,13 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ulimits")
-    private @Nullable Output<List<ContainerUlimitGetArgs>> ulimits;
+    private @Nullable Output<List<ContainerUlimitArgs>> ulimits;
 
     /**
      * @return Ulimit options to add.
      * 
      */
-    public Optional<Output<List<ContainerUlimitGetArgs>>> ulimits() {
+    public Optional<Output<List<ContainerUlimitArgs>>> ulimits() {
         return Optional.ofNullable(this.ulimits);
     }
 
@@ -995,14 +995,14 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uploads")
-    private @Nullable Output<List<ContainerUploadGetArgs>> uploads;
+    private @Nullable Output<List<ContainerUploadArgs>> uploads;
 
     /**
      * @return Specifies files to upload to the container before starting it. Only one of `content` or `content_base64` can be set and
      * at least one of them has to be set.
      * 
      */
-    public Optional<Output<List<ContainerUploadGetArgs>>> uploads() {
+    public Optional<Output<List<ContainerUploadArgs>>> uploads() {
         return Optional.ofNullable(this.uploads);
     }
 
@@ -1043,13 +1043,13 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumes")
-    private @Nullable Output<List<ContainerVolumeGetArgs>> volumes;
+    private @Nullable Output<List<ContainerVolumeArgs>> volumes;
 
     /**
      * @return Spec for mounting volumes in the container.
      * 
      */
-    public Optional<Output<List<ContainerVolumeGetArgs>>> volumes() {
+    public Optional<Output<List<ContainerVolumeArgs>>> volumes() {
         return Optional.ofNullable(this.volumes);
     }
 
@@ -1203,7 +1203,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder capabilities(@Nullable Output<ContainerCapabilitiesGetArgs> capabilities) {
+        public Builder capabilities(@Nullable Output<ContainerCapabilitiesArgs> capabilities) {
             $.capabilities = capabilities;
             return this;
         }
@@ -1214,7 +1214,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder capabilities(ContainerCapabilitiesGetArgs capabilities) {
+        public Builder capabilities(ContainerCapabilitiesArgs capabilities) {
             return capabilities(Output.of(capabilities));
         }
 
@@ -1344,7 +1344,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder devices(@Nullable Output<List<ContainerDeviceGetArgs>> devices) {
+        public Builder devices(@Nullable Output<List<ContainerDeviceArgs>> devices) {
             $.devices = devices;
             return this;
         }
@@ -1355,7 +1355,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder devices(List<ContainerDeviceGetArgs> devices) {
+        public Builder devices(List<ContainerDeviceArgs> devices) {
             return devices(Output.of(devices));
         }
 
@@ -1365,7 +1365,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder devices(ContainerDeviceGetArgs... devices) {
+        public Builder devices(ContainerDeviceArgs... devices) {
             return devices(List.of(devices));
         }
 
@@ -1638,7 +1638,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder healthcheck(@Nullable Output<ContainerHealthcheckGetArgs> healthcheck) {
+        public Builder healthcheck(@Nullable Output<ContainerHealthcheckArgs> healthcheck) {
             $.healthcheck = healthcheck;
             return this;
         }
@@ -1649,7 +1649,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder healthcheck(ContainerHealthcheckGetArgs healthcheck) {
+        public Builder healthcheck(ContainerHealthcheckArgs healthcheck) {
             return healthcheck(Output.of(healthcheck));
         }
 
@@ -1680,7 +1680,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hosts(@Nullable Output<List<ContainerHostGetArgs>> hosts) {
+        public Builder hosts(@Nullable Output<List<ContainerHostArgs>> hosts) {
             $.hosts = hosts;
             return this;
         }
@@ -1691,7 +1691,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hosts(List<ContainerHostGetArgs> hosts) {
+        public Builder hosts(List<ContainerHostArgs> hosts) {
             return hosts(Output.of(hosts));
         }
 
@@ -1701,7 +1701,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hosts(ContainerHostGetArgs... hosts) {
+        public Builder hosts(ContainerHostArgs... hosts) {
             return hosts(List.of(hosts));
         }
 
@@ -1838,7 +1838,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(@Nullable Output<List<ContainerLabelGetArgs>> labels) {
+        public Builder labels(@Nullable Output<List<ContainerLabelArgs>> labels) {
             $.labels = labels;
             return this;
         }
@@ -1849,7 +1849,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(List<ContainerLabelGetArgs> labels) {
+        public Builder labels(List<ContainerLabelArgs> labels) {
             return labels(Output.of(labels));
         }
 
@@ -1859,7 +1859,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(ContainerLabelGetArgs... labels) {
+        public Builder labels(ContainerLabelArgs... labels) {
             return labels(List.of(labels));
         }
 
@@ -2040,7 +2040,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mounts(@Nullable Output<List<ContainerMountGetArgs>> mounts) {
+        public Builder mounts(@Nullable Output<List<ContainerMountArgs>> mounts) {
             $.mounts = mounts;
             return this;
         }
@@ -2051,7 +2051,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mounts(List<ContainerMountGetArgs> mounts) {
+        public Builder mounts(List<ContainerMountArgs> mounts) {
             return mounts(Output.of(mounts));
         }
 
@@ -2061,7 +2061,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder mounts(ContainerMountGetArgs... mounts) {
+        public Builder mounts(ContainerMountArgs... mounts) {
             return mounts(List.of(mounts));
         }
 
@@ -2158,7 +2158,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkDatas(@Nullable Output<List<ContainerNetworkDataGetArgs>> networkDatas) {
+        public Builder networkDatas(@Nullable Output<List<ContainerNetworkDataArgs>> networkDatas) {
             $.networkDatas = networkDatas;
             return this;
         }
@@ -2169,7 +2169,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkDatas(List<ContainerNetworkDataGetArgs> networkDatas) {
+        public Builder networkDatas(List<ContainerNetworkDataArgs> networkDatas) {
             return networkDatas(Output.of(networkDatas));
         }
 
@@ -2179,7 +2179,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkDatas(ContainerNetworkDataGetArgs... networkDatas) {
+        public Builder networkDatas(ContainerNetworkDataArgs... networkDatas) {
             return networkDatas(List.of(networkDatas));
         }
 
@@ -2253,7 +2253,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networksAdvanced(@Nullable Output<List<ContainerNetworksAdvancedGetArgs>> networksAdvanced) {
+        public Builder networksAdvanced(@Nullable Output<List<ContainerNetworksAdvancedArgs>> networksAdvanced) {
             $.networksAdvanced = networksAdvanced;
             return this;
         }
@@ -2264,7 +2264,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networksAdvanced(List<ContainerNetworksAdvancedGetArgs> networksAdvanced) {
+        public Builder networksAdvanced(List<ContainerNetworksAdvancedArgs> networksAdvanced) {
             return networksAdvanced(Output.of(networksAdvanced));
         }
 
@@ -2274,7 +2274,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networksAdvanced(ContainerNetworksAdvancedGetArgs... networksAdvanced) {
+        public Builder networksAdvanced(ContainerNetworksAdvancedArgs... networksAdvanced) {
             return networksAdvanced(List.of(networksAdvanced));
         }
 
@@ -2305,7 +2305,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ports(@Nullable Output<List<ContainerPortGetArgs>> ports) {
+        public Builder ports(@Nullable Output<List<ContainerPortArgs>> ports) {
             $.ports = ports;
             return this;
         }
@@ -2316,7 +2316,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ports(List<ContainerPortGetArgs> ports) {
+        public Builder ports(List<ContainerPortArgs> ports) {
             return ports(Output.of(ports));
         }
 
@@ -2326,7 +2326,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ports(ContainerPortGetArgs... ports) {
+        public Builder ports(ContainerPortArgs... ports) {
             return ports(List.of(ports));
         }
 
@@ -2647,7 +2647,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ulimits(@Nullable Output<List<ContainerUlimitGetArgs>> ulimits) {
+        public Builder ulimits(@Nullable Output<List<ContainerUlimitArgs>> ulimits) {
             $.ulimits = ulimits;
             return this;
         }
@@ -2658,7 +2658,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ulimits(List<ContainerUlimitGetArgs> ulimits) {
+        public Builder ulimits(List<ContainerUlimitArgs> ulimits) {
             return ulimits(Output.of(ulimits));
         }
 
@@ -2668,7 +2668,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ulimits(ContainerUlimitGetArgs... ulimits) {
+        public Builder ulimits(ContainerUlimitArgs... ulimits) {
             return ulimits(List.of(ulimits));
         }
 
@@ -2679,7 +2679,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder uploads(@Nullable Output<List<ContainerUploadGetArgs>> uploads) {
+        public Builder uploads(@Nullable Output<List<ContainerUploadArgs>> uploads) {
             $.uploads = uploads;
             return this;
         }
@@ -2691,7 +2691,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder uploads(List<ContainerUploadGetArgs> uploads) {
+        public Builder uploads(List<ContainerUploadArgs> uploads) {
             return uploads(Output.of(uploads));
         }
 
@@ -2702,7 +2702,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder uploads(ContainerUploadGetArgs... uploads) {
+        public Builder uploads(ContainerUploadArgs... uploads) {
             return uploads(List.of(uploads));
         }
 
@@ -2756,7 +2756,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder volumes(@Nullable Output<List<ContainerVolumeGetArgs>> volumes) {
+        public Builder volumes(@Nullable Output<List<ContainerVolumeArgs>> volumes) {
             $.volumes = volumes;
             return this;
         }
@@ -2767,7 +2767,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder volumes(List<ContainerVolumeGetArgs> volumes) {
+        public Builder volumes(List<ContainerVolumeArgs> volumes) {
             return volumes(Output.of(volumes));
         }
 
@@ -2777,7 +2777,7 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder volumes(ContainerVolumeGetArgs... volumes) {
+        public Builder volumes(ContainerVolumeArgs... volumes) {
             return volumes(List.of(volumes));
         }
 

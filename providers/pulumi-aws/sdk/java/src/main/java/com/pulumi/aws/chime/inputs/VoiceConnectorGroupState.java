@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.chime.inputs;
 
-import com.pulumi.aws.chime.inputs.VoiceConnectorGroupConnectorGetArgs;
+import com.pulumi.aws.chime.inputs.VoiceConnectorGroupConnectorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -22,13 +22,13 @@ public final class VoiceConnectorGroupState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="connectors")
-    private @Nullable Output<List<VoiceConnectorGroupConnectorGetArgs>> connectors;
+    private @Nullable Output<List<VoiceConnectorGroupConnectorArgs>> connectors;
 
     /**
      * @return The Amazon Chime Voice Connectors to route inbound calls to.
      * 
      */
-    public Optional<Output<List<VoiceConnectorGroupConnectorGetArgs>>> connectors() {
+    public Optional<Output<List<VoiceConnectorGroupConnectorArgs>>> connectors() {
         return Optional.ofNullable(this.connectors);
     }
 
@@ -78,7 +78,7 @@ public final class VoiceConnectorGroupState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder connectors(@Nullable Output<List<VoiceConnectorGroupConnectorGetArgs>> connectors) {
+        public Builder connectors(@Nullable Output<List<VoiceConnectorGroupConnectorArgs>> connectors) {
             $.connectors = connectors;
             return this;
         }
@@ -89,7 +89,7 @@ public final class VoiceConnectorGroupState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder connectors(List<VoiceConnectorGroupConnectorGetArgs> connectors) {
+        public Builder connectors(List<VoiceConnectorGroupConnectorArgs> connectors) {
             return connectors(Output.of(connectors));
         }
 
@@ -99,7 +99,7 @@ public final class VoiceConnectorGroupState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder connectors(VoiceConnectorGroupConnectorGetArgs... connectors) {
+        public Builder connectors(VoiceConnectorGroupConnectorArgs... connectors) {
             return connectors(List.of(connectors));
         }
 

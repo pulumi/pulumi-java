@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.elastictranscoder.inputs;
 
-import com.pulumi.aws.elastictranscoder.inputs.PipelineContentConfigGetArgs;
-import com.pulumi.aws.elastictranscoder.inputs.PipelineContentConfigPermissionGetArgs;
-import com.pulumi.aws.elastictranscoder.inputs.PipelineNotificationsGetArgs;
-import com.pulumi.aws.elastictranscoder.inputs.PipelineThumbnailConfigGetArgs;
-import com.pulumi.aws.elastictranscoder.inputs.PipelineThumbnailConfigPermissionGetArgs;
+import com.pulumi.aws.elastictranscoder.inputs.PipelineContentConfigArgs;
+import com.pulumi.aws.elastictranscoder.inputs.PipelineContentConfigPermissionArgs;
+import com.pulumi.aws.elastictranscoder.inputs.PipelineNotificationsArgs;
+import com.pulumi.aws.elastictranscoder.inputs.PipelineThumbnailConfigArgs;
+import com.pulumi.aws.elastictranscoder.inputs.PipelineThumbnailConfigPermissionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -56,13 +56,13 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentConfig")
-    private @Nullable Output<PipelineContentConfigGetArgs> contentConfig;
+    private @Nullable Output<PipelineContentConfigArgs> contentConfig;
 
     /**
      * @return The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
      * 
      */
-    public Optional<Output<PipelineContentConfigGetArgs>> contentConfig() {
+    public Optional<Output<PipelineContentConfigArgs>> contentConfig() {
         return Optional.ofNullable(this.contentConfig);
     }
 
@@ -71,13 +71,13 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentConfigPermissions")
-    private @Nullable Output<List<PipelineContentConfigPermissionGetArgs>> contentConfigPermissions;
+    private @Nullable Output<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions;
 
     /**
      * @return The permissions for the `content_config` object. (documented below)
      * 
      */
-    public Optional<Output<List<PipelineContentConfigPermissionGetArgs>>> contentConfigPermissions() {
+    public Optional<Output<List<PipelineContentConfigPermissionArgs>>> contentConfigPermissions() {
         return Optional.ofNullable(this.contentConfigPermissions);
     }
 
@@ -116,13 +116,13 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notifications")
-    private @Nullable Output<PipelineNotificationsGetArgs> notifications;
+    private @Nullable Output<PipelineNotificationsArgs> notifications;
 
     /**
      * @return The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
      * 
      */
-    public Optional<Output<PipelineNotificationsGetArgs>> notifications() {
+    public Optional<Output<PipelineNotificationsArgs>> notifications() {
         return Optional.ofNullable(this.notifications);
     }
 
@@ -161,13 +161,13 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thumbnailConfig")
-    private @Nullable Output<PipelineThumbnailConfigGetArgs> thumbnailConfig;
+    private @Nullable Output<PipelineThumbnailConfigArgs> thumbnailConfig;
 
     /**
      * @return The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
      * 
      */
-    public Optional<Output<PipelineThumbnailConfigGetArgs>> thumbnailConfig() {
+    public Optional<Output<PipelineThumbnailConfigArgs>> thumbnailConfig() {
         return Optional.ofNullable(this.thumbnailConfig);
     }
 
@@ -176,13 +176,13 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thumbnailConfigPermissions")
-    private @Nullable Output<List<PipelineThumbnailConfigPermissionGetArgs>> thumbnailConfigPermissions;
+    private @Nullable Output<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions;
 
     /**
      * @return The permissions for the `thumbnail_config` object. (documented below)
      * 
      */
-    public Optional<Output<List<PipelineThumbnailConfigPermissionGetArgs>>> thumbnailConfigPermissions() {
+    public Optional<Output<List<PipelineThumbnailConfigPermissionArgs>>> thumbnailConfigPermissions() {
         return Optional.ofNullable(this.thumbnailConfigPermissions);
     }
 
@@ -268,7 +268,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder contentConfig(@Nullable Output<PipelineContentConfigGetArgs> contentConfig) {
+        public Builder contentConfig(@Nullable Output<PipelineContentConfigArgs> contentConfig) {
             $.contentConfig = contentConfig;
             return this;
         }
@@ -279,7 +279,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder contentConfig(PipelineContentConfigGetArgs contentConfig) {
+        public Builder contentConfig(PipelineContentConfigArgs contentConfig) {
             return contentConfig(Output.of(contentConfig));
         }
 
@@ -289,7 +289,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder contentConfigPermissions(@Nullable Output<List<PipelineContentConfigPermissionGetArgs>> contentConfigPermissions) {
+        public Builder contentConfigPermissions(@Nullable Output<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions) {
             $.contentConfigPermissions = contentConfigPermissions;
             return this;
         }
@@ -300,7 +300,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder contentConfigPermissions(List<PipelineContentConfigPermissionGetArgs> contentConfigPermissions) {
+        public Builder contentConfigPermissions(List<PipelineContentConfigPermissionArgs> contentConfigPermissions) {
             return contentConfigPermissions(Output.of(contentConfigPermissions));
         }
 
@@ -310,7 +310,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder contentConfigPermissions(PipelineContentConfigPermissionGetArgs... contentConfigPermissions) {
+        public Builder contentConfigPermissions(PipelineContentConfigPermissionArgs... contentConfigPermissions) {
             return contentConfigPermissions(List.of(contentConfigPermissions));
         }
 
@@ -362,7 +362,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notifications(@Nullable Output<PipelineNotificationsGetArgs> notifications) {
+        public Builder notifications(@Nullable Output<PipelineNotificationsArgs> notifications) {
             $.notifications = notifications;
             return this;
         }
@@ -373,7 +373,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notifications(PipelineNotificationsGetArgs notifications) {
+        public Builder notifications(PipelineNotificationsArgs notifications) {
             return notifications(Output.of(notifications));
         }
 
@@ -425,7 +425,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder thumbnailConfig(@Nullable Output<PipelineThumbnailConfigGetArgs> thumbnailConfig) {
+        public Builder thumbnailConfig(@Nullable Output<PipelineThumbnailConfigArgs> thumbnailConfig) {
             $.thumbnailConfig = thumbnailConfig;
             return this;
         }
@@ -436,7 +436,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder thumbnailConfig(PipelineThumbnailConfigGetArgs thumbnailConfig) {
+        public Builder thumbnailConfig(PipelineThumbnailConfigArgs thumbnailConfig) {
             return thumbnailConfig(Output.of(thumbnailConfig));
         }
 
@@ -446,7 +446,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder thumbnailConfigPermissions(@Nullable Output<List<PipelineThumbnailConfigPermissionGetArgs>> thumbnailConfigPermissions) {
+        public Builder thumbnailConfigPermissions(@Nullable Output<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions) {
             $.thumbnailConfigPermissions = thumbnailConfigPermissions;
             return this;
         }
@@ -457,7 +457,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder thumbnailConfigPermissions(List<PipelineThumbnailConfigPermissionGetArgs> thumbnailConfigPermissions) {
+        public Builder thumbnailConfigPermissions(List<PipelineThumbnailConfigPermissionArgs> thumbnailConfigPermissions) {
             return thumbnailConfigPermissions(Output.of(thumbnailConfigPermissions));
         }
 
@@ -467,7 +467,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder thumbnailConfigPermissions(PipelineThumbnailConfigPermissionGetArgs... thumbnailConfigPermissions) {
+        public Builder thumbnailConfigPermissions(PipelineThumbnailConfigPermissionArgs... thumbnailConfigPermissions) {
             return thumbnailConfigPermissions(List.of(thumbnailConfigPermissions));
         }
 

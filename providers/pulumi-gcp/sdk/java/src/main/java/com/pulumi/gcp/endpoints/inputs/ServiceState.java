@@ -5,8 +5,8 @@ package com.pulumi.gcp.endpoints.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.endpoints.inputs.ServiceApiGetArgs;
-import com.pulumi.gcp.endpoints.inputs.ServiceEndpointGetArgs;
+import com.pulumi.gcp.endpoints.inputs.ServiceApiArgs;
+import com.pulumi.gcp.endpoints.inputs.ServiceEndpointArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,13 +23,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apis")
-    private @Nullable Output<List<ServiceApiGetArgs>> apis;
+    private @Nullable Output<List<ServiceApiArgs>> apis;
 
     /**
      * @return A list of API objects.
      * 
      */
-    public Optional<Output<List<ServiceApiGetArgs>>> apis() {
+    public Optional<Output<List<ServiceApiArgs>>> apis() {
         return Optional.ofNullable(this.apis);
     }
 
@@ -70,13 +70,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpoints")
-    private @Nullable Output<List<ServiceEndpointGetArgs>> endpoints;
+    private @Nullable Output<List<ServiceEndpointArgs>> endpoints;
 
     /**
      * @return A list of Endpoint objects.
      * 
      */
-    public Optional<Output<List<ServiceEndpointGetArgs>>> endpoints() {
+    public Optional<Output<List<ServiceEndpointArgs>>> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
 
@@ -199,7 +199,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder apis(@Nullable Output<List<ServiceApiGetArgs>> apis) {
+        public Builder apis(@Nullable Output<List<ServiceApiArgs>> apis) {
             $.apis = apis;
             return this;
         }
@@ -210,7 +210,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder apis(List<ServiceApiGetArgs> apis) {
+        public Builder apis(List<ServiceApiArgs> apis) {
             return apis(Output.of(apis));
         }
 
@@ -220,7 +220,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder apis(ServiceApiGetArgs... apis) {
+        public Builder apis(ServiceApiArgs... apis) {
             return apis(List.of(apis));
         }
 
@@ -274,7 +274,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder endpoints(@Nullable Output<List<ServiceEndpointGetArgs>> endpoints) {
+        public Builder endpoints(@Nullable Output<List<ServiceEndpointArgs>> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
@@ -285,7 +285,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder endpoints(List<ServiceEndpointGetArgs> endpoints) {
+        public Builder endpoints(List<ServiceEndpointArgs> endpoints) {
             return endpoints(Output.of(endpoints));
         }
 
@@ -295,7 +295,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder endpoints(ServiceEndpointGetArgs... endpoints) {
+        public Builder endpoints(ServiceEndpointArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }
 

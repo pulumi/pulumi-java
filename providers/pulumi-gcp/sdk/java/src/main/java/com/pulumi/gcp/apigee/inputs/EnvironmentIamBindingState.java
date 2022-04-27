@@ -5,7 +5,7 @@ package com.pulumi.gcp.apigee.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.apigee.inputs.EnvironmentIamBindingConditionGetArgs;
+import com.pulumi.gcp.apigee.inputs.EnvironmentIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class EnvironmentIamBindingState extends com.pulumi.resources.Resou
     public static final EnvironmentIamBindingState Empty = new EnvironmentIamBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<EnvironmentIamBindingConditionGetArgs> condition;
+    private @Nullable Output<EnvironmentIamBindingConditionArgs> condition;
 
-    public Optional<Output<EnvironmentIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<EnvironmentIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -116,12 +116,12 @@ public final class EnvironmentIamBindingState extends com.pulumi.resources.Resou
             $ = new EnvironmentIamBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<EnvironmentIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<EnvironmentIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(EnvironmentIamBindingConditionGetArgs condition) {
+        public Builder condition(EnvironmentIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

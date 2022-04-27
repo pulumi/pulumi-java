@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.lightsail.inputs;
 
-import com.pulumi.aws.lightsail.inputs.InstancePublicPortsPortInfoGetArgs;
+import com.pulumi.aws.lightsail.inputs.InstancePublicPortsPortInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +37,13 @@ public final class InstancePublicPortsState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="portInfos")
-    private @Nullable Output<List<InstancePublicPortsPortInfoGetArgs>> portInfos;
+    private @Nullable Output<List<InstancePublicPortsPortInfoArgs>> portInfos;
 
     /**
      * @return Configuration block with port information. AWS closes all currently open ports that are not included in the `port_info`. Detailed below.
      * 
      */
-    public Optional<Output<List<InstancePublicPortsPortInfoGetArgs>>> portInfos() {
+    public Optional<Output<List<InstancePublicPortsPortInfoArgs>>> portInfos() {
         return Optional.ofNullable(this.portInfos);
     }
 
@@ -99,7 +99,7 @@ public final class InstancePublicPortsState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder portInfos(@Nullable Output<List<InstancePublicPortsPortInfoGetArgs>> portInfos) {
+        public Builder portInfos(@Nullable Output<List<InstancePublicPortsPortInfoArgs>> portInfos) {
             $.portInfos = portInfos;
             return this;
         }
@@ -110,7 +110,7 @@ public final class InstancePublicPortsState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder portInfos(List<InstancePublicPortsPortInfoGetArgs> portInfos) {
+        public Builder portInfos(List<InstancePublicPortsPortInfoArgs> portInfos) {
             return portInfos(Output.of(portInfos));
         }
 
@@ -120,7 +120,7 @@ public final class InstancePublicPortsState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder portInfos(InstancePublicPortsPortInfoGetArgs... portInfos) {
+        public Builder portInfos(InstancePublicPortsPortInfoArgs... portInfos) {
             return portInfos(List.of(portInfos));
         }
 

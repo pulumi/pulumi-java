@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ecr.inputs;
 
-import com.pulumi.aws.ecr.inputs.RegistryScanningConfigurationRuleGetArgs;
+import com.pulumi.aws.ecr.inputs.RegistryScanningConfigurationRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +37,13 @@ public final class RegistryScanningConfigurationState extends com.pulumi.resourc
      * 
      */
     @Import(name="rules")
-    private @Nullable Output<List<RegistryScanningConfigurationRuleGetArgs>> rules;
+    private @Nullable Output<List<RegistryScanningConfigurationRuleArgs>> rules;
 
     /**
      * @return One or multiple blocks specifying scanning rules to determine which repository filters are used and at what frequency scanning will occur. See below for schema.
      * 
      */
-    public Optional<Output<List<RegistryScanningConfigurationRuleGetArgs>>> rules() {
+    public Optional<Output<List<RegistryScanningConfigurationRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
 
@@ -115,7 +115,7 @@ public final class RegistryScanningConfigurationState extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder rules(@Nullable Output<List<RegistryScanningConfigurationRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<RegistryScanningConfigurationRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
@@ -126,7 +126,7 @@ public final class RegistryScanningConfigurationState extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder rules(List<RegistryScanningConfigurationRuleGetArgs> rules) {
+        public Builder rules(List<RegistryScanningConfigurationRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
@@ -136,7 +136,7 @@ public final class RegistryScanningConfigurationState extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder rules(RegistryScanningConfigurationRuleGetArgs... rules) {
+        public Builder rules(RegistryScanningConfigurationRuleArgs... rules) {
             return rules(List.of(rules));
         }
 

@@ -5,8 +5,8 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.logging.inputs.BillingAccountSinkBigqueryOptionsGetArgs;
-import com.pulumi.gcp.logging.inputs.BillingAccountSinkExclusionGetArgs;
+import com.pulumi.gcp.logging.inputs.BillingAccountSinkBigqueryOptionsArgs;
+import com.pulumi.gcp.logging.inputs.BillingAccountSinkExclusionArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,13 +24,13 @@ public final class BillingAccountSinkState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="bigqueryOptions")
-    private @Nullable Output<BillingAccountSinkBigqueryOptionsGetArgs> bigqueryOptions;
+    private @Nullable Output<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions;
 
     /**
      * @return Options that affect sinks exporting data to BigQuery. Structure documented below.
      * 
      */
-    public Optional<Output<BillingAccountSinkBigqueryOptionsGetArgs>> bigqueryOptions() {
+    public Optional<Output<BillingAccountSinkBigqueryOptionsArgs>> bigqueryOptions() {
         return Optional.ofNullable(this.bigqueryOptions);
     }
 
@@ -105,13 +105,13 @@ public final class BillingAccountSinkState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="exclusions")
-    private @Nullable Output<List<BillingAccountSinkExclusionGetArgs>> exclusions;
+    private @Nullable Output<List<BillingAccountSinkExclusionArgs>> exclusions;
 
     /**
      * @return Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
      * 
      */
-    public Optional<Output<List<BillingAccountSinkExclusionGetArgs>>> exclusions() {
+    public Optional<Output<List<BillingAccountSinkExclusionArgs>>> exclusions() {
         return Optional.ofNullable(this.exclusions);
     }
 
@@ -202,7 +202,7 @@ public final class BillingAccountSinkState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder bigqueryOptions(@Nullable Output<BillingAccountSinkBigqueryOptionsGetArgs> bigqueryOptions) {
+        public Builder bigqueryOptions(@Nullable Output<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions) {
             $.bigqueryOptions = bigqueryOptions;
             return this;
         }
@@ -213,7 +213,7 @@ public final class BillingAccountSinkState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder bigqueryOptions(BillingAccountSinkBigqueryOptionsGetArgs bigqueryOptions) {
+        public Builder bigqueryOptions(BillingAccountSinkBigqueryOptionsArgs bigqueryOptions) {
             return bigqueryOptions(Output.of(bigqueryOptions));
         }
 
@@ -313,7 +313,7 @@ public final class BillingAccountSinkState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder exclusions(@Nullable Output<List<BillingAccountSinkExclusionGetArgs>> exclusions) {
+        public Builder exclusions(@Nullable Output<List<BillingAccountSinkExclusionArgs>> exclusions) {
             $.exclusions = exclusions;
             return this;
         }
@@ -324,7 +324,7 @@ public final class BillingAccountSinkState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder exclusions(List<BillingAccountSinkExclusionGetArgs> exclusions) {
+        public Builder exclusions(List<BillingAccountSinkExclusionArgs> exclusions) {
             return exclusions(Output.of(exclusions));
         }
 
@@ -334,7 +334,7 @@ public final class BillingAccountSinkState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder exclusions(BillingAccountSinkExclusionGetArgs... exclusions) {
+        public Builder exclusions(BillingAccountSinkExclusionArgs... exclusions) {
             return exclusions(List.of(exclusions));
         }
 

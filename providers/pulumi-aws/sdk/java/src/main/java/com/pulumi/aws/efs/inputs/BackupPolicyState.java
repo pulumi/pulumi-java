@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.efs.inputs;
 
-import com.pulumi.aws.efs.inputs.BackupPolicyBackupPolicyGetArgs;
+import com.pulumi.aws.efs.inputs.BackupPolicyBackupPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -21,13 +21,13 @@ public final class BackupPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupPolicy")
-    private @Nullable Output<BackupPolicyBackupPolicyGetArgs> backupPolicy;
+    private @Nullable Output<BackupPolicyBackupPolicyArgs> backupPolicy;
 
     /**
      * @return A backup_policy object (documented below).
      * 
      */
-    public Optional<Output<BackupPolicyBackupPolicyGetArgs>> backupPolicy() {
+    public Optional<Output<BackupPolicyBackupPolicyArgs>> backupPolicy() {
         return Optional.ofNullable(this.backupPolicy);
     }
 
@@ -77,7 +77,7 @@ public final class BackupPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder backupPolicy(@Nullable Output<BackupPolicyBackupPolicyGetArgs> backupPolicy) {
+        public Builder backupPolicy(@Nullable Output<BackupPolicyBackupPolicyArgs> backupPolicy) {
             $.backupPolicy = backupPolicy;
             return this;
         }
@@ -88,7 +88,7 @@ public final class BackupPolicyState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder backupPolicy(BackupPolicyBackupPolicyGetArgs backupPolicy) {
+        public Builder backupPolicy(BackupPolicyBackupPolicyArgs backupPolicy) {
             return backupPolicy(Output.of(backupPolicy));
         }
 

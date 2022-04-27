@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.codepipeline.inputs;
 
-import com.pulumi.aws.codepipeline.inputs.PipelineArtifactStoreGetArgs;
-import com.pulumi.aws.codepipeline.inputs.PipelineStageGetArgs;
+import com.pulumi.aws.codepipeline.inputs.PipelineArtifactStoreArgs;
+import com.pulumi.aws.codepipeline.inputs.PipelineStageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -39,13 +39,13 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="artifactStore")
-    private @Nullable Output<PipelineArtifactStoreGetArgs> artifactStore;
+    private @Nullable Output<PipelineArtifactStoreArgs> artifactStore;
 
     /**
      * @return One or more artifact_store blocks. Artifact stores are documented below.
      * 
      */
-    public Optional<Output<PipelineArtifactStoreGetArgs>> artifactStore() {
+    public Optional<Output<PipelineArtifactStoreArgs>> artifactStore() {
         return Optional.ofNullable(this.artifactStore);
     }
 
@@ -84,13 +84,13 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stages")
-    private @Nullable Output<List<PipelineStageGetArgs>> stages;
+    private @Nullable Output<List<PipelineStageArgs>> stages;
 
     /**
      * @return A stage block. Stages are documented below.
      * 
      */
-    public Optional<Output<List<PipelineStageGetArgs>>> stages() {
+    public Optional<Output<List<PipelineStageArgs>>> stages() {
         return Optional.ofNullable(this.stages);
     }
 
@@ -181,7 +181,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder artifactStore(@Nullable Output<PipelineArtifactStoreGetArgs> artifactStore) {
+        public Builder artifactStore(@Nullable Output<PipelineArtifactStoreArgs> artifactStore) {
             $.artifactStore = artifactStore;
             return this;
         }
@@ -192,7 +192,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder artifactStore(PipelineArtifactStoreGetArgs artifactStore) {
+        public Builder artifactStore(PipelineArtifactStoreArgs artifactStore) {
             return artifactStore(Output.of(artifactStore));
         }
 
@@ -244,7 +244,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder stages(@Nullable Output<List<PipelineStageGetArgs>> stages) {
+        public Builder stages(@Nullable Output<List<PipelineStageArgs>> stages) {
             $.stages = stages;
             return this;
         }
@@ -255,7 +255,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder stages(List<PipelineStageGetArgs> stages) {
+        public Builder stages(List<PipelineStageArgs> stages) {
             return stages(Output.of(stages));
         }
 
@@ -265,7 +265,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder stages(PipelineStageGetArgs... stages) {
+        public Builder stages(PipelineStageArgs... stages) {
             return stages(List.of(stages));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.folder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.folder.inputs.IamAuditConfigAuditLogConfigGetArgs;
+import com.pulumi.gcp.folder.inputs.IamAuditConfigAuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,13 +22,13 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="auditLogConfigs")
-    private @Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
+    private @Nullable Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
     /**
      * @return The configuration for logging of each type of permission. This can be specified multiple times.
      * 
      */
-    public Optional<Output<List<IamAuditConfigAuditLogConfigGetArgs>>> auditLogConfigs() {
+    public Optional<Output<List<IamAuditConfigAuditLogConfigArgs>>> auditLogConfigs() {
         return Optional.ofNullable(this.auditLogConfigs);
     }
 
@@ -102,7 +102,7 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder auditLogConfigs(@Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs) {
+        public Builder auditLogConfigs(@Nullable Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs) {
             $.auditLogConfigs = auditLogConfigs;
             return this;
         }
@@ -113,7 +113,7 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder auditLogConfigs(List<IamAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
+        public Builder auditLogConfigs(List<IamAuditConfigAuditLogConfigArgs> auditLogConfigs) {
             return auditLogConfigs(Output.of(auditLogConfigs));
         }
 
@@ -123,7 +123,7 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder auditLogConfigs(IamAuditConfigAuditLogConfigGetArgs... auditLogConfigs) {
+        public Builder auditLogConfigs(IamAuditConfigAuditLogConfigArgs... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
 

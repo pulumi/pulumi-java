@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.waf.inputs;
 
-import com.pulumi.aws.waf.inputs.RegexMatchSetRegexMatchTupleGetArgs;
+import com.pulumi.aws.waf.inputs.RegexMatchSetRegexMatchTupleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -52,13 +52,13 @@ public final class RegexMatchSetState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="regexMatchTuples")
-    private @Nullable Output<List<RegexMatchSetRegexMatchTupleGetArgs>> regexMatchTuples;
+    private @Nullable Output<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples;
 
     /**
      * @return The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
      * 
      */
-    public Optional<Output<List<RegexMatchSetRegexMatchTupleGetArgs>>> regexMatchTuples() {
+    public Optional<Output<List<RegexMatchSetRegexMatchTupleArgs>>> regexMatchTuples() {
         return Optional.ofNullable(this.regexMatchTuples);
     }
 
@@ -136,7 +136,7 @@ public final class RegexMatchSetState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder regexMatchTuples(@Nullable Output<List<RegexMatchSetRegexMatchTupleGetArgs>> regexMatchTuples) {
+        public Builder regexMatchTuples(@Nullable Output<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples) {
             $.regexMatchTuples = regexMatchTuples;
             return this;
         }
@@ -147,7 +147,7 @@ public final class RegexMatchSetState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder regexMatchTuples(List<RegexMatchSetRegexMatchTupleGetArgs> regexMatchTuples) {
+        public Builder regexMatchTuples(List<RegexMatchSetRegexMatchTupleArgs> regexMatchTuples) {
             return regexMatchTuples(Output.of(regexMatchTuples));
         }
 
@@ -157,7 +157,7 @@ public final class RegexMatchSetState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder regexMatchTuples(RegexMatchSetRegexMatchTupleGetArgs... regexMatchTuples) {
+        public Builder regexMatchTuples(RegexMatchSetRegexMatchTupleArgs... regexMatchTuples) {
             return regexMatchTuples(List.of(regexMatchTuples));
         }
 

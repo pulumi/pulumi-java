@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.connect.inputs;
 
-import com.pulumi.aws.connect.inputs.QuickConnectQuickConnectConfigGetArgs;
+import com.pulumi.aws.connect.inputs.QuickConnectQuickConnectConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -82,13 +82,13 @@ public final class QuickConnectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quickConnectConfig")
-    private @Nullable Output<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig;
+    private @Nullable Output<QuickConnectQuickConnectConfigArgs> quickConnectConfig;
 
     /**
      * @return A block that defines the configuration information for the Quick Connect: `quick_connect_type` and one of `phone_config`, `queue_config`, `user_config` . The Quick Connect Config block is documented below.
      * 
      */
-    public Optional<Output<QuickConnectQuickConnectConfigGetArgs>> quickConnectConfig() {
+    public Optional<Output<QuickConnectQuickConnectConfigArgs>> quickConnectConfig() {
         return Optional.ofNullable(this.quickConnectConfig);
     }
 
@@ -258,7 +258,7 @@ public final class QuickConnectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder quickConnectConfig(@Nullable Output<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig) {
+        public Builder quickConnectConfig(@Nullable Output<QuickConnectQuickConnectConfigArgs> quickConnectConfig) {
             $.quickConnectConfig = quickConnectConfig;
             return this;
         }
@@ -269,7 +269,7 @@ public final class QuickConnectState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder quickConnectConfig(QuickConnectQuickConnectConfigGetArgs quickConnectConfig) {
+        public Builder quickConnectConfig(QuickConnectQuickConnectConfigArgs quickConnectConfig) {
             return quickConnectConfig(Output.of(quickConnectConfig));
         }
 

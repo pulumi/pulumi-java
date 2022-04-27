@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.appconfig.inputs;
 
-import com.pulumi.aws.appconfig.inputs.ConfigurationProfileValidatorGetArgs;
+import com.pulumi.aws.appconfig.inputs.ConfigurationProfileValidatorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -158,13 +158,13 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="validators")
-    private @Nullable Output<List<ConfigurationProfileValidatorGetArgs>> validators;
+    private @Nullable Output<List<ConfigurationProfileValidatorArgs>> validators;
 
     /**
      * @return A set of methods for validating the configuration. Maximum of 2. See Validator below for more details.
      * 
      */
-    public Optional<Output<List<ConfigurationProfileValidatorGetArgs>>> validators() {
+    public Optional<Output<List<ConfigurationProfileValidatorArgs>>> validators() {
         return Optional.ofNullable(this.validators);
     }
 
@@ -396,7 +396,7 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder validators(@Nullable Output<List<ConfigurationProfileValidatorGetArgs>> validators) {
+        public Builder validators(@Nullable Output<List<ConfigurationProfileValidatorArgs>> validators) {
             $.validators = validators;
             return this;
         }
@@ -407,7 +407,7 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder validators(List<ConfigurationProfileValidatorGetArgs> validators) {
+        public Builder validators(List<ConfigurationProfileValidatorArgs> validators) {
             return validators(Output.of(validators));
         }
 
@@ -417,7 +417,7 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder validators(ConfigurationProfileValidatorGetArgs... validators) {
+        public Builder validators(ConfigurationProfileValidatorArgs... validators) {
             return validators(List.of(validators));
         }
 

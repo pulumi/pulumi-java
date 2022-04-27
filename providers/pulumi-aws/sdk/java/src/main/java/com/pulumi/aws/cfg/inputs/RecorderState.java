@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cfg.inputs;
 
-import com.pulumi.aws.cfg.inputs.RecorderRecordingGroupGetArgs;
+import com.pulumi.aws.cfg.inputs.RecorderRecordingGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class RecorderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recordingGroup")
-    private @Nullable Output<RecorderRecordingGroupGetArgs> recordingGroup;
+    private @Nullable Output<RecorderRecordingGroupArgs> recordingGroup;
 
     /**
      * @return Recording group - see below.
      * 
      */
-    public Optional<Output<RecorderRecordingGroupGetArgs>> recordingGroup() {
+    public Optional<Output<RecorderRecordingGroupArgs>> recordingGroup() {
         return Optional.ofNullable(this.recordingGroup);
     }
 
@@ -114,7 +114,7 @@ public final class RecorderState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder recordingGroup(@Nullable Output<RecorderRecordingGroupGetArgs> recordingGroup) {
+        public Builder recordingGroup(@Nullable Output<RecorderRecordingGroupArgs> recordingGroup) {
             $.recordingGroup = recordingGroup;
             return this;
         }
@@ -125,7 +125,7 @@ public final class RecorderState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder recordingGroup(RecorderRecordingGroupGetArgs recordingGroup) {
+        public Builder recordingGroup(RecorderRecordingGroupArgs recordingGroup) {
             return recordingGroup(Output.of(recordingGroup));
         }
 

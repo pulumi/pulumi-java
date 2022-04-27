@@ -5,8 +5,8 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.RegionDiskDiskEncryptionKeyGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionDiskSourceSnapshotEncryptionKeyGetArgs;
+import com.pulumi.gcp.compute.inputs.RegionDiskDiskEncryptionKeyArgs;
+import com.pulumi.gcp.compute.inputs.RegionDiskSourceSnapshotEncryptionKeyArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -66,7 +66,7 @@ public final class RegionDiskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskEncryptionKey")
-    private @Nullable Output<RegionDiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
+    private @Nullable Output<RegionDiskDiskEncryptionKeyArgs> diskEncryptionKey;
 
     /**
      * @return Encrypts the disk using a customer-supplied encryption key.
@@ -81,7 +81,7 @@ public final class RegionDiskState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionDiskDiskEncryptionKeyGetArgs>> diskEncryptionKey() {
+    public Optional<Output<RegionDiskDiskEncryptionKeyArgs>> diskEncryptionKey() {
         return Optional.ofNullable(this.diskEncryptionKey);
     }
 
@@ -342,7 +342,7 @@ public final class RegionDiskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceSnapshotEncryptionKey")
-    private @Nullable Output<RegionDiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey;
+    private @Nullable Output<RegionDiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
     /**
      * @return The customer-supplied encryption key of the source snapshot. Required
@@ -351,7 +351,7 @@ public final class RegionDiskState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionDiskSourceSnapshotEncryptionKeyGetArgs>> sourceSnapshotEncryptionKey() {
+    public Optional<Output<RegionDiskSourceSnapshotEncryptionKeyArgs>> sourceSnapshotEncryptionKey() {
         return Optional.ofNullable(this.sourceSnapshotEncryptionKey);
     }
 
@@ -508,7 +508,7 @@ public final class RegionDiskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder diskEncryptionKey(@Nullable Output<RegionDiskDiskEncryptionKeyGetArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Output<RegionDiskDiskEncryptionKeyArgs> diskEncryptionKey) {
             $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
@@ -528,7 +528,7 @@ public final class RegionDiskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder diskEncryptionKey(RegionDiskDiskEncryptionKeyGetArgs diskEncryptionKey) {
+        public Builder diskEncryptionKey(RegionDiskDiskEncryptionKeyArgs diskEncryptionKey) {
             return diskEncryptionKey(Output.of(diskEncryptionKey));
         }
 
@@ -878,7 +878,7 @@ public final class RegionDiskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sourceSnapshotEncryptionKey(@Nullable Output<RegionDiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(@Nullable Output<RegionDiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
             $.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
@@ -892,7 +892,7 @@ public final class RegionDiskState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sourceSnapshotEncryptionKey(RegionDiskSourceSnapshotEncryptionKeyGetArgs sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(RegionDiskSourceSnapshotEncryptionKeyArgs sourceSnapshotEncryptionKey) {
             return sourceSnapshotEncryptionKey(Output.of(sourceSnapshotEncryptionKey));
         }
 

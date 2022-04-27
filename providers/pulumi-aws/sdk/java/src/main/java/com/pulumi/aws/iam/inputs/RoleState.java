@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.iam.inputs;
 
-import com.pulumi.aws.iam.inputs.RoleInlinePolicyGetArgs;
+import com.pulumi.aws.iam.inputs.RoleInlinePolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -100,13 +100,13 @@ public final class RoleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inlinePolicies")
-    private @Nullable Output<List<RoleInlinePolicyGetArgs>> inlinePolicies;
+    private @Nullable Output<List<RoleInlinePolicyArgs>> inlinePolicies;
 
     /**
      * @return Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. See below. If no blocks are configured, this provider will not manage any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies added out of band on `apply`.
      * 
      */
-    public Optional<Output<List<RoleInlinePolicyGetArgs>>> inlinePolicies() {
+    public Optional<Output<List<RoleInlinePolicyArgs>>> inlinePolicies() {
         return Optional.ofNullable(this.inlinePolicies);
     }
 
@@ -394,7 +394,7 @@ public final class RoleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder inlinePolicies(@Nullable Output<List<RoleInlinePolicyGetArgs>> inlinePolicies) {
+        public Builder inlinePolicies(@Nullable Output<List<RoleInlinePolicyArgs>> inlinePolicies) {
             $.inlinePolicies = inlinePolicies;
             return this;
         }
@@ -405,7 +405,7 @@ public final class RoleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder inlinePolicies(List<RoleInlinePolicyGetArgs> inlinePolicies) {
+        public Builder inlinePolicies(List<RoleInlinePolicyArgs> inlinePolicies) {
             return inlinePolicies(Output.of(inlinePolicies));
         }
 
@@ -415,7 +415,7 @@ public final class RoleState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder inlinePolicies(RoleInlinePolicyGetArgs... inlinePolicies) {
+        public Builder inlinePolicies(RoleInlinePolicyArgs... inlinePolicies) {
             return inlinePolicies(List.of(inlinePolicies));
         }
 

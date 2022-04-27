@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.FirewallPolicyRuleMatchGetArgs;
+import com.pulumi.gcp.compute.inputs.FirewallPolicyRuleMatchArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -129,13 +129,13 @@ public final class FirewallPolicyRuleState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="match")
-    private @Nullable Output<FirewallPolicyRuleMatchGetArgs> match;
+    private @Nullable Output<FirewallPolicyRuleMatchArgs> match;
 
     /**
      * @return A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced. Structure is documented below.
      * 
      */
-    public Optional<Output<FirewallPolicyRuleMatchGetArgs>> match() {
+    public Optional<Output<FirewallPolicyRuleMatchArgs>> match() {
         return Optional.ofNullable(this.match);
     }
 
@@ -387,7 +387,7 @@ public final class FirewallPolicyRuleState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder match(@Nullable Output<FirewallPolicyRuleMatchGetArgs> match) {
+        public Builder match(@Nullable Output<FirewallPolicyRuleMatchArgs> match) {
             $.match = match;
             return this;
         }
@@ -398,7 +398,7 @@ public final class FirewallPolicyRuleState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder match(FirewallPolicyRuleMatchGetArgs match) {
+        public Builder match(FirewallPolicyRuleMatchArgs match) {
             return match(Output.of(match));
         }
 

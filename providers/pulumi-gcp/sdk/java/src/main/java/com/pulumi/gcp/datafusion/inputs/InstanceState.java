@@ -5,7 +5,7 @@ package com.pulumi.gcp.datafusion.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.datafusion.inputs.InstanceNetworkConfigGetArgs;
+import com.pulumi.gcp.datafusion.inputs.InstanceNetworkConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -131,14 +131,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfig")
-    private @Nullable Output<InstanceNetworkConfigGetArgs> networkConfig;
+    private @Nullable Output<InstanceNetworkConfigArgs> networkConfig;
 
     /**
      * @return Network configuration options. These are required when a private Data Fusion instance is to be created.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InstanceNetworkConfigGetArgs>> networkConfig() {
+    public Optional<Output<InstanceNetworkConfigArgs>> networkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
 
@@ -535,7 +535,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkConfig(@Nullable Output<InstanceNetworkConfigGetArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Output<InstanceNetworkConfigArgs> networkConfig) {
             $.networkConfig = networkConfig;
             return this;
         }
@@ -547,7 +547,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkConfig(InstanceNetworkConfigGetArgs networkConfig) {
+        public Builder networkConfig(InstanceNetworkConfigArgs networkConfig) {
             return networkConfig(Output.of(networkConfig));
         }
 

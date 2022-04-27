@@ -5,8 +5,8 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.ServiceAttachmentConnectedEndpointGetArgs;
-import com.pulumi.gcp.compute.inputs.ServiceAttachmentConsumerAcceptListGetArgs;
+import com.pulumi.gcp.compute.inputs.ServiceAttachmentConnectedEndpointArgs;
+import com.pulumi.gcp.compute.inputs.ServiceAttachmentConsumerAcceptListArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,13 +24,13 @@ public final class ServiceAttachmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="connectedEndpoints")
-    private @Nullable Output<List<ServiceAttachmentConnectedEndpointGetArgs>> connectedEndpoints;
+    private @Nullable Output<List<ServiceAttachmentConnectedEndpointArgs>> connectedEndpoints;
 
     /**
      * @return An array of the consumer forwarding rules connected to this service attachment.
      * 
      */
-    public Optional<Output<List<ServiceAttachmentConnectedEndpointGetArgs>>> connectedEndpoints() {
+    public Optional<Output<List<ServiceAttachmentConnectedEndpointArgs>>> connectedEndpoints() {
         return Optional.ofNullable(this.connectedEndpoints);
     }
 
@@ -58,7 +58,7 @@ public final class ServiceAttachmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="consumerAcceptLists")
-    private @Nullable Output<List<ServiceAttachmentConsumerAcceptListGetArgs>> consumerAcceptLists;
+    private @Nullable Output<List<ServiceAttachmentConsumerAcceptListArgs>> consumerAcceptLists;
 
     /**
      * @return An array of projects that are allowed to connect to this service
@@ -66,7 +66,7 @@ public final class ServiceAttachmentState extends com.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<ServiceAttachmentConsumerAcceptListGetArgs>>> consumerAcceptLists() {
+    public Optional<Output<List<ServiceAttachmentConsumerAcceptListArgs>>> consumerAcceptLists() {
         return Optional.ofNullable(this.consumerAcceptLists);
     }
 
@@ -282,7 +282,7 @@ public final class ServiceAttachmentState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder connectedEndpoints(@Nullable Output<List<ServiceAttachmentConnectedEndpointGetArgs>> connectedEndpoints) {
+        public Builder connectedEndpoints(@Nullable Output<List<ServiceAttachmentConnectedEndpointArgs>> connectedEndpoints) {
             $.connectedEndpoints = connectedEndpoints;
             return this;
         }
@@ -293,7 +293,7 @@ public final class ServiceAttachmentState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder connectedEndpoints(List<ServiceAttachmentConnectedEndpointGetArgs> connectedEndpoints) {
+        public Builder connectedEndpoints(List<ServiceAttachmentConnectedEndpointArgs> connectedEndpoints) {
             return connectedEndpoints(Output.of(connectedEndpoints));
         }
 
@@ -303,7 +303,7 @@ public final class ServiceAttachmentState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder connectedEndpoints(ServiceAttachmentConnectedEndpointGetArgs... connectedEndpoints) {
+        public Builder connectedEndpoints(ServiceAttachmentConnectedEndpointArgs... connectedEndpoints) {
             return connectedEndpoints(List.of(connectedEndpoints));
         }
 
@@ -338,7 +338,7 @@ public final class ServiceAttachmentState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder consumerAcceptLists(@Nullable Output<List<ServiceAttachmentConsumerAcceptListGetArgs>> consumerAcceptLists) {
+        public Builder consumerAcceptLists(@Nullable Output<List<ServiceAttachmentConsumerAcceptListArgs>> consumerAcceptLists) {
             $.consumerAcceptLists = consumerAcceptLists;
             return this;
         }
@@ -351,7 +351,7 @@ public final class ServiceAttachmentState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder consumerAcceptLists(List<ServiceAttachmentConsumerAcceptListGetArgs> consumerAcceptLists) {
+        public Builder consumerAcceptLists(List<ServiceAttachmentConsumerAcceptListArgs> consumerAcceptLists) {
             return consumerAcceptLists(Output.of(consumerAcceptLists));
         }
 
@@ -363,7 +363,7 @@ public final class ServiceAttachmentState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder consumerAcceptLists(ServiceAttachmentConsumerAcceptListGetArgs... consumerAcceptLists) {
+        public Builder consumerAcceptLists(ServiceAttachmentConsumerAcceptListArgs... consumerAcceptLists) {
             return consumerAcceptLists(List.of(consumerAcceptLists));
         }
 

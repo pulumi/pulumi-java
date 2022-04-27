@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cloudwatch.inputs;
 
-import com.pulumi.aws.cloudwatch.inputs.EventPermissionConditionGetArgs;
+import com.pulumi.aws.cloudwatch.inputs.EventPermissionConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class EventPermissionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<EventPermissionConditionGetArgs> condition;
+    private @Nullable Output<EventPermissionConditionArgs> condition;
 
     /**
      * @return Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
      * 
      */
-    public Optional<Output<EventPermissionConditionGetArgs>> condition() {
+    public Optional<Output<EventPermissionConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -146,7 +146,7 @@ public final class EventPermissionState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<EventPermissionConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<EventPermissionConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -157,7 +157,7 @@ public final class EventPermissionState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder condition(EventPermissionConditionGetArgs condition) {
+        public Builder condition(EventPermissionConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

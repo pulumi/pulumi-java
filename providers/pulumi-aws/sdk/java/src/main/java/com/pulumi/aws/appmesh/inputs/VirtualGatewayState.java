@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.appmesh.inputs;
 
-import com.pulumi.aws.appmesh.inputs.VirtualGatewaySpecGetArgs;
+import com.pulumi.aws.appmesh.inputs.VirtualGatewaySpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -127,13 +127,13 @@ public final class VirtualGatewayState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="spec")
-    private @Nullable Output<VirtualGatewaySpecGetArgs> spec;
+    private @Nullable Output<VirtualGatewaySpecArgs> spec;
 
     /**
      * @return The virtual gateway specification to apply.
      * 
      */
-    public Optional<Output<VirtualGatewaySpecGetArgs>> spec() {
+    public Optional<Output<VirtualGatewaySpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
 
@@ -353,7 +353,7 @@ public final class VirtualGatewayState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder spec(@Nullable Output<VirtualGatewaySpecGetArgs> spec) {
+        public Builder spec(@Nullable Output<VirtualGatewaySpecArgs> spec) {
             $.spec = spec;
             return this;
         }
@@ -364,7 +364,7 @@ public final class VirtualGatewayState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder spec(VirtualGatewaySpecGetArgs spec) {
+        public Builder spec(VirtualGatewaySpecArgs spec) {
             return spec(Output.of(spec));
         }
 

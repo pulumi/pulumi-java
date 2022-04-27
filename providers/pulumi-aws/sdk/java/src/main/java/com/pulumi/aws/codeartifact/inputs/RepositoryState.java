@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.codeartifact.inputs;
 
-import com.pulumi.aws.codeartifact.inputs.RepositoryExternalConnectionsGetArgs;
-import com.pulumi.aws.codeartifact.inputs.RepositoryUpstreamGetArgs;
+import com.pulumi.aws.codeartifact.inputs.RepositoryExternalConnectionsArgs;
+import com.pulumi.aws.codeartifact.inputs.RepositoryUpstreamArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -99,13 +99,13 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalConnections")
-    private @Nullable Output<RepositoryExternalConnectionsGetArgs> externalConnections;
+    private @Nullable Output<RepositoryExternalConnectionsArgs> externalConnections;
 
     /**
      * @return An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
      * 
      */
-    public Optional<Output<RepositoryExternalConnectionsGetArgs>> externalConnections() {
+    public Optional<Output<RepositoryExternalConnectionsArgs>> externalConnections() {
         return Optional.ofNullable(this.externalConnections);
     }
 
@@ -159,13 +159,13 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="upstreams")
-    private @Nullable Output<List<RepositoryUpstreamGetArgs>> upstreams;
+    private @Nullable Output<List<RepositoryUpstreamArgs>> upstreams;
 
     /**
      * @return A list of upstream repositories to associate with the repository. The order of the upstream repositories in the list determines their priority order when AWS CodeArtifact looks for a requested package version. see Upstream
      * 
      */
-    public Optional<Output<List<RepositoryUpstreamGetArgs>>> upstreams() {
+    public Optional<Output<List<RepositoryUpstreamArgs>>> upstreams() {
         return Optional.ofNullable(this.upstreams);
     }
 
@@ -313,7 +313,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder externalConnections(@Nullable Output<RepositoryExternalConnectionsGetArgs> externalConnections) {
+        public Builder externalConnections(@Nullable Output<RepositoryExternalConnectionsArgs> externalConnections) {
             $.externalConnections = externalConnections;
             return this;
         }
@@ -324,7 +324,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder externalConnections(RepositoryExternalConnectionsGetArgs externalConnections) {
+        public Builder externalConnections(RepositoryExternalConnectionsArgs externalConnections) {
             return externalConnections(Output.of(externalConnections));
         }
 
@@ -397,7 +397,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder upstreams(@Nullable Output<List<RepositoryUpstreamGetArgs>> upstreams) {
+        public Builder upstreams(@Nullable Output<List<RepositoryUpstreamArgs>> upstreams) {
             $.upstreams = upstreams;
             return this;
         }
@@ -408,7 +408,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder upstreams(List<RepositoryUpstreamGetArgs> upstreams) {
+        public Builder upstreams(List<RepositoryUpstreamArgs> upstreams) {
             return upstreams(Output.of(upstreams));
         }
 
@@ -418,7 +418,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder upstreams(RepositoryUpstreamGetArgs... upstreams) {
+        public Builder upstreams(RepositoryUpstreamArgs... upstreams) {
             return upstreams(List.of(upstreams));
         }
 

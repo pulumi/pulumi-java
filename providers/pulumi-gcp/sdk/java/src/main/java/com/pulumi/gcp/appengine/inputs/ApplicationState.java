@@ -5,9 +5,9 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.appengine.inputs.ApplicationFeatureSettingsGetArgs;
-import com.pulumi.gcp.appengine.inputs.ApplicationIapGetArgs;
-import com.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRuleGetArgs;
+import com.pulumi.gcp.appengine.inputs.ApplicationFeatureSettingsArgs;
+import com.pulumi.gcp.appengine.inputs.ApplicationIapArgs;
+import com.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRuleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -120,13 +120,13 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="featureSettings")
-    private @Nullable Output<ApplicationFeatureSettingsGetArgs> featureSettings;
+    private @Nullable Output<ApplicationFeatureSettingsArgs> featureSettings;
 
     /**
      * @return A block of optional settings to configure specific App Engine features:
      * 
      */
-    public Optional<Output<ApplicationFeatureSettingsGetArgs>> featureSettings() {
+    public Optional<Output<ApplicationFeatureSettingsArgs>> featureSettings() {
         return Optional.ofNullable(this.featureSettings);
     }
 
@@ -150,13 +150,13 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iap")
-    private @Nullable Output<ApplicationIapGetArgs> iap;
+    private @Nullable Output<ApplicationIapArgs> iap;
 
     /**
      * @return Settings for enabling Cloud Identity Aware Proxy
      * 
      */
-    public Optional<Output<ApplicationIapGetArgs>> iap() {
+    public Optional<Output<ApplicationIapArgs>> iap() {
         return Optional.ofNullable(this.iap);
     }
 
@@ -231,13 +231,13 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="urlDispatchRules")
-    private @Nullable Output<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules;
+    private @Nullable Output<List<ApplicationUrlDispatchRuleArgs>> urlDispatchRules;
 
     /**
      * @return A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
      * 
      */
-    public Optional<Output<List<ApplicationUrlDispatchRuleGetArgs>>> urlDispatchRules() {
+    public Optional<Output<List<ApplicationUrlDispatchRuleArgs>>> urlDispatchRules() {
         return Optional.ofNullable(this.urlDispatchRules);
     }
 
@@ -416,7 +416,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder featureSettings(@Nullable Output<ApplicationFeatureSettingsGetArgs> featureSettings) {
+        public Builder featureSettings(@Nullable Output<ApplicationFeatureSettingsArgs> featureSettings) {
             $.featureSettings = featureSettings;
             return this;
         }
@@ -427,7 +427,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder featureSettings(ApplicationFeatureSettingsGetArgs featureSettings) {
+        public Builder featureSettings(ApplicationFeatureSettingsArgs featureSettings) {
             return featureSettings(Output.of(featureSettings));
         }
 
@@ -458,7 +458,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder iap(@Nullable Output<ApplicationIapGetArgs> iap) {
+        public Builder iap(@Nullable Output<ApplicationIapArgs> iap) {
             $.iap = iap;
             return this;
         }
@@ -469,7 +469,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder iap(ApplicationIapGetArgs iap) {
+        public Builder iap(ApplicationIapArgs iap) {
             return iap(Output.of(iap));
         }
 
@@ -569,7 +569,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder urlDispatchRules(@Nullable Output<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules) {
+        public Builder urlDispatchRules(@Nullable Output<List<ApplicationUrlDispatchRuleArgs>> urlDispatchRules) {
             $.urlDispatchRules = urlDispatchRules;
             return this;
         }
@@ -580,7 +580,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder urlDispatchRules(List<ApplicationUrlDispatchRuleGetArgs> urlDispatchRules) {
+        public Builder urlDispatchRules(List<ApplicationUrlDispatchRuleArgs> urlDispatchRules) {
             return urlDispatchRules(Output.of(urlDispatchRules));
         }
 
@@ -590,7 +590,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder urlDispatchRules(ApplicationUrlDispatchRuleGetArgs... urlDispatchRules) {
+        public Builder urlDispatchRules(ApplicationUrlDispatchRuleArgs... urlDispatchRules) {
             return urlDispatchRules(List.of(urlDispatchRules));
         }
 

@@ -5,18 +5,18 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageAdvancedMachineFeaturesGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageAttachedDiskGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageBootDiskGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageConfidentialInstanceConfigGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageGuestAcceleratorGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageNetworkInterfaceGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageNetworkPerformanceConfigGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageReservationAffinityGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageSchedulingGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageScratchDiskGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageServiceAccountGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageShieldedInstanceConfigGetArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageAdvancedMachineFeaturesArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageAttachedDiskArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageBootDiskArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageConfidentialInstanceConfigArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageGuestAcceleratorArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageNetworkInterfaceArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageNetworkPerformanceConfigArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageReservationAffinityArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageSchedulingArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageScratchDiskArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageServiceAccountArgs;
+import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageShieldedInstanceConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -35,13 +35,13 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="advancedMachineFeatures")
-    private @Nullable Output<InstanceFromMachineImageAdvancedMachineFeaturesGetArgs> advancedMachineFeatures;
+    private @Nullable Output<InstanceFromMachineImageAdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
     /**
      * @return Controls for advanced machine-related behavior features.
      * 
      */
-    public Optional<Output<InstanceFromMachineImageAdvancedMachineFeaturesGetArgs>> advancedMachineFeatures() {
+    public Optional<Output<InstanceFromMachineImageAdvancedMachineFeaturesArgs>> advancedMachineFeatures() {
         return Optional.ofNullable(this.advancedMachineFeatures);
     }
 
@@ -67,13 +67,13 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="attachedDisks")
-    private @Nullable Output<List<InstanceFromMachineImageAttachedDiskGetArgs>> attachedDisks;
+    private @Nullable Output<List<InstanceFromMachineImageAttachedDiskArgs>> attachedDisks;
 
     /**
      * @return List of disks attached to the instance
      * 
      */
-    public Optional<Output<List<InstanceFromMachineImageAttachedDiskGetArgs>>> attachedDisks() {
+    public Optional<Output<List<InstanceFromMachineImageAttachedDiskArgs>>> attachedDisks() {
         return Optional.ofNullable(this.attachedDisks);
     }
 
@@ -82,13 +82,13 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="bootDisks")
-    private @Nullable Output<List<InstanceFromMachineImageBootDiskGetArgs>> bootDisks;
+    private @Nullable Output<List<InstanceFromMachineImageBootDiskArgs>> bootDisks;
 
     /**
      * @return The boot disk for the instance.
      * 
      */
-    public Optional<Output<List<InstanceFromMachineImageBootDiskGetArgs>>> bootDisks() {
+    public Optional<Output<List<InstanceFromMachineImageBootDiskArgs>>> bootDisks() {
         return Optional.ofNullable(this.bootDisks);
     }
 
@@ -113,14 +113,14 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="confidentialInstanceConfig")
-    private @Nullable Output<InstanceFromMachineImageConfidentialInstanceConfigGetArgs> confidentialInstanceConfig;
+    private @Nullable Output<InstanceFromMachineImageConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
     /**
      * @return The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
      * to create.
      * 
      */
-    public Optional<Output<InstanceFromMachineImageConfidentialInstanceConfigGetArgs>> confidentialInstanceConfig() {
+    public Optional<Output<InstanceFromMachineImageConfidentialInstanceConfigArgs>> confidentialInstanceConfig() {
         return Optional.ofNullable(this.confidentialInstanceConfig);
     }
 
@@ -219,13 +219,13 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="guestAccelerators")
-    private @Nullable Output<List<InstanceFromMachineImageGuestAcceleratorGetArgs>> guestAccelerators;
+    private @Nullable Output<List<InstanceFromMachineImageGuestAcceleratorArgs>> guestAccelerators;
 
     /**
      * @return List of the type and count of accelerator cards attached to the instance.
      * 
      */
-    public Optional<Output<List<InstanceFromMachineImageGuestAcceleratorGetArgs>>> guestAccelerators() {
+    public Optional<Output<List<InstanceFromMachineImageGuestAcceleratorArgs>>> guestAccelerators() {
         return Optional.ofNullable(this.guestAccelerators);
     }
 
@@ -390,13 +390,13 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="networkInterfaces")
-    private @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceGetArgs>> networkInterfaces;
+    private @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceArgs>> networkInterfaces;
 
     /**
      * @return The networks attached to the instance.
      * 
      */
-    public Optional<Output<List<InstanceFromMachineImageNetworkInterfaceGetArgs>>> networkInterfaces() {
+    public Optional<Output<List<InstanceFromMachineImageNetworkInterfaceArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
 
@@ -406,14 +406,14 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="networkPerformanceConfig")
-    private @Nullable Output<InstanceFromMachineImageNetworkPerformanceConfigGetArgs> networkPerformanceConfig;
+    private @Nullable Output<InstanceFromMachineImageNetworkPerformanceConfigArgs> networkPerformanceConfig;
 
     /**
      * @return Configures network performance settings for the instance. If not specified, the instance will be created with its
      * default network performance configuration.
      * 
      */
-    public Optional<Output<InstanceFromMachineImageNetworkPerformanceConfigGetArgs>> networkPerformanceConfig() {
+    public Optional<Output<InstanceFromMachineImageNetworkPerformanceConfigArgs>> networkPerformanceConfig() {
         return Optional.ofNullable(this.networkPerformanceConfig);
     }
 
@@ -439,13 +439,13 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="reservationAffinity")
-    private @Nullable Output<InstanceFromMachineImageReservationAffinityGetArgs> reservationAffinity;
+    private @Nullable Output<InstanceFromMachineImageReservationAffinityArgs> reservationAffinity;
 
     /**
      * @return Specifies the reservations that this instance can consume from.
      * 
      */
-    public Optional<Output<InstanceFromMachineImageReservationAffinityGetArgs>> reservationAffinity() {
+    public Optional<Output<InstanceFromMachineImageReservationAffinityArgs>> reservationAffinity() {
         return Optional.ofNullable(this.reservationAffinity);
     }
 
@@ -471,13 +471,13 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="scheduling")
-    private @Nullable Output<InstanceFromMachineImageSchedulingGetArgs> scheduling;
+    private @Nullable Output<InstanceFromMachineImageSchedulingArgs> scheduling;
 
     /**
      * @return The scheduling strategy being used by the instance.
      * 
      */
-    public Optional<Output<InstanceFromMachineImageSchedulingGetArgs>> scheduling() {
+    public Optional<Output<InstanceFromMachineImageSchedulingArgs>> scheduling() {
         return Optional.ofNullable(this.scheduling);
     }
 
@@ -486,13 +486,13 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="scratchDisks")
-    private @Nullable Output<List<InstanceFromMachineImageScratchDiskGetArgs>> scratchDisks;
+    private @Nullable Output<List<InstanceFromMachineImageScratchDiskArgs>> scratchDisks;
 
     /**
      * @return The scratch disks attached to the instance.
      * 
      */
-    public Optional<Output<List<InstanceFromMachineImageScratchDiskGetArgs>>> scratchDisks() {
+    public Optional<Output<List<InstanceFromMachineImageScratchDiskArgs>>> scratchDisks() {
         return Optional.ofNullable(this.scratchDisks);
     }
 
@@ -516,13 +516,13 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="serviceAccount")
-    private @Nullable Output<InstanceFromMachineImageServiceAccountGetArgs> serviceAccount;
+    private @Nullable Output<InstanceFromMachineImageServiceAccountArgs> serviceAccount;
 
     /**
      * @return The service account to attach to the instance.
      * 
      */
-    public Optional<Output<InstanceFromMachineImageServiceAccountGetArgs>> serviceAccount() {
+    public Optional<Output<InstanceFromMachineImageServiceAccountArgs>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
 
@@ -531,13 +531,13 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="shieldedInstanceConfig")
-    private @Nullable Output<InstanceFromMachineImageShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
+    private @Nullable Output<InstanceFromMachineImageShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     /**
      * @return The shielded vm config being used by the instance.
      * 
      */
-    public Optional<Output<InstanceFromMachineImageShieldedInstanceConfigGetArgs>> shieldedInstanceConfig() {
+    public Optional<Output<InstanceFromMachineImageShieldedInstanceConfigArgs>> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
 
@@ -671,7 +671,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder advancedMachineFeatures(@Nullable Output<InstanceFromMachineImageAdvancedMachineFeaturesGetArgs> advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(@Nullable Output<InstanceFromMachineImageAdvancedMachineFeaturesArgs> advancedMachineFeatures) {
             $.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
@@ -682,7 +682,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder advancedMachineFeatures(InstanceFromMachineImageAdvancedMachineFeaturesGetArgs advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(InstanceFromMachineImageAdvancedMachineFeaturesArgs advancedMachineFeatures) {
             return advancedMachineFeatures(Output.of(advancedMachineFeatures));
         }
 
@@ -715,7 +715,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder attachedDisks(@Nullable Output<List<InstanceFromMachineImageAttachedDiskGetArgs>> attachedDisks) {
+        public Builder attachedDisks(@Nullable Output<List<InstanceFromMachineImageAttachedDiskArgs>> attachedDisks) {
             $.attachedDisks = attachedDisks;
             return this;
         }
@@ -726,7 +726,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder attachedDisks(List<InstanceFromMachineImageAttachedDiskGetArgs> attachedDisks) {
+        public Builder attachedDisks(List<InstanceFromMachineImageAttachedDiskArgs> attachedDisks) {
             return attachedDisks(Output.of(attachedDisks));
         }
 
@@ -736,7 +736,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder attachedDisks(InstanceFromMachineImageAttachedDiskGetArgs... attachedDisks) {
+        public Builder attachedDisks(InstanceFromMachineImageAttachedDiskArgs... attachedDisks) {
             return attachedDisks(List.of(attachedDisks));
         }
 
@@ -746,7 +746,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder bootDisks(@Nullable Output<List<InstanceFromMachineImageBootDiskGetArgs>> bootDisks) {
+        public Builder bootDisks(@Nullable Output<List<InstanceFromMachineImageBootDiskArgs>> bootDisks) {
             $.bootDisks = bootDisks;
             return this;
         }
@@ -757,7 +757,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder bootDisks(List<InstanceFromMachineImageBootDiskGetArgs> bootDisks) {
+        public Builder bootDisks(List<InstanceFromMachineImageBootDiskArgs> bootDisks) {
             return bootDisks(Output.of(bootDisks));
         }
 
@@ -767,7 +767,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder bootDisks(InstanceFromMachineImageBootDiskGetArgs... bootDisks) {
+        public Builder bootDisks(InstanceFromMachineImageBootDiskArgs... bootDisks) {
             return bootDisks(List.of(bootDisks));
         }
 
@@ -799,7 +799,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder confidentialInstanceConfig(@Nullable Output<InstanceFromMachineImageConfidentialInstanceConfigGetArgs> confidentialInstanceConfig) {
+        public Builder confidentialInstanceConfig(@Nullable Output<InstanceFromMachineImageConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
             $.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
@@ -811,7 +811,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder confidentialInstanceConfig(InstanceFromMachineImageConfidentialInstanceConfigGetArgs confidentialInstanceConfig) {
+        public Builder confidentialInstanceConfig(InstanceFromMachineImageConfidentialInstanceConfigArgs confidentialInstanceConfig) {
             return confidentialInstanceConfig(Output.of(confidentialInstanceConfig));
         }
 
@@ -947,7 +947,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder guestAccelerators(@Nullable Output<List<InstanceFromMachineImageGuestAcceleratorGetArgs>> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable Output<List<InstanceFromMachineImageGuestAcceleratorArgs>> guestAccelerators) {
             $.guestAccelerators = guestAccelerators;
             return this;
         }
@@ -958,7 +958,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder guestAccelerators(List<InstanceFromMachineImageGuestAcceleratorGetArgs> guestAccelerators) {
+        public Builder guestAccelerators(List<InstanceFromMachineImageGuestAcceleratorArgs> guestAccelerators) {
             return guestAccelerators(Output.of(guestAccelerators));
         }
 
@@ -968,7 +968,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder guestAccelerators(InstanceFromMachineImageGuestAcceleratorGetArgs... guestAccelerators) {
+        public Builder guestAccelerators(InstanceFromMachineImageGuestAcceleratorArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
 
@@ -1194,7 +1194,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder networkInterfaces(@Nullable Output<List<InstanceFromMachineImageNetworkInterfaceGetArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<InstanceFromMachineImageNetworkInterfaceArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
@@ -1205,7 +1205,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder networkInterfaces(List<InstanceFromMachineImageNetworkInterfaceGetArgs> networkInterfaces) {
+        public Builder networkInterfaces(List<InstanceFromMachineImageNetworkInterfaceArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
@@ -1215,7 +1215,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder networkInterfaces(InstanceFromMachineImageNetworkInterfaceGetArgs... networkInterfaces) {
+        public Builder networkInterfaces(InstanceFromMachineImageNetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
@@ -1226,7 +1226,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder networkPerformanceConfig(@Nullable Output<InstanceFromMachineImageNetworkPerformanceConfigGetArgs> networkPerformanceConfig) {
+        public Builder networkPerformanceConfig(@Nullable Output<InstanceFromMachineImageNetworkPerformanceConfigArgs> networkPerformanceConfig) {
             $.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
@@ -1238,7 +1238,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder networkPerformanceConfig(InstanceFromMachineImageNetworkPerformanceConfigGetArgs networkPerformanceConfig) {
+        public Builder networkPerformanceConfig(InstanceFromMachineImageNetworkPerformanceConfigArgs networkPerformanceConfig) {
             return networkPerformanceConfig(Output.of(networkPerformanceConfig));
         }
 
@@ -1271,7 +1271,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder reservationAffinity(@Nullable Output<InstanceFromMachineImageReservationAffinityGetArgs> reservationAffinity) {
+        public Builder reservationAffinity(@Nullable Output<InstanceFromMachineImageReservationAffinityArgs> reservationAffinity) {
             $.reservationAffinity = reservationAffinity;
             return this;
         }
@@ -1282,7 +1282,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder reservationAffinity(InstanceFromMachineImageReservationAffinityGetArgs reservationAffinity) {
+        public Builder reservationAffinity(InstanceFromMachineImageReservationAffinityArgs reservationAffinity) {
             return reservationAffinity(Output.of(reservationAffinity));
         }
 
@@ -1315,7 +1315,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder scheduling(@Nullable Output<InstanceFromMachineImageSchedulingGetArgs> scheduling) {
+        public Builder scheduling(@Nullable Output<InstanceFromMachineImageSchedulingArgs> scheduling) {
             $.scheduling = scheduling;
             return this;
         }
@@ -1326,7 +1326,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder scheduling(InstanceFromMachineImageSchedulingGetArgs scheduling) {
+        public Builder scheduling(InstanceFromMachineImageSchedulingArgs scheduling) {
             return scheduling(Output.of(scheduling));
         }
 
@@ -1336,7 +1336,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder scratchDisks(@Nullable Output<List<InstanceFromMachineImageScratchDiskGetArgs>> scratchDisks) {
+        public Builder scratchDisks(@Nullable Output<List<InstanceFromMachineImageScratchDiskArgs>> scratchDisks) {
             $.scratchDisks = scratchDisks;
             return this;
         }
@@ -1347,7 +1347,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder scratchDisks(List<InstanceFromMachineImageScratchDiskGetArgs> scratchDisks) {
+        public Builder scratchDisks(List<InstanceFromMachineImageScratchDiskArgs> scratchDisks) {
             return scratchDisks(Output.of(scratchDisks));
         }
 
@@ -1357,7 +1357,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder scratchDisks(InstanceFromMachineImageScratchDiskGetArgs... scratchDisks) {
+        public Builder scratchDisks(InstanceFromMachineImageScratchDiskArgs... scratchDisks) {
             return scratchDisks(List.of(scratchDisks));
         }
 
@@ -1388,7 +1388,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder serviceAccount(@Nullable Output<InstanceFromMachineImageServiceAccountGetArgs> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<InstanceFromMachineImageServiceAccountArgs> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
@@ -1399,7 +1399,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder serviceAccount(InstanceFromMachineImageServiceAccountGetArgs serviceAccount) {
+        public Builder serviceAccount(InstanceFromMachineImageServiceAccountArgs serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
@@ -1409,7 +1409,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder shieldedInstanceConfig(@Nullable Output<InstanceFromMachineImageShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Output<InstanceFromMachineImageShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
@@ -1420,7 +1420,7 @@ public final class InstanceFromMachineImageState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder shieldedInstanceConfig(InstanceFromMachineImageShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(InstanceFromMachineImageShieldedInstanceConfigArgs shieldedInstanceConfig) {
             return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
 

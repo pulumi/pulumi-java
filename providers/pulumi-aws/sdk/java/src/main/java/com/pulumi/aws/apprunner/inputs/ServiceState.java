@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.apprunner.inputs;
 
-import com.pulumi.aws.apprunner.inputs.ServiceEncryptionConfigurationGetArgs;
-import com.pulumi.aws.apprunner.inputs.ServiceHealthCheckConfigurationGetArgs;
-import com.pulumi.aws.apprunner.inputs.ServiceInstanceConfigurationGetArgs;
-import com.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationGetArgs;
+import com.pulumi.aws.apprunner.inputs.ServiceEncryptionConfigurationArgs;
+import com.pulumi.aws.apprunner.inputs.ServiceHealthCheckConfigurationArgs;
+import com.pulumi.aws.apprunner.inputs.ServiceInstanceConfigurationArgs;
+import com.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -55,13 +55,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionConfiguration")
-    private @Nullable Output<ServiceEncryptionConfigurationGetArgs> encryptionConfiguration;
+    private @Nullable Output<ServiceEncryptionConfigurationArgs> encryptionConfiguration;
 
     /**
      * @return An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK. See Encryption Configuration below for more details.
      * 
      */
-    public Optional<Output<ServiceEncryptionConfigurationGetArgs>> encryptionConfiguration() {
+    public Optional<Output<ServiceEncryptionConfigurationArgs>> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
 
@@ -70,13 +70,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckConfiguration")
-    private @Nullable Output<ServiceHealthCheckConfigurationGetArgs> healthCheckConfiguration;
+    private @Nullable Output<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration;
 
     /**
      * @return Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
      * 
      */
-    public Optional<Output<ServiceHealthCheckConfigurationGetArgs>> healthCheckConfiguration() {
+    public Optional<Output<ServiceHealthCheckConfigurationArgs>> healthCheckConfiguration() {
         return Optional.ofNullable(this.healthCheckConfiguration);
     }
 
@@ -85,13 +85,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceConfiguration")
-    private @Nullable Output<ServiceInstanceConfigurationGetArgs> instanceConfiguration;
+    private @Nullable Output<ServiceInstanceConfigurationArgs> instanceConfiguration;
 
     /**
      * @return The runtime configuration of instances (scaling units) of the App Runner service. See Instance Configuration below for more details.
      * 
      */
-    public Optional<Output<ServiceInstanceConfigurationGetArgs>> instanceConfiguration() {
+    public Optional<Output<ServiceInstanceConfigurationArgs>> instanceConfiguration() {
         return Optional.ofNullable(this.instanceConfiguration);
     }
 
@@ -145,13 +145,13 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceConfiguration")
-    private @Nullable Output<ServiceSourceConfigurationGetArgs> sourceConfiguration;
+    private @Nullable Output<ServiceSourceConfigurationArgs> sourceConfiguration;
 
     /**
      * @return The source to deploy to the App Runner service. Can be a code or an image repository. See Source Configuration below for more details.
      * 
      */
-    public Optional<Output<ServiceSourceConfigurationGetArgs>> sourceConfiguration() {
+    public Optional<Output<ServiceSourceConfigurationArgs>> sourceConfiguration() {
         return Optional.ofNullable(this.sourceConfiguration);
     }
 
@@ -283,7 +283,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionConfiguration(@Nullable Output<ServiceEncryptionConfigurationGetArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Output<ServiceEncryptionConfigurationArgs> encryptionConfiguration) {
             $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
@@ -294,7 +294,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionConfiguration(ServiceEncryptionConfigurationGetArgs encryptionConfiguration) {
+        public Builder encryptionConfiguration(ServiceEncryptionConfigurationArgs encryptionConfiguration) {
             return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
 
@@ -304,7 +304,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder healthCheckConfiguration(@Nullable Output<ServiceHealthCheckConfigurationGetArgs> healthCheckConfiguration) {
+        public Builder healthCheckConfiguration(@Nullable Output<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration) {
             $.healthCheckConfiguration = healthCheckConfiguration;
             return this;
         }
@@ -315,7 +315,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder healthCheckConfiguration(ServiceHealthCheckConfigurationGetArgs healthCheckConfiguration) {
+        public Builder healthCheckConfiguration(ServiceHealthCheckConfigurationArgs healthCheckConfiguration) {
             return healthCheckConfiguration(Output.of(healthCheckConfiguration));
         }
 
@@ -325,7 +325,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder instanceConfiguration(@Nullable Output<ServiceInstanceConfigurationGetArgs> instanceConfiguration) {
+        public Builder instanceConfiguration(@Nullable Output<ServiceInstanceConfigurationArgs> instanceConfiguration) {
             $.instanceConfiguration = instanceConfiguration;
             return this;
         }
@@ -336,7 +336,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder instanceConfiguration(ServiceInstanceConfigurationGetArgs instanceConfiguration) {
+        public Builder instanceConfiguration(ServiceInstanceConfigurationArgs instanceConfiguration) {
             return instanceConfiguration(Output.of(instanceConfiguration));
         }
 
@@ -409,7 +409,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sourceConfiguration(@Nullable Output<ServiceSourceConfigurationGetArgs> sourceConfiguration) {
+        public Builder sourceConfiguration(@Nullable Output<ServiceSourceConfigurationArgs> sourceConfiguration) {
             $.sourceConfiguration = sourceConfiguration;
             return this;
         }
@@ -420,7 +420,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sourceConfiguration(ServiceSourceConfigurationGetArgs sourceConfiguration) {
+        public Builder sourceConfiguration(ServiceSourceConfigurationArgs sourceConfiguration) {
             return sourceConfiguration(Output.of(sourceConfiguration));
         }
 

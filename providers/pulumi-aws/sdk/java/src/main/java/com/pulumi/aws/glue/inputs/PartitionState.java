@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.glue.inputs;
 
-import com.pulumi.aws.glue.inputs.PartitionStorageDescriptorGetArgs;
+import com.pulumi.aws.glue.inputs.PartitionStorageDescriptorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -128,13 +128,13 @@ public final class PartitionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageDescriptor")
-    private @Nullable Output<PartitionStorageDescriptorGetArgs> storageDescriptor;
+    private @Nullable Output<PartitionStorageDescriptorArgs> storageDescriptor;
 
     /**
      * @return A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
      * 
      */
-    public Optional<Output<PartitionStorageDescriptorGetArgs>> storageDescriptor() {
+    public Optional<Output<PartitionStorageDescriptorArgs>> storageDescriptor() {
         return Optional.ofNullable(this.storageDescriptor);
     }
 
@@ -340,7 +340,7 @@ public final class PartitionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder storageDescriptor(@Nullable Output<PartitionStorageDescriptorGetArgs> storageDescriptor) {
+        public Builder storageDescriptor(@Nullable Output<PartitionStorageDescriptorArgs> storageDescriptor) {
             $.storageDescriptor = storageDescriptor;
             return this;
         }
@@ -351,7 +351,7 @@ public final class PartitionState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder storageDescriptor(PartitionStorageDescriptorGetArgs storageDescriptor) {
+        public Builder storageDescriptor(PartitionStorageDescriptorArgs storageDescriptor) {
             return storageDescriptor(Output.of(storageDescriptor));
         }
 

@@ -5,11 +5,11 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildGetArgs;
-import com.pulumi.gcp.cloudbuild.inputs.TriggerGithubGetArgs;
-import com.pulumi.gcp.cloudbuild.inputs.TriggerPubsubConfigGetArgs;
-import com.pulumi.gcp.cloudbuild.inputs.TriggerTriggerTemplateGetArgs;
-import com.pulumi.gcp.cloudbuild.inputs.TriggerWebhookConfigGetArgs;
+import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildArgs;
+import com.pulumi.gcp.cloudbuild.inputs.TriggerGithubArgs;
+import com.pulumi.gcp.cloudbuild.inputs.TriggerPubsubConfigArgs;
+import com.pulumi.gcp.cloudbuild.inputs.TriggerTriggerTemplateArgs;
+import com.pulumi.gcp.cloudbuild.inputs.TriggerWebhookConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,14 +29,14 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="build")
-    private @Nullable Output<TriggerBuildGetArgs> build;
+    private @Nullable Output<TriggerBuildArgs> build;
 
     /**
      * @return Contents of the build template. Either a filename or build template must be provided.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<TriggerBuildGetArgs>> build() {
+    public Optional<Output<TriggerBuildArgs>> build() {
         return Optional.ofNullable(this.build);
     }
 
@@ -107,7 +107,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="github")
-    private @Nullable Output<TriggerGithubGetArgs> github;
+    private @Nullable Output<TriggerGithubArgs> github;
 
     /**
      * @return Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
@@ -115,7 +115,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<TriggerGithubGetArgs>> github() {
+    public Optional<Output<TriggerGithubArgs>> github() {
         return Optional.ofNullable(this.github);
     }
 
@@ -221,7 +221,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pubsubConfig")
-    private @Nullable Output<TriggerPubsubConfigGetArgs> pubsubConfig;
+    private @Nullable Output<TriggerPubsubConfigArgs> pubsubConfig;
 
     /**
      * @return PubsubConfig describes the configuration of a trigger that creates
@@ -230,7 +230,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<TriggerPubsubConfigGetArgs>> pubsubConfig() {
+    public Optional<Output<TriggerPubsubConfigArgs>> pubsubConfig() {
         return Optional.ofNullable(this.pubsubConfig);
     }
 
@@ -312,7 +312,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="triggerTemplate")
-    private @Nullable Output<TriggerTriggerTemplateGetArgs> triggerTemplate;
+    private @Nullable Output<TriggerTriggerTemplateArgs> triggerTemplate;
 
     /**
      * @return Template describing the types of source changes to trigger a build.
@@ -323,7 +323,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<TriggerTriggerTemplateGetArgs>> triggerTemplate() {
+    public Optional<Output<TriggerTriggerTemplateArgs>> triggerTemplate() {
         return Optional.ofNullable(this.triggerTemplate);
     }
 
@@ -335,7 +335,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webhookConfig")
-    private @Nullable Output<TriggerWebhookConfigGetArgs> webhookConfig;
+    private @Nullable Output<TriggerWebhookConfigArgs> webhookConfig;
 
     /**
      * @return WebhookConfig describes the configuration of a trigger that creates
@@ -344,7 +344,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<TriggerWebhookConfigGetArgs>> webhookConfig() {
+    public Optional<Output<TriggerWebhookConfigArgs>> webhookConfig() {
         return Optional.ofNullable(this.webhookConfig);
     }
 
@@ -395,7 +395,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder build(@Nullable Output<TriggerBuildGetArgs> build) {
+        public Builder build(@Nullable Output<TriggerBuildArgs> build) {
             $.build = build;
             return this;
         }
@@ -407,7 +407,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder build(TriggerBuildGetArgs build) {
+        public Builder build(TriggerBuildArgs build) {
             return build(Output.of(build));
         }
 
@@ -503,7 +503,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder github(@Nullable Output<TriggerGithubGetArgs> github) {
+        public Builder github(@Nullable Output<TriggerGithubArgs> github) {
             $.github = github;
             return this;
         }
@@ -516,7 +516,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder github(TriggerGithubGetArgs github) {
+        public Builder github(TriggerGithubArgs github) {
             return github(Output.of(github));
         }
 
@@ -681,7 +681,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pubsubConfig(@Nullable Output<TriggerPubsubConfigGetArgs> pubsubConfig) {
+        public Builder pubsubConfig(@Nullable Output<TriggerPubsubConfigArgs> pubsubConfig) {
             $.pubsubConfig = pubsubConfig;
             return this;
         }
@@ -695,7 +695,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder pubsubConfig(TriggerPubsubConfigGetArgs pubsubConfig) {
+        public Builder pubsubConfig(TriggerPubsubConfigArgs pubsubConfig) {
             return pubsubConfig(Output.of(pubsubConfig));
         }
 
@@ -812,7 +812,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder triggerTemplate(@Nullable Output<TriggerTriggerTemplateGetArgs> triggerTemplate) {
+        public Builder triggerTemplate(@Nullable Output<TriggerTriggerTemplateArgs> triggerTemplate) {
             $.triggerTemplate = triggerTemplate;
             return this;
         }
@@ -828,7 +828,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder triggerTemplate(TriggerTriggerTemplateGetArgs triggerTemplate) {
+        public Builder triggerTemplate(TriggerTriggerTemplateArgs triggerTemplate) {
             return triggerTemplate(Output.of(triggerTemplate));
         }
 
@@ -841,7 +841,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder webhookConfig(@Nullable Output<TriggerWebhookConfigGetArgs> webhookConfig) {
+        public Builder webhookConfig(@Nullable Output<TriggerWebhookConfigArgs> webhookConfig) {
             $.webhookConfig = webhookConfig;
             return this;
         }
@@ -855,7 +855,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder webhookConfig(TriggerWebhookConfigGetArgs webhookConfig) {
+        public Builder webhookConfig(TriggerWebhookConfigArgs webhookConfig) {
             return webhookConfig(Output.of(webhookConfig));
         }
 

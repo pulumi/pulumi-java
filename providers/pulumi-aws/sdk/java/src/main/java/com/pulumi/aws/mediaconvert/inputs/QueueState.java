@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.mediaconvert.inputs;
 
-import com.pulumi.aws.mediaconvert.inputs.QueueReservationPlanSettingsGetArgs;
+import com.pulumi.aws.mediaconvert.inputs.QueueReservationPlanSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -82,13 +82,13 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reservationPlanSettings")
-    private @Nullable Output<QueueReservationPlanSettingsGetArgs> reservationPlanSettings;
+    private @Nullable Output<QueueReservationPlanSettingsArgs> reservationPlanSettings;
 
     /**
      * @return A detail pricing plan of the  reserved queue. See below.
      * 
      */
-    public Optional<Output<QueueReservationPlanSettingsGetArgs>> reservationPlanSettings() {
+    public Optional<Output<QueueReservationPlanSettingsArgs>> reservationPlanSettings() {
         return Optional.ofNullable(this.reservationPlanSettings);
     }
 
@@ -258,7 +258,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder reservationPlanSettings(@Nullable Output<QueueReservationPlanSettingsGetArgs> reservationPlanSettings) {
+        public Builder reservationPlanSettings(@Nullable Output<QueueReservationPlanSettingsArgs> reservationPlanSettings) {
             $.reservationPlanSettings = reservationPlanSettings;
             return this;
         }
@@ -269,7 +269,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder reservationPlanSettings(QueueReservationPlanSettingsGetArgs reservationPlanSettings) {
+        public Builder reservationPlanSettings(QueueReservationPlanSettingsArgs reservationPlanSettings) {
             return reservationPlanSettings(Output.of(reservationPlanSettings));
         }
 

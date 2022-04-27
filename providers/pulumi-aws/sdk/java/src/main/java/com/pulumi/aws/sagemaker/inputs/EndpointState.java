@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigGetArgs;
+import com.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +37,13 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deploymentConfig")
-    private @Nullable Output<EndpointDeploymentConfigGetArgs> deploymentConfig;
+    private @Nullable Output<EndpointDeploymentConfigArgs> deploymentConfig;
 
     /**
      * @return The deployment configuration for an endpoint, which contains the desired deployment strategy and rollback configurations. See Deployment Config.
      * 
      */
-    public Optional<Output<EndpointDeploymentConfigGetArgs>> deploymentConfig() {
+    public Optional<Output<EndpointDeploymentConfigArgs>> deploymentConfig() {
         return Optional.ofNullable(this.deploymentConfig);
     }
 
@@ -163,7 +163,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder deploymentConfig(@Nullable Output<EndpointDeploymentConfigGetArgs> deploymentConfig) {
+        public Builder deploymentConfig(@Nullable Output<EndpointDeploymentConfigArgs> deploymentConfig) {
             $.deploymentConfig = deploymentConfig;
             return this;
         }
@@ -174,7 +174,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder deploymentConfig(EndpointDeploymentConfigGetArgs deploymentConfig) {
+        public Builder deploymentConfig(EndpointDeploymentConfigArgs deploymentConfig) {
             return deploymentConfig(Output.of(deploymentConfig));
         }
 

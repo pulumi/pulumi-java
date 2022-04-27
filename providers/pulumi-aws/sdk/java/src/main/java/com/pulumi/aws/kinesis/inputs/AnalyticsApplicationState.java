@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.kinesis.inputs;
 
-import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationCloudwatchLoggingOptionsGetArgs;
-import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsGetArgs;
-import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputGetArgs;
-import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesGetArgs;
+import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationCloudwatchLoggingOptionsArgs;
+import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsArgs;
+import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputArgs;
+import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -44,14 +44,14 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="cloudwatchLoggingOptions")
-    private @Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
+    private @Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
     /**
      * @return The CloudWatch log stream options to monitor application errors.
      * See CloudWatch Logging Options below for more details.
      * 
      */
-    public Optional<Output<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs>> cloudwatchLoggingOptions() {
+    public Optional<Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs>> cloudwatchLoggingOptions() {
         return Optional.ofNullable(this.cloudwatchLoggingOptions);
     }
 
@@ -105,13 +105,13 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="inputs")
-    private @Nullable Output<AnalyticsApplicationInputsGetArgs> inputs;
+    private @Nullable Output<AnalyticsApplicationInputsArgs> inputs;
 
     /**
      * @return Input configuration of the application. See Inputs below for more details.
      * 
      */
-    public Optional<Output<AnalyticsApplicationInputsGetArgs>> inputs() {
+    public Optional<Output<AnalyticsApplicationInputsArgs>> inputs() {
         return Optional.ofNullable(this.inputs);
     }
 
@@ -150,13 +150,13 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="outputs")
-    private @Nullable Output<List<AnalyticsApplicationOutputGetArgs>> outputs;
+    private @Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs;
 
     /**
      * @return Output destination configuration of the application. See Outputs below for more details.
      * 
      */
-    public Optional<Output<List<AnalyticsApplicationOutputGetArgs>>> outputs() {
+    public Optional<Output<List<AnalyticsApplicationOutputArgs>>> outputs() {
         return Optional.ofNullable(this.outputs);
     }
 
@@ -166,14 +166,14 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="referenceDataSources")
-    private @Nullable Output<AnalyticsApplicationReferenceDataSourcesGetArgs> referenceDataSources;
+    private @Nullable Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources;
 
     /**
      * @return An S3 Reference Data Source for the application.
      * See Reference Data Sources below for more details.
      * 
      */
-    public Optional<Output<AnalyticsApplicationReferenceDataSourcesGetArgs>> referenceDataSources() {
+    public Optional<Output<AnalyticsApplicationReferenceDataSourcesArgs>> referenceDataSources() {
         return Optional.ofNullable(this.referenceDataSources);
     }
 
@@ -320,7 +320,7 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder cloudwatchLoggingOptions(@Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
             $.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
@@ -332,7 +332,7 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder cloudwatchLoggingOptions(AnalyticsApplicationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(AnalyticsApplicationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
             return cloudwatchLoggingOptions(Output.of(cloudwatchLoggingOptions));
         }
 
@@ -405,7 +405,7 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder inputs(@Nullable Output<AnalyticsApplicationInputsGetArgs> inputs) {
+        public Builder inputs(@Nullable Output<AnalyticsApplicationInputsArgs> inputs) {
             $.inputs = inputs;
             return this;
         }
@@ -416,7 +416,7 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder inputs(AnalyticsApplicationInputsGetArgs inputs) {
+        public Builder inputs(AnalyticsApplicationInputsArgs inputs) {
             return inputs(Output.of(inputs));
         }
 
@@ -468,7 +468,7 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder outputs(@Nullable Output<List<AnalyticsApplicationOutputGetArgs>> outputs) {
+        public Builder outputs(@Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs) {
             $.outputs = outputs;
             return this;
         }
@@ -479,7 +479,7 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder outputs(List<AnalyticsApplicationOutputGetArgs> outputs) {
+        public Builder outputs(List<AnalyticsApplicationOutputArgs> outputs) {
             return outputs(Output.of(outputs));
         }
 
@@ -489,7 +489,7 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder outputs(AnalyticsApplicationOutputGetArgs... outputs) {
+        public Builder outputs(AnalyticsApplicationOutputArgs... outputs) {
             return outputs(List.of(outputs));
         }
 
@@ -500,7 +500,7 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder referenceDataSources(@Nullable Output<AnalyticsApplicationReferenceDataSourcesGetArgs> referenceDataSources) {
+        public Builder referenceDataSources(@Nullable Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources) {
             $.referenceDataSources = referenceDataSources;
             return this;
         }
@@ -512,7 +512,7 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder referenceDataSources(AnalyticsApplicationReferenceDataSourcesGetArgs referenceDataSources) {
+        public Builder referenceDataSources(AnalyticsApplicationReferenceDataSourcesArgs referenceDataSources) {
             return referenceDataSources(Output.of(referenceDataSources));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.iap.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.iap.inputs.WebIamMemberConditionGetArgs;
+import com.pulumi.gcp.iap.inputs.WebIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,14 +22,14 @@ public final class WebIamMemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<WebIamMemberConditionGetArgs> condition;
+    private @Nullable Output<WebIamMemberConditionArgs> condition;
 
     /**
      * @return ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<WebIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<WebIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -126,7 +126,7 @@ public final class WebIamMemberState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<WebIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<WebIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -138,7 +138,7 @@ public final class WebIamMemberState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder condition(WebIamMemberConditionGetArgs condition) {
+        public Builder condition(WebIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

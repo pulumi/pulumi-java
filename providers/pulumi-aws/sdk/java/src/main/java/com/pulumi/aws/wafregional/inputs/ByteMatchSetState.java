@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.wafregional.inputs;
 
-import com.pulumi.aws.wafregional.inputs.ByteMatchSetByteMatchTupleGetArgs;
+import com.pulumi.aws.wafregional.inputs.ByteMatchSetByteMatchTupleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -22,13 +22,13 @@ public final class ByteMatchSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="byteMatchTuples")
-    private @Nullable Output<List<ByteMatchSetByteMatchTupleGetArgs>> byteMatchTuples;
+    private @Nullable Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples;
 
     /**
      * @return Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
      * 
      */
-    public Optional<Output<List<ByteMatchSetByteMatchTupleGetArgs>>> byteMatchTuples() {
+    public Optional<Output<List<ByteMatchSetByteMatchTupleArgs>>> byteMatchTuples() {
         return Optional.ofNullable(this.byteMatchTuples);
     }
 
@@ -78,7 +78,7 @@ public final class ByteMatchSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder byteMatchTuples(@Nullable Output<List<ByteMatchSetByteMatchTupleGetArgs>> byteMatchTuples) {
+        public Builder byteMatchTuples(@Nullable Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples) {
             $.byteMatchTuples = byteMatchTuples;
             return this;
         }
@@ -89,7 +89,7 @@ public final class ByteMatchSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder byteMatchTuples(List<ByteMatchSetByteMatchTupleGetArgs> byteMatchTuples) {
+        public Builder byteMatchTuples(List<ByteMatchSetByteMatchTupleArgs> byteMatchTuples) {
             return byteMatchTuples(Output.of(byteMatchTuples));
         }
 
@@ -99,7 +99,7 @@ public final class ByteMatchSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder byteMatchTuples(ByteMatchSetByteMatchTupleGetArgs... byteMatchTuples) {
+        public Builder byteMatchTuples(ByteMatchSetByteMatchTupleArgs... byteMatchTuples) {
             return byteMatchTuples(List.of(byteMatchTuples));
         }
 

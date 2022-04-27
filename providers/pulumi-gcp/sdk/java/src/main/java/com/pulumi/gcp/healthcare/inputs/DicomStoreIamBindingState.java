@@ -5,7 +5,7 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.healthcare.inputs.DicomStoreIamBindingConditionGetArgs;
+import com.pulumi.gcp.healthcare.inputs.DicomStoreIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class DicomStoreIamBindingState extends com.pulumi.resources.Resour
     public static final DicomStoreIamBindingState Empty = new DicomStoreIamBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<DicomStoreIamBindingConditionGetArgs> condition;
+    private @Nullable Output<DicomStoreIamBindingConditionArgs> condition;
 
-    public Optional<Output<DicomStoreIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<DicomStoreIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -114,12 +114,12 @@ public final class DicomStoreIamBindingState extends com.pulumi.resources.Resour
             $ = new DicomStoreIamBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<DicomStoreIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<DicomStoreIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(DicomStoreIamBindingConditionGetArgs condition) {
+        public Builder condition(DicomStoreIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

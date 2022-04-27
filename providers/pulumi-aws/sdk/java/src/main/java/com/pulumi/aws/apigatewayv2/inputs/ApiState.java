@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.apigatewayv2.inputs;
 
-import com.pulumi.aws.apigatewayv2.inputs.ApiCorsConfigurationGetArgs;
+import com.pulumi.aws.apigatewayv2.inputs.ApiCorsConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -87,13 +87,13 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="corsConfiguration")
-    private @Nullable Output<ApiCorsConfigurationGetArgs> corsConfiguration;
+    private @Nullable Output<ApiCorsConfigurationArgs> corsConfiguration;
 
     /**
      * @return The cross-origin resource sharing (CORS) [configuration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html). Applicable for HTTP APIs.
      * 
      */
-    public Optional<Output<ApiCorsConfigurationGetArgs>> corsConfiguration() {
+    public Optional<Output<ApiCorsConfigurationArgs>> corsConfiguration() {
         return Optional.ofNullable(this.corsConfiguration);
     }
 
@@ -441,7 +441,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder corsConfiguration(@Nullable Output<ApiCorsConfigurationGetArgs> corsConfiguration) {
+        public Builder corsConfiguration(@Nullable Output<ApiCorsConfigurationArgs> corsConfiguration) {
             $.corsConfiguration = corsConfiguration;
             return this;
         }
@@ -452,7 +452,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder corsConfiguration(ApiCorsConfigurationGetArgs corsConfiguration) {
+        public Builder corsConfiguration(ApiCorsConfigurationArgs corsConfiguration) {
             return corsConfiguration(Output.of(corsConfiguration));
         }
 

@@ -5,13 +5,13 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.RegionHealthCheckGrpcHealthCheckGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionHealthCheckHttp2HealthCheckGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionHealthCheckHttpHealthCheckGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionHealthCheckHttpsHealthCheckGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionHealthCheckLogConfigGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionHealthCheckSslHealthCheckGetArgs;
-import com.pulumi.gcp.compute.inputs.RegionHealthCheckTcpHealthCheckGetArgs;
+import com.pulumi.gcp.compute.inputs.RegionHealthCheckGrpcHealthCheckArgs;
+import com.pulumi.gcp.compute.inputs.RegionHealthCheckHttp2HealthCheckArgs;
+import com.pulumi.gcp.compute.inputs.RegionHealthCheckHttpHealthCheckArgs;
+import com.pulumi.gcp.compute.inputs.RegionHealthCheckHttpsHealthCheckArgs;
+import com.pulumi.gcp.compute.inputs.RegionHealthCheckLogConfigArgs;
+import com.pulumi.gcp.compute.inputs.RegionHealthCheckSslHealthCheckArgs;
+import com.pulumi.gcp.compute.inputs.RegionHealthCheckTcpHealthCheckArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -78,14 +78,14 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="grpcHealthCheck")
-    private @Nullable Output<RegionHealthCheckGrpcHealthCheckGetArgs> grpcHealthCheck;
+    private @Nullable Output<RegionHealthCheckGrpcHealthCheckArgs> grpcHealthCheck;
 
     /**
      * @return A nested object resource
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionHealthCheckGrpcHealthCheckGetArgs>> grpcHealthCheck() {
+    public Optional<Output<RegionHealthCheckGrpcHealthCheckArgs>> grpcHealthCheck() {
         return Optional.ofNullable(this.grpcHealthCheck);
     }
 
@@ -112,14 +112,14 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="http2HealthCheck")
-    private @Nullable Output<RegionHealthCheckHttp2HealthCheckGetArgs> http2HealthCheck;
+    private @Nullable Output<RegionHealthCheckHttp2HealthCheckArgs> http2HealthCheck;
 
     /**
      * @return A nested object resource
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionHealthCheckHttp2HealthCheckGetArgs>> http2HealthCheck() {
+    public Optional<Output<RegionHealthCheckHttp2HealthCheckArgs>> http2HealthCheck() {
         return Optional.ofNullable(this.http2HealthCheck);
     }
 
@@ -129,14 +129,14 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="httpHealthCheck")
-    private @Nullable Output<RegionHealthCheckHttpHealthCheckGetArgs> httpHealthCheck;
+    private @Nullable Output<RegionHealthCheckHttpHealthCheckArgs> httpHealthCheck;
 
     /**
      * @return A nested object resource
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionHealthCheckHttpHealthCheckGetArgs>> httpHealthCheck() {
+    public Optional<Output<RegionHealthCheckHttpHealthCheckArgs>> httpHealthCheck() {
         return Optional.ofNullable(this.httpHealthCheck);
     }
 
@@ -146,14 +146,14 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="httpsHealthCheck")
-    private @Nullable Output<RegionHealthCheckHttpsHealthCheckGetArgs> httpsHealthCheck;
+    private @Nullable Output<RegionHealthCheckHttpsHealthCheckArgs> httpsHealthCheck;
 
     /**
      * @return A nested object resource
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionHealthCheckHttpsHealthCheckGetArgs>> httpsHealthCheck() {
+    public Optional<Output<RegionHealthCheckHttpsHealthCheckArgs>> httpsHealthCheck() {
         return Optional.ofNullable(this.httpsHealthCheck);
     }
 
@@ -163,14 +163,14 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="logConfig")
-    private @Nullable Output<RegionHealthCheckLogConfigGetArgs> logConfig;
+    private @Nullable Output<RegionHealthCheckLogConfigArgs> logConfig;
 
     /**
      * @return Configure logging on this health check.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionHealthCheckLogConfigGetArgs>> logConfig() {
+    public Optional<Output<RegionHealthCheckLogConfigArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
 
@@ -256,14 +256,14 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sslHealthCheck")
-    private @Nullable Output<RegionHealthCheckSslHealthCheckGetArgs> sslHealthCheck;
+    private @Nullable Output<RegionHealthCheckSslHealthCheckArgs> sslHealthCheck;
 
     /**
      * @return A nested object resource
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionHealthCheckSslHealthCheckGetArgs>> sslHealthCheck() {
+    public Optional<Output<RegionHealthCheckSslHealthCheckArgs>> sslHealthCheck() {
         return Optional.ofNullable(this.sslHealthCheck);
     }
 
@@ -273,14 +273,14 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tcpHealthCheck")
-    private @Nullable Output<RegionHealthCheckTcpHealthCheckGetArgs> tcpHealthCheck;
+    private @Nullable Output<RegionHealthCheckTcpHealthCheckArgs> tcpHealthCheck;
 
     /**
      * @return A nested object resource
      * Structure is documented below.
      * 
      */
-    public Optional<Output<RegionHealthCheckTcpHealthCheckGetArgs>> tcpHealthCheck() {
+    public Optional<Output<RegionHealthCheckTcpHealthCheckArgs>> tcpHealthCheck() {
         return Optional.ofNullable(this.tcpHealthCheck);
     }
 
@@ -450,7 +450,7 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder grpcHealthCheck(@Nullable Output<RegionHealthCheckGrpcHealthCheckGetArgs> grpcHealthCheck) {
+        public Builder grpcHealthCheck(@Nullable Output<RegionHealthCheckGrpcHealthCheckArgs> grpcHealthCheck) {
             $.grpcHealthCheck = grpcHealthCheck;
             return this;
         }
@@ -462,7 +462,7 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder grpcHealthCheck(RegionHealthCheckGrpcHealthCheckGetArgs grpcHealthCheck) {
+        public Builder grpcHealthCheck(RegionHealthCheckGrpcHealthCheckArgs grpcHealthCheck) {
             return grpcHealthCheck(Output.of(grpcHealthCheck));
         }
 
@@ -496,7 +496,7 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder http2HealthCheck(@Nullable Output<RegionHealthCheckHttp2HealthCheckGetArgs> http2HealthCheck) {
+        public Builder http2HealthCheck(@Nullable Output<RegionHealthCheckHttp2HealthCheckArgs> http2HealthCheck) {
             $.http2HealthCheck = http2HealthCheck;
             return this;
         }
@@ -508,7 +508,7 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder http2HealthCheck(RegionHealthCheckHttp2HealthCheckGetArgs http2HealthCheck) {
+        public Builder http2HealthCheck(RegionHealthCheckHttp2HealthCheckArgs http2HealthCheck) {
             return http2HealthCheck(Output.of(http2HealthCheck));
         }
 
@@ -519,7 +519,7 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder httpHealthCheck(@Nullable Output<RegionHealthCheckHttpHealthCheckGetArgs> httpHealthCheck) {
+        public Builder httpHealthCheck(@Nullable Output<RegionHealthCheckHttpHealthCheckArgs> httpHealthCheck) {
             $.httpHealthCheck = httpHealthCheck;
             return this;
         }
@@ -531,7 +531,7 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder httpHealthCheck(RegionHealthCheckHttpHealthCheckGetArgs httpHealthCheck) {
+        public Builder httpHealthCheck(RegionHealthCheckHttpHealthCheckArgs httpHealthCheck) {
             return httpHealthCheck(Output.of(httpHealthCheck));
         }
 
@@ -542,7 +542,7 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder httpsHealthCheck(@Nullable Output<RegionHealthCheckHttpsHealthCheckGetArgs> httpsHealthCheck) {
+        public Builder httpsHealthCheck(@Nullable Output<RegionHealthCheckHttpsHealthCheckArgs> httpsHealthCheck) {
             $.httpsHealthCheck = httpsHealthCheck;
             return this;
         }
@@ -554,7 +554,7 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder httpsHealthCheck(RegionHealthCheckHttpsHealthCheckGetArgs httpsHealthCheck) {
+        public Builder httpsHealthCheck(RegionHealthCheckHttpsHealthCheckArgs httpsHealthCheck) {
             return httpsHealthCheck(Output.of(httpsHealthCheck));
         }
 
@@ -565,7 +565,7 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder logConfig(@Nullable Output<RegionHealthCheckLogConfigGetArgs> logConfig) {
+        public Builder logConfig(@Nullable Output<RegionHealthCheckLogConfigArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
@@ -577,7 +577,7 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder logConfig(RegionHealthCheckLogConfigGetArgs logConfig) {
+        public Builder logConfig(RegionHealthCheckLogConfigArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 
@@ -688,7 +688,7 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder sslHealthCheck(@Nullable Output<RegionHealthCheckSslHealthCheckGetArgs> sslHealthCheck) {
+        public Builder sslHealthCheck(@Nullable Output<RegionHealthCheckSslHealthCheckArgs> sslHealthCheck) {
             $.sslHealthCheck = sslHealthCheck;
             return this;
         }
@@ -700,7 +700,7 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder sslHealthCheck(RegionHealthCheckSslHealthCheckGetArgs sslHealthCheck) {
+        public Builder sslHealthCheck(RegionHealthCheckSslHealthCheckArgs sslHealthCheck) {
             return sslHealthCheck(Output.of(sslHealthCheck));
         }
 
@@ -711,7 +711,7 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder tcpHealthCheck(@Nullable Output<RegionHealthCheckTcpHealthCheckGetArgs> tcpHealthCheck) {
+        public Builder tcpHealthCheck(@Nullable Output<RegionHealthCheckTcpHealthCheckArgs> tcpHealthCheck) {
             $.tcpHealthCheck = tcpHealthCheck;
             return this;
         }
@@ -723,7 +723,7 @@ public final class RegionHealthCheckState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder tcpHealthCheck(RegionHealthCheckTcpHealthCheckGetArgs tcpHealthCheck) {
+        public Builder tcpHealthCheck(RegionHealthCheckTcpHealthCheckArgs tcpHealthCheck) {
             return tcpHealthCheck(Output.of(tcpHealthCheck));
         }
 

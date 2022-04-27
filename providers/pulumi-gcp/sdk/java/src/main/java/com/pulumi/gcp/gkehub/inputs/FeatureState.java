@@ -5,9 +5,9 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.gkehub.inputs.FeatureResourceStateGetArgs;
-import com.pulumi.gcp.gkehub.inputs.FeatureSpecGetArgs;
-import com.pulumi.gcp.gkehub.inputs.FeatureStateGetArgs;
+import com.pulumi.gcp.gkehub.inputs.FeatureResourceStateArgs;
+import com.pulumi.gcp.gkehub.inputs.FeatureSpecArgs;
+import com.pulumi.gcp.gkehub.inputs.FeatureStateArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -115,13 +115,13 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceStates")
-    private @Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates;
+    private @Nullable Output<List<FeatureResourceStateArgs>> resourceStates;
 
     /**
      * @return State of the Feature resource itself.
      * 
      */
-    public Optional<Output<List<FeatureResourceStateGetArgs>>> resourceStates() {
+    public Optional<Output<List<FeatureResourceStateArgs>>> resourceStates() {
         return Optional.ofNullable(this.resourceStates);
     }
 
@@ -130,13 +130,13 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spec")
-    private @Nullable Output<FeatureSpecGetArgs> spec;
+    private @Nullable Output<FeatureSpecArgs> spec;
 
     /**
      * @return Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
      * 
      */
-    public Optional<Output<FeatureSpecGetArgs>> spec() {
+    public Optional<Output<FeatureSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
 
@@ -145,13 +145,13 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="states")
-    private @Nullable Output<List<FeatureStateGetArgs>> states;
+    private @Nullable Output<List<FeatureStateArgs>> states;
 
     /**
      * @return Output only. The Hub-wide Feature state
      * 
      */
-    public Optional<Output<List<FeatureStateGetArgs>>> states() {
+    public Optional<Output<List<FeatureStateArgs>>> states() {
         return Optional.ofNullable(this.states);
     }
 
@@ -335,7 +335,7 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resourceStates(@Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates) {
+        public Builder resourceStates(@Nullable Output<List<FeatureResourceStateArgs>> resourceStates) {
             $.resourceStates = resourceStates;
             return this;
         }
@@ -346,7 +346,7 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resourceStates(List<FeatureResourceStateGetArgs> resourceStates) {
+        public Builder resourceStates(List<FeatureResourceStateArgs> resourceStates) {
             return resourceStates(Output.of(resourceStates));
         }
 
@@ -356,7 +356,7 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resourceStates(FeatureResourceStateGetArgs... resourceStates) {
+        public Builder resourceStates(FeatureResourceStateArgs... resourceStates) {
             return resourceStates(List.of(resourceStates));
         }
 
@@ -366,7 +366,7 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder spec(@Nullable Output<FeatureSpecGetArgs> spec) {
+        public Builder spec(@Nullable Output<FeatureSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
@@ -377,7 +377,7 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder spec(FeatureSpecGetArgs spec) {
+        public Builder spec(FeatureSpecArgs spec) {
             return spec(Output.of(spec));
         }
 
@@ -387,7 +387,7 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder states(@Nullable Output<List<FeatureStateGetArgs>> states) {
+        public Builder states(@Nullable Output<List<FeatureStateArgs>> states) {
             $.states = states;
             return this;
         }
@@ -398,7 +398,7 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder states(List<FeatureStateGetArgs> states) {
+        public Builder states(List<FeatureStateArgs> states) {
             return states(Output.of(states));
         }
 
@@ -408,7 +408,7 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder states(FeatureStateGetArgs... states) {
+        public Builder states(FeatureStateArgs... states) {
             return states(List.of(states));
         }
 

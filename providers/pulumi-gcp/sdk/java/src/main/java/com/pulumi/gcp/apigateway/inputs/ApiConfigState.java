@@ -5,8 +5,8 @@ package com.pulumi.gcp.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.apigateway.inputs.ApiConfigGatewayConfigGetArgs;
-import com.pulumi.gcp.apigateway.inputs.ApiConfigOpenapiDocumentGetArgs;
+import com.pulumi.gcp.apigateway.inputs.ApiConfigGatewayConfigArgs;
+import com.pulumi.gcp.apigateway.inputs.ApiConfigOpenapiDocumentArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -88,7 +88,7 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayConfig")
-    private @Nullable Output<ApiConfigGatewayConfigGetArgs> gatewayConfig;
+    private @Nullable Output<ApiConfigGatewayConfigArgs> gatewayConfig;
 
     /**
      * @return Immutable. Gateway specific configuration.
@@ -96,7 +96,7 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<ApiConfigGatewayConfigGetArgs>> gatewayConfig() {
+    public Optional<Output<ApiConfigGatewayConfigArgs>> gatewayConfig() {
         return Optional.ofNullable(this.gatewayConfig);
     }
 
@@ -136,14 +136,14 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="openapiDocuments")
-    private @Nullable Output<List<ApiConfigOpenapiDocumentGetArgs>> openapiDocuments;
+    private @Nullable Output<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments;
 
     /**
      * @return An OpenAPI Specification Document describing an API.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<ApiConfigOpenapiDocumentGetArgs>>> openapiDocuments() {
+    public Optional<Output<List<ApiConfigOpenapiDocumentArgs>>> openapiDocuments() {
         return Optional.ofNullable(this.openapiDocuments);
     }
 
@@ -306,7 +306,7 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder gatewayConfig(@Nullable Output<ApiConfigGatewayConfigGetArgs> gatewayConfig) {
+        public Builder gatewayConfig(@Nullable Output<ApiConfigGatewayConfigArgs> gatewayConfig) {
             $.gatewayConfig = gatewayConfig;
             return this;
         }
@@ -319,7 +319,7 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder gatewayConfig(ApiConfigGatewayConfigGetArgs gatewayConfig) {
+        public Builder gatewayConfig(ApiConfigGatewayConfigArgs gatewayConfig) {
             return gatewayConfig(Output.of(gatewayConfig));
         }
 
@@ -372,7 +372,7 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder openapiDocuments(@Nullable Output<List<ApiConfigOpenapiDocumentGetArgs>> openapiDocuments) {
+        public Builder openapiDocuments(@Nullable Output<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments) {
             $.openapiDocuments = openapiDocuments;
             return this;
         }
@@ -384,7 +384,7 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder openapiDocuments(List<ApiConfigOpenapiDocumentGetArgs> openapiDocuments) {
+        public Builder openapiDocuments(List<ApiConfigOpenapiDocumentArgs> openapiDocuments) {
             return openapiDocuments(Output.of(openapiDocuments));
         }
 
@@ -395,7 +395,7 @@ public final class ApiConfigState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder openapiDocuments(ApiConfigOpenapiDocumentGetArgs... openapiDocuments) {
+        public Builder openapiDocuments(ApiConfigOpenapiDocumentArgs... openapiDocuments) {
             return openapiDocuments(List.of(openapiDocuments));
         }
 

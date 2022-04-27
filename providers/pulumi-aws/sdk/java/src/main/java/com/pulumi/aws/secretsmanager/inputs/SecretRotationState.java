@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.secretsmanager.inputs;
 
-import com.pulumi.aws.secretsmanager.inputs.SecretRotationRotationRulesGetArgs;
+import com.pulumi.aws.secretsmanager.inputs.SecretRotationRotationRulesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -53,13 +53,13 @@ public final class SecretRotationState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rotationRules")
-    private @Nullable Output<SecretRotationRotationRulesGetArgs> rotationRules;
+    private @Nullable Output<SecretRotationRotationRulesArgs> rotationRules;
 
     /**
      * @return A structure that defines the rotation configuration for this secret. Defined below.
      * 
      */
-    public Optional<Output<SecretRotationRotationRulesGetArgs>> rotationRules() {
+    public Optional<Output<SecretRotationRotationRulesArgs>> rotationRules() {
         return Optional.ofNullable(this.rotationRules);
     }
 
@@ -161,7 +161,7 @@ public final class SecretRotationState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder rotationRules(@Nullable Output<SecretRotationRotationRulesGetArgs> rotationRules) {
+        public Builder rotationRules(@Nullable Output<SecretRotationRotationRulesArgs> rotationRules) {
             $.rotationRules = rotationRules;
             return this;
         }
@@ -172,7 +172,7 @@ public final class SecretRotationState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder rotationRules(SecretRotationRotationRulesGetArgs rotationRules) {
+        public Builder rotationRules(SecretRotationRotationRulesArgs rotationRules) {
             return rotationRules(Output.of(rotationRules));
         }
 

@@ -5,12 +5,12 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.sql.inputs.DatabaseInstanceCloneGetArgs;
-import com.pulumi.gcp.sql.inputs.DatabaseInstanceIpAddressGetArgs;
-import com.pulumi.gcp.sql.inputs.DatabaseInstanceReplicaConfigurationGetArgs;
-import com.pulumi.gcp.sql.inputs.DatabaseInstanceRestoreBackupContextGetArgs;
-import com.pulumi.gcp.sql.inputs.DatabaseInstanceServerCaCertGetArgs;
-import com.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsGetArgs;
+import com.pulumi.gcp.sql.inputs.DatabaseInstanceCloneArgs;
+import com.pulumi.gcp.sql.inputs.DatabaseInstanceIpAddressArgs;
+import com.pulumi.gcp.sql.inputs.DatabaseInstanceReplicaConfigurationArgs;
+import com.pulumi.gcp.sql.inputs.DatabaseInstanceRestoreBackupContextArgs;
+import com.pulumi.gcp.sql.inputs.DatabaseInstanceServerCaCertArgs;
+import com.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="clone")
-    private @Nullable Output<DatabaseInstanceCloneGetArgs> clone;
+    private @Nullable Output<DatabaseInstanceCloneArgs> clone;
 
     /**
      * @return The context needed to create this instance as a clone of another instance. When this field is set during
@@ -38,7 +38,7 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * configuration is detailed below.
      * 
      */
-    public Optional<Output<DatabaseInstanceCloneGetArgs>> clone_() {
+    public Optional<Output<DatabaseInstanceCloneArgs>> clone_() {
         return Optional.ofNullable(this.clone);
     }
 
@@ -152,9 +152,9 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     }
 
     @Import(name="ipAddresses")
-    private @Nullable Output<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses;
+    private @Nullable Output<List<DatabaseInstanceIpAddressArgs>> ipAddresses;
 
-    public Optional<Output<List<DatabaseInstanceIpAddressGetArgs>>> ipAddresses() {
+    public Optional<Output<List<DatabaseInstanceIpAddressArgs>>> ipAddresses() {
         return Optional.ofNullable(this.ipAddresses);
     }
 
@@ -268,14 +268,14 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="replicaConfiguration")
-    private @Nullable Output<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration;
+    private @Nullable Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration;
 
     /**
      * @return The configuration for replication. The
      * configuration is detailed below. Valid only for MySQL instances.
      * 
      */
-    public Optional<Output<DatabaseInstanceReplicaConfigurationGetArgs>> replicaConfiguration() {
+    public Optional<Output<DatabaseInstanceReplicaConfigurationArgs>> replicaConfiguration() {
         return Optional.ofNullable(this.replicaConfiguration);
     }
 
@@ -287,7 +287,7 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="restoreBackupContext")
-    private @Nullable Output<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext;
+    private @Nullable Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext;
 
     /**
      * @return The context needed to restore the database to a backup run. This field will
@@ -296,7 +296,7 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * block during resource creation/update will trigger the restore action after the resource is created/updated.
      * 
      */
-    public Optional<Output<DatabaseInstanceRestoreBackupContextGetArgs>> restoreBackupContext() {
+    public Optional<Output<DatabaseInstanceRestoreBackupContextArgs>> restoreBackupContext() {
         return Optional.ofNullable(this.restoreBackupContext);
     }
 
@@ -331,9 +331,9 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
     }
 
     @Import(name="serverCaCerts")
-    private @Nullable Output<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts;
+    private @Nullable Output<List<DatabaseInstanceServerCaCertArgs>> serverCaCerts;
 
-    public Optional<Output<List<DatabaseInstanceServerCaCertGetArgs>>> serverCaCerts() {
+    public Optional<Output<List<DatabaseInstanceServerCaCertArgs>>> serverCaCerts() {
         return Optional.ofNullable(this.serverCaCerts);
     }
 
@@ -360,14 +360,14 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="settings")
-    private @Nullable Output<DatabaseInstanceSettingsGetArgs> settings;
+    private @Nullable Output<DatabaseInstanceSettingsArgs> settings;
 
     /**
      * @return The settings to use for the database. The
      * configuration is detailed below. Required if `clone` is not set.
      * 
      */
-    public Optional<Output<DatabaseInstanceSettingsGetArgs>> settings() {
+    public Optional<Output<DatabaseInstanceSettingsArgs>> settings() {
         return Optional.ofNullable(this.settings);
     }
 
@@ -422,7 +422,7 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder clone_(@Nullable Output<DatabaseInstanceCloneGetArgs> clone) {
+        public Builder clone_(@Nullable Output<DatabaseInstanceCloneArgs> clone) {
             $.clone = clone;
             return this;
         }
@@ -435,7 +435,7 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder clone_(DatabaseInstanceCloneGetArgs clone) {
+        public Builder clone_(DatabaseInstanceCloneArgs clone) {
             return clone_(Output.of(clone));
         }
 
@@ -578,16 +578,16 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
             return firstIpAddress(Output.of(firstIpAddress));
         }
 
-        public Builder ipAddresses(@Nullable Output<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Output<List<DatabaseInstanceIpAddressArgs>> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
-        public Builder ipAddresses(List<DatabaseInstanceIpAddressGetArgs> ipAddresses) {
+        public Builder ipAddresses(List<DatabaseInstanceIpAddressArgs> ipAddresses) {
             return ipAddresses(Output.of(ipAddresses));
         }
 
-        public Builder ipAddresses(DatabaseInstanceIpAddressGetArgs... ipAddresses) {
+        public Builder ipAddresses(DatabaseInstanceIpAddressArgs... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
 
@@ -738,7 +738,7 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder replicaConfiguration(@Nullable Output<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration) {
+        public Builder replicaConfiguration(@Nullable Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration) {
             $.replicaConfiguration = replicaConfiguration;
             return this;
         }
@@ -750,7 +750,7 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder replicaConfiguration(DatabaseInstanceReplicaConfigurationGetArgs replicaConfiguration) {
+        public Builder replicaConfiguration(DatabaseInstanceReplicaConfigurationArgs replicaConfiguration) {
             return replicaConfiguration(Output.of(replicaConfiguration));
         }
 
@@ -763,7 +763,7 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder restoreBackupContext(@Nullable Output<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext) {
+        public Builder restoreBackupContext(@Nullable Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext) {
             $.restoreBackupContext = restoreBackupContext;
             return this;
         }
@@ -777,7 +777,7 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder restoreBackupContext(DatabaseInstanceRestoreBackupContextGetArgs restoreBackupContext) {
+        public Builder restoreBackupContext(DatabaseInstanceRestoreBackupContextArgs restoreBackupContext) {
             return restoreBackupContext(Output.of(restoreBackupContext));
         }
 
@@ -823,16 +823,16 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
             return selfLink(Output.of(selfLink));
         }
 
-        public Builder serverCaCerts(@Nullable Output<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts) {
+        public Builder serverCaCerts(@Nullable Output<List<DatabaseInstanceServerCaCertArgs>> serverCaCerts) {
             $.serverCaCerts = serverCaCerts;
             return this;
         }
 
-        public Builder serverCaCerts(List<DatabaseInstanceServerCaCertGetArgs> serverCaCerts) {
+        public Builder serverCaCerts(List<DatabaseInstanceServerCaCertArgs> serverCaCerts) {
             return serverCaCerts(Output.of(serverCaCerts));
         }
 
-        public Builder serverCaCerts(DatabaseInstanceServerCaCertGetArgs... serverCaCerts) {
+        public Builder serverCaCerts(DatabaseInstanceServerCaCertArgs... serverCaCerts) {
             return serverCaCerts(List.of(serverCaCerts));
         }
 
@@ -866,7 +866,7 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder settings(@Nullable Output<DatabaseInstanceSettingsGetArgs> settings) {
+        public Builder settings(@Nullable Output<DatabaseInstanceSettingsArgs> settings) {
             $.settings = settings;
             return this;
         }
@@ -878,7 +878,7 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder settings(DatabaseInstanceSettingsGetArgs settings) {
+        public Builder settings(DatabaseInstanceSettingsArgs settings) {
             return settings(Output.of(settings));
         }
 

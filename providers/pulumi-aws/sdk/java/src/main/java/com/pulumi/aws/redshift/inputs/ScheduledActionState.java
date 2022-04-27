@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.redshift.inputs;
 
-import com.pulumi.aws.redshift.inputs.ScheduledActionTargetActionGetArgs;
+import com.pulumi.aws.redshift.inputs.ScheduledActionTargetActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -127,13 +127,13 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="targetAction")
-    private @Nullable Output<ScheduledActionTargetActionGetArgs> targetAction;
+    private @Nullable Output<ScheduledActionTargetActionArgs> targetAction;
 
     /**
      * @return Target action. Documented below.
      * 
      */
-    public Optional<Output<ScheduledActionTargetActionGetArgs>> targetAction() {
+    public Optional<Output<ScheduledActionTargetActionArgs>> targetAction() {
         return Optional.ofNullable(this.targetAction);
     }
 
@@ -321,7 +321,7 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder targetAction(@Nullable Output<ScheduledActionTargetActionGetArgs> targetAction) {
+        public Builder targetAction(@Nullable Output<ScheduledActionTargetActionArgs> targetAction) {
             $.targetAction = targetAction;
             return this;
         }
@@ -332,7 +332,7 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder targetAction(ScheduledActionTargetActionGetArgs targetAction) {
+        public Builder targetAction(ScheduledActionTargetActionArgs targetAction) {
             return targetAction(Output.of(targetAction));
         }
 

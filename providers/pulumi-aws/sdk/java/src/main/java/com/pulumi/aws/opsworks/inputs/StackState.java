@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.opsworks.inputs;
 
-import com.pulumi.aws.opsworks.inputs.StackCustomCookbooksSourceGetArgs;
+import com.pulumi.aws.opsworks.inputs.StackCustomCookbooksSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -107,14 +107,14 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customCookbooksSources")
-    private @Nullable Output<List<StackCustomCookbooksSourceGetArgs>> customCookbooksSources;
+    private @Nullable Output<List<StackCustomCookbooksSourceArgs>> customCookbooksSources;
 
     /**
      * @return When `use_custom_cookbooks` is set, provide this sub-object as
      * described below.
      * 
      */
-    public Optional<Output<List<StackCustomCookbooksSourceGetArgs>>> customCookbooksSources() {
+    public Optional<Output<List<StackCustomCookbooksSourceArgs>>> customCookbooksSources() {
         return Optional.ofNullable(this.customCookbooksSources);
     }
 
@@ -561,7 +561,7 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customCookbooksSources(@Nullable Output<List<StackCustomCookbooksSourceGetArgs>> customCookbooksSources) {
+        public Builder customCookbooksSources(@Nullable Output<List<StackCustomCookbooksSourceArgs>> customCookbooksSources) {
             $.customCookbooksSources = customCookbooksSources;
             return this;
         }
@@ -573,7 +573,7 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customCookbooksSources(List<StackCustomCookbooksSourceGetArgs> customCookbooksSources) {
+        public Builder customCookbooksSources(List<StackCustomCookbooksSourceArgs> customCookbooksSources) {
             return customCookbooksSources(Output.of(customCookbooksSources));
         }
 
@@ -584,7 +584,7 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customCookbooksSources(StackCustomCookbooksSourceGetArgs... customCookbooksSources) {
+        public Builder customCookbooksSources(StackCustomCookbooksSourceArgs... customCookbooksSources) {
             return customCookbooksSources(List.of(customCookbooksSources));
         }
 

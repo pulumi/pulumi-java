@@ -5,7 +5,7 @@ package com.pulumi.gcp.serviceAccount.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.serviceAccount.inputs.IAMBindingConditionGetArgs;
+import com.pulumi.gcp.serviceAccount.inputs.IAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class IAMBindingState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<IAMBindingConditionGetArgs> condition;
+    private @Nullable Output<IAMBindingConditionArgs> condition;
 
     /**
      * @return An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<IAMBindingConditionGetArgs>> condition() {
+    public Optional<Output<IAMBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -125,7 +125,7 @@ public final class IAMBindingState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<IAMBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<IAMBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -137,7 +137,7 @@ public final class IAMBindingState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder condition(IAMBindingConditionGetArgs condition) {
+        public Builder condition(IAMBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

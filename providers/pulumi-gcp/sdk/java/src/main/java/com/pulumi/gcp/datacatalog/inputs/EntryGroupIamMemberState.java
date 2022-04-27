@@ -5,7 +5,7 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.datacatalog.inputs.EntryGroupIamMemberConditionGetArgs;
+import com.pulumi.gcp.datacatalog.inputs.EntryGroupIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class EntryGroupIamMemberState extends com.pulumi.resources.Resourc
     public static final EntryGroupIamMemberState Empty = new EntryGroupIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<EntryGroupIamMemberConditionGetArgs> condition;
+    private @Nullable Output<EntryGroupIamMemberConditionArgs> condition;
 
-    public Optional<Output<EntryGroupIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<EntryGroupIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -133,12 +133,12 @@ public final class EntryGroupIamMemberState extends com.pulumi.resources.Resourc
             $ = new EntryGroupIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<EntryGroupIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<EntryGroupIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(EntryGroupIamMemberConditionGetArgs condition) {
+        public Builder condition(EntryGroupIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

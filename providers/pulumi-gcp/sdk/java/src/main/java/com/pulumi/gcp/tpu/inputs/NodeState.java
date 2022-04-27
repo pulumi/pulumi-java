@@ -5,8 +5,8 @@ package com.pulumi.gcp.tpu.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.tpu.inputs.NodeNetworkEndpointGetArgs;
-import com.pulumi.gcp.tpu.inputs.NodeSchedulingConfigGetArgs;
+import com.pulumi.gcp.tpu.inputs.NodeNetworkEndpointArgs;
+import com.pulumi.gcp.tpu.inputs.NodeSchedulingConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -136,14 +136,14 @@ public final class NodeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkEndpoints")
-    private @Nullable Output<List<NodeNetworkEndpointGetArgs>> networkEndpoints;
+    private @Nullable Output<List<NodeNetworkEndpointArgs>> networkEndpoints;
 
     /**
      * @return The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
      * node first reach out to the first (index 0) entry.
      * 
      */
-    public Optional<Output<List<NodeNetworkEndpointGetArgs>>> networkEndpoints() {
+    public Optional<Output<List<NodeNetworkEndpointArgs>>> networkEndpoints() {
         return Optional.ofNullable(this.networkEndpoints);
     }
 
@@ -170,14 +170,14 @@ public final class NodeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedulingConfig")
-    private @Nullable Output<NodeSchedulingConfigGetArgs> schedulingConfig;
+    private @Nullable Output<NodeSchedulingConfigArgs> schedulingConfig;
 
     /**
      * @return Sets the scheduling options for this TPU instance.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<NodeSchedulingConfigGetArgs>> schedulingConfig() {
+    public Optional<Output<NodeSchedulingConfigArgs>> schedulingConfig() {
         return Optional.ofNullable(this.schedulingConfig);
     }
 
@@ -438,7 +438,7 @@ public final class NodeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkEndpoints(@Nullable Output<List<NodeNetworkEndpointGetArgs>> networkEndpoints) {
+        public Builder networkEndpoints(@Nullable Output<List<NodeNetworkEndpointArgs>> networkEndpoints) {
             $.networkEndpoints = networkEndpoints;
             return this;
         }
@@ -450,7 +450,7 @@ public final class NodeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkEndpoints(List<NodeNetworkEndpointGetArgs> networkEndpoints) {
+        public Builder networkEndpoints(List<NodeNetworkEndpointArgs> networkEndpoints) {
             return networkEndpoints(Output.of(networkEndpoints));
         }
 
@@ -461,7 +461,7 @@ public final class NodeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkEndpoints(NodeNetworkEndpointGetArgs... networkEndpoints) {
+        public Builder networkEndpoints(NodeNetworkEndpointArgs... networkEndpoints) {
             return networkEndpoints(List.of(networkEndpoints));
         }
 
@@ -495,7 +495,7 @@ public final class NodeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schedulingConfig(@Nullable Output<NodeSchedulingConfigGetArgs> schedulingConfig) {
+        public Builder schedulingConfig(@Nullable Output<NodeSchedulingConfigArgs> schedulingConfig) {
             $.schedulingConfig = schedulingConfig;
             return this;
         }
@@ -507,7 +507,7 @@ public final class NodeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schedulingConfig(NodeSchedulingConfigGetArgs schedulingConfig) {
+        public Builder schedulingConfig(NodeSchedulingConfigArgs schedulingConfig) {
             return schedulingConfig(Output.of(schedulingConfig));
         }
 

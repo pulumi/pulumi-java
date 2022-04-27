@@ -5,7 +5,7 @@ package com.pulumi.gcp.vertex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigGetArgs;
+import com.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -86,7 +86,7 @@ public final class AiFeatureStoreEntityTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="monitoringConfig")
-    private @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig;
+    private @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig;
 
     /**
      * @return The default monitoring configuration for all Features under this EntityType.
@@ -94,7 +94,7 @@ public final class AiFeatureStoreEntityTypeState extends com.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs>> monitoringConfig() {
+    public Optional<Output<AiFeatureStoreEntityTypeMonitoringConfigArgs>> monitoringConfig() {
         return Optional.ofNullable(this.monitoringConfig);
     }
 
@@ -254,7 +254,7 @@ public final class AiFeatureStoreEntityTypeState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder monitoringConfig(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig) {
+        public Builder monitoringConfig(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig) {
             $.monitoringConfig = monitoringConfig;
             return this;
         }
@@ -267,7 +267,7 @@ public final class AiFeatureStoreEntityTypeState extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder monitoringConfig(AiFeatureStoreEntityTypeMonitoringConfigGetArgs monitoringConfig) {
+        public Builder monitoringConfig(AiFeatureStoreEntityTypeMonitoringConfigArgs monitoringConfig) {
             return monitoringConfig(Output.of(monitoringConfig));
         }
 

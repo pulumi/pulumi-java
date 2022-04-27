@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.dlm.inputs;
 
-import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsGetArgs;
+import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -67,13 +67,13 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policyDetails")
-    private @Nullable Output<LifecyclePolicyPolicyDetailsGetArgs> policyDetails;
+    private @Nullable Output<LifecyclePolicyPolicyDetailsArgs> policyDetails;
 
     /**
      * @return See the `policy_details` configuration block. Max of 1.
      * 
      */
-    public Optional<Output<LifecyclePolicyPolicyDetailsGetArgs>> policyDetails() {
+    public Optional<Output<LifecyclePolicyPolicyDetailsArgs>> policyDetails() {
         return Optional.ofNullable(this.policyDetails);
     }
 
@@ -221,7 +221,7 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder policyDetails(@Nullable Output<LifecyclePolicyPolicyDetailsGetArgs> policyDetails) {
+        public Builder policyDetails(@Nullable Output<LifecyclePolicyPolicyDetailsArgs> policyDetails) {
             $.policyDetails = policyDetails;
             return this;
         }
@@ -232,7 +232,7 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder policyDetails(LifecyclePolicyPolicyDetailsGetArgs policyDetails) {
+        public Builder policyDetails(LifecyclePolicyPolicyDetailsArgs policyDetails) {
             return policyDetails(Output.of(policyDetails));
         }
 

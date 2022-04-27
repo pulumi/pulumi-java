@@ -5,7 +5,7 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.cloudrun.inputs.IamBindingConditionGetArgs;
+import com.pulumi.gcp.cloudrun.inputs.IamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class IamBindingState extends com.pulumi.resources.ResourceArgs {
     public static final IamBindingState Empty = new IamBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<IamBindingConditionGetArgs> condition;
+    private @Nullable Output<IamBindingConditionArgs> condition;
 
-    public Optional<Output<IamBindingConditionGetArgs>> condition() {
+    public Optional<Output<IamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -142,12 +142,12 @@ public final class IamBindingState extends com.pulumi.resources.ResourceArgs {
             $ = new IamBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<IamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<IamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(IamBindingConditionGetArgs condition) {
+        public Builder condition(IamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

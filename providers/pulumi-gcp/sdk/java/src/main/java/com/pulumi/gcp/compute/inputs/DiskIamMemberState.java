@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.DiskIamMemberConditionGetArgs;
+import com.pulumi.gcp.compute.inputs.DiskIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class DiskIamMemberState extends com.pulumi.resources.ResourceArgs 
     public static final DiskIamMemberState Empty = new DiskIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<DiskIamMemberConditionGetArgs> condition;
+    private @Nullable Output<DiskIamMemberConditionArgs> condition;
 
-    public Optional<Output<DiskIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<DiskIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -145,12 +145,12 @@ public final class DiskIamMemberState extends com.pulumi.resources.ResourceArgs 
             $ = new DiskIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<DiskIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<DiskIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(DiskIamMemberConditionGetArgs condition) {
+        public Builder condition(DiskIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

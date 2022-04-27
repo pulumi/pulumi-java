@@ -5,11 +5,11 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.container.inputs.NodePoolAutoscalingGetArgs;
-import com.pulumi.gcp.container.inputs.NodePoolManagementGetArgs;
-import com.pulumi.gcp.container.inputs.NodePoolNetworkConfigGetArgs;
-import com.pulumi.gcp.container.inputs.NodePoolNodeConfigGetArgs;
-import com.pulumi.gcp.container.inputs.NodePoolUpgradeSettingsGetArgs;
+import com.pulumi.gcp.container.inputs.NodePoolAutoscalingArgs;
+import com.pulumi.gcp.container.inputs.NodePoolManagementArgs;
+import com.pulumi.gcp.container.inputs.NodePoolNetworkConfigArgs;
+import com.pulumi.gcp.container.inputs.NodePoolNodeConfigArgs;
+import com.pulumi.gcp.container.inputs.NodePoolUpgradeSettingsArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,14 +28,14 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscaling")
-    private @Nullable Output<NodePoolAutoscalingGetArgs> autoscaling;
+    private @Nullable Output<NodePoolAutoscalingArgs> autoscaling;
 
     /**
      * @return Configuration required by cluster autoscaler to adjust
      * the size of the node pool to the current cluster usage. Structure is documented below.
      * 
      */
-    public Optional<Output<NodePoolAutoscalingGetArgs>> autoscaling() {
+    public Optional<Output<NodePoolAutoscalingArgs>> autoscaling() {
         return Optional.ofNullable(this.autoscaling);
     }
 
@@ -132,14 +132,14 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="management")
-    private @Nullable Output<NodePoolManagementGetArgs> management;
+    private @Nullable Output<NodePoolManagementArgs> management;
 
     /**
      * @return Node management configuration, wherein auto-repair and
      * auto-upgrade is configured. Structure is documented below.
      * 
      */
-    public Optional<Output<NodePoolManagementGetArgs>> management() {
+    public Optional<Output<NodePoolManagementArgs>> management() {
         return Optional.ofNullable(this.management);
     }
 
@@ -206,14 +206,14 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfig")
-    private @Nullable Output<NodePoolNetworkConfigGetArgs> networkConfig;
+    private @Nullable Output<NodePoolNetworkConfigArgs> networkConfig;
 
     /**
      * @return The network configuration of the pool. See
      * gcp.container.Cluster for schema.
      * 
      */
-    public Optional<Output<NodePoolNetworkConfigGetArgs>> networkConfig() {
+    public Optional<Output<NodePoolNetworkConfigArgs>> networkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
 
@@ -223,14 +223,14 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeConfig")
-    private @Nullable Output<NodePoolNodeConfigGetArgs> nodeConfig;
+    private @Nullable Output<NodePoolNodeConfigArgs> nodeConfig;
 
     /**
      * @return Parameters used in creating the node pool. See
      * gcp.container.Cluster for schema.
      * 
      */
-    public Optional<Output<NodePoolNodeConfigGetArgs>> nodeConfig() {
+    public Optional<Output<NodePoolNodeConfigArgs>> nodeConfig() {
         return Optional.ofNullable(this.nodeConfig);
     }
 
@@ -303,7 +303,7 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="upgradeSettings")
-    private @Nullable Output<NodePoolUpgradeSettingsGetArgs> upgradeSettings;
+    private @Nullable Output<NodePoolUpgradeSettingsArgs> upgradeSettings;
 
     /**
      * @return Specify node upgrade settings to change how many nodes GKE attempts to
@@ -311,7 +311,7 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
      * The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
      * 
      */
-    public Optional<Output<NodePoolUpgradeSettingsGetArgs>> upgradeSettings() {
+    public Optional<Output<NodePoolUpgradeSettingsArgs>> upgradeSettings() {
         return Optional.ofNullable(this.upgradeSettings);
     }
 
@@ -388,7 +388,7 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoscaling(@Nullable Output<NodePoolAutoscalingGetArgs> autoscaling) {
+        public Builder autoscaling(@Nullable Output<NodePoolAutoscalingArgs> autoscaling) {
             $.autoscaling = autoscaling;
             return this;
         }
@@ -400,7 +400,7 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoscaling(NodePoolAutoscalingGetArgs autoscaling) {
+        public Builder autoscaling(NodePoolAutoscalingArgs autoscaling) {
             return autoscaling(Output.of(autoscaling));
         }
 
@@ -548,7 +548,7 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder management(@Nullable Output<NodePoolManagementGetArgs> management) {
+        public Builder management(@Nullable Output<NodePoolManagementArgs> management) {
             $.management = management;
             return this;
         }
@@ -560,7 +560,7 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder management(NodePoolManagementGetArgs management) {
+        public Builder management(NodePoolManagementArgs management) {
             return management(Output.of(management));
         }
 
@@ -646,7 +646,7 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkConfig(@Nullable Output<NodePoolNetworkConfigGetArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Output<NodePoolNetworkConfigArgs> networkConfig) {
             $.networkConfig = networkConfig;
             return this;
         }
@@ -658,7 +658,7 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkConfig(NodePoolNetworkConfigGetArgs networkConfig) {
+        public Builder networkConfig(NodePoolNetworkConfigArgs networkConfig) {
             return networkConfig(Output.of(networkConfig));
         }
 
@@ -669,7 +669,7 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodeConfig(@Nullable Output<NodePoolNodeConfigGetArgs> nodeConfig) {
+        public Builder nodeConfig(@Nullable Output<NodePoolNodeConfigArgs> nodeConfig) {
             $.nodeConfig = nodeConfig;
             return this;
         }
@@ -681,7 +681,7 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nodeConfig(NodePoolNodeConfigGetArgs nodeConfig) {
+        public Builder nodeConfig(NodePoolNodeConfigArgs nodeConfig) {
             return nodeConfig(Output.of(nodeConfig));
         }
 
@@ -788,7 +788,7 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder upgradeSettings(@Nullable Output<NodePoolUpgradeSettingsGetArgs> upgradeSettings) {
+        public Builder upgradeSettings(@Nullable Output<NodePoolUpgradeSettingsArgs> upgradeSettings) {
             $.upgradeSettings = upgradeSettings;
             return this;
         }
@@ -801,7 +801,7 @@ public final class NodePoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder upgradeSettings(NodePoolUpgradeSettingsGetArgs upgradeSettings) {
+        public Builder upgradeSettings(NodePoolUpgradeSettingsArgs upgradeSettings) {
             return upgradeSettings(Output.of(upgradeSettings));
         }
 

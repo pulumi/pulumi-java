@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.secretsmanager.inputs;
 
-import com.pulumi.aws.secretsmanager.inputs.SecretReplicaGetArgs;
-import com.pulumi.aws.secretsmanager.inputs.SecretRotationRulesGetArgs;
+import com.pulumi.aws.secretsmanager.inputs.SecretReplicaArgs;
+import com.pulumi.aws.secretsmanager.inputs.SecretRotationRulesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -146,13 +146,13 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicas")
-    private @Nullable Output<List<SecretReplicaGetArgs>> replicas;
+    private @Nullable Output<List<SecretReplicaArgs>> replicas;
 
     /**
      * @return Configuration block to support secret replication. See details below.
      * 
      */
-    public Optional<Output<List<SecretReplicaGetArgs>>> replicas() {
+    public Optional<Output<List<SecretReplicaArgs>>> replicas() {
         return Optional.ofNullable(this.replicas);
     }
 
@@ -211,7 +211,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
     @Import(name="rotationRules")
-    private @Nullable Output<SecretRotationRulesGetArgs> rotationRules;
+    private @Nullable Output<SecretRotationRulesArgs> rotationRules;
 
     /**
      * @return Configuration block for the rotation configuration of this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
@@ -221,7 +221,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
-    public Optional<Output<SecretRotationRulesGetArgs>> rotationRules() {
+    public Optional<Output<SecretRotationRulesArgs>> rotationRules() {
         return Optional.ofNullable(this.rotationRules);
     }
 
@@ -466,7 +466,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder replicas(@Nullable Output<List<SecretReplicaGetArgs>> replicas) {
+        public Builder replicas(@Nullable Output<List<SecretReplicaArgs>> replicas) {
             $.replicas = replicas;
             return this;
         }
@@ -477,7 +477,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder replicas(List<SecretReplicaGetArgs> replicas) {
+        public Builder replicas(List<SecretReplicaArgs> replicas) {
             return replicas(Output.of(replicas));
         }
 
@@ -487,7 +487,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder replicas(SecretReplicaGetArgs... replicas) {
+        public Builder replicas(SecretReplicaArgs... replicas) {
             return replicas(List.of(replicas));
         }
 
@@ -559,7 +559,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
          * 
          */
         @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
-        public Builder rotationRules(@Nullable Output<SecretRotationRulesGetArgs> rotationRules) {
+        public Builder rotationRules(@Nullable Output<SecretRotationRulesArgs> rotationRules) {
             $.rotationRules = rotationRules;
             return this;
         }
@@ -574,7 +574,7 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
          * 
          */
         @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
-        public Builder rotationRules(SecretRotationRulesGetArgs rotationRules) {
+        public Builder rotationRules(SecretRotationRulesArgs rotationRules) {
             return rotationRules(Output.of(rotationRules));
         }
 

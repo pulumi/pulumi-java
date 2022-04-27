@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.workspaces.inputs;
 
-import com.pulumi.aws.workspaces.inputs.IpGroupRuleGetArgs;
+import com.pulumi.aws.workspaces.inputs.IpGroupRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -53,13 +53,13 @@ public final class IpGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-    private @Nullable Output<List<IpGroupRuleGetArgs>> rules;
+    private @Nullable Output<List<IpGroupRuleArgs>> rules;
 
     /**
      * @return One or more pairs specifying the IP group rule (in CIDR format) from which web requests originate.
      * 
      */
-    public Optional<Output<List<IpGroupRuleGetArgs>>> rules() {
+    public Optional<Output<List<IpGroupRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
 
@@ -169,7 +169,7 @@ public final class IpGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(@Nullable Output<List<IpGroupRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<IpGroupRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
@@ -180,7 +180,7 @@ public final class IpGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(List<IpGroupRuleGetArgs> rules) {
+        public Builder rules(List<IpGroupRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
@@ -190,7 +190,7 @@ public final class IpGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(IpGroupRuleGetArgs... rules) {
+        public Builder rules(IpGroupRuleArgs... rules) {
             return rules(List.of(rules));
         }
 

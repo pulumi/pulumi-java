@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cloudwatch.inputs;
 
-import com.pulumi.aws.cloudwatch.inputs.MetricAlarmMetricQueryGetArgs;
+import com.pulumi.aws.cloudwatch.inputs.MetricAlarmMetricQueryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -218,13 +218,13 @@ public final class MetricAlarmState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricQueries")
-    private @Nullable Output<List<MetricAlarmMetricQueryGetArgs>> metricQueries;
+    private @Nullable Output<List<MetricAlarmMetricQueryArgs>> metricQueries;
 
     /**
      * @return Enables you to create an alarm based on a metric math expression. You may specify at most 20.
      * 
      */
-    public Optional<Output<List<MetricAlarmMetricQueryGetArgs>>> metricQueries() {
+    public Optional<Output<List<MetricAlarmMetricQueryArgs>>> metricQueries() {
         return Optional.ofNullable(this.metricQueries);
     }
 
@@ -734,7 +734,7 @@ public final class MetricAlarmState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder metricQueries(@Nullable Output<List<MetricAlarmMetricQueryGetArgs>> metricQueries) {
+        public Builder metricQueries(@Nullable Output<List<MetricAlarmMetricQueryArgs>> metricQueries) {
             $.metricQueries = metricQueries;
             return this;
         }
@@ -745,7 +745,7 @@ public final class MetricAlarmState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder metricQueries(List<MetricAlarmMetricQueryGetArgs> metricQueries) {
+        public Builder metricQueries(List<MetricAlarmMetricQueryArgs> metricQueries) {
             return metricQueries(Output.of(metricQueries));
         }
 
@@ -755,7 +755,7 @@ public final class MetricAlarmState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder metricQueries(MetricAlarmMetricQueryGetArgs... metricQueries) {
+        public Builder metricQueries(MetricAlarmMetricQueryArgs... metricQueries) {
             return metricQueries(List.of(metricQueries));
         }
 

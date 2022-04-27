@@ -5,7 +5,7 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.datacatalog.inputs.PolicyTagIamMemberConditionGetArgs;
+import com.pulumi.gcp.datacatalog.inputs.PolicyTagIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class PolicyTagIamMemberState extends com.pulumi.resources.Resource
     public static final PolicyTagIamMemberState Empty = new PolicyTagIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<PolicyTagIamMemberConditionGetArgs> condition;
+    private @Nullable Output<PolicyTagIamMemberConditionArgs> condition;
 
-    public Optional<Output<PolicyTagIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<PolicyTagIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -107,12 +107,12 @@ public final class PolicyTagIamMemberState extends com.pulumi.resources.Resource
             $ = new PolicyTagIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<PolicyTagIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<PolicyTagIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(PolicyTagIamMemberConditionGetArgs condition) {
+        public Builder condition(PolicyTagIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

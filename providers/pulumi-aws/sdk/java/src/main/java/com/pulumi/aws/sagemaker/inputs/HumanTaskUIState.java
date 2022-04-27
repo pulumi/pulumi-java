@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.HumanTaskUIUiTemplateGetArgs;
+import com.pulumi.aws.sagemaker.inputs.HumanTaskUIUiTemplateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -82,13 +82,13 @@ public final class HumanTaskUIState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uiTemplate")
-    private @Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate;
+    private @Nullable Output<HumanTaskUIUiTemplateArgs> uiTemplate;
 
     /**
      * @return The Liquid template for the worker user interface. See UI Template below.
      * 
      */
-    public Optional<Output<HumanTaskUIUiTemplateGetArgs>> uiTemplate() {
+    public Optional<Output<HumanTaskUIUiTemplateArgs>> uiTemplate() {
         return Optional.ofNullable(this.uiTemplate);
     }
 
@@ -210,7 +210,7 @@ public final class HumanTaskUIState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder uiTemplate(@Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate) {
+        public Builder uiTemplate(@Nullable Output<HumanTaskUIUiTemplateArgs> uiTemplate) {
             $.uiTemplate = uiTemplate;
             return this;
         }
@@ -221,7 +221,7 @@ public final class HumanTaskUIState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder uiTemplate(HumanTaskUIUiTemplateGetArgs uiTemplate) {
+        public Builder uiTemplate(HumanTaskUIUiTemplateArgs uiTemplate) {
             return uiTemplate(Output.of(uiTemplate));
         }
 

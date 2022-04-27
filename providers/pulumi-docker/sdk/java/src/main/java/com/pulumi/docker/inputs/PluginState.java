@@ -5,7 +5,7 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.docker.inputs.PluginGrantPermissionGetArgs;
+import com.pulumi.docker.inputs.PluginGrantPermissionArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -129,13 +129,13 @@ public final class PluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="grantPermissions")
-    private @Nullable Output<List<PluginGrantPermissionGetArgs>> grantPermissions;
+    private @Nullable Output<List<PluginGrantPermissionArgs>> grantPermissions;
 
     /**
      * @return Grant specific permissions only
      * 
      */
-    public Optional<Output<List<PluginGrantPermissionGetArgs>>> grantPermissions() {
+    public Optional<Output<List<PluginGrantPermissionArgs>>> grantPermissions() {
         return Optional.ofNullable(this.grantPermissions);
     }
 
@@ -365,7 +365,7 @@ public final class PluginState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder grantPermissions(@Nullable Output<List<PluginGrantPermissionGetArgs>> grantPermissions) {
+        public Builder grantPermissions(@Nullable Output<List<PluginGrantPermissionArgs>> grantPermissions) {
             $.grantPermissions = grantPermissions;
             return this;
         }
@@ -376,7 +376,7 @@ public final class PluginState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder grantPermissions(List<PluginGrantPermissionGetArgs> grantPermissions) {
+        public Builder grantPermissions(List<PluginGrantPermissionArgs> grantPermissions) {
             return grantPermissions(Output.of(grantPermissions));
         }
 
@@ -386,7 +386,7 @@ public final class PluginState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder grantPermissions(PluginGrantPermissionGetArgs... grantPermissions) {
+        public Builder grantPermissions(PluginGrantPermissionArgs... grantPermissions) {
             return grantPermissions(List.of(grantPermissions));
         }
 

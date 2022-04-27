@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigGetArgs;
-import com.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigGetArgs;
-import com.pulumi.aws.sagemaker.inputs.EndpointConfigurationProductionVariantGetArgs;
+import com.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigArgs;
+import com.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigArgs;
+import com.pulumi.aws.sagemaker.inputs.EndpointConfigurationProductionVariantArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -40,13 +40,13 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="asyncInferenceConfig")
-    private @Nullable Output<EndpointConfigurationAsyncInferenceConfigGetArgs> asyncInferenceConfig;
+    private @Nullable Output<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig;
 
     /**
      * @return Specifies configuration for how an endpoint performs asynchronous inference.
      * 
      */
-    public Optional<Output<EndpointConfigurationAsyncInferenceConfigGetArgs>> asyncInferenceConfig() {
+    public Optional<Output<EndpointConfigurationAsyncInferenceConfigArgs>> asyncInferenceConfig() {
         return Optional.ofNullable(this.asyncInferenceConfig);
     }
 
@@ -55,13 +55,13 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dataCaptureConfig")
-    private @Nullable Output<EndpointConfigurationDataCaptureConfigGetArgs> dataCaptureConfig;
+    private @Nullable Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig;
 
     /**
      * @return Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
      * 
      */
-    public Optional<Output<EndpointConfigurationDataCaptureConfigGetArgs>> dataCaptureConfig() {
+    public Optional<Output<EndpointConfigurationDataCaptureConfigArgs>> dataCaptureConfig() {
         return Optional.ofNullable(this.dataCaptureConfig);
     }
 
@@ -100,13 +100,13 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="productionVariants")
-    private @Nullable Output<List<EndpointConfigurationProductionVariantGetArgs>> productionVariants;
+    private @Nullable Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants;
 
     /**
      * @return Fields are documented below.
      * 
      */
-    public Optional<Output<List<EndpointConfigurationProductionVariantGetArgs>>> productionVariants() {
+    public Optional<Output<List<EndpointConfigurationProductionVariantArgs>>> productionVariants() {
         return Optional.ofNullable(this.productionVariants);
     }
 
@@ -198,7 +198,7 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder asyncInferenceConfig(@Nullable Output<EndpointConfigurationAsyncInferenceConfigGetArgs> asyncInferenceConfig) {
+        public Builder asyncInferenceConfig(@Nullable Output<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig) {
             $.asyncInferenceConfig = asyncInferenceConfig;
             return this;
         }
@@ -209,7 +209,7 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder asyncInferenceConfig(EndpointConfigurationAsyncInferenceConfigGetArgs asyncInferenceConfig) {
+        public Builder asyncInferenceConfig(EndpointConfigurationAsyncInferenceConfigArgs asyncInferenceConfig) {
             return asyncInferenceConfig(Output.of(asyncInferenceConfig));
         }
 
@@ -219,7 +219,7 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder dataCaptureConfig(@Nullable Output<EndpointConfigurationDataCaptureConfigGetArgs> dataCaptureConfig) {
+        public Builder dataCaptureConfig(@Nullable Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig) {
             $.dataCaptureConfig = dataCaptureConfig;
             return this;
         }
@@ -230,7 +230,7 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder dataCaptureConfig(EndpointConfigurationDataCaptureConfigGetArgs dataCaptureConfig) {
+        public Builder dataCaptureConfig(EndpointConfigurationDataCaptureConfigArgs dataCaptureConfig) {
             return dataCaptureConfig(Output.of(dataCaptureConfig));
         }
 
@@ -282,7 +282,7 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder productionVariants(@Nullable Output<List<EndpointConfigurationProductionVariantGetArgs>> productionVariants) {
+        public Builder productionVariants(@Nullable Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants) {
             $.productionVariants = productionVariants;
             return this;
         }
@@ -293,7 +293,7 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder productionVariants(List<EndpointConfigurationProductionVariantGetArgs> productionVariants) {
+        public Builder productionVariants(List<EndpointConfigurationProductionVariantArgs> productionVariants) {
             return productionVariants(Output.of(productionVariants));
         }
 
@@ -303,7 +303,7 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder productionVariants(EndpointConfigurationProductionVariantGetArgs... productionVariants) {
+        public Builder productionVariants(EndpointConfigurationProductionVariantArgs... productionVariants) {
             return productionVariants(List.of(productionVariants));
         }
 

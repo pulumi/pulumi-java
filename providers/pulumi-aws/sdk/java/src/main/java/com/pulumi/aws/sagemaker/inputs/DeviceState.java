@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.DeviceDeviceGetArgs;
+import com.pulumi.aws.sagemaker.inputs.DeviceDeviceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -43,13 +43,13 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="device")
-    private @Nullable Output<DeviceDeviceGetArgs> device;
+    private @Nullable Output<DeviceDeviceArgs> device;
 
     /**
      * @return The device to register with SageMaker Edge Manager. See Device details below.
      * 
      */
-    public Optional<Output<DeviceDeviceGetArgs>> device() {
+    public Optional<Output<DeviceDeviceArgs>> device() {
         return Optional.ofNullable(this.device);
     }
 
@@ -131,7 +131,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder device(@Nullable Output<DeviceDeviceGetArgs> device) {
+        public Builder device(@Nullable Output<DeviceDeviceArgs> device) {
             $.device = device;
             return this;
         }
@@ -142,7 +142,7 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder device(DeviceDeviceGetArgs device) {
+        public Builder device(DeviceDeviceArgs device) {
             return device(Output.of(device));
         }
 

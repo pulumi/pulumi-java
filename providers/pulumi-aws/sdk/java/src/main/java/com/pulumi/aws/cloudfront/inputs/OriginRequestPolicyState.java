@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.cloudfront.inputs;
 
-import com.pulumi.aws.cloudfront.inputs.OriginRequestPolicyCookiesConfigGetArgs;
-import com.pulumi.aws.cloudfront.inputs.OriginRequestPolicyHeadersConfigGetArgs;
-import com.pulumi.aws.cloudfront.inputs.OriginRequestPolicyQueryStringsConfigGetArgs;
+import com.pulumi.aws.cloudfront.inputs.OriginRequestPolicyCookiesConfigArgs;
+import com.pulumi.aws.cloudfront.inputs.OriginRequestPolicyHeadersConfigArgs;
+import com.pulumi.aws.cloudfront.inputs.OriginRequestPolicyQueryStringsConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -38,13 +38,13 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="cookiesConfig")
-    private @Nullable Output<OriginRequestPolicyCookiesConfigGetArgs> cookiesConfig;
+    private @Nullable Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig;
 
     /**
      * @return Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
      * 
      */
-    public Optional<Output<OriginRequestPolicyCookiesConfigGetArgs>> cookiesConfig() {
+    public Optional<Output<OriginRequestPolicyCookiesConfigArgs>> cookiesConfig() {
         return Optional.ofNullable(this.cookiesConfig);
     }
 
@@ -68,13 +68,13 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="headersConfig")
-    private @Nullable Output<OriginRequestPolicyHeadersConfigGetArgs> headersConfig;
+    private @Nullable Output<OriginRequestPolicyHeadersConfigArgs> headersConfig;
 
     /**
      * @return Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
      * 
      */
-    public Optional<Output<OriginRequestPolicyHeadersConfigGetArgs>> headersConfig() {
+    public Optional<Output<OriginRequestPolicyHeadersConfigArgs>> headersConfig() {
         return Optional.ofNullable(this.headersConfig);
     }
 
@@ -98,13 +98,13 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="queryStringsConfig")
-    private @Nullable Output<OriginRequestPolicyQueryStringsConfigGetArgs> queryStringsConfig;
+    private @Nullable Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig;
 
     /**
      * @return Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.
      * 
      */
-    public Optional<Output<OriginRequestPolicyQueryStringsConfigGetArgs>> queryStringsConfig() {
+    public Optional<Output<OriginRequestPolicyQueryStringsConfigArgs>> queryStringsConfig() {
         return Optional.ofNullable(this.queryStringsConfig);
     }
 
@@ -164,7 +164,7 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder cookiesConfig(@Nullable Output<OriginRequestPolicyCookiesConfigGetArgs> cookiesConfig) {
+        public Builder cookiesConfig(@Nullable Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig) {
             $.cookiesConfig = cookiesConfig;
             return this;
         }
@@ -175,7 +175,7 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder cookiesConfig(OriginRequestPolicyCookiesConfigGetArgs cookiesConfig) {
+        public Builder cookiesConfig(OriginRequestPolicyCookiesConfigArgs cookiesConfig) {
             return cookiesConfig(Output.of(cookiesConfig));
         }
 
@@ -206,7 +206,7 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder headersConfig(@Nullable Output<OriginRequestPolicyHeadersConfigGetArgs> headersConfig) {
+        public Builder headersConfig(@Nullable Output<OriginRequestPolicyHeadersConfigArgs> headersConfig) {
             $.headersConfig = headersConfig;
             return this;
         }
@@ -217,7 +217,7 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder headersConfig(OriginRequestPolicyHeadersConfigGetArgs headersConfig) {
+        public Builder headersConfig(OriginRequestPolicyHeadersConfigArgs headersConfig) {
             return headersConfig(Output.of(headersConfig));
         }
 
@@ -248,7 +248,7 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder queryStringsConfig(@Nullable Output<OriginRequestPolicyQueryStringsConfigGetArgs> queryStringsConfig) {
+        public Builder queryStringsConfig(@Nullable Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig) {
             $.queryStringsConfig = queryStringsConfig;
             return this;
         }
@@ -259,7 +259,7 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder queryStringsConfig(OriginRequestPolicyQueryStringsConfigGetArgs queryStringsConfig) {
+        public Builder queryStringsConfig(OriginRequestPolicyQueryStringsConfigArgs queryStringsConfig) {
             return queryStringsConfig(Output.of(queryStringsConfig));
         }
 

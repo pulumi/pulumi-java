@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.eks.inputs;
 
-import com.pulumi.aws.eks.inputs.IdentityProviderConfigOidcGetArgs;
+import com.pulumi.aws.eks.inputs.IdentityProviderConfigOidcArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -52,13 +52,13 @@ public final class IdentityProviderConfigState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="oidc")
-    private @Nullable Output<IdentityProviderConfigOidcGetArgs> oidc;
+    private @Nullable Output<IdentityProviderConfigOidcArgs> oidc;
 
     /**
      * @return Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
      * 
      */
-    public Optional<Output<IdentityProviderConfigOidcGetArgs>> oidc() {
+    public Optional<Output<IdentityProviderConfigOidcArgs>> oidc() {
         return Optional.ofNullable(this.oidc);
     }
 
@@ -184,7 +184,7 @@ public final class IdentityProviderConfigState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder oidc(@Nullable Output<IdentityProviderConfigOidcGetArgs> oidc) {
+        public Builder oidc(@Nullable Output<IdentityProviderConfigOidcArgs> oidc) {
             $.oidc = oidc;
             return this;
         }
@@ -195,7 +195,7 @@ public final class IdentityProviderConfigState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder oidc(IdentityProviderConfigOidcGetArgs oidc) {
+        public Builder oidc(IdentityProviderConfigOidcArgs oidc) {
             return oidc(Output.of(oidc));
         }
 

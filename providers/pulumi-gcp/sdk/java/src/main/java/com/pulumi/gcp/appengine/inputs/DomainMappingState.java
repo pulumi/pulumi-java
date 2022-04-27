@@ -5,8 +5,8 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.appengine.inputs.DomainMappingResourceRecordGetArgs;
-import com.pulumi.gcp.appengine.inputs.DomainMappingSslSettingsGetArgs;
+import com.pulumi.gcp.appengine.inputs.DomainMappingResourceRecordArgs;
+import com.pulumi.gcp.appengine.inputs.DomainMappingSslSettingsArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -92,14 +92,14 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceRecords")
-    private @Nullable Output<List<DomainMappingResourceRecordGetArgs>> resourceRecords;
+    private @Nullable Output<List<DomainMappingResourceRecordArgs>> resourceRecords;
 
     /**
      * @return The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS
      * configuration in order to serve the application via this domain mapping.
      * 
      */
-    public Optional<Output<List<DomainMappingResourceRecordGetArgs>>> resourceRecords() {
+    public Optional<Output<List<DomainMappingResourceRecordArgs>>> resourceRecords() {
         return Optional.ofNullable(this.resourceRecords);
     }
 
@@ -109,14 +109,14 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sslSettings")
-    private @Nullable Output<DomainMappingSslSettingsGetArgs> sslSettings;
+    private @Nullable Output<DomainMappingSslSettingsArgs> sslSettings;
 
     /**
      * @return SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<DomainMappingSslSettingsGetArgs>> sslSettings() {
+    public Optional<Output<DomainMappingSslSettingsArgs>> sslSettings() {
         return Optional.ofNullable(this.sslSettings);
     }
 
@@ -248,7 +248,7 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder resourceRecords(@Nullable Output<List<DomainMappingResourceRecordGetArgs>> resourceRecords) {
+        public Builder resourceRecords(@Nullable Output<List<DomainMappingResourceRecordArgs>> resourceRecords) {
             $.resourceRecords = resourceRecords;
             return this;
         }
@@ -260,7 +260,7 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder resourceRecords(List<DomainMappingResourceRecordGetArgs> resourceRecords) {
+        public Builder resourceRecords(List<DomainMappingResourceRecordArgs> resourceRecords) {
             return resourceRecords(Output.of(resourceRecords));
         }
 
@@ -271,7 +271,7 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder resourceRecords(DomainMappingResourceRecordGetArgs... resourceRecords) {
+        public Builder resourceRecords(DomainMappingResourceRecordArgs... resourceRecords) {
             return resourceRecords(List.of(resourceRecords));
         }
 
@@ -282,7 +282,7 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder sslSettings(@Nullable Output<DomainMappingSslSettingsGetArgs> sslSettings) {
+        public Builder sslSettings(@Nullable Output<DomainMappingSslSettingsArgs> sslSettings) {
             $.sslSettings = sslSettings;
             return this;
         }
@@ -294,7 +294,7 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder sslSettings(DomainMappingSslSettingsGetArgs sslSettings) {
+        public Builder sslSettings(DomainMappingSslSettingsArgs sslSettings) {
             return sslSettings(Output.of(sslSettings));
         }
 

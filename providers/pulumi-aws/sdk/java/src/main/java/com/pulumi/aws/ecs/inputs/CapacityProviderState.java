@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ecs.inputs;
 
-import com.pulumi.aws.ecs.inputs.CapacityProviderAutoScalingGroupProviderGetArgs;
+import com.pulumi.aws.ecs.inputs.CapacityProviderAutoScalingGroupProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +37,13 @@ public final class CapacityProviderState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="autoScalingGroupProvider")
-    private @Nullable Output<CapacityProviderAutoScalingGroupProviderGetArgs> autoScalingGroupProvider;
+    private @Nullable Output<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider;
 
     /**
      * @return Configuration block for the provider for the ECS auto scaling group. Detailed below.
      * 
      */
-    public Optional<Output<CapacityProviderAutoScalingGroupProviderGetArgs>> autoScalingGroupProvider() {
+    public Optional<Output<CapacityProviderAutoScalingGroupProviderArgs>> autoScalingGroupProvider() {
         return Optional.ofNullable(this.autoScalingGroupProvider);
     }
 
@@ -139,7 +139,7 @@ public final class CapacityProviderState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder autoScalingGroupProvider(@Nullable Output<CapacityProviderAutoScalingGroupProviderGetArgs> autoScalingGroupProvider) {
+        public Builder autoScalingGroupProvider(@Nullable Output<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider) {
             $.autoScalingGroupProvider = autoScalingGroupProvider;
             return this;
         }
@@ -150,7 +150,7 @@ public final class CapacityProviderState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder autoScalingGroupProvider(CapacityProviderAutoScalingGroupProviderGetArgs autoScalingGroupProvider) {
+        public Builder autoScalingGroupProvider(CapacityProviderAutoScalingGroupProviderArgs autoScalingGroupProvider) {
             return autoScalingGroupProvider(Output.of(autoScalingGroupProvider));
         }
 

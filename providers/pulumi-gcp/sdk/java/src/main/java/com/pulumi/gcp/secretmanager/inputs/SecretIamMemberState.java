@@ -5,7 +5,7 @@ package com.pulumi.gcp.secretmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.secretmanager.inputs.SecretIamMemberConditionGetArgs;
+import com.pulumi.gcp.secretmanager.inputs.SecretIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class SecretIamMemberState extends com.pulumi.resources.ResourceArg
     public static final SecretIamMemberState Empty = new SecretIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<SecretIamMemberConditionGetArgs> condition;
+    private @Nullable Output<SecretIamMemberConditionArgs> condition;
 
-    public Optional<Output<SecretIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<SecretIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -117,12 +117,12 @@ public final class SecretIamMemberState extends com.pulumi.resources.ResourceArg
             $ = new SecretIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<SecretIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<SecretIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(SecretIamMemberConditionGetArgs condition) {
+        public Builder condition(SecretIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

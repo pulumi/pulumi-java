@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cloudformation.inputs;
 
-import com.pulumi.aws.cloudformation.inputs.CloudFormationTypeLoggingConfigGetArgs;
+import com.pulumi.aws.cloudformation.inputs.CloudFormationTypeLoggingConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -127,13 +127,13 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="loggingConfig")
-    private @Nullable Output<CloudFormationTypeLoggingConfigGetArgs> loggingConfig;
+    private @Nullable Output<CloudFormationTypeLoggingConfigArgs> loggingConfig;
 
     /**
      * @return Configuration block containing logging configuration.
      * 
      */
-    public Optional<Output<CloudFormationTypeLoggingConfigGetArgs>> loggingConfig() {
+    public Optional<Output<CloudFormationTypeLoggingConfigArgs>> loggingConfig() {
         return Optional.ofNullable(this.loggingConfig);
     }
 
@@ -465,7 +465,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder loggingConfig(@Nullable Output<CloudFormationTypeLoggingConfigGetArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Output<CloudFormationTypeLoggingConfigArgs> loggingConfig) {
             $.loggingConfig = loggingConfig;
             return this;
         }
@@ -476,7 +476,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder loggingConfig(CloudFormationTypeLoggingConfigGetArgs loggingConfig) {
+        public Builder loggingConfig(CloudFormationTypeLoggingConfigArgs loggingConfig) {
             return loggingConfig(Output.of(loggingConfig));
         }
 

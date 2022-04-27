@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.s3.inputs;
 
-import com.pulumi.aws.s3.inputs.BucketMetricFilterGetArgs;
+import com.pulumi.aws.s3.inputs.BucketMetricFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class BucketMetricState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-    private @Nullable Output<BucketMetricFilterGetArgs> filter;
+    private @Nullable Output<BucketMetricFilterArgs> filter;
 
     /**
      * @return [Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
      * 
      */
-    public Optional<Output<BucketMetricFilterGetArgs>> filter() {
+    public Optional<Output<BucketMetricFilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
 
@@ -114,7 +114,7 @@ public final class BucketMetricState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder filter(@Nullable Output<BucketMetricFilterGetArgs> filter) {
+        public Builder filter(@Nullable Output<BucketMetricFilterArgs> filter) {
             $.filter = filter;
             return this;
         }
@@ -125,7 +125,7 @@ public final class BucketMetricState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder filter(BucketMetricFilterGetArgs filter) {
+        public Builder filter(BucketMetricFilterArgs filter) {
             return filter(Output.of(filter));
         }
 

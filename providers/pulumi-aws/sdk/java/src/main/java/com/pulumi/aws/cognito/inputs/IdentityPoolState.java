@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cognito.inputs;
 
-import com.pulumi.aws.cognito.inputs.IdentityPoolCognitoIdentityProviderGetArgs;
+import com.pulumi.aws.cognito.inputs.IdentityPoolCognitoIdentityProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -69,13 +69,13 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cognitoIdentityProviders")
-    private @Nullable Output<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders;
+    private @Nullable Output<List<IdentityPoolCognitoIdentityProviderArgs>> cognitoIdentityProviders;
 
     /**
      * @return An array of Amazon Cognito Identity user pools and their client IDs.
      * 
      */
-    public Optional<Output<List<IdentityPoolCognitoIdentityProviderGetArgs>>> cognitoIdentityProviders() {
+    public Optional<Output<List<IdentityPoolCognitoIdentityProviderArgs>>> cognitoIdentityProviders() {
         return Optional.ofNullable(this.cognitoIdentityProviders);
     }
 
@@ -289,7 +289,7 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cognitoIdentityProviders(@Nullable Output<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders) {
+        public Builder cognitoIdentityProviders(@Nullable Output<List<IdentityPoolCognitoIdentityProviderArgs>> cognitoIdentityProviders) {
             $.cognitoIdentityProviders = cognitoIdentityProviders;
             return this;
         }
@@ -300,7 +300,7 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cognitoIdentityProviders(List<IdentityPoolCognitoIdentityProviderGetArgs> cognitoIdentityProviders) {
+        public Builder cognitoIdentityProviders(List<IdentityPoolCognitoIdentityProviderArgs> cognitoIdentityProviders) {
             return cognitoIdentityProviders(Output.of(cognitoIdentityProviders));
         }
 
@@ -310,7 +310,7 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cognitoIdentityProviders(IdentityPoolCognitoIdentityProviderGetArgs... cognitoIdentityProviders) {
+        public Builder cognitoIdentityProviders(IdentityPoolCognitoIdentityProviderArgs... cognitoIdentityProviders) {
             return cognitoIdentityProviders(List.of(cognitoIdentityProviders));
         }
 

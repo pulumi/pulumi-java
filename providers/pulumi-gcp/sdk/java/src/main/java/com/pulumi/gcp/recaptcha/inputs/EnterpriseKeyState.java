@@ -5,10 +5,10 @@ package com.pulumi.gcp.recaptcha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyAndroidSettingsGetArgs;
-import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyIosSettingsGetArgs;
-import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyTestingOptionsGetArgs;
-import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyWebSettingsGetArgs;
+import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyAndroidSettingsArgs;
+import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyIosSettingsArgs;
+import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyTestingOptionsArgs;
+import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyWebSettingsArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,13 +25,13 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="androidSettings")
-    private @Nullable Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings;
+    private @Nullable Output<EnterpriseKeyAndroidSettingsArgs> androidSettings;
 
     /**
      * @return Settings for keys that can be used by Android apps.
      * 
      */
-    public Optional<Output<EnterpriseKeyAndroidSettingsGetArgs>> androidSettings() {
+    public Optional<Output<EnterpriseKeyAndroidSettingsArgs>> androidSettings() {
         return Optional.ofNullable(this.androidSettings);
     }
 
@@ -70,13 +70,13 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="iosSettings")
-    private @Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings;
+    private @Nullable Output<EnterpriseKeyIosSettingsArgs> iosSettings;
 
     /**
      * @return Settings for keys that can be used by iOS apps.
      * 
      */
-    public Optional<Output<EnterpriseKeyIosSettingsGetArgs>> iosSettings() {
+    public Optional<Output<EnterpriseKeyIosSettingsArgs>> iosSettings() {
         return Optional.ofNullable(this.iosSettings);
     }
 
@@ -130,13 +130,13 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="testingOptions")
-    private @Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions;
+    private @Nullable Output<EnterpriseKeyTestingOptionsArgs> testingOptions;
 
     /**
      * @return Options for user acceptance testing.
      * 
      */
-    public Optional<Output<EnterpriseKeyTestingOptionsGetArgs>> testingOptions() {
+    public Optional<Output<EnterpriseKeyTestingOptionsArgs>> testingOptions() {
         return Optional.ofNullable(this.testingOptions);
     }
 
@@ -145,13 +145,13 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="webSettings")
-    private @Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings;
+    private @Nullable Output<EnterpriseKeyWebSettingsArgs> webSettings;
 
     /**
      * @return Settings for keys that can be used by websites.
      * 
      */
-    public Optional<Output<EnterpriseKeyWebSettingsGetArgs>> webSettings() {
+    public Optional<Output<EnterpriseKeyWebSettingsArgs>> webSettings() {
         return Optional.ofNullable(this.webSettings);
     }
 
@@ -193,7 +193,7 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder androidSettings(@Nullable Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings) {
+        public Builder androidSettings(@Nullable Output<EnterpriseKeyAndroidSettingsArgs> androidSettings) {
             $.androidSettings = androidSettings;
             return this;
         }
@@ -204,7 +204,7 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder androidSettings(EnterpriseKeyAndroidSettingsGetArgs androidSettings) {
+        public Builder androidSettings(EnterpriseKeyAndroidSettingsArgs androidSettings) {
             return androidSettings(Output.of(androidSettings));
         }
 
@@ -256,7 +256,7 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder iosSettings(@Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings) {
+        public Builder iosSettings(@Nullable Output<EnterpriseKeyIosSettingsArgs> iosSettings) {
             $.iosSettings = iosSettings;
             return this;
         }
@@ -267,7 +267,7 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder iosSettings(EnterpriseKeyIosSettingsGetArgs iosSettings) {
+        public Builder iosSettings(EnterpriseKeyIosSettingsArgs iosSettings) {
             return iosSettings(Output.of(iosSettings));
         }
 
@@ -340,7 +340,7 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder testingOptions(@Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions) {
+        public Builder testingOptions(@Nullable Output<EnterpriseKeyTestingOptionsArgs> testingOptions) {
             $.testingOptions = testingOptions;
             return this;
         }
@@ -351,7 +351,7 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder testingOptions(EnterpriseKeyTestingOptionsGetArgs testingOptions) {
+        public Builder testingOptions(EnterpriseKeyTestingOptionsArgs testingOptions) {
             return testingOptions(Output.of(testingOptions));
         }
 
@@ -361,7 +361,7 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder webSettings(@Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings) {
+        public Builder webSettings(@Nullable Output<EnterpriseKeyWebSettingsArgs> webSettings) {
             $.webSettings = webSettings;
             return this;
         }
@@ -372,7 +372,7 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder webSettings(EnterpriseKeyWebSettingsGetArgs webSettings) {
+        public Builder webSettings(EnterpriseKeyWebSettingsArgs webSettings) {
             return webSettings(Output.of(webSettings));
         }
 

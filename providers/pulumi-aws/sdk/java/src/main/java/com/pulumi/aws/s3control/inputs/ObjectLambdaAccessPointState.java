@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.s3control.inputs;
 
-import com.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationGetArgs;
+import com.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -43,13 +43,13 @@ public final class ObjectLambdaAccessPointState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="configuration")
-    private @Nullable Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration;
+    private @Nullable Output<ObjectLambdaAccessPointConfigurationArgs> configuration;
 
     /**
      * @return A configuration block containing details about the Object Lambda Access Point. See Configuration below for more details.
      * 
      */
-    public Optional<Output<ObjectLambdaAccessPointConfigurationGetArgs>> configuration() {
+    public Optional<Output<ObjectLambdaAccessPointConfigurationArgs>> configuration() {
         return Optional.ofNullable(this.configuration);
     }
 
@@ -131,7 +131,7 @@ public final class ObjectLambdaAccessPointState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder configuration(@Nullable Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration) {
+        public Builder configuration(@Nullable Output<ObjectLambdaAccessPointConfigurationArgs> configuration) {
             $.configuration = configuration;
             return this;
         }
@@ -142,7 +142,7 @@ public final class ObjectLambdaAccessPointState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder configuration(ObjectLambdaAccessPointConfigurationGetArgs configuration) {
+        public Builder configuration(ObjectLambdaAccessPointConfigurationArgs configuration) {
             return configuration(Output.of(configuration));
         }
 

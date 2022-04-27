@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.directoryservice.inputs;
 
-import com.pulumi.aws.directoryservice.inputs.DirectoryConnectSettingsGetArgs;
-import com.pulumi.aws.directoryservice.inputs.DirectoryVpcSettingsGetArgs;
+import com.pulumi.aws.directoryservice.inputs.DirectoryConnectSettingsArgs;
+import com.pulumi.aws.directoryservice.inputs.DirectoryVpcSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -55,13 +55,13 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectSettings")
-    private @Nullable Output<DirectoryConnectSettingsGetArgs> connectSettings;
+    private @Nullable Output<DirectoryConnectSettingsArgs> connectSettings;
 
     /**
      * @return Connector related information about the directory. Fields documented below.
      * 
      */
-    public Optional<Output<DirectoryConnectSettingsGetArgs>> connectSettings() {
+    public Optional<Output<DirectoryConnectSettingsArgs>> connectSettings() {
         return Optional.ofNullable(this.connectSettings);
     }
 
@@ -250,13 +250,13 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcSettings")
-    private @Nullable Output<DirectoryVpcSettingsGetArgs> vpcSettings;
+    private @Nullable Output<DirectoryVpcSettingsArgs> vpcSettings;
 
     /**
      * @return VPC related information about the directory. Fields documented below.
      * 
      */
-    public Optional<Output<DirectoryVpcSettingsGetArgs>> vpcSettings() {
+    public Optional<Output<DirectoryVpcSettingsArgs>> vpcSettings() {
         return Optional.ofNullable(this.vpcSettings);
     }
 
@@ -347,7 +347,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder connectSettings(@Nullable Output<DirectoryConnectSettingsGetArgs> connectSettings) {
+        public Builder connectSettings(@Nullable Output<DirectoryConnectSettingsArgs> connectSettings) {
             $.connectSettings = connectSettings;
             return this;
         }
@@ -358,7 +358,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder connectSettings(DirectoryConnectSettingsGetArgs connectSettings) {
+        public Builder connectSettings(DirectoryConnectSettingsArgs connectSettings) {
             return connectSettings(Output.of(connectSettings));
         }
 
@@ -630,7 +630,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcSettings(@Nullable Output<DirectoryVpcSettingsGetArgs> vpcSettings) {
+        public Builder vpcSettings(@Nullable Output<DirectoryVpcSettingsArgs> vpcSettings) {
             $.vpcSettings = vpcSettings;
             return this;
         }
@@ -641,7 +641,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcSettings(DirectoryVpcSettingsGetArgs vpcSettings) {
+        public Builder vpcSettings(DirectoryVpcSettingsArgs vpcSettings) {
             return vpcSettings(Output.of(vpcSettings));
         }
 

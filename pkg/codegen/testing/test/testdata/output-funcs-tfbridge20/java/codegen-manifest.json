@@ -10,7 +10,6 @@
     "src/main/java/com/pulumi/mypkg/inputs/GetAmiIdsArgs.java",
     "src/main/java/com/pulumi/mypkg/inputs/GetAmiIdsFilter.java",
     "src/main/java/com/pulumi/mypkg/inputs/ListStorageAccountKeysArgs.java",
-    "src/main/java/com/pulumi/mypkg/inputs/StorageAccountKeyResponse.java",
     "src/main/java/com/pulumi/mypkg/outputs/GetAmiIdsFilter.java",
     "src/main/java/com/pulumi/mypkg/outputs/GetAmiIdsResult.java",
     "src/main/java/com/pulumi/mypkg/outputs/ListStorageAccountKeysResult.java",

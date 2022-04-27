@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.applicationloadbalancing.inputs;
 
-import com.pulumi.aws.applicationloadbalancing.inputs.ListenerDefaultActionGetArgs;
+import com.pulumi.aws.applicationloadbalancing.inputs.ListenerDefaultActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -69,13 +69,13 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultActions")
-    private @Nullable Output<List<ListenerDefaultActionGetArgs>> defaultActions;
+    private @Nullable Output<List<ListenerDefaultActionArgs>> defaultActions;
 
     /**
      * @return Configuration block for default actions. Detailed below.
      * 
      */
-    public Optional<Output<List<ListenerDefaultActionGetArgs>>> defaultActions() {
+    public Optional<Output<List<ListenerDefaultActionArgs>>> defaultActions() {
         return Optional.ofNullable(this.defaultActions);
     }
 
@@ -271,7 +271,7 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultActions(@Nullable Output<List<ListenerDefaultActionGetArgs>> defaultActions) {
+        public Builder defaultActions(@Nullable Output<List<ListenerDefaultActionArgs>> defaultActions) {
             $.defaultActions = defaultActions;
             return this;
         }
@@ -282,7 +282,7 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultActions(List<ListenerDefaultActionGetArgs> defaultActions) {
+        public Builder defaultActions(List<ListenerDefaultActionArgs> defaultActions) {
             return defaultActions(Output.of(defaultActions));
         }
 
@@ -292,7 +292,7 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder defaultActions(ListenerDefaultActionGetArgs... defaultActions) {
+        public Builder defaultActions(ListenerDefaultActionArgs... defaultActions) {
             return defaultActions(List.of(defaultActions));
         }
 

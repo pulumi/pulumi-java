@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.WorkforceCognitoConfigGetArgs;
-import com.pulumi.aws.sagemaker.inputs.WorkforceOidcConfigGetArgs;
-import com.pulumi.aws.sagemaker.inputs.WorkforceSourceIpConfigGetArgs;
+import com.pulumi.aws.sagemaker.inputs.WorkforceCognitoConfigArgs;
+import com.pulumi.aws.sagemaker.inputs.WorkforceOidcConfigArgs;
+import com.pulumi.aws.sagemaker.inputs.WorkforceSourceIpConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -38,13 +38,13 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cognitoConfig")
-    private @Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig;
+    private @Nullable Output<WorkforceCognitoConfigArgs> cognitoConfig;
 
     /**
      * @return Use this parameter to configure an Amazon Cognito private workforce. A single Cognito workforce is created using and corresponds to a single Amazon Cognito user pool. Conflicts with `oidc_config`. see Cognito Config details below.
      * 
      */
-    public Optional<Output<WorkforceCognitoConfigGetArgs>> cognitoConfig() {
+    public Optional<Output<WorkforceCognitoConfigArgs>> cognitoConfig() {
         return Optional.ofNullable(this.cognitoConfig);
     }
 
@@ -53,13 +53,13 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oidcConfig")
-    private @Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig;
+    private @Nullable Output<WorkforceOidcConfigArgs> oidcConfig;
 
     /**
      * @return Use this parameter to configure a private workforce using your own OIDC Identity Provider. Conflicts with `cognito_config`. see OIDC Config details below.
      * 
      */
-    public Optional<Output<WorkforceOidcConfigGetArgs>> oidcConfig() {
+    public Optional<Output<WorkforceOidcConfigArgs>> oidcConfig() {
         return Optional.ofNullable(this.oidcConfig);
     }
 
@@ -68,13 +68,13 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceIpConfig")
-    private @Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig;
+    private @Nullable Output<WorkforceSourceIpConfigArgs> sourceIpConfig;
 
     /**
      * @return A list of IP address ranges Used to create an allow list of IP addresses for a private workforce. By default, a workforce isn&#39;t restricted to specific IP addresses. see Source Ip Config details below.
      * 
      */
-    public Optional<Output<WorkforceSourceIpConfigGetArgs>> sourceIpConfig() {
+    public Optional<Output<WorkforceSourceIpConfigArgs>> sourceIpConfig() {
         return Optional.ofNullable(this.sourceIpConfig);
     }
 
@@ -164,7 +164,7 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cognitoConfig(@Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig) {
+        public Builder cognitoConfig(@Nullable Output<WorkforceCognitoConfigArgs> cognitoConfig) {
             $.cognitoConfig = cognitoConfig;
             return this;
         }
@@ -175,7 +175,7 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder cognitoConfig(WorkforceCognitoConfigGetArgs cognitoConfig) {
+        public Builder cognitoConfig(WorkforceCognitoConfigArgs cognitoConfig) {
             return cognitoConfig(Output.of(cognitoConfig));
         }
 
@@ -185,7 +185,7 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder oidcConfig(@Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig) {
+        public Builder oidcConfig(@Nullable Output<WorkforceOidcConfigArgs> oidcConfig) {
             $.oidcConfig = oidcConfig;
             return this;
         }
@@ -196,7 +196,7 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder oidcConfig(WorkforceOidcConfigGetArgs oidcConfig) {
+        public Builder oidcConfig(WorkforceOidcConfigArgs oidcConfig) {
             return oidcConfig(Output.of(oidcConfig));
         }
 
@@ -206,7 +206,7 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sourceIpConfig(@Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig) {
+        public Builder sourceIpConfig(@Nullable Output<WorkforceSourceIpConfigArgs> sourceIpConfig) {
             $.sourceIpConfig = sourceIpConfig;
             return this;
         }
@@ -217,7 +217,7 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sourceIpConfig(WorkforceSourceIpConfigGetArgs sourceIpConfig) {
+        public Builder sourceIpConfig(WorkforceSourceIpConfigArgs sourceIpConfig) {
             return sourceIpConfig(Output.of(sourceIpConfig));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.datasync.inputs;
 
-import com.pulumi.aws.datasync.inputs.S3LocationS3ConfigGetArgs;
+import com.pulumi.aws.datasync.inputs.S3LocationS3ConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -68,13 +68,13 @@ public final class S3LocationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3Config")
-    private @Nullable Output<S3LocationS3ConfigGetArgs> s3Config;
+    private @Nullable Output<S3LocationS3ConfigArgs> s3Config;
 
     /**
      * @return Configuration block containing information for connecting to S3.
      * 
      */
-    public Optional<Output<S3LocationS3ConfigGetArgs>> s3Config() {
+    public Optional<Output<S3LocationS3ConfigArgs>> s3Config() {
         return Optional.ofNullable(this.s3Config);
     }
 
@@ -256,7 +256,7 @@ public final class S3LocationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder s3Config(@Nullable Output<S3LocationS3ConfigGetArgs> s3Config) {
+        public Builder s3Config(@Nullable Output<S3LocationS3ConfigArgs> s3Config) {
             $.s3Config = s3Config;
             return this;
         }
@@ -267,7 +267,7 @@ public final class S3LocationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder s3Config(S3LocationS3ConfigGetArgs s3Config) {
+        public Builder s3Config(S3LocationS3ConfigArgs s3Config) {
             return s3Config(Output.of(s3Config));
         }
 

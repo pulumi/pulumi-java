@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.fsx.inputs;
 
-import com.pulumi.aws.fsx.inputs.WindowsFileSystemAuditLogConfigurationGetArgs;
-import com.pulumi.aws.fsx.inputs.WindowsFileSystemSelfManagedActiveDirectoryGetArgs;
+import com.pulumi.aws.fsx.inputs.WindowsFileSystemAuditLogConfigurationArgs;
+import com.pulumi.aws.fsx.inputs.WindowsFileSystemSelfManagedActiveDirectoryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -71,13 +71,13 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="auditLogConfiguration")
-    private @Nullable Output<WindowsFileSystemAuditLogConfigurationGetArgs> auditLogConfiguration;
+    private @Nullable Output<WindowsFileSystemAuditLogConfigurationArgs> auditLogConfiguration;
 
     /**
      * @return The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See below.
      * 
      */
-    public Optional<Output<WindowsFileSystemAuditLogConfigurationGetArgs>> auditLogConfiguration() {
+    public Optional<Output<WindowsFileSystemAuditLogConfigurationArgs>> auditLogConfiguration() {
         return Optional.ofNullable(this.auditLogConfiguration);
     }
 
@@ -281,13 +281,13 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="selfManagedActiveDirectory")
-    private @Nullable Output<WindowsFileSystemSelfManagedActiveDirectoryGetArgs> selfManagedActiveDirectory;
+    private @Nullable Output<WindowsFileSystemSelfManagedActiveDirectoryArgs> selfManagedActiveDirectory;
 
     /**
      * @return Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `active_directory_id`. Detailed below.
      * 
      */
-    public Optional<Output<WindowsFileSystemSelfManagedActiveDirectoryGetArgs>> selfManagedActiveDirectory() {
+    public Optional<Output<WindowsFileSystemSelfManagedActiveDirectoryArgs>> selfManagedActiveDirectory() {
         return Optional.ofNullable(this.selfManagedActiveDirectory);
     }
 
@@ -555,7 +555,7 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder auditLogConfiguration(@Nullable Output<WindowsFileSystemAuditLogConfigurationGetArgs> auditLogConfiguration) {
+        public Builder auditLogConfiguration(@Nullable Output<WindowsFileSystemAuditLogConfigurationArgs> auditLogConfiguration) {
             $.auditLogConfiguration = auditLogConfiguration;
             return this;
         }
@@ -566,7 +566,7 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder auditLogConfiguration(WindowsFileSystemAuditLogConfigurationGetArgs auditLogConfiguration) {
+        public Builder auditLogConfiguration(WindowsFileSystemAuditLogConfigurationArgs auditLogConfiguration) {
             return auditLogConfiguration(Output.of(auditLogConfiguration));
         }
 
@@ -869,7 +869,7 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder selfManagedActiveDirectory(@Nullable Output<WindowsFileSystemSelfManagedActiveDirectoryGetArgs> selfManagedActiveDirectory) {
+        public Builder selfManagedActiveDirectory(@Nullable Output<WindowsFileSystemSelfManagedActiveDirectoryArgs> selfManagedActiveDirectory) {
             $.selfManagedActiveDirectory = selfManagedActiveDirectory;
             return this;
         }
@@ -880,7 +880,7 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder selfManagedActiveDirectory(WindowsFileSystemSelfManagedActiveDirectoryGetArgs selfManagedActiveDirectory) {
+        public Builder selfManagedActiveDirectory(WindowsFileSystemSelfManagedActiveDirectoryArgs selfManagedActiveDirectory) {
             return selfManagedActiveDirectory(Output.of(selfManagedActiveDirectory));
         }
 

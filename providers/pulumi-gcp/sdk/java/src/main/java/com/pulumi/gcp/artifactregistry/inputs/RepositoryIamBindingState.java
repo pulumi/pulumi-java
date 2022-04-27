@@ -5,7 +5,7 @@ package com.pulumi.gcp.artifactregistry.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.artifactregistry.inputs.RepositoryIamBindingConditionGetArgs;
+import com.pulumi.gcp.artifactregistry.inputs.RepositoryIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class RepositoryIamBindingState extends com.pulumi.resources.Resour
     public static final RepositoryIamBindingState Empty = new RepositoryIamBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<RepositoryIamBindingConditionGetArgs> condition;
+    private @Nullable Output<RepositoryIamBindingConditionArgs> condition;
 
-    public Optional<Output<RepositoryIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<RepositoryIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -144,12 +144,12 @@ public final class RepositoryIamBindingState extends com.pulumi.resources.Resour
             $ = new RepositoryIamBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<RepositoryIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<RepositoryIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(RepositoryIamBindingConditionGetArgs condition) {
+        public Builder condition(RepositoryIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

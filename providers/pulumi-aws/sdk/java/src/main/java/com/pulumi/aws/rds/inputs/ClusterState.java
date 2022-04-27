@@ -5,9 +5,9 @@ package com.pulumi.aws.rds.inputs;
 
 import com.pulumi.aws.rds.enums.EngineMode;
 import com.pulumi.aws.rds.enums.EngineType;
-import com.pulumi.aws.rds.inputs.ClusterRestoreToPointInTimeGetArgs;
-import com.pulumi.aws.rds.inputs.ClusterS3ImportGetArgs;
-import com.pulumi.aws.rds.inputs.ClusterScalingConfigurationGetArgs;
+import com.pulumi.aws.rds.inputs.ClusterRestoreToPointInTimeArgs;
+import com.pulumi.aws.rds.inputs.ClusterS3ImportArgs;
+import com.pulumi.aws.rds.inputs.ClusterScalingConfigurationArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -587,20 +587,20 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restoreToPointInTime")
-    private @Nullable Output<ClusterRestoreToPointInTimeGetArgs> restoreToPointInTime;
+    private @Nullable Output<ClusterRestoreToPointInTimeArgs> restoreToPointInTime;
 
     /**
      * @return Nested attribute for [point in time restore](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PIT.html). More details below.
      * 
      */
-    public Optional<Output<ClusterRestoreToPointInTimeGetArgs>> restoreToPointInTime() {
+    public Optional<Output<ClusterRestoreToPointInTimeArgs>> restoreToPointInTime() {
         return Optional.ofNullable(this.restoreToPointInTime);
     }
 
     @Import(name="s3Import")
-    private @Nullable Output<ClusterS3ImportGetArgs> s3Import;
+    private @Nullable Output<ClusterS3ImportArgs> s3Import;
 
-    public Optional<Output<ClusterS3ImportGetArgs>> s3Import() {
+    public Optional<Output<ClusterS3ImportArgs>> s3Import() {
         return Optional.ofNullable(this.s3Import);
     }
 
@@ -609,13 +609,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scalingConfiguration")
-    private @Nullable Output<ClusterScalingConfigurationGetArgs> scalingConfiguration;
+    private @Nullable Output<ClusterScalingConfigurationArgs> scalingConfiguration;
 
     /**
      * @return Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
      * 
      */
-    public Optional<Output<ClusterScalingConfigurationGetArgs>> scalingConfiguration() {
+    public Optional<Output<ClusterScalingConfigurationArgs>> scalingConfiguration() {
         return Optional.ofNullable(this.scalingConfiguration);
     }
 
@@ -1659,7 +1659,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder restoreToPointInTime(@Nullable Output<ClusterRestoreToPointInTimeGetArgs> restoreToPointInTime) {
+        public Builder restoreToPointInTime(@Nullable Output<ClusterRestoreToPointInTimeArgs> restoreToPointInTime) {
             $.restoreToPointInTime = restoreToPointInTime;
             return this;
         }
@@ -1670,16 +1670,16 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder restoreToPointInTime(ClusterRestoreToPointInTimeGetArgs restoreToPointInTime) {
+        public Builder restoreToPointInTime(ClusterRestoreToPointInTimeArgs restoreToPointInTime) {
             return restoreToPointInTime(Output.of(restoreToPointInTime));
         }
 
-        public Builder s3Import(@Nullable Output<ClusterS3ImportGetArgs> s3Import) {
+        public Builder s3Import(@Nullable Output<ClusterS3ImportArgs> s3Import) {
             $.s3Import = s3Import;
             return this;
         }
 
-        public Builder s3Import(ClusterS3ImportGetArgs s3Import) {
+        public Builder s3Import(ClusterS3ImportArgs s3Import) {
             return s3Import(Output.of(s3Import));
         }
 
@@ -1689,7 +1689,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scalingConfiguration(@Nullable Output<ClusterScalingConfigurationGetArgs> scalingConfiguration) {
+        public Builder scalingConfiguration(@Nullable Output<ClusterScalingConfigurationArgs> scalingConfiguration) {
             $.scalingConfiguration = scalingConfiguration;
             return this;
         }
@@ -1700,7 +1700,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scalingConfiguration(ClusterScalingConfigurationGetArgs scalingConfiguration) {
+        public Builder scalingConfiguration(ClusterScalingConfigurationArgs scalingConfiguration) {
             return scalingConfiguration(Output.of(scalingConfiguration));
         }
 

@@ -5,7 +5,7 @@ package com.pulumi.gcp.artifactregistry.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.artifactregistry.inputs.RepositoryIamMemberConditionGetArgs;
+import com.pulumi.gcp.artifactregistry.inputs.RepositoryIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class RepositoryIamMemberState extends com.pulumi.resources.Resourc
     public static final RepositoryIamMemberState Empty = new RepositoryIamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<RepositoryIamMemberConditionGetArgs> condition;
+    private @Nullable Output<RepositoryIamMemberConditionArgs> condition;
 
-    public Optional<Output<RepositoryIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<RepositoryIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -143,12 +143,12 @@ public final class RepositoryIamMemberState extends com.pulumi.resources.Resourc
             $ = new RepositoryIamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<RepositoryIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<RepositoryIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(RepositoryIamMemberConditionGetArgs condition) {
+        public Builder condition(RepositoryIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

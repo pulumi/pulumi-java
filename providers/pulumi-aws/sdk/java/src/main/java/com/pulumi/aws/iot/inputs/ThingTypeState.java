@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.iot.inputs;
 
-import com.pulumi.aws.iot.inputs.ThingTypePropertiesGetArgs;
+import com.pulumi.aws.iot.inputs.ThingTypePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -68,13 +68,13 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-    private @Nullable Output<ThingTypePropertiesGetArgs> properties;
+    private @Nullable Output<ThingTypePropertiesArgs> properties;
 
     /**
      * @return , Configuration block that can contain the following properties of the thing type:
      * 
      */
-    public Optional<Output<ThingTypePropertiesGetArgs>> properties() {
+    public Optional<Output<ThingTypePropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
 
@@ -206,7 +206,7 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder properties(@Nullable Output<ThingTypePropertiesGetArgs> properties) {
+        public Builder properties(@Nullable Output<ThingTypePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
@@ -217,7 +217,7 @@ public final class ThingTypeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder properties(ThingTypePropertiesGetArgs properties) {
+        public Builder properties(ThingTypePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 

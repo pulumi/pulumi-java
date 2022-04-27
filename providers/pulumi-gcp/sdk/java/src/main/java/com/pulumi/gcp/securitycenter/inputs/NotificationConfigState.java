@@ -5,7 +5,7 @@ package com.pulumi.gcp.securitycenter.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.securitycenter.inputs.NotificationConfigStreamingConfigGetArgs;
+import com.pulumi.gcp.securitycenter.inputs.NotificationConfigStreamingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,14 +118,14 @@ public final class NotificationConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="streamingConfig")
-    private @Nullable Output<NotificationConfigStreamingConfigGetArgs> streamingConfig;
+    private @Nullable Output<NotificationConfigStreamingConfigArgs> streamingConfig;
 
     /**
      * @return The config for triggering streaming-based notifications.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<NotificationConfigStreamingConfigGetArgs>> streamingConfig() {
+    public Optional<Output<NotificationConfigStreamingConfigArgs>> streamingConfig() {
         return Optional.ofNullable(this.streamingConfig);
     }
 
@@ -298,7 +298,7 @@ public final class NotificationConfigState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder streamingConfig(@Nullable Output<NotificationConfigStreamingConfigGetArgs> streamingConfig) {
+        public Builder streamingConfig(@Nullable Output<NotificationConfigStreamingConfigArgs> streamingConfig) {
             $.streamingConfig = streamingConfig;
             return this;
         }
@@ -310,7 +310,7 @@ public final class NotificationConfigState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder streamingConfig(NotificationConfigStreamingConfigGetArgs streamingConfig) {
+        public Builder streamingConfig(NotificationConfigStreamingConfigArgs streamingConfig) {
             return streamingConfig(Output.of(streamingConfig));
         }
 

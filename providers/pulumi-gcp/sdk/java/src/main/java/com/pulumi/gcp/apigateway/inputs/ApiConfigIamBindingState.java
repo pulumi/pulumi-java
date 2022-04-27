@@ -5,7 +5,7 @@ package com.pulumi.gcp.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.apigateway.inputs.ApiConfigIamBindingConditionGetArgs;
+import com.pulumi.gcp.apigateway.inputs.ApiConfigIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,9 +42,9 @@ public final class ApiConfigIamBindingState extends com.pulumi.resources.Resourc
     }
 
     @Import(name="condition")
-    private @Nullable Output<ApiConfigIamBindingConditionGetArgs> condition;
+    private @Nullable Output<ApiConfigIamBindingConditionArgs> condition;
 
-    public Optional<Output<ApiConfigIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<ApiConfigIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -168,12 +168,12 @@ public final class ApiConfigIamBindingState extends com.pulumi.resources.Resourc
             return apiConfig(Output.of(apiConfig));
         }
 
-        public Builder condition(@Nullable Output<ApiConfigIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<ApiConfigIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(ApiConfigIamBindingConditionGetArgs condition) {
+        public Builder condition(ApiConfigIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

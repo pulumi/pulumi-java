@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.efs.inputs;
 
-import com.pulumi.aws.efs.inputs.FileSystemLifecyclePolicyGetArgs;
-import com.pulumi.aws.efs.inputs.FileSystemSizeInByteGetArgs;
+import com.pulumi.aws.efs.inputs.FileSystemLifecyclePolicyArgs;
+import com.pulumi.aws.efs.inputs.FileSystemSizeInByteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -138,13 +138,13 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lifecyclePolicy")
-    private @Nullable Output<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy;
+    private @Nullable Output<FileSystemLifecyclePolicyArgs> lifecyclePolicy;
 
     /**
      * @return A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
      * 
      */
-    public Optional<Output<FileSystemLifecyclePolicyGetArgs>> lifecyclePolicy() {
+    public Optional<Output<FileSystemLifecyclePolicyArgs>> lifecyclePolicy() {
         return Optional.ofNullable(this.lifecyclePolicy);
     }
 
@@ -213,13 +213,13 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sizeInBytes")
-    private @Nullable Output<List<FileSystemSizeInByteGetArgs>> sizeInBytes;
+    private @Nullable Output<List<FileSystemSizeInByteArgs>> sizeInBytes;
 
     /**
      * @return The latest known metered size (in bytes) of data stored in the file system, the value is not the exact size that the file system was at any point in time. See Size In Bytes.
      * 
      */
-    public Optional<Output<List<FileSystemSizeInByteGetArgs>>> sizeInBytes() {
+    public Optional<Output<List<FileSystemSizeInByteArgs>>> sizeInBytes() {
         return Optional.ofNullable(this.sizeInBytes);
     }
 
@@ -466,7 +466,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lifecyclePolicy(@Nullable Output<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy) {
+        public Builder lifecyclePolicy(@Nullable Output<FileSystemLifecyclePolicyArgs> lifecyclePolicy) {
             $.lifecyclePolicy = lifecyclePolicy;
             return this;
         }
@@ -477,7 +477,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder lifecyclePolicy(FileSystemLifecyclePolicyGetArgs lifecyclePolicy) {
+        public Builder lifecyclePolicy(FileSystemLifecyclePolicyArgs lifecyclePolicy) {
             return lifecyclePolicy(Output.of(lifecyclePolicy));
         }
 
@@ -571,7 +571,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sizeInBytes(@Nullable Output<List<FileSystemSizeInByteGetArgs>> sizeInBytes) {
+        public Builder sizeInBytes(@Nullable Output<List<FileSystemSizeInByteArgs>> sizeInBytes) {
             $.sizeInBytes = sizeInBytes;
             return this;
         }
@@ -582,7 +582,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sizeInBytes(List<FileSystemSizeInByteGetArgs> sizeInBytes) {
+        public Builder sizeInBytes(List<FileSystemSizeInByteArgs> sizeInBytes) {
             return sizeInBytes(Output.of(sizeInBytes));
         }
 
@@ -592,7 +592,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder sizeInBytes(FileSystemSizeInByteGetArgs... sizeInBytes) {
+        public Builder sizeInBytes(FileSystemSizeInByteArgs... sizeInBytes) {
             return sizeInBytes(List.of(sizeInBytes));
         }
 

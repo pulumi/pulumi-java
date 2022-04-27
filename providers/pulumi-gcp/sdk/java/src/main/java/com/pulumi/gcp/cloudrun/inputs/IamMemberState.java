@@ -5,7 +5,7 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.cloudrun.inputs.IamMemberConditionGetArgs;
+import com.pulumi.gcp.cloudrun.inputs.IamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,9 +17,9 @@ public final class IamMemberState extends com.pulumi.resources.ResourceArgs {
     public static final IamMemberState Empty = new IamMemberState();
 
     @Import(name="condition")
-    private @Nullable Output<IamMemberConditionGetArgs> condition;
+    private @Nullable Output<IamMemberConditionArgs> condition;
 
-    public Optional<Output<IamMemberConditionGetArgs>> condition() {
+    public Optional<Output<IamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -141,12 +141,12 @@ public final class IamMemberState extends com.pulumi.resources.ResourceArgs {
             $ = new IamMemberState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<IamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<IamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(IamMemberConditionGetArgs condition) {
+        public Builder condition(IamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

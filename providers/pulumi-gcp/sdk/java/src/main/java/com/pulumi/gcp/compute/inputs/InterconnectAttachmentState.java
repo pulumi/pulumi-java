@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.InterconnectAttachmentPrivateInterconnectInfoGetArgs;
+import com.pulumi.gcp.compute.inputs.InterconnectAttachmentPrivateInterconnectInfoArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -375,14 +375,14 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="privateInterconnectInfos")
-    private @Nullable Output<List<InterconnectAttachmentPrivateInterconnectInfoGetArgs>> privateInterconnectInfos;
+    private @Nullable Output<List<InterconnectAttachmentPrivateInterconnectInfoArgs>> privateInterconnectInfos;
 
     /**
      * @return Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
      * to is of type DEDICATED.
      * 
      */
-    public Optional<Output<List<InterconnectAttachmentPrivateInterconnectInfoGetArgs>>> privateInterconnectInfos() {
+    public Optional<Output<List<InterconnectAttachmentPrivateInterconnectInfoArgs>>> privateInterconnectInfos() {
         return Optional.ofNullable(this.privateInterconnectInfos);
     }
 
@@ -1046,7 +1046,7 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder privateInterconnectInfos(@Nullable Output<List<InterconnectAttachmentPrivateInterconnectInfoGetArgs>> privateInterconnectInfos) {
+        public Builder privateInterconnectInfos(@Nullable Output<List<InterconnectAttachmentPrivateInterconnectInfoArgs>> privateInterconnectInfos) {
             $.privateInterconnectInfos = privateInterconnectInfos;
             return this;
         }
@@ -1058,7 +1058,7 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder privateInterconnectInfos(List<InterconnectAttachmentPrivateInterconnectInfoGetArgs> privateInterconnectInfos) {
+        public Builder privateInterconnectInfos(List<InterconnectAttachmentPrivateInterconnectInfoArgs> privateInterconnectInfos) {
             return privateInterconnectInfos(Output.of(privateInterconnectInfos));
         }
 
@@ -1069,7 +1069,7 @@ public final class InterconnectAttachmentState extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder privateInterconnectInfos(InterconnectAttachmentPrivateInterconnectInfoGetArgs... privateInterconnectInfos) {
+        public Builder privateInterconnectInfos(InterconnectAttachmentPrivateInterconnectInfoArgs... privateInterconnectInfos) {
             return privateInterconnectInfos(List.of(privateInterconnectInfos));
         }
 

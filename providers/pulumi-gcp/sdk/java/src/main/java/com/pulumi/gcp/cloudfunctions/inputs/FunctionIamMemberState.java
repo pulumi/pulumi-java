@@ -5,7 +5,7 @@ package com.pulumi.gcp.cloudfunctions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.cloudfunctions.inputs.FunctionIamMemberConditionGetArgs;
+import com.pulumi.gcp.cloudfunctions.inputs.FunctionIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,9 +24,9 @@ public final class FunctionIamMemberState extends com.pulumi.resources.ResourceA
     }
 
     @Import(name="condition")
-    private @Nullable Output<FunctionIamMemberConditionGetArgs> condition;
+    private @Nullable Output<FunctionIamMemberConditionArgs> condition;
 
-    public Optional<Output<FunctionIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<FunctionIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -104,12 +104,12 @@ public final class FunctionIamMemberState extends com.pulumi.resources.ResourceA
             return cloudFunction(Output.of(cloudFunction));
         }
 
-        public Builder condition(@Nullable Output<FunctionIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<FunctionIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(FunctionIamMemberConditionGetArgs condition) {
+        public Builder condition(FunctionIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

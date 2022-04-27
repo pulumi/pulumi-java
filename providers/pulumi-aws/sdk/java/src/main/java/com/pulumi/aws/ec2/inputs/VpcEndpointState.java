@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.VpcEndpointDnsEntryGetArgs;
+import com.pulumi.aws.ec2.inputs.VpcEndpointDnsEntryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -69,13 +69,13 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsEntries")
-    private @Nullable Output<List<VpcEndpointDnsEntryGetArgs>> dnsEntries;
+    private @Nullable Output<List<VpcEndpointDnsEntryArgs>> dnsEntries;
 
     /**
      * @return The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
      * 
      */
-    public Optional<Output<List<VpcEndpointDnsEntryGetArgs>>> dnsEntries() {
+    public Optional<Output<List<VpcEndpointDnsEntryArgs>>> dnsEntries() {
         return Optional.ofNullable(this.dnsEntries);
     }
 
@@ -427,7 +427,7 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dnsEntries(@Nullable Output<List<VpcEndpointDnsEntryGetArgs>> dnsEntries) {
+        public Builder dnsEntries(@Nullable Output<List<VpcEndpointDnsEntryArgs>> dnsEntries) {
             $.dnsEntries = dnsEntries;
             return this;
         }
@@ -438,7 +438,7 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dnsEntries(List<VpcEndpointDnsEntryGetArgs> dnsEntries) {
+        public Builder dnsEntries(List<VpcEndpointDnsEntryArgs> dnsEntries) {
             return dnsEntries(Output.of(dnsEntries));
         }
 
@@ -448,7 +448,7 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder dnsEntries(VpcEndpointDnsEntryGetArgs... dnsEntries) {
+        public Builder dnsEntries(VpcEndpointDnsEntryArgs... dnsEntries) {
             return dnsEntries(List.of(dnsEntries));
         }
 

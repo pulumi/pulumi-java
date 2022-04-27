@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.s3.inputs;
 
-import com.pulumi.aws.s3.inputs.BucketReplicationConfigRuleGetArgs;
+import com.pulumi.aws.s3.inputs.BucketReplicationConfigRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -52,13 +52,13 @@ public final class BucketReplicationConfigState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="rules")
-    private @Nullable Output<List<BucketReplicationConfigRuleGetArgs>> rules;
+    private @Nullable Output<List<BucketReplicationConfigRuleArgs>> rules;
 
     /**
      * @return Set of configuration blocks describing the rules managing the replication documented below.
      * 
      */
-    public Optional<Output<List<BucketReplicationConfigRuleGetArgs>>> rules() {
+    public Optional<Output<List<BucketReplicationConfigRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
 
@@ -136,7 +136,7 @@ public final class BucketReplicationConfigState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder rules(@Nullable Output<List<BucketReplicationConfigRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<BucketReplicationConfigRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
@@ -147,7 +147,7 @@ public final class BucketReplicationConfigState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder rules(List<BucketReplicationConfigRuleGetArgs> rules) {
+        public Builder rules(List<BucketReplicationConfigRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
@@ -157,7 +157,7 @@ public final class BucketReplicationConfigState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder rules(BucketReplicationConfigRuleGetArgs... rules) {
+        public Builder rules(BucketReplicationConfigRuleArgs... rules) {
             return rules(List.of(rules));
         }
 

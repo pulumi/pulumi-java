@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.pinpoint.inputs;
 
-import com.pulumi.aws.pinpoint.inputs.AppCampaignHookGetArgs;
-import com.pulumi.aws.pinpoint.inputs.AppLimitsGetArgs;
-import com.pulumi.aws.pinpoint.inputs.AppQuietTimeGetArgs;
+import com.pulumi.aws.pinpoint.inputs.AppCampaignHookArgs;
+import com.pulumi.aws.pinpoint.inputs.AppLimitsArgs;
+import com.pulumi.aws.pinpoint.inputs.AppQuietTimeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -54,13 +54,13 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="campaignHook")
-    private @Nullable Output<AppCampaignHookGetArgs> campaignHook;
+    private @Nullable Output<AppCampaignHookArgs> campaignHook;
 
     /**
      * @return Specifies settings for invoking an AWS Lambda function that customizes a segment for a campaign
      * 
      */
-    public Optional<Output<AppCampaignHookGetArgs>> campaignHook() {
+    public Optional<Output<AppCampaignHookArgs>> campaignHook() {
         return Optional.ofNullable(this.campaignHook);
     }
 
@@ -69,13 +69,13 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="limits")
-    private @Nullable Output<AppLimitsGetArgs> limits;
+    private @Nullable Output<AppLimitsArgs> limits;
 
     /**
      * @return The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
      * 
      */
-    public Optional<Output<AppLimitsGetArgs>> limits() {
+    public Optional<Output<AppLimitsArgs>> limits() {
         return Optional.ofNullable(this.limits);
     }
 
@@ -114,13 +114,13 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quietTime")
-    private @Nullable Output<AppQuietTimeGetArgs> quietTime;
+    private @Nullable Output<AppQuietTimeArgs> quietTime;
 
     /**
      * @return The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
      * 
      */
-    public Optional<Output<AppQuietTimeGetArgs>> quietTime() {
+    public Optional<Output<AppQuietTimeArgs>> quietTime() {
         return Optional.ofNullable(this.quietTime);
     }
 
@@ -234,7 +234,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder campaignHook(@Nullable Output<AppCampaignHookGetArgs> campaignHook) {
+        public Builder campaignHook(@Nullable Output<AppCampaignHookArgs> campaignHook) {
             $.campaignHook = campaignHook;
             return this;
         }
@@ -245,7 +245,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder campaignHook(AppCampaignHookGetArgs campaignHook) {
+        public Builder campaignHook(AppCampaignHookArgs campaignHook) {
             return campaignHook(Output.of(campaignHook));
         }
 
@@ -255,7 +255,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder limits(@Nullable Output<AppLimitsGetArgs> limits) {
+        public Builder limits(@Nullable Output<AppLimitsArgs> limits) {
             $.limits = limits;
             return this;
         }
@@ -266,7 +266,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder limits(AppLimitsGetArgs limits) {
+        public Builder limits(AppLimitsArgs limits) {
             return limits(Output.of(limits));
         }
 
@@ -318,7 +318,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder quietTime(@Nullable Output<AppQuietTimeGetArgs> quietTime) {
+        public Builder quietTime(@Nullable Output<AppQuietTimeArgs> quietTime) {
             $.quietTime = quietTime;
             return this;
         }
@@ -329,7 +329,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder quietTime(AppQuietTimeGetArgs quietTime) {
+        public Builder quietTime(AppQuietTimeArgs quietTime) {
             return quietTime(Output.of(quietTime));
         }
 

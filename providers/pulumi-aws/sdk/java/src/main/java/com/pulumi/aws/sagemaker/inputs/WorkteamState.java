@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionGetArgs;
-import com.pulumi.aws.sagemaker.inputs.WorkteamNotificationConfigurationGetArgs;
+import com.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionArgs;
+import com.pulumi.aws.sagemaker.inputs.WorkteamNotificationConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -54,13 +54,13 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="memberDefinitions")
-    private @Nullable Output<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions;
+    private @Nullable Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions;
 
     /**
      * @return A list of Member Definitions that contains objects that identify the workers that make up the work team. Workforces can be created using Amazon Cognito or your own OIDC Identity Provider (IdP). For private workforces created using Amazon Cognito use `cognito_member_definition`. For workforces created using your own OIDC identity provider (IdP) use `oidc_member_definition`. Do not provide input for both of these parameters in a single request. see Member Definition details below.
      * 
      */
-    public Optional<Output<List<WorkteamMemberDefinitionGetArgs>>> memberDefinitions() {
+    public Optional<Output<List<WorkteamMemberDefinitionArgs>>> memberDefinitions() {
         return Optional.ofNullable(this.memberDefinitions);
     }
 
@@ -69,13 +69,13 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationConfiguration")
-    private @Nullable Output<WorkteamNotificationConfigurationGetArgs> notificationConfiguration;
+    private @Nullable Output<WorkteamNotificationConfigurationArgs> notificationConfiguration;
 
     /**
      * @return Configures notification of workers regarding available or expiring work items. see Notification Configuration details below.
      * 
      */
-    public Optional<Output<WorkteamNotificationConfigurationGetArgs>> notificationConfiguration() {
+    public Optional<Output<WorkteamNotificationConfigurationArgs>> notificationConfiguration() {
         return Optional.ofNullable(this.notificationConfiguration);
     }
 
@@ -234,7 +234,7 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder memberDefinitions(@Nullable Output<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions) {
+        public Builder memberDefinitions(@Nullable Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions) {
             $.memberDefinitions = memberDefinitions;
             return this;
         }
@@ -245,7 +245,7 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder memberDefinitions(List<WorkteamMemberDefinitionGetArgs> memberDefinitions) {
+        public Builder memberDefinitions(List<WorkteamMemberDefinitionArgs> memberDefinitions) {
             return memberDefinitions(Output.of(memberDefinitions));
         }
 
@@ -255,7 +255,7 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder memberDefinitions(WorkteamMemberDefinitionGetArgs... memberDefinitions) {
+        public Builder memberDefinitions(WorkteamMemberDefinitionArgs... memberDefinitions) {
             return memberDefinitions(List.of(memberDefinitions));
         }
 
@@ -265,7 +265,7 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notificationConfiguration(@Nullable Output<WorkteamNotificationConfigurationGetArgs> notificationConfiguration) {
+        public Builder notificationConfiguration(@Nullable Output<WorkteamNotificationConfigurationArgs> notificationConfiguration) {
             $.notificationConfiguration = notificationConfiguration;
             return this;
         }
@@ -276,7 +276,7 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notificationConfiguration(WorkteamNotificationConfigurationGetArgs notificationConfiguration) {
+        public Builder notificationConfiguration(WorkteamNotificationConfigurationArgs notificationConfiguration) {
             return notificationConfiguration(Output.of(notificationConfiguration));
         }
 

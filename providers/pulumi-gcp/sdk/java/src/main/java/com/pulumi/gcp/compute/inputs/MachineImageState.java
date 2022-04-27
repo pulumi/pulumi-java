@@ -5,7 +5,7 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.MachineImageMachineImageEncryptionKeyGetArgs;
+import com.pulumi.gcp.compute.inputs.MachineImageMachineImageEncryptionKeyArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -59,7 +59,7 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="machineImageEncryptionKey")
-    private @Nullable Output<MachineImageMachineImageEncryptionKeyGetArgs> machineImageEncryptionKey;
+    private @Nullable Output<MachineImageMachineImageEncryptionKeyArgs> machineImageEncryptionKey;
 
     /**
      * @return Encrypts the machine image using a customer-supplied encryption key.
@@ -69,7 +69,7 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<MachineImageMachineImageEncryptionKeyGetArgs>> machineImageEncryptionKey() {
+    public Optional<Output<MachineImageMachineImageEncryptionKeyArgs>> machineImageEncryptionKey() {
         return Optional.ofNullable(this.machineImageEncryptionKey);
     }
 
@@ -235,7 +235,7 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder machineImageEncryptionKey(@Nullable Output<MachineImageMachineImageEncryptionKeyGetArgs> machineImageEncryptionKey) {
+        public Builder machineImageEncryptionKey(@Nullable Output<MachineImageMachineImageEncryptionKeyArgs> machineImageEncryptionKey) {
             $.machineImageEncryptionKey = machineImageEncryptionKey;
             return this;
         }
@@ -250,7 +250,7 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder machineImageEncryptionKey(MachineImageMachineImageEncryptionKeyGetArgs machineImageEncryptionKey) {
+        public Builder machineImageEncryptionKey(MachineImageMachineImageEncryptionKeyArgs machineImageEncryptionKey) {
             return machineImageEncryptionKey(Output.of(machineImageEncryptionKey));
         }
 

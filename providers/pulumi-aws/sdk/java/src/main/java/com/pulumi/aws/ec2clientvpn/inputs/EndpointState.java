@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.ec2clientvpn.inputs;
 
-import com.pulumi.aws.ec2clientvpn.inputs.EndpointAuthenticationOptionGetArgs;
-import com.pulumi.aws.ec2clientvpn.inputs.EndpointConnectionLogOptionsGetArgs;
+import com.pulumi.aws.ec2clientvpn.inputs.EndpointAuthenticationOptionArgs;
+import com.pulumi.aws.ec2clientvpn.inputs.EndpointConnectionLogOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -40,13 +40,13 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticationOptions")
-    private @Nullable Output<List<EndpointAuthenticationOptionGetArgs>> authenticationOptions;
+    private @Nullable Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions;
 
     /**
      * @return Information about the authentication method to be used to authenticate clients.
      * 
      */
-    public Optional<Output<List<EndpointAuthenticationOptionGetArgs>>> authenticationOptions() {
+    public Optional<Output<List<EndpointAuthenticationOptionArgs>>> authenticationOptions() {
         return Optional.ofNullable(this.authenticationOptions);
     }
 
@@ -70,13 +70,13 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionLogOptions")
-    private @Nullable Output<EndpointConnectionLogOptionsGetArgs> connectionLogOptions;
+    private @Nullable Output<EndpointConnectionLogOptionsArgs> connectionLogOptions;
 
     /**
      * @return Information about the client connection logging options.
      * 
      */
-    public Optional<Output<EndpointConnectionLogOptionsGetArgs>> connectionLogOptions() {
+    public Optional<Output<EndpointConnectionLogOptionsArgs>> connectionLogOptions() {
         return Optional.ofNullable(this.connectionLogOptions);
     }
 
@@ -294,7 +294,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder authenticationOptions(@Nullable Output<List<EndpointAuthenticationOptionGetArgs>> authenticationOptions) {
+        public Builder authenticationOptions(@Nullable Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions) {
             $.authenticationOptions = authenticationOptions;
             return this;
         }
@@ -305,7 +305,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder authenticationOptions(List<EndpointAuthenticationOptionGetArgs> authenticationOptions) {
+        public Builder authenticationOptions(List<EndpointAuthenticationOptionArgs> authenticationOptions) {
             return authenticationOptions(Output.of(authenticationOptions));
         }
 
@@ -315,7 +315,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder authenticationOptions(EndpointAuthenticationOptionGetArgs... authenticationOptions) {
+        public Builder authenticationOptions(EndpointAuthenticationOptionArgs... authenticationOptions) {
             return authenticationOptions(List.of(authenticationOptions));
         }
 
@@ -346,7 +346,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder connectionLogOptions(@Nullable Output<EndpointConnectionLogOptionsGetArgs> connectionLogOptions) {
+        public Builder connectionLogOptions(@Nullable Output<EndpointConnectionLogOptionsArgs> connectionLogOptions) {
             $.connectionLogOptions = connectionLogOptions;
             return this;
         }
@@ -357,7 +357,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder connectionLogOptions(EndpointConnectionLogOptionsGetArgs connectionLogOptions) {
+        public Builder connectionLogOptions(EndpointConnectionLogOptionsArgs connectionLogOptions) {
             return connectionLogOptions(Output.of(connectionLogOptions));
         }
 

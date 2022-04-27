@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.appmesh.inputs;
 
-import com.pulumi.aws.appmesh.inputs.VirtualServiceSpecGetArgs;
+import com.pulumi.aws.appmesh.inputs.VirtualServiceSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -127,13 +127,13 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="spec")
-    private @Nullable Output<VirtualServiceSpecGetArgs> spec;
+    private @Nullable Output<VirtualServiceSpecArgs> spec;
 
     /**
      * @return The virtual service specification to apply.
      * 
      */
-    public Optional<Output<VirtualServiceSpecGetArgs>> spec() {
+    public Optional<Output<VirtualServiceSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
 
@@ -353,7 +353,7 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder spec(@Nullable Output<VirtualServiceSpecGetArgs> spec) {
+        public Builder spec(@Nullable Output<VirtualServiceSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
@@ -364,7 +364,7 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder spec(VirtualServiceSpecGetArgs spec) {
+        public Builder spec(VirtualServiceSpecArgs spec) {
             return spec(Output.of(spec));
         }
 

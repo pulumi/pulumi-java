@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.glue.inputs;
 
-import com.pulumi.aws.glue.inputs.UserDefinedFunctionResourceUriGetArgs;
+import com.pulumi.aws.glue.inputs.UserDefinedFunctionResourceUriArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -126,13 +126,13 @@ public final class UserDefinedFunctionState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceUris")
-    private @Nullable Output<List<UserDefinedFunctionResourceUriGetArgs>> resourceUris;
+    private @Nullable Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris;
 
     /**
      * @return The configuration block for Resource URIs. See resource uris below for more details.
      * 
      */
-    public Optional<Output<List<UserDefinedFunctionResourceUriGetArgs>>> resourceUris() {
+    public Optional<Output<List<UserDefinedFunctionResourceUriArgs>>> resourceUris() {
         return Optional.ofNullable(this.resourceUris);
     }
 
@@ -318,7 +318,7 @@ public final class UserDefinedFunctionState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder resourceUris(@Nullable Output<List<UserDefinedFunctionResourceUriGetArgs>> resourceUris) {
+        public Builder resourceUris(@Nullable Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris) {
             $.resourceUris = resourceUris;
             return this;
         }
@@ -329,7 +329,7 @@ public final class UserDefinedFunctionState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder resourceUris(List<UserDefinedFunctionResourceUriGetArgs> resourceUris) {
+        public Builder resourceUris(List<UserDefinedFunctionResourceUriArgs> resourceUris) {
             return resourceUris(Output.of(resourceUris));
         }
 
@@ -339,7 +339,7 @@ public final class UserDefinedFunctionState extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder resourceUris(UserDefinedFunctionResourceUriGetArgs... resourceUris) {
+        public Builder resourceUris(UserDefinedFunctionResourceUriArgs... resourceUris) {
             return resourceUris(List.of(resourceUris));
         }
 

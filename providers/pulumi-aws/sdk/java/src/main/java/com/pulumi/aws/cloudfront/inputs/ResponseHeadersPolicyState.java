@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.cloudfront.inputs;
 
-import com.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigGetArgs;
-import com.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCustomHeadersConfigGetArgs;
-import com.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigGetArgs;
+import com.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigArgs;
+import com.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCustomHeadersConfigArgs;
+import com.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -38,13 +38,13 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="corsConfig")
-    private @Nullable Output<ResponseHeadersPolicyCorsConfigGetArgs> corsConfig;
+    private @Nullable Output<ResponseHeadersPolicyCorsConfigArgs> corsConfig;
 
     /**
      * @return A configuration for a set of HTTP response headers that are used for Cross-Origin Resource Sharing (CORS). See Cors Config for more information.
      * 
      */
-    public Optional<Output<ResponseHeadersPolicyCorsConfigGetArgs>> corsConfig() {
+    public Optional<Output<ResponseHeadersPolicyCorsConfigArgs>> corsConfig() {
         return Optional.ofNullable(this.corsConfig);
     }
 
@@ -53,13 +53,13 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="customHeadersConfig")
-    private @Nullable Output<ResponseHeadersPolicyCustomHeadersConfigGetArgs> customHeadersConfig;
+    private @Nullable Output<ResponseHeadersPolicyCustomHeadersConfigArgs> customHeadersConfig;
 
     /**
      * @return Object that contains an attribute `items` that contains a list of custom headers. See Custom Header for more information.
      * 
      */
-    public Optional<Output<ResponseHeadersPolicyCustomHeadersConfigGetArgs>> customHeadersConfig() {
+    public Optional<Output<ResponseHeadersPolicyCustomHeadersConfigArgs>> customHeadersConfig() {
         return Optional.ofNullable(this.customHeadersConfig);
     }
 
@@ -98,13 +98,13 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="securityHeadersConfig")
-    private @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigGetArgs> securityHeadersConfig;
+    private @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigArgs> securityHeadersConfig;
 
     /**
      * @return A configuration for a set of security-related HTTP response headers. See Security Headers Config for more information.
      * 
      */
-    public Optional<Output<ResponseHeadersPolicySecurityHeadersConfigGetArgs>> securityHeadersConfig() {
+    public Optional<Output<ResponseHeadersPolicySecurityHeadersConfigArgs>> securityHeadersConfig() {
         return Optional.ofNullable(this.securityHeadersConfig);
     }
 
@@ -164,7 +164,7 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder corsConfig(@Nullable Output<ResponseHeadersPolicyCorsConfigGetArgs> corsConfig) {
+        public Builder corsConfig(@Nullable Output<ResponseHeadersPolicyCorsConfigArgs> corsConfig) {
             $.corsConfig = corsConfig;
             return this;
         }
@@ -175,7 +175,7 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder corsConfig(ResponseHeadersPolicyCorsConfigGetArgs corsConfig) {
+        public Builder corsConfig(ResponseHeadersPolicyCorsConfigArgs corsConfig) {
             return corsConfig(Output.of(corsConfig));
         }
 
@@ -185,7 +185,7 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder customHeadersConfig(@Nullable Output<ResponseHeadersPolicyCustomHeadersConfigGetArgs> customHeadersConfig) {
+        public Builder customHeadersConfig(@Nullable Output<ResponseHeadersPolicyCustomHeadersConfigArgs> customHeadersConfig) {
             $.customHeadersConfig = customHeadersConfig;
             return this;
         }
@@ -196,7 +196,7 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder customHeadersConfig(ResponseHeadersPolicyCustomHeadersConfigGetArgs customHeadersConfig) {
+        public Builder customHeadersConfig(ResponseHeadersPolicyCustomHeadersConfigArgs customHeadersConfig) {
             return customHeadersConfig(Output.of(customHeadersConfig));
         }
 
@@ -248,7 +248,7 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder securityHeadersConfig(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigGetArgs> securityHeadersConfig) {
+        public Builder securityHeadersConfig(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigArgs> securityHeadersConfig) {
             $.securityHeadersConfig = securityHeadersConfig;
             return this;
         }
@@ -259,7 +259,7 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder securityHeadersConfig(ResponseHeadersPolicySecurityHeadersConfigGetArgs securityHeadersConfig) {
+        public Builder securityHeadersConfig(ResponseHeadersPolicySecurityHeadersConfigArgs securityHeadersConfig) {
             return securityHeadersConfig(Output.of(securityHeadersConfig));
         }
 

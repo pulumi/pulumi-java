@@ -5,7 +5,7 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.certificateauthority.inputs.CaPoolIamMemberConditionGetArgs;
+import com.pulumi.gcp.certificateauthority.inputs.CaPoolIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -32,9 +32,9 @@ public final class CaPoolIamMemberState extends com.pulumi.resources.ResourceArg
     }
 
     @Import(name="condition")
-    private @Nullable Output<CaPoolIamMemberConditionGetArgs> condition;
+    private @Nullable Output<CaPoolIamMemberConditionArgs> condition;
 
-    public Optional<Output<CaPoolIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<CaPoolIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -166,12 +166,12 @@ public final class CaPoolIamMemberState extends com.pulumi.resources.ResourceArg
             return caPool(Output.of(caPool));
         }
 
-        public Builder condition(@Nullable Output<CaPoolIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<CaPoolIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(CaPoolIamMemberConditionGetArgs condition) {
+        public Builder condition(CaPoolIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

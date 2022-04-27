@@ -5,18 +5,18 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.InstanceAdvancedMachineFeaturesGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceAttachedDiskGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceBootDiskGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceConfidentialInstanceConfigGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceGuestAcceleratorGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceNetworkInterfaceGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceNetworkPerformanceConfigGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceReservationAffinityGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceSchedulingGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceScratchDiskGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceServiceAccountGetArgs;
-import com.pulumi.gcp.compute.inputs.InstanceShieldedInstanceConfigGetArgs;
+import com.pulumi.gcp.compute.inputs.InstanceAdvancedMachineFeaturesArgs;
+import com.pulumi.gcp.compute.inputs.InstanceAttachedDiskArgs;
+import com.pulumi.gcp.compute.inputs.InstanceBootDiskArgs;
+import com.pulumi.gcp.compute.inputs.InstanceConfidentialInstanceConfigArgs;
+import com.pulumi.gcp.compute.inputs.InstanceGuestAcceleratorArgs;
+import com.pulumi.gcp.compute.inputs.InstanceNetworkInterfaceArgs;
+import com.pulumi.gcp.compute.inputs.InstanceNetworkPerformanceConfigArgs;
+import com.pulumi.gcp.compute.inputs.InstanceReservationAffinityArgs;
+import com.pulumi.gcp.compute.inputs.InstanceSchedulingArgs;
+import com.pulumi.gcp.compute.inputs.InstanceScratchDiskArgs;
+import com.pulumi.gcp.compute.inputs.InstanceServiceAccountArgs;
+import com.pulumi.gcp.compute.inputs.InstanceShieldedInstanceConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -35,13 +35,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advancedMachineFeatures")
-    private @Nullable Output<InstanceAdvancedMachineFeaturesGetArgs> advancedMachineFeatures;
+    private @Nullable Output<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
     /**
      * @return Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
      * 
      */
-    public Optional<Output<InstanceAdvancedMachineFeaturesGetArgs>> advancedMachineFeatures() {
+    public Optional<Output<InstanceAdvancedMachineFeaturesArgs>> advancedMachineFeatures() {
         return Optional.ofNullable(this.advancedMachineFeatures);
     }
 
@@ -67,13 +67,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attachedDisks")
-    private @Nullable Output<List<InstanceAttachedDiskGetArgs>> attachedDisks;
+    private @Nullable Output<List<InstanceAttachedDiskArgs>> attachedDisks;
 
     /**
      * @return Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.
      * 
      */
-    public Optional<Output<List<InstanceAttachedDiskGetArgs>>> attachedDisks() {
+    public Optional<Output<List<InstanceAttachedDiskArgs>>> attachedDisks() {
         return Optional.ofNullable(this.attachedDisks);
     }
 
@@ -83,14 +83,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bootDisk")
-    private @Nullable Output<InstanceBootDiskGetArgs> bootDisk;
+    private @Nullable Output<InstanceBootDiskArgs> bootDisk;
 
     /**
      * @return The boot disk for the instance.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InstanceBootDiskGetArgs>> bootDisk() {
+    public Optional<Output<InstanceBootDiskArgs>> bootDisk() {
         return Optional.ofNullable(this.bootDisk);
     }
 
@@ -118,13 +118,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="confidentialInstanceConfig")
-    private @Nullable Output<InstanceConfidentialInstanceConfigGetArgs> confidentialInstanceConfig;
+    private @Nullable Output<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
     /**
      * @return Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
      * 
      */
-    public Optional<Output<InstanceConfidentialInstanceConfigGetArgs>> confidentialInstanceConfig() {
+    public Optional<Output<InstanceConfidentialInstanceConfigArgs>> confidentialInstanceConfig() {
         return Optional.ofNullable(this.confidentialInstanceConfig);
     }
 
@@ -230,14 +230,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="guestAccelerators")
-    private @Nullable Output<List<InstanceGuestAcceleratorGetArgs>> guestAccelerators;
+    private @Nullable Output<List<InstanceGuestAcceleratorArgs>> guestAccelerators;
 
     /**
      * @return List of the type and count of accelerator cards attached to the instance. Structure documented below.
      * **Note:** GPU accelerators can only be used with `on_host_maintenance` option set to TERMINATE.
      * 
      */
-    public Optional<Output<List<InstanceGuestAcceleratorGetArgs>>> guestAccelerators() {
+    public Optional<Output<List<InstanceGuestAcceleratorArgs>>> guestAccelerators() {
         return Optional.ofNullable(this.guestAccelerators);
     }
 
@@ -429,14 +429,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkInterfaces")
-    private @Nullable Output<List<InstanceNetworkInterfaceGetArgs>> networkInterfaces;
+    private @Nullable Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
 
     /**
      * @return Networks to attach to the instance. This can
      * be specified multiple times. Structure is documented below.
      * 
      */
-    public Optional<Output<List<InstanceNetworkInterfaceGetArgs>>> networkInterfaces() {
+    public Optional<Output<List<InstanceNetworkInterfaceArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
 
@@ -449,7 +449,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkPerformanceConfig")
-    private @Nullable Output<InstanceNetworkPerformanceConfigGetArgs> networkPerformanceConfig;
+    private @Nullable Output<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig;
 
     /**
      * @return Configures network performance settings for the instance. Structure is
@@ -459,7 +459,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * in order for this setting to take effect.
      * 
      */
-    public Optional<Output<InstanceNetworkPerformanceConfigGetArgs>> networkPerformanceConfig() {
+    public Optional<Output<InstanceNetworkPerformanceConfigArgs>> networkPerformanceConfig() {
         return Optional.ofNullable(this.networkPerformanceConfig);
     }
 
@@ -486,14 +486,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reservationAffinity")
-    private @Nullable Output<InstanceReservationAffinityGetArgs> reservationAffinity;
+    private @Nullable Output<InstanceReservationAffinityArgs> reservationAffinity;
 
     /**
      * @return Specifies the reservations that this instance can consume from.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<InstanceReservationAffinityGetArgs>> reservationAffinity() {
+    public Optional<Output<InstanceReservationAffinityArgs>> reservationAffinity() {
         return Optional.ofNullable(this.reservationAffinity);
     }
 
@@ -518,14 +518,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduling")
-    private @Nullable Output<InstanceSchedulingGetArgs> scheduling;
+    private @Nullable Output<InstanceSchedulingArgs> scheduling;
 
     /**
      * @return The scheduling strategy to use. More details about
      * this configuration option are detailed below.
      * 
      */
-    public Optional<Output<InstanceSchedulingGetArgs>> scheduling() {
+    public Optional<Output<InstanceSchedulingArgs>> scheduling() {
         return Optional.ofNullable(this.scheduling);
     }
 
@@ -535,14 +535,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scratchDisks")
-    private @Nullable Output<List<InstanceScratchDiskGetArgs>> scratchDisks;
+    private @Nullable Output<List<InstanceScratchDiskArgs>> scratchDisks;
 
     /**
      * @return Scratch disks to attach to the instance. This can be
      * specified multiple times for multiple scratch disks. Structure is documented below.
      * 
      */
-    public Optional<Output<List<InstanceScratchDiskGetArgs>>> scratchDisks() {
+    public Optional<Output<List<InstanceScratchDiskArgs>>> scratchDisks() {
         return Optional.ofNullable(this.scratchDisks);
     }
 
@@ -568,7 +568,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccount")
-    private @Nullable Output<InstanceServiceAccountGetArgs> serviceAccount;
+    private @Nullable Output<InstanceServiceAccountArgs> serviceAccount;
 
     /**
      * @return Service account to attach to the instance.
@@ -576,7 +576,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
      */
-    public Optional<Output<InstanceServiceAccountGetArgs>> serviceAccount() {
+    public Optional<Output<InstanceServiceAccountArgs>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
 
@@ -587,7 +587,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shieldedInstanceConfig")
-    private @Nullable Output<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
+    private @Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     /**
      * @return Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
@@ -595,7 +595,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
      */
-    public Optional<Output<InstanceShieldedInstanceConfigGetArgs>> shieldedInstanceConfig() {
+    public Optional<Output<InstanceShieldedInstanceConfigArgs>> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
 
@@ -709,7 +709,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder advancedMachineFeatures(@Nullable Output<InstanceAdvancedMachineFeaturesGetArgs> advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(@Nullable Output<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures) {
             $.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
@@ -720,7 +720,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder advancedMachineFeatures(InstanceAdvancedMachineFeaturesGetArgs advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(InstanceAdvancedMachineFeaturesArgs advancedMachineFeatures) {
             return advancedMachineFeatures(Output.of(advancedMachineFeatures));
         }
 
@@ -753,7 +753,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attachedDisks(@Nullable Output<List<InstanceAttachedDiskGetArgs>> attachedDisks) {
+        public Builder attachedDisks(@Nullable Output<List<InstanceAttachedDiskArgs>> attachedDisks) {
             $.attachedDisks = attachedDisks;
             return this;
         }
@@ -764,7 +764,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attachedDisks(List<InstanceAttachedDiskGetArgs> attachedDisks) {
+        public Builder attachedDisks(List<InstanceAttachedDiskArgs> attachedDisks) {
             return attachedDisks(Output.of(attachedDisks));
         }
 
@@ -774,7 +774,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder attachedDisks(InstanceAttachedDiskGetArgs... attachedDisks) {
+        public Builder attachedDisks(InstanceAttachedDiskArgs... attachedDisks) {
             return attachedDisks(List.of(attachedDisks));
         }
 
@@ -785,7 +785,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bootDisk(@Nullable Output<InstanceBootDiskGetArgs> bootDisk) {
+        public Builder bootDisk(@Nullable Output<InstanceBootDiskArgs> bootDisk) {
             $.bootDisk = bootDisk;
             return this;
         }
@@ -797,7 +797,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder bootDisk(InstanceBootDiskGetArgs bootDisk) {
+        public Builder bootDisk(InstanceBootDiskArgs bootDisk) {
             return bootDisk(Output.of(bootDisk));
         }
 
@@ -832,7 +832,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder confidentialInstanceConfig(@Nullable Output<InstanceConfidentialInstanceConfigGetArgs> confidentialInstanceConfig) {
+        public Builder confidentialInstanceConfig(@Nullable Output<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
             $.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
@@ -843,7 +843,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder confidentialInstanceConfig(InstanceConfidentialInstanceConfigGetArgs confidentialInstanceConfig) {
+        public Builder confidentialInstanceConfig(InstanceConfidentialInstanceConfigArgs confidentialInstanceConfig) {
             return confidentialInstanceConfig(Output.of(confidentialInstanceConfig));
         }
 
@@ -986,7 +986,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder guestAccelerators(@Nullable Output<List<InstanceGuestAcceleratorGetArgs>> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable Output<List<InstanceGuestAcceleratorArgs>> guestAccelerators) {
             $.guestAccelerators = guestAccelerators;
             return this;
         }
@@ -998,7 +998,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder guestAccelerators(List<InstanceGuestAcceleratorGetArgs> guestAccelerators) {
+        public Builder guestAccelerators(List<InstanceGuestAcceleratorArgs> guestAccelerators) {
             return guestAccelerators(Output.of(guestAccelerators));
         }
 
@@ -1009,7 +1009,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder guestAccelerators(InstanceGuestAcceleratorGetArgs... guestAccelerators) {
+        public Builder guestAccelerators(InstanceGuestAcceleratorArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
 
@@ -1262,7 +1262,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkInterfaces(@Nullable Output<List<InstanceNetworkInterfaceGetArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
@@ -1274,7 +1274,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkInterfaces(List<InstanceNetworkInterfaceGetArgs> networkInterfaces) {
+        public Builder networkInterfaces(List<InstanceNetworkInterfaceArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
@@ -1285,7 +1285,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkInterfaces(InstanceNetworkInterfaceGetArgs... networkInterfaces) {
+        public Builder networkInterfaces(InstanceNetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
@@ -1299,7 +1299,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkPerformanceConfig(@Nullable Output<InstanceNetworkPerformanceConfigGetArgs> networkPerformanceConfig) {
+        public Builder networkPerformanceConfig(@Nullable Output<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig) {
             $.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
@@ -1314,7 +1314,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networkPerformanceConfig(InstanceNetworkPerformanceConfigGetArgs networkPerformanceConfig) {
+        public Builder networkPerformanceConfig(InstanceNetworkPerformanceConfigArgs networkPerformanceConfig) {
             return networkPerformanceConfig(Output.of(networkPerformanceConfig));
         }
 
@@ -1348,7 +1348,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder reservationAffinity(@Nullable Output<InstanceReservationAffinityGetArgs> reservationAffinity) {
+        public Builder reservationAffinity(@Nullable Output<InstanceReservationAffinityArgs> reservationAffinity) {
             $.reservationAffinity = reservationAffinity;
             return this;
         }
@@ -1360,7 +1360,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder reservationAffinity(InstanceReservationAffinityGetArgs reservationAffinity) {
+        public Builder reservationAffinity(InstanceReservationAffinityArgs reservationAffinity) {
             return reservationAffinity(Output.of(reservationAffinity));
         }
 
@@ -1392,7 +1392,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scheduling(@Nullable Output<InstanceSchedulingGetArgs> scheduling) {
+        public Builder scheduling(@Nullable Output<InstanceSchedulingArgs> scheduling) {
             $.scheduling = scheduling;
             return this;
         }
@@ -1404,7 +1404,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scheduling(InstanceSchedulingGetArgs scheduling) {
+        public Builder scheduling(InstanceSchedulingArgs scheduling) {
             return scheduling(Output.of(scheduling));
         }
 
@@ -1415,7 +1415,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scratchDisks(@Nullable Output<List<InstanceScratchDiskGetArgs>> scratchDisks) {
+        public Builder scratchDisks(@Nullable Output<List<InstanceScratchDiskArgs>> scratchDisks) {
             $.scratchDisks = scratchDisks;
             return this;
         }
@@ -1427,7 +1427,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scratchDisks(List<InstanceScratchDiskGetArgs> scratchDisks) {
+        public Builder scratchDisks(List<InstanceScratchDiskArgs> scratchDisks) {
             return scratchDisks(Output.of(scratchDisks));
         }
 
@@ -1438,7 +1438,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder scratchDisks(InstanceScratchDiskGetArgs... scratchDisks) {
+        public Builder scratchDisks(InstanceScratchDiskArgs... scratchDisks) {
             return scratchDisks(List.of(scratchDisks));
         }
 
@@ -1471,7 +1471,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serviceAccount(@Nullable Output<InstanceServiceAccountGetArgs> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<InstanceServiceAccountArgs> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
@@ -1484,7 +1484,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder serviceAccount(InstanceServiceAccountGetArgs serviceAccount) {
+        public Builder serviceAccount(InstanceServiceAccountArgs serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
@@ -1496,7 +1496,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder shieldedInstanceConfig(@Nullable Output<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
@@ -1509,7 +1509,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder shieldedInstanceConfig(InstanceShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(InstanceShieldedInstanceConfigArgs shieldedInstanceConfig) {
             return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
 

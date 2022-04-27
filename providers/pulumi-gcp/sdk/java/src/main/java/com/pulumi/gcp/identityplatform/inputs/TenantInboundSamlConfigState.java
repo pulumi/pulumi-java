@@ -5,8 +5,8 @@ package com.pulumi.gcp.identityplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigIdpConfigGetArgs;
-import com.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigSpConfigGetArgs;
+import com.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigIdpConfigArgs;
+import com.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigSpConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -54,14 +54,14 @@ public final class TenantInboundSamlConfigState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="idpConfig")
-    private @Nullable Output<TenantInboundSamlConfigIdpConfigGetArgs> idpConfig;
+    private @Nullable Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig;
 
     /**
      * @return SAML IdP configuration when the project acts as the relying party
      * Structure is documented below.
      * 
      */
-    public Optional<Output<TenantInboundSamlConfigIdpConfigGetArgs>> idpConfig() {
+    public Optional<Output<TenantInboundSamlConfigIdpConfigArgs>> idpConfig() {
         return Optional.ofNullable(this.idpConfig);
     }
 
@@ -108,7 +108,7 @@ public final class TenantInboundSamlConfigState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="spConfig")
-    private @Nullable Output<TenantInboundSamlConfigSpConfigGetArgs> spConfig;
+    private @Nullable Output<TenantInboundSamlConfigSpConfigArgs> spConfig;
 
     /**
      * @return SAML SP (Service Provider) configuration when the project acts as the relying party to receive
@@ -116,7 +116,7 @@ public final class TenantInboundSamlConfigState extends com.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    public Optional<Output<TenantInboundSamlConfigSpConfigGetArgs>> spConfig() {
+    public Optional<Output<TenantInboundSamlConfigSpConfigArgs>> spConfig() {
         return Optional.ofNullable(this.spConfig);
     }
 
@@ -214,7 +214,7 @@ public final class TenantInboundSamlConfigState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder idpConfig(@Nullable Output<TenantInboundSamlConfigIdpConfigGetArgs> idpConfig) {
+        public Builder idpConfig(@Nullable Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig) {
             $.idpConfig = idpConfig;
             return this;
         }
@@ -226,7 +226,7 @@ public final class TenantInboundSamlConfigState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder idpConfig(TenantInboundSamlConfigIdpConfigGetArgs idpConfig) {
+        public Builder idpConfig(TenantInboundSamlConfigIdpConfigArgs idpConfig) {
             return idpConfig(Output.of(idpConfig));
         }
 
@@ -286,7 +286,7 @@ public final class TenantInboundSamlConfigState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder spConfig(@Nullable Output<TenantInboundSamlConfigSpConfigGetArgs> spConfig) {
+        public Builder spConfig(@Nullable Output<TenantInboundSamlConfigSpConfigArgs> spConfig) {
             $.spConfig = spConfig;
             return this;
         }
@@ -299,7 +299,7 @@ public final class TenantInboundSamlConfigState extends com.pulumi.resources.Res
          * @return builder
          * 
          */
-        public Builder spConfig(TenantInboundSamlConfigSpConfigGetArgs spConfig) {
+        public Builder spConfig(TenantInboundSamlConfigSpConfigArgs spConfig) {
             return spConfig(Output.of(spConfig));
         }
 

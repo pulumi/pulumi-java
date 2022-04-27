@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.organizations.inputs;
 
-import com.pulumi.aws.organizations.inputs.OrganizationAccountGetArgs;
-import com.pulumi.aws.organizations.inputs.OrganizationNonMasterAccountGetArgs;
-import com.pulumi.aws.organizations.inputs.OrganizationRootGetArgs;
+import com.pulumi.aws.organizations.inputs.OrganizationAccountArgs;
+import com.pulumi.aws.organizations.inputs.OrganizationNonMasterAccountArgs;
+import com.pulumi.aws.organizations.inputs.OrganizationRootArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -24,13 +24,13 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accounts")
-    private @Nullable Output<List<OrganizationAccountGetArgs>> accounts;
+    private @Nullable Output<List<OrganizationAccountArgs>> accounts;
 
     /**
      * @return List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
      * 
      */
-    public Optional<Output<List<OrganizationAccountGetArgs>>> accounts() {
+    public Optional<Output<List<OrganizationAccountArgs>>> accounts() {
         return Optional.ofNullable(this.accounts);
     }
 
@@ -144,13 +144,13 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nonMasterAccounts")
-    private @Nullable Output<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts;
+    private @Nullable Output<List<OrganizationNonMasterAccountArgs>> nonMasterAccounts;
 
     /**
      * @return List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
      * 
      */
-    public Optional<Output<List<OrganizationNonMasterAccountGetArgs>>> nonMasterAccounts() {
+    public Optional<Output<List<OrganizationNonMasterAccountArgs>>> nonMasterAccounts() {
         return Optional.ofNullable(this.nonMasterAccounts);
     }
 
@@ -159,13 +159,13 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roots")
-    private @Nullable Output<List<OrganizationRootGetArgs>> roots;
+    private @Nullable Output<List<OrganizationRootArgs>> roots;
 
     /**
      * @return List of organization roots. All elements have these attributes:
      * 
      */
-    public Optional<Output<List<OrganizationRootGetArgs>>> roots() {
+    public Optional<Output<List<OrganizationRootArgs>>> roots() {
         return Optional.ofNullable(this.roots);
     }
 
@@ -208,7 +208,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accounts(@Nullable Output<List<OrganizationAccountGetArgs>> accounts) {
+        public Builder accounts(@Nullable Output<List<OrganizationAccountArgs>> accounts) {
             $.accounts = accounts;
             return this;
         }
@@ -219,7 +219,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accounts(List<OrganizationAccountGetArgs> accounts) {
+        public Builder accounts(List<OrganizationAccountArgs> accounts) {
             return accounts(Output.of(accounts));
         }
 
@@ -229,7 +229,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder accounts(OrganizationAccountGetArgs... accounts) {
+        public Builder accounts(OrganizationAccountArgs... accounts) {
             return accounts(List.of(accounts));
         }
 
@@ -406,7 +406,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nonMasterAccounts(@Nullable Output<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts) {
+        public Builder nonMasterAccounts(@Nullable Output<List<OrganizationNonMasterAccountArgs>> nonMasterAccounts) {
             $.nonMasterAccounts = nonMasterAccounts;
             return this;
         }
@@ -417,7 +417,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nonMasterAccounts(List<OrganizationNonMasterAccountGetArgs> nonMasterAccounts) {
+        public Builder nonMasterAccounts(List<OrganizationNonMasterAccountArgs> nonMasterAccounts) {
             return nonMasterAccounts(Output.of(nonMasterAccounts));
         }
 
@@ -427,7 +427,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder nonMasterAccounts(OrganizationNonMasterAccountGetArgs... nonMasterAccounts) {
+        public Builder nonMasterAccounts(OrganizationNonMasterAccountArgs... nonMasterAccounts) {
             return nonMasterAccounts(List.of(nonMasterAccounts));
         }
 
@@ -437,7 +437,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder roots(@Nullable Output<List<OrganizationRootGetArgs>> roots) {
+        public Builder roots(@Nullable Output<List<OrganizationRootArgs>> roots) {
             $.roots = roots;
             return this;
         }
@@ -448,7 +448,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder roots(List<OrganizationRootGetArgs> roots) {
+        public Builder roots(List<OrganizationRootArgs> roots) {
             return roots(Output.of(roots));
         }
 
@@ -458,7 +458,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder roots(OrganizationRootGetArgs... roots) {
+        public Builder roots(OrganizationRootArgs... roots) {
             return roots(List.of(roots));
         }
 

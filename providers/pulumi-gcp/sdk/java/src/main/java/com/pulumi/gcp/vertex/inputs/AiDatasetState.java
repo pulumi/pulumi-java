@@ -5,7 +5,7 @@ package com.pulumi.gcp.vertex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.vertex.inputs.AiDatasetEncryptionSpecGetArgs;
+import com.pulumi.gcp.vertex.inputs.AiDatasetEncryptionSpecArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -55,14 +55,14 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionSpec")
-    private @Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec;
+    private @Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec;
 
     /**
      * @return Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AiDatasetEncryptionSpecGetArgs>> encryptionSpec() {
+    public Optional<Output<AiDatasetEncryptionSpecArgs>> encryptionSpec() {
         return Optional.ofNullable(this.encryptionSpec);
     }
 
@@ -243,7 +243,7 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionSpec(@Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec) {
+        public Builder encryptionSpec(@Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec) {
             $.encryptionSpec = encryptionSpec;
             return this;
         }
@@ -255,7 +255,7 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder encryptionSpec(AiDatasetEncryptionSpecGetArgs encryptionSpec) {
+        public Builder encryptionSpec(AiDatasetEncryptionSpecArgs encryptionSpec) {
             return encryptionSpec(Output.of(encryptionSpec));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.batch.inputs;
 
-import com.pulumi.aws.batch.inputs.SchedulingPolicyFairSharePolicyGetArgs;
+import com.pulumi.aws.batch.inputs.SchedulingPolicyFairSharePolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -33,9 +33,9 @@ public final class SchedulingPolicyState extends com.pulumi.resources.ResourceAr
     }
 
     @Import(name="fairSharePolicy")
-    private @Nullable Output<SchedulingPolicyFairSharePolicyGetArgs> fairSharePolicy;
+    private @Nullable Output<SchedulingPolicyFairSharePolicyArgs> fairSharePolicy;
 
-    public Optional<Output<SchedulingPolicyFairSharePolicyGetArgs>> fairSharePolicy() {
+    public Optional<Output<SchedulingPolicyFairSharePolicyArgs>> fairSharePolicy() {
         return Optional.ofNullable(this.fairSharePolicy);
     }
 
@@ -133,12 +133,12 @@ public final class SchedulingPolicyState extends com.pulumi.resources.ResourceAr
             return arn(Output.of(arn));
         }
 
-        public Builder fairSharePolicy(@Nullable Output<SchedulingPolicyFairSharePolicyGetArgs> fairSharePolicy) {
+        public Builder fairSharePolicy(@Nullable Output<SchedulingPolicyFairSharePolicyArgs> fairSharePolicy) {
             $.fairSharePolicy = fairSharePolicy;
             return this;
         }
 
-        public Builder fairSharePolicy(SchedulingPolicyFairSharePolicyGetArgs fairSharePolicy) {
+        public Builder fairSharePolicy(SchedulingPolicyFairSharePolicyArgs fairSharePolicy) {
             return fairSharePolicy(Output.of(fairSharePolicy));
         }
 

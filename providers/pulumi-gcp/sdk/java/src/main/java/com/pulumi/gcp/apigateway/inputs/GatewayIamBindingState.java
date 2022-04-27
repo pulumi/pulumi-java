@@ -5,7 +5,7 @@ package com.pulumi.gcp.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.apigateway.inputs.GatewayIamBindingConditionGetArgs;
+import com.pulumi.gcp.apigateway.inputs.GatewayIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class GatewayIamBindingState extends com.pulumi.resources.ResourceA
     public static final GatewayIamBindingState Empty = new GatewayIamBindingState();
 
     @Import(name="condition")
-    private @Nullable Output<GatewayIamBindingConditionGetArgs> condition;
+    private @Nullable Output<GatewayIamBindingConditionArgs> condition;
 
-    public Optional<Output<GatewayIamBindingConditionGetArgs>> condition() {
+    public Optional<Output<GatewayIamBindingConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -140,12 +140,12 @@ public final class GatewayIamBindingState extends com.pulumi.resources.ResourceA
             $ = new GatewayIamBindingState(Objects.requireNonNull(defaults));
         }
 
-        public Builder condition(@Nullable Output<GatewayIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<GatewayIamBindingConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
-        public Builder condition(GatewayIamBindingConditionGetArgs condition) {
+        public Builder condition(GatewayIamBindingConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cloudhsmv2.inputs;
 
-import com.pulumi.aws.cloudhsmv2.inputs.ClusterClusterCertificateGetArgs;
+import com.pulumi.aws.cloudhsmv2.inputs.ClusterClusterCertificateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterCertificates")
-    private @Nullable Output<List<ClusterClusterCertificateGetArgs>> clusterCertificates;
+    private @Nullable Output<List<ClusterClusterCertificateArgs>> clusterCertificates;
 
     /**
      * @return The list of cluster certificates.
@@ -39,7 +39,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
      * 
      */
-    public Optional<Output<List<ClusterClusterCertificateGetArgs>>> clusterCertificates() {
+    public Optional<Output<List<ClusterClusterCertificateArgs>>> clusterCertificates() {
         return Optional.ofNullable(this.clusterCertificates);
     }
 
@@ -222,7 +222,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterCertificates(@Nullable Output<List<ClusterClusterCertificateGetArgs>> clusterCertificates) {
+        public Builder clusterCertificates(@Nullable Output<List<ClusterClusterCertificateArgs>> clusterCertificates) {
             $.clusterCertificates = clusterCertificates;
             return this;
         }
@@ -238,7 +238,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterCertificates(List<ClusterClusterCertificateGetArgs> clusterCertificates) {
+        public Builder clusterCertificates(List<ClusterClusterCertificateArgs> clusterCertificates) {
             return clusterCertificates(Output.of(clusterCertificates));
         }
 
@@ -253,7 +253,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder clusterCertificates(ClusterClusterCertificateGetArgs... clusterCertificates) {
+        public Builder clusterCertificates(ClusterClusterCertificateArgs... clusterCertificates) {
             return clusterCertificates(List.of(clusterCertificates));
         }
 

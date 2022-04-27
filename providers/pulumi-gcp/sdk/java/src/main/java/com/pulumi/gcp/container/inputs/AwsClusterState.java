@@ -5,11 +5,11 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.container.inputs.AwsClusterAuthorizationGetArgs;
-import com.pulumi.gcp.container.inputs.AwsClusterControlPlaneGetArgs;
-import com.pulumi.gcp.container.inputs.AwsClusterFleetGetArgs;
-import com.pulumi.gcp.container.inputs.AwsClusterNetworkingGetArgs;
-import com.pulumi.gcp.container.inputs.AwsClusterWorkloadIdentityConfigGetArgs;
+import com.pulumi.gcp.container.inputs.AwsClusterAuthorizationArgs;
+import com.pulumi.gcp.container.inputs.AwsClusterControlPlaneArgs;
+import com.pulumi.gcp.container.inputs.AwsClusterFleetArgs;
+import com.pulumi.gcp.container.inputs.AwsClusterNetworkingArgs;
+import com.pulumi.gcp.container.inputs.AwsClusterWorkloadIdentityConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -43,13 +43,13 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorization")
-    private @Nullable Output<AwsClusterAuthorizationGetArgs> authorization;
+    private @Nullable Output<AwsClusterAuthorizationArgs> authorization;
 
     /**
      * @return Required. Configuration related to the cluster RBAC settings.
      * 
      */
-    public Optional<Output<AwsClusterAuthorizationGetArgs>> authorization() {
+    public Optional<Output<AwsClusterAuthorizationArgs>> authorization() {
         return Optional.ofNullable(this.authorization);
     }
 
@@ -73,13 +73,13 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="controlPlane")
-    private @Nullable Output<AwsClusterControlPlaneGetArgs> controlPlane;
+    private @Nullable Output<AwsClusterControlPlaneArgs> controlPlane;
 
     /**
      * @return Required. Configuration related to the cluster control plane.
      * 
      */
-    public Optional<Output<AwsClusterControlPlaneGetArgs>> controlPlane() {
+    public Optional<Output<AwsClusterControlPlaneArgs>> controlPlane() {
         return Optional.ofNullable(this.controlPlane);
     }
 
@@ -150,13 +150,13 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fleet")
-    private @Nullable Output<AwsClusterFleetGetArgs> fleet;
+    private @Nullable Output<AwsClusterFleetArgs> fleet;
 
     /**
      * @return Fleet configuration.
      * 
      */
-    public Optional<Output<AwsClusterFleetGetArgs>> fleet() {
+    public Optional<Output<AwsClusterFleetArgs>> fleet() {
         return Optional.ofNullable(this.fleet);
     }
 
@@ -195,13 +195,13 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networking")
-    private @Nullable Output<AwsClusterNetworkingGetArgs> networking;
+    private @Nullable Output<AwsClusterNetworkingArgs> networking;
 
     /**
      * @return Required. Cluster-wide networking configuration.
      * 
      */
-    public Optional<Output<AwsClusterNetworkingGetArgs>> networking() {
+    public Optional<Output<AwsClusterNetworkingArgs>> networking() {
         return Optional.ofNullable(this.networking);
     }
 
@@ -287,13 +287,13 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workloadIdentityConfigs")
-    private @Nullable Output<List<AwsClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs;
+    private @Nullable Output<List<AwsClusterWorkloadIdentityConfigArgs>> workloadIdentityConfigs;
 
     /**
      * @return Output only. Workload Identity settings.
      * 
      */
-    public Optional<Output<List<AwsClusterWorkloadIdentityConfigGetArgs>>> workloadIdentityConfigs() {
+    public Optional<Output<List<AwsClusterWorkloadIdentityConfigArgs>>> workloadIdentityConfigs() {
         return Optional.ofNullable(this.workloadIdentityConfigs);
     }
 
@@ -365,7 +365,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder authorization(@Nullable Output<AwsClusterAuthorizationGetArgs> authorization) {
+        public Builder authorization(@Nullable Output<AwsClusterAuthorizationArgs> authorization) {
             $.authorization = authorization;
             return this;
         }
@@ -376,7 +376,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder authorization(AwsClusterAuthorizationGetArgs authorization) {
+        public Builder authorization(AwsClusterAuthorizationArgs authorization) {
             return authorization(Output.of(authorization));
         }
 
@@ -407,7 +407,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder controlPlane(@Nullable Output<AwsClusterControlPlaneGetArgs> controlPlane) {
+        public Builder controlPlane(@Nullable Output<AwsClusterControlPlaneArgs> controlPlane) {
             $.controlPlane = controlPlane;
             return this;
         }
@@ -418,7 +418,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder controlPlane(AwsClusterControlPlaneGetArgs controlPlane) {
+        public Builder controlPlane(AwsClusterControlPlaneArgs controlPlane) {
             return controlPlane(Output.of(controlPlane));
         }
 
@@ -514,7 +514,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fleet(@Nullable Output<AwsClusterFleetGetArgs> fleet) {
+        public Builder fleet(@Nullable Output<AwsClusterFleetArgs> fleet) {
             $.fleet = fleet;
             return this;
         }
@@ -525,7 +525,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder fleet(AwsClusterFleetGetArgs fleet) {
+        public Builder fleet(AwsClusterFleetArgs fleet) {
             return fleet(Output.of(fleet));
         }
 
@@ -577,7 +577,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networking(@Nullable Output<AwsClusterNetworkingGetArgs> networking) {
+        public Builder networking(@Nullable Output<AwsClusterNetworkingArgs> networking) {
             $.networking = networking;
             return this;
         }
@@ -588,7 +588,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder networking(AwsClusterNetworkingGetArgs networking) {
+        public Builder networking(AwsClusterNetworkingArgs networking) {
             return networking(Output.of(networking));
         }
 
@@ -705,7 +705,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workloadIdentityConfigs(@Nullable Output<List<AwsClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs) {
+        public Builder workloadIdentityConfigs(@Nullable Output<List<AwsClusterWorkloadIdentityConfigArgs>> workloadIdentityConfigs) {
             $.workloadIdentityConfigs = workloadIdentityConfigs;
             return this;
         }
@@ -716,7 +716,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workloadIdentityConfigs(List<AwsClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfigs) {
+        public Builder workloadIdentityConfigs(List<AwsClusterWorkloadIdentityConfigArgs> workloadIdentityConfigs) {
             return workloadIdentityConfigs(Output.of(workloadIdentityConfigs));
         }
 
@@ -726,7 +726,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder workloadIdentityConfigs(AwsClusterWorkloadIdentityConfigGetArgs... workloadIdentityConfigs) {
+        public Builder workloadIdentityConfigs(AwsClusterWorkloadIdentityConfigArgs... workloadIdentityConfigs) {
             return workloadIdentityConfigs(List.of(workloadIdentityConfigs));
         }
 

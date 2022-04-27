@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.gamelift.inputs;
 
-import com.pulumi.aws.gamelift.inputs.FleetEc2InboundPermissionGetArgs;
-import com.pulumi.aws.gamelift.inputs.FleetResourceCreationLimitPolicyGetArgs;
-import com.pulumi.aws.gamelift.inputs.FleetRuntimeConfigurationGetArgs;
+import com.pulumi.aws.gamelift.inputs.FleetEc2InboundPermissionArgs;
+import com.pulumi.aws.gamelift.inputs.FleetResourceCreationLimitPolicyArgs;
+import com.pulumi.aws.gamelift.inputs.FleetRuntimeConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -70,13 +70,13 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ec2InboundPermissions")
-    private @Nullable Output<List<FleetEc2InboundPermissionGetArgs>> ec2InboundPermissions;
+    private @Nullable Output<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions;
 
     /**
      * @return Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
      * 
      */
-    public Optional<Output<List<FleetEc2InboundPermissionGetArgs>>> ec2InboundPermissions() {
+    public Optional<Output<List<FleetEc2InboundPermissionArgs>>> ec2InboundPermissions() {
         return Optional.ofNullable(this.ec2InboundPermissions);
     }
 
@@ -197,13 +197,13 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceCreationLimitPolicy")
-    private @Nullable Output<FleetResourceCreationLimitPolicyGetArgs> resourceCreationLimitPolicy;
+    private @Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
 
     /**
      * @return Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
      * 
      */
-    public Optional<Output<FleetResourceCreationLimitPolicyGetArgs>> resourceCreationLimitPolicy() {
+    public Optional<Output<FleetResourceCreationLimitPolicyArgs>> resourceCreationLimitPolicy() {
         return Optional.ofNullable(this.resourceCreationLimitPolicy);
     }
 
@@ -212,13 +212,13 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtimeConfiguration")
-    private @Nullable Output<FleetRuntimeConfigurationGetArgs> runtimeConfiguration;
+    private @Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration;
 
     /**
      * @return Instructions for launching server processes on each instance in the fleet. See below.
      * 
      */
-    public Optional<Output<FleetRuntimeConfigurationGetArgs>> runtimeConfiguration() {
+    public Optional<Output<FleetRuntimeConfigurationArgs>> runtimeConfiguration() {
         return Optional.ofNullable(this.runtimeConfiguration);
     }
 
@@ -360,7 +360,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ec2InboundPermissions(@Nullable Output<List<FleetEc2InboundPermissionGetArgs>> ec2InboundPermissions) {
+        public Builder ec2InboundPermissions(@Nullable Output<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions) {
             $.ec2InboundPermissions = ec2InboundPermissions;
             return this;
         }
@@ -371,7 +371,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ec2InboundPermissions(List<FleetEc2InboundPermissionGetArgs> ec2InboundPermissions) {
+        public Builder ec2InboundPermissions(List<FleetEc2InboundPermissionArgs> ec2InboundPermissions) {
             return ec2InboundPermissions(Output.of(ec2InboundPermissions));
         }
 
@@ -381,7 +381,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ec2InboundPermissions(FleetEc2InboundPermissionGetArgs... ec2InboundPermissions) {
+        public Builder ec2InboundPermissions(FleetEc2InboundPermissionArgs... ec2InboundPermissions) {
             return ec2InboundPermissions(List.of(ec2InboundPermissions));
         }
 
@@ -561,7 +561,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resourceCreationLimitPolicy(@Nullable Output<FleetResourceCreationLimitPolicyGetArgs> resourceCreationLimitPolicy) {
+        public Builder resourceCreationLimitPolicy(@Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy) {
             $.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
             return this;
         }
@@ -572,7 +572,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder resourceCreationLimitPolicy(FleetResourceCreationLimitPolicyGetArgs resourceCreationLimitPolicy) {
+        public Builder resourceCreationLimitPolicy(FleetResourceCreationLimitPolicyArgs resourceCreationLimitPolicy) {
             return resourceCreationLimitPolicy(Output.of(resourceCreationLimitPolicy));
         }
 
@@ -582,7 +582,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder runtimeConfiguration(@Nullable Output<FleetRuntimeConfigurationGetArgs> runtimeConfiguration) {
+        public Builder runtimeConfiguration(@Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration) {
             $.runtimeConfiguration = runtimeConfiguration;
             return this;
         }
@@ -593,7 +593,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder runtimeConfiguration(FleetRuntimeConfigurationGetArgs runtimeConfiguration) {
+        public Builder runtimeConfiguration(FleetRuntimeConfigurationArgs runtimeConfiguration) {
             return runtimeConfiguration(Output.of(runtimeConfiguration));
         }
 

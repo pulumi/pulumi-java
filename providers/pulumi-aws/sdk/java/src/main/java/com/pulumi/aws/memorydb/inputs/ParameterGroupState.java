@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.memorydb.inputs;
 
-import com.pulumi.aws.memorydb.inputs.ParameterGroupParameterGetArgs;
+import com.pulumi.aws.memorydb.inputs.ParameterGroupParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -90,13 +90,13 @@ public final class ParameterGroupState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="parameters")
-    private @Nullable Output<List<ParameterGroupParameterGetArgs>> parameters;
+    private @Nullable Output<List<ParameterGroupParameterArgs>> parameters;
 
     /**
      * @return Set of MemoryDB parameters to apply. Any parameters not specified will fall back to their family defaults. Detailed below.
      * 
      */
-    public Optional<Output<List<ParameterGroupParameterGetArgs>>> parameters() {
+    public Optional<Output<List<ParameterGroupParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
 
@@ -260,7 +260,7 @@ public final class ParameterGroupState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder parameters(@Nullable Output<List<ParameterGroupParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<ParameterGroupParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
@@ -271,7 +271,7 @@ public final class ParameterGroupState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder parameters(List<ParameterGroupParameterGetArgs> parameters) {
+        public Builder parameters(List<ParameterGroupParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
@@ -281,7 +281,7 @@ public final class ParameterGroupState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder parameters(ParameterGroupParameterGetArgs... parameters) {
+        public Builder parameters(ParameterGroupParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 

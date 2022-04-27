@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.glue.inputs;
 
-import com.pulumi.aws.glue.inputs.JobCommandGetArgs;
-import com.pulumi.aws.glue.inputs.JobExecutionPropertyGetArgs;
-import com.pulumi.aws.glue.inputs.JobNotificationPropertyGetArgs;
+import com.pulumi.aws.glue.inputs.JobCommandArgs;
+import com.pulumi.aws.glue.inputs.JobExecutionPropertyArgs;
+import com.pulumi.aws.glue.inputs.JobNotificationPropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Double;
@@ -42,13 +42,13 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="command")
-    private @Nullable Output<JobCommandGetArgs> command;
+    private @Nullable Output<JobCommandArgs> command;
 
     /**
      * @return The command of the job. Defined below.
      * 
      */
-    public Optional<Output<JobCommandGetArgs>> command() {
+    public Optional<Output<JobCommandArgs>> command() {
         return Optional.ofNullable(this.command);
     }
 
@@ -102,13 +102,13 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionProperty")
-    private @Nullable Output<JobExecutionPropertyGetArgs> executionProperty;
+    private @Nullable Output<JobExecutionPropertyArgs> executionProperty;
 
     /**
      * @return Execution property of the job. Defined below.
      * 
      */
-    public Optional<Output<JobExecutionPropertyGetArgs>> executionProperty() {
+    public Optional<Output<JobExecutionPropertyArgs>> executionProperty() {
         return Optional.ofNullable(this.executionProperty);
     }
 
@@ -192,13 +192,13 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationProperty")
-    private @Nullable Output<JobNotificationPropertyGetArgs> notificationProperty;
+    private @Nullable Output<JobNotificationPropertyArgs> notificationProperty;
 
     /**
      * @return Notification property of the job. Defined below.
      * 
      */
-    public Optional<Output<JobNotificationPropertyGetArgs>> notificationProperty() {
+    public Optional<Output<JobNotificationPropertyArgs>> notificationProperty() {
         return Optional.ofNullable(this.notificationProperty);
     }
 
@@ -376,7 +376,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder command(@Nullable Output<JobCommandGetArgs> command) {
+        public Builder command(@Nullable Output<JobCommandArgs> command) {
             $.command = command;
             return this;
         }
@@ -387,7 +387,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder command(JobCommandGetArgs command) {
+        public Builder command(JobCommandArgs command) {
             return command(Output.of(command));
         }
 
@@ -470,7 +470,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder executionProperty(@Nullable Output<JobExecutionPropertyGetArgs> executionProperty) {
+        public Builder executionProperty(@Nullable Output<JobExecutionPropertyArgs> executionProperty) {
             $.executionProperty = executionProperty;
             return this;
         }
@@ -481,7 +481,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder executionProperty(JobExecutionPropertyGetArgs executionProperty) {
+        public Builder executionProperty(JobExecutionPropertyArgs executionProperty) {
             return executionProperty(Output.of(executionProperty));
         }
 
@@ -596,7 +596,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notificationProperty(@Nullable Output<JobNotificationPropertyGetArgs> notificationProperty) {
+        public Builder notificationProperty(@Nullable Output<JobNotificationPropertyArgs> notificationProperty) {
             $.notificationProperty = notificationProperty;
             return this;
         }
@@ -607,7 +607,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder notificationProperty(JobNotificationPropertyGetArgs notificationProperty) {
+        public Builder notificationProperty(JobNotificationPropertyArgs notificationProperty) {
             return notificationProperty(Output.of(notificationProperty));
         }
 

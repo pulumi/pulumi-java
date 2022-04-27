@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.synthetics.inputs;
 
-import com.pulumi.aws.synthetics.inputs.CanaryArtifactConfigGetArgs;
-import com.pulumi.aws.synthetics.inputs.CanaryRunConfigGetArgs;
-import com.pulumi.aws.synthetics.inputs.CanaryScheduleGetArgs;
-import com.pulumi.aws.synthetics.inputs.CanaryTimelineGetArgs;
-import com.pulumi.aws.synthetics.inputs.CanaryVpcConfigGetArgs;
+import com.pulumi.aws.synthetics.inputs.CanaryArtifactConfigArgs;
+import com.pulumi.aws.synthetics.inputs.CanaryRunConfigArgs;
+import com.pulumi.aws.synthetics.inputs.CanaryScheduleArgs;
+import com.pulumi.aws.synthetics.inputs.CanaryTimelineArgs;
+import com.pulumi.aws.synthetics.inputs.CanaryVpcConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -44,13 +44,13 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="artifactConfig")
-    private @Nullable Output<CanaryArtifactConfigGetArgs> artifactConfig;
+    private @Nullable Output<CanaryArtifactConfigArgs> artifactConfig;
 
     /**
      * @return configuration for canary artifacts, including the encryption-at-rest settings for artifacts that the canary uploads to Amazon S3. See Artifact Config.
      * 
      */
-    public Optional<Output<CanaryArtifactConfigGetArgs>> artifactConfig() {
+    public Optional<Output<CanaryArtifactConfigArgs>> artifactConfig() {
         return Optional.ofNullable(this.artifactConfig);
     }
 
@@ -149,13 +149,13 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runConfig")
-    private @Nullable Output<CanaryRunConfigGetArgs> runConfig;
+    private @Nullable Output<CanaryRunConfigArgs> runConfig;
 
     /**
      * @return Configuration block for individual canary runs. Detailed below.
      * 
      */
-    public Optional<Output<CanaryRunConfigGetArgs>> runConfig() {
+    public Optional<Output<CanaryRunConfigArgs>> runConfig() {
         return Optional.ofNullable(this.runConfig);
     }
 
@@ -224,13 +224,13 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule")
-    private @Nullable Output<CanaryScheduleGetArgs> schedule;
+    private @Nullable Output<CanaryScheduleArgs> schedule;
 
     /**
      * @return Configuration block providing how often the canary is to run and when these test runs are to stop. Detailed below.
      * 
      */
-    public Optional<Output<CanaryScheduleGetArgs>> schedule() {
+    public Optional<Output<CanaryScheduleArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
 
@@ -329,13 +329,13 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timelines")
-    private @Nullable Output<List<CanaryTimelineGetArgs>> timelines;
+    private @Nullable Output<List<CanaryTimelineArgs>> timelines;
 
     /**
      * @return Structure that contains information about when the canary was created, modified, and most recently run. see Timeline.
      * 
      */
-    public Optional<Output<List<CanaryTimelineGetArgs>>> timelines() {
+    public Optional<Output<List<CanaryTimelineArgs>>> timelines() {
         return Optional.ofNullable(this.timelines);
     }
 
@@ -344,13 +344,13 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfig")
-    private @Nullable Output<CanaryVpcConfigGetArgs> vpcConfig;
+    private @Nullable Output<CanaryVpcConfigArgs> vpcConfig;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<Output<CanaryVpcConfigGetArgs>> vpcConfig() {
+    public Optional<Output<CanaryVpcConfigArgs>> vpcConfig() {
         return Optional.ofNullable(this.vpcConfig);
     }
 
@@ -442,7 +442,7 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder artifactConfig(@Nullable Output<CanaryArtifactConfigGetArgs> artifactConfig) {
+        public Builder artifactConfig(@Nullable Output<CanaryArtifactConfigArgs> artifactConfig) {
             $.artifactConfig = artifactConfig;
             return this;
         }
@@ -453,7 +453,7 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder artifactConfig(CanaryArtifactConfigGetArgs artifactConfig) {
+        public Builder artifactConfig(CanaryArtifactConfigArgs artifactConfig) {
             return artifactConfig(Output.of(artifactConfig));
         }
 
@@ -589,7 +589,7 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder runConfig(@Nullable Output<CanaryRunConfigGetArgs> runConfig) {
+        public Builder runConfig(@Nullable Output<CanaryRunConfigArgs> runConfig) {
             $.runConfig = runConfig;
             return this;
         }
@@ -600,7 +600,7 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder runConfig(CanaryRunConfigGetArgs runConfig) {
+        public Builder runConfig(CanaryRunConfigArgs runConfig) {
             return runConfig(Output.of(runConfig));
         }
 
@@ -694,7 +694,7 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schedule(@Nullable Output<CanaryScheduleGetArgs> schedule) {
+        public Builder schedule(@Nullable Output<CanaryScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
@@ -705,7 +705,7 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder schedule(CanaryScheduleGetArgs schedule) {
+        public Builder schedule(CanaryScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }
 
@@ -841,7 +841,7 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder timelines(@Nullable Output<List<CanaryTimelineGetArgs>> timelines) {
+        public Builder timelines(@Nullable Output<List<CanaryTimelineArgs>> timelines) {
             $.timelines = timelines;
             return this;
         }
@@ -852,7 +852,7 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder timelines(List<CanaryTimelineGetArgs> timelines) {
+        public Builder timelines(List<CanaryTimelineArgs> timelines) {
             return timelines(Output.of(timelines));
         }
 
@@ -862,7 +862,7 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder timelines(CanaryTimelineGetArgs... timelines) {
+        public Builder timelines(CanaryTimelineArgs... timelines) {
             return timelines(List.of(timelines));
         }
 
@@ -872,7 +872,7 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfig(@Nullable Output<CanaryVpcConfigGetArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<CanaryVpcConfigArgs> vpcConfig) {
             $.vpcConfig = vpcConfig;
             return this;
         }
@@ -883,7 +883,7 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder vpcConfig(CanaryVpcConfigGetArgs vpcConfig) {
+        public Builder vpcConfig(CanaryVpcConfigArgs vpcConfig) {
             return vpcConfig(Output.of(vpcConfig));
         }
 

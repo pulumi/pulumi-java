@@ -5,7 +5,7 @@ package com.pulumi.gcp.iap.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.iap.inputs.AppEngineVersionIamMemberConditionGetArgs;
+import com.pulumi.gcp.iap.inputs.AppEngineVersionIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -37,14 +37,14 @@ public final class AppEngineVersionIamMemberState extends com.pulumi.resources.R
      * 
      */
     @Import(name="condition")
-    private @Nullable Output<AppEngineVersionIamMemberConditionGetArgs> condition;
+    private @Nullable Output<AppEngineVersionIamMemberConditionArgs> condition;
 
     /**
      * @return An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<AppEngineVersionIamMemberConditionGetArgs>> condition() {
+    public Optional<Output<AppEngineVersionIamMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
 
@@ -195,7 +195,7 @@ public final class AppEngineVersionIamMemberState extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder condition(@Nullable Output<AppEngineVersionIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<AppEngineVersionIamMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
@@ -207,7 +207,7 @@ public final class AppEngineVersionIamMemberState extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder condition(AppEngineVersionIamMemberConditionGetArgs condition) {
+        public Builder condition(AppEngineVersionIamMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
 

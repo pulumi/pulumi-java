@@ -5,8 +5,8 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationGetArgs;
-import com.pulumi.gcp.compute.inputs.SecurityScanConfigScheduleGetArgs;
+import com.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationArgs;
+import com.pulumi.gcp.compute.inputs.SecurityScanConfigScheduleArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class SecurityScanConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="authentication")
-    private @Nullable Output<SecurityScanConfigAuthenticationGetArgs> authentication;
+    private @Nullable Output<SecurityScanConfigAuthenticationArgs> authentication;
 
     /**
      * @return The authentication configuration.
@@ -34,7 +34,7 @@ public final class SecurityScanConfigState extends com.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    public Optional<Output<SecurityScanConfigAuthenticationGetArgs>> authentication() {
+    public Optional<Output<SecurityScanConfigAuthenticationArgs>> authentication() {
         return Optional.ofNullable(this.authentication);
     }
 
@@ -144,14 +144,14 @@ public final class SecurityScanConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="schedule")
-    private @Nullable Output<SecurityScanConfigScheduleGetArgs> schedule;
+    private @Nullable Output<SecurityScanConfigScheduleArgs> schedule;
 
     /**
      * @return The schedule of the ScanConfig
      * Structure is documented below.
      * 
      */
-    public Optional<Output<SecurityScanConfigScheduleGetArgs>> schedule() {
+    public Optional<Output<SecurityScanConfigScheduleArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
 
@@ -248,7 +248,7 @@ public final class SecurityScanConfigState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder authentication(@Nullable Output<SecurityScanConfigAuthenticationGetArgs> authentication) {
+        public Builder authentication(@Nullable Output<SecurityScanConfigAuthenticationArgs> authentication) {
             $.authentication = authentication;
             return this;
         }
@@ -261,7 +261,7 @@ public final class SecurityScanConfigState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder authentication(SecurityScanConfigAuthenticationGetArgs authentication) {
+        public Builder authentication(SecurityScanConfigAuthenticationArgs authentication) {
             return authentication(Output.of(authentication));
         }
 
@@ -419,7 +419,7 @@ public final class SecurityScanConfigState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder schedule(@Nullable Output<SecurityScanConfigScheduleGetArgs> schedule) {
+        public Builder schedule(@Nullable Output<SecurityScanConfigScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
@@ -431,7 +431,7 @@ public final class SecurityScanConfigState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder schedule(SecurityScanConfigScheduleGetArgs schedule) {
+        public Builder schedule(SecurityScanConfigScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }
 

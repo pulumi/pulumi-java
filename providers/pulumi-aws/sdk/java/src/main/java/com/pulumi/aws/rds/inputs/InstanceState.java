@@ -5,8 +5,8 @@ package com.pulumi.aws.rds.inputs;
 
 import com.pulumi.aws.rds.enums.InstanceType;
 import com.pulumi.aws.rds.enums.StorageType;
-import com.pulumi.aws.rds.inputs.InstanceRestoreToPointInTimeGetArgs;
-import com.pulumi.aws.rds.inputs.InstanceS3ImportGetArgs;
+import com.pulumi.aws.rds.inputs.InstanceRestoreToPointInTimeArgs;
+import com.pulumi.aws.rds.inputs.InstanceS3ImportArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -927,13 +927,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restoreToPointInTime")
-    private @Nullable Output<InstanceRestoreToPointInTimeGetArgs> restoreToPointInTime;
+    private @Nullable Output<InstanceRestoreToPointInTimeArgs> restoreToPointInTime;
 
     /**
      * @return A configuration block for restoring a DB instance to an arbitrary point in time. Requires the `identifier` argument to be set with the name of the new DB instance to be created. See Restore To Point In Time below for details.
      * 
      */
-    public Optional<Output<InstanceRestoreToPointInTimeGetArgs>> restoreToPointInTime() {
+    public Optional<Output<InstanceRestoreToPointInTimeArgs>> restoreToPointInTime() {
         return Optional.ofNullable(this.restoreToPointInTime);
     }
 
@@ -942,13 +942,13 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3Import")
-    private @Nullable Output<InstanceS3ImportGetArgs> s3Import;
+    private @Nullable Output<InstanceS3ImportArgs> s3Import;
 
     /**
      * @return Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
      * 
      */
-    public Optional<Output<InstanceS3ImportGetArgs>> s3Import() {
+    public Optional<Output<InstanceS3ImportArgs>> s3Import() {
         return Optional.ofNullable(this.s3Import);
     }
 
@@ -2489,7 +2489,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder restoreToPointInTime(@Nullable Output<InstanceRestoreToPointInTimeGetArgs> restoreToPointInTime) {
+        public Builder restoreToPointInTime(@Nullable Output<InstanceRestoreToPointInTimeArgs> restoreToPointInTime) {
             $.restoreToPointInTime = restoreToPointInTime;
             return this;
         }
@@ -2500,7 +2500,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder restoreToPointInTime(InstanceRestoreToPointInTimeGetArgs restoreToPointInTime) {
+        public Builder restoreToPointInTime(InstanceRestoreToPointInTimeArgs restoreToPointInTime) {
             return restoreToPointInTime(Output.of(restoreToPointInTime));
         }
 
@@ -2510,7 +2510,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder s3Import(@Nullable Output<InstanceS3ImportGetArgs> s3Import) {
+        public Builder s3Import(@Nullable Output<InstanceS3ImportArgs> s3Import) {
             $.s3Import = s3Import;
             return this;
         }
@@ -2521,7 +2521,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder s3Import(InstanceS3ImportGetArgs s3Import) {
+        public Builder s3Import(InstanceS3ImportArgs s3Import) {
             return s3Import(Output.of(s3Import));
         }
 

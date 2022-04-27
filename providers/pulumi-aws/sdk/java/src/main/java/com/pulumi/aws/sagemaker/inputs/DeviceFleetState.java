@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.sagemaker.inputs;
 
-import com.pulumi.aws.sagemaker.inputs.DeviceFleetOutputConfigGetArgs;
+import com.pulumi.aws.sagemaker.inputs.DeviceFleetOutputConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -90,13 +90,13 @@ public final class DeviceFleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputConfig")
-    private @Nullable Output<DeviceFleetOutputConfigGetArgs> outputConfig;
+    private @Nullable Output<DeviceFleetOutputConfigArgs> outputConfig;
 
     /**
      * @return Specifies details about the repository. see Output Config details below.
      * 
      */
-    public Optional<Output<DeviceFleetOutputConfigGetArgs>> outputConfig() {
+    public Optional<Output<DeviceFleetOutputConfigArgs>> outputConfig() {
         return Optional.ofNullable(this.outputConfig);
     }
 
@@ -276,7 +276,7 @@ public final class DeviceFleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder outputConfig(@Nullable Output<DeviceFleetOutputConfigGetArgs> outputConfig) {
+        public Builder outputConfig(@Nullable Output<DeviceFleetOutputConfigArgs> outputConfig) {
             $.outputConfig = outputConfig;
             return this;
         }
@@ -287,7 +287,7 @@ public final class DeviceFleetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder outputConfig(DeviceFleetOutputConfigGetArgs outputConfig) {
+        public Builder outputConfig(DeviceFleetOutputConfigArgs outputConfig) {
             return outputConfig(Output.of(outputConfig));
         }
 

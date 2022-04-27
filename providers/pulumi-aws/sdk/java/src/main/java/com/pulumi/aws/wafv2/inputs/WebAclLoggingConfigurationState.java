@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import com.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterGetArgs;
-import com.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldGetArgs;
+import com.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterArgs;
+import com.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -38,13 +38,13 @@ public final class WebAclLoggingConfigurationState extends com.pulumi.resources.
      * 
      */
     @Import(name="loggingFilter")
-    private @Nullable Output<WebAclLoggingConfigurationLoggingFilterGetArgs> loggingFilter;
+    private @Nullable Output<WebAclLoggingConfigurationLoggingFilterArgs> loggingFilter;
 
     /**
      * @return A configuration block that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation. See Logging Filter below for more details.
      * 
      */
-    public Optional<Output<WebAclLoggingConfigurationLoggingFilterGetArgs>> loggingFilter() {
+    public Optional<Output<WebAclLoggingConfigurationLoggingFilterArgs>> loggingFilter() {
         return Optional.ofNullable(this.loggingFilter);
     }
 
@@ -53,13 +53,13 @@ public final class WebAclLoggingConfigurationState extends com.pulumi.resources.
      * 
      */
     @Import(name="redactedFields")
-    private @Nullable Output<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields;
+    private @Nullable Output<List<WebAclLoggingConfigurationRedactedFieldArgs>> redactedFields;
 
     /**
      * @return The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported. See Redacted Fields below for more details.
      * 
      */
-    public Optional<Output<List<WebAclLoggingConfigurationRedactedFieldGetArgs>>> redactedFields() {
+    public Optional<Output<List<WebAclLoggingConfigurationRedactedFieldArgs>>> redactedFields() {
         return Optional.ofNullable(this.redactedFields);
     }
 
@@ -142,7 +142,7 @@ public final class WebAclLoggingConfigurationState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder loggingFilter(@Nullable Output<WebAclLoggingConfigurationLoggingFilterGetArgs> loggingFilter) {
+        public Builder loggingFilter(@Nullable Output<WebAclLoggingConfigurationLoggingFilterArgs> loggingFilter) {
             $.loggingFilter = loggingFilter;
             return this;
         }
@@ -153,7 +153,7 @@ public final class WebAclLoggingConfigurationState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder loggingFilter(WebAclLoggingConfigurationLoggingFilterGetArgs loggingFilter) {
+        public Builder loggingFilter(WebAclLoggingConfigurationLoggingFilterArgs loggingFilter) {
             return loggingFilter(Output.of(loggingFilter));
         }
 
@@ -163,7 +163,7 @@ public final class WebAclLoggingConfigurationState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder redactedFields(@Nullable Output<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields) {
+        public Builder redactedFields(@Nullable Output<List<WebAclLoggingConfigurationRedactedFieldArgs>> redactedFields) {
             $.redactedFields = redactedFields;
             return this;
         }
@@ -174,7 +174,7 @@ public final class WebAclLoggingConfigurationState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder redactedFields(List<WebAclLoggingConfigurationRedactedFieldGetArgs> redactedFields) {
+        public Builder redactedFields(List<WebAclLoggingConfigurationRedactedFieldArgs> redactedFields) {
             return redactedFields(Output.of(redactedFields));
         }
 
@@ -184,7 +184,7 @@ public final class WebAclLoggingConfigurationState extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder redactedFields(WebAclLoggingConfigurationRedactedFieldGetArgs... redactedFields) {
+        public Builder redactedFields(WebAclLoggingConfigurationRedactedFieldArgs... redactedFields) {
             return redactedFields(List.of(redactedFields));
         }
 

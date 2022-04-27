@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.gamelift.inputs;
 
-import com.pulumi.aws.gamelift.inputs.AliasRoutingStrategyGetArgs;
+import com.pulumi.aws.gamelift.inputs.AliasRoutingStrategyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -67,13 +67,13 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routingStrategy")
-    private @Nullable Output<AliasRoutingStrategyGetArgs> routingStrategy;
+    private @Nullable Output<AliasRoutingStrategyArgs> routingStrategy;
 
     /**
      * @return Specifies the fleet and/or routing type to use for the alias.
      * 
      */
-    public Optional<Output<AliasRoutingStrategyGetArgs>> routingStrategy() {
+    public Optional<Output<AliasRoutingStrategyArgs>> routingStrategy() {
         return Optional.ofNullable(this.routingStrategy);
     }
 
@@ -205,7 +205,7 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder routingStrategy(@Nullable Output<AliasRoutingStrategyGetArgs> routingStrategy) {
+        public Builder routingStrategy(@Nullable Output<AliasRoutingStrategyArgs> routingStrategy) {
             $.routingStrategy = routingStrategy;
             return this;
         }
@@ -216,7 +216,7 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder routingStrategy(AliasRoutingStrategyGetArgs routingStrategy) {
+        public Builder routingStrategy(AliasRoutingStrategyArgs routingStrategy) {
             return routingStrategy(Output.of(routingStrategy));
         }
 

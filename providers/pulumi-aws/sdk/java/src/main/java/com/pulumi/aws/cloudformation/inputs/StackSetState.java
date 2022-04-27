@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cloudformation.inputs;
 
-import com.pulumi.aws.cloudformation.inputs.StackSetAutoDeploymentGetArgs;
+import com.pulumi.aws.cloudformation.inputs.StackSetAutoDeploymentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -53,13 +53,13 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoDeployment")
-    private @Nullable Output<StackSetAutoDeploymentGetArgs> autoDeployment;
+    private @Nullable Output<StackSetAutoDeploymentArgs> autoDeployment;
 
     /**
      * @return Configuration block containing the auto-deployment model for your StackSet. This can only be defined when using the `SERVICE_MANAGED` permission model.
      * 
      */
-    public Optional<Output<StackSetAutoDeploymentGetArgs>> autoDeployment() {
+    public Optional<Output<StackSetAutoDeploymentArgs>> autoDeployment() {
         return Optional.ofNullable(this.autoDeployment);
     }
 
@@ -313,7 +313,7 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoDeployment(@Nullable Output<StackSetAutoDeploymentGetArgs> autoDeployment) {
+        public Builder autoDeployment(@Nullable Output<StackSetAutoDeploymentArgs> autoDeployment) {
             $.autoDeployment = autoDeployment;
             return this;
         }
@@ -324,7 +324,7 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder autoDeployment(StackSetAutoDeploymentGetArgs autoDeployment) {
+        public Builder autoDeployment(StackSetAutoDeploymentArgs autoDeployment) {
             return autoDeployment(Output.of(autoDeployment));
         }
 

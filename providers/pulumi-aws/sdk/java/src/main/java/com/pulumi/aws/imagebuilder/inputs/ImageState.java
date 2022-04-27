@@ -3,8 +3,8 @@
 
 package com.pulumi.aws.imagebuilder.inputs;
 
-import com.pulumi.aws.imagebuilder.inputs.ImageImageTestsConfigurationGetArgs;
-import com.pulumi.aws.imagebuilder.inputs.ImageOutputResourceGetArgs;
+import com.pulumi.aws.imagebuilder.inputs.ImageImageTestsConfigurationArgs;
+import com.pulumi.aws.imagebuilder.inputs.ImageOutputResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -100,13 +100,13 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageTestsConfiguration")
-    private @Nullable Output<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration;
+    private @Nullable Output<ImageImageTestsConfigurationArgs> imageTestsConfiguration;
 
     /**
      * @return Configuration block with image tests configuration. Detailed below.
      * 
      */
-    public Optional<Output<ImageImageTestsConfigurationGetArgs>> imageTestsConfiguration() {
+    public Optional<Output<ImageImageTestsConfigurationArgs>> imageTestsConfiguration() {
         return Optional.ofNullable(this.imageTestsConfiguration);
     }
 
@@ -160,13 +160,13 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputResources")
-    private @Nullable Output<List<ImageOutputResourceGetArgs>> outputResources;
+    private @Nullable Output<List<ImageOutputResourceArgs>> outputResources;
 
     /**
      * @return List of objects with resources created by the image.
      * 
      */
-    public Optional<Output<List<ImageOutputResourceGetArgs>>> outputResources() {
+    public Optional<Output<List<ImageOutputResourceArgs>>> outputResources() {
         return Optional.ofNullable(this.outputResources);
     }
 
@@ -378,7 +378,7 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder imageTestsConfiguration(@Nullable Output<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration) {
+        public Builder imageTestsConfiguration(@Nullable Output<ImageImageTestsConfigurationArgs> imageTestsConfiguration) {
             $.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
@@ -389,7 +389,7 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder imageTestsConfiguration(ImageImageTestsConfigurationGetArgs imageTestsConfiguration) {
+        public Builder imageTestsConfiguration(ImageImageTestsConfigurationArgs imageTestsConfiguration) {
             return imageTestsConfiguration(Output.of(imageTestsConfiguration));
         }
 
@@ -462,7 +462,7 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder outputResources(@Nullable Output<List<ImageOutputResourceGetArgs>> outputResources) {
+        public Builder outputResources(@Nullable Output<List<ImageOutputResourceArgs>> outputResources) {
             $.outputResources = outputResources;
             return this;
         }
@@ -473,7 +473,7 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder outputResources(List<ImageOutputResourceGetArgs> outputResources) {
+        public Builder outputResources(List<ImageOutputResourceArgs> outputResources) {
             return outputResources(Output.of(outputResources));
         }
 
@@ -483,7 +483,7 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder outputResources(ImageOutputResourceGetArgs... outputResources) {
+        public Builder outputResources(ImageOutputResourceArgs... outputResources) {
             return outputResources(List.of(outputResources));
         }
 

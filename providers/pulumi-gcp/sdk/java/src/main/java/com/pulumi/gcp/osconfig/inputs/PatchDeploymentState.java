@@ -5,11 +5,11 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.osconfig.inputs.PatchDeploymentInstanceFilterGetArgs;
-import com.pulumi.gcp.osconfig.inputs.PatchDeploymentOneTimeScheduleGetArgs;
-import com.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigGetArgs;
-import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleGetArgs;
-import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRolloutGetArgs;
+import com.pulumi.gcp.osconfig.inputs.PatchDeploymentInstanceFilterArgs;
+import com.pulumi.gcp.osconfig.inputs.PatchDeploymentOneTimeScheduleArgs;
+import com.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigArgs;
+import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleArgs;
+import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRolloutArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -75,14 +75,14 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="instanceFilter")
-    private @Nullable Output<PatchDeploymentInstanceFilterGetArgs> instanceFilter;
+    private @Nullable Output<PatchDeploymentInstanceFilterArgs> instanceFilter;
 
     /**
      * @return VM instances to patch.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PatchDeploymentInstanceFilterGetArgs>> instanceFilter() {
+    public Optional<Output<PatchDeploymentInstanceFilterArgs>> instanceFilter() {
         return Optional.ofNullable(this.instanceFilter);
     }
 
@@ -128,14 +128,14 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="oneTimeSchedule")
-    private @Nullable Output<PatchDeploymentOneTimeScheduleGetArgs> oneTimeSchedule;
+    private @Nullable Output<PatchDeploymentOneTimeScheduleArgs> oneTimeSchedule;
 
     /**
      * @return Schedule a one-time execution.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PatchDeploymentOneTimeScheduleGetArgs>> oneTimeSchedule() {
+    public Optional<Output<PatchDeploymentOneTimeScheduleArgs>> oneTimeSchedule() {
         return Optional.ofNullable(this.oneTimeSchedule);
     }
 
@@ -145,14 +145,14 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="patchConfig")
-    private @Nullable Output<PatchDeploymentPatchConfigGetArgs> patchConfig;
+    private @Nullable Output<PatchDeploymentPatchConfigArgs> patchConfig;
 
     /**
      * @return Patch configuration that is applied.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PatchDeploymentPatchConfigGetArgs>> patchConfig() {
+    public Optional<Output<PatchDeploymentPatchConfigArgs>> patchConfig() {
         return Optional.ofNullable(this.patchConfig);
     }
 
@@ -204,14 +204,14 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="recurringSchedule")
-    private @Nullable Output<PatchDeploymentRecurringScheduleGetArgs> recurringSchedule;
+    private @Nullable Output<PatchDeploymentRecurringScheduleArgs> recurringSchedule;
 
     /**
      * @return Schedule recurring executions.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PatchDeploymentRecurringScheduleGetArgs>> recurringSchedule() {
+    public Optional<Output<PatchDeploymentRecurringScheduleArgs>> recurringSchedule() {
         return Optional.ofNullable(this.recurringSchedule);
     }
 
@@ -221,14 +221,14 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="rollout")
-    private @Nullable Output<PatchDeploymentRolloutGetArgs> rollout;
+    private @Nullable Output<PatchDeploymentRolloutArgs> rollout;
 
     /**
      * @return Rollout strategy of the patch job.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<PatchDeploymentRolloutGetArgs>> rollout() {
+    public Optional<Output<PatchDeploymentRolloutArgs>> rollout() {
         return Optional.ofNullable(this.rollout);
     }
 
@@ -359,7 +359,7 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder instanceFilter(@Nullable Output<PatchDeploymentInstanceFilterGetArgs> instanceFilter) {
+        public Builder instanceFilter(@Nullable Output<PatchDeploymentInstanceFilterArgs> instanceFilter) {
             $.instanceFilter = instanceFilter;
             return this;
         }
@@ -371,7 +371,7 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder instanceFilter(PatchDeploymentInstanceFilterGetArgs instanceFilter) {
+        public Builder instanceFilter(PatchDeploymentInstanceFilterArgs instanceFilter) {
             return instanceFilter(Output.of(instanceFilter));
         }
 
@@ -430,7 +430,7 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder oneTimeSchedule(@Nullable Output<PatchDeploymentOneTimeScheduleGetArgs> oneTimeSchedule) {
+        public Builder oneTimeSchedule(@Nullable Output<PatchDeploymentOneTimeScheduleArgs> oneTimeSchedule) {
             $.oneTimeSchedule = oneTimeSchedule;
             return this;
         }
@@ -442,7 +442,7 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder oneTimeSchedule(PatchDeploymentOneTimeScheduleGetArgs oneTimeSchedule) {
+        public Builder oneTimeSchedule(PatchDeploymentOneTimeScheduleArgs oneTimeSchedule) {
             return oneTimeSchedule(Output.of(oneTimeSchedule));
         }
 
@@ -453,7 +453,7 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder patchConfig(@Nullable Output<PatchDeploymentPatchConfigGetArgs> patchConfig) {
+        public Builder patchConfig(@Nullable Output<PatchDeploymentPatchConfigArgs> patchConfig) {
             $.patchConfig = patchConfig;
             return this;
         }
@@ -465,7 +465,7 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder patchConfig(PatchDeploymentPatchConfigGetArgs patchConfig) {
+        public Builder patchConfig(PatchDeploymentPatchConfigArgs patchConfig) {
             return patchConfig(Output.of(patchConfig));
         }
 
@@ -530,7 +530,7 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder recurringSchedule(@Nullable Output<PatchDeploymentRecurringScheduleGetArgs> recurringSchedule) {
+        public Builder recurringSchedule(@Nullable Output<PatchDeploymentRecurringScheduleArgs> recurringSchedule) {
             $.recurringSchedule = recurringSchedule;
             return this;
         }
@@ -542,7 +542,7 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder recurringSchedule(PatchDeploymentRecurringScheduleGetArgs recurringSchedule) {
+        public Builder recurringSchedule(PatchDeploymentRecurringScheduleArgs recurringSchedule) {
             return recurringSchedule(Output.of(recurringSchedule));
         }
 
@@ -553,7 +553,7 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder rollout(@Nullable Output<PatchDeploymentRolloutGetArgs> rollout) {
+        public Builder rollout(@Nullable Output<PatchDeploymentRolloutArgs> rollout) {
             $.rollout = rollout;
             return this;
         }
@@ -565,7 +565,7 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder rollout(PatchDeploymentRolloutGetArgs rollout) {
+        public Builder rollout(PatchDeploymentRolloutArgs rollout) {
             return rollout(Output.of(rollout));
         }
 

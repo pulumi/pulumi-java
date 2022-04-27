@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.datapipeline.inputs;
 
-import com.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterObjectGetArgs;
-import com.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterValueGetArgs;
-import com.pulumi.aws.datapipeline.inputs.PipelineDefinitionPipelineObjectGetArgs;
+import com.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterObjectArgs;
+import com.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterValueArgs;
+import com.pulumi.aws.datapipeline.inputs.PipelineDefinitionPipelineObjectArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -24,13 +24,13 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="parameterObjects")
-    private @Nullable Output<List<PipelineDefinitionParameterObjectGetArgs>> parameterObjects;
+    private @Nullable Output<List<PipelineDefinitionParameterObjectArgs>> parameterObjects;
 
     /**
      * @return Configuration block for the parameter objects used in the pipeline definition. See below
      * 
      */
-    public Optional<Output<List<PipelineDefinitionParameterObjectGetArgs>>> parameterObjects() {
+    public Optional<Output<List<PipelineDefinitionParameterObjectArgs>>> parameterObjects() {
         return Optional.ofNullable(this.parameterObjects);
     }
 
@@ -39,13 +39,13 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="parameterValues")
-    private @Nullable Output<List<PipelineDefinitionParameterValueGetArgs>> parameterValues;
+    private @Nullable Output<List<PipelineDefinitionParameterValueArgs>> parameterValues;
 
     /**
      * @return Configuration block for the parameter values used in the pipeline definition. See below
      * 
      */
-    public Optional<Output<List<PipelineDefinitionParameterValueGetArgs>>> parameterValues() {
+    public Optional<Output<List<PipelineDefinitionParameterValueArgs>>> parameterValues() {
         return Optional.ofNullable(this.parameterValues);
     }
 
@@ -69,13 +69,13 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="pipelineObjects")
-    private @Nullable Output<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects;
+    private @Nullable Output<List<PipelineDefinitionPipelineObjectArgs>> pipelineObjects;
 
     /**
      * @return Configuration block for the objects that define the pipeline. See below
      * 
      */
-    public Optional<Output<List<PipelineDefinitionPipelineObjectGetArgs>>> pipelineObjects() {
+    public Optional<Output<List<PipelineDefinitionPipelineObjectArgs>>> pipelineObjects() {
         return Optional.ofNullable(this.pipelineObjects);
     }
 
@@ -112,7 +112,7 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder parameterObjects(@Nullable Output<List<PipelineDefinitionParameterObjectGetArgs>> parameterObjects) {
+        public Builder parameterObjects(@Nullable Output<List<PipelineDefinitionParameterObjectArgs>> parameterObjects) {
             $.parameterObjects = parameterObjects;
             return this;
         }
@@ -123,7 +123,7 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder parameterObjects(List<PipelineDefinitionParameterObjectGetArgs> parameterObjects) {
+        public Builder parameterObjects(List<PipelineDefinitionParameterObjectArgs> parameterObjects) {
             return parameterObjects(Output.of(parameterObjects));
         }
 
@@ -133,7 +133,7 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder parameterObjects(PipelineDefinitionParameterObjectGetArgs... parameterObjects) {
+        public Builder parameterObjects(PipelineDefinitionParameterObjectArgs... parameterObjects) {
             return parameterObjects(List.of(parameterObjects));
         }
 
@@ -143,7 +143,7 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder parameterValues(@Nullable Output<List<PipelineDefinitionParameterValueGetArgs>> parameterValues) {
+        public Builder parameterValues(@Nullable Output<List<PipelineDefinitionParameterValueArgs>> parameterValues) {
             $.parameterValues = parameterValues;
             return this;
         }
@@ -154,7 +154,7 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder parameterValues(List<PipelineDefinitionParameterValueGetArgs> parameterValues) {
+        public Builder parameterValues(List<PipelineDefinitionParameterValueArgs> parameterValues) {
             return parameterValues(Output.of(parameterValues));
         }
 
@@ -164,7 +164,7 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder parameterValues(PipelineDefinitionParameterValueGetArgs... parameterValues) {
+        public Builder parameterValues(PipelineDefinitionParameterValueArgs... parameterValues) {
             return parameterValues(List.of(parameterValues));
         }
 
@@ -195,7 +195,7 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder pipelineObjects(@Nullable Output<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects) {
+        public Builder pipelineObjects(@Nullable Output<List<PipelineDefinitionPipelineObjectArgs>> pipelineObjects) {
             $.pipelineObjects = pipelineObjects;
             return this;
         }
@@ -206,7 +206,7 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder pipelineObjects(List<PipelineDefinitionPipelineObjectGetArgs> pipelineObjects) {
+        public Builder pipelineObjects(List<PipelineDefinitionPipelineObjectArgs> pipelineObjects) {
             return pipelineObjects(Output.of(pipelineObjects));
         }
 
@@ -216,7 +216,7 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder pipelineObjects(PipelineDefinitionPipelineObjectGetArgs... pipelineObjects) {
+        public Builder pipelineObjects(PipelineDefinitionPipelineObjectArgs... pipelineObjects) {
             return pipelineObjects(List.of(pipelineObjects));
         }
 

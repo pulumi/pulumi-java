@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.elb.inputs;
 
-import com.pulumi.aws.elb.inputs.LoadBalancerPolicyPolicyAttributeGetArgs;
+import com.pulumi.aws.elb.inputs.LoadBalancerPolicyPolicyAttributeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -37,13 +37,13 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="policyAttributes")
-    private @Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes;
+    private @Nullable Output<List<LoadBalancerPolicyPolicyAttributeArgs>> policyAttributes;
 
     /**
      * @return Policy attribute to apply to the policy.
      * 
      */
-    public Optional<Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>>> policyAttributes() {
+    public Optional<Output<List<LoadBalancerPolicyPolicyAttributeArgs>>> policyAttributes() {
         return Optional.ofNullable(this.policyAttributes);
     }
 
@@ -131,7 +131,7 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder policyAttributes(@Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes) {
+        public Builder policyAttributes(@Nullable Output<List<LoadBalancerPolicyPolicyAttributeArgs>> policyAttributes) {
             $.policyAttributes = policyAttributes;
             return this;
         }
@@ -142,7 +142,7 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder policyAttributes(List<LoadBalancerPolicyPolicyAttributeGetArgs> policyAttributes) {
+        public Builder policyAttributes(List<LoadBalancerPolicyPolicyAttributeArgs> policyAttributes) {
             return policyAttributes(Output.of(policyAttributes));
         }
 
@@ -152,7 +152,7 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder policyAttributes(LoadBalancerPolicyPolicyAttributeGetArgs... policyAttributes) {
+        public Builder policyAttributes(LoadBalancerPolicyPolicyAttributeArgs... policyAttributes) {
             return policyAttributes(List.of(policyAttributes));
         }
 

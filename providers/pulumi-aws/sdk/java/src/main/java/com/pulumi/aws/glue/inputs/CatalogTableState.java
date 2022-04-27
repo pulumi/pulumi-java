@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.glue.inputs;
 
-import com.pulumi.aws.glue.inputs.CatalogTablePartitionIndexGetArgs;
-import com.pulumi.aws.glue.inputs.CatalogTablePartitionKeyGetArgs;
-import com.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorGetArgs;
-import com.pulumi.aws.glue.inputs.CatalogTableTargetTableGetArgs;
+import com.pulumi.aws.glue.inputs.CatalogTablePartitionIndexArgs;
+import com.pulumi.aws.glue.inputs.CatalogTablePartitionKeyArgs;
+import com.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorArgs;
+import com.pulumi.aws.glue.inputs.CatalogTableTargetTableArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -132,13 +132,13 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partitionIndices")
-    private @Nullable Output<List<CatalogTablePartitionIndexGetArgs>> partitionIndices;
+    private @Nullable Output<List<CatalogTablePartitionIndexArgs>> partitionIndices;
 
     /**
      * @return Configuration block for a maximum of 3 partition indexes. See `partition_index` below.
      * 
      */
-    public Optional<Output<List<CatalogTablePartitionIndexGetArgs>>> partitionIndices() {
+    public Optional<Output<List<CatalogTablePartitionIndexArgs>>> partitionIndices() {
         return Optional.ofNullable(this.partitionIndices);
     }
 
@@ -147,13 +147,13 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partitionKeys")
-    private @Nullable Output<List<CatalogTablePartitionKeyGetArgs>> partitionKeys;
+    private @Nullable Output<List<CatalogTablePartitionKeyArgs>> partitionKeys;
 
     /**
      * @return Configuration block of columns by which the table is partitioned. Only primitive types are supported as partition keys. See `partition_keys` below.
      * 
      */
-    public Optional<Output<List<CatalogTablePartitionKeyGetArgs>>> partitionKeys() {
+    public Optional<Output<List<CatalogTablePartitionKeyArgs>>> partitionKeys() {
         return Optional.ofNullable(this.partitionKeys);
     }
 
@@ -177,13 +177,13 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageDescriptor")
-    private @Nullable Output<CatalogTableStorageDescriptorGetArgs> storageDescriptor;
+    private @Nullable Output<CatalogTableStorageDescriptorArgs> storageDescriptor;
 
     /**
      * @return Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
      * 
      */
-    public Optional<Output<CatalogTableStorageDescriptorGetArgs>> storageDescriptor() {
+    public Optional<Output<CatalogTableStorageDescriptorArgs>> storageDescriptor() {
         return Optional.ofNullable(this.storageDescriptor);
     }
 
@@ -207,13 +207,13 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetTable")
-    private @Nullable Output<CatalogTableTargetTableGetArgs> targetTable;
+    private @Nullable Output<CatalogTableTargetTableArgs> targetTable;
 
     /**
      * @return Configuration block of a target table for resource linking. See `target_table` below.
      * 
      */
-    public Optional<Output<CatalogTableTargetTableGetArgs>> targetTable() {
+    public Optional<Output<CatalogTableTargetTableArgs>> targetTable() {
         return Optional.ofNullable(this.targetTable);
     }
 
@@ -438,7 +438,7 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder partitionIndices(@Nullable Output<List<CatalogTablePartitionIndexGetArgs>> partitionIndices) {
+        public Builder partitionIndices(@Nullable Output<List<CatalogTablePartitionIndexArgs>> partitionIndices) {
             $.partitionIndices = partitionIndices;
             return this;
         }
@@ -449,7 +449,7 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder partitionIndices(List<CatalogTablePartitionIndexGetArgs> partitionIndices) {
+        public Builder partitionIndices(List<CatalogTablePartitionIndexArgs> partitionIndices) {
             return partitionIndices(Output.of(partitionIndices));
         }
 
@@ -459,7 +459,7 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder partitionIndices(CatalogTablePartitionIndexGetArgs... partitionIndices) {
+        public Builder partitionIndices(CatalogTablePartitionIndexArgs... partitionIndices) {
             return partitionIndices(List.of(partitionIndices));
         }
 
@@ -469,7 +469,7 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder partitionKeys(@Nullable Output<List<CatalogTablePartitionKeyGetArgs>> partitionKeys) {
+        public Builder partitionKeys(@Nullable Output<List<CatalogTablePartitionKeyArgs>> partitionKeys) {
             $.partitionKeys = partitionKeys;
             return this;
         }
@@ -480,7 +480,7 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder partitionKeys(List<CatalogTablePartitionKeyGetArgs> partitionKeys) {
+        public Builder partitionKeys(List<CatalogTablePartitionKeyArgs> partitionKeys) {
             return partitionKeys(Output.of(partitionKeys));
         }
 
@@ -490,7 +490,7 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder partitionKeys(CatalogTablePartitionKeyGetArgs... partitionKeys) {
+        public Builder partitionKeys(CatalogTablePartitionKeyArgs... partitionKeys) {
             return partitionKeys(List.of(partitionKeys));
         }
 
@@ -521,7 +521,7 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder storageDescriptor(@Nullable Output<CatalogTableStorageDescriptorGetArgs> storageDescriptor) {
+        public Builder storageDescriptor(@Nullable Output<CatalogTableStorageDescriptorArgs> storageDescriptor) {
             $.storageDescriptor = storageDescriptor;
             return this;
         }
@@ -532,7 +532,7 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder storageDescriptor(CatalogTableStorageDescriptorGetArgs storageDescriptor) {
+        public Builder storageDescriptor(CatalogTableStorageDescriptorArgs storageDescriptor) {
             return storageDescriptor(Output.of(storageDescriptor));
         }
 
@@ -563,7 +563,7 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder targetTable(@Nullable Output<CatalogTableTargetTableGetArgs> targetTable) {
+        public Builder targetTable(@Nullable Output<CatalogTableTargetTableArgs> targetTable) {
             $.targetTable = targetTable;
             return this;
         }
@@ -574,7 +574,7 @@ public final class CatalogTableState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder targetTable(CatalogTableTargetTableGetArgs targetTable) {
+        public Builder targetTable(CatalogTableTargetTableArgs targetTable) {
             return targetTable(Output.of(targetTable));
         }
 

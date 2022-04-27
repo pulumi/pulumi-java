@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.mediapackage.inputs;
 
-import com.pulumi.aws.mediapackage.inputs.ChannelHlsIngestGetArgs;
+import com.pulumi.aws.mediapackage.inputs.ChannelHlsIngestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
@@ -69,13 +69,13 @@ public final class ChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hlsIngests")
-    private @Nullable Output<List<ChannelHlsIngestGetArgs>> hlsIngests;
+    private @Nullable Output<List<ChannelHlsIngestArgs>> hlsIngests;
 
     /**
      * @return A single item list of HLS ingest information
      * 
      */
-    public Optional<Output<List<ChannelHlsIngestGetArgs>>> hlsIngests() {
+    public Optional<Output<List<ChannelHlsIngestArgs>>> hlsIngests() {
         return Optional.ofNullable(this.hlsIngests);
     }
 
@@ -207,7 +207,7 @@ public final class ChannelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hlsIngests(@Nullable Output<List<ChannelHlsIngestGetArgs>> hlsIngests) {
+        public Builder hlsIngests(@Nullable Output<List<ChannelHlsIngestArgs>> hlsIngests) {
             $.hlsIngests = hlsIngests;
             return this;
         }
@@ -218,7 +218,7 @@ public final class ChannelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hlsIngests(List<ChannelHlsIngestGetArgs> hlsIngests) {
+        public Builder hlsIngests(List<ChannelHlsIngestArgs> hlsIngests) {
             return hlsIngests(Output.of(hlsIngests));
         }
 
@@ -228,7 +228,7 @@ public final class ChannelState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder hlsIngests(ChannelHlsIngestGetArgs... hlsIngests) {
+        public Builder hlsIngests(ChannelHlsIngestArgs... hlsIngests) {
             return hlsIngests(List.of(hlsIngests));
         }
 

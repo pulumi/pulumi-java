@@ -3,9 +3,9 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import com.pulumi.aws.wafv2.inputs.RuleGroupCustomResponseBodyGetArgs;
-import com.pulumi.aws.wafv2.inputs.RuleGroupRuleGetArgs;
-import com.pulumi.aws.wafv2.inputs.RuleGroupVisibilityConfigGetArgs;
+import com.pulumi.aws.wafv2.inputs.RuleGroupCustomResponseBodyArgs;
+import com.pulumi.aws.wafv2.inputs.RuleGroupRuleArgs;
+import com.pulumi.aws.wafv2.inputs.RuleGroupVisibilityConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -56,13 +56,13 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customResponseBodies")
-    private @Nullable Output<List<RuleGroupCustomResponseBodyGetArgs>> customResponseBodies;
+    private @Nullable Output<List<RuleGroupCustomResponseBodyArgs>> customResponseBodies;
 
     /**
      * @return Defines custom response bodies that can be referenced by `custom_response` actions. See Custom Response Body below for details.
      * 
      */
-    public Optional<Output<List<RuleGroupCustomResponseBodyGetArgs>>> customResponseBodies() {
+    public Optional<Output<List<RuleGroupCustomResponseBodyArgs>>> customResponseBodies() {
         return Optional.ofNullable(this.customResponseBodies);
     }
 
@@ -108,13 +108,13 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-    private @Nullable Output<List<RuleGroupRuleGetArgs>> rules;
+    private @Nullable Output<List<RuleGroupRuleArgs>> rules;
 
     /**
      * @return The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
      * 
      */
-    public Optional<Output<List<RuleGroupRuleGetArgs>>> rules() {
+    public Optional<Output<List<RuleGroupRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
 
@@ -168,13 +168,13 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="visibilityConfig")
-    private @Nullable Output<RuleGroupVisibilityConfigGetArgs> visibilityConfig;
+    private @Nullable Output<RuleGroupVisibilityConfigArgs> visibilityConfig;
 
     /**
      * @return Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
      * 
      */
-    public Optional<Output<RuleGroupVisibilityConfigGetArgs>> visibilityConfig() {
+    public Optional<Output<RuleGroupVisibilityConfigArgs>> visibilityConfig() {
         return Optional.ofNullable(this.visibilityConfig);
     }
 
@@ -260,7 +260,7 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customResponseBodies(@Nullable Output<List<RuleGroupCustomResponseBodyGetArgs>> customResponseBodies) {
+        public Builder customResponseBodies(@Nullable Output<List<RuleGroupCustomResponseBodyArgs>> customResponseBodies) {
             $.customResponseBodies = customResponseBodies;
             return this;
         }
@@ -271,7 +271,7 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customResponseBodies(List<RuleGroupCustomResponseBodyGetArgs> customResponseBodies) {
+        public Builder customResponseBodies(List<RuleGroupCustomResponseBodyArgs> customResponseBodies) {
             return customResponseBodies(Output.of(customResponseBodies));
         }
 
@@ -281,7 +281,7 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder customResponseBodies(RuleGroupCustomResponseBodyGetArgs... customResponseBodies) {
+        public Builder customResponseBodies(RuleGroupCustomResponseBodyArgs... customResponseBodies) {
             return customResponseBodies(List.of(customResponseBodies));
         }
 
@@ -342,7 +342,7 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(@Nullable Output<List<RuleGroupRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<RuleGroupRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
@@ -353,7 +353,7 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(List<RuleGroupRuleGetArgs> rules) {
+        public Builder rules(List<RuleGroupRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
@@ -363,7 +363,7 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rules(RuleGroupRuleGetArgs... rules) {
+        public Builder rules(RuleGroupRuleArgs... rules) {
             return rules(List.of(rules));
         }
 
@@ -436,7 +436,7 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder visibilityConfig(@Nullable Output<RuleGroupVisibilityConfigGetArgs> visibilityConfig) {
+        public Builder visibilityConfig(@Nullable Output<RuleGroupVisibilityConfigArgs> visibilityConfig) {
             $.visibilityConfig = visibilityConfig;
             return this;
         }
@@ -447,7 +447,7 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder visibilityConfig(RuleGroupVisibilityConfigGetArgs visibilityConfig) {
+        public Builder visibilityConfig(RuleGroupVisibilityConfigArgs visibilityConfig) {
             return visibilityConfig(Output.of(visibilityConfig));
         }
 

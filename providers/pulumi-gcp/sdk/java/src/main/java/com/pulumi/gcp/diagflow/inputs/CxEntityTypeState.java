@@ -5,8 +5,8 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.diagflow.inputs.CxEntityTypeEntityGetArgs;
-import com.pulumi.gcp.diagflow.inputs.CxEntityTypeExcludedPhraseGetArgs;
+import com.pulumi.gcp.diagflow.inputs.CxEntityTypeEntityArgs;
+import com.pulumi.gcp.diagflow.inputs.CxEntityTypeExcludedPhraseArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -76,14 +76,14 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entities")
-    private @Nullable Output<List<CxEntityTypeEntityGetArgs>> entities;
+    private @Nullable Output<List<CxEntityTypeEntityArgs>> entities;
 
     /**
      * @return The collection of entity entries associated with the entity type.
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<CxEntityTypeEntityGetArgs>>> entities() {
+    public Optional<Output<List<CxEntityTypeEntityArgs>>> entities() {
         return Optional.ofNullable(this.entities);
     }
 
@@ -94,7 +94,7 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="excludedPhrases")
-    private @Nullable Output<List<CxEntityTypeExcludedPhraseGetArgs>> excludedPhrases;
+    private @Nullable Output<List<CxEntityTypeExcludedPhraseArgs>> excludedPhrases;
 
     /**
      * @return Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion.
@@ -102,7 +102,7 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    public Optional<Output<List<CxEntityTypeExcludedPhraseGetArgs>>> excludedPhrases() {
+    public Optional<Output<List<CxEntityTypeExcludedPhraseArgs>>> excludedPhrases() {
         return Optional.ofNullable(this.excludedPhrases);
     }
 
@@ -310,7 +310,7 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder entities(@Nullable Output<List<CxEntityTypeEntityGetArgs>> entities) {
+        public Builder entities(@Nullable Output<List<CxEntityTypeEntityArgs>> entities) {
             $.entities = entities;
             return this;
         }
@@ -322,7 +322,7 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder entities(List<CxEntityTypeEntityGetArgs> entities) {
+        public Builder entities(List<CxEntityTypeEntityArgs> entities) {
             return entities(Output.of(entities));
         }
 
@@ -333,7 +333,7 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder entities(CxEntityTypeEntityGetArgs... entities) {
+        public Builder entities(CxEntityTypeEntityArgs... entities) {
             return entities(List.of(entities));
         }
 
@@ -345,7 +345,7 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder excludedPhrases(@Nullable Output<List<CxEntityTypeExcludedPhraseGetArgs>> excludedPhrases) {
+        public Builder excludedPhrases(@Nullable Output<List<CxEntityTypeExcludedPhraseArgs>> excludedPhrases) {
             $.excludedPhrases = excludedPhrases;
             return this;
         }
@@ -358,7 +358,7 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder excludedPhrases(List<CxEntityTypeExcludedPhraseGetArgs> excludedPhrases) {
+        public Builder excludedPhrases(List<CxEntityTypeExcludedPhraseArgs> excludedPhrases) {
             return excludedPhrases(Output.of(excludedPhrases));
         }
 
@@ -370,7 +370,7 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder excludedPhrases(CxEntityTypeExcludedPhraseGetArgs... excludedPhrases) {
+        public Builder excludedPhrases(CxEntityTypeExcludedPhraseArgs... excludedPhrases) {
             return excludedPhrases(List.of(excludedPhrases));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ssm.inputs;
 
-import com.pulumi.aws.ssm.inputs.ResourceDataSyncS3DestinationGetArgs;
+import com.pulumi.aws.ssm.inputs.ResourceDataSyncS3DestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -36,13 +36,13 @@ public final class ResourceDataSyncState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="s3Destination")
-    private @Nullable Output<ResourceDataSyncS3DestinationGetArgs> s3Destination;
+    private @Nullable Output<ResourceDataSyncS3DestinationArgs> s3Destination;
 
     /**
      * @return Amazon S3 configuration details for the sync.
      * 
      */
-    public Optional<Output<ResourceDataSyncS3DestinationGetArgs>> s3Destination() {
+    public Optional<Output<ResourceDataSyncS3DestinationArgs>> s3Destination() {
         return Optional.ofNullable(this.s3Destination);
     }
 
@@ -98,7 +98,7 @@ public final class ResourceDataSyncState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder s3Destination(@Nullable Output<ResourceDataSyncS3DestinationGetArgs> s3Destination) {
+        public Builder s3Destination(@Nullable Output<ResourceDataSyncS3DestinationArgs> s3Destination) {
             $.s3Destination = s3Destination;
             return this;
         }
@@ -109,7 +109,7 @@ public final class ResourceDataSyncState extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder s3Destination(ResourceDataSyncS3DestinationGetArgs s3Destination) {
+        public Builder s3Destination(ResourceDataSyncS3DestinationArgs s3Destination) {
             return s3Destination(Output.of(s3Destination));
         }
 

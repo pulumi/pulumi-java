@@ -5,8 +5,8 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.docker.inputs.NetworkIpamConfigGetArgs;
-import com.pulumi.docker.inputs.NetworkLabelGetArgs;
+import com.pulumi.docker.inputs.NetworkIpamConfigArgs;
+import com.pulumi.docker.inputs.NetworkLabelArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -103,13 +103,13 @@ public final class NetworkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipamConfigs")
-    private @Nullable Output<List<NetworkIpamConfigGetArgs>> ipamConfigs;
+    private @Nullable Output<List<NetworkIpamConfigArgs>> ipamConfigs;
 
     /**
      * @return The IPAM configuration options
      * 
      */
-    public Optional<Output<List<NetworkIpamConfigGetArgs>>> ipamConfigs() {
+    public Optional<Output<List<NetworkIpamConfigArgs>>> ipamConfigs() {
         return Optional.ofNullable(this.ipamConfigs);
     }
 
@@ -148,13 +148,13 @@ public final class NetworkState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-    private @Nullable Output<List<NetworkLabelGetArgs>> labels;
+    private @Nullable Output<List<NetworkLabelArgs>> labels;
 
     /**
      * @return User-defined key/value metadata
      * 
      */
-    public Optional<Output<List<NetworkLabelGetArgs>>> labels() {
+    public Optional<Output<List<NetworkLabelArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
 
@@ -353,7 +353,7 @@ public final class NetworkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ipamConfigs(@Nullable Output<List<NetworkIpamConfigGetArgs>> ipamConfigs) {
+        public Builder ipamConfigs(@Nullable Output<List<NetworkIpamConfigArgs>> ipamConfigs) {
             $.ipamConfigs = ipamConfigs;
             return this;
         }
@@ -364,7 +364,7 @@ public final class NetworkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ipamConfigs(List<NetworkIpamConfigGetArgs> ipamConfigs) {
+        public Builder ipamConfigs(List<NetworkIpamConfigArgs> ipamConfigs) {
             return ipamConfigs(Output.of(ipamConfigs));
         }
 
@@ -374,7 +374,7 @@ public final class NetworkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder ipamConfigs(NetworkIpamConfigGetArgs... ipamConfigs) {
+        public Builder ipamConfigs(NetworkIpamConfigArgs... ipamConfigs) {
             return ipamConfigs(List.of(ipamConfigs));
         }
 
@@ -426,7 +426,7 @@ public final class NetworkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(@Nullable Output<List<NetworkLabelGetArgs>> labels) {
+        public Builder labels(@Nullable Output<List<NetworkLabelArgs>> labels) {
             $.labels = labels;
             return this;
         }
@@ -437,7 +437,7 @@ public final class NetworkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(List<NetworkLabelGetArgs> labels) {
+        public Builder labels(List<NetworkLabelArgs> labels) {
             return labels(Output.of(labels));
         }
 
@@ -447,7 +447,7 @@ public final class NetworkState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder labels(NetworkLabelGetArgs... labels) {
+        public Builder labels(NetworkLabelArgs... labels) {
             return labels(List.of(labels));
         }
 
