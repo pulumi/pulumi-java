@@ -308,9 +308,10 @@ func (mod *modContext) typeStringRecHelper(
 }
 
 func (mod *modContext) typeStringForObjectType(t *schema.ObjectType, qualifier qualifier, input bool) TypeShape {
+	foreign := t.Package != mod.pkg
 	namingCtx := mod
-	// TODO is this branch exercised? Is there an issue with classQueue?
-	if t.Package != mod.pkg {
+
+	if foreign {
 		// If object type belongs to another package, we apply naming conventions from that package,
 		// including package naming and compatibility mode.
 		extPkg := t.Package
@@ -330,12 +331,14 @@ func (mod *modContext) typeStringForObjectType(t *schema.ObjectType, qualifier q
 		panic(err)
 	}
 	className := names.Ident(mod.typeName(t))
-	mod.classQueue.ensureGenerated(classQueueEntry{
-		packageName: packageName,
-		className:   className,
-		schemaType:  t,
-		input:       input,
-	})
+	if !foreign {
+		mod.classQueue.ensureGenerated(classQueueEntry{
+			packageName: packageName,
+			className:   className,
+			schemaType:  t,
+			input:       input,
+		})
+	}
 	fqn := packageName.Dot(className)
 	return TypeShape{Type: fqn}
 }
